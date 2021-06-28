@@ -1,0 +1,43 @@
+import OsTabs from '@site/src/components/OsTabs'
+import TabItem from '@theme/TabItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWindows } from "@fortawesome/free-brands-svg-icons"
+import Video from '@site/src/components/Video'
+
+# Betriebssystem
+
+## Globale Suche
+
+<OsTabs>
+  <TabItem value="win">
+
+- **Startmenü** öffnen (<FontAwesomeIcon icon={faWindows} />-Taste)) und direkt mit Tippen beginnen.
+- Auf die Lupe klicken und Suchanfrage starten.
+
+Es kann nach Programmen, Ordnern, Dateien, aber auch z.B. nach dem Wetter gesucht werden.
+
+![](./images/win/global_search.png)
+</TabItem>
+<TabItem value="mac">
+
+
+- **Spotlight** öffnen (**Cmd+Leertaste**) und direkt mit Tippen beginnen.
+
+Es kann nach Programmen, Ordnern, Dateien, aber auch z.B. nach dem Wetter gesucht werden.
+
+![](./images/osx/global_search.png)
+</TabItem>
+</OsTabs>
+
+## Night-Shift
+
+Wenns mal spät wird - Augenschonender Bildschirm um den Schlafrhythmus nicht zu stören.
+
+<OsTabs>
+  <TabItem value="win">
+    <Video src={require('./images/win/nightshift.mp4').default} />
+  </TabItem>
+  <TabItem value="mac">
+    <Video src={require('./images/osx/nightshift.mp4').default} />
+  </TabItem>
+</OsTabs>

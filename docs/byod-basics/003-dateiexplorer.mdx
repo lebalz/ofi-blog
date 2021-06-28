@@ -1,0 +1,136 @@
+import OsTabs from '@site/src/components/OsTabs'
+import Video from '@site/src/components/Video'
+import TabItem from '@theme/TabItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWindows } from "@fortawesome/free-brands-svg-icons"
+
+# Dateiexplorer
+
+<OsTabs>
+<TabItem value="win">
+
+Deteiexplorer
+
+![](./images/win-explorer.png)
+</TabItem>
+<TabItem value="mac">
+
+Finder
+
+![](./images/osx-finder.png)
+
+</TabItem>
+</OsTabs>
+
+
+## Ansichten
+
+<OsTabs>
+<TabItem value="win">
+
+- Navigationsbereich
+- Vorschaufenster
+- Mittelgrosse Symbole
+- Liste
+- **Details**\*
+
+\* wird als Standardoption empfohlen.
+
+</TabItem>
+<TabItem value="mac">
+
+- **Symbolleiste ein/ausblenden**\*
+- Alle Tabs ein/ausblenden
+- Tableiste ein/ausblenden
+- **Pfadleiste ein/ausblenden**\*
+- Statusleiste ein/ausblenden
+
+\* wird empfohlen, diese Optionen einzublenden.
+
+<Video src={require('./images/osx/finder_view_settings.mp4').default} />
+</TabItem>
+</OsTabs>
+
+### Sortieren
+
+<OsTabs>
+<TabItem value="win">
+<Video src={require('./images/win/explorer_sort.mp4').default} />
+</TabItem>
+<TabItem value="mac">
+<Video src={require('./images/osx/finder_sort.mp4').default} />
+</TabItem>
+</OsTabs>
+
+## Ordner Erstellen
+- Über das Kontextmenü
+- Über das Menüband
+
+<OsTabs>
+<TabItem value="win">
+<Video src={require('./images/win/new_folder.mp4').default} />
+</TabItem>
+<TabItem value="mac">
+<Video src={require('./images/osx/new_folder.mp4').default} />
+</TabItem>
+</OsTabs>
+
+## Dokumente verschieben
+
+- per Drag&Drop (mit der Maus Packen und in einen anderen Ordner Ziehen)
+
+<OsTabs>
+<TabItem value="win">
+
+- Ausschneiden&Einfügen (auch über Tastenkürzel `ctrl+x` und `ctrl+v` möglich)
+
+<Video src={require('./images/win/move_files.mp4').default} />
+</TabItem>
+<TabItem value="mac">
+-
+</TabItem>
+</OsTabs>
+
+## Dokumente umbenennen
+
+<OsTabs>
+<TabItem value="win">
+
+- Mit `F2` (je nach Tastatur auch `Fn+F2`)
+- Mit rechtsklick "Umbenennen"
+
+</TabItem>
+<TabItem value="mac">
+
+- Mit `enter`
+- Mit rechtsklick "Umbenennen"
+
+<Video src={require('./images/osx/rename.mp4').default} />
+
+</TabItem>
+</OsTabs>
+
+
+## ZIP Dateien
+
+### Komprimieren
+
+<OsTabs>
+<TabItem value="win">
+<Video src={require('./images/win/zip.mp4').default} />
+</TabItem>
+<TabItem value="mac">
+<Video src={require('./images/osx/zip.mp4').default} />
+</TabItem>
+</OsTabs>
+
+### Entpacken
+
+<OsTabs>
+<TabItem value="win">
+<Video src={require('./images/win/extract_zip.mp4').default} />
+</TabItem>
+<TabItem value="mac">
+.zip-Datei Doppelklicken
+</TabItem>
+</OsTabs>

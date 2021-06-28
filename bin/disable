@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -e
+
+usage="usage: ./disable <topic> <version>"
+
+TOPIC=$1
+VERSION=$2
+
+PATH="versioned_docs/version-$VERSION/$TOPIC"
+
+if [[ ! -d "$PATH" ]] && [[ ! -f "$PATH" ]]
+then
+    echo "$TOPIC is not enabled."
+    exit 0
+fi
+
+if [[ -L "$PATH" && -d "$PATH" ]]
+then
+    /bin/rm "$PATH"
+    echo "Disabled '$TOPIC'."
+else
+    echo "Can't disable '$TOPIC' since '$PATH' is not a symlink."
+fi

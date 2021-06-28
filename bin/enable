@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e
+
+usage="usage: ./enable <topic> <version>, e.g: 'enable byod_basics 24f'"
+
+TOPIC=$1
+VERSION=$2
+PATH="versioned_docs/version-$VERSION"
+
+if [[ -d "$PATH/$TOPIC" ]] || [[ -f "$PATH/$TOPIC" ]]
+then
+    echo "'$TOPIC' already enabled for $VERSION."
+    exit 0
+fi
+
+
+(cd "$PATH" && /bin/ln -s "../../docs/$TOPIC" .)
+echo "Enabled '$TOPIC' for $VERSION"
