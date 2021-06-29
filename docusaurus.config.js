@@ -104,7 +104,19 @@ module.exports = {
             '24f': {
               banner: 'none'
             },
+            '24i': {
+              banner: 'none'
+            },
             '24L': {
+              banner: 'none'
+            },
+            '24K': {
+              banner: 'none'
+            },
+            '24o': {
+              banner: 'none'
+            },
+            '25h': {
               banner: 'none'
             }
           },
