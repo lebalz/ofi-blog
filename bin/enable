@@ -15,5 +15,12 @@ then
 fi
 
 
+if [[ ! -d "docs/$TOPIC" ]] && [[ ! -f "docs/$TOPIC" ]]
+then
+    echo "$TOPIC is not found."
+    exit 0
+fi
+
+
 (cd "$PATH" && /bin/ln -s "../../docs/$TOPIC" .)
 echo "Enabled '$TOPIC' for $VERSION"

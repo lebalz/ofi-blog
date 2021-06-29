@@ -20,9 +20,9 @@ const CourseList: Course[] = [
     classes: [
       '24f',
       '24i',
-      '24o',
-      '24P',
+      '24K',
       '24L',
+      '24o',
     ]
   }
 ];
