@@ -50,7 +50,6 @@ export default function Home() {
             autoPlay
           />
         </div>
-        <a href="docs/home">docs</a>
         <HomepageCourses />
       </main>
     </Layout>
