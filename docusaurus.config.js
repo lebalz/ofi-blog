@@ -1,12 +1,15 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const fs = require('fs');
+const HTMLParser = require('node-html-parser');
+const BASE_URL = '/ofi-blog/';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'OF Informatik',
   tagline: 'Gymnasium Biel Seeland',
   url: 'https://lebalz.github.io',
-  baseUrl: '/ofi-blog/',
+  baseUrl: BASE_URL,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -130,4 +133,24 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    function hide_pagination(context, options) {
+      return {
+        name: 'hide-pagination',
+        injectHtmlTags({ content }) {
+          return {
+            postBodyTags: [
+              {
+                tagName: 'script',
+                attributes: {
+                  charset: 'utf-8',
+                  src: BASE_URL + 'js/hide_pagination.js',
+                },
+              }
+            ],
+          };
+        },
+      };
+    },
+  ]
 };
