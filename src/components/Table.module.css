@@ -1,0 +1,76 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+table.ofi-table > tbody tr.holiday {
+  background: #9abcf2;
+}
+
+table.ofi-table > tbody tr.event {
+  background: var(--ifm-color-success-lightest);
+}
+
+table.ofi-table > tbody tr.test {
+  background: var(--ifm-color-warning-lightest);
+}
+
+table.ofi-table > tbody tr.info {
+  background: var(--ifm-color-info-lightest);
+}
+table.ofi-table {
+  width: 100%;
+}
+table.ofi-table tr {
+  background-color: var(--ifm-table-background);
+  background: var(--ifm-table-background);
+}
+
+table.ofi-table td,
+table.ofi-table th {
+  border: none;
+}
+
+table.ofi-table.collapsing {
+  width: auto;
+}
+
+table.ofi-table.striped tr:nth-child(even){
+  background-color: var(--ifm-table-stripe-background);
+  background: var(--ifm-table-stripe-background);
+}
+
+table.ofi-table.celled {
+  border: var(--ifm-table-border-width) solid var(--ifm-table-border-color);
+}
+
+table.ofi-table.collapsing {
+  width: auto;
+}
+table.ofi-table.compact {
+  font-size: x-small;
+}
+table.ofi-table.compact td,
+table.ofi-table.compact th {
+  padding: 6px;
+}
+
+
+
+table.ofi-table.tiny td,
+table.ofi-table.tiny th {
+  padding: 2px;
+}
+
+table.ofi-table.small td,
+table.ofi-table.small th {
+  padding: 6px;
+}
+
+table.ofi-table.normal td,
+table.ofi-table.normal th {
+  padding: 12px;
+}
+
+table.ofi-table.large td,
+table.ofi-table.large th {
+  padding: 16px;
+}
+

@@ -2,6 +2,10 @@
 
 [OFI Blog](https://lebalz.github.io/ofi-blog)
 
+## Styling
+
+The `theme/classic` is used. It is build with [infima](https://infima.dev/).
+
 ## New Documentation
 
 Add or edit new docs in [docs/](). This will have effect to all different "Versions" since their versions are only simlinked.
