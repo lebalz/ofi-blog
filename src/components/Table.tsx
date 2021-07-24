@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUmbrellaBeach as holiday, faGraduationCap as test, faCalendarDay as event, faInfo as info, IconDefinition } from "@fortawesome/free-solid-svg-icons"
-import styles from './Table.module.css';
+import styles from './Table.module.scss';
 import clsx from 'clsx';
 
 export enum Type {
