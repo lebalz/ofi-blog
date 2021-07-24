@@ -1,0 +1,39 @@
+---
+sidebar_position: 1
+---
+import Table from '@site/src/components/Table'
+
+# 24i
+
+<Table
+  header={['Datum', 'Thema', 'Inhalt']}
+  compact
+  selectable
+  rows={[
+    { cells: ['Di. 17.08.', 'Netzwerk', ''] },
+    { cells: ['Di. 24.08.', 'Netzwerk', ''] },
+    { cells: ['Di. 31.08.', 'Netzwerk', ''] },
+    { cells: ['Di. 07.09.', 'Netzwerk', '']},
+    { cells: ['Di. 14.09.', 'Netzwerk', ''] },
+    { cells: ['Di. 21.09.', 'Netzwerk', 'Test'], type: 'test' },
+    { cells: ['Di. 28.10.', 'Umweltwoche', ''], type: 'holiday' },
+    { cells: ['Di. 05.10.', 'Herbstferien', ''], type: 'holiday' },
+    { cells: ['Di. 12.10.', 'Herbstferien', ''], type: 'holiday' },
+    { cells: ['Di. 19.10.', 'Herbstferien', ''], type: 'holiday' },
+    { cells: ['Di. 26.10.', 'Kryptologie', ''] },
+    { cells: ['Di. 02.11.', 'Kryptologie', ''] },
+    { cells: ['Di. 09.11.', 'Kryptologie', ''] },
+    { cells: ['Di. 16.11.', 'Kryptologie', ''] },
+    { cells: ['Di. 23.11.', 'Kryptologie', ''] },
+    { cells: ['Di. 30.11.', 'Kryptologie', 'Sichere Passwörter'] },
+    { cells: ['Di. 07.12.', 'Kryptologie', 'Test'], type: 'test' },
+    { cells: ['Di. 14.12.', 'Datenbanken', ''] },
+    { cells: ['Di. 21.12.', 'Datenbanken', ''] },
+    { cells: ['Di. 28.12.', 'Winterferien', ''], type: 'holiday' },
+    { cells: ['Di. 04.01.', 'Winterferien', ''], type: 'holiday' },
+    { cells: ['Di. 11.01.', 'Datenbanken', ''] },
+    { cells: ['Mi. 18.01.', 'Notenschluss', ''], type: 'event' },
+    { cells: ['Di. 21.01.', 'Datenbanken', ''] },
+    { cells: ['Di. 25.01.', 'Datenbanken', ''] }
+  ]}
+/>
