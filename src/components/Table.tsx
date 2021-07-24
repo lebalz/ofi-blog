@@ -89,6 +89,7 @@ interface TableProps {
   celled?: boolean;
   striped?: boolean;
   collapsing?: boolean;
+  selectable?: boolean;
 }
 
 export default class Table extends React.Component<TableProps> {
@@ -103,7 +104,8 @@ export default class Table extends React.Component<TableProps> {
           styles[this.props.compact && 'compact'],
           styles[this.props.celled && 'celled'],
           styles[this.props.striped && 'striped'],
-          styles[this.props.collapsing && 'collapsing']
+          styles[this.props.collapsing && 'collapsing'],
+          styles[this.props.selectable && 'selectable']
         )}
       >
         <thead>
