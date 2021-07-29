@@ -6,9 +6,9 @@ var observer = new MutationObserver(function (mutations, observer) {
   }
   const isBody = mutations.length > 1 && (['BODY', 'HTML'].includes(mutations[0].target.tagName.toUpperCase()))
   if (!isBody && !mutations[0].target.classList.contains('menu__link')) {
-    if (window._LOG_MUTATIONS_) {
-      console.log(mutations);
-    }
+    // if (window._LOG_MUTATIONS_) {
+    //   console.log(mutations);
+    // }
     return;
   }
   const pagination = document.querySelector(".pagination-nav");
