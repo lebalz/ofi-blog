@@ -132,6 +132,23 @@ module.exports = {
     ],
   ],
   plugins: [
+    function (context, options) {
+      return {
+        name: 'raw-src-loader',
+        configureWebpack(config, isServer, utils) {
+          return {
+            module: {
+              rules: [
+                {
+                  test: /\.raw\.*/,
+                  type: 'asset/source'
+                },
+              ],
+            },
+          };
+        },
+      };
+    },
     function hide_pagination(context, options) {
       return {
         name: 'hide-pagination',
@@ -151,5 +168,6 @@ module.exports = {
       };
     },
     'docusaurus-plugin-sass',
-  ]
+  ],
+  themes: ['docusaurus-live-brython']
 };

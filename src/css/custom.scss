@@ -14,7 +14,7 @@
   --ifm-color-primary-light: #262e46;
   --ifm-color-primary-lighter: #28304a;
   --ifm-color-primary-lightest: #2e3753;
-  --ifm-code-font-size: 95%;
+  --ifm-code-font-size: 65%;
 }
 
 html[data-theme='dark'] {
@@ -38,3 +38,4 @@ html[data-theme='dark'] {
   height: 40vh;
   object-fit: cover;
 }
+

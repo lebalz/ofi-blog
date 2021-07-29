@@ -6,52 +6,52 @@ Die `while` Schleife kann man sich wie ein kleines Kind auf einer Wanderung vors
 
 Die `while` Schleife stellt ebenfalls immerzu dieselbe Frage, die jeweils mit Ja (`True`) oder Nein (`False`) beantwortet wird. Solange die Frage mit _Ja_ beantwortet wird, wird der Code-Teil erneut wiederholt.
 
-```py
+```py live_py
+from turtle import *
 counter = 0
 
 while counter < 4:
     forward(100)
-    left()
+    left(90)
     counter = counter + 1
-
-done()
 ```
 
 ```py
+from turtle import *
 counter = 0               # counter = 0
 
 # Bedingung: ✅ (counter ist kleiner als 4)
 forward(100)
-left()
+left(90)
 counter = counter + 1     # counter = 1
 
 # Bedingung: ✅ (counter ist kleiner als 4)
 forward(100)
-left()
+left(90)
 counter = counter + 1     # counter = 2
 
 # Bedingung: ✅ (counter ist kleiner als 4)
 forward(100)
-left()
+left(90)
 counter = counter + 1     # counter = 3
 
 # Bedingung: ✅ (counter ist kleiner als 4)
 forward(100)
-left()
+left(90)
 counter = counter + 1     # counter = 4
 
 # Bedingung: ❌ (counter ist nicht mehr kleiner als 4)
 # --> wiederholung abbrechen
-
-done()
 ```
 
 # Was ist die Ausgabe des folgenden Programms?
 
-```py
-from gbsl_turtle import *
+```py live_py
+from turtle import *
 
-goto(-30, 0, draw=False)
+penup()
+goto(-30, 0)
+pendown()
 
 counter = 0
 while counter < 8:
@@ -59,7 +59,9 @@ while counter < 8:
     left(45)
     counter = counter + 1
 
-goto(-30, 100, draw=False)
+penup()
+goto(-30, 100)
+pendown()
 setheading(180)     # Orientierung nach links: ◀️
 
 counter = 0
@@ -68,8 +70,9 @@ while counter < 8:
     right(45)
     counter = counter + 1
 
-
-goto(30, 100, draw=False)
+penup()
+goto(30, 100)
+pendown()
 setheading(0)       # Orientierung nach rechts: ▶️
 
 
@@ -79,8 +82,9 @@ while counter < 8:
     left(45)
     counter = counter + 1
 
-
-goto(-48, 40, draw=False)
+penup()
+goto(-48, 40)
+pendown()
 setheading(-45)     # Orientierung nach rechts unten: ↘️
 
 counter = 0
@@ -88,6 +92,4 @@ while counter < 3:
     forward(40)
     left(45)
     counter = counter + 1
-
-done()
 ```

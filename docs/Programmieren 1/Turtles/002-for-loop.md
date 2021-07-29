@@ -8,7 +8,7 @@ Die `for` Schleife kann man sich wie ein Ticket-Schalter vorstellen. Der Verkäu
 
 In Python wird die Warteschleife als Liste in eckigen Klammern geschrieben:
 
-```py
+```py live_py
 for person in ['Jack', 'Maria', 'Reto']:
     print(f'Guten Tag {person}, wie kann ich helfen?')
     print('...')
@@ -35,61 +35,70 @@ Auf wiedersehen.
 Um einen beliebigen Code-Teil mehrfach nacheinander auszuführen, können wir nun auch Zahlen als Warteschleife verwenden:
 
 
-```py
+```py live_py
+from turtle import *
 for counter in [0, 1, 2, 3]:
     forward(100)
-    left()
+    left(90)
 ```
 
 Für jede Zahl wird der Code-Teil wiederholt:
 
 
-```py
+```py live_py
+from turtle import *
 # 0
 forward(100)
-left()
+left(90)
 # 1
 forward(100)
-left()
+left(90)
 # 2
 forward(100)
-left()
+left(90)
 # 3
 forward(100)
-left()
+left(90)
 ```
 
 Oder in Kurzschreibweise:
 
 
-```py
+```py live_py
+from turtle import *
 for counter in range(4):
     forward(100)
-    left()
+    left(90)
 ```
 
 wobei `range(4)` eine Warteschleife mit `4` Elementen erzeugt.
 
 ## Was ist die Ausgabe des folgenden Programms?
 
-```py
-from gbsl_turtle import *
-
-goto(-30, 0, draw=False)
+```py live_py
+from turtle import *
+penup()
+goto(-30, 0)
+pendown()
 
 for counter in range(8):
     forward(60)
     left(45)
 
-goto(-30, 100, draw=False)
+penup()
+goto(-30, 100)
+pendown()
+
 setheading(180)     # Orientierung nach links: ◀️
 
 for counter in range(8):
     forward(5)
     right(45)
 
+penup()
+goto(30, 100)
+pendown()
 
-goto(30, 100, draw=False)
 setheading(0)       # Orientierung nach rechts: ▶️
 
 
@@ -97,13 +106,14 @@ for counter in range(8):
     forward(5)
     left(45)
 
+penup()
+goto(-48, 40)
+pendown()
 
-goto(-48, 40, draw=False)
 setheading(-45)     # Orientierung nach rechts unten: ↘️
 
 for counter in range(3):
     forward(40)
     left(45)
 
-done()
 ```
