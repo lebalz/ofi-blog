@@ -80,6 +80,7 @@ module.exports = {
     prism: {
       theme: require('prism-react-renderer/themes/vsDark'),
     },
+    hideableSidebar: true,
   },
   presets: [
     [
