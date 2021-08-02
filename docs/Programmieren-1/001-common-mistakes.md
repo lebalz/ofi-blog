@@ -29,7 +29,7 @@ Ein Vergleich wird normalerweise in einer Kontrollstruktur verwendet. Dabei ist 
 alter = input('Wie alt bist du?') # das Resultat ist ein Text
 alter = int(alter)  # alter zu einer Ganzzahl umwandeln
 if alter == 14:
-    print('Yay, du bist 14 jährig 🥳')
+    print('Yay, du bist 14 jährig 🥳') 
 ```
 :::
 
@@ -40,17 +40,17 @@ Das Zählen beginne immer bei Null. Beispiele:
 - Das folgende Programm gibt die Zahlen `0` bis `9` aus:
     ```py live_py slim
     for i in range(10):
-        print(i)
+        print(i) 
     ```
 - Das erste Zeichen einer Zeichenkette erhält man durch Abfrage mittels eckiger Klammern und dem Index `0`:
     ```py live_py slim
     text = 'Hallo GBSL'
-    print(text[0])
+    print(text[0]) 
     ```
 - Das erste Element einer Liste erhält man durch Abfrage mittels eckiger Klammern und dem Index `0`:
     ```py live_py slim
     liste = ['Äpfel', 'Birnen', 'Bananen']
-    print(liste[0])
+    print(liste[0]) 
     ```
 
 ## 4. Code-Blocks und Einrücken
@@ -65,6 +65,10 @@ Beispiele:
         print('🥳')     # \ 
         print('🥳🥳')   #  |- diese 3 Zeilen werden gleich oft
         print('🥳🥳🥳') # /   wiederholt
-    print('--- Ende ---')
+    print('--- Ende ---') 
     ```
-- 
+
+
+:::custom
+Blaaa
+:::
