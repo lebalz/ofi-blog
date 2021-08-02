@@ -4,7 +4,7 @@
 - Halten Sie Abschnitte fest, die sich wiederholen
 
 
-```py live_py
+```py live_py title=Ein-Turtle-Programm
 from turtle import *
 
 setheading(0)

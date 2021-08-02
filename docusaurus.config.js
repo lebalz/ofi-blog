@@ -78,7 +78,7 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} lebalz`,
     },
     prism: {
-      theme: require('prism-react-renderer/themes/vsDark'),
+      theme: require('prism-react-renderer/themes/dracula'),
     },
     hideableSidebar: true,
   },

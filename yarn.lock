@@ -3638,10 +3638,10 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
-docusaurus-live-brython@^0.0.1-beta.4.21:
-  version "0.0.1-beta.4.21"
-  resolved "https://registry.yarnpkg.com/docusaurus-live-brython/-/docusaurus-live-brython-0.0.1-beta.4.21.tgz#482b0dc3d318f30d7a8b13e640af5c02e2492ff6"
-  integrity sha512-eVF/dniF56H084ArlNTGM1s4Zwkhm81+ROiEY8xSZW3aJ7F9Ecd6fAOYHvb0F3YiAR1yXKsigbns3MDMG39yiw==
+docusaurus-live-brython@^0.0.1-beta.4.58:
+  version "0.0.1-beta.4.58"
+  resolved "https://registry.yarnpkg.com/docusaurus-live-brython/-/docusaurus-live-brython-0.0.1-beta.4.58.tgz#1a392b51124d51332bd423f99b555a6b6a52e4d4"
+  integrity sha512-HtKPFnax8MqLx9MEk/5Siae0Xf1+GNN5EmYDdtmtCQk8sU/JMPcomX5JjOvKjV5mBceyBS1p31CuxWA96oIq4g==
   dependencies:
     "@docusaurus/core" "2.0.0-beta.4"
     "@fortawesome/free-brands-svg-icons" "^5.15.3"
@@ -3649,6 +3649,7 @@ docusaurus-live-brython@^0.0.1-beta.4.21:
     "@fortawesome/react-fontawesome" "^0.1.14"
     ace-builds "^1.4.12"
     clsx "^1.1.1"
+    lodash "^4.17.21"
     react-ace "^9.4.1"
     react-draggable "^4.4.3"
 
