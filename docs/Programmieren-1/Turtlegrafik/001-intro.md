@@ -44,23 +44,23 @@ Befehlsname  Parameter: 90 Schritte vorwärts
 
 ```py live_py title=Stift-und-Punkte
 from turtle import *
+
+forward(80)
+dot(5)
+left(90)
+forward(80)
+dot(5)
+left(90)
+forward(80)
+dot(5)
+left(90)
+forward(80)
+dot(5)
+
 penup()
-forward(80)
-dot(5)
 left(90)
-
-pendown()
-forward(80)
-dot(5)
+forward(40)
 left(90)
-
-penup()
-forward(80)
+forward(40)
 dot(5)
-left(90)
-
-pendown()
-forward(80)
-dot(5)
-left(90)
 ```
