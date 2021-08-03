@@ -19,6 +19,14 @@ module.exports = {
         alt: 'Logo',
         src: 'img/logo.png',
       },
+      items: [
+        {
+          type: 'doc',
+          position: 'left',
+          docId: 'home',
+          label: 'Material'
+        }
+      ]
     },
     footer: {
       style: 'dark',
@@ -79,6 +87,7 @@ module.exports = {
     },
     prism: {
       theme: require('prism-react-renderer/themes/dracula'),
+      darkTheme: require('prism-react-renderer/themes/dracula'),
     },
     hideableSidebar: true,
   },
