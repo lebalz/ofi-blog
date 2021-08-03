@@ -1,4 +1,9 @@
-# Häufige Fehler
+---
+title: Häufige Fehler
+---
+
+# Häufige Fehler [^1]
+
 
 Hier werden die zehn häufigsten Fehler in Python zusammengefasst.
 
@@ -67,8 +72,6 @@ Beispiele:
         print('🥳🥳🥳') # /   wiederholt
     print('--- Ende ---') 
     ```
+    
 
-
-:::custom
-Blaaa
-:::
+[^1]: [Stefan Rothe](https://rothe.io/?b=python-ref&p=968398)

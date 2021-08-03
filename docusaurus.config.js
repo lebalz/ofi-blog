@@ -83,7 +83,7 @@ module.exports = {
           ],
         }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} lebalz`,
+      copyright: `<a class="footer__link-item" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de"><img src="/static/img/by-nc-sa.eu.svg" alt="CC-BY-NC-SA"> Text und Bilder von Balthasar Hofer, Ausnahmen sind gekennzeichnet.</a>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/dracula'),
@@ -99,7 +99,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/lebalz/ofi-blog/edit/main/',
           path: 'docs',
           includeCurrentVersion: true,
           lastVersion: 'current',

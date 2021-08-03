@@ -39,3 +39,21 @@ html[data-theme='dark'] {
   object-fit: cover;
 }
 
+.footnote-ref {
+  &::before {
+    content: "[";
+    margin-right: 3px;
+  }
+  &::after {
+    content: "]";
+    margin-left: 3px;
+  }
+}
+
+.footer__copyright {
+  img {
+    height: 1em;
+    margin-right: 1ch;
+    vertical-align: text-bottom;
+  }
+}
