@@ -3638,10 +3638,10 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
-docusaurus-live-brython@^0.0.1-beta.4.99:
-  version "0.0.1-beta.4.99"
-  resolved "https://registry.yarnpkg.com/docusaurus-live-brython/-/docusaurus-live-brython-0.0.1-beta.4.99.tgz#2488b27dd53a997d0bd663bcb87d9f8950a64b45"
-  integrity sha512-BQALeVR2/dQKJNBui7Hl/cw/27T9Y06YYLwILxqb6bXbZ2kukoya08WWdWKU9cl9HHrqCQTTnaxttsNazGYAug==
+docusaurus-live-brython@^0.0.1-beta.4.111:
+  version "0.0.1-beta.4.111"
+  resolved "https://registry.yarnpkg.com/docusaurus-live-brython/-/docusaurus-live-brython-0.0.1-beta.4.111.tgz#1547561067c553d8b05da3b2475bdcb957f78457"
+  integrity sha512-7arybKSCgmOSEmXmb8Ov6MCM/vr7d6LXSU8Fyo0WW+mGWRN/g0XDyyP18hQOtOcAHxHq+0qkVtxsTxK8yOy2SA==
   dependencies:
     "@docusaurus/core" "2.0.0-beta.4"
     "@fortawesome/free-brands-svg-icons" "^5.15.3"
@@ -3652,6 +3652,7 @@ docusaurus-live-brython@^0.0.1-beta.4.99:
     lodash "^4.17.21"
     react-ace "^9.4.3"
     react-draggable "^4.4.3"
+    svg-parser "^2.0.4"
 
 docusaurus-plugin-sass@^0.2.1:
   version "0.2.1"
@@ -8739,7 +8740,7 @@ supports-color@^8.0.0:
   dependencies:
     has-flag "^4.0.0"
 
-svg-parser@^2.0.2:
+svg-parser@^2.0.2, svg-parser@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/svg-parser/-/svg-parser-2.0.4.tgz#fdc2e29e13951736140b76cb122c8ee6630eb6b5"
   integrity sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==
