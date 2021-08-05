@@ -14,7 +14,7 @@ Der Hauswart der Madretsch-Schule kontrolliert anhand des Lieferscheins, ob alle
 
 Möglicherweise fehlt eine Schraube. In dem Fall schickt er dem GBSL-Hauswart einen Brief und bittet ihn, diese Schraube nachzuschicken.
 
-![@](img/002-school-example.svg)
+![@](img/3-school-example.svg)
 
 ## Internet
 

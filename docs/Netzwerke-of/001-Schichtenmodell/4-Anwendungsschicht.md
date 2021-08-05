@@ -1,5 +1,6 @@
 ---
-title: 4 Anwendungsschicht
+sidebar_label: 4. Anwendungsschicht
+sidebar_position: 2
 ---
 
 # Schicht 4: Anwendungsschicht [^1]
@@ -9,7 +10,7 @@ Auf der Anwendungsschicht geht es um Dinge, die den Benutzer des Systems interes
 ## Beispiel «Schule»
 Im Beispiel «Schule» sind dies Pulte, welche von einem Schulhaus ins andere transportiert werden sollen. Wie genau Verpackung und Transport organisiert sind, wird auf dieser Ebene ausgeblendet. Hier geht es nur um den eigentlich Inhalt – also darum, welche und wie viele Pulte verschickt werden sollen.
 
-![@](img/001-school-example.svg)
+![@](img/4-school-example.svg)
 
 ## Internet
 Typische Anwendungen im Internet sind Webseiten, Web-Apps oder E-Mail.

@@ -10,7 +10,7 @@ Auf der phyikalischen Schicht geht es um das konkrete Transportmittel (Velokurie
 ## Beispiel «Schule»
 Im Beispiel «Schule» müssen die Säcke, die die vielen Pakete enthalten, nun endlich transportiert werden. Dies übernehmen Speditionsangestellte, die die Säcke mit Hilfe von Lastwagen an den nächsten Zielort (z.B. in ein Paketzentrum oder an die Lieferadresse) bringen. Die Spedition kümmert sich nur um den aktuellen Transportabschnitt.
 
-![@](img/004-school-example.svg)
+![@](img/1-school-example.svg)
 
 ## Internet
 Die physikalische Schicht besteht aus der Hardware, also den Kabeln und Geräten (mit ihren physikalischen Adressen). Die physikalische Adresse wird MAC-Adresse genannt (siehe Begriff MAC-Adressen).
