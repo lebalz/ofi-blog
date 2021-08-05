@@ -1,5 +1,6 @@
 ---
-title: 3 Transportschicht
+sidebar_label: 3. Transportschicht
+sidebar_position: 3
 ---
 
 #  Schicht 3: Transportschicht [^1]

@@ -1,5 +1,6 @@
 ---
-title: 1 Physikalische Schicht (Netzzugangsschicht)
+sidebar_label: 1. Physikalische Schicht
+sidebar_position: 6
 ---
 
 #  Schicht 1: Physikalische Schicht (Netzzugangsschicht) [^1]

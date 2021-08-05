@@ -50,7 +50,7 @@ Befehlsname
 
 :::
 
-:::info Aufgabe 1
+:::aufgabe Aufgabe 1
 Ändern Sie das Programm "Quadrat" so ab, dass es:
 - doppelt so gross gezeichnet wird
 - um 45° nach links gedreht gezeichnet wird 
@@ -78,7 +78,7 @@ forward(80)
 left(90)
 forward(80) 
 ```
-:::info Aufgabe 2
+:::aufgabe Aufgabe 2
 Erweitern Sie das Programm so, dass die gewürfelte Zahl `5` gezeichnet wird:
 
 ![Würfel 5](./img/wuerfel-5.svg)

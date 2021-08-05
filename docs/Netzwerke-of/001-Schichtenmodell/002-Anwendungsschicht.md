@@ -1,5 +1,6 @@
 ---
-title: 4 Anwendungsschicht
+sidebar_label: 4. Anwendungsschicht
+sidebar_position: 2
 ---
 
 # Schicht 4: Anwendungsschicht [^1]

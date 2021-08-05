@@ -1,5 +1,6 @@
 ---
-title: 2 Vermittlungsschicht
+sidebar_label: 2. Vermittlungsschicht
+sidebar_position: 5
 ---
 
 #  Schicht 2: Vermittlungsschicht [^1]

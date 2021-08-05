@@ -74,4 +74,4 @@ Beispiele:
     ```
     
 
-[^1]: [Stefan Rothe](https://rothe.io/?b=python-ref&p=968398)
+[^1] Quelle: [rothe.io](https://rothe.io/?b=python-ref&p=968398)

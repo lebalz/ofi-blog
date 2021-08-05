@@ -17,7 +17,7 @@
   --ifm-code-font-size: 85%;
 }
 
-html[data-theme='dark'] {
+html[data-theme="dark"] {
   --ifm-color-primary: #4d5c8d;
   --ifm-color-primary-dark: #45537f;
   --ifm-color-primary-darker: #414e78;
@@ -34,12 +34,27 @@ html[data-theme='dark'] {
   padding: 0 var(--ifm-pre-padding);
 }
 
-.gallery-wrapper .image-gallery-content .image-gallery-slide .image-gallery-image {
+.gallery-wrapper
+  .image-gallery-content
+  .image-gallery-slide
+  .image-gallery-image {
   height: 40vh;
   object-fit: cover;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .footnote-ref {
+    font-size: 50%;
+  }
+}
+
 .footnote-ref {
+  font-size: 75%;
   &::before {
     content: "[";
     margin-right: 3px;
