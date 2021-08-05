@@ -1,8 +1,7 @@
 ---
 title: Schichtenmodell
 ---
-
-# Schichtenmodell [^1]
+# Schichtenmodell [^1][^2]
 
 Die Kommunikation zwischen Digitalgeräten ist auf so allgemeine Art geregelt, dass es für die beteiligten Endgeräte eigentlich keinen Unterschied macht, ob sie direkt miteinander verbunden sind, oder ob sie ihre Nachrichten über ein weltweites Netzwerk (=Internet) austauschen. Die Grundlage für beides ist ein Schichtenmodell, das die komplexe Aufgabe der Nachrichtenübermittlung auf verschiedenen Ebenen, bzw. Schichten verteilt:
 
@@ -16,3 +15,4 @@ Jedes dieser Gespräche dient einem bestimmten Zweck innerhalb der komplizierten
 
 
 [^1]: Quelle: [OFIN.ch](https://oinf.ch/kurs/vernetzung-und-systeme/kommunikation-in-netzwerken/)
+[^2]: Quelle: [mygymer.ch](https://informatik.mygymer.ch/g23c/008.rechnernetze-kommunikation/01.schichtenmodell.html#beispiel-%C2%ABpaketversand%C2%BB)
