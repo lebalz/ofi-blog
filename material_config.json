@@ -1,31 +1,31 @@
 {
   "24f": [
     {
-      "from": "docs/byod-basics-v24/",
+      "from": "docs/byod-basics/v24/",
       "to": "versioned_docs/version-24f/byod-basics"
     }
   ],
   "24i": [
     {
-      "from": "docs/byod-basics-v24/",
+      "from": "docs/byod-basics/v24/",
       "to": "versioned_docs/version-24i/byod-basics"
     }
   ],
   "24K": [
     {
-      "from": "docs/byod-basics-v24/",
+      "from": "docs/byod-basics/v24/",
       "to": "versioned_docs/version-24K/byod-basics"
     }
   ],
   "24L": [
     {
-      "from": "docs/byod-basics-v24/",
+      "from": "docs/byod-basics/v24/",
       "to": "versioned_docs/version-24L/byod-basics"
     }
   ],
   "24o": [
     {
-      "from": "docs/byod-basics-v24/",
+      "from": "docs/byod-basics/v24/",
       "to": "versioned_docs/version-24o/byod-basics"
     }
   ],

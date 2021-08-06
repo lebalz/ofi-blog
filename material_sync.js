@@ -29,7 +29,11 @@ Object.keys(CONFIG).forEach((klass) => {
                 break;
             case 'object':
                 srcPath = src.from;
-                toPath = `versioned_docs/version-${klass}/${src.to || relative2Doc(src)}`
+                if (src.to) {
+                    toPath = src.to
+                } else {
+                    toPath = `versioned_docs/version-${klass}/${relative2Doc(src)}`
+                }
                 exclude = src.exclude;
                 break;
         }
