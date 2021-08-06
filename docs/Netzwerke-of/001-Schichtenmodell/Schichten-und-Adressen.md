@@ -30,4 +30,4 @@ Analog muss auch ein Computer wissen, an welches Programm er eine eingehende Anf
 
 Das einzige, was diese Angestellten dem Kunden anbieten können, ist die **Dienstleistung**, auf welche sich dieses Geschäft spezialisiert hat. Dass der Ablauf für einen Dienstleistungsbezug in jedem Geschäft anders abläuft, ist klar – schliesslich muss sich im Coiffeurgeschäft auf einen Stuhl setzen und bekommt einen Mantel und den Hals gebunden, während man in der Bäckerei die gewünschten Brote bestellt. Dies entspricht den Protokollen auf der [**Anwendungsschicht (DNS, HTTP, ...)**](./4-Anwendungsschicht.md).
 
-[^1] Quelle: [rothe.io](https://rothe.io/?b=network&p=783655)
+[^1]: Quelle: [rothe.io](https://rothe.io/?b=network&p=783655)

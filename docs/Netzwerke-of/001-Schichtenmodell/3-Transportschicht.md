@@ -28,4 +28,4 @@ Die zwei wichtigsten Protokolle der Transportschicht sind TCP und UDP. Hier werd
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/AYdF7b3nMto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[^1] Quelle: [rothe.io](https://rothe.io/?b=network&p=463589)
+[^1]: Quelle: [rothe.io](https://rothe.io/?b=network&p=463589)

@@ -25,4 +25,4 @@ Das wichtigste Protokoll der Vermittlungsschicht ist das Internet Protokoll (IP)
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/5o8CwafCxnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[^1] Quelle: [rothe.io](https://rothe.io/?b=network&p=750322)
+[^1]: Quelle: [rothe.io](https://rothe.io/?b=network&p=750322)
