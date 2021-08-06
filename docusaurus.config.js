@@ -167,24 +167,24 @@ module.exports = {
         },
       };
     },
-    function hide_pagination(context, options) {
-      return {
-        name: 'hide-pagination',
-        injectHtmlTags({ content }) {
-          return {
-            postBodyTags: [
-              {
-                tagName: 'script',
-                attributes: {
-                  charset: 'utf-8',
-                  src: BASE_URL + 'js/hide_pagination.js',
-                },
-              }
-            ],
-          };
-        },
-      };
-    },
+    // function hide_pagination(context, options) {
+    //   return {
+    //     name: 'hide-pagination',
+    //     injectHtmlTags({ content }) {
+    //       return {
+    //         postBodyTags: [
+    //           {
+    //             tagName: 'script',
+    //             attributes: {
+    //               charset: 'utf-8',
+    //               src: BASE_URL + 'js/hide_pagination.js',
+    //             },
+    //           }
+    //         ],
+    //       };
+    //     },
+    //   };
+    // },
     'docusaurus-plugin-sass',
   ],
   themes: ['docusaurus-live-brython']

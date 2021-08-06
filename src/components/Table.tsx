@@ -22,14 +22,28 @@ interface CellProps {
   value: string | JSX.Element;
   icon?: JSX.Element;
   align?: "left" | "center" | "right" | "justify" | "char";
+  date?: Date;
 }
 
+
+const toDateString = (date: Date) => {
+  const day = date.getDay()
+  // return `${WEEK_DAYS[day]}. ${String(d.getDate()).padStart(2,'0')}.${String(d.getMonth() + 1).padStart(2,'0')}.`;
+  return (
+    <span style={{fontFamily: 'monospace'}}>
+    {WEEK_DAYS[day]}. {String(date.getDate()).padStart(2,'0')}.{String(date.getMonth() + 1).padStart(2,'0')}.
+    </span>)
+}
 export class Cell extends React.Component<CellProps> {
 
   render() {
-    const { align, icon } = this.props;
+    const { align, icon, date } = this.props;
+    var value = this.props.value;
+    if (date) {
+      value = toDateString(date);
+    }
     return (
-      <td align={align}>{this.props.value}{icon ? ' ' : ''}{icon}</td>
+      <td align={align}>{value}{icon ? ' ' : ''}{icon}</td>
     )
   }
 }
@@ -41,6 +55,23 @@ interface iRow {
 
 interface RowProps extends iRow {
   alignments?: ("left" | "center" | "right" | "justify" | "char")[];
+  dateIndex?: number;
+}
+
+const WEEK_DAYS = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+const getDate = (date: String) => {
+  const parts = date.match(/(?<d>\d+)\.(?<m>\d+)\.(?<y>\d+)/);
+  if (!parts || !parts.groups) {
+    return;
+  }
+  return new Date(`${parts.groups.y}-${parts.groups.m}-${parts.groups.d}`);
+
+}
+
+const weekNumber = (date: Date) => {
+  var oneJan = new Date(date.getFullYear(), 0, 1);
+  var numberOfDays = Math.floor((date.getTime() - oneJan.getTime()) / (24 * 60 * 60 * 1000));
+  return Math.ceil(numberOfDays / 7) + 1;
 }
 
 
@@ -59,6 +90,20 @@ export class Row extends React.Component<RowProps> {
     if (type) {
       props.className = styles[type];
     }
+
+    var date = undefined;
+    if (this.props.dateIndex !== undefined && this.props.dateIndex >= 0) {
+      const c = cells[this.props.dateIndex];
+      if (typeof c === 'string') {
+        date = getDate(c);
+        if (date && weekNumber(new Date()) === weekNumber(date)) {
+          props.className = `${props.className} ${styles.currentWeek}`
+        }
+
+      }
+    }
+
+
     return (
       <tr {...props}>
         {
@@ -72,7 +117,7 @@ export class Row extends React.Component<RowProps> {
             } else {
               cellProps.align = 'left';
             }
-            return <Cell {...cellProps} key={idx} />
+            return <Cell {...cellProps} key={idx} date={this.props.dateIndex === idx ? date : undefined} />
           })
         }
       </tr>
@@ -81,7 +126,7 @@ export class Row extends React.Component<RowProps> {
 }
 
 interface TableProps {
-  header?: iRow[];
+  header?: string[];
   rows: iRow[];
   alignments?: ("left" | "center" | "right" | "justify" | "char")[];
   size?: 'tiny' | 'small' | 'normal' | 'large';
@@ -95,6 +140,7 @@ interface TableProps {
 export default class Table extends React.Component<TableProps> {
   render() {
     const props: any = {}
+    const dateIndex = (this.props.header || []).indexOf('Datum');
     return (
       <table
         style={{ display: 'table', borderCollapse: 'collapse' }}
@@ -126,7 +172,7 @@ export default class Table extends React.Component<TableProps> {
         <tbody>
           {
             this.props.rows.map((row, idx) => {
-              return <Row alignments={this.props.alignments} {...row} key={idx} />
+              return <Row alignments={this.props.alignments} {...row} key={idx} dateIndex={dateIndex} />
             })
           }
         </tbody>

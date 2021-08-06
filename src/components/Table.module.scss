@@ -48,6 +48,9 @@ table.ofi-table {
     &.info {
       --table-background-color: var(--ifm-color-info-lightest);
     }
+    &.currentWeek {
+      border-left: 8px solid var(--ifm-color-warning-lighter);
+    }
   }
 
   td,

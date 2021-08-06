@@ -7,6 +7,9 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
+    "add": "node material_add.js",
+    "sync": "node material_sync.js",
+    "remove": "node material_remove.js",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
@@ -51,6 +54,8 @@
     "@types/react": "^17.0.11",
     "@types/react-helmet": "^6.1.1",
     "@types/react-router-dom": "^5.1.7",
+    "minimist": "^1.2.5",
+    "rsync": "^0.6.1",
     "typescript": "^4.3.4"
   }
 }
