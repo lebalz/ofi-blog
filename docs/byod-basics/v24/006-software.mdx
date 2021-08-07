@@ -10,11 +10,11 @@ import { faWindows } from "@fortawesome/free-brands-svg-icons"
 
 > Der Ausdruck **Software** ist ein Kunstwort, das von John W. Tukey im Jahr 1958 im American Mathematical Monthly als Gegenstück zu dem wesentlich älteren Wort **Hardware** das erste Mal verwendet wurde. Dabei bezeichnet **Hardware alle physischen Bestandteile eines Computers**. In diesem Sinn könnten unter Software – als dem Gegenstück zur Hardware – grundsätzlich alle elektronisch gespeicherten Daten verstanden werden. Als Software werden jedoch nur Programme (bspw. Word oder Firefox) bezeichnet - die damit erzeugten Dateien/Daten werden jedoch nicht als solche bezeichnet. [^1]
 
-Im folgenden werden gängige Abläufe zu verschiedener Software auf dem BYOD-Gerät gezeigt. Oft gibt es mehr als eine Möglichkeit, das gewünschte Ziel zu erreichen (bspw. über Tastenkürzel, sog. "Shortcuts"). Es steht Ihnen frei, auch eigene Varianten auszuprobieren oder sich anzueignen. 
+Im folgenden werden gängige Abläufe zu verschiedener Software auf dem BYOD-Gerät gezeigt. Oft gibt es mehr als eine Möglichkeit, das gewünschte Ziel zu erreichen (bspw. über Tastenkürzel, sog. "Shortcuts"). Es steht Ihnen frei, auch eigene Varianten auszuprobieren und sich anzueignen. 
 
 ## Fotos / Videos
 
-### Bildschrimfoto erstellen
+### Bildschirmfoto erstellen
 
 <OsTabs>
 <TabItem value="win">
@@ -30,6 +30,15 @@ Im folgenden werden gängige Abläufe zu verschiedener Software auf dem BYOD-Ger
 
 </TabItem>
 <TabItem value="mac">
+
+![Bildschirmfoto](/img/byod-basics/osx/apps_bildschirmfoto.png)
+
+1. In Spotlight nach `Bildschirmfoto` (französisch: `captures`) suchen
+2. Es gibt unterschiedliche Optionen um eine Bildschirmaufnahme zu erfassen:
+
+
+![Bildschirmfoto Aufnehmen](/img/byod-basics/osx/take_screenshot.png)
+
 </TabItem>
 </OsTabs>
 
@@ -50,7 +59,10 @@ Optional kann das Video zuerst noch zugeschnitten werden.
 </TabItem>
 <TabItem value="mac">
 
-<Video src={useBaseUrl('/img/byod-basics/osx/create_screencast.mp4')} />
+Auf Mac OSx lassen sich mit dem App **Bildschirmfoto** ebenfalls Screencasts (Videoaufnahmen des Bildschirms) aufnehmen.
+
+![Bildschirmfoto](/img/byod-basics/osx/apps_bildschirmfoto.png)
+
 
 </TabItem>
 </OsTabs>
@@ -84,14 +96,7 @@ src={useBaseUrl('/img/byod-basics/win/edit_picture1.mp4')}
 
 </TabItem>
 <TabItem value="mac">
-
-
-<Video title="Zeichnung hinzufügen" src={useBaseUrl('/img/byod-basics/osx/edit_picture1.mp4')}>
-</Video>
-
-<Video title="Zuschneiden/Drehen" src={useBaseUrl('/img/byod-basics/osx/edit_picture2.mp4')} />
-
-
+<Video title="Foto zuschneiden, drehen und bearbeiten" src={useBaseUrl('/img/byod-basics/osx/edit_picture.mp4')}/>
 </TabItem>
 </OsTabs>
 
@@ -110,7 +115,12 @@ src={useBaseUrl('/img/byod-basics/win/edit_picture1.mp4')}
 </TabItem>
 <TabItem value="mac">
 
-<Video title="Video zuschneiden" src={useBaseUrl('/img/byod-basics/osx/shorten_video.mp4')} />
+<Video title="Video zuschneiden" src={useBaseUrl('/img/byod-basics/osx/shorten_video.mp4')} >
+
+1. Video mit "QuickTime" öffnen (doppelklicken)
+2. `Bearbeiten > Kürzen`
+
+</Video>
 
 </TabItem>
 </OsTabs>
@@ -118,20 +128,48 @@ src={useBaseUrl('/img/byod-basics/win/edit_picture1.mp4')}
 
 ## Browser
 
+Vergewissern Sie sich, dass Sie folgende Aufgaben ohne weiteres im Browser ihrer Wahl (bspw. Firefox, Chrome, Edge, Safari...) durchführen können:
+
 - Internetseite aufrufen (bspw. `https://srf.ch`)
 - Auf Seite suchen (`Ctrl+f` oder `Einstellungen > Auf Seite suchen`)
 - Seite drucken (`Ctrl+p`)
-- URL kürzen um sie einfacher zu teilen, bspw. mit [https://bitly.com/](https://bitly.com/)
 - Neuer Tab öffnen (`Ctrl+t`)
-- Privates Fenster öffnen (*Inkognito Mode*) - hier werden alle persönlichen Daten nach dem Schliessen *aller* privater Fenster wieder gelöscht. So werden Sie bspw. auch von allen angemeldeten Websites automatisch abgemeldet und auch "Automatische Logins" werden verworfen. Auf fremden Laptops empfielt sich also der private Modus.  
+- <details>
+<summary>Privates Fenster öffnen (<i>Inkognito Mode</i>)</summary>
+hier werden alle persönlichen Daten nach dem Schliessen des Fensters wieder gelöscht. So werden Sie bspw. auch von allen angemeldeten Websites automatisch abgemeldet und auch "Automatische Logins" werden verworfen. Auf fremden Laptops empfielt sich also der private Modus.
+</details>
+
+- URL kürzen um sie einfacher zu teilen, bspw. mit [https://bitly.com/](https://bitly.com/)
 
 ## Mailprogramm & Kalender
 
-- **Voraussetzung** GBSL Mail ist in einem Mailprogramm (bspw. im Programm "Mail") Eingerichtet.
+Sie richten ihr Mail-Konto auf einem Mailprogramm (bspw. im Programm "Mail") ein und können anschliessend die folgenden Aufgaben durchführen:
 
-- Neue Mail schreiben
-- Neuen Kalender-Eintrag erstellen (bspw. über die Kalender-App)
-- Mail-Signatur hinzufügen/ändern
+- Eine neue Mail schreiben und verschicken
+
+<details>
+<summary>Eine Mail-Signatur hinzufügen/ändern.</summary>
+
+Als Signatur wird ein Textabschnitt bezeichnet, der häufig am Ende von E-Mails, Usenet-Postings oder Beiträgen in Internetforen steht und Angaben zum Absender enthält.
+
+Etablierte Konvention ist, eine Signatur durch einen Signaturtrenner vom Nachrichtentext abzutrennen. Dieser besteht aus einer Zeile, die nur die Zeichenfolge „-- “ (zwei Bindestriche und ein Leerzeichen) enthält.[3] Dadurch ermöglicht man es den meisten E-Mail-Programmen und Newsreadern, eine Signatur automatisch zu erkennen und beim Antworten nicht zu zitieren.[^2]
+
+Beispiel für eine Signatur:
+
+```txt {5-9}
+Hallo,
+das ist ein Beispieltext, um Signaturen zu demonstrieren.
+Viele Grüße
+Reto
+--
+Reto Holzer
+Holzerstrasse. 8, 2502 Biel
+Tel.: +41 079 123 45 67
+E-Mail: reto@holzer.ch
+````
+</details>
+
+- Einen neuen Kalender-Eintrag erstellen (bspw. über die Kalender-App)
 
 
 <OsTabs>
@@ -239,7 +277,7 @@ Nachrichten an Lehrpersonen werden mit **Sorgfalt** geschrieben. Es gehört eine
 > Mark Muster, 24z
 
 :::warning Teams ≠ WhatsApp
-Auch wenn Sie nur eine kurze Frage haben gehört die Anrede und Schlussformel dazu (es ist **kein WhatsApp-Chat unter Freunden**!).
+Auch wenn Sie nur eine kurze Frage haben, gehört die Anrede und Schlussformel dazu (es ist **kein WhatsApp-Chat unter Freunden**!).
 
 Entwickelt sich durch die Antwort der Lehrperson einen Chat-Charakter (daher die Lehrperson schreibt innerhalb kurzer Zeit zurück und Sie haben eine Rückfrage zum selben Thema), darf die Anrede und die Schlussformel anschliessend für diese Unterhaltung weggelassen werden.
 :::
@@ -288,3 +326,4 @@ Gelöschte Dateien können **online** während 30 Tagen wiederhergestellt werden
 
 
 [^1]: Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Software#Etymologie)
+[^2]: Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Signatur_(E-Mails_und_Postings))
