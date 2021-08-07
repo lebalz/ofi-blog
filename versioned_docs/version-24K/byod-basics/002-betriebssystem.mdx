@@ -2,6 +2,7 @@ import OsTabs from '@site/src/components/OsTabs'
 import TabItem from '@theme/TabItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindows } from "@fortawesome/free-brands-svg-icons"
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Video from '@site/src/components/Video'
 
 # Betriebssystem
@@ -16,7 +17,7 @@ import Video from '@site/src/components/Video'
 
 Es kann nach Programmen, Ordnern, Dateien, aber auch z.B. nach dem Wetter gesucht werden.
 
-![](./../../../static/img/byod-basics/win/global_search.png)
+![](/img/byod-basics/win/global_search.png)
 
 </TabItem>
 <TabItem value="mac">
@@ -26,7 +27,7 @@ Es kann nach Programmen, Ordnern, Dateien, aber auch z.B. nach dem Wetter gesuch
 
 Es kann nach Programmen, Ordnern, Dateien, aber auch z.B. nach dem Wetter gesucht werden.
 
-![](./../../../static/img/byod-basics/osx/global_search.png)
+![](/img/byod-basics/osx/global_search.png)
 </TabItem>
 </OsTabs>
 
@@ -36,9 +37,9 @@ Wenns mal spät wird - Augenschonender Bildschirm um den Schlafrhythmus nicht zu
 
 <OsTabs>
   <TabItem value="win">
-    <Video src={require('./../../../static/img/byod-basics/win/nightshift.mp4').default} />
+    <Video src={useBaseUrl('/img/byod-basics/win/nightshift.mp4')} />
   </TabItem>
   <TabItem value="mac">
-    <Video src={require('./../../../static/img/byod-basics/osx/nightshift.mp4').default} />
+    <Video src={useBaseUrl('/img/byod-basics/osx/nightshift.mp4')} />
   </TabItem>
 </OsTabs>
