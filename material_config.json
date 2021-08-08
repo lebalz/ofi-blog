@@ -44,5 +44,13 @@
       ]
     }
   ],
-  "25h": []
+  "25h": [
+    {
+      "from": "docs/byod-basics/v25/",
+      "to": "versioned_docs/version-25h/byod-basics",
+      "ignore": [
+        "_category_.json"
+      ]
+    }
+  ]
 }
