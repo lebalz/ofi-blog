@@ -16,8 +16,20 @@ const relative2Doc = (path) => {
     return path;
 }
 
+const ensureTrailingSlash = (path) => {
+    if (typeof path !== 'string') {
+        return path;
+    }
+    if (path.endsWith('/')) {
+        return path;
+    }
+    return `${path}/`
+}
+
 Object.keys(CONFIG).forEach((klass) => {
     const config = CONFIG[klass];
+    const gitignore = [];
+    const classDir = `versioned_docs/version-${klass}/`;
     config.forEach((src) => {
         var srcPath = undefined
         var toPath = undefined
@@ -25,24 +37,25 @@ Object.keys(CONFIG).forEach((klass) => {
         switch (typeof src) {
             case 'string':
                 srcPath = src;
-                toPath = `versioned_docs/version-${klass}/${relative2Doc(src)}`;
+                toPath = `${classDir}${relative2Doc(src)}`;
                 break;
             case 'object':
                 srcPath = src.from;
                 if (src.to) {
                     toPath = src.to
                 } else {
-                    toPath = `versioned_docs/version-${klass}/${relative2Doc(src)}`
+                    toPath = `${classDir}${relative2Doc(src)}`
                 }
                 ignore = src.ignore;
                 break;
         }
         const isDir = fs.lstatSync(srcPath).isDirectory()
-        if (isDir && !srcPath.endsWith('/')) {
-            srcPath = srcPath + '/';
+        if (isDir) {
+            srcPath = ensureTrailingSlash(srcPath);
         }
 
         if (isDir) {
+            gitignore.push(ensureTrailingSlash(toPath.replace(classDir, '')))
             const rsync = new Rsync()
                 .source(srcPath)
                 .destination(toPath)
@@ -50,6 +63,7 @@ Object.keys(CONFIG).forEach((klass) => {
                 .delete();
             if (ignore) {
                 rsync.exclude(ignore)
+                gitignore.push(`!${ignore}`)
             }
             // console.log(rsync.command())
             rsync.execute((err, code, cmd) => {
@@ -57,7 +71,9 @@ Object.keys(CONFIG).forEach((klass) => {
             })
         } else {
             fs.writeFileSync(srcPath, toPath);
+            gitignore.push(toPath.replace(classDir, ''))
         }
+        fs.writeFileSync(`${classDir}.gitignore`, gitignore.join("\n"))
 
     })
 })
