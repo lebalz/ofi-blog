@@ -51,6 +51,4 @@ jobs:
             npm i
           fi
           npm run sync
-          git add .
-          git commit -am "synced files"
           npm run deploy
