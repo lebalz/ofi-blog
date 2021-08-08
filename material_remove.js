@@ -1,18 +1,21 @@
 const fs = require('fs');
-const { argv } = require('process');
 const CONFIG_FILE = './material_config.json'
 const configs = require(CONFIG_FILE);
+var argv = require('minimist')(process.argv.slice(2));
 
-console.log('remove:', argv.slice(2))
+if (argv.help) {
+    console.log(`
+yarn run remove [source] [[--from="v1,v2"]]
 
+examples:
 
-var toRemove = argv.slice(2);
-var klassen = Object.keys(configs);
-if (toRemove.includes('--from')) {
-    const idx = toRemove.indexOf('--from');
-    klassen = toRemove.slice(idx + 1);
-    toRemove = toRemove.slice(0, idx);
+yarn run remove docs/byod-basics/v24/ --from="24a,24b"
+`)
+    exit(0)
 }
+
+const toRemove = argv._;
+var klassen = argv.from ? argv.from.split(',') : Object.keys(configs);
 
 const DOC_PATH = 'docs/'
 
@@ -28,8 +31,6 @@ const relative2Doc = (path) => {
     return path;
 }
 
-console.log(toRemove, klassen)
-
 klassen.forEach((klass) => {
     const config = configs[klass];
     const keepedFiles = [];
@@ -38,7 +39,7 @@ klassen.forEach((klass) => {
         const to = (typeof src === 'object' && src.to) ? src.to : `versioned_docs/version-${klass}/${relative2Doc(src)}` ;
         var keep = true;
         toRemove.forEach((rmSrc) => {
-            console.log(from, rmSrc)
+            console.log(from, rmSrc, from === rmSrc)
             if (from === rmSrc) {
                 keep = false;
                 if (fs.existsSync(to)) {

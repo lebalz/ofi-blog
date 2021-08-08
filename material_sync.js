@@ -21,7 +21,7 @@ Object.keys(CONFIG).forEach((klass) => {
     config.forEach((src) => {
         var srcPath = undefined
         var toPath = undefined
-        var exclude = undefined;
+        var ignore = undefined;
         switch (typeof src) {
             case 'string':
                 srcPath = src;
@@ -34,7 +34,7 @@ Object.keys(CONFIG).forEach((klass) => {
                 } else {
                     toPath = `versioned_docs/version-${klass}/${relative2Doc(src)}`
                 }
-                exclude = src.exclude;
+                ignore = src.ignore;
                 break;
         }
         const isDir = fs.lstatSync(srcPath).isDirectory()
@@ -48,8 +48,8 @@ Object.keys(CONFIG).forEach((klass) => {
                 .destination(toPath)
                 .archive()
                 .delete();
-            if (exclude) {
-                rsync.exclude(src.exclude)
+            if (ignore) {
+                rsync.exclude(ignore)
             }
             // console.log(rsync.command())
             rsync.execute((err, code, cmd) => {
