@@ -48,7 +48,7 @@ export default class Video extends React.Component<Props> {
     const { title, src, type, children } = this.props;
 
     return (
-      <div ref={this.videoRef}>
+      <div ref={this.videoRef} className={styles.videoComponent}>
         {this.state.open ? (
           <div className={styles.cardOpen}>
             <div className={styles.headerOpen}>

@@ -3638,10 +3638,10 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
-docusaurus-live-brython@^0.0.1-beta.4.111:
-  version "0.0.1-beta.4.111"
-  resolved "https://registry.yarnpkg.com/docusaurus-live-brython/-/docusaurus-live-brython-0.0.1-beta.4.111.tgz#1547561067c553d8b05da3b2475bdcb957f78457"
-  integrity sha512-7arybKSCgmOSEmXmb8Ov6MCM/vr7d6LXSU8Fyo0WW+mGWRN/g0XDyyP18hQOtOcAHxHq+0qkVtxsTxK8yOy2SA==
+docusaurus-live-brython@^0.0.1-beta.4.114:
+  version "0.0.1-beta.4.114"
+  resolved "https://registry.yarnpkg.com/docusaurus-live-brython/-/docusaurus-live-brython-0.0.1-beta.4.114.tgz#ca973ce58c64cd5e9ff0b2dbf023ac4eb547b55c"
+  integrity sha512-xC5cdNT7mh9l4ViF3cJElcwL+BSiirZPHcWynKYY0xKv0x2yuY8Hvk9T0za/6QBcsAafPoZkUJz84XWHt/asWA==
   dependencies:
     "@docusaurus/core" "2.0.0-beta.4"
     "@fortawesome/free-brands-svg-icons" "^5.15.3"
@@ -9005,6 +9005,11 @@ type-is@~1.6.17, type-is@~1.6.18:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.24"
+
+typed.js@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.12.tgz#246aff074c8e18d32ec27acb7be15094ac0bc0e1"
+  integrity sha512-lyACZh1cu+vpfYY3DG/bvsGLXXbdoDDpWxmqta10IQUdMXisMXOEyl+jos+YT9uBbzK4QaKYBjT3R0kTJO0Slw==
 
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"
