@@ -1,5 +1,5 @@
 <!--?xml version="1.0" standalone="no"?-->
-<svg id="ofi_blog_24f_Programmieren_1_Turtlegrafik_intro__Stift_und_Punkte_svg" width="90" height="90" xmlns="http://www.w3.org/2000/svg" viewBox="245,165,90,90">
+<svg id="ofi_blog_Programmieren_1_Turtlegrafik_intro__Stift_und_Punkte_svg" width="90" height="94" xmlns="http://www.w3.org/2000/svg" viewBox="245,161,90,94">
 <g transform="translate(250 250)">
 <line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
 <circle cx="0" cy="0" r="5" fill="black" style=""></circle>
@@ -13,9 +13,30 @@
 <circle cx="80" cy="-80" r="5" fill="black" style=""></circle>
 <line x1="80" y1="-80" x2="0" y2="-80" opacity="0" style="stroke: black; stroke-width: 1;"></line>
 <circle cx="0" cy="-80.00000000000001" r="5" fill="black" style=""></circle>
-<line x1="0" y1="-80.00000000000001" x2="-1.4695761589768237e-14" y2="-80.00000000000001" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="-80.00000000000001" x2="0" y2="-80.00000000000001" opacity="0" style="stroke: black; stroke-width: 1;"></line>
 </g>
 <g transform="translate(250 250)">
-<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(-1.4695761589768237e-14,-1.4210854715202004e-14) rotate(-360,0,0)"></polygon>
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="0" transform="translate(0.0,-80.00000000000001) rotate(-360,0,0)"></polygon>
 </g>
-</svg>
+<metadata><raw>from turtle import *
+
+penup()
+dot(10)
+forward(40)
+left(90)
+
+forward(40)
+dot(10)
+right(180)
+forward(40)
+left(90)
+forward(40)
+dot(10)
+left(90)
+forward(80)
+dot(10)
+left(90)
+forward(80)
+dot(10)
+left(90)
+hideturtle()</raw></metadata></svg>

@@ -51,10 +51,12 @@ Befehlsname
 :::
 
 :::aufgabe Aufgabe 1
-Ändern Sie das Programm "Quadrat" so ab, dass es:
-- doppelt so gross gezeichnet wird
-- um 45° nach links gedreht gezeichnet wird 
+Ändern Sie das Programm "Quadrat" so ab, dass:
+- das Quadrat doppelt so gross gezeichnet wird
+- das Quadrat um 45° nach links gedreht gezeichnet wird 
 :::
+
+## Ein weiteres Programm
 
 ```py live_py title=Stift-und-Punkte
 from turtle import *
@@ -79,7 +81,11 @@ left(90)
 forward(80) 
 ```
 :::aufgabe Aufgabe 2
-Erweitern Sie das Programm so, dass die gewürfelte Zahl `5` gezeichnet wird:
+Versuchen Sie nachzuvollziehen, welche Zeile was macht.
+
+Erweitern Sie dann das Programm so, dass die gewürfelte Zahl `5` gezeichnet wird:
 
 ![Würfel 5](./img/wuerfel-5.svg)
+
+Tipp: mit `hideturtle()` kann die Turtle unsichtbar gemacht werden.
 :::
