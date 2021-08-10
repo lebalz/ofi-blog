@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const CONFIG_FILE = './material_config.json'
 const configs = require(CONFIG_FILE);
 var argv = require('minimist')(process.argv.slice(2));
@@ -31,16 +32,30 @@ const relative2Doc = (path) => {
     return path;
 }
 
+const ensureTrailingSlash = (path) => {
+    if (typeof path !== 'string') {
+        return path;
+    }
+    if (path.endsWith('/')) {
+        return path;
+    }
+    return `${path}/`
+}
+
 klassen.forEach((klass) => {
     const config = configs[klass];
     const keepedFiles = [];
     config.forEach((src) => {
-        const from = typeof src === 'string' ? src : src.from;
+        const from = `${DOC_PATH}${relative2Doc(typeof src === 'string' ? src : src.from)}`;
         const to = (typeof src === 'object' && src.to) ? src.to : `versioned_docs/version-${klass}/${relative2Doc(src)}` ;
         var keep = true;
         toRemove.forEach((rmSrc) => {
-            console.log(from, rmSrc, from === rmSrc)
-            if (from === rmSrc) {
+            var toRmSrc = `${DOC_PATH}${relative2Doc(rmSrc)}` 
+            if (fs.lstatSync(toRmSrc).isDirectory()) {
+                toRmSrc = ensureTrailingSlash(toRmSrc);
+            }
+            console.log(from, toRmSrc, from === toRmSrc)
+            if (from === toRmSrc) {
                 keep = false;
                 if (fs.existsSync(to)) {
                     console.log('- remove', to, 'from', klass);
@@ -48,7 +63,12 @@ klassen.forEach((klass) => {
                         console.log('rm dir', to)
                         fs.rmdirSync(to, { recursive: true, force: true });
                     } else {
-                        fs.rmSync(to);
+                        let parent = path.dirname(to);
+                        fs.unlinkSync(to);
+                        while (fs.readdirSync(parent).length === 0) {
+                            fs.rmdirSync(parent, { recursive: true, force: true });
+                            parent = path.dirname(parent);
+                        }
                     }
                 } else {
                     console.log('- unset', to, 'from', klass);

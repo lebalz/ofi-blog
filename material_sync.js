@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const Rsync = require('rsync');
 const CONFIG = require('./material_config.json')
 
@@ -53,6 +54,10 @@ Object.keys(CONFIG).forEach((klass) => {
         if (isDir) {
             srcPath = ensureTrailingSlash(srcPath);
         }
+        const parent = path.dirname(toPath);
+        if (!fs.existsSync(parent)) {
+            fs.mkdirSync(parent, {recursive: true})
+        }
 
         if (isDir) {
             gitignore.push(ensureTrailingSlash(toPath.replace(classDir, '')))
@@ -65,12 +70,13 @@ Object.keys(CONFIG).forEach((klass) => {
                 rsync.exclude(ignore)
                 gitignore.push(`!${ignore}`)
             }
+            rsync.exclude('.sync.*')
             // console.log(rsync.command())
             rsync.execute((err, code, cmd) => {
                 console.log('finished', err, code, cmd)
             })
         } else {
-            fs.writeFileSync(srcPath, toPath);
+            fs.copyFileSync(srcPath, toPath);
             gitignore.push(toPath.replace(classDir, ''))
         }
         fs.writeFileSync(`${classDir}.gitignore`, gitignore.join("\n"))

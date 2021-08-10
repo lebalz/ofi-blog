@@ -6,6 +6,26 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/software-installation/images/vscode-1.59/",
+      "to": "versioned_docs/version-24f/03-Software/images/vscode-1.59",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/vscode-1.59.mdx",
+      "to": "versioned_docs/version-24f/03-Software/02-vscode.mdx",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/images/python-3.9/",
+      "to": "versioned_docs/version-24f/03-Software/images/python-3.9",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/python-3.9.mdx",
+      "to": "versioned_docs/version-24f/03-Software/01-python.mdx",
+      "ignore": []
     }
   ],
   "24i": [
@@ -15,6 +35,26 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/software-installation/images/vscode-1.59/",
+      "to": "versioned_docs/version-24i/03-Software/images/vscode-1.59",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/vscode-1.59.mdx",
+      "to": "versioned_docs/version-24i/03-Software/02-vscode.mdx",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/images/python-3.9/",
+      "to": "versioned_docs/version-24i/03-Software/images/python-3.9",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/python-3.9.mdx",
+      "to": "versioned_docs/version-24i/03-Software/01-python.mdx",
+      "ignore": []
     }
   ],
   "24K": [
@@ -24,6 +64,26 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/software-installation/images/vscode-1.59/",
+      "to": "versioned_docs/version-24K/03-Software/images/vscode-1.59",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/vscode-1.59.mdx",
+      "to": "versioned_docs/version-24K/03-Software/02-vscode.mdx",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/images/python-3.9/",
+      "to": "versioned_docs/version-24K/03-Software/images/python-3.9",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/python-3.9.mdx",
+      "to": "versioned_docs/version-24K/03-Software/01-python.mdx",
+      "ignore": []
     }
   ],
   "24L": [
@@ -33,6 +93,26 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/software-installation/images/vscode-1.59/",
+      "to": "versioned_docs/version-24L/03-Software/images/vscode-1.59",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/vscode-1.59.mdx",
+      "to": "versioned_docs/version-24L/03-Software/02-vscode.mdx",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/images/python-3.9/",
+      "to": "versioned_docs/version-24L/03-Software/images/python-3.9",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/python-3.9.mdx",
+      "to": "versioned_docs/version-24L/03-Software/01-python.mdx",
+      "ignore": []
     }
   ],
   "24o": [
@@ -42,6 +122,26 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/software-installation/images/vscode-1.59/",
+      "to": "versioned_docs/version-24o/03-Software/images/vscode-1.59",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/vscode-1.59.mdx",
+      "to": "versioned_docs/version-24o/03-Software/02-vscode.mdx",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/images/python-3.9/",
+      "to": "versioned_docs/version-24o/03-Software/images/python-3.9",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/python-3.9.mdx",
+      "to": "versioned_docs/version-24o/03-Software/01-python.mdx",
+      "ignore": []
     }
   ],
   "25h": [
