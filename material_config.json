@@ -26,6 +26,11 @@
       "from": "docs/software-installation/python-3.9.mdx",
       "to": "versioned_docs/version-24f/03-Software/01-python.mdx",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/v24/",
+      "to": "versioned_docs/version-24f/04-Programmieren-1",
+      "ignore": []
     }
   ],
   "24i": [
@@ -54,6 +59,11 @@
     {
       "from": "docs/software-installation/python-3.9.mdx",
       "to": "versioned_docs/version-24i/03-Software/01-python.mdx",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/v24/",
+      "to": "versioned_docs/version-24i/04-Programmieren-1",
       "ignore": []
     }
   ],
@@ -84,6 +94,11 @@
       "from": "docs/software-installation/python-3.9.mdx",
       "to": "versioned_docs/version-24K/03-Software/01-python.mdx",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/v24/",
+      "to": "versioned_docs/version-24K/04-Programmieren-1",
+      "ignore": []
     }
   ],
   "24L": [
@@ -113,6 +128,11 @@
       "from": "docs/software-installation/python-3.9.mdx",
       "to": "versioned_docs/version-24L/03-Software/01-python.mdx",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/v24/",
+      "to": "versioned_docs/version-24L/04-Programmieren-1",
+      "ignore": []
     }
   ],
   "24o": [
@@ -141,6 +161,11 @@
     {
       "from": "docs/software-installation/python-3.9.mdx",
       "to": "versioned_docs/version-24o/03-Software/01-python.mdx",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/v24/",
+      "to": "versioned_docs/version-24o/04-Programmieren-1",
       "ignore": []
     }
   ],
