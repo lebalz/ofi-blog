@@ -21,10 +21,9 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
+          to: 'playground',
           position: 'left',
-          docId: 'home',
-          label: 'Material'
+          label: 'Playground'
         }
       ]
     },
