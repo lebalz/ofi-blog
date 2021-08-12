@@ -1,4 +1,4 @@
-const BASE_URL = '/ofi-blog/';
+const BASE_URL = '/';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
