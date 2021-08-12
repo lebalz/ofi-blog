@@ -54,8 +54,13 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
-```console
-GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
+Setup github actions to deploy your page on each push to the main branch.
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### Custom Domain
+
+- Add a `CNAME` File to the static directory
+- Disable CLoudflare "DNS Proxy" temporarly
+- Deploy
+- Let Github generate SSL certificates for you
+- Check "Enforce https:"
+- Re-Enable DNS Proxy on Cloudflare again.
