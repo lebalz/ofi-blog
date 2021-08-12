@@ -8,10 +8,11 @@ interface Props {
   src: string;
   type?: "mp4";
   title?: string | JSX.Element;
+  expanded?: boolean;
 }
 
 export default class Video extends React.Component<Props> {
-  state = { open: false, visible: false };
+  state = { open: !!this.props.expanded, visible: false };
 
   videoRef = React.createRef<HTMLDivElement>();
   //attach our function to document event listener on scrolling whole doc
@@ -94,7 +95,7 @@ export default class Video extends React.Component<Props> {
               {children && <div className={styles.description}>{children}</div>}
             </div>
             {this.state.visible ? (
-                <video style={{ marginLeft: "auto" }} autoPlay height="150px" loop>
+                <video style={{ marginLeft: "auto" }} autoPlay controls height="150px" loop>
                   <source src={src} type={`video/${type || "mp4"}`} />
                 </video>
             ) : (
