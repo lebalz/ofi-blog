@@ -3,6 +3,8 @@ const BASE_URL = '/';
 const visit = require("unist-util-visit");
 const path = require("path");
 const fs = require("fs")
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 const remarkAuthorInfos = () => {
   const transformer = (root, file) => {
@@ -160,6 +162,8 @@ module.exports = {
             }
           },
           beforeDefaultRemarkPlugins: [remarkAuthorInfos],
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         theme: {
           customCss: [
@@ -232,5 +236,13 @@ module.exports = {
     //   };
     // },
   ],
-  themes: ['docusaurus-live-brython']
+  themes: ['docusaurus-live-brython'],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
+      integrity:
+        'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
+      crossorigin: 'anonymous',
+    },
+  ],
 };

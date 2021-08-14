@@ -27,7 +27,7 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24f/005-Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24f/05-Netzwerke/001-Schichtenmodell",
       "ignore": []
     },
     {
@@ -36,6 +36,11 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/Netzwerke-of/Begriffe/",
+      "to": "versioned_docs/version-24f/05-Netzwerke/002-Begriffe",
+      "ignore": []
     }
   ],
   "24i": [
@@ -66,7 +71,7 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24i/005-Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24i/05-Netzwerke/001-Schichtenmodell",
       "ignore": []
     },
     {
@@ -75,6 +80,11 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/Netzwerke-of/Begriffe/",
+      "to": "versioned_docs/version-24i/05-Netzwerke/002-Begriffe",
+      "ignore": []
     }
   ],
   "24K": [
@@ -105,7 +115,7 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24K/005-Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24K/05-Netzwerke/001-Schichtenmodell",
       "ignore": []
     },
     {
@@ -114,6 +124,11 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/Netzwerke-of/Begriffe/",
+      "to": "versioned_docs/version-24K/05-Netzwerke/002-Begriffe",
+      "ignore": []
     }
   ],
   "24L": [
@@ -144,7 +159,7 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24L/005-Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24L/05-Netzwerke/001-Schichtenmodell",
       "ignore": []
     },
     {
@@ -153,6 +168,11 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/Netzwerke-of/Begriffe/",
+      "to": "versioned_docs/version-24L/05-Netzwerke/002-Begriffe",
+      "ignore": []
     }
   ],
   "24o": [
@@ -183,7 +203,7 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24o/005-Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24o/05-Netzwerke/001-Schichtenmodell",
       "ignore": []
     },
     {
@@ -192,6 +212,11 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/Netzwerke-of/Begriffe/",
+      "to": "versioned_docs/version-24o/05-Netzwerke/002-Begriffe",
+      "ignore": []
     }
   ],
   "25h": [
