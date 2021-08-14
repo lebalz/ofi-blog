@@ -1,13 +1,6 @@
 {
   "24f": [
     {
-      "from": "docs/byod-basics/v24/",
-      "to": "versioned_docs/version-24f/byod-basics",
-      "ignore": [
-        "_category_.json"
-      ]
-    },
-    {
       "from": "docs/software-installation/images/vscode-1.59/",
       "to": "versioned_docs/version-24f/03-Software/images/vscode-1.59",
       "ignore": []
@@ -34,18 +27,18 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24f/Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24f/005-Netzwerke/001-Schichtenmodell",
       "ignore": []
-    }
-  ],
-  "24i": [
+    },
     {
       "from": "docs/byod-basics/v24/",
-      "to": "versioned_docs/version-24i/byod-basics",
+      "to": "versioned_docs/version-24f/02-BYOD-Basics",
       "ignore": [
         "_category_.json"
       ]
-    },
+    }
+  ],
+  "24i": [
     {
       "from": "docs/software-installation/images/vscode-1.59/",
       "to": "versioned_docs/version-24i/03-Software/images/vscode-1.59",
@@ -73,18 +66,18 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24i/Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24i/005-Netzwerke/001-Schichtenmodell",
       "ignore": []
-    }
-  ],
-  "24K": [
+    },
     {
       "from": "docs/byod-basics/v24/",
-      "to": "versioned_docs/version-24K/byod-basics",
+      "to": "versioned_docs/version-24i/02-BYOD-Basics",
       "ignore": [
         "_category_.json"
       ]
-    },
+    }
+  ],
+  "24K": [
     {
       "from": "docs/software-installation/images/vscode-1.59/",
       "to": "versioned_docs/version-24K/03-Software/images/vscode-1.59",
@@ -112,18 +105,18 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24K/Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24K/005-Netzwerke/001-Schichtenmodell",
       "ignore": []
-    }
-  ],
-  "24L": [
+    },
     {
       "from": "docs/byod-basics/v24/",
-      "to": "versioned_docs/version-24L/byod-basics",
+      "to": "versioned_docs/version-24K/02-BYOD-Basics",
       "ignore": [
         "_category_.json"
       ]
-    },
+    }
+  ],
+  "24L": [
     {
       "from": "docs/software-installation/images/vscode-1.59/",
       "to": "versioned_docs/version-24L/03-Software/images/vscode-1.59",
@@ -151,18 +144,18 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24L/Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24L/005-Netzwerke/001-Schichtenmodell",
       "ignore": []
-    }
-  ],
-  "24o": [
+    },
     {
       "from": "docs/byod-basics/v24/",
-      "to": "versioned_docs/version-24o/byod-basics",
+      "to": "versioned_docs/version-24L/02-BYOD-Basics",
       "ignore": [
         "_category_.json"
       ]
-    },
+    }
+  ],
+  "24o": [
     {
       "from": "docs/software-installation/images/vscode-1.59/",
       "to": "versioned_docs/version-24o/03-Software/images/vscode-1.59",
@@ -190,8 +183,15 @@
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
-      "to": "versioned_docs/version-24o/Netzwerke/001-Schichtenmodell",
+      "to": "versioned_docs/version-24o/005-Netzwerke/001-Schichtenmodell",
       "ignore": []
+    },
+    {
+      "from": "docs/byod-basics/v24/",
+      "to": "versioned_docs/version-24o/02-BYOD-Basics",
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "25h": [

@@ -34,7 +34,7 @@ Object.keys(CONFIG).forEach((klass) => {
     config.forEach((src) => {
         var srcPath = undefined
         var toPath = undefined
-        var ignore = undefined;
+        var ignore = [];
         switch (typeof src) {
             case 'string':
                 srcPath = src;
@@ -66,7 +66,7 @@ Object.keys(CONFIG).forEach((klass) => {
                 .destination(toPath)
                 .archive()
                 .delete();
-            if (ignore) {
+            if (ignore.length > 0) {
                 rsync.exclude(ignore)
                 gitignore.push(`!${ignore}`)
             }
