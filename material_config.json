@@ -31,6 +31,11 @@
       "from": "docs/Programmieren-1/v24/",
       "to": "versioned_docs/version-24f/04-Programmieren-1",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/001-Schichtenmodell/",
+      "to": "versioned_docs/version-24f/Netzwerke/001-Schichtenmodell",
+      "ignore": []
     }
   ],
   "24i": [
@@ -64,6 +69,11 @@
     {
       "from": "docs/Programmieren-1/v24/",
       "to": "versioned_docs/version-24i/04-Programmieren-1",
+      "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/001-Schichtenmodell/",
+      "to": "versioned_docs/version-24i/Netzwerke/001-Schichtenmodell",
       "ignore": []
     }
   ],
@@ -99,6 +109,11 @@
       "from": "docs/Programmieren-1/v24/",
       "to": "versioned_docs/version-24K/04-Programmieren-1",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/001-Schichtenmodell/",
+      "to": "versioned_docs/version-24K/Netzwerke/001-Schichtenmodell",
+      "ignore": []
     }
   ],
   "24L": [
@@ -133,6 +148,11 @@
       "from": "docs/Programmieren-1/v24/",
       "to": "versioned_docs/version-24L/04-Programmieren-1",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/001-Schichtenmodell/",
+      "to": "versioned_docs/version-24L/Netzwerke/001-Schichtenmodell",
+      "ignore": []
     }
   ],
   "24o": [
@@ -166,6 +186,11 @@
     {
       "from": "docs/Programmieren-1/v24/",
       "to": "versioned_docs/version-24o/04-Programmieren-1",
+      "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/001-Schichtenmodell/",
+      "to": "versioned_docs/version-24o/Netzwerke/001-Schichtenmodell",
       "ignore": []
     }
   ],
