@@ -1,0 +1,21 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+table.asciiTable {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  font-family: monospace;
+  text-align: center;
+  cursor: pointer;
+  > tbody {
+    > tr > td {
+    height: 3em;
+    padding: 0px;
+    &:hover {
+      background-color: yellow;
+    }
+  }
+  } 
+
+
+}
