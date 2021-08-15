@@ -85,7 +85,11 @@ const Answer = (props: Props) => {
   React.useEffect(() => {
     const id = `${pageId()}_${props.id}`;
     setMyId(id);
-    let saved = getItem(id, {value: DefaultValues(props)}).value;
+    let saved = getItem(id, {}).value;
+    if (saved === undefined) {
+      setLoaded(true);
+      return;
+    }
     if (props.type === "array") {
       if (Array.isArray(saved)) {
         if (saved.length > props.size) {
