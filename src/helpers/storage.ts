@@ -12,8 +12,22 @@ const checkExpiry = () => {
     }
 }
 
-const getItem = (key: string, default_val: any = undefined) => {
+const getItem = (key: string, context: string | undefined = undefined, default_val: any = undefined) => {
     checkExpiry();
+    if (context) {
+        const contextItem = localStorage.getItem(context);
+        if (contextItem) {
+            const item = JSON.parse(contextItem)
+            if (typeof item === 'object') {
+                const val = item[key];
+                if (val === undefined) {
+                    return default_val;
+                }
+                return val;
+            }
+            return default_val;
+        }
+    }
     const item = localStorage.getItem(key);
     if (item) {
         return JSON.parse(item)
@@ -30,9 +44,25 @@ const getItem = (key: string, default_val: any = undefined) => {
  * setItem('foo', {bar: 'baz'})
  * ```
  */
-const setItem = (key: string, value: object, ttl: number = _30_DAYS) => {
-    const old = getItem(key, {})
+const setItem = (key: string, value: object, context: string | undefined = undefined, ttl: number = _30_DAYS) => {
     const now = Date.now();
+
+    if (context) {
+        let contextData = getItem(context, undefined, {})
+        if (typeof contextData !== 'object') {
+            contextData = {}
+        }
+        const oldItem = contextData[key] || {};
+        const item = {
+            ...oldItem,
+            ...value
+        }
+        contextData.expiry = now + ttl;
+        contextData[key] = item;
+        localStorage.setItem(context, JSON.stringify(contextData))
+        return;
+    }
+    const old = getItem(key, context, {})
     const item = {
         ...old,
         ...value,

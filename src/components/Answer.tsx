@@ -10,6 +10,7 @@ interface Base {
   select?: string[];
   id: string;
   label?: string;
+  hideDataAttr?: boolean;
 }
 
 interface ArrayProps extends Base {
@@ -32,11 +33,16 @@ const DefaultValues = (props: Props) => {
   return Array(props.size).fill("");
 };
 
-const getClassName = (value: string) => {
+const getDataAttr = (value: string) => {
   if (OPTIONS_REGEX.test(value)) {
-    return styles[value.match(OPTIONS_REGEX).groups!.klass];
+    return value.match(OPTIONS_REGEX).groups!.klass;
   }
   return undefined;
+
+}
+
+const getClassName = (value: string) => {
+  return styles[getDataAttr(value)]
 };
 
 function sanitizeId(id: string) {
@@ -52,18 +58,19 @@ function sanitizeId(id: string) {
 function pageId() {
   try {
     const pageId = sanitizeId(window.location.pathname.replace(/^\/|\/$/g, ""));
-    return pageId;
+    return pageId.toLowerCase();
   } catch (e) {
     return `answer`;
   }
 }
 
-const Option = ({ value }) => {
+const Option = ({ value, showDataAttr }) => {
   let val = value;
   let klass: string | undefined = undefined;
   if (OPTIONS_REGEX.test(value)) {
-    klass = getClassName(value);
-    val = value.replace(OPTIONS_REGEX, "");
+    const data = getDataAttr(value);
+    klass = styles[data];
+    val = `${value.replace(OPTIONS_REGEX, "")}${showDataAttr ? ' ' + data : ''}`;
   }
   return (
     <option value={value} className={klass}>
@@ -75,18 +82,18 @@ const Option = ({ value }) => {
 const Answer = (props: Props) => {
   const [loaded, setLoaded] = React.useState(false);
   const [value, setValue] = React.useState(props.type === 'array' ? [] : '');
-  const [myId, setMyId] = React.useState("");
+  const [contextKey, setContextKey] = React.useState("");
 
   React.useEffect(() => {
     if (loaded) {
-      setItem(myId, { value: value, type: props.type }, _1_YEAR);
+      setItem(props.id, { value: value, type: props.type }, contextKey, _1_YEAR);
     }
   }, [value]);
 
   React.useEffect(() => {
-    const id = `${pageId()}_${props.id}`;
-    setMyId(id);
-    let saved = getItem(id, {}).value;
+    const id = pageId();
+    setContextKey(pageId());
+    let saved = getItem(props.id, id, {}).value;
     if (saved === undefined) {
       saved = DefaultValues(props)
     }
@@ -131,7 +138,7 @@ const Answer = (props: Props) => {
             disabled={!loaded}
           >
             {props.select.map((v, idx) => (
-              <Option value={v} key={idx} />
+              <Option value={v} key={idx} showDataAttr={!props.hideDataAttr} />
             ))}
           </select>
         ) : (
@@ -159,7 +166,7 @@ const Answer = (props: Props) => {
               disabled={!loaded}
             >
               {props.select.map((v, idx) => (
-                <Option value={v} key={idx} />
+                <Option value={v} key={idx} showDataAttr={!props.hideDataAttr} />
               ))}
             </select>
           );
