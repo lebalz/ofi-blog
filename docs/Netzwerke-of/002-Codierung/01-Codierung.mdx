@@ -1,0 +1,94 @@
+---
+title: Codierung
+---
+
+import AsciiEncoding from '@site/src/components/AsciiEncoding'
+
+## Codierung: Übersetzung von Datenpaketen
+
+Die Datenpakete bestehen aus verschiedenen Zeichen. Wie lassen sich diese in Einsen und Nullen übersetzen? Auf dem Computer ist jedem Zeichen eine eindeutige Zahl zugeordnet - eine sog. **Zeichencodierung**. Eine gängige Zeichencodierung ist etwa [ASCII, 128 Zeichen](https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange) oder mit enthaltenen Umlauten [Latin 1, 256 Zeichen](https://de.wikipedia.org/wiki/ISO_8859-1). Python verwendet standardmässig die Zeichencodierung *Latin 1* - für emojis aber ist bspw. eine Zeichencodierung mit mehr Zeichenzuordnungen wie [UTF-8](https://de.wikipedia.org/wiki/UTF-8) notwendig.
+
+<details><summary>Ascii Tabelle</summary>
+
+Bemerken Sie: nicht alle zur Verfügung stehenden Zellen enthalten einen Buchstaben. Diese Zellen wurden bewusst freigehalten, um die entsprechenden Einträge für die Gerätesteuerung nutzen zu können.
+
+<AsciiEncoding />
+
+</details>
+
+### Text -> Binär
+
+Jedes Zeichen auf der Tastatur hat eine feste Zahl zugeordnet. In Python lässt sich ein Zeichen leicht in die entsprechende Zahl übersetzen:
+
+```py live_py slim
+zeichen = 'g'
+zahl = ord(zeichen)
+print(zeichen, '->', zahl)
+```
+
+Dargestellt wird eine Zahl im Dezimalsystem, daher mit der Basis `10`. Um ins Binäre Zahlensystem mit der Basis 2 zu wechseln, kann die Funktion `bin` verwendet werden:
+
+```py live_py slim
+bin_zahl = bin(108)
+print(bin_zahl)
+
+# Python-Zusatzinformationen über den Datentyp weglassen:
+bin_zahl = bin_zahl[2:]  # start beim dritten Zeichen
+print(bin_zahl)
+
+# auf 1 byte = 8 bit ergänzen
+bin_zahl = bin_zahl.zfill(8)
+print(bin_zahl)
+```
+
+:::aufgabe
+Wandeln Sie Ihren Namen in Binär-Code um, indem Sie
+- zuerst jeden `buchstabe`n in eine Zahl umwandeln
+- dann die Zahl ins binäre übersetzen
+- und schliesslich die binäre Zeichenkette ausgeben
+:::
+
+```py live_py title=bin--name.py
+name = 'Reto'
+for buchstabe in name:
+    print(buchstabe)
+```
+
+### Binär -> Text
+
+Versuchen Sie nachzuvollziehen, was der folgende Code macht. Erinnerung: `int` wandelt einen Text in eine Zahl um, `chr` steht für "Character" und gibt für eine Zahl das entsprechend codierte Zeichen zuück.
+
+```py live_py slim
+code = '01000111'
+
+# in Zahl umwandeln
+zahl = int(code)
+print('Versuch 1', zahl) # geht nicht, wieso?
+
+zahl = int(code, 2)
+print('Versuch 2', zahl)
+
+# in Zeichen umwandeln
+print('Zeichen', chr(zahl))
+```
+
+
+:::aufgabe
+Wandeln Sie die binäre Folge wieder um in Text. Was kommt dabei raus?
+:::
+
+```py live_py title=name.py
+binaer = ['01000111','01000010','01010011','01001100']
+for code in binaer:
+    print(code)
+```
+
+<details><summary>Lösung</summary>
+
+```py
+binaer = ['01000111','01000010','01010011','01001100']
+for code in binaer:
+    zahl = int(code, 2)
+    print(chr(zahl))
+```
+</details>
