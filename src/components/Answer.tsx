@@ -3,7 +3,7 @@ import styles from "./Answer.module.scss";
 import { getItem, setItem, _1_YEAR } from "../helpers/storage";
 
 type Types = "array" | "string";
-const OPTIONS_REGEX = /--(?<klass>\w+)$/
+const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 
 interface Base {
   type: Types;
@@ -29,7 +29,7 @@ const DefaultValues = (props: Props) => {
   if (props.type === "string") {
     return "";
   }
-  return [...Array(props.size)].map(() => "");
+  return Array(props.size).fill("");
 };
 
 const getClassName = (value: string) => {
@@ -37,58 +37,58 @@ const getClassName = (value: string) => {
     return styles[value.match(OPTIONS_REGEX).groups!.klass];
   }
   return undefined;
-}
-
+};
 
 function sanitizeId(id: string) {
   if (!id) {
-      return;
+    return;
   }
-  return id.replace(/[\/\.\-#]/g, '_').replace(/%201/g, '_').replace(/[\.:,"'\s]/g, '')
+  return id
+    .replace(/[\/\.\-#]/g, "_")
+    .replace(/%201/g, "_")
+    .replace(/[\.:,"'\s]/g, "");
 }
 
 function pageId() {
   try {
-    const pageId = sanitizeId(window.location.pathname.replace(/^\/|\/$/g, ''))
-    return pageId
+    const pageId = sanitizeId(window.location.pathname.replace(/^\/|\/$/g, ""));
+    return pageId;
   } catch (e) {
-    return `answer`
+    return `answer`;
   }
 }
 
-const Option = ({value}) => {
-    let val = value;
-    let klass: string | undefined = undefined;
-    if (OPTIONS_REGEX.test(value)) {
-      klass = getClassName(value);
-      val = value.replace(OPTIONS_REGEX, '')
-    }
-    return (
-      <option value={value} className={klass}>
-        {val}
-      </option>
-    );
-   
-}
+const Option = ({ value }) => {
+  let val = value;
+  let klass: string | undefined = undefined;
+  if (OPTIONS_REGEX.test(value)) {
+    klass = getClassName(value);
+    val = value.replace(OPTIONS_REGEX, "");
+  }
+  return (
+    <option value={value} className={klass}>
+      {val}
+    </option>
+  );
+};
 
 const Answer = (props: Props) => {
   const [loaded, setLoaded] = React.useState(false);
-  const [value, setValue] = React.useState(DefaultValues(props));
-  const [myId, setMyId] = React.useState('');
+  const [value, setValue] = React.useState(props.type === 'array' ? [] : '');
+  const [myId, setMyId] = React.useState("");
 
   React.useEffect(() => {
     if (loaded) {
       setItem(myId, { value: value, type: props.type }, _1_YEAR);
     }
-  }, [value])
+  }, [value]);
 
   React.useEffect(() => {
     const id = `${pageId()}_${props.id}`;
     setMyId(id);
     let saved = getItem(id, {}).value;
     if (saved === undefined) {
-      setLoaded(true);
-      return;
+      saved = DefaultValues(props)
     }
     if (props.type === "array") {
       if (Array.isArray(saved)) {
@@ -104,11 +104,11 @@ const Answer = (props: Props) => {
     }
     setValue(saved);
     setLoaded(true);
-  }, [props.id, props.type]);
+  }, []);
 
   const onChange = (newVal: string, idx: number = 0) => {
-      if (props.type === "string") {
-        setValue(newVal);
+    if (props.type === "string") {
+      setValue(newVal);
     } else {
       const newArr = [
         ...(value as string[]).slice(0, idx),
@@ -119,20 +119,24 @@ const Answer = (props: Props) => {
     }
   };
 
-  if (!loaded) {
-    return null;
-  }
-
   if (props.type === "string") {
     return (
       <div className={styles.answer}>
         {props.label && <label>{props.label}</label>}
         {props.select ? (
-          <select onChange={(e) => onChange(e.target.value)} value={value} className={getClassName(value as string)}>
-            {props.select.map((v, idx) => <Option value={v} key={idx}/>)}
+          <select
+            onChange={(e) => onChange(e.target.value)}
+            value={value}
+            className={getClassName(value as string)}
+            disabled={!loaded}
+          >
+            {props.select.map((v, idx) => (
+              <Option value={v} key={idx} />
+            ))}
           </select>
         ) : (
           <input
+            disabled={!loaded}
             type="text"
             onChange={(e) => onChange(e.target.value)}
             value={value}
@@ -142,7 +146,7 @@ const Answer = (props: Props) => {
     );
   }
   return (
-    <div className={styles.answer}>
+    <div className={styles.answer} data-loaded={loaded}>
       {props.label && <label>{props.label}</label>}
       {(value as string[]).map((c, i) => {
         if (props.select) {
@@ -152,8 +156,11 @@ const Answer = (props: Props) => {
               onChange={(e) => onChange(e.target.value, i)}
               value={c}
               className={getClassName(c)}
+              disabled={!loaded}
             >
-              {props.select.map((v, idx) =>  <Option value={v} key={idx}/>)}
+              {props.select.map((v, idx) => (
+                <Option value={v} key={idx} />
+              ))}
             </select>
           );
         }
@@ -163,6 +170,7 @@ const Answer = (props: Props) => {
             type="text"
             onChange={(e) => onChange(e.target.value, i)}
             value={c}
+            disabled={!loaded}
           />
         );
       })}
