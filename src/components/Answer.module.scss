@@ -1,0 +1,54 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+html[data-theme="dark"] {
+    .answer {
+        select {
+            background: silver;
+            option {
+                background: silver;
+            }
+        }
+    }
+}
+
+.answer {
+    select {
+        padding: 4px;
+        background: white;
+        &.blue {
+            background: rgb(61, 61, 243);
+        }
+        &.red {
+            background: rgb(241, 79, 79);
+        }
+        &.green {
+            background: rgb(69, 235, 69);
+        }
+        &.black {
+            background: rgb(53, 39, 39);
+            color: white;
+        }
+        option {
+            background: white;
+            &.blue {
+                background: rgb(61, 61, 243);
+            }
+            &.red {
+                background: rgb(241, 79, 79);
+            }
+            &.green {
+                background: rgb(69, 235, 69);
+            }
+            &.black {
+                background: rgb(53, 39, 39);
+                color: white;
+            }
+        }
+    } 
+    input {
+        padding: 4px;
+    }
+    label {
+        padding-right: 1em;
+    }
+}

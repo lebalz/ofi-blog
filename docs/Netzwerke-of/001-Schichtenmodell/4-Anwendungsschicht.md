@@ -27,6 +27,6 @@ Sie sehen, dass zum Senden und Empfangen von E-Mails zwei verschiedene Protokoll
 
 ### ⭐ Weitere Informationen
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/kBXQZMmiA4s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/kBXQZMmiA4s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=network&p=80064)

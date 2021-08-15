@@ -4,7 +4,7 @@ title: Internet
 
 # Wie funktioniert das Internet?
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/l_aSMNjx_Fw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/l_aSMNjx_Fw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 Die Ursprünge des heutigen Internets reichen zurück ins Jahr **1969**, als am 29. Oktober das *Arpanet* startete. Das Arpanet hatte zum Ziel, die Rechenleistung der wenigen Grossrechnern an Universitäten ortsübergreifend zusammenzuschliessen. Dieses Ziel wurde weitgehend verfehlt und stattdessen etablierte sich ab dem Jahr **1971** die **E-Mail** - und hat sich bis heute als wichtiger Informationskanal gehalten.
 
