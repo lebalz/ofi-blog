@@ -52,7 +52,7 @@ h1 {
 JavaScript
 
 ```js
-alert('Wollen Sie die Seite wirklich verlassen?')
+alert('Seite verlassen?')
 ```
 
 ---
@@ -219,7 +219,7 @@ https://www.derbund.ch/24403218
 
 ### Virenschutz aktuell halten
 
-![Virenschutz](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pcwelt.de%2Fratgeber%2FVirenschutz-im-Test-Gratis-gegen-teuer-10638300.html&psig=AOvVaw0oTlKPs8Qnjrvzf4d3I_op&ust=1629490207451000&source=images&cd=vfe&ved=0CAcQjRxqFwoTCOCsxaDyvfICFQAAAAAdAAAAABAD)
+![Virenschutz](https://www.heise.de/select/ct/2019/3/1549002696073866/contentimages/image-1547477494860021.jpg)
 
 
 ---
