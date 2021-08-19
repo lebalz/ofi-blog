@@ -60,7 +60,8 @@ Object.keys(CONFIG).forEach((klass) => {
         }
 
         if (isDir) {
-            gitignore.push(ensureTrailingSlash(toPath.replace(classDir, '')))
+            const sanitizedClassDir = ensureTrailingSlash(toPath.replace(classDir, ''));
+            gitignore.push(`${sanitizedClassDir}*`)
             const rsync = new Rsync()
                 .source(srcPath)
                 .destination(toPath)
@@ -68,7 +69,7 @@ Object.keys(CONFIG).forEach((klass) => {
                 .delete();
             if (ignore.length > 0) {
                 rsync.exclude(ignore)
-                gitignore.push(`!${ignore}`)
+                gitignore.push(`!${sanitizedClassDir}${ignore}`)
             }
             rsync.exclude('.sync.*')
             // console.log(rsync.command())

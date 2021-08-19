@@ -1,9 +1,9 @@
-03-Software/images/vscode-1.59/
+03-Software/images/vscode-1.59/*
 03-Software/02-vscode.mdx
-03-Software/images/python-3.9/
+03-Software/images/python-3.9/*
 03-Software/01-python.mdx
-04-Programmieren-1/
-05-Netzwerke/001-Schichtenmodell/
-02-BYOD-Basics/
-!_category_.json
-05-Netzwerke/002-Begriffe/
+04-Programmieren-1/*
+05-Netzwerke/001-Schichtenmodell/*
+02-BYOD-Basics/*
+!02-BYOD-Basics/_category_.json
+05-Netzwerke/002-Begriffe/*
