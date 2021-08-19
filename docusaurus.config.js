@@ -193,57 +193,14 @@ module.exports = {
         },
       };
     },
-    // function (context, options) {
-    //   return {
-    //     name: 'test-loader',
-    //     configureWebpack(config, isServer, utils) {
-    //       return {
-    //         module: {
-    //           rules: [
-    //             {
-    //               test: /\.mdx?$/,
-    //               use: [
-    //                 {
-    //                   loader: path.join(__dirname, './plugins/img-loader/img-loader'),
-    //                   options: {
-    //                     siteDir: context.siteDir
-    //                   }
-    //                 }
-    //               ]
-    //             }
-    //           ]
-    //         }
-    //       }
-    //     }
-    //   }
-    // },
-    // function hide_pagination(context, options) {
-    //   return {
-    //     name: 'hide-pagination',
-    //     injectHtmlTags({ content }) {
-    //       return {
-    //         postBodyTags: [
-    //           {
-    //             tagName: 'script',
-    //             attributes: {
-    //               charset: 'utf-8',
-    //               src: BASE_URL + 'js/hide_pagination.js',
-    //             },
-    //           }
-    //         ],
-    //       };
-    //     },
-    //   };
-    // },
   ],
   themes: [
     ['docusaurus-live-brython', 
     {
-      brython_src: 'https://raw.githack.com/lebalz/brython/master/www/src/brython.js', 
-      brython_stdlib_src: 'https://raw.githack.com/lebalz/brython/master/www/src/brython_stdlib.js',      brython_pips: [
-        'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay_v001.brython.js',
-        'https://raw.githack.com/lebalz/ofi-blog/main/static/js/passlib.hash.brython.js',
-        'https://raw.githack.com/lebalz/ofi-blog/main/static/js/pyscrypt.brython.js'
+      brython_src: 'https://raw.githack.com/brython-dev/brython/master/www/src/brython.js', 
+      brython_stdlib_src: 'https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js',
+      brython_pips: [
+        'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js'
       ]
     }]
   ],
