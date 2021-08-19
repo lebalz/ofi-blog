@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+	<link rel="stylesheet" href="reveal.js/dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css">
+
+<style type="text/css">
+	.reveal p {
+	  text-align: left;
+	}
+	.reveal h2 {
+		text-align: left;
+	}
+	.reveal h3 {
+		text-align: left;
+	}
+	.reveal h4 {
+		text-align: left;
+	}
+	.reveal ul {
+	  display: block;
+	}
+	.reveal ol {
+	  display: block;
+	}
+	.reveal pre.code-wrapper>code.hljs {
+		font-size: 32pt;
+		width: fit-content;
+		line-height: initial;
+	}
+  </style>
+  
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown="01-ict-intro.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+		</div>
+	</div>
+
+	<script src="reveal.js/dist/reveal.js"></script>
+	<script src="reveal.js/plugin/zoom/zoom.js"></script>
+	<script src="reveal.js/plugin/notes/notes.js"></script>
+	<script src="reveal.js/plugin/search/search.js"></script>
+	<script src="reveal.js/plugin/markdown/markdown.js"></script>
+	<script src="reveal.js/plugin/highlight/highlight.js"></script>
+	<script>
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+		});
+
+	</script>
+
+</body>
+
+</html>

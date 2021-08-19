@@ -23,6 +23,7 @@ const remarkAuthorInfos = () => {
   return transformer;
 };
 
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'OF Informatik',
@@ -152,7 +153,7 @@ module.exports = {
             }
           },
           admonitions: {
-            customTypes: {              
+            customTypes: {
               aufgabe: {
                 ifmClass: "info",
                 keyword: "info",
@@ -191,6 +192,15 @@ module.exports = {
             },
           };
         },
+      };
+    },
+    function (context, options) {
+      return {
+        name: 'watch-presentations',
+        getPathsToWatch() {
+          const staticPath = path.resolve(context.siteDir, 'static');
+          return [`${staticPath}/p/*.{md, html}`];
+        }
       };
     },
   ],

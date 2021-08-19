@@ -9,9 +9,6 @@ Eine oft unterschätzte Gefahr ist der Verlust von Daten.
 
 ## Ursachen
 
-Datenverlust durch Defekt des Geräts
-Bild: Jan Kuss
-
 Für den Verlust von Daten gibt es verschiedene Ursachen, beispielsweise:
 
 - Defekt des Geräts, auf welchem die Daten gespeichert sind,
@@ -27,6 +24,6 @@ Daten sollten nie auf nur einem Gerät gespeichert werden. Mit Cloud-Lösung wer
 
 ### Schutz vor Schadsoftware
 
-Mit einfachen Massnahmen kann man sich vor Schadsoftware schützen.
+[Kapitel Schadsoftware](4-Schadsoftware.mdx)
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?page=ict/2-security/1-data-loss/)
