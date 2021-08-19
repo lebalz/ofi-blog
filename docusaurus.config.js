@@ -236,7 +236,16 @@ module.exports = {
     //   };
     // },
   ],
-  themes: ['docusaurus-live-brython'],
+  themes: [
+    ['docusaurus-live-brython', 
+    {
+      brython_src: 'https://raw.githack.com/lebalz/brython/master/www/src/brython.js', 
+      brython_stdlib_src: 'https://raw.githack.com/lebalz/brython/master/www/src/brython_stdlib.js',
+      brython_pips: ['https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js']
+      brython_pips: ['https://raw.githack.com/lebalz/ofi-blog/main/static/js/passlib.brython.js']
+      brython_pips: ['https://raw.githack.com/lebalz/ofi-blog/main/static/js/pyscrypt.brython.js']
+    }]
+  ],
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
