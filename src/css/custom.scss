@@ -79,3 +79,12 @@ h6 {
     vertical-align: text-bottom;
   }
 }
+
+table {
+  width: 100%;
+  display: table;
+  td,
+  th {
+    border: none;
+  }
+}
