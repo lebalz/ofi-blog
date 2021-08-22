@@ -12,6 +12,8 @@ html[data-theme="dark"] {
 }
 
 .answer {
+    display: flex;
+    align-items: baseline;
     select {
         padding: 4px;
         background: white;
@@ -50,5 +52,19 @@ html[data-theme="dark"] {
     }
     label {
         padding-right: 1em;
+    }
+    .checkButton {
+        line-height: 1.6em;
+        margin-top: 0.1em;
+        cursor: pointer;
+        &.correct {
+            color: var(--ifm-color-success);
+        }
+        &.wrong {
+            color: var(--ifm-color-danger);
+        }
+        &.unchecked {
+            color: var(--ifm-color-primary);
+        }
     }
 }

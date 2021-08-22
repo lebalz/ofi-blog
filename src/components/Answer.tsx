@@ -1,6 +1,9 @@
 import * as React from "react";
 import styles from "./Answer.module.scss";
 import { getItem, setItem, _1_YEAR } from "../helpers/storage";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle, faTimesCircle, faQuestionCircle } from "@fortawesome/free-solid-svg-icons"
+import clsx from "clsx";
 
 type Types = "array" | "string";
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
@@ -11,6 +14,7 @@ interface Base {
   id: string;
   label?: string;
   hideDataAttr?: boolean;
+  children?: React.ReactNode;
 }
 
 interface ArrayProps extends Base {
@@ -64,6 +68,16 @@ function pageId() {
   }
 }
 
+const CheckIcon = (state) => {
+  if (state === 'correct') {
+    return faCheckCircle;
+  }
+  if (state === 'wrong') {
+    return faTimesCircle;
+  }
+  return faQuestionCircle;
+}
+
 const Option = ({ value, showDataAttr }) => {
   let val = value;
   let klass: string | undefined = undefined;
@@ -83,6 +97,7 @@ const Answer = (props: Props) => {
   const [loaded, setLoaded] = React.useState(false);
   const [value, setValue] = React.useState(props.type === 'array' ? [] : '');
   const [contextKey, setContextKey] = React.useState("");
+  const [correctState, setCorrectState] = React.useState('unchecked');
 
   React.useEffect(() => {
     if (loaded) {
@@ -94,6 +109,7 @@ const Answer = (props: Props) => {
     const id = pageId();
     setContextKey(pageId());
     let saved = getItem(props.id, id, {}).value;
+    const hadValue = !!saved;
     if (saved === undefined) {
       saved = DefaultValues(props)
     }
@@ -111,9 +127,13 @@ const Answer = (props: Props) => {
     }
     setValue(saved);
     setLoaded(true);
+    if (props.solution && hadValue) {
+      checkAnswer(saved)
+    }
   }, []);
 
   const onChange = (newVal: string, idx: number = 0) => {
+    setCorrectState('unchecked')
     if (props.type === "string") {
       setValue(newVal);
     } else {
@@ -126,10 +146,15 @@ const Answer = (props: Props) => {
     }
   };
 
+  const checkAnswer = (current) => {
+    setCorrectState((current) === props.solution ? 'correct' : 'wrong')
+  }
+
   if (props.type === "string") {
     return (
       <div className={styles.answer}>
         {props.label && <label>{props.label}</label>}
+        {props.children && <label>{props.children}</label>}
         {props.select ? (
           <select
             onChange={(e) => onChange(e.target.value)}
@@ -148,6 +173,12 @@ const Answer = (props: Props) => {
             onChange={(e) => onChange(e.target.value)}
             value={value}
           />
+        )}
+        {props.solution && (
+          <button onClick={() => checkAnswer(value)} className={clsx(styles[correctState], styles.checkButton)}>
+            <FontAwesomeIcon 
+              icon={CheckIcon(correctState)} />
+            </button>
         )}
       </div>
     );

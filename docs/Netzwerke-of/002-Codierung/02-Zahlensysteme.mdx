@@ -1,0 +1,140 @@
+---
+title: Zahlensysteme
+---
+
+import Answer from "@site/src/components/Answer";
+import Flex from "@site/src/components/Flex";
+
+# Zahlensysteme
+
+Aktuelle Computer kennen im wesentlichen zwei Zustände: Strom- oder Nicht-Strom. Da es nichts dazwischen gibt, werden diese Zustände auch "binär" genannt. Dies kann mit Zahlen wie folgt dargestellt werden:
+
+- `0` --> kein Strom
+- `1` --> Strom
+
+Da wir Menschen uns besser im Zehnersystem zurechtfinden, wo es 10 eindeutige Zeichen gibt, brauchen wir eine Möglichkeit, zwischen diesen System hin- und herzurechnen. Jedes dieser sog. Stellenwertsysteme ist gleich aufgebaut. Schauen wir uns das Zehnersystem an, bemerkt man, dass jede stelle mit einer 10er Potenz multipliziert wird.
+
+## Zehnersystem
+
+$$
+\begin{aligned}
+
+328 &= 300 + 20 + 8 \\
+    &= 3 * 100 + 2 * 10 + 8 * 1 \\
+    &= 3 \cdot 10^2 + 2 \cdot 10^1 + 8 \cdot 10^0 \\
+
+\end{aligned}
+$$
+
+## Binärsystem (Dualsystem oder auch Zweiersystem)
+
+Nun gibt es nur zwei eindeutige Zeichen, `0` und `1`, und jede Stelle wird mit einer Zweierpotenz multipliziert. In der folgenden Tabelle sind die ersten 12 Dezimalzahlen auch als Binärzahl angegeben.
+
+<div className="small-table">
+
+|    Binär | Dezimal |
+| -------: | ------: |
+|    $0_2$ |       0 |
+|    $1_2$ |       1 |
+|   $10_2$ |       2 |
+|   $11_2$ |       3 |
+|  $100_2$ |       4 |
+|  $101_2$ |       5 |
+|  $110_2$ |       6 |
+|  $111_2$ |       7 |
+| $1000_2$ |       8 |
+| $1001_2$ |       9 |
+| $1010_2$ |      10 |
+| $1011_2$ |      11 |
+| $1100_2$ |      12 |
+
+</div>
+
+### Umrechnung Binär -> Dezimal
+
+Die Umrechnung vom Binärsystem ins Dezimalsystem erfolgt durch Ausmultiplizieren mit den entsprechenden Zweierpotenzen.
+
+Beispiel: `1011`
+
+$$
+\begin{aligned}
+
+1011_2 &= 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 \\
+     &= 1 \cdot 8 + 0 \cdot 4 + 1 \cdot 2 + 1 \cdot 1 \\
+     &= 11_{10}
+
+\end{aligned}
+$$
+
+### Umwandlung Dezimalsystem -> Binärsystem
+
+Für die Umrechnung vom Dezimalsystem zum Binärsystem ist die Tabelle der Zweierpotenzen essenziell:
+
+| $2^8$ | $2^7$ | $2^6$ | $2^5$ | $2^4$ | $2^3$ | $2^2$ | $2^1$ | $2^0$ |
+| ----: | ----: | ----: | ----: | ----: | ----: | ----: | ----: | ----: |
+|   256 |   128 |    64 |    32 |    16 |     8 |     4 |     2 |     1 |
+
+**Beispiel**: 143
+
+Die erste Zweierpotenz, die kleiner ist als 143 ist, ist $2^7 = 128$ -> die Binärzahl hat also 8 Stellen.
+
+Nun wird für jede Stelle überprüft, ob die entsprechende Zweierpotenz zur Zwischensumme dazuaddiert werden kann, oder ob man dadurch bereits eine zu grusse Zahl erhält.
+
+| **2er-Potenz**                                                                                                                    |                                                $2^7$ |                                                    $2^6$ |                                                  $2^5$ |                                                    $2^4$ |                                                 $2^3$ |                                                   $2^2$ |                                            $2^1$ |                                            $2^0$ |                                           Zwischensumme |
+| :-------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------: | -------------------------------------------------------: | -----------------------------------------------------: | -------------------------------------------------------: | ----------------------------------------------------: | ------------------------------------------------------: | -----------------------------------------------: | -----------------------------------------------: | ------------------------------------------------------: |
+| _Rechnungsschritte_                                                                                                               | <span style={{backgroundColor: 'yellow'}}>128</span> | <span style={{backgroundColor: 'greenyellow'}}>64</span> | <span style={{backgroundColor: 'lawngreen'}}>32</span> | <span style={{backgroundColor: 'springgreen'}}>16</span> | <span style={{backgroundColor: 'turquoise'}}>8</span> | <span style={{backgroundColor: 'deepskyblue'}}>4</span> | <span style={{backgroundColor: 'plum'}}>2</span> | <span style={{backgroundColor: 'pink'}}>1</span> |                                                         |
+| 1. <span style={{backgroundColor: 'yellow'}}>128</span> + <span style={{backgroundColor: 'yellow'}}>128</span> $\lt 143$          |                                                    1 |                                                          |                                                        |                                                          |                                                       |                                                         |                                                  |                                                  |    <span style={{backgroundColor: 'yellow'}}>128</span> |
+| 2. <span style={{backgroundColor: 'yellow'}}>128</span> + <span style={{backgroundColor: 'greenyellow'}}>61</span> $\not \lt 143$ |                                                    1 |                                                        0 |                                                        |                                                          |                                                       |                                                         |                                                  |                                                  |    <span style={{backgroundColor: 'yellow'}}>128</span> |
+| 3. <span style={{backgroundColor: 'yellow'}}>128</span> + <span style={{backgroundColor: 'lawngreen'}}>32</span> $\not \lt 143$   |                                                    1 |                                                        0 |                                                      0 |                                                          |                                                       |                                                         |                                                  |                                                  |    <span style={{backgroundColor: 'yellow'}}>128</span> |
+| 4. <span style={{backgroundColor: 'yellow'}}>128</span> + <span style={{backgroundColor: 'springgreen'}}>16</span> $\not \lt 143$ |                                                    1 |                                                        0 |                                                      0 |                                                        0 |                                                       |                                                         |                                                  |                                                  |    <span style={{backgroundColor: 'yellow'}}>128</span> |
+| 5. <span style={{backgroundColor: 'yellow'}}>128</span> + <span style={{backgroundColor: 'turquoise'}}>8</span> $\lt 143$         |                                                    1 |                                                        0 |                                                      0 |                                                        0 |                                                     1 |                                                         |                                                  |                                                  |    <span style={{backgroundColor: 'orange'}}>136</span> |
+| 6. <span style={{backgroundColor: 'orange'}}>136</span> + <span style={{backgroundColor: 'deepskyblue'}}>4</span> $\lt 143$       |                                                    1 |                                                        0 |                                                      0 |                                                        0 |                                                     1 |                                                       1 |                                                  |                                                  |     <span style={{backgroundColor: 'coral'}}>140</span> |
+| 7. <span style={{backgroundColor: 'coral'}}>140</span> + <span style={{backgroundColor: 'plum'}}>2</span>$\lt 143$                |                                                    1 |                                                        0 |                                                      0 |                                                        0 |                                                     1 |                                                       1 |                                                1 |                                                  | <span style={{backgroundColor: 'lightblue'}}>142</span> |
+| **8.** <span style={{backgroundColor: 'lightblue'}}>142</span> + <span style={{backgroundColor: 'pink'}}>1</span>$= 143$          |                                                **1** |                                                    **0** |                                                  **0** |                                                    **0** |                                                 **1** |                                                   **1** |                                            **1** |                                            **1** |                                                 **143** |
+
+:::aufgabe
+
+Wandeln Sie die gegebenen Zahlen vom Binär- ins Dezimalsystem um, bzw. umgekehrt.
+
+<Flex>
+<div>
+<Answer type="string" id="q1" solution="13">
+
+$1101_2=$
+
+</Answer>
+
+<Answer type="string" id="q2" solution="55">
+
+$110111_2=$
+
+</Answer>
+
+<Answer type="string" id="q3" solution="202">
+
+$11001010_2=$
+
+</Answer>
+</div>
+<div>
+
+<Answer type="string" id="q4" solution="101011">
+
+$43_{10}=$
+
+</Answer>
+
+<Answer type="string" id="q5" solution="11110001">
+
+$241_{10}=$
+
+</Answer>
+
+<Answer type="string" id="q6" solution="11000010">
+
+$194_{10}=$
+
+</Answer>
+</div>
+</Flex>
+:::
