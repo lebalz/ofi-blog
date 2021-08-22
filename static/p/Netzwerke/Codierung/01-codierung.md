@@ -16,7 +16,7 @@ Note:
 
 # Code
 
-<div class="full">
+<div class="full" style="background: white">
 
 ![](images/code.svg)
 </div>
@@ -64,8 +64,10 @@ Wie lassen sich Zahlen über ein Stromkabel verschicken?
 
 # Binärsystem
 
-![](images/Dezimal2Bin.png)
+<div class="full">
 
+![](images/Dezimal2Bin.png)
+</div>
 
 # Binärsystem
 

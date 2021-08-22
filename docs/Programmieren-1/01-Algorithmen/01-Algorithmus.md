@@ -22,7 +22,7 @@ Algorithmen werden oft in einer **Fachsprache** oder in einer **symbolischen Spr
 
 - Die **Notenschrift** ist eine symbolische Sprache, in welcher die zu spielende Musik kompakt festgehalten werden kann.
 - **Rezepte** sind normalerweise in einer Fachsprache verfasst, welche Fachbegriffe wie «Schnee», «schlagen» oder «Glasieren» und Mengenangaben wie «TL» oder «Prise» enthält.
-- Bauanleitungen, z.B. IKEA-Anleitungen zum Zusammenbau von Möbeln sind in einer nonverbalen Zeichensprache verfasst.
+- **Bauanleitungen**, z.B. IKEA-Anleitungen zum Zusammenbau von Möbeln sind in einer nonverbalen Zeichensprache verfasst.
 
 ## Schritt
 Wie die einzelnen Schritte eines Algorithmus lauten, hängt stark vom Gebiet ab, für welches der Algorithmus verwendet wird. Die Einzelschritte beim Spielen eines Musikstücks unterscheiden sich stark von den Schritten beim Kochen.

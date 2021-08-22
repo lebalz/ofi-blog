@@ -217,6 +217,11 @@
       "from": "docs/Netzwerke-of/Begriffe/",
       "to": "versioned_docs/version-24o/05-Netzwerke/002-Begriffe",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/002-Codierung/",
+      "to": "versioned_docs/version-24o/05-Netzwerke/003-Codierung",
+      "ignore": []
     }
   ],
   "25h": [
