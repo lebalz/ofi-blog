@@ -88,3 +88,9 @@ table {
     border: none;
   }
 }
+
+.small-table table {
+  td {
+    padding: 0.2em;
+  }
+}

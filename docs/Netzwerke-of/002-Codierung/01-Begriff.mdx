@@ -1,0 +1,55 @@
+---
+title: Begriff
+---
+
+import Flex from '@site/src/components/Flex'
+import Card from '@site/src/components/Card'
+
+# Code [^1]
+
+:::info Information
+Unter einer Information versteht man «das Wissen, das ein Sender einem Empfänger über einen Informationskanal übermittelt».[1]
+:::
+
+:::info Daten
+Daten sind Zeichen oder Symbole, die Informationen darstellen. Daten können gesendet, empfangen und verarbeitet werden.
+:::
+
+:::info Code
+Ein Code ist eine «Sprache», die festlegt, wie Informationen vom Sender in Daten übersetzt und vom Empfänger wieder interpretiert werden.
+:::
+
+![](images/code.svg)
+
+
+## Code
+Die Informationsübertragung kann nur funktionieren, wenn Sender und Empfänger den gleichen Code verwenden. Bei zwischenmenschlicher Kommunikation ist der Code normalerweise nicht explizit festgelegt. Dann muss der Empfänger den Code erraten, was zu Missverständnissen führen kann.
+
+![](images/cover.svg)
+
+Ein Code ist eine Vorschrift, welche Daten von einer Darstellung in eine andere umwandelt. Dabei darf keine Information verloren gehen, eine Rückumwandlung muss möglich sein.
+
+Beispiel eines Codes: Umwandlung von Braillezeichen in Buchstaben und umgekehrt.
+
+![](images/code-1.svg)
+
+Das Ziel dieser Umwandlung ist es, eine für einen bestimmten Zweck optimierte Darstellung Informationen zu erreichen. So ist die Brailleschrift dafür optimiert, per Tastsinn gelesen werden zu können.
+
+## Beispiele für Codes
+
+
+<div>
+<Flex>
+    <Card imgSrc={require('./images/braille.jpg').default} title="Brailleschrift" justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/ascii.png').default} title="ASCII" justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/dna_transcription.png').default} title="Genetischer Code" justifyContent="space-between" spacer/>
+</Flex>
+<Flex>
+    <Card imgSrc={require('./images/qrcode.png').default} title="QR-Code" justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/isbn.png').default} title="ISBN" justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/what3words.jpg').default} title={<a href="https://what3words.com/k%C3%B6nigin.gesehen.damals">what3words.com</a>} justifyContent="space-between" spacer/>
+</Flex>
+</div>
+
+
+[^1]: Quelle: [rothe.io](https://rothe.io/?page=code/1-basics/1-code/)

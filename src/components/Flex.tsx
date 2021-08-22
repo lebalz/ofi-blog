@@ -8,7 +8,8 @@ export default class Flex extends React.Component {
           display: 'flex',
           alignItems: 'stretch',
           alignContent: 'space-between',
-          justifyContent: 'space-between'
+          justifyContent: 'space-between',
+          flexWrap: 'wrap'
       }}>
           {this.props.children}
       </div>

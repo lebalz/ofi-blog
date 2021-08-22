@@ -1,0 +1,451 @@
+---
+title: Zeichencodierung
+---
+
+import AsciiEncoding from "@site/src/components/AsciiEncoding";
+import Flex from "@site/src/components/Flex";
+import Card from "@site/src/components/Card";
+
+# Zeichencodierung
+
+Datenpakete bestehen aus verschiedenen Zahlen und Zeichen. Wie lassen sich diese in Einsen und Nullen übersetzen? Auf dem Computer ist jedem Zeichen eine eindeutige Zahl zugeordnet - eine sog. **Zeichencodierung**. Eine gängige Zeichencodierung ist etwa [ASCII, 128 Zeichen](https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange), wobei für ein Zeichen genau `7 bit`, also 7 Stellen mit `0` oder `1`, notwendig sind. In diesen 128 möglichen Zeichen sind `33` Steuerzeichen und `95` normale Zeichen enthalten.
+
+**Steuerzeichen** sind spezielle Zeichen wie bspw. das Zeichen `\n` für einen Zeilenumbruch oder `\t` für einen Tabulator.
+
+Die ASCII-Codierung enthält noch keine Umlaute, weshalb mit [Latin 1, 256 Zeichen](https://de.wikipedia.org/wiki/ISO_8859-1) der Informationsgehalt um ein Bit erhöht wurde, so dass insgesamt `256` Zeichen codiert werden können - die ersten `128` Zeichen sind dabei identische mit ASCII.
+
+<details className="small-table" ><summary>Latin 1 Tabelle</summary>
+
+<AsciiEncoding />
+
+| Zeichen | Zahl | Binär      |
+| :------ | :--- | :--------- |
+|         | 0    | `00000000` |
+|         | 1    | `00000001` |
+|         | 2    | `00000010` |
+|         | 3    | `00000011` |
+|         | 4    | `00000100` |
+|         | 5    | `00000101` |
+|         | 6    | `00000110` |
+|         | 7    | `00000111` |
+|         | 8    | `00001000` |
+| `\t`    | 9    | `00001001` |
+| `\n`    | 10   | `00001010` |
+|         | 11   | `00001011` |
+|         | 12   | `00001100` |
+|         | 13   | `00001101` |
+|         | 14   | `00001110` |
+|         | 15   | `00001111` |
+|         | 16   | `00010000` |
+|         | 17   | `00010001` |
+|         | 18   | `00010010` |
+|         | 19   | `00010011` |
+|         | 20   | `00010100` |
+|         | 21   | `00010101` |
+|         | 22   | `00010110` |
+|         | 23   | `00010111` |
+|         | 24   | `00011000` |
+|         | 25   | `00011001` |
+|         | 26   | `00011010` |
+|         | 27   | `00011011` |
+|         | 28   | `00011100` |
+|         | 29   | `00011101` |
+|         | 30   | `00011110` |
+|         | 31   | `00011111` |
+|         | 32   | `00100000` |
+| !       | 33   | `00100001` |
+| "       | 34   | `00100010` |
+| #       | 35   | `00100011` |
+| $       | 36   | `00100100` |
+| %       | 37   | `00100101` |
+| &       | 38   | `00100110` |
+| '       | 39   | `00100111` |
+| (       | 40   | `00101000` |
+| )       | 41   | `00101001` |
+| \*      | 42   | `00101010` |
+| +       | 43   | `00101011` |
+| ,       | 44   | `00101100` |
+| -       | 45   | `00101101` |
+| .       | 46   | `00101110` |
+| /       | 47   | `00101111` |
+| 0       | 48   | `00110000` |
+| 1       | 49   | `00110001` |
+| 2       | 50   | `00110010` |
+| 3       | 51   | `00110011` |
+| 4       | 52   | `00110100` |
+| 5       | 53   | `00110101` |
+| 6       | 54   | `00110110` |
+| 7       | 55   | `00110111` |
+| 8       | 56   | `00111000` |
+| 9       | 57   | `00111001` |
+| :       | 58   | `00111010` |
+| ;       | 59   | `00111011` |
+| <       | 60   | `00111100` |
+| =       | 61   | `00111101` |
+| >       | 62   | `00111110` |
+| ?       | 63   | `00111111` |
+| @       | 64   | `01000000` |
+| A       | 65   | `01000001` |
+| B       | 66   | `01000010` |
+| C       | 67   | `01000011` |
+| D       | 68   | `01000100` |
+| E       | 69   | `01000101` |
+| F       | 70   | `01000110` |
+| G       | 71   | `01000111` |
+| H       | 72   | `01001000` |
+| I       | 73   | `01001001` |
+| J       | 74   | `01001010` |
+| K       | 75   | `01001011` |
+| L       | 76   | `01001100` |
+| M       | 77   | `01001101` |
+| N       | 78   | `01001110` |
+| O       | 79   | `01001111` |
+| P       | 80   | `01010000` |
+| Q       | 81   | `01010001` |
+| R       | 82   | `01010010` |
+| S       | 83   | `01010011` |
+| T       | 84   | `01010100` |
+| U       | 85   | `01010101` |
+| V       | 86   | `01010110` |
+| W       | 87   | `01010111` |
+| X       | 88   | `01011000` |
+| Y       | 89   | `01011001` |
+| Z       | 90   | `01011010` |
+| [       | 91   | `01011011` |
+| \\      | 92   | `01011100` |
+| ]       | 93   | `01011101` |
+| ^       | 94   | `01011110` |
+| \_      | 95   | `01011111` |
+| \`      | 96   | `01100000` |
+| a       | 97   | `01100001` |
+| b       | 98   | `01100010` |
+| c       | 99   | `01100011` |
+| d       | 100  | `01100100` |
+| e       | 101  | `01100101` |
+| f       | 102  | `01100110` |
+| g       | 103  | `01100111` |
+| h       | 104  | `01101000` |
+| i       | 105  | `01101001` |
+| j       | 106  | `01101010` |
+| k       | 107  | `01101011` |
+| l       | 108  | `01101100` |
+| m       | 109  | `01101101` |
+| n       | 110  | `01101110` |
+| o       | 111  | `01101111` |
+| p       | 112  | `01110000` |
+| q       | 113  | `01110001` |
+| r       | 114  | `01110010` |
+| s       | 115  | `01110011` |
+| t       | 116  | `01110100` |
+| u       | 117  | `01110101` |
+| v       | 118  | `01110110` |
+| w       | 119  | `01110111` |
+| x       | 120  | `01111000` |
+| y       | 121  | `01111001` |
+| z       | 122  | `01111010` |
+| {       | 123  | `01111011` |
+| \|      | 124  | `01111100` |
+| }       | 125  | `01111101` |
+| ~       | 126  | `01111110` |
+|        | 127  | `01111111` |
+|         | 128  | `10000000` |
+|         | 129  | `10000001` |
+|         | 130  | `10000010` |
+|         | 131  | `10000011` |
+|         | 132  | `10000100` |
+|         | 133  | `10000101` |
+|         | 134  | `10000110` |
+|         | 135  | `10000111` |
+|         | 136  | `10001000` |
+|         | 137  | `10001001` |
+|         | 138  | `10001010` |
+|         | 139  | `10001011` |
+|         | 140  | `10001100` |
+|         | 141  | `10001101` |
+|         | 142  | `10001110` |
+|         | 143  | `10001111` |
+|         | 144  | `10010000` |
+|         | 145  | `10010001` |
+|         | 146  | `10010010` |
+|         | 147  | `10010011` |
+|         | 148  | `10010100` |
+|         | 149  | `10010101` |
+|         | 150  | `10010110` |
+|         | 151  | `10010111` |
+|         | 152  | `10011000` |
+|         | 153  | `10011001` |
+|         | 154  | `10011010` |
+|         | 155  | `10011011` |
+|         | 156  | `10011100` |
+|         | 157  | `10011101` |
+|         | 158  | `10011110` |
+|         | 159  | `10011111` |
+|         | 160  | `10100000` |
+| ¡       | 161  | `10100001` |
+| ¢       | 162  | `10100010` |
+| £       | 163  | `10100011` |
+| ¤       | 164  | `10100100` |
+| ¥       | 165  | `10100101` |
+| ¦       | 166  | `10100110` |
+| §       | 167  | `10100111` |
+| ¨       | 168  | `10101000` |
+| ©       | 169  | `10101001` |
+| ª       | 170  | `10101010` |
+| «       | 171  | `10101011` |
+| ¬       | 172  | `10101100` |
+|         | 173  | `10101101` |
+| ®       | 174  | `10101110` |
+| ¯       | 175  | `10101111` |
+| °       | 176  | `10110000` |
+| ±       | 177  | `10110001` |
+| ²       | 178  | `10110010` |
+| ³       | 179  | `10110011` |
+| ´       | 180  | `10110100` |
+| µ       | 181  | `10110101` |
+| ¶       | 182  | `10110110` |
+| ·       | 183  | `10110111` |
+| ¸       | 184  | `10111000` |
+| ¹       | 185  | `10111001` |
+| º       | 186  | `10111010` |
+| »       | 187  | `10111011` |
+| ¼       | 188  | `10111100` |
+| ½       | 189  | `10111101` |
+| ¾       | 190  | `10111110` |
+| ¿       | 191  | `10111111` |
+| À       | 192  | `11000000` |
+| Á       | 193  | `11000001` |
+| Â       | 194  | `11000010` |
+| Ã       | 195  | `11000011` |
+| Ä       | 196  | `11000100` |
+| Å       | 197  | `11000101` |
+| Æ       | 198  | `11000110` |
+| Ç       | 199  | `11000111` |
+| È       | 200  | `11001000` |
+| É       | 201  | `11001001` |
+| Ê       | 202  | `11001010` |
+| Ë       | 203  | `11001011` |
+| Ì       | 204  | `11001100` |
+| Í       | 205  | `11001101` |
+| Î       | 206  | `11001110` |
+| Ï       | 207  | `11001111` |
+| Ð       | 208  | `11010000` |
+| Ñ       | 209  | `11010001` |
+| Ò       | 210  | `11010010` |
+| Ó       | 211  | `11010011` |
+| Ô       | 212  | `11010100` |
+| Õ       | 213  | `11010101` |
+| Ö       | 214  | `11010110` |
+| ×       | 215  | `11010111` |
+| Ø       | 216  | `11011000` |
+| Ù       | 217  | `11011001` |
+| Ú       | 218  | `11011010` |
+| Û       | 219  | `11011011` |
+| Ü       | 220  | `11011100` |
+| Ý       | 221  | `11011101` |
+| Þ       | 222  | `11011110` |
+| ß       | 223  | `11011111` |
+| à       | 224  | `11100000` |
+| á       | 225  | `11100001` |
+| â       | 226  | `11100010` |
+| ã       | 227  | `11100011` |
+| ä       | 228  | `11100100` |
+| å       | 229  | `11100101` |
+| æ       | 230  | `11100110` |
+| ç       | 231  | `11100111` |
+| è       | 232  | `11101000` |
+| é       | 233  | `11101001` |
+| ê       | 234  | `11101010` |
+| ë       | 235  | `11101011` |
+| ì       | 236  | `11101100` |
+| í       | 237  | `11101101` |
+| î       | 238  | `11101110` |
+| ï       | 239  | `11101111` |
+| ð       | 240  | `11110000` |
+| ñ       | 241  | `11110001` |
+| ò       | 242  | `11110010` |
+| ó       | 243  | `11110011` |
+| ô       | 244  | `11110100` |
+| õ       | 245  | `11110101` |
+| ö       | 246  | `11110110` |
+| ÷       | 247  | `11110111` |
+| ø       | 248  | `11111000` |
+| ù       | 249  | `11111001` |
+| ú       | 250  | `11111010` |
+| û       | 251  | `11111011` |
+| ü       | 252  | `11111100` |
+| ý       | 253  | `11111101` |
+| þ       | 254  | `11111110` |
+| ÿ       | 255  | `11111111` |
+
+</details>
+
+### Text -> Binär
+
+Jedes Zeichen auf der Tastatur hat eine feste Zahl zugeordnet. In Python lässt sich ein Zeichen leicht in die entsprechende Zahl übersetzen:
+
+```py live_py slim
+zeichen = 'g'
+zahl = ord(zeichen)
+print(zeichen, '->', zahl)
+```
+
+Dargestellt wird eine Zahl im Dezimalsystem, daher mit der Basis `10`. Um ins Binäre Zahlensystem mit der Basis 2 zu wechseln, kann die Funktion `bin` verwendet werden:
+
+```py live_py slim
+bin_zahl = bin(108)
+print(bin_zahl)
+
+# Python-Zusatzinformationen über den Datentyp weglassen:
+bin_zahl = bin_zahl[2:]  # start beim dritten Zeichen
+print(bin_zahl)
+
+# auf 1 byte = 8 bit ergänzen
+bin_zahl = bin_zahl.zfill(8)
+print(bin_zahl)
+```
+
+:::aufgabe
+Wandeln Sie Ihren Namen in Binär-Code um, indem Sie
+
+- zuerst jeden `buchstaben` in eine Zahl umwandeln
+- dann die Zahl ins binäre übersetzen
+- und schliesslich die binäre Zeichenkette mit `print` ausgeben
+
+```py live_py title=bin--name.py
+name = 'Reto'
+for buchstabe in name:
+    print(buchstabe)
+```
+
+:::
+
+### Binär -> Text
+
+Versuchen Sie nachzuvollziehen, was der folgende Code macht. Erinnerung: `int` wandelt einen Text in eine Zahl um, `chr` steht für "Character" und gibt für eine Zahl das entsprechend codierte Zeichen zurück.
+
+```py live_py slim
+code = '01000111'
+
+# in Zahl umwandeln
+zahl = int(code)
+print('Versuch 1', zahl) # geht nicht, wieso?
+
+zahl = int(code, 2)
+print('Versuch 2', zahl)
+
+# in Zeichen umwandeln
+print('Zeichen', chr(zahl))
+```
+
+:::aufgabe
+Wandeln Sie die binäre Folge wieder um in Text. Was kommt dabei raus?
+
+```py live_py title=name.py
+binaer = ['01000111','01000010','01010011','01001100']
+for code in binaer:
+    print(code)
+```
+
+<details><summary>⭐️ Zusatz 1</summary>
+Können Sie das übersetzte Wort auch auf einer einzigen Zeile ausgeben?
+</details>
+<details><summary>⭐️ Zusatz 2</summary>
+Die folgende Funktion wandelt eine Text-Kette aus Binär-Zahlen in eine Liste mit Binär-Zahlen von `8bit` länge um. Verwenden Sie diese Funktion, um eine beliebige Zeichenkette in Text umzuwandeln.
+
+```py live_py
+def to_8bit(bin_text):
+    return [bin_text[i:i + 8] for i in range(0, len(bin_text), 8)]
+
+binaer = to_8bit('01000111010000100101001101001100')
+print(binaer)
+```
+
+</details>
+
+<details><summary>Lösung</summary>
+
+```py
+binaer = ['01000111','01000010','01010011','01001100']
+for code in binaer:
+    zahl = int(code, 2)
+    print(chr(zahl))
+```
+
+</details>
+:::
+
+## Unicode / UTF-8 [^1]
+
+### Unicode
+
+[Unicode](https://de.wikipedia.org/wiki/Unicode) ist ein internationaler Standard für Schriftzeichen und Symbole. Das Unicode-Konsortium erstellt einen Katalog von allen sinnvollen Schriftzeichen, welcher ständig erweitert wird. In der Version 12.1, welche im Mai 2019 veröffentlicht wurde, umfasst Unicode $137'929$ Zeichen.
+
+Hier sind ein paar Zeichen aufgeführt, um zu illustrieren wie umfangreich Unicode ist:
+
+<div>
+<Flex>
+    <Card imgSrc={require('./images/unicode-0041.png').default} description={<a href="https://unicode-table.com/de/0041/">Lateinischer Grossbuchstaben A <code>U+0041</code></a>} justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/unicode-3084.png').default} description={<a href="https://unicode-table.com/de/3084/">Hiragana-Buchstabe Ya <code>U+3084</code></a>} justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/unicode-13CD.png').default} description={<a href="https://unicode-table.com/de/13CD/">Cherokee-Buchstabe S <code>U+13CD</code></a>} justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/unicode-1F0B9.png').default} description={<a href="https://unicode-table.com/de/1F0B9/">Spielkarte Neun der Herzen <code>U+1F0B9</code></a>} justifyContent="space-between" spacer/>
+</Flex>
+
+<Flex>
+    <Card imgSrc={require('./images/unicode-1F92F.png').default} description={<a href="https://unicode-table.com/de/1F92F/">Entsetztes Gesicht mit explodierendem Kopf <code>U+1F92F</code>
+</a>} justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/unicode-1F412.png').default} description={<a href="https://unicode-table.com/de/1F412/">Affe <code>U+1F412</code></a>} justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/unicode-23FB.png').default} description={<a href="https://unicode-table.com/de/23FB/">Power-Symbol <code>U+23FB</code></a>} justifyContent="space-between" spacer/>
+    <Card imgSrc={require('./images/unicode-1322C.png').default} description={<a href="https://unicode-table.com/de/1322C/">Ägyptische Hieroplyphe Nl012 <code>U+1322C</code></a>} justifyContent="space-between" spacer/>
+</Flex>
+</div>
+Quelle: [UT - Unicode Table](https://unicode-table.com/de/)
+
+Jedem Unicode-Zeichen hat eine eindeutige Unicode-Nummer, welche häufig als hexadezimale Zahl geschrieben wird.
+
+### UTF-8
+
+**UTF-8** ist ein Code, der Unicode-Zeichen in Bitmuster übersetzt. Ein Unicode-Zeichen wird mit ein bis vier Byte (daher 8-32 bit) dargestellt. Die folgende Tabelle zeigt, wie die Codierung funktioniert:
+
+| Unicode-Bereich | Bitmuster                             | Anzahl Bit |
+| :-------------- | :------------------------------------ | ---------: |
+| 0 bis 127       | `0xxxxxxx`                            |          7 |
+| 128 bis 2047    | `110xxxxx 10xxxxxx`                   |         11 |
+| 2048 bis 65535  | `1110xxxx 10xxxxxx 10xxxxxx`          |         16 |
+| ab 65536        | `11110xxx 10xxxxxx 10xxxxxx 10xxxxxx` |         21 |
+
+Unicode-Zeichen mit einer Nummer zwischen 0 und 127 werden mit einem Byte dargestellt, welches mit `0` beginnt. Somit ist UTF-8 in diesem Bereich identisch mit ASCII (und Latin 1).
+
+Für die anderen Zeichen wird mehr als ein Byte verwendet. Dabei beginnt jedes Byte mit einer oder mehreren `1`, gefolgt von einer `0`. Die Anzahl `1` im ersten Byte definieren, wie viele Bytes für das Zeichen verwendet werden. Die folgenden Bytes werden mit `10` markiert. Die `x` werden mit der Binärdarstellung der Unicode-Nummer aufgefüllt.
+
+| Zeichen                       | Nummer |                             Bitmuster |
+| :---------------------------- | -----: | ------------------------------------: |
+| A                             |     65 |                            `01000001` |
+| ä                             |    228 |                   `11000011 10100100` |
+| Schwarze Sonne mit Strahlen ☀ |   9728 |          `11100010 10011000 10000000` |
+| Affe 🐒                       | 128018 | `11110000 10011111 10010000 10010010` |
+
+Der Vorteil dieser Codierung ist, dass am Beginn eines Bytes erkannt wird, ob es sich um den Anfang die Fortsetzung eines Zeichens handelt.
+
+| Beginn | Bedeutung                                     |
+| :----- | :-------------------------------------------- |
+| 0…     | ASCII-Zeichen                                 |
+| 10…    | Fortsetzung eines Zeichens mit mehreren Bytes |
+| 110…   | Beginn eines Zeichens mit zwei Bytes          |
+| 1110…  | Beginn eines Zeichens mit drei Bytes          |
+| 11110… | Beginn eines Zeichens mit vier Bytes          |
+
+Dies wird deutlich, wenn man dies als Binärbaum darstellt:
+
+![UTF-8 Präfix](images/utf-8-prefix.svg)
+
+## Mehrstufige Codierung [^2]
+
+
+Oft werden Informationen mehrstufig codiert. So wird beispielsweise die Information «Ich bin müde.» als Emoji dargestellt. Das Handy ordnet dem Emoji die entsprechende Unicode-Nummer zu. Diese wird mit UTF-8 in eine Bitfolge übersetzt, welche über das Mobilfunknetz übermittelt wird.
+
+Das Handy des Empfängers übersetzt die Bitfolge wieder zurück in eine Unicode-Nummer und das entsprechende Emoji. Die Interpretation des Emojis muss vom Empfänger selbst vorgenommen werden.
+
+![Unicode zu UTF-8](images/unicode.svg)
+
+[^1]: Quelle [rothe.io](https://rothe.io/?page=code/3-text/4-unicode/)
+[^2]: Quelle [rothe.io](https://rothe.io/?page=code/3-text/5-code/)
