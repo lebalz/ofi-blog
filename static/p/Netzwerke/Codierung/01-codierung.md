@@ -69,6 +69,7 @@ Wie lassen sich Zahlen über ein Stromkabel verschicken?
 ![](images/Dezimal2Bin.png)
 </div>
 
+
 # Binärsystem
 
 Übung: Zahlensysteme
@@ -110,26 +111,6 @@ Das nennt sich **Zeichencodierung**
 | E       | 69   | `01000101` |
 | F       | 70   | `01000110` |
 | G       | 71   | `01000111` |
-| H       | 72   | `01001000` |
-| I       | 73   | `01001001` |
-| J       | 74   | `01001010` |
-| K       | 75   | `01001011` |
-| L       | 76   | `01001100` |
-| M       | 77   | `01001101` |
-| N       | 78   | `01001110` |
-| O       | 79   | `01001111` |
-| P       | 80   | `01010000` |
-| Q       | 81   | `01010001` |
-| R       | 82   | `01010010` |
-| S       | 83   | `01010011` |
-| T       | 84   | `01010100` |
-| U       | 85   | `01010101` |
-| V       | 86   | `01010110` |
-| W       | 87   | `01010111` |
-| X       | 88   | `01011000` |
-| Y       | 89   | `01011001` |
-| Z       | 90   | `01011010` |
-
 
 
 # Python
@@ -206,3 +187,55 @@ Zahl zu Zeichen
 zahl = 71
 chr(zahl) # => G
 ```
+
+
+
+# UTF-8
+
+| Unicode-Bereich | Bitmuster                             | Anzahl Bit |
+| :-------------- | :------------------------------------ | ---------: |
+| 0 bis 127       | `0xxxxxxx`                            |          7 |
+| 128 bis 2047    | `110xxxxx 10xxxxxx`                   |         11 |
+| 2048 bis 65535  | `1110xxxx 10xxxxxx 10xxxxxx`          |         16 |
+| ab 65536        | `11110xxx 10xxxxxx 10xxxxxx 10xxxxxx` |         21 |
+
+
+# UTF-8
+
+| Zeichen                       | Nummer |                             Bitmuster |
+| :---------------------------- | -----: | ------------------------------------: |
+| A                             |     65 |                            `01000001` |
+| ä                             |    228 |                   `11000011 10100100` |
+| Schwarze Sonne mit Strahlen ☀ |   9728 |          `11100010 10011000 10000000` |
+| Affe 🐒                       | 128018 | `11110000 10011111 10010000 10010010` |
+
+
+# UTF-8
+
+| Beginn | Bedeutung                                     |
+| :----- | :-------------------------------------------- |
+| 0…     | ASCII-Zeichen                                 |
+| 10…    | Fortsetzung eines Zeichens mit mehreren Bytes |
+| 110…   | Beginn eines Zeichens mit zwei Bytes          |
+| 1110…  | Beginn eines Zeichens mit drei Bytes          |
+| 11110… | Beginn eines Zeichens mit vier Bytes          |
+
+
+# UTF-8
+
+<div class="full" style="background: white">
+
+![](images/utf-8-prefix.svg)
+</div>
+
+
+
+# Mehrstufige Codierung
+
+<div class="full" style="background: white">
+
+![](images/unicode.svg)
+</div>
+
+Note:
+Oft werden Informationen mehrstufig codiert. So wird beispielsweise die Information «Ich bin müde.» als Emoji dargestellt. Das Handy ordnet dem Emoji die entsprechende Unicode-Nummer zu. Diese wird mit UTF-8 in eine Bitfolge übersetzt, welche über das Mobilfunknetz übermittelt wird.
