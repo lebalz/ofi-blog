@@ -13,6 +13,11 @@
           "type": "link",
           "label": "01-Intro",
           "href": "https://ofi.gbsl.website/p/01-ict-intro.html"
+        },
+        {
+          "type": "link",
+          "label": "HK-01-Algorithmen",
+          "href": "https://ofi.gbsl.website/p/Programmieren/Algorithmen/01-algorithmen.html"
         }
       ]
     }
