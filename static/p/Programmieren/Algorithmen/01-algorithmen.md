@@ -209,6 +209,21 @@ Note:
 Parameter
 
 
+# Flussdiagramm
+
+<div style="background: white">
+
+![Flussdiagramm](images/flowchart-spaghetti.svg)
+</div>
+
+Note:
+**Programmablaufplan** ist eine grafische Darstellungsform eines Algorithmus. Es besteht aus Elementen, welche einzelne Schritte des Algorithmus darstellen.
+- Pfeile geben die Reihenfolge an
+- Napoletana ruft Spaghetti-Programm auf
+- Parameter: n Portionen
+
+
+
 
 # RoboZZle
 
