@@ -51,8 +51,8 @@
   - ✅ (=gefunden)
 
 In dieser Sprache:
-- gibt es `↱` nicht ⚠️
-- kann z.B. `3x ↑` nicht interpretiert werden ⚠️
+- gibt es "`↱`" nicht ⚠️
+- kann z.B. "`3x ↑`" nicht interpretiert werden ⚠️
 
 
 
@@ -70,18 +70,18 @@ Note:
 | Musikstück spielen | Notenblatt    | Ein c' spielen                    |
 
 
-# Spezielle Sprachen
+## Spezielle Sprachen
 
 - Fachsprache oder symbolische Sprache
 
 
-# Spezielle Sprachen
+## Spezielle Sprachen
 
 - Fachsprache oder symbolische Sprache
 - kürzere und klarere Beschreibung der einzelnen Schritte
 
 
-# Spezielle Sprachen
+## Spezielle Sprachen
 
 - Fachsprache oder symbolische Sprache
 - kürzere und klarere Beschreibung der einzelnen Schritte
@@ -95,7 +95,7 @@ Note:
 - Die Struktur eines Algorithmus ist universell
 
 
-## Strukturen
+# Strukturen
 - Sequenz 👣
 - Wiederholung 🔁
 - Bedingte Ausführung ⑂
@@ -113,7 +113,7 @@ Parameter: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welc
 
 # Endlichkeit
 
-Ein Algorithmus muss nach endlich vielen Einzelschritten enden
+⚠️ Ein Algorithmus muss nach endlich vielen Einzelschritten enden
 
 
 # Al-Chwarizmi
