@@ -120,14 +120,14 @@ Jedem Zeichen wird eine Zahl zugeordnet.
 Das nennt sich **Zeichencodierung**
 
 
-# Zeichencodierung: ASCII
+## Zeichencodierung: ASCII
 
 - `7 bit` Information pro Zeichen
 - 33 Steuerzeichen (bspw. neue Zeile)
 - 95 normale Zeichen (Buchstaben)
 
 
-# ASCII
+## ASCII
 
 | Zeichen | Zahl | Binär      |
 | :------ | :--- | :--------- |
@@ -140,7 +140,7 @@ Das nennt sich **Zeichencodierung**
 | G       | 71   | `1000111` |
 
 
-# Codierung
+## Decodierung
 
 <video src="images/paper_tape_shapolab.mp4#t=40,70" controls  autoPlay  width="100%"  loop></video>
 
