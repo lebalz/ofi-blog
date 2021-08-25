@@ -142,7 +142,7 @@ Das nennt sich **Zeichencodierung**
 
 ## Decodierung
 
-<video src="images/paper_tape_shapolab.mp4#t=40,70" controls  autoPlay  width="100%"  loop></video>
+<video src="images/paper_tape_shapolab.mp4#t=40,70" controls width="100%" loop></video>
 
 
 
@@ -168,7 +168,7 @@ Oft werden Informationen mehrstufig codiert. So wird beispielsweise die Informat
 | ab 65536        | `11110xxx 10xxxxxx 10xxxxxx 10xxxxxx` |         21 |
 
 
-# UTF-8
+## UTF-8
 
 | Zeichen                       | Nummer |                             Bitmuster |
 | :---------------------------- | -----: | ------------------------------------: |
@@ -178,7 +178,7 @@ Oft werden Informationen mehrstufig codiert. So wird beispielsweise die Informat
 | Affe 🐒                       | 128018 | `11110000 10011111 10010000 10010010` |
 
 
-# UTF-8
+## UTF-8
 
 | Beginn | Bedeutung                                     |
 | :----- | :-------------------------------------------- |
@@ -189,7 +189,7 @@ Oft werden Informationen mehrstufig codiert. So wird beispielsweise die Informat
 | 11110… | Beginn eines Zeichens mit vier Bytes          |
 
 
-# UTF-8
+## UTF-8
 
 <div class="full" style="background: white">
 
