@@ -131,89 +131,30 @@ Das nennt sich **Zeichencodierung**
 
 | Zeichen | Zahl | Binär      |
 | :------ | :--- | :--------- |
-| A       | 65   | `01000001` |
-| B       | 66   | `01000010` |
-| C       | 67   | `01000011` |
-| D       | 68   | `01000100` |
-| E       | 69   | `01000101` |
-| F       | 70   | `01000110` |
-| G       | 71   | `01000111` |
+| A       | 65   | `1000001` |
+| B       | 66   | `1000010` |
+| C       | 67   | `1000011` |
+| D       | 68   | `1000100` |
+| E       | 69   | `1000101` |
+| F       | 70   | `1000110` |
+| G       | 71   | `1000111` |
 
 
-# Python
+# Codierung
 
-```py
-zahl = ord('A') # => 65
-```
-
-
-# Python
-
-```py
-zahl = ord('A') # => 65
-bin_zahl = bin(zahl) # => 0b1101100
-```
-
-
-# Python
-
-Ergänzen auf genau 8 bit
-
-```py
-zahl = ord('A') # => 65
-bin_zahl = bin(zahl) # => 0b1101100
-
-# die ersten beiden Zeichen abschneiden
-bin_zahl = bin_zahl[2:]      # => 1101100
-# auf 8 Zeichen ergänzen
-bin_zahl = bin_zahl.zfill(8) # => 01101100
-```
-
-
-# Python
-
-Ausgabe?
-
-```py
-name = 'Maria'
-for buchstabe in name:
-    print(buchstabe)
-```
+<video src="images/paper_tape_shapolab.mp4#t=40,70" controls  autoPlay  width="100%"  loop></video>
 
 
 
-# Python
+## Mehrstufige Codierung
 
-Binär zu Zahl
+<div class="full" style="background: white">
 
-```py
-code = '01000111'
+![](images/unicode.svg)
+</div>
 
-# in Zahl umwandeln
-zahl = int(code) # => 1000111
-```
-
-
-# Python
-
-Binär zu Zahl
-
-```py
-code = '01000111'
-
-# in Zahl umwandeln
-zahl = int(code, 2) # => 71
-```
-
-
-# Python
-
-Zahl zu Zeichen
-
-```py
-zahl = 71
-chr(zahl) # => G
-```
+Note:
+Oft werden Informationen mehrstufig codiert. So wird beispielsweise die Information «Ich bin müde.» als Emoji dargestellt. Das Handy ordnet dem Emoji die entsprechende Unicode-Nummer zu. Diese wird mit UTF-8 in eine Bitfolge übersetzt, welche über das Mobilfunknetz übermittelt wird.
 
 
 
@@ -254,15 +195,3 @@ chr(zahl) # => G
 
 ![](images/utf-8-prefix.svg)
 </div>
-
-
-
-# Mehrstufige Codierung
-
-<div class="full" style="background: white">
-
-![](images/unicode.svg)
-</div>
-
-Note:
-Oft werden Informationen mehrstufig codiert. So wird beispielsweise die Information «Ich bin müde.» als Emoji dargestellt. Das Handy ordnet dem Emoji die entsprechende Unicode-Nummer zu. Diese wird mit UTF-8 in eine Bitfolge übersetzt, welche über das Mobilfunknetz übermittelt wird.
