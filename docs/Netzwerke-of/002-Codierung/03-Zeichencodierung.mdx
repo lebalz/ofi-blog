@@ -5,6 +5,8 @@ title: Zeichencodierung
 import AsciiEncoding from "@site/src/components/AsciiEncoding";
 import Flex from "@site/src/components/Flex";
 import Card from "@site/src/components/Card";
+import Video from "@site/src/components/Video";
+
 
 # Zeichencodierung
 
@@ -378,9 +380,14 @@ for code in binaer:
 
 ## Binärer Decodierer
 
-<video src="images/paper_tape_shapolab.mp4#t=40,70" controls  width="100%" loop></video>
+<Video 
+    src={require('./images/paper_tape_shapolab.mp4').default}
+    expanded
+>
 
 Quelle: [Twitter](https://twitter.com/shapoco/status/1373534314961326092)
+
+</Video>
 
 :::aufgabe
 

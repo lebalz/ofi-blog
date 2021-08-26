@@ -29,14 +29,14 @@ export default class Video extends React.Component<Props> {
   isInViewport = () => {
     const bbox = this.videoRef.current.getBoundingClientRect();
     const { top, bottom } = bbox;
-    const {innerHeight} = window;
+    const { innerHeight } = window;
     if (top < innerHeight && bottom > 0) {
       if (!this.state.visible) {
-        this.setState({visible: true});
+        this.setState({ visible: true });
       }
     } else {
       if (this.state.visible) {
-        this.setState({visible: false});
+        this.setState({ visible: false });
       }
     }
   };
@@ -54,28 +54,30 @@ export default class Video extends React.Component<Props> {
           <div className={styles.cardOpen}>
             <div className={styles.headerOpen}>
               {title && <h5 className={styles.title}>{title}</h5>}
-              <button
-                className={clsx(
-                  "button button--sm button--outline button--secondary",
-                  styles.minimize
-                )}
-                onClick={this.onClick}
-              >
-                <FontAwesomeIcon icon={faWindowMinimize} />
-              </button>
+              {!this.props.expanded && (
+                <button
+                  className={clsx(
+                    "button button--sm button--outline button--secondary",
+                    styles.minimize
+                  )}
+                  onClick={this.onClick}
+                >
+                  <FontAwesomeIcon icon={faWindowMinimize} />
+                </button>
+              )}
               {children && <div className={styles.description}>{children}</div>}
             </div>
             {this.state.visible ? (
-              <video 
-              controls 
-              autoPlay 
-              width="100%" 
-              loop
+              <video
+                controls
+                autoPlay
+                width="100%"
+                loop
               >
                 <source src={src} type={`video/${type || "mp4"}`} />
               </video>
             ) : (
-              <div style={{height: '150px'}}>
+              <div style={{ height: '150px' }}>
                 <FontAwesomeIcon icon={faCircleNotch} spin />
               </div>
             )}
@@ -95,15 +97,15 @@ export default class Video extends React.Component<Props> {
               {children && <div className={styles.description}>{children}</div>}
             </div>
             {this.state.visible ? (
-                <video style={{ marginLeft: "auto" }} autoPlay controls height="150px" loop>
-                  <source src={src} type={`video/${type || "mp4"}`} />
-                </video>
+              <video style={{ marginLeft: "auto" }} autoPlay controls height="150px" loop>
+                <source src={src} type={`video/${type || "mp4"}`} />
+              </video>
             ) : (
-              <div style={{height: '150px'}}>
+              <div style={{ height: '150px' }}>
                 <FontAwesomeIcon icon={faCircleNotch} spin />
               </div>
             )}
-            </button>
+          </button>
         )}
       </div>
     );
