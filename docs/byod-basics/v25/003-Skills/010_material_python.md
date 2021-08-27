@@ -1,6 +1,6 @@
 # ✍️ Python Material für die BYOD Prüfung
 
-[⬇ Download BYOD Material](/files/material_byod.zip)
+<a href="https://ofi.gbsl.website/files/material_byod.zip">⬇ Download BYOD Material</a>
 
 ```py live_py title=hello__world.py
 print("Hello World! It's a beautiful Day.")
