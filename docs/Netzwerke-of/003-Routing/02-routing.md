@@ -5,7 +5,7 @@ title: Routing
 import Answer from "@site/src/components/Answer";
 import Finding from "@site/src/components/Finding";
 
-# Routing
+# Routing [^1]
 
 :::danger Vorgehensweise
 
@@ -146,3 +146,5 @@ Bei Engpässen können verschiedene Wege gleichzeitig benutzt werden. (Load-Bala
 Routing-Algorithmen sorgen dafür, dass Datenpakete ihren Weg durch das Internet finden. Dabei kann es sein, dass mehrere Pakete mit dem selben Ziel unterschiedliche Routen nehmen.
 
 ![](images/routing.svg)
+
+[^1]: Quelle: [informatik.mygymer.ch](https://informatik.mygymer.ch/g23c/008.rechnernetze-kommunikation/05.routing.html)
