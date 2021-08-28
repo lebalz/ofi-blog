@@ -1,0 +1,13 @@
+details {
+  &.finding {
+    > summary > svg {
+      transition: all 0.5s;
+      transition-delay: 0s;
+      float: right;
+      fill: var(--ifm-alert-border-color);
+    }
+    &[open] > summary > svg {
+      transform: scale(1.6) rotate(360deg);
+    }
+  }
+}

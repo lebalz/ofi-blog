@@ -7,6 +7,8 @@ import {
   faTimesCircle,
   faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; // ES6
 import clsx from "clsx";
 
 type Types = "array" | "string" | "text";
@@ -115,9 +117,22 @@ const Answer = (props: Props) => {
   const [value, setValue] = React.useState(props.type === "array" ? [] : "");
   const [contextKey, setContextKey] = React.useState("");
   const [textAreaLines,setTextAreaLines] = React.useState(2);
+  const [showQuillToolbar,setShowQuillToolbar] = React.useState(false);
+  const [hasTextEdits,setHasTextEdits] = React.useState(false);
   const [correctState, setCorrectState] = React.useState("unchecked");
 
+
+  const quillRef = React.useRef(null);
+
+  const onQuillToolbarMouseDown = (e: any) => {
+    e.preventDefault();
+  }
+
   React.useEffect(() => {
+    if (quillRef && quillRef.current) {
+      console.log(quillRef.current.editor)
+      quillRef.current.editor.getModule("toolbar").container.addEventListener("mousedown", onQuillToolbarMouseDown);
+    }
     if (loaded) {
       setItem(
         props.id,
@@ -125,6 +140,12 @@ const Answer = (props: Props) => {
         contextKey,
         _4_YEARS
       );
+    }
+    return () => {
+      console.log(quillRef.current)
+      if (quillRef && quillRef.current) {
+        quillRef.current.editor.getModule("toolbar").container.removeEventListener("mousedown", onQuillToolbarMouseDown);
+      }
     }
   }, [value]);
 
@@ -265,20 +286,32 @@ const Answer = (props: Props) => {
       );
     case "text":
       return (
-        <div className={styles.answer}>
-          {props.label && <label>{props.label}</label>}
-          {props.children && <label>{props.children}</label>}
-          <textarea 
-            style={{height: `${1.1*textAreaLines + 1.6}em`}} 
-            value={value} 
-            className={value.length > (props.minLength || 10) ? styles.edited : undefined}
-            disabled={!loaded} 
-            onChange={(e) => onChange(e.target.value)}
-            placeholder={props.placeholder || "Antwort"}
-            spellCheck
+        <div
+          onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)}
+          onBlur={() => showQuillToolbar && setShowQuillToolbar(false)}
+        >
+          <ReactQuill
+            ref={quillRef}
+            className={clsx(
+              styles.quillAnswer, 
+              showQuillToolbar ? undefined : 'disable-toolbar',
+              hasTextEdits ? styles.edited : undefined
+            )}
+            value={value as string}
+            onChange={(content,delta, source, editor) => {
+              const hasEdits = editor.getText().length > (props.minLength || 10)
+              if (hasEdits !== hasTextEdits) {
+                setHasTextEdits(hasEdits);
+              }
+              onChange(content);
+            }}
+            modules={{
+              toolbar: true
+            }}
+            placeholder={props.placeholder || "✍️ Antwort..."}
           />
         </div>
-      );
+      )
   }
 };
 

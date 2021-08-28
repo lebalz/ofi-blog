@@ -1,80 +1,88 @@
 /* stylelint-disable docusaurus/copyright-header */
 
 html[data-theme="dark"] {
-    .answer {
-        select {
-            background: silver;
-            option {
-                background: silver;
-            }
-        }
+  .answer {
+    select {
+      background: silver;
+      option {
+        background: silver;
+      }
     }
+  }
 }
 
 .answer {
-    display: flex;
-    align-items: baseline;
-    select {
-        padding: 4px;
-        background: white;
-        &.blue {
-            background: rgb(61, 61, 243);
-        }
-        &.red {
-            background: rgb(241, 79, 79);
-        }
-        &.green {
-            background: rgb(69, 235, 69);
-        }
-        &.black {
-            background: rgb(53, 39, 39);
-            color: white;
-        }
-        option {
-            background: white;
-            &.blue {
-                background: rgb(61, 61, 243);
-            }
-            &.red {
-                background: rgb(241, 79, 79);
-            }
-            &.green {
-                background: rgb(69, 235, 69);
-            }
-            &.black {
-                background: rgb(53, 39, 39);
-                color: white;
-            }
-        }
-    } 
-    input {
-        padding: 4px;
+  display: flex;
+  align-items: baseline;
+  select {
+    padding: 4px;
+    background: white;
+    &.blue {
+      background: rgb(61, 61, 243);
     }
-    label {
-        padding-right: 1em;
+    &.red {
+      background: rgb(241, 79, 79);
     }
-    .checkButton {
-        line-height: 1.6em;
-        margin-top: 0.1em;
-        cursor: pointer;
-        &.correct {
-            color: var(--ifm-color-success);
-        }
-        &.wrong {
-            color: var(--ifm-color-danger);
-        }
-        &.unchecked {
-            color: var(--ifm-color-primary);
-        }
+    &.green {
+      background: rgb(69, 235, 69);
     }
+    &.black {
+      background: rgb(53, 39, 39);
+      color: white;
+    }
+    option {
+      background: white;
+      &.blue {
+        background: rgb(61, 61, 243);
+      }
+      &.red {
+        background: rgb(241, 79, 79);
+      }
+      &.green {
+        background: rgb(69, 235, 69);
+      }
+      &.black {
+        background: rgb(53, 39, 39);
+        color: white;
+      }
+    }
+  }
+  input {
+    padding: 4px;
+  }
+  label {
+    padding-right: 1em;
+  }
+  .checkButton {
+    line-height: 1.6em;
+    margin-top: 0.1em;
+    cursor: pointer;
+    &.correct {
+      color: var(--ifm-color-success);
+    }
+    &.wrong {
+      color: var(--ifm-color-danger);
+    }
+    &.unchecked {
+      color: var(--ifm-color-primary);
+    }
+  }
 
-    textarea {
-        width: 100%;
-        font-family: var(--ifm-font-family-base);
-        font-size: var(--ifm-font-size-base);
-        padding: 8px;
-        &.edited {
-            border: 2px solid var(--ifm-color-success);
-        }
+  textarea {
+    width: 100%;
+    font-family: var(--ifm-font-family-base);
+    font-size: var(--ifm-font-size-base);
+    padding: 8px;
+    &.edited {
+      border: 2px solid var(--ifm-color-success);
     }
+  }
+}
+
+.quillAnswer {
+  border-radius: var(--ifm-alert-border-radius);
+  border: 1px solid var(--ifm-color-primary);
+  &.edited {
+    border: 2px solid var(--ifm-color-success);
+  }
 }

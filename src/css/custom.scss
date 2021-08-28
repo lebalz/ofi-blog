@@ -94,3 +94,46 @@ table {
     padding: 0.2em;
   }
 }
+
+.no-table-header table {
+  thead {
+    display: none;
+  }
+}
+
+.quill {
+  .ql-toolbar.ql-snow {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    .ql-stroke {
+      fill: none;
+      stroke: var(--ifm-alert-foreground-color);
+    }
+    .ql-fill {
+      fill: var(--ifm-alert-foreground-color);
+      stroke: none;
+    }
+
+    .ql-picker {
+      color: var(--ifm-alert-foreground-color);
+    }
+    .ql-picker-options {
+      background: var(--ifm-background-color);
+    }
+  }
+
+  .ql-container.ql-snow {
+    border: 0px solid;
+  }
+
+  &.disable-toolbar {
+    .ql-toolbar {
+      display: none;
+    }
+    .ql-container {
+      border-top: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+}
