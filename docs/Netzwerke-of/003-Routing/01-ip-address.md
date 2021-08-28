@@ -5,7 +5,7 @@ title: IP-Adresse
 import Answer from "@site/src/components/Answer";
 import OsTabs from '@site/src/components/OsTabs';
 
-# IP-Adresse
+# IP-Adresse [^1]
 
 Wie Pakete eine Postadresse haben, brauchen auch Datenpakete eine Adresse, damit sie korrekt zugestellt werden können. Diese Adressen nennt man **IP-Adressen**, wobei IP für *Internet Protocol* steht.
 

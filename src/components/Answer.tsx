@@ -7,8 +7,6 @@ import {
   faTimesCircle,
   faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css'; // ES6
 import clsx from "clsx";
 
 type Types = "array" | "string" | "text";
@@ -112,15 +110,32 @@ const Option = ({ value, showDataAttr }) => {
   );
 };
 
+var ReactQuill: any | undefined = undefined;
+
+const loadQuill = (callback) => {
+  if (ReactQuill) {
+      return callback();
+  }
+
+  import('react-quill').then((reactQuill) => {
+      return Promise.all([
+        import('react-quill/dist/quill.snow.css')
+      ]).then(obj => {
+          ReactQuill = reactQuill.default;
+          callback();
+      });
+  })
+};
+
 const Answer = (props: Props) => {
   const [loaded, setLoaded] = React.useState(false);
   const [value, setValue] = React.useState(props.type === "array" ? [] : "");
   const [contextKey, setContextKey] = React.useState("");
-  const [textAreaLines,setTextAreaLines] = React.useState(2);
   const [showQuillToolbar,setShowQuillToolbar] = React.useState(false);
   const [hasTextEdits,setHasTextEdits] = React.useState(false);
   const [correctState, setCorrectState] = React.useState("unchecked");
 
+  const [quillLoaded, setQuillLoaded] = React.useState(false);
 
   const quillRef = React.useRef(null);
 
@@ -128,11 +143,29 @@ const Answer = (props: Props) => {
     e.preventDefault();
   }
 
+
   React.useEffect(() => {
-    if (quillRef && quillRef.current) {
-      console.log(quillRef.current.editor)
-      quillRef.current.editor.getModule("toolbar").container.addEventListener("mousedown", onQuillToolbarMouseDown);
+    if (props.type !== 'text') {
+      return;
     }
+    let isMounted = true;
+    loadQuill(() => {
+        if (isMounted) {
+            setQuillLoaded(true);
+            if (quillRef && quillRef.current) {
+              quillRef.current.editor.getModule("toolbar").container.addEventListener("mousedown", onQuillToolbarMouseDown);
+            }
+        }
+    });
+    return () => {
+      isMounted = false
+      if (quillRef && quillRef.current) {
+        quillRef.current.editor.getModule("toolbar").container.removeEventListener("mousedown", onQuillToolbarMouseDown);
+      }
+    };
+  }, []);
+
+  React.useEffect(() => {
     if (loaded) {
       setItem(
         props.id,
@@ -140,12 +173,6 @@ const Answer = (props: Props) => {
         contextKey,
         _4_YEARS
       );
-    }
-    return () => {
-      console.log(quillRef.current)
-      if (quillRef && quillRef.current) {
-        quillRef.current.editor.getModule("toolbar").container.removeEventListener("mousedown", onQuillToolbarMouseDown);
-      }
     }
   }, [value]);
 
@@ -170,28 +197,16 @@ const Answer = (props: Props) => {
       }
     }
     setValue(saved);
-    checkNumberOfTextAreaLines(saved);
     setLoaded(true);
     if (props.type !== "text" && props.solution && hadValue) {
       checkAnswer(saved);
     }
   }, []);
 
-  const checkNumberOfTextAreaLines = (text: string) => {
-    if (props.type !== 'text') {
-      return;
-    }
-    const lines = (text.match(/\r?\n/g) || []).length + 1;
-    if (textAreaLines !== lines) {
-      setTextAreaLines(lines);
-    }
-  }
-
   const onChange = (newVal: string, idx: number = 0) => {
     setCorrectState("unchecked");
     if (props.type === "string" || props.type === "text") {
       setValue(newVal);
-      checkNumberOfTextAreaLines(newVal);
     } else {
       const newArr = [
         ...(value as string[]).slice(0, idx),
@@ -285,6 +300,13 @@ const Answer = (props: Props) => {
         </div>
       );
     case "text":
+      if (!ReactQuill || !quillLoaded) {
+        return (
+          <div>
+            Loading...
+          </div>
+        )
+      }
       return (
         <div
           onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)}
@@ -292,6 +314,7 @@ const Answer = (props: Props) => {
         >
           <ReactQuill
             ref={quillRef}
+
             className={clsx(
               styles.quillAnswer, 
               showQuillToolbar ? undefined : 'disable-toolbar',
