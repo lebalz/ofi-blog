@@ -21,8 +21,8 @@
     "present": "gulp serve"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.4",
-    "@docusaurus/preset-classic": "2.0.0-beta.4",
+    "@docusaurus/core": "^2.0.0-beta.5",
+    "@docusaurus/preset-classic": "2.0.0-beta.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -31,7 +31,7 @@
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
-    "docusaurus-live-brython": "^0.0.1-beta.4.149",
+    "docusaurus-live-brython": "^0.0.1-beta.5.1",
     "docusaurus-plugin-sass": "^0.2.1",
     "file-loader": "^6.2.0",
     "hast-util-is-element": "1.1.0",
@@ -60,7 +60,7 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-beta.4",
+    "@docusaurus/module-type-aliases": "2.0.0-beta.5",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^17.0.11",
     "@types/react-helmet": "^6.1.1",
