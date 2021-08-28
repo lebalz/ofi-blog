@@ -7,7 +7,7 @@ title: IP-Adresse
 ## Adressen
 Sämtliche Geräte in einem Netzwerk müssen eine Adresse erhalten, damit Datenpakete an die richtigen Stellen weitergeleitet werden können.
 
-Im *Internet Protocol* (IP) werden IP-Adressen verwendet. Es gibt zwei Versionen des Internet Protovols: *IPv4* und *IPv6*.
+Im *Internet Protocol* (IP) werden IP-Adressen verwendet. Es gibt zwei Versionen des Internet Protokolls: *IPv4* und *IPv6*.
 
 ## IPv4-Adressen
 
