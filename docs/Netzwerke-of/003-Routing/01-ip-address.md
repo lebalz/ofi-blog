@@ -3,6 +3,7 @@ title: IP-Adresse
 ---
 
 import Answer from "@site/src/components/Answer";
+import TabItem from '@theme/TabItem';
 import OsTabs from '@site/src/components/OsTabs';
 
 # IP-Adresse [^1]
