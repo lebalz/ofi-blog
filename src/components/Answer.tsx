@@ -154,6 +154,7 @@ const Answer = (props: Props) => {
             setQuillLoaded(true);
             if (quillRef && quillRef.current) {
               quillRef.current.editor.getModule("toolbar").container.addEventListener("mousedown", onQuillToolbarMouseDown);
+              checkWorkingState(quillRef.current.editor);
             }
         }
     });
@@ -202,6 +203,17 @@ const Answer = (props: Props) => {
       checkAnswer(saved);
     }
   }, []);
+
+  const checkWorkingState = (editor: any) => {
+    if (props.type !== 'text') {
+      return;
+    }
+    const hasEdits = editor.getText().length > (props.minLength || 10)
+    if (hasEdits !== hasTextEdits) {
+      setHasTextEdits(hasEdits);
+    }
+  }
+
 
   const onChange = (newVal: string, idx: number = 0) => {
     setCorrectState("unchecked");
@@ -321,12 +333,9 @@ const Answer = (props: Props) => {
               hasTextEdits ? styles.edited : undefined
             )}
             value={value as string}
-            onChange={(content,delta, source, editor) => {
-              const hasEdits = editor.getText().length > (props.minLength || 10)
-              if (hasEdits !== hasTextEdits) {
-                setHasTextEdits(hasEdits);
-              }
+            onChange={(content, _delta, _source, editor) => {
               onChange(content);
+              checkWorkingState(editor)
             }}
             modules={{
               toolbar: true
