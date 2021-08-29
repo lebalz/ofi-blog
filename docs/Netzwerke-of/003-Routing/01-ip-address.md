@@ -132,7 +132,7 @@ ping 194.124.132.216
     
 :::aufgabe Ping ausführen
 
-Führen Sie Ping mit folgenden IP-Adressen aus:
+Führen Sie einen Ping mit folgenden IP-Adressen aus:
 
 ```sh
 194.124.132.216
