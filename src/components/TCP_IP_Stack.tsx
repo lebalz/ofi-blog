@@ -7,7 +7,7 @@ const Stack = () => {
     <div>
       <div className={clsx(styles.level)}>
         <div className={clsx(styles.details, styles.data)}>
-          <div>Anwendungsschicht</div>
+          <div>Anwendungs&shy;schicht</div>
         </div>
         <div className={clsx(styles.details)}>
           <div>Web, E-Mail</div>
@@ -18,7 +18,7 @@ const Stack = () => {
 
       <div className={clsx(styles.level)}>
         <div className={clsx(styles.details , styles.tcp)}>
-          <div>Transportschicht</div>
+          <div>Transport&shy;schicht</div>
         </div>
         <div className={clsx(styles.details)}>
           <div>Über&shy;tragungs&shy;steuerungs&shy;protokoll &shy;(TCP)</div>
@@ -32,7 +32,7 @@ const Stack = () => {
 
       <div className={clsx(styles.level)}>
         <div className={clsx(styles.details , styles.ip)}>
-          <div>Internetschicht</div>
+          <div>Vermittlungs&shy;schicht</div>
         </div>
         <div className={clsx(styles.details)}>
           <div>Internet&shy;protokoll &shy;(IP)</div>

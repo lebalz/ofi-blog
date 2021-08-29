@@ -1,5 +1,5 @@
 ---
-title: Routing
+title: Routing im Internet
 ---
 
 import Answer from "@site/src/components/Answer";
@@ -7,139 +7,150 @@ import Finding from "@site/src/components/Finding";
 import TabItem from '@theme/TabItem';
 import OsTabs from '@site/src/components/OsTabs';
 
-# Routing [^1]
+# Routing im Internet [^1]
 
-:::danger Vorgehensweise
+Wie Pakete eine Postadresse haben, brauchen auch Datenpakete eine Adresse, damit sie korrekt zugestellt werden können. Diese Adressen nennt man **IP-Adressen**, wobei IP für *Internet Protocol* steht.
+## Adressierung
 
-Lesen Sie sich selbständig durch dieses Kapitel durch, wobei Sie
+Normalerweise erhält jedes Gerät beim Beitritt zu einem Rechnernetz eine IP-Adresse zugewiesen. Die Adresse gehört zum entsprechenden Netz und erlaubt die Kommunikation mit allen Geräten die sich ebenfalls im selben Netz befinden. Deshalb erhält Ihr Gerät hier am GBSL eine andere Adresse als bei Ihnen zu Hause.
 
-- die Aufgaben lösen und die Ergebnisse notieren
-- vor jedem «gewonnene Erkenntnisse» überlegen Sie kurz, was eine gewonnene Erkenntnis sein könnte – und zwar bevor Sie das Kästchen aufklappen
-- lesen Sie die «gewonnenen Erkenntnisse» durch und überlegen Sie sich, was damit genau gemeint ist
-- falls Sie eine Frage haben oder eine Erkenntnis notiert haben, die nicht aufgelistet wird, dann halten Sie diese fest, damit wir am Schluss darüber sprechen können
+:::info
+
+Ihre Persönlichkeit ändern Sie bei einem Umzug nicht, Ihre Wohnadresse aber schon. Gleiches gilt für die MAC-Adresse und IP-Adresse eines Geräts: Die MAC-Adresse bleibt gleich, die im Netzwerk sichtbare IP-Adresse ändert jedoch.
+:::
+
+### Aufbau
+Eine IP-Adresse setzt sich aus 4 Zahlen zu je 8 Bit zusammen. Diese 4 Zahlen werden im Dezimalsystem notiert und mit Punkten verbunden.
+
+```
+194.124.132.216
+```
+    
+Mit 8 Bits können Zahlen von $0-255$ dargestellt werden:
+
+$$
+\begin{aligned}
+1111\,1111_2 &= 2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0 \\
+            &= 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 \\
+            &= 255
+\end{aligned}
+$$
+
+
+### meine IP
+
+Jedes Gerät das mit dem Internet verbunden ist, braucht eine IP-Adresse.
+
+:::aufgabe IP-Adresse finden
+
+Finden und notieren Sie die IP-Adresse
+
+- Ihres Computers
+- Ihres Smartphones
+
+Vergleichen Sie die beiden IP-Adressen. Was stellen Sie fest?
+
+<Answer type="text" id="q1" placeholder="IP-Adressen"/>
+
+<details><summary>Wie finde ich die IP-Adresse?</summary>
+
+Sie wissen nicht, wie man die IP-Adresse des eigenen Geräts findet?
+
+Es gibt zahlreiche Anleitungen: Googeln Sie z.B.
+
+```
+IP-Adresse finden Android
+```
+
+oder
+
+```
+IP-Adresse finden Windows 10
+```
+oder etwas Ähnliches, das auf Ihr Gerät resp. Ihr  Betriebssystem abgestimmt ist.
+</details>
+:::
+
+:::aufgabe 🏠 IP-Adresse finden
+
+Finden und notieren Sie die IP-Adresse
+
+- Ihres Computers
+- Ihres Smartphones
+
+bei Ihnen zu Hause!
+
+<Answer type="text" id="q2" placeholder="IP-Adressen"/>
 
 :::
 
-Wir befinden uns auf der [Vermittlungs-Schicht](../001-Schichtenmodell/2-Vermittlungsschicht.md): Hier werden IP-Pakete vom Start- zum Zielgerät übertragen. Bei ihrem Weg durch das Internet müssen die Pakete geleitet werden – man spricht von **Routing**.
+## Standardgateway
 
-## Verkehrsbetriebe Biel
+Für die Kommunikation mit Geräten ausserhalb des eigenen Netzwerks müssen die Internetpakete zum nächsten Verteilzentrum geschickt werden. In der Analogie zum Öffentlichen Verkehr ist dies die nächstgelegene Haltestelle, die Sie zum Hauptbahnhof bringt: wollen Sie an einen Ort ausserhalb ihrer Stadt, so gehen Sie zum Hauptbahnhof, wo Sie in die richtige Richtung weitergeleitet werden. Dieser Weg zum Hauptbahnhof wird bei Netzwerken **Standardgateway** genannt.
 
-Durch das Verkehrsnetz der Verkehrsbetriebe Biel wird der öffentliche Verkehr in der Stadt Biel sichergestellt.
+### Standardgateway ihres Laptops
 
-![](images/vb-verkehrsnetz.png)
+<OsTabs>
+<TabItem value="win">
 
-Sie möchten mit dem ÖV vom Gymnasium (Ländtestrasse 12, Biel/Bienne) zum Sportplatz Mettmoos fahren.
+```.sh title="In der Kommandozeile (cmd) eingeben"
+ipconfig
+```
+</TabItem>
+<TabItem value="mac">
 
-:::aufgabe Mit dem Netzplan
+```.sh title="In der Koommandozeile (terminal) eingeben"
+netstat -nr
+```
 
-Welche Möglichkeiten sehen Sie auf dem Liniennetz?
-<Answer type="text" id="q1"/>
+![](images/netstat.png)
+
+</TabItem>
+</OsTabs>
+
+:::info
+Zu Hause haben Sie als Standardgateway die IP-Adresse Ihres Routers/Modems eingetragen – also dem Gerät, das Sie von Ihrem Internet-Anbieter erhalten, um Zugang zum Internet zu erhalten.
 :::
 
-:::aufgabe 💻 mit Google Maps
-Welchen Transportoptionen schlägt Ihnen [Google Maps](https://www.google.com/maps/dir/Gymnasium+Biel-Seeland,+L%C3%A4ndtestrasse+12,+2503+Biel/Sports+Ground+Mettmoos,+Parkplatz+Mettmoos,+2504+Biel/@47.1389934,7.2384864,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x478e195743e2cd43:0x7eeeab7e9cc7fa72!2m2!1d7.2359916!2d47.1334096!1m5!1m1!1s0x478e192b26b851e1:0x5e85058550f44003!2m2!1d7.2756948!2d47.1390779!3e3) vor, wenn Sie die Route _Ländtestrasse 12_ → *Sportplatz Mettmoos* suchen?
-
-- Welche Optionen werden vorgeschlagen?
-- Welches ist gemäss Google die beste Route?
-- Ändert sich die Route, wenn sie möglichst kurze Fusswege enthalten soll? (Einstellbar unter _Routenoptionen_)
-- Ändert sich der Reisevorschlag, wenn Sie spät in der Nacht eine Verbindung suchen?
-
-<Answer type="text" id="q2"/>
-
-:::
-
-<Finding>
-
-- Es gibt mehrere Wege, welche ans Ziel führen.
-- Der optimale Weg ist abhängig von den Rahmenbedingungen und kann sich **ändern**.
-
-</Finding>
-
-## gefundene Analogien
-
-<div className="no-table-header">
-
-|              <!-- --> | <!-- -->                                                            |
-| --------------------: | :------------------------------------------------------------------ |
-|              **WLAN** | zu Fuss bis zur nächsten Haltestelle                                |
-|   **Sichtbare WLANs** | Haltestellen, die zu Fuss erreichbar sind: Bahnhof & Badhausstrasse |
-| **Rechnernetz (LAN)** | mit Bus (für weiter entfernte Ziele: Tram, Zug, ...)                |
-|            **Router** | Umsteigen an gewissen Haltestellen                                  |
-
-</div>
-
-## Routing für Touristen
-Datenpakete sind – anders als wir als Passagiere vom *ÖV* – nicht intelligent. Sie wissen nicht, wie sie umsteigen müssen. Dies muss für sie übernommen werden.
-
-Ein Datenpaket im ÖV vom Gymer zum Sportplatz Mettmoos müsste
-- an jeder Haltestelle wissen:
-  - ob es aussteigen oder umsteigen muss
-  - in welchen Bus es einsteigen muss
-  - ob es am Ziel angekommen ist.
-
-- an jeder Strassenkreuzung (wenn zu Fuss unterwegs) wissen:
-  - welche Abzweigung es nehmen soll
-  - ob es am Ziel angekommen ist.
-
-:::aufgabe Routing-Tabelle
-
-Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für die folgenden Haltestellen:
-
-- Seehofweg
-- Bahnhof Biel
-- Mühlestrasse/Moulin
-- Schulen Linde
-- Bahnhof Mett
-
-Beispiel-Anleitung: **Bahnhof Biel** → in Bus Nr. 1 Richtung *Löhre/Mauchamp* einsteigen
+:::aufgabe
+Gehen Sie auf die Webseite https://whatsmyip.org/. Was wird angezeigt?
 
 <Answer type="text" id="q3"/>
 
+<details><summary>Lösung</summary>
+
+Bei der angezeigten Adresse handelt es sich um die IP-Adresse, welche im Internet sichtbar ist. Ihr Gerät befindet sich meist nicht direkt im Internet, sondern ist über den Router damit verbunden. Sie sehen hier also die externe IP-Adresse Ihres Routers/Modems.
+
+(Router oder Hotspots haben immer mindestens zwei IP-Adressen, weil sie zwei Netze miteinander verbinden und deshalb in beiden Netzen eine IP-Adresse brauchen.)
+
+</details>
 :::
 
 
-:::aufgabe Andere Ziele
+### Ping
+Beim Ping-Befehl handelt es sich um ein Netzwerkdiagnose-Tool, womit man die Datenübertragung zu einem anderen Gerät überprüfen kann. Dabei sendet man ein Signal an ein entferntes Gerät. Dieses Gerät sollte dann ein Signal zurücksenden.
 
-Die Anleitungen müssten natürlich auch Anweisungen haben für andere Ziele.
+```sh title="In der Kommandozeile"
+ping 194.124.132.216
+```
+    
+:::aufgabe Ping ausführen
 
-- Wie würden die Umsteigungsanweisungen für die 5 obenstehenden Haltestellen für das Ziel "Bern" lauten?
-- Wie für das Ziel "Zürich"?
-- Muss jede Haltestelle wirklich Anweisungen für jedes andere Ziel haben?
+Führen Sie einen Ping mit folgenden IP-Adressen aus:
+
+```sh
+194.124.132.216
+8.8.8.8
+185.237.144.226
+194.150.245.142
+```
+
+- Was bedeutet die Ausgabe?
+- Wieso gibt es Unterschiede?
 
 <Answer type="text" id="q4"/>
 
 :::
-
-
-<Finding>
-
-Es können Anweisungen "delegiert" werden: Es muss nur der *Bahnhof Biel* wissen, in welchen Zug man einsteigen muss um nach Bern oder Zürich zu fahren. Die anderen Haltestellen leiten alle Anfragen ausserhalb des Biel-Netzes an den *Bahnhof Biel* weiter.
-
-</Finding>
-
-## Ausfall Schienennetz
-
-> Wegen Umbauarbeiten fällt die Linie Nr. 9 ab "Brühlplatz" aus. Welche Möglichkeiten haben Sie, wenn Sie beim *Seehofweg* eingestiegen sind, um doch an den Sportplatz zu gelangen?
-
-
-<Finding>
-
-Es gibt verschiedene Wege zum Ziel - auch nicht optimale Wege, die normalerweise nicht benutzt werden. Diese Optionen ermöglichen aber eine gewisse **Ausfallsicherheit**. Im Beispiel oben können Sie entweder beim Bahnhof Biel oder beim Brühlplatz auf eine andere Verbindung umsteigen. 
-
-</Finding>
-
-## Grosse Gruppe
-
-> 4 Parallelklassen – also ca. 100 Personen haben beim Sportplatz Mettmoos.
-> Wie kommen sie am schnellsten dahin, wenn wir damit rechnen, dass wegen Corona und dem Feierabendverkehr maximal 25 Personen pro Bus Platz finden?
-
-
-<Finding>
-
-Bei Engpässen können verschiedene Wege gleichzeitig benutzt werden. (Load-Balancing)
-
-</Finding>
-
 
 ## Routing für Datenpakete
 
@@ -147,10 +158,20 @@ Routing-Algorithmen sorgen dafür, dass Datenpakete ihren Weg durch das Internet
 
 ![Netzwerkrouting](images/routing.svg)
 
+### Router
+
+Ein Router ist ein Gerät, welches zwei Netzwerke miteinander verbindet. Er besitzt also **zwei Netzwerkkarten** und somit auch **zwei IP-Adressen** (und auch zwei MAC-Adressen).
+
+> Ein IP-Paket weist folgende Informationen auf:
+> - IP-Adresse Quelle (Verfasser der Nachricht)
+> - IP-Adresse Sender
+> - IP-Adresse Empfänger
+
 ## Router im Schichtenmodell
 Router stellen die Verbindung zwischen unterschiedlichen Netzwerken her. Sie müssen die **IP-Pakete auspacken**, damit diese gemäss der IP-Adresse **weitergeleitet** werden können. Dabei bedienen sich Router spezieller Tabellen, welche angeben, wohin ein Paket mit einer bestimmten IP-Adresse hingeleitet werden soll.
 
 ![](images/routing-ip-packages.svg)
+
 
 ## Routen verfolgen
 Der Befehl `traceroute` (macOS) resp. `tracert` (Windows) kann diese Route nachverfolgt werden. Dabei werden die Zwischenstationen – also dort wo das Paket entpackt und gemäss Ziel-IP-Adresse weitergeleitet wird – angezeigt.

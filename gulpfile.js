@@ -7,7 +7,7 @@ gulp.task('reload', () => gulp.src(['static/p/**/*.html', 'static/p/**/*.md'])
 gulp.task('serve', () => {
 
     connect.server({
-        root: 'static/p',
+        root: 'static/',
         port: 8001,
         host: '0.0.0.0',
         livereload: true
