@@ -38,8 +38,8 @@
       ]
     },
     {
-      "from": "docs/Netzwerke-of/Begriffe/",
-      "to": "versioned_docs/version-24f/05-Netzwerke/002-Begriffe",
+      "from": "docs/Netzwerke-of/010-Begriffe/",
+      "to": "versioned_docs/version-24f/05-Netzwerke/010-Begriffe",
       "ignore": []
     },
     {
@@ -87,8 +87,8 @@
       ]
     },
     {
-      "from": "docs/Netzwerke-of/Begriffe/",
-      "to": "versioned_docs/version-24i/05-Netzwerke/002-Begriffe",
+      "from": "docs/Netzwerke-of/010-Begriffe/",
+      "to": "versioned_docs/version-24i/05-Netzwerke/010-Begriffe",
       "ignore": []
     },
     {
@@ -136,8 +136,8 @@
       ]
     },
     {
-      "from": "docs/Netzwerke-of/Begriffe/",
-      "to": "versioned_docs/version-24K/05-Netzwerke/002-Begriffe",
+      "from": "docs/Netzwerke-of/010-Begriffe/",
+      "to": "versioned_docs/version-24K/05-Netzwerke/010-Begriffe",
       "ignore": []
     },
     {
@@ -185,13 +185,18 @@
       ]
     },
     {
-      "from": "docs/Netzwerke-of/Begriffe/",
-      "to": "versioned_docs/version-24L/05-Netzwerke/002-Begriffe",
+      "from": "docs/Netzwerke-of/010-Begriffe/",
+      "to": "versioned_docs/version-24L/05-Netzwerke/010-Begriffe",
       "ignore": []
     },
     {
       "from": "docs/Netzwerke-of/002-Codierung/",
       "to": "versioned_docs/version-24L/05-Netzwerke/003-Codierung",
+      "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/003-Routing/",
+      "to": "versioned_docs/version-24L/05-Netzwerke/004-Routing",
       "ignore": []
     }
   ],
@@ -234,8 +239,8 @@
       ]
     },
     {
-      "from": "docs/Netzwerke-of/Begriffe/",
-      "to": "versioned_docs/version-24o/05-Netzwerke/002-Begriffe",
+      "from": "docs/Netzwerke-of/010-Begriffe/",
+      "to": "versioned_docs/version-24o/05-Netzwerke/010-Begriffe",
       "ignore": []
     },
     {
