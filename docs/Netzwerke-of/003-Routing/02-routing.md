@@ -14,30 +14,16 @@ Wie Pakete eine Postadresse haben, brauchen auch Datenpakete eine Adresse, damit
 
 Normalerweise erhält jedes Gerät beim Beitritt zu einem Rechnernetz eine IP-Adresse zugewiesen. Die Adresse gehört zum entsprechenden Netz und erlaubt die Kommunikation mit allen Geräten die sich ebenfalls im selben Netz befinden. Deshalb erhält Ihr Gerät hier am GBSL eine andere Adresse als bei Ihnen zu Hause.
 
-:::info
-
-Ihre Persönlichkeit ändern Sie bei einem Umzug nicht, Ihre Wohnadresse aber schon. Gleiches gilt für die MAC-Adresse und IP-Adresse eines Geräts: Die MAC-Adresse bleibt gleich, die im Netzwerk sichtbare IP-Adresse ändert jedoch.
-:::
-
 ### Aufbau
-Eine IP-Adresse setzt sich aus 4 Zahlen zu je 8 Bit zusammen. Diese 4 Zahlen werden im Dezimalsystem notiert und mit Punkten verbunden.
+Eine IP-Adresse (genauer, IPv4 Adresse) setzt sich aus 4 Zahlen zu je 8 Bit zusammen. Diese 4 Zahlen werden im Dezimalsystem notiert und mit Punkten verbunden.
 
 ```
 194.124.132.216
 ```
-    
-Mit 8 Bits können Zahlen von $0-255$ dargestellt werden:
 
-$$
-\begin{aligned}
-1111\,1111_2 &= 2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0 \\
-            &= 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 \\
-            &= 255
-\end{aligned}
-$$
+Es gibt also insgesamt $2^{32} = 4'294'967'296$ verschiedene IP-Adressen. Auf den ersten Blick scheint die Anzahl sehr gross zu sein. Durch die Vielzahl an internetfähigen Geräten weltweit sind ein Grossteil der Adressen inzwischen vergeben. Deshalb gibt es eine neuere IP-Version 6, die aber den alten Standard noch nicht ersetzt hat. Mehr dazu [hier: IPv6](../Begriffe/1-ip-adresse.md#ipv6-adressen).
 
-
-### meine IP
+### Meine IP
 
 Jedes Gerät das mit dem Internet verbunden ist, braucht eine IP-Adresse.
 
@@ -84,52 +70,6 @@ bei Ihnen zu Hause!
 
 :::
 
-## Standardgateway
-
-Für die Kommunikation mit Geräten ausserhalb des eigenen Netzwerks müssen die Internetpakete zum nächsten Verteilzentrum geschickt werden. In der Analogie zum Öffentlichen Verkehr ist dies die nächstgelegene Haltestelle, die Sie zum Hauptbahnhof bringt: wollen Sie an einen Ort ausserhalb ihrer Stadt, so gehen Sie zum Hauptbahnhof, wo Sie in die richtige Richtung weitergeleitet werden. Dieser Weg zum Hauptbahnhof wird bei Netzwerken **Standardgateway** genannt.
-
-### Standardgateway ihres Laptops
-
-<OsTabs>
-<TabItem value="win">
-
-```.sh title="In der Kommandozeile (cmd) eingeben"
-ipconfig
-```
-
-![](images/ipconfig.png)
-
-</TabItem>
-<TabItem value="mac">
-
-```.sh title="In der Koommandozeile (terminal) eingeben"
-netstat -nr
-```
-
-![](images/netstat.png)
-
-</TabItem>
-</OsTabs>
-
-:::info
-Zu Hause haben Sie als Standardgateway die IP-Adresse Ihres Routers/Modems eingetragen – also dem Gerät, das Sie von Ihrem Internet-Anbieter erhalten, um Zugang zum Internet zu erhalten.
-:::
-
-:::aufgabe
-Gehen Sie auf die Webseite https://whatsmyip.org/. Was wird angezeigt?
-
-<Answer type="text" id="q3"/>
-
-<details><summary>Lösung</summary>
-
-Bei der angezeigten Adresse handelt es sich um die IP-Adresse, welche im Internet sichtbar ist. Ihr Gerät befindet sich meist nicht direkt im Internet, sondern ist über den Router damit verbunden. Sie sehen hier also die externe IP-Adresse Ihres Routers/Modems.
-
-(Router oder Hotspots haben immer mindestens zwei IP-Adressen, weil sie zwei Netze miteinander verbinden und deshalb in beiden Netzen eine IP-Adresse brauchen.)
-
-</details>
-:::
-
-
 ### Ping
 Beim Ping-Befehl handelt es sich um ein Netzwerkdiagnose-Tool, womit man die Datenübertragung zu einem anderen Gerät überprüfen kann. Dabei sendet man ein Signal an ein entferntes Gerät. Dieses Gerät sollte dann ein Signal zurücksenden.
 
@@ -151,7 +91,7 @@ Führen Sie einen Ping mit folgenden IP-Adressen aus:
 - Was bedeutet die Ausgabe?
 - Wieso gibt es Unterschiede?
 
-<Answer type="text" id="q4"/>
+<Answer type="text" id="q3"/>
 
 :::
 
@@ -161,19 +101,21 @@ Routing-Algorithmen sorgen dafür, dass Datenpakete ihren Weg durch das Internet
 
 ![Netzwerkrouting](images/routing.svg)
 
-### Router
+### Router im Schichtenmodell
 
-Ein Router ist ein Gerät, welches zwei Netzwerke miteinander verbindet. Er besitzt also **zwei Netzwerkkarten** und somit auch **zwei IP-Adressen** (und auch zwei MAC-Adressen).
+Der **Router** ist das **Paketverteilzentrum** und verbindet mehrere Netzwerke miteinander. Er besitzt also mindestens **zwei Netzwerkkarten** und somit auch mindestens **zwei IP-Adressen** um sich mit den einzelnen Netzwerken zu verbinden.
 
-> Ein IP-Paket weist folgende Informationen auf:
-> - IP-Adresse Quelle (Verfasser der Nachricht)
-> - IP-Adresse Sender
-> - IP-Adresse Empfänger
-
-## Router im Schichtenmodell
-Router stellen die Verbindung zwischen unterschiedlichen Netzwerken her. Sie müssen die **IP-Pakete auspacken**, damit diese gemäss der IP-Adresse **weitergeleitet** werden können. Dabei bedienen sich Router spezieller Tabellen, welche angeben, wohin ein Paket mit einer bestimmten IP-Adresse hingeleitet werden soll.
+Sie müssen die **IP-Pakete auspacken**, damit diese gemäss der IP-Adresse **weitergeleitet** werden können. Dabei bedienen sich Router spezieller Tabellen, welche angeben, wohin ein Paket mit einer bestimmten IP-Adresse hingeleitet werden soll.
 
 ![](images/routing-ip-packages.svg)
+
+:::note
+
+Damit ein Router ein IP-Paket weiterleiten kann, braucht er folgende, im Paket enthaltene Informationen:
+- IP-Adresse Sender
+- IP-Adresse Empfänger
+
+:::
 
 
 ## Routen verfolgen
@@ -211,7 +153,65 @@ traceroute www.gbsl.ch
 Beobachten Sie den Output. Erkennen Sie Gemeinsamkeiten oder irgendeine spezielle Zwischenstation?
 :::
 
+## Standardgateway
 
+Für die Kommunikation mit Geräten ausserhalb des eigenen Netzwerks müssen die Internetpakete zum nächsten Verteilzentrum geschickt werden. In der Analogie zum Öffentlichen Verkehr ist dies die nächstgelegene Haltestelle, die Sie zum Hauptbahnhof bringt: wollen Sie an einen Ort ausserhalb ihrer Stadt, so gehen Sie zum Hauptbahnhof, wo Sie in die richtige Richtung weitergeleitet werden. Dieser Weg zum Hauptbahnhof wird bei Netzwerkfähigen Geräten **Standardgateway** genannt.
+
+### Standardgateway ihres Laptops
+
+<OsTabs>
+<TabItem value="win">
+
+```.sh title="In der Kommandozeile (cmd) eingeben"
+ipconfig
+```
+
+![](images/ipconfig.png)
+
+</TabItem>
+<TabItem value="mac">
+
+```.sh title="In der Koommandozeile (terminal) eingeben"
+netstat -nr
+```
+
+![](images/netstat.png)
+
+</TabItem>
+</OsTabs>
+
+:::info
+Zu Hause haben Sie als Standardgateway die IP-Adresse Ihres Routers/Modems eingetragen – also dem Gerät, das Sie von Ihrem Internet-Anbieter erhalten, um Zugang zum Internet zu erhalten.
+:::
+
+:::aufgabe
+Gehen Sie auf die Webseite https://whatsmyip.org/. Was wird angezeigt?
+
+<Answer type="text" id="q4"/>
+
+<details><summary>Lösung</summary>
+
+Bei der angezeigten Adresse handelt es sich um die IP-Adresse, welche im Internet sichtbar ist. Ihr Gerät befindet sich meist nicht direkt im Internet, sondern ist über den Router damit verbunden. Sie sehen hier also die externe IP-Adresse Ihres Routers/Modems.
+
+(Router oder Hotspots haben immer mindestens zwei IP-Adressen, weil sie zwei Netze miteinander verbinden und deshalb in beiden Netzen eine IP-Adresse brauchen.)
+
+</details>
+:::
+
+## ⭐️ MAC-Adresse
+
+Die physikalische Adresse, auch Hardware-Adresse eines Computers (oder genauer gesagt die Adresse seiner Netzwerkschnittstelle) – nennt man **MAC-Adresse** (*MAC* steht für `Media Access Control` und hat entsprechen nichts mit Apple zu tun). Sie besteht aus 48 Bit oder 6 Bytes, so dass sie üblicherweise als Hexadezimalzahl (mit $16$ eindeutigen Zeichen) mit `6×2` Stellen angegeben wird, beispielsweise: `48:2C:6A:1E:59:3D`. Jede MAC-Adresse muss **weltweit eindeutig** sein, damit die Zustellung von Paketen, und somit auch die Transportsicherheit, garantiert werden kann. Die MAC-Adresse wird bei der Herstellung der Netzwerkkarte fix vergeben und kann nicht mehr verändert werden.
+
+:::info
+
+Ihre Persönlichkeit ändern Sie bei einem Umzug nicht, Ihre Wohnadresse aber schon. Gleiches gilt für die MAC-Adresse und IP-Adresse eines Geräts: Die MAC-Adresse bleibt gleich, die im Netzwerk sichtbare IP-Adresse ändert jedoch.
+:::
+
+### Wozu braucht es die MAC-Adresse?
+
+Die MAC-Adresse erlaubt die direkte Kommunikation zwischen zwei Geräten im selben Netzwerk, ohne dabei den Router zu beauftragen, ihre Pakete weiterzuleiten. Da diese direkte Kommunikation effizienter ist, merkt sich bspw. der WLAN-Accesspoint\* bei Ihnen zuhause, welche IP-Adresse zu welcher MAC-Adresse gehört. So kann ein Paket direkt zu Ihrem Gerät geschickt werden, ohne jedes Mal den richtigen Empfänger im Netzwerk ausfindig zu machen.  
+
+\* oft sind WLAN-Accesspoint und Router im selben Gerät kombiniert. Doch im Innern sind es zwei Geräte, ein Router und ein WLAN-Accesspoint.   
 ## «Highspeed-Routen»
 ### Schweiz
 Auf der untenstehenden Karte erkennt man die schnellsten Leitungen von Switch. Diese Organisation verbindet die Universitäten und Forschungsinstitute miteinander und mit dem Ausland.

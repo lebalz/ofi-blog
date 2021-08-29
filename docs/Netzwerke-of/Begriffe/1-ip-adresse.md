@@ -42,4 +42,4 @@ Diese Form der einheitlichen Adressierung erlaubt es, die Zugehörigkeit zu Teil
 
 
 
-[^1]: Quelle: [inf-schule: Fachkonzept IP-Adressierung](https://www.inf-schule.de/kommunikation/netze/module/vermittlung/dienste_protokolle/ipadressierung)
+[^1]: Quelle: [inf-schule: Fachkonzept IP-Adressierung](https://www.inf-schule.de/rechnernetze/vermittlung/fachkonzept_ipadressierung)
