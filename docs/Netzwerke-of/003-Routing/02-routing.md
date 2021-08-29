@@ -96,6 +96,9 @@ Für die Kommunikation mit Geräten ausserhalb des eigenen Netzwerks müssen die
 ```.sh title="In der Kommandozeile (cmd) eingeben"
 ipconfig
 ```
+
+![](images/ipconfig.png)
+
 </TabItem>
 <TabItem value="mac">
 

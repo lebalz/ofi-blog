@@ -95,6 +95,12 @@ table {
   }
 }
 
+div.small {
+  img {
+    max-width: 200px;
+  }
+}
+
 .no-table-header table {
   thead {
     display: none;
