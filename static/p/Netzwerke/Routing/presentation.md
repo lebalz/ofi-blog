@@ -3,6 +3,118 @@
 ![](images/highway.jpg)
 
 
+## Netzwerk
+
+Schweiz
+
+<div class="full">
+
+![](images/switch-lan.jpg)
+
+</div>
+
+Note:
+SWITCH-lan ist das Universitäts-Netz
+
+## Netzwerk
+
+Schweiz
+
+<div class="full">
+
+![](images/gascom-lan.png)
+
+</div>
+
+Note:
+In der Schweiz werden auch Gasleitungen verwendet, um Glasfaserkabel zu verlegen...
+
+
+## Netzwerk
+
+International
+
+<div class="full">
+
+![](images/international-lan.png)
+
+</div>
+
+
+## "Bahnhöfe" des Internets
+
+**Router**
+
+<div class="full">
+
+![](images/routing.svg)
+
+</div>
+
+Note:
+verbinden mehrere Netzwerke miteinander
+
+
+## Router
+
+<div class="full">
+
+![](images/routing-ip-packages.svg)
+
+</div>
+
+Note:
+Router müssen die Pakete auspacken, lesen und anpassen, damit Pakete ans richtige Ort kommen...
+
+
+
+## IP-Adresse
+
+```
+IP-Adresse finden Windows 10
+```
+
+
+## IP-Adresse
+
+https://whatsmyip.org
+
+unterschiede?
+
+
+## Ping
+
+Wie ein Echo - wenn unter der gegebenen IP-Adresse ein Dienst vorhanden ist, schickt dieser eine kurze Nachricht zurück...
+
+```sh
+ping 194.124.132.216
+```
+
+## Traceroute
+
+Über welche Stationen wird ein Paket weitergeschickt?
+
+```sh
+# win
+tracert 194.124.132.216
+
+# osx
+traceroute 194.124.132.216
+```
+
+
+## Traceroute
+
+Über welche Stationen wird ein Paket weitergeschickt?
+
+```sh
+# win
+tracert srf.ch
+
+# osx
+traceroute srf.ch
+```
+
 
 # 💻 - Adressen
 
