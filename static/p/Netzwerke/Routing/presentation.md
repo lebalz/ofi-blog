@@ -120,6 +120,16 @@ traceroute srf.ch
 
 
 
+## Standardgateway
+
+![](images/ipconfig.png)
+
+
+## Standardgateway
+
+![](images/netstat.png)
+
+
 # 💻 - Adressen
 
 - 📡 MAC-Adresse: `48:2C:6A:1E:59:3D`
