@@ -193,11 +193,6 @@
       "from": "docs/Netzwerke-of/002-Codierung/",
       "to": "versioned_docs/version-24L/05-Netzwerke/003-Codierung",
       "ignore": []
-    },
-    {
-      "from": "docs/Netzwerke-of/003-Routing/",
-      "to": "versioned_docs/version-24L/05-Netzwerke/004-Routing",
-      "ignore": []
     }
   ],
   "24o": [
@@ -246,6 +241,11 @@
     {
       "from": "docs/Netzwerke-of/002-Codierung/",
       "to": "versioned_docs/version-24o/05-Netzwerke/003-Codierung",
+      "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/003-Routing/",
+      "to": "versioned_docs/version-24o/05-Netzwerke/004-Routing",
       "ignore": []
     }
   ],
