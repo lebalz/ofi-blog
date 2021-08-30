@@ -151,6 +151,8 @@ traceroute www.gbsl.ch
 </OsTabs>
 
 Beobachten Sie den Output. Erkennen Sie Gemeinsamkeiten oder irgendeine spezielle Zwischenstation?
+<Answer type="text" id="q4"/>
+
 :::
 
 ## Standardgateway
@@ -187,7 +189,7 @@ Zu Hause haben Sie als Standardgateway die IP-Adresse Ihres Routers/Modems einge
 :::aufgabe
 Gehen Sie auf die Webseite https://whatsmyip.org/. Was wird angezeigt?
 
-<Answer type="text" id="q4"/>
+<Answer type="text" id="q5"/>
 
 <details><summary>Lösung</summary>
 
@@ -241,7 +243,7 @@ Wie kommt ein Datenpaket von Biel
 
 https://www.submarinecablemap.com/
 
-<Answer type="text" id="q5"/>
+<Answer type="text" id="q6"/>
 
 :::
 
