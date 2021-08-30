@@ -16,6 +16,7 @@ Schweiz
 Note:
 SWITCH-lan ist das Universitäts-Netz
 
+
 ## Netzwerk
 
 Schweiz
@@ -39,6 +40,7 @@ International
 ![](images/international-lan.png)
 
 </div>
+
 
 
 ## "Bahnhöfe" des Internets
@@ -90,6 +92,7 @@ Wie ein Echo - wenn unter der gegebenen IP-Adresse ein Dienst vorhanden ist, sch
 ping 194.124.132.216
 ```
 
+
 ## Traceroute
 
 Über welche Stationen wird ein Paket weitergeschickt?
@@ -114,6 +117,7 @@ tracert srf.ch
 # osx
 traceroute srf.ch
 ```
+
 
 
 # 💻 - Adressen
