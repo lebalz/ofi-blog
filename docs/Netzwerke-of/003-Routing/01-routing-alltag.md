@@ -72,18 +72,18 @@ Welchen Transportoptionen schlägt Ihnen [Google Maps](https://www.google.com/ma
 Datenpakete sind – anders als wir als Passagiere vom *ÖV* – nicht intelligent. Sie wissen nicht, wie sie umsteigen müssen. Dies muss für sie übernommen werden.
 
 Ein Datenpaket im ÖV vom Gymer zum Sportplatz Mettmoos müsste
-- an jeder Haltestelle wissen:
-  - ob es aussteigen oder umsteigen muss
-  - in welchen Bus es einsteigen muss
-  - ob es am Ziel angekommen ist.
+1. an jeder Haltestelle wissen:
+  - ob man Aussteigen oder Umsteigen muss
+  - in welchen Bus man einsteigen muss
+  - ob man am Ziel angekommen ist.
 
-- an jeder Strassenkreuzung (wenn zu Fuss unterwegs) wissen:
+2. an jeder Strassenkreuzung (wenn zu Fuss unterwegs) wissen:
   - welche Abzweigung es nehmen soll
   - ob es am Ziel angekommen ist.
 
 :::aufgabe Routing-Tabelle
 
-Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für die folgenden Haltestellen:
+Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für Datenpakete gemäss obigem Punkt 1. für die folgenden Haltestellen:
 
 - Seehofweg
 - Bahnhof Biel
