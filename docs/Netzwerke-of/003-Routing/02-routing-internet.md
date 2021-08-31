@@ -99,7 +99,7 @@ Führen Sie einen Ping mit folgenden IP-Adressen aus:
 
 Routing-Algorithmen sorgen dafür, dass Datenpakete ihren Weg durch das Internet finden. Dabei kann es sein, dass mehrere Pakete mit dem selben Ziel unterschiedliche Routen nehmen.
 
-![Netzwerkrouting](images/routing_slim.png)
+![Netzwerkrouting](images/routing.png)
 
 ### Router im Schichtenmodell
 
@@ -107,7 +107,7 @@ Der **Router** ist das **Paketverteilzentrum** und verbindet mehrere Netzwerke m
 
 Sie müssen die **IP-Pakete auspacken**, damit diese gemäss der IP-Adresse **weitergeleitet** werden können. Dabei bedienen sich Router spezieller Tabellen, welche angeben, wohin ein Paket mit einer bestimmten IP-Adresse hingeleitet werden soll.
 
-![](images/routing-ip-packages.svg)
+![](images/routing_slim.png)
 
 :::note
 
