@@ -35,7 +35,7 @@ Ein Algorithmus definiert, in welcher **Reihenfolge** die einzelnen Schritte nac
 Folgende Strukturen können unterschieden werden:
 - **Sequenz**: Es wird ein Schritt nach dem anderen abgearbeitet.
 - **Wiederholung**: Einer oder mehrere Schritte werden eine bestimmte Anzahl mal wiederholt.
-- **Bedingte** Ausführung: Einer oder mehrere Schritte werden nur ausgeführt, wenn eine bestimmte Bedingung erfüllt ist.
+- **Bedingte Ausführung**: Einer oder mehrere Schritte werden nur ausgeführt, wenn eine bestimmte Bedingung erfüllt ist.
 - **Unterprogramm**: Mehrere Schritte können zusammengefasst und mit einem Namen versehen werden. Anstatt immer wieder alle Schritte aufzuführen, wird nur der Name angegeben.
 - **Parameter**: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welche bei jeder Ausführung neu festgelegt werden.
 
