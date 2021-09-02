@@ -20,7 +20,6 @@ Wenn Sie in Word ein Dokument abspeichern, gibt es im wesentlichen zwei Möglich
 - das Dokument direkt auf **OneDrive** Speichern. Die Navigation zum richtigen Ordner kann etwas träge sein, da die Ordnerstruktur übers Internet direkt von OneDrive geladen wird.
 - das Dokument wird auf dem **Computer** gespeichert - alle Möglichkeiten stehen offen - Sie können nach wie vor einen Ordner auf OneDrive auswählen.
 
-
 Sofern ein OneDrive Ordner ausgewählt wurde, wird das Dokument automatisch synchronisiert.
 
 ## Gemeinsames Arbeiten
@@ -33,12 +32,28 @@ Sofern ein OneDrive Ordner ausgewählt wurde, wird das Dokument automatisch sync
 
 Ein auf OneDrive gespeichertes Word-Dokument kann zur gemeinsamen Bearbeitung (z.B. für eine Gruppenarbeit) freiegegeben werden. Bei der Freigabe müssen Sie entscheiden, ob das Dokument nur betrachtet, oder auch bearbeitet werden darf:
 
-<div style={{width: '300px'}}>
+<div className="no-table-header small-m">
 
-![](images/doc-sharing.png)
+|                             |                                |
+| :-------------------------- | :----------------------------- |
+| ![](images/doc-sharing.png) | ![](images/word-share-doc.png) |
 
 </div>
 
-:::info Link Kopieren 📋
+:::caution Link Kopieren 📋
 Erfahrungsgemäss funktioniert das Freigeben von Dokumenten am zuverlässigsten und am schnellsten, wenn der **Link** kopiert und per Teams verschickt wird. Die E-Mails bleiben manchmal etwas länger in einer Warteschleife bei Edubern hängen.
+
+Beachten Sie, dass fürs Kopieren eines Links die Link-Einstellungen auf **Jeder mit dem Link** bzw. **Personen bei EDUBERN mit dem Link** gewählt werden muss.
+:::
+
+:::aufgabe Gemeinsames Arbeiten an einem Dokument
+
+Gemeinsame Bearbeitung der Menüs fürs Klassenlager.
+
+- Namen bei Ihrer Gruppe eintragen
+- Menü-Vorschlag festhalten
+- Bild vom Menü suchen und einfügen
+
+[Menü-Klassenlager](https://erzbe-my.sharepoint.com/:w:/g/personal/balthasar_hofer_gbsl_ch/EZSz1D2J68pMuB_QaFrn83QBPHt7eDNtP8G5Vv7OppPUig?e=oBHa2n)
+
 :::

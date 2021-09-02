@@ -1,6 +1,19 @@
+---
+title: Dokumentstruktur
+---
+
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Textaufbau in Word
+
+:::caution Vorgehen
+
+1. Theorie durchlesen - überlegen Sie sich nach jedem Abschnitt, ob Ihnen die Inhalte bekannt vorkommen und ob Sie sich zutrauen, diese Schritte selber durchzuführen.
+2. Markieren Sie in [diesem Dokument](https://erzbe-my.sharepoint.com/:w:/g/personal/balthasar_hofer_gbsl_ch/EZzjhrkIPrhGrQVoLbz3WgMBKi6PihXFLJJT23-xVAFj9A?e=hu7Caq), ob Sie diese Inhalte gerne vorgeführt erhalten würden. 
+3. Bearbeiten Sie die untenstehende Aufgabe
+4. Wenn Sie fertig sind, zeigen Sie das Resultat Herrn Hofer
+
+:::
 
 ## Drei Strukturebenenen
 Ein Word-Dokument kennt drei verschiedene Strukturebenenen:
@@ -21,10 +34,13 @@ Auf jeder Strukturebene lassen sich unterschiedliche Formatierungen vornehmen.
 In einem Abschnitt wird das grundlegende Erscheinungsbild vorgegeben.
 - Ausrichtung
 - Format
-- Spalten
+- Spalten (Text auf mehrere Spalten verteilen)
 - Seitenränder
+- Seitenzahlen
 
 Unter **Layout** lassen sich viele *Abschnitt-Einstellungen* vornehmen und auch *Abschnitt-Umbrüche* einfügen. Durch Klicken auf den rot eingefärbten Pfeil können zudem weitere Einstellungsmöglichkeiten angezeigt werden.
+
+Jeder Abschnitt kann unabhängig vom Vorhergehenden/Nachfolgenden konfiguriert werden. Im Beispiel oben werden also zwei Fortlaufende Umbrüche (`Umbrüche>(Abschnittumbrüche)>Fortlaufend`) eingefügt, damit kein Seitenwechsel passiert.
 
 <div className="no-table-header top">
 
@@ -47,7 +63,11 @@ Mit einer Formatvorlage können Struktur- und Darstellungsinformationen zusammen
 
 Es gibt vordefinierte Formatvorlagen, die einem Absatz zugewiesen werden können:
 
+<div style={{maxWidth: '350px'}}>
+
 ![](images/word-formatvorlage.png)
+
+</div>
 
 Die Formatvorlagen können auch nach den eigenen Wünschen **angepasst** werden:
 
@@ -65,6 +85,12 @@ Erstellen Sie keine neuen Formatvorlagen für Überschriften sonder passen Sie d
 
 #### Formatierungen
 
+<div style={{maxWidth: '550px'}}>
+
+![](images/word-tabstopps.png)
+
+</div>
+
 - Tabstopps `┗` `┻` `┛`
   - der Cursor springt beim Drücken der Tabulator-Taste `⭾` bis zu diesem Tabstopp.
   - Die Ausrichtung bestimmt, wie der Tabulator-Text ausgerichtet wird.
@@ -73,8 +99,6 @@ Erstellen Sie keine neuen Formatvorlagen für Überschriften sonder passen Sie d
   - Der gesamte Absatz wird eingerückt.
 - Erstzeileneinzug `▽`
   - Die erste Zeile eines Absatzes kann eigens kontrolliert werden.
-
-![](images/word-tabstopps.png)
 
 :::tip
 Unter **Ansicht > Anzeige** kann das Lineal eingeblendet werden.
@@ -99,13 +123,21 @@ Ein Zeilenumbruch im selben Absatz kann mit `Shift+Enter` erzeugt werden.
 
 Einzelne Wörter und Buchstaben/Zeichen lassen sich individuell formatieren. So kann etwa festgelegt werden, ob ein Zeichen kursiv, fett oder unterstrichen dargestellt werden kann.
 
+<div style={{maxWidth: '400px'}}>
+
 ![](images/word-zeichenformatierung.png)
+
+</div>
 
 #### Einfügen
 
 Beim Einfügen von kopiertem Text, bspw. von einer Website, werden auch die Zeichenformate mitkopiert (z.B. Links werden dann farbig angezeigt...). Dies ist nicht immer erwünscht und teilweise soll nur der Text übernommen werden. Dann kann über die Einfüge-Optionen *Nur den Text übernehmen* ausgewählt werden:
 
+<div style={{maxWidth: '350px'}}>
+
 ![](images/word-paste-options.png)
+
+</div>
 
 ## Übung
 
@@ -113,7 +145,7 @@ Beim Einfügen von kopiertem Text, bspw. von einer Website, werden auch die Zeic
 
 Laden Sie das Word-Dokument [ex01-what-is-programming.docx](files/ex01-what-is-programming.docx) herunter.
 
-1. Verschieben Sie die Datei auf OneDrive in den Ordner `OneDrive - Edubern/Informatik/Word/ex01-what-is-programming.docx`
+1. Verschieben Sie die Datei auf OneDrive in Ihren Informatik-Ordner.
 2. Formatieren Sie Ihr Word-Dokument so, dass es am Ende wie in der Vorlage unten aussieht:
 
 <div style={{maxHeight: '350px', overflow: 'auto'}}>
