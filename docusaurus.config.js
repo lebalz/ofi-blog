@@ -18,6 +18,17 @@ const remarkAuthorInfos = () => {
           node.title = `Author: ${bib.author} @ ${bib.licence}${bib.edited ? ', Bearbeitet' : ''}`
         }
       }
+      // if (node.alt) {
+      //   if (/@size--(?<dim>\d+)/.test(node.alt)) {
+      //     const res = node.alt.match(/@size--(?<dim>\d+)/);
+      //     if (res.groups && res.groups.dim) {
+      //       node.width = res.groups.dim;
+      //       node.style = { width: `${res.groups.dim}px` }
+      //     }
+      //     console.log(node)
+
+      //   }
+      // }
     });
   };
   return transformer;
@@ -35,7 +46,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'lebalz', // Usually your GitHub org/user name.
   projectName: 'ofi-blog', // Usually your repo name.
-  trailingSlash: true,
+  trailingSlash: false,
   themeConfig: {
     navbar: {
       title: 'Informatik',
@@ -205,14 +216,14 @@ module.exports = {
     },
   ],
   themes: [
-    ['docusaurus-live-brython', 
-    {
-      brython_src: 'https://raw.githack.com/brython-dev/brython/master/www/src/brython.js', 
-      brython_stdlib_src: 'https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js',
-      brython_pips: [
-        'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js'
-      ]
-    }]
+    ['docusaurus-live-brython',
+      {
+        brython_src: 'https://raw.githack.com/brython-dev/brython/master/www/src/brython.js',
+        brython_stdlib_src: 'https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js',
+        brython_pips: [
+          'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js'
+        ]
+      }]
   ],
   stylesheets: [
     {
