@@ -155,3 +155,38 @@ div.small {
     }
   }
 }
+
+
+
+/*
+ * Reset the line-number counter for each .prism-code scope
+ */
+ .prism-code {
+  counter-reset: line-number;
+}
+
+/*
+ * Notice the chained .language-ts class name to .prism-code
+ * You can chain more languages in order to add line numbers
+ */
+.prism-code.language-py .token-line::before {
+  counter-increment: line-number;
+  content: counter(line-number);
+  margin-right: calc(var(--ifm-pre-padding) * 1.5);
+  text-align: right;
+  min-width: 1.5rem;
+  display: inline-block;
+  opacity: .3;
+  position: sticky;
+  left: var(--ifm-pre-padding);
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(231, 231, 139, 0.753);
+}
+
+html[data-theme="dark"] {
+  .docusaurus-highlight-code-line {
+    background-color: rgba(121, 121, 70, 0.678);
+  }  
+}
