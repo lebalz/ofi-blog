@@ -19,6 +19,7 @@ interface Base {
   label?: string;
   hideDataAttr?: boolean;
   children?: React.ReactNode;
+  default?: React.ReactNode;
 }
 
 interface ArrayProps extends Base {
@@ -48,6 +49,9 @@ type Props = ArrayProps | StringProps | TextProps;
 
 const DefaultValues = (props: Props) => {
   if (props.type === "string" || props.type === "text") {
+    if (props.default) {
+      return props.default;
+    }
     return "";
   }
   return Array(props.size).fill("");
@@ -99,9 +103,8 @@ const Option = ({ value, showDataAttr }) => {
   if (OPTIONS_REGEX.test(value)) {
     const data = getDataAttr(value);
     klass = styles[data];
-    val = `${value.replace(OPTIONS_REGEX, "")}${
-      showDataAttr ? " " + data : ""
-    }`;
+    val = `${value.replace(OPTIONS_REGEX, "")}${showDataAttr ? " " + data : ""
+      }`;
   }
   return (
     <option value={value} className={klass}>
@@ -114,16 +117,16 @@ var ReactQuill: any | undefined = undefined;
 
 const loadQuill = (callback) => {
   if (ReactQuill) {
-      return callback();
+    return callback();
   }
 
   import('react-quill').then((reactQuill) => {
-      return Promise.all([
-        import('react-quill/dist/quill.snow.css')
-      ]).then(obj => {
-          ReactQuill = reactQuill.default;
-          callback();
-      });
+    return Promise.all([
+      import('react-quill/dist/quill.snow.css')
+    ]).then(obj => {
+      ReactQuill = reactQuill.default;
+      callback();
+    });
   })
 };
 
@@ -131,8 +134,8 @@ const Answer = (props: Props) => {
   const [loaded, setLoaded] = React.useState(false);
   const [value, setValue] = React.useState(props.type === "array" ? [] : "");
   const [contextKey, setContextKey] = React.useState("");
-  const [showQuillToolbar,setShowQuillToolbar] = React.useState(false);
-  const [hasTextEdits,setHasTextEdits] = React.useState(false);
+  const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
+  const [hasTextEdits, setHasTextEdits] = React.useState(false);
   const [correctState, setCorrectState] = React.useState("unchecked");
 
   const [quillLoaded, setQuillLoaded] = React.useState(false);
@@ -150,13 +153,13 @@ const Answer = (props: Props) => {
     }
     let isMounted = true;
     loadQuill(() => {
-        if (isMounted) {
-            setQuillLoaded(true);
-            if (quillRef && quillRef.current) {
-              quillRef.current.editor.getModule("toolbar").container.addEventListener("mousedown", onQuillToolbarMouseDown);
-              checkWorkingState(quillRef.current.editor);
-            }
+      if (isMounted) {
+        setQuillLoaded(true);
+        if (quillRef && quillRef.current) {
+          quillRef.current.editor.getModule("toolbar").container.addEventListener("mousedown", onQuillToolbarMouseDown);
+          checkWorkingState(quillRef.current.editor);
         }
+      }
     });
     return () => {
       isMounted = false
@@ -324,11 +327,14 @@ const Answer = (props: Props) => {
           onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)}
           onBlur={() => showQuillToolbar && setShowQuillToolbar(false)}
         >
+          {props.label && (
+            <h6>{props.label}</h6>
+          )}
           <ReactQuill
             ref={quillRef}
 
             className={clsx(
-              styles.quillAnswer, 
+              styles.quillAnswer,
               showQuillToolbar ? undefined : 'disable-toolbar',
               hasTextEdits ? styles.edited : undefined
             )}

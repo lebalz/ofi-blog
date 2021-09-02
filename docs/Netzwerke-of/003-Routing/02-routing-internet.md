@@ -107,7 +107,7 @@ Der **Router** ist das **Paketverteilzentrum** und verbindet mehrere Netzwerke m
 
 Sie müssen die **IP-Pakete auspacken**, damit diese gemäss der IP-Adresse **weitergeleitet** werden können. Dabei bedienen sich Router spezieller Tabellen, welche angeben, wohin ein Paket mit einer bestimmten IP-Adresse hingeleitet werden soll.
 
-![](images/routing-ip-packages.svg)
+![](images/routing_slim.png)
 
 :::note
 
