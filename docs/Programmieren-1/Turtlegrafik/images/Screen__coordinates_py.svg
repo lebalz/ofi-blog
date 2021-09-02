@@ -1,0 +1,267 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="Screen__coordinates_py_svg" width="537.015625" height="538" xmlns="http://www.w3.org/2000/svg" viewBox="3.984375,13.5,537.015625,538">
+<g transform="translate(280 280)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="-244" y2="0" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-244" y1="265" x2="-250" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="250" x2="-250" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-250" x2="-219" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-219" y1="265" x2="-225" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-225" y1="250" x2="-225" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-225" y1="-250" x2="-194" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-194" y1="265" x2="-200" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-200" y1="250" x2="-200" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-200" y1="-250" x2="-169" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-169" y1="265" x2="-175" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-175" y1="250" x2="-175" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-175" y1="-250" x2="-144" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-144" y1="265" x2="-150" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-150" y1="250" x2="-150" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-150" y1="-250" x2="-119" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-119" y1="265" x2="-125" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-125" y1="250" x2="-125" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-125" y1="-250" x2="-94" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-94" y1="265" x2="-100" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-100" y1="250" x2="-100" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-100" y1="-250" x2="-69" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-69" y1="265" x2="-75" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-75" y1="250" x2="-75" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-75" y1="-250" x2="-44" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-44" y1="265" x2="-50" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-50" y1="250" x2="-50" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-50" y1="-250" x2="-19" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-19" y1="265" x2="-25" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-25" y1="250" x2="-25" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-25" y1="-250" x2="6" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="6" y1="265" x2="0" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="0" y1="250" x2="0" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="0" y1="-250" x2="31" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="31" y1="265" x2="25" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="25" y1="250" x2="25" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="25" y1="-250" x2="56" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="56" y1="265" x2="50" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="50" y1="250" x2="50" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="50" y1="-250" x2="81" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="81" y1="265" x2="75" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="75" y1="250" x2="75" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="75" y1="-250" x2="106" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="106" y1="265" x2="100" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="100" y1="250" x2="100" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="100" y1="-250" x2="131" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="131" y1="265" x2="125" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="125" y1="250" x2="125" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="125" y1="-250" x2="156" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="156" y1="265" x2="150" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="150" y1="250" x2="150" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="150" y1="-250" x2="181" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="181" y1="265" x2="175" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="175" y1="250" x2="175" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="175" y1="-250" x2="206" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="206" y1="265" x2="200" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="200" y1="250" x2="200" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="200" y1="-250" x2="231" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="231" y1="265" x2="225" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="225" y1="250" x2="225" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="225" y1="-250" x2="256" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="256" y1="265" x2="250" y2="265" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="250" x2="250" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-250" x2="-255" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="253" x2="-250" y2="253" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="250" x2="250" y2="250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="250" x2="-255" y2="250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="228" x2="-250" y2="228" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="225" x2="250" y2="225" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="225" x2="-255" y2="225" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="203" x2="-250" y2="203" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="200" x2="250" y2="200" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="200" x2="-255" y2="200" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="178" x2="-250" y2="178" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="175" x2="250" y2="175" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="175" x2="-255" y2="175" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="153" x2="-250" y2="153" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="150" x2="250" y2="150" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="150" x2="-255" y2="150" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="128" x2="-250" y2="128" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="125" x2="250" y2="125" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="125" x2="-255" y2="125" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="103" x2="-250" y2="103" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="100" x2="250" y2="100" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="100" x2="-255" y2="100" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="78" x2="-250" y2="78" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="75" x2="250" y2="75" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="75" x2="-255" y2="75" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="53" x2="-250" y2="53" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="50" x2="250" y2="50" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="50" x2="-255" y2="50" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="28" x2="-250" y2="28" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="25" x2="250" y2="25" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="25" x2="-255" y2="25" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="3" x2="-250" y2="3" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="0" x2="250" y2="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="0" x2="-255" y2="0" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-22" x2="-250" y2="-22" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-25" x2="250" y2="-25" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-25" x2="-255" y2="-25" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-47" x2="-250" y2="-47" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-50" x2="250" y2="-50" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-50" x2="-255" y2="-50" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-72" x2="-250" y2="-72" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-75" x2="250" y2="-75" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-75" x2="-255" y2="-75" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-97" x2="-250" y2="-97" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-100" x2="250" y2="-100" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-100" x2="-255" y2="-100" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-122" x2="-250" y2="-122" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-125" x2="250" y2="-125" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-125" x2="-255" y2="-125" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-147" x2="-250" y2="-147" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-150" x2="250" y2="-150" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-150" x2="-255" y2="-150" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-172" x2="-250" y2="-172" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-175" x2="250" y2="-175" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-175" x2="-255" y2="-175" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-197" x2="-250" y2="-197" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-200" x2="250" y2="-200" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-200" x2="-255" y2="-200" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-222" x2="-250" y2="-222" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-225" x2="250" y2="-225" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-225" x2="-255" y2="-225" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-255" y1="-247" x2="-250" y2="-247" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="-250" y1="-250" x2="250" y2="-250" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="250" y1="-250" x2="0" y2="-250" opacity="0" style="stroke: lightgray; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="-250" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-250" y1="0" x2="250" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="250" y1="0" x2="232.67949192431124" y2="-9.999999999999998" style="stroke: black; stroke-width: 1;"></line>
+<line x1="232.67949192431124" y1="-9.999999999999998" x2="250" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="250" y1="0" x2="232.67949192431124" y2="9.999999999999998" style="stroke: black; stroke-width: 1;"></line>
+<line x1="232.67949192431124" y1="9.999999999999998" x2="240" y2="9.999999999999998" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="240" y1="20" x2="0" y2="20" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="-1.5308084989341916e-14" y2="250" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-1.5308084989341916e-14" y1="250" x2="1.5308084989341916e-14" y2="-250" style="stroke: black; stroke-width: 1;"></line>
+<line x1="1.5308084989341916e-14" y1="-250" x2="-9.999999999999993" y2="-232.67949192431124" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-9.999999999999993" y1="-232.67949192431124" x2="1.5987211554602254e-14" y2="-250" style="stroke: black; stroke-width: 1;"></line>
+<line x1="1.5987211554602254e-14" y1="-250" x2="10.000000000000018" y2="-232.67949192431124" style="stroke: black; stroke-width: 1;"></line>
+<line x1="10.000000000000018" y1="-232.67949192431124" x2="-30" y2="-232.67949192431124" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-30" y1="-240" x2="0" y2="-240" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+</g>
+<g transform="translate(280 280)">
+<text x="-244" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-250</text>
+<text x="-219" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-225</text>
+<text x="-194" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-200</text>
+<text x="-169" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-175</text>
+<text x="-144" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-150</text>
+<text x="-119" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-125</text>
+<text x="-94" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-100</text>
+<text x="-69" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-75</text>
+<text x="-44" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-50</text>
+<text x="-19" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-25</text>
+<text x="6" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">0</text>
+<text x="31" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">25</text>
+<text x="56" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">50</text>
+<text x="81" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">75</text>
+<text x="106" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">100</text>
+<text x="131" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">125</text>
+<text x="156" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">150</text>
+<text x="181" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">175</text>
+<text x="206" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">200</text>
+<text x="231" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">225</text>
+<text x="256" y="265" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">250</text>
+<text x="-255" y="253" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-250</text>
+<text x="-255" y="228" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-225</text>
+<text x="-255" y="203" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-200</text>
+<text x="-255" y="178" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-175</text>
+<text x="-255" y="153" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-150</text>
+<text x="-255" y="128" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-125</text>
+<text x="-255" y="103" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-100</text>
+<text x="-255" y="78" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-75</text>
+<text x="-255" y="53" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-50</text>
+<text x="-255" y="28" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">-25</text>
+<text x="-255" y="3" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">0</text>
+<text x="-255" y="-22" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">25</text>
+<text x="-255" y="-47" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">50</text>
+<text x="-255" y="-72" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">75</text>
+<text x="-255" y="-97" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">100</text>
+<text x="-255" y="-122" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">125</text>
+<text x="-255" y="-147" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">150</text>
+<text x="-255" y="-172" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">175</text>
+<text x="-255" y="-197" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">200</text>
+<text x="-255" y="-222" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">225</text>
+<text x="-255" y="-247" fill="black" text-anchor="end" style="display: block; font-family: Arial; font-size: 8px; font-style: normal;" display="block">250</text>
+<text x="240" y="20" fill="black" text-anchor="start" style="display: block; font-family: Arial; font-size: 24px; font-style: normal;" display="block">x</text>
+<text x="-30" y="-240" fill="black" text-anchor="start" style="display: block; font-family: Arial; font-size: 24px; font-style: normal;" display="block">y</text>
+</g>
+<g transform="translate(280 280)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(0,0) rotate(-90,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+turtle.set_defaults(
+    canvwidth = 280 * 2,
+    canvheight = 280 * 2
+)
+speed(100)
+def grid(xmin: int, xmax: int, ymin: int, ymax: int, tick: int, scale: int = 1):
+    old_pos = getturtle().pos()
+    old_pensize = getturtle().pensize()
+    pensize(1)
+    old_color = getturtle().color()
+    pencolor('lightgray')
+    offset_x = len(str(max(xmax, xmin))) * 2
+    offset_y = len(str(max(ymax, ymin))) * 2
+    for xtick in range(scale * xmin, scale * xmax + 1, tick):
+        penup()
+        goto(xtick + offset_x, scale * ymin - 15)
+        pencolor('black')
+        write(xtick, font=("Arial", 8, "normal"), align='right')
+        pencolor('lightgray')
+
+        goto(xtick, scale * ymin)
+        pendown()
+        goto(xtick, scale * ymax)
+
+    for ytick in range(scale * ymin, scale * ymax + 1, tick):
+        penup()
+        goto(scale * xmin - 5, ytick - offset_y + 3)
+        pencolor('black')
+        write(ytick, align='right')
+        pencolor('lightgray')
+        goto(scale * xmin, ytick)
+        pendown()
+        goto(scale * xmax, ytick)
+    penup()
+    goto(*old_pos)
+    pendown()
+    pensize(old_pensize)
+    color(*old_color)
+
+dim = 250
+grid(-dim, dim, -dim, dim, 25)
+
+# draw x axis
+backward(250)
+forward(500)
+left(150)
+forward(20)
+backward(20)
+right(300)
+forward(20)
+penup()
+goto(240, -20)
+write('x', font=("Arial", 24, "normal"))
+
+
+# draw y axis
+home()
+left(90)
+pendown()
+backward(250)
+forward(500)
+left(150)
+forward(20)
+backward(20)
+right(300)
+forward(20)
+penup()
+goto(-30, 240)
+write('y', font=("Arial", 24, "normal"),)
+home()
+</raw></metadata></svg>
