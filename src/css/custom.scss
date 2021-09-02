@@ -101,9 +101,14 @@ div.small {
   }
 }
 
-.no-table-header table {
-  thead {
-    display: none;
+.no-table-header {
+  table {
+    thead {
+      display: none;
+    }
+  }
+  &.top table td {
+    vertical-align: top;
   }
 }
 
