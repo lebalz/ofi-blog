@@ -89,6 +89,13 @@ table {
   }
 }
 
+.float-right {
+  &>p>img {
+    float: right;
+    max-width: 300px;
+  }
+}
+
 .small-table table {
   td {
     padding: 0.2em;
