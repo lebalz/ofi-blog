@@ -72,7 +72,7 @@ Welchen Transportoptionen schlägt Ihnen [Google Maps](https://www.google.com/ma
 Datenpakete sind – anders als wir als Passagiere vom *ÖV* – nicht intelligent. Sie wissen nicht, wie sie umsteigen müssen. Dies muss für sie übernommen werden.
 
 Ein Datenpaket im ÖV vom Gymer zum Sportplatz Mettmoos müsste
-1. an jeder Haltestelle wissen:
+1. an **jeder Haltestelle** wissen:
   - ob man Aussteigen oder Umsteigen muss
   - in welchen Bus man einsteigen muss
   - ob man am Ziel angekommen ist.
@@ -91,7 +91,7 @@ Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für Date
 - Schulen Linde
 - Bahnhof Mett
 
-Beispiel-Anleitung: **Bahnhof Biel** → in Bus Nr. 1 Richtung *Löhre/Mauchamp* einsteigen
+Beispiel-Anleitung: **Seehofweg** → Bus Nr. 9
 
 <Answer type="text" id="q3"/>
 
