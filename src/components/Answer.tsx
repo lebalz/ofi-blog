@@ -43,6 +43,7 @@ interface TextProps extends Base {
   type: "text";
   placeholder?: string;
   minLength?: number;
+  quillTheme?: 'snow' | 'bubble'
 }
 
 type Props = ArrayProps | StringProps | TextProps;
@@ -122,7 +123,8 @@ const loadQuill = (callback) => {
 
   import('react-quill').then((reactQuill) => {
     return Promise.all([
-      import('react-quill/dist/quill.snow.css')
+      import('react-quill/dist/quill.snow.css'),
+      import('react-quill/dist/quill.bubble.css')
     ]).then(obj => {
       ReactQuill = reactQuill.default;
       callback();
@@ -332,7 +334,7 @@ const Answer = (props: Props) => {
           )}
           <ReactQuill
             ref={quillRef}
-
+            theme={props.quillTheme || 'snow'}
             className={clsx(
               styles.quillAnswer,
               showQuillToolbar ? undefined : 'disable-toolbar',

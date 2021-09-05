@@ -33,7 +33,7 @@ Eine wichtige Eigenschaft von Algorithmen ist die **Ausführbarkeit**. Sie bedeu
 Ein Algorithmus definiert, in welcher **Reihenfolge** die einzelnen Schritte nacheinander abgearbeitet werden. Die Beschreibung dieser Reihenfolge ist die **Struktur** des Algorithmus. Während die Einzelschritte je nach Anwendungsgebiet unterschiedlich sind, sind die Strukturen (beim Programmieren spricht man von **Kontrollstrukturen**) von Algorithmen universell.
 
 Folgende Strukturen können unterschieden werden:
-- **Sequenz**: Es wird ein Schritt nach dem anderen abgearbeitet.
+- **Sequenz**: eine Folge von Schritten/Anweisungen, die nacheinander abgearbeitet werden.
 - **Wiederholung**: Einer oder mehrere Schritte werden eine bestimmte Anzahl mal wiederholt.
 - **Bedingte** Ausführung: Einer oder mehrere Schritte werden nur ausgeführt, wenn eine bestimmte Bedingung erfüllt ist.
 - **Unterprogramm**: Mehrere Schritte können zusammengefasst und mit einem Namen versehen werden. Anstatt immer wieder alle Schritte aufzuführen, wird nur der Name angegeben.

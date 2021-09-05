@@ -1,0 +1,20 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="zickzack_py_svg" width="70" height="37.32051086425781" xmlns="http://www.w3.org/2000/svg" viewBox="245,222.6794891357422,70,37.32051086425781">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="10.000000000000002" y2="-17.32050807568877" style="stroke: red; stroke-width: 5;" stroke-linecap="round"></line>
+<circle cx="10.000000000000002" cy="-17.32050807568877" r="5" fill="red" style=""></circle>
+<line x1="10.000000000000002" y1="-17.32050807568877" x2="20.000000000000004" y2="0" style="stroke: red; stroke-width: 5;" stroke-linecap="round"></line>
+<circle cx="20.000000000000004" cy="0" r="5" fill="red" style=""></circle>
+<line x1="20.000000000000004" y1="0" x2="30.000000000000007" y2="-17.32050807568877" style="stroke: orange; stroke-width: 5;" stroke-linecap="round"></line>
+<circle cx="30.000000000000007" cy="-17.32050807568877" r="5" fill="orange" style=""></circle>
+<line x1="30.000000000000007" y1="-17.32050807568877" x2="40.00000000000001" y2="0" style="stroke: orange; stroke-width: 5;" stroke-linecap="round"></line>
+<circle cx="40.00000000000001" cy="0" r="5" fill="orange" style=""></circle>
+<line x1="40.00000000000001" y1="0" x2="50.00000000000001" y2="-17.32050807568877" style="stroke: lime; stroke-width: 5;" stroke-linecap="round"></line>
+<circle cx="50.00000000000001" cy="-17.32050807568877" r="5" fill="lime" style=""></circle>
+<line x1="50.00000000000001" y1="-17.32050807568877" x2="60.00000000000001" y2="0" style="stroke: lime; stroke-width: 5;" stroke-linecap="round"></line>
+<line x1="60.00000000000001" y1="0" x2="60.00000000000001" y2="0" style="stroke: lime; stroke-width: 5;" stroke-linecap="round"></line>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="lime" fill="lime" stroke-width="1" opacity="0" transform="translate(60.00000000000001,-0.0) rotate(-90,0,0)"></polygon>
+</g></svg>

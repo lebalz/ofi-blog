@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+    <link
+      rel="stylesheet"
+      href="../../reveal.js/plugin/highlight/monokai.css"
+    />
+
+    <style type="text/css">
+      :root {
+        --r-background-color: #232a40;
+      }
+      .reveal img {
+        border-radius: 8px;
+        box-shadow: 4px 4px 25px #cccccc27;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+        max-height: 50vh;
+      }
+	  .reveal .full img {
+		  width: 85%;
+	  }
+      .reveal p {
+        text-align: left;
+      }
+
+      .reveal h2 {
+        text-align: left;
+      }
+      .reveal h3 {
+        text-align: left;
+      }
+      .reveal h4 {
+        text-align: left;
+      }
+      .reveal ul {
+        display: block;
+      }
+      .reveal ol {
+        display: block;
+      }
+      .reveal pre.code-wrapper {
+        width: auto;
+      }
+      .reveal pre.code-wrapper > code.hljs {
+        font-size: 26pt;
+        width: 100%;
+        line-height: initial;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-markdown="presentation.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Note:"
+        ></section>
+      </div>
+    </div>
+
+    <script src="../../reveal.js/dist/reveal.js"></script>
+    <script src="../../reveal.js/plugin/zoom/zoom.js"></script>
+    <script src="../../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../../reveal.js/plugin/search/search.js"></script>
+    <script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="../../reveal.js/plugin/math/math.js"></script>
+    <script>
+      // Also available as an ES module, see:
+      // https://revealjs.com/initialization/
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+          RevealMath,
+        ],
+      });
+
+      const OPTIONS_REGEX = /--(?<klass>\w+)$/;
+      function getDataAttr(value) {
+        if (value && OPTIONS_REGEX.test(value)) {
+          return value.match(OPTIONS_REGEX).groups.klass;
+        }
+        return undefined;
+      };
+      function getTransformedNodes(solution, label) {
+        const container = document.createElement('div');
+        container.style.lineHeight = 2;
+        container.style.textAlign = 'left';
+        container.style.paddingLeft = '5em';
+        const labelNode = document.createElement('span');
+        labelNode.innerHTML = `${label}:`;
+        labelNode.style = "padding: 12px; margin: 4px; font-family: monospace";
+        container.appendChild(labelNode);
+        solution.split(' ').forEach((s) => {
+          const step = document.createElement('span');
+          const color = getDataAttr(s) || 'unset';
+          // const fc =  getDataAttr(s) ? 'white' : 'black'
+          step.innerHTML = s.split('--')[0];
+          step.style = `padding: 12px; border: 1px solid silver; background-color: ${color}; margin: 4px; border-radius: 8px; font-family: monospace;`
+          container.appendChild(step)
+        })
+        return container;
+      }
+      Reveal.on('ready', event => {
+      // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+        const nodes = document.querySelectorAll('.solution')
+        
+        nodes.forEach(node => {
+          const solution = node.getAttribute('data-solution-f1');   
+          if (!solution) {
+            return;
+          }     
+          node.replaceChildren(getTransformedNodes(solution, 'F1'));
+          const solutionF2 = node.getAttribute('data-solution-f2');
+          if (solutionF2) {
+            node.appendChild(getTransformedNodes(solutionF2, 'F2'));
+          }
+        })
+
+      } );
+    </script>
+  </body>
+</html>

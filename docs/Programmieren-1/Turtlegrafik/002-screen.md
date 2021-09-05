@@ -1,4 +1,8 @@
-# Screen
+---
+title: Zeichnungsfläche
+---
+
+# Zeichnungsfläche - Screen
 
 Die Zeichenfläche kann konfiguriert werden, z.B. mit einer Hintergrundfarbe, oder aber auch die Dimensionen des Hintergrunds.
 

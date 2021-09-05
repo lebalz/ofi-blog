@@ -286,6 +286,11 @@
       "from": "docs/Programmieren-1/01-Algorithmen/",
       "to": "versioned_docs/version-25h/04-Programmieren-1/01-Algorithmen",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/Turtlegrafik/",
+      "to": "versioned_docs/version-25h/versioned_docs/version-25h/04-Programmieren-1/02-Turtlegrafik",
+      "ignore": []
     }
   ]
 }
