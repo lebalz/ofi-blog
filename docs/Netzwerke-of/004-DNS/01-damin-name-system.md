@@ -98,18 +98,31 @@ Es gibt Web-Sites, über welche man herausfinden kann, von wem ein bestimmter Do
 - https://www.whois.com/whois/ (TLDs com, org, edu, …)
 - http://whois.nic.swiss/ (TLD swiss)
 
-:::aufgabe Aufgabe 1
-
-Wie findet man die IP-Adresse, welche zu einem Domain-Name gehört?
-
-<Answer type="text" id="q1"/>
-:::
-
+## IP Adressen herausfinden
 Wenn Sie im Browser auf Ihrem Computer den Link https://www.instagram.com eingeben, so muss Ihr Computer herausfinden, welche IP-Adresse zum Domain-Name www.instagram.com in diesem Link gehört, damit er den Instagram-Server schliesslich kontaktieren kann.
 
 Den zuständigen DNS-Server kann Ihr Computer, aber nur über dessen eigene IP-Adresse erreichen. Wenn Ihr Computer das zum ersten Mal macht, so kennt er diese Adresse noch nicht. Deshalb wendet er sich an einen der **13 DNS-Server** auf der obersten Ebene, den sogenannten **Root-Servern**, deren IP-Adressen jedem Computer bekannt sind. Diese leiten Ihren Computer dann an die tiefer gelegenen DNS-Server weiter, bis schliesslich der richtige DNS-Server gefunden ist. Das passiert automatisch, ohne, dass Sie davon etwas merken.
 
 Man kann solche Anfragen aber auch von Hand machen. Dazu können Sie die Seite https://tools.keycdn.com/dig verwenden.
+
+:::aufgabe Aufgabe 1
+
+Wie findet man die IP-Adresse, welche zu einem Domain-Name gehört? (Googeln Sie nach einer Website, welche einen Dienst anbietet, der dies tut.)
+
+<Answer type="text" id="q1"/>
+
+
+<details><summary>⭐️ The Hacky Way - Übers Terminal</summary>
+
+Sie können auch in der Windows-Eingabeaufforderung oder auf dem Mac-Terminal einen Domain-Name zu einer IP-Adresse auflösen. Dazu brauchen Sie den Befehl `nslookup`.
+
+Beispiel:
+```
+nslookup de.wikipedia.org
+```
+Probieren Sie es aus, wenn Sie Lust auf mehr Hacker-Feeling haben.
+</details>
+:::
 
 :::aufgabe Instagram
 
@@ -117,15 +130,6 @@ Finden Sie heraus, welches die IP-Adresse von www.instagram.com ist.
 
 <Answer type="text" id="q2" label="IP-Adresse"/>
 
-<details><summary>Übers Terminal</summary>
-
-Sie können auch in der Windows-Eingabeaufforderung oder auf dem Mac-Terminal einen Domain-Name zu einer IP-Adresse auflösen. Dazu brauchen Sie den Befehl nslookup.
-Beispiel:
-```
-nslookup de.wikipedia.org
-```
-Probieren Sie es aus, wenn Sie Lust auf mehr Hacker-Feeling haben.
-</details>
 :::
 
 
