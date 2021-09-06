@@ -71,9 +71,7 @@ Object.keys(CONFIG).forEach((klass) => {
                 rsync.exclude(ignore)
                 gitignore.push(`!${sanitizedClassDir}${ignore}`)
             }
-            rsync.exclude('.sync.*')
-            rsync.exclude('.nosync.*')
-            // console.log(rsync.command())
+            rsync.exclude(['.sync.*', '*.nosync.*'])
             rsync.execute((err, code, cmd) => {
                 console.log('finished', err, code, cmd)
             })
