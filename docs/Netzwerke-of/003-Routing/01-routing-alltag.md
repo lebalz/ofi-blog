@@ -130,7 +130,7 @@ Es gibt verschiedene Wege zum Ziel - auch nicht optimale Wege, die normalerweise
 
 ## Grosse Gruppe
 
-> 4 Parallelklassen – also ca. 100 Personen haben beim Sportplatz Mettmoos.
+> 4 Parallelklassen – also ca. 100 Personen haben beim Sportplatz Mettmoos abgemacht.
 > Wie kommen sie am schnellsten dahin, wenn wir damit rechnen, dass wegen Corona und dem Feierabendverkehr maximal 25 Personen pro Bus Platz finden?
 
 
