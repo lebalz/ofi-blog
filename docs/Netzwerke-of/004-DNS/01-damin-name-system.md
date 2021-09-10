@@ -76,7 +76,7 @@ Zeichnen Sie eine Hierarchie (Baum), in welcher folgende Domain-Namen vorkommen 
 - www.gbsl.ch
 - learningview.org
 - tel.search.ch
-- erzbe-my.scharepoint.com
+- erzbe-my.sharepoint.com
 - outlook.office.com
 - www.office.com
 
