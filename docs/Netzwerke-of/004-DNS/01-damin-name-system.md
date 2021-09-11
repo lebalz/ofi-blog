@@ -134,7 +134,7 @@ Finden Sie heraus, welches die IP-Adresse von www.instagram.com ist.
 
 
 :::aufgabe Aufgabe 2
-Untenstehende Abbildung zeigt eine verdächtige aussehende E-Mail. Sie enthält einen Button, unter welchem angeblich Details einer Foto angeschaut werden können.
+Untenstehende Abbildung zeigt eine verdächtige aussehende E-Mail. Sie enthält einen Button, unter welchem angeblich Details eines Fotos angeschaut werden können.
 
 ![](images/fishy-mail.png)
 
