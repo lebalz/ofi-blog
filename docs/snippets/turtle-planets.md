@@ -61,8 +61,8 @@ for step in range(STEPS * ROUNDS):
   moon2.setheading(180 - to_degree(angle_moon2))
 
 # hide turtles
-sun.hide()
-earth.hide()
-moon.hide()
-moon2.hide()
+sun.hideturtle()
+earth.hideturtle()
+moon.hideturtle()
+moon2.hideturtle()
 ```
