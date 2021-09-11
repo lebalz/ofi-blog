@@ -56,6 +56,11 @@
       "from": "docs/Netzwerke-of/004-DNS/",
       "to": "versioned_docs/version-24f/05-Netzwerke/005-DNS",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/090-Pruefung.md",
+      "to": "versioned_docs/version-24f/05-Netzwerke/090-Pruefung.md",
+      "ignore": []
     }
   ],
   "24i": [
@@ -114,6 +119,11 @@
     {
       "from": "docs/Netzwerke-of/004-DNS/",
       "to": "versioned_docs/version-24i/05-Netzwerke/005-DNS",
+      "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/090-Pruefung.md",
+      "to": "versioned_docs/version-24i/05-Netzwerke/090-Pruefung.md",
       "ignore": []
     }
   ],
@@ -174,6 +184,11 @@
       "from": "docs/Netzwerke-of/004-DNS/",
       "to": "versioned_docs/version-24K/05-Netzwerke/005-DNS",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/090-Pruefung.md",
+      "to": "versioned_docs/version-24K/05-Netzwerke/090-Pruefung.md",
+      "ignore": []
     }
   ],
   "24L": [
@@ -233,6 +248,11 @@
       "from": "docs/Netzwerke-of/004-DNS/",
       "to": "versioned_docs/version-24L/05-Netzwerke/005-DNS",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/090-Pruefung.md",
+      "to": "versioned_docs/version-24L/05-Netzwerke/090-Pruefung.md",
+      "ignore": []
     }
   ],
   "24o": [
@@ -291,6 +311,11 @@
     {
       "from": "docs/Netzwerke-of/004-DNS/",
       "to": "versioned_docs/version-24o/05-Netzwerke/005-DNS",
+      "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/090-Pruefung.md",
+      "to": "versioned_docs/version-24o/05-Netzwerke/090-Pruefung.md",
       "ignore": []
     }
   ],
