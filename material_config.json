@@ -61,6 +61,11 @@
       "from": "docs/Netzwerke-of/090-Pruefung.md",
       "to": "versioned_docs/version-24f/05-Netzwerke/090-Pruefung.md",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/005-Sicherheit/",
+      "to": "versioned_docs/version-24f/05-Netzwerke/006-Sicherheit",
+      "ignore": []
     }
   ],
   "24i": [
@@ -125,6 +130,11 @@
       "from": "docs/Netzwerke-of/090-Pruefung.md",
       "to": "versioned_docs/version-24i/05-Netzwerke/090-Pruefung.md",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/005-Sicherheit/",
+      "to": "versioned_docs/version-24i/05-Netzwerke/006-Sicherheit",
+      "ignore": []
     }
   ],
   "24K": [
@@ -188,6 +198,11 @@
     {
       "from": "docs/Netzwerke-of/090-Pruefung.md",
       "to": "versioned_docs/version-24K/05-Netzwerke/090-Pruefung.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/005-Sicherheit/",
+      "to": "versioned_docs/version-24K/05-Netzwerke/006-Sicherheit",
       "ignore": []
     }
   ],
@@ -316,6 +331,11 @@
     {
       "from": "docs/Netzwerke-of/090-Pruefung.md",
       "to": "versioned_docs/version-24o/05-Netzwerke/090-Pruefung.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/005-Sicherheit/",
+      "to": "versioned_docs/version-24o/05-Netzwerke/006-Sicherheit",
       "ignore": []
     }
   ],
