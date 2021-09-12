@@ -188,6 +188,13 @@ Angenommen einem Angreifer gelingt es, Ihrem Computer eine beliebige, aber falsc
 <Answer type="text" id="q6" placeholder="Möglichkeiten"/>
 :::
 
+
+## Rückblick
+
+Ausschnitt: Start bis 2:51 Minuten.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DLNy_XNNBew?start=1&end=2:51" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>></iframe>
+
 ## Schlusspunkt
 Sie haben nun das Domain-Name-System kennengelernt. Es ist eines der wichtigsten Teile des Internet. Sie haben gesehen, wie man zu einem Domain-Name die zugehörige IP-Adresse erhält. Sie haben auch eine Idee von den Konsequenzen erhalten, wenn das Domain-Name-System nicht so funktioniert, wie erwartet, beispielsweise wegen einer Attacke durch Hacker (*DNS-Hijacking*). Solche Attacken können in unserer vernetzten Welt einen enormen wirtschaftlichen Schaden verursachen.
 
