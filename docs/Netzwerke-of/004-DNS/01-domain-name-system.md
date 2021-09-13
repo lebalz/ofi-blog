@@ -3,6 +3,9 @@ title: Domain Name System
 ---
 
 import Answer from "@site/src/components/Answer";
+import CheckPageRename from "@site/src/components/CheckPageRename";
+
+<CheckPageRename oldName="dns_damin_name_system" newName="dns_domain_name_system" />
 
 # Domain-Name-System [^1]
 
