@@ -30,7 +30,7 @@ Folgende bit-Sequenzen sind UTF-8 Codiert. Welche Dezimalzahlen sind codiert?
 ---
 
 ```
-1110'001 1000'0000 1000'1111
+1110'0001 1000'0000 1000'1111
 ```
 
 <Answer type="string" id="q3" solution="4111"/>
@@ -43,7 +43,7 @@ Folgende bit-Sequenzen sind UTF-8 Codiert. Welche Dezimalzahlen sind codiert?
 Codieren Sie folgende bit-Sequenz zu UTF-8:
 
 ```
-110'1001'0101'1001'0110
+1100'1001'0101'1001'0110
 ```
 
 <Answer type="string" id="q4" solution="11110001 10101001 10010110 10010110" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')}/>
