@@ -46,7 +46,7 @@ Codieren Sie folgende bit-Sequenz zu UTF-8:
 1100'1001'0101'1001'0110
 ```
 
-<Answer type="string" id="q4" solution="11110001 10101001 10010110 10010110" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')}/>
+<Answer type="string" id="q4" solution="11110011 10101001 10010110 10010110" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')}/>
 
 ---
 
