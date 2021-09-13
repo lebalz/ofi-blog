@@ -20,6 +20,7 @@ interface Base {
   hideDataAttr?: boolean;
   children?: React.ReactNode;
   default?: React.ReactNode;
+  sanitizer?: (val) => any;
 }
 
 interface ArrayProps extends Base {
@@ -238,7 +239,8 @@ const Answer = (props: Props) => {
     if (props.type === "text") {
       return;
     }
-    setCorrectState(current === props.solution ? "correct" : "wrong");
+    const sanitizer = props.sanitizer ? props.sanitizer : (val) => val;
+    setCorrectState(sanitizer(current) === sanitizer(props.solution) ? "correct" : "wrong");
   };
 
   switch (props.type) {
