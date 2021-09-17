@@ -53,5 +53,5 @@ Kopieren Sie den untenstehenden Text inkl. der Bilder und formatieren Sie das Do
 > Eine Onlinesucht kann zur Beeinträchtigung der sozialen Beziehungen und der schulischen oder beruflichen Leistungen führen. Einige Nutzungsformen können auch grosse finanzielle Probleme mit sich bringen. Mitunter wird auch die körperliche Gesundheit geschädigt. So kann es z. B. zu Haltungsschäden, zu Problemen wegen eines gestörten Essverhaltens, zu Kopfschmerzen und Sehproblemen kommen.
 >
 > Weiterführende Informationen zu Internetgebrauch und Onlinesucht
-> Zahlen und Fakten zu Internetnutzung und Onlinesucht: [zahlen-fakten.suchtschweiz.ch](zahlen-fakten.suchtschweiz.ch); [monam.ch](monam.ch)
-> Beratung und Therapie bei Onlinesucht: [spielsucht-radix.ch](spielsucht-radix.ch)
+> Zahlen und Fakten zu Internetnutzung und Onlinesucht: [https://zahlen-fakten.suchtschweiz.ch](https://zahlen-fakten.suchtschweiz.ch); [https://monam.ch](https://monam.ch)
+> Beratung und Therapie bei Onlinesucht: [https://spielsucht-radix.ch](https://spielsucht-radix.ch)
