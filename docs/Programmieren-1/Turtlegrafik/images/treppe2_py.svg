@@ -1,0 +1,66 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="treppe2_py_svg" width="412.5" height="417.5" xmlns="http://www.w3.org/2000/svg" viewBox="42.5,40,412.5,417.5">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="-200" y2="0" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<circle cx="-200" cy="200" r="2.5" fill="black" style=""></circle>
+<line x1="-200" y1="200" x2="-200" y2="180" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-200" y1="180" x2="-180" y2="180" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-180" y1="180" x2="-180" y2="160" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-180" y1="160" x2="-160" y2="160" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-160" y1="160" x2="-160" y2="140" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-160" y1="140" x2="-140" y2="140" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-140" y1="140" x2="-140" y2="120" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-140" y1="120" x2="-120" y2="120" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-120" y1="120" x2="-120" y2="100" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-120" y1="100" x2="-100" y2="100" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-100" y1="100" x2="-100" y2="80" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-100" y1="80" x2="-80" y2="80" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-80" y1="80" x2="-80" y2="60" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-80" y1="60" x2="-60" y2="60" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-60" y1="60" x2="-60" y2="40" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-60" y1="40" x2="-40" y2="40" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-40" y1="40" x2="-40" y2="20" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-40" y1="20" x2="-20" y2="20" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-20" y1="20" x2="-20" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-20" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="1.2246467991473533e-15" y2="-20" style="stroke: black; stroke-width: 1;"></line>
+<line x1="1.2246467991473533e-15" y1="-20" x2="20" y2="-20" style="stroke: black; stroke-width: 1;"></line>
+<line x1="20" y1="-20" x2="20" y2="-40" style="stroke: black; stroke-width: 1;"></line>
+<line x1="20" y1="-40" x2="40" y2="-40" style="stroke: black; stroke-width: 1;"></line>
+<line x1="40" y1="-40" x2="40" y2="-60" style="stroke: black; stroke-width: 1;"></line>
+<line x1="40" y1="-60" x2="60" y2="-60" style="stroke: black; stroke-width: 1;"></line>
+<line x1="60" y1="-60" x2="60" y2="-80" style="stroke: black; stroke-width: 1;"></line>
+<line x1="60" y1="-80" x2="80" y2="-80" style="stroke: black; stroke-width: 1;"></line>
+<line x1="80" y1="-80" x2="80" y2="-100" style="stroke: black; stroke-width: 1;"></line>
+<line x1="80" y1="-100" x2="100" y2="-100" style="stroke: black; stroke-width: 1;"></line>
+<line x1="100" y1="-100" x2="100" y2="-120" style="stroke: black; stroke-width: 1;"></line>
+<line x1="100" y1="-120" x2="120" y2="-120" style="stroke: black; stroke-width: 1;"></line>
+<line x1="120" y1="-120" x2="120" y2="-140" style="stroke: black; stroke-width: 1;"></line>
+<line x1="120" y1="-140" x2="140" y2="-140" style="stroke: black; stroke-width: 1;"></line>
+<line x1="140" y1="-140" x2="140" y2="-160" style="stroke: black; stroke-width: 1;"></line>
+<line x1="140" y1="-160" x2="160" y2="-160" style="stroke: black; stroke-width: 1;"></line>
+<line x1="160" y1="-160" x2="160" y2="-180" style="stroke: black; stroke-width: 1;"></line>
+<line x1="160" y1="-180" x2="180" y2="-180" style="stroke: black; stroke-width: 1;"></line>
+<line x1="180" y1="-180" x2="180" y2="-200" style="stroke: black; stroke-width: 1;"></line>
+<line x1="180" y1="-200" x2="200" y2="-200" style="stroke: black; stroke-width: 1;"></line>
+</g>
+<g transform="translate(250 250)">
+<text x="-200" y="200" fill="black" text-anchor="start" style="display: block; font-family: Arial; font-size: 10px; font-style: normal;" display="block">(-200, -200)</text>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(200.0,-200.0) rotate(-90,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+
+speed(0)
+penup()
+goto(-200, -200)
+pendown()
+dot()
+write('(-200, -200)', font=("Arial", 10, "normal"))
+for i in range(20):
+    left(90)
+    forward(20)
+    right(90)
+    forward(20)</raw></metadata></svg>

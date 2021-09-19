@@ -1,7 +1,6 @@
 ---
 title: Turtle Befehle
 ---
-
 # Turtle Befehle [^1][^2]
 
 ## Bewegungen
@@ -22,8 +21,10 @@ Dreht die Turtle `angle` Grad nach links.
 Dreht die Turtle `angle` Grad nach rechts.
 :::
 
-:::def `goto(x, y)`
+:::def `goto(x, y)` <div id="goto"></div>
 Bewegt die Turtle zur Position mit den Koordinaten (`x`, `y`).
+
+**Beispiel**: `goto(50, 100)`
 :::
 
 :::def `home()`

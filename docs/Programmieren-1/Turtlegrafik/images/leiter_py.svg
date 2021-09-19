@@ -1,0 +1,50 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="leiter_py_svg" width="220" height="45" xmlns="http://www.w3.org/2000/svg" viewBox="245,215,220,45">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="30" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="30" y1="0" x2="30.000000000000004" y2="-30" style="stroke: black; stroke-width: 1;"></line>
+<line x1="30.000000000000004" y1="-30" x2="3.552713678800501e-15" y2="-30.000000000000004" style="stroke: black; stroke-width: 1;"></line>
+<line x1="3.552713678800501e-15" y1="-30.000000000000004" x2="-1.958196917362588e-15" y2="-3.552713678800501e-15" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-1.958196917362588e-15" y1="-3.552713678800501e-15" x2="29.999999999999996" y2="3.795167116083619e-15" style="stroke: black; stroke-width: 1;"></line>
+<line x1="29.999999999999996" y1="3.795167116083619e-15" x2="60" y2="1.1143047910967739e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="60" y1="1.1143047910967739e-14" x2="60.00000000000001" y2="-29.99999999999999" style="stroke: black; stroke-width: 1;"></line>
+<line x1="60.00000000000001" y1="-29.99999999999999" x2="30.000000000000007" y2="-30" style="stroke: black; stroke-width: 1;"></line>
+<line x1="30.000000000000007" y1="-30" x2="29.999999999999993" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="29.999999999999993" y1="0" x2="59.99999999999999" y2="1.469576158976824e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="59.99999999999999" y1="1.469576158976824e-14" x2="90" y2="2.939152317953648e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="90" y1="2.939152317953648e-14" x2="90.00000000000001" y2="-29.99999999999997" style="stroke: black; stroke-width: 1;"></line>
+<line x1="90.00000000000001" y1="-29.99999999999997" x2="60.000000000000014" y2="-29.99999999999999" style="stroke: black; stroke-width: 1;"></line>
+<line x1="60.000000000000014" y1="-29.99999999999999" x2="60.00000000000005" y2="1.0658141036401503e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="60.00000000000005" y1="1.0658141036401503e-14" x2="90.00000000000006" y2="3.2701783421053855e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="90.00000000000006" y1="3.2701783421053855e-14" x2="120.00000000000006" y2="5.4745425805706207e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="120.00000000000006" y1="5.4745425805706207e-14" x2="120.00000000000003" y2="-29.999999999999947" style="stroke: black; stroke-width: 1;"></line>
+<line x1="120.00000000000003" y1="-29.999999999999947" x2="90.00000000000003" y2="-29.99999999999997" style="stroke: black; stroke-width: 1;"></line>
+<line x1="90.00000000000003" y1="-29.99999999999997" x2="90.00000000000006" y2="2.842170943040401e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="90.00000000000006" y1="2.842170943040401e-14" x2="120.00000000000006" y2="5.781323260994049e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="120.00000000000006" y1="5.781323260994049e-14" x2="150.00000000000006" y2="8.720475578947698e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="150.00000000000006" y1="8.720475578947698e-14" x2="150.00000000000003" y2="-29.99999999999991" style="stroke: black; stroke-width: 1;"></line>
+<line x1="150.00000000000003" y1="-29.99999999999991" x2="120.00000000000003" y2="-29.999999999999943" style="stroke: black; stroke-width: 1;"></line>
+<line x1="120.00000000000003" y1="-29.999999999999943" x2="120.00000000000004" y2="5.684341886080802e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="120.00000000000004" y1="5.684341886080802e-14" x2="150.00000000000006" y2="9.358282283522861e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="150.00000000000006" y1="9.358282283522861e-14" x2="180.00000000000006" y2="1.303222268096492e-13" style="stroke: black; stroke-width: 1;"></line>
+<line x1="180.00000000000006" y1="1.303222268096492e-13" x2="180.00000000000003" y2="-29.99999999999987" style="stroke: black; stroke-width: 1;"></line>
+<line x1="180.00000000000003" y1="-29.99999999999987" x2="150.00000000000003" y2="-29.9999999999998" style="stroke: black; stroke-width: 1;"></line>
+<line x1="150.00000000000003" y1="-29.9999999999998" x2="149.99999999999994" y2="1.9895196601282805e-13" style="stroke: black; stroke-width: 1;"></line>
+<line x1="149.99999999999994" y1="1.9895196601282805e-13" x2="179.99999999999994" y2="2.4303925078213276e-13" style="stroke: black; stroke-width: 1;"></line>
+<line x1="179.99999999999994" y1="2.4303925078213276e-13" x2="209.99999999999994" y2="2.8712653555143746e-13" style="stroke: black; stroke-width: 1;"></line>
+<line x1="209.99999999999994" y1="2.8712653555143746e-13" x2="209.99999999999994" y2="-29.999999999999712" style="stroke: black; stroke-width: 1;"></line>
+<line x1="209.99999999999994" y1="-29.999999999999712" x2="179.99999999999994" y2="-29.999999999999652" style="stroke: black; stroke-width: 1;"></line>
+<line x1="179.99999999999994" y1="-29.999999999999652" x2="179.99999999999983" y2="3.481659405224491e-13" style="stroke: black; stroke-width: 1;"></line>
+<line x1="179.99999999999983" y1="3.481659405224491e-13" x2="209.99999999999983" y2="3.996011060866379e-13" style="stroke: black; stroke-width: 1;"></line>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(209.99999999999983,3.996011060866379e-13) rotate(-2610,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+
+for i in range(7):
+    for j in range(4):
+        forward(30)
+        left(90)
+    forward(30)</raw></metadata></svg>

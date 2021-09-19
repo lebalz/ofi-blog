@@ -1,0 +1,30 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="weihnachtsstern_py_svg" width="153.96926879882812" height="160.8813018798828" xmlns="http://www.w3.org/2000/svg" viewBox="151.03073120117188,143.3590850830078,153.96926879882812,160.8813018798828">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="50" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="50" y1="0" x2="11.697777844051103" y2="-32.13938048432697" style="stroke: black; stroke-width: 1;"></line>
+<line x1="11.697777844051103" y1="-32.13938048432697" x2="36.69777784405111" y2="-75.4406506735489" style="stroke: black; stroke-width: 1;"></line>
+<line x1="36.69777784405111" y1="-75.4406506735489" x2="-10.286853195244312" y2="-58.339643507265464" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-10.286853195244312" y1="-58.339643507265464" x2="-35.286853195244305" y2="-101.6409136964874" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-35.286853195244305" y1="-101.6409136964874" x2="-43.96926207859082" y2="-52.400526045877" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-43.96926207859082" y1="-52.400526045877" x2="-93.96926207859082" y2="-52.40052604587701" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-93.96926207859082" y1="-52.40052604587701" x2="-55.667039922641926" y2="-20.26114556155003" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-55.667039922641926" y1="-20.26114556155003" x2="-80.66703992264195" y2="23.040124627671894" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-80.66703992264195" y1="23.040124627671894" x2="-33.68240888334653" y2="5.939117461388445" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-33.68240888334653" y1="5.939117461388445" x2="-8.682408883346525" y2="49.24038765061037" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-8.682408883346525" y1="49.24038765061037" x2="-3.552713678800501e-15" y2="-2.842170943040401e-14" style="stroke: black; stroke-width: 1;"></line>
+<polygon points="0.0,-0.0 50.0,-0.0 11.697777844051103,-32.13938048432697 36.69777784405111,-75.4406506735489 -10.286853195244312,-58.339643507265464 -35.286853195244305,-101.6409136964874 -43.96926207859082,-52.400526045877 -93.96926207859082,-52.40052604587701 -55.667039922641926,-20.26114556155003 -80.66703992264195,23.040124627671894 -33.68240888334653,5.939117461388445 -8.682408883346525,49.24038765061037 -3.552713678800501e-15,-2.842170943040401e-14" style="display: block; fill: red; stroke: black; stroke-width: 1;" display="block" transform="translate(0,0) rotate(0,0,0)"></polygon>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="red" stroke-width="1" opacity="1" transform="translate(-3.552713678800501e-15,-2.842170943040401e-14) rotate(-450,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+fillcolor('red')
+begin_fill()
+for i in range(6):
+    forward(50)
+    left(140)
+    forward(50)
+    right(80)
+end_fill()</raw></metadata></svg>

@@ -1,4 +1,5 @@
 import * as React from "react";
+import ReactDomServer from "react-dom/server";
 import styles from "./Answer.module.scss";
 import { getItem, setItem, _4_YEARS } from "../helpers/storage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -53,6 +54,9 @@ const DefaultValues = (props: Props) => {
   if (props.type === "string" || props.type === "text") {
     if (props.default) {
       return props.default;
+    }
+    if (props.children) {
+      return ReactDomServer.renderToString(props.children)
     }
     return "";
   }
@@ -128,6 +132,10 @@ const loadQuill = (callback) => {
       import('react-quill/dist/quill.bubble.css')
     ]).then(obj => {
       ReactQuill = reactQuill.default;
+      // var BackgroundClass = ReactQuill.Quill.import('attributors/class/background');
+      // var ColorClass = ReactQuill.Quill.import('attributors/class/color');
+      // ReactQuill.Quill.register(BackgroundClass, true)
+      // ReactQuill.Quill.register(ColorClass, true)
       callback();
     });
   })
@@ -348,7 +356,13 @@ const Answer = (props: Props) => {
               checkWorkingState(editor)
             }}
             modules={{
-              toolbar: true
+              toolbar: [
+
+                [{ 'header': [1, 2, 3, false] }],
+                ['bold', 'italic', 'underline'],        // toggled buttons
+                [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+              ]
             }}
             placeholder={props.placeholder || "✍️ Antwort..."}
           />
