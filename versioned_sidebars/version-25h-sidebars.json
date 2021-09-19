@@ -18,6 +18,11 @@
           "type": "link",
           "label": "HK-01-Algorithmen",
           "href": "https://ofi.gbsl.website/p/Programmieren/Algorithmen/01-algorithmen.html"
+        },
+        {
+          "type": "link",
+          "label": "HK-03-Wiederholung 🔁",
+          "href": "https://ofi.gbsl.website/p/Programmieren/Schleifen/presentation.html"
         }
       ]
     }

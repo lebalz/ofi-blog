@@ -252,7 +252,7 @@ hideturtle()
 </Finding>
 :::
 
-:::aufgabe Vogel
+:::aufgabe 8. Vogel
 Zeichnen Sie einen Vogel, indem Sie mehrmals nacheinander folgende Befehle wiederholen:
 
 ```py
