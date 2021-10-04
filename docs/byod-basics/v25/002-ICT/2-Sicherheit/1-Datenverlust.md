@@ -5,7 +5,7 @@ title: Datenverlust
 # Datenverlust [^1]
 Eine oft unterschätzte Gefahr ist der Verlust von Daten.
 
-![@](images/crashed_laptop.jpg)
+![](images/crashed_laptop.jpg)
 
 ## Ursachen
 

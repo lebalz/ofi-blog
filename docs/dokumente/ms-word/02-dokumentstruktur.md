@@ -63,11 +63,7 @@ Mit einer Formatvorlage können Struktur- und Darstellungsinformationen zusammen
 
 Es gibt vordefinierte Formatvorlagen, die einem Absatz zugewiesen werden können:
 
-<div style={{maxWidth: '350px'}}>
-
-![](images/word-formatvorlage.png)
-
-</div>
+![--width=350px](images/word-formatvorlage.png)
 
 Die Formatvorlagen können auch nach den eigenen Wünschen **angepasst** werden:
 
@@ -85,11 +81,7 @@ Erstellen Sie keine neuen Formatvorlagen für Überschriften sonder passen Sie d
 
 #### Formatierungen
 
-<div style={{maxWidth: '550px'}}>
-
-![](images/word-tabstopps.png)
-
-</div>
+![--width=550px](images/word-tabstopps.png)
 
 - Tabstopps `┗` `┻` `┛`
   - der Cursor springt beim Drücken der Tabulator-Taste `⭾` bis zu diesem Tabstopp.
@@ -123,21 +115,13 @@ Ein Zeilenumbruch im selben Absatz kann mit `Shift+Enter` erzeugt werden.
 
 Einzelne Wörter und Buchstaben/Zeichen lassen sich individuell formatieren. So kann etwa festgelegt werden, ob ein Zeichen kursiv, fett oder unterstrichen dargestellt werden kann.
 
-<div style={{maxWidth: '400px'}}>
-
-![](images/word-zeichenformatierung.png)
-
-</div>
+![--width=400px](images/word-zeichenformatierung.png)
 
 #### Einfügen
 
 Beim Einfügen von kopiertem Text, bspw. von einer Website, werden auch die Zeichenformate mitkopiert (z.B. Links werden dann farbig angezeigt...). Dies ist nicht immer erwünscht und teilweise soll nur der Text übernommen werden. Dann kann über die Einfüge-Optionen *Nur den Text übernehmen* ausgewählt werden:
 
-<div style={{maxWidth: '350px'}}>
-
-![](images/word-paste-options.png)
-
-</div>
+![--width=350px](images/word-paste-options.png)
 
 ## Übung
 

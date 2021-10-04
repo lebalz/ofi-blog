@@ -9,34 +9,42 @@ const escapePath = require('@docusaurus/utils').escapePath;
 const toMessageRelativeFilePath = require('@docusaurus/utils').toMessageRelativeFilePath;
 
 
-const SIZE = /\s*--size\s*=\s*(?<dim>[\d\S]+)/;
-const WIDTH = /\s*--width\s*=\s*(?<dim>[\d\S]+)/;
-const HEIGHT = /\s*--height\s*=\s*(?<dim>[\d\S]+)/;
+const SIZE = { test: /\s*--size\s*=\s*(?<value>[\d\S]+)/, key: 'size', type: 'string' };
+const WIDTH = { test: /\s*--width\s*=\s*(?<value>[\d\S]+)/, key: 'width', type: 'string' };
+const HEIGHT = { test: /\s*--height\s*=\s*(?<value>[\d\S]+)/, key: 'height', type: 'string' };
+
+/**
+ * 
+ * @param {{test: RegExp, key: string, type: string}} opt 
+ * @param {string} alt 
+ * @param {Object} options 
+ * @returns 
+ */
+const processOption = (opt, alt, options) => {
+  if (opt.test.test(alt)) {
+    if (opt.type === 'boolean') {
+      options[opt.key] = true;
+    } else {
+      const res = alt.match(opt.test);
+      if (res.groups && res.groups.value) {
+        options[opt.key] = res.groups.value;
+      }
+    }
+    return alt.replace(opt.test, '');
+  }
+  return alt;
+}
 
 const parseOptions = (alt) => {
   const options = {}
   let altText = alt;
-  if (SIZE.test(altText)) {
-    const res = altText.match(SIZE);
-    if (res.groups && res.groups.dim) {
-      options.size = res.groups.dim;
-    }
-    altText = altText.replace(SIZE, '');
-  }
-  if (WIDTH.test(altText)) {
-    const res = altText.match(WIDTH);
-    if (res.groups && res.groups.dim) {
-      options.width = res.groups.dim;
-    }
-    altText = altText.replace(WIDTH, '');
-  }
-  if (HEIGHT.test(altText)) {
-    const res = altText.match(HEIGHT);
-    if (res.groups && res.groups.dim) {
-      options.height = res.groups.dim;
-    }
-    altText = altText.replace(HEIGHT, '');
-  }
+  [
+    SIZE,
+    WIDTH,
+    HEIGHT
+  ].forEach((opt) => {
+    altText = processOption(opt, altText, options)
+  })
   return {
     alt: alt,
     caption: altText || '',
@@ -175,12 +183,12 @@ const plugin = (options) => {
         if (!isInline && node.type === 'paragraph') {
           node.type = 'div';
         }
-        
+
         node.children.forEach((c) => {
           if (c.type !== 'image') {
             return;
           }
-          promises.push(processImageNode(c, isInline, { filePath: filePath, staticDir: staticDir }));          
+          promises.push(processImageNode(c, isInline, { filePath: filePath, staticDir: staticDir }));
         })
       }
     );

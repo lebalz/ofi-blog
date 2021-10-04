@@ -14,29 +14,17 @@ nummeriert werden und wie auf solche nummerierten Elemente verwiesen werden kann
 
 Das Kopf- und Fusszeilen Menü öffnen (Doppelklick in den untersten Bereich eines Blattes, oder im Suchfeld "Fusszeile" eingeben).
 
-<div style={{maxWidth: '350px', overflow: 'auto'}}>
-
-![](images/word-seitenzahl.png)
-
-</div>
+![--width=350](images/word-seitenzahl.png)
 
 Soll die erste Seite (bspw. Titelblatt) keine Seitenzahl erhalten, so kann das Häckchen "Erste Seite Anders" angewählt werden:
 
-<div style={{maxWidth: '350px', overflow: 'auto'}}>
-
-![](images/word-seitenzahl-erste-seite-anders.png)
-
-</div>
+![--width=350](images/word-seitenzahl-erste-seite-anders.png)
 
 Über die Option "Seitenzahle formatieren..." kann bspw. das Seitenzahlformat (z.B. römische Zahlen) oder der Startwert festgelegt werden.
 
 Die erste Seite, auch wenn "Erste Seite Anders" ausgewählt ist, zählt bei der Nummerierung auch dazu. Die Nummerierung muss also bei `0` starten, wenn die Seite nach dem Titelblatt die Seitenzahl `1` erhalten soll.
 
-<div style={{maxWidth: '350px', overflow: 'auto'}}>
-
-![](images/word-seitenzahl-format.png)
-
-</div>
+![--width=350](images/word-seitenzahl-format.png)
 
 ## Überschriften Nummerieren
 
@@ -44,11 +32,7 @@ Um Überschriften automatisiert nummerieren zu lassen, müssen die Überschrifte
 
 Die Formatvorlage für eine Überschrift kann geändert und über `Format > Nummerierung` eine Nummerierung hinzugefügt werden. 
 
-<div style={{maxWidth: '450px', overflow: 'auto'}}>
-
-![](images/word-formatvorlage-nummerierung.png)
-
-</div>
+![--width=450](images/word-formatvorlage-nummerierung.png)
 
 ### Geschachtelte Nummerierung
 
@@ -63,11 +47,7 @@ Soll eine verschachtelte Nummerierung eingefügt werden, muss
 - der Cursor im Überschriften-Text fokussiert werden
 - Über die "Liste mit mehreren Ebenen" die verschachtelte Nummerierung eingefügt werden
 
-<div style={{maxWidth: '350px', overflow: 'auto'}}>
-
-![](images/word-nummerierung-edit.png)
-
-</div>
+![--width=350](images/word-nummerierung-edit.png)
 
 ### Automatisches Inhaltsverzeichnis
 

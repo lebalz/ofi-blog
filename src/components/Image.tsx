@@ -71,7 +71,10 @@ const defaultUnit = (value: string, unit: string = "px") => {
 };
 
 const ResizedImage = (props: Props) => {
-  const style: { maxWidth?: string; maxHeight?: string } = {};
+  const style: {
+    maxWidth?: string;
+    maxHeight?: string;
+  } = {};
   if (props.options.size) {
     style.maxWidth = defaultUnit(props.options.size);
     style.maxHeight = defaultUnit(props.options.size);
@@ -82,13 +85,14 @@ const ResizedImage = (props: Props) => {
   if (props.options.width) {
     style.maxWidth = defaultUnit(props.options.width);
   }
+
   return (
     <img
       src={props.src}
       alt={props.alt}
       style={style}
       title={
-        (props.isInline && props.bib)
+        props.isInline && props.bib
           ? `Author: ${props.bib.author} @ ${props.bib.licence}${
               props.bib.edited ? ", Bearbeitet" : ""
             }`
@@ -128,7 +132,9 @@ const Image = (props: Props) => {
           {visible && <BibDetails {...props.bib} />}
         </React.Fragment>
       )}
-      {props.caption && <figcaption>{props.caption}</figcaption>}
+      {props.caption && props.caption !== "undefined" && (
+        <figcaption>{props.caption}</figcaption>
+      )}
     </figure>
   );
 };

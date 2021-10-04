@@ -14,7 +14,7 @@ Im Beispiel «Schule» ist aus den beiden oberen Schichten alles für den Transp
 
 Die Post hat keine Ahnung, welche Ware in wie viele Pakete aufgeteilt transportiert wird, sie weiss nur von wo nach wo welches Paket transportiert werden muss.
 
-![@](img/2-school-example.svg)
+![](img/2-school-example.svg)
 
 
 ## Internet

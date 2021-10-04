@@ -319,7 +319,7 @@ Wählen Sie vier zufällige Wörter.
 
 # Schadsoftware
 
-![Ransomware Wanna Cry @](./images/wanna_cry.jpg)
+![Ransomware Wanna Cry](./images/wanna_cry.jpg)
 
 --
 

@@ -237,7 +237,7 @@ Weitere Gesten [hier](https://support.microsoft.com/de-de/windows/touchpad-geste
 
 - **Voraussetzung** GBSL Mail ist in einem Mailprogramm (bspw. im Programm "Mail") Eingerichtet:
 
-  <img src="win/mail_app.png" width="150px" height="150px">
+  ![--size=150](win/mail_app.png)
 
   In der Mail-App einen neuen Exchange Mailaccount hinzufügen:
 
