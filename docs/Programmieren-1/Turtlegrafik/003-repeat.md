@@ -236,13 +236,6 @@ Zeichnen Sie eine Perlenkette in Ihrer Lieblingsfarbe, die aus `18` Perlen (dots
 ```py live_py title=perlenkette.py
 from turtle import *
 
-speed(0)
-for i in range(18):
-    forward(40)
-    dot(15)
-    left(360/18)
-
-hideturtle()
 ```
 <Finding title="Hinweise">
 
