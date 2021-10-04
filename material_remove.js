@@ -59,16 +59,16 @@ klassen.forEach((klass) => {
                 keep = false;
                 if (fs.existsSync(to)) {
                     console.log('- remove', to, 'from', klass);
+                    let parent = path.dirname(to);
                     if (fs.lstatSync(to).isDirectory()) {
                         console.log('rm dir', to)
                         fs.rmdirSync(to, { recursive: true, force: true });
                     } else {
-                        let parent = path.dirname(to);
                         fs.unlinkSync(to);
-                        while (fs.readdirSync(parent).length === 0) {
-                            fs.rmdirSync(parent, { recursive: true, force: true });
-                            parent = path.dirname(parent);
-                        }
+                    }
+                    while (fs.readdirSync(parent).length === 0) {
+                        fs.rmdirSync(parent, { recursive: true, force: true });
+                        parent = path.dirname(parent);
                     }
                 } else {
                     console.log('- unset', to, 'from', klass);

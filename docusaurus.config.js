@@ -1,38 +1,9 @@
 const BASE_URL = '/';
 
-const visit = require("unist-util-visit");
 const path = require("path");
-const fs = require("fs")
 const math = require('remark-math');
 const katex = require('rehype-katex');
-
-const remarkAuthorInfos = () => {
-  const transformer = (root, file) => {
-    const dir = path.dirname(file.history[0]);
-    visit(root, "image", (node) => {
-      if (node.url) {
-        const ext = path.extname(node.url);
-        const bibFile = path.resolve(dir, node.url.replace((new RegExp(`${ext}$`)), '.json'))
-        if (fs.existsSync(bibFile)) {
-          const bib = require(bibFile);
-          node.title = `Author: ${bib.author} @ ${bib.licence}${bib.edited ? ', Bearbeitet' : ''}`
-        }
-      }
-      // if (node.alt) {
-      //   if (/@size--(?<dim>\d+)/.test(node.alt)) {
-      //     const res = node.alt.match(/@size--(?<dim>\d+)/);
-      //     if (res.groups && res.groups.dim) {
-      //       node.width = res.groups.dim;
-      //       node.style = { width: `${res.groups.dim}px` }
-      //     }
-      //     console.log(node)
-
-      //   }
-      // }
-    });
-  };
-  return transformer;
-};
+const transformImage = require('./src/plugins/transform-images');
 
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -179,7 +150,7 @@ module.exports = {
               }
             }
           },
-          beforeDefaultRemarkPlugins: [remarkAuthorInfos],
+          beforeDefaultRemarkPlugins: [transformImage],
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
