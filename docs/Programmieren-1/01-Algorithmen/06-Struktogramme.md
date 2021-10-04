@@ -3,8 +3,6 @@ title: Struktogramme
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
-import Flex from '@site/src/components/Flex';
-
 
 # Struktogramme
 
@@ -13,9 +11,7 @@ Struktogramme sind eine Möglichkeit, Programme und Algorithmen grafisch darzust
 ## Sequenz 👣
 In einem Struktogramm wird jeder Befehl in einen rechteckigen Kasten geschrieben. Befehle müssen nicht in einer Programmiersprache geschrieben werden, *Parameter* werden <u>unterstrichen</u>.
 
-<Flex>
-<div style={{flexGrow: 1, minWidth: '300px'}}>
-
+:::flex --min=250px --gap=50px
 ```py live_py slim
 from turtle import *
 
@@ -23,27 +19,20 @@ forward(100)
 left(90)
 forward(50) 
 ```
-
-</div>
-<div style={{flexGrow: 1}}></div>
-<div style={{flexGrow: 1}}>
+***
 <Strukto program={[
     {type: 'step', code: <span><u>100</u> Schritte vorwärts</span>},
     {type: 'step', code: <span><u>90</u>° nach links</span>},
     {type: 'step', code: <span><u>50</u> Schritte vorwärts</span>}
 ]} />
-</div>
-</Flex>
+:::
 
 
 ## Wiederholung 🔁
 
 Eine Wiederholung wird wie folgt dargestellt.
 
-
-<Flex>
-<div style={{flexGrow: 1, minWidth: '300px'}}>
-
+:::flex --min=250px --gap=50px
 ```py live_py slim
 from turtle import *
 
@@ -51,10 +40,7 @@ for i in range(4):
     forward(100)
     left(90)
 ```
-
-</div>
-<div style={{flexGrow: 1}}></div>
-<div style={{flexGrow: 1}}>
+***
 <Strukto program={[
     {
         type: 'repeat', 
@@ -65,8 +51,7 @@ for i in range(4):
         ]
     }
 ]} />
-</div>
-</Flex>
+:::
 
 :::tip Bemerke
 - Beim Struktogramm wird der wiederholte Teil durch die **Einrückung** ersichtlich. Auch in Python werden wiederholte Sequenzen (Zeilen 4-5) visuell mit einem Tabulator eingerückt.
@@ -76,9 +61,7 @@ for i in range(4):
 ## Unterprogramm 🏷
 Eine Sequenz kann mit einem Namen versehen werden. Anstatt immer die ganze Sequenz aufzuschreiben, genügt es den Namen aufzuschreiben.
 
-<Flex>
-<div style={{flexGrow: 1, minWidth: '300px'}}>
-
+:::flex --min=250px --gap=50px
 ```py live_py slim
 from turtle import *
 
@@ -95,10 +78,7 @@ forward(100)
 zick_zack()
 zick_zack()
 ```
-
-</div>
-<div style={{flexGrow: 1}}></div>
-<div style={{flexGrow: 1}}>
+***
 <Strukto program={[
     {
         type: 'def', 
@@ -115,8 +95,7 @@ zick_zack()
     {type: 'call', code: <span>zick_zack</span>},
     {type: 'call', code: <span>zick_zack</span>}
 ]} />
-</div>
-</Flex>
+:::
 
 :::tip Bemerke
 - Um ein Unterprogramm aufzurufen, wird beim Struktogramm der Kasten mit doppelten Seitenstrichen markiert, bei Python werden runde Klammern am Ende des Namens angegeben.

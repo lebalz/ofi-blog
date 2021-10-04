@@ -7,33 +7,13 @@ const getFileLoaderUtils = require('@docusaurus/core/lib/webpack/utils').getFile
 const posixPath = require('@docusaurus/utils').posixPath;
 const escapePath = require('@docusaurus/utils').escapePath;
 const toMessageRelativeFilePath = require('@docusaurus/utils').toMessageRelativeFilePath;
+const processOption = require('./helpers');
 
 
 const SIZE = { test: /\s*--size\s*=\s*(?<value>[\d\S]+)/, key: 'size', type: 'string' };
 const WIDTH = { test: /\s*--width\s*=\s*(?<value>[\d\S]+)/, key: 'width', type: 'string' };
 const HEIGHT = { test: /\s*--height\s*=\s*(?<value>[\d\S]+)/, key: 'height', type: 'string' };
 
-/**
- * 
- * @param {{test: RegExp, key: string, type: string}} opt 
- * @param {string} alt 
- * @param {Object} options 
- * @returns 
- */
-const processOption = (opt, alt, options) => {
-  if (opt.test.test(alt)) {
-    if (opt.type === 'boolean') {
-      options[opt.key] = true;
-    } else {
-      const res = alt.match(opt.test);
-      if (res.groups && res.groups.value) {
-        options[opt.key] = res.groups.value;
-      }
-    }
-    return alt.replace(opt.test, '');
-  }
-  return alt;
-}
 
 const parseOptions = (alt) => {
   const options = {}
@@ -43,7 +23,8 @@ const parseOptions = (alt) => {
     WIDTH,
     HEIGHT
   ].forEach((opt) => {
-    altText = processOption(opt, altText, options)
+    processOption(opt, altText, options);
+    altText = altText.replace(opt.test, '');
   })
   return {
     alt: alt,

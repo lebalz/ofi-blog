@@ -2,9 +2,6 @@
 title: Begriff
 ---
 
-import Flex from '@site/src/components/Flex'
-import Card from '@site/src/components/Card'
-
 # Code [^1]
 
 :::info Information
@@ -36,20 +33,25 @@ Beispiel eines Codes: Umwandlung von Braillezeichen in Buchstaben und umgekehrt.
 Das Ziel dieser Umwandlung ist es, eine für einen bestimmten Zweck optimierte Darstellung Informationen zu erreichen. So ist die Brailleschrift dafür optimiert, per Tastsinn gelesen werden zu können.
 
 ## Beispiele für Codes
-
-
-<div>
-<Flex>
-    <Card imgSrc={require('./images/braille.jpg').default} title="Brailleschrift" justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/ascii.png').default} title="ASCII" justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/dna_transcription.png').default} title="Genetischer Code" justifyContent="space-between" spacer/>
-</Flex>
-<Flex>
-    <Card imgSrc={require('./images/qrcode.png').default} title="QR-Code" justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/isbn.png').default} title="ISBN" justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/what3words.jpg').default} title={<a href="https://what3words.com/k%C3%B6nigin.gesehen.damals">what3words.com</a>} justifyContent="space-between" spacer/>
-</Flex>
-</div>
+:::cards --cols=3 --width=200px
+![](images/braille.jpg)
+#### Brailleschrift
+***
+![](images/ascii.png)
+#### ASCII
+***
+![](images/dna_transcription.png)
+#### Genetischer Code
+***
+![](images/qrcode.png)
+#### QR-Code
+***
+![](images/isbn.png)
+#### ISBN
+***
+![](images/what3words.jpg)
+#### [what3words.com](https://what3words.com/k%C3%B6nigin.gesehen.damals)
+:::
 
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?page=code/1-basics/1-code/)

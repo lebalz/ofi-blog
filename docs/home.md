@@ -1,41 +1,11 @@
 ---
 sidebar_position: 1
 ---
-
-import Flex from '@site/src/components/Flex'
+import Answer from "@site/src/components/Answer";
 
 # Obligatorisches Fach Informatik
 
-<Flex>
 
-hi
-hi
-
-</Flex>
-
-:::bla
-
-hmms
-
-:::
-
-Bla
-
-![Blaaaa --size=124](dokumente/ms-word/images/share.png)
-
-![Blaaaa --size=30%](dokumente/ms-word/images/doc-sharing.png)
-
-Bluu ![Blaaaa --size=124](dokumente/ms-word/images/share.png)
-
-
-
-|bla|blu|
-|:-|:-|
-|bla|![--size=100%](dokumente/ms-word/images/share.png)|
-
-```mdx-code-block
-bli bla blu
-```
 
 ## Präsentationen
 

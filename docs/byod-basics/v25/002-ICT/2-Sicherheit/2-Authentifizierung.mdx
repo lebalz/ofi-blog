@@ -11,11 +11,21 @@ import Card from '@site/src/components/Card';
 
 Es gibt drei verschiedene Wege, wie sich eine Person authentisieren kann:
 
-<Flex>
-    <Card imgSrc={require('./images/password.jpg').default} title="Wissen" description="Die Person weiss etwas, z.B. ein Passwort oder eine Pin"/>
-    <Card imgSrc={require('./images/keys.jpg').default} title="Besitz" description="Die Person besitzt etwas, z.B. eine Kreditkarte oder einen Schlüssel." />
-    <Card imgSrc={require('./images/eye.jpg').default} title="Merkmal" description="Die Person wird über körperliches Merkmal identifiziert, z.B. einen Fingerabdruck oder die Iris."/>
-</Flex>
+:::cards
+***
+![](images/password.jpg)
+#### Wissen
+Die Person weiss etwas, z.B. ein Passwort oder eine Pin
+
+***
+![](images/keys.jpg)
+#### Besitz
+Die Person besitzt etwas, z.B. eine Kreditkarte oder einen Schlüssel.
+***
+![](images/eye.jpg)
+#### Merkmal
+Die Person wird über körperliches Merkmal identifiziert, z.B. einen Fingerabdruck oder die Iris.
+:::
 
 Jede dieser drei Methoden hat Vor- und Nachteile. Um die Nachteile auszugleichen kann eine sogenannte **Zwei-Faktor-Authentifizierung** verwendet werden, welche sich gleichzeitig auf zwei der drei Methoden abstützt.
 

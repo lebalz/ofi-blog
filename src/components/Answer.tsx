@@ -55,7 +55,7 @@ const DefaultValues = (props: Props) => {
     if (props.default) {
       return props.default;
     }
-    if (props.children) {
+    if (props.children && props.type === "text") {
       return ReactDomServer.renderToString(props.children)
     }
     return "";

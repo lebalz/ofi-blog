@@ -3,8 +3,6 @@ title: Zeichencodierung
 ---
 
 import AsciiEncoding from "@site/src/components/AsciiEncoding";
-import Flex from "@site/src/components/Flex";
-import Card from "@site/src/components/Card";
 import Video from "@site/src/components/Video";
 
 
@@ -402,22 +400,32 @@ Der binäre Code befindet sich auf der linken Seite. Wozu braucht es die zweite,
 
 Hier sind ein paar Zeichen aufgeführt, um zu illustrieren wie umfangreich Unicode ist:
 
-<div>
-<Flex>
-    <Card imgSrc={require('./images/unicode-0041.png').default} description={<a href="https://unicode-table.com/de/0041/">Lateinischer Grossbuchstaben A <code>U+0041</code></a>} justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/unicode-3084.png').default} description={<a href="https://unicode-table.com/de/3084/">Hiragana-Buchstabe Ya <code>U+3084</code></a>} justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/unicode-13CD.png').default} description={<a href="https://unicode-table.com/de/13CD/">Cherokee-Buchstabe S <code>U+13CD</code></a>} justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/unicode-1F0B9.png').default} description={<a href="https://unicode-table.com/de/1F0B9/">Spielkarte Neun der Herzen <code>U+1F0B9</code></a>} justifyContent="space-between" spacer/>
-</Flex>
+:::cards --cols=4 --min=150px
+![](images/unicode-0041.png)
+[Lateinischer Grossbuchstaben A `U+0041`](https://unicode-table.com/de/0041/)
+***
+![](images/unicode-3084.png)
+[Hiragana-Buchstabe Ya `U+3084`](https://unicode-table.com/de/3084/)
+***
+![](images/unicode-13CD.png)
+[Cherokee-Buchstabe S `U+13CD`](https://unicode-table.com/de/13CD/)
+***
+![](images/unicode-1F0B9.png)
+[Spielkarte Neun der Herzen `U+1F0B9`](https://unicode-table.com/de/1F0B9/)
+***
+![](images/unicode-1F92F.png)
+[Entsetztes Gesicht mit explodierendem Kopf `U+1F92F`](https://unicode-table.com/de/1F92F/)
+***
+![](images/unicode-1F412.png)
+[Affe `U+1F412`](https://unicode-table.com/de/1F412/)
+***
+![](images/unicode-23FB.png)
+[Power-Symbol `U+23FB`](https://unicode-table.com/de/23FB/)
+***
+![](images/unicode-1322C.png)
+[Ägyptische Hieroplyphe Nl012 `U+1322C`](https://unicode-table.com/de/1322C/)
+:::
 
-<Flex>
-    <Card imgSrc={require('./images/unicode-1F92F.png').default} description={<a href="https://unicode-table.com/de/1F92F/">Entsetztes Gesicht mit explodierendem Kopf <code>U+1F92F</code>
-</a>} justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/unicode-1F412.png').default} description={<a href="https://unicode-table.com/de/1F412/">Affe <code>U+1F412</code></a>} justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/unicode-23FB.png').default} description={<a href="https://unicode-table.com/de/23FB/">Power-Symbol <code>U+23FB</code></a>} justifyContent="space-between" spacer/>
-    <Card imgSrc={require('./images/unicode-1322C.png').default} description={<a href="https://unicode-table.com/de/1322C/">Ägyptische Hieroplyphe Nl012 <code>U+1322C</code></a>} justifyContent="space-between" spacer/>
-</Flex>
-</div>
 Quelle: [UT - Unicode Table](https://unicode-table.com/de/)
 
 Jedem Unicode-Zeichen hat eine eindeutige Unicode-Nummer, welche häufig als hexadezimale Zahl geschrieben wird.

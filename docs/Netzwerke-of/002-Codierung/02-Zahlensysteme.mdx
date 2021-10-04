@@ -3,7 +3,6 @@ title: Zahlensysteme
 ---
 
 import Answer from "@site/src/components/Answer";
-import Flex from "@site/src/components/Flex";
 
 # Zahlensysteme
 
@@ -92,12 +91,11 @@ Nun wird für jede Stelle überprüft, ob die entsprechende Zweierpotenz zur Zwi
 | 7. <span style={{backgroundColor: 'coral'}}>140</span> + <span style={{backgroundColor: 'plum'}}>2</span>$\lt 143$                |                                                    1 |                                                        0 |                                                      0 |                                                        0 |                                                     1 |                                                       1 |                                                1 |                                                  | <span style={{backgroundColor: 'lightblue'}}>142</span> |
 | **8.** <span style={{backgroundColor: 'lightblue'}}>142</span> + <span style={{backgroundColor: 'pink'}}>1</span>$= 143$          |                                                **1** |                                                    **0** |                                                  **0** |                                                    **0** |                                                 **1** |                                                   **1** |                                            **1** |                                            **1** |                                                 **143** |
 
-:::aufgabe
 
-Wandeln Sie die gegebenen Zahlen vom Binär- ins Dezimalsystem um, bzw. umgekehrt.
+:::flex
+:::aufgabe Bin → Dez
+Wandeln Sie vom vom Binär- ins Dezimalsystem um.
 
-<Flex>
-<div>
 <Answer type="string" id="q1" solution="13">
 
 $1101_2=$
@@ -115,8 +113,11 @@ $110111_2=$
 $11001010_2=$
 
 </Answer>
-</div>
-<div>
+:::
+
+***
+:::aufgabe Dez → Bin
+Wandeln Sie vom  Dezimal- ins Binärsystem um.
 
 <Answer type="string" id="q4" solution="101011">
 
@@ -135,6 +136,5 @@ $241_{10}=$
 $194_{10}=$
 
 </Answer>
-</div>
-</Flex>
+:::
 :::

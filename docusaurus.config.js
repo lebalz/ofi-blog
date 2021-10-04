@@ -4,6 +4,7 @@ const path = require("path");
 const math = require('remark-math');
 const katex = require('rehype-katex');
 const transformImage = require('./src/plugins/transform-images');
+const remarkFlex = require('./src/plugins/remark-flex');
 
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -151,7 +152,7 @@ module.exports = {
             }
           },
           beforeDefaultRemarkPlugins: [transformImage],
-          remarkPlugins: [math],
+          remarkPlugins: [math, remarkFlex],
           rehypePlugins: [katex],
         },
         theme: {

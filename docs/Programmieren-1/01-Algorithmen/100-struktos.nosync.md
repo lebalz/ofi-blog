@@ -3,12 +3,8 @@ title: Struktos
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
-import Flex from '@site/src/components/Flex';
 
-<Flex alignItems="end">
-<div style={{flexGrow: 1, minWidth: '300px'}}>
-
-
+:::flex --min=250px --gap=50px
 ```py live_py slim
 for i in range(5):
     left(90)
@@ -16,10 +12,7 @@ for i in range(5):
     right(90)
     forward(29) 
 ```
-
-</div>
-<div style={{flexGrow: 1}}></div>
-<div style={{flexGrow: 1}}>
+***
 <Strukto program={[
     {
         type: 'repeat', 
@@ -32,6 +25,4 @@ for i in range(5):
         ]
     }
 ]} />
-</div>
-
-</Flex>
+:::
