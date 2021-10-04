@@ -88,7 +88,7 @@ const ResizedImage = (props: Props) => {
       alt={props.alt}
       style={style}
       title={
-        props.isInline
+        (props.isInline && props.bib)
           ? `Author: ${props.bib.author} @ ${props.bib.licence}${
               props.bib.edited ? ", Bearbeitet" : ""
             }`
