@@ -3,6 +3,7 @@ const _30_DAYS = 30 * _MS_PER_DAY;
 const _1_YEAR = 365 * _MS_PER_DAY;
 const _4_YEARS = 4 * _1_YEAR;
 const LAST_CLEANUP_KEY = 'last_cleanup';
+const DB_NAME = 'ofi-blog';
 
 const checkExpiry = () => {
     const now = Date.now();
@@ -74,7 +75,7 @@ const setItem = (key: string, value: object, context: string | undefined = undef
 const cleanUp = () => {
     const now = Date.now();
     Object.keys(localStorage).forEach((key) => {
-        const item = getItem(key, {});
+        const item = getItem(key, undefined, {});
         if (item.expiry && item.expiry > now) {
             localStorage.removeItem(key);
         }
