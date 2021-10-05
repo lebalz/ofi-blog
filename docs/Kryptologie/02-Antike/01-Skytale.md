@@ -4,7 +4,7 @@ title: Skytale
 
 # Skytale [^1]
 
-Um ca. 500 v. Chr. nutzten die Spartaner eine Skytale (griechisch für «Stock» oder «Stab»), um wichtige militärische Botschaften zu übermitteln. Der Absender wickelte dabei einen Streifen aus Pergament oder Leder spiralförmig um die Skytale und schrieb die Nachricht längs des Stabes auf das aufgewickelte Band. Auf dem abgewickelten Streifen, der dem Empfänger übermittelt wird, steht nun eine scheinbar sinnlose Buchstabenfolge. Der Empfänger kann die Botschaft mit einer Skytale vom selben Durchmesser aber wieder entziffern.
+Um ca. 500 v. Chr. nutzten die Spartaner eine **Skytale** (griechisch für "*Stock*" oder "*Stab*"), um wichtige militärische Botschaften zu übermitteln. Der Absender wickelte dabei einen Streifen aus Pergament oder Leder spiralförmig um die Skytale und schrieb die Nachricht längs des Stabes auf das aufgewickelte Band. Auf dem abgewickelten Streifen, der dem Empfänger übermittelt wird, steht nun eine scheinbar sinnlose Buchstabenfolge. Der Empfänger kann die Botschaft mit einer Skytale vom selben Durchmesser aber wieder entziffern.
 
 ![Nachbildung einer Skytale --width=300px](images/skytale.png)
 
@@ -58,10 +58,6 @@ for spalte in range(spalten):
             klartext = klartext + zeile[spalte]
 
 print(klartext)
-```
-
-```
-blaaa
 ```
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=818731)
