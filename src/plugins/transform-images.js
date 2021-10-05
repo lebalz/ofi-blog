@@ -157,6 +157,16 @@ const plugin = (options) => {
         // paragraphs with only one image shall be div's
         if (!isInline && node.type === 'paragraph') {
           node.type = 'div';
+          if (!node.data) {
+            node.data = {}
+          }
+          if (!node.data.hProperties) {
+            node.data.hProperties = {}
+          }
+          if (!node.data.hProperties.style) {
+            node.data.hProperties.style = {}
+          }
+          node.data.hProperties.style = {...node.data.hProperties.style, display: 'flex', justifyContent: 'center'};
         }
         if (!node.children) {
           return;
