@@ -40,11 +40,11 @@ const BibDetails = (props: Bib) => {
   return (
     <span className={styles.details}>
       <span className={clsx("badge badge--secondary", styles.badgeItem)}>
-        Author: {props.author}
+        Autor: {props.author}
       </span>
       <a href={props.licence_url} target="_blank" className={styles.badgeItem}>
         <span className={clsx("badge badge--secondary")}>
-          Licence: {props.licence}
+          Lizenz: {props.licence}
         </span>
       </a>
       {props.edited && (
