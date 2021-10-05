@@ -77,15 +77,15 @@ const Strukto = (props: Props) => {
             {props.program.map((codeLine, idx) => {
                 switch (codeLine.type) {
                     case 'call':
-                        return <Call code={codeLine.code} />
+                        return <Call key={idx} code={codeLine.code} />
                     case 'def':
-                        return <Def code={codeLine.code} block={codeLine.block} />
+                        return <Def key={idx} code={codeLine.code} block={codeLine.block} />
                     case 'repeat':
-                        return <Repeat code={codeLine.code} block={codeLine.block} />
+                        return <Repeat key={idx} code={codeLine.code} block={codeLine.block} />
                     case 'step':
-                        return <Step code={codeLine.code} />
+                        return <Step key={idx} code={codeLine.code} />
                     case 'statement':
-                        return <Statement code={codeLine.code} />
+                        return <Statement key={idx} code={codeLine.code} />
                 }
             })}
         </div>

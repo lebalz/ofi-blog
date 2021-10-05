@@ -7,25 +7,19 @@ const getFileLoaderUtils = require('@docusaurus/core/lib/webpack/utils').getFile
 const posixPath = require('@docusaurus/utils').posixPath;
 const escapePath = require('@docusaurus/utils').escapePath;
 const toMessageRelativeFilePath = require('@docusaurus/utils').toMessageRelativeFilePath;
-const processOption = require('./helpers');
+const {parseOptions, cleanedText} = require('./helpers');
+
+/**
+ * Supported config annotations:
+ * @option --size
+ * @option --width
+ * @option --height
+ */
 
 
-const SIZE = { test: /\s*--size\s*=\s*(?<value>[\d\S]+)/, key: 'size', type: 'string' };
-const WIDTH = { test: /\s*--width\s*=\s*(?<value>[\d\S]+)/, key: 'width', type: 'string' };
-const HEIGHT = { test: /\s*--height\s*=\s*(?<value>[\d\S]+)/, key: 'height', type: 'string' };
-
-
-const parseOptions = (alt) => {
-  const options = {}
-  let altText = alt;
-  [
-    SIZE,
-    WIDTH,
-    HEIGHT
-  ].forEach((opt) => {
-    processOption(opt, altText, options);
-    altText = altText.replace(opt.test, '');
-  })
+const getOptions = (alt) => {
+  const altText = cleanedText(alt);
+  const options = parseOptions(alt);
   return {
     alt: alt,
     caption: altText || '',
@@ -53,7 +47,7 @@ const createJSX = (node, isInline, pathUrl, filePath) => {
   }
   const jsxNode = node;
   jsxNode.type = 'jsx';
-  const { alt, caption, options } = jsxNode.alt ? parseOptions(jsxNode.alt) : { alt: undefined, options: {} };
+  const { alt, caption, options } = jsxNode.alt ? getOptions(jsxNode.alt) : { alt: undefined, options: {} };
 
   jsxNode.value = `<Image 
     bib={${JSON.stringify(bib)}}
@@ -164,7 +158,9 @@ const plugin = (options) => {
         if (!isInline && node.type === 'paragraph') {
           node.type = 'div';
         }
-
+        if (!node.children) {
+          return;
+        }
         node.children.forEach((c) => {
           if (c.type !== 'image') {
             return;

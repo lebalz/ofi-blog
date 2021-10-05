@@ -1,23 +1,21 @@
 figure.container {
+    display: inline-block;
     position: relative;
     .bib {
+        float: right;
         font-size: small;
-        position: absolute;
-        right: 2px;
-        bottom: 2px;
-        border: 1px solid var(--ifm-color-primary);
         background-color: var(--ifm-background-color);
         color: var(--ifm-color-primary);
-        opacity: 0.3;
         border-radius: 8px;
         padding: 2px 4px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 200px;
         cursor: pointer;
         &:hover {
-            opacity: 1;
+            background-color: var(--ifm-color-info-lightest);
+            color: var(--ifm-color-primary);
+        }
+        &.visible {
+            // background-color: var(--ifm-color-info-lightest);
+            color: var(--ifm-color-success);
         }
         -webkit-touch-callout: none; /* iOS Safari */
           -webkit-user-select: none; /* Safari */
@@ -27,17 +25,14 @@ figure.container {
                   user-select: none; /* Non-prefixed version, currently
                                         supported by Chrome, Edge, Opera and Firefox */
     }
-    > .details {
-        display: inline-block;
-        .badgeItem {
-            margin-left: 8px;
-            &:first-child {
-                margin-left: 0px;
-            }
-        }
-    }
     figcaption {
         font-style: italic;
+        > .details {
+            display: flex;
+            align-items: flex-end;
+            justify-content: start;
+            gap: 1em;
+        }
     }
 }
 

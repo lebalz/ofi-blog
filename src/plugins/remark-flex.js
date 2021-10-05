@@ -1,5 +1,5 @@
 const visit = require("unist-util-visit");
-const processOption = require('./helpers');
+const { parseOptions } = require('./helpers');
 
 const NEWLINE = "\n";
 
@@ -10,11 +10,6 @@ function escapeRegExp(s) {
 
 const MD_IMAGE_REGEX = /^!\[.*?\]\(.*?\)/;
 const MIN_WIDTH = '50px';
-const COLS = { test: /\s*--cols\s*=\s*(?<value>[\d\S]+)/, key: 'cols', type: 'int' };
-const WIDTH = { test: /\s*(--width|--min-width|--min)\s*=\s*(?<value>[\d\S]+)/, key: 'minWidth', type: 'string' };
-const GAP = { test: /\s*--gap\s*=\s*(?<value>[\d\S]+)/, key: 'gap', type: 'string' };
-const ALIGN = { test: /\s*(--align|--alignItems)\s*=\s*(?<value>[\d\S]+)/, key: 'align', type: 'string' };
-const FLEX_GROW = { test: /\s*(--grow|--flexGrow)\s*=\s*(?<value>[\d\S]+)/, key: 'flexGrow', type: 'int' };
 
 // create a node that will compile to HTML
 const element = (tagName, classes = [], children = [], style = {}) => {
@@ -32,53 +27,93 @@ const element = (tagName, classes = [], children = [], style = {}) => {
     };
 };
 
+const ALIASES = {
+    width: 'minWidth',
+    min: 'minWidth',
+    align: 'alignItems',
+    grow: 'flexGrow',
+    cols: 'columns',
+    basis: 'flexBasis',
+    justify: 'justifyContent'
+};
 
 const parseFlexOptions = (config) => {
-    const style = { flexBasis: MIN_WIDTH };
-    const { cols } = processOption(COLS, config);
-    const { minWidth } = processOption(WIDTH, config);
-    if (cols && minWidth) {
-        style.flexBasis = `max(${minWidth}, ${100 / cols}% - ${cols * 0.2 + (cols - 2) * 0.2}em)`;
-    } else if (cols) {
-        style.flexBasis = `max(${MIN_WIDTH}, ${100 / cols}% - ${cols * 0.2 + (cols - 2) * 0.2}em)`;
-    } else if (minWidth) {
-        style.flexBasis = minWidth;
+    const css = parseOptions(
+        config,
+        true,
+        ALIASES
+    );
+
+    if (!('flexBasis' in css)) {
+        const { columns, minWidth } = css;
+        const cols = columns ? Number.parseInt(columns, 10) : undefined;
+        if (cols && minWidth) {
+            css.flexBasis = `max(${minWidth}, ${100 / cols}% - ${cols * 0.2 + (cols - 2) * 0.2}em)`;
+            delete css.columns;
+            delete css.minWidth;
+        } else if (cols) {
+            css.flexBasis = `max(${MIN_WIDTH}, ${100 / cols}% - ${cols * 0.2 + (cols - 2) * 0.2}em)`;
+            delete css.columns;
+        } else if (minWidth) {
+            css.flexBasis = minWidth;
+            delete css.minWidth;
+        }
     }
-    const { flexGrow } = processOption(FLEX_GROW, config);
-    if (flexGrow !== undefined) {
-        style.flexGrow = flexGrow;
-    }
-    return style;
+    return css;
 }
+
+/**
+ * @param {{[key: string]: string}} css
+ */
+const extractItemStyle = (css) => {
+    const itemStyle = {};
+    ['flexBasis', 'flexGrow'].forEach((key) => {
+        if (key in css) {
+            itemStyle[key] = css[key];
+            delete css[key]
+        }
+    });
+    return itemStyle
+}
+
 
 /**
  * 
  * @param {string} text 
  * @returns 
  */
-const parseFlexItemOptions = (text = undefined, style = 'card__body') => {
-    const opts = { style: style, empty: false };
+const parseFlexItemOptions = (text = undefined, defaultClass = undefined) => {
+    const opts = { classes: [], style: {}, empty: false };
     if (!text) {
         return opts;
     }
-    const res = text.match(/^\*\*\*\s*(?<style>\S+)?/);
-    if (res.groups && res.groups.style) {
-        switch (res.groups.style) {
-            case 'full':
-                opts.style = 'card__image';
-                break;
-            case 'empty':
-            case 'spacer':
-            case 'placeholder':
-                opts.style = 'empty';
-                opts.empty = true;
-                break;
+    const config = parseFlexOptions(text);
+    ['full', 'code'].forEach((k) => {
+        if (k in config) {
+            if (config[k]) {
+                opts.classes.push('card__image');
+            }
+            delete config[k];
         }
+    });
+    ['empty', 'spacer', 'placeholder'].forEach((k) => {
+        if (k in config) {
+            if (config[k]) {
+                opts.empty = true;
+                opts.classes.push('empty');
+            }
+            delete config[k];
+        }
+    });
+    opts.style = config;
+
+    if (defaultClass && opts.classes.length === 0) {
+        opts.classes.push(defaultClass)
     }
     return opts;
 }
 
-const DEFAULT_ITEM = {cards: 'card__body', flex: ''}
+const DEFAULT_ITEM = { cards: 'card__body' }
 
 // passed to unified.use()
 // you have to use a named function for access to `this` :(
@@ -105,7 +140,8 @@ function attacher(options) {
         const now = eat.now();
         const [opening, keyword, config] = match;
         const food = [];
-        const itemStyle = parseFlexOptions(config);
+        const wrapperStyle = parseFlexOptions(config);
+        const itemStyle = extractItemStyle(wrapperStyle);
         const content = [{ content: [], options: parseFlexItemOptions(undefined, DEFAULT_ITEM[keyword]) }];
 
         // consume lines until a closing tag
@@ -142,7 +178,7 @@ function attacher(options) {
                 content.push({ content: [], options: parseFlexItemOptions(line, DEFAULT_ITEM[keyword]) });
                 continue;
             }
-            content[content.length - 1].content.push({line: line, level: level});
+            content[content.length - 1].content.push({ line: line, level: level });
         }
 
         // consume the processed tag and replace escape sequence
@@ -154,32 +190,31 @@ function attacher(options) {
 
             const children = [];
             const raw = []
-            const flushChildren = (klass) => {
+            const flushChildren = (klassen) => {
                 if (raw.length === 0) {
                     return;
                 }
                 children.push(
-                    element('div', klass, this.tokenizeBlock(raw.join(NEWLINE).replace(escapeTag, ':::'), now))
+                    element('div', klassen, this.tokenizeBlock(raw.join(NEWLINE).replace(escapeTag, ':::'), now))
                 )
                 raw.splice(0);
             }
             part.content.forEach((p) => {
                 if (p.level === 0 && keyword === 'cards' && MD_IMAGE_REGEX.test(p.line)) {
-                    flushChildren(part.options.style);
+                    flushChildren(part.options.classes);
                     raw.push(p.line);
                     flushChildren('card__image');
                 } else {
                     raw.push(p.line);
                 }
             });
-            flushChildren(part.options.style);
-
+            flushChildren(part.options.classes);
 
             return element(
                 'div',
                 ['item', ...klasses],
                 children,
-                itemStyle
+                { ...itemStyle, ...part.options.style }
             )
         })
 
@@ -189,16 +224,6 @@ function attacher(options) {
         // parse the content in block mode
         const exit = this.enterBlock();
         exit();
-
-        const wrapperStyle = {}
-        const { gap } = processOption(GAP, config);
-        if(gap) {
-            wrapperStyle.gap = gap;
-        }
-        const { align } = processOption(ALIGN, config);
-        if(align) {
-            wrapperStyle.alignItems = align;
-        }
         // build the nodes for the full markup
         const flex = element(
             "div",

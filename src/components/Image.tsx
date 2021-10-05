@@ -109,6 +109,8 @@ const Image = (props: Props) => {
   const [showControls, setShowControls] = React.useState(false);
   const [visible, setVisible] = React.useState(false);
 
+  const hasCaption = props.caption && props.caption !== "undefined";
+  const hasFigCaption = props.bib || hasCaption;
   return (
     <figure
       className={clsx(styles.container)}
@@ -122,18 +124,19 @@ const Image = (props: Props) => {
       }}
     >
       <ResizedImage {...props} />
-      {props.bib && (
-        <React.Fragment>
-          {showControls && (
-            <span className={styles.bib} onClick={() => setVisible(!visible)}>
-              @{props.bib.author}
+      {hasFigCaption && (
+        <figcaption>
+
+          {hasCaption && (
+            <span>{props.caption}</span>
+          )}
+          {props.bib && (
+            <span className={clsx(styles.bib, visible ? styles.visible : undefined)} onClick={() => setVisible(!visible)}>
+              @
             </span>
           )}
           {visible && <BibDetails {...props.bib} />}
-        </React.Fragment>
-      )}
-      {props.caption && props.caption !== "undefined" && (
-        <figcaption>{props.caption}</figcaption>
+        </figcaption>
       )}
     </figure>
   );

@@ -12,9 +12,8 @@ import Answer from "@site/src/components/Answer";
 
 In der [Aufgabe 8](001-intro.md#aufgaben) haben Sie eine Treppe gezeichnet. Ihr Programm sieht vermutlich etwa wie folgt aus:
 
-<Flex alignItems="center">
-<div style={{flexGrow: 1, minWidth: '300px'}}>
-
+:::flex --min=250px --justify=space-between --align=center
+***
 ```py live_py slim
 from turtle import *
 
@@ -39,15 +38,10 @@ forward(17)
 right(90)
 forward(29)
 ```
-
-</div>
-<div style={{flexGrow: 1}}></div>
-<div style={{flexGrow: 1}}>
-
+***--empty --grow=0.5 --min=50px
+***
 ![](images/stairs.svg)
-
-</div>
-</Flex>
+:::
 
 <Finding title="Was stellen Sie beim Treppen-Programm fest?">
 
@@ -71,9 +65,7 @@ forward(29)
 
 Ein Algorithmus kann Sequenzen wiederholt ausführen. In Python wird die zu wiederholende Sequenz **Codeblock** genannt.
 
-<Flex>
-<div style={{flexGrow: 1, minWidth: '300px'}}>
-
+:::flex --min=300px
 ```py live_py slim
 from turtle import *
 
@@ -83,10 +75,8 @@ for i in range(5):
     right(90)
     forward(29)
 ```
-
-</div>
-<div style={{flexGrow: 1}}></div>
-<div style={{flexGrow: 1}}>
+***--empty --grow=0.5 --min=50px
+***
 <Strukto program={[
     {
         type: 'repeat', 
@@ -99,8 +89,7 @@ for i in range(5):
         ]
     }
 ]} />
-</div>
-</Flex>
+:::
 
 :::def `for i in range(n):`
 Mit `for i in range(n):` wird eine wiederholte Ausführung vorbereitet. Der nachfolgende **Codeblock** wird `n` Mal wiederholt, bevor weitere Anweisungen ausgeführt werden.
