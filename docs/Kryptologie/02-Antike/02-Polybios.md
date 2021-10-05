@@ -35,13 +35,17 @@ klartext = klartext.upper().replace('J', 'I').replace('V', 'U')
 verschlüsselt = ''
 for buchstabe in klartext:
     index = QUADRAT.index(buchstabe)
-    spalte = (index % 5) + 1
-    zeile = (index // 5) + 1
-    verschlüsselt = verschlüsselt + f'{zeile}{spalte} '
+    spalte = index % 5 # berechnet den ganzzahligen Rest bei einer Division durch 5
+    zeile = index // 5 # berechnet die ganzzahlige Division durch 5
+    verschlüsselt = verschlüsselt + f'{zeile + 1}{spalte + 1} '
 
-print(verschlüsselt)
+print(verschlüsselt.strip()) # strip entfernt Leerzeichen an den Rändern
 ```
 
+:::aufgabe
+Lesen Sie das Programm durch und versuchen Sie, jede Zeile zu verstehen.
+
+Flicken Sie den Code, so dass der verschlüsselte Text lesbar wird. 
 
 ```py live_py title=from__polybios.py
 QUADRAT = [
@@ -56,12 +60,14 @@ verschlüsselt = '35 34 31 53 12 24 34 43'
 klartext = ''
 zahlen = verschlüsselt.split(' ')
 for zahl in zahlen:
-    zeile = int(zahl[0]) - 1
-    spalte = int(zahl[1]) - 1
-    index = zeile * 5 + spalte
+    zeile = int(zahl[0])
+    spalte = int(zahl[1])
+    index = 0
     klartext = klartext + QUADRAT[index]
 
 print(klartext)
 ```
+:::
+
 ---
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=423844)
