@@ -14,6 +14,4 @@ const api = axios.create({
   headers: {}
 });
 
-(<any>window).api = api;
-
 export default api;
