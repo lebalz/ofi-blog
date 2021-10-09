@@ -2,5 +2,10 @@
   "extends": "@tsconfig/docusaurus/tsconfig.json",
   "include": [
     "src/"
-  ]
+  ],
+  "compilerOptions": {
+    "target": "ES5",
+    "useDefineForClassFields": true,
+    "experimentalDecorators": true
+  }
 }

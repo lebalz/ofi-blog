@@ -1,0 +1,14 @@
+import api from './base';
+import { AxiosPromise, CancelTokenSource } from 'axios';
+
+export interface User {
+  id: number;
+  email: string;
+  class?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export function user(): AxiosPromise<User> {
+  return api.get('user');
+}
