@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "API=\"http://localhost:3001\" DOMAIN=\"http://localhost:3000\" docusaurus start",
+    "start": "docusaurus start",
     "prebuild": "node material_sync.js",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",

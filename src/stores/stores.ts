@@ -4,8 +4,6 @@ import React from "react";
 import { makeObservable, observable } from "mobx";
 import { DocumentStore } from "./DocumentStore";
 
-
-
 export class RootStore {
   stores = observable([]);
   @observable initialized = false;
@@ -20,14 +18,6 @@ export class RootStore {
   }
 }
 
-// export const stores = Object.freeze({
-//   counterStore: new CounterStore(),
-//   msalStore: new MSALStore(),
-// });
-
 export const rootStore = Object.freeze(new RootStore());
-if (window) {
-  (<any>window).store = rootStore;
-}
 export const storesContext = React.createContext(rootStore);
 export const StoresProvider = storesContext.Provider;
