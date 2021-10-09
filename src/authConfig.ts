@@ -15,7 +15,7 @@ export const API =
     : "https://api.gbsl.website";
 const CLIENT_ID =
   process.env.NODE_ENV === "development"
-    ? "bf18ff76-0692-4685-bf72-00f239b26298"
+    ? "0e3069ab-9826-4738-810b-231456d4bc6a"
     : "7a1d70dc-500e-41d8-93cd-cdfd56cc50ff";
 
 /**
