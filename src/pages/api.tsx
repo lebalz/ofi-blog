@@ -5,13 +5,17 @@ import clsx from "clsx";
 import { observer } from "mobx-react-lite";
 
 const Login = observer(() => {
+  const [webKey, setWebKey] = React.useState('test');
   const msalStore = useStore("msalStore");
   const documentStore = useStore("documentStore");
-
+  console.log(webKey)
   return (
     <Layout>
       <h1>API DEBUG</h1>
       <h1>{msalStore.account ? msalStore.account.username : "nope"}</h1>
+      <div>
+        <input type="text" onChange={(e) => setWebKey(e.target.value)} defaultValue="test"/>
+      </div>
       <div>
         <button
           className={clsx('button', 'button--primary', msalStore.loggedIn && 'disabled')}
@@ -32,7 +36,7 @@ const Login = observer(() => {
         <button
           className={clsx('button', 'button--secondary', !msalStore.loggedIn && 'disabled')}
           onClick={() =>
-            documentStore.loadDocument('test')
+            documentStore.loadDocument(webKey)
           }
         >
           Get
@@ -40,7 +44,7 @@ const Login = observer(() => {
         <button
           className={clsx('button', 'button--secondary', !msalStore.loggedIn && 'disabled')}
           onClick={() =>
-            documentStore.createDocument('test', {text: 'blubber', data: {a: 'blaa', b: 13}, keys: [1,2,3,24]})
+            documentStore.createDocument(webKey, {text: 'blubber', data: {a: 'blaa', b: 13}, keys: [1,2,3,24]})
           }
         >
           Create
@@ -48,15 +52,24 @@ const Login = observer(() => {
         <button
           className={clsx('button', 'button--secondary', !msalStore.loggedIn && 'disabled')}
           onClick={() =>
-            documentStore.updateDocument('test', {text: 'blubber', data: {a: 'blaa', b: Math.random()}, keys: [1,2,3,24]})
+            documentStore.updateDocument(webKey, {text: 'blubber', data: {a: 'blaa', b: Math.random()}, keys: [1,2,3,24]})
           }
         >
           Update
         </button>
+        <button
+          className={clsx('button', 'button--danger', !msalStore.loggedIn && 'disabled')}
+          onClick={() =>
+            documentStore.deleteDocument(webKey)
+          }
+        >
+          Delete
+        </button>
         </div>
+        <h3>{webKey}</h3>
         <pre>
           <code>
-            {JSON.stringify(documentStore.find('test') || {}, undefined, 2)}
+            {JSON.stringify(documentStore.find(webKey) || {}, undefined, 2)}
           </code>
         </pre>
     </Layout>

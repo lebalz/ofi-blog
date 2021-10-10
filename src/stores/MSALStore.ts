@@ -16,8 +16,9 @@ export class ApiCall<T, V> {
   onDone: (data: AxiosResponse<T>) => V;
 
   constructor(fetch: () => AxiosPromise<T>, onDone: (data: AxiosResponse<T>) => V) {
-    this.fetch = fetch;
-    this.onDone = onDone;
+    makeObservable(this);
+    this.fetch = action(fetch);
+    this.onDone = action(onDone);
   }
 }
 
@@ -38,7 +39,6 @@ export class MSALStore {
       () => this.loggedIn,
       (isLoggedIn) => {
         if (isLoggedIn && this.apiCalls.length > 0) {
-          console.log('run v2')
           this.handleCall();
         } else {
           this.apiCalls.splice(0);

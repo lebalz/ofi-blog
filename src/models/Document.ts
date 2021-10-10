@@ -1,26 +1,24 @@
-import { action, computed, observable } from 'mobx';
+import { action, computed, makeObservable, observable } from 'mobx';
 import { Document as DocumentProps } from '../api/document';
 
 export default class Document {
-  readonly id: number;
-  readonly userId: number;
-  readonly webKey: string;
-  readonly pristine: Object;
-
-  readonly createdAt: Date;
-  readonly updatedAt: Date;
+  @observable id: number;
+  @observable userId: number;
+  @observable webKey: string;
+  @observable pristine: Object;
+  @observable createdAt: Date;
+  @observable
+  updatedAt: Date;
 
   @observable.ref
   data: Object;
 
+  @observable
+  state: 'ready' | 'pending' | 'error' = 'ready';
+
   constructor(props: DocumentProps) {
-    this.id = props.id;
-    this.userId = props.user_id;
-    this.webKey = props.web_key;
-    this.pristine = props.data;
-    this.data = props.data;
-    this.createdAt = new Date(props.created_at);
-    this.updatedAt = new Date(props.updated_at);
+    this.update(props);
+    makeObservable(this);
   }
 
   static formatDate(date: Date) {
@@ -30,6 +28,17 @@ export default class Document {
   @action
   setData(data: Object) {
     this.data = data;
+  }
+
+  @action
+  update(props: DocumentProps) {
+    this.id = props.id;
+    this.userId = props.user_id;
+    this.webKey = props.web_key;
+    this.pristine = props.data;
+    this.data = props.data;
+    this.createdAt = new Date(props.created_at);
+    this.updatedAt = new Date(props.updated_at);
   }
 
   @computed
