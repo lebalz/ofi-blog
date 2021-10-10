@@ -1,4 +1,4 @@
-import { computed, observable } from 'mobx';
+import { action, computed, observable } from 'mobx';
 import { Document as DocumentProps } from '../api/document';
 
 export default class Document {
@@ -25,6 +25,11 @@ export default class Document {
 
   static formatDate(date: Date) {
     return date.toLocaleString();
+  }
+
+  @action
+  setData(data: Object) {
+    this.data = data;
   }
 
   @computed

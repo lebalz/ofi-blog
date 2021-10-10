@@ -59,17 +59,15 @@ export class DocumentStore {
 
   @action
   updateDocument(webKey: string, data: Object) {
-    this.root.msalStore.callApi<Object, void>(
+      const old = this.find(webKey);
+      this.root.msalStore.callApi<Object, void>(
       () => putDocument(webKey, data),
       (res) => {
-        const old = this.find(webKey);
-        old.data = data;
-        // console.log(res, old.props);
-        // if (old) {
-        //   this.documents.remove(old);
-        //   this.documents.push(new Document({...old.props, data: data}))
-        // }
-        console.log('success put', data)
+        if (old) {
+          this.documents.remove(old);
+        }
+        old.setData(data);
+        this.documents.push(old);
       }
     );
   }

@@ -5,7 +5,7 @@ import {
   PublicClientApplication,
 } from "@azure/msal-browser";
 import { action, computed, makeObservable, observable, reaction } from "mobx";
-import { loginRequest } from "../authConfig";
+import { API, loginRequest } from "../authConfig";
 import { RootStore } from "./stores";
 import api from '../api/base';
 
@@ -128,8 +128,7 @@ export class MSALStore {
       throw "No Login Present!";
     }
     const request = {
-      scopes: ["https://api.gbsl.website/api/access_as_user"],
-      // scopes: ["http://localhost:3001/api/access_as_user"],
+      scopes: [`${API}/api/access_as_user`],
       account: this.msalInstance.getAccountByUsername(this.account.username),
     };
     console.log(request, this.account);
