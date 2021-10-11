@@ -1,23 +1,90 @@
-import { action, computed, makeObservable, observable } from 'mobx';
-import { Document as DocumentProps } from '../api/document';
+import axios, { CancelTokenSource, Method } from "axios";
+import { debounce } from "lodash";
+import {
+  action,
+  computed,
+  makeObservable,
+  observable,
+  runInAction,
+} from "mobx";
+import { Document as DocumentProps } from "../api/document";
+import { DocumentStore } from "../stores/DocumentStore";
 
-export default class Document {
-  @observable id: number;
-  @observable userId: number;
-  @observable webKey: string;
-  @observable pristine: Object;
-  @observable createdAt: Date;
+type RequestState = "init" | "done" | "pending" | "deleted" | "error";
+class ApiState {
   @observable
-  updatedAt: Date;
+  method: Method;
+
+  @observable
+  state: RequestState;
+
+  cancelToken: CancelTokenSource = axios.CancelToken.source();
+
+  constructor(method: Method, state: RequestState = "init") {
+    this.method = method;
+    this.state = state;
+  }
+
+  @action
+  cancelApiRequests() {
+    this.cancelToken.cancel("Requests canceled");
+    this.cancelToken = axios.CancelToken.source();
+  }
+}
+
+export default class Document<T extends Object = Object> {
+  private readonly store: DocumentStore;
+
+  @observable id: number = -1;
+  @observable userId: number = -1;
+  @observable webKey: string;
+  @observable.ref
+  pristine: T = {} as T;
+  @observable createdAt: Date = new Date();
+  @observable
+  updatedAt: Date = new Date();
 
   @observable.ref
-  data: Object;
+  data: T = {} as T;
 
-  @observable
-  state: 'ready' | 'pending' | 'error' = 'ready';
+  @observable.ref
+  state: ApiState;
 
-  constructor(props: DocumentProps) {
-    this.update(props);
+  constructor(
+    store: DocumentStore,
+    webKey: string,
+    data?: T,
+    update: boolean = false
+  ) {
+    this.store = store;
+    this.webKey = webKey;
+    if (data) {
+      this.data = data;
+    }
+    this.state = new ApiState("get");
+    this.store.apiGetDocument<T>(this.webKey, this.state.cancelToken).then(
+      action((docProps) => {
+        if (docProps) {
+          this.updateProps(docProps);
+          this.state.state = "done";
+          if (data && update) {
+            this.setData(data);
+          }
+        } else if (data) {
+          this.state.method = "post";
+          this.store
+            .apiCreateDocument(this.webKey, data, this.state.cancelToken)
+            .then(
+              action((newDoc) => {
+                this.updateProps(newDoc);
+                this.state.state = "done";
+              })
+            );
+        } else {
+          this.state.state = "error";
+        }
+      })
+    );
     makeObservable(this);
   }
 
@@ -25,13 +92,44 @@ export default class Document {
     return date.toLocaleString();
   }
 
-  @action
-  setData(data: Object) {
-    this.data = data;
+  @computed
+  get isCreated() {
+    return this.id !== -1;
   }
 
   @action
-  update(props: DocumentProps) {
+  private _save() {
+    if (this.isCreated) {
+      this.state.cancelApiRequests();
+      this.store.apiUpdateDocument(
+        this.webKey,
+        this.data,
+        this.state.cancelToken
+      );
+    }
+  }
+
+  save = debounce(this._save, 1000, { leading: false, trailing: true });
+
+  @action
+  setData(data: T) {
+    this.data = data;
+    this.updatedAt = new Date();
+    this.save();
+  }
+
+  @action
+  delete() {
+    this.state.state = "deleted";
+    this.store
+      .apiDeleteDocument(this.webKey, this.state.cancelToken)
+      .then(() => {
+        runInAction(() => this.store.documents.remove(this));
+      });
+  }
+
+  @action
+  private updateProps(props: DocumentProps<T>) {
     this.id = props.id;
     this.userId = props.user_id;
     this.webKey = props.web_key;
@@ -42,14 +140,14 @@ export default class Document {
   }
 
   @computed
-  get props(): DocumentProps {
+  get props(): DocumentProps<T> {
     return {
       id: this.id,
       user_id: this.userId,
       web_key: this.webKey,
       data: this.data,
       created_at: this.createdAt.toISOString(),
-      updated_at: this.updatedAt.toISOString()
+      updated_at: this.updatedAt.toISOString(),
     };
   }
 }

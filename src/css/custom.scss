@@ -183,15 +183,15 @@ html[data-theme="dark"] {
     border-right: 0px;
     .ql-stroke {
       fill: none;
-      stroke: var(--ifm-alert-foreground-color);
+      stroke: var(--ifm-color-primary-contrast-foreground);
     }
     .ql-fill {
-      fill: var(--ifm-alert-foreground-color);
+      fill: var(--ifm-color-primary-contrast-foreground);
       stroke: none;
     }
 
     .ql-picker {
-      color: var(--ifm-alert-foreground-color);
+      color: var(--ifm-color-primary-contrast-foreground);
     }
     .ql-picker-options {
       background: var(--ifm-background-color);

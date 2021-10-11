@@ -9,19 +9,6 @@ import { API, loginRequest } from "../authConfig";
 import { RootStore } from "./stores";
 import api from '../api/base';
 
-export class ApiCall<T, V> {
-  @observable
-  state: 'waiting' | 'processing' | 'done' = 'waiting';
-  fetch: () => AxiosPromise<T>;
-  onDone: (data: AxiosResponse<T>) => V;
-
-  constructor(fetch: () => AxiosPromise<T>, onDone: (data: AxiosResponse<T>) => V) {
-    makeObservable(this);
-    this.fetch = action(fetch);
-    this.onDone = action(onDone);
-  }
-}
-
 export class MSALStore {
   private readonly root: RootStore;
   @observable
@@ -30,54 +17,10 @@ export class MSALStore {
   @observable.ref
   _msalInstance?: PublicClientApplication;
 
-  apiCalls = observable.array<ApiCall<unknown, unknown>>([], {deep: false});
-
   constructor(root: RootStore) {
     makeObservable(this);
     this.root = root;
-    reaction(
-      () => this.loggedIn,
-      (isLoggedIn) => {
-        if (isLoggedIn && this.apiCalls.length > 0) {
-          this.handleCall();
-        } else {
-          this.apiCalls.splice(0);
-        }
-      }
-    )
-    reaction(
-      () => this.apiCalls.length > 0,
-      (run) => {
-        if (run && this.loggedIn) {
-          console.log('run v2')
-          this.handleCall();
-        }
-      }
-    )
   }
-
-  @action
-  handleCall() {
-    const task = this.apiCalls.find(c => c.state === 'waiting');
-    if (task) {
-      task.state = 'processing';
-      task.fetch().then((value) => {
-        console.log(value);
-        return task.onDone(value)
-      }).catch((error) => console.warn(error));
-      this.apiCalls.remove(task);
-    }
-  }
-
-  @action
-  callApi<T, V>(fetch: () => AxiosPromise<T>, onDone: (data: AxiosResponse<T>) => V) {
-    const call = () => this.getToken().then((token) => {
-      api.defaults.headers.Authorization = `Bearer ${token}`;
-      return fetch();
-    });
-    this.apiCalls.push(new ApiCall(call, onDone));
-  }
-
   @computed
   get msalInstance(): PublicClientApplication {
     if (!this._msalInstance) {
@@ -104,7 +47,7 @@ export class MSALStore {
   @action
   login() {
     this.msalInstance.loginRedirect(loginRequest).catch((e) => {
-      console.log(e);
+      console.warn(e);
     });
   }
 
@@ -117,22 +60,19 @@ export class MSALStore {
       account: this.msalInstance.getAccountByUsername(this.account.username),
     };
     this.msalInstance.logoutRedirect(logoutRequest).catch((e) => {
-      console.log(e);
+      console.warn(e);
     });
   }
 
   @action
   getTokenRedirect() {
     if (!this.account) {
-      console.warn("Not logged in");
       throw "No Login Present!";
     }
     const request = {
       scopes: [`${API}/api/access_as_user`],
       account: this.msalInstance.getAccountByUsername(this.account.username),
     };
-    console.log(request, this.account);
-
     return this.msalInstance.acquireTokenSilent(request).catch((error) => {
       console.error(error);
       console.warn(
@@ -140,20 +80,21 @@ export class MSALStore {
       );
       if (error instanceof InteractionRequiredAuthError) {
         // fallback to interaction when silent call fails
-        console.log("request", request);
         return this.msalInstance.acquireTokenRedirect(request);
       }
       throw error;
     });
   }
 
-  getToken() {
+  withToken(): Promise<boolean> {
     return this.getTokenRedirect().then(
       (res) => {
         if (res) {
-          return res.accessToken;
+          api.defaults.headers.Authorization = `Bearer ${res.accessToken}`;
+          return true;
         }
-        return '';
+        console.warn('No Login Token Found')
+        return false;
       } 
     )
   }

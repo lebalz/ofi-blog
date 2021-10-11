@@ -1,3 +1,4 @@
+import { CancelTokenSource } from 'axios';
 import { action, makeObservable, observable } from "mobx";
 import { computedFn } from "mobx-utils";
 import { getDocument, postDocument, putDocument, Document as DocumentProps, deleteDocument } from "../api/document";
@@ -10,94 +11,78 @@ export class DocumentStore {
   
   @observable initialized: boolean = false
   constructor(root: RootStore) {
-    makeObservable(this);
     this.root = root;
+    makeObservable(this);
   }
 
-
   find = computedFn(
-    function (this: DocumentStore, webKey: string): Document | undefined {
-      return this.documents.find((q) => q.webKey === webKey);
+    function <T extends Object = Object>(this: DocumentStore, webKey: string) {
+      return this.documents.find((q) => q.webKey === webKey) as Document<T>;
     },
     { keepAlive: true }
   );
 
   @action
-  private createOrUpdateDocument(doc: DocumentProps): Document {
-    const current = this.find(doc.web_key);
+  createOrUpdateDocument<T extends Object = Object>(webKey: string, data: T): Document<T> {
+    const current = this.find<T>(webKey);
     if (current) {
-      current.updatedAt = new Date(doc.created_at)
-      current.setData(doc.data);
+      current.setData(data);
       return current;
     } 
-      const d = new Document(doc);
-      this.documents.push(d);
-      return d;
-    
-  }
-
-
-  @action
-  loadDocument(webKey: string) {
-    this.root.msalStore.callApi<DocumentProps, void>(
-      () => getDocument(webKey),
-      ({data}) => {
-        this.createOrUpdateDocument(data);
-      }
-    );
+    const doc = new Document(this, webKey, data);
+    this.documents.push(doc);
+    return doc;
   }
 
   @action
-  createDocument(webKey: string, data: Object) {
-    const current = this.find(webKey);
+  getOrCreateDocument<T extends Object = Object>(webKey: string, defaultData: T): Document<T> {
+    const current = this.find<T>(webKey);
     if (current) {
-      return this.updateDocument(webKey, data);
+      return current;
     }
-    const props: DocumentProps = {
-      data: data,
-      id: -1,
-      created_at: (new Date()).toISOString(),
-      updated_at: (new Date()).toISOString(),
-      user_id: -1,
-      web_key: webKey
-    }
-    const doc = this.createOrUpdateDocument(props);
-    doc.state = 'pending';
-    this.root.msalStore.callApi(
-      () => postDocument(webKey, data),
-      (res) => {
-        doc.update(res.data);
+    const doc = new Document(this, webKey, defaultData);
+    this.documents.push(doc);
+    return doc;
+  }
+
+
+  @action
+  apiGetDocument<T extends Object = Object>(webKey: string, cancelToken: CancelTokenSource): Promise<DocumentProps<T> | undefined> {
+    return this.root.msalStore.withToken().then((ok) => {
+      if (ok) {
+        return getDocument<T>(webKey, cancelToken).then(({data}) => {
+          return data;
+        })
       }
-    );
+    })
   }
 
   @action
-  deleteDocument(webKey: string) {
-      const toDel = this.find(webKey);
-      this.root.msalStore.callApi(
-      () => deleteDocument(webKey),
-      (res) => {
-        if (toDel) {
-          this.documents.remove(toDel);
-        }
-        console.log('successful delete');
+  apiCreateDocument<T extends Object = Object>(webKey: string, data: T, cancelToken: CancelTokenSource): Promise<DocumentProps<T> | undefined> {
+    return this.root.msalStore.withToken().then((ok) => {
+      if (ok) {
+        return postDocument<T>(webKey, data, cancelToken).then(({data}) => {
+          return data;
+        })
       }
-    );
+    })
   }
 
   @action
-  updateDocument(webKey: string, data: Object) {
-      const current = this.find(webKey);
-      if (current) {
-        current.data = data;
-        current.state = 'pending';
-        current.updatedAt = new Date();
+  apiDeleteDocument(webKey: string, cancelToken: CancelTokenSource) {
+    return this.root.msalStore.withToken().then((ok) => {
+      if (ok) {
+        return deleteDocument(webKey, cancelToken);
       }
-      this.root.msalStore.callApi<Object, void>(
-      () => putDocument(webKey, data),
-      (res) => {
-        current.state = 'ready';
+    });
+  }
+
+  @action
+  apiUpdateDocument<T extends Object = Object>(webKey: string, data: T, cancelToken: CancelTokenSource) {
+    return this.root.msalStore.withToken().then((ok) => {
+      if (ok) {
+        return putDocument<T>(webKey, data, cancelToken)
       }
-    );
+    });
   }
 }

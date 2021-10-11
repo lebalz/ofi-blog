@@ -64,7 +64,6 @@ const BibDetails = (props: Bib) => {
 const defaultUnit = (value: string, unit: string = "px") => {
   // when only a number is given, add the default unit
   if (/^\d+(\.\d*)?$/.test(value)) {
-    console.log(value);
     return `${value}${unit}`;
   }
   return value;
