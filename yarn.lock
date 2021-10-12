@@ -1682,24 +1682,12 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.35.tgz#01dd3d054da07a00b764d78748df20daf2b317e9"
   integrity sha512-IHUfxSEDS9dDGqYwIW7wTN6tn/O8E0n5PcAHz9cAaBoZw6UpG20IG/YM3NNLaGPwPqgjBAFjIURzqoQs3rrtuw==
 
-"@fortawesome/fontawesome-common-types@^0.2.36":
-  version "0.2.36"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.36.tgz#b44e52db3b6b20523e0c57ef8c42d315532cb903"
-  integrity sha512-a/7BiSgobHAgBWeN7N0w+lAhInrGxksn13uK7231n2m8EDPE3BMCl9NZLTGrj9ZXfCmC6LM0QLqXidIizVQ6yg==
-
 "@fortawesome/fontawesome-svg-core@^1.2.35":
   version "1.2.35"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.35.tgz#85aea8c25645fcec88d35f2eb1045c38d3e65cff"
   integrity sha512-uLEXifXIL7hnh2sNZQrIJWNol7cTVIzwI+4qcBIq9QWaZqUblm0IDrtSqbNg+3SQf8SMGHkiSigD++rHmCHjBg==
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.35"
-
-"@fortawesome/fontawesome-svg-core@^1.2.36":
-  version "1.2.36"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.36.tgz#4f2ea6f778298e0c47c6524ce2e7fd58eb6930e3"
-  integrity sha512-YUcsLQKYb6DmaJjIHdDWpBIGCcyE/W+p/LMGvjQem55Mm2XWVAP5kWTMKWLv9lwpCVjpLxPyOMOyUocP1GxrtA==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.36"
 
 "@fortawesome/free-brands-svg-icons@^5.15.3":
   version "5.15.3"
@@ -2142,6 +2130,11 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
   integrity sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
 
+"@types/uuid@^8.3.1":
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.1.tgz#1a32969cf8f0364b3d8c8af9cc3555b7805df14f"
+  integrity sha512-Y2mHTRAbqfFkpjldbkHGY8JIzRN6XqYRliG8/24FcHm2D2PwW24fl5xMRTVGdrb7iMrwCaIEbLWerGIkXuFWVg==
+
 "@webassemblyjs/ast@1.11.0":
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.0.tgz#a5aa679efdc9e51707a4207139da57920555961f"
@@ -2290,6 +2283,11 @@ ace-builds@^1.4.12:
   version "1.4.12"
   resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.4.12.tgz#888efa386e36f4345f40b5233fcc4fe4c588fae7"
   integrity sha512-G+chJctFPiiLGvs3+/Mly3apXTcfgE45dT5yp12BcWZ1kUs+gm0qd3/fv4gsz6fVag4mM0moHVpjHDIgph6Psg==
+
+ace-builds@^1.4.13:
+  version "1.4.13"
+  resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.4.13.tgz#186f42d3849ebcc6a48b93088a058489897514c1"
+  integrity sha512-SOLzdaQkY6ecPKYRDDg+MY1WoGgXA34cIvYJNNoBMGGUswHmlauU2Hy0UL96vW0Fs/LgFbMUjD+6vqzWTldIYQ==
 
 acorn-walk@^8.0.0:
   version "8.1.1"
@@ -3249,11 +3247,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
-  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
-
 clean-css@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.3.tgz#507b5de7d97b48ee53d84adb0160ff6216380f78"
@@ -4128,23 +4121,6 @@ dns-txt@^2.0.2:
   integrity sha1-uR2Ab10nGI5Ks+fRB9iBocxGQrY=
   dependencies:
     buffer-indexof "^1.0.0"
-
-docusaurus-live-brython@^0.0.1-beta.6.12:
-  version "0.0.1-beta.6.12"
-  resolved "https://registry.yarnpkg.com/docusaurus-live-brython/-/docusaurus-live-brython-0.0.1-beta.6.12.tgz#95c88d1186a3e70619f356238c9b326b1ea95052"
-  integrity sha512-zbqG6q7k4VawswNHFESB9uYeeARZcil3FDfne/Gucsio+a/NjoAeFNlundJvjGBYGrtZoQejU5mvKDxETJ+oSQ==
-  dependencies:
-    "@docusaurus/core" "2.0.0-beta.6"
-    "@fortawesome/fontawesome-svg-core" "^1.2.36"
-    "@fortawesome/free-brands-svg-icons" "^5.15.3"
-    "@fortawesome/free-solid-svg-icons" "^5.15.3"
-    "@fortawesome/react-fontawesome" "^0.1.14"
-    ace-builds "^1.4.12"
-    clsx "^1.1.1"
-    lodash "^4.17.21"
-    react-ace "^9.4.3"
-    react-draggable "^4.4.3"
-    svg-parser "^2.0.4"
 
 docusaurus-plugin-sass@^0.2.1:
   version "0.2.1"
@@ -8597,10 +8573,10 @@ rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-ace@^9.4.3:
-  version "9.4.3"
-  resolved "https://registry.yarnpkg.com/react-ace/-/react-ace-9.4.3.tgz#4534f4bbbfba4bdc723c8b0cd33e7d876f8d78ed"
-  integrity sha512-WKknvcOZLhMtTSicRll94SjfZe6XEvZO6OpjJQCUGDcygZwfopkizeVntHX2ldMystbcmVES1RrjXUmyw0+wfQ==
+react-ace@^9.4.4:
+  version "9.4.4"
+  resolved "https://registry.yarnpkg.com/react-ace/-/react-ace-9.4.4.tgz#2ae0d9fd199daec0bb62353d92356eaf8edfc4f8"
+  integrity sha512-gHSH4Wm+jE28pcr4hXKeSwG2DHPZhVlfAfR+VI/dgStnUFWJMPClpRI8emLEYEK/g4cZ4cHY80HTfFwfc4020w==
   dependencies:
     ace-builds "^1.4.12"
     diff-match-patch "^1.0.5"
@@ -8662,12 +8638,12 @@ react-dom@^17.0.1:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-draggable@^4.4.3:
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-4.4.3.tgz#0727f2cae5813e36b0e4962bf11b2f9ef2b406f3"
-  integrity sha512-jV4TE59MBuWm7gb6Ns3Q1mxX8Azffb7oTtDtBgFkxRvhDp38YAARmRplrj0+XGkhOJB5XziArX+4HUUABtyZ0w==
+react-draggable@^4.4.4:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-4.4.4.tgz#5b26d9996be63d32d285a426f41055de87e59b2f"
+  integrity sha512-6e0WdcNLwpBx/YIDpoyd2Xb04PB0elrDrulKUgdrIlwuYvxh5Ok9M+F8cljm8kPXXs43PmMzek9RrB1b7mLMqA==
   dependencies:
-    classnames "^2.2.5"
+    clsx "^1.1.1"
     prop-types "^15.6.0"
 
 react-error-overlay@^6.0.9:
@@ -10879,6 +10855,11 @@ uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
 v8flags@^3.2.0:
   version "3.2.0"

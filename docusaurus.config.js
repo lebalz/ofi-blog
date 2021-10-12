@@ -166,6 +166,7 @@ module.exports = {
   ],
   plugins: [
     'docusaurus-plugin-sass',
+    './src/plugins/brython-source.js',
     function (context, options) {
       return {
         name: 'raw-src-loader',
@@ -194,14 +195,6 @@ module.exports = {
     },
   ],
   themes: [
-    ['docusaurus-live-brython',
-      {
-        brython_src: 'https://raw.githack.com/brython-dev/brython/master/www/src/brython.js',
-        brython_stdlib_src: 'https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js',
-        brython_pips: [
-          'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js'
-        ]
-      }]
   ],
   stylesheets: [
     {
