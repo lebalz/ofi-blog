@@ -1,5 +1,5 @@
-import { CancelTokenSource } from 'axios';
-import { action, makeObservable, observable } from "mobx";
+import axios, { CancelTokenSource } from 'axios';
+import { action, makeObservable, observable, runInAction } from "mobx";
 import { computedFn } from "mobx-utils";
 import { getDocument, postDocument, putDocument, Document as DocumentProps, deleteDocument } from "../api/document";
 import Document from "../models/Document";
@@ -8,6 +8,10 @@ import { RootStore } from "./stores";
 export class DocumentStore {
   private readonly root: RootStore;
   documents = observable<Document>([]);
+  dummyDocs = observable<Document>([]);
+
+  @observable
+  opendTurtleModalWebKey: string | undefined = undefined;
   
   @observable initialized: boolean = false
   constructor(root: RootStore) {
@@ -21,6 +25,23 @@ export class DocumentStore {
     },
     { keepAlive: true }
   );
+
+  @action
+  setOpendTurtleModal(webKey: string | undefined) {
+    this.opendTurtleModalWebKey = webKey;
+  }
+
+  @action
+  remove(webKey: string) {
+    const toRemove = this.find(webKey);
+    if (toRemove) {
+      toRemove.state.state = 'deleted';
+      const cancelToken = axios.CancelToken.source();
+      this.apiDeleteDocument(webKey, cancelToken).then(() => {
+        runInAction(() => this.documents.remove(toRemove));
+      })
+    }
+  }
 
   @action
   createOrUpdateDocument<T extends Object = Object>(webKey: string, data: T): Document<T> {
@@ -42,7 +63,30 @@ export class DocumentStore {
     }
     const doc = new Document(this, webKey, defaultData);
     this.documents.push(doc);
+    setTimeout(action(() => {
+      this.removeDummy(webKey);
+    }), 1);
     return doc;
+  }
+
+  @action
+  getOrCreateDummyDoc<T extends Object = Object>(webKey: string, defaultData: T): Document<T> {
+    const current = this.dummyDocs.find((q) => q.webKey === webKey) as Document<T>;
+    if (current) {
+      return current;
+    }
+    const doc = new Document(this, webKey, defaultData, false, false);
+    this.dummyDocs.push(doc);
+    return doc;
+  }
+
+  @action
+  removeDummy(webKey: string) {
+    const toRemove = this.dummyDocs.find((q) => q.webKey === webKey);
+    if (toRemove) {
+      toRemove.state.state = 'deleted';
+      this.dummyDocs.remove(toRemove);
+    }
   }
 
 

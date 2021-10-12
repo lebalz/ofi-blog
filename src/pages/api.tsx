@@ -3,7 +3,6 @@ import Layout from "@theme/Layout";
 import { useStore } from "../stores/hooks";
 import clsx from "clsx";
 import { observer } from "mobx-react-lite";
-import AnswerV2 from "../components/AnswerV2";
 import Answer from "../components/Answer";
 
 const Login = observer(() => {
@@ -16,8 +15,10 @@ const Login = observer(() => {
       <h1>API DEBUG</h1>
       <h1>{account ? account.username : "nope"}</h1>
       <div>
-      <AnswerV2 id="blaabi" />
-      <Answer id="blaabi" type="text" />
+      <Answer webKey="325e83cb-e08f-4152-90a9-8d2b9e5a5590" type="text" />
+      <Answer type="array" webKey="393422a8-c422-464e-94eb-dff929bc9346" label="Lösung F1" size={4} select={['', '↑', '↰', '↱']}/>
+      <Answer type="string" webKey="a5e7d705-83bd-4076-b1b4-c4cf314eaef6" label="Blaa"/>
+
       </div>
       <div>
         <input

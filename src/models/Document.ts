@@ -33,7 +33,7 @@ class ApiState {
 }
 
 export default class Document<T extends Object = Object> {
-  private readonly store: DocumentStore;
+  protected readonly store: DocumentStore;
 
   @observable id: number = -1;
   @observable userId: number = -1;
@@ -43,6 +43,8 @@ export default class Document<T extends Object = Object> {
   @observable createdAt: Date = new Date();
   @observable
   updatedAt: Date = new Date();
+  @observable
+  loaded: boolean = false;
 
   @observable.ref
   data: T = {} as T;
@@ -50,41 +52,50 @@ export default class Document<T extends Object = Object> {
   @observable.ref
   state: ApiState;
 
+  isDummy: boolean;
+
   constructor(
     store: DocumentStore,
     webKey: string,
     data?: T,
-    update: boolean = false
+    update: boolean = false,
+    isDummy: boolean = false
   ) {
     this.store = store;
     this.webKey = webKey;
+    this.isDummy = isDummy;
     if (data) {
       this.data = data;
     }
-    this.state = new ApiState("get");
-    this.store.apiGetDocument<T>(this.webKey, this.state.cancelToken).then(
-      action((docProps) => {
-        if (docProps) {
-          this.updateProps(docProps);
-          this.state.state = "done";
-          if (data && update) {
-            this.setData(data);
+    if (!this.isDummy) {
+      this.state = new ApiState("get");
+      this.store.apiGetDocument<T>(this.webKey, this.state.cancelToken).then(
+        action((docProps) => {
+          if (docProps) {
+            this.updateProps(docProps);
+            this.state.state = "done";
+            this.loaded = true;
+            if (data && update) {
+              this.setData(data);
+            }
+          } else if (data) {
+            this.state.method = "post";
+            this.store
+              .apiCreateDocument(this.webKey, data, this.state.cancelToken)
+              .then(
+                action((newDoc) => {
+                  this.updateProps(newDoc);
+                  this.state.state = "done";
+                  this.loaded = true;
+                })
+              );
+          } else {
+            this.state.state = "error";
+            this.loaded = false;
           }
-        } else if (data) {
-          this.state.method = "post";
-          this.store
-            .apiCreateDocument(this.webKey, data, this.state.cancelToken)
-            .then(
-              action((newDoc) => {
-                this.updateProps(newDoc);
-                this.state.state = "done";
-              })
-            );
-        } else {
-          this.state.state = "error";
-        }
-      })
-    );
+        })
+      );
+    }
     makeObservable(this);
   }
 
@@ -98,7 +109,10 @@ export default class Document<T extends Object = Object> {
   }
 
   @action
-  private _save() {
+  protected _save() {
+    if (this.isDummy) {
+      return;
+    }
     if (this.isCreated) {
       this.state.cancelApiRequests();
       this.store.apiUpdateDocument(
@@ -113,6 +127,7 @@ export default class Document<T extends Object = Object> {
 
   @action
   setData(data: T) {
+    console.log(data)
     this.data = data;
     this.updatedAt = new Date();
     this.save();
@@ -120,16 +135,18 @@ export default class Document<T extends Object = Object> {
 
   @action
   delete() {
+    if (this.isDummy) {
+      this.loaded = false;
+      this.store.removeDummy(this.webKey);
+      return;
+    }
     this.state.state = "deleted";
-    this.store
-      .apiDeleteDocument(this.webKey, this.state.cancelToken)
-      .then(() => {
-        runInAction(() => this.store.documents.remove(this));
-      });
+    this.loaded = false;
+    this.store.remove(this.webKey);
   }
 
   @action
-  private updateProps(props: DocumentProps<T>) {
+  protected updateProps(props: DocumentProps<T>) {
     this.id = props.id;
     this.userId = props.user_id;
     this.webKey = props.web_key;
