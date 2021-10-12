@@ -36,7 +36,7 @@ Finden und notieren Sie die IP-Adresse
 
 Vergleichen Sie die beiden IP-Adressen. Was stellen Sie fest?
 
-<Answer type="text" id="q1" placeholder="IP-Adressen"/>
+<Answer type="text" id="q1" webKey="f77e88bf-c6c6-401b-aa77-1b4eb3f0fa41" placeholder="IP-Adressen"/>
 
 <details><summary>Wie finde ich die IP-Adresse?</summary>
 
@@ -66,7 +66,7 @@ Finden und notieren Sie die IP-Adresse
 
 bei Ihnen zu Hause!
 
-<Answer type="text" id="q2" placeholder="IP-Adressen"/>
+<Answer type="text" id="q2" webKey="e5978cd5-14d6-47d7-ac16-3963ef1a0747" placeholder="IP-Adressen"/>
 
 :::
 
@@ -91,7 +91,7 @@ Führen Sie einen Ping mit folgenden IP-Adressen aus:
 - Was bedeutet die Ausgabe?
 - Wieso gibt es Unterschiede?
 
-<Answer type="text" id="q3"/>
+<Answer type="text" webKey="df970dc4-335f-41ef-9f99-353cfd0bfb4c" id="q3"/>
 
 :::
 
@@ -151,7 +151,7 @@ traceroute www.gbsl.ch
 </OsTabs>
 
 Beobachten Sie den Output. Erkennen Sie Gemeinsamkeiten oder irgendeine spezielle Zwischenstation?
-<Answer type="text" id="q4"/>
+<Answer type="text" webKey="34672741-e429-43b0-ab58-9db495a8f090" id="q4"/>
 
 :::
 
@@ -189,7 +189,7 @@ Zu Hause haben Sie als Standardgateway die IP-Adresse Ihres Routers/Modems einge
 :::aufgabe
 Gehen Sie auf die Webseite https://whatsmyip.org/. Was wird angezeigt?
 
-<Answer type="text" id="q5"/>
+<Answer type="text" webKey="84b69738-074c-4ee9-8e6c-073a6a896aeb" id="q5"/>
 
 <details><summary>Lösung</summary>
 
@@ -243,7 +243,7 @@ Wie kommt ein Datenpaket von Biel
 
 https://www.submarinecablemap.com/
 
-<Answer type="text" id="q6"/>
+<Answer type="text" id="q6" webKey="44309f6f-d19d-4b0e-b597-1e04c5edf221"/>
 
 :::
 

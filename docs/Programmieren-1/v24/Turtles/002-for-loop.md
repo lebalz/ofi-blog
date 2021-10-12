@@ -8,7 +8,7 @@ Die `for` Schleife kann man sich wie ein Ticket-Schalter vorstellen. Der Verkäu
 
 In Python wird die Warteschleife als Liste in eckigen Klammern geschrieben:
 
-```py live_py
+```py live_py id=3f6dd4e0-f5bf-4d2f-ad8e-ee414e97cece
 for person in ['Jack', 'Maria', 'Reto']:
     print(f'Guten Tag {person}, wie kann ich helfen?')
     print('...')
@@ -35,7 +35,7 @@ Auf wiedersehen.
 Um einen beliebigen Code-Teil mehrfach nacheinander auszuführen, können wir nun auch Zahlen als Warteschleife verwenden:
 
 
-```py live_py
+```py live_py id=0c4d6d9b-158d-4558-8902-bf4d09254b1e
 from turtle import *
 for counter in [0, 1, 2, 3]:
     forward(100)
@@ -45,7 +45,7 @@ for counter in [0, 1, 2, 3]:
 Für jede Zahl wird der Code-Teil wiederholt:
 
 
-```py live_py
+```py live_py id=c482f58c-66bb-4406-ad47-e42b4f6ee971
 from turtle import *
 # 0
 forward(100)
@@ -64,7 +64,7 @@ left(90)
 Oder in Kurzschreibweise:
 
 
-```py live_py
+```py live_py id=46a4e93f-80c8-4e66-ab86-f187b810a8e8
 from turtle import *
 for counter in range(4):
     forward(100)
@@ -75,7 +75,7 @@ wobei `range(4)` eine Warteschleife mit `4` Elementen erzeugt.
 
 ## Was ist die Ausgabe des folgenden Programms?
 
-```py live_py
+```py live_py id=63756aea-ee47-4805-b077-8637a09ca08d
 from turtle import *
 penup()
 goto(-30, 0)

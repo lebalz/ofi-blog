@@ -12,7 +12,7 @@ import Answer from "@site/src/components/Answer";
 
 Was ist das Prinzip der DNS Cache Poisioning Attacke?
 
-<Answer type="text" id="q1"/>
+<Answer type="text" id="q1" webKey="307634c6-4014-425d-832d-eca3269ad79f"/>
 
 :::
 
@@ -24,6 +24,6 @@ Was ist das Prinzip der DNS Cache Poisioning Attacke?
 
 Wie verläuft eine ARP/DNS-Spoofing Attacke?
 
-<Answer type="text" id="q2"/>
+<Answer type="text" id="q2" webKey="832e9fad-b764-42dc-a9c7-b6ea964a8cd0"/>
 
 :::

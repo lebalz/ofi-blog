@@ -6,7 +6,7 @@ Die `while` Schleife kann man sich wie ein kleines Kind auf einer Wanderung vors
 
 Die `while` Schleife stellt ebenfalls immerzu dieselbe Frage, die jeweils mit Ja (`True`) oder Nein (`False`) beantwortet wird. Solange die Frage mit _Ja_ beantwortet wird, wird der Code-Teil erneut wiederholt.
 
-```py live_py
+```py live_py id=f53cdb80-f26f-463c-b399-a2104cecf834
 from turtle import *
 counter = 0
 
@@ -46,7 +46,7 @@ counter = counter + 1     # counter = 4
 
 # Was ist die Ausgabe des folgenden Programms?
 
-```py live_py
+```py live_py id=f78c086e-30d9-4805-b3b8-fb4269ddd712
 from turtle import *
 
 penup()

@@ -2,8 +2,6 @@
 title: Einführung
 ---
 
-import Answer from '@site/src/components/Answer';
-
 # Einführung Python
 
 Programmieren heisst, einer Maschine Befehle zu erteilen und sie damit zu steuern. Die erste solche Maschine, die Sie steuern, ist eine kleine Schildkröte (bzw. ein kleines Dreieck) auf dem Bildschirm: Die Turtle. Was kann diese Turtle und was musst du wissen, um sie zu steuern?
@@ -72,7 +70,7 @@ Markieren Sie auf dem Zusatzblatt die Elemente eines Algorithmus mit unterschied
 - das Quadrat doppelt so gross gezeichnet wird
 - das Quadrat um 45° nach links gedreht gezeichnet wird
 
-```py live_py title=quatrat.py
+```py live_py title=quatrat.py id=7d72f0f0-1928-4f06-8783-09000e8f2f4a
 from turtle import *
 
 left(90)
@@ -191,7 +189,7 @@ Versuchen Sie, folgendes Zickzack-Muster mit einer Stiftdicke von `5` zu zeichne
 
 ![](images/zickzack_py.svg)
 
-```py live_py title=zickzack.py
+```py live_py title=zickzack.py id=ab8648f3-80f0-4f24-8470-c7bfeefa9ee6
 from turtle import *
 
 ```
@@ -231,7 +229,7 @@ Versuchen Sie nachzuvollziehen, welche Zeile was macht.
 
 Fügen Sie immer wenn ein Unterprogramm zum ersten Mal verwendet wird, einen **Kommentar** hinzu, was dieses Unterprogramm macht und, falls vorhanden, welchen Einfluss die Parameter haben.
 
-```py live_py title=Stift-und-Punkte
+```py live_py title=Stift-und-Punkte id=764c988c-2a3d-409c-9e03-4dee147d12ba
 from turtle import *
 
 forward(40)
@@ -263,7 +261,7 @@ forward(80)
 
 Verstecken Sie auch die Turtle am Ende.
 
-```py live_py title=Würfel__5.py
+```py live_py title=Würfel__5.py id=035454e4-9b17-4d93-bd4e-5b1466c2abc6
 from turtle import *
 
 forward(40)
@@ -294,7 +292,7 @@ Das "Haus vom Nikolaus" ist ein Zeichenspiel für Kinder. Ziel ist es, das besag
 
 ![](images/haus_nikolaus.svg)
 
-```py live_py title=haus__nikolaus.py
+```py live_py title=haus__nikolaus.py id=d5730220-3200-4211-bf67-cce925c3a6be
 from turtle import *
 ```
 
@@ -311,7 +309,7 @@ Zeichnen Sie eine Treppe mit einer Breite von `29` Pixeln und einer Höhe von `1
 
 ![](images/stairs.svg)
 
-```py live_py title=treppe.py
+```py live_py title=treppe.py id=83700b30-a08c-4578-bf5e-292a504fb661
 from turtle import *
 ```
 :::

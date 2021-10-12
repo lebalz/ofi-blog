@@ -33,7 +33,7 @@ Sie möchten mit dem ÖV vom Gymnasium (Ländtestrasse 12, Biel/Bienne) zum Spor
 :::aufgabe Mit dem Netzplan
 
 Welche Möglichkeiten sehen Sie auf dem Liniennetz?
-<Answer type="text" id="q1"/>
+<Answer type="text" id="q1" webKey="d6938484-81a6-4240-bbd0-b94ed04bdc72"/>
 :::
 
 :::aufgabe 💻 mit Google Maps
@@ -44,7 +44,7 @@ Welchen Transportoptionen schlägt Ihnen [Google Maps](https://www.google.com/ma
 - Ändert sich die Route, wenn sie möglichst kurze Fusswege enthalten soll? (Einstellbar unter _Routenoptionen_)
 - Ändert sich der Reisevorschlag, wenn Sie spät in der Nacht eine Verbindung suchen?
 
-<Answer type="text" id="q2"/>
+<Answer type="text" id="q2" webKey="482bf3ac-ff0d-44ca-9700-5274cf9fecd4"/>
 
 :::
 
@@ -93,7 +93,7 @@ Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für Date
 
 Beispiel-Anleitung: **Seehofweg** → Bus Nr. 9
 
-<Answer type="text" id="q3"/>
+<Answer type="text" id="q3" webKey="7bcc9f60-6fe8-4162-b45f-8cda4e248730"/>
 
 :::
 
@@ -106,7 +106,7 @@ Die Anleitungen müssten natürlich auch Anweisungen haben für andere Ziele.
 - Wie für das Ziel "Zürich"?
 - Muss jede Haltestelle wirklich Anweisungen für jedes andere Ziel haben?
 
-<Answer type="text" id="q4"/>
+<Answer type="text" id="q4" webKey="609cfe7e-bab0-4a50-97c7-7b3ac571fba0"/>
 
 :::
 

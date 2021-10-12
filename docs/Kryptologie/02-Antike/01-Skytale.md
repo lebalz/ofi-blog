@@ -13,7 +13,7 @@ Die Skytale ist ein Beispiel einer Verschlüsselung durch Transposition. Das hei
 
 ## Skytale ausprobieren
 
-```py live_py title=to__skytale.py
+```py live_py title=to__skytale.py id=401ae4f3-626c-4f6f-95a0-bf366b9ae1c3
 klartext = 'Skytale'
 schlüssel = 3
 
@@ -37,7 +37,7 @@ print(verschlüsselt)
 ```
 
 
-```py live_py title=from__skytale.py
+```py live_py title=from__skytale.py id=b53eb042-3589-4bab-b504-36243f65af67
 verschlüsselt = '''\
 Ste
 ka

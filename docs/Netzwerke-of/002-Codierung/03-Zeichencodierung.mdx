@@ -311,7 +311,7 @@ Wandeln Sie Ihren Namen in Binär-Code um, indem Sie
 - dann die Zahl ins binäre übersetzen
 - und schliesslich die binäre Zeichenkette mit `print` ausgeben
 
-```py live_py title=bin--name.py
+```py live_py title=bin--name.py id=618e6375-9762-4011-9fe4-6c4a6000fa1e
 name = 'Reto'
 for buchstabe in name:
     print(buchstabe)
@@ -340,7 +340,7 @@ print('Zeichen', chr(zahl))
 :::aufgabe
 Wandeln Sie die binäre Folge wieder um in Text. Was kommt dabei raus?
 
-```py live_py title=name.py
+```py live_py title=name.py id=2c2166d8-1402-4503-8f5b-47d18208fdb2
 binaer = ['01000111','01000010','01010011','01001100']
 for code in binaer:
     print(code)
@@ -353,7 +353,7 @@ Können Sie das übersetzte Wort auch auf einer einzigen Zeile ausgeben?
 
 Die folgende Funktion wandelt eine Text-Kette aus Binär-Zahlen in eine Liste mit Binär-Zahlen von `8bit` länge um. Verwenden Sie diese Funktion, um eine beliebige Zeichenkette in Text umzuwandeln.
 
-```py live_py
+```py live_py 
 def to_8bit(bin_text):
     return [bin_text[i:i + 8] for i in range(0, len(bin_text), 8)]
 

@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 ---
-import Answer from "@site/src/components/Answer";
 
 # Obligatorisches Fach Informatik
 

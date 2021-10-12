@@ -47,7 +47,7 @@ Die Nachricht `KOMM ALLEINE` wird verschlüsselt zu `XBZZ NYYRVAR`.
 ## Caesar-Chiffre ausprobieren
 
 
-```py live_py title=to__caesar.py
+```py live_py title=to__caesar.py id=4f0f7d8d-a2d3-4c2f-b05f-ed9bd6b52b33
 ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 SCHLÜSSEL = 'D'
 ROT = ALPHABET.index(SCHLÜSSEL)
@@ -67,7 +67,7 @@ print(verschlüsselt)
 :::aufgabe
 Ändern Sie den Code so ab, dass der verschlüsselte Text wieder entschlüsselt werden kann.
 
-```py live_py title=from__caesar.py
+```py live_py title=from__caesar.py id=ebc928b8-7ff6-4566-9438-475718cedc03
 ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 SCHLÜSSEL = 'D'
 ROT = ALPHABET.index(SCHLÜSSEL)
@@ -89,7 +89,7 @@ Sie haben eine geheime Nachricht abgefangen, kennen aber den Schlüssel nicht. S
 
 Verwenden Sie die Ausgangslage aus dem obigen Programm.
 
-```py live_py title=hack__caesar.py
+```py live_py title=hack__caesar.py id=a99f0b6f-07cd-4498-b0d7-69af7aed70dd
 verschlüsselt = 'ALCZLJ'
 ```
 

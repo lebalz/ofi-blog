@@ -3,7 +3,7 @@
 
 Draw the screen coordinates.
 
-```py live_py title=Screen--coordinates.py
+```py live_py title=Screen--coordinates.py id=71b84778-74e3-48be-a072-c5ca98f6b0a7
 from turtle import *
 turtle.set_defaults(
     canvwidth = 280 * 2,

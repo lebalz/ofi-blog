@@ -5,7 +5,6 @@ title: Wiederholung 🔁
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Flex from '@site/src/components/Flex';
 import Finding from "@site/src/components/Finding";
-import Answer from "@site/src/components/Answer";
 
 
 # Wiederholung 🔁
@@ -111,7 +110,7 @@ for i in range(4):
 <Flex>
 <div style={{flexGrow: 1, minWidth: '300px'}}>
 
-```py live_py title=wiederholung.py
+```py live_py title=wiederholung.py id=3d368326-dde6-414f-b494-ace1bfc2a687
 from turtle import *
 
 
@@ -173,7 +172,7 @@ Zeichnen Sie eine Treppe 20 Stufen. Die Treppe soll bei den Koordinaten `(-200, 
 
 ![](images/treppe2_py.svg)
 
-```py live_py title=treppe2.py
+```py live_py title=treppe2.py id=00154400-fda8-4401-8f39-60c9922e3ffd
 from turtle import *
 
 ```
@@ -187,7 +186,7 @@ Zeichnen Sie einen Stern. Verwenden Sie dabei den Befehl `backward()`.
 
 ![](images/schneestern_py.svg)
 
-```py live_py title=schneestern.py
+```py live_py title=schneestern.py id=24ce0c01-fb10-4085-b727-8c6734c4688a
 from turtle import *
 
 ```
@@ -200,7 +199,7 @@ from turtle import *
 
 ![](images/weihnachtsstern_py.svg)
 
-```py live_py title=weihnachtsstern.py
+```py live_py title=weihnachtsstern.py id=1dbb6910-c078-4dc5-b0b9-bee2ffc9be87
 from turtle import *
 
 ```
@@ -213,7 +212,7 @@ from turtle import *
 
 ![](images/leiter_py.svg)
 
-```py live_py title=leiter.py
+```py live_py title=leiter.py id=f0060a01-1ef0-4a7a-9ec9-a7567753e7ff
 from turtle import *
 
 ```
@@ -222,7 +221,7 @@ from turtle import *
 :::aufgabe 7. Perlenkette
 Zeichnen Sie eine Perlenkette in Ihrer Lieblingsfarbe, die aus `18` Perlen (dots) besteht.
 
-```py live_py title=perlenkette.py
+```py live_py title=perlenkette.py id=65b9f38d-cb5e-4932-a04a-bab80d3f57d5
 from turtle import *
 
 ```
@@ -244,7 +243,7 @@ right(3)
 
 ![](images/vogel_py.svg)
 
-```py live_py title=vogel.py
+```py live_py title=vogel.py id=579adf8b-2e8e-4c4d-bfdf-ae3ae319663a
 from turtle import *
 
 ```

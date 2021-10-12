@@ -26,7 +26,7 @@ Bei dieser Substitution hängt die Anzahl möglicher Verschlüsselungen von der 
 ## Substitutionschiffre ausprobieren
 
 
-```py live_py title=to__substitution.py
+```py live_py title=to__substitution.py id=db63b078-a82a-4f00-90df-729ed1901f07
 ALPHABET = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.split(' ')
 SCHLÜSSEL = 'I S X D L Y A V E B F G C W M Z N K O R H Q J P U T'.split(' ')
 
@@ -45,7 +45,7 @@ print(verschlüsselt)
 ```
 
 
-```py live_py title=from__substitution.py
+```py live_py title=from__substitution.py id=25d474c6-eef5-485f-b721-b6338cfc8889
 ALPHABET = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.split(' ')
 SCHLÜSSEL = 'I S X D L Y A V E B F G C W M Z N K O R H Q J P U T'.split(' ')
 
@@ -64,7 +64,7 @@ print(klartext)
 ```
 
 
-```py live_py title=schlüssel.py
+```py live_py title=schlüssel.py id=94fcf1be-7efe-4ebd-98a6-1c2a4fa43957
 from random import shuffle
 schlüssel='A B C D E F G H I J K L M N O P Q R S T U V W X Y Z'.split(' ')
 shuffle(schlüssel)

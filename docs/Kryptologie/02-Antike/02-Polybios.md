@@ -20,7 +20,7 @@ So wird der Klartext `HALLO` zum Geheimtext `23 11 31 31 34`.
 
 ## Polybios ausprobieren
 
-```py live_py title=to__polybios.py
+```py live_py title=to__polybios.py id=7de16f01-3830-43dc-9ce6-6cf0b0161e9a
 QUADRAT = [
     'A', 'B', 'C', 'D', 'E',
     'F', 'G', 'H', 'I', 'K',
@@ -47,7 +47,7 @@ Lesen Sie das Programm durch und versuchen Sie, jede Zeile zu verstehen.
 
 Flicken Sie den Code, so dass der verschlüsselte Text lesbar wird. 
 
-```py live_py title=from__polybios.py
+```py live_py title=from__polybios.py id=2a72f129-612f-45f5-9972-ac82561bc97e
 QUADRAT = [
     'A', 'B', 'C', 'D', 'E',
     'F', 'G', 'H', 'I', 'K',
