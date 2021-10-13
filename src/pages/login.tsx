@@ -5,6 +5,7 @@ import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { default as indexStyles } from "./index.module.css";
 import { useStore } from "../stores/hooks";
+import { Link } from "@docusaurus/router";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -37,12 +38,9 @@ export default function Login() {
               </button>
             </>
           ) : (
-          <button
-            className="button button--warning"
-            onClick={() => msalStore.login()}
-          >
+            <Link to="/" onClick={() => msalStore.login()} className="button button--warning">
             Login mit GBSL Account
-          </button>
+          </Link>
           )}
         </div>
       </main>
