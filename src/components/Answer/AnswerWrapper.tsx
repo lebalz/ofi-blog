@@ -110,8 +110,12 @@ const getDocument = (store: DocumentStore, props: Props) => {
 };
 
 const AnswerWrapper = observer((props: Props) => {
+  const [loaded, setLoaded] = React.useState(0);
   const documentStore = useStore("documentStore");
   const [document] = React.useState(getDocument(documentStore, props));
+  React.useEffect(() => {
+    setLoaded(loaded + 1);
+  }, [props.webKey])
   return (
     <DocumentContext.Provider value={document}>
       {props.children}

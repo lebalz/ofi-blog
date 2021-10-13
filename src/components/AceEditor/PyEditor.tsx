@@ -28,7 +28,7 @@ const PyEditor = observer((props: Props) => {
    * this effect triggers the brython execution
    */
   React.useEffect(() => {
-    const disposer = reaction(
+    return reaction(
       () => pyScript.execCounter,
       (counter) => {
         if (counter > 0) {
@@ -39,10 +39,7 @@ const PyEditor = observer((props: Props) => {
         }
       }
     )
-    return () => {
-      disposer();
-    }
-  }, [pyScript]);
+  }, [pyScript.pyDoc.webKey]);
 
   return (
     <React.Fragment>

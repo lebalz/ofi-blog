@@ -79,7 +79,7 @@ const PyAceEditor = observer((props: Props) => {
   }, [props.webKey]);
   return (
     <ScriptWrapper {...props}>
-      {!msalStore.loggedIn && !props.slim && <LoginAlert />}
+      {!props.slim && <LoginAlert />}
       {msalStore.loggedIn && !props.slim && <LegacyResolver />}
       <div
         className={clsx(

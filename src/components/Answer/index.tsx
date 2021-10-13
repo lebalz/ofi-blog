@@ -46,8 +46,8 @@ const Answer = observer((props: Props) => {
   const msalStore = useStore("msalStore");
   return (
     <AnswerWrapper {...props}>
-      {!msalStore.loggedIn && <LoginAlert />}
       <div data--web-key={props.webKey}>
+        <LoginAlert />
         {msalStore.loggedIn && <LegacyResolver />}
         {msalStore.loggedIn && <OfflineChecker />}
         {props.type === "text" && <TextAnswer {...props} />}

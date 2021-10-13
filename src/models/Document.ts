@@ -184,7 +184,7 @@ export default class Document<T extends Object = Object> {
         this.setOfflineState(false);
         return res;
       }).catch((error) => {
-        console.log('err', error);
+        console.warn('err', error);
         this.setOfflineState(true);
       });
     }
