@@ -6,7 +6,7 @@ import { useStore } from "../../stores/hooks";
 
 const LoginAlert = observer(() => {
   const msalStore = useStore("msalStore");
-  if (!msalStore.loggedIn) {
+  if (msalStore.loggedIn) {
     return null;
   }
   return (
