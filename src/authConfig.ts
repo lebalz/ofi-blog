@@ -45,9 +45,15 @@ export const msalConfig = {
             console.error(message);
             return;
           case LogLevel.Info:
+            if (process.env.NODE_ENV !== 'debug') {
+              return
+            }
             console.info(message);
             return;
           case LogLevel.Verbose:
+            if (process.env.NODE_ENV !== 'debug') {
+              return
+            }
             console.debug(message);
             return;
           case LogLevel.Warning:
