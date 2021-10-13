@@ -1,7 +1,7 @@
 import * as React from "react";
 import clsx from "clsx";
-import {default as editorStyles} from "./styles.module.scss";
-import styles from "./Header.module.scss";
+// import {default as editorStyles} from "./styles.module.scss";
+import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPython } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -55,7 +55,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
   };
 
   return (
-    <div className={clsx(editorStyles.brythonCodeBlockHeader, styles.brythonCodeBlockHeader, editorStyles.controls)}>
+    <div className={clsx(styles.brythonCodeBlockHeader, styles.brythonCodeBlockHeader, styles.controls)}>
       {!slim && <div className={styles.title}>{title}</div>}
       {!slim && !pyScript.pyDoc.loaded && (
         <span
@@ -73,7 +73,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
           ⚠️ Offline
         </span>
       )}
-      {!slim && <div className={editorStyles.spacer}></div>}
+      {!slim && <div className={styles.spacer}></div>}
       {!slim && pyScript.showSavedNotification && (
         <FontAwesomeIcon
           icon={faCheckCircle}
