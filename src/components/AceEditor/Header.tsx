@@ -41,11 +41,6 @@ interface Props {
 
 const Header = observer(({ slim, title, resettable }: Props) => {
   const pyScript = React.useContext(ScriptContext);
-  const [loaded, setLoaded] = React.useState(0);
-  React.useEffect(() => {
-    setLoaded(loaded + 1)
-  }, [slim, title, resettable])
-
   const onReset = () => {
     if (!resettable) {
       return;
@@ -59,7 +54,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
   };
 
   return (
-    <div className={clsx(styles.brythonCodeBlockHeader, styles.brythonCodeBlockHeader, styles.controls)} data--loaded={loaded}>
+    <div className={clsx(styles.brythonCodeBlockHeader, styles.brythonCodeBlockHeader, styles.controls)}>
       {!slim && <div className={styles.title}>{title}</div>}
       {!slim && !pyScript.pyDoc.loaded && (
         <span

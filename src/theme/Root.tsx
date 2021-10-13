@@ -52,16 +52,12 @@ const Msal = observer(({ children }) => {
 
 // Default implementation, that you can customize
 function Root({ children }) {
-  const [loaded, setLoaded] = React.useState(0);
   const isBrowser = useIsBrowser();
   if (isBrowser && !(window as any).store) {
     (window as any).store = rootStore;
   }
-  React.useEffect(() => {
-    setLoaded(loaded + 1)
-  }, [])
   return (
-    <div data--loaded={loaded}>
+    <div>
       <StoresProvider value={rootStore}>
         <Msal>{children}</Msal>
       </StoresProvider>

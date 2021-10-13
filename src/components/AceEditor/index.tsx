@@ -10,6 +10,7 @@ import clsx from "clsx";
 import LoginAlert from "./LoginAlert";
 import { getItem, removeItem, _1_YEAR } from "../../utils/storage";
 import LegacyResolver from "./LegacyResolver";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 
 interface Props {
   webKey: string;
@@ -28,16 +29,16 @@ const getDocument = (store: DocumentStore, props: Props) => {
   if (props.slim) {
     return new Script(
       store.getOrCreateDummyDoc<PyDoc>(props.webKey, {
-        code: props.code || '',
+        code: props.code || "",
       }),
-      props.code || ''
+      props.code || ""
     );
   }
   return new Script(
     store.getOrCreateDocument<PyDoc>(
       props.webKey,
       {
-        code: props.code || '',
+        code: props.code || "",
       },
       () => {
         const old = getItem<{ edited: string; expiry: number }>(
@@ -48,8 +49,8 @@ const getDocument = (store: DocumentStore, props: Props) => {
           return undefined;
         }
         return {
-          data: { code: old.edited }, 
-          cleanup: () => removeItem(props.codeId, props.contextId) 
+          data: { code: old.edited },
+          cleanup: () => removeItem(props.codeId, props.contextId),
         };
       }
     ),
@@ -77,6 +78,10 @@ const PyAceEditor = observer((props: Props) => {
       documentStore.removeDummy(webKey);
     };
   }, [props.webKey]);
+
+  if (!useIsBrowser()) {
+    return <div>Loading</div>;
+  }
   return (
     <ScriptWrapper {...props}>
       {!props.slim && <LoginAlert />}
