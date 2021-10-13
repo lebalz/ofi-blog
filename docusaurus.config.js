@@ -31,6 +31,11 @@ module.exports = {
           to: 'playground',
           position: 'left',
           label: 'Playground'
+        },
+        {
+          to: 'login',
+          position: 'right',
+          label: '🔑'
         }
       ]
     },
