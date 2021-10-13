@@ -1,6 +1,7 @@
 import * as React from "react";
 import clsx from "clsx";
-import styles from "./styles.module.scss";
+import {default as editorStyles} from "./styles.module.scss";
+import styles from "./Header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPython } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -24,17 +25,19 @@ const PlayButton = observer(() => {
       className={clsx(styles.playButton, styles.headerButton)}
       title="Code Ausführen"
     >
-      <FontAwesomeIcon icon={pyScript.executing ? faPython : faPlay} spin={pyScript.executing} />
+      <FontAwesomeIcon
+        icon={pyScript.executing ? faPython : faPlay}
+        spin={pyScript.executing}
+      />
     </button>
   );
 });
 
-
 interface Props {
-    slim: boolean;
-    title: string;
-    resettable: boolean;
-  }
+  slim: boolean;
+  title: string;
+  resettable: boolean;
+}
 
 const Header = observer(({ slim, title, resettable }: Props) => {
   const pyScript = React.useContext(ScriptContext);
@@ -47,18 +50,30 @@ const Header = observer(({ slim, title, resettable }: Props) => {
       "Änderungen verwerfen? (Ihre Version geht verloren!)"
     );
     if (shouldReset) {
-      pyScript.pyDoc.setData({code: pyScript.rawScript});
+      pyScript.pyDoc.setData({ code: pyScript.rawScript });
     }
   };
 
   return (
-    <div className={clsx(styles.brythonCodeBlockHeader, styles.controls)}>
-      {!slim && (
-        <React.Fragment>
-          <div className={styles.title}>{title}</div>
-          <div className={styles.spacer}></div>
-        </React.Fragment>
+    <div className={clsx(editorStyles.brythonCodeBlockHeader, styles.brythonCodeBlockHeader, editorStyles.controls)}>
+      {!slim && <div className={styles.title}>{title}</div>}
+      {!slim && !pyScript.pyDoc.loaded && (
+        <span
+          className="badge badge--warning"
+          title="Warte auf die Antwort des Servers. Seite neu laden."
+        >
+          Laden
+        </span>
       )}
+      {!slim && pyScript.pyDoc.isOffline && (
+        <span
+          className={clsx("badge", "badge--danger", styles.badge)}
+          title="Netzwerkverbindung überprüfen!"
+        >
+          ⚠️ Offline
+        </span>
+      )}
+      {!slim && <div className={editorStyles.spacer}></div>}
       {!slim && pyScript.showSavedNotification && (
         <FontAwesomeIcon
           icon={faCheckCircle}
@@ -81,7 +96,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
             styles.headerButton,
             pyScript.showRaw ? styles.showRawButtonDisabled : undefined
           )}
-          onClick={action(() => pyScript.showRaw = !pyScript.showRaw)}
+          onClick={action(() => (pyScript.showRaw = !pyScript.showRaw))}
           title={pyScript.showRaw ? "Mein Code Anzeigen" : "Original Anzeigen"}
         >
           {pyScript.showRaw ? (
@@ -98,4 +113,3 @@ const Header = observer(({ slim, title, resettable }: Props) => {
 
 export default Header;
 export { PlayButton };
-

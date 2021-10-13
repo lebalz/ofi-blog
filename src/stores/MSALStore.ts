@@ -1,6 +1,7 @@
 import { AxiosPromise, AxiosResponse } from 'axios';
 import {
   AccountInfo,
+  AuthenticationResult,
   InteractionRequiredAuthError,
   PublicClientApplication,
 } from "@azure/msal-browser";
@@ -65,7 +66,7 @@ export class MSALStore {
   }
 
   @action
-  getTokenRedirect() {
+  getTokenRedirect(): Promise<void | AuthenticationResult> {
     if (!this.account) {
       throw "No Login Present!";
     }
@@ -86,7 +87,7 @@ export class MSALStore {
     });
   }
 
-  withToken(): Promise<boolean> {
+  withToken(): Promise<boolean | void> {
     return this.getTokenRedirect().then(
       (res) => {
         if (res) {

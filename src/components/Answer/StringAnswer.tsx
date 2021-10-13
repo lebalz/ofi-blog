@@ -12,6 +12,7 @@ import {
   faTimesCircle,
   faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import { reaction } from "mobx";
 
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 
@@ -50,6 +51,17 @@ const StringAnswer = observer((props: StringProps) => {
     setCorrectState(sanitizer(current) === sanitizer(props.solution) ? "correct" : "wrong");
   };
 
+  React.useEffect(() => {
+    return reaction(
+      () => doc.loaded,
+      (loaded) => {
+        if (loaded) {
+          checkAnswer(doc.data.value)
+        }
+      }
+    )
+  }, [])
+
   return (
     <div className={styles.answer}>
       {props.label && <label>{props.label}</label>}
@@ -70,7 +82,7 @@ const StringAnswer = observer((props: StringProps) => {
           type="text"
           onChange={(e) => onChange(e.target.value)}
           value={doc.data.value}
-          disabled={!doc.loaded}
+          disabled={!doc.loaded || doc.isReadonly}
         />
       )}
       {props.solution && (

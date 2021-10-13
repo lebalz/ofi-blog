@@ -65,7 +65,7 @@ const TextAnswer = observer((props: TextProps) => {
     doc.setData({ value: newVal, type: 'text' });
   };
 
-  if (!ReactQuill || !quillLoaded || !doc.loaded) {
+  if (!ReactQuill || !quillLoaded) {
     return <div>Loading...</div>;
   }
   return (
@@ -74,11 +74,12 @@ const TextAnswer = observer((props: TextProps) => {
       <ReactQuill
         ref={quillRef}
         theme="snow"
+        readOnly={!doc.loaded || doc.isReadonly}
         className={clsx(
           styles.quillAnswer,
           showQuillToolbar ? undefined : "disable-toolbar"
         )}
-        value={doc.data.value || ""}
+        value={doc.loaded ? doc.data.value || "" : 'Laden...'}
         onChange={(content, _delta, _source, _editor) => {
           onChange(content);
         }}
@@ -98,7 +99,7 @@ const TextAnswer = observer((props: TextProps) => {
             suppressErrorLogging: false, // default
           },
         }}
-        placeholder={props.placeholder || "✍️ Antwort..."}
+        placeholder={(props.placeholder || "✍️ Antwort...")}
       />
     </div>
   );

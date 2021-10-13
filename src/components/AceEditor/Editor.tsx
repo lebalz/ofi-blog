@@ -94,7 +94,7 @@ const Editor = observer(() => {
           onChange={(value: string) => {
             pyScript.pyDoc.setData({code: value})
           }}
-          readOnly={pyScript.showRaw}
+          readOnly={pyScript.showRaw || !pyScript.pyDoc.loaded}
           value={pyScript.showRaw ? pyScript.rawScript : pyScript.pyDoc.data.code}
           defaultValue={pyScript.pyDoc.data.code}
           name={DOM_ELEMENT_IDS.aceEditor(pyScript.codeId)}

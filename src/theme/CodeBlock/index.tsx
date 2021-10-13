@@ -42,8 +42,6 @@ const getCodeId = (title, children) => {
 
 const withLiveEditor = (Component) => {
   const WrappedComponent = function(props) {
-    console.log(props)
-
     if (props.live_py && ExecutionEnvironment.canUseDOM) {
       if (!props.id && !props.slim) {
         <Component {...props} />

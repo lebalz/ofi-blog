@@ -11,7 +11,6 @@ const BrythonCommunicator = observer(() => {
 
   const onBryNotify = React.useCallback((event) => {
     if (event.detail) {
-      console.log(event, event.detail);
       const data = event.detail as LogMessage;
       if (data.type === "done") {
         return runInAction(() => (pyScript.executing = false));

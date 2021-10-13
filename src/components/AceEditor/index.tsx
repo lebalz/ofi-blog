@@ -7,6 +7,9 @@ import { DocumentStore } from "../../stores/DocumentStore";
 import Script, { PyDoc } from "../../models/Script";
 import BrythonCommunicator from "./BrythonCommunicator";
 import clsx from "clsx";
+import LoginAlert from "./LoginAlert";
+import { getItem, removeItem, _1_YEAR } from "../../utils/storage";
+import LegacyResolver from "./LegacyResolver";
 
 interface Props {
   webKey: string;
@@ -31,16 +34,31 @@ const getDocument = (store: DocumentStore, props: Props) => {
     );
   }
   return new Script(
-    store.getOrCreateDocument<PyDoc>(props.webKey, {
-      code: props.code,
-    }),
+    store.getOrCreateDocument<PyDoc>(
+      props.webKey,
+      {
+        code: props.code,
+      },
+      () => {
+        const old = getItem<{ edited: string; expiry: number }>(
+          props.codeId,
+          props.contextId
+        );
+        if (!old) {
+          return undefined;
+        }
+        return {
+          data: { code: old.edited }, 
+          cleanup: () => removeItem(props.codeId, props.contextId) 
+        };
+      }
+    ),
     props.code
   );
 };
 
 const ScriptWrapper = observer((props: Props) => {
   // code: getItem<LocalStorageCode>(codeId, contextId, {}).edited || `${children}`.replace(/\n$/, '')
-
   const documentStore = useStore("documentStore");
   const [script] = React.useState(getDocument(documentStore, props));
   return (
@@ -52,6 +70,7 @@ const ScriptWrapper = observer((props: Props) => {
 
 const PyAceEditor = observer((props: Props) => {
   const documentStore = useStore("documentStore");
+  const msalStore = useStore("msalStore");
   React.useEffect(() => {
     const webKey = props.webKey;
     return () => {
@@ -60,6 +79,8 @@ const PyAceEditor = observer((props: Props) => {
   }, [props.webKey]);
   return (
     <ScriptWrapper {...props}>
+      {!msalStore.loggedIn && !props.slim && <LoginAlert />}
+      {msalStore.loggedIn && !props.slim && <LegacyResolver />}
       <div
         className={clsx(
           styles.playgroundContainer,
@@ -68,7 +89,6 @@ const PyAceEditor = observer((props: Props) => {
         )}
       >
         <BrythonCommunicator />
-
         <PyEditor {...props} />
       </div>
     </ScriptWrapper>

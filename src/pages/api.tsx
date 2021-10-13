@@ -18,6 +18,7 @@ const Login = observer(() => {
       <Answer webKey="325e83cb-e08f-4152-90a9-8d2b9e5a5590" type="text" />
       <Answer type="array" webKey="393422a8-c422-464e-94eb-dff929bc9346" label="Lösung F1" size={4} select={['', '↑', '↰', '↱']}/>
       <Answer type="string" webKey="a5e7d705-83bd-4076-b1b4-c4cf314eaef6" label="Blaa"/>
+      <Answer type="string" webKey="0339b2a6-3165-463c-bae4-b8c2dabc0456" select={['hans', 'marianne']}/>
 
       </div>
       <div>
@@ -50,7 +51,7 @@ const Login = observer(() => {
             documentStore.getOrCreateDocument(webKey, {
               text: "bla",
               data: { a: 'bluu', data: {} }
-            })
+            }, () => undefined)
           }
         >
           Get
@@ -66,7 +67,7 @@ const Login = observer(() => {
               text: "blubber",
               data: { a: "blaa", b: Math.random() },
               keys: [1, 2, 3, 24],
-            })
+            }, () => undefined)
           }
         >
           Update

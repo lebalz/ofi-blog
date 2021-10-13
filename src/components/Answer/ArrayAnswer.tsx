@@ -55,7 +55,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
             type="text"
             onChange={(e) => onChange(e.target.value, i)}
             value={c}
-            disabled={!doc.loaded}
+            disabled={!doc.loaded || doc.isReadonly}
           />
         );
       })}

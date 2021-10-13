@@ -46,52 +46,80 @@ export default class Document<T extends Object = Object> {
   @observable
   loaded: boolean = false;
 
+  @observable
+  isOffline: boolean = false;
+
   @observable.ref
   data: T = {} as T;
 
   @observable.ref
   state: ApiState;
 
+  @observable
   isDummy: boolean;
+
+  isReadonly: boolean = false;
+
+  @observable.ref
+  legacyData?: T;
+  legacyCleanup?: () => void;
 
   constructor(
     store: DocumentStore,
     webKey: string,
+    getLegacyData: () => { data: T | undefined; cleanup?: () => void },
     data?: T,
-    update: boolean = false,
-    isDummy: boolean = false
+    isDummy: boolean = false,
+    readonly: boolean = false
   ) {
     this.store = store;
     this.webKey = webKey;
-    this.isDummy = isDummy;
+    this.isDummy = isDummy || !store.isLoggedIn;
+    this.isReadonly = readonly;
+    const legacy = getLegacyData();
+    if (legacy) {
+      this.legacyData = legacy.data;
+      this.legacyCleanup = legacy.cleanup;
+    }
+    let usedLegacy = false;
     if (data) {
       this.data = data;
     }
-    if (!this.isDummy) {
+    if (this.isDummy) {
+      this.setLoaded(true);
+    } else {
       this.state = new ApiState("get");
       this.store.apiGetDocument<T>(this.webKey, this.state.cancelToken).then(
         action((docProps) => {
           if (docProps) {
             this.updateProps(docProps);
             this.state.state = "done";
-            this.loaded = true;
-            if (data && update) {
-              this.setData(data);
-            }
-          } else if (data) {
+            this.setLoaded(true);
+          } else if (this.legacyData || data) {
             this.state.method = "post";
+            if (this.legacyData) {
+              usedLegacy = true;
+            }
             this.store
-              .apiCreateDocument(this.webKey, data, this.state.cancelToken)
+              .apiCreateDocument(this.webKey, this.legacyData || data, this.state.cancelToken)
               .then(
                 action((newDoc) => {
-                  this.updateProps(newDoc);
-                  this.state.state = "done";
-                  this.loaded = true;
+                  if (newDoc) {
+                    this.updateProps(newDoc);
+                    if (usedLegacy) {
+                      runInAction(() => this.legacyData = undefined);
+                      if (this.legacyCleanup) {
+                        this.legacyCleanup();
+                      }
+                    }
+                    this.state.state = "done";
+                    this.setLoaded(true);
+                  }
                 })
               );
           } else {
             this.state.state = "error";
-            this.loaded = false;
+            this.setLoaded(false);
           }
         })
       );
@@ -103,6 +131,36 @@ export default class Document<T extends Object = Object> {
     return date.toLocaleString();
   }
 
+  @action
+  resolveLegacyDoc(action: "use_legacy" | "use_current") {
+    if (!this.legacyData) {
+      return;
+    }
+    if (action === "use_legacy") {
+      this.setData(this.legacyData, true)
+        .then((res) => {
+          if (res.data && res.data.state === "ok") {
+            runInAction(() => {
+              this.legacyData = undefined;
+              if (this.legacyCleanup) {
+                this.legacyCleanup();
+              }
+            });
+          }
+        });
+    } else {
+      this.legacyData = undefined;
+      if (this.legacyCleanup) {
+        this.legacyCleanup();
+      }
+    }
+  }
+
+  @action
+  private setLoaded(loaded: boolean) {
+    this.loaded = loaded;
+  }
+
   @computed
   get isCreated() {
     return this.id !== -1;
@@ -111,25 +169,48 @@ export default class Document<T extends Object = Object> {
   @action
   protected _save() {
     if (this.isDummy) {
-      return;
+      return Promise.resolve({
+        updated_at: new Date().toISOString(),
+        state: "ok",
+      });
     }
     if (this.isCreated) {
       this.state.cancelApiRequests();
-      this.store.apiUpdateDocument(
+      return this.store.apiUpdateDocument(
         this.webKey,
         this.data,
         this.state.cancelToken
-      );
+      ).then((res) => {
+        this.setOfflineState(false);
+        return res;
+      }).catch((error) => {
+        console.log('err', error);
+        this.setOfflineState(true);
+      });
     }
+    return Promise.resolve({
+      state: "error",
+      message: "Document not created yet",
+    });
   }
 
   save = debounce(this._save, 1000, { leading: false, trailing: true });
 
   @action
-  setData(data: T) {
-    console.log(data)
+  setOfflineState(offline: boolean) {
+    if (this.isOffline === offline) {
+      return;
+    }
+    this.isOffline = offline;
+  }
+
+  @action
+  setData(data: T, flush?: boolean) {
     this.data = data;
     this.updatedAt = new Date();
+    if (flush) {
+      return this._save();
+    }
     this.save();
   }
 

@@ -115,62 +115,6 @@
   }
 }
 
-
-.headerButton {
-  border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-  margin: 0px 2px;
-  &:hover {
-    box-shadow: 2px 2px 45px var(--ifm-color-primary);
-  }
-}
-
-
-.containerSlim {
-  .headerButton {
-    height: 100%;
-    border-radius: 0px;
-    padding: 2px 6px;
-    margin: 0px;
-  }
-}
-
-.playButton {
-  background-color: var(--ifm-color-success);
-  color: white;
-}
-
-.showRawButton {
-  background-color: var(--ifm-color-primary);
-  color: white;
-}
-.showRawButtonDisabled {
-  background-color: transparent;
-  border: 2px solid var(--ifm-color-primary);
-  color: var(--ifm-color-primary);
-  padding: 4px 10px;
-}
-
-.brythonCodeBlockHeader {
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.08em;
-  padding: 0.5em;
-  text-transform: uppercase;
-  font-weight: bold;
-  background: var(--ifm-color-emphasis-200);
-  color: var(--ifm-color-content);
-  font-size: calc(var(--ifm-code-font-size) * 1.2);
-}
-.brythonCodeBlockHeader > .title {
-  flex-shrink: 1;
-  flex-grow: 1;
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 .containerSlim > .brythonCodeBlockHeader {
   padding: 0px;
 }

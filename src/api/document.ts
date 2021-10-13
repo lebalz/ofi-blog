@@ -36,7 +36,7 @@ export function putDocument<T extends Object = Object>(
   webKey: string,
   data: T,
   cancelToken: CancelTokenSource
-) {
+): AxiosPromise<{updated_at: string, state: string}> {
   return api.put(
     `document/${webKey}`,
     {

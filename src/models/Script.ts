@@ -53,7 +53,6 @@ export default class Script {
 
   @action
   addLogMessage(msg: LogMessage) {
-    console.log('got msg', msg)
     this._logMessages.push(msg);
   }
 
