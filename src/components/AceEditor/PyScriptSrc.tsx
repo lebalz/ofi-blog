@@ -9,7 +9,7 @@ const PyScriptSrc = observer(() => {
   const pyScript = React.useContext(ScriptContext);
     return (
         <script id={DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)} type="text/py_disabled" className="brython-script">
-            {`${run_template}\nrun("""${sanitizePyScript(pyScript.pyDoc.data.code)}""", '${pyScript.codeId}')`}
+            {`${run_template}\nrun("""${sanitizePyScript(pyScript.pyDoc.data.code || '')}""", '${pyScript.codeId}')`}
         </script>
     )
 })

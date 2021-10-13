@@ -28,23 +28,23 @@ const getDocument = (store: DocumentStore, props: Props) => {
   if (props.slim) {
     return new Script(
       store.getOrCreateDummyDoc<PyDoc>(props.webKey, {
-        code: props.code,
+        code: props.code || '',
       }),
-      props.code
+      props.code || ''
     );
   }
   return new Script(
     store.getOrCreateDocument<PyDoc>(
       props.webKey,
       {
-        code: props.code,
+        code: props.code || '',
       },
       () => {
         const old = getItem<{ edited: string; expiry: number }>(
           props.codeId,
           props.contextId
         );
-        if (!old) {
+        if (!old || !old.edited) {
           return undefined;
         }
         return {

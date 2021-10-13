@@ -80,7 +80,7 @@ const getDocument = (store: DocumentStore, props: Props) => {
       props.id,
       pid
     );
-    if (!old) {
+    if (!old || !old.value) {
       return undefined;
     }
     return {
