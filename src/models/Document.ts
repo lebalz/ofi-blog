@@ -35,6 +35,8 @@ class ApiState {
 export default class Document<T extends Object = Object> {
   protected readonly store: DocumentStore;
 
+  type: "code" | "string" | "text" | "array";
+
   @observable id: number = -1;
   @observable userId: number = -1;
   @observable webKey: string;
@@ -67,11 +69,13 @@ export default class Document<T extends Object = Object> {
   constructor(
     store: DocumentStore,
     webKey: string,
+    type: "code" | "string" | "text" | "array",
     getLegacyData: () => { data: T | undefined; cleanup?: () => void },
     data?: T,
     isDummy: boolean = false,
     readonly: boolean = false
   ) {
+    this.type = type;
     this.store = store;
     this.webKey = webKey;
     this.isDummy = isDummy || !store.isLoggedIn;
@@ -101,13 +105,18 @@ export default class Document<T extends Object = Object> {
               usedLegacy = true;
             }
             this.store
-              .apiCreateDocument(this.webKey, this.legacyData || data, this.state.cancelToken)
+              .apiCreateDocument(
+                this.webKey,
+                this.type,
+                this.legacyData || data,
+                this.state.cancelToken
+              )
               .then(
                 action((newDoc) => {
                   if (newDoc) {
                     this.updateProps(newDoc);
                     if (usedLegacy) {
-                      runInAction(() => this.legacyData = undefined);
+                      runInAction(() => (this.legacyData = undefined));
                       if (this.legacyCleanup) {
                         this.legacyCleanup();
                       }
@@ -137,17 +146,16 @@ export default class Document<T extends Object = Object> {
       return;
     }
     if (action === "use_legacy") {
-      this.setData(this.legacyData, true)
-        .then((res) => {
-          if (res.data && res.data.state === "ok") {
-            runInAction(() => {
-              this.legacyData = undefined;
-              if (this.legacyCleanup) {
-                this.legacyCleanup();
-              }
-            });
-          }
-        });
+      this.setData(this.legacyData, true).then((res) => {
+        if (res.data && res.data.state === "ok") {
+          runInAction(() => {
+            this.legacyData = undefined;
+            if (this.legacyCleanup) {
+              this.legacyCleanup();
+            }
+          });
+        }
+      });
     } else {
       this.legacyData = undefined;
       if (this.legacyCleanup) {
@@ -176,17 +184,16 @@ export default class Document<T extends Object = Object> {
     }
     if (this.isCreated) {
       this.state.cancelApiRequests();
-      return this.store.apiUpdateDocument(
-        this.webKey,
-        this.data,
-        this.state.cancelToken
-      ).then((res) => {
-        this.setOfflineState(false);
-        return res;
-      }).catch((error) => {
-        console.warn('err', error);
-        this.setOfflineState(true);
-      });
+      return this.store
+        .apiUpdateDocument(this.webKey, this.data, this.state.cancelToken)
+        .then((res) => {
+          this.setOfflineState(false);
+          return res;
+        })
+        .catch((error) => {
+          console.warn("err", error);
+          this.setOfflineState(true);
+        });
     }
     return Promise.resolve({
       state: "error",
@@ -243,6 +250,7 @@ export default class Document<T extends Object = Object> {
       id: this.id,
       user_id: this.userId,
       web_key: this.webKey,
+      type: this.type,
       data: this.data,
       created_at: this.createdAt.toISOString(),
       updated_at: this.updatedAt.toISOString(),

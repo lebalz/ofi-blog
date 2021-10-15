@@ -5,6 +5,7 @@ export interface Document<T> {
   id: number;
   user_id: number;
   web_key: string;
+  type: 'code' | 'string' | 'text' | 'array';
   data: T;
   created_at: string;
   updated_at: string;
@@ -19,6 +20,7 @@ export function getDocument<T>(
 
 export function postDocument<T>(
   webKey: string,
+  type: 'code' | 'string' | 'text' | 'array',
   data: T,
   cancelToken: CancelTokenSource
 ): AxiosPromise<Document<T>> {
@@ -27,6 +29,7 @@ export function postDocument<T>(
     {
       web_key: webKey,
       data: data,
+      type: type
     },
     { cancelToken: cancelToken.token }
   );

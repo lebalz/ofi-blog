@@ -1,5 +1,11 @@
 import axios, { CancelTokenSource } from "axios";
-import { action, computed, makeObservable, observable, runInAction } from "mobx";
+import {
+  action,
+  computed,
+  makeObservable,
+  observable,
+  runInAction,
+} from "mobx";
 import { computedFn } from "mobx-utils";
 import {
   getDocument,
@@ -52,15 +58,16 @@ export class DocumentStore {
   @action
   createOrUpdateDocument<T extends Object = Object>(
     webKey: string,
+    type: "code" | "string" | "text" | "array",
     data: T,
-    getLegacyData: () => ({data: T | undefined, cleanup?: () => void})
+    getLegacyData: () => { data: T | undefined; cleanup?: () => void }
   ): Document<T> {
     const current = this.find<T>(webKey);
     if (current) {
       current.setData(data);
       return current;
     }
-    const doc = new Document(this, webKey, getLegacyData, data);
+    const doc = new Document(this, webKey, type, getLegacyData, data);
     this.documents.push(doc);
     return doc;
   }
@@ -73,14 +80,15 @@ export class DocumentStore {
   @action
   getOrCreateDocument<T extends Object = Object>(
     webKey: string,
+    type: 'code' | 'string' | 'text' | 'array',
     defaultData: T,
-    getLegacyData: () => ({data: T | undefined, cleanup?: () => void})
+    getLegacyData: () => { data: T | undefined; cleanup?: () => void }
   ): Document<T> {
     const current = this.find<T>(webKey);
     if (current) {
       return current;
     }
-    const doc = new Document(this, webKey, getLegacyData, defaultData);
+    const doc = new Document(this, webKey, type, getLegacyData, defaultData);
     this.documents.push(doc);
     setTimeout(
       action(() => {
@@ -94,6 +102,7 @@ export class DocumentStore {
   @action
   getOrCreateDummyDoc<T extends Object = Object>(
     webKey: string,
+    type: 'code' | 'string' | 'text' | 'array',
     defaultData: T
   ): Document<T> {
     const current = this.dummyDocs.find(
@@ -102,7 +111,14 @@ export class DocumentStore {
     if (current) {
       return current;
     }
-    const doc = new Document(this, webKey, () => ({data: undefined}), defaultData, false);
+    const doc = new Document(
+      this,
+      webKey,
+      type,
+      () => undefined,
+      defaultData,
+      false
+    );
     this.dummyDocs.push(doc);
     return doc;
   }
@@ -132,14 +148,17 @@ export class DocumentStore {
   @action
   apiCreateDocument<T extends Object = Object>(
     webKey: string,
+    type: "code" | "string" | "text" | "array",
     data: T,
     cancelToken: CancelTokenSource
   ): Promise<DocumentProps<T> | void> {
     return this.root.msalStore.withToken().then((ok) => {
       if (ok) {
-        return postDocument<T>(webKey, data, cancelToken).then(({ data }) => {
-          return data;
-        });
+        return postDocument<T>(webKey, type, data, cancelToken).then(
+          ({ data }) => {
+            return data;
+          }
+        );
       }
     });
   }

@@ -35,7 +35,8 @@ const DUMMY_DOC = (type: Types) => {
       return new Document<AnswerDoc>(
         undefined as DocumentStore,
         "",
-        () => ({ data: undefined }),
+        type,
+        () => undefined,
         { value: "", type: type },
         true
       );
@@ -43,7 +44,8 @@ const DUMMY_DOC = (type: Types) => {
       return new Document<AnswerDoc>(
         undefined as DocumentStore,
         "",
-        () => ({ data: undefined }),
+        type,
+        () => undefined,
         { value: [""], type: "array", size: 1 },
         true
       );
@@ -91,6 +93,7 @@ const getDocument = (store: DocumentStore, props: Props) => {
   if (props.type === "array") {
     return store.getOrCreateDocument<AnswerDoc>(
       props.webKey,
+      'array',
       {
         value: DefaultValue(props) as any,
         type: props.type,
@@ -101,6 +104,7 @@ const getDocument = (store: DocumentStore, props: Props) => {
   }
   return store.getOrCreateDocument<AnswerDoc>(
     props.webKey,
+    props.type,
     {
       value: DefaultValue(props) as any,
       type: props.type,
