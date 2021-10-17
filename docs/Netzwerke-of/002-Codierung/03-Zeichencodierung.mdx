@@ -353,7 +353,7 @@ Können Sie das übersetzte Wort auch auf einer einzigen Zeile ausgeben?
 
 Die folgende Funktion wandelt eine Text-Kette aus Binär-Zahlen in eine Liste mit Binär-Zahlen von `8bit` länge um. Verwenden Sie diese Funktion, um eine beliebige Zeichenkette in Text umzuwandeln.
 
-```py live_py 
+```py live_py id=cfb03d75-76ef-41bf-b1b6-8cbdc4a669dc
 def to_8bit(bin_text):
     return [bin_text[i:i + 8] for i in range(0, len(bin_text), 8)]
 
