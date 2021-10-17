@@ -44,7 +44,7 @@ const withLiveEditor = (Component) => {
   const WrappedComponent = function(props) {
     if (props.live_py && ExecutionEnvironment.canUseDOM) {
       if (!props.id && !props.slim) {
-        <Component {...props} />
+        return <Component {...props} />
       }
       const contextId = pageId();
       const code = props.children.replace(/\n$/, '');
