@@ -4,7 +4,6 @@ const fs = require('fs-extra');
 const UUID_REGEX = new RegExp(/live_py(.*)?id=(?<uuid>[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})/, 'g')
 const UUID_REGEX2 = new RegExp(/webKey="(?<uuid>[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})/, 'g')
 
-const used_uuids = []
 
 function UUIDInUseException(message) {
   const error = new Error(message);
@@ -12,7 +11,9 @@ function UUIDInUseException(message) {
 }
 
 UUIDInUseException.prototype = Object.create(Error.prototype);
+
 fs.writeFile(path.join(process.cwd(), '.uuids'), '');
+const used_uuids = []
 const plugin = (options) => {
   const transformer = async (root, file) => {
     const filePath = file.history[0];

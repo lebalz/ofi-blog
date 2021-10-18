@@ -4,7 +4,7 @@ const path = require("path");
 const math = require('remark-math');
 const katex = require('rehype-katex');
 const transformImage = require('./src/plugins/transform-images');
-const validateUuids = require('./src/plugins/validate-uuids');
+// const validateUuids = require('./src/plugins/validate-uuids');
 const remarkFlex = require('./src/plugins/remark-flex');
 
 
@@ -157,7 +157,7 @@ module.exports = {
               }
             }
           },
-          beforeDefaultRemarkPlugins: [validateUuids, transformImage],
+          beforeDefaultRemarkPlugins: [transformImage],
           remarkPlugins: [math, remarkFlex],
           rehypePlugins: [katex],
         },
