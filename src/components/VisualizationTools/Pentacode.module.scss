@@ -39,15 +39,9 @@
                     border: 1px solid black;
                     &.off {
                         background: black;
-                        &:hover {
-                            background-color: rgb(207, 207, 207);
-                        }
                     }
                     &.on {
                         background: white;
-                        &:hover {
-                            background-color: rgb(43, 42, 42);
-                        }
                     }
                 }
             }
