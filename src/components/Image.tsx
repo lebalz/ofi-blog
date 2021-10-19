@@ -16,6 +16,7 @@ interface Options {
   size?: string;
   width?: string;
   height?: string;
+  noMargins?: boolean;
 }
 
 interface FigProps {
@@ -70,10 +71,7 @@ const defaultUnit = (value: string, unit: string = "px") => {
 };
 
 const ResizedImage = (props: Props) => {
-  const style: {
-    maxWidth?: string;
-    maxHeight?: string;
-  } = {};
+  const style: React.CSSProperties = {};
   if (props.options.size) {
     style.maxWidth = defaultUnit(props.options.size);
     style.maxHeight = defaultUnit(props.options.size);
@@ -84,6 +82,12 @@ const ResizedImage = (props: Props) => {
   if (props.options.width) {
     style.maxWidth = defaultUnit(props.options.width);
   }
+  // Object.entries(props.options).forEach(([attr, val]) => {
+  //   if (['height', 'width', 'size'].includes(attr)) {
+  //     return;
+  //   }
+  //   style[attr] = val;
+  // })
 
   return (
     <img
@@ -110,9 +114,10 @@ const Image = (props: Props) => {
 
   const hasCaption = props.caption && props.caption !== "undefined";
   const hasFigCaption = props.bib || hasCaption;
+  console.log(props.options)
   return (
     <figure
-      className={clsx(styles.container)}
+      className={clsx(styles.container, props.options.noMargins && styles.noMargins)}
       onMouseEnter={() => setShowControls(true)}
       onMouseOut={(e) => {
         if (

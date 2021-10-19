@@ -23,7 +23,7 @@ const element = (tagName, classes = [], children = [], style = {}) => {
             hName: tagName,
             hProperties: hProperties
         },
-        children
+        children: children
     };
 };
 
@@ -85,6 +85,9 @@ const extractItemStyle = (css) => {
 const parseFlexItemOptions = (text = undefined, defaultClass = undefined) => {
     const opts = { classes: [], style: {}, empty: false };
     if (!text) {
+        if (defaultClass) {
+            opts.classes.push(defaultClass)
+        }
         return opts;
     }
     const config = parseFlexOptions(text);
@@ -92,6 +95,14 @@ const parseFlexItemOptions = (text = undefined, defaultClass = undefined) => {
         if (k in config) {
             if (config[k]) {
                 opts.classes.push('card__image');
+            }
+            delete config[k];
+        }
+    });
+    ['noFlex'].forEach((k) => {
+        if (k in config) {
+            if (config[k]) {
+                opts.classes.push('no_flex');
             }
             delete config[k];
         }
@@ -171,7 +182,7 @@ function attacher(options) {
             // the divider tag *** is NOT part of the content
             if (level === 0 && /^\*\*\*\s*(?<style>\S+)?/.test(line)) {
                 // check if this is the config of the first item
-                if (content.length === 1 && content[content.length - 1].content.length === 0) {
+                if (content.length === 1 && content[0].content.length === 0) {
                     content[content.length - 1].options = parseFlexItemOptions(line, DEFAULT_ITEM[keyword]);
                     continue;
                 }
@@ -183,40 +194,46 @@ function attacher(options) {
 
         // consume the processed tag and replace escape sequence
         const childNodes = content.map((part) => {
-            const klasses = [];
+            const wrapperKlasses = [];
             if (keyword === 'cards' && !part.options.empty) {
-                klasses.push('card')
+                wrapperKlasses.push('card')
             }
 
             const children = [];
             const raw = []
-            const flushChildren = (klassen) => {
+            const flushChildren = (klassen, wrapChildren) => {
                 if (raw.length === 0) {
                     return;
                 }
-                children.push(
-                    element('div', klassen, this.tokenizeBlock(raw.join(NEWLINE).replace(escapeTag, ':::'), now))
-                )
+                if (wrapChildren) {
+                    children.push(
+                        element('div', klassen, this.tokenizeBlock(raw.join(NEWLINE).replace(escapeTag, ':::'), now))
+                    )
+                } else {
+                    wrapperKlasses.push(...klassen)
+                    children.push(
+                        ...this.tokenizeBlock(raw.join(NEWLINE).replace(escapeTag, ':::'), now)
+                    )
+                }
                 raw.splice(0);
             }
             part.content.forEach((p) => {
                 if (p.level === 0 && keyword === 'cards' && MD_IMAGE_REGEX.test(p.line)) {
-                    flushChildren(part.options.classes);
+                    flushChildren(part.options.classes, true);
                     raw.push(p.line);
-                    flushChildren('card__image');
+                    flushChildren(['card__image'], true);
                 } else {
                     raw.push(p.line);
                 }
             });
-            flushChildren(part.options.classes);
-
+            flushChildren(part.options.classes, keyword === 'cards');
             return element(
                 'div',
-                ['item', ...klasses],
+                ['item', ...wrapperKlasses],
                 children,
                 { ...itemStyle, ...part.options.style }
-            )
-        })
+            );
+        });
 
         // const contentString = content.join(NEWLINE).replace(escapeTag, ':::');
         const add = eat(opening + food.join(NEWLINE));

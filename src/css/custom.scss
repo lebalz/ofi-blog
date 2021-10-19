@@ -98,6 +98,7 @@ table {
   }
 }
 
+.slim-table table,
 .small-table table {
   td {
     padding: 0.2em;
@@ -258,6 +259,11 @@ div.flex {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 10px;
+    &.no_flex {
+      flex-grow: unset;
+      flex-shrink: unset;
+      flex-basis: unset;
+    }
     .card__image {
       :first-child {
         margin: 0;

@@ -19,7 +19,7 @@ const {parseOptions, cleanedText} = require('./helpers');
 
 const getOptions = (alt) => {
   const altText = cleanedText(alt);
-  const options = parseOptions(alt);
+  const options = parseOptions(alt, true);
   return {
     alt: alt,
     caption: altText || '',
@@ -153,6 +153,9 @@ const plugin = (options) => {
         return false;
       },
       (node) => {
+        if (!node.children) {
+          return;
+        }
         const isInline = node.children.length > 1;
         // paragraphs with only one image shall be div's
         if (!isInline && node.type === 'paragraph') {
@@ -167,9 +170,6 @@ const plugin = (options) => {
             node.data.hProperties.style = {}
           }
           node.data.hProperties.style = {...node.data.hProperties.style, display: 'flex', justifyContent: 'center'};
-        }
-        if (!node.children) {
-          return;
         }
         node.children.forEach((c) => {
           if (c.type !== 'image') {
