@@ -114,7 +114,6 @@ const Image = (props: Props) => {
 
   const hasCaption = props.caption && props.caption !== "undefined";
   const hasFigCaption = props.bib || hasCaption;
-  console.log(props.options)
   return (
     <figure
       className={clsx(styles.container, props.options.noMargins && styles.noMargins)}
