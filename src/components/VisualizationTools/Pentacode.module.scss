@@ -1,0 +1,56 @@
+.container {
+    padding: 1rem 0.5rem;
+    background: var(--ifm-color-info-lightest);
+    border-radius: var(--ifm-global-radius);
+    .input {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5em;
+        font-family: var(--ifm-font-family-monospace);
+        font-size: var(--ifm-code-font-size);
+    }
+    
+    .interactive {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3em;
+
+        .input {
+            font-family: var(--ifm-font-family-monospace);
+            font-size: var(--ifm-font-size-base);
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: unset;
+            align-self: stretch;
+            margin: 0;
+        }
+        .pixelEditor {
+            .row {
+                margin: 0;
+                line-height: 0;
+                .cell {
+                    cursor: pointer;
+                    line-height: 0;
+                    margin: 0.1em;
+                    display: inline-block;
+                    width: 2em;
+                    height: 2em;
+                    border: 1px solid black;
+                    &.off {
+                        background: black;
+                        &:hover {
+                            background-color: rgb(207, 207, 207);
+                        }
+                    }
+                    &.on {
+                        background: white;
+                        &:hover {
+                            background-color: rgb(43, 42, 42);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

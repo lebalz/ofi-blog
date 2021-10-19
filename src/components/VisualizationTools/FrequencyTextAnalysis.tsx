@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import * as React from 'react';
 import styles from './FrequencyTextAnalysis.module.scss';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { sortBy } from 'lodash';
 import ReactSwitch from 'react-switch';
 
 const FrequencyAnalysis = () => {
