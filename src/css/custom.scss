@@ -7,48 +7,45 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-link-color: #677dc3;
-  --ifm-color-primary: #232a40;
-  --ifm-color-primary-dark: #20263a;
-  --ifm-color-primary-darker: #1e2436;
-  --ifm-color-primary-darkest: #191d2d;
-  --ifm-color-primary-light: #262e46;
-  --ifm-color-primary-lighter: #28304a;
-  --ifm-color-primary-lightest: #2e3753;
-  --ifm-code-font-size: 85%;
-  --ifm-background-color: white;
-  --ifm-card-background-color: #f7f7f7;
+    --ifm-link-color: #677dc3;
+    --ifm-color-primary: #232a40;
+    --ifm-color-primary-dark: #20263a;
+    --ifm-color-primary-darker: #1e2436;
+    --ifm-color-primary-darkest: #191d2d;
+    --ifm-color-primary-light: #262e46;
+    --ifm-color-primary-lighter: #28304a;
+    --ifm-color-primary-lightest: #2e3753;
+    --ifm-code-font-size: 85%;
+    --ifm-background-color: white;
+    --ifm-card-background-color: #f7f7f7;
 }
 
-html[data-theme="dark"] {
-  --ifm-link-color: #677dc3;
-  --ifm-color-primary: #4d5c8d;
-  --ifm-color-primary-dark: #45537f;
-  --ifm-color-primary-darker: #414e78;
-  --ifm-color-primary-darkest: #364063;
-  --ifm-color-primary-light: #55659b;
-  --ifm-color-primary-lighter: #596aa2;
-  --ifm-color-primary-lightest: #6c7caf;
-  --ifm-card-background-color: #242526;
-  .heroBanner_src-pages-index-module {
-    color: white;
-    background: #232a40;
-  }
+html[data-theme='dark'] {
+    --ifm-link-color: #677dc3;
+    --ifm-color-primary: #4d5c8d;
+    --ifm-color-primary-dark: #45537f;
+    --ifm-color-primary-darker: #414e78;
+    --ifm-color-primary-darkest: #364063;
+    --ifm-color-primary-light: #55659b;
+    --ifm-color-primary-lighter: #596aa2;
+    --ifm-color-primary-lightest: #6c7caf;
+    --ifm-card-background-color: #242526;
+    .heroBanner_src-pages-index-module {
+        color: white;
+        background: #232a40;
+    }
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgb(72, 77, 91);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
+    background-color: rgb(72, 77, 91);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
 }
 
-.gallery-wrapper
-  .image-gallery-content
-  .image-gallery-slide
-  .image-gallery-image {
-  height: 40vh;
-  object-fit: cover;
+.gallery-wrapper .image-gallery-content .image-gallery-slide .image-gallery-image {
+    height: 40vh;
+    object-fit: cover;
 }
 
 h1,
@@ -57,176 +54,174 @@ h3,
 h4,
 h5,
 h6 {
-  .footnote-ref {
-    font-size: 50%;
-  }
+    .footnote-ref {
+        font-size: 50%;
+    }
 }
 
 .footnote-ref {
-  font-size: 75%;
-  &::before {
-    content: "[";
-    margin-right: 3px;
-  }
-  &::after {
-    content: "]";
-    margin-left: 3px;
-  }
+    font-size: 75%;
+    &::before {
+        content: '[';
+        margin-right: 3px;
+    }
+    &::after {
+        content: ']';
+        margin-left: 3px;
+    }
 }
 
 .footer__copyright {
-  img {
-    height: 1em;
-    margin-right: 1ch;
-    vertical-align: text-bottom;
-  }
+    img {
+        height: 1em;
+        margin-right: 1ch;
+        vertical-align: text-bottom;
+    }
 }
 
 table {
-  width: 100%;
-  display: table;
-  td,
-  th {
-    border: none;
-  }
+    width: 100%;
+    display: table;
+    td,
+    th {
+        border: none;
+    }
 }
 
 .float-right {
-  &>p>img {
-    float: right;
-    max-width: 300px;
-  }
+    & > p > img {
+        float: right;
+        max-width: 300px;
+    }
 }
 
 .normal-header table {
-  th {
-    font-weight: var(--ifm-font-weight-normal);
-  }
+    th {
+        font-weight: var(--ifm-font-weight-normal);
+    }
 }
 
 .slim-table table,
 .small-table table {
-  td {
-    padding: 0.2em;
-  }
+    td {
+        padding: 0.2em;
+    }
 }
 
 .color-badge {
-  border-radius: 4px;
-  padding: 2px 6px;
-  color: white;
-  &.red {
-    background-color: red;
-  }
-  &.green {
-    background-color: green;
-  }
-  &.blue {
-    background-color: blue;
-  }
+    border-radius: 4px;
+    padding: 2px 6px;
+    color: white;
+    &.red {
+        background-color: red;
+    }
+    &.green {
+        background-color: green;
+    }
+    &.blue {
+        background-color: blue;
+    }
 }
 
 div.small {
-  img {
-    max-width: 200px;
-  }
+    img {
+        max-width: 200px;
+    }
 }
 
 div.small-m {
-  img {
-    max-width: 300px;
-  }
+    img {
+        max-width: 300px;
+    }
 }
 
 .no-table-header {
-  table {
-    thead {
-      display: none;
+    table {
+        thead {
+            display: none;
+        }
     }
-  }
-  &.top table td {
-    vertical-align: top;
-  }
+    &.top table td {
+        vertical-align: top;
+    }
 }
 
-html[data-theme="dark"] {
-  .admonition.admonition-def {  
-    --ifm-alert-background-color: var(--ifm-color-primary-darkest);
-    .admonition-heading {
-      code {
-        background-color: var(--ifm-color-primary-dark);
-        &:first-of-type {
-          background-color: var(--ifm-color-primary-lightest);
-        }  
-      }
+html[data-theme='dark'] {
+    .admonition.admonition-def {
+        --ifm-alert-background-color: var(--ifm-color-primary-darkest);
+        .admonition-heading {
+            code {
+                background-color: var(--ifm-color-primary-dark);
+                &:first-of-type {
+                    background-color: var(--ifm-color-primary-lightest);
+                }
+            }
+        }
     }
-  }
 }
 .admonition.admonition-def {
-  --ifm-alert-border-color: rgb(30, 255, 0);
-  --ifm-alert-background-color: rgba(0, 0, 0, 0.226);
-  .admonition-heading {
-    code {
-      color: rgb(19, 165, 0);
-      text-transform: none;
-      background-color: var(--ifm-color-secondary-dark);
-      &:first-of-type {
-        background-color: var(--ifm-color-primary-dark);
-        color: var(--ifm-alert-border-color);
-      }
-      font-size: 120%;
-    }    
-    .admonition-icon svg {
-      color: #2b971d;
-      display: none;
+    --ifm-alert-border-color: rgb(30, 255, 0);
+    --ifm-alert-background-color: rgba(0, 0, 0, 0.226);
+    .admonition-heading {
+        code {
+            color: rgb(19, 165, 0);
+            text-transform: none;
+            background-color: var(--ifm-color-secondary-dark);
+            &:first-of-type {
+                background-color: var(--ifm-color-primary-dark);
+                color: var(--ifm-alert-border-color);
+            }
+            font-size: 120%;
+        }
+        .admonition-icon svg {
+            color: #2b971d;
+            display: none;
+        }
     }
-  }
 }
 
 .quill {
-  .ql-toolbar.ql-snow {
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    .ql-stroke {
-      fill: none;
-      stroke: var(--ifm-color-primary-contrast-foreground);
-    }
-    .ql-fill {
-      fill: var(--ifm-color-primary-contrast-foreground);
-      stroke: none;
+    .ql-toolbar.ql-snow {
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        .ql-stroke {
+            fill: none;
+            stroke: var(--ifm-color-primary-contrast-foreground);
+        }
+        .ql-fill {
+            fill: var(--ifm-color-primary-contrast-foreground);
+            stroke: none;
+        }
+
+        .ql-picker {
+            color: var(--ifm-color-primary-contrast-foreground);
+        }
+        .ql-picker-options {
+            background: var(--ifm-background-color);
+        }
     }
 
-    .ql-picker {
-      color: var(--ifm-color-primary-contrast-foreground);
+    .ql-container.ql-snow {
+        border: 0px solid;
     }
-    .ql-picker-options {
-      background: var(--ifm-background-color);
-    }
-  }
 
-  .ql-container.ql-snow {
-    border: 0px solid;
-  }
-
-  &.disable-toolbar {
-    .ql-toolbar {
-      display: none;
+    &.disable-toolbar {
+        .ql-toolbar {
+            display: none;
+        }
+        .ql-container {
+            border-top: 1px solid #ccc;
+            border-radius: 4px;
+        }
     }
-    .ql-container {
-      border-top: 1px solid #ccc;
-      border-radius: 4px;
-    }
-  }
 }
-
-
 
 /*
  * Reset the line-number counter for each .prism-code scope
  */
- .prism-code {
-  counter-reset: line-number;
+.prism-code {
+    counter-reset: line-number;
 }
 
 /*
@@ -234,56 +229,60 @@ html[data-theme="dark"] {
  * You can chain more languages in order to add line numbers
  */
 .prism-code.language-py .token-line::before {
-  counter-increment: line-number;
-  content: counter(line-number);
-  margin-right: calc(var(--ifm-pre-padding) * 1.5);
-  text-align: right;
-  min-width: 1.5rem;
-  display: inline-block;
-  opacity: .3;
-  position: sticky;
-  left: var(--ifm-pre-padding);
+    counter-increment: line-number;
+    content: counter(line-number);
+    margin-right: calc(var(--ifm-pre-padding) * 1.5);
+    text-align: right;
+    min-width: 1.5rem;
+    display: inline-block;
+    opacity: 0.3;
+    position: sticky;
+    left: var(--ifm-pre-padding);
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgba(231, 231, 139, 0.753);
+    background-color: rgba(231, 231, 139, 0.753);
 }
 
-html[data-theme="dark"] {
-  .docusaurus-highlight-code-line {
-    background-color: rgba(121, 121, 70, 0.678);
-  }  
+html[data-theme='dark'] {
+    .docusaurus-highlight-code-line {
+        background-color: rgba(121, 121, 70, 0.678);
+    }
 }
-
 
 div.flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4em;
-  margin-bottom: 1em;
-  >div.item {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 10px;
-    &.no_flex {
-      flex-grow: unset;
-      flex-shrink: unset;
-      flex-basis: unset;
-    }
-    .card__image {
-      :first-child {
-        margin: 0;
-      }
-      figure {
-        margin: 0;
-        line-height: 0;
-        >* {
-          line-height: normal;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4em;
+    margin-bottom: 1em;
+    > div.item {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 10px;
+        &.noFlex {
+            flex-grow: unset;
+            flex-shrink: unset;
+            flex-basis: unset;
         }
-        figcaption {
-          margin: 0.4em 1em ;
+        .card__image {
+            :first-child {
+                margin: 0;
+            }
+            figure {
+                margin: 0;
+                line-height: 0;
+                > * {
+                    line-height: normal;
+                }
+                figcaption {
+                    margin: 0.4em 1em;
+                }
+            }
         }
-      }
     }
-  }
+}
+
+.monospace {
+    font-size: var(--ifm-code-font-size);
+    font-family: var(--ifm-font-family-monospace);
 }

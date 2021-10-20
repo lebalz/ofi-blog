@@ -8,7 +8,7 @@ import Answer from "@site/src/components/Answer";
 
 Da wir nun mit Bits arbeiten und nicht mehr mit Buchstaben, müssen wir nach anderen Möglichkeiten zur Verschlüsselung suchen. Alphabetverschiebungen wie bei Caesar und Substitutionen sind nicht mehr geeignete Mittel, wenn nur die Zahlen `0` und `1` zur Verfügung stehen.
 
-Nebst den bekannten Operationen,  *Addition, SUbtraktion, Multiplikation und Division*, kann ein Computer auch noch weitere Operationen auf zwei Binärzahlen anwenden. Eine solche Operation ist das **XOR**:
+Nebst den bekannten Operationen,  *Addition, SUbtraktion, Multiplikation und Division*, kann ein Computer auch noch weitere Operationen auf zwei Binärzahlen anwenden. Eine solche Operation ist das **XOR** (*Exclusive OR*):
 
 > Exclusive or or exclusive disjunction is a logical operation that is 1 if and only if its arguments differ (one is 1, the other is 0).[^2]
 
@@ -17,11 +17,9 @@ XOR kann auch zur Verschlüsselung verwendet werden. Dabei wird jeweils 1 Bit de
 Die Wahrheitstabelle sieht folgendermassen aus:
 
 :::cards
-***--flex-basis=13em
+***--flex-basis=13em --class=slim-table;normal-header
 
 ### Verschlüsselung
-
-<div className="slim-table normal-header">
 
 |  *p*  |  *k*  | *c* = *p* **XOR** *k* |
 | :---: | :---: | :-------------------: |
@@ -30,17 +28,13 @@ Die Wahrheitstabelle sieht folgendermassen aus:
 |   1   |   0   |           1           |
 |   1   |   1   |           0           |
 
-</div>
-
 *p*: *plain text* (Klartext) <br/>
 *k*: *key* (Schlüssel) <br/>
 *c*: *cipher* (Verschlüsselt)
 
-***--flex-basis=13em
+***--flex-basis=13em --class=slim-table;normal-header
 
 ### Entschlüsselung
-
-<div className="slim-table normal-header">
 
 |  *c*  |  *k*  | *p* = *c* **XOR** *k* |
 | :---: | :---: | :-------------------: |
@@ -49,7 +43,6 @@ Die Wahrheitstabelle sieht folgendermassen aus:
 |   1   |   0   |           1           |
 |   0   |   1   |           1           |
 
-</div>
 :::
 
 Analog zu ROT13 gilt auch hier: Die Verschlüsselung ist identisch mit der Entschlüsselung, da Folgendes gilt:

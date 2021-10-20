@@ -34,7 +34,9 @@ const ALIASES = {
     grow: 'flexGrow',
     cols: 'columns',
     basis: 'flexBasis',
-    justify: 'justifyContent'
+    justify: 'justifyContent',
+    class: 'className',
+    classes: 'className'
 };
 
 const parseFlexOptions = (config) => {
@@ -83,7 +85,7 @@ const extractItemStyle = (css) => {
  * @returns 
  */
 const parseFlexItemOptions = (text = undefined, defaultClass = undefined) => {
-    const opts = { classes: [], style: {}, empty: false };
+    const opts = { classes: [], style: {}, noDefaultClass: false };
     if (!text) {
         if (defaultClass) {
             opts.classes.push(defaultClass)
@@ -102,15 +104,20 @@ const parseFlexItemOptions = (text = undefined, defaultClass = undefined) => {
     ['noFlex'].forEach((k) => {
         if (k in config) {
             if (config[k]) {
-                opts.classes.push('no_flex');
+                opts.classes.push(k);
             }
             delete config[k];
         }
     });
+    if ('className' in config) {
+        klasses = config['className'].split(/[,;]/g)
+        opts.classes.push(...klasses);
+        delete config['className'];
+    }
     ['empty', 'spacer', 'placeholder'].forEach((k) => {
         if (k in config) {
             if (config[k]) {
-                opts.empty = true;
+                opts.noDefaultClass = true;
                 opts.classes.push('empty');
             }
             delete config[k];
@@ -118,7 +125,7 @@ const parseFlexItemOptions = (text = undefined, defaultClass = undefined) => {
     });
     opts.style = config;
 
-    if (defaultClass && opts.classes.length === 0) {
+    if (defaultClass && !opts.noDefaultClass) {
         opts.classes.push(defaultClass)
     }
     return opts;
@@ -195,7 +202,7 @@ function attacher(options) {
         // consume the processed tag and replace escape sequence
         const childNodes = content.map((part) => {
             const wrapperKlasses = [];
-            if (keyword === 'cards' && !part.options.empty) {
+            if (keyword === 'cards' && !part.options.noDefaultClass) {
                 wrapperKlasses.push('card')
             }
 
