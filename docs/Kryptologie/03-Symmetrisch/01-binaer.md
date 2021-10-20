@@ -12,8 +12,8 @@ Das Verfahren wird etwas umständlicher, da jeweils in die binäre Computersprac
 3. ...
 4. Decodierung des binären Geheimtextes (binärer Geheimtext → Geheimtext)
 
-:::danger Unterschied «Codierung» und «Verschlüsselung»
-Es ist wichtig, dass die Begriffe Codierung und Verschlüsselung unterschieden werden:
+:::info Unterschied «Codierung» und «Verschlüsselung»
+Es ist wichtig, dass die Begriffe **Codierung** und **Verschlüsselung** unterschieden werden:
 
 - Eine **Codierung** ist eine Umwandlung in eine andere Darstellungsform (z.B. Text → Zahlen, Bild → Text, Zahlen → binäre Zahlen, ...). Eine Codierung hat das **Ziel**, eine Information in ein bestimmtes **Datenformat umzuwandeln**, sie bietet keine Sicherheit.
 

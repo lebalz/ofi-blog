@@ -98,6 +98,12 @@ table {
   }
 }
 
+.normal-header table {
+  th {
+    font-weight: var(--ifm-font-weight-normal);
+  }
+}
+
 .slim-table table,
 .small-table table {
   td {

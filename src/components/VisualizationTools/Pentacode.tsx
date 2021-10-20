@@ -1,4 +1,7 @@
+import { faClipboard, faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
+import { toBlob, toPng } from 'html-to-image';
 import * as React from 'react';
 import styles from './Pentacode.module.scss';
 
@@ -78,12 +81,12 @@ const deepCopy = (arr: number[][]): number[][] => {
     arr.forEach((row) => {
         const newRow = [];
         copy.push(newRow);
-        row.forEach((cell)=> {
+        row.forEach((cell) => {
             newRow.push(cell);
-        })
-    })
+        });
+    });
     return copy;
-}
+};
 
 const toPenta = (text: string): string[] => {
     return text
@@ -109,7 +112,7 @@ const toText = (penta: string): string[] => {
     return pentaChunks(penta).map((seq) => PENTA_TABLE[seq] || seq);
 };
 
-const PentacodeTranslator = () => {
+const TextEditor = () => {
     const [text, setText] = React.useState('');
     const [penta, setPenta] = React.useState('');
     const [source, setSource] = React.useState('');
@@ -159,14 +162,16 @@ const PentacodeTranslator = () => {
     );
 };
 
-const PentaSquare = () => {
-    const [penta, setPenta] = React.useState('00000\n00000\n00000\n00000\n00000');
+const PixelEditor = () => {
+    const ref = React.useRef<HTMLDivElement>(null);
+    const [showCopied, setShowCopied] = React.useState(false);
+    const [penta, setPenta] = React.useState('00000 00000 00000 00000 00000');
     const [pentaCells, setPentaCells] = React.useState([
-        [0,0,0,0,0],
-        [0,0,0,0,0],
-        [0,0,0,0,0],
-        [0,0,0,0,0],
-        [0,0,0,0,0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0],
     ]);
     const [source, setSource] = React.useState('');
 
@@ -177,7 +182,9 @@ const PentaSquare = () => {
             return;
         }
         setSource('editor');
-        setPentaCells(pentaChunks(penta, false).map((row) => row.split('').map((v) => Number.parseInt(v, 2))));
+        setPentaCells(
+            pentaChunks(penta, false).map((row) => row.split('').map((v) => Number.parseInt(v, 2)))
+        );
     }, [penta]);
 
     React.useEffect(() => {
@@ -187,40 +194,95 @@ const PentaSquare = () => {
             return;
         }
         setSource('cell');
-        setPenta(pentaCells.map((row) => row.join('')).join('\n'));
+        setPenta(pentaCells.map((row) => row.join('')).join(' '));
     }, [pentaCells]);
+
+
+    React.useEffect(() => {
+        // prevent trigger-circle, when source was updated from editor
+        if (!showCopied) {
+            return;
+        }
+        const timeoutId = setTimeout(() => setShowCopied(false), 2000);
+        return () => clearTimeout(timeoutId);
+    }, [showCopied]);
+
+    const onCopy = React.useCallback(() => {
+        if (ref.current === null) {
+            return;
+        }
+        console.log('new refs');
+        toBlob(ref.current, { backgroundColor: 'white', canvasWidth:  5 * 10, canvasHeight: pentaCells.length * 10})
+            .then((blob) => {
+                return navigator.clipboard.write([
+                    new ClipboardItem({
+                        ['image/png']: blob as unknown as Promise<Blob>,
+                    }),
+                ]);
+            })
+            .then(() => {
+                setShowCopied(true);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, [ref]);
+
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container)}>
             <div className="container">
                 <p className="hero__subtitle">Pixel-Editor</p>
                 <div className={styles.interactive}>
                     <div className={clsx(styles.pixelEditor)}>
-                        {pentaCells.map((row, rowIdx) => {
-                            return (
-                                <div className={clsx(styles.row)} key={rowIdx}>
-                                    {row.map((cell, idx) => {
-                                        return (
-                                            <span
-                                                className={clsx(styles.cell, cell === 0 ? styles.off : styles.on)}
-                                                key={idx}
-                                                onClick={() => {
-                                                    const newCells = deepCopy(pentaCells);
-                                                    newCells[rowIdx][idx] = 1 - newCells[rowIdx][idx];
-                                                    setPentaCells(newCells);
-                                                }}
-                                            />
-                                        );
-                                    })}
-                                </div>
-                            );
-                        })}
+                        <div ref={ref}>
+                            {pentaCells.map((row, rowIdx) => {
+                                return (
+                                    <div className={clsx(styles.row)} key={rowIdx}>
+                                        {row.map((cell, idx) => {
+                                            return (
+                                                <span
+                                                    className={clsx(
+                                                        styles.cell,
+                                                        cell === 0 ? styles.off : styles.on
+                                                    )}
+                                                    key={idx}
+                                                    onClick={() => {
+                                                        const newCells = deepCopy(pentaCells);
+                                                        newCells[rowIdx][idx] = 1 - newCells[rowIdx][idx];
+                                                        setPentaCells(newCells);
+                                                    }}
+                                                />
+                                            );
+                                        })}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <div className={styles.actions}>
+                            <button
+                                className="button button--outline button--secondary button--sm"
+                                onClick={() => setPentaCells([...pentaCells, [0, 0, 0, 0, 0]])}
+                            >
+                                +
+                            </button>
+                            <button
+                                className="button button--outline button--secondary button--sm"
+                                onClick={() => setPentaCells([...pentaCells.slice(0, -1)])}
+                            >
+                                －
+                            </button>
 
-                        <button
-                            className="button button--outline button--secondary"
-                            onClick={() => setPentaCells([...pentaCells, [0,0,0,0,0]])}
-                        >
-                            +
-                        </button>
+                            <button
+                                className={clsx('button', 'button--outline', 'button--sm', showCopied ? 'button--success' : 'button--primary', styles.copy)}
+                                onClick={onCopy}
+                            >
+                                {showCopied ? (
+                                    <FontAwesomeIcon icon={faClipboardCheck}/>
+                                ) : (
+                                    <FontAwesomeIcon icon={faClipboard}/>
+                                )}
+                            </button>
+                        </div>
                     </div>
 
                     <textarea
@@ -236,4 +298,4 @@ const PentaSquare = () => {
     );
 };
 
-export { PentaSquare, PentacodeTranslator };
+export { PixelEditor, TextEditor };

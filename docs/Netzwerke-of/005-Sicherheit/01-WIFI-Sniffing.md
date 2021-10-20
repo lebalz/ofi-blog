@@ -67,24 +67,24 @@ Sehr praktisch: mit einem Hexadezimalzeichen können alle Zustände beschrieben 
 
 <div className="small-table">
 
-| Dezimal | Hexadezimal | Binär  |
+| Dezimal | Hexadezimal |  Binär |
 | ------: | ----------: | -----: |
-| 0       | `0`         | `0000` |
-| 1       | `1`         | `0001` |
-| 2       | `2`         | `0010` |
-| 3       | `3`         | `0011` |
-| 4       | `4`         | `0100` |
-| 5       | `5`         | `0101` |
-| 6       | `6`         | `0110` |
-| 7       | `7`         | `0111` |
-| 8       | `8`         | `1000` |
-| 9       | `9`         | `1001` |
-| 10      | `A`         | `1010` |
-| 11      | `B`         | `1011` |
-| 12      | `C`         | `1100` |
-| 13      | `D`         | `1101` |
-| 14      | `E`         | `1110` |
-| 15      | `F`         | `1111` |
+|       0 |         `0` | `0000` |
+|       1 |         `1` | `0001` |
+|       2 |         `2` | `0010` |
+|       3 |         `3` | `0011` |
+|       4 |         `4` | `0100` |
+|       5 |         `5` | `0101` |
+|       6 |         `6` | `0110` |
+|       7 |         `7` | `0111` |
+|       8 |         `8` | `1000` |
+|       9 |         `9` | `1001` |
+|      10 |         `A` | `1010` |
+|      11 |         `B` | `1011` |
+|      12 |         `C` | `1100` |
+|      13 |         `D` | `1101` |
+|      14 |         `E` | `1110` |
+|      15 |         `F` | `1111` |
 
 </div>
 
@@ -92,14 +92,13 @@ Sehr praktisch: mit einem Hexadezimalzeichen können alle Zustände beschrieben 
 
 So lassen sich Binärzahlen, aufgeteilt in Bytes (=8 bits) durch zwei Hexadezimal Zahlen beschreiben:
 
-$$
+$$\
 \begin{aligned}
 12_{10} \quad\tilde{=}\quad 0000 \; 1100_{2} \quad & \tilde{=}\quad 0C_{16} \\
 19_{10} \quad\tilde{=}\quad 0001 \; 0011_{2} \quad & \tilde{=}\quad 13_{16} \\
 42_{10} \quad\tilde{=}\quad 0010 \; 1010_{2} \quad & \tilde{=}\quad 2A_{16} \\
 189_{10} \quad\tilde{=}\quad 1011 \; 1101_{2} \quad & \tilde{=}\quad BD_{16}
-\end{aligned}
-$$
+\end{aligned}$$
 
 </details>
 
