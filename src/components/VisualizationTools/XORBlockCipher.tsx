@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { shuffle } from 'lodash';
 import * as React from 'react';
 import { PENTA_TABLE, sanitizePentaString } from './Pentacode';
 import styles from './XORBlockCipher.module.scss';
@@ -22,29 +23,82 @@ const XORBlockCipher = () => {
 
     React.useEffect(() => {
         const keyLength = key.length;
-        if (keyLength === 0) {
+        if (keyLength === 0 || (mode === 'CBC' && iv.length !== key.length)) {
             return;
         }
-        console.log(source);
         const k = toPentaInt(key);
+        // ECB
+        if (mode === 'ECB') {
+            switch (source) {
+                case 'cipher':
+                    const cc = toPentaInt(cipherText);
+                    let p = fromPentaInt(cc.map((charCode, idx) => charCode ^ k[idx % keyLength]));
+                    return setText(p);
+                case 'text':
+                    const t = toPentaInt(text);
+                    const c = fromPentaInt(t.map((charCode, idx) => charCode ^ k[idx % keyLength]));
+                    return setCipherText(c);
+            }
+        }
+        // CBC
+        const blockCipher = toPentaInt(iv);
         switch (source) {
             case 'cipher':
                 const cc = toPentaInt(cipherText);
-                const p = fromPentaInt(cc.map((charCode, idx) => charCode ^ k[idx % keyLength]));
-                setText(p);
-                break;
+                const p = fromPentaInt(
+                    cc.map((charCode, idx) => {
+                        const ind = idx % keyLength;
+                        const res = charCode ^ k[ind] ^ blockCipher[ind];
+                        blockCipher[ind] = charCode;
+                        return res;
+                    })
+                );
+                return setText(p);
             case 'text':
                 const t = toPentaInt(text);
-                const c = fromPentaInt(t.map((charCode, idx) => charCode ^ k[idx % keyLength]));
-                setCipherText(c);
-                break;
+                const c = fromPentaInt(
+                    t.map((charCode, idx) => {
+                        const ind = idx % keyLength;
+                        const res = charCode ^ blockCipher[ind] ^ k[ind];
+                        blockCipher[ind] = res;
+                        return res;
+                    })
+                );
+                return setCipherText(c);
         }
-    }, [text, cipherText, key]);
+    }, [text, cipherText, key, mode, iv]);
 
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container)}>
             <div className="container">
-                <p className="hero__subtitle">Häufigkeitsanalyse</p>
+                <p className="hero__subtitle">XOR Blockchiffre</p>
+                <h4>Modus</h4>
+                <div className={clsx('buttongroup', styles.modes)}>
+                    <button
+                        className={clsx(
+                            'button',
+                            'button--sm',
+                            'button--primary',
+                            'button--outline',
+                            mode === 'ECB' && 'button--active'
+                        )}
+                        onClick={() => setMode('ECB')}
+                    >
+                        ECB
+                    </button>
+                    <button
+                        className={clsx(
+                            'button',
+                            'button--sm',
+                            'button--primary',
+                            'button--outline',
+                            mode === 'CBC' && 'button--active'
+                        )}
+                        onClick={() => setMode('CBC')}
+                    >
+                        CBC
+                    </button>
+                </div>
                 <h4>Klartext</h4>
                 <textarea
                     className={clsx(styles.input)}
@@ -56,18 +110,75 @@ const XORBlockCipher = () => {
                         setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
                     }}
                     rows={5}
+                    placeholder="Klartext"
                 ></textarea>
-                <input
-                    type="text"
-                    placeholder="Schlüssel"
-                    value={key}
-                    onChange={(e) => {
-                        const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
-                        setKey(sanitizePentaString(e.target.value));
-                        setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
-                    }}
-                />
-                <div>{mode}</div>
+                <div className={styles.stringInputContainer}>
+                    <h4>
+                        <label htmlFor="block-chain-key">Schlüssel</label>
+                    </h4>
+                    <input
+                        id="block-chain-key"
+                        type="text"
+                        placeholder="Schlüssel"
+                        value={key}
+                        onChange={(e) => {
+                            const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                            setKey(sanitizePentaString(e.target.value));
+                            setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
+                        }}
+                    />
+                </div>
+                {mode === 'CBC' && (
+                    <div className={styles.stringInputContainer}>
+                        <h4>
+                            <label htmlFor="cbc-iv">Initialisierungs Vektor (IV)</label>
+                        </h4>
+                        <div className={clsx(styles.iv, 'button-group')}>
+                            <input
+                                id="cbc-iv"
+                                type="text"
+                                placeholder="Der IV muss die gleiche Länge haben wie der Schlüssel"
+                                value={iv}
+                                className={clsx(iv.length !== key.length && styles.invalid)}
+                                onChange={(e) => {
+                                    const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                                    setIv(sanitizePentaString(e.target.value));
+                                    setTimeout(() => {
+                                        e.target.setSelectionRange(pos, pos);
+                                    }, 0);
+                                }}
+                            />
+                            {iv.length !== key.length && (
+                                <span
+                                    className={clsx('badge', 'badge--danger', styles.errorBadge)}
+                                    title="Der IV muss die gleiche Länge haben wie der Schlüssel"
+                                >
+                                    Länge
+                                </span>
+                            )}
+                            <button
+                                className={clsx('button', 'button--primary', 'button--sm')}
+                                onClick={() => {
+                                    if (key.length === 0) {
+                                        return setIv('');
+                                    }
+                                    const alphabet = Object.keys(PENTA_TABLE).filter(
+                                        (char) => char.length === 1
+                                    );
+                                    const rand = shuffle(
+                                        [...Array(Math.floor(key.length / alphabet.length) + 2)].reduce(
+                                            (prev, curr) => [...prev, ...alphabet],
+                                            []
+                                        )
+                                    );
+                                    setIv(rand.slice(0, key.length).join(''));
+                                }}
+                            >
+                                Zufällig Setzen
+                            </button>
+                        </div>
+                    </div>
+                )}
                 <h4>Geheimtext</h4>
                 <textarea
                     className={clsx(styles.input)}
@@ -79,6 +190,7 @@ const XORBlockCipher = () => {
                         setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
                     }}
                     rows={5}
+                    placeholder="XOR Verschlüsselter Geheimtext"
                 ></textarea>
             </div>
         </div>

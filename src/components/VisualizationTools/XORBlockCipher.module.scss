@@ -7,6 +7,7 @@ html[data-theme="dark"] {
 
 .container {
     padding: 1rem 0.5rem;
+    margin-bottom: 1em;
     background: var(--ifm-color-info-lightest);
     border-radius: var(--ifm-global-radius);
     .input {
@@ -15,8 +16,41 @@ html[data-theme="dark"] {
         margin-bottom: 0.5em;
         font-family: var(--ifm-font-family-monospace);
         font-size: var(--ifm-code-font-size);
+        border-style: none;
     }
-    label {
-        margin-left: 1em;
+    h4 {
+        margin-bottom: 0.2em;
+    }
+    .modes {
+        margin-bottom: 1em;
+    }
+    .stringInputContainer {
+        h4 {
+            margin-bottom: 0;
+        }
+        .iv {
+            display: flex;
+            position: relative;
+            .errorBadge {
+                position: absolute;
+                right: 10.2em;
+                top: 3px;
+                height: 1.8em;
+                cursor: pointer;
+            }
+        }
+        input {
+            width: 100%;
+            font-family: var(--ifm-font-family-monospace);
+            font-size: var(--ifm-code-font-size);
+            &.invalid {
+                border-color: var(--ifm-color-danger);
+                border-style: solid;
+                outline-color: var(--ifm-color-danger);
+            }
+            border-style: none;
+            height: 3.3ch;
+        }
+        margin-bottom: 0.5em;
     }
 }

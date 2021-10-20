@@ -9,8 +9,6 @@ import XORBlockCipher from "@site/src/components/VisualizationTools/XORBlockCiph
 
 # Verkettung von Blöcken[^1]
 
-<XORBlockCipher />
-
 Im letzten Kapitel wurde der Geheimtext zur Ver- bzw. Entschlüsselung in Blöcke aufgeteilt, die exakt so lang sind wie der Schlüssel. Die Blöcke werden anschliessend einzeln durch die XOR-Funktion mit dem Schlüssel ver- bzw. entschlüsselt.
 
 :::info Allgemeine Blockchiffre
@@ -27,6 +25,11 @@ In der Abbildung wird deutlich, dass ECB kein eigenes Verschlüsselungsverfahren
 Die Entschlüsselung funktioniert analog: Der Geheimtext wird wiederum in Blöcke aufgeteilt, welche separat mit dem Schlüssel entschlüsselt werden. Die dabei entstandenen Klartext-Blöcke ergeben aneinander gereiht den gesamten Klartext.
 
 ![Entschlüsselung im ECB-Modus](images/ECB_decryption.svg)
+
+### Tool
+
+<XORBlockCipher />
+
 
 :::aufgabe Aufgabe ECB-Modus
 1. Verschlüsseln Sie den Text `EINE SEHR KLEINE SENSATION` mit dem Schlüssel `ZUSE`.  
