@@ -9,7 +9,12 @@ import styles from './Pentacode.module.scss';
  * @url: https://rothe.io/crypto/teaching/2-modern/2-1-Kryptologie-Blockchiffre.pdf
  */
 
-const PENTA_TABLE = {
+
+export const sanitizePentaString = (text: string) => {
+    return text.toUpperCase().replace(/\s/g, ' ').replace(/[^ABCDEFGHIJKLMNOPQRSTUVWXYZ,-.\?@\s]/g, '')
+}
+
+export const PENTA_TABLE = {
     [' ']: '00000',
     A: '00001',
     B: '00010',

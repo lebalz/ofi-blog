@@ -24,8 +24,6 @@ html[data-theme="dark"] {
         gap: 3em;
 
         .input {
-            font-family: var(--ifm-font-family-monospace);
-            font-size: var(--ifm-font-size-base);
             flex-grow: 1;
             flex-shrink: 1;
             width: unset;

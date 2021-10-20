@@ -47,14 +47,14 @@ const parseFlexOptions = (config) => {
     );
 
     if (!('flexBasis' in css)) {
-        const { columns, minWidth } = css;
+        const { columns, minWidth, gap } = css;
         const cols = columns ? Number.parseInt(columns, 10) : undefined;
         if (cols && minWidth) {
-            css.flexBasis = `max(${minWidth}, ${100 / cols}% - ${cols * 0.2 + (cols - 2) * 0.2}em)`;
+            css.flexBasis = `max(${minWidth}, ${100 / cols}% - calc(${cols-1} * ${gap || '0.4em'}))`;
             delete css.columns;
             delete css.minWidth;
         } else if (cols) {
-            css.flexBasis = `max(${MIN_WIDTH}, ${100 / cols}% - ${cols * 0.2 + (cols - 2) * 0.2}em)`;
+            css.flexBasis = `max(${MIN_WIDTH}, ${100 / cols}% - calc(${cols-1} * ${gap || '0.4em'}))`;
             delete css.columns;
         } else if (minWidth) {
             css.flexBasis = minWidth;
