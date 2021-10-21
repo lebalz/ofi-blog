@@ -204,7 +204,6 @@ const PixelEditor = () => {
 
 
     React.useEffect(() => {
-        // prevent trigger-circle, when source was updated from editor
         if (!showCopied) {
             return;
         }

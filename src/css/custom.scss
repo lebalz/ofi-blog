@@ -303,15 +303,17 @@ div.flex {
     .input,
     .button {
         border-radius: 0;
+        &:not(:first-child) {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
         &:first-child {
             border-top-left-radius: var(--ifm-button-border-radius);
             border-bottom-left-radius: var(--ifm-button-border-radius);
-            margin-right: 0;
         }
         &:last-child {
             border-top-right-radius: var(--ifm-button-border-radius);
             border-bottom-right-radius: var(--ifm-button-border-radius);
-            margin-left: 0;
         }
     }
 }
