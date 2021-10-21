@@ -2,6 +2,8 @@
 
 <a href="https://ofi.gbsl.website/files/material_byod.zip">⬇ Download BYOD Material</a>
 
+Alle Python-Bezogenen Aufgabe sollen direkt auf dieser Seite gemacht werden.
+
 ```py live_py title=hello__world.py id=4ceda0c5-4c49-457d-9839-80eeed8c100a
 print("Hello World! It's a beautiful Day.")
 
@@ -14,7 +16,7 @@ import random
 
 SQRT3 = sqrt(3)
 COLORS = ['red', 'blue', 'orange', 'green', 'purple', 'brown']
-speed(15)
+speed(7)
 
 for index_x in range(5):
     for index_y in range(5):
