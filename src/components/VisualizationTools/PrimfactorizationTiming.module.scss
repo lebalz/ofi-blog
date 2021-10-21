@@ -16,6 +16,12 @@ html[data-theme="dark"] {
     .stage {
         display: flex;
         align-items: center;
+    }
+    .result {
+        display: flex;
+        align-items: center;
+        margin: 0.5em 0;
+        max-width: 20em;
         .badge {
             margin-left: 0.2em;
         }
@@ -24,5 +30,8 @@ html[data-theme="dark"] {
         margin-left: 0.2em;
         margin-right: 0.2em;
         margin-bottom: 0.5em;
+    }
+    .copy {
+        float: right;
     }
 }
