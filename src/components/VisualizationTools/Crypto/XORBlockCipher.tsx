@@ -166,7 +166,7 @@ const XORBlockCipher = () => {
                                         (char) => char.length === 1
                                     );
                                     const rand = shuffle(
-                                        [...Array(Math.floor(key.length / alphabet.length) + 2)].reduce(
+                                        Array(Math.floor(key.length / alphabet.length) + 2).fill('').reduce(
                                             (prev, curr) => [...prev, ...alphabet],
                                             []
                                         )
