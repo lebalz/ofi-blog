@@ -153,7 +153,6 @@ const PrimfactorizationTiming = () => {
         if (ref.current === null) {
             return;
         }
-        console.log('new refs');
         toBlob(ref.current, {
             backgroundColor: 'white'
         })
