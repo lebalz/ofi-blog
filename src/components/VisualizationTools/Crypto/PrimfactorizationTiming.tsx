@@ -2,8 +2,8 @@ import { faClipboard, faClipboardCheck, faClock, faPlay } from '@fortawesome/fre
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import * as React from 'react';
-import { randomPrime } from '../../utils/prime';
-import styles from './PrimfactorizationTiming.module.scss';
+import { randomPrime } from '../../../utils/prime';
+import styles from './styles.module.scss';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { toBlob } from 'html-to-image';
 
@@ -180,7 +180,7 @@ const PrimfactorizationTiming = () => {
         return () => clearTimeout(timeoutId);
     }, [showCopied]);
     return (
-        <div className={clsx('hero', 'shadow--lw', styles.container)}>
+        <div className={clsx('hero', 'shadow--lw', styles.container, styles.factorization)}>
             <div className="container">
                 <p className="hero__subtitle">Zeitanalyse Primfaktorzerlegung</p>
                 Primzahlen mit

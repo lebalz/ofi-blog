@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import * as React from 'react';
-import styles from './FrequencyTextAnalysis.module.scss';
+import styles from './styles.module.scss';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import ReactSwitch from 'react-switch';
 
@@ -12,7 +12,7 @@ const FrequencyAnalysis = () => {
 
     React.useEffect(() => {
         const freq = {}
-        let processedText = text.toUpperCase().replace(/\s/g, '');
+        let processedText = text.toUpperCase().replace(/\s/g, ' ');
         if (onlyLetters) {
             processedText = processedText.replace(/[^A-Z]/g, '')
         }

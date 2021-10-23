@@ -10,6 +10,9 @@ html[data-theme="dark"] {
     margin-bottom: 1em;
     background: var(--ifm-color-info-lightest);
     border-radius: var(--ifm-global-radius);
+    h4 {
+        margin-bottom: 0.2em;
+    }
     .input {
         display: block;
         width: 100%;
@@ -17,9 +20,6 @@ html[data-theme="dark"] {
         font-family: var(--ifm-font-family-monospace);
         font-size: var(--ifm-code-font-size);
         border-style: none;
-    }
-    h4 {
-        margin-bottom: 0.2em;
     }
     .modes {
         margin-bottom: 1em;
@@ -52,5 +52,28 @@ html[data-theme="dark"] {
             height: 3.3ch;
         }
         margin-bottom: 0.5em;
+    }
+    &.factorization {
+        .stage {
+            display: flex;
+            align-items: center;
+        }
+        .result {
+            display: flex;
+            align-items: center;
+            margin: 0.5em 0;
+            max-width: 20em;
+            .badge {
+                margin-left: 0.2em;
+            }
+        }
+        .digits {
+            margin-left: 0.2em;
+            margin-right: 0.2em;
+            margin-bottom: 0.5em;
+        }
+        .copy {
+            float: right;
+        }
     }
 }

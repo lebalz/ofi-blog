@@ -4,7 +4,7 @@ title: Verkettung von Blöcken
 
 import Answer from "@site/src/components/Answer";
 import Finding from "@site/src/components/Finding";
-import XORBlockCipher from "@site/src/components/VisualizationTools/XORBlockCipher";
+import XORBlockCipher from "@site/src/components/VisualizationTools/Crypto/XORBlockCipher";
 
 
 # Verkettung von Blöcken[^1]

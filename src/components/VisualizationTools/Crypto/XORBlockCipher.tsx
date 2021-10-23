@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import { shuffle } from 'lodash';
 import * as React from 'react';
-import { PENTA_TABLE, sanitizePentaString } from './Pentacode';
-import styles from './XORBlockCipher.module.scss';
+import { PENTA_TABLE, sanitizePentaString } from './../Pentacode';
+import styles from './styles.module.scss';
 
 const toPentaInt = (text: string): number[] => {
     const t = sanitizePentaString(text);

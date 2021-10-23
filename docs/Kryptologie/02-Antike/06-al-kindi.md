@@ -1,7 +1,7 @@
 ---
 title: Häufigkeitsanalyse
 ---
-import FrequencyAnalysis from "@site/src/components/VisualizationTools/FrequencyTextAnalysis";
+import FrequencyAnalysis from "@site/src/components/VisualizationTools/Crypto/FrequencyTextAnalysis";
 
 # Häufigkeitsanalyse [^1]
 
@@ -11,9 +11,9 @@ Nicht alle Buchstaben kommen in der deutschen Sprache gleich häufig vor. Nachfo
 
 <div className="slim-table">
 
-|            |  1.   |   2.   |   3.   |   4.   |   5.   |   6.   |   7.   |   8.   |   9.   |  10.   |
-| :--------- | :---: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| Buchstabe  |   E   |   N    |   I    |   S    |   R    |   A    |   T    |   D    |   H    |   U    |
+|            |   1.    |   2.   |   3.   |   4.   |   5.   |   6.   |   7.   |   8.   |   9.   |  10.   |
+| :--------- | :-----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Buchstabe  |    E    |   N    |   I    |   S    |   R    |   A    |   T    |   D    |   H    |   U    |
 | Häufigkeit | 17,40 % | 9,78 % | 7,55 % | 7,27 % | 7,00 % | 6,51 % | 6,15 % | 5,08 % | 4,76 % | 4,35 % |
 
 </div>
