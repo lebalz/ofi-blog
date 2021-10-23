@@ -12,7 +12,7 @@ const Skytale = () => {
         if (!key || source !== 'text') {
             return;
         }
-        const lines = [...Array(key)].map(() => '');
+        const lines = Array(key).fill('');
         text.split('').forEach((char, idx) => {
             lines[idx % key] += char;
         });

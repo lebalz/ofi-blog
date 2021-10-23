@@ -215,7 +215,6 @@ const PixelEditor = () => {
         if (ref.current === null) {
             return;
         }
-        console.log('new refs');
         toBlob(ref.current, { backgroundColor: 'white', canvasWidth:  5 * 10, canvasHeight: pentaCells.length * 10})
             .then((blob) => {
                 return navigator.clipboard.write([

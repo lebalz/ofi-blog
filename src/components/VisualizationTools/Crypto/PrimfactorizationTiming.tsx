@@ -122,7 +122,6 @@ const PrimfactorizationTiming = () => {
         const t0 = window.performance.now();
         setProd(prime1 * prime2);
         const ellapsed = window.performance.now() - t0;
-        console.log(ellapsed);
         set_tMult(ellapsed);
         setStage(2);
     };
