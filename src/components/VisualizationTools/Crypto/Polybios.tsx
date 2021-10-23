@@ -49,7 +49,7 @@ const Polybios = () => {
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container)}>
             <div className="container">
-                <p className="hero__subtitle">Polybios</p>
+                <p className="hero__subtitle">Polybios-Chiffre</p>
                 <h4>Klartext</h4>
                 <textarea
                     className={clsx(styles.input)}
