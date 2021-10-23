@@ -37,7 +37,7 @@ const Caesar = () => {
                     }
                     return ALPHABET[(ALPHABET.length + ALPHABET.indexOf(char) - shift) % ALPHABET.length];
                 })
-                return setCipherText(txt.join(''));
+                return setText(txt.join(''));
         }
     }, [text, cipherText, key]);
 
@@ -79,7 +79,7 @@ const Caesar = () => {
                     onChange={(e) => {
                         const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
                         setSource('cipher');
-                        setCipherText(e.target.value.replace(/\s+/g, ' ').replace(/[^0-9\s]/g, ''));
+                        setCipherText(sanitizer(e.target.value));
                         setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
                     }}
                     rows={5}
