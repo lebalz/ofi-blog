@@ -24,6 +24,12 @@ html[data-theme="dark"] {
     .modes {
         margin-bottom: 1em;
     }
+    .caesarKey {
+        overflow-x: auto;
+        .pills {
+            width: max-content;
+        }
+    }
     .stringInputContainer {
         h4 {
             margin-bottom: 0;

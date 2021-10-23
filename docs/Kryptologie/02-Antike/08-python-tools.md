@@ -101,3 +101,57 @@ for zahl in zahlen:
 print(klartext)
 ```
 :::
+
+## Caesar-Chiffre
+
+
+```py live_py title=to__caesar.py id=4f0f7d8d-a2d3-4c2f-b05f-ed9bd6b52b33
+ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+SCHLÜSSEL = 'D'
+ROT = ALPHABET.index(SCHLÜSSEL)
+
+klartext = 'CAESAR'
+
+klartext = klartext.upper()
+verschlüsselt = ''
+for buchstabe in klartext:
+    index = ALPHABET.index(buchstabe) + ROT
+    index = index % 26 # ganzzahliger Rest bei Division durch 26
+    verschlüsselt = verschlüsselt + ALPHABET[index]
+
+print(verschlüsselt)
+```
+
+:::aufgabe
+Ändern Sie den Code so ab, dass der verschlüsselte Text wieder entschlüsselt werden kann.
+
+```py live_py title=from__caesar.py id=ebc928b8-7ff6-4566-9438-475718cedc03
+ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+SCHLÜSSEL = 'D'
+ROT = ALPHABET.index(SCHLÜSSEL)
+
+verschlüsselt = 'JDLXV'
+
+verschlüsselt = klartext.upper()
+klartext = ''
+for buchstabe in verschlüsselt:
+    index = 0
+    klartext = klartext + ALPHABET[index]
+
+print(klartext)
+```
+
+<details><summary>⭐️ Zusatz</summary>
+
+Sie haben eine geheime Nachricht abgefangen, kennen aber den Schlüssel nicht. Sie wissen aber, dass `ALCZLJ` ein sinnvolles Wort ergeben muss. Schreiben Sie ein Programm, das alle möglichen Schlüssel durchprobiert und jeweils den entschlüsselten Text ausdruckt.
+
+Verwenden Sie die Ausgangslage aus dem obigen Programm.
+
+```py live_py title=hack__caesar.py id=a99f0b6f-07cd-4498-b0d7-69af7aed70dd
+verschlüsselt = 'ALCZLJ'
+```
+
+</details>
+:::
+
+
