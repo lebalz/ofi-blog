@@ -29,10 +29,6 @@ export default class Script {
   showRaw: boolean = false;
 
   @observable
-  showSavedNotification: boolean = false;
-
-
-  @observable
   turtleModalOpen: boolean = false;
 
   @observable

@@ -64,6 +64,14 @@ const Editor = observer(() => {
             bindKey: { win: "Ctrl-Enter", mac: "Command-Enter" },
             exec: () => pyScript.execScript(document, documentStore),
           });
+          node.editor.commands.addCommand({
+            // commands is array of key bindings.
+            name: "save",
+            bindKey: { win: "Ctrl-s", mac: "Command-s" },
+            exec: () => {
+              pyScript.pyDoc.saveNow();
+            }
+          });
         }
       }
       return () => {
