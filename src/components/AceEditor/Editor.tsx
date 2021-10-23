@@ -80,6 +80,10 @@ const Editor = observer(() => {
           if (cmd) {
             node.editor.commands.removeCommand(cmd, true);
           }
+          const save = node.editor.commands.commands["save"];
+          if (save) {
+            node.editor.commands.removeCommand(save, true);
+          }
         }
       };
     },

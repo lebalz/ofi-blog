@@ -53,9 +53,8 @@ const Header = observer(({ slim, title, resettable }: Props) => {
     React.useEffect(() => {
         let timeoutId: NodeJS.Timeout;
         const disposer = reaction(
-            () => pyScript.pyDoc.state.state,
+            () => pyScript.pyDoc.state?.state,
             (current, last) => {
-                console.log(current, last);
                 if (last === 'save' && current === 'done') {
                     setShowSavedNotification(true);
                     timeoutId = setTimeout(() => {
