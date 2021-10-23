@@ -3,16 +3,41 @@ import * as React from 'react';
 import styles from './styles.module.scss';
 const SANITIZE_REGEX = /[^ABCDEFGHIKLMNOPQRSTUWXYZ\s]/g;
 const QUADRAT = [
-    'A', 'B', 'C', 'D', 'E',
-    'F', 'G', 'H', 'I', 'K',
-    'L', 'M', 'N', 'O', 'P',
-    'Q', 'R', 'S', 'T', 'U',
-    'E', 'X', 'Y', 'Z', ' '
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'E',
+    'X',
+    'Y',
+    'Z',
+    ' ',
 ];
 
 const sanitizer = (text: string) => {
-    return text.toUpperCase().replace(/\s+/g, ' ').replace(/J/g, 'I').replace(/V/g, 'U').replace(SANITIZE_REGEX, '');
-}
+    return text
+        .toUpperCase()
+        .replace(/\s+/g, ' ')
+        .replace(/J/g, 'I')
+        .replace(/V/g, 'U')
+        .replace(SANITIZE_REGEX, '');
+};
 
 const Polybios = () => {
     const [text, setText] = React.useState('');
@@ -20,31 +45,29 @@ const Polybios = () => {
     const [source, setSource] = React.useState<'text' | 'cipher'>('text');
 
     React.useEffect(() => {
-        switch (source) {
-            case 'text':
-                if (text.length === 0) {
-                    return;
-                }
-                const cipher = text.split('').map((char) => {
-                    const idx = QUADRAT.indexOf(char)
-                    const col = idx % 5
-                    const row = Math.floor(idx / 5)
-                    return `${row + 1}${col + 1}`
-
-                })
-                return setCipherText(cipher.join(' '));
-            case 'cipher':
-                if (cipherText.length === 0) {
-                    return;
-                }
-                const cLines = cipherText.split(' ');
-                const txt = cLines.map((tuple) => {
-                    const [row, col] = tuple.split('').map((c) => Number.parseInt(c, 10) - 1);
-                    return QUADRAT[row * 5 + col];
-                })
-                return setText(txt.join(''));
+        if (source !== 'text' || text.length === 0) {
+            return;
         }
-    }, [text, cipherText]);
+        const cipher = text.split('').map((char) => {
+            const idx = QUADRAT.indexOf(char);
+            const col = idx % 5;
+            const row = Math.floor(idx / 5);
+            return `${row + 1}${col + 1}`;
+        });
+        setCipherText(cipher.join(' '));
+    }, [text]);
+
+    React.useEffect(() => {
+        if (source !== 'cipher' || cipherText.length === 0) {
+            return;
+        }
+        const cLines = cipherText.split(' ');
+        const txt = cLines.map((tuple) => {
+            const [row, col] = tuple.split('').map((c) => Number.parseInt(c, 10) - 1);
+            return QUADRAT[row * 5 + col];
+        });
+        setText(txt.join(''));
+    }, [cipherText]);
 
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container)}>

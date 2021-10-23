@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import * as React from 'react';
 import styles from './styles.module.scss';
-const ALPHABET = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const sanitizer = (text: string) => {
     return text.toUpperCase().replace(/\s+/g, ' ');
-}
+};
 
 const Caesar = () => {
     const [text, setText] = React.useState('');
@@ -14,32 +14,32 @@ const Caesar = () => {
     const [source, setSource] = React.useState<'text' | 'cipher'>('text');
 
     React.useEffect(() => {
-        const shift = ALPHABET.indexOf(key);
-        switch (source) {
-            case 'text':
-                if (text.length === 0) {
-                    return;
-                }
-                const cipher = text.split('').map((char) => {
-                    if (!ALPHABET.includes(char)) {
-                        return char;
-                    }
-                    return ALPHABET[(ALPHABET.indexOf(char) + shift) % ALPHABET.length];
-                })
-                return setCipherText(cipher.join(''));
-            case 'cipher':
-                if (cipherText.length === 0) {
-                    return;
-                }
-                const txt = cipherText.split('').map((char) => {
-                    if (!ALPHABET.includes(char)) {
-                        return char;
-                    }
-                    return ALPHABET[(ALPHABET.length + ALPHABET.indexOf(char) - shift) % ALPHABET.length];
-                })
-                return setText(txt.join(''));
+        if (source !== 'text' || text.length === 0) {
+            return;
         }
-    }, [text, cipherText, key]);
+        const shift = ALPHABET.indexOf(key);
+        const cipher = text.split('').map((char) => {
+            if (!ALPHABET.includes(char)) {
+                return char;
+            }
+            return ALPHABET[(ALPHABET.indexOf(char) + shift) % ALPHABET.length];
+        });
+        return setCipherText(cipher.join(''));
+    }, [text, key]);
+
+    React.useEffect(() => {
+        const shift = ALPHABET.indexOf(key);
+        if (source !== 'cipher' || cipherText.length === 0) {
+            return;
+        }
+        const txt = cipherText.split('').map((char) => {
+            if (!ALPHABET.includes(char)) {
+                return char;
+            }
+            return ALPHABET[(ALPHABET.length + ALPHABET.indexOf(char) - shift) % ALPHABET.length];
+        });
+        return setText(txt.join(''));
+    }, [cipherText, key]);
 
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container)}>
@@ -58,17 +58,21 @@ const Caesar = () => {
                     rows={5}
                     placeholder="Klartext"
                 ></textarea>
-                <h4>Schlüssel: <span className="badge badge--primary">{key}</span></h4>
+                <h4>
+                    Schlüssel: <span className="badge badge--primary">{key}</span>
+                </h4>
                 <div className={styles.caesarKey}>
                     <ul className={clsx('pills', styles.pills)}>
                         {ALPHABET.map((char, idx) => {
-                            return (<li 
-                                className={clsx('pills__item', key === char && 'pills__item--active')}
-                                onClick={() => setKey(char)}
-                                key={char}
-                            >
-                                {char}
-                            </li>)
+                            return (
+                                <li
+                                    className={clsx('pills__item', key === char && 'pills__item--active')}
+                                    onClick={() => setKey(char)}
+                                    key={char}
+                                >
+                                    {char}
+                                </li>
+                            );
                         })}
                     </ul>
                 </div>

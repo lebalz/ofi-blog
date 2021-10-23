@@ -9,32 +9,40 @@ const Skytale = () => {
     const [source, setSource] = React.useState<'text' | 'cipher'>('text');
 
     React.useEffect(() => {
-        switch (source) {
-            case 'text':
-                if (text.length === 0) {
-                    return;
-                }
-                const lines = [...Array(key)].map(() => '');
-                text.split('').forEach((char, idx) => {
-                    lines[idx % key] += char;
-                })
-                return setCipherText(lines.join('\n'));
-            case 'cipher':
-                if (cipherText.length === 0) {
-                    return;
-                }
-                const cLines = cipherText.split('\n');
-                let decrypt = '';
-                for (let i = 0; i < cLines[0].length; i++) {
-                    cLines.forEach((line) => {
-                        if (line.length > i) {
-                            decrypt += line.charAt(i);
-                        }
-                    })
-                }
-                return setText(decrypt);
+        if (!key || source !== 'text') {
+            return;
         }
-    }, [text, cipherText, key]);
+        const lines = [...Array(key)].map(() => '');
+        text.split('').forEach((char, idx) => {
+            lines[idx % key] += char;
+        });
+        setCipherText(lines.join('\n'));
+    }, [text, key]);
+
+    React.useEffect(() => {
+        if (!key || source !== 'cipher') {
+            return;
+        }
+        if (cipherText.length === 0) {
+            if (text !== '') {
+                setText('');
+            }
+            return;
+        }
+        const cLines = cipherText.split('\n');
+        if (cLines.length !== key) {
+            setKey(cLines.length);
+        }
+        let decrypt = '';
+        for (let i = 0; i < cLines[0].length; i++) {
+            cLines.forEach((line) => {
+                if (line.length > i) {
+                    decrypt += line.charAt(i);
+                }
+            });
+        }
+        setText(decrypt);
+    }, [cipherText, key]);
 
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container)}>
@@ -46,7 +54,9 @@ const Skytale = () => {
                     value={text}
                     onChange={(e) => {
                         setSource('text');
-                        setText(e.target.value);
+                        const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                        setText(e.target.value.replace(/\n/g, ' '));
+                        setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
                     }}
                     rows={5}
                     placeholder="Klartext"
@@ -61,13 +71,14 @@ const Skytale = () => {
                         min={1}
                         max={26}
                         placeholder="Schlüssel"
-                        value={key}
+                        value={key || ''}
                         onChange={(e) => {
                             if (source !== 'text') {
                                 setSource('text');
                             }
                             setKey(Number.parseInt(e.target.value, 10));
                         }}
+                        disabled={source === 'cipher'}
                     />
                 </div>
                 <h4>Geheimtext</h4>

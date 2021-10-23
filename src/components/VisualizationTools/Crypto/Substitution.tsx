@@ -55,34 +55,36 @@ const Substitution = () => {
     }, [key]);
 
     React.useEffect(() => {
+        if (source !== 'text' || text.length === 0) {
+            return;
+        }
         if (missingChars.length > 0) {
             return;
         }
-        switch (source) {
-            case 'text':
-                if (text.length === 0) {
-                    return;
-                }
-                const cipher = text.split('').map((char) => {
-                    if (!ALPHABET.includes(char)) {
-                        return char;
-                    }
-                    return key[ALPHABET.indexOf(char)];
-                });
-                return setCipherText(cipher.join(''));
-            case 'cipher':
-                if (cipherText.length === 0) {
-                    return;
-                }
-                const txt = cipherText.split('').map((char) => {
-                    if (!ALPHABET.includes(char)) {
-                        return char;
-                    }
-                    return ALPHABET[key.split('').indexOf(char)];
-                });
-                return setText(txt.join(''));
+        const cipher = text.split('').map((char) => {
+            if (!ALPHABET.includes(char)) {
+                return char;
+            }
+            return key[ALPHABET.indexOf(char)];
+        });
+        setCipherText(cipher.join(''));
+    }, [text, key, missingChars]);
+
+    React.useEffect(() => {
+        if (source !== 'cipher' || cipherText.length === 0) {
+            return;
         }
-    }, [text, cipherText, key, missingChars]);
+        if (missingChars.length > 0) {
+            return;
+        }
+        const txt = cipherText.split('').map((char) => {
+            if (!ALPHABET.includes(char)) {
+                return char;
+            }
+            return ALPHABET[key.split('').indexOf(char)];
+        });
+        setText(txt.join(''));
+    }, [cipherText, key, missingChars]);
 
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container)}>
