@@ -1,11 +1,11 @@
-import { faClipboard, faClipboardCheck, faClock, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import * as React from 'react';
 import { randomPrime } from '../../../utils/prime';
 import styles from './styles.module.scss';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { toBlob } from 'html-to-image';
+import CopyImageToClipboard from '../../CopyImageToClipboard';
 
 interface StageProps {
     onStage: () => any;
@@ -16,31 +16,28 @@ interface StageProps {
 const Stage = (props: StageProps) => {
     return (
         <>
-        <div className={clsx(styles.stage)}>
-            <h4>
-                {props.label}
-            </h4>
-            <span style={{ flexGrow: 1 }} />
-            <button className="button button--success button--sm" onClick={props.onStage}>
-                <FontAwesomeIcon icon={faPlay} color="white" />
-            </button>
-        </div>
-        <div className={clsx(styles.result)}>
-                        {props.result.calculations.map((calc, idx) => {
-                return (
-                    <span className={clsx('badge', 'badge--secondary', styles.badge)} key={idx}>
-                        {calc}
+            <div className={clsx(styles.stage)}>
+                <h4>{props.label}</h4>
+                <span style={{ flexGrow: 1 }} />
+                <button className="button button--success button--sm" onClick={props.onStage}>
+                    <FontAwesomeIcon icon={faPlay} color="white" />
+                </button>
+            </div>
+            <div className={clsx(styles.result)}>
+                {props.result.calculations.map((calc, idx) => {
+                    return (
+                        <span className={clsx('badge', 'badge--secondary', styles.badge)} key={idx}>
+                            {calc}
+                        </span>
+                    );
+                })}
+                <span style={{ flexGrow: 1 }} />
+                {props.result.time_ms !== undefined && (
+                    <span className={clsx('badge', 'badge--success', styles.badge)}>
+                        <FontAwesomeIcon icon={faClock} /> {props.result.time_ms.toFixed(1)} ms
                     </span>
-                );
-            })}
-            <span style={{ flexGrow: 1 }} />
-            {props.result.time_ms !== undefined && (
-                <span className={clsx('badge', 'badge--success', styles.badge)}>
-                    <FontAwesomeIcon icon={faClock} /> {props.result.time_ms.toFixed(1)} ms
-                </span>
-            )}
-
-        </div>
+                )}
+            </div>
         </>
     );
 };
@@ -56,17 +53,17 @@ const tickFormatter = (tick: number) => {
         return tick;
     }
     const pot10 = `${tick}`.length - 1;
-    const num = `${tick}`.replace(/0*$/, '')
+    const num = `${tick}`.replace(/0*$/, '');
     const one = num.slice(0, 1);
     const rest = num.slice(1);
     if (one === '1') {
-        return `10^${pot10}`
+        return `10^${pot10}`;
     }
     if (!rest) {
-        return `${num.slice(0, 1)}·10^${pot10}`
+        return `${num.slice(0, 1)}·10^${pot10}`;
     }
-    return `${num.slice(0, 1)}.${num.slice(1)}·10^${pot10}`
-}
+    return `${num.slice(0, 1)}.${num.slice(1)}·10^${pot10}`;
+};
 
 const PrimfactorizationTiming = () => {
     const [digits, setDigits] = React.useState(6);
@@ -148,35 +145,6 @@ const PrimfactorizationTiming = () => {
         setStage(3);
     };
 
-    const onCopy = React.useCallback(() => {
-        if (ref.current === null) {
-            return;
-        }
-        toBlob(ref.current, {
-            backgroundColor: 'white'
-        })
-            .then((blob) => {
-                return navigator.clipboard.write([
-                    new ClipboardItem({
-                        ['image/png']: blob as unknown as Promise<Blob>,
-                    }),
-                ]);
-            })
-            .then(() => {
-                setShowCopied(true);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }, [ref]);
-
-    React.useEffect(() => {
-        if (!showCopied) {
-            return;
-        }
-        const timeoutId = setTimeout(() => setShowCopied(false), 2000);
-        return () => clearTimeout(timeoutId);
-    }, [showCopied]);
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container, styles.factorization)}>
             <div className="container">
@@ -262,52 +230,35 @@ const PrimfactorizationTiming = () => {
                     />
                 )}
                 {measurements.length > 0 && (
-                        <div style={{width: '100%', overflow: 'auto'}}>
-                            <button
-                                className={clsx(
-                                    'button',
-                                    'button--outline',
-                                    'button--sm',
-                                    showCopied ? 'button--success' : 'button--primary',
-                                    styles.copy
-                                )}
-                                onClick={onCopy}
-                            >
-                                {showCopied ? (
-                                    <FontAwesomeIcon icon={faClipboardCheck} />
-                                ) : (
-                                    <FontAwesomeIcon icon={faClipboard} />
-                                )}
-                            </button>
-
-                            <div ref={ref} style={{overflow: 'auto', width: 'max(100%, 500px)'}}>
-                                <ResponsiveContainer width="100%" height={400}>
-                                    <ScatterChart
-                                        width={500}
-                                        height={300}
-                                        margin={{
-                                            top: 5,
-                                            right: 100,
-                                            bottom: 80,
-                                            left: 20,
-                                        }}
-                                    >
-                                        <CartesianGrid />
-                                        <XAxis
-                                            type="number"
-                                            dataKey="product"
-                                            name="Produkt"
-                                            tickFormatter={tickFormatter}
-                                            angle={40}
-                                            textAnchor="start"
-                                        />
-                                        <YAxis type="number" dataKey="time" name="Zeit" unit="ms" />
-                                        <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-                                        <Scatter name="Mesurements" data={measurements} fill="#8884d8" />
-                                    </ScatterChart>
-                                </ResponsiveContainer>
-                            </div>
-                        </div>
+                    <div style={{ width: '100%', overflow: 'auto' }}>
+                        <CopyImageToClipboard>
+                            <ResponsiveContainer width="100%" height={400}>
+                                <ScatterChart
+                                    width={500}
+                                    height={300}
+                                    margin={{
+                                        top: 5,
+                                        right: 100,
+                                        bottom: 80,
+                                        left: 20,
+                                    }}
+                                >
+                                    <CartesianGrid />
+                                    <XAxis
+                                        type="number"
+                                        dataKey="product"
+                                        name="Produkt"
+                                        tickFormatter={tickFormatter}
+                                        angle={40}
+                                        textAnchor="start"
+                                    />
+                                    <YAxis type="number" dataKey="time" name="Zeit" unit="ms" />
+                                    <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+                                    <Scatter name="Mesurements" data={measurements} fill="#8884d8" />
+                                </ScatterChart>
+                            </ResponsiveContainer>
+                        </CopyImageToClipboard>
+                    </div>
                 )}
             </div>
         </div>

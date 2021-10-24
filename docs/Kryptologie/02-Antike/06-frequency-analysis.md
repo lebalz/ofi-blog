@@ -2,6 +2,7 @@
 title: Häufigkeitsanalyse
 ---
 import FrequencyAnalysis from "@site/src/components/VisualizationTools/Crypto/FrequencyTextAnalysis";
+import Answer from "@site/src/components/Answer";
 
 # Häufigkeitsanalyse [^1]
 
@@ -35,6 +36,7 @@ Durch die Häufigkeitsanalyse werden Geheimtexte, die durch eine monoalphabetisc
 
 <FrequencyAnalysis />
 
+<Answer type="text" webKey="1c1320de-991f-4b0f-9a4c-3a9c71073b66" />
 
 [^1]: Quelle [rothe.io](https://rothe.io/?b=crypto&p=151207)
 [^2]: Quelle [Wikipedia](https://de.wikipedia.org/wiki/Buchstabenh%C3%A4ufigkeit)

@@ -3,6 +3,7 @@ title: Polybios-Chiffre
 ---
 
 import Polybios from "@site/src/components/VisualizationTools/Crypto/Polybios";
+import Answer from "@site/src/components/Answer";
 
 # Polybios-Chiffre [^1]
 
