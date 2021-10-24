@@ -35,7 +35,7 @@ const CopyImageToClipboard = ({ children }: Props) => {
         if (['none', 'spin', 'ready'].includes(copyState)) {
             return;
         }
-        const timeoutId = setTimeout(() => setCopyState('none'), 2000);
+        const timeoutId = setTimeout(() => setCopyState(copyState === 'copied' ? 'ready' : 'none'), 2000);
         return () => clearTimeout(timeoutId);
     }, [copyState]);
 
@@ -54,6 +54,7 @@ const CopyImageToClipboard = ({ children }: Props) => {
                     'button--sm',
                     CopyClass[copyState]
                 )}
+                disabled={copyState === 'spin'}
                 style={{ float: 'right' }}
                 onClick={() => {
                     if (ref.current === null) {
