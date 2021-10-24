@@ -221,6 +221,8 @@ from turtle import *
 :::aufgabe 7. Perlenkette
 Zeichnen Sie eine Perlenkette in Ihrer Lieblingsfarbe, die aus `18` Perlen (dots) besteht.
 
+![](images/perlen18.svg)
+
 ```py live_py title=perlenkette.py id=65b9f38d-cb5e-4932-a04a-bab80d3f57d5
 from turtle import *
 
