@@ -1,4 +1,4 @@
-import { faClipboard, faClipboardCheck, faCross, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCircleNotch, faClipboard, faClipboardCheck, faCross, faEllipsisH, faTimesCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { toBlob } from 'html-to-image';
@@ -8,17 +8,42 @@ interface Props {
     children: JSX.Element;
 }
 
+type CopyState = 'none' | 'spin' | 'ready' | 'copied' | 'error';
+
+const CopyIcon: {[key in CopyState]: IconDefinition} = {
+    none: faEllipsisH,
+    copied: faClipboardCheck,
+    error: faTimesCircle,
+    spin: faCircleNotch,
+    ready: faClipboard,
+}
+
+const CopyClass: {[key in CopyState]: string} = {
+    none: 'button--primary',
+    ready: 'button--primary',
+    error: 'button--danger',
+    copied: 'button--success',
+    spin: 'button--secondary'
+}
+
 const CopyImageToClipboard = ({ children }: Props) => {
-    const [showCopied, setShowCopied] = React.useState<'none' | 'copied' | 'error'>('none');
+    const [blob, setBlob] = React.useState<Blob | undefined>(undefined);
+    const [copyState, setCopyState] = React.useState<CopyState>('none');
     const ref = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {
-        if (showCopied === 'none') {
+        if (['none', 'spin', 'ready'].includes(copyState)) {
             return;
         }
-        const timeoutId = setTimeout(() => setShowCopied('none'), 2000);
+        const timeoutId = setTimeout(() => setCopyState('none'), 2000);
         return () => clearTimeout(timeoutId);
-    }, [showCopied]);
+    }, [copyState]);
+
+    React.useEffect(() => {
+        if (copyState !== 'none') {
+            setCopyState('none');
+        }
+    }, [children])
 
     return (
         <React.Fragment>
@@ -27,37 +52,42 @@ const CopyImageToClipboard = ({ children }: Props) => {
                     'button',
                     'button--outline',
                     'button--sm',
-                    showCopied === 'none' && 'button--primary',
-                    showCopied === 'error' && 'button--danger',
-                    showCopied === 'copied' && 'button--success',
+                    CopyClass[copyState]
                 )}
                 style={{ float: 'right' }}
                 onClick={() => {
                     if (ref.current === null) {
                         return;
                     }
-                    toBlob(ref.current, {
-                        backgroundColor: 'white',
-                    })
-                        .then((blob) => {
-                            return navigator.clipboard.write([
-                                new ClipboardItem({
-                                    ['image/png']: blob as unknown as Promise<Blob>,
-                                }),
-                            ]);
+                    if (copyState === 'none') {
+                        setCopyState('spin');
+                        return toBlob(ref.current, {backgroundColor: 'white'}).then((blob) => {
+                            setBlob(blob);
+                            setCopyState('ready');
                         })
-                        .then(() => {
-                            setShowCopied('copied');
+                    }
+                    if (copyState !== 'ready') {
+                        return;
+                    }
+                    try {
+                        navigator.clipboard.write([
+                            new ClipboardItem({
+                                ['image/png']: blob as any
+                            })
+                        ]).then(() => {
+                            setCopyState('copied');
                         })
                         .catch((err) => {
-                            setShowCopied('error');
-                            console.log(err);
+                            setCopyState('error');
+                            console.warn(err);
                         });
+                    } catch (err) {
+                        console.warn(err);
+                        setCopyState('error');
+                    }
                 }}
             >
-                {showCopied === 'none' && <FontAwesomeIcon icon={faClipboard} />}
-                {showCopied === 'copied' && <FontAwesomeIcon icon={faClipboardCheck} />}
-                {showCopied === 'error' && <FontAwesomeIcon icon={faTimesCircle} />}
+                <FontAwesomeIcon icon={CopyIcon[copyState]} />
             </button>
             <div ref={ref} style={{ overflow: 'auto', width: 'max(100%, 500px)' }}>
                 {children}
