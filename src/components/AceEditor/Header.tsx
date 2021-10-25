@@ -95,7 +95,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
                     )}
                     {<div className={styles.spacer}></div>}
                     <span style={{ minWidth: '1em' }}>
-                        {pyScript.pyDoc.state.state === 'save' && (
+                        {pyScript.pyDoc && pyScript.pyDoc.state?.state === 'save' && (
                             <FontAwesomeIcon icon={faSync} style={{ color: '#3578e5' }} spin />
                         )}
                         {showSavedNotification && (
