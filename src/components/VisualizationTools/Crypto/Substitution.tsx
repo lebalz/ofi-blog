@@ -36,17 +36,14 @@ const sanitizer = (text: string) => {
 };
 
 const sanitizeKey = (key: string) => {
-    return uniq(
-        sanitizer(key)
-            .replace(/[^A-Z]/g, '')
-            .split('')
-    ).join('');
+    return key.toUpperCase().replace(/[^A-Z ]/g, '')
 };
 
 const Substitution = () => {
     const [text, setText] = React.useState('');
-    const [key, setKey] = React.useState('');
+    const [key, setKey] = React.useState(ALPHABET.join(''));
     const [missingChars, setMissingChars] = React.useState(ALPHABET);
+    const [duplicatedChars, setDuplicatedChars] = React.useState(ALPHABET);
     const [cipherText, setCipherText] = React.useState('');
     const [source, setSource] = React.useState<'text' | 'cipher'>('text');
 
@@ -58,7 +55,7 @@ const Substitution = () => {
         if (source !== 'text' || text.length === 0) {
             return;
         }
-        if (missingChars.length > 0) {
+        if (key.length !== ALPHABET.length) {
             return;
         }
         const cipher = text.split('').map((char) => {
@@ -74,7 +71,7 @@ const Substitution = () => {
         if (source !== 'cipher' || cipherText.length === 0) {
             return;
         }
-        if (missingChars.length > 0) {
+        if (key.length !== ALPHABET.length) {
             return;
         }
         const txt = cipherText.split('').map((char) => {
@@ -85,6 +82,14 @@ const Substitution = () => {
         });
         setText(txt.join(''));
     }, [cipherText, key, missingChars]);
+
+    React.useEffect(() => {
+        const dups = key.split('');
+        uniq(key.split('')).forEach((char) => {
+            dups.splice(dups.indexOf(char), 1);
+        })
+        setDuplicatedChars(uniq(dups));
+    }, [missingChars])
 
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container)}>
@@ -113,7 +118,7 @@ const Substitution = () => {
                             type="text"
                             placeholder="Ein vollständiges Aplhabet"
                             value={key}
-                            className={clsx(missingChars.length > 0 && styles.invalid)}
+                            className={clsx(key.length !== ALPHABET.length && styles.invalid)}
                             onChange={(e) => {
                                 const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
                                 setKey(sanitizeKey(e.target.value));
@@ -133,10 +138,22 @@ const Substitution = () => {
                     </div>
                     {missingChars.length > 0 && (
                         <div>
-                            <span>Im Schlüssel fehlen die Buchstaben:</span>
+                            <span>Im Schlüssel fehlende Buchstaben:</span>
                             {missingChars.map((char) => {
                                 return (
                                     <span className={clsx('badge', 'badge--danger')} key={char}>
+                                        {char}
+                                    </span>
+                                );
+                            })}
+                        </div>
+                    )}
+                    {duplicatedChars.length > 0 && (
+                        <div>
+                            <span>Im Schlüssel doppelt vorhandene Buchstaben:</span>
+                            {duplicatedChars.map((char) => {
+                                return (
+                                    <span className={clsx('badge', 'badge--warning')} key={char}>
                                         {char}
                                     </span>
                                 );
