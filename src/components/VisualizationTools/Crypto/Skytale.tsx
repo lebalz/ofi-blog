@@ -7,6 +7,7 @@ const Skytale = () => {
     const [cipherText, setCipherText] = React.useState('');
     const [key, setKey] = React.useState(2);
     const [source, setSource] = React.useState<'text' | 'cipher'>('text');
+    const [cursorPos, setCursorPos] = React.useState(0);
 
     React.useEffect(() => {
         if (!key || source !== 'text') {
@@ -16,7 +17,7 @@ const Skytale = () => {
         text.split('').forEach((char, idx) => {
             lines[idx % key] += char;
         });
-        setCipherText(lines.join('\n'));
+        setCipherText(lines.join('\n').trim());
     }, [text, key]);
 
     React.useEffect(() => {
@@ -24,22 +25,20 @@ const Skytale = () => {
             return;
         }
         if (cipherText.length === 0) {
-            if (text !== '') {
-                setText('');
-            }
+            if (text !== '') { setText(''); }
             return;
         }
-        const cLines = cipherText.split('\n');
-        if (cLines.length !== key) {
-            setKey(cLines.length);
-        }
+        let cLines = cipherText.split('\n');
+        cLines = cLines.map((l) => l.padEnd(Math.max(...(cLines.map(c => c.length))), ' '));
+        let cipher = cLines.join('').replace(/\t+/g, ' ');
+        const cols = Math.ceil(cipher.length / key);
+
+        cipher = cipher.padEnd(cols * key, ' ')
         let decrypt = '';
-        for (let i = 0; i < cLines[0].length; i++) {
-            cLines.forEach((line) => {
-                if (line.length > i) {
-                    decrypt += line.charAt(i);
-                }
-            });
+        for (let i = 0; i < cols; i++) {
+            for (let j = 0; j < key; j++) {
+                decrypt += cipher.charAt(i + j * cols);
+            }
         }
         setText(decrypt);
     }, [cipherText, key]);
@@ -73,12 +72,8 @@ const Skytale = () => {
                         placeholder="Schlüssel"
                         value={key || ''}
                         onChange={(e) => {
-                            if (source !== 'text') {
-                                setSource('text');
-                            }
                             setKey(Number.parseInt(e.target.value, 10));
                         }}
-                        disabled={source === 'cipher'}
                     />
                 </div>
                 <h4>Geheimtext</h4>
