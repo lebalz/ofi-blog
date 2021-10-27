@@ -214,6 +214,16 @@
       "from": "docs/Netzwerke-of/005-Sicherheit/",
       "to": "versioned_docs/version-24K/05-Netzwerke/006-Sicherheit",
       "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/01-Lernziele.md",
+      "to": "versioned_docs/version-24K/06-Kryptologie/01-Lernziele.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/02-Antike/",
+      "to": "versioned_docs/version-24K/06-Kryptologie/02-Anitke",
+      "ignore": []
     }
   ],
   "24L": [
