@@ -13,7 +13,7 @@ Sie haben bereits festgestellt, dass Python sehr pingelig ist was Tippfehler und
 Syntax Fehler sind kleine Fehler in einem Programm. Da das Programm nicht von einem Mensch, sondern von einem Computer "gelesen" und interpretiert wird, reicht ein Tippfehler, ein fehlendes Komma oder eine fehlende Klammer, dass das Programm nicht mehr verstanden werden kann.
 
 Die Python Sprache setzt sich aus folgenden Elementen zusammen:
-- **Schlüsselwörter** (*Statements*): Wörter oder Zeichen, die ohne Anführungszeichen und ohne Klammern geschrieben werden. z.B. `import`, `from` oder `for`, aber auch `:` oder `*`. Sie müssen in einer vordefinierten Reihenfolge vorliegen, damit diese von Python verstanden werden. *([↩ alle Schlüsselwörter](../Python/01-keywords.md))*
+- **Schlüsselwörter** (*Statements*): Wörter oder Zeichen, die ohne Anführungszeichen und ohne Klammern geschrieben werden. z.B. `import`, `from` oder `for`, aber auch `:` oder `*`. Sie müssen in einer vordefinierten Reihenfolge vorliegen, damit diese von Python verstanden werden. *([↩ alle Schlüsselwörter](../03-Python/01-keywords.md))*
 - **Befehle** (Unterprogramme, *Funktionen*): vordefinierte Befehle, die mit einer runden Klammer aufgerufen werden. z.B. `print('hello')`
 - **Variablen**: Namen, die einen Wert enthalten
 
