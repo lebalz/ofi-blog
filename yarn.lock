@@ -1610,6 +1610,16 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@lebalz/remark-admonitions@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@lebalz/remark-admonitions/-/remark-admonitions-1.2.3.tgz#19a8307bea3589739bbf3c738947c54b2aeaa9c5"
+  integrity sha512-BoDd8SpcFQH8Kf2j2jeF2PCqp6RnPy3QuYxspXWkE1aetfKZYwNoV/UqVfwju1Z/xrdDAwsoV5w+IK/FfrHdlA==
+  dependencies:
+    github-slugger "^1.4.0"
+    rehype-parse "^7.0.0"
+    unified "^9.2.0"
+    unist-util-visit "^2.0.2"
+
 "@mdx-js/loader@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-1.6.22.tgz#d9e8fe7f8185ff13c9c8639c048b123e30d322c4"
@@ -10800,7 +10810,7 @@ unified@^8.4.2:
     trough "^1.0.0"
     vfile "^4.0.0"
 
-unified@^9.0.0:
+unified@^9.0.0, unified@^9.2.0:
   version "9.2.2"
   resolved "https://registry.yarnpkg.com/unified/-/unified-9.2.2.tgz#67649a1abfc3ab85d2969502902775eb03146975"
   integrity sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==
