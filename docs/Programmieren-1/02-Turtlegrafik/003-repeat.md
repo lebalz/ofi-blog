@@ -177,7 +177,7 @@ from turtle import *
 
 ```
 
-> Trick: Verwenden Sie den Befehl [`goto(x, y)`](100-turtle-commands.md#goto) um die Turtle bei `-200, -200` zu positionieren.
+> Trick: Verwenden Sie den Befehl [`goto(x, y)`](100-turtle-commands.md#gotox-y) um die Turtle bei `-200, -200` zu positionieren.
 
 :::
 

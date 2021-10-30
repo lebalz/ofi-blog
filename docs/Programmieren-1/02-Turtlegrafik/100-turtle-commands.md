@@ -21,7 +21,7 @@ Dreht die Turtle `angle` Grad nach links.
 Dreht die Turtle `angle` Grad nach rechts.
 :::
 
-:::def `goto(x, y)` <div id="goto"></div>
+:::def `goto(x, y)`
 Bewegt die Turtle zur Position mit den Koordinaten (`x`, `y`).
 
 **Beispiel**: `goto(50, 100)`
