@@ -82,6 +82,11 @@ export default class Script {
       .forEach((src) => {
         src.setAttribute("type", "text/py_disabled");
       });
+    document.querySelectorAll('.brython-turtle-result').forEach((resContainer) => {
+      resContainer.childNodes.forEach((svg) => {
+        resContainer.removeChild(svg);
+      });
+    });
     const active = document.getElementById(
       DOM_ELEMENT_IDS.scriptSource(this.codeId)
     );

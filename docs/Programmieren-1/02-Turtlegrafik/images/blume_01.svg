@@ -1,0 +1,25 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="ofi_b47c6d09_11ca_4bff_b676_09cb0d7399bf_svg" width="83.531005859375" height="68.53102111816406" xmlns="http://www.w3.org/2000/svg" viewBox="245,186.46897888183594,83.531005859375,68.53102111816406">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="10" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="10" y1="0" x2="19.87688340595138" y2="-1.5643446504023086" style="stroke: black; stroke-width: 1;"></line>
+<line x1="19.87688340595138" y1="-1.5643446504023086" x2="29.38744856890291" y2="-4.654514594151783" style="stroke: black; stroke-width: 1;"></line>
+<line x1="29.38744856890291" y1="-4.654514594151783" x2="38.29751381078659" y2="-9.19441959154725" style="stroke: black; stroke-width: 1;"></line>
+<line x1="38.29751381078659" y1="-9.19441959154725" x2="46.38768375453606" y2="-15.072272114471982" style="stroke: black; stroke-width: 1;"></line>
+<line x1="46.38768375453606" y1="-15.072272114471982" x2="53.45875156640154" y2="-22.143339926337458" style="stroke: black; stroke-width: 1;"></line>
+<line x1="53.45875156640154" y1="-22.143339926337458" x2="59.33660408932627" y2="-30.233509870086934" style="stroke: black; stroke-width: 1;"></line>
+<line x1="59.33660408932627" y1="-30.233509870086934" x2="63.87650908672174" y2="-39.14357511197061" style="stroke: black; stroke-width: 1;"></line>
+<line x1="63.87650908672174" y1="-39.14357511197061" x2="66.96667903047121" y2="-48.65414027492215" style="stroke: black; stroke-width: 1;"></line>
+<line x1="66.96667903047121" y1="-48.65414027492215" x2="68.53102368087352" y2="-58.53102368087353" style="stroke: black; stroke-width: 1;"></line>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(68.53102368087352,-58.53102368087353) rotate(-180,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+
+def bogen():
+    for i in range(10):
+        forward(10)
+        left(9)
+bogen()</raw></metadata></svg>

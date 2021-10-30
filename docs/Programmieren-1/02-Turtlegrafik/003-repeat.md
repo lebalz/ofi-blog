@@ -3,7 +3,6 @@ title: Wiederholung 🔁
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
-import Flex from '@site/src/components/Flex';
 import Finding from "@site/src/components/Finding";
 
 
@@ -107,18 +106,13 @@ for i in range(4):
 
 Übersetzen Sie das Struktogramm in ein Python Programm. Was entsteht?
 
-<Flex>
-<div style={{flexGrow: 1, minWidth: '300px'}}>
-
+:::flex --min-width=300px --gap=30px
 ```py live_py title=wiederholung.py id=3d368326-dde6-414f-b494-ace1bfc2a687
 from turtle import *
 
 
 ```
-
-</div>
-<div style={{flexGrow: 1, flexShrink: 100}}></div>
-<div style={{flexGrow: 1, flexShrink: 0}}>
+***
 <Strukto program={[
     {
         type: 'repeat', 
@@ -130,8 +124,6 @@ from turtle import *
     },
     {type: 'step', code: 'Turtle verstecken'}
 ]} />
-</div>
-</Flex>
 :::
 
 

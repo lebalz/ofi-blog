@@ -1,11 +1,5 @@
 import * as React from "react";
 import styles from "./Strukto.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheckCircle,
-  faTimesCircle,
-  faQuestionCircle,
-} from "@fortawesome/free-solid-svg-icons";
 import clsx from "clsx";
 
 interface Base {

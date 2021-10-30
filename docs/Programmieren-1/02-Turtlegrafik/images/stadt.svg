@@ -1,0 +1,64 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="ofi_b5c82672_65db_4725_8ec9_7a80ac835b3d_svg" width="210" height="90" xmlns="http://www.w3.org/2000/svg" viewBox="245,170,210,90">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="50" y2="0" style="stroke: red; stroke-width: 1;"></line>
+<line x1="50" y1="0" x2="50" y2="-50" style="stroke: red; stroke-width: 1;"></line>
+<line x1="50" y1="-50" x2="0" y2="-50.00000000000001" style="stroke: red; stroke-width: 1;"></line>
+<line x1="0" y1="-50.00000000000001" x2="-9.184850993605149e-15" y2="-7.105427357601002e-15" style="stroke: red; stroke-width: 1;"></line>
+<line x1="-9.184850993605149e-15" y1="-7.105427357601002e-15" x2="50.00000000000001" y2="-50" style="stroke: red; stroke-width: 1;"></line>
+<line x1="50.00000000000001" y1="-50" x2="24.999999999999996" y2="-74.99999999999999" style="stroke: red; stroke-width: 1;"></line>
+<line x1="24.999999999999996" y1="-74.99999999999999" x2="1.4210854715202004e-14" y2="-49.99999999999997" style="stroke: red; stroke-width: 1;"></line>
+<line x1="1.4210854715202004e-14" y1="-49.99999999999997" x2="50.000000000000036" y2="7.105427357601002e-15" style="stroke: red; stroke-width: 1;"></line>
+<line x1="50.000000000000036" y1="7.105427357601002e-15" x2="100.00000000000003" y2="3.159836334054807e-14" style="stroke: blue; stroke-width: 1;"></line>
+<line x1="100.00000000000003" y1="3.159836334054807e-14" x2="100.00000000000006" y2="-49.99999999999997" style="stroke: blue; stroke-width: 1;"></line>
+<line x1="100.00000000000006" y1="-49.99999999999997" x2="50.00000000000006" y2="-50" style="stroke: blue; stroke-width: 1;"></line>
+<line x1="50.00000000000006" y1="-50" x2="50.000000000000114" y2="0" style="stroke: blue; stroke-width: 1;"></line>
+<line x1="50.000000000000114" y1="0" x2="100.00000000000011" y2="-50.000000000000014" style="stroke: blue; stroke-width: 1;"></line>
+<line x1="100.00000000000011" y1="-50.000000000000014" x2="75.00000000000016" y2="-75.00000000000006" style="stroke: blue; stroke-width: 1;"></line>
+<line x1="75.00000000000016" y1="-75.00000000000006" x2="50.000000000000156" y2="-50.00000000000006" style="stroke: blue; stroke-width: 1;"></line>
+<line x1="50.000000000000156" y1="-50.00000000000006" x2="100.00000000000006" y2="3.552713678800501e-14" style="stroke: blue; stroke-width: 1;"></line>
+<line x1="100.00000000000006" y1="3.552713678800501e-14" x2="150.00000000000006" y2="8.451300875389914e-14" style="stroke: green; stroke-width: 1;"></line>
+<line x1="150.00000000000006" y1="8.451300875389914e-14" x2="150.00000000000003" y2="-49.999999999999915" style="stroke: green; stroke-width: 1;"></line>
+<line x1="150.00000000000003" y1="-49.999999999999915" x2="100.00000000000003" y2="-49.99999999999997" style="stroke: green; stroke-width: 1;"></line>
+<line x1="100.00000000000003" y1="-49.99999999999997" x2="100.00000000000006" y2="2.842170943040401e-14" style="stroke: green; stroke-width: 1;"></line>
+<line x1="100.00000000000006" y1="2.842170943040401e-14" x2="150.00000000000026" y2="-49.99999999999978" style="stroke: green; stroke-width: 1;"></line>
+<line x1="150.00000000000026" y1="-49.99999999999978" x2="125.00000000000031" y2="-74.99999999999983" style="stroke: green; stroke-width: 1;"></line>
+<line x1="125.00000000000031" y1="-74.99999999999983" x2="100.0000000000003" y2="-49.999999999999844" style="stroke: green; stroke-width: 1;"></line>
+<line x1="100.0000000000003" y1="-49.999999999999844" x2="150.00000000000034" y2="9.947598300641403e-14" style="stroke: green; stroke-width: 1;"></line>
+<line x1="150.00000000000034" y1="9.947598300641403e-14" x2="200.00000000000034" y2="1.7295479095525522e-13" style="stroke: orange; stroke-width: 1;"></line>
+<line x1="200.00000000000034" y1="1.7295479095525522e-13" x2="200.00000000000034" y2="-49.99999999999983" style="stroke: orange; stroke-width: 1;"></line>
+<line x1="200.00000000000034" y1="-49.99999999999983" x2="150.00000000000034" y2="-49.99999999999973" style="stroke: orange; stroke-width: 1;"></line>
+<line x1="150.00000000000034" y1="-49.99999999999973" x2="150.00000000000017" y2="2.7000623958883807e-13" style="stroke: orange; stroke-width: 1;"></line>
+<line x1="150.00000000000017" y1="2.7000623958883807e-13" x2="200.00000000000003" y2="-49.99999999999987" style="stroke: orange; stroke-width: 1;"></line>
+<line x1="200.00000000000003" y1="-49.99999999999987" x2="175.00000000000009" y2="-74.99999999999994" style="stroke: orange; stroke-width: 1;"></line>
+<line x1="175.00000000000009" y1="-74.99999999999994" x2="150.00000000000006" y2="-49.99999999999997" style="stroke: orange; stroke-width: 1;"></line>
+<line x1="150.00000000000006" y1="-49.99999999999997" x2="200.0000000000001" y2="-7.105427357601002e-15" style="stroke: orange; stroke-width: 1;"></line>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="orange" fill="orange" stroke-width="1" opacity="1" transform="translate(200.0000000000001,-7.105427357601002e-15) rotate(-2970,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+speed(10)
+def haus():
+    for i in range(4):
+        forward(50)
+        left(90)
+    left(45)
+    forward(50 * 2**0.5)
+    for i in range(2):
+        left(90)
+        forward(50 / 2**0.5)
+    left(90)
+    forward(50 * 2**0.5)
+    left(45)
+
+color('red')
+haus()
+color('blue')
+haus()
+color('green')
+haus()
+color('orange')
+haus()
+</raw></metadata></svg>

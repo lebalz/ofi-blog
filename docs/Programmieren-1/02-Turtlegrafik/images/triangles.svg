@@ -1,0 +1,47 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="ofi_b1352293_d560_469c_a7f1_ff8d81c769b6_svg" width="110" height="96.6025390625" xmlns="http://www.w3.org/2000/svg" viewBox="195,201.69873046875,110,96.6025390625">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="50" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="50" y1="0" x2="25.00000000000001" y2="-43.30127018922194" style="stroke: black; stroke-width: 1;"></line>
+<line x1="25.00000000000001" y1="-43.30127018922194" x2="-1.0658141036401503e-14" y2="-1.4210854715202004e-14" style="stroke: black; stroke-width: 1;"></line>
+<polygon points="0.0,-0.0 50.0,-0.0 25.00000000000001,-43.30127018922194 -1.0658141036401503e-14,-1.4210854715202004e-14" style="display: block; fill: red; stroke: black; stroke-width: 1;" display="block" transform="translate(0,0) rotate(0,0,0)"></polygon>
+<line x1="-1.0658141036401503e-14" y1="-1.4210854715202004e-14" x2="-24.99999999999997" y2="-43.301270189221974" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-24.99999999999997" y1="-43.301270189221974" x2="-49.999999999999964" y2="-3.552713678800501e-14" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-49.999999999999964" y1="-3.552713678800501e-14" x2="3.552713678800501e-14" y2="-1.1034200805057945e-14" style="stroke: black; stroke-width: 1;"></line>
+<polygon points="-1.0658141036401503e-14,-1.4210854715202004e-14 -24.99999999999997,-43.301270189221974 -49.999999999999964,-3.552713678800501e-14 3.552713678800501e-14,-1.1034200805057945e-14" style="display: block; fill: green; stroke: black; stroke-width: 1;" display="block" transform="translate(0,0) rotate(0,0,0)"></polygon>
+<line x1="3.552713678800501e-14" y1="-1.1034200805057945e-14" x2="-25.000000000000043" y2="43.301270189221874" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-25.000000000000043" y1="43.301270189221874" x2="24.999999999999957" y2="43.30127018922191" style="stroke: black; stroke-width: 1;"></line>
+<line x1="24.999999999999957" y1="43.30127018922191" x2="-6.039613253960852e-14" y2="-1.4210854715202004e-14" style="stroke: black; stroke-width: 1;"></line>
+<polygon points="3.552713678800501e-14,-1.1034200805057945e-14 -25.000000000000043,43.301270189221874 24.999999999999957,43.30127018922191 -6.039613253960852e-14,-1.4210854715202004e-14" style="display: block; fill: blue; stroke: black; stroke-width: 1;" display="block" transform="translate(0,0) rotate(0,0,0)"></polygon>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="blue" stroke-width="1" opacity="1" transform="translate(-6.039613253960852e-14,-1.4210854715202004e-14) rotate(-1410,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+speed(5)
+
+fillcolor('red')
+begin_fill()
+for i in range(3):
+    forward(50)
+    left(120)
+end_fill()
+
+left(120)
+
+fillcolor('green')
+begin_fill()
+for i in range(3):
+    forward(50)
+    left(120)
+end_fill()
+
+left(120)
+
+fillcolor('blue')
+begin_fill()
+for i in range(3):
+    forward(50)
+    left(120)
+end_fill() </raw></metadata></svg>

@@ -93,10 +93,10 @@ const parseFlexItemOptions = (text = undefined, defaultClass = undefined) => {
         return opts;
     }
     const config = parseFlexOptions(text);
-    ['full', 'code'].forEach((k) => {
+    ['code'].forEach((k) => {
         if (k in config) {
             if (config[k]) {
-                opts.classes.push('card__image');
+                opts.classes.push('card__image', 'code__card');
             }
             delete config[k];
         }
