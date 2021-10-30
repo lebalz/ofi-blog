@@ -27,11 +27,15 @@ export const ScriptContext = React.createContext<Script>(undefined);
 
 const getDocument = (store: DocumentStore, props: Props) => {
   if (props.slim) {
+    let code = (props.code || '').trim();
+    if (code.length > 0) {
+      code = `${code} `;
+    }
     return new Script(
       store.getOrCreateDummyDoc<PyDoc>(props.webKey, 'code', {
-        code: props.code || "",
+        code: code,
       }),
-      props.code || ""
+      code
     );
   }
   return new Script(

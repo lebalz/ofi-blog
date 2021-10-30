@@ -1,0 +1,54 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="ofi_b11d905a_08e3_4f43_810f_c4c227bb5d46_svg" width="260" height="260" xmlns="http://www.w3.org/2000/svg" viewBox="120,120,260,260">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="-125" y2="0" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-125" y1="125" x2="125" y2="125" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="125" y1="125" x2="125.00000000000001" y2="125" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="125.00000000000001" y1="-125" x2="-124.99999999999999" y2="-125" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-124.99999999999999" y1="-125.00000000000003" x2="-125.00000000000003" y2="-125.00000000000003" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<polygon points="-125,125 125.0,125.0 125.00000000000001,-125.0 -124.99999999999999,-125.00000000000003 -125.00000000000003,124.99999999999997" style="display: block; fill: red; stroke: black; stroke-width: 1;" display="block" transform="translate(0,0) rotate(0,0,0)"></polygon>
+<line x1="-125.00000000000003" y1="124.99999999999997" x2="24.99999999999997" y2="124.99999999999997" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="24.99999999999997" y1="125.00000000000001" x2="24.999999999999986" y2="125.00000000000001" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="24.999999999999986" y1="75.00000000000001" x2="25" y2="75.00000000000001" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="25" y1="25.000000000000014" x2="75" y2="25.000000000000014" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="75" y1="25.000000000000025" x2="75.00000000000001" y2="25.000000000000025" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="75.00000000000001" y1="-24.999999999999975" x2="25.000000000000014" y2="-24.999999999999975" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="25.000000000000014" y1="-24.999999999999993" x2="25.00000000000003" y2="-24.999999999999993" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="25.00000000000003" y1="-75" x2="-24.99999999999997" y2="-75" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-24.99999999999997" y1="-75.00000000000001" x2="-24.999999999999993" y2="-75.00000000000001" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-24.999999999999993" y1="-25.000000000000014" x2="-75" y2="-25.000000000000014" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-75" y1="-25.000000000000032" x2="-75.00000000000003" y2="-25.000000000000032" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-75.00000000000003" y1="24.999999999999968" x2="-25.00000000000003" y2="24.999999999999968" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-25.00000000000003" y1="24.999999999999993" x2="-25.00000000000005" y2="24.999999999999993" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-25.00000000000005" y1="75" x2="24.99999999999995" y2="75" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<polygon points="24.999999999999986,75.00000000000001 25.0,25.000000000000014 75.0,25.000000000000025 75.00000000000001,-24.999999999999975 25.000000000000014,-24.999999999999993 25.00000000000003,-75.0 -24.99999999999997,-75.00000000000001 -24.999999999999993,-25.000000000000014 -75.0,-25.000000000000032 -75.00000000000003,24.999999999999968 -25.00000000000003,24.999999999999993 -25.00000000000005,75.0 24.99999999999995,75.00000000000003" style="display: block; fill: white; stroke: black; stroke-width: 1;" display="block" transform="translate(0,0) rotate(0,0,0)"></polygon>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="white" stroke-width="1" opacity="1" transform="translate(24.99999999999995,75.00000000000003) rotate(-900,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+
+speed(10)
+penup()
+goto(-125, -125)
+fillcolor("red")
+
+begin_fill()
+for i in range(4):
+    forward(250)
+    left(90)
+end_fill()
+forward(150)
+left(90)
+forward(50)
+fillcolor("white")
+begin_fill()
+for i in range(4):
+    forward(50)
+    right(90)
+    forward(50)
+    left(90)
+    forward(50)
+    left(90)
+end_fill()</raw></metadata></svg>

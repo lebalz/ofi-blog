@@ -31,7 +31,7 @@ forward(80)
 
 :::note `from turtle import *`
 
-Damit Python die Befehle zum zeichnen verwenden kann, müssen diese zuerst aus einem Modul **importiert** werden. Damit beim Importieren nicht jeder einzelne Befehl angegeben werden muss, wird das Zeichen `*` verwendet welches alle verfügbaren Befehle importiert.
+Damit Python die Befehle zum zeichnen verwenden kann, müssen diese zuerst aus einer Bibliothek **importiert** werden. Damit beim Importieren nicht jeder einzelne Befehl angegeben werden muss, wird das Zeichen `*` verwendet welches alle verfügbaren Befehle importiert.
 :::
 
 :::note Befehle: `forward`, `left`
@@ -40,7 +40,7 @@ Alle Befehle in Python sind nach demselben Schema aufgebaut:
 
 - einen Befehlsnamen
 - runde Klammern
-- _optional_ in den runden Klammern eine Liste\* von Parametern, die auch leer sein darf.
+- _optional_ in den runden Klammern eine Auflistung\* von Parametern, die auch leer sein darf.
 
 ```
        forward(90)
@@ -126,7 +126,7 @@ forward(30)
 
 <div className="small-table no-table-header">
 
-|        |                                                                                 |
+|             |                                                                                 |
 | :---------- | :------------------------------------------------------------------------------ |
 | `yellow`    | <div style={{width: '8em', height: '1em', backgroundColor: 'yellow'}}></div>    |
 | `gold`      | <div style={{width: '8em', height: '1em', backgroundColor: 'gold'}}></div>      |

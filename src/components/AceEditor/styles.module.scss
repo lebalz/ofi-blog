@@ -54,6 +54,14 @@
   flex-shrink: 1;
 }
 
+:global .flex {
+  :local {
+    .playgroundContainer {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .brythonCodeBlock {
   display: flex;
   flex-wrap: wrap;
