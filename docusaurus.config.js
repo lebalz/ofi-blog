@@ -103,6 +103,10 @@ module.exports = {
       darkTheme: require('prism-react-renderer/themes/vsDark'),
     },
     hideableSidebar: true,
+    gtag: {
+      trackingID: 'G-6C8Q8MDTFC',
+      anonymizeIP: true
+    },
   },
   presets: [
     [
@@ -204,6 +208,7 @@ module.exports = {
         }
       };
     },
+    '@docusaurus/plugin-google-gtag'
   ],
   themes: [
   ],
