@@ -2,6 +2,7 @@
 title: Codierung
 ---
 
+import Answer from '@site/src/components/Answer'
 import {TextEditor, PixelEditor} from "@site/src/components/VisualizationTools/Pentacode";
 
 # Codierung
@@ -52,6 +53,8 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 | `?`       |   30 | `11110` |
 | `@`       |   31 | `11111` |
 :::
+
+<Answer type="text" web_key="fc6f5120-4883-4ac2-b7c4-528919c0ff87" placeholder="Notizen..." />
 
 ## Editor
 

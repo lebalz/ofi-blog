@@ -105,5 +105,6 @@ In der Realität ist es besonders wichtig, dass die Verschlüsselungsfunktion s�
 Aus diesem Grund arbeiten aktuelle Verschlüsselungsfunktionen von Blockchiffren in **mehreren Runden**.
 :::
 
+<Answer type="text" web_key="6777c273-f2c3-4387-bee1-609a6a0be2c0" placeholder="Notizen..." />
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=685616)

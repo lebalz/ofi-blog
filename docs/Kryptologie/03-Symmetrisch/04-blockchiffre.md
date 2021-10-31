@@ -83,4 +83,6 @@ Verschlüsseln Sie den folgenden Text mit der XOR-Blockchiffre:
 
 :::
 
+<Answer type="text" web_key="bcdeeca1-2a54-4cf3-9187-849376053664" placeholder="Notizen..." />
+
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=894637)

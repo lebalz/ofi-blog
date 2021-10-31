@@ -98,6 +98,7 @@ Als Schlüssel haben Sie das Wort `MACHT` abgemacht.
 
 :::
 
+<Answer type="text" web_key="b978535b-b455-4a60-aa44-8a32aac4a899" placeholder="Notizen..."  />
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=353789)
 [^2]: Quelle: [Germundsson, Roger; Weisstein, Eric](http://mathworld.wolfram.com/XOR.html)

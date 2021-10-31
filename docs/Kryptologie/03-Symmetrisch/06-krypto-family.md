@@ -2,6 +2,8 @@
 title: Krypto-Familie
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # Krypto-Familie
 
 :::cards --cols=3  --minWidth=10em --gap=2em
@@ -28,5 +30,7 @@ Wird eine vertrauenswürdige dritte Stelle verwendet, wird Trent (engl. für **t
 Bei sämtlichen bisher betrachteten Verfahren handelte es sich um symmetrische Verfahren, d.h. zum Verschlüsseln und Entschlüsseln wird derselbe Schlüssel verwendet:
 
 ![](images/symm-encryption.svg)
+
+<Answer type="text" web_key="e8752baa-a4cb-4376-9917-badd6ca1fd1b" placeholder="Notizen..." />
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=932192)
