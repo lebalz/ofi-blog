@@ -37,6 +37,6 @@ Wie im Kapitel «Codes und Daten» besprochen, gibt es dazu eine Vielzahl von Co
 
 Für die folgenden Beispiele verwenden wir den etwas kürzeren Pentacode.
 
-<Answer type="text" web_key="e1cd3339-5234-42b3-90cd-9e777d74a88e" placeholder="Notizen..." />
+<Answer type="text" webKey="e1cd3339-5234-42b3-90cd-9e777d74a88e" placeholder="Notizen..." />
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=4464)

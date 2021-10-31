@@ -76,7 +76,21 @@ const pageId = () => {
 };
 
 const getDocument = (store: DocumentStore, props: Props) => {
+  if (!store.isLoggedIn) {
+    return store.getOrCreateDummyDoc<AnswerDoc>(
+      props.webKey,
+      props.type,
+      {
+        value: DefaultValue(props) as any,
+        type: props.type,
+        size: props.type === 'array' ? props.size : undefined
+      }
+    )
+  }
   const legacyHandler = () => {
+    if (!props.id) {
+      return undefined;
+    }
     const pid = pageId();
     const old = getItem<{ value: string | string[]; expiry: number }>(
       props.id,
