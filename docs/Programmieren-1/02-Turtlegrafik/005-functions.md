@@ -131,7 +131,7 @@ Die Definition alleine führt das Programm noch nicht aus. Dazu muss der Befehl 
 
 1. Erzeugen Sie ein Programm gemäss folgendem Struktogramm:
 
-:::cards
+:::cards --min-width=200px
 
 <Strukto program={[
     {
@@ -162,7 +162,7 @@ from turtle import *
 
 :::aufgabe Aufgabe 1 – Sechsecke
 
-:::cards
+:::cards --min-width=200px
 ***--code --flex-grow=2
 ```py live_py title=sechseck.py id=6d4c82e3-ecaa-486e-a756-3a1a1a8a70fc
 from turtle import *
@@ -188,7 +188,7 @@ Nach jedem Sechseck muss `36°` gedreht werden.
 
 :::aufgabe Aufgabe 2 – Häuser
 
-:::cards
+:::cards --min-width=200px
 ***--code --flex-grow=2
 ```py live_py title=stadt.py id=b5c82672-65db-4725-8ec9-7a80ac835b3d
 from turtle import *
@@ -210,7 +210,7 @@ from turtle import *
 :::aufgabe Aufgabe 3 – Blume
 Sie werden in dieser Aufgabe unter der Verwendung mehrerer Unterprogramme eine komplexe Aufgabe schrittweise lösen.
 
-:::cards
+:::cards --min-width=200px
 ***--code --flex-grow=2
 ```py live_py title=blume.py id=b47c6d09-11ca-4bff-b676-09cb0d7399bf
 from turtle import *

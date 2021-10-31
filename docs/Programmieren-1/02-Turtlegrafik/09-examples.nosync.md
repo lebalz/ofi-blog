@@ -1,3 +1,11 @@
+---
+title: Beispiele Unterprogramme
+---
+
+# Beispiele Unterprogramme
+
+Weitere Beispiele...
+
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
 :::cards --min-width=250px
