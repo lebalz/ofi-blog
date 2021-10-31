@@ -76,6 +76,11 @@
       "from": "docs/Kryptologie/02-Antike/",
       "to": "versioned_docs/version-24f/06-Kryptologie/02-Antike",
       "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/03-Symmetrisch/",
+      "to": "versioned_docs/version-24f/06-Kryptologie/03-Symmetrisch",
+      "ignore": []
     }
   ],
   "24i": [
@@ -153,7 +158,12 @@
     },
     {
       "from": "docs/Kryptologie/02-Antike/",
-      "to": "versioned_docs/version-24i/06-Kryptologie/02-Antike/",
+      "to": "versioned_docs/version-24i/06-Kryptologie/02-Antike",
+      "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/03-Symmetrisch/",
+      "to": "versioned_docs/version-24i/06-Kryptologie/03-Symmetrisch",
       "ignore": []
     }
   ],
@@ -234,6 +244,11 @@
       "from": "docs/Kryptologie/02-Antike/",
       "to": "versioned_docs/version-24K/06-Kryptologie/02-Anitke",
       "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/03-Symmetrisch/",
+      "to": "versioned_docs/version-24K/06-Kryptologie/03-Symmetrisch",
+      "ignore": []
     }
   ],
   "24L": [
@@ -311,7 +326,7 @@
     },
     {
       "from": "docs/Kryptologie/02-Antike/",
-      "to": "versioned_docs/version-24L/06-Kryptologie/02-Antike/",
+      "to": "versioned_docs/version-24L/06-Kryptologie/02-Antike",
       "ignore": []
     }
   ],
@@ -391,6 +406,11 @@
     {
       "from": "docs/Kryptologie/02-Antike/",
       "to": "versioned_docs/version-24o/06-Kryptologie/02-Antike",
+      "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/03-Symmetrisch/",
+      "to": "versioned_docs/version-24o/06-Kryptologie/03-Symmetrisch",
       "ignore": []
     }
   ],
