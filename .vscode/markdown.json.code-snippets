@@ -23,7 +23,7 @@
 	},
 	"answer": {
 		"prefix": "<Answer />",
-		"body": "<Answer type=\"$1\" web_key=\"$2\" /",
+		"body": "<Answer type=\"$1\" webKey=\"$2\" /",
 		"description": "import a component from components"
 	},
 	
