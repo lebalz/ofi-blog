@@ -207,8 +207,7 @@ module.exports = {
           return [`${staticPath}/p/*.{md, html}`];
         }
       };
-    },
-    '@docusaurus/plugin-google-gtag'
+    }
   ],
   themes: [
   ],
