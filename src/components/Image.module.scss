@@ -1,3 +1,11 @@
+html[data-theme='dark'] {
+    figure.container {
+        >img {
+            background: var(--ifm-color-primary-contrast-foreground);
+        }
+    }    
+}
+
 figure.container {
     display: inline-block;
     position: relative;

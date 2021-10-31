@@ -95,7 +95,7 @@ const TextAnswer = observer((props: TextProps) => {
             maxWidth: 1024, // default
             maxHeight: 1024, // default
             imageType: "image/jpeg", // default
-            debug: true, // default
+            debug: false, // default
             suppressErrorLogging: false, // default
           },
         }}
