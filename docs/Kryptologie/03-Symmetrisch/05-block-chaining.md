@@ -33,7 +33,7 @@ Die Entschlüsselung funktioniert analog: Der Geheimtext wird wiederum in Blöck
 
 :::aufgabe Aufgabe ECB-Modus
 1. Verschlüsseln Sie den Text `EINE SEHR KLEINE SENSATION` mit dem Schlüssel `ZUSE`.  
-<Answer type="string" webKey="52638af8-d4af-4f19-ab55-8de24a8bac94" solution="@-. ZFVMHUXI@-. ZFVKITGLU" sanitizer={(val) => val.trim().toUpperCase()} />
+<Answer type="string" webKey="52638af8-d4af-4f19-ab55-8de24a8bac94" solution="@-. ZFVMHUXI@-. ZFVKITGLU," sanitizer={(val) => val.trim().toUpperCase()} />
 
 2. Schauen Sie sich den Klartext und den Geheimtext genau an.
 3. Überlegen Sie sich, welche Schwächen der ECB-Modus hat.
