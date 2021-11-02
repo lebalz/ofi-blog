@@ -2,10 +2,12 @@ import { faCircleNotch, faClipboard, faClipboardCheck, faCross, faEllipsisH, faT
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { toBlob } from 'html-to-image';
+import { Options } from 'html-to-image/lib/options';
 import * as React from 'react';
 
 interface Props {
     children: JSX.Element;
+    options?: Options
 }
 
 type CopyState = 'none' | 'spin' | 'ready' | 'copied' | 'error';
@@ -26,7 +28,7 @@ const CopyClass: {[key in CopyState]: string} = {
     spin: 'button--secondary'
 }
 
-const CopyImageToClipboard = ({ children }: Props) => {
+const CopyImageToClipboard = ({ children, options }: Props) => {
     const [blob, setBlob] = React.useState<Blob | undefined>(undefined);
     const [copyState, setCopyState] = React.useState<CopyState>('none');
     const ref = React.useRef<HTMLDivElement>(null);
@@ -55,14 +57,13 @@ const CopyImageToClipboard = ({ children }: Props) => {
                     CopyClass[copyState]
                 )}
                 disabled={copyState === 'spin'}
-                style={{ float: 'right' }}
                 onClick={() => {
                     if (ref.current === null) {
                         return;
                     }
                     if (copyState === 'none') {
                         setCopyState('spin');
-                        return toBlob(ref.current, {backgroundColor: 'white'}).then((blob) => {
+                        return toBlob(ref.current, options).then((blob) => {
                             setBlob(blob);
                             setCopyState('ready');
                         })
@@ -90,7 +91,7 @@ const CopyImageToClipboard = ({ children }: Props) => {
             >
                 <FontAwesomeIcon icon={CopyIcon[copyState]} />
             </button>
-            <div ref={ref} style={{ overflow: 'auto', width: 'max(100%, 500px)' }}>
+            <div ref={ref} className="copy-container" >
                 {children}
             </div>
         </React.Fragment>

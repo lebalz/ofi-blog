@@ -95,27 +95,33 @@ const FrequencyAnalysis = () => {
                             : 'Nur vorkommende Buchstaben'}
                     </label>
                 </div>
-                <CopyImageToClipboard>
-                    <ResponsiveContainer width="100%" height={400}>
-                        <BarChart
-                            data={data}
-                            width={500}
-                            height={300}
-                            margin={{
-                                top: 5,
-                                right: 30,
-                                left: 0,
-                                bottom: 5,
-                            }}
-                        >
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="char" />
-                            <YAxis unit="%" name="foo" />
-                            <Bar dataKey="count" fill="#ffba00" />
-                            <Tooltip formatter={(value, name, props) => [`${value} %`, 'Häufigkeit']}/>
-                        </BarChart>
-                    </ResponsiveContainer>
-                </CopyImageToClipboard>
+                <div style={{ maxWidth: '100%', overflow: 'auto' }}>
+                    <div style={{ width: 'max(100%, 500px)' }}>
+                        <CopyImageToClipboard options={{backgroundColor: 'white'}}>
+                            <ResponsiveContainer width="100%" height={400}>
+                                <BarChart
+                                    data={data}
+                                    width={500}
+                                    height={300}
+                                    margin={{
+                                        top: 5,
+                                        right: 30,
+                                        left: 0,
+                                        bottom: 5,
+                                    }}
+                                >
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="char" />
+                                    <YAxis unit="%" name="foo" />
+                                    <Bar dataKey="count" fill="#ffba00" />
+                                    <Tooltip
+                                        formatter={(value, name, props) => [`${value} %`, 'Häufigkeit']}
+                                    />
+                                </BarChart>
+                            </ResponsiveContainer>
+                        </CopyImageToClipboard>
+                    </div>
+                </div>
             </div>
         </div>
     );

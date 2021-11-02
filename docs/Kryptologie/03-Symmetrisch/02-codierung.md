@@ -63,3 +63,5 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 ## Schwarzweiss-Bild
 
 <PixelEditor />
+
+<Answer type="text" webKey="7bd8c2e9-3ae4-4601-814f-2d2128040cdd" />

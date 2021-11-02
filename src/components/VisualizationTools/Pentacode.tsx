@@ -3,16 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { toBlob, toPng } from 'html-to-image';
 import * as React from 'react';
+import CopyImageToClipboard from '../CopyImageToClipboard';
 import styles from './Pentacode.module.scss';
 
 /**
  * @url: https://rothe.io/crypto/teaching/2-modern/2-1-Kryptologie-Blockchiffre.pdf
  */
 
-
 export const sanitizePentaString = (text: string) => {
-    return text.toUpperCase().replace(/\s/g, ' ').replace(/[^ABCDEFGHIJKLMNOPQRSTUVWXYZ,-.\?@\s]/g, '')
-}
+    return text
+        .toUpperCase()
+        .replace(/\s/g, ' ')
+        .replace(/[^ABCDEFGHIJKLMNOPQRSTUVWXYZ,-.\?@\s]/g, '');
+};
 
 export const PENTA_TABLE = {
     [' ']: '00000',
@@ -168,8 +171,6 @@ const TextEditor = () => {
 };
 
 const PixelEditor = () => {
-    const ref = React.useRef<HTMLDivElement>(null);
-    const [showCopied, setShowCopied] = React.useState(false);
     const [penta, setPenta] = React.useState('00000 00000 00000 00000 00000');
     const [pentaCells, setPentaCells] = React.useState([
         [0, 0, 0, 0, 0],
@@ -202,65 +203,44 @@ const PixelEditor = () => {
         setPenta(pentaCells.map((row) => row.join('')).join(' '));
     }, [pentaCells]);
 
-
-    React.useEffect(() => {
-        if (!showCopied) {
-            return;
-        }
-        const timeoutId = setTimeout(() => setShowCopied(false), 2000);
-        return () => clearTimeout(timeoutId);
-    }, [showCopied]);
-
-    const onCopy = React.useCallback(() => {
-        if (ref.current === null) {
-            return;
-        }
-        toBlob(ref.current, { backgroundColor: 'white', canvasWidth:  5 * 10, canvasHeight: pentaCells.length * 10})
-            .then((blob) => {
-                return navigator.clipboard.write([
-                    new ClipboardItem({
-                        ['image/png']: blob as unknown as Promise<Blob>,
-                    }),
-                ]);
-            })
-            .then(() => {
-                setShowCopied(true);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }, [ref]);
-
     return (
         <div className={clsx('hero', 'shadow--lw', styles.container)}>
             <div className="container">
                 <p className="hero__subtitle">Pixel-Editor</p>
                 <div className={styles.interactive}>
                     <div className={clsx(styles.pixelEditor)}>
-                        <div ref={ref}>
-                            {pentaCells.map((row, rowIdx) => {
-                                return (
-                                    <div className={clsx(styles.row)} key={rowIdx}>
-                                        {row.map((cell, idx) => {
-                                            return (
-                                                <span
-                                                    className={clsx(
-                                                        styles.cell,
-                                                        cell === 0 ? styles.off : styles.on
-                                                    )}
-                                                    key={idx}
-                                                    onClick={() => {
-                                                        const newCells = deepCopy(pentaCells);
-                                                        newCells[rowIdx][idx] = 1 - newCells[rowIdx][idx];
-                                                        setPentaCells(newCells);
-                                                    }}
-                                                />
-                                            );
-                                        })}
-                                    </div>
-                                );
-                            })}
-                        </div>
+                        <CopyImageToClipboard
+                            options={{
+                                backgroundColor: 'white',
+                                canvasWidth: 5 * 10,
+                                canvasHeight: pentaCells.length * 10,
+                            }}
+                        >
+                            <>
+                                {pentaCells.map((row, rowIdx) => {
+                                    return (
+                                        <div className={clsx(styles.row)} key={rowIdx}>
+                                            {row.map((cell, idx) => {
+                                                return (
+                                                    <span
+                                                        className={clsx(
+                                                            styles.cell,
+                                                            cell === 0 ? styles.off : styles.on
+                                                        )}
+                                                        key={idx}
+                                                        onClick={() => {
+                                                            const newCells = deepCopy(pentaCells);
+                                                            newCells[rowIdx][idx] = 1 - newCells[rowIdx][idx];
+                                                            setPentaCells(newCells);
+                                                        }}
+                                                    />
+                                                );
+                                            })}
+                                        </div>
+                                    );
+                                })}
+                            </>
+                        </CopyImageToClipboard>
                         <div className={styles.actions}>
                             <button
                                 className="button button--outline button--secondary button--sm"
@@ -273,17 +253,6 @@ const PixelEditor = () => {
                                 onClick={() => setPentaCells([...pentaCells.slice(0, -1)])}
                             >
                                 －
-                            </button>
-
-                            <button
-                                className={clsx('button', 'button--outline', 'button--sm', showCopied ? 'button--success' : 'button--primary', styles.copy)}
-                                onClick={onCopy}
-                            >
-                                {showCopied ? (
-                                    <FontAwesomeIcon icon={faClipboardCheck}/>
-                                ) : (
-                                    <FontAwesomeIcon icon={faClipboard}/>
-                                )}
                             </button>
                         </div>
                     </div>
