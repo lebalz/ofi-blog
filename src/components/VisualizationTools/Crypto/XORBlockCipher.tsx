@@ -100,18 +100,22 @@ const XORBlockCipher = () => {
                     </button>
                 </div>
                 <h4>Klartext</h4>
-                <textarea
-                    className={clsx(styles.input)}
-                    value={text}
-                    onChange={(e) => {
-                        setSource('text');
-                        const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
-                        setText(sanitizePentaString(e.target.value));
-                        setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
-                    }}
-                    rows={5}
-                    placeholder="Klartext"
-                ></textarea>
+                <div className={styles.inputContainer}>
+                    <textarea
+                        className={clsx(styles.input)}
+                        value={text}
+                        onFocus={() => setSource('text')}
+                        onChange={(e) => {
+                            setSource('text');
+                            const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                            setText(sanitizePentaString(e.target.value));
+                            setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
+                        }}
+                        rows={5}
+                        placeholder="Klartext"
+                    ></textarea>
+                    {source === 'text' && <div className={styles.active}></div>}
+                </div>
                 <div className={styles.stringInputContainer}>
                     <h4>
                         <label htmlFor="block-chain-key">Schlüssel</label>
@@ -166,10 +170,9 @@ const XORBlockCipher = () => {
                                         (char) => char.length === 1
                                     );
                                     const rand = shuffle(
-                                        Array(Math.floor(key.length / alphabet.length) + 2).fill('').reduce(
-                                            (prev, curr) => [...prev, ...alphabet],
-                                            []
-                                        )
+                                        Array(Math.floor(key.length / alphabet.length) + 2)
+                                            .fill('')
+                                            .reduce((prev, curr) => [...prev, ...alphabet], [])
                                     );
                                     setIv(rand.slice(0, key.length).join(''));
                                 }}
@@ -180,18 +183,22 @@ const XORBlockCipher = () => {
                     </div>
                 )}
                 <h4>Geheimtext</h4>
-                <textarea
-                    className={clsx(styles.input)}
-                    value={cipherText}
-                    onChange={(e) => {
-                        setSource('cipher');
-                        const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
-                        setCipherText(sanitizePentaString(e.target.value));
-                        setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
-                    }}
-                    rows={5}
-                    placeholder="XOR Verschlüsselter Geheimtext"
-                ></textarea>
+                <div className={styles.inputContainer}>
+                    <textarea
+                        className={clsx(styles.input)}
+                        value={cipherText}
+                        onFocus={() => setSource('cipher')}
+                        onChange={(e) => {
+                            setSource('cipher');
+                            const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                            setCipherText(sanitizePentaString(e.target.value));
+                            setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
+                        }}
+                        rows={5}
+                        placeholder="XOR Verschlüsselter Geheimtext"
+                    ></textarea>
+                    {source === 'cipher' && <span className={styles.active}></span>}
+                </div>
             </div>
         </div>
     );

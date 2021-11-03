@@ -20,6 +20,18 @@ html[data-theme='dark'] {
         font-size: var(--ifm-code-font-size);
         border-style: none;
     }
+    .inputContainer {
+        position: relative;
+        .active {
+            position: absolute;
+            top: 0.3em;
+            right: 0.3em;
+            width: 0.4em;
+            height: 0.4em;
+            border-radius: 0.2em;
+            background: var(--ifm-color-success);
+        }
+    }
     .modes {
         margin-bottom: 1em;
     }

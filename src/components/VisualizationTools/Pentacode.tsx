@@ -1,10 +1,8 @@
-import { faClipboard, faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
-import { toBlob, toPng } from 'html-to-image';
 import * as React from 'react';
 import CopyImageToClipboard from '../CopyImageToClipboard';
 import styles from './Pentacode.module.scss';
+import inpStyles from './Crypto/styles.module.scss';
 
 /**
  * @url: https://rothe.io/crypto/teaching/2-modern/2-1-Kryptologie-Blockchiffre.pdf
@@ -123,25 +121,21 @@ const toText = (penta: string): string[] => {
 const TextEditor = () => {
     const [text, setText] = React.useState('');
     const [penta, setPenta] = React.useState('');
-    const [source, setSource] = React.useState('');
+    const [source, setSource] = React.useState<'text' | 'penta'>('text');
 
     React.useEffect(() => {
         // prevent trigger-circle, when source was updated from penta
-        if (source === 'penta') {
-            setSource('');
+        if (source !== 'text') {
             return;
         }
-        setSource('text');
         setPenta(toPenta(text).join(' '));
     }, [text]);
 
     React.useEffect(() => {
         // prevent trigger-circle, when source was updated from text
-        if (source === 'text') {
-            setSource('');
+        if (source !== 'penta') {
             return;
         }
-        setSource('penta');
         setText(toText(penta).join(''));
     }, [penta]);
 
@@ -150,21 +144,29 @@ const TextEditor = () => {
             <div className="container">
                 <p className="hero__subtitle">Pentacode</p>
                 <h4>Klartext</h4>
-                <textarea
-                    placeholder="Klartext eingeben"
-                    className={clsx(styles.input)}
-                    value={text}
-                    onChange={(e) => setText(e.target.value.toUpperCase())}
-                    rows={5}
-                ></textarea>
+                <div className={styles.inputContainer}>
+                    <textarea
+                        onFocus={() => setSource('text')}
+                        placeholder="Klartext eingeben"
+                        className={clsx(styles.input)}
+                        value={text}
+                        onChange={(e) => setText(e.target.value.toUpperCase())}
+                        rows={5}
+                    ></textarea>
+                    {source === 'text' && <div className={styles.active}></div>}
+                </div>
                 <h4>Pentacode</h4>
-                <textarea
-                    placeholder="Binären Pentacode eingeben"
-                    className={clsx(styles.input)}
-                    value={penta}
-                    onChange={(e) => setPenta(e.target.value.replace(/[^01\s]/g, ''))}
-                    rows={5}
-                ></textarea>
+                <div className={styles.inputContainer}>
+                    <textarea
+                        onFocus={() => setSource('penta')}
+                        placeholder="Binären Pentacode eingeben"
+                        className={clsx(styles.input)}
+                        value={penta}
+                        onChange={(e) => setPenta(e.target.value.replace(/[^01\s]/g, ''))}
+                        rows={5}
+                    ></textarea>
+                    {source === 'penta' && <div className={styles.active}></div>}
+                </div>
             </div>
         </div>
     );

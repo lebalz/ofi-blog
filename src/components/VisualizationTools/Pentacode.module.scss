@@ -17,7 +17,18 @@ html[data-theme="dark"] {
         font-family: var(--ifm-font-family-monospace);
         font-size: var(--ifm-code-font-size);
     }
-    
+    .inputContainer {
+        position: relative;
+        .active {
+            position: absolute;
+            top: 0.3em;
+            right: 0.3em;
+            width: 0.4em;
+            height: 0.4em;
+            border-radius: 0.2em;
+            background: var(--ifm-color-success);
+        }
+    }
     .interactive {
         display: flex;
         justify-content: space-between;
