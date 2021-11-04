@@ -7,6 +7,7 @@ steps:
 - name: website
   image: node:16.11.1
   commands:
+  - apt-get update && apt-get install rsync -y
   - mkdir -p $HOME/.ssh
   - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
   - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
