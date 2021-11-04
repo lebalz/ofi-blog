@@ -1,3 +1,4 @@
+---
 kind: pipeline
 type: docker
 name: default
@@ -15,7 +16,7 @@ steps:
   - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
   - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
   - chmod 0600 $HOME/.ssh/id_rsa
-  - npm i
+  - npm install
   - npm run deploy
   environment:
     USE_SSH: true
