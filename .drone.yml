@@ -1,10 +1,5 @@
 kind: pipeline
 type: docker
-trigger:
-  ref:
-  - refs/heads/main
-  - refs/tags/**
-  - refs/pull/**
 - name: Website
   image: node:16.11.1
   when:
