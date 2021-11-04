@@ -1,11 +1,14 @@
 kind: pipeline
 type: docker
 trigger:
-  branch:
-  - main
+  ref:
+  - refs/heads/main
+  - refs/tags/**
+  - refs/pull/**
 - name: Website
   image: node:16.11.1
   when:
+    branches: [main]
     event: [push, pull_request]
   commands:
     - mkdir -p $HOME/.ssh
