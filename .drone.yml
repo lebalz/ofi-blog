@@ -1,17 +1,19 @@
 kind: pipeline
 type: docker
+trigger:
+  branch:
+  - main
 - name: Website
   image: node:16.11.1
   when:
-    branches: [main]
     event: [push, pull_request]
   commands:
-    - mkdir -p $HOME/.ssh
-    - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
-    - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
-    - chmod 0600 $HOME/.ssh/id_rsa
-    - npm i
-    - npm run deploy
+  - mkdir -p $HOME/.ssh
+  - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
+  - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
+  - chmod 0600 $HOME/.ssh/id_rsa
+  - npm i
+  - npm run deploy
   environment:
     USE_SSH: true
     GIT_USER: $DRONE_COMMIT_AUTHOR
