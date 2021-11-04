@@ -20,6 +20,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'lebalz', // Usually your GitHub org/user name.
   projectName: 'ofi-blog', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
   trailingSlash: false,
   themeConfig: {
     navbar: {
