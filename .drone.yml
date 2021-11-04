@@ -1,11 +1,10 @@
-# .drone.yml
 kind: pipeline
 type: docker
 trigger:
   event:
     - tag
 - name: Website
-  image: node:16
+  image: node:16.11.1
   commands:
     - mkdir -p $HOME/.ssh
     - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
