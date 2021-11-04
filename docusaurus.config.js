@@ -103,11 +103,7 @@ module.exports = {
       theme: require('prism-react-renderer/themes/vsLight'),
       darkTheme: require('prism-react-renderer/themes/vsDark'),
     },
-    hideableSidebar: true,
-    gtag: {
-      trackingID: 'G-6C8Q8MDTFC',
-      anonymizeIP: true
-    },
+    hideableSidebar: true
   },
   presets: [
     [
@@ -218,6 +214,15 @@ module.exports = {
       integrity:
         'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
       crossorigin: 'anonymous',
+    },
+  ],
+  scripts: [
+    // Object format.
+    {
+      src: 'https://umami.gbsl.website/umami.js',
+      ['data-website-id']: '8fc2386c-353f-487d-b58b-1e5c1f4301d7',
+      async: true,
+      defer: true
     },
   ],
 };
