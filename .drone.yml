@@ -3,11 +3,10 @@ type: docker
 trigger:
   branch:
   - main
-  event:
-  - push
-  - pull_request
 - name: Website
   image: node:16.11.1
+  when:
+    event: [push, pull_request]
   commands:
     - mkdir -p $HOME/.ssh
     - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
