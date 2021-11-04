@@ -7,18 +7,23 @@ steps:
 - name: website
   image: node:16.11.1
   commands:
-  - echo "Start... $HOME"
   - mkdir -p $HOME/.ssh
   - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
   - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
   - chmod 0600 $HOME/.ssh/id_rsa
-  - npm install
+  - yarn install --frozen-lockfile
+  - npm run sync
   - npm run deploy
   environment:
     USE_SSH: true
     GIT_USER: $DRONE_COMMIT_AUTHOR
     GITHUB_PRIVATE_KEY:
       from_secret: "git_deploy_private_key"
+  when:
+    event:
+      include:
+      - push
+      - pull_request
 
 trigger:
   branch:
