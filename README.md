@@ -53,8 +53,9 @@ yarn build
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ## Deployment
-
-Setup github actions to deploy your page on each push to the main branch.
+Either
+- Setup github actions to deploy your page on each push to the main branch.
+- or setup a drone runner to build the project and deploy it to gh-pages.
 
 ### Custom Domain
 
