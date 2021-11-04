@@ -1,12 +1,15 @@
 kind: pipeline
 type: docker
-trigger:
-  branch:
-  - main
+name: default
+
+steps:
 - name: Website
   image: node:16.11.1
   when:
-    event: [push, pull_request]
+    event:
+      include:
+      - push
+      - pull_request
   commands:
   - mkdir -p $HOME/.ssh
   - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
@@ -19,3 +22,7 @@ trigger:
     GIT_USER: $DRONE_COMMIT_AUTHOR
     GITHUB_PRIVATE_KEY:
       from_secret: "git_deploy_private_key"
+
+trigger:
+  branch:
+  - main
