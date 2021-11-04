@@ -11,7 +11,6 @@ trigger:
     - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
     - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
     - chmod 0600 $HOME/.ssh/id_rsa
-    - cd website
     - npm i
     - npm run deploy
   environment:
