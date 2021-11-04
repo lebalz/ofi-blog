@@ -1,8 +1,11 @@
 kind: pipeline
 type: docker
 trigger:
+  branch:
+  - main
   event:
-    - tag
+  - push
+  - pull_request
 - name: Website
   image: node:16.11.1
   commands:
