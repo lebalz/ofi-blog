@@ -7,8 +7,8 @@ import { useStore } from "../../stores/hooks";
 import { Props, Types } from ".";
 import { getItem, removeItem } from "../../utils/storage";
 import { sanitizeId } from "../../utils/sanitizers";
+import ReactDOMServer from 'react-dom/server'
 
-const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 export interface AnswerTextDoc {
   value: React.ReactNode;
   type: "text";
@@ -28,39 +28,15 @@ export interface AnswerArrayDoc {
 
 type AnswerDoc = AnswerStringDoc | AnswerTextDoc | AnswerArrayDoc;
 
-const DUMMY_DOC = (type: Types) => {
-  switch (type) {
-    case "string":
-    case "text":
-      return new Document<AnswerDoc>(
-        undefined as DocumentStore,
-        "",
-        type,
-        () => undefined,
-        { value: "", type: type },
-        true
-      );
-    case "array":
-      return new Document<AnswerDoc>(
-        undefined as DocumentStore,
-        "",
-        type,
-        () => undefined,
-        { value: [""], type: "array", size: 1 },
-        true
-      );
-  }
-};
-
 export const DocumentContext =
   React.createContext<Document<AnswerDoc>>(undefined);
 
-const DefaultValue = (props: Props) => {
+const DefaultValue = (props: {childNodes?: React.ReactNode } & Props) => {
   switch (props.type) {
     case "string":
       return props.default || "";
     case "text":
-      return props.default || "";
+      return props.default || props.childNodes ? ReactDOMServer.renderToString(props.childNodes) : "";
     case "array":
       return Array(props.size).fill("");
   }
@@ -127,7 +103,7 @@ const getDocument = (store: DocumentStore, props: Props) => {
   );
 };
 
-const AnswerWrapper = observer((props: Props) => {
+const AnswerWrapper = observer((props: {childNodes?: React.ReactNode } & Props) => {
   const documentStore = useStore("documentStore");
   const [document] = React.useState(getDocument(documentStore, props));
   if (!useIsBrowser()) {

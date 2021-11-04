@@ -173,7 +173,8 @@ html[data-theme='dark'] {
 .admonition.admonition-def {
     --ifm-alert-border-color: rgb(30, 255, 0);
     --ifm-alert-background-color: rgba(0, 0, 0, 0.226);
-    .admonition-heading {
+    >.admonition-content>.admonition-heading,
+    >.admonition-heading {
         code {
             color: rgb(19, 165, 0);
             text-transform: none;
@@ -184,9 +185,11 @@ html[data-theme='dark'] {
             }
             font-size: 120%;
         }
-        .admonition-icon svg {
-            color: #2b971d;
-            display: none;
+        .admonition-icon {
+            margin-right: 0;
+            svg {
+                display: none;
+            }
         }
     }
 }

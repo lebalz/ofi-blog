@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="352px" height="272px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g>
+        <path d="M192,24C192,19.585 188.415,16 184,16L72,16C67.585,16 64,19.585 64,24L64,40C64,44.415 67.585,48 72,48L184,48C188.415,48 192,44.415 192,40L192,24Z" style="fill:rgb(144,202,249);stroke:black;stroke-width:1px;"/>
+        <text x="102.795px" y="39.756px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">ASCII</text>
+    </g>
+    <g>
+        <path d="M288,119C288,114.585 284.415,111 280,111L168,111C163.585,111 160,114.585 160,119L160,135C160,139.415 163.585,143 168,143L280,143C284.415,143 288,139.415 288,135L288,119Z" style="fill:rgb(144,202,249);stroke:black;stroke-width:1px;"/>
+        <text x="175.583px" y="132.054px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">zwei Bytes</text>
+    </g>
+    <g>
+        <g>
+            <g>
+                <path d="M153.636,140.618L160,138.497L157.879,144.861L157.879,140.618L153.636,140.618Z"/>
+                <path d="M128,170.497C128,170.497 150.735,147.762 157.879,140.618" style="fill:none;stroke:black;stroke-width:1px;"/>
+                <text x="127.17px" y="157.872px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">0</text>
+                <text x="125.217px" y="212.872px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">1</text>
+                <circle cx="120" cy="178.497" r="8" style="fill:rgb(255,204,128);stroke:black;stroke-width:1px;"/>
+                <path d="M157.879,212.133L160,218.497L153.636,216.376L157.879,216.376L157.879,212.133Z"/>
+                <path d="M128,186.497C128,186.497 150.735,209.232 157.879,216.376" style="fill:none;stroke:black;stroke-width:1px;"/>
+            </g>
+            <g>
+                <circle cx="168" cy="218.619" r="8" style="fill:rgb(255,204,128);stroke:black;stroke-width:1px;"/>
+                <path d="M201.452,201.164L208,202.619L202.907,206.985L205.09,203.347L201.452,201.164Z"/>
+                <path d="M176,210.619C176,210.619 197.201,205.319 205.09,203.347" style="fill:none;stroke:black;stroke-width:1px;"/>
+                <path d="M202.907,230.253L208,234.619L201.452,236.074L205.09,233.892L202.907,230.253Z"/>
+                <path d="M176,226.619C176,226.619 197.201,231.919 205.09,233.892" style="fill:none;stroke:black;stroke-width:1px;"/>
+                <text x="175.17px" y="206.375px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">0</text>
+                <text x="173.822px" y="244.994px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">1</text>
+            </g>
+        </g>
+    </g>
+    <g>
+        <path d="M336,232C336,227.585 332.415,224 328,224L216,224C211.585,224 208,227.585 208,232L208,248C208,252.415 211.585,256 216,256L328,256C332.415,256 336,252.415 336,248L336,232Z" style="fill:rgb(144,202,249);stroke:black;stroke-width:1px;"/>
+        <text x="228.357px" y="245.054px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">vier Bytes</text>
+    </g>
+    <g>
+        <path d="M336,184C336,179.585 332.415,176 328,176L216,176C211.585,176 208,179.585 208,184L208,200C208,204.415 211.585,208 216,208L328,208C332.415,208 336,204.415 336,200L336,184Z" style="fill:rgb(144,202,249);stroke:black;stroke-width:1px;"/>
+        <text x="225.978px" y="197.054px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">drei Bytes</text>
+    </g>
+    <g>
+        <path d="M105.636,89.121L112,87L109.879,93.364L109.879,89.121L105.636,89.121Z"/>
+        <path d="M80,119C80,119 102.735,96.265 109.879,89.121" style="fill:none;stroke:black;stroke-width:1px;"/>
+        <text x="79.17px" y="106.375px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">0</text>
+        <text x="77.217px" y="161.375px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">1</text>
+        <circle cx="72" cy="127" r="8" style="fill:rgb(255,204,128);stroke:black;stroke-width:1px;"/>
+        <path d="M109.879,160.636L112,167L105.636,164.879L109.879,164.879L109.879,160.636Z"/>
+        <path d="M80,135C80,135 102.735,157.735 109.879,164.879" style="fill:none;stroke:black;stroke-width:1px;"/>
+    </g>
+    <g>
+        <path d="M239.946,72C239.946,67.585 236.362,64 231.946,64L120,64C115.585,64 112,67.585 112,72L112,88C112,92.415 115.585,96 120,96L231.946,96C236.362,96 239.946,92.415 239.946,88L239.946,72Z" style="fill:rgb(144,202,249);stroke:black;stroke-width:1px;"/>
+        <text x="123.019px" y="85.054px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">Fortsetzung</text>
+    </g>
+    <g>
+        <path d="M57.636,42.121L64,40L61.879,46.364L61.879,42.121L57.636,42.121Z"/>
+        <path d="M32,72C32,72 54.735,49.265 61.879,42.121" style="fill:none;stroke:black;stroke-width:1px;"/>
+        <text x="31.17px" y="59.375px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">0</text>
+        <text x="29.217px" y="114.375px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">1</text>
+        <circle cx="24" cy="80" r="8" style="fill:rgb(255,204,128);stroke:black;stroke-width:1px;"/>
+        <path d="M61.879,113.636L64,120L57.636,117.879L61.879,117.879L61.879,113.636Z"/>
+        <path d="M32,88C32,88 54.735,110.735 61.879,117.879" style="fill:none;stroke:black;stroke-width:1px;"/>
+    </g>
+</svg>

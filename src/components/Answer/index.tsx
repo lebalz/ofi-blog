@@ -45,7 +45,7 @@ export type Props = StringProps | ArrayProps | TextProps;
 const Answer = observer((props: Props) => {
   const msalStore = useStore("msalStore");
   return (
-    <AnswerWrapper {...props}>
+    <AnswerWrapper {...props} childNodes={props.children}>
       <div data--web-key={props.webKey}>
         <LoginAlert />
         {msalStore.loggedIn && <LegacyResolver />}

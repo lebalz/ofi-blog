@@ -441,6 +441,11 @@
       "from": "docs/Programmieren-1/03-Python/",
       "to": "versioned_docs/version-25h/04-Programmieren-1/03-Python",
       "ignore": []
+    },
+    {
+      "from": "docs/Codierung/",
+      "to": "versioned_docs/version-25h/05-Codierung",
+      "ignore": []
     }
   ]
 }

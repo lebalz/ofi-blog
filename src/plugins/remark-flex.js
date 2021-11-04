@@ -46,6 +46,16 @@ const parseFlexOptions = (config) => {
         ALIASES
     );
 
+    if (!('classes' in css)) {
+        css.classes = [];
+    }
+
+    if ('className' in css) {
+        const klasses = css['className'].split(/[,;]/g)
+        css.classes.push(...klasses);
+        delete config['className'];
+    }
+
     if (!('flexBasis' in css)) {
         const { columns, minWidth, gap } = css;
         const cols = columns ? Number.parseInt(columns, 10) : undefined;
@@ -109,11 +119,6 @@ const parseFlexItemOptions = (text = undefined, defaultClass = undefined) => {
             delete config[k];
         }
     });
-    if ('className' in config) {
-        klasses = config['className'].split(/[,;]/g)
-        opts.classes.push(...klasses);
-        delete config['className'];
-    }
     ['empty', 'spacer', 'placeholder'].forEach((k) => {
         if (k in config) {
             if (config[k]) {
@@ -248,10 +253,12 @@ function attacher(options) {
         // parse the content in block mode
         const exit = this.enterBlock();
         exit();
+        const klasses = wrapperStyle.classes;
+        delete wrapperStyle['classes'];
         // build the nodes for the full markup
         const flex = element(
             "div",
-            ["flex", `flex-${keyword}`],
+            ["flex", `flex-${keyword}`, ...klasses],
             childNodes,
             wrapperStyle
         );
