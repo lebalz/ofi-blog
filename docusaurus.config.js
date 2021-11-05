@@ -141,6 +141,9 @@ module.exports = {
             },
             '25h': {
               banner: 'none'
+            },
+            '24w': {
+              banner: 'none'
             }
           },
           admonitions: false,

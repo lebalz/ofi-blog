@@ -24,6 +24,12 @@ const CourseList: Course[] = [
       '24L',
       '24o',
     ]
+  },
+  {
+    title: 'WMS',
+    classes: [
+      '24w'
+    ]
   }
 ];
 
