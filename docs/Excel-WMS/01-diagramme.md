@@ -6,6 +6,9 @@ import Answer from '@site/src/components/Answer'
 
 # Excel Diagramme
 
+
+Daten können alles Mögliche sein: Messwerte, Ergebnisse von Umfragen, Beobachtungen und Zählungen. Nicht alle diese Daten lassen sich überhaupt mit Hilfe von Zahlen erfassen. Man sollte sich daher klar machen, dass es verschiedene Typen von Daten gibt. Daten sind entweder **quantitativ** (alles, was sich zählen und messen und überhaupt in Zahlen ausdrücken lässt) oder **qualitativ** (alles, was man zwar beobachten und ordnen, aber nicht in Form von Zahlen angeben kann). 
+
 ## Kreisdiagramm
 
 ![--width=350px](images/diagramm-kreis.png)
@@ -19,7 +22,7 @@ Kreisdiagramme werden für die Darstellung verschiedener Anteile an einem Ganzen
 
 ### Vorgehen
 
-- Eine Tabelle mit der Kategorie und der effektiven Anzahl erzeugen. **Die Summe aller Kategorien muss der Summe der Datenpunkte _n_ entsprechen!**  
+- Eine Tabelle mit der Kategorie und der effektiven Anzahl erzeugen. **Die Summe aller Kategorien muss der Stichprobengrösse _n_ entsprechen!**  
   Hilfreiche Feldfunktionen:
   - `=ZÄHLENWENN(A1:A12;"Schwarz")` -> Zählt, wie oft der Wert "Schwarz" im Bereich `A1:A12` vorkommt
   - `=ZÄHLENWENNS(A1:A12; ">=10"; A1:A12; "<20")` -> Zählt, wie viele Werte im Bereich `A1:A12` zwischen 10 und 20 liegen. Bemerke, dass der Bereich zweimal angegeben werden muss.
@@ -32,7 +35,7 @@ Kreisdiagramme werden für die Darstellung verschiedener Anteile an einem Ganzen
 - Rechtsklick auf eine weisse Fläche des Diagramms > `Als Bild speichern...` 
 
 :::finding
-- Die Anzahl Datenpunkte **n** muss angegeben werden
+- Die Stichprobengrösse **n** muss angegeben werden (=Anzahl der Datenpunkte)
 - Die Prozentwerte der einzelnen Kreissegmente müssen bei Diagrammen mit weniger als 10 Segmenten beschriftet werden.
 - Entweder in einer Legende oder direkt im Segment muss die Kategorie ersichtlich sein.
 :::
@@ -49,22 +52,20 @@ Liniendiagramme werden für die Visualisierung von Entwicklungen im zeitlichen V
 
 ## Säulendiaramm
 
+![--width=400px](images/diagramm-saeulen.png)
+
 Säulendiagramme kommen bei der Darstellung von Grössenvergleichen innerhalb eines Zeitraums vor.
+Das Säulendiagramm eignet sich besonders, um wenige Ausprägungen (bis ca. 15) zu veranschaulichen. Bei mehr Kategorien leidet die Anschaulichkeit und es sind Liniendiagramme zu bevorzugen. Auch im Falle von metrisch stetigen Daten eignet sich das Säulendiagramm nicht, es ist ein Histogramm zu bevorzugen.
+
 <Answer type="text" webKey="c4e2959c-ebd0-4635-b53c-60fa4ef7e301" placeholder="✍️ Notizen..." />
 
 ## Balkendiagramm
 
-Balkendiagramme werden zur Darstellung von Rangfolgen verwendet.
+![--width=400px](images/diagramm-balken.png)
+
+Das Balkendiagramm ist dem Säulendiagramm sehr ähnlich. Es entspricht einem Säulendiagramm mit vertauschten Achsen. So werden aus den vertikalen Säulen horizontale Balken und es wächst bei zunehmender Stichprobengrösse in die Länge und nicht in die Breite. Besonders gut sind Balkendiagramme für die Darstellung von Rangfolgen geeignet.
+
 <Answer type="text" webKey="6cdbdad0-872b-4590-ad80-fb83182a36d7" placeholder="✍️ Notizen..." />
-
-## Boxplot
-
-Ein Box-Plot besteht immer aus einem Rechteck, genannt Box, und zwei Linien, die dieses Rechteck verlängern. Diese Linien werden als „Antenne" bezeichnet und werden durch einen Strich abgeschlossen. Der Strich in der Box repräsentiert den **Median** der Verteilung. Als **Ausreisser** werden Daten bezeichnet, die mehr als das 1.5-fache des Interquartilsabstands (der Abstand vom oberen zum unteren Quartil) vom untern bzw. oberen Quartil entfernt sind.
-
-Ein Beispiel: 8, 10, 10, 12, 17, 20, 30, 67
-
-
-
 
 :::aufgabe Geeignetes Diagramm
 Bestimmen Sie das geeignete Diagramm für die gegebene Ausgangslage.
@@ -76,13 +77,13 @@ Bestimmen Sie das geeignete Diagramm für die gegebene Ausgangslage.
 <Answer type="string" webKey="8fb7cc30-2565-415f-b227-60f35b5dcd95" solution="Balkendiagramm" select={['', 'Balkendiagramm', 'Liniendiagramm', 'Säulendiagramm', 'Kreisdiagramm']} />
 
 3. Sie wollen in einem Diagramm die Tageshöchst- und -tiefsttemperaturen des letzten Monats aufzeigen.
-<Answer type="string" webKey="71077fa7-e0de-4eef-b71b-7d9d05661fac" solution="Säulendiagramm" select={['', 'Balkendiagramm', 'Liniendiagramm', 'Säulendiagramm', 'Kreisdiagramm']} />
+<Answer type="string" webKey="71077fa7-e0de-4eef-b71b-7d9d05661fac" solution="Liniendiagramm" select={['', 'Balkendiagramm', 'Liniendiagramm', 'Säulendiagramm', 'Kreisdiagramm']} />
 
 4. Sie wollen grafisch darstellen, wie hoch der TV-Konsum jedes Lernenden in Ihrer Klasse während einer Woche ist.
-<Answer type="string" webKey="4a081b61-f7f6-4bc3-995c-9d9d14b101d9" solution="Liniendiagramm" select={['', 'Balkendiagramm', 'Liniendiagramm', 'Säulendiagramm', 'Kreisdiagramm']} />
+<Answer type="string" webKey="4a081b61-f7f6-4bc3-995c-9d9d14b101d9" solution="Balkendiagramm" select={['', 'Balkendiagramm', 'Liniendiagramm', 'Säulendiagramm', 'Kreisdiagramm']} />
 
 5. Sie haben den Durchschnitt des täglichen TV-Konsums Ihrer Klasse ermittelt, und zwar während den letzten sieben Tagen. Nun visualisieren Sie das Resultat.
-<Answer type="string" webKey="ae5eb985-4e04-413b-a55c-8570387ef199" solution="Balkendiagramm" select={['', 'Balkendiagramm', 'Liniendiagramm', 'Säulendiagramm', 'Kreisdiagramm']} />
+<Answer type="string" webKey="ae5eb985-4e04-413b-a55c-8570387ef199" solution="Säulendiagramm" select={['', 'Balkendiagramm', 'Liniendiagramm', 'Säulendiagramm', 'Kreisdiagramm']} />
 
 6. Sie haben bei einer Klassenumfrage die Meinungen Ihrer Mitlernenden über das Angebot der Schulmensa eingeholt. Sie wollen das Resultat in einem Diagramm darstellen.
 <Answer type="string" webKey="2309e16e-9d86-42a7-8e3b-2267dc4ef94a" solution="Kreisdiagramm" select={['', 'Balkendiagramm', 'Liniendiagramm', 'Säulendiagramm', 'Kreisdiagramm']} />
