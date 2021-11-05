@@ -451,7 +451,7 @@
   "24w": [
     {
       "from": "docs/Excel-WMS/",
-      "to": "versioned_docs/version-24w/01-Excel",
+      "to": "versioned_docs/version-24w/02-Excel",
       "ignore": []
     }
   ]
