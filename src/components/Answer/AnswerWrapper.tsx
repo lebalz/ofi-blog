@@ -7,7 +7,7 @@ import { useStore } from "../../stores/hooks";
 import { Props, Types } from ".";
 import { getItem, removeItem } from "../../utils/storage";
 import { sanitizeId } from "../../utils/sanitizers";
-import ReactDOMServer from 'react-dom/server'
+// import ReactDOMServer from 'react-dom/server'
 
 export interface AnswerTextDoc {
   value: React.ReactNode;
@@ -36,7 +36,8 @@ const DefaultValue = (props: {childNodes?: React.ReactNode } & Props) => {
     case "string":
       return props.default || "";
     case "text":
-      return props.default || props.childNodes ? ReactDOMServer.renderToString(props.childNodes) : "";
+      return props.default || "";
+      // return props.default || props.childNodes ? ReactDOMServer.renderToString(props.childNodes) : "";
     case "array":
       return Array(props.size).fill("");
   }
