@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[4079],{41891:function(e){e.exports=JSON.parse('{"pluginId":"default","version":"24w","label":"24w","banner":null,"badge":true,"className":"docs-version-24w","isLast":false,"docsSidebars":{"version-24w/sidebar":[{"type":"link","label":"Home 24w","href":"/24w/home"}]}}')}}]);
