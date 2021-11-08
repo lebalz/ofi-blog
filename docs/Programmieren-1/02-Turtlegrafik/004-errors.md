@@ -61,6 +61,11 @@ forward(100)
 from turtle import *
 goto(100 50)
 ```
+
+:::finding Hinweis
+Was macht der Befehl `goto`? Schauen Sie die Funktionsweise unter [Turtle Befehle#goto(x, y)](100-turtle-commands.md#gotox-y) nach
+:::
+
 ***
 ```py live_py title=error3.py id=8f6d207b-397a-4c54-9812-f49956ccfef8
 from turtle import *
@@ -108,6 +113,10 @@ print('15.3 aufgerundet =', ceyl(15.3))
 print('15.8 abgerundet =', flor(15.8))
 
 ```
+
+:::finding Hinweis
+Suchen Sie die fehlerhaften Befehle in Kombination mit `Python` auf Google, bspw. `python ceyl`.
+:::
 :::
 
 
@@ -124,12 +133,13 @@ Python erwartet nach jedem Doppelpunkt `:`, dass ein **eingerückter** Codeblock
 ### Beispiel
 
 :::cards --min-width=250px
-**Nicht eingerückt***
+*** --backgroundColor=var(--ifm-color-danger-lightest)
+**Nicht eingerückt**
 ```py live_py slim
 for i in range(5):
 print('Hallo')
 ```
-***
+*** --backgroundColor=var(--ifm-color-success-lightest)
 **Korrektur**
 ```py live_py slim
 for i in range(5):
@@ -138,13 +148,14 @@ for i in range(5):
 :::
 
 :::cards --min-width=250px
+*** --backgroundColor=var(--ifm-color-danger-lightest)
 **Falsch eingerückt**
 ```py live_py slim
 print('Hallo')
  print('wie')
 print('gehts?')
 ```
-***
+*** --backgroundColor=var(--ifm-color-success-lightest)
 **Korrektur**
 ```py live_py slim
 print('Hallo')
