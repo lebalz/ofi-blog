@@ -9,6 +9,8 @@ import { observer } from "mobx-react-lite";
 import LegacyResolver from "./LegacyResolver";
 import OfflineChecker from "./OfflineChecker";
 
+export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();
+
 export type Types = "array" | "string" | "text";
 
 export interface Base {
@@ -22,6 +24,8 @@ export interface TextProps extends Base {
   type: "text";
   placeholder?: string;
   default?: string | React.ReactNode;
+  monospace?: boolean;
+  reduced?: boolean;
 }
 
 export interface ArrayProps extends Base {
@@ -37,7 +41,11 @@ export interface StringProps extends Base {
   default?: string;
   select?: string[];
   solution?: string;
+  labelWidth?: string;
+  width?: string; /* input width */
   sanitizer?: (val: string) => string;
+  checker?: (val: string | undefined) => boolean;
+  disabled?: boolean;
 }
 
 export type Props = StringProps | ArrayProps | TextProps;

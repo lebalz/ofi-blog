@@ -7,6 +7,18 @@ import {TextProps, Types} from '.';
 
 var ReactQuill: any | undefined = undefined;
 
+const TOOLBAR_BASE = [
+  ["bold", "italic", "underline"],
+];
+
+const TOOLBAR = [
+  ...TOOLBAR_BASE,
+  [{ header: [1, 2, 3, false] }],
+  ["bold", "italic", "underline"], // toggled buttons
+  [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+  [{ list: "ordered" }, { list: "bullet" }],
+]
+
 const loadQuill = (callback) => {
   if (ReactQuill) {
     return callback();
@@ -77,6 +89,7 @@ const TextAnswer = observer((props: TextProps) => {
         readOnly={!doc.loaded || doc.isReadonly}
         className={clsx(
           styles.quillAnswer,
+          props.monospace && styles.monospace,
           showQuillToolbar ? undefined : "disable-toolbar"
         )}
         value={doc.loaded ? doc.data.value || "" : 'Laden...'}
@@ -84,12 +97,7 @@ const TextAnswer = observer((props: TextProps) => {
           onChange(content);
         }}
         modules={{
-          toolbar: [
-            [{ header: [1, 2, 3, false] }],
-            ["bold", "italic", "underline"], // toggled buttons
-            [{ color: [] }, { background: [] }], // dropdown with defaults from theme
-            [{ list: "ordered" }, { list: "bullet" }],
-          ],
+          toolbar: props.reduced ? TOOLBAR_BASE : TOOLBAR,
           imageCompress: {
             quality: 0.5, // default
             maxWidth: 1024, // default

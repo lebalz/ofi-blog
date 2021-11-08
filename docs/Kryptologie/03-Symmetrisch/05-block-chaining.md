@@ -76,7 +76,7 @@ Auf den ersten Blick erstaunlich ist die Tatsache, dass die Entschlüsselung mit
 2. Achten Sie wiederum auf die Blöcke, die im Klartext übereinstimmen. Was passiert jetzt?
 3. Wähle verschiedene Initialisierungsvektoren. Wie unterscheiden sich die Resultate?
 
-<Answer type="text" webKey="d98093d9-0718-4b04-9ac3-f2ea9617153b" />
+<Answer type="text" webKey="d98093d9-0718-4b04-9ac3-f2ea9617153b" monospace />
 
 :::
 

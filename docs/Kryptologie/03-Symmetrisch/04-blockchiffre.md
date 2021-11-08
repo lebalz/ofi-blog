@@ -74,7 +74,7 @@ Verschlüsseln Sie den folgenden Text mit der XOR-Blockchiffre:
 
 ### Vorgehenseweise
 
-<Answer type="text" webKey="3bce79ec-5813-4d29-a7c5-3fec156bd472" />
+<Answer type="text" webKey="3bce79ec-5813-4d29-a7c5-3fec156bd472" monospace />
 
 ### Lösung
 

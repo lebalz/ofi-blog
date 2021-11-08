@@ -50,6 +50,7 @@ html[data-theme="dark"] {
   input {
     padding: 4px;
     width: 100%;
+    font-family: inherit;
   }
   label {
     padding-right: 1em;
@@ -85,6 +86,12 @@ html[data-theme="dark"] {
   border: 1px solid var(--ifm-color-primary);
   &.edited {
     border: 2px solid var(--ifm-color-success);
+  }
+  &.monospace {
+    :global .ql-editor {
+      font-family: Monaco, Courier New, monospace;
+      font-size: 11px;
+    }
   }
   margin-bottom: 1.2em;
 }
