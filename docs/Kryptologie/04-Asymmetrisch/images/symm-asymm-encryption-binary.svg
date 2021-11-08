@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="480px" height="280px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Calque-1" serif:id="Calque 1">
+        <g id="Klartext">
+            <rect x="29.649" y="36.26" width="85.986" height="134.127" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,-59.9844,-50.2837)">
+                <text x="94.224px" y="102.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01010010</text>
+                <text x="94.224px" y="118.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11001001</text>
+                <text x="94.224px" y="134.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01011110</text>
+                <text x="94.224px" y="150.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10001010</text>
+                <text x="94.224px" y="166.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11101101</text>
+                <text x="94.224px" y="182.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01010111</text>
+                <text x="94.224px" y="198.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01011010</text>
+                <text x="94.224px" y="214.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10100101</text>
+            </g>
+            <text x="51.905px" y="26.052px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Klartext</text>
+        </g>
+        <g id="Sitzungsschlüssel">
+            <rect x="192.104" y="110.802" width="85.986" height="22.704" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <text x="196.694px" y="126.768px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11010110</text>
+            <text x="187.36px" y="146.594px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Sitzungsschlüssel</text>
+        </g>
+        <g id="Sitzungsschlüssel1" serif:id="Sitzungsschlüssel">
+            <rect x="191.045" y="221.311" width="85.986" height="22.704" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <text x="195.636px" y="237.566px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">00001011</text>
+            <text x="177.302px" y="262.391px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">öﬀentlicher Schlüssel</text>
+        </g>
+        <g id="Geheimtext">
+            <g id="symm.-Geheimtext" serif:id="symm. Geheimtext">
+                <rect x="359.474" y="36.26" width="85.986" height="134.127" style="fill:rgb(65,167,209);stroke:black;stroke-width:1px;"/>
+                <g transform="matrix(1,0,0,1,269.841,-50.2837)">
+                    <text x="94.224px" y="102.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01010010</text>
+                    <text x="94.224px" y="118.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11001001</text>
+                    <text x="94.224px" y="134.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01011110</text>
+                    <text x="94.224px" y="150.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10001010</text>
+                    <text x="94.224px" y="166.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11101101</text>
+                    <text x="94.224px" y="182.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01010111</text>
+                    <text x="94.224px" y="198.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01011010</text>
+                    <text x="94.224px" y="214.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10100101</text>
+                </g>
+                <text x="371.005px" y="26.199px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Geheimtext</text>
+            </g>
+            <g id="asymm.-Geheimtext" serif:id="asymm. Geheimtext">
+                <rect x="359.474" y="173.737" width="85.986" height="22.704" style="fill:rgb(116,191,61);stroke:black;stroke-width:1px;"/>
+                <text x="364.065px" y="189.703px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11010110</text>
+            </g>
+            <rect x="354.583" y="30.993" width="95.768" height="171.027" style="fill:none;stroke:black;stroke-width:1px;"/>
+        </g>
+        <path d="M347.474,68.225L359.474,74.225L347.474,80.225C350.474,77.225 350.474,71.225 347.474,68.225Z"/>
+        <path d="M283.346,74.225L349.874,74.225" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M347.474,178.734L359.474,184.734L347.474,190.734C350.474,187.734 350.474,181.734 347.474,178.734Z"/>
+        <path d="M283.346,184.734L349.874,184.734" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M174.448,68.225L186.448,74.225L174.448,80.225C177.448,77.225 177.448,71.225 174.448,68.225Z"/>
+        <path d="M115.634,74.225L176.848,74.225" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M227.646,101.51L233.646,89.51L239.646,101.51C236.646,98.51 230.646,98.51 227.646,101.51Z"/>
+        <path d="M233.646,110.802L233.646,99.11" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M227.646,212.019L233.646,200.019L239.646,212.019C236.646,209.019 230.646,209.019 227.646,212.019Z"/>
+        <path d="M233.646,221.311L233.646,209.619" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M227.646,157.449L233.646,169.449L239.646,157.449C236.646,160.449 230.646,160.449 227.646,157.449Z"/>
+        <path d="M233.646,159.849L233.646,148.157" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <g id="symm.-Verschlüsselung" serif:id="symm. Verschlüsselung">
+            <rect x="186.448" y="58.94" width="96.898" height="30.57" style="fill:rgb(65,167,209);stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,-73.7441,-31.4489)">
+                <text x="272.011px" y="102.51px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">symmetrische</text>
+                <text x="265.323px" y="114.903px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">V<tspan x="272.665px 279.339px " y="114.903px 114.903px ">er</tspan>schlüsselung</text>
+            </g>
+        </g>
+        <g id="asymm.-Verschlüsselung" serif:id="asymm. Verschlüsselung">
+            <rect x="185.197" y="169.449" width="96.898" height="30.57" style="fill:rgb(116,191,61);stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,-74.9956,79.06)">
+                <text x="268.674px" y="102.51px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">asymmetrische</text>
+                <text x="265.323px" y="114.903px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">V<tspan x="272.665px 279.339px " y="114.903px 114.903px ">er</tspan>schlüsselung</text>
+            </g>
+        </g>
+    </g>
+    <g id="layer1">
+    </g>
+</svg>
