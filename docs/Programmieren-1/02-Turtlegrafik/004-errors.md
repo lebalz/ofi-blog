@@ -123,17 +123,35 @@ Python erwartet nach jedem Doppelpunkt `:`, dass ein **eingerückter** Codeblock
 
 ### Beispiel
 
-Nicht eingerückt:
+:::cards --min-width=250px
+**Nicht eingerückt***
 ```py live_py slim
 for i in range(5):
 print('Hallo')
 ```
-Falsch eingerückt
+***
+**Korrektur**
+```py live_py slim
+for i in range(5):
+    print('Hallo')
+```
+:::
+
+:::cards --min-width=250px
+**Falsch eingerückt**
 ```py live_py slim
 print('Hallo')
  print('wie')
 print('gehts?')
 ```
+***
+**Korrektur**
+```py live_py slim
+print('Hallo')
+print('wie')
+print('gehts?')
+```
+:::
 
 :::aufgabe Fehler finden
 Finden und lösen Sie die entstandenen Fehler, so dass die Ausgabe
@@ -146,7 +164,7 @@ lautet.
 
 ```py live_py title=errors.py id=0538f258-5b10-4dec-be08-644e1f1df6a8
 for i in range(2):
-print('Hallo', i)
+print('Hallo zum', i)
  print('Ende')
 ```
 :::
@@ -175,7 +193,7 @@ for i in range(4):
     forward(20)
     left(90)
 ```
-Auf Zeile 4 fehlen die runden Klammern - `pendown` wird nicht ausgeführt!
+Auf Zeile 4 fehlen die runden Klammern - `pendown` wird nicht ausgeführt! Fehler beheben: Den Befehl mit `pendown()` aufrufen.
 
 
 ---
