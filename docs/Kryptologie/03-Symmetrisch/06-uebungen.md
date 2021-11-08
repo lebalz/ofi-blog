@@ -123,5 +123,5 @@ Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 :::
 
 Entschlüsselter Text (Buchstaben-Form)
-<Answer type="string" webKey="dabff993-1dc5-43c8-bfca-f944c8dc3f96" solution="DOLCE" sanitizer={(val) => UPPER_NOSPACE(val)?.length === 7 ? UPPER_NOSPACE(val).slice(2) : UPPER_NOSPACE(val)}/>
+<Answer type="string" webKey="4ce989c5-27ad-4146-bdf6-adb7b5908b55" solution="DOLCE" sanitizer={(val) => UPPER_NOSPACE(val)?.length === 7 ? UPPER_NOSPACE(val).slice(2) : UPPER_NOSPACE(val)}/>
 :::
