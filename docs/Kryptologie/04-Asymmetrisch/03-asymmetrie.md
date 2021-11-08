@@ -3,6 +3,7 @@ title: Asymmetrie
 ---
 
 import PrimfactorizationTiming from "@site/src/components/VisualizationTools/Crypto/PrimfactorizationTiming";
+import ColorExchange from "@site/src/components/VisualizationTools/ColorExchange";
 import Answer from "@site/src/components/Answer";
 
 # Asymmetrie
@@ -14,5 +15,7 @@ import Answer from "@site/src/components/Answer";
 
 <Answer type="text" webKey="ae59f85e-43e7-42f1-afd9-a8a079fc931d" />
 :::
+
+<ColorExchange />
 
 <PrimfactorizationTiming />
