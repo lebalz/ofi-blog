@@ -23,7 +23,7 @@ const PlayButton = observer(() => {
     return (
         <button
             onClick={() => pyScript.execScript(document, documentStore)}
-            className={clsx(styles.playButton, styles.headerButton)}
+            className={clsx(styles.playButton, styles.headerButton, `umami--click--exec-brython`)}
             title="Code Ausführen"
         >
             <FontAwesomeIcon icon={pyScript.executing ? faPython : faPlay} spin={pyScript.executing} />
