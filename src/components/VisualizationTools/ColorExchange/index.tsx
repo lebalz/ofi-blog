@@ -138,7 +138,7 @@ const ColorExchange = (props: Props) => {
                     >
                         Öffentlich
                     </span>{' '}
-                    Farbe
+                    Eve 🕶
                 </div>
             </div>
             <div className={clsx(styles.B)}>

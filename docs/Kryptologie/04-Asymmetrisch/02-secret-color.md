@@ -29,7 +29,7 @@ Wieso erhalten Alice und Bob schlussendlich dieselbe Farbe?
 :::
 
 :::aufgabe Wieso kennt Eve die geheime Farbe nicht?
-Überlegen Sie sich: wieso kann Eve aus den verschickten Farben die geheime Farbe nicht herstellen kann?
+Überlegen Sie sich: wieso kann Eve aus den verschickten Farben die geheime Farbe nicht herstellen?
 
 <Answer type="text" webKey="a627b60d-54bd-4a3e-a870-510d014364cf" />
 :::
