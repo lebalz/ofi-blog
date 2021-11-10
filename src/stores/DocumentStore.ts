@@ -160,7 +160,7 @@ export class DocumentStore {
         return this.root.msalStore.withToken().then((ok) => {
             if (ok) {
                 if (window && (window as any).umami) {
-                    (window as any).umami('update-doc', `update-doc-${document.type}`);
+                    (window as any).umami(`update-${document.type}`, `update-doc`);
                 }
                 return putDocument<T>(document.webKey, document.data, cancelToken);
             }
