@@ -109,7 +109,7 @@ const ColorExchange = (props: Props) => {
         <div className={styles.container}>
             <div className={clsx(styles.A)}>
                 <ColorPicker
-                    className={styles.colorPicker}
+                    className={clsx(styles.colorPicker, 'umami--click--color-exchange-colorpicker')}
                     hue={colorA}
                     onInput={(h) => setColorA(h)}
                     initiallyCollapsed

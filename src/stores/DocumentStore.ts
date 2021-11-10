@@ -156,10 +156,13 @@ export class DocumentStore {
     }
 
     @action
-    apiUpdateDocument<T extends Object = Object>(webKey: string, data: T, cancelToken: CancelTokenSource) {
+    apiUpdateDocument<T extends Object = Object>(document: Document<T>, cancelToken: CancelTokenSource) {
         return this.root.msalStore.withToken().then((ok) => {
             if (ok) {
-                return putDocument<T>(webKey, data, cancelToken);
+                if (window && (window as any).umami) {
+                    (window as any).umami('update-doc', `update-doc-${document.type}`);
+                }
+                return putDocument<T>(document.webKey, document.data, cancelToken);
             }
         });
     }

@@ -196,7 +196,7 @@ export default class Document<T extends Object = Object> {
             this.state.cancelApiRequests();
             this.state.setState('save');
             return this.store
-                .apiUpdateDocument(this.webKey, this.data, this.state.cancelToken)
+                .apiUpdateDocument<T>(this, this.state.cancelToken)
                 .then((res) => {
                     this.setOfflineState(false);
                     this.state.setState('done');
