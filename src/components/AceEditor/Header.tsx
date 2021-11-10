@@ -17,13 +17,13 @@ import { ScriptContext } from '.';
 import { action, reaction } from 'mobx';
 import { useStore } from '../../stores/hooks';
 
-const PlayButton = observer(({slim}:{slim: boolean}) => {
+const PlayButton = observer(() => {
     const pyScript = React.useContext(ScriptContext);
     const documentStore = useStore('documentStore');
     return (
         <button
             onClick={() => pyScript.execScript(document, documentStore)}
-            className={clsx(styles.playButton, styles.headerButton, `umami--click--exec-brython-${slim ? 'example' : 'script'}`)}
+            className={clsx(styles.playButton, styles.headerButton)}
             title="Code Ausführen"
         >
             <FontAwesomeIcon icon={pyScript.executing ? faPython : faPlay} spin={pyScript.executing} />
@@ -133,7 +133,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
                     )}
                 </React.Fragment>
             )}
-            <PlayButton slim={slim} />
+            <PlayButton />
         </div>
     );
 });
