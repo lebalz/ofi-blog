@@ -33,12 +33,14 @@ class ApiState {
     }
 }
 
+export type DocType = 'code' | 'string' | 'text' | 'array' | 'tdoc';
+
 export default class Document<T extends Object = Object> {
     protected readonly store: DocumentStore;
 
     iDisposer: IReactionDisposer;
 
-    type: 'code' | 'string' | 'text' | 'array';
+    type: DocType;
 
     @observable id: number = -1;
     @observable userId: number = -1;
@@ -72,7 +74,7 @@ export default class Document<T extends Object = Object> {
     constructor(
         store: DocumentStore,
         webKey: string,
-        type: 'code' | 'string' | 'text' | 'array',
+        type: DocType,
         getLegacyData: () => { data: T | undefined; cleanup?: () => void },
         data?: T,
         isDummy: boolean = false,

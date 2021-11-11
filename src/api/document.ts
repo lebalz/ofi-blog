@@ -1,11 +1,12 @@
 import api from "./base";
 import { AxiosPromise, CancelTokenSource } from "axios";
+import { DocType } from "../models/Document";
 
 export interface Document<T> {
   id: number;
   user_id: number;
   web_key: string;
-  type: 'code' | 'string' | 'text' | 'array';
+  type: DocType;
   data: T;
   created_at: string;
   updated_at: string;
@@ -20,7 +21,7 @@ export function getDocument<T>(
 
 export function postDocument<T>(
   webKey: string,
-  type: 'code' | 'string' | 'text' | 'array',
+  type: DocType,
   data: T,
   cancelToken: CancelTokenSource
 ): AxiosPromise<Document<T>> {

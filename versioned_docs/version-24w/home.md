@@ -1,4 +1,5 @@
 ---
+sidebar_position: 0
 title: Home 24w
 ---
 import TypedText from '@site/src/components/TypedText'

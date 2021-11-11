@@ -8,7 +8,7 @@ import {
     Document as DocumentProps,
     deleteDocument,
 } from '../api/document';
-import Document from '../models/Document';
+import Document, { DocType } from '../models/Document';
 import { RootStore } from './stores';
 
 export class DocumentStore {
@@ -52,7 +52,7 @@ export class DocumentStore {
     @action
     createOrUpdateDocument<T extends Object = Object>(
         webKey: string,
-        type: 'code' | 'string' | 'text' | 'array',
+        type: DocType,
         data: T,
         getLegacyData: () => { data: T | undefined; cleanup?: () => void }
     ): Document<T> {
@@ -74,7 +74,7 @@ export class DocumentStore {
     @action
     getOrCreateDocument<T extends Object = Object>(
         webKey: string,
-        type: 'code' | 'string' | 'text' | 'array',
+        type: DocType,
         defaultData: T,
         getLegacyData: () => { data: T | undefined; cleanup?: () => void }
     ): Document<T> {
@@ -96,7 +96,7 @@ export class DocumentStore {
     @action
     getOrCreateDummyDoc<T extends Object = Object>(
         webKey: string,
-        type: 'code' | 'string' | 'text' | 'array',
+        type: DocType,
         defaultData: T
     ): Document<T> {
         const current = this.dummyDocs.find((q) => q.webKey === webKey) as Document<T>;
@@ -133,7 +133,7 @@ export class DocumentStore {
     @action
     apiCreateDocument<T extends Object = Object>(
         webKey: string,
-        type: 'code' | 'string' | 'text' | 'array',
+        type: DocType,
         data: T,
         cancelToken: CancelTokenSource
     ): Promise<DocumentProps<T> | void> {
