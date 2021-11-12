@@ -81,6 +81,11 @@
       "from": "docs/Kryptologie/03-Symmetrisch/",
       "to": "versioned_docs/version-24f/06-Kryptologie/03-Symmetrisch",
       "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/04-Asymmetrisch/",
+      "to": "versioned_docs/version-24f/06-Kryptologie/04-Asymmetrisch",
+      "ignore": []
     }
   ],
   "24i": [
