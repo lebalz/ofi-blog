@@ -7,12 +7,17 @@ import {TextEditor} from "@site/src/components/VisualizationTools/Pentacode";
 
 # Übungen
 
+Lösen Sie die Übungen von Hand (daher nur mit dem Pentacode-Editor als Hilfsmittel).
+## ECB Modus
+
 <TextEditor />
 
 :::aufgabe 1. XOR Verschlüsselung
 Verschlüsseln Sie den Text `BUCHSTABENSPIELE` mit dem Schlüssel `AKRONYM`
 
 <Answer type="text" webKey="a30ab42b-0e2a-4452-a7a4-f34c96e8a4cd" monospace />
+
+(*Lösung als Text (nicht als Binäre Zahlenfolgt) angeben*)
 
 <Answer type="string" webKey="b680e137-905a-4bc5-a05a-fe65bc1684ee" solution="C?QG.MLCN--?PHMN" sanitizer={UPPER_NOSPACE}/>
 
@@ -23,10 +28,21 @@ Entschlüsseln Sie den Text `XWVJZWEKK,XWVJIK` mit dem Schlüssel `VVXKZ`
 
 <Answer type="text" webKey="f0c2bc43-cc15-4f58-8466-19f2f3374d2e" monospace />
 
+(*Lösung als Text (nicht als Binäre Zahlenfolgt) angeben*)
+
 <Answer type="string" webKey="f877bdef-a2e9-4b82-a6cc-1b61109970c7" solution="NANA ASS ANANAS." sanitizer={UPPER_NOSPACE}/>
 :::
 
+## CBC Modus
+
+:::info Hinweis CBC-Modus
+- Jeder Block hat genau so viele Bits wie der Schlüssel. (Hier werden also meist 2 Buchstaben (=`10` bits) pro Antwort in einem Block verwendet.)
+- `c1` ist ein Zwischenresultat, damit wird weitergearbeitet...
+:::
+
 :::aufgabe 3. CBC-Modus: Verschlüsseln
+
+![CBC: Verschlüsseln](images/CBC_encryption.svg)
 
 Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 
@@ -72,6 +88,8 @@ Verschlüsselter Text (Buchstaben-Form)
 
 
 :::aufgabe 4. CBC-Modus: Entschlüsseln
+
+![CBC Entschlüsseln](images/CBC_decryption.svg)
 
 Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 
