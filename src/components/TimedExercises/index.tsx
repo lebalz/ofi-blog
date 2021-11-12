@@ -1,3 +1,4 @@
+import useIsBrowser from '@docusaurus/useIsBrowser';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
@@ -17,7 +18,7 @@ export const TimedExercisesContext = React.createContext<TimedExercisesModel>(un
 
 const getDocument = (store: DocumentStore, props: Props) => {
     return new TimedExercisesModel(
-        store.getOrCreateDocument<TimedDoc>(
+        store.getOrCreateDocument<TimedDoc, TimedExercisesModel>(
             props.webKey,
             'tdoc',
             {
@@ -37,6 +38,9 @@ const ExercisesWrapper = observer((props: Props) => {
 });
 
 const TimedExercises = observer((props: Props) => {
+    if (!useIsBrowser()) {
+        return <div>Loading</div>;
+    }
     return (
         <ExercisesWrapper {...props}>
             <LoginAlert />

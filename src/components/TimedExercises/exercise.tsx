@@ -71,7 +71,7 @@ const Exercise = observer((props: Props) => {
                 )}
                 {ex.isRunning && (
                     <span className={clsx('badge', 'badge--secondary', styles.time)}>
-                        {formatTime(ex.timer)}
+                        {formatTime(ex.duration)}
                     </span>
                 )}
                 {!ex.isRunning && (

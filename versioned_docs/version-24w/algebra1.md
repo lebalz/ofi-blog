@@ -19,3 +19,9 @@ import TimedExercises from '@site/src/components/TimedExercises'
 
 ## Kapitel 3
 <TimedExercises webKey="23f279a3-5eb5-4557-989d-bc9be25bfc58" chapter="Kapitel 3" />
+
+## Kapitel 5
+<TimedExercises webKey="f56d9901-f3c5-405f-85d5-3efedff22a62" chapter="Kapitel 5" />
+
+## Kapitel 6
+<TimedExercises webKey="81d29bab-40f2-4ec9-bcc9-80710b23aca3" chapter="Kapitel 6" />

@@ -12,7 +12,6 @@ const Chapter = observer(() => {
     const tDoc = React.useContext(TimedExercisesContext);
     return (
         <div>
-            <h4>{tDoc.chapter.chapter}</h4>
             <div className={clsx(styles.exercises)}>
                 {tDoc.chapter.exercises.map((ex, idx) => (
                     <Exercise exercise={ex} key={idx}/>
@@ -20,9 +19,7 @@ const Chapter = observer(() => {
                 <button
                     className={clsx('button', 'button--sm', 'button--primary')}
                     onClick={action(() => {
-                        console.log(tDoc.chapter.exercises.length);
-                        const ex = new ExerciseModel({start: '', end: '', name: `bla-${tDoc.chapter.exercises.length}`, labels: []}, tDoc.chapter);
-                        tDoc.chapter.exercises.push(ex);
+                        tDoc.chapter.addExercise();
                     })} 
                 >
                     +

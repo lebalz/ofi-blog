@@ -35,7 +35,7 @@ class ApiState {
 
 export type DocType = 'code' | 'string' | 'text' | 'array' | 'tdoc';
 
-export default class Document<T extends Object = Object> {
+export default class Document<T extends Object = Object, R extends Object = Object> {
     protected readonly store: DocumentStore;
 
     iDisposer: IReactionDisposer;
@@ -64,6 +64,9 @@ export default class Document<T extends Object = Object> {
 
     @observable
     isDummy: boolean;
+
+    @observable
+    model?: R;
 
     isReadonly: boolean = false;
 
@@ -144,6 +147,11 @@ export default class Document<T extends Object = Object> {
 
     static formatDate(date: Date) {
         return date.toLocaleString();
+    }
+
+    @action
+    setModel(model: R | undefined) {
+        this.model = model;
     }
 
     @action

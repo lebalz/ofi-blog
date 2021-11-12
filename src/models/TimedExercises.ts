@@ -1,3 +1,4 @@
+import { useStore } from './../stores/hooks';
 import axios, { CancelTokenSource, Method } from 'axios';
 import _ from 'lodash';
 import { debounce } from 'lodash';
@@ -5,6 +6,7 @@ import { action, computed, makeObservable, observable, reaction } from 'mobx';
 import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER } from '../components/AceEditor/constants';
 import { DocumentStore } from '../stores/DocumentStore';
 import Document from './Document';
+import { rootStore } from '../stores/stores';
 
 export type ExerciseLabel = 'solved' | 'important' | 'question' | 'fail';
 
@@ -29,6 +31,7 @@ export const formatTime = (ms: number) => {
 }
 
 export class Exercise {
+    private readonly store: DocumentStore;
     private readonly chapter: Chapter;
     @observable
     startTime?: Date;
@@ -38,59 +41,32 @@ export class Exercise {
     name: string;
     labels = observable<ExerciseLabel>([]);
 
-    disposer?: NodeJS.Timer;
-
-    @observable
-    timer = 0;
-
     constructor(data: TExercise, chapter: Chapter) {
+        this.store = rootStore.documentStore;
         this.chapter = chapter;
         this.startTime = data.start ? new Date(data.start) : undefined;
         this.endTime = data.end ? new Date(data.end) : undefined;
-        if (this.startTime && !this.endTime) {
-            this.timer = Date.now() - this.startTime.getTime();
-            this.startTimer();
-        }
         this.name = data.name;
         this.labels.replace(data.labels);
         makeObservable(this);
     }
 
     @action
-    startTimer() {
-        this.disposer = setInterval(action(() => {
-            if (this.isRunning) {
-                this.timer = Date.now() - this.startTime.getTime();
-            } else {
-                this.stopTimer();
-            }
-        }), 1000);
-    }
-
-    @action
-    stopTimer() {
-        if (this.disposer) {
-            clearInterval(this.disposer);
-        }
-    }
-
-    @action
     start() {
-        this.chapter.stopAll();
+        this.chapter.stopRunning();
         this.startTime = new Date();
-        this.startTimer();
     }
 
     @action
     stop() {
-        this.endTime = new Date();
-        this.stopTimer();
+        if (!this.endTime) {
+            this.endTime = new Date();
+        }
     }
 
     @action
     delete() {
         this.chapter.remove(this);
-        this.stopTimer();
     }
 
     @action
@@ -118,7 +94,7 @@ export class Exercise {
             return;
         }
         if (this.isRunning) {
-            return Date.now() - this.startTime.getTime();
+            return this.store.timer - this.startTime.getTime();
         }
         return this.endTime.getTime() - this.startTime.getTime();
     }
@@ -135,9 +111,11 @@ export class Exercise {
 }
 
 class Chapter {
+    private readonly timedEx: TimedExercises;
     exercises = observable<Exercise>([]);
     chapter: string;
-    constructor(data: TimedDoc, onChange: (data: TimedDoc) => void) {
+    constructor(data: TimedDoc, timedEx: TimedExercises) {
+        this.timedEx = timedEx;
         this.chapter = data.chapter;
         const exercises = _.orderBy(data.exercises, ['name']).map((ex) => new Exercise(ex, this));
         this.exercises.replace(exercises);
@@ -145,9 +123,15 @@ class Chapter {
         reaction(
             () => this.props,
             (props) => {
-                onChange(props);
+                this.timedEx.updateData(this);
             }
         );
+    }
+
+    @action
+    addExercise() {
+        const ex = new Exercise({start: '', end: '', name: '', labels: []}, this);
+        this.exercises.push(ex);
     }
 
     @computed
@@ -164,7 +148,7 @@ class Chapter {
     }
 
     @action
-    stopAll() {
+    stopRunning() {
         this.exercises.forEach((ex) => {
             if (ex.isRunning) {
                 ex.stop();
@@ -180,24 +164,34 @@ class Chapter {
 
 export default class TimedExercises {
     @observable.ref
-    _tDoc: Document<TimedDoc>;
+    _tDoc: Document<TimedDoc, TimedExercises>;
     @observable.ref
     chapter: Chapter;
     isDummy: boolean;
+    store: DocumentStore;
 
-    constructor(tDoc: Document<TimedDoc>) {
+    constructor(tDoc: Document<TimedDoc, TimedExercises>) {
+        this.store = rootStore.documentStore;
         if (!tDoc.loaded) {
             const iDisposer = reaction(
                 () => tDoc.loaded,
                 (loaded) => {
-                    this.chapter = new Chapter(tDoc.data, (data) => this._tDoc.setData(data));
-                    iDisposer();
+                    if (loaded) {
+                        this.chapter = new Chapter(tDoc.data, this);
+                        iDisposer();
+                    }
                 }
             );
         }
         this.isDummy = tDoc.isDummy;
         this._tDoc = tDoc;
-        this.chapter = new Chapter(tDoc.data, (data) => this._tDoc.setData(data));
+        this._tDoc.setModel(this);
+        this.chapter = new Chapter(tDoc.data, this);
         makeObservable(this);
+    }
+
+    @action
+    updateData(source: Chapter) {
+        this._tDoc.setData(source.props);
     }
 }

@@ -17,17 +17,23 @@ export class DocumentStore {
     dummyDocs = observable<Document>([]);
 
     @observable
+    timer = 0;
+
+    @observable
     opendTurtleModalWebKey: string | undefined = undefined;
 
     @observable initialized: boolean = false;
     constructor(root: RootStore) {
         this.root = root;
         makeObservable(this);
+        setInterval(action(() => {
+            this.timer = Date.now();
+        }), 1000);
     }
 
     find = computedFn(
-        function <T extends Object = Object>(this: DocumentStore, webKey: string) {
-            return this.documents.find((q) => q.webKey === webKey) as Document<T>;
+        function <T extends Object = Object, R extends Object = Object>(this: DocumentStore, webKey: string) {
+            return this.documents.find((q) => q.webKey === webKey) as Document<T, R>;
         },
         { keepAlive: true }
     );
@@ -36,6 +42,13 @@ export class DocumentStore {
     setOpendTurtleModal(webKey: string | undefined) {
         this.opendTurtleModalWebKey = webKey;
     }
+
+    filterBy = computedFn(
+        function <T extends Object = Object, R extends Object = Object>(this: DocumentStore, type: DocType) {
+            return this.documents.filter((doc) => doc.type === type) as Document<T, R>[]
+        },
+        { keepAlive: true }
+    )
 
     @action
     remove(webKey: string) {
@@ -72,17 +85,17 @@ export class DocumentStore {
     }
 
     @action
-    getOrCreateDocument<T extends Object = Object>(
+    getOrCreateDocument<T extends Object = Object, R extends Object = Object>(
         webKey: string,
         type: DocType,
         defaultData: T,
         getLegacyData: () => { data: T | undefined; cleanup?: () => void }
-    ): Document<T> {
-        const current = this.find<T>(webKey);
+    ): Document<T, R> {
+        const current = this.find<T, R>(webKey);
         if (current) {
             return current;
         }
-        const doc = new Document(this, webKey, type, getLegacyData, defaultData);
+        const doc = new Document<T, R>(this, webKey, type, getLegacyData, defaultData);
         this.documents.push(doc);
         setTimeout(
             action(() => {
@@ -94,16 +107,16 @@ export class DocumentStore {
     }
 
     @action
-    getOrCreateDummyDoc<T extends Object = Object>(
+    getOrCreateDummyDoc<T extends Object = Object, R extends Object = Object>(
         webKey: string,
         type: DocType,
         defaultData: T
-    ): Document<T> {
-        const current = this.dummyDocs.find((q) => q.webKey === webKey) as Document<T>;
+    ): Document<T, R> {
+        const current = this.dummyDocs.find((q) => q.webKey === webKey) as Document<T, R>;
         if (current) {
             return current;
         }
-        const doc = new Document(this, webKey, type, () => undefined, defaultData, true, false);
+        const doc = new Document<T, R>(this, webKey, type, () => undefined, defaultData, true, false);
         this.dummyDocs.push(doc);
         return doc;
     }
