@@ -51,7 +51,7 @@ export class UserStore {
                             })
                         )
                         .catch((err) => {
-                            if (!err.response) {
+                            if (err.message?.startsWith('Network Error')) {
                                 this.root.msalStore.setApiOfflineState(true);
                             } else {
                                 return;

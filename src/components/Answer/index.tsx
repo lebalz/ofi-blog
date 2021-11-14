@@ -11,7 +11,7 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 import { sanitizeId } from '../../utils/sanitizers';
 import { getItem, removeItem } from '../../utils/storage';
 import { ModelTypes } from '../../models/iModel';
-import { reaction } from 'mobx';
+import ReactDomServer from 'react-dom/server';
 
 export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();
 
@@ -25,12 +25,25 @@ export interface Base {
   children?: React.ReactNode;
 }
 
+export interface ToolbarOptions {
+  bold?: boolean;
+  italic?: boolean;
+  underline?: boolean;
+  h1?: boolean;
+  h2?: boolean;
+  h3?: boolean;
+  color?: boolean;
+  background?: boolean;
+  ul?: boolean;
+  ol?: boolean;
+}
+
 export interface TextProps extends Base {
   type: 'text';
   placeholder?: string;
   default?: string | React.ReactNode;
   monospace?: boolean;
-  reduced?: boolean;
+  toolbar?: ToolbarOptions;
 }
 
 export interface ArrayProps extends Base {
@@ -64,7 +77,7 @@ const getDefault = (props: Props): ModelTypes => {
             };
         case 'text':
             return {
-                value: props.default || '',
+                value: props.default ||  ReactDomServer.renderToString(props.children),
                 type: 'text',
             };
         case 'array':

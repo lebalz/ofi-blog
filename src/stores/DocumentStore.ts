@@ -92,7 +92,7 @@ export class DocumentStore {
         if (!view) {
             return this.documents;
         }
-        return this.documents.filter((doc) => doc.userId === view.id);
+        return this.documents.filter((doc) => doc.userId === view.id || doc.userId < 0);
     }
 
     find = computedFn(
@@ -122,12 +122,12 @@ export class DocumentStore {
         persist: boolean,
         getLegacyData: () => { data: ModelTypes | undefined; cleanup?: () => void },
         readonly?: boolean
-    ): void {
+    ): Promise<T> {
         const legacy = getLegacyData();
         const loadedModel = this.find<T>(webKey);
         if (loadedModel) {
             if (loadedModel.loaded) {
-                return;
+                return Promise.resolve(loadedModel);
             }
             this.documents.remove(loadedModel);
         }
@@ -142,11 +142,11 @@ export class DocumentStore {
         this.documents.push(model);
         if (!persist || !this.root.msalStore.loggedIn) {
             model.loaded = true;
-            return;
+            return Promise.resolve(model);
         }
         const ct = axios.CancelToken.source();
         const { isMyView } = this.root.userStore;
-        this.apiGetDocument<typeof model.data>(model.webKey, ct)
+        return this.apiGetDocument<typeof model.data>(model.webKey, ct)
             .then((data) => {
                 if (data) {
                     return { data: data, returnDummy: false };
@@ -172,7 +172,7 @@ export class DocumentStore {
                     const fromApi = CreateModel(data.data, {
                         readonly: readonly,
                         raw: type === 'code' ? TypedDoc('code', defaultData).code : undefined,
-                    });
+                    }) as T;
                     fromApi.loaded = true;
                     runInAction(() => {
                         if (legacy) {
@@ -180,10 +180,12 @@ export class DocumentStore {
                             fromApi.legacyData = legacy.data as any;
                         }
                         fromApi.loaded = true;
-                        this.documents.push(fromApi);
                         this.documents.remove(model);
+                        this.documents.push(fromApi);
                     });
+                    return fromApi;
                 }
+                return model;
             });
     }
 
@@ -208,7 +210,7 @@ export class DocumentStore {
                             return data;
                         })
                         .catch((err) => {
-                            if (!err.response) {
+                            if (err.message?.startsWith('Network Error')) {
                                 this.root.msalStore.setApiOfflineState(true);
                             } else {
                                 return;
@@ -220,7 +222,7 @@ export class DocumentStore {
                         return data;
                     })
                     .catch((err) => {
-                        if (!err.response) {
+                        if (err.message?.startsWith('Network Error')) {
                             this.root.msalStore.setApiOfflineState(true);
                         } else {
                             return;
@@ -247,7 +249,7 @@ export class DocumentStore {
                 }
             })
             .catch((err) => {
-                if (!err.response) {
+                if (err.message?.startsWith('Network Error')) {
                     this.root.msalStore.setApiOfflineState(true);
                 } else {
                     return;

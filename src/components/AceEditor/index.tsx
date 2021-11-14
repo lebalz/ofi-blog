@@ -3,7 +3,6 @@ import styles from './styles.module.scss';
 import PyEditor from './PyEditor';
 import { observer } from 'mobx-react-lite';
 import { useDocument, useStore } from '../../stores/hooks';
-import { DocumentStore } from '../../stores/DocumentStore';
 import Script, { PyDoc } from '../../models/Script';
 import BrythonCommunicator from './BrythonCommunicator';
 import clsx from 'clsx';
@@ -58,8 +57,9 @@ const PyAceEditor = observer((props: Props) => {
     const msalStore = useStore('msalStore');
     useDocument(getDefault(props), 'code', props.webKey, !props.slim, getLegacyResolver(props));
     const model = store.find<Script>(props.webKey);
-    if (!useIsBrowser() || !model) {
-        return <div>Loading</div>;
+    const inBrowser = useIsBrowser();
+    if (!inBrowser || !model) {
+        return <div>Loading...</div>;
     }
     return (
         <div>

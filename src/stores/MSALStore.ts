@@ -50,7 +50,6 @@ export class MSALStore {
                         }
                     })
                     .catch((err) => {
-                        console.error(err);
                         return;
                     });
                 if (offlineTime > 20000 && window) {

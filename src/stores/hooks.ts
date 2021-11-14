@@ -16,16 +16,21 @@ export const useDocument = (
     getLegacyData: () => { data: ModelTypes | undefined; cleanup?: () => void },
     readonly?: boolean
 ) => {
+    const [initialized, setInitialized] = React.useState(false);
     /** initial load */
     React.useEffect(() => {
-        rootStore.documentStore.provideDocument(defaultData, type, webKey, persist, getLegacyData, readonly);
+        rootStore.documentStore
+            .provideDocument(defaultData, type, webKey, persist, getLegacyData, readonly)
+            .finally(() => {
+                setInitialized(true);
+            });
     }, []);
     /** load when view changes */
     React.useEffect(() => {
         return reaction(
             () => rootStore.userStore.currentView,
             (currentView) => {
-                if (currentView) {
+                if (initialized && currentView && !rootStore.userStore.isMyView) {
                     rootStore.documentStore.provideDocument(
                         defaultData,
                         type,
@@ -37,13 +42,13 @@ export const useDocument = (
                 }
             }
         );
-    }, []);
+    }, [initialized]);
     /** load when api is online again */
     React.useEffect(() => {
         return reaction(
             () => rootStore.msalStore.isApiOffline,
             (isOffline) => {
-                if (!isOffline) {
+                if (initialized && !isOffline) {
                     rootStore.documentStore.provideDocument(
                         defaultData,
                         type,
@@ -55,5 +60,5 @@ export const useDocument = (
                 }
             }
         );
-    }, []);
+    }, [initialized]);
 };
