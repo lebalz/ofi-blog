@@ -45,7 +45,7 @@ const StringAnswer = observer((props: StringProps) => {
   const doc = store.find<StringModel>(props.webKey);
 
   const onChange = (newVal: string) => {
-    if (props.isLegacy) {
+    if (props.isLegacy || !doc.loaded) {
       return;
     }
     setCorrectState("unchecked");

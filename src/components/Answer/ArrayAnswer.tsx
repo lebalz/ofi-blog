@@ -25,7 +25,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
   const doc = store.find<ArrayAnswerModel>(props.webKey);
 
   const onChange = (newVal: string, idx: number = 0) => {
-    if (props.isLegacy) {
+    if (props.isLegacy || !doc.loaded) {
       return;
     }
     const newArr = [

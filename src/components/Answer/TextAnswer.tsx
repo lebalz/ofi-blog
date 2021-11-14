@@ -101,7 +101,7 @@ const TextAnswer = observer((props: TextProps) => {
           props.monospace && styles.monospace,
           showQuillToolbar ? undefined : "disable-toolbar"
         )}
-        value={props.isLegacy ? doc.legacyData.value : (doc.loaded ? doc.value || "" : 'Laden...')}
+        value={props.isLegacy ? doc.legacyData.value : (doc.value || '')}
         onChange={(content, _delta, _source, _editor) => {
           onChange(content);
         }}
@@ -116,7 +116,7 @@ const TextAnswer = observer((props: TextProps) => {
             suppressErrorLogging: false, // default
           },
         }}
-        placeholder={(props.placeholder || "✍️ Antwort...")}
+        placeholder={(doc.loaded ? (props.placeholder || "✍️ Antwort...") : 'Laden...')}
       />
     </div>
   );
