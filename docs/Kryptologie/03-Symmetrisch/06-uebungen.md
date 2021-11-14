@@ -93,7 +93,7 @@ Verschlüsselter Text (Buchstaben-Form)
 
 Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 
-<Answer type="text" webKey="aeaf6634-df2d-427f-9daa-970ff225f105" monospace />
+<Answer type="text" webKey="1d46518d-94df-4d09-8d12-ae6f28df2b67" monospace />
 
 (Antworten als Penta-Binärcode)
 :::cards --rows=4 --min-width=250px --font-family=monospace
