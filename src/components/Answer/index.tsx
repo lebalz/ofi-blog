@@ -121,12 +121,10 @@ const Answer = observer((props: Props) => {
     const msalStore = useStore('msalStore');
     const model = store.find(props.webKey);
     const inBrowser = useIsBrowser();
-
-    useDocument(getDefault(props), props.type, props.webKey, true, getLegacyResolver(props));
-
     if (!model || !inBrowser) {
         return <div>Loading...</div>;
     }
+    useDocument(getDefault(props), props.type, props.webKey, true, getLegacyResolver(props));
 
     return (
         <div data--web-key={props.webKey}>
