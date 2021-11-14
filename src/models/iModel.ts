@@ -1,7 +1,7 @@
 import ArrayAnswer, { ArrayDoc } from './Answer/Array';
 import StringAnswer, { StringDoc } from './Answer/String';
 import Text, { TextDoc } from './Answer/Text';
-import SaveService from './saveService';
+import SaveService from './SaveService';
 import Script, { PyDoc } from './Script';
 import TimedExercises, { TimedDoc } from './TimedExercises';
 

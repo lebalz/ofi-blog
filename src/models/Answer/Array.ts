@@ -4,7 +4,7 @@ import { action, computed, makeObservable, observable } from "mobx";
 import { ArrayModel, BaseModel } from '../iModel';
 import { DocumentStore } from "../../stores/DocumentStore";
 import { rootStore } from '../../stores/stores';
-import SaveService from '../saveService';
+import SaveService from '../SaveService';
 
 export interface ArrayDoc {
     value: string[];

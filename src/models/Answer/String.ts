@@ -1,10 +1,10 @@
 import { CancelTokenSource } from 'axios';
 import { Document, putDocument } from './../../api/document';
 import { action, computed, makeObservable, observable } from "mobx";
-import { BaseModel, StringModel } from '../iModel';
+import { StringModel } from '../iModel';
 import { DocumentStore } from "../../stores/DocumentStore";
 import { rootStore } from '../../stores/stores';
-import SaveService from '../saveService';
+import SaveService from '../SaveService';
 
 export interface StringDoc {
     value: string;

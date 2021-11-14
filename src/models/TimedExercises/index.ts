@@ -5,7 +5,7 @@ import Chapter from './Chapter';
 import { TimedModel } from '../iModel';
 import { DocumentStore } from "../../stores/DocumentStore";
 import { rootStore } from '../../stores/stores';
-import SaveService from '../saveService';
+import SaveService from '../SaveService';
 
 export type ExerciseLabel = 'solved' | 'important' | 'question' | 'fail';
 
