@@ -18,10 +18,10 @@ interface Props {
 const TimedExercises = observer((props: Props) => {
     const store = useStore('documentStore');
     useDocument(
-        {
+        () => ({
             chapter: props.chapter,
             exercises: [],
-        },
+        }),
         'tdoc',
         props.webKey,
         true,

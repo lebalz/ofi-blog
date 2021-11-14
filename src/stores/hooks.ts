@@ -9,7 +9,7 @@ export const useStore = <T extends keyof typeof rootStore>(store: T): typeof roo
     React.useContext(storesContext)[store];
 
 export const useDocument = (
-    defaultData: ModelTypes,
+    defaultData: () => ModelTypes,
     type: DocType,
     webKey: string,
     persist: boolean,
@@ -20,7 +20,7 @@ export const useDocument = (
     /** initial load */
     React.useEffect(() => {
         rootStore.documentStore
-            .provideDocument(defaultData, type, webKey, persist, getLegacyData, readonly)
+            .provideDocument(defaultData(), type, webKey, persist, getLegacyData, readonly)
             .finally(() => {
                 setInitialized(true);
             });
@@ -32,7 +32,7 @@ export const useDocument = (
             (currentView) => {
                 if (initialized && currentView && !rootStore.userStore.isMyView) {
                     rootStore.documentStore.provideDocument(
-                        defaultData,
+                        defaultData(),
                         type,
                         webKey,
                         persist,
@@ -50,7 +50,7 @@ export const useDocument = (
             (isOffline) => {
                 if (initialized && !isOffline) {
                     rootStore.documentStore.provideDocument(
-                        defaultData,
+                        defaultData(),
                         type,
                         webKey,
                         persist,
