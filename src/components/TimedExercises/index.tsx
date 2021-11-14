@@ -1,10 +1,10 @@
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import clsx from 'clsx';
+import { reaction } from 'mobx';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
-import { default as TimedExercisesModel, TimedDoc } from '../../models/TimedExercises';
-import { DocumentStore } from '../../stores/DocumentStore';
-import { useStore } from '../../stores/hooks';
+import { default as TimedExercisModel } from '../../models/TimedExercises';
+import { useDocument, useStore } from '../../stores/hooks';
 import LoginAlert from '../AceEditor/LoginAlert';
 import Chapter from './chapter';
 import styles from './styles.module.scss';
@@ -14,40 +14,31 @@ interface Props {
     chapter: string;
     children: React.ReactNode;
 }
-export const TimedExercisesContext = React.createContext<TimedExercisesModel>(undefined);
-
-const getDocument = (store: DocumentStore, props: Props) => {
-    return new TimedExercisesModel(
-        store.getOrCreateDocument<TimedDoc, TimedExercisesModel>(
-            props.webKey,
-            'tdoc',
-            {
-                chapter: props.chapter,
-                exercises: [],
-            },
-            () => undefined
-        )
-    );
-};
-const ExercisesWrapper = observer((props: Props) => {
-    const documentStore = useStore('documentStore');
-    const [tExercises] = React.useState(getDocument(documentStore, props));
-    return (
-        <TimedExercisesContext.Provider value={tExercises}>{props.children}</TimedExercisesContext.Provider>
-    );
-});
 
 const TimedExercises = observer((props: Props) => {
-    if (!useIsBrowser()) {
+    const store = useStore('documentStore');
+    const userStore = useStore('userStore');
+    useDocument(
+        {
+            chapter: props.chapter,
+            exercises: [],
+        },
+        'tdoc',
+        props.webKey,
+        true,
+        () => undefined
+    );
+    const model = store.find(props.webKey);
+    if (!useIsBrowser() || !model) {
         return <div>Loading</div>;
     }
     return (
-        <ExercisesWrapper {...props}>
+        <div>
             <LoginAlert />
             <div className={clsx(styles.TimedExercisesContainer)}>
-                <Chapter />
+                <Chapter webKey={props.webKey} />
             </div>
-        </ExercisesWrapper>
+        </div>
     );
 });
 

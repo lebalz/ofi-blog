@@ -10,19 +10,20 @@ import Result from "./Result";
 import Header from "./Header";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../../stores/hooks";
-import { ScriptContext } from ".";
 import { reaction } from "mobx";
+import Script from "../../models/Script";
 
 interface Props {
   slim: boolean;
   children: React.ReactNode;
   title: string;
   resettable: boolean;
+  webKey: string;
 }
 
 const PyEditor = observer((props: Props) => {
-  const pyScript = React.useContext(ScriptContext);
-  const documentStore = useStore("documentStore");
+  const store = useStore('documentStore');
+  const pyScript = store.find<Script>(props.webKey);
 
   /**
    * this effect triggers the brython execution
@@ -34,7 +35,7 @@ const PyEditor = observer((props: Props) => {
         if (counter > 0) {
           pyScript.clearLogMessages();
           if (window && (window as any).umami) {
-            (window as any).umami.trackEvent(`${pyScript.isDummy ? 'py' : pyScript.pyDoc.webKey}`, `exec-script-${pyScript.isDummy ? 'temp' : 'persisted'}`);
+            (window as any).umami.trackEvent(`${pyScript.isDummy ? 'py' : pyScript.webKey}`, `exec-script-${pyScript.isDummy ? 'temp' : 'persisted'}`);
           }
           (window as any).brython(1, {
             ids: [DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)],
@@ -42,7 +43,7 @@ const PyEditor = observer((props: Props) => {
         }
       }
     )
-  }, [pyScript.pyDoc.webKey]);
+  }, [pyScript]);
 
   return (
     <React.Fragment>
@@ -50,12 +51,13 @@ const PyEditor = observer((props: Props) => {
         slim={props.slim}
         title={props.title}
         resettable={props.resettable}
+        webKey={props.webKey}
       />
-      <Editor />
+      <Editor webKey={props.webKey} />
       <div className={clsx(styles.result)}>
-        <Result />
-        {documentStore.opendTurtleModalWebKey === pyScript.pyDoc.webKey && (
-          <TurtleResult />
+        <Result webKey={props.webKey}/>
+        {store.opendTurtleModalWebKey === pyScript.webKey && (
+          <TurtleResult webKey={props.webKey}/>
         )}
       </div>
     </React.Fragment>

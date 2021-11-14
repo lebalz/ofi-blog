@@ -59,7 +59,9 @@ function Root({ children }) {
   return (
     <div>
       <StoresProvider value={rootStore}>
-        <Msal>{children}</Msal>
+        <Msal>
+          {children}
+        </Msal>
       </StoresProvider>
     </div>
   );

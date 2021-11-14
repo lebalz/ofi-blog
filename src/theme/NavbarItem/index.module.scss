@@ -1,0 +1,6 @@
+.navBadge {
+    :global .badge {
+        cursor: pointer;
+        user-select: none;
+    }
+}

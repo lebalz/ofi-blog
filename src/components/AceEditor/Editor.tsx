@@ -5,14 +5,19 @@ import styles from "./styles.module.scss";
 import { DOM_ELEMENT_IDS } from "./constants";
 import PyScriptSrc from "./PyScriptSrc";
 import { observer } from "mobx-react-lite";
-import { ScriptContext } from ".";
 import { useStore } from "../../stores/hooks";
+import Script from "../../models/Script";
 
-const PlaceholderEditor = observer(() => {
-  const pyScript = React.useContext(ScriptContext);
+interface Props {
+  webKey: string;
+}
+
+const PlaceholderEditor = observer((props: Props) => {
+  const store = useStore('documentStore');
+  const pyScript = store.find<Script>(props.webKey);
   return (
     <pre>
-      <code>{pyScript.pyDoc.data.code}</code>
+      <code>{pyScript.data.code}</code>
     </pre>
   );
 });
@@ -37,9 +42,10 @@ const loadLibs = (callback) => {
     });
   });
 };
-const Editor = observer(() => {
-  const pyScript = React.useContext(ScriptContext);
-  const documentStore = useStore("documentStore");
+
+const Editor = observer((props: Props) => {
+  const store = useStore('documentStore');
+  const pyScript = store.find<Script>(props.webKey);
 
   const [loaded, setLoaded] = React.useState(false);
   React.useEffect(() => {
@@ -62,14 +68,14 @@ const Editor = observer(() => {
             // commands is array of key bindings.
             name: "execute",
             bindKey: { win: "Ctrl-Enter", mac: "Command-Enter" },
-            exec: () => pyScript.execScript(document, documentStore),
+            exec: () => pyScript.execScript(document),
           });
           node.editor.commands.addCommand({
             // commands is array of key bindings.
             name: "save",
             bindKey: { win: "Ctrl-s", mac: "Command-s" },
             exec: () => {
-              pyScript.pyDoc.saveNow();
+              pyScript.saveService.saveNow();
             }
           });
         }
@@ -104,11 +110,11 @@ const Editor = observer(() => {
           theme="dracula"
           keyBindings="VSCode"
           onChange={(value: string) => {
-            pyScript.pyDoc.setData({code: value})
+            pyScript.setData({code: value})
           }}
-          readOnly={pyScript.showRaw || !pyScript.pyDoc.loaded}
-          value={pyScript.showRaw ? pyScript.rawScript : pyScript.pyDoc.data.code}
-          defaultValue={pyScript.pyDoc.data.code}
+          readOnly={pyScript.showRaw || !pyScript.loaded}
+          value={pyScript.showRaw ? pyScript.rawScript : pyScript.data.code}
+          defaultValue={pyScript.code}
           name={DOM_ELEMENT_IDS.aceEditor(pyScript.codeId)}
           editorProps={{ $blockScrolling: true }}
           setOptions={{
@@ -124,9 +130,9 @@ const Editor = observer(() => {
           showGutter
         />
       ) : (
-        <PlaceholderEditor />
+        <PlaceholderEditor webKey={props.webKey} />
       )}
-      <PyScriptSrc />
+      <PyScriptSrc webKey={props.webKey}/>
     </div>
   );
 });

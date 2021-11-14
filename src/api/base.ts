@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { CancelTokenSource } from 'axios';
 import { API } from '../authConfig';
 
 export namespace Api {
@@ -13,5 +13,9 @@ const api = axios.create({
   baseURL: Api.BASE_API_URL,
   headers: {}
 });
+
+export function isLive(cancelToken: CancelTokenSource) {
+  return api.get('', { cancelToken: cancelToken.token });
+}
 
 export default api;

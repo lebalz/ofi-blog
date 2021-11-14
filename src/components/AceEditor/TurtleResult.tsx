@@ -8,10 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/hooks';
-import { ScriptContext } from '.';
-
-const TurtleResult = observer(() => {
-    const pyScript = React.useContext(ScriptContext);
+import Script from '../../models/Script';
+interface Props {
+    webKey: string;
+}
+const TurtleResult = observer((props: Props) => {
+  const store = useStore('documentStore');
+  const pyScript = store.find<Script>(props.webKey);
     const documentStore = useStore("documentStore");
     return (
         <Draggable

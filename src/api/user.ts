@@ -4,6 +4,7 @@ import { AxiosPromise, CancelTokenSource } from 'axios';
 export interface User {
   id: number;
   email: string;
+  admin: boolean;
   class?: string;
   created_at: string;
   updated_at: string;

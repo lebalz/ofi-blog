@@ -2,19 +2,23 @@ import * as React from 'react';
 import { DOM_ELEMENT_IDS } from './constants';
 import { sanitizePyScript } from '../../utils/sanitizers';
 import { observer } from 'mobx-react-lite';
-import { ScriptContext } from '.';
+import { useStore } from '../../stores/hooks';
+import Script from '../../models/Script';
 const run_template = require('./brython_runner.raw.py');
 
-const PyScriptSrc = observer(() => {
-    const pyScript = React.useContext(ScriptContext);
+interface Props {
+    webKey: string;
+}
+const PyScriptSrc = observer((props: Props) => {
+    const store = useStore('documentStore');
+    const pyScript = store.find<Script>(props.webKey);
     return (
         <script
-            key={pyScript.execCounter}
             id={DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)}
             type="text/py_disabled"
             className="brython-script"
         >
-            {`${run_template}\nrun("""${sanitizePyScript(pyScript.pyDoc.data.code || '')}""", '${
+            {`${run_template}\nrun("""${sanitizePyScript(pyScript.code || '')}""", '${
                 pyScript.codeId
             }')`}
         </script>

@@ -1,13 +1,17 @@
 import { runInAction } from "mobx";
 import { observer } from "mobx-react-lite";
 import * as React from "react";
-import { ScriptContext } from ".";
-import { LogMessage } from "../../models/Script";
+import Script, { LogMessage } from "../../models/Script";
+import { useStore } from "../../stores/hooks";
 import { useRefWithCallback } from "../../utils/use_ref_with_clbk";
 import { BRYTHON_NOTIFICATION_EVENT, DOM_ELEMENT_IDS } from "./constants";
+interface Props {
+  webKey: string;
+}
 
-const BrythonCommunicator = observer(() => {
-  const pyScript = React.useContext(ScriptContext);
+const BrythonCommunicator = observer((props: Props) => {
+  const store = useStore('documentStore');
+  const pyScript = store.find<Script>(props.webKey);
 
   const onBryNotify = React.useCallback((event) => {
     if (event.detail) {

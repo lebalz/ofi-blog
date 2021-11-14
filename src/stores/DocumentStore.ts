@@ -1,20 +1,72 @@
 import axios, { CancelTokenSource } from 'axios';
 import { action, computed, makeObservable, observable, runInAction } from 'mobx';
 import { computedFn } from 'mobx-utils';
-import {
-    getDocument,
-    postDocument,
-    putDocument,
-    Document as DocumentProps,
-    deleteDocument,
-} from '../api/document';
-import Document, { DocType } from '../models/Document';
+import { getDocument, postDocument, Document as DocumentProps } from '../api/document';
+import { getDocument as getDocumentAsAdmin } from '../api/admin';
+import ArrayAnswer from '../models/Answer/Array';
+import StringAnswer from '../models/Answer/String';
+import Text from '../models/Answer/Text';
+import { DocType, ModelTypes, IModel, TypedDoc, Model } from '../models/iModel';
+import Script from '../models/Script';
+import TimedExercises from '../models/TimedExercises';
 import { RootStore } from './stores';
 
+const CreateModel = (data: DocumentProps<any>, options: { raw?: string; readonly?: boolean } = {}) => {
+    switch (data.type) {
+        case 'array':
+            return new ArrayAnswer(data);
+        case 'code':
+            return new Script(data, options.raw || '');
+        case 'string':
+            return new StringAnswer(data);
+        case 'tdoc':
+            return new TimedExercises(data);
+        case 'text':
+            return new Text(data);
+    }
+};
+
+const CreateDummyModel = <T extends IModel = IModel>(
+    uid: number,
+    type: DocType,
+    data: ModelTypes,
+    webKey: string,
+    readonly: boolean = false,
+    isDummy: boolean = false
+) => {
+    let model: IModel;
+    const dummy: DocumentProps<{}> = {
+        id: -1,
+        user_id: uid,
+        web_key: webKey,
+        type: type,
+        data: data,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+    };
+    switch (type) {
+        case 'array':
+            model = new ArrayAnswer({ ...dummy, data: TypedDoc('array', data) });
+            break;
+        case 'code':
+            const c = TypedDoc('code', data);
+            model = new Script({ ...dummy, data: c }, c.code, readonly, isDummy);
+            break;
+        case 'string':
+            model = new StringAnswer({ ...dummy, data: TypedDoc('string', data) });
+            break;
+        case 'tdoc':
+            model = new TimedExercises({ ...dummy, data: TypedDoc('tdoc', data) });
+            break;
+        case 'text':
+            model = new Text({ ...dummy, data: TypedDoc('text', data) });
+            break;
+    }
+    return model as T;
+};
 export class DocumentStore {
     private readonly root: RootStore;
-    documents = observable<Document>([]);
-    dummyDocs = observable<Document>([]);
+    documents = observable<Model>([]);
 
     @observable
     timer = 0;
@@ -26,14 +78,26 @@ export class DocumentStore {
     constructor(root: RootStore) {
         this.root = root;
         makeObservable(this);
-        setInterval(action(() => {
-            this.timer = Date.now();
-        }), 1000);
+        setInterval(
+            action(() => {
+                this.timer = Date.now();
+            }),
+            1000
+        );
+    }
+
+    @computed
+    get viewedDocuments() {
+        const view = this.root.userStore.currentView;
+        if (!view) {
+            return this.documents;
+        }
+        return this.documents.filter((doc) => doc.userId === view.id);
     }
 
     find = computedFn(
-        function <T extends Object = Object, R extends Object = Object>(this: DocumentStore, webKey: string) {
-            return this.documents.find((q) => q.webKey === webKey) as Document<T, R>;
+        function <T extends Model = Model>(this: DocumentStore, webKey: string): T {
+            return this.viewedDocuments.find((q) => q.webKey === webKey) as T;
         },
         { keepAlive: true }
     );
@@ -44,89 +108,88 @@ export class DocumentStore {
     }
 
     filterBy = computedFn(
-        function <T extends Object = Object, R extends Object = Object>(this: DocumentStore, type: DocType) {
-            return this.documents.filter((doc) => doc.type === type) as Document<T, R>[]
+        function <T extends Model = Model>(this: DocumentStore, type: DocType) {
+            return this.viewedDocuments.filter((doc) => doc.type === type) as T[];
         },
         { keepAlive: true }
-    )
+    );
 
     @action
-    remove(webKey: string) {
-        const toRemove = this.find(webKey);
-        if (toRemove) {
-            toRemove.state.state = 'deleted';
-            const cancelToken = axios.CancelToken.source();
-            this.apiDeleteDocument(webKey, cancelToken).then(() => {
-                runInAction(() => this.documents.remove(toRemove));
-            });
-        }
-    }
-
-    @action
-    createOrUpdateDocument<T extends Object = Object>(
-        webKey: string,
+    provideDocument<T extends Model = Model>(
+        defaultData: ModelTypes,
         type: DocType,
-        data: T,
-        getLegacyData: () => { data: T | undefined; cleanup?: () => void }
-    ): Document<T> {
-        const current = this.find<T>(webKey);
-        if (current) {
-            current.setData(data);
-            return current;
+        webKey: string,
+        persist: boolean,
+        getLegacyData: () => { data: ModelTypes | undefined; cleanup?: () => void },
+        readonly?: boolean
+    ): void {
+        const legacy = getLegacyData();
+        const loadedModel = this.find<T>(webKey);
+        if (loadedModel) {
+            if (loadedModel.loaded) {
+                return;
+            }
+            this.documents.remove(loadedModel);
         }
-        const doc = new Document(this, webKey, type, getLegacyData, data);
-        this.documents.push(doc);
-        return doc;
+        const model = CreateDummyModel<T>(
+            this.root.userStore.currentView?.id || -1,
+            type,
+            defaultData,
+            webKey,
+            readonly,
+            !persist
+        );
+        this.documents.push(model);
+        if (!persist || !this.root.msalStore.loggedIn) {
+            model.loaded = true;
+            return;
+        }
+        const ct = axios.CancelToken.source();
+        const { isMyView } = this.root.userStore;
+        this.apiGetDocument<typeof model.data>(model.webKey, ct)
+            .then((data) => {
+                if (data) {
+                    return { data: data, returnDummy: false };
+                } else {
+                    if (isMyView) {
+                        return this.apiCreateDocument(model.webKey, model.type, model.data, ct).then(
+                            (data) => {
+                                return { data: data, returnDummy: false };
+                            }
+                        );
+                    }
+                    return { data: model.props, returnDummy: true };
+                }
+            })
+            .then((data) => {
+                if (data.returnDummy) {
+                    runInAction(() => {
+                        model.loaded = true;
+                    });
+                    return model;
+                }
+                if (data.data) {
+                    const fromApi = CreateModel(data.data, {
+                        readonly: readonly,
+                        raw: type === 'code' ? TypedDoc('code', defaultData).code : undefined,
+                    });
+                    fromApi.loaded = true;
+                    runInAction(() => {
+                        if (legacy) {
+                            fromApi.legacyCleanup = legacy.cleanup;
+                            fromApi.legacyData = legacy.data as any;
+                        }
+                        fromApi.loaded = true;
+                        this.documents.push(fromApi);
+                        this.documents.remove(model);
+                    });
+                }
+            });
     }
 
     @computed
     get isLoggedIn() {
         return this.root.msalStore.loggedIn;
-    }
-
-    @action
-    getOrCreateDocument<T extends Object = Object, R extends Object = Object>(
-        webKey: string,
-        type: DocType,
-        defaultData: T,
-        getLegacyData: () => { data: T | undefined; cleanup?: () => void }
-    ): Document<T, R> {
-        const current = this.find<T, R>(webKey);
-        if (current) {
-            return current;
-        }
-        const doc = new Document<T, R>(this, webKey, type, getLegacyData, defaultData);
-        this.documents.push(doc);
-        setTimeout(
-            action(() => {
-                this.removeDummy(webKey);
-            }),
-            1
-        );
-        return doc;
-    }
-
-    @action
-    getOrCreateDummyDoc<T extends Object = Object, R extends Object = Object>(
-        webKey: string,
-        type: DocType,
-        defaultData: T
-    ): Document<T, R> {
-        const current = this.dummyDocs.find((q) => q.webKey === webKey) as Document<T, R>;
-        if (current) {
-            return current;
-        }
-        const doc = new Document<T, R>(this, webKey, type, () => undefined, defaultData, true, false);
-        this.dummyDocs.push(doc);
-        return doc;
-    }
-
-    @action
-    removeDummy(webKey: string) {
-        const toRemove = this.dummyDocs.find((q) => q.webKey === webKey);
-        if (toRemove) {
-            this.dummyDocs.remove(toRemove);
-        }
     }
 
     @action
@@ -136,9 +199,33 @@ export class DocumentStore {
     ): Promise<DocumentProps<T> | void> {
         return this.root.msalStore.withToken().then((ok) => {
             if (ok) {
-                return getDocument<T>(webKey, cancelToken).then(({ data }) => {
-                    return data;
-                });
+                const isOthersView =
+                    this.root.userStore.currentView &&
+                    this.root.userStore.currentView.id !== this.root.userStore.current?.id;
+                if (!isOthersView) {
+                    return getDocument<T>(webKey, cancelToken)
+                        .then(({ data }) => {
+                            return data;
+                        })
+                        .catch((err) => {
+                            if (!err.response) {
+                                this.root.msalStore.setApiOfflineState(true);
+                            } else {
+                                return;
+                            }
+                        });
+                }
+                return getDocumentAsAdmin<T>(this.root.userStore.currentView.id, webKey, cancelToken)
+                    .then(({ data }) => {
+                        return data;
+                    })
+                    .catch((err) => {
+                        if (!err.response) {
+                            this.root.msalStore.setApiOfflineState(true);
+                        } else {
+                            return;
+                        }
+                    });
             }
         });
     }
@@ -150,33 +237,21 @@ export class DocumentStore {
         data: T,
         cancelToken: CancelTokenSource
     ): Promise<DocumentProps<T> | void> {
-        return this.root.msalStore.withToken().then((ok) => {
-            if (ok) {
-                return postDocument<T>(webKey, type, data, cancelToken).then(({ data }) => {
-                    return data;
-                });
-            }
-        });
-    }
-
-    @action
-    apiDeleteDocument(webKey: string, cancelToken: CancelTokenSource) {
-        return this.root.msalStore.withToken().then((ok) => {
-            if (ok) {
-                return deleteDocument(webKey, cancelToken);
-            }
-        });
-    }
-
-    @action
-    apiUpdateDocument<T extends Object = Object>(document: Document<T>, cancelToken: CancelTokenSource) {
-        return this.root.msalStore.withToken().then((ok) => {
-            if (ok) {
-                if (window && (window as any).umami) {
-                    (window as any).umami.trackEvent(`${document.webKey}`, `update-doc-${document.type}`);
+        return this.root.msalStore
+            .withToken()
+            .then((ok) => {
+                if (ok) {
+                    return postDocument<T>(webKey, type, data, cancelToken).then(({ data }) => {
+                        return data;
+                    });
                 }
-                return putDocument<T>(document.webKey, document.data, cancelToken);
-            }
-        });
+            })
+            .catch((err) => {
+                if (!err.response) {
+                    this.root.msalStore.setApiOfflineState(true);
+                } else {
+                    return;
+                }
+            });
     }
 }

@@ -105,7 +105,10 @@ def run(code, node_id):
     notify(node_id, {'type': 'start', 'time': time.time()})
     try:
         ns = {'__name__': node_id}
-        exec(py_script, ns)
+        loc = {}
+        exec(py_script, ns, loc)
+        # if len(code.splitlines()) < 10:
+        #    print('  --', '\n'.join([f'{x}: {loc[x]}' for x in loc.keys() if not x.startswith('__')]))
     except Exception as exc:
         print_exc(file=sys.stderr)
     finally:

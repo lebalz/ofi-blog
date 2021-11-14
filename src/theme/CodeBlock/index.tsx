@@ -49,9 +49,10 @@ const withLiveEditor = (Component) => {
       const contextId = pageId();
       const code = props.children.replace(/\n$/, '');
       const codeId = getCodeId(props.title, code);
+      const [webKey] = React.useState(props.id || uuidv4());
       return <PyAceEditor
           {...props}
-          webKey={props.id || uuidv4()}
+          webKey={webKey}
           code={code}
           codeId={codeId}
           contextId={contextId}

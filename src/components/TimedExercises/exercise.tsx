@@ -1,11 +1,6 @@
 import * as React from 'react';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
-import {
-    Exercise as ExerciseModel,
-    ExerciseLabel as ExerciseLabel,
-    formatTime,
-} from '../../models/TimedExercises';
 import styles from './styles.module.scss';
 import { action } from 'mobx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,6 +14,9 @@ import {
     faTimesCircle,
     faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
+import { ExerciseLabel } from '../../models/TimedExercises';
+import { formatTime } from '../../helpers/time';
+import {default as ExerciseModel} from '../../models/TimedExercises/Exercise';
 const LabelIcon: { [k in ExerciseLabel]: IconDefinition } = {
     solved: faCheckCircle,
     fail: faTimesCircle,

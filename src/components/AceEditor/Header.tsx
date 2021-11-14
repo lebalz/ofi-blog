@@ -13,16 +13,19 @@ import {
     faSync,
 } from '@fortawesome/free-solid-svg-icons';
 import { observer } from 'mobx-react-lite';
-import { ScriptContext } from '.';
 import { action, reaction } from 'mobx';
 import { useStore } from '../../stores/hooks';
+import Script from '../../models/Script';
 
-const PlayButton = observer(() => {
-    const pyScript = React.useContext(ScriptContext);
-    const documentStore = useStore('documentStore');
+interface PlayProps {
+    webKey: string;
+}
+const PlayButton = observer((props: PlayProps) => {
+    const store = useStore('documentStore');
+    const pyScript = store.find<Script>(props.webKey);
     return (
         <button
-            onClick={() => pyScript.execScript(document, documentStore)}
+            onClick={() => pyScript.execScript(document)}
             className={clsx(styles.playButton, styles.headerButton)}
             title="Code Ausführen"
         >
@@ -35,25 +38,31 @@ interface Props {
     slim: boolean;
     title: string;
     resettable: boolean;
+    webKey: string;
 }
 
-const Header = observer(({ slim, title, resettable }: Props) => {
+const Header = observer(({ slim, title, resettable, webKey }: Props) => {
     const [showSavedNotification, setShowSavedNotification] = React.useState(false);
-    const pyScript = React.useContext(ScriptContext);
+    const store = useStore('documentStore');
+    const pyScript = store.find<Script>(webKey);
+    if (!pyScript) {
+        return null;
+    }
+
     const onReset = () => {
         if (!resettable) {
             return;
         }
         const shouldReset = window.confirm('Änderungen verwerfen? (Ihre Version geht verloren!)');
         if (shouldReset) {
-            pyScript.pyDoc.setData({ code: pyScript.rawScript });
+            pyScript.setData({ code: pyScript.rawScript });
         }
     };
 
     React.useEffect(() => {
         let timeoutId: NodeJS.Timeout;
         const disposer = reaction(
-            () => pyScript.pyDoc.state?.state,
+            () => pyScript.saveService.state,
             (current, last) => {
                 if (last === 'save' && current === 'done') {
                     setShowSavedNotification(true);
@@ -77,7 +86,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
             {!slim && (
                 <React.Fragment>
                     <div className={styles.title}>{title}</div>
-                    {!pyScript.pyDoc.loaded && (
+                    {!pyScript.loaded && (
                         <span
                             className="badge badge--warning"
                             title="Warte auf die Antwort des Servers. Seite neu laden."
@@ -85,7 +94,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
                             Laden
                         </span>
                     )}
-                    {pyScript.pyDoc.isOffline && (
+                    {pyScript.saveService.isOffline && (
                         <span
                             className={clsx('badge', 'badge--danger', styles.badge)}
                             title="Netzwerkverbindung überprüfen!"
@@ -95,7 +104,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
                     )}
                     {<div className={styles.spacer}></div>}
                     <span style={{ minWidth: '1em' }}>
-                        {pyScript.pyDoc && pyScript.pyDoc.state?.state === 'save' && (
+                        {pyScript.saveService.state === 'save' && (
                             <FontAwesomeIcon icon={faSync} style={{ color: '#3578e5' }} spin />
                         )}
                         {showSavedNotification && (
@@ -133,7 +142,7 @@ const Header = observer(({ slim, title, resettable }: Props) => {
                     )}
                 </React.Fragment>
             )}
-            <PlayButton />
+            <PlayButton webKey={webKey} />
         </div>
     );
 });

@@ -2,8 +2,11 @@ import * as React from "react";
 import styles from "./Answer.module.scss";
 import clsx from "clsx";
 import { observer } from "mobx-react-lite";
-import { DocumentContext } from "./AnswerWrapper";
-import {TextProps, Types} from '.';
+import {TextProps} from '.';
+import { useStore } from "../../stores/hooks";
+import { TextModel } from "../../models/iModel";
+import Text from "../../models/Answer/Text";
+import { runInAction } from "mobx";
 
 var ReactQuill: any | undefined = undefined;
 
@@ -42,7 +45,8 @@ const TextAnswer = observer((props: TextProps) => {
   const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
   const [quillLoaded, setQuillLoaded] = React.useState(false);
   const quillRef = React.useRef(null);
-  const doc = React.useContext(DocumentContext);
+  const store = useStore('documentStore');
+  const doc = store.find<Text>(props.webKey);
 
   const onQuillToolbarMouseDown = (e: any) => {
     e.preventDefault();
@@ -71,10 +75,15 @@ const TextAnswer = observer((props: TextProps) => {
   }, []);
 
   const onChange = (newVal: string, idx: number = 0) => {
+    if (props.isLegacy || !doc.loaded) {
+      return;
+    }
     if (!quillLoaded) {
       return;
     }
-    doc.setData({ value: newVal, type: 'text' });
+    runInAction(() => {
+      doc.value = newVal;
+    })
   };
 
   if (!ReactQuill || !quillLoaded) {
@@ -86,13 +95,13 @@ const TextAnswer = observer((props: TextProps) => {
       <ReactQuill
         ref={quillRef}
         theme="snow"
-        readOnly={!doc.loaded || doc.isReadonly}
+        readOnly={props.isLegacy || !doc.loaded || doc.readonly}
         className={clsx(
           styles.quillAnswer,
           props.monospace && styles.monospace,
           showQuillToolbar ? undefined : "disable-toolbar"
         )}
-        value={doc.loaded ? doc.data.value || "" : 'Laden...'}
+        value={props.isLegacy ? doc.legacyData.value : (doc.loaded ? doc.value || "" : 'Laden...')}
         onChange={(content, _delta, _source, _editor) => {
           onChange(content);
         }}

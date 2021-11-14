@@ -2,9 +2,7 @@ import * as React from "react";
 import styles from "./Answer.module.scss";
 import clsx from "clsx";
 import { observer } from "mobx-react-lite";
-import { AnswerStringDoc, DocumentContext } from "./AnswerWrapper";
 import { StringProps } from ".";
-import Document from "../../models/Document";
 import Option from "./Option";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,6 +12,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { reaction } from "mobx";
 import useIsBrowser from "@docusaurus/useIsBrowser";
+import { useStore } from "../../stores/hooks";
+import {default as StringModel} from "../../models/Answer/String";
 
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 
@@ -41,9 +41,13 @@ const CheckIcon = (state) => {
 const StringAnswer = observer((props: StringProps) => {
   const inBrowser = useIsBrowser();
   const [correctState, setCorrectState] = React.useState("unchecked");
-  const doc = React.useContext(DocumentContext) as Document<AnswerStringDoc>;
+  const store = useStore('documentStore');
+  const doc = store.find<StringModel>(props.webKey);
 
   const onChange = (newVal: string) => {
+    if (props.isLegacy) {
+      return;
+    }
     setCorrectState("unchecked");
     doc.setData({ value: newVal, type: 'string' });
   };
@@ -81,9 +85,9 @@ const StringAnswer = observer((props: StringProps) => {
         <select
           onChange={(e) => onChange(e.target.value)}
           style={{width: props.width}}
-          value={doc.data.value}
+          value={props.isLegacy ? doc.legacyData?.value : doc.data.value}
           className={getClassName(doc.data.value)}
-          disabled={!doc.loaded}
+          disabled={!doc.loaded || props.isLegacy}
         >
           {props.select.map((v, idx) => (
             <Option value={v} key={idx} />
@@ -94,8 +98,8 @@ const StringAnswer = observer((props: StringProps) => {
           type="text"
           style={{width: props.width}}
           onChange={(e) => onChange(e.target.value)}
-          value={doc.data.value}
-          disabled={!doc.loaded || doc.isReadonly || props.disabled}
+          value={props.isLegacy ? doc.legacyData?.value : doc.data.value}
+          disabled={!doc.loaded || doc.readonly || props.disabled}
         />
       )}
       {(props.solution || props.checker) && (

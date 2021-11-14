@@ -2,14 +2,18 @@ import clsx from "clsx";
 import * as React from "react";
 import { action } from "mobx";
 import { observer } from "mobx-react-lite";
-import { TimedExercisesContext } from ".";
-import { Exercise as ExerciseModel } from "../../models/TimedExercises";
+import TimedExercises from "../../models/TimedExercises";
 import styles from "./styles.module.scss";
 import Exercise from "./exercise";
+import { useStore } from "../../stores/hooks";
 
+interface Props {
+    webKey: string;
+}
 
-const Chapter = observer(() => {
-    const tDoc = React.useContext(TimedExercisesContext);
+const Chapter = observer((props: Props) => {
+    const store = useStore('documentStore');
+    const tDoc = store.find<TimedExercises>(props.webKey);
     return (
         <div>
             <div className={clsx(styles.exercises)}>

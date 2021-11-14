@@ -30,6 +30,8 @@
 
 .result {
   grid-area: result;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .containerSlim {

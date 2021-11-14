@@ -1,10 +1,11 @@
 import * as React from "react";
 import styles from "./Answer.module.scss";
 import { observer } from "mobx-react-lite";
-import { AnswerArrayDoc, DocumentContext } from "./AnswerWrapper";
 import { ArrayProps, Types } from ".";
-import Document from "../../models/Document";
 import Option from "./Option";
+import { useStore } from "../../stores/hooks";
+import {default as ArrayAnswerModel} from "../../models/Answer/Array";
+import { ArrayModel } from "../../models/iModel";
 
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 
@@ -20,9 +21,13 @@ const getClassName = (value: string) => {
 };
 
 const ArrayAnswer = observer((props: ArrayProps) => {
-  const doc = React.useContext(DocumentContext) as Document<AnswerArrayDoc>;
+  const store = useStore('documentStore');
+  const doc = store.find<ArrayAnswerModel>(props.webKey);
 
   const onChange = (newVal: string, idx: number = 0) => {
+    if (props.isLegacy) {
+      return;
+    }
     const newArr = [
       ...doc.data.value.slice(0, idx),
       newVal,
@@ -33,7 +38,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
   return (
     <div className={styles.answer}>
       {props.label && <label>{props.label}</label>}
-      {doc.data.value.map((c, i) => {
+      {(props.isLegacy ? doc.legacyData?.value || [] : doc.data.value).map((c, i) => {
         if (props.select) {
           return (
             <select
@@ -41,7 +46,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
               onChange={(e) => onChange(e.target.value, i)}
               value={c}
               className={getClassName(c)}
-              disabled={!doc.loaded}
+              disabled={!doc.loaded || props.isLegacy}
             >
               {props.select.map((v, idx) => (
                 <Option value={v} key={idx} />
@@ -55,7 +60,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
             type="text"
             onChange={(e) => onChange(e.target.value, i)}
             value={c}
-            disabled={!doc.loaded || doc.isReadonly}
+            disabled={!doc.loaded || doc.readonly}
           />
         );
       })}
