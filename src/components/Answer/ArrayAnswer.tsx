@@ -35,6 +35,10 @@ const ArrayAnswer = observer((props: ArrayProps) => {
     ];
     doc.setData({...doc.data, value: newArr});
   };
+
+  if (!doc.loaded) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className={styles.answer}>
       {props.label && <label>{props.label}</label>}

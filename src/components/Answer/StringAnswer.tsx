@@ -77,6 +77,9 @@ const StringAnswer = observer((props: StringProps) => {
     }
   }, [inBrowser])
 
+  if (!doc.loaded) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className={styles.answer}>
       {props.label && <label style={{width: props.labelWidth}}>{props.label}</label>}

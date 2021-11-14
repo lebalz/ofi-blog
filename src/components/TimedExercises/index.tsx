@@ -17,7 +17,6 @@ interface Props {
 
 const TimedExercises = observer((props: Props) => {
     const store = useStore('documentStore');
-    const userStore = useStore('userStore');
     useDocument(
         {
             chapter: props.chapter,

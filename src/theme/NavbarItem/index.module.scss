@@ -3,4 +3,7 @@
         cursor: pointer;
         user-select: none;
     }
+    .userBadge {
+        --ifm-badge-background-color: var(--ifm-contrast-background-value);
+    }
 }

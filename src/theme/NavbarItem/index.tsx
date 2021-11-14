@@ -45,7 +45,7 @@ const withLoginNavbar = (Component) => {
                         <ul className="dropdown__menu">
                             {userStore.byClass(version?.name).map((user, idx) => (
                                     <li key={idx} onClick={() => userStore.setView(user)}>
-                                        <div className="badge badge--secondary dropdown__link">
+                                        <div className={clsx(styles.userBadge, 'badge', 'badge--secondary', 'dropdown__link')}>
                                             {user.name}
                                         </div>
                                     </li>

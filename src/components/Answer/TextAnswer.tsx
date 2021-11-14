@@ -86,7 +86,7 @@ const TextAnswer = observer((props: TextProps) => {
     })
   };
 
-  if (!ReactQuill || !quillLoaded) {
+  if (!ReactQuill || !quillLoaded || !doc.loaded) {
     return <div>Loading...</div>;
   }
   return (
@@ -95,7 +95,7 @@ const TextAnswer = observer((props: TextProps) => {
       <ReactQuill
         ref={quillRef}
         theme="snow"
-        readOnly={props.isLegacy || !doc.loaded || doc.readonly}
+        readOnly={props.isLegacy || doc.readonly}
         className={clsx(
           styles.quillAnswer,
           props.monospace && styles.monospace,
@@ -116,7 +116,7 @@ const TextAnswer = observer((props: TextProps) => {
             suppressErrorLogging: false, // default
           },
         }}
-        placeholder={(doc.loaded ? (props.placeholder || "✍️ Antwort...") : 'Laden...')}
+        placeholder={props.placeholder || "✍️ Antwort..."}
       />
     </div>
   );
