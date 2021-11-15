@@ -121,12 +121,13 @@ export class DocumentStore {
         webKey: string,
         persist: boolean,
         getLegacyData: () => { data: ModelTypes | undefined; cleanup?: () => void },
-        readonly?: boolean
+        readonly?: boolean,
+        forceReload?: boolean
     ): Promise<T> {
         const legacy = getLegacyData();
         const loadedModel = this.find<T>(webKey);
         if (loadedModel) {
-            if (loadedModel.loaded) {
+            if (loadedModel.loaded && !forceReload) {
                 return Promise.resolve(loadedModel);
             }
             this.documents.remove(loadedModel);

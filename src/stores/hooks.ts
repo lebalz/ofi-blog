@@ -37,7 +37,8 @@ export const useDocument = (
                         webKey,
                         persist,
                         getLegacyData,
-                        readonly
+                        readonly,
+                        true
                     );
                 }
             }
@@ -55,7 +56,8 @@ export const useDocument = (
                         webKey,
                         persist,
                         getLegacyData,
-                        readonly
+                        readonly,
+                        true
                     );
                 }
             }

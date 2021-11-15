@@ -79,7 +79,7 @@ const Header = observer(({ slim, title, resettable, webKey }: Props) => {
             }
             disposer();
         };
-    }, []);
+    }, [pyScript]);
 
     return (
         <div className={clsx(styles.brythonCodeBlockHeader, styles.brythonCodeBlockHeader, styles.controls)}>

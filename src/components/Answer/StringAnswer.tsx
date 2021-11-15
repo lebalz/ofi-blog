@@ -60,22 +60,23 @@ const StringAnswer = observer((props: StringProps) => {
     setCorrectState(sanitizer(current) === sanitizer(props.solution) ? "correct" : "wrong");
   };
 
+  /** check the answer */
   React.useEffect(() => {
     return reaction(
       () => doc.loaded,
       (loaded) => {
         if (loaded) {
-          checkAnswer(doc.data.value)
+          checkAnswer(doc.value)
         }
       }
     )
-  }, [])
+  }, [doc])
 
   React.useEffect(() => {
     if (doc.loaded) {
-      checkAnswer(doc.data.value);
+      checkAnswer(doc.value);
     }
-  }, [inBrowser])
+  }, [doc, inBrowser])
 
   if (!doc.loaded) {
     return <div>Loading...</div>;
@@ -88,8 +89,8 @@ const StringAnswer = observer((props: StringProps) => {
         <select
           onChange={(e) => onChange(e.target.value)}
           style={{width: props.width}}
-          value={props.isLegacy ? doc.legacyData?.value : doc.data.value}
-          className={getClassName(doc.data.value)}
+          value={props.isLegacy ? doc.legacyData?.value : doc.value}
+          className={getClassName(doc.value)}
           disabled={!doc.loaded || props.isLegacy}
         >
           {props.select.map((v, idx) => (
@@ -101,13 +102,13 @@ const StringAnswer = observer((props: StringProps) => {
           type="text"
           style={{width: props.width}}
           onChange={(e) => onChange(e.target.value)}
-          value={props.isLegacy ? doc.legacyData?.value : doc.data.value}
+          value={props.isLegacy ? doc.legacyData?.value : doc.value}
           disabled={!doc.loaded || doc.readonly || props.disabled}
         />
       )}
       {(props.solution || props.checker) && (
         <button
-          onClick={() => checkAnswer(doc.data.value)}
+          onClick={() => checkAnswer(doc.value)}
           className={clsx(styles[correctState], styles.checkButton)}
         >
           <FontAwesomeIcon icon={CheckIcon(correctState)} />
