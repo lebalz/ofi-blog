@@ -226,7 +226,7 @@ Im obigen Beispiel startet `i` bei `2` und wird solange um `3` erhöht, bis die 
 :::aufgabe
 
 1. Kopieren Sie die Definition eines Hauses aus der letzten Übung in dieses Programm. Modifizieren Sie das Unterprogramm `haus(size)` so ab, dass nun die Grösse des Hauses spezifiziert werden kann. Die Wurzel einer Zahl kann mit `sqrt(zahl)` berechnet werden.
-2. Schreiben Sie ein ein Unterprogramm `move(x, y)`, welches die Schritte
+2. Schreiben Sie ein Unterprogramm `move(x, y)`, welches die Schritte
    1. Stift heben
    2. zur Position `x`, `y` gehen
    3. Stift senken  
@@ -248,7 +248,6 @@ from math import sqrt
 from random import randint, choice
 
 ```
-
 :::
 
 
