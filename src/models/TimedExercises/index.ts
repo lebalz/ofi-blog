@@ -78,7 +78,7 @@ export default class TimedExercises implements TimedModel {
 
     @computed
     get canUpdate(): boolean {
-        return false;
+        return !this.readonly &&  this.loaded;
     }
 
     @computed
