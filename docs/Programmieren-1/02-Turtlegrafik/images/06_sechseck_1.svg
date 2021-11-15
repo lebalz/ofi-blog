@@ -1,0 +1,24 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="ofi_fcd69fed_4ed9_4706_954e_c49cf1c8b764_svg" width="50" height="49.641021728515625" xmlns="http://www.w3.org/2000/svg" viewBox="235,210.35897827148438,50,49.641021728515625">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="20" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="20" y1="0" x2="30" y2="-17.32050807568877" style="stroke: black; stroke-width: 1;"></line>
+<line x1="30" y1="-17.32050807568877" x2="20.000000000000004" y2="-34.64101615137754" style="stroke: black; stroke-width: 1;"></line>
+<line x1="20.000000000000004" y1="-34.64101615137754" x2="3.552713678800501e-15" y2="-34.64101615137754" style="stroke: black; stroke-width: 1;"></line>
+<line x1="3.552713678800501e-15" y1="-34.64101615137754" x2="-10.000000000000005" y2="-17.32050807568877" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-10.000000000000005" y1="-17.32050807568877" x2="-3.552713678800501e-15" y2="0" style="stroke: black; stroke-width: 1;"></line>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(-3.552713678800501e-15,-0.0) rotate(-450,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+
+speed(10)
+def sechseck(size, farbe):
+    color(farbe)
+    for i in range(6):
+        forward(size)
+        left(60)
+
+sechseck(20, 'black')</raw></metadata></svg>

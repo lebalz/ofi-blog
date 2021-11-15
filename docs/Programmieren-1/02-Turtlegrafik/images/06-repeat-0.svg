@@ -1,0 +1,15 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="ofi_75f28a3c_c540_46de_a1fb_4c6c443ff3d8_svg" width="40" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="245,240,40,20">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="30" y2="0" style="stroke: black; stroke-width: 1;"></line>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(30.0,-0.0) rotate(-90,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import *
+for i in range(1):
+    forward(30)
+    left(90) 
+    
+right(90)</raw></metadata></svg>
