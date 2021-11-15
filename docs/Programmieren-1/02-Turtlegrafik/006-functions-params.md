@@ -119,7 +119,7 @@ def quadrat(size, farbe):
         left(90)
 
 quadrat(50, 'red')  # ein rotes Quadrat mit der Grösse 50 zeichnen
-square(100, 'blue') # ein blaues Quadrat mit der Grösse 100 zeichnen
+quadrat(100, 'blue') # ein blaues Quadrat mit der Grösse 100 zeichnen
 ```
 
 Es ist prinzipiell möglich, beliebig viele Parameter nacheinander zu übergeben.
