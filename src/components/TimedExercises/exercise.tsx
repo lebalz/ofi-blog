@@ -15,7 +15,7 @@ import {
     faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
 import { ExerciseLabel } from '../../models/TimedExercises';
-import { formatTime } from '../../helpers/time';
+import { formatDate, formatTime } from '../../helpers/time';
 import {default as ExerciseModel} from '../../models/TimedExercises/Exercise';
 const LabelIcon: { [k in ExerciseLabel]: IconDefinition } = {
     solved: faCheckCircle,
@@ -49,6 +49,9 @@ const Exercise = observer((props: Props) => {
                 onChange={action((e) => (ex.name = e.target.value))}
                 placeholder="Aufgabe"
             />
+            <span className={clsx('badge', 'badge--secondary', styles.time)}>
+                {formatDate(ex.createdAt)}
+            </span>
             <div style={{ flexGrow: 1 }} />
             <div className={clsx(styles.controls)}>
                 {!ex.isRunning && !ex.endTime && (

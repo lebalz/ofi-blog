@@ -13,6 +13,7 @@ export interface TExercise {
     start: string;
     end: string;
     name: string;
+    created_at: string;
     labels: ExerciseLabel[];
 }
 
@@ -70,7 +71,7 @@ export default class TimedExercises implements TimedModel {
         this.createdAt = new Date(doc.created_at);
         this.updatedAt = new Date(doc.updated_at);
         this.pristine = doc.data;
-        this.chapter = new Chapter(doc.data);
+        this.chapter = new Chapter(doc.data, doc.created_at);
         makeObservable(this);
         /** order depends, initialize AFTER making this observable! */
         this.saveService = new SaveService(this, save);
@@ -88,7 +89,7 @@ export default class TimedExercises implements TimedModel {
 
     @action
     setData(data: TimedDoc) {
-        this.chapter = new Chapter(data);
+        this.chapter = new Chapter(data, this.createdAt.toISOString());
     }
 
     @computed

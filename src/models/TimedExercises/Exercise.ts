@@ -11,6 +11,7 @@ export default class Exercise {
     startTime?: Date;
     @observable
     endTime?: Date;
+    createdAt: Date;
     @observable
     name: string;
     labels = observable<ExerciseLabel>([]);
@@ -18,6 +19,7 @@ export default class Exercise {
     constructor(data: TExercise, chapter: Chapter) {
         this.store = rootStore.documentStore;
         this.chapter = chapter;
+        this.createdAt = data.created_at ? new Date(data.created_at) : new Date(); 
         this.startTime = data.start ? new Date(data.start) : undefined;
         this.endTime = data.end ? new Date(data.end) : undefined;
         this.name = data.name;
@@ -81,6 +83,7 @@ export default class Exercise {
             end: this.endTime?.toISOString() || '',
             name: this.name,
             labels: this.labels,
+            created_at: this.createdAt.toISOString()
         };
     }
 }
