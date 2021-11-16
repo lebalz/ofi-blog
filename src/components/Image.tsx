@@ -73,14 +73,14 @@ const defaultUnit = (value: string, unit: string = "px") => {
 const ResizedImage = (props: Props) => {
   const style: React.CSSProperties = {};
   if (props.options.size) {
-    style.maxWidth = defaultUnit(props.options.size);
+    style.maxWidth = `min(90vw, ${defaultUnit(props.options.size)})`;
     style.maxHeight = defaultUnit(props.options.size);
   }
   if (props.options.height) {
     style.maxHeight = defaultUnit(props.options.height);
   }
   if (props.options.width) {
-    style.maxWidth = defaultUnit(props.options.width);
+    style.maxWidth = `min(90vw, ${defaultUnit(props.options.width)})`;
   }
   // Object.entries(props.options).forEach(([attr, val]) => {
   //   if (['height', 'width', 'size'].includes(attr)) {
