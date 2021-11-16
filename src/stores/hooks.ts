@@ -30,7 +30,7 @@ export const useDocument = (
         return reaction(
             () => rootStore.userStore.currentView,
             (currentView) => {
-                if (initialized && currentView && !rootStore.userStore.isMyView) {
+                if (initialized && currentView) {
                     rootStore.documentStore.provideDocument(
                         defaultData(),
                         type,
