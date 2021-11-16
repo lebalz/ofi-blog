@@ -3,6 +3,7 @@ title: Sichere Passwörter
 ---
 
 import PasswordChecker from '@site/src/components/PasswordChecker'
+import Answer from '@site/src/components/Answer'
 
 # Sichere Passwörter
 
@@ -45,3 +46,5 @@ Für gängige Passwort-Manager gibt es auch Browser-Plugins, welche das Ausfüll
 - [BitWarden](https://bitwarden.com/) (🏅 Empfehlung) - gute Basis-Funktionen und einfaches Handling, zudem Open Source (Kerckhoffs Prinzip 😉)
 - [KeePass](https://keepass.info/) - auch Open Source
 - [LastPass](https://www.lastpass.com/)
+
+<Answer type="text" webKey="9568cbe5-e9dc-4471-9e5e-03ebf92aa10a" placeholder="Notizen..." />

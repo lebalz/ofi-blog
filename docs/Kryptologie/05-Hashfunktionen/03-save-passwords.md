@@ -1,6 +1,7 @@
 ---
 title: Passwörter Speichern
 ---
+
 import Answer from '@site/src/components/Answer'
 
 # Passwörter speichern [^1]
@@ -100,5 +101,7 @@ Wie funktioniert der Anmeldevorgang an den Computern der Schule, wenn Benutzerna
 <Answer type="text" webKey="d2dcaf7f-9480-495f-9142-1f606e424069" />
 
 :::
+
+<Answer type="text" webKey="b146e1f3-ef8c-4ed7-ade2-428829f619fa" placeholder="Notizen..."/>
 
 [^1]: Quelle: [rothe](https://rothe.io/?b=crypto&p=994723)

@@ -2,6 +2,8 @@
 title: Hash Funktionen
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # Hashfunktionen [^1]
 
 :::info
@@ -48,6 +50,6 @@ Es gibt verschiedene aktuelle Hashfunktionen. Nachfolgend einige mit SHA-1 (Secu
 
 Die letzten beiden Beispiele zeigen, dass bereits kleinste Änderungen zu komplett anderen Hashwerten führen. Kryptographische Hashfunktion sind so konstruiert, dass bei einer Änderung an einem Bit ca. 50% der Hashwert-Bits ändern.
 
-<Answer type="text" webKey="34f7ade1-bd99-46ef-a2f2-883c02573eb1" />
+<Answer type="text" webKey="34f7ade1-bd99-46ef-a2f2-883c02573eb1" placeholder="Notizen..." />
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=103784)
