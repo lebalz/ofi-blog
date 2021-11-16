@@ -37,7 +37,7 @@ Um Verwechslungen zu vermeiden, spricht man bei der symmetrischen Verschlüsselu
 
 :::aufgabe Asymmetrische Verschlüsselung
 1. Überlegen Sie sich, wie die Verschlüsselung funktioniert, wenn ein Dokument an verschiedene Leute versendet wird. Machen Sie sich dazu eine Skizze.
-2. Welche Nachteile erkennst du?
+2. Welche Nachteile erkennen Sie?
 
 <Answer type="text" webKey="6f969d09-5b80-4553-8c21-3bbc70b53f52" />
 :::
