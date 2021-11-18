@@ -48,6 +48,8 @@ const Exercise = observer((props: Props) => {
             <div className={clsx(styles.base)}>
                 <input
                     type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
                     value={ex.name}
                     onChange={action((e) => (ex.name = e.target.value))}
                     placeholder="Aufgabe"

@@ -1,18 +1,32 @@
+html[data-theme='dark'] {
+    .exercise {
+        .base {
+            input {
+                background: rgb(59, 59, 59);
+            }
+        }
+    }
+}
 .exercise {
+  box-shadow: var(--ifm-blockquote-shadow);
+    border-radius: 8px;
+    margin-top: 0.5em;
     .base {
-
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        margin: 0.1em;
+        margin-bottom: 0.2em;
         input {
             padding: 4px;
-            width: 7em;
+            width: 5em;
             flex-shrink: 1;
             flex-basis: 5em;
             font-family: inherit;
             border-radius: 8px;
-            padding: 4px 8px;
-            border:  none;
+            padding: 4px 5px;
+            border:  1px solid var(--ifm-color-primary);
+            background: var(--ifm-color-emphasis-200);
         }
         .time {
             align-self: center;
@@ -21,7 +35,7 @@
             user-select: none;
             cursor: pointer;
             &:hover {
-                background-color: var(--ifm-color-emphasis-600);
+                background-color: var(--ifm-color-emphasis-300);
             }
         }
         .controls {
@@ -50,8 +64,6 @@
                 }
             }
         }
-        margin-top: 0.5em;
-        margin-bottom: 1em;
     }
     .timeSpan {
         display: flex;
