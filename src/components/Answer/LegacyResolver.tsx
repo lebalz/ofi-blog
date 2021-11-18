@@ -1,4 +1,3 @@
-import useIsBrowser from '@docusaurus/useIsBrowser';
 import { runInAction } from 'mobx';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
@@ -19,7 +18,7 @@ import TextAnswer from './TextAnswer';
  */
 
 const resolveLegacyDoc = (action: 'use_legacy' | 'use_current', model: IModel) => {
-    if (model.type === 'code' || model.type === 'tdoc') {
+    if (model.type === 'code') {
         return;
     }
     if (action === 'use_legacy') {

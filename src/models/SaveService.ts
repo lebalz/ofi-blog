@@ -3,8 +3,17 @@ import { debounce } from 'lodash';
 import { action, computed, makeObservable, observable, reaction } from 'mobx';
 import { umamiReport } from '../helpers/umami';
 import { RootStore, rootStore } from '../stores/stores';
-import { IModel } from './iModel';
 type RequestState = 'init' | 'save' | 'done' | 'pending' | 'deleted' | 'error';
+
+export interface ApiModel {
+    umami?: {
+        event: string;
+        message: string;
+    };
+    canUpdate: boolean;
+    data: Object;
+    saveService: SaveService;
+}
 
 export default class SaveService {
     private readonly rootStore: RootStore;
@@ -20,9 +29,9 @@ export default class SaveService {
     cancelToken: CancelTokenSource = axios.CancelToken.source();
 
     @observable.ref
-    model: IModel;
-    endpoint: (model: IModel, CancelTokenSource) => Promise<any>;
-    constructor(model: IModel, endpoint: (model: IModel, CancelTokenSource) => Promise<any>) {
+    model: ApiModel;
+    endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>;
+    constructor(model: ApiModel, endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>) {
         this.rootStore = rootStore;
         this.endpoint = endpoint;
         this.model = model;
@@ -36,6 +45,7 @@ export default class SaveService {
         reaction(
             () => this.model.data,
             (props) => {
+                console.log('save', this.model.data);
                 this.save();
             }
         );
@@ -63,10 +73,12 @@ export default class SaveService {
     @action
     _save() {
         if (!this.rootStore.msalStore.loggedIn) {
+            console.log('[s] not logged in')
             return;
         }
         const { isMyView } = this.rootStore.userStore;
         if (!this.model.canUpdate || !isMyView) {
+            console.log('[s] can not login')
             return Promise.resolve({
                 updated_at: new Date().toISOString(),
                 state: 'ok',
@@ -78,10 +90,10 @@ export default class SaveService {
         return this.rootStore.msalStore
             .withToken()
             .then((ok) => {
-                if (ok) {
-                    umamiReport(`update-doc-${this.model.type}`, `${this.model.webKey}`);
-                    return this.endpoint(this.model, this.cancelToken);
+                if (ok && this.model.umami) {
+                    umamiReport(`update-doc-${this.model.umami.event}`, `${this.model.umami.message}`);
                 }
+                return this.endpoint(this.model, this.cancelToken);
             })
             .then(
                 action((res) => {

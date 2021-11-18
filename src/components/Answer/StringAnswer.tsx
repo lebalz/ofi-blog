@@ -78,6 +78,10 @@ const StringAnswer = observer((props: StringProps) => {
     }
   }, [doc, inBrowser])
 
+  if (!inBrowser) {
+    return <div>SSR</div>;
+  }
+
   if (!doc.loaded) {
     return <div>Loading...</div>;
   }

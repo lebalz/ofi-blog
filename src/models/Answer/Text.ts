@@ -2,7 +2,7 @@ import { CancelTokenSource } from 'axios';
 import { Document, putDocument } from './../../api/document';
 import { action, computed, makeObservable, observable } from "mobx";
 import { TextModel } from '../iModel';
-import SaveService from '../SaveService';
+import SaveService, { ApiModel } from '../SaveService';
 
 export interface TextDoc {
     value: React.ReactNode;
@@ -19,7 +19,7 @@ const save = (model: Text, cancelToken: CancelTokenSource) => {
     return putDocument<TextDoc>(model.webKey, model.data, cancelToken);
 }
 
-export default class Text implements TextModel {
+export default class Text implements TextModel, ApiModel {
     type: 'text' = 'text';
     webKey: string;
     id: number;

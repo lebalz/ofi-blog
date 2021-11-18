@@ -58,7 +58,10 @@ const PyAceEditor = observer((props: Props) => {
     useDocument(() => getDefault(props), 'code', props.webKey, !props.slim, getLegacyResolver(props));
     const model = store.find<Script>(props.webKey);
     const inBrowser = useIsBrowser();
-    if (!inBrowser || !model) {
+    if (!inBrowser) {
+        return <div>SSR</div>;
+    }
+    if (!model) {
         return <div>Loading...</div>;
     }
     return (

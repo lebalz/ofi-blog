@@ -4,7 +4,7 @@ import { action, computed, makeObservable, observable } from "mobx";
 import { BaseModel, CodeModel } from './iModel';
 import { DocumentStore } from "../stores/DocumentStore";
 import { rootStore } from '../stores/stores';
-import SaveService from './SaveService';
+import SaveService, { ApiModel } from './SaveService';
 import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER } from '../components/AceEditor/constants';
 
 export interface PyDoc {
@@ -27,7 +27,7 @@ const save = (model: Script, cancelToken: CancelTokenSource) => {
     return putDocument<PyDoc>(model.webKey, model.data, cancelToken);
 }
 
-export default class Script implements CodeModel {
+export default class Script implements CodeModel, ApiModel {
     type: 'code' = 'code';
     private readonly store: DocumentStore;
     webKey: string;

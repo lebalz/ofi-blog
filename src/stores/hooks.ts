@@ -64,3 +64,50 @@ export const useDocument = (
         );
     }, [initialized]);
 };
+
+
+
+export const useTimedTopic = (
+    webKey: string,
+) => {
+    const [initialized, setInitialized] = React.useState(false);
+    /** initial load */
+    console.log('initial load')
+    React.useEffect(() => {
+        rootStore.timedTopicStore
+            .provideTopic(webKey, false)
+            .finally(() => {
+                setInitialized(true);
+            });
+    }, []);
+    /** load when view changes */
+    React.useEffect(() => {
+        return reaction(
+            () => rootStore.userStore.currentView,
+            (currentView, prev) => {
+                if (initialized && currentView) {
+                    console.log('load from view')
+                    rootStore.timedTopicStore.provideTopic(
+                        webKey,
+                        true
+                    );
+                }
+            }
+        );
+    }, [initialized]);
+    /** load when api is online again */
+    React.useEffect(() => {
+        return reaction(
+            () => rootStore.msalStore.isApiOffline,
+            (isOffline, prev) => {
+                if (initialized && !isOffline && prev) {
+                    console.log('load from offlineChecker')
+                    rootStore.timedTopicStore.provideTopic(
+                        webKey,
+                        true
+                    );
+                }
+            }
+        );
+    }, [initialized]);
+};

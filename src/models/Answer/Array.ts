@@ -4,7 +4,7 @@ import { action, computed, makeObservable, observable } from "mobx";
 import { ArrayModel, BaseModel } from '../iModel';
 import { DocumentStore } from "../../stores/DocumentStore";
 import { rootStore } from '../../stores/stores';
-import SaveService from '../SaveService';
+import SaveService, { ApiModel } from '../SaveService';
 
 export interface ArrayDoc {
     value: string[];
@@ -23,7 +23,7 @@ const save = (model: ArrayAnswer, cancelToken: CancelTokenSource) => {
     return putDocument<ArrayDoc>(model.webKey, model.data, cancelToken);
 }
 
-export default class ArrayAnswer implements ArrayModel {
+export default class ArrayAnswer implements ArrayModel, ApiModel {
     type: 'array' = 'array';
     private readonly store: DocumentStore;
     webKey: string;

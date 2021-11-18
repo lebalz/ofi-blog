@@ -4,7 +4,7 @@ import { action, computed, makeObservable, observable } from "mobx";
 import { StringModel } from '../iModel';
 import { DocumentStore } from "../../stores/DocumentStore";
 import { rootStore } from '../../stores/stores';
-import SaveService from '../SaveService';
+import SaveService, { ApiModel } from '../SaveService';
 
 export interface StringDoc {
     value: string;
@@ -21,7 +21,7 @@ const save = (model: StringAnswer, cancelToken: CancelTokenSource) => {
     return putDocument<StringDoc>(model.webKey, model.data, cancelToken);
 }
 
-export default class StringAnswer implements StringModel {
+export default class StringAnswer implements StringModel, ApiModel {
     type: 'string' = 'string';
     private readonly store: DocumentStore;
     webKey: string;

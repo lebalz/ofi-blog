@@ -1,19 +1,14 @@
+import { TimedExerciseData } from '../api/timed_exercise';
+import { TimedTopicData } from '../api/timed_topic';
 import ArrayAnswer, { ArrayDoc } from './Answer/Array';
 import StringAnswer, { StringDoc } from './Answer/String';
 import Text, { TextDoc } from './Answer/Text';
 import SaveService from './SaveService';
 import Script, { PyDoc } from './Script';
-import TimedExercises, { TimedDoc } from './TimedExercises';
+import TimeSpan from './TimedTopic/TimeSpan';
 
-export type DocType = 'code' | 'string' | 'text' | 'array' | 'tdoc';
+export type DocType = 'code' | 'string' | 'text' | 'array';
 
-// const BlaMap: {[key in DocType]: Function} = {
-//     'array': ArrayAnswer,
-//     'string': StringAnswer,
-//     'code': Script,
-//     'text': Text,
-//     'tdoc': TimedExercises,
-// }
 export interface BaseModel {
     webKey: string;
     id: number;
@@ -48,12 +43,6 @@ export interface TextModel extends BaseModel {
     legacyData?: TextDoc;
     setData: (data: TextDoc) => void;
 }
-export interface TimedModel extends BaseModel {
-    type: 'tdoc';
-    data: TimedDoc;
-    legacyData?: TimedDoc;
-    setData: (data: TimedDoc) => void;
-}
 export interface CodeModel extends BaseModel {
     type: 'code';
     data: PyDoc;
@@ -62,15 +51,14 @@ export interface CodeModel extends BaseModel {
 }
 
 
-export type ModelTypes = ArrayDoc | PyDoc | StringDoc | TextDoc | TimedDoc;
-export type IModel = CodeModel | TimedModel | TextModel | StringModel | ArrayModel;
-export type Model = Script | Text | ArrayAnswer | StringAnswer | TimedExercises;
+export type ModelTypes = ArrayDoc | PyDoc | StringDoc | TextDoc;
+export type IModel = CodeModel | TextModel | StringModel | ArrayModel ;
+export type Model = Script | Text | ArrayAnswer | StringAnswer;
 
 function TypedDoc(type: 'array', data: Object): ArrayDoc;
 function TypedDoc(type: 'code', data: Object): PyDoc;
 function TypedDoc(type: 'string', data: Object): StringDoc;
 function TypedDoc(type: 'text', data: Object): TextDoc;
-function TypedDoc(type: 'tdoc', data: Object): TimedDoc;
 function TypedDoc(type: DocType, data: Object) {
     switch (type) {
         case 'code':
@@ -81,8 +69,6 @@ function TypedDoc(type: DocType, data: Object) {
             return data as any as TextDoc;
         case 'array':
             return data as any as ArrayDoc;
-        case 'tdoc':
-            return data as any as TimedDoc;
     }
 }
 

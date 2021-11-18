@@ -8,7 +8,6 @@ import StringAnswer from '../models/Answer/String';
 import Text from '../models/Answer/Text';
 import { DocType, ModelTypes, IModel, TypedDoc, Model } from '../models/iModel';
 import Script from '../models/Script';
-import TimedExercises from '../models/TimedExercises';
 import { RootStore } from './stores';
 
 const CreateModel = (data: DocumentProps<any>, options: { raw?: string; readonly?: boolean } = {}) => {
@@ -19,8 +18,6 @@ const CreateModel = (data: DocumentProps<any>, options: { raw?: string; readonly
             return new Script(data, options.raw || '');
         case 'string':
             return new StringAnswer(data);
-        case 'tdoc':
-            return new TimedExercises(data);
         case 'text':
             return new Text(data);
     }
@@ -54,9 +51,6 @@ const CreateDummyModel = <T extends IModel = IModel>(
             break;
         case 'string':
             model = new StringAnswer({ ...dummy, data: TypedDoc('string', data) });
-            break;
-        case 'tdoc':
-            model = new TimedExercises({ ...dummy, data: TypedDoc('tdoc', data) });
             break;
         case 'text':
             model = new Text({ ...dummy, data: TypedDoc('text', data) });

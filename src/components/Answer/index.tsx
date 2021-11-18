@@ -122,8 +122,11 @@ const Answer = observer((props: Props) => {
     const model = store.find(props.webKey);
     const inBrowser = useIsBrowser();
     useDocument(() => getDefault(props), props.type, props.webKey, true, getLegacyResolver(props));
-
-    if (!model || !inBrowser) {
+    
+    if (!inBrowser) {
+        return <div>SSR</div>;
+    }
+    if (!model) {
         return <div>Loading...</div>;
     }
     return (
