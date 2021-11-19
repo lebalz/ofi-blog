@@ -91,7 +91,7 @@ export default class SaveService {
             .withToken()
             .then((ok) => {
                 if (ok && this.model.umami) {
-                    umamiReport(`update-doc-${this.model.umami.event}`, `${this.model.umami.message}`);
+                    umamiReport(this.model.umami.event, `${this.model.umami.message}`);
                 }
                 return this.endpoint(this.model, this.cancelToken);
             })
