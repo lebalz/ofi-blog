@@ -8,7 +8,6 @@ import SaveService, { ApiModel } from '../SaveService';
 import TimedExercise from './TimedExercise';
 
 const save = (model: TimeSpan, cancelToken: CancelTokenSource) => {
-    console.log('save ts');
     return stopTimeSpan(model.topicId, model.exerciseId, model.id, cancelToken);
 };
 
@@ -43,6 +42,14 @@ export default class TimeSpan implements ApiModel {
     @computed
     get isRunning() {
         return this.start && !this.end;
+    }
+
+    @computed
+    get umami() {
+        return {
+            event: 'update-time-span',
+            message: ''
+        }
     }
 
     @action

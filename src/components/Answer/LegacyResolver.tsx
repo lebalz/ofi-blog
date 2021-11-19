@@ -13,7 +13,7 @@ import TextAnswer from './TextAnswer';
  * localStorage.setItem('programmieren_1_algorithmen_uebungen_robozzle', '{"expiry":1760275631656,"robozzle_a1":{"value":["↑","↑","↰","↑"],"type":"array"}}')
  * 
  * --> /playground
- * localStorage.setItem('playground', '{"expiry":1760275631656,"python__playground_py":{"code":"print(\'fucker\')","type":"code"}}')
+ * localStorage.setItem('playground', '{"expiry":1760275631656,"python__playground_py":{"code":"print(\'foobar\')","type":"code"}}')
  * 
  */
 

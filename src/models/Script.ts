@@ -104,6 +104,14 @@ export default class Script implements CodeModel, ApiModel {
     }
 
     @computed
+    get umami() {
+        return {
+            event: `update-doc-${this.type}`,
+            message: this.webKey
+        }
+    }
+
+    @computed
     get data(): PyDoc {
         return {
             code: this.code

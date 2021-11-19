@@ -82,6 +82,14 @@ export default class Text implements TextModel, ApiModel {
     }
 
     @computed
+    get umami() {
+        return {
+            event: `update-doc-${this.type}`,
+            message: this.webKey
+        }
+    }
+
+    @computed
     get props(): Document<TextDoc> {
         return {
             id: this.id,

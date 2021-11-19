@@ -83,6 +83,14 @@ export default class ArrayAnswer implements ArrayModel, ApiModel {
         };
     }
 
+    @computed
+    get umami() {
+        return {
+            event: `update-doc-${this.type}`,
+            message: this.webKey
+        }
+    }
+
     @action
     setData(data: ArrayDoc) {
         this.value.replace(data.value);

@@ -1,14 +1,10 @@
 html[data-theme='dark'] {
     .exercise {
-        .base {
-            input {
-                background: rgb(59, 59, 59);
-            }
-        }
+        box-shadow: 0 5px 40px rgba(110, 110, 110, 0.2);
     }
 }
 .exercise {
-  box-shadow: var(--ifm-blockquote-shadow);
+    box-shadow: var(--ifm-blockquote-shadow);
     border-radius: 8px;
     margin-top: 0.5em;
     .base {
@@ -26,7 +22,7 @@ html[data-theme='dark'] {
             border-radius: 8px;
             padding: 4px 5px;
             border:  1px solid var(--ifm-color-primary);
-            background: var(--ifm-color-emphasis-200);
+            // background: var(--ifm-color-emphasis-200);
         }
         .time {
             align-self: center;
@@ -65,23 +61,26 @@ html[data-theme='dark'] {
             }
         }
     }
-    .timeSpan {
-        display: flex;
-        height: 0.6em;
-        padding: 0.1em;
-        .time {
-            position: relative;
-            background: var(--ifm-color-primary);
-            border-radius: 0.2em;
-            &.active {
-                background: var(--ifm-color-success);
-            }
-            .timeText {
-                font-size: 70%;
-                font-style: italic;
-                position: absolute;
-                left: 0.5em;
-                bottom: -2.2ch;
+    .details {
+        padding-bottom: 1em;
+        .timeSpan {
+            display: flex;
+            height: 0.6em;
+            padding: 0.1em;
+            .time {
+                position: relative;
+                background: var(--ifm-color-primary);
+                border-radius: 0.2em;
+                &.active {
+                    background: var(--ifm-color-success);
+                }
+                .timeText {
+                    font-size: 70%;
+                    font-style: italic;
+                    position: absolute;
+                    left: 0.5em;
+                    bottom: -2.2ch;
+                }
             }
         }
     }

@@ -77,6 +77,14 @@ export default class TimedTopic implements ApiModel {
         return this.exercises.map((ex) => ex.running).filter((ts) => ts);
     }
 
+    @computed
+    get umami() {
+        return {
+            event: 'update-timed-topic',
+            message: ''
+        }
+    }
+
     @action
     addExercise() {
         const ct = axios.CancelToken.source();

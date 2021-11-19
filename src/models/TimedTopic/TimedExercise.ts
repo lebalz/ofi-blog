@@ -85,6 +85,14 @@ export default class TimedExercise implements ApiModel {
     }
 
     @computed
+    get umami() {
+        return {
+            event: `update-timed-exercise`,
+            message: ''
+        }
+    }
+
+    @computed
     get running(): TimeSpan | undefined {
         return this.timeSpans.find((ts) => ts.isRunning);
     }

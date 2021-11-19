@@ -80,6 +80,15 @@ export default class StringAnswer implements StringModel, ApiModel {
             value: this.value
         };
     }
+
+    @computed
+    get umami() {
+        return {
+            event: `update-doc-${this.type}`,
+            message: this.webKey
+        }
+    }
+
     @action
     setData(data: StringDoc) {
         this.value = data.value;
