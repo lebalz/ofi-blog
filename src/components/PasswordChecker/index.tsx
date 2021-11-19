@@ -105,7 +105,7 @@ const PasswordChecker = observer(() => {
             )}
         >
             <p className="hero__subtitle">Passwort Checker</p>
-            <h4>Wie sicher ist meine Passwort?</h4>
+            <h4>Wie sicher ist mein Passwort?</h4>
             <input placeholder="Passwort" ref={ref} type="password" onChange={(e) => setPw(e.target.value)} />
             {time && <span className={clsx('badge', LEVEL_BADGE_MAPPING[level])}>{time}</span>}
             {time && (
