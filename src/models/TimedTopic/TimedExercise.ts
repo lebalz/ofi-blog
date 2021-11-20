@@ -195,6 +195,20 @@ export default class TimedExercise implements ApiModel, iTextData {
     }
 
     @computed
+    get hasText(): boolean {
+        if (!this.text) {
+            return false;
+        }
+        try {
+            const re = /^<p>(<br>|<br\/>|<br\s\/>|\s+|)<\/p>$/gm;
+            return !re.test(this.text as string);
+        } catch (e) {
+            console.warn(e);
+            return true;
+        }
+    }
+
+    @computed
     get startTime(): number {
         if (this.timeSpans.length === 0) {
             return 0;

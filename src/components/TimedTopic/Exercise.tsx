@@ -12,8 +12,10 @@ import {
     faQuestionCircle,
     faCheckCircle,
     faTimesCircle,
+    faComment,
     faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
+import {faComment as farComment} from '@fortawesome/free-regular-svg-icons';
 import { formatDate, formatTime } from '../../helpers/time';
 import { ExerciseLabel } from '../../api/timed_exercise';
 import TimedExercise from '../../models/TimedTopic/TimedExercise';
@@ -85,6 +87,13 @@ const Exercise = observer((props: Props) => {
                 </div>
                 <div style={{ flexGrow: 1 }} />
                 <div className={clsx(styles.labels)}>
+                    <FontAwesomeIcon
+                        className={clsx(styles.icon)}
+                        color={'var(--ifm-color-primary)'}
+                        icon={ex.hasText ? faComment : farComment}
+                        onClick={() => setShowDetails(!showDetails)}
+                    />
+
                     {(['solved', 'fail', 'important', 'question'] as ExerciseLabel[]).map((label, idx) => {
                         const active = ex.labels.includes(label);
                         return (
