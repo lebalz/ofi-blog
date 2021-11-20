@@ -12,6 +12,7 @@ import { sanitizeId } from '../../utils/sanitizers';
 import { getItem, removeItem } from '../../utils/storage';
 import { ModelTypes } from '../../models/iModel';
 import ReactDomServer from 'react-dom/server';
+import { ToolbarOptions } from '../shared/QuillEditor';
 
 export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();
 
@@ -23,19 +24,6 @@ export interface Base {
     id?: string;
     label?: string;
     children?: React.ReactNode;
-}
-
-export interface ToolbarOptions {
-    bold?: boolean;
-    italic?: boolean;
-    underline?: boolean;
-    h1?: boolean;
-    h2?: boolean;
-    h3?: boolean;
-    color?: boolean;
-    background?: boolean;
-    ul?: boolean;
-    ol?: boolean;
 }
 
 export interface TextProps extends Base {

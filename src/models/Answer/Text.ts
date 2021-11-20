@@ -3,6 +3,7 @@ import { Document, putDocument } from './../../api/document';
 import { action, computed, makeObservable, observable } from "mobx";
 import { TextModel } from '../iModel';
 import SaveService, { ApiModel } from '../SaveService';
+import { iTextData } from '../../components/shared/QuillEditor';
 
 export interface TextDoc {
     value: React.ReactNode;
@@ -19,7 +20,7 @@ const save = (model: Text, cancelToken: CancelTokenSource) => {
     return putDocument<TextDoc>(model.webKey, model.data, cancelToken);
 }
 
-export default class Text implements TextModel, ApiModel {
+export default class Text implements TextModel, ApiModel, iTextData {
     type: 'text' = 'text';
     webKey: string;
     id: number;
@@ -66,6 +67,19 @@ export default class Text implements TextModel, ApiModel {
     @computed
     get canUpdate(): boolean {
         return !this.readonly &&  this.loaded;
+    }
+
+    @computed
+    get text(): string | React.ReactNode {
+        if (this.legacyData && this.legacyData.value) {
+            return this.legacyData.value;
+        }
+        return this.value;
+    }
+
+    @action
+    setText(text: React.ReactNode) {
+        this.value = text;
     }
 
     @computed

@@ -94,7 +94,6 @@ export class TimedTopicStore {
             })
             .then((data) => {
                 if (data && data.returnDummy) {
-                    console.log('is dummy');
                     runInAction(() => {
                         model.loaded = true;
                     });
@@ -103,7 +102,6 @@ export class TimedTopicStore {
                 if (data) {
                     const fromApi = new TimedTopic(data.data, false);
                     runInAction(() => {
-                        console.log(data.data, fromApi);
                         fromApi.loaded = true;
                         this.timedTopics.remove(model);
                         this.timedTopics.push(fromApi);

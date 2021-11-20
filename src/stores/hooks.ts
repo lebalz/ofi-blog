@@ -72,7 +72,6 @@ export const useTimedTopic = (
 ) => {
     const [initialized, setInitialized] = React.useState(false);
     /** initial load */
-    console.log('initial load')
     React.useEffect(() => {
         rootStore.timedTopicStore
             .provideTopic(webKey, false)
@@ -86,7 +85,6 @@ export const useTimedTopic = (
             () => rootStore.userStore.currentView,
             (currentView, prev) => {
                 if (initialized && currentView) {
-                    console.log('load from view')
                     rootStore.timedTopicStore.provideTopic(
                         webKey,
                         true
@@ -101,7 +99,6 @@ export const useTimedTopic = (
             () => rootStore.msalStore.isApiOffline,
             (isOffline, prev) => {
                 if (initialized && !isOffline && prev) {
-                    console.log('load from offlineChecker')
                     rootStore.timedTopicStore.provideTopic(
                         webKey,
                         true

@@ -14,17 +14,19 @@ import { postTimeSpan } from '../../api/time_span';
 import { sortBy, sumBy } from 'lodash';
 import { TimedTopicStore } from '../../stores/TimedTopicStore';
 import { rootStore } from '../../stores/stores';
+import { iTextData } from '../../components/shared/QuillEditor';
 
 
 const save = (model: TimedExercise, cancelToken: CancelTokenSource) => {
     return putExercise(model.topicId, model.id, model.data, cancelToken);
 };
 
-export default class TimedExercise implements ApiModel {
+export default class TimedExercise implements ApiModel, iTextData {
     private readonly store: TimedTopicStore;
     private readonly topic: TimedTopic;
     readonly id: number;
     createdAt: Date;
+    loaded = true;
 
     @observable.ref
     updatedAt: Date;
@@ -39,6 +41,9 @@ export default class TimedExercise implements ApiModel {
 
     timeSpans = observable<TimeSpan>([]);
 
+    @observable
+    text: React.ReactNode;
+
     constructor(data: TimedExerciseProps, topic: TimedTopic) {
         this.store = rootStore.timedTopicStore;
         this.topic = topic;
@@ -50,6 +55,7 @@ export default class TimedExercise implements ApiModel {
             this.timeSpans.push(new TimeSpan(ts, this));
         });
         this.labels.replace(data.data.labels || []);
+        this.text = data.data.text || '';
         makeObservable(this);
         this.saveService = new SaveService(this, save);
     }
@@ -69,11 +75,17 @@ export default class TimedExercise implements ApiModel {
         return this.topic.webKey;
     }
 
+    @action
+    setText(text: React.ReactNode) {
+        this.text = text;
+    }
+
     @computed
     get data(): TimedExerciseData {
         return {
             data: {
-                labels: this.labels.slice()
+                labels: this.labels.slice(),
+                text: this.text
             },
             name: this.name,
         };

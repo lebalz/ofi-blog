@@ -1,0 +1,16 @@
+.quillAnswer {
+    border-radius: var(--ifm-alert-border-radius);
+    border: 1px solid var(--ifm-color-primary);
+    background: white;
+    &.edited {
+        border: 2px solid var(--ifm-color-success);
+    }
+    &.monospace {
+        :global .ql-editor {
+            font-family: Monaco, Courier New, monospace;
+            font-size: 11px;
+            background: white;
+        }
+    }
+    margin-bottom: 1.2em;
+}

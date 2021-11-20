@@ -29,7 +29,6 @@ export default class TimeSpan implements ApiModel {
         this.id = data.id;
         makeObservable(this);
         if (this.isRunning) {
-            console.log('setup save service');
             this.saveService = new SaveService(this, save);
         }
     }

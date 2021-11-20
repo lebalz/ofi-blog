@@ -18,6 +18,7 @@ import { formatDate, formatTime } from '../../helpers/time';
 import { ExerciseLabel } from '../../api/timed_exercise';
 import TimedExercise from '../../models/TimedTopic/TimedExercise';
 import TimeSpan from './TimeSpan';
+import QuillEditor from '../shared/QuillEditor';
 const LabelIcon: { [k in ExerciseLabel]: IconDefinition } = {
     solved: faCheckCircle,
     fail: faTimesCircle,
@@ -107,9 +108,23 @@ const Exercise = observer((props: Props) => {
             </div>
             {showDetails && (
                 <div className={clsx(styles.details)}>
-                    {ex.timeSpans.map((ts, idx) => (
-                        <TimeSpan timeSpan={ts} key={idx} />
-                    ))}
+                    <div className={clsx(styles.timeSpans)}>
+                        {ex.timeSpans.map((ts, idx) => (
+                            <TimeSpan timeSpan={ts} key={idx} />
+                        ))}
+                    </div>
+                    <QuillEditor
+                        model={ex}
+                        placeholder="✍️ Notizen"
+                        toolbar={{
+                            bold: true,
+                            italic: true,
+                            underline: true,
+                            background: true,
+                            formula: true,
+                            ol: true,
+                        }}
+                    />
                 </div>
             )}
         </div>

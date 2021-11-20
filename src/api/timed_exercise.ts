@@ -6,6 +6,7 @@ export type ExerciseLabel = 'solved' | 'important' | 'question' | 'fail';
 
 export interface Data {
     labels: ExerciseLabel[];
+    text?: React.ReactNode;
 }
 
 export interface  TimedExerciseData {
@@ -40,7 +41,6 @@ export function putExercise(
     data: TimedExerciseData,
     cancelToken: CancelTokenSource
 ): AxiosPromise<{ updated_at: string }> {
-    console.log('api put', data)
     return api.put(
         `timed_topics/${topicId}/${exerciseId}`,
         data,

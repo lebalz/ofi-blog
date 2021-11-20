@@ -45,7 +45,6 @@ export default class SaveService {
         reaction(
             () => this.model.data,
             (props) => {
-                console.log('save', this.model.data);
                 this.save();
             }
         );
@@ -73,12 +72,10 @@ export default class SaveService {
     @action
     _save() {
         if (!this.rootStore.msalStore.loggedIn) {
-            console.log('[s] not logged in')
             return;
         }
         const { isMyView } = this.rootStore.userStore;
         if (!this.model.canUpdate || !isMyView) {
-            console.log('[s] can not login')
             return Promise.resolve({
                 updated_at: new Date().toISOString(),
                 state: 'ok',

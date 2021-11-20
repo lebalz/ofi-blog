@@ -62,24 +62,38 @@ html[data-theme='dark'] {
         }
     }
     .details {
-        padding-bottom: 1em;
-        .timeSpan {
-            display: flex;
-            height: 0.6em;
-            padding: 0.1em;
-            .time {
-                position: relative;
-                background: var(--ifm-color-primary);
-                border-radius: 0.2em;
-                &.active {
-                    background: var(--ifm-color-success);
+        .timeSpans {
+            padding-bottom: 1em;
+            .timeSpan {
+                display: flex;
+                height: 0.6em;
+                padding: 0.1em;
+                .time {
+                    position: relative;
+                    background: var(--ifm-color-primary);
+                    border-radius: 0.2em;
+                    &.active {
+                        background: var(--ifm-color-success);
+                    }
+                    .timeText {
+                        font-size: 70%;
+                        font-style: italic;
+                        position: absolute;
+                        right: calc(100% + 0.2em);
+                        top: 0;
+                        bottom: 0;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        line-height: 0.6;
+                    }
                 }
-                .timeText {
-                    font-size: 70%;
-                    font-style: italic;
-                    position: absolute;
-                    left: 0.5em;
-                    bottom: -2.2ch;
+                &:first-of-type {
+                    .time {
+                        .timeText {
+                            left: calc(100% + 0.2em);
+                            right: unset;
+                        }
+                    }
                 }
             }
         }

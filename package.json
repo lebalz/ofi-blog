@@ -46,6 +46,7 @@
     "file-loader": "^6.2.0",
     "hast-util-is-element": "1.1.0",
     "html-to-image": "^1.9.0",
+    "katex": "^0.15.1",
     "lodash": "^4.17.21",
     "mdast": "^3.0.0",
     "mobx": "^6.3.3",
