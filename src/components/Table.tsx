@@ -48,7 +48,7 @@ export class Cell extends React.Component<CellProps> {
   }
 }
 
-interface iRow {
+export interface iRow {
   cells: (string | JSX.Element)[];
   type?: Type;
 }
@@ -139,7 +139,6 @@ interface TableProps {
 
 export default class Table extends React.Component<TableProps> {
   render() {
-    const props: any = {}
     const dateIndex = (this.props.header || []).indexOf('Datum');
     return (
       <table

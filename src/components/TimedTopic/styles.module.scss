@@ -3,6 +3,14 @@ html[data-theme='dark'] {
         box-shadow: 0 5px 40px rgba(110, 110, 110, 0.2);
     }
 }
+.faButton {
+    align-self: center;
+    cursor: pointer;
+    margin-left: 0.2em;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
 .exercise {
     box-shadow: var(--ifm-blockquote-shadow);
     border-radius: 8px;
@@ -41,14 +49,6 @@ html[data-theme='dark'] {
                 margin: 0 1em;
             }
             flex-basis: 150px;
-        }
-        .faButton {
-            align-self: center;
-            cursor: pointer;
-            margin-left: 0.2em;
-            &:hover {
-                transform: scale(1.2);
-            }
         }
         .labels {
             .icon {

@@ -56,6 +56,28 @@ export default class TimedTopic implements ApiModel {
     }
 
     @computed
+    get totalTime(): number {
+        return this.exercises.reduce((prev, current) => {
+            return prev + current.duration;
+        }, 0)
+    }
+
+    @computed
+    get totalTimeGroupedByDate(): {[key: string]: number} {
+        const ts = this.exercises.reduce((prev, current) => {
+            return [...prev, ...current.timeSpans];
+        }, [] as TimeSpan[]);
+        const grouped: {[key: string]: number} = {};
+        ts.forEach((t) => {
+            if (!(t.fStartDate in grouped)) {
+                grouped[t.fStartDate] = 0;
+            }
+            grouped[t.fStartDate] += t.duration;
+        });
+        return grouped;
+    }
+
+    @computed
     get canUpdate(): boolean {
         return !this.isDummy && this.loaded;
     }

@@ -2,6 +2,7 @@ import { CancelTokenSource } from 'axios';
 import _ from 'lodash';
 import { action, computed, makeObservable, observable } from 'mobx';
 import { stopTimeSpan, TimeSpan as TimeSpanProps } from '../../api/time_span';
+import { formatDate } from '../../helpers/time';
 import { rootStore } from '../../stores/stores';
 import { TimedTopicStore } from '../../stores/TimedTopicStore';
 import SaveService, { ApiModel } from '../SaveService';
@@ -69,6 +70,11 @@ export default class TimeSpan implements ApiModel {
             start: start,
             end: this.exercise.endTime - this.end.getTime()
         }
+    }
+
+    @computed
+    get fStartDate(): string {
+        return formatDate(this.start);
     }
 
     @computed
