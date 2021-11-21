@@ -29,8 +29,8 @@ const TimeSpan = observer((props: Props) => {
     return (
         <div className={clsx(styles.timeSpan)}>
             <div className={clsx(styles.spacer)} style={{flexGrow: timeSpentBefore}}></div>
-            <div className={clsx(styles.time, ts.isRunning && styles.active)} style={{flexGrow: duration}} >
-                <div className={clsx(styles.timeText)}>{props.showDate && `${ts.fStartDate} | `}{slimTime(ts.duration)}</div>
+            <div className={clsx(styles.time, ts.isRunning && styles.active, ts.tooLong && styles.tooLong)} style={{flexGrow: duration}} >
+                <div className={clsx(styles.timeText)}>{props.showDate && `${ts.fStartDate} | `}{slimTime(ts.duration)}{ts.tooLong && ` (${slimTime(ts.rawDuration)})`}</div>
             </div>
             <div className={clsx(styles.spacer)} style={{flexGrow: timeSpentAfter}} ></div>
         </div>

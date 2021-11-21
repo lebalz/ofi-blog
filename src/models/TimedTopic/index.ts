@@ -65,6 +65,9 @@ export default class TimedTopic implements ApiModel {
     @computed
     get totalTime(): number {
         return this.exercises.reduce((prev, current) => {
+            if (current.duration < 0) {
+                return 0;
+            }
             return prev + current.duration;
         }, 0);
     }
@@ -84,15 +87,15 @@ export default class TimedTopic implements ApiModel {
 
     @computed
     get totalTimeGroupedByDate(): { [key: string]: number } {
-        const ts = this.exercises.reduce((prev, current) => {
+        const timeSpans = this.exercises.reduce((prev, current) => {
             return [...prev, ...current.timeSpans];
         }, [] as TimeSpan[]);
         const grouped: { [key: string]: number } = {};
-        ts.forEach((t) => {
-            if (!(t.fStartDate in grouped)) {
-                grouped[t.fStartDate] = 0;
+        timeSpans.forEach((ts) => {
+            if (!(ts.fStartDate in grouped)) {
+                grouped[ts.fStartDate] = 0;
             }
-            grouped[t.fStartDate] += t.duration;
+            grouped[ts.fStartDate] += ts.duration > 0 ? ts.duration : 0;
         });
         return grouped;
     }

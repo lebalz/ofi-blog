@@ -98,6 +98,9 @@ html[data-theme='dark'] {
                     &.active {
                         background: var(--ifm-color-success);
                     }
+                    &.tooLong {
+                        background: var(--ifm-color-danger);
+                    }
                     .timeText {
                         width: max-content;
                         font-size: 70%;

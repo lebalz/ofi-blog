@@ -2,7 +2,7 @@ import { CancelTokenSource } from 'axios';
 import _ from 'lodash';
 import { action, computed, makeObservable, observable } from 'mobx';
 import { stopTimeSpan, TimeSpan as TimeSpanProps } from '../../api/time_span';
-import { formatDate } from '../../helpers/time';
+import { formatDate, HOUR_MS, MINUTE_MS, SECOND_MS } from '../../helpers/time';
 import { rootStore } from '../../stores/stores';
 import { TimedTopicStore } from '../../stores/TimedTopicStore';
 import SaveService, { ApiModel } from '../SaveService';
@@ -78,6 +78,11 @@ export default class TimeSpan implements ApiModel {
     }
 
     @computed
+    get tooLong(): boolean {
+        return this.rawDuration > HOUR_MS;
+    }
+
+    @computed
     get nextTimeSpan(): TimeSpan | undefined {
         return this.exercise.nextTimeSpan(this);
     }
@@ -98,12 +103,20 @@ export default class TimeSpan implements ApiModel {
     }
 
     @computed
-    get duration(): number {
+    get rawDuration(): number {
         if (this.isRunning) {
             const tspan = this.store.timer - this.start.getTime();
             return tspan < 0 ? 0 : tspan;
         }
         return this.end.getTime() - this.start.getTime();
+    }
+
+    @computed
+    get duration(): number {
+        if (this.tooLong) {
+            return 5 * MINUTE_MS;
+        }
+        return this.rawDuration;
     }
 
     @computed
