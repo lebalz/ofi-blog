@@ -64,9 +64,9 @@ export class TimedTopicStore {
 
     @computed
     get topicStats() {
-        const totalTime = this.myTopics.reduce((prev, curr) => prev + curr.totalTime, 0);
+        const totalTime = this.viewedTopics.reduce((prev, curr) => prev + curr.totalTime, 0);
         const totalTimeGroupedByDate: { [key: string]: number } = {};
-        this.myTopics.forEach((topic) => {
+        this.viewedTopics.forEach((topic) => {
             for (const [date, time] of Object.entries(topic.totalTimeGroupedByDate)) {
                 if (date in totalTimeGroupedByDate) {
                     totalTimeGroupedByDate[date] += time;
