@@ -6,6 +6,7 @@ import Option from "./Option";
 import { useStore } from "../../stores/hooks";
 import {default as ArrayAnswerModel} from "../../models/Answer/Array";
 import { ArrayModel } from "../../models/iModel";
+import Loader from "../shared/Loader";
 
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 
@@ -37,7 +38,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
   };
 
   if (!doc.loaded) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
   return (
     <div className={styles.answer}>

@@ -2,6 +2,7 @@ import * as React from 'react';
 import styles from './QuillEditor.module.scss';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
+import Loader from './Loader';
 
 var ReactQuill: any | undefined = undefined;
 
@@ -186,7 +187,7 @@ const QuillEditor = observer((props: Props) => {
     };
 
     if (!ReactQuill || !quillLoaded || !model.loaded) {
-        return <div>Loading...</div>;
+        return <Loader />;
     }
     return (
         <div onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)}>

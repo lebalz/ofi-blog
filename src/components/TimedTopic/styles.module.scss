@@ -3,6 +3,27 @@ html[data-theme='dark'] {
         box-shadow: 0 5px 40px rgba(110, 110, 110, 0.2);
     }
 }
+.orderControl {
+    display: flex;
+    align-items: baseline;
+    gap: 0.2em;
+    .orderBadge {
+        cursor: pointer;
+        user-select: none;
+        :global .badge {
+            cursor: pointer;
+            user-select: none;
+        }
+        .colBadge {
+            --ifm-badge-background-color: var(--ifm-contrast-background-value);
+        }
+        &:hover {
+            .faIcon {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
 .faButton {
     align-self: center;
     cursor: pointer;
@@ -29,15 +50,17 @@ html[data-theme='dark'] {
             font-family: inherit;
             border-radius: 8px;
             padding: 4px 5px;
-            border:  1px solid var(--ifm-color-primary);
+            border: 1px solid var(--ifm-color-primary);
             // background: var(--ifm-color-emphasis-200);
         }
         .time {
             align-self: center;
-            min-width: 6em;
+            min-width: 5em;
             margin-left: 1em;
             user-select: none;
             cursor: pointer;
+            font-family: monospace;
+            font-size: small;
             &:hover {
                 background-color: var(--ifm-color-emphasis-300);
             }
@@ -76,6 +99,7 @@ html[data-theme='dark'] {
                         background: var(--ifm-color-success);
                     }
                     .timeText {
+                        width: max-content;
                         font-size: 70%;
                         font-style: italic;
                         position: absolute;

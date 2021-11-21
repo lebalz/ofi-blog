@@ -8,6 +8,7 @@ import { TimedTopicStore } from '../../stores/TimedTopicStore';
 import TimedExercise from './TimedExercise';
 import { postExercise } from '../../api/timed_exercise';
 import TimeSpan from './TimeSpan';
+import { orderBy } from 'lodash';
 
 const save = (model: TimedTopic, cancelToken: CancelTokenSource) => {
     return putTopic(model.webKey, model.data, cancelToken);
@@ -38,6 +39,11 @@ export default class TimedTopic implements ApiModel {
     @observable.ref
     saveService: SaveService;
 
+    @observable
+    lockSortOrder: boolean = false;
+
+    ordered: TimedExercise[];
+
     constructor(timedTopic: TimedTopicProps, isDummy: boolean = false) {
         this.isDummy = isDummy;
         this.store = rootStore.timedTopicStore;
@@ -50,6 +56,7 @@ export default class TimedTopic implements ApiModel {
         (timedTopic.exercises || []).forEach((ex) => {
             this.exercises.push(new TimedExercise(ex, this));
         });
+        this.ordered = this.exercises;
         makeObservable(this);
         /** order depends, initialize AFTER making this observable! */
         this.saveService = new SaveService(this, save);
@@ -59,15 +66,28 @@ export default class TimedTopic implements ApiModel {
     get totalTime(): number {
         return this.exercises.reduce((prev, current) => {
             return prev + current.duration;
-        }, 0)
+        }, 0);
     }
 
     @computed
-    get totalTimeGroupedByDate(): {[key: string]: number} {
+    get orderedExercises(): TimedExercise[] {
+        if (!this.lockSortOrder) {
+            this.ordered = orderBy(this.exercises, this.store.orderBy, this.store.sortOrder);
+        }
+        return this.ordered;
+    }
+
+    @action
+    setLockedSortOrder(locked: boolean) {
+        this.lockSortOrder = locked;
+    }
+
+    @computed
+    get totalTimeGroupedByDate(): { [key: string]: number } {
         const ts = this.exercises.reduce((prev, current) => {
             return [...prev, ...current.timeSpans];
         }, [] as TimeSpan[]);
-        const grouped: {[key: string]: number} = {};
+        const grouped: { [key: string]: number } = {};
         ts.forEach((t) => {
             if (!(t.fStartDate in grouped)) {
                 grouped[t.fStartDate] = 0;
@@ -103,8 +123,8 @@ export default class TimedTopic implements ApiModel {
     get umami() {
         return {
             event: 'update-timed-topic',
-            message: ''
-        }
+            message: '',
+        };
     }
 
     @action

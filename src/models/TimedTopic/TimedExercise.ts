@@ -109,6 +109,12 @@ export default class TimedExercise implements ApiModel, iTextData {
         return this.timeSpans.find((ts) => ts.isRunning);
     }
 
+
+    @action
+    setLockedSortOrder(locked: boolean) {
+        this.topic.setLockedSortOrder(locked);
+    }
+
     @action
     start() {
         this.store.stopAllRunning();

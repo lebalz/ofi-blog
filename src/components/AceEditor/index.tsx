@@ -11,6 +11,7 @@ import { getItem, removeItem, _1_YEAR } from '../../utils/storage';
 import LegacyResolver from './LegacyResolver';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { reaction } from 'mobx';
+import Loader from '../shared/Loader';
 
 interface Props {
     webKey: string;
@@ -62,7 +63,7 @@ const PyAceEditor = observer((props: Props) => {
         return <div>SSR</div>;
     }
     if (!model) {
-        return <div>Loading...</div>;
+        return <Loader />;
     }
     return (
         <div>

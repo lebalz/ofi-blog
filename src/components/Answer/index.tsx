@@ -13,6 +13,7 @@ import { getItem, removeItem } from '../../utils/storage';
 import { ModelTypes } from '../../models/iModel';
 import ReactDomServer from 'react-dom/server';
 import { ToolbarOptions } from '../shared/QuillEditor';
+import Loader from '../shared/Loader';
 
 export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();
 
@@ -115,7 +116,7 @@ const Answer = observer((props: Props) => {
         return <div>SSR</div>;
     }
     if (!model) {
-        return <div>Loading...</div>;
+        return <Loader />;
     }
     return (
         <div data--web-key={props.webKey}>

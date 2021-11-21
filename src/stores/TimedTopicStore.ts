@@ -6,9 +6,22 @@ import { RootStore } from './stores';
 import TimedTopic from '../models/TimedTopic';
 import { getTopic, postTopic, TimedTopicData, TimedTopic as TimedTopicProps } from '../api/timed_topic';
 
+
+export type OrderBy = 'name' | 'updatedAt' | 'duration';
+export const ORDER_COLUMNS: OrderBy[] = ['name', 'updatedAt', 'duration'];
+export const ORDER_NAME_MAP: {[key in OrderBy]: string} = {
+    name: 'Name',
+    updatedAt: 'Zuletzt Geändert',
+    duration: 'Länge'
+};
 export class TimedTopicStore {
     private readonly root: RootStore;
     timedTopics = observable<TimedTopic>([]);
+
+    @observable
+    orderBy: OrderBy = 'name';
+    @observable
+    sortOrder: 'asc' | 'desc' = 'asc';
 
     @observable
     timer = 0;
@@ -26,6 +39,20 @@ export class TimedTopicStore {
         );
     }
 
+    @action
+    setOrderColumn(col: OrderBy) {
+        this.orderBy = col;
+    }
+
+    @action
+    toggleSortOrder() {
+        if (this.sortOrder === 'asc') {
+            this.sortOrder = 'desc';
+        } else {
+            this.sortOrder = 'asc';
+        }
+    }
+
     @computed
     get viewedTopics() {
         const view = this.root.userStore.currentView;
@@ -33,6 +60,25 @@ export class TimedTopicStore {
             return this.timedTopics;
         }
         return this.timedTopics.filter((doc) => doc.userId === view.id || doc.userId < 0);
+    }
+
+    @computed
+    get topicStats() {
+        const totalTime = this.myTopics.reduce((prev, curr) => prev + curr.totalTime, 0);
+        const totalTimeGroupedByDate: { [key: string]: number } = {};
+        this.myTopics.forEach((topic) => {
+            for (const [date, time] of Object.entries(topic.totalTimeGroupedByDate)) {
+                if (date in totalTimeGroupedByDate) {
+                    totalTimeGroupedByDate[date] += time;
+                } else {
+                    totalTimeGroupedByDate[date] = time;
+                }
+            }
+        });
+        return {
+            totalTimeGroupedByDate: totalTimeGroupedByDate,
+            totalTime: totalTime,
+        };
     }
 
     @computed

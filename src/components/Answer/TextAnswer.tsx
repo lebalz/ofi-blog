@@ -4,13 +4,14 @@ import { TextProps } from '.';
 import { useStore } from '../../stores/hooks';
 import Text from '../../models/Answer/Text';
 import QuillEditor from '../shared/QuillEditor';
+import Loader from '../shared/Loader';
 
 const TextAnswer = observer((props: TextProps) => {
     const store = useStore('documentStore');
     const doc = store.find<Text>(props.webKey);
 
-    if (!doc.loaded) {
-        return <div>Loading...</div>;
+    if (!doc.loaded) {    
+        return <Loader />;
     }
     return (
         <div>

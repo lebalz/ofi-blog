@@ -5,9 +5,12 @@ sidebar_position: 2
 ---
 
 import TimedTopic from '@site/src/components/TimedTopic'
+import TopicStats from '@site/src/components/TimedTopic/TopicStats'
 
 
 # Algebra 1
+
+<TopicStats />
 
 ## Kapitel 1
 <TimedTopic webKey="915b28a8-0722-4f72-93b9-dd7ef6f7537d" topic="Kapitel 1" />

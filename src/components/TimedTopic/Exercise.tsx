@@ -15,12 +15,13 @@ import {
     faComment,
     faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
-import {faComment as farComment} from '@fortawesome/free-regular-svg-icons';
+import { faComment as farComment } from '@fortawesome/free-regular-svg-icons';
 import { formatDate, formatTime } from '../../helpers/time';
 import { ExerciseLabel } from '../../api/timed_exercise';
 import TimedExercise from '../../models/TimedTopic/TimedExercise';
 import TimeSpan from './TimeSpan';
 import QuillEditor from '../shared/QuillEditor';
+import { useStore } from '../../stores/hooks';
 const LabelIcon: { [k in ExerciseLabel]: IconDefinition } = {
     solved: faCheckCircle,
     fail: faTimesCircle,
@@ -40,6 +41,8 @@ interface Props {
 
 const Exercise = observer((props: Props) => {
     const [showDetails, setShowDetails] = React.useState(false);
+    const store = useStore('timedTopicStore');
+    const inputRef = React.useRef<HTMLInputElement>(null);
     const ex = props.exercise;
     const onDelete = () => {
         if (confirm('Wirklich Löschen?')) {
@@ -50,9 +53,14 @@ const Exercise = observer((props: Props) => {
         <div className={clsx(styles.exercise)}>
             <div className={clsx(styles.base)}>
                 <input
+                    ref={inputRef}
                     type="text"
                     value={ex.name}
-                    onChange={action((e) => (ex.name = e.target.value))}
+                    onChange={action((e) => {
+                        ex.name = e.target.value;
+                    })}
+                    onFocus={() => ex.setLockedSortOrder(true)}
+                    onBlur={() => ex.setLockedSortOrder(false)}
                     placeholder="Aufgabe"
                 />
                 <span
@@ -118,9 +126,12 @@ const Exercise = observer((props: Props) => {
             {showDetails && (
                 <div className={clsx(styles.details)}>
                     <div className={clsx(styles.timeSpans)}>
-                        {ex.timeSpans.map((ts, idx) => (
-                            <TimeSpan timeSpan={ts} key={idx} />
-                        ))}
+                        {ex.timeSpans.map((ts, idx) => {
+                            const next = idx < ex.timeSpans.length - 1 ? ex.timeSpans[idx + 1] : ts;
+                            const last = idx === 0 ? ts : ex.timeSpans[idx - 1];
+                            const dateChanged = ts.fStartDate !== last.fStartDate || ts.fStartDate !== next.fStartDate;
+                            return <TimeSpan timeSpan={ts} key={idx} showDate={dateChanged} />;
+                        })}
                     </div>
                     <QuillEditor
                         model={ex}

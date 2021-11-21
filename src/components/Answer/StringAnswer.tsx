@@ -14,6 +14,7 @@ import { reaction } from "mobx";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import { useStore } from "../../stores/hooks";
 import {default as StringModel} from "../../models/Answer/String";
+import Loader from "../shared/Loader";
 
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 
@@ -83,7 +84,7 @@ const StringAnswer = observer((props: StringProps) => {
   }
 
   if (!doc.loaded) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
   return (
     <div className={styles.answer}>
