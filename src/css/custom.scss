@@ -194,43 +194,6 @@ html[data-theme='dark'] {
     }
 }
 
-.quill {
-    .ql-toolbar.ql-snow {
-        border-top: 0px;
-        border-left: 0px;
-        border-right: 0px;
-        .ql-stroke {
-            fill: none;
-            stroke: var(--ifm-color-primary-contrast-foreground);
-        }
-        .ql-fill {
-            fill: var(--ifm-color-primary-contrast-foreground);
-            stroke: none;
-        }
-
-        .ql-picker {
-            color: var(--ifm-color-primary-contrast-foreground);
-        }
-        .ql-picker-options {
-            background: var(--ifm-background-color);
-        }
-    }
-
-    .ql-container.ql-snow {
-        border: 0px solid;
-    }
-
-    &.disable-toolbar {
-        .ql-toolbar {
-            display: none;
-        }
-        .ql-container {
-            border-top: 1px solid #ccc;
-            border-radius: 4px;
-        }
-    }
-}
-
 /*
  * Reset the line-number counter for each .prism-code scope
  */

@@ -190,7 +190,7 @@ const QuillEditor = observer((props: Props) => {
         return <Loader />;
     }
     return (
-        <div onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)}>
+        <div onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)} className={clsx(styles.quillEditor)}>
             <ReactQuill
                 ref={quillRef}
                 theme="snow"
@@ -198,7 +198,7 @@ const QuillEditor = observer((props: Props) => {
                 className={clsx(
                     styles.quillAnswer,
                     props.monospace && styles.monospace,
-                    showQuillToolbar ? undefined : 'disable-toolbar'
+                    showQuillToolbar ? undefined : styles.disableToolbar
                 )}
                 value={model.text || ''}
                 onChange={(content, _delta, _source, _editor) => {
