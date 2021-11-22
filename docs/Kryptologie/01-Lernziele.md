@@ -3,6 +3,7 @@ title: Lernziele
 ---
 
 # Lernziele
+
 :::note Verschlüsselungsverfahren
 - Sie verstehen das Prinzip symmetrischer Verschlüsselungsverfahren und verwenden das Wissen in Beispielen mit antiken Verfahren an.
 - Sie knacken antike symmetrische Verfahren (Häufigkeitsanalysen, Brute Force, ...).
@@ -33,4 +34,8 @@ title: Lernziele
 - Sie verstehen, dass regelmässige *Softwareupdates*, aktuelle *Antivirensoftware* und eine *aktive Firewall* für die Systemsicherheit zentral sind.
 - Sie verstehen die Wichtigkeit, dieselben Passwörter nicht für mehrere Dienste/Systeme einzusetzen und kennst Möglichkeiten der Passwortverwaltung (z.B. Passwortmanager).
 - Sie verstehen, dass das Passwort des E-Mail-Accounts besonders wichtig ist (z.B. wegen der Passwortrücksetzung via E-Mail).
+:::
+
+:::caution Unterrichtsinhalte
+An der Prüfung können auch Inhalte/Diskussionen/Experimente zu den obigen Themen aufgegriffen werden, welche nur im Unterricht behandelt/diskutiert wurden.
 :::
