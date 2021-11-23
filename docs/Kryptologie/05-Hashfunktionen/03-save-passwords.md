@@ -25,10 +25,10 @@ Wir können jedoch – anstelle eines Passwortes – eine Prüfsumme speichern:
 | :----------- | :--------- | :---------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------- |
 | alice        | 12345      | 6                                                                                   | 3                                                                                    |
 | bob          | 123456     | <Answer type="string" webKey="e4c0e4ee-b780-4b66-b3eb-fee7643ef81c" solution="6" /> | <Answer type="string" webKey="51536ba1-e597-4ad6-889e-da2f6b30e2bd" solution="-3" /> |
-| charlie      | 12345678   | <Answer type="string" webKey="4f07fa06-d3ff-49db-82ce-cd8632c67d84" solution="9" /> | <Answer type="string" webKey="d2ebd64c-8b98-4663-9eae-3fcd0f8552e6" solution="-4" /> |
+| charlie      | 12345678   | <Answer type="string" webKey="4f07fa06-d3ff-49db-82ce-cd8632c67d84" solution="3" /> | <Answer type="string" webKey="d2ebd64c-8b98-4663-9eae-3fcd0f8552e6" solution="-4" /> |
 | donald       | 123456789  | <Answer type="string" webKey="f0c5928e-9a39-48c8-bcb7-1b2880ba175e" solution="9" /> | <Answer type="string" webKey="ab408c87-9091-48f6-9e62-d401dd528399" solution="5" />  |
 | eve          | 1234567890 | <Answer type="string" webKey="521b7f5f-407b-4014-ada2-55d6376de9e1" solution="9" /> | <Answer type="string" webKey="0c9e1541-20ec-4ac0-b525-e5c1197c6700" solution="5" />  |
-| frederick    | 11111111   | <Answer type="string" webKey="20936c4d-0147-4755-992a-6f6a217d7044" solution="6" /> | <Answer type="string" webKey="f62d0c99-c687-4122-a26e-4962c3ff70b3" solution="0" />  |
+| frederick    | 11111111   | <Answer type="string" webKey="20936c4d-0147-4755-992a-6f6a217d7044" solution="8" /> | <Answer type="string" webKey="f62d0c99-c687-4122-a26e-4962c3ff70b3" solution="0" />  |
 | grace        | 123123     | <Answer type="string" webKey="e662e73f-3299-474a-86ca-3dc3a415549d" solution="3" /> | <Answer type="string" webKey="ba26c8da-572c-4736-996c-597bd13e44c7" solution="0" />  |
 | hanna        | password   | <Answer type="string" webKey="af45e7bc-1898-4790-a2e6-71bf311c2b95" solution="7" /> | <Answer type="string" webKey="6f718695-6297-49a6-9b38-f8bd5faae01c" solution="37" /> |
 | ian          | picture1   | <Answer type="string" webKey="a61c5db0-31e2-4c16-86d7-b8b518497ac8" solution="3" /> | <Answer type="string" webKey="3d1d3b0b-e008-403a-b2b3-b344a1b6582f" solution="-3" /> |
