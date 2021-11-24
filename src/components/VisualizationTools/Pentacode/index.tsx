@@ -1,8 +1,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
-import CopyImageToClipboard from '../CopyImageToClipboard';
+import CopyImageToClipboard from '../../shared/CopyImageToClipboard';
 import styles from './Pentacode.module.scss';
-import inpStyles from './Crypto/styles.module.scss';
 
 /**
  * @url: https://rothe.io/crypto/teaching/2-modern/2-1-Kryptologie-Blockchiffre.pdf

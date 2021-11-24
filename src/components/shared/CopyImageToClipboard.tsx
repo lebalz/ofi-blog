@@ -1,4 +1,4 @@
-import { faCircleNotch, faClipboard, faClipboardCheck, faCross, faEllipsisH, faTimesCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faCircleNotch, faClipboard, faClipboardCheck, faEllipsisH, faTimesCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { toBlob } from 'html-to-image';

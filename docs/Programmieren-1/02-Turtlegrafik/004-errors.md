@@ -2,8 +2,6 @@
 title: Fehler
 ---
 
-import Flex from '@site/src/components/Flex';
-
 # Fehler
 
 Sie haben bereits festgestellt, dass Python sehr pingelig ist was Tippfehler und die präzise Verwendung von Klammern, Anführungszeichen, Doppelpunkten und Leerzeichen angeht. Jede Sprache hat seine eigenen Regeln, wie Wörter und Sätze strukturiert sein müssen. Diese Regeln sind allgemein bekannt als die **Syntax** einer Sprache. Bei Programmiersprachen wird mit der Syntax festgelegt, welche Wörter, in welcher Reihenfolge und in welchem Kontext erlaubt sind.

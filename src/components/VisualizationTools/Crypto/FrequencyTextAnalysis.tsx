@@ -3,7 +3,7 @@ import * as React from 'react';
 import styles from './styles.module.scss';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 import ReactSwitch from 'react-switch';
-import CopyImageToClipboard from '../../CopyImageToClipboard';
+import CopyImageToClipboard from '../../shared/CopyImageToClipboard';
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const SWITCH_SIZE = { width: 35, height: 18 };

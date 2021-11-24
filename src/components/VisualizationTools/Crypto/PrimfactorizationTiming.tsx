@@ -5,7 +5,7 @@ import * as React from 'react';
 import { randomPrime } from '../../../utils/prime';
 import styles from './styles.module.scss';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import CopyImageToClipboard from '../../CopyImageToClipboard';
+import CopyImageToClipboard from '../../shared/CopyImageToClipboard';
 
 interface StageProps {
     onStage: () => any;
