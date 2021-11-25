@@ -112,10 +112,13 @@ table {
     }
 }
 
-.slim-table table,
-.small-table table {
-    td {
-        padding: 0.2em;
+.slim-table,
+.small-table {
+    overflow-x: auto;
+    table {
+        td {
+            padding: 0.2em;
+        }
     }
 }
 
@@ -146,7 +149,9 @@ div.small-m {
     }
 }
 
+.no-header,
 .no-table-header {
+    overflow-x: auto;
     table {
         thead {
             display: none;

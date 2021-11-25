@@ -1884,6 +1884,11 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/docusaurus/-/docusaurus-1.0.4.tgz#fc40f87a672568678d83533dd4031a09d75877ca"
   integrity sha512-I6sziQAzLrrqj9r6S26c7aOAjfGVXIE7gWdNONPwnpDcHiMRMQut1s1YCi/APem3dOy23tAb2rvHfNtGCaWuUQ==
 
+"@types/animejs@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@types/animejs/-/animejs-3.1.4.tgz#92f90d1c800b9041b64a7da9da0e68e690146b0e"
+  integrity sha512-WUjeFT2SXd6intfE6cg6eL1jk/JL88JqM2gC4WqO4iHLmbCvHUq6aoLK13lGpDWs4FtS2PHoYraJZ0dEx99Dyg==
+
 "@types/d3-color@^2":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/d3-color/-/d3-color-2.0.3.tgz#8bc4589073c80e33d126345542f588056511fe82"
@@ -2371,6 +2376,11 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
+
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
 
 ansi-align@^3.0.0:
   version "3.0.1"

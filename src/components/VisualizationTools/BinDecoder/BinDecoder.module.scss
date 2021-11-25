@@ -1,0 +1,52 @@
+.bitContainer {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    .bit {
+        background-color: white;
+        transform: rotate(180deg);
+        display: block;
+        text-align: center;
+        border-radius: 4px;
+        &.off {
+            background: black;
+            color: white;
+        }
+    }
+}
+.svgContainer {
+    position: relative;
+    .out {
+        position: absolute;
+        transform: translateY(-100px) translateX(-120px);
+        textarea {
+            width: 100%;
+            height: fit-content;
+        }
+    }
+}
+.sentBits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em 0.8em;
+}
+.octet {
+    display: flex;
+    .bit {
+        padding: 3px;
+        line-height: 20px;
+        width: 20px;
+        min-height: 20px;
+        background-color: white;
+        display: block;
+        text-align: center;
+        border-radius: 4px;
+        &.off {
+            background: black;
+            color: white;
+        }
+        &.processed {
+            font-style: italic;
+        }
+    }
+}
