@@ -91,6 +91,11 @@
       "from": "docs/Kryptologie/05-Hashfunktionen/",
       "to": "versioned_docs/version-24f/06-Kryptologie/05-Hashfunktionen",
       "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/06-Digitale-Signaturen/",
+      "to": "versioned_docs/version-24f/06-Kryptologie/06-Digitale-Signaturen",
+      "ignore": []
     }
   ],
   "24i": [
