@@ -66,7 +66,7 @@ const BinDecoder = () => {
     const pathSvg = React.useRef<HTMLDivElement>(null);
     const [anims, setAnims] = React.useState<Array<anime.AnimeInstance>>([]);
     const [bin, setBin] = React.useState(
-        '01001101  01101001 01100011 01101000 01100101 01101100 01101100 01100101'
+        '01010010 01100101 01110100 01101111'
     );
     const [out, setOut] = React.useState('');
     const [outPos, setOutPos] = React.useState({ top: 0, left: 0 });
@@ -77,7 +77,7 @@ const BinDecoder = () => {
     const [flushStack, setFlushStack] = React.useState(false);
     React.useEffect(() => {
         if (mode === 'latin1') {
-            setBin('01001101  01101001 01100011 01101000 01100101 01101100 01101100 01100101');
+            setBin('01010010 01100101 01110100 01101111');
         } else {
             setBin('11100010 10101101 10010000');
         }
@@ -167,7 +167,6 @@ const BinDecoder = () => {
                     delay: idx * 90 + Math.floor(idx / 8) * 100,
                     loop: false,
                     complete: (anim) => {
-                        console.log(idx);
                         setProcessedIdx(idx);
                     },
                 });
@@ -194,13 +193,6 @@ const BinDecoder = () => {
             const chunkStart = Math.floor(processedIdx / 8) * 8;
             const ctrlBits = controlBits(animBin.substr(chunkStart, 8));
             const ctrlBitsNext = controlBits(animBin.substr(chunkStart + 8, 8));
-            console.log(
-                chunkStart,
-                animBin.substr(chunkStart, 8),
-                ctrlBits,
-                animBin.substr(chunkStart + 8, 8),
-                ctrlBitsNext
-            );
             parseStack = parseStack && (ctrlBits === 1 || ctrlBitsNext !== 2);
             if (processedIdx % 8 >= ctrlBits) {
                 newStack.push(currentBin);
@@ -209,7 +201,7 @@ const BinDecoder = () => {
         setStack(newStack);
         if (parseStack) {
             pauseAnimations(anims);
-            const char = String.fromCharCode(parseInt(newStack.join(''), 2));
+            const char = String.fromCodePoint(parseInt(newStack.join(''), 2));
             setOut(`${out}${char}`);
             setFlushStack(true);
             setTimer(
