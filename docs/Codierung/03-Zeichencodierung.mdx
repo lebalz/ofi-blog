@@ -108,3 +108,15 @@ print(chr(int(1101111, 2)))
 
 <Answer type="text" webKey="dbc5df1d-6e84-4160-b108-8f66a35f7234" />
 :::
+
+## Binärer Codierer
+
+```py live_py id=a69f1738-3ea7-4644-8e25-4569ec6eebe7
+def prettyBin(bin_zahl):
+    bin_zahl = bin_zahl[2:] # erste beiden Zeichen abschneiden
+    bin_zahl = bin_zahl.zfill(8) # ergänze mit Nullen auf 8 Stellen
+    print(bin_zahl)
+
+for buchstabe in 'Hallo':
+    print(buchstabe)
+```

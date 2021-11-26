@@ -163,8 +163,8 @@ const BinDecoder = () => {
                     translateY: animPath('y'),
                     rotate: animPath('angle'),
                     easing: 'linear',
-                    duration: 3000,
-                    delay: idx * 60 + Math.floor(idx / 8) * 100,
+                    duration: 4000,
+                    delay: idx * 90 + Math.floor(idx / 8) * 100,
                     loop: false,
                     complete: (anim) => {
                         console.log(idx);
@@ -274,7 +274,7 @@ const BinDecoder = () => {
                                     className={clsx(...BUTTON_CLSX)}
                                     onClick={() => setState(state === 'running' ? 'pause' : 'continue')}
                                 >
-                                    {state === 'running' ? 'pause' : 'continue'}
+                                    {state === 'running' ? 'Pause' : 'Fortsetzen'}
                                 </button>
                                 <button
                                     className={clsx(...BUTTON_CLSX)}
