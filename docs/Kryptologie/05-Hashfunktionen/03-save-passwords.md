@@ -72,7 +72,7 @@ Nachfolgend eine weitere Liste mit Vorschlägen für Prüfsummen.
 <div className="slim-table">
 
 | Benutzername | Passwort  | ???       | ???       | ???        |
-| :----------- | :-------- | :-------- | :-------- |
+| :----------- | :-------- | :-------- | :-------- | :--------- |
 | alice        | 1234567   | 7654321   | 3456789   | 5040       |
 | bob          | qwerty    | ytrewq    | sygtva    | 17595000   |
 | charlie      | abc123    | 321cba    | cde345    | 36         |
