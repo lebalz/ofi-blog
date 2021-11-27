@@ -1,24 +1,40 @@
+html[data-theme='dark'] {
+    .bit {
+        &.on {
+            color: black;
+        }
+    }
+    .charHistory {
+        table {
+            background: var(--ifm-code-background);
+        }
+    }
+}
+.bit {
+    background-color: white;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    padding: 3px;
+    width: 20px;
+    line-height: 20px;
+    min-height: 20px;
+    &.off {
+        background: black;
+        color: white;
+    }
+}
 .bitContainer {
     position: absolute;
     width: 20px;
     height: 20px;
     .bit {
-        background-color: white;
         transform: rotate(180deg);
-        display: block;
-        text-align: center;
-        border-radius: 4px;
-        &.off {
-            background: black;
-            color: white;
-        }
     }
 }
 .svgContainer {
     position: relative;
     .out {
-        position: absolute;
-        transform: translateY(-100px) translateX(-120px);
         textarea {
             width: 100%;
             height: fit-content;
@@ -28,25 +44,49 @@
 .sentBits {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.3em 0.8em;
-}
-.octet {
-    display: flex;
+    gap: 0.1em 0;
+    margin-top: 0.2em;
     .bit {
-        padding: 3px;
-        line-height: 20px;
-        width: 20px;
-        min-height: 20px;
-        background-color: white;
-        display: block;
-        text-align: center;
-        border-radius: 4px;
-        &.off {
-            background: black;
-            color: white;
+        font-size: 55%;
+        width: 12px;
+        height: 12px;
+        padding: 0px;
+        padding-bottom: 3px;
+        &.first {
+            margin-left: 0.8em;
         }
         &.processed {
             font-style: italic;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: 3px solid var(--ifm-color-primary);
+            padding-bottom: 0;
+        }
+    }
+}
+.octet {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    min-height: 26px;
+    border-bottom: 1px solid var(--ifm-color-primary);
+    border-left: 1px solid var(--ifm-color-primary);
+    border-bottom-left-radius: 4px;
+}
+
+.charHistory {
+    overflow: auto;
+    max-height: 5em;
+    margin-top: 0.5em;
+    table {
+        font-size: x-small;
+        th {
+            // font-weight: var(--ifm-font-weight-normal);
+            padding: 2px;
+            text-align: left;
+        }
+        td {
+            padding: 2px;
         }
     }
 }

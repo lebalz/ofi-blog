@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg">
   <path style="fill: rgba(255, 255, 255, 0); stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 4px; stroke: rgb(0, 0, 0); paint-order: fill;" d="M 434.055 80.455 C 434.394 80.514 281.469 78.945 237.584 80.182 C 155.198 82.504 148.145 102.186 137.054 122.94 C 122.743 149.721 142.879 180.949 184.24 188.926 C 243.485 200.352 184.615 189.565 243.15 199.821 C 352.28 218.941 243.725 200.057 352.983 218.796 C 421.973 230.629 430.424 326.015 388.414 363.241 C 354.909 392.932 318.78 422.155 196.953 422.666 C 196.604 422.667 108.21 421.703 107.693 420.983"/>
   <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
   <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
   <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 580.259 147.152"/>
-  <circle class="binDecoderOut" style="fill: rgb(216, 216, 216);" cx="107.301" cy="405.399" r="6.167"/>
 </svg>

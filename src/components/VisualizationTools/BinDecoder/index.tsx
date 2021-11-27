@@ -5,8 +5,15 @@ import containerStyle from '../../styles/container.module.scss';
 import anime from 'animejs';
 /** make sure to adapt the query selector when renaming the svg */
 import Cable from './cable.svg';
+import { pauseAnimations, removeAnimations, playAnimations } from '../../helpers/animeUtils';
 
 const BUTTON_CLSX = ['button', 'button--sm', 'button--primary', 'button--outline'];
+
+interface ProcessedPart {
+    char: string;
+    bin: string;
+    ord: number;
+}
 
 const octaChunks = (octaText: string): string[] => {
     const chunks: string[] = [];
@@ -29,33 +36,6 @@ const controlBits = (octet: string) => {
     return m.groups.control.length;
 };
 
-const removeAnimations = (animItems: HTMLDivElement[] | null) => {
-    if (!animItems) {
-        return;
-    }
-    /** stop current running animations */
-    animItems.forEach((item) => {
-        if (item) {
-            anime.remove(item);
-        }
-    });
-};
-
-const pauseAnimations = (animItems: anime.AnimeInstance[]) => {
-    animItems.forEach((anim) => {
-        if (anim) {
-            anim.pause();
-        }
-    });
-};
-const playAnimations = (animItems: anime.AnimeInstance[]) => {
-    animItems.forEach((anim) => {
-        if (anim) {
-            anim.play();
-        }
-    });
-};
-
 type State = 'start' | 'running' | 'pause' | 'continue' | 'idle' | 'stop';
 
 const BinDecoder = () => {
@@ -65,10 +45,8 @@ const BinDecoder = () => {
     const itemsRef = React.useRef<Array<HTMLDivElement | null>>([]);
     const pathSvg = React.useRef<HTMLDivElement>(null);
     const [anims, setAnims] = React.useState<Array<anime.AnimeInstance>>([]);
-    const [bin, setBin] = React.useState(
-        '01010010 01100101 01110100 01101111'
-    );
-    const [out, setOut] = React.useState('');
+    const [bin, setBin] = React.useState('01010010 01100101 01110100 01101111');
+    const [out, setOut] = React.useState<ProcessedPart[]>([]);
     const [outPos, setOutPos] = React.useState({ top: 0, left: 0 });
     const [animBin, setAnimBin] = React.useState('');
     const [stack, setStack] = React.useState<string[]>([]);
@@ -99,15 +77,15 @@ const BinDecoder = () => {
                 playAnimations(anims);
                 setState('running');
                 break;
-                case 'running':
-                    if (flushStack) {
-                        setFlushStack(false);
-                        setStack([]);
-                    }
+            case 'running':
+                if (flushStack) {
+                    setFlushStack(false);
+                    setStack([]);
+                }
                 break;
             case 'stop':
                 removeAnimations(itemsRef.current);
-                setOut('');
+                setOut([]);
                 setAnimBin('');
                 setStack([]);
                 setState('idle');
@@ -116,7 +94,7 @@ const BinDecoder = () => {
                 removeAnimations(itemsRef.current);
                 const chunks = octaChunks(bin);
                 setBin(chunks.join(' '));
-                setOut('');
+                setOut([]);
                 setAnimBin('');
                 setStack([]);
                 setTimeout(() => {
@@ -126,6 +104,7 @@ const BinDecoder = () => {
                 break;
         }
     }, [state, timer, flushStack]);
+
     React.useEffect(() => {
         if (pathSvg.current) {
             const out = pathSvg.current.querySelector('svg>circle.cable_svg__binDecoderOut');
@@ -136,10 +115,11 @@ const BinDecoder = () => {
             }
         }
     }, []);
+
     React.useEffect(() => {
         pauseAnimations(anims);
         removeAnimations(itemsRef.current);
-        setOut('');
+        setOut([]);
         setAnimBin('');
         setStack([]);
         setState('idle');
@@ -201,8 +181,15 @@ const BinDecoder = () => {
         setStack(newStack);
         if (parseStack) {
             pauseAnimations(anims);
-            const char = String.fromCodePoint(parseInt(newStack.join(''), 2));
-            setOut(`${out}${char}`);
+            const bin = newStack.join('');
+            const ord = parseInt(bin, 2);
+            const char: ProcessedPart = {
+                bin: bin,
+                ord: ord,
+                char: String.fromCodePoint(ord),
+            };
+
+            setOut([...out, char]);
             setFlushStack(true);
             setTimer(
                 setTimeout(() => {
@@ -251,13 +238,9 @@ const BinDecoder = () => {
                         onChange={(e) => setBin(e.target.value.replace(/[^01\s]/g, '1'))}
                         rows={3}
                     ></textarea>
-
                     <div className={clsx('buttongroup', styles.modes)}>
                         {['start', 'idle'].includes(state) ? (
-                            <button
-                                className={clsx(...BUTTON_CLSX)}
-                                onClick={() => setState('start')}
-                            >
+                            <button className={clsx(...BUTTON_CLSX)} onClick={() => setState('start')}>
                                 Start
                             </button>
                         ) : (
@@ -268,34 +251,26 @@ const BinDecoder = () => {
                                 >
                                     {state === 'running' ? 'Pause' : 'Fortsetzen'}
                                 </button>
-                                <button
-                                    className={clsx(...BUTTON_CLSX)}
-                                    onClick={() => setState('stop')}
-                                >
+                                <button className={clsx(...BUTTON_CLSX)} onClick={() => setState('stop')}>
                                     Stop
                                 </button>
                             </React.Fragment>
                         )}
                     </div>
                     <div className={clsx(styles.sentBits)}>
-                        {octaChunks(animBin).map((chunk, cIdx) => {
+                        {animBin.split('').map((chr, idx) => {
+                            const isFirstOfByte = idx > 0 && idx % 8 === 0;
                             return (
-                                <div className={clsx(styles.octet)} key={cIdx}>
-                                    {chunk.split('').map((chr, idx) => {
-                                        const num = cIdx * 8 + idx;
-                                        return (
-                                            <div
-                                                className={clsx(
-                                                    styles.bit,
-                                                    processedIdx >= num && styles.processed,
-                                                    chr === '1' ? styles.on : styles.off
-                                                )}
-                                                key={idx}
-                                            >
-                                                {chr}
-                                            </div>
-                                        );
-                                    })}
+                                <div
+                                    className={clsx(
+                                        styles.bit,
+                                        processedIdx >= idx && styles.processed,
+                                        isFirstOfByte && styles.first,
+                                        chr === '1' ? styles.on : styles.off
+                                    )}
+                                    key={idx}
+                                >
+                                    {chr}
                                 </div>
                             );
                         })}
@@ -315,15 +290,21 @@ const BinDecoder = () => {
                             );
                         })}
                         <div ref={pathSvg} className={clsx(styles.svgContainer)}>
+                            {/* SVG */}
                             <Cable />
+                            {/* OUTPUT CONTAINER */}
                             <div className={clsx(styles.out)} style={{ top: outPos.top, left: outPos.left }}>
+                                {/* OUTPUT VALUE */}
+                                <textarea value={out.map((chr) => chr.char).join('')} disabled></textarea>
+                                {/* CURRENT STACK */}
                                 <div className={clsx(styles.octet)}>
                                     {stack.map((chr, idx) => {
                                         return (
                                             <div
                                                 className={clsx(
                                                     styles.bit,
-                                                    chr === '1' ? styles.on : styles.off
+                                                    chr === '1' && styles.on,
+                                                    chr === '0' && styles.off
                                                 )}
                                                 key={idx}
                                             >
@@ -332,7 +313,32 @@ const BinDecoder = () => {
                                         );
                                     })}
                                 </div>
-                                <textarea value={out} disabled></textarea>
+                                {/* PROCESSED TABLE */}
+                                <div className={clsx(styles.charHistory)}>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Chr</th>
+                                                <th>Dec</th>
+                                                <th>Bin</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {out
+                                                .slice()
+                                                .reverse()
+                                                .map((chr, idx) => {
+                                                    return (
+                                                        <tr key={idx}>
+                                                            <td>{chr.char}</td>
+                                                            <td>{chr.ord}</td>
+                                                            <td>{chr.bin}</td>
+                                                        </tr>
+                                                    );
+                                                })}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
