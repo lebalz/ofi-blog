@@ -12,7 +12,7 @@ interface Bib {
   edited?: boolean;
 }
 
-interface Options {
+interface Options extends Partial<React.CSSProperties> {
   size?: string;
   width?: string;
   height?: string;
@@ -71,23 +71,27 @@ const defaultUnit = (value: string, unit: string = "px") => {
 };
 
 const ResizedImage = (props: Props) => {
-  const style: React.CSSProperties = {};
-  if (props.options.size) {
-    style.maxWidth = `min(90vw, ${defaultUnit(props.options.size)})`;
-    style.maxHeight = defaultUnit(props.options.size);
+  let style: React.CSSProperties = {};
+  const opts = {...props.options};
+  if (opts.noMargins) {
+    delete opts.noMargins;
   }
-  if (props.options.height) {
-    style.maxHeight = defaultUnit(props.options.height);
+  if (opts.size) {
+    style.maxWidth = `min(90vw, ${defaultUnit(opts.size)})`;
+    style.maxHeight = defaultUnit(opts.size);
+    delete opts.size;
   }
-  if (props.options.width) {
-    style.maxWidth = `min(90vw, ${defaultUnit(props.options.width)})`;
+  if (opts.height) {
+    style.maxHeight = defaultUnit(opts.height);
+    style.height = defaultUnit(opts.height);
+    delete opts.height;
   }
-  // Object.entries(props.options).forEach(([attr, val]) => {
-  //   if (['height', 'width', 'size'].includes(attr)) {
-  //     return;
-  //   }
-  //   style[attr] = val;
-  // })
+  if (opts.width) {
+    style.maxWidth = `min(90vw, ${defaultUnit(opts.width)})`;
+    style.width = defaultUnit(opts.width);
+    delete opts.width;
+  }
+  style = {...style, ...opts};
 
   return (
     <img
@@ -114,6 +118,10 @@ const Image = (props: Props) => {
 
   const hasCaption = props.caption && props.caption !== "undefined";
   const hasFigCaption = props.bib || hasCaption;
+  let noMargin = false;
+  if (props.options.noMargins) {
+    noMargin = true;
+  }
   return (
     <figure
       className={clsx(styles.container, props.options.noMargins && styles.noMargins)}

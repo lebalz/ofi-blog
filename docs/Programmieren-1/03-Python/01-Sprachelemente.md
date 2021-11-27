@@ -3,6 +3,7 @@ title: Sprachelemente
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
+import PyOperatoren from '@site/docs/Programmieren-1/03-Python/_def-python-operatoren.md';
 
 # Sprachelemente
 
@@ -72,18 +73,7 @@ for i in range(4):
 ## Grundrechenoperationen
 Die Grundrechenoperationen werden in Python wie folgt geschrieben:
 
-
-<div className="slim-table">
-
-| Operation      | mathematisch | Python   |
-| :------------- | :----------- | :------- |
-| Addition       | $a + b$      | `a + b`  |
-| Subtraktion    | $a - b$      | `a - b`  |
-| Multiplikation | $a \cdot b$  | `a * b`  |
-| Division       | $a ÷ b$      | `a / b`  |
-| Potenz         | $a^b$        | `a ** b` |
-
-</div>
+<PyOperatoren />
 
 #### Beispiele
 :::flex --min=300px
