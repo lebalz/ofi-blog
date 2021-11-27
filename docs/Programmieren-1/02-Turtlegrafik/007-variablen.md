@@ -1,10 +1,10 @@
 ---
-title: Variablen
+title: 7. Variablen 🚧
 ---
 
 import PyOps from '@site/docs/Programmieren-1/03-Python/_def-python-operatoren.md';
 
-# Variablen
+# 7. Variablen 🚧
 
 ## Einführung
 Im vorhergehenden Kapitel haben Sie Quadrate gezeichnet, deren Seitenlänge im Programm fest eingebaut waren. Manchmal möchten Sie aber die Seitenlänge mit einem Eingabedialog einlesen. Dazu muss das Programm die eingegebene Zahl als Variable speichern.

@@ -1,12 +1,12 @@
 ---
-title: Wiederholung 🔁
+title: 3. Wiederholung 🔁
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Finding from "@site/src/components/Finding";
 
 
-# Wiederholung 🔁
+# 3. Wiederholung 🔁
 
 In der [Aufgabe 8](001-intro.md#aufgaben) haben Sie eine Treppe gezeichnet. Ihr Programm sieht vermutlich etwa wie folgt aus:
 

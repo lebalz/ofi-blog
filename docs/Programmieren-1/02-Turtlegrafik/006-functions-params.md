@@ -1,10 +1,10 @@
 ---
-title: Parameter
+title: 6. Parameter
 ---
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Answer from '@site/src/components/Answer'
 
-# Parameter
+# 6. Parameter
 
 Ein weiteres Strukturelement eines Algorithmus sind [**Parameter**](../01-Algorithmen/01-Algorithmus.md#struktur). Die Verwendung von Parametern haben wir bereits in Aktion gesehen -  im Struktogramm sind alle Parameter <u>unterstrichen</u>, in Python werden alle Parameter als Liste, abgetrennt mit Kommas, in den <u>runden Klammern</u> geschrieben.
 
