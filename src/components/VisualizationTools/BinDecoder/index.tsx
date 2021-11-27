@@ -291,7 +291,7 @@ const BinDecoder = () => {
                         })}
                         <div ref={pathSvg} className={clsx(styles.svgContainer)}>
                             {/* SVG */}
-                            <Cable />
+                            <Cable className={clsx(styles.cable)} />
                             {/* OUTPUT CONTAINER */}
                             <div className={clsx(styles.out)} style={{ top: outPos.top, left: outPos.left }}>
                                 {/* OUTPUT VALUE */}
