@@ -291,3 +291,15 @@ div.flex {
         }
     }
 }
+
+.error {
+    .prism-code {
+        code {
+            .token-line {
+                .token.plain {
+                    color: var(--ifm-color-danger-darker);
+                }
+            }
+        }
+    }
+}

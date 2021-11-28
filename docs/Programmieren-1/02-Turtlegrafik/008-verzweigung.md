@@ -1,0 +1,112 @@
+---
+title: 8. Verzweigungen
+---
+
+import Strukto from '@site/src/components/struktogramm/Strukto';
+import PyAlert from '@site/docs/Programmieren-1/03-Python/_def-python-alert.md';
+import PyBreak from '@site/docs/Programmieren-1/03-Python/_def-python-break.md';
+import Ratespiel from '@site/src/components/Ratespiel'
+import Answer from '@site/src/components/Answer'
+
+# 8. Bedingte Ausführung ⑂
+
+> Einer oder mehrere Schritte werden nur ausgeführt, wenn eine bestimmte Bedingung erfüllt ist.
+
+In Programmen möchten wir während der Ausführung des Programms entscheiden können, ob Befehle ausgeführt werden oder nicht. Auch möchten wir entscheiden können, ob eine Wiederholung abgebrochen werden soll. 
+
+## Vergleichen
+Um zu entscheiden, ob Befehle ausgeführt werden sollen, wird immer eine eine Frage gestellt, die eindeutig mit "Ja" oder "Nein" beantwortet werden kann. Wird die Frage mit "Ja" beantwortet, so ist diese Aussage **Wahr** und die Bedingung ist **erfüllt**. Andernfalls ist die Aussage **Falsch** und die Bedingung ist **nicht erfüllt**.
+
+Ein Frage kann als **Vergleich** geschrieben werden. Beispielsweise wird die Frage "Ist 4 kleiner als 2?" als `4 < 2` aufgeschrieben. Die offensichtliche Antwort ist "Nein" und entspricht in Python dem Wert `False`.
+Spannender sind vergleiche, wenn diese mit Variablen durchgeführt werden, da man nicht schon im Voraus weiss, welcher Wert in einer Variable enthalten ist.
+Die Frage von "Ist x kleiner als 2" (`x < 2`) hängt also davon ab, welcher Wert **zur Zeit** in der Variable `x` gespeichert ist.
+
+:::flex
+
+<Strukto program={[
+    {type: 'input', code: <span><span className="var">alter</span> = Wie alt bist du?</span>},
+    {
+        type: 'if', 
+        code: <span>Ist das <span className="var">alter</span> kleiner als 14?</span>,
+        block: [
+            {type: 'step', code: <span>Ausgabe: Du darfst Velo fahren</span>},
+            {type: 'elif', code: <span>Sonst, ist das <span className="var">alter</span> kleiner als 16?</span>},
+            {type: 'step', code: <span>Ausgabe: Du darfst Töffli fahren</span>},
+            {type: 'elif', code: <span>Sonst, ist das <span className="var">alter</span> kleiner als 18?</span>},
+            {type: 'step', code: <span>Ausgabe: Du darfst Roller fahren</span>},
+            {type: 'else'},
+            {type: 'step', code: <span>Ausgabe: Du darfst Auto fahren</span>}
+        ]
+    }
+]} />
+***
+
+```py live_py slim
+alter = int(input('Wie alt bist du?'))
+
+if alter < 14:
+    print('Du darfst Velo fahren')
+elif alter < 16:
+    print('Du darfst Töffli fahren')
+elif alter < 18:
+    print('Du darfst Roller fahren')
+else:
+    print('Du darfst Auto fahren')
+
+```
+
+:::
+
+In Python können alle üblichen Fragen als Vergleiche von zwei Werten geschrieben werden.
+
+<div className="slim-table">
+
+| Name     | Mathematisch | Python |
+| :------- | :----------- | :----- |
+| grösser  | $\lt$        | `<`    |
+| kleiner  | $\gt$        | `>`    |
+| grösser  | $\leq$       | `<=`   |
+| kleiner  | $\geq$       | `>=`   |
+| gleich   | $==$         | `==`   |
+| ungleich | $\neq$       | `!=`   |
+
+</div>
+
+:::danger Achtung
+Bei der Überprüfung auf Gleichheit werden zwei Gleichheitszeichen `==` geschrieben.
+:::
+
+## Ausgabefenster
+
+In Python lassen sich Ausgaben nicht nur mit `print` sondern auch mit dem Befehl `alert()` (aus der Bibliothek `browser`) in einer Ausgabebox anzeigen. *Die Ausgabe mit `alert` wird hier verwendet, weil die Online-Version von Python die Ausgaben mit `print` erst am Ende des Programms anzeigt wird*.
+
+<PyAlert />
+
+## Zufallszahlen erraten
+
+:::aufgabe Ratespiel
+
+Probieren Sie das Ratespiel aus:
+
+<Ratespiel />
+
+1. Beschreiben Sie in eigenen Worten, wie das Ratespiel funktioniert.
+
+<Answer type="text" webKey="44979bbe-f85a-45ff-badf-76e910710000" />
+
+2. Zeichnen Sie mit ihrer Pultnachbar:in ein Struktogramm für das Programm.
+3. Schreiben Sie gemäss dem Struktogramm das Ratespiel in Python. 
+
+```py live_py title=ratespiel.py id=fd00137d-92d8-4572-ba48-60c20aeca5f0
+from browser import alert
+from random import randint
+
+```
+
+**Hinweis**: Wenn die Zahl gefunden wurde, soll die Spieler:in nicht mehr nach einer Eingabe gefragt werden. Mit dem Befehl `break` kann die Wiederholung abgebrochen werden.
+
+<details><summary><code>break</code></summary>
+<PyBreak />
+</details>
+
+:::

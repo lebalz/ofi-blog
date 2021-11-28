@@ -81,3 +81,25 @@ end_fill()
 ***--alignSelf=center
 ![](images/triangles-and-squares.svg)
 :::
+
+#### Ratespiel
+
+```py
+from random import randint
+from browser import alert
+
+geheim = randint(0, 100)
+
+for i in range(10):
+    zahl = int(input(f'{i + 1}/10 Versuchen: Gib eine ganze Zahl zwischen 0 und 100 ein.'))
+    if zahl == geheim:
+        alert(f'Gewonnen!!! Die gesuchte Zahl {geheim} wurde in {i + 1} Versuchen gefunden :)')
+        break
+    elif zahl < geheim:
+        alert(f'{zahl} ist zu klein')
+    else:
+        alert(f'{zahl} ist zu gross')
+
+if zahl != geheim:
+    alert(f'verloren :(, die gesuchte Zahl war {geheim}')
+```
