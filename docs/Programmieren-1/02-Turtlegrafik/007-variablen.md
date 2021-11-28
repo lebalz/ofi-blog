@@ -12,7 +12,7 @@ import PyTemplateString from '@site/docs/Programmieren-1/03-Python/_def-python-t
 Im vorhergehenden Kapitel haben Sie Quadrate gezeichnet, deren Seitenlänge im Programm fest eingebaut waren. Manchmal möchten Sie aber die Seitenlänge mit einem Eingabedialog einlesen. Dazu muss das Programm die eingegebene Zahl als Variable speichern.
 Variablen kann man sich wie eine Zügelbox vorstellen, welche mit einem Namen angeschrieben ist. Der Name beschreibt, was sich in der Box befindet, damit man den Inhalt später auch wieder findet.
 
-![Variable Zuweisen --width=300px](images/variable-init.svg)
+![Variable Zuweisen --width=300px](images/07-variable-init.svg)
 
 Mit der Schreibweise `anzahl = 12` wird eine solche Box erstellt. In Zukunft sagen wir, dass damit die Variable `anzahl` **definiert** und ihr einen **Wert zugewiesen** wird. Um den Inhalt der Box zu erhalten, kann der Name (ohne Anführungszeichen) geschrieben werden. Im Struktogramm werden alle Variablen **umrahmt**.
 
@@ -53,13 +53,13 @@ print(f'{anzahl} Tafeln Schokolade sind {anzahl * gewicht} g schwer')
 ## Überschreiben: Variablen neu Zuweisen 
 In einer Box kann immer nur ein einziges Objekt abgelegt werden. Wenn später also ein neuer Wert in bereits beschriftete Zügelbox gelegt wird, so wird der aktuelle Wert verdrängt. Künftig wird diese erneute Zuweisung **Überschreiben einer Variable** genannt.
 
-![Variablen überschreiben --width=350px](images/variable-set.svg)
+![Variablen überschreiben --width=350px](images/07-variable-set.svg)
 
 ```py live_py slim
 anzahl = 12
-print('Anzahl =', anzahl)
+print(f'Anzahl = {anzahl}')
 anzahl = 7
-print('Anzahl =', anzahl)
+print(f'Anzahl = {anzahl}')
 ```
 
 Im obigen Beispiel wird der initiale Wert der Variable `anzahl` (12) mit dem neuen Wert `7` überschrieben.
