@@ -105,7 +105,7 @@ Im Programm kann mit Hilfe einer **Eingabeboxen** Werte eingelesen und einer Var
 from turtle import *
 speed(12)
 
-anzahl = input("Wie viele Strecken soll die Spirale haben?")
+anzahl = input('Wie viele Strecken soll die Spirale haben?')
 anzahl = int(anzahl)
 
 seite = 10

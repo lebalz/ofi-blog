@@ -106,6 +106,8 @@ print(f'Hallo {name}') # => Hallo Alfred
 
 ## Variable: Struktogramm
 
+Variablen werden **umrandet**.
+
 <div class="full">
 
 ![](images/07-strukto-var.png)
@@ -140,11 +142,41 @@ print(anzahl + 1) # => 15
 
 
 
+# Benutzereingaben
+
+- Interaktion mit Benutzer:innen
+- `input` erzeugt ein Eingabefenster
+- Die Antwort kann in einer Variable gespeichert werden
+
+```py
+alter = input('Wie alt bist du?')
+print(f'Ich bin {alter} Jahre alt.')
+```
+
 
 # Struktogramm
 
+Eingaben werden in einem **Parallelogramm** dargestellt.
 <div class="full">
 
 ![](images/07-strukto-input.png)
 
 </div>
+
+
+## Mit Eingaben rechnen
+
+- Benutzereingaben liegen als **Text** vor
+- Zahlen müssen zuerst umgewandelt werden:
+  - Ganze Zahlen: `int`
+  - Dezimalzahlen: `float`
+
+```py
+anzahl = input('Wie viele Strecken soll die Spirale haben?')
+anzahl = int(anzahl)
+seite = 10
+for i in range(anzahl):
+    forward(seite)
+    left(90)
+    seite = seite + 10
+```
