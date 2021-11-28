@@ -11,18 +11,28 @@
       "items": [        
         {
           "type": "link",
-          "label": "01-Intro",
+          "label": "01 Intro",
           "href": "https://ofi.gbsl.website/p/01-ict-intro.html"
         },
         {
           "type": "link",
-          "label": "HK-01-Algorithmen",
+          "label": "HK01 Algorithmen",
           "href": "https://ofi.gbsl.website/p/Programmieren/Algorithmen/01-algorithmen.html"
         },
         {
           "type": "link",
-          "label": "HK-03-Wiederholung 🔁",
+          "label": "HK03 Wiederholung 🔁",
           "href": "https://ofi.gbsl.website/p/Programmieren/Schleifen/presentation.html"
+        },
+        {
+          "type": "link",
+          "label": "HK07 Variablen",
+          "href": "https://ofi.gbsl.website/p/Programmieren/07-Variablen/presentation.html"
+        },
+        {
+          "type": "link",
+          "label": "HK08 Verzweigungen ⑂",
+          "href": "https://ofi.gbsl.website/p/Programmieren/08-Conditions/presentation.html"
         }
       ]
     }
