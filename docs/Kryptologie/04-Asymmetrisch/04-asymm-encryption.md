@@ -53,7 +53,7 @@ Der **RSA** Algorithmus ist der aktuell am weitesten verbreitete asymmetrische V
 
 ### Funktionsweise
 
-Die Funktionsweise basiert darauf, dass es leicht ist, $c = m^{e} mod n$ zu berechnen, aber praktisch unmöglich, ohne den privaten Schlüssel `d` die Umkehr­funktion zu berechnen.
+Die Funktionsweise basiert darauf, dass es leicht ist, $c = m^{e}\: mod\: n$ zu berechnen, aber praktisch unmöglich, ohne den privaten Schlüssel `d` die Umkehr­funktion zu berechnen.
 
 <div className="slim-table no-header-table">
 
