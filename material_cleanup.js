@@ -35,12 +35,12 @@ klassen.forEach((klass) => {
         if (fs.existsSync(src.to)) {
             let parent = path.dirname(src.to);
             if (fs.lstatSync(src.to).isDirectory()) {
-                fs.rmdirSync(src.to, { recursive: true, force: true });
+                fs.rmSync(src.to, { recursive: true, force: true });
             } else {
                 fs.unlinkSync(src.to);
             }
             while (fs.readdirSync(parent).length === 0) {
-                fs.rmdirSync(parent, { recursive: true, force: true });
+                fs.rmSync(parent, { recursive: true, force: true });
                 parent = path.dirname(parent);
             }
         }
@@ -51,6 +51,6 @@ klassen.forEach((klass) => {
         }
         fs.copyFileSync(`${tmp_dir}/${f}`, f);
     });
-    fs.rmdirSync(tmp_dir, { recursive: true, force: true });
+    fs.rmSync(tmp_dir, { recursive: true, force: true });
 
 })

@@ -62,12 +62,12 @@ klassen.forEach((klass) => {
                     let parent = path.dirname(to);
                     if (fs.lstatSync(to).isDirectory()) {
                         console.log('rm dir', to)
-                        fs.rmdirSync(to, { recursive: true, force: true });
+                        fs.rmSync(to, { recursive: true, force: true });
                     } else {
                         fs.unlinkSync(to);
                     }
                     while (fs.readdirSync(parent).length === 0) {
-                        fs.rmdirSync(parent, { recursive: true, force: true });
+                        fs.rmSync(parent, { recursive: true, force: true });
                         parent = path.dirname(parent);
                     }
                 } else {
