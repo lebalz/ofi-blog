@@ -2,6 +2,8 @@
 title: Verfahren kombinieren
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # Verfahren kombinieren [^1]
 
 Für uns ist Wichtig:
@@ -21,6 +23,12 @@ Wir versuchen, mehrere Verfahren zu kombinieren und deren Vorteile zu nutzen. Ei
 
 ![Digitale Signatur: Hashwert und asymmetrische Verschlüsselung](images/hash-asymm-signature-binary.svg)
 
+:::aufgabe Digitale Signaturen überprüfen
 
+Überlegen Sie sich, wie man eine solche digital signierte Nachricht überprüfen kann. Zeichnen Sie die benötigten Schritte auf.
+
+<Answer type="text" webKey="99cd9f5a-6715-44a8-89cf-c79770c0740b" />
+
+:::
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=559733)
