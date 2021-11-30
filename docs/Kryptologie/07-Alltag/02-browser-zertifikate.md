@@ -18,7 +18,7 @@ Die **Daten werden symmetrisch** verschlüsselt, der **Sitzungsschlüssel asymme
 
 Da die Browser nicht jeden einzelnen öffentlichen Schlüssel der Webseiten (dies sind gemäss internet live stats hunderte Millionen[^3]) kennen können, vertrauen sie ausgewählten **Zertifizierungsstellen**. Der öffentliche Schlüssel einer Webseite wird von einer Zertifizierungsstelle digital signiert. Das so entstandene Zertifikat wird beim Verbindungsaufbau übertragen und kann vom Browser überprüft werden.
 
-![Webseitenzertifikate](images/https-gbsl.ch.png)
+![Webseitenzertifikate --width=400px](images/https-gbsl.ch.png)
 
 Das Schloss vor der URL zeigt die Verwendung von HTTPS (und Webseitenzertifikaten) an.
 Beim Klicken auf das Schloss können «Weitere Informationen» zur Verbindung angezeigt werden (unter Firefox):
