@@ -234,7 +234,7 @@ Im obigen Beispiel startet `i` bei `2` und wird solange um `3` erhöht, bis die 
    zusammenfasst. 
 3. Mit dem Befehl `randint(min, max)` aus der Bibliothek `random` kann eine zufällige ganze Zahl erzeugt werden. Dabei muss der kleinst und der grösstmögliche Wert angegeben werden. Mit `move(randint(-20, 20), randint(-20, 20))` kann also die Turtle an eine beliebige Position verschoben werden. Zeichnen Sie 20 Häuser an zufälligen Positionen mit der Grösse `30`.
 
-![](images/06_house_city.png)
+![Stadt --width=300px](images/06_house_city.png)
 
 4. Wählen Sie nun auch die Grösse zufällig: `haus(randint(10, 100))`
 5. Nun soll auch noch die Farbe zufällig gewählt werden. Der Befehl `choice` aus der Bibliothek `random` gibt jeweils ein zufälliges Element einer Liste zurück: `choice([1, 3, 5, 7, 9])` etwa wählt zufällig eine ungerade Zahl zwischen 1 und 10 aus. Die Liste der Farben:
