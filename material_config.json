@@ -96,6 +96,11 @@
       "from": "docs/Kryptologie/06-Digitale-Signaturen/",
       "to": "versioned_docs/version-24f/06-Kryptologie/06-Digitale-Signaturen",
       "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/07-Alltag/",
+      "to": "versioned_docs/version-24f/06-Kryptologie/07-Alltag",
+      "ignore": []
     }
   ],
   "24i": [
@@ -294,6 +299,11 @@
       "from": "docs/Kryptologie/05-Hashfunktionen/",
       "to": "versioned_docs/version-24K/06-Kryptologie/05-Hashfunktionen",
       "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/06-Digitale-Signaturen/",
+      "to": "versioned_docs/version-24K/06-Kryptologie/06-Digitale-Signaturen",
+      "ignore": []
     }
   ],
   "24L": [
@@ -387,6 +397,11 @@
     {
       "from": "docs/Kryptologie/05-Hashfunktionen/",
       "to": "versioned_docs/version-24L/06-Kryptologie/05-Hashfunktionen",
+      "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/06-Digitale-Signaturen/",
+      "to": "versioned_docs/version-24L/06-Kryptologie/06-Digitale-Signaturen",
       "ignore": []
     }
   ],
