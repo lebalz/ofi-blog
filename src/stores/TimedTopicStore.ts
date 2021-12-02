@@ -7,11 +7,11 @@ import TimedTopic from '../models/TimedTopic';
 import { getTopic, postTopic, TimedTopicData, TimedTopic as TimedTopicProps } from '../api/timed_topic';
 
 
-export type OrderBy = 'name' | 'updatedAt' | 'duration';
-export const ORDER_COLUMNS: OrderBy[] = ['name', 'updatedAt', 'duration'];
+export type OrderBy = 'name' | 'lastEdited' | 'duration';
+export const ORDER_COLUMNS: OrderBy[] = ['name', 'lastEdited', 'duration'];
 export const ORDER_NAME_MAP: {[key in OrderBy]: string} = {
     name: 'Name',
-    updatedAt: 'Zuletzt Geändert',
+    lastEdited: 'Zuletzt Geändert',
     duration: 'Länge'
 };
 export class TimedTopicStore {

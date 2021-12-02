@@ -75,7 +75,7 @@ export default class TimedTopic implements ApiModel {
     @computed
     get orderedExercises(): TimedExercise[] {
         if (!this.lockSortOrder) {
-            this.ordered = orderBy(this.exercises, this.store.orderBy, this.store.sortOrder);
+            this.ordered = orderBy(this.exercises, [this.store.orderBy], this.store.sortOrder);
         }
         return this.ordered;
     }
