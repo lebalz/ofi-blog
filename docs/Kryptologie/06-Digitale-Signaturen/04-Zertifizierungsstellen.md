@@ -37,7 +37,7 @@ Wie könnte Trent dafür sorgen, dass die öffentlichen Schlüssel besser überp
 
 <Solution webKey="c6892ee0-018c-498f-9bbd-185f0e3038d2">
 
-Trent ist bekannt und akzeptiert als Zertifizierungsstelle, alle kennen seinen öffentlichen Schlüssel. Wenn Trent die Kunden gut überprüft und deren Schlüssel signiert, kann Bob sicher sein, den richtigen Schlüssel zu verwenden. Er akzeptiert folglich keine unsignierten Schlüssel mehr.
+Trent ist bekannt und akzeptiert als Zertifizierungsstelle, alle kennen seinen öffentlichen Schlüssel. Wenn Trent die Kunden gut überprüft und deren **öffentliche Schlüssel** (⚠️ die privaten Schlüssel der Kunden kennt auch Trent nicht!) signiert, kann Bob sicher sein, den richtigen Schlüssel zu verwenden. Er akzeptiert folglich keine unsignierten Schlüssel mehr.
 
 ![Schutz vor Man-in-the-Middle-Attacken](images/certificates.svg)
 
