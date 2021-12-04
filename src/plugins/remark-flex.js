@@ -14,6 +14,10 @@ const MIN_WIDTH = '50px';
 // create a node that will compile to HTML
 const element = (tagName, classes = [], children = [], style = {}) => {
     const hProperties = { style: style }
+    if ('classes' in style) {
+        classes.push(...style.classes);
+        delete style.classes;
+    }
     if (classes.length > 0) {
         hProperties.className = classes;
     }
