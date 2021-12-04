@@ -1,0 +1,65 @@
+html[data-theme='dark'] {
+    .wrapper {
+        .disabled {
+            --ifm-alert-border-color: gray;
+            --ifm-alert-background-color: rgb(99, 98, 98);
+        }
+    }
+}
+.wrapper {
+    --current-alert-padding-vertical: var(--ifm-alert-padding-vertical);
+
+    :global .alert {
+        --ifm-alert-padding-vertical: 0.2em;
+        --ifm-alert-padding-horizontal: 0.2em;
+        margin-right: calc(-1 * var(--current-alert-padding-vertical));
+        margin-left: calc(
+            -1 * calc(var(--current-alert-padding-vertical) + var(--ifm-alert-border-left-width))
+        );
+    }
+
+    .disabled {
+        --ifm-alert-border-color: gray;
+        --ifm-alert-background-color: rgb(226, 226, 226);
+        font-style: italic;
+        font-size: smaller;
+        user-select: none;
+        cursor: pointer;
+        padding-left: 0.5em;
+        > svg {
+          float: right;
+          fill: var(--ifm-color-success);
+          margin-right: 0.2em;
+      }
+    }
+
+    details.solution {
+        > summary > svg {
+            transition: all 0.5s;
+            transition-delay: 0s;
+            float: right;
+            fill: var(--ifm-alert-border-color);
+            margin-right: 0.2em;
+        }
+        &[open] > summary > svg {
+            transform: scale(1.6) rotate(360deg);
+        }
+        > div {
+            > div {
+                // the collapsibleContent within the details
+                margin-top: 0.2em;
+                padding-top: 0.2em;
+            }
+        }
+    }
+}
+
+:global .admonition {
+    :last-child {
+        &.solution-wrapper {
+            .alert {
+                margin-bottom: calc(-1 * var(--current-alert-padding-vertical));
+            }
+        }
+    }
+}

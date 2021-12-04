@@ -1,0 +1,172 @@
+import axios, { CancelTokenSource } from 'axios';
+import { action, computed, makeObservable, observable, runInAction } from 'mobx';
+import { computedFn } from 'mobx-utils';
+import { getSolutionAuthorizationAsAdmin } from '../api/admin';
+import { RootStore } from './stores';
+import {
+    Authorization,
+    authorized,
+    postSolutionPolicy,
+    SolutionPolicy,
+    SolutionPolicyData,
+} from '../api/solution_policy';
+import SolutionAuthorization from '../models/SolutionAuthorization';
+
+const VERSION_REGEX = /^\/\d{2}.\//;
+
+const getDocUrl = () => {
+    try {
+        const loc = window.location.href.replace(window.location.origin, '').replace(/#.*/, '');
+        if (VERSION_REGEX.test(loc)) {
+            return loc.replace(VERSION_REGEX, '/');
+        }
+        return loc;
+    } catch (e) {
+        return '';
+    }
+};
+
+export class PolicyStore {
+    private readonly root: RootStore;
+    authorizations = observable<SolutionAuthorization>([]);
+
+    @observable initialized: boolean = false;
+
+    constructor(root: RootStore) {
+        this.root = root;
+        makeObservable(this);
+    }
+
+    @computed
+    get viewedAuthorizations() {
+        const view = this.root.userStore.currentView;
+        if (!view) {
+            return this.authorizations;
+        }
+        return this.authorizations.filter((auth) => auth.userId === view.id || auth.userId < 0);
+    }
+
+    find = computedFn(
+        function (this: PolicyStore, webKey: string): SolutionAuthorization | undefined {
+            return this.viewedAuthorizations.find((q) => q.webKey === webKey);
+        },
+        { keepAlive: true }
+    );
+
+    @action
+    provideAuthorization(webKey: string, forceReload?: boolean): Promise<SolutionAuthorization> {
+        const loadedAuth = this.find(webKey);
+        if (loadedAuth) {
+            if (loadedAuth.loaded && !forceReload) {
+                return Promise.resolve(loadedAuth);
+            }
+            this.authorizations.remove(loadedAuth);
+        }
+        const model = new SolutionAuthorization({
+            web_key: webKey,
+            show: false,
+            user_id: this.root.userStore.currentView?.id || -1,
+        });
+        this.authorizations.push(model);
+        if (!this.root.msalStore.loggedIn) {
+            model.loaded = true;
+            return Promise.resolve(model);
+        }
+        const ct = axios.CancelToken.source();
+        return this.apiAuthorized(model.webKey, ct)
+            .then((data) => {
+                if (data) {
+                    return data;
+                } else {
+                    return this.apiCreateSolutionAuthorization(
+                        {
+                            web_key: model.webKey,
+                            document_url: getDocUrl(),
+                        },
+                        ct
+                    ).then((data) => {
+                        return{ web_key: model.webKey, show: this.root.userStore.current?.admin, user_id: model.userId };
+                    });
+                }
+            })
+            .then((data) => {
+                if (data) {
+                    const fromApi = new SolutionAuthorization(data);
+                    runInAction(() => {
+                        fromApi.loaded = true;
+                        this.authorizations.remove(model);
+                        this.authorizations.push(fromApi);
+                    });
+                    return fromApi;
+                }
+                return model;
+            });
+    }
+
+    @computed
+    get isLoggedIn() {
+        return this.root.msalStore.loggedIn;
+    }
+
+    @action
+    apiAuthorized(webKey: string, cancelToken: CancelTokenSource): Promise<Authorization> {
+        return this.root.msalStore.withToken().then((ok) => {
+            if (ok) {
+                const isOthersView =
+                    this.root.userStore.currentView &&
+                    this.root.userStore.currentView.id !== this.root.userStore.current?.id;
+                if (!isOthersView) {
+                    return authorized(webKey, cancelToken)
+                        .then(({ data }) => {
+                            return data;
+                        })
+                        .catch((err) => {
+                            if (err.message?.startsWith('Network Error')) {
+                                this.root.msalStore.setApiOfflineState(true);
+                            } else {
+                                return undefined;
+                            }
+                        });
+                }
+                return getSolutionAuthorizationAsAdmin(
+                    this.root.userStore.currentView.id,
+                    webKey,
+                    cancelToken
+                )
+                    .then(({ data }) => {
+                        return data;
+                    })
+                    .catch((err) => {
+                        if (err.message?.startsWith('Network Error')) {
+                            this.root.msalStore.setApiOfflineState(true);
+                        } else {
+                            return undefined;
+                        }
+                    });
+            }
+        });
+    }
+
+    @action
+    apiCreateSolutionAuthorization(
+        data: SolutionPolicyData,
+        cancelToken: CancelTokenSource
+    ): Promise<void | SolutionPolicy> {
+        return this.root.msalStore
+            .withToken()
+            .then((ok) => {
+                if (ok) {
+                    return postSolutionPolicy(data, cancelToken).then(({ data }) => {
+                        return data;
+                    });
+                }
+            })
+            .catch((err) => {
+                if (err.message?.startsWith('Network Error')) {
+                    this.root.msalStore.setApiOfflineState(true);
+                } else {
+                    return undefined;
+                }
+            });
+    }
+}

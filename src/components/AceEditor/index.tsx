@@ -66,7 +66,7 @@ const PyAceEditor = observer((props: Props) => {
         return <Loader />;
     }
     return (
-        <div>
+        <div className={clsx(styles.wrapper)}>
             {!props.slim && <LoginAlert />}
             {msalStore.loggedIn && !props.slim && <LegacyResolver webKey={props.webKey} />}
             <div

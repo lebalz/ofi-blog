@@ -1,5 +1,8 @@
 .loader {
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    .badge {
+        color: var(--ifm-color-content);
+    }
 }

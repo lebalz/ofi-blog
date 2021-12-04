@@ -108,3 +108,47 @@ export const useTimedTopic = (
         );
     }, [initialized]);
 };
+
+
+
+export const useSolution = (
+    webKey: string,
+) => {
+    const [initialized, setInitialized] = React.useState(false);
+    /** initial load */
+    React.useEffect(() => {
+        rootStore.policyStore
+            .provideAuthorization(webKey, false)
+            .finally(() => {
+                setInitialized(true);
+            });
+    }, []);
+    /** load when view changes */
+    React.useEffect(() => {
+        return reaction(
+            () => rootStore.userStore.currentView,
+            (currentView, prev) => {
+                if (initialized && currentView) {
+                    rootStore.policyStore.provideAuthorization(
+                        webKey,
+                        true
+                    );
+                }
+            }
+        );
+    }, [initialized]);
+    /** load when api is online again */
+    React.useEffect(() => {
+        return reaction(
+            () => rootStore.msalStore.isApiOffline,
+            (isOffline, prev) => {
+                if (initialized && !isOffline && prev) {
+                    rootStore.policyStore.provideAuthorization(
+                        webKey,
+                        true
+                    );
+                }
+            }
+        );
+    }, [initialized]);
+};

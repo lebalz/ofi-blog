@@ -9,7 +9,7 @@ const Loader = observer(() => {
     return (
         <div className={clsx(styles.loader)}>
             <FontAwesomeIcon icon={faCircleNotch} spin />
-            <span className={clsx('badge')}>Laden...</span>
+            <span className={clsx('badge', styles.badge)}>Laden...</span>
         </div>
     )
 });

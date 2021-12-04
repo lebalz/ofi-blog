@@ -1,3 +1,4 @@
+import { PolicyStore } from './PolicyStore';
 import { MSALStore } from "./MSALStore";
 import { DocumentStore } from "./DocumentStore";
 
@@ -14,12 +15,14 @@ export class RootStore {
   msalStore: MSALStore;
   userStore: UserStore;
   timedTopicStore: TimedTopicStore;
+  policyStore: PolicyStore;
   constructor() {
     makeObservable(this);
     this.msalStore = new MSALStore(this);
     this.documentStore = new DocumentStore(this);
     this.userStore = new UserStore(this);
     this.timedTopicStore = new TimedTopicStore(this);
+    this.policyStore = new PolicyStore(this);
     this.initialized = true;
   }
 }
