@@ -3,6 +3,7 @@ title: Asymmetrie umkehren
 ---
 
 import Answer from '@site/src/components/Answer'
+import Solution from '@site/src/components/Solution'
 
 # Asymmetrie umkehren [^1]
 Wir erinnern uns an das Prinzip der reinen [asymmetrische Verschlüsselung](../04-Asymmetrisch/03-asymmetrie.md):
@@ -31,7 +32,7 @@ p = D(c, d)
 $$
 
 :::aufgabe Aufgabe Gedankenexperiment
-a. Was erhalten wir, wenn wir der Verschlüsselungsfunktion anstelle des öffentlichen Schlüssels von Bob **den privaten Schlüssel von Alice** übergeben?
+a. Was erhalten wir, wenn wir der Verschlüsselungsfunktion anstelle des öffentlichen Schlüssels von Bob **den privaten Schlüssel d von Alice** übergeben?
 $$
 ? = E(p, d)
 $$
@@ -50,6 +51,22 @@ b.)
 
 </Answer>
 
+<Solution webKey="7ff60a15-ccaa-4ab4-98f5-a908c6b89c6e">
+
+a. Es entsteht ebenso ein «spezieller Geheimtext», also etwas, das nicht direkt verstanden werden kann, wir bezeichnen dieses Produkt mit dem Buchstaben $s$.
+
+$$
+s = E(p, d)
+$$
+
+b. Da dieser spezielle «spezielle Geheimtext» $s$ mit dem privaten Schlüssel von Alice «verschlüsselt» wurde, kann er nur mit dem zugehörigen öffentlichen Schlüssel $e$ von Alice wieder in Klartext umgewandelt werden.
+
+$$
+p = D(s, e)
+$$
+
+</Solution>
+
 :::
 
 :::aufgabe Aufgabe Bedeutung des Gedankenexperimentes
@@ -65,6 +82,13 @@ b.)
 
 </Answer>
 
+<Solution webKey="7ff60a15-ccaa-4ab4-98f5-a908c6b89c6e">
+
+a. Man erhält die digitale Unterschrift, also die **Signatur** `s` von Alice. Nur Alice kann mit ihrem privaten Schlüssel das Dokument so verschlüsseln, dass es mit ihrem öffentlichen Schlüssel wieder zum Original entschlüsselt werden kann.
+
+b. Dieser Vorgang hat **nichts mit Geheimhaltung zu tun** - es geht ausschliesslich darum, ein Dokument von der Absender:in signieren zu lassen.
+
+</Solution>
 :::
 
 ## Digitale Signatur
@@ -81,6 +105,11 @@ Wenn Bob die Nachricht mit dem öffentlichen Schlüssel von Alice entschlüsseln
 Überlegen Sie sich, wie ein signiertes Dokument von mehr als zwei Personen angeschaut und überprüft wird. Welche Schlüssel werden verwendet?
 
 <Answer type="text" webKey="6e6c19e8-7a15-41cc-83b4-ca2987de22d1" />
+
+<Solution webKey="7ff60a15-ccaa-4ab4-98f5-a908c6b89c6e">
+
+![](images/hash-asymm-signature.svg)
+</Solution>
 :::
 
 ## Nachteile

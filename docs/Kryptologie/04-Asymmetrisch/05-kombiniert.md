@@ -3,6 +3,7 @@ title: Kombinierte Verfahren
 ---
 
 import Answer from '@site/src/components/Answer'
+import Solution from '@site/src/components/Solution'
 
 # Kombinierte Verfahren [^1]
 
@@ -54,6 +55,12 @@ Asymmetrische Verfahren sind also nicht besser als symmetrische! Sie erfüllen e
 Stellen Sie dar, wie die Umkehrung – also die Entschlüsselung – funktioniert, wenn symmetrische und asymmetrische Verfahren kombiniert verwendet werden.
 
 <Answer type="text" webKey="4a33b602-eb5f-427d-ba5e-725756b5f112" />
+
+<Solution webKey="1f2cf2b5-9a49-48e7-9b45-6bca55560abf">
+
+![Symmetrische und asymmetrische Entschlüsselung kombiniert](images/symm-asymm-decryption-binary.svg)
+
+</Solution>
 
 :::
 

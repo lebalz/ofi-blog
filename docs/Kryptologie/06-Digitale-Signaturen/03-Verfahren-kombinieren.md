@@ -3,6 +3,7 @@ title: Verfahren kombinieren
 ---
 
 import Answer from '@site/src/components/Answer'
+import Solution from '@site/src/components/Solution'
 
 # Verfahren kombinieren [^1]
 
@@ -29,6 +30,10 @@ Wir versuchen, mehrere Verfahren zu kombinieren und deren Vorteile zu nutzen. Ei
 
 <Answer type="text" webKey="99cd9f5a-6715-44a8-89cf-c79770c0740b" />
 
+<Solution webKey="5bacd9c8-2222-47c2-bc1d-e90116caf1d0">
+
+![Digitale Signatur überprüfen](images/hash-asymm-signature-verification-binary.svg)
+</Solution>
 :::
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=559733)

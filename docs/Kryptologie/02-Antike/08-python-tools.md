@@ -132,8 +132,8 @@ ROT = ALPHABET.index(SCHLÜSSEL)
 
 verschlüsselt = 'JDLXV'
 
-verschlüsselt = klartext.upper()
 klartext = ''
+verschlüsselt = klartext.upper()
 for buchstabe in verschlüsselt:
     index = 0
     klartext = klartext + ALPHABET[index]

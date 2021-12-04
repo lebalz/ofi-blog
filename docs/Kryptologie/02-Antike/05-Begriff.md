@@ -3,6 +3,7 @@ title: Begriffe
 ---
 
 import Answer from "@site/src/components/Answer";
+import Solution from '@site/src/components/Solution'
 
 # Begriffe
 
@@ -57,7 +58,16 @@ Geben Sie die Grösse des Schlüsselraumes für die folgenden Verschlüsselungsv
 allgemeine monoalphabetische Substitution
 <Answer type="text" id="q4" webKey="87f42c57-7331-42b6-a77c-e7aa23d4cebe"></Answer>
 
+<Solution webKey="2b2b5bad-9f90-4aa2-8cba-71c4e8f2dab0">
 
+- Skytale: ein, zwei Dutzend
+- Caesar\*: $26$
+- ROT13: $1$
+- Monoalphabetische Substitution: $26! > 4*10^26$
+- Polybios: $25! > 1.5*10^25$
+
+\* auch wenn die Verschiebung `A -> A` auf den ersten Blick keinen Sinn ergibt, werden bei der Angabe des Schlüsselraums immer jegliche, grundsätzlich mögliche Varianten angegeben. Bei der monoalphabetischen Substitution würden anderenfalls viele Möglichkeiten vorweg ausgeschlossen, so dass das Verfahren einfacher zu knacken wäre.
+</Solution>
 :::
 
 ---

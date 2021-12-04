@@ -3,6 +3,7 @@ title: Zertifizierungsstellen
 ---
 
 import Answer from '@site/src/components/Answer'
+import Solution from '@site/src/components/Solution'
 
 # Zertifizierungsstellen [^1]
 
@@ -15,6 +16,12 @@ import Answer from '@site/src/components/Answer'
 Alice schickt ihren öffentlichen Schlüssel (also ihr Vorhängeschloss) per Post an Bob. Überlege dir, was der bösartige Mallory anstellen könnte, um Alice und Bob zu überlisten.
 
 <Answer type="text" webKey="5b4c5a94-b1fc-4dd6-9c99-65c907b258d4" />
+<Solution webKey="c6892ee0-018c-498f-9bbd-185f0e3038d2">
+
+Da der öffentliche Schlüssel nur aus Zahlen besteht, ist es für Bob nicht erkennbar, ob er den richtigen Schlüssel erhalten hat.
+
+![Man-in-the-middle-Attacke](images/public-key-attack-2.svg)
+</Solution>
 :::
 
 ## Schutz gegen Man-in-the-Middle-Attacken
@@ -27,6 +34,14 @@ Wie können wir uns vor Man-in-the-Middle-Attacken schützen? Kann uns Trent hel
 Wie könnte Trent dafür sorgen, dass die öffentlichen Schlüssel besser überprüfbar sind?
 
 <Answer type="text" webKey="a2ef63f4-8f01-4e78-8135-1eb43e4a09ed" />
+
+<Solution webKey="c6892ee0-018c-498f-9bbd-185f0e3038d2">
+
+Trent ist bekannt und akzeptiert als Zertifizierungsstelle, alle kennen seinen öffentlichen Schlüssel. Wenn Trent die Kunden gut überprüft und deren Schlüssel signiert, kann Bob sicher sein, den richtigen Schlüssel zu verwenden. Er akzeptiert folglich keine unsignierten Schlüssel mehr.
+
+![Schutz vor Man-in-the-Middle-Attacken](images/certificates.svg)
+
+</Solution>
 :::
 
 ## Wieso kann sich Mallory nicht zwischen Trent und Bob einschleichen?

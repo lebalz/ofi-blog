@@ -3,6 +3,7 @@ title: Asymm. Verschlüsselung
 ---
 
 import Answer from '@site/src/components/Answer'
+import Solution from '@site/src/components/Solution'
 
 # Asymmetrische Verschlüsselung [^1]
 
@@ -40,6 +41,17 @@ Um Verwechslungen zu vermeiden, spricht man bei der symmetrischen Verschlüsselu
 2. Welche Nachteile erkennen Sie?
 
 <Answer type="text" webKey="6f969d09-5b80-4553-8c21-3bbc70b53f52" />
+
+<Solution webKey="eb555af1-a9d0-4165-8dcc-abf879e84a88">
+
+![Asymmetrische Verschlüsselung für zwei Personen](images/asymm-encryption-for-two.svg)
+
+**Nachteile**
+- Das Dokument muss separat für zwei Personen verschlüsselt werden.
+- Jeder Person muss eine andere Nachricht geschickt werden.
+
+</Solution>
+
 :::
 
 <details><summary>

@@ -3,6 +3,7 @@ title: XOR-Verschlüsselung
 ---
 
 import Answer from "@site/src/components/Answer";
+import Solution from '@site/src/components/Solution'
 
 # XOR-Verschlüsselung [^1]
 
@@ -95,6 +96,14 @@ Als Schlüssel haben Sie das Wort `MACHT` abgemacht.
 4. Was geschieht, wenn Sie daraus mit Pentacode einen Text erstellen?
 
 <Answer type="text" webKey="87a642b5-0a0b-4da3-a808-a4629294f359" />
+
+<Solution webKey="e445b1ac-3c01-4268-9f57-796c401258a8">
+
+Wichtige Punkte:
+- Auch Bilder (im allgemeinen jegliche Binär-Daten) lassen sich digital verschlüsseln
+- Vom verschlüsselten Bild kann **nicht** auf das Original geschlossen werden - sowohl die Anzahl schwarzer/weisser Felder wie auch deren Anordnung ist wild durchmischt. 
+
+</Solution>
 
 :::
 
