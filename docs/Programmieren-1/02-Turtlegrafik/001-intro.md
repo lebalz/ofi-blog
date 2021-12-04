@@ -2,6 +2,8 @@
 title: 1. Einführung
 ---
 
+import Solution from "@site/src/components/Solution";
+
 # 1. Einführung Python
 
 Programmieren heisst, einer Maschine Befehle zu erteilen und sie damit zu steuern. Die erste solche Maschine, die Sie steuern, ist eine kleine Schildkröte (bzw. ein kleines Dreieck) auf dem Bildschirm: Die Turtle. Was kann diese Turtle und was musst du wissen, um sie zu steuern?
@@ -97,6 +99,24 @@ Die Form der Turtle kann mit dem Befehl `shape` verändert werden. Ändern Sie a
 - `'classic'` (standard)
 
 </details>
+
+<Solution webKey="18c86fcd-6e82-4df7-931c-86d5bf528a55">
+
+```py live_py slim
+from turtle import *
+
+shape('turtle')
+left(45)
+forward(160)
+left(90)
+forward(160)
+left(90)
+forward(160)
+left(90)
+forward(160)
+```
+</Solution>
+
 :::
 
 
@@ -198,6 +218,41 @@ from turtle import *
 Machen Sie bei jedem Richtungswechsel einen Punkt:
 
 ![](images/zickzack_py_dots.svg)
+
+<Solution webKey="18c86fcd-6e82-4df7-931c-86d5bf528a55">
+
+```py live_py slim
+from turtle import *
+
+pensize(5)
+
+color('red')
+left(60)
+forward(40)
+dot()       # punkt zeichnen
+right(120)
+forward(40)
+dot()       # punkt zeichnen
+left(120)
+
+color('orange')
+forward(40)
+dot()       # punkt zeichnen
+right(120)
+forward(40)
+dot()       # punkt zeichnen
+left(120)
+
+color('lime')
+forward(40)
+dot()       # punkt zeichnen
+right(120)
+forward(40)
+left(120)
+
+hideturtle()
+```
+</Solution>
 :::
 
 ## Kommentare
@@ -283,6 +338,34 @@ forward(80)
 left(90)
 forward(80) 
 ```
+
+<Solution webKey="18c86fcd-6e82-4df7-931c-86d5bf528a55">
+
+```py live_py slim
+from turtle import *
+
+penup()
+dot(10)
+forward(40)
+left(90)
+
+forward(40)
+dot(10)
+right(180)
+forward(40)
+left(90)
+forward(40)
+dot(10)
+left(90)
+forward(80)
+dot(10)
+left(90)
+forward(80)
+dot(10)
+left(90)
+hideturtle()
+```
+</Solution>
 :::
 
 ## Aufgaben
@@ -300,16 +383,71 @@ from turtle import *
 
 Verwenden Sie für die Zeichnung Ihre Lieblingsfarbe und eine grössere Stiftdicke.
 
+<Solution webKey="18c86fcd-6e82-4df7-931c-86d5bf528a55">
+
+```py live_py slim
+from turtle import *
+
+pensize(5)
+color('teal')
+
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+
+left(90 + 45)
+forward(141)
+left(90)
+forward(71)
+left(90)
+forward(71)
+left(90)
+forward(141)
+hideturtle()
+```
+</Solution>
 :::
 
 
 :::aufgabe Aufgabe 8: Treppe
 
-Zeichnen Sie eine Treppe mit einer Breite von `29` Pixeln und einer Höhe von `17` Pixeln.
+Zeichnen Sie eine Treppe mit fünf Stufen, die eine Breite von `29` Pixeln und eine Höhe von `17` Pixeln haben.
 
 ![](images/stairs.svg)
 
 ```py live_py title=treppe.py id=83700b30-a08c-4578-bf5e-292a504fb661
 from turtle import *
 ```
+
+<Solution webKey="18c86fcd-6e82-4df7-931c-86d5bf528a55">
+
+```py live_py slim
+from turtle import *
+
+left(90)
+forward(17)
+right(90)
+forward(29)
+left(90)
+forward(17)
+right(90)
+forward(29)
+left(90)
+forward(17)
+right(90)
+forward(29)
+left(90)
+forward(17)
+right(90)
+forward(29)
+left(90)
+forward(17)
+right(90)
+forward(29)
+```
+</Solution>
 :::
