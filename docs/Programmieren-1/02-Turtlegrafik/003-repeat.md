@@ -5,7 +5,6 @@ title: 3. Wiederholung 🔁
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Finding from "@site/src/components/Finding";
 
-
 # 3. Wiederholung 🔁
 
 In der [Aufgabe 8](001-intro.md#aufgaben) haben Sie eine Treppe gezeichnet. Ihr Programm sieht vermutlich etwa wie folgt aus:
@@ -124,8 +123,9 @@ from turtle import *
     },
     {type: 'step', code: 'Turtle verstecken'}
 ]} />
-:::
 
+:::
+:::
 
 :::aufgabe 1. Python → Struktogramm
 Zeichnen Sie für folgendes Programm ein Struktogramm (auf ein Blatt Papier).
