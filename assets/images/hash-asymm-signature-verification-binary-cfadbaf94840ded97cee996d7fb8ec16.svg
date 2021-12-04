@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="580px" height="280px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Calque-1" serif:id="Calque 1">
+        <g id="Klartext">
+            <rect x="361.757" y="35.212" width="85.986" height="134.127" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,272.124,-51.3317)">
+                <text x="94.224px" y="102.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01010010</text>
+                <text x="94.224px" y="118.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11001001</text>
+                <text x="94.224px" y="134.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01011110</text>
+                <text x="94.224px" y="150.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10001010</text>
+                <text x="94.224px" y="166.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11101101</text>
+                <text x="94.224px" y="182.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01010111</text>
+                <text x="94.224px" y="198.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01011010</text>
+                <text x="94.224px" y="214.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10100101</text>
+            </g>
+            <text x="384.014px" y="25.004px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Klartext</text>
+        </g>
+        <g id="Sitzungsschlüssel">
+            <rect x="191.045" y="221.311" width="85.986" height="22.704" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <text x="195.636px" y="237.566px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10011100</text>
+            <text x="177.716px" y="262.683px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">öﬀentlicher Schlüssel</text>
+            <path d="M447.743,74.225L510.893,74.225" style="fill:none;stroke:black;stroke-width:2px;"/>
+            <path d="M504.893,101.43L510.893,113.43L516.893,101.43C513.893,104.43 507.893,104.43 504.893,101.43Z"/>
+            <path d="M510.893,103.83L510.893,74.225" style="fill:none;stroke:black;stroke-width:2px;"/>
+            <path d="M504.893,160.689L510.893,172.689L516.893,160.689C513.893,163.689 507.893,163.689 504.893,160.689Z"/>
+            <path d="M510.893,163.089L510.893,144" style="fill:none;stroke:black;stroke-width:2px;"/>
+            <g id="symm.-Verschlüsselung" serif:id="symm. Verschlüsselung">
+                <rect x="462.444" y="113.43" width="96.898" height="30.57" style="fill:rgb(251,163,0);stroke:black;stroke-width:1px;"/>
+                <text x="475.804px" y="133.013px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Hashfunktion</text>
+            </g>
+            <g id="symm.-Verschlüsselung1" serif:id="symm. Verschlüsselung">
+                <rect x="410.086" y="217.661" width="96.898" height="30.57" style="fill:rgb(232,204,0);stroke:black;stroke-width:1px;"/>
+                <text x="425.113px" y="237.244px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Überprüfung</text>
+            </g>
+        </g>
+        <g id="Geheimtext">
+            <g id="symm.-Geheimtext" serif:id="symm. Geheimtext">
+                <rect x="25.273" y="35.212" width="85.986" height="134.127" style="fill:none;stroke:black;stroke-width:1px;"/>
+                <g transform="matrix(1,0,0,1,-64.3599,-51.3317)">
+                    <text x="94.224px" y="102.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01010010</text>
+                    <text x="94.224px" y="118.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11001001</text>
+                    <text x="94.224px" y="134.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01011110</text>
+                    <text x="94.224px" y="150.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10001010</text>
+                    <text x="94.224px" y="166.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">11101101</text>
+                    <text x="94.224px" y="182.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01010111</text>
+                    <text x="94.224px" y="198.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01011010</text>
+                    <text x="94.224px" y="214.51px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10100101</text>
+                </g>
+                <text x="29.804px" y="25.151px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Signierter <tspan x="84.279px 90.279px 96.953px " y="25.151px 25.151px 25.151px ">Tex</tspan>t</text>
+            </g>
+            <g id="asymm.-Geheimtext" serif:id="asymm. Geheimtext">
+                <rect x="25.273" y="172.689" width="85.986" height="22.704" style="fill:rgb(116,191,61);stroke:black;stroke-width:1px;"/>
+                <text x="29.864px" y="188.655px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">10001000</text>
+            </g>
+            <rect x="20.382" y="29.945" width="95.768" height="171.027" style="fill:none;stroke:black;stroke-width:1px;"/>
+        </g>
+        <g id="asymm.-Verschlüsselung" serif:id="asymm. Verschlüsselung">
+            <rect x="185.197" y="169.449" width="96.898" height="30.57" style="fill:rgb(116,191,61);stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,-74.9956,79.06)">
+                <text x="268.674px" y="102.51px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">asymmetrische</text>
+                <text x="265.323px" y="114.903px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Entschlüsselung</text>
+            </g>
+        </g>
+        <use xlink:href="#_Image1" x="282.268" y="178.734" width="80.663px" height="12px" transform="matrix(0.995841,0,0,1,0,0)"/>
+        <g id="asymm.-Geheimtext1" serif:id="asymm. Geheimtext">
+            <rect x="361.757" y="172.689" width="85.986" height="22.704" style="fill:rgb(251,163,0);stroke:black;stroke-width:1px;"/>
+            <text x="366.348px" y="188.655px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01110111</text>
+        </g>
+        <g id="asymm.-Geheimtext2" serif:id="asymm. Geheimtext">
+            <rect x="467.9" y="172.689" width="85.986" height="22.704" style="fill:rgb(251,163,0);stroke:black;stroke-width:1px;"/>
+            <text x="472.49px" y="188.655px" style="font-family:'CourierNewPSMT', 'Courier New', monospace;font-size:16px;">01110111</text>
+        </g>
+        <use xlink:href="#_Image2" x="110.35" y="178.734" width="74.938px" height="12px" transform="matrix(0.999173,0,0,1,0,0)"/>
+        <use xlink:href="#_Image3" x="110.479" y="68.225" width="251.499px" height="12px" transform="matrix(0.99801,0,0,1,0,0)"/>
+        <use xlink:href="#_Image4" x="227.646" y="206.372" width="12px" height="22.292px" transform="matrix(1,0,0,0.969219,0,0)"/>
+        <use xlink:href="#_Image5" x="420.752" y="200.567" width="12px" height="22.292px" transform="matrix(1,0,0,0.969219,0,0)"/>
+        <use xlink:href="#_Image5" x="483.775" y="200.567" width="12px" height="22.292px" transform="matrix(1,0,0,0.969219,0,0)"/>
+    </g>
+    <defs>
+        <image id="_Image1" width="81px" height="12px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAAMCAYAAAAan1EfAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABI0lEQVRIie2WPW7CMBiGX0csHbtXYmPgCCV2FDsTGzfoJVjxGuUybNlIIPEZGHIKTpC3AxQaklCkDu3gR3qlT7K9PP78g/ePKTabDUj6kGjblmma0jnHZ9cE8HQQQojVagVjDJIkoXOOP63xEgeYzWZivV5jt9tBSgljDOu6HpXpJY6wXC6vdVEUUEpBa82qqnoyAwAEQE+X+XzeE1uWJaIoQhzHPBwON5mvby/8EunTTRAED8ejKGJZlvTH+RcIIc7F5YvDtm19vuV0Oo12YBzH3O/35OWLM7lJFX+wl/+X4/HYe0C01rDWQinVkTW5n+g5k+f5tTbGwFoLKeVgp3mJAzRNwyzLkCQJrLUIw/DhMfUS7yDJ7XaLoiiwWCyeuuM+AYCVuSHrL3HQAAAAAElFTkSuQmCC"/>
+        <image id="_Image2" width="75px" height="12px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAAMCAYAAAAqE0A+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABGUlEQVRIie2UMW6EMBBF/0CalCm2iyKX5AppsJUKSi6QhmMgTUPLBTgEJVva3IKSIn1KKphUoCCxYqvVap0nfcn6tiXr2TI+vt7AzBCRNXmeo67rTfdomedZqqoS55xcs56ZEcBTiIiyLEOSJDDGiHNOjvZ4KwsAlFJUFAWcczDGHErzWhYApGm6jhdpWutdad7LiqIIQbDV0HXdrjR6eX2Wn+/x5oe8J8IwxDRNF+fjOIZS6v9lXQMRAQCC988TMTOJyJo8z6mu6033qBnHESL7f7rWGtZaWGtJKUVPt7yhe6Tve8zzvOm01mBmaK3pb++9rLZt1/ElSQteyxqGQcqyhDEGzIw4jnclLXgrS0SkaRqcz+dDSQu/0/Pl0O5zLBoAAAAASUVORK5CYII="/>
+        <image id="_Image3" width="252px" height="12px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPwAAAAMCAYAAABGOdB+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABNklEQVRoge3aMYqDQBiG4W/WlDlEECxsU6SMMzaCpWUu4B3SjGnS5SopA6kyOYWF4DHs5N9KQXazbhFkh/2eamAUpnnR0VHWWogITqcTBmVZYrvdoixLENHfJCJyuVyw2+2w3+/V3PVVVeFjiYUR0fsppVRRFMiyDGmayvP5lLl7GDyRx8IwVMfjEY/HA1prGGN+DJ/BE3kuz/Nx7Jwbw3fOfQmfwRN5Lo5jKDXdwjvnYIyB1noSvoqiSJqmWXyRRPQ+QRCg7/uX80mSYLPZ8AlP9B8MbwCrw+Gg+FuOyF9d18l6vf52TmsNay201qqqKqwWXhsRvVld1xCZfp8zxsBaiyRJJpt7Bk/kudvtNo5fhT5g8EQea9tWzucz0jSFtXb2xB2DJ/KUiMj1esX9fv/V0VoA+AQ+UWuOH5G/vQAAAABJRU5ErkJggg=="/>
+        <image id="_Image4" width="12px" height="23px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAXCAYAAAA/ZK6/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABOElEQVQ4je3Usa3CMBAG4P9M6CNaCpoUEU2moAp0IBrooMgGQJE1mIEB0rAAVCAKXIUiFRKM4MD/KiIZv/DeAJx0kuW7z7Jsy5KmKd6jKAoCQKfTkfeakHRAr9ejiGC73ToAJK3c7XYEQADc7/d8rzug3+9XYDAYfAaHw6FqfuXxeGQtGA6HDhiNRr+D8/lMEXGAiFBrTQdMJhOn+ZXT6dQGeZ5TKVULGo0G8zxnBWazWW3zK+fzOUlCiqJgEASIoghxHKPb7WI8HgMANpsNtNbIsgyn0wmXywWyXC7ZbreRJAmUUlKWJZvNJgDAGAPP8+TxeHC9XuN6vQL3+906NmNMtQ1jjFW73W50bvoTIAnlPK4/4gv+E95isbAmns9nNV6tVlDKXtPzfd+aIIkwDAEArVbL+QR+AAllTNITwUarAAAAAElFTkSuQmCC"/>
+        <image id="_Image5" width="12px" height="23px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAXCAYAAAA/ZK6/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABNUlEQVQ4je2UoWrDUBSG/5PbpwiMmaqavMBsTGlcMioS14rIMVs7HdcnqMgTVEQPWtdWJEw0ImYUGhjMhvSfCGSkt2F9gB04cDn3/zjmu1fentEpAly9N+fgCYKrGnw/vnYG9eWCj88IAPD18EJlGF2IZKerqmKzCKyqitf3xvXKv+ofuAs4n8+8N1yWJQdRFME0TYZhCKWUpgIA1HXN5XKJ0+kEKYqCw+EQlmVhPB5jNBphOp0CAOI4RpZlWK/XOBwOyPO8UWM2m7U69PV8PifJBjgejzQMozeslGKe578ASfi+3wsEQdBK2AJpmlJEtLCIMMsyHSAJ13U1wPO8juIdYLfbacB+v+8HSGIymbRhx3G0B6QBm82mBbbbrQYIqZth2zZFBEmS6J/ALRUWiwVEblqCH7WWKtCet0+nAAAAAElFTkSuQmCC"/>
+    </defs>
+</svg>
