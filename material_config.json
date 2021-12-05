@@ -502,6 +502,11 @@
       "from": "docs/Kryptologie/06-Digitale-Signaturen/",
       "to": "versioned_docs/version-24o/06-Kryptologie/06-Digitale-Signaturen",
       "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/07-Alltag/",
+      "to": "versioned_docs/version-24o/06-Kryptologie/07-Alltag",
+      "ignore": []
     }
   ],
   "25h": [
