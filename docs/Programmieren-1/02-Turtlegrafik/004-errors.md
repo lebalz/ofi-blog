@@ -2,6 +2,8 @@
 title: 4. Fehler
 ---
 
+import Solution from '@site/src/components/Solution'
+
 # 4. Fehler
 
 Sie haben bereits festgestellt, dass Python sehr pingelig ist was Tippfehler und die präzise Verwendung von Klammern, Anführungszeichen, Doppelpunkten und Leerzeichen angeht. Jede Sprache hat seine eigenen Regeln, wie Wörter und Sätze strukturiert sein müssen. Diese Regeln sind allgemein bekannt als die **Syntax** einer Sprache. Bei Programmiersprachen wird mit der Syntax festgelegt, welche Wörter, in welcher Reihenfolge und in welchem Kontext erlaubt sind.
@@ -73,6 +75,21 @@ for i in range(4)
 ```
 ***empty
 :::
+<Solution webKey="d775eeeb-21a2-479c-aba3-24a3173b9fe1">
+
+Die Fehlermeldung gibt den Hinweis, was falsch ist.
+
+**error1.py**:
+- Zeile 1: Tippfehler, `from`
+
+**error2.py**:
+- Zeile 2: Vergessenes Komma bei `goto(100, 50)`
+
+**error3.py**:
+- Zeile 2: Vergessenes `:` am Ende der Zeile
+
+</Solution>
+
 :::
 
 ## Namens Fehler (`NameError`)
@@ -115,6 +132,23 @@ print('15.8 abgerundet =', flor(15.8))
 :::finding Hinweis
 Suchen Sie die fehlerhaften Befehle in Kombination mit `Python` auf Google, bspw. `python ceyl`.
 :::
+
+<Solution webKey="d775eeeb-21a2-479c-aba3-24a3173b9fe1">
+
+Zwei Namensfehler, die Fehlermeldung sagt die Zeilennummer und schlägt den richtigen Befehl vor:
+1. Zeile 5
+    ```error
+    File <string>, line 5, in <module>
+    NameError: name 'ceyl' is not defined. Did you mean: 'ceil'?
+    ```
+
+2. Zeile 6
+   ```error
+    File <string>, line 6, in <module>
+    NameError: name 'flor' is not defined. Did you mean: 'floor'?
+    ```
+
+</Solution>
 :::
 
 
@@ -176,6 +210,14 @@ for i in range(2):
 print('Hallo zum', i)
  print('Ende')
 ```
+<Solution webKey="d775eeeb-21a2-479c-aba3-24a3173b9fe1">
+
+```py live_py slim
+for i in range(2):
+    print('Hallo zum', i)
+print('Ende')
+```
+</Solution>
 :::
 
 ## Logikfehler
@@ -240,5 +282,39 @@ end_fill
 
 
 ```
+<Solution webKey="d775eeeb-21a2-479c-aba3-24a3173b9fe1">
+
+**Vorgehensweise**:
+1. Programm ausführen
+2. Fehlermeldung analysieren und **nur** diesen Fehler flicken
+3. Zurück zu Punkt 1
+
+```py live_py slim
+from turtle import *
+
+penup()
+goto(-125, -125)
+fillcolor("red")
+
+begin_fill()
+for i in range(4):
+    forward(250)
+    left(90)
+end_fill()
+forward(150)
+left(90)
+forward(50)
+fillcolor("white")
+begin_fill()
+for i in range(4):
+    forward(50)
+    right(90)
+    forward(50)
+    left(90)
+    forward(50)
+    left(90)
+end_fill()
+```
+</Solution>
 
 :::
