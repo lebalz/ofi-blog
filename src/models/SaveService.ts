@@ -16,6 +16,7 @@ export interface ApiModel {
 }
 
 export default class SaveService {
+    private readonly tDebounce: number = 1000;
     private readonly rootStore: RootStore;
     @observable
     method: Method;
@@ -31,7 +32,8 @@ export default class SaveService {
     @observable.ref
     model: ApiModel;
     endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>;
-    constructor(model: ApiModel, endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>) {
+    constructor(model: ApiModel, endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>, tDebounce: number = 1000) {
+        this.tDebounce = tDebounce;
         this.rootStore = rootStore;
         this.endpoint = endpoint;
         this.model = model;
@@ -67,7 +69,7 @@ export default class SaveService {
         return this.save.flush();
     }
 
-    save = debounce(this._save, 1000, { leading: false, trailing: true, maxWait: 5000 });
+    save = debounce(this._save, this.tDebounce, { leading: false, trailing: true, maxWait: 5000 });
 
     @action
     _save() {

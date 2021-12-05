@@ -1,16 +1,17 @@
 import axios, { CancelTokenSource } from 'axios';
-import { action, computed, makeObservable, observable, runInAction } from 'mobx';
+import { action, computed, makeObservable, observable, reaction, runInAction } from 'mobx';
 import { computedFn } from 'mobx-utils';
-import { getSolutionAuthorizationAsAdmin } from '../api/admin';
+import { getSolutionAuthorizationAsAdmin, solutionPolicies } from '../api/admin';
 import { RootStore } from './stores';
 import {
     Authorization,
     authorized,
     postSolutionPolicy,
-    SolutionPolicy,
+    SolutionPolicy as SolutionPolicyProps,
     SolutionPolicyData,
 } from '../api/solution_policy';
 import SolutionAuthorization from '../models/SolutionAuthorization';
+import SolutionPolicy from '../models/SolutionPolicy';
 
 const VERSION_REGEX = /^\/\d{2}.\//;
 
@@ -29,11 +30,18 @@ const getDocUrl = () => {
 export class PolicyStore {
     private readonly root: RootStore;
     authorizations = observable<SolutionAuthorization>([]);
+    policies = observable<SolutionPolicy>([]);
 
     @observable initialized: boolean = false;
 
     constructor(root: RootStore) {
         this.root = root;
+        reaction(
+            () => this.root.userStore.current,
+            (account) => {
+                this.reload();
+            }
+        );
         makeObservable(this);
     }
 
@@ -85,7 +93,11 @@ export class PolicyStore {
                         },
                         ct
                     ).then((data) => {
-                        return{ web_key: model.webKey, show: this.root.userStore.current?.admin, user_id: model.userId };
+                        return {
+                            web_key: model.webKey,
+                            show: this.root.userStore.current?.admin,
+                            user_id: model.userId,
+                        };
                     });
                 }
             })
@@ -101,6 +113,43 @@ export class PolicyStore {
                 }
                 return model;
             });
+    }
+
+    @action
+    reload() {
+        this.policies.replace([]);
+        this.authorizations.replace([]);
+        if (this.root.msalStore.account) {
+            this.loadPolicies();
+        }
+    }
+    @action
+    loadPolicies() {
+        if (!this.root.userStore.current?.admin) {
+            return;
+        }
+        this.root.msalStore.withToken().then((ok) => {
+            solutionPolicies()
+                .then(
+                    action(({ data }) => {
+                        const current = this.root.userStore.current;
+                        if (current?.admin) {
+                            this.policies.replace(
+                                data.map((prop) => {
+                                    return new SolutionPolicy(prop);
+                                })
+                            );
+                        }
+                    })
+                )
+                .catch((err) => {
+                    if (!err.response) {
+                        this.root.msalStore.setApiOfflineState(true);
+                    } else {
+                        return;
+                    }
+                });
+        });
     }
 
     @computed
@@ -151,7 +200,7 @@ export class PolicyStore {
     apiCreateSolutionAuthorization(
         data: SolutionPolicyData,
         cancelToken: CancelTokenSource
-    ): Promise<void | SolutionPolicy> {
+    ): Promise<void | SolutionPolicyProps> {
         return this.root.msalStore
             .withToken()
             .then((ok) => {

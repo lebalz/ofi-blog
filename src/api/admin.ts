@@ -3,7 +3,7 @@ import { AxiosPromise, CancelTokenSource } from 'axios';
 import { User } from './user';
 import { Document } from './document';
 import TimedTopic from '../models/TimedTopic';
-import { Authorization } from './solution_policy';
+import { Authorization, SolutionPolicy } from './solution_policy';
 
 export function users(): AxiosPromise<User[]> {
     return api.get('admin/users');
@@ -26,4 +26,9 @@ export function getSolutionAuthorizationAsAdmin(uid: number, webKey: string, can
     return api.get(
         `admin/policy/solution/${uid}/${webKey}`
     )
+}
+
+
+export function solutionPolicies(): AxiosPromise<SolutionPolicy[]> {
+    return api.get('admin/policy/solution');
 }

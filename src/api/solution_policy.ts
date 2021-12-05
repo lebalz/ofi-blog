@@ -1,6 +1,5 @@
 import { AxiosPromise, CancelTokenSource } from "axios";
 import api from "./base";
-import { TimedExercise } from "./timed_exercise";
 
 export interface SolutionPolicyData {
     web_key: string;
@@ -10,6 +9,7 @@ export interface SolutionPolicyData {
 export interface SolutionPolicy extends SolutionPolicyData {
     authorized_classes: string[];
     authoirzed_users: string[];
+    authoirzed_groups: string[];
 }
 
 export interface Authorization {
