@@ -2,6 +2,7 @@
 title: 5. Unterprogramme
 ---
 import Strukto from '@site/src/components/struktogramm/Strukto';
+import Solution from '@site/src/components/Solution'
 
 # 5. Unterprogramme [^1]
 
@@ -127,7 +128,7 @@ Die Definition alleine führt das Programm noch nicht aus. Dazu muss der Befehl 
 
 ---
 
-:::aufgabe
+:::aufgabe Struktogramm → Python
 
 1. Erzeugen Sie ein Programm gemäss folgendem Struktogramm:
 
@@ -158,6 +159,26 @@ from turtle import *
 2. Ändern Sie obiges Programm so, dass der Winkel einer Stufe neu `110°` beträgt.
 3. Zeichnen Sie eine Treppe mit 30 Stufen. Denken Sie dabei auch an das letzte Kapitel. 
 
+<Solution webKey="d32f5ea1-be5c-4928-87d6-f9d4e5bc5480">
+
+**Bemerke**: Die Definition des Unterprogramms `stufe` führt den Code noch nicht aus, erst auf Zeile 10 wird das Unterprogramm **aufgerufen** uns ausgeführt.
+
+```py live_py slim
+from turtle import *
+
+def stufe():
+    left(95)
+    forward(20)
+    right(95)
+    forward(30)
+
+forward(100)
+stufe()
+stufe()
+stufe()
+```
+</Solution>
+
 :::
 
 :::aufgabe Aufgabe 1 – Sechsecke
@@ -184,6 +205,23 @@ Nach jedem Sechseck muss `36°` gedreht werden.
 
 </details>
 :::
+
+<Solution webKey="d32f5ea1-be5c-4928-87d6-f9d4e5bc5480">
+
+```py live_py slim
+from turtle import *
+
+def sechseck():
+    for i in range(6):
+        forward(50)
+        left(60)
+
+for i in range(10):
+    sechseck()
+    left(36)
+```
+</Solution>
+
 :::
 
 :::aufgabe Aufgabe 2 – Häuser
@@ -204,6 +242,40 @@ from turtle import *
 
 ![](images/stadt.svg)
 :::
+
+<Solution webKey="d32f5ea1-be5c-4928-87d6-f9d4e5bc5480">
+
+```py live_py slim
+from turtle import *
+
+def haus():
+    # Viereck
+    for i in range(4):
+        forward(50)
+        left(90)
+    # Diagonale 1
+    left(45)
+    forward(71)
+    # Dach
+    for i in range(2):
+        left(90)
+        forward(36)
+    # Diagonale 2
+    left(90)
+    forward(71)
+    # Drehen damit Turtle nach rechts schaut
+    left(45)
+
+color('red')
+haus()
+color('blue')
+haus()
+color('green')
+haus()
+color('orange')
+haus()
+```
+</Solution>
 
 :::
 
@@ -234,6 +306,43 @@ from turtle import *
 
     ![](images/blume_05.svg)
 :::
+
+<Solution webKey="d32f5ea1-be5c-4928-87d6-f9d4e5bc5480">
+
+```py live_py slim
+from turtle import *
+
+def bogen():
+    for i in range(10):
+        forward(10)
+        left(9)
+
+def blumenblatt():
+    fillcolor('red')
+    pencolor('red')
+    begin_fill()
+    for i in range(2):
+        bogen()
+        left(90)
+    end_fill()
+
+def blume():
+    for i in range(5):
+        blumenblatt()
+        left(72)
+
+blume()
+
+# Zusatz
+pencolor('black')
+pensize(2)
+right(45)
+for i in range(10):
+    forward(20)
+    right(4)
+```
+</Solution>
+
 :::
 
 
