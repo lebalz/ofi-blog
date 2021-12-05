@@ -21,9 +21,14 @@
 		"body": "import $1 from '@site/src/components/$1'",
 		"description": "import a component from components"
 	},
-	"answer": {
-		"prefix": "<Answer />",
-		"body": "<Answer type=\"$1\" webKey=\"$2\" /",
-		"description": "import a component from components"
-	},
+	// "answer": {
+	// 	"prefix": "<Answer />",
+	// 	"body": "<Answer type=\"$1\" webKey=\"$2\" /",
+	// 	"description": "insert a Answer component"
+	// },
+	// "solution": {
+	// 	"prefix": "<Solution />",
+	// 	"body": "<Solution webKey=\"$1\">$2</Solution",
+	// 	"description": "insert a solution component"
+	// },
 }

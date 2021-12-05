@@ -4,6 +4,7 @@ title: 3. Wiederholung 🔁
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Finding from "@site/src/components/Finding";
+import Solution from '@site/src/components/Solution'
 
 # 3. Wiederholung 🔁
 
@@ -125,6 +126,17 @@ from turtle import *
 ]} />
 
 :::
+<Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
+
+```py live_py slim
+from turtle import *
+
+for i in range(9):
+    forward(100)
+    left(160)
+hideturtle()
+```
+</Solution>
 :::
 
 :::aufgabe 1. Python → Struktogramm
@@ -141,6 +153,26 @@ for i in range(5):
     left(72)
     backward(20) 
 ```
+<Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
+
+**Zu Beachten**:
+- Unterstrichene Parameter
+
+<Strukto program={[
+    {type: 'step', code: <span><u>30</u> Schritte vorwärts</span>},
+    {type: 'step', code: <span><u>60</u>° nach links</span>},
+    {
+        type: 'repeat', 
+        code: <span><u>5</u> mal wiederholen:</span>,
+        block: [
+            {type: 'step', code: <span><u>100</u> Schritte vorwärts</span>},
+            {type: 'step', code: <span><u>72</u>° nach links</span>},
+            {type: 'step', code: <span><u>20</u> Schritte rückwärts</span>},
+        ]
+    }
+]} />
+
+</Solution>
 :::
 
 :::aufgabe 2. Python → Struktogramm
@@ -156,6 +188,31 @@ for i in range(5):
         left(90)
     forward(100) 
 ```
+<Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
+
+**Zu Beachten**:
+- die eingerückten Code-Zeilen werden wiederholt, auch wenn darin Wiederholungen vorkommen.
+- Unterstrichene Parameter
+
+<Strukto program={[
+    {
+        type: 'repeat', 
+        code: <span><u>5</u> mal wiederholen:</span>,
+        block: [
+            {type: 'step', code: <span><u>72</u>° nach links</span>},
+            {
+                type: 'repeat',
+                code: <span><u>4</u> mal wiederholen:</span>,
+                block: [
+                    {type: 'step', code: <span><u>20</u> Schritte vorwärts</span>},
+                    {type: 'step', code: <span><u>90</u>° nach links</span>},
+                ]
+            },
+            {type: 'step', code: <span><u>100</u> Schritte vorwärts</span>},
+        ]
+    }
+]} />
+</Solution>
 :::
 
 
@@ -171,6 +228,22 @@ from turtle import *
 
 > Trick: Verwenden Sie den Befehl [`goto(x, y)`](100-turtle-commands.md#gotox-y) um die Turtle bei `-200, -200` zu positionieren.
 
+<Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
+
+```py live_py slim
+from turtle import *
+
+penup()
+goto(-200, -200)
+pendown()
+
+for i in range(20):
+    left(90)
+    forward(20)
+    right(90)
+    forward(20)
+```
+</Solution>
 :::
 
 :::aufgabe 4. Schneestern
@@ -182,6 +255,17 @@ Zeichnen Sie einen Stern. Verwenden Sie dabei den Befehl `backward()`.
 from turtle import *
 
 ```
+<Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
+
+```py live_py slim
+from turtle import *
+
+for i in range(6):
+    forward(100)
+    backward(100)
+    left(60)
+```
+</Solution>
 :::
 
 
@@ -195,6 +279,23 @@ from turtle import *
 from turtle import *
 
 ```
+<Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
+
+```py live_py slim
+from turtle import *
+
+fillcolor('red')
+begin_fill()
+
+for i in range(6):
+    forward(50)
+    left(140)
+    forward(50)
+    right(80)
+
+end_fill()
+```
+</Solution>
 :::
 
 :::aufgabe 6. Quadrate
@@ -208,6 +309,21 @@ from turtle import *
 from turtle import *
 
 ```
+<Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
+
+```py live_py slim
+from turtle import *
+
+for i in range(7):
+    # quadrat zeichnen
+    for j in range(4):
+        forward(30)
+        left(90)
+    # nachdem ein Quadrat gezeichnet wurde, muss man
+    # noch eine Seitenlänge vorwärts gehen
+    forward(30)
+```
+</Solution>
 :::
 
 :::aufgabe 7. Perlenkette
@@ -225,6 +341,19 @@ from turtle import *
 - Python kann auch rechnen 😋 - lassen Sie die Drehung von Python berechnen. Beispiel: `left(360 / 4)` ist dasselbe wie `left(90)`
 
 </Finding>
+<Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
+
+```py live_py slim
+from turtle import *
+
+pencolor('teal')
+for i in range(18):
+    forward(40)
+    dot(15)
+    left(360/18)
+hideturtle()
+```
+</Solution>
 :::
 
 :::aufgabe 8. Vogel
@@ -241,5 +370,26 @@ right(3)
 from turtle import *
 
 ```
+<Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
+
+```py live_py slim
+from turtle import *
+
+# Flügel 1
+left(45)
+for i in range(30):
+    forward(4)
+    right(3)
+
+left(90)
+
+# Flügel 2
+for i in range(30):
+    forward(4)
+    right(3)
+
+hideturtle()
+```
+</Solution>
 
 :::
