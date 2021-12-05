@@ -31,7 +31,7 @@ from turtle import *
 winkel = 20
 while distance(0, 0) < 200:
     forward(5)
-    left(angle)
+    left(winkel)
     winkel = winkel * 0.99
 ```
 :::
