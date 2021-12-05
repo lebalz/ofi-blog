@@ -3,6 +3,7 @@ title: 4. Fehler
 ---
 
 import Solution from '@site/src/components/Solution'
+import Hint from '@site/src/components/Solution/Hint'
 
 # 4. Fehler
 
@@ -129,10 +130,10 @@ print('15.8 abgerundet =', flor(15.8))
 
 ```
 
-:::finding Hinweis
-Suchen Sie die fehlerhaften Befehle in Kombination mit `Python` auf Google, bspw. `python ceyl`.
-:::
+<Hint>
 
+Suchen Sie die fehlerhaften Befehle in Kombination mit `Python` auf Google, bspw. `python ceyl`.
+</Hint>
 <Solution webKey="d775eeeb-21a2-479c-aba3-24a3173b9fe1">
 
 Zwei Namensfehler, die Fehlermeldung sagt die Zeilennummer und schlägt den richtigen Befehl vor:

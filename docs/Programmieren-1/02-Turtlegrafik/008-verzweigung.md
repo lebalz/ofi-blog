@@ -8,6 +8,7 @@ import PyBreak from '@site/docs/Programmieren-1/03-Python/_def-python-break.md';
 import Ratespiel from '@site/src/components/Ratespiel'
 import Answer from '@site/src/components/Answer'
 import Solution from '@site/src/components/Solution'
+import Hint from '@site/src/components/Solution/Hint'
 
 # 8. Bedingte Ausführung ⑂
 
@@ -103,13 +104,13 @@ from browser import alert
 from random import randint
 
 ```
+<Hint>
 
-**Hinweis**: Wenn die Zahl gefunden wurde, soll die Spieler:in nicht mehr nach einer Eingabe gefragt werden. Mit dem Befehl `break` kann die Wiederholung abgebrochen werden.
-
-<details><summary><code>break</code></summary>
+Wenn die Zahl gefunden wurde, soll die Spieler:in nicht mehr nach einer Eingabe gefragt werden. Mit dem Befehl `break` kann die Wiederholung abgebrochen werden.
+</Hint>
+<Hint title={<span><code>break</code></span>}>
 <PyBreak />
-</details>
-
+</Hint>
 <Solution webKey="fcf61032-e9fd-460a-a5d2-cf19c5a782e8">
 
 #### Struktogramm

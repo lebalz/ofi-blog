@@ -46,7 +46,7 @@ const Solution = observer((props: Props) => {
                     {props.children}
                 </Details>
             ) : (
-                <div className={clsx('alert', styles.disabled)}>Lösung (noch nicht freigeschaltet) <Icon /></div>
+                <div className={clsx('alert', styles.disabled)}>Lösung (nicht freigeschaltet) <Icon /></div>
             )}
         </div>
     );

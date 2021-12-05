@@ -3,6 +3,7 @@ title: 1. Einführung
 ---
 
 import Solution from "@site/src/components/Solution";
+import Hint from "@site/src/components/Solution/Hint";
 
 # 1. Einführung Python
 
@@ -89,7 +90,7 @@ forward(80)
 
 Die Form der Turtle kann mit dem Befehl `shape` verändert werden. Ändern Sie auf Zeile `3` die Turtleform auf eine Schildkröte durch **Aufrufen des Befehls** `shape` mit dem **Parameter** `'turtle'`.
 
-<details><summary>Mögliche Parameter für den Befehl <code>shape</code> </summary>
+<Hint title={<span>Mögliche Parameter für den Befehl <code>shape</code></span>}>
 
 - `'arrow'`
 - `'turtle'`
@@ -98,7 +99,7 @@ Die Form der Turtle kann mit dem Befehl `shape` verändert werden. Ändern Sie a
 - `'triangle'`
 - `'classic'` (standard)
 
-</details>
+</Hint>
 
 <Solution webKey="18c86fcd-6e82-4df7-931c-86d5bf528a55">
 

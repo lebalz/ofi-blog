@@ -5,6 +5,7 @@ title: 3. Wiederholung 🔁
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Finding from "@site/src/components/Finding";
 import Solution from '@site/src/components/Solution'
+import Hint from "@site/src/components/Solution/Hint";
 
 # 3. Wiederholung 🔁
 
@@ -335,12 +336,12 @@ Zeichnen Sie eine Perlenkette in Ihrer Lieblingsfarbe, die aus `18` Perlen (dots
 from turtle import *
 
 ```
-<Finding title="Hinweise">
+<Hint>
 
 - Die Turtle muss nach 18 Drehungen wieder nach rechts schauen - pro Drehung also `xxx` Grad
 - Python kann auch rechnen 😋 - lassen Sie die Drehung von Python berechnen. Beispiel: `left(360 / 4)` ist dasselbe wie `left(90)`
 
-</Finding>
+</Hint>
 <Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
 
 ```py live_py slim
