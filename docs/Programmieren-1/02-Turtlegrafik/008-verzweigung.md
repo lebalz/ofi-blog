@@ -7,6 +7,7 @@ import PyAlert from '@site/docs/Programmieren-1/03-Python/_def-python-alert.md';
 import PyBreak from '@site/docs/Programmieren-1/03-Python/_def-python-break.md';
 import Ratespiel from '@site/src/components/Ratespiel'
 import Answer from '@site/src/components/Answer'
+import Solution from '@site/src/components/Solution'
 
 # 8. Bedingte Ausführung ⑂
 
@@ -109,4 +110,61 @@ from random import randint
 <PyBreak />
 </details>
 
+<Solution webKey="fcf61032-e9fd-460a-a5d2-cf19c5a782e8">
+
+#### Struktogramm
+
+<Strukto program={[
+    {type: 'step', code: <span>Eine zufällige ganze Zahl zwischen <u>0</u> und <u>100</u> in <span className="var">zahl</span> speichern.</span>},
+    {
+        type: 'repeat',
+        code: <span><u>10</u> mal wiederholen:</span>,
+        block: [
+            {type: 'input', code: <span><span className="var">geraten</span> = Zahl zwischen <u>0</u> und <u>100</u></span>},
+            {
+                type: 'if',
+                code: <span>Ist die <span className="var">geraten</span>e Zahl gleich wie die zufällig <span className="var">zahl</span>?</span>,
+                block: [
+                    {type: 'step', code: <span>Ausgabe: Yay, gewonnen!</span>},
+                    {type: 'step', code: <span>Wiederholungen beenden</span>},
+                    {type: 'elif', code: <span>Sonst, ist <span className="var">geraten</span>e Zahl grösser als die zufällige <span className="var">zahl</span>?</span> },
+                    {type: 'step', code: <span>Ausgabe: Die eingegebene Zahl ist zu gross.</span>},
+                    {type: 'else', code: <span>Ausgabe: Die eingegebene Zahl ist zu klein.</span>}
+                ]
+            }
+        ]
+    },
+    { 
+        type: 'if',
+        code: <span>Ist die <span className="var">geraten</span>e Zahl ungleich der zufälligen <span className="var">zahl</span>?</span>,
+        block: [{type: 'step', code: <span>Ausgabe: Du hast verloren.</span>}]
+    }
+]}
+/>
+
+#### Programm
+
+```py live_py slim
+from browser import alert
+from random import randint 
+
+zahl = randint(0, 100)
+
+for i in range(10):
+    geraten = input(f'{i + 1}/10 Versuchen: Gib eine ganze Zahl zwischen 0 und 100 ein.')
+    geraten = int(geraten)
+    
+    if geraten == zahl:
+        alert(f'Yay, du hast die Zahl {zahl} in {i + 1} Versuchen gefunden!')
+        break
+    elif geraten > zahl:
+        alert(f'Die eingegebene Zahl {geraten} ist zu gross')
+    else:
+        alert(f'Die eingegebene Zahl {geraten} ist zu klein')
+
+if zahl != geraten:
+    alert(f':( du hast verloren, die gesuchte Zahl war {zahl}')
+```
+
+</Solution>
 :::
