@@ -5,6 +5,7 @@ title: 7. Variablen
 import PyOps from '@site/docs/Programmieren-1/03-Python/_def-python-operatoren.md';
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import PyTemplateString from '@site/docs/Programmieren-1/03-Python/_def-python-template-string.md';
+import Solution from '@site/src/components/Solution'
 
 # 7. Variablen
 
@@ -91,6 +92,29 @@ print(anzahl + 1)
 anzahl = anzahl + 3
 print(anzahl)
 ```
+
+<Solution webKey="e6f8fdb3-1edc-4d98-8b4b-65857dc454b8">
+
+```py live_py slim
+anzahl = 2              # setzt anzahl=2
+print(anzahl)       # => 2, anzahl=2
+print(anzahl + 2)   # => 4, anzahl=2
+
+anzahl = 7              # setzt anzahl=7
+print(anzahl)       # => 7, anzahl=7
+print(anzahl + 2)   # => 9, anzahl=7
+
+anzahl = anzahl + 3     # setzt anzahl=7 + 3
+print(anzahl)       # => 10, anzahl=10
+
+anzahl = anzahl + 3     # setzt anzahl=10 + 3
+print(anzahl + 1)   # => 14, anzahl=13
+
+anzahl = anzahl + 3     # setzt anzahl=13 + 3
+print(anzahl)       # => 16, anzahl=16
+```
+
+</Solution>
 :::
 
 :::finding Gleichheitszeichen
@@ -163,7 +187,7 @@ print('Ich bin', grösse, 'cm gross')
     {type: 'input', code: <span><span className="var">grösse</span> = Wie gross bist du [m]?</span>},
     {type: 'input', code: <span><span className="var">gewicht</span> = Wie schwer bist du [kg]?</span>},
     {type: 'step', code: <span><span className="var">bmi</span> = <span className="var">gewicht</span> geteilt durch <span className="var">grösse</span> mal <span className="var">grösse</span> </span>},
-    {type: 'step', code: <span>Ausgabe: Bmi: <span className="var">bmi</span></span>}
+    {type: 'step', code: <span>Ausgabe: BMI: <span className="var">bmi</span></span>}
 ]} />
 ***
 
@@ -178,6 +202,22 @@ TypeError: Can't multiply sequence by non-int of type 'str'
 ```
 → Der eingegebene Text kann nicht multipliziert werden - zuerst müssen `gewicht` und `grösse` in Dezimalzahlen (`float`) umgewandelt werden: `gewicht = float(gewicht)`.
 :::
+
+
+<Solution webKey="e6f8fdb3-1edc-4d98-8b4b-65857dc454b8">
+
+```py live_py slim
+grösse = input('Wie gross bist du [cm]?')
+gewicht = input('Wie schwer bist du [kg]?')
+
+# umwandeln zu Zahlen
+grösse = float(grösse)
+gewicht = float(gewicht)
+
+bmi = gewicht / (grösse * grösse) # Klammern sind entscheidend!
+print(f'BMI: {bmi}')
+```
+</Solution>
 :::
 
 :::aufgabe Aufgabe 2 – `n-Eck`
@@ -187,6 +227,19 @@ Nach Eingabe der Anzahl Ecken in einer Eingabebox soll die Turtle ein regelmäss
 from turtle import *
 
 ```
+
+<Solution webKey="e6f8fdb3-1edc-4d98-8b4b-65857dc454b8">
+
+```py live_py slim
+from turtle import *
+n = int(input('Wie viele Ecken soll das n-Eck haben?'))
+
+for i in range(n):
+    forward(40)
+    left(360 / n)
+hideturtle()
+```
+</Solution>
 :::
 
 :::aufgabe Aufgabe 3
@@ -197,4 +250,20 @@ Mit `speed(10)` können Sie das Zeichnen beschleunigen.
 ```py live_py title=star.py id=d6f4d7f5-1deb-4031-82bc-c9482369477e
 from turtle import *
 ```
+
+<Solution webKey="e6f8fdb3-1edc-4d98-8b4b-65857dc454b8">
+
+```py live_py slim
+from turtle import * 
+
+winkel = input('Winkel?')
+winkel = int(winkel)
+
+speed(10)
+
+for i in range(30):
+    forward(100)
+    left(winkel)
+```
+</Solution>
 :::
