@@ -1,0 +1,70 @@
+<!--?xml version="1.0" standalone="no"?-->
+<svg id="ofi_a64133e9_5b2e_415a_a884_2671bdb3027e_svg" width="210" height="215" xmlns="http://www.w3.org/2000/svg" viewBox="145,145,210,215">
+<g transform="translate(250 250)">
+<line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="0" y1="0" x2="10" y2="0" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="10" y1="10" x2="10.000000000000002" y2="-10" style="stroke: black; stroke-width: 1;"></line>
+<line x1="10.000000000000002" y1="-10" x2="-9.999999999999998" y2="-10.000000000000002" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-9.999999999999998" y1="-10.000000000000002" x2="-10.000000000000002" y2="9.999999999999998" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-10.000000000000002" y1="9.999999999999998" x2="9.999999999999998" y2="10.000000000000004" style="stroke: black; stroke-width: 1;"></line>
+<line x1="9.999999999999998" y1="10.000000000000004" x2="20" y2="10.000000000000004" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="20" y1="20" x2="20.00000000000001" y2="-20" style="stroke: black; stroke-width: 1;"></line>
+<line x1="20.00000000000001" y1="-20" x2="-19.99999999999999" y2="-20.000000000000014" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-19.99999999999999" y1="-20.000000000000014" x2="-20.000000000000007" y2="19.999999999999986" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-20.000000000000007" y1="19.999999999999986" x2="19.999999999999993" y2="20.000000000000007" style="stroke: black; stroke-width: 1;"></line>
+<line x1="19.999999999999993" y1="20.000000000000007" x2="30" y2="20.000000000000007" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="30" y1="30" x2="30.000000000000032" y2="-30" style="stroke: black; stroke-width: 1;"></line>
+<line x1="30.000000000000032" y1="-30" x2="-29.999999999999968" y2="-30.000000000000036" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-29.999999999999968" y1="-30.000000000000036" x2="-29.9999999999999" y2="29.999999999999964" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-29.9999999999999" y1="29.999999999999964" x2="30.0000000000001" y2="30.000000000000007" style="stroke: black; stroke-width: 1;"></line>
+<line x1="30.0000000000001" y1="30.000000000000007" x2="40" y2="30.000000000000007" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="40" y1="40" x2="39.99999999999992" y2="-40" style="stroke: black; stroke-width: 1;"></line>
+<line x1="39.99999999999992" y1="-40" x2="-40.00000000000008" y2="-40.00000000000007" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-40.00000000000008" y1="-40.00000000000007" x2="-40.00000000000001" y2="39.99999999999993" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-40.00000000000001" y1="39.99999999999993" x2="39.99999999999999" y2="40.00000000000001" style="stroke: black; stroke-width: 1;"></line>
+<line x1="39.99999999999999" y1="40.00000000000001" x2="50" y2="40.00000000000001" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="50" y1="50" x2="49.99999999999993" y2="-50" style="stroke: black; stroke-width: 1;"></line>
+<line x1="49.99999999999993" y1="-50" x2="-50.00000000000007" y2="-50.000000000000114" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-50.00000000000007" y1="-50.000000000000114" x2="-50.00000000000001" y2="49.999999999999886" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-50.00000000000001" y1="49.999999999999886" x2="49.99999999999999" y2="50.00000000000001" style="stroke: black; stroke-width: 1;"></line>
+<line x1="49.99999999999999" y1="50.00000000000001" x2="60" y2="50.00000000000001" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="60" y1="60" x2="59.99999999999994" y2="-60" style="stroke: black; stroke-width: 1;"></line>
+<line x1="59.99999999999994" y1="-60" x2="-60.00000000000006" y2="-59.99999999999974" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-60.00000000000006" y1="-59.99999999999974" x2="-60.00000000000044" y2="60.00000000000026" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-60.00000000000044" y1="60.00000000000026" x2="59.99999999999956" y2="60.00000000000044" style="stroke: black; stroke-width: 1;"></line>
+<line x1="59.99999999999956" y1="60.00000000000044" x2="70" y2="60.00000000000044" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="70" y1="70" x2="69.99999999999997" y2="-70" style="stroke: black; stroke-width: 1;"></line>
+<line x1="69.99999999999997" y1="-70" x2="-70.00000000000003" y2="-69.99999999999973" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-70.00000000000003" y1="-69.99999999999973" x2="-70.00000000000051" y2="70.00000000000027" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-70.00000000000051" y1="70.00000000000027" x2="69.99999999999949" y2="70.00000000000051" style="stroke: black; stroke-width: 1;"></line>
+<line x1="69.99999999999949" y1="70.00000000000051" x2="80" y2="70.00000000000051" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="80" y1="80" x2="80" y2="-80" style="stroke: black; stroke-width: 1;"></line>
+<line x1="80" y1="-80" x2="-80" y2="-79.99999999999973" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-80" y1="-79.99999999999973" x2="-80.00000000000058" y2="80.00000000000027" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-80.00000000000058" y1="80.00000000000027" x2="79.99999999999942" y2="80.00000000000058" style="stroke: black; stroke-width: 1;"></line>
+<line x1="79.99999999999942" y1="80.00000000000058" x2="90" y2="80.00000000000058" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="90" y1="90" x2="90.00000000000004" y2="-90" style="stroke: black; stroke-width: 1;"></line>
+<line x1="90.00000000000004" y1="-90" x2="-89.99999999999996" y2="-89.99999999999973" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-89.99999999999996" y1="-89.99999999999973" x2="-90.00000000000067" y2="90.00000000000027" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-90.00000000000067" y1="90.00000000000027" x2="89.99999999999933" y2="90.00000000000067" style="stroke: black; stroke-width: 1;"></line>
+<line x1="89.99999999999933" y1="90.00000000000067" x2="100" y2="90.00000000000067" opacity="0" style="stroke: black; stroke-width: 1;"></line>
+<line x1="100" y1="100" x2="100.0000000000001" y2="-100" style="stroke: black; stroke-width: 1;"></line>
+<line x1="100.0000000000001" y1="-100" x2="-99.9999999999999" y2="-99.99999999999976" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-99.9999999999999" y1="-99.99999999999976" x2="-100.00000000000074" y2="100.00000000000024" style="stroke: black; stroke-width: 1;"></line>
+<line x1="-100.00000000000074" y1="100.00000000000024" x2="99.99999999999926" y2="100.00000000000072" style="stroke: black; stroke-width: 1;"></line>
+</g>
+<g transform="translate(250 250)">
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(99.99999999999926,100.00000000000072) rotate(-3690,0,0)"></polygon>
+</g>
+<metadata><raw>from turtle import * 
+
+def move(x, y):
+    penup()
+    goto(x, y)
+    pendown()
+speed(0)
+for i in range(1, 11):
+    move(i * 10, -i * 10)
+    for n in range(4):
+        left(90)
+        forward(i * 20)</raw></metadata></svg>

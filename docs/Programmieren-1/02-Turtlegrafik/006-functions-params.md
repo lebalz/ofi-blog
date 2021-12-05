@@ -3,6 +3,7 @@ title: 6. Parameter
 ---
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Answer from '@site/src/components/Answer'
+import Solution from '@site/src/components/Solution'
 
 # 6. Parameter
 
@@ -48,6 +49,11 @@ for i in range(5):
 ```
 
 :::
+
+<Solution webKey="9ade393f-3a94-4b7f-87f5-114ffc4f1e60">
+
+![7 Parameter, 6 Befehlsnamen --width=200px](images/06-aufgabe1-lsg.png)
+</Solution>
 :::
 
 
@@ -80,6 +86,12 @@ quotient(12, 20 + 4)
 ⭐️ Was sind die Parameter bei `quotient(12, 20 + 4)`? In welcher Reihenfolge werden diese verrechnet? 
 
 <Answer type="text" webKey="bdc8ef98-1690-49c0-bc81-8b3e50d758fc" />
+<Solution webKey="9ade393f-3a94-4b7f-87f5-114ffc4f1e60">
+
+- Die beiden übergebenen Parameter sind `12` und `24`.
+- Bevor die Parameter übergeben werden, werden diese jeweils ausgewertet, daher zuerst wird `20 + 4` berechnet und das Resultat `24` als Parameter übergeben.
+
+</Solution>
 
 :::
 
@@ -157,6 +169,34 @@ from turtle import *
     **Tipp**: Die Stiftdicke können Sie mit `pensize(10)` auf `10` setzen.
  
 :::
+<Solution webKey="9ade393f-3a94-4b7f-87f5-114ffc4f1e60">
+
+```py live_py slim
+from turtle import *
+
+speed(10)
+
+def sechseck(size, farbe):
+    color(farbe)
+    for i in range(6):
+        forward(size)
+        left(60)
+
+pensize(10)
+
+sechseck(100, 'violet')
+sechseck(90, 'indigo')
+sechseck(80, 'blue')
+sechseck(70, 'green')
+sechseck(60, 'lime')
+sechseck(50, 'lightgreen')
+sechseck(40, 'yellow')
+sechseck(30, 'orange')
+sechseck(20, 'orangered')
+sechseck(10, 'red')
+```
+</Solution>
+
 :::
 
 ## Wiederholungen
@@ -248,15 +288,75 @@ from math import sqrt
 from random import randint, choice
 
 ```
+<Solution webKey="9ade393f-3a94-4b7f-87f5-114ffc4f1e60">
+
+```py live_py slim
+from turtle import *
+from math import sqrt
+from random import randint, choice 
+
+def move(x, y):
+    penup()
+    goto(x, y)
+    pendown()
+
+def haus(size):
+    # Viereck zeichnen
+    for i in range(4):
+        forward(size)
+        left(90)
+    # Diagonale 1
+    left(45)
+    forward(sqrt(2) * size)
+    # Hausdach
+    left(90)
+    forward(sqrt(2) * size / 2)
+    left(90)
+    forward(sqrt(2) * size / 2)
+    # Diagonale 2
+    left(90)
+    forward(size * sqrt(2))
+    # wieder nach rechts schauen
+    left(45)
+
+# Die Programmausführung beginnt hier
+speed(20)
+pensize(3)
+
+for i in range(30):
+    pencolor(choice(['violet', 'indigo', 'blue', 'green', 'lime', 'lightgreen', 'yellow', 'orange', 'orangered', 'red']))
+    move(randint(-250, 250), randint(-250, 250))
+    haus(randint(10, 100))
+```
+</Solution>
+
 :::
 
 
 :::aufgabe ⭐️ Zusatz
 Zeichnen Sie folgende Quadrate. Auf wie viele Zeilen können Sie Ihr Programm kürzen?
 
-![](images/06_squares.png)
+![](images/06_squares.svg)
 
 ```py live_py title=quadrate.py id=a64133e9-5b2e-415a-a884-2671bdb3027e
 from turtle import *
 ```
+<Solution webKey="9ade393f-3a94-4b7f-87f5-114ffc4f1e60">
+
+```py live_py slim
+from turtle import * 
+
+def move(x, y):
+    penup()
+    goto(x, y)
+    pendown()
+
+for i in range(1, 11):
+    move(i * 10, -i * 10)
+    for n in range(4):
+        left(90)
+        forward(i * 20)
+```
+</Solution>
+
 :::
