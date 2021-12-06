@@ -375,7 +375,7 @@
       "ignore": []
     },
     {
-      "from": "docs/Kryptologie/01-Lernziele.md",
+      "from": "docs/Kryptologie/01-Lernziele-reduced.md",
       "to": "versioned_docs/version-24L/06-Kryptologie/01-Lernziele.md",
       "ignore": []
     },
