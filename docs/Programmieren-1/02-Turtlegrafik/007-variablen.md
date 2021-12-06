@@ -174,7 +174,7 @@ Wird ein Wert über eine Eingabeaufforderung eingelesen, so wird dies im Strukto
 
 ```py live_py slim
 grösse = input('Wie gross bist du [cm]?')
-print('Ich bin', grösse, 'cm gross')
+print(f'Ich bin {grösse} cm gross')
 ```
 :::
 
