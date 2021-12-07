@@ -33,7 +33,7 @@ title: Lernziele
 - Sie wissen, dass Personen daher ein beliebtes Angriffsziel sind (z.B. Social Engineering, Phishing).
 - Sie wissen, dass Systeme Schwachstellen aufweisen und somit Angriffsflächen bieten.
 - Sie verstehen, dass regelmässige *Softwareupdates*, aktuelle *Antivirensoftware* und eine *aktive Firewall* für die Systemsicherheit zentral sind.
-- Sie verstehen die Wichtigkeit, dieselben Passwörter nicht für mehrere Dienste/Systeme einzusetzen und kennst Möglichkeiten der Passwortverwaltung (z.B. Passwortmanager).
+- Sie verstehen die Wichtigkeit, dieselben Passwörter nicht für mehrere Dienste/Systeme einzusetzen und kennen Möglichkeiten der Passwortverwaltung (z.B. Passwortmanager).
 - Sie verstehen, dass das Passwort des E-Mail-Accounts besonders wichtig ist (z.B. wegen der Passwortrücksetzung via E-Mail).
 :::
 
