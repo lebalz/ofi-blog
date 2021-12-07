@@ -15,20 +15,24 @@ const Topic = observer((props: Props) => {
     const store = useStore('timedTopicStore');
     const tDoc = store.find(props.webKey);
     return (
-        <div>
-            <OrderControl />
-            <div className={clsx(styles.exercises)}>
-                {tDoc.orderedExercises.map((ex, idx) => (
-                    <Exercise exercise={ex} key={idx} />
-                ))}
+        <div className={styles.topic}>
+            <div className={clsx(styles.controls)}>
+                <OrderControl />
                 <button
                     className={clsx('button', 'button--sm', 'button--primary')}
                     onClick={action(() => {
                         tDoc.addExercise();
+                        store.setSortOrder('desc');
+                        store.setOrderColumn('createdAt');
                     })}
                 >
                     +
                 </button>
+            </div>
+            <div className={clsx(styles.exercises)}>
+                {tDoc.orderedExercises.map((ex, idx) => (
+                    <Exercise exercise={ex} key={idx} />
+                ))}
             </div>
         </div>
     );

@@ -5,23 +5,25 @@ import { getTopicAsAdmin } from '../api/admin';
 import { RootStore } from './stores';
 import TimedTopic from '../models/TimedTopic';
 import { getTopic, postTopic, TimedTopicData, TimedTopic as TimedTopicProps } from '../api/timed_topic';
+import {orderBy as _orderBy} from 'lodash';
 
 
-export type OrderBy = 'name' | 'lastEdited' | 'duration';
-export const ORDER_COLUMNS: OrderBy[] = ['name', 'lastEdited', 'duration'];
+export type OrderBy = 'name' | 'createdAt' | 'lastEdited' | 'duration';
+export const ORDER_COLUMNS: OrderBy[] = ['name', 'lastEdited', 'duration', 'createdAt'];
 export const ORDER_NAME_MAP: {[key in OrderBy]: string} = {
     name: 'Name',
     lastEdited: 'Zuletzt Geändert',
-    duration: 'Länge'
+    duration: 'Länge',
+    createdAt: 'Erstellt Am'
 };
 export class TimedTopicStore {
     private readonly root: RootStore;
     timedTopics = observable<TimedTopic>([]);
 
     @observable
-    orderBy: OrderBy = 'name';
+    orderBy: OrderBy = 'createdAt';
     @observable
-    sortOrder: 'asc' | 'desc' = 'asc';
+    sortOrder: 'asc' | 'desc' = 'desc';
 
     @observable
     timer = 0;
@@ -41,16 +43,27 @@ export class TimedTopicStore {
 
     @action
     setOrderColumn(col: OrderBy) {
+        if (this.orderBy === col) {
+            return;
+        }
         this.orderBy = col;
     }
 
     @action
     toggleSortOrder() {
         if (this.sortOrder === 'asc') {
-            this.sortOrder = 'desc';
+            this.setSortOrder('desc');
         } else {
-            this.sortOrder = 'asc';
+            this.setSortOrder('asc');
         }
+    }
+
+    @action
+    setSortOrder(order: 'asc' | 'desc') {
+        if (this.sortOrder === order) {
+            return;
+        }
+        this.sortOrder = order;
     }
 
     @computed
@@ -66,7 +79,7 @@ export class TimedTopicStore {
     get topicStats() {
         const totalTime = this.viewedTopics.reduce((prev, curr) => prev + curr.totalTime, 0);
         const totalTimeGroupedByDate: { [key: string]: number } = {};
-        this.viewedTopics.forEach((topic) => {
+        _orderBy(this.viewedTopics, ['createdAt'], ['asc']).forEach((topic) => {
             for (const [date, time] of Object.entries(topic.totalTimeGroupedByDate)) {
                 if (date in totalTimeGroupedByDate) {
                     totalTimeGroupedByDate[date] += time;

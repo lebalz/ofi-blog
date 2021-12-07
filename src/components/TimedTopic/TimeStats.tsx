@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import _, { sortBy } from 'lodash';
+import _, { orderBy, sortBy } from 'lodash';
 import styles from './styles.module.scss';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';

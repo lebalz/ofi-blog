@@ -3,6 +3,12 @@ html[data-theme='dark'] {
         box-shadow: 0 5px 40px rgba(110, 110, 110, 0.2);
     }
 }
+.topic {
+    .controls {
+        display: flex;
+        justify-content: space-between;
+    }
+}
 .orderControl {
     display: flex;
     align-items: baseline;
