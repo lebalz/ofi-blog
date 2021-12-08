@@ -3,22 +3,29 @@ import _, { orderBy, sortBy } from 'lodash';
 import styles from './styles.module.scss';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
-import { formatTime } from '../../helpers/time';
+import { formatDate, formatTime, WeekDay, WEEK_DAYS } from '../../helpers/time';
 import Table, { iRow } from '../Table';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { DayStats } from '../../models/TimedTopic';
+import moment from 'moment';
 
 interface Props {
-    totalTimeGroupedByDate: { [key: string]: number };
+    totalTimeGroupedByDate: { [key: string]: DayStats };
     totalTime: number;
+    firstDayOfWeek?: WeekDay;
 }
+
 const TimeStats = observer((props: Props) => {
     const [showStats, setShowStats] = React.useState(false);
     const rows: iRow[] = [];
-    const { totalTimeGroupedByDate, totalTime } = props;
-    for (const [date, time] of Object.entries(totalTimeGroupedByDate)) {
-        rows.push({ cells: [date, formatTime(time)] });
-    }
+    const { totalTimeGroupedByDate, totalTime, firstDayOfWeek } = props;
+    const shift = -1 * WEEK_DAYS.indexOf(firstDayOfWeek || 'So');
+    const firstDayOfYear = moment().startOf('year').day();
+    orderBy(Object.values(totalTimeGroupedByDate), ['date'], ['asc']).forEach((item) => {
+        const weekNr = Math.floor((item.day - 1 + firstDayOfYear + shift) / 7);
+        rows.push({ cells: [item.fDate, formatTime(item.total)], className: clsx(weekNr % 2 === 0 ? styles.even : styles.odd) });
+    })
 
     return (
         <div className={clsx(styles.topicStats)}>
@@ -43,7 +50,7 @@ const TimeStats = observer((props: Props) => {
                         </div>
                         <Table
                             header={['Tag', 'Zeit']}
-                            rows={sortBy(rows, (item) => item.cells[0])}
+                            rows={rows}
                             compact
                             size="small"
                             alignments={['left', 'right']}

@@ -8,10 +8,12 @@ import LoginAlert from '../AceEditor/LoginAlert';
 import Topic from './Topic';
 import TimeStats from './TimeStats';
 import Loader from '../shared/Loader';
+import { WeekDay } from '../../helpers/time';
 interface Props {
     webKey: string;
     topic: string;
     children: React.ReactNode;
+    firstDayOfWeek?: WeekDay;
 }
 
 const TimedTopic = observer((props: Props) => {
@@ -27,7 +29,11 @@ const TimedTopic = observer((props: Props) => {
     return (
         <div>
             <LoginAlert />
-            <TimeStats totalTime={model.totalTime} totalTimeGroupedByDate={model.totalTimeGroupedByDate} />
+            <TimeStats 
+            totalTime={model.totalTime} 
+            totalTimeGroupedByDate={model.totalTimeGroupedByDate}
+            firstDayOfWeek={props.firstDayOfWeek} 
+            />
             <div className={clsx(styles.TimedExercisesContainer)}>
                 <Topic webKey={props.webKey} />
             </div>

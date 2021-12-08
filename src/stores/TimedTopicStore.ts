@@ -3,7 +3,7 @@ import { action, computed, makeObservable, observable, runInAction } from 'mobx'
 import { computedFn } from 'mobx-utils';
 import { getTopicAsAdmin } from '../api/admin';
 import { RootStore } from './stores';
-import TimedTopic from '../models/TimedTopic';
+import TimedTopic, { DayStats } from '../models/TimedTopic';
 import { getTopic, postTopic, TimedTopicData, TimedTopic as TimedTopicProps } from '../api/timed_topic';
 import {orderBy as _orderBy} from 'lodash';
 
@@ -76,20 +76,28 @@ export class TimedTopicStore {
     }
 
     @computed
-    get topicStats() {
+    get topicStats()  {
         const totalTime = this.viewedTopics.reduce((prev, curr) => prev + curr.totalTime, 0);
-        const totalTimeGroupedByDate: { [key: string]: number } = {};
-        _orderBy(this.viewedTopics, ['createdAt'], ['asc']).forEach((topic) => {
-            for (const [date, time] of Object.entries(topic.totalTimeGroupedByDate)) {
-                if (date in totalTimeGroupedByDate) {
-                    totalTimeGroupedByDate[date] += time;
-                } else {
-                    totalTimeGroupedByDate[date] = time;
+        const grouped: { [key: string]: DayStats } = {};
+        this.viewedTopics.forEach((topic) => {
+            Object.values(topic.totalTimeGroupedByDate).forEach((topic) => {
+                let stat: DayStats = grouped[topic.fDate];
+                if (!stat) {
+                    stat = {
+                        date: topic.date,
+                        day: topic.day,
+                        timeSpans: 0,
+                        fDate: topic.fDate,
+                        total: 0
+                    };
+                    grouped[topic.fDate] = stat;
                 }
-            }
+                stat.timeSpans += topic.timeSpans;
+                stat.total += topic.total;
+            })
         });
         return {
-            totalTimeGroupedByDate: totalTimeGroupedByDate,
+            totalTimeGroupedByDate: grouped,
             totalTime: totalTime,
         };
     }

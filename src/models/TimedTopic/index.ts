@@ -14,6 +14,14 @@ const save = (model: TimedTopic, cancelToken: CancelTokenSource) => {
     return putTopic(model.webKey, model.data, cancelToken);
 };
 
+export interface DayStats {
+    day: number;
+    date: Date;
+    fDate: string;
+    total: number;
+    timeSpans: number;
+}
+
 export default class TimedTopic implements ApiModel {
     private readonly store: TimedTopicStore;
     webKey: string;
@@ -86,16 +94,25 @@ export default class TimedTopic implements ApiModel {
     }
 
     @computed
-    get totalTimeGroupedByDate(): { [key: string]: number } {
+    get totalTimeGroupedByDate(): { [key: string]: DayStats } {
         const timeSpans = this.exercises.reduce((prev, current) => {
             return [...prev, ...current.timeSpans];
         }, [] as TimeSpan[]);
-        const grouped: { [key: string]: number } = {};
+        const grouped: { [key: string]: DayStats } = {};
         timeSpans.forEach((ts) => {
-            if (!(ts.fStartDate in grouped)) {
-                grouped[ts.fStartDate] = 0;
+            let stat: DayStats = grouped[ts.fStartDate];
+            if (!stat) {
+                stat = {
+                    date: new Date(ts.start.getFullYear(), ts.start.getMonth(), ts.start.getDate()),
+                    day: ts.dayOfYear,
+                    timeSpans: 0,
+                    fDate: ts.fStartDate,
+                    total: 0
+                };
+                grouped[ts.fStartDate] = stat;
             }
-            grouped[ts.fStartDate] += ts.duration > 0 ? ts.duration : 0;
+            stat.total += ts.duration > 0 ? ts.duration : 0;
+            stat.timeSpans += ts.duration > 0 ? 1 : 0;
         });
         return grouped;
     }

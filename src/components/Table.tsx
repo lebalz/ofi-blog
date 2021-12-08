@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUmbrellaBeach as holiday, faGraduationCap as test, faCalendarDay as event, faInfo as info, IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import styles from './Table.module.scss';
 import clsx from 'clsx';
+import { WEEK_DAYS } from '../helpers/time';
 
 export enum Type {
   Holiday = 'holiday',
@@ -51,6 +52,7 @@ export class Cell extends React.Component<CellProps> {
 export interface iRow {
   cells: (string | JSX.Element)[];
   type?: Type;
+  className?: string;
 }
 
 interface RowProps extends iRow {
@@ -58,7 +60,6 @@ interface RowProps extends iRow {
   dateIndex?: number;
 }
 
-const WEEK_DAYS = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
 const getDate = (date: String) => {
   const parts = date.match(/(?<d>\d+)\.(?<m>\d+)\.(?<y>\d+)/);
   if (!parts || !parts.groups) {
@@ -105,7 +106,7 @@ export class Row extends React.Component<RowProps> {
 
 
     return (
-      <tr {...props}>
+      <tr {...props} className={this.props.className}>
         {
           cells.map((cell, idx) => {
             const cellProps: CellProps = { value: cell }

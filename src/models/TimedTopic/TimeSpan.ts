@@ -1,8 +1,9 @@
 import { CancelTokenSource } from 'axios';
 import _ from 'lodash';
 import { action, computed, makeObservable, observable } from 'mobx';
+import moment from 'moment';
 import { stopTimeSpan, TimeSpan as TimeSpanProps } from '../../api/time_span';
-import { formatDate, HOUR_MS, MINUTE_MS, SECOND_MS } from '../../helpers/time';
+import { formatDate, HOUR_MS, MINUTE_MS, SECOND_MS, WeekDay, WEEK_DAYS } from '../../helpers/time';
 import { rootStore } from '../../stores/stores';
 import { TimedTopicStore } from '../../stores/TimedTopicStore';
 import SaveService, { ApiModel } from '../SaveService';
@@ -32,6 +33,16 @@ export default class TimeSpan implements ApiModel {
         if (this.isRunning) {
             this.saveService = new SaveService(this, save);
         }
+    }
+
+    @computed
+    get dayOfYear() {
+        return moment(this.start).dayOfYear()
+    }
+
+    @computed
+    get day(): WeekDay {
+        return WEEK_DAYS[this.start.getDay()];
     }
 
     @computed
@@ -74,7 +85,7 @@ export default class TimeSpan implements ApiModel {
 
     @computed
     get fStartDate(): string {
-        return formatDate(this.start);
+        return `${this.day}. ${formatDate(this.start)}`;
     }
 
     @computed

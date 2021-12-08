@@ -3,6 +3,14 @@ html[data-theme='dark'] {
         box-shadow: 0 5px 40px rgba(110, 110, 110, 0.2);
     }
 }
+.topicStats {
+    .even {
+        border-left: 3px solid rgb(0, 255, 170);
+    }
+    .odd {
+        border-left: 4px solid rgb(0, 68, 255);
+    }
+}
 .topic {
     .controls {
         display: flex;
