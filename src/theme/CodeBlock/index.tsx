@@ -7,7 +7,7 @@
 
 import React from 'react';
 // @ts-ignore
-import CodeBlock from '@theme-init/CodeBlock';
+import CodeBlock from '@theme-original/CodeBlock';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { sanitizedTitle, sanitizeId } from '../../utils/sanitizers';
 import hashCode from '../../utils/hash_code';

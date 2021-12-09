@@ -3,11 +3,11 @@ const path = require('path');
 const url = require('url');
 const fs = require('fs-extra');
 const escapeHtml = require('escape-html');
-const getFileLoaderUtils = require('@docusaurus/core/lib/webpack/utils').getFileLoaderUtils;
 const posixPath = require('@docusaurus/utils').posixPath;
 const escapePath = require('@docusaurus/utils').escapePath;
 const toMessageRelativeFilePath = require('@docusaurus/utils').toMessageRelativeFilePath;
-const {parseOptions, cleanedText} = require('./helpers');
+const { parseOptions, cleanedText } = require('./helpers');
+const getFileLoaderUtils = require('@docusaurus/utils').getFileLoaderUtils;
 
 /**
  * Supported config annotations:
@@ -94,6 +94,28 @@ async function ensureImageFileExist(imagePath, sourceFilePath) {
 
 /**
  * 
+ * @param {string[]} possiblePaths 
+ * @param {string} sourceFilePath 
+ * @returns string
+ */
+async function findImage(possiblePaths, sourceFilePath) {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const possiblePath of possiblePaths) {
+    if (await fs.pathExists(possiblePath)) {
+      return possiblePath;
+    }
+  }
+  throw new Error(
+    `Image ${possiblePaths
+      .map((p) => toMessageRelativeFilePath(p))
+      .join(' or ')} used in ${toMessageRelativeFilePath(
+        sourceFilePath,
+      )} not found.`,
+  );
+}
+
+/**
+ * 
  * @param {Image} node 
  * @param {isInline} boolean
  * @param {PluginOptions} param1
@@ -101,7 +123,7 @@ async function ensureImageFileExist(imagePath, sourceFilePath) {
 async function processImageNode(
   node,
   isInline,
-  { filePath, staticDir },
+  { filePath, staticDirs },
 ) {
   if (!node.url) {
     throw new Error(
@@ -124,9 +146,12 @@ async function processImageNode(
   // images without protocol
   else if (path.isAbsolute(node.url)) {
     // absolute paths are expected to exist in the static folder
-    const expectedImagePath = path.join(staticDir, node.url);
-    await ensureImageFileExist(expectedImagePath, filePath);
-    createJSX(node, isInline, posixPath(expectedImagePath), filePath);
+
+    const possibleImagePaths = staticDirs.map((dir) =>
+      path.join(dir, node.url),
+    );
+    const imagePath = await findImage(possibleImagePaths, filePath);
+    createJSX(node, isInline, posixPath(imagePath), filePath);
   }
   // We try to convert image urls without protocol to images with require calls
   // going through webpack ensures that image assets exist at build time
@@ -169,13 +194,13 @@ const plugin = (options) => {
           if (!node.data.hProperties.style) {
             node.data.hProperties.style = {}
           }
-          node.data.hProperties.style = {...node.data.hProperties.style, display: 'flex', justifyContent: 'center'};
+          node.data.hProperties.style = { ...node.data.hProperties.style, display: 'flex', justifyContent: 'center' };
         }
         node.children.forEach((c) => {
           if (c.type !== 'image') {
             return;
           }
-          promises.push(processImageNode(c, isInline, { filePath: filePath, staticDir: staticDir }));
+          promises.push(processImageNode(c, isInline, { filePath: filePath, staticDirs: [staticDir] }));
         })
       }
     );

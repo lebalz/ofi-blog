@@ -7,22 +7,21 @@
 
 import React from 'react';
 // @ts-ignore
-import NavbarItem from '@theme-init/NavbarItem';
+import NavbarItem from '@theme-original/NavbarItem';
 import { useStore } from '../../stores/hooks';
 import { Link } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { observer } from 'mobx-react-lite';
-import { firstNameFromEmail, lastNameFromEmail } from '../../helpers/name';
 import clsx from 'clsx';
 import styles from './index.module.scss';
 
-const currentVersion = (versions: NavbarItem[]): NavbarItem | undefined => {
+const currentVersion = (versions: (typeof NavbarItem)[]): typeof NavbarItem | undefined => {
     return versions.find((v) => v.path.length > 1 && window.location.pathname.startsWith(v.path));
 };
 
 const withLoginNavbar = (Component) => {
-    const WrappedComponent = observer((props: NavbarItem) => {
+    const WrappedComponent = observer((props: typeof NavbarItem) => {
         if (!ExecutionEnvironment.canUseDOM) {
             return <Component {...props} />;
         }
