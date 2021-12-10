@@ -87,9 +87,12 @@ export class Row extends React.Component<RowProps> {
   }
   render() {
     const { type, cells } = this.props
-    const props: any = {}
+    const props: any = {className: []}
+    if (this.props.className) {
+      props.className.push(this.props.className);
+    }
     if (type) {
-      props.className = styles[type];
+      props.className.push(styles[type]);
     }
 
     var date = undefined;
@@ -98,7 +101,7 @@ export class Row extends React.Component<RowProps> {
       if (typeof c === 'string') {
         date = getDate(c);
         if (date && weekNumber(new Date()) === weekNumber(date)) {
-          props.className = `${props.className} ${styles.currentWeek}`
+          props.className.push(`${props.className} ${styles.currentWeek}`)
         }
 
       }
@@ -106,7 +109,7 @@ export class Row extends React.Component<RowProps> {
 
 
     return (
-      <tr {...props} className={this.props.className}>
+      <tr {...props} className={clsx(...props.className)}>
         {
           cells.map((cell, idx) => {
             const cellProps: CellProps = { value: cell }

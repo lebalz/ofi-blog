@@ -83,8 +83,7 @@ table.ofi-table {
   }
 
   &.striped > tbody > tr:nth-child(even) {
-    background-color: var(--ifm-table-stripe-background);
-    background: var(--ifm-table-stripe-background);
+    --table-background-color: var(--ifm-table-stripe-background);
   }
 
   &.celled {
