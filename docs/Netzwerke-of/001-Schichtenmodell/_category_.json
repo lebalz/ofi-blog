@@ -1,4 +1,7 @@
 {
     "collapsible": true,
-    "collapsed": true
+    "collapsed": true,
+    "link": {
+      "type": "generated-index"
+    }
   }

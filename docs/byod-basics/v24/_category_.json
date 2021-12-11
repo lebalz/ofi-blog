@@ -1,4 +1,8 @@
 {
-  "label": "BYOD v24",
-  "position": 2
+    "collapsible": true,
+    "collapsed": true,
+    "position": 2,
+    "link": {
+      "type": "generated-index"
+    }
 }
