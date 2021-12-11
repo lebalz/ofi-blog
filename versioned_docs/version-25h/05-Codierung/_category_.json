@@ -1,8 +1,8 @@
 {
     "collapsible": true,
-    "collapsed": true,
+    "collapsed": false,
     "link": {
       "type": "generated-index",
-      "title": "Netzwerke"
+      "title": "Codierung"
     }
-  }
+}

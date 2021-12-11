@@ -84,7 +84,7 @@ module.exports = {
             },
             {
               label: 'GBSL',
-              to: 'https://gbsl.website',
+              to: 'https://gbsl.ch',
             },
             {
               label: 'Intranet',
@@ -107,7 +107,7 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      'classic',
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),

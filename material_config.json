@@ -545,7 +545,9 @@
     {
       "from": "docs/Codierung/",
       "to": "versioned_docs/version-25h/05-Codierung",
-      "ignore": []
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "24w": [

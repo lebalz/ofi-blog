@@ -1,4 +1,8 @@
 {
   "collapsible": true,
-  "collapsed": false
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Programmieren 1"
+  }
 }
