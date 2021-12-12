@@ -28,3 +28,7 @@ import TopicStats from '@site/src/components/TimedTopic/TopicStats'
 
 ## Kapitel 6
 <TimedTopic webKey="81d29bab-40f2-4ec9-bcc9-80710b23aca3" topic="Kapitel 6" firstDayOfWeek="Fr"/>
+
+
+## Kapitel 7 (Freiwillig: Prüfungsvorbereitung Probe 2)
+<TimedTopic webKey="96b8a471-b2a7-4230-8223-1128205f07da" topic="Kapitel 7" firstDayOfWeek="Fr"/>
