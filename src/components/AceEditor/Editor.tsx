@@ -104,6 +104,15 @@ const Editor = observer((props: Props) => {
           style={{
             width: "100%",
           }}
+          onPaste={(e) => {
+            if (pyScript.versioned) {
+              /**
+               * Save and mark pasted content immediately
+               */
+              pyScript.setPastedEdit(true);
+              pyScript.saveService.saveNow();
+            }
+          }}
           maxLines={25}
           ref={editorRef}
           mode="python"

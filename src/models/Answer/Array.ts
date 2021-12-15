@@ -20,7 +20,7 @@ export const DEFAULT_DATA: ArrayDoc = {
 }
 
 const save = (model: ArrayAnswer, cancelToken: CancelTokenSource) => {
-    return putDocument<ArrayDoc>(model.webKey, model.data, cancelToken);
+    return putDocument<ArrayDoc>(model.webKey, model.data, false, false, cancelToken);
 }
 
 export default class ArrayAnswer implements ArrayModel, ApiModel {
@@ -105,6 +105,7 @@ export default class ArrayAnswer implements ArrayModel, ApiModel {
             user_id: this.userId,
             web_key: this.webKey,
             type: this.type,
+            versions: [],
             data: this.data,
             created_at: this.createdAt.toISOString(),
             updated_at: this.updatedAt.toISOString(),

@@ -58,6 +58,7 @@ const withLiveEditor = (Component) => {
           contextId={contextId}
           resettable={!props.persist}
           slim={!!props.slim}
+          versioned={!!props.versioned}
           title={sanitizedTitle(props.title) || 'Python'}
         />
       ;

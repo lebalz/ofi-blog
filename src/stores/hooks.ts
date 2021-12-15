@@ -14,13 +14,14 @@ export const useDocument = (
     webKey: string,
     persist: boolean,
     getLegacyData: () => { data: ModelTypes | undefined; cleanup?: () => void },
-    readonly?: boolean
+    readonly?: boolean,
+    versioned?: boolean
 ) => {
     const [initialized, setInitialized] = React.useState(false);
     /** initial load */
     React.useEffect(() => {
         rootStore.documentStore
-            .provideDocument(defaultData(), type, webKey, persist, getLegacyData, readonly)
+            .provideDocument(defaultData(), type, webKey, persist, getLegacyData, readonly, false, versioned)
             .finally(() => {
                 setInitialized(true);
             });
@@ -38,7 +39,8 @@ export const useDocument = (
                         persist,
                         getLegacyData,
                         readonly,
-                        true
+                        true,
+                        versioned
                     );
                 }
             }
@@ -57,7 +59,8 @@ export const useDocument = (
                         persist,
                         getLegacyData,
                         readonly,
-                        true
+                        true,
+                        versioned
                     );
                 }
             }

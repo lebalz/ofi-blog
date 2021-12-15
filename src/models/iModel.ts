@@ -1,11 +1,8 @@
-import { TimedExerciseData } from '../api/timed_exercise';
-import { TimedTopicData } from '../api/timed_topic';
 import ArrayAnswer, { ArrayDoc } from './Answer/Array';
 import StringAnswer, { StringDoc } from './Answer/String';
 import Text, { TextDoc } from './Answer/Text';
 import SaveService from './SaveService';
 import Script, { PyDoc } from './Script';
-import TimeSpan from './TimedTopic/TimeSpan';
 
 export type DocType = 'code' | 'string' | 'text' | 'array';
 

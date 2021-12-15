@@ -17,7 +17,7 @@ export const DEFAULT_DATA: TextDoc = {
 }
 
 const save = (model: Text, cancelToken: CancelTokenSource) => {
-    return putDocument<TextDoc>(model.webKey, model.data, cancelToken);
+    return putDocument<TextDoc>(model.webKey, model.data,  false, false, cancelToken);
 }
 
 export default class Text implements TextModel, ApiModel, iTextData {
@@ -111,6 +111,7 @@ export default class Text implements TextModel, ApiModel, iTextData {
             web_key: this.webKey,
             type: this.type,
             data: this.data,
+            versions: [],
             created_at: this.createdAt.toISOString(),
             updated_at: this.updatedAt.toISOString(),
         };

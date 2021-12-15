@@ -10,12 +10,12 @@ import { DocType, ModelTypes, IModel, TypedDoc, Model } from '../models/iModel';
 import Script from '../models/Script';
 import { RootStore } from './stores';
 
-const CreateModel = (data: DocumentProps<any>, options: { raw?: string; readonly?: boolean } = {}) => {
+const CreateModel = (data: DocumentProps<any>, options: { raw?: string; readonly?: boolean, versioned?: boolean } = {}) => {
     switch (data.type) {
         case 'array':
             return new ArrayAnswer(data);
         case 'code':
-            return new Script(data, options.raw || '');
+            return new Script(data, options.raw || '', options.readonly, false, options.versioned);
         case 'string':
             return new StringAnswer(data);
         case 'text':
@@ -38,22 +38,23 @@ const CreateDummyModel = <T extends IModel = IModel>(
         web_key: webKey,
         type: type,
         data: data,
+        versions: [],
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
     };
     switch (type) {
         case 'array':
-            model = new ArrayAnswer({ ...dummy, data: TypedDoc('array', data) });
+            model = new ArrayAnswer({ ...dummy, versions: [], data: TypedDoc('array', data) });
             break;
         case 'code':
             const c = TypedDoc('code', data);
-            model = new Script({ ...dummy, data: c }, c.code, readonly, isDummy);
+            model = new Script({ ...dummy, versions: [], data: c }, c.code, readonly, isDummy, false);
             break;
         case 'string':
-            model = new StringAnswer({ ...dummy, data: TypedDoc('string', data) });
+            model = new StringAnswer({ ...dummy, versions: [], data: TypedDoc('string', data) });
             break;
         case 'text':
-            model = new Text({ ...dummy, data: TypedDoc('text', data) });
+            model = new Text({ ...dummy, versions: [], data: TypedDoc('text', data) });
             break;
     }
     return model as T;
@@ -116,7 +117,8 @@ export class DocumentStore {
         persist: boolean,
         getLegacyData: () => { data: ModelTypes | undefined; cleanup?: () => void },
         readonly?: boolean,
-        forceReload?: boolean
+        forceReload?: boolean,
+        versioned?: boolean
     ): Promise<T> {
         const legacy = getLegacyData();
         const loadedModel = this.find<T>(webKey);
@@ -167,6 +169,7 @@ export class DocumentStore {
                     const fromApi = CreateModel(data.data, {
                         readonly: readonly,
                         raw: type === 'code' ? TypedDoc('code', defaultData).code : undefined,
+                        versioned: versioned
                     }) as T;
                     fromApi.loaded = true;
                     runInAction(() => {

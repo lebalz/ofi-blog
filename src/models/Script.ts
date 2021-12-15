@@ -1,8 +1,9 @@
+import { runInAction } from 'mobx';
 import { CancelTokenSource } from 'axios';
 import { Document, putDocument } from './../api/document';
-import { action, computed, makeObservable, observable } from "mobx";
-import { BaseModel, CodeModel } from './iModel';
-import { DocumentStore } from "../stores/DocumentStore";
+import { action, computed, makeObservable, observable } from 'mobx';
+import { CodeModel } from './iModel';
+import { DocumentStore } from '../stores/DocumentStore';
 import { rootStore } from '../stores/stores';
 import SaveService, { ApiModel } from './SaveService';
 import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER } from '../components/AceEditor/constants';
@@ -11,21 +12,23 @@ export interface PyDoc {
     code: string;
 }
 
-
 export interface LogMessage {
     type: 'done' | 'stdout' | 'stderr';
     output: string;
     timeStamp: number;
 }
 
-
 export const DEFAULT_DATA: PyDoc = {
-    code: ''
-}
+    code: '',
+};
 
 const save = (model: Script, cancelToken: CancelTokenSource) => {
-    return putDocument<PyDoc>(model.webKey, model.data, cancelToken);
-}
+    const pasted = model.pastedEdit;
+    if (pasted) {
+        model.setPastedEdit(false);
+    }
+    return putDocument<PyDoc>(model.webKey, model.data, model.versioned, pasted, cancelToken);
+};
 
 export default class Script implements CodeModel, ApiModel {
     type: 'code' = 'code';
@@ -33,7 +36,7 @@ export default class Script implements CodeModel, ApiModel {
     webKey: string;
     id: number;
     userId: number;
-    @observable 
+    @observable
     createdAt: Date;
     @observable
     updatedAt: Date;
@@ -52,7 +55,6 @@ export default class Script implements CodeModel, ApiModel {
     @observable.ref
     legacyData?: PyDoc;
     legacyCleanup?: () => void;
-
 
     /** model specific props */
 
@@ -79,8 +81,17 @@ export default class Script implements CodeModel, ApiModel {
     code: string;
     readonly: boolean;
 
+    versioned: boolean;
+    @observable
+    pastedEdit: boolean;
 
-    constructor(doc: Document<PyDoc>, rawScript: string, readonly: boolean = false, isDummy: boolean = false) {
+    constructor(
+        doc: Document<PyDoc>,
+        rawScript: string,
+        readonly: boolean = false,
+        isDummy: boolean = false,
+        versioned: boolean = false
+    ) {
         this.readonly = readonly;
         this.store = rootStore.documentStore;
         this.webKey = doc.web_key;
@@ -93,6 +104,7 @@ export default class Script implements CodeModel, ApiModel {
         this.executedScriptSource = doc.data.code;
         this.code = doc.data.code;
         this.isDummy = isDummy;
+        this.versioned = versioned;
         makeObservable(this);
         /** order depends, initialize AFTER making this observable! */
         this.saveService = new SaveService(this, save);
@@ -100,21 +112,21 @@ export default class Script implements CodeModel, ApiModel {
 
     @computed
     get canUpdate(): boolean {
-        return !this.isDummy &&!this.readonly && this.loaded;
+        return !this.isDummy && !this.readonly && this.loaded;
     }
 
     @computed
     get umami() {
         return {
             event: `update-doc-${this.type}`,
-            message: this.webKey
-        }
+            message: this.webKey,
+        };
     }
 
     @computed
     get data(): PyDoc {
         return {
-            code: this.code
+            code: this.code,
         };
     }
 
@@ -131,6 +143,7 @@ export default class Script implements CodeModel, ApiModel {
             web_key: this.webKey,
             type: this.type,
             data: this.data,
+            versions: [],
             created_at: this.createdAt.toISOString(),
             updated_at: this.updatedAt.toISOString(),
         };
@@ -184,6 +197,11 @@ export default class Script implements CodeModel, ApiModel {
         );
     }
 
+    @action
+    setPastedEdit(pasted: boolean) {
+        this.pastedEdit = pasted;
+    }
+
     @computed
     get codeId(): string {
         return `ofi_${this.webKey}`.replace(/-/g, '_');
@@ -198,5 +216,4 @@ export default class Script implements CodeModel, ApiModel {
     get hasEdits(): boolean {
         return this.rawScript !== this.data.code;
     }
-
 }

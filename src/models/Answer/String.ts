@@ -18,7 +18,7 @@ export const DEFAULT_DATA: StringDoc = {
 }
 
 const save = (model: StringAnswer, cancelToken: CancelTokenSource) => {
-    return putDocument<StringDoc>(model.webKey, model.data, cancelToken);
+    return putDocument<StringDoc>(model.webKey, model.data,  false, false, cancelToken);
 }
 
 export default class StringAnswer implements StringModel, ApiModel {
@@ -102,6 +102,7 @@ export default class StringAnswer implements StringModel, ApiModel {
             web_key: this.webKey,
             type: this.type,
             data: this.data,
+            versions: [],
             created_at: this.createdAt.toISOString(),
             updated_at: this.updatedAt.toISOString(),
         };
