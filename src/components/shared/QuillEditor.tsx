@@ -18,6 +18,7 @@ export interface ToolbarOptions {
     ul?: boolean;
     ol?: boolean;
     formula?: boolean;
+    code?: boolean;
     image?: boolean;
 }
 
@@ -88,6 +89,9 @@ const getToolbar = (options: ToolbarOptions) => {
             visuals.push('image')
         }
         toolbar.push(visuals);
+    }
+    if (options.code) {
+        toolbar.push(['code-block'])
     }
     return toolbar;
 };

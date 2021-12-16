@@ -9,6 +9,7 @@ import styles from './styles.module.scss';
 
 interface Props {
     webKey: string;
+    title?: string;
     children?: React.ReactNode;
 }
 
@@ -40,13 +41,13 @@ const Solution = observer((props: Props) => {
         <div data--web-key={props.webKey} className={clsx(styles.wrapper, 'solution-wrapper')}>
             {model.show ? (
                 <Details
-                    summary={<summary>Lösung <Icon /></summary>}
+                    summary={<summary>{props.title || 'Lösung'} <Icon /></summary>}
                     className={clsx('alert alert--success', styles.solution)}
                 >
                     {props.children}
                 </Details>
             ) : (
-                <div className={clsx('alert', styles.disabled)}>Lösung (nicht freigeschaltet) <Icon /></div>
+                <div className={clsx('alert', styles.disabled)}>{props.title || 'Lösung'} (nicht freigeschaltet) <Icon /></div>
             )}
         </div>
     );

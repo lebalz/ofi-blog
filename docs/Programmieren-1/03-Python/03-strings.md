@@ -138,6 +138,47 @@ grüfnisch = grüfnisch.replace('ü', 'ünüfü')
 cow(grüfnisch)
 ```
 </Solution>
+
+<Solution title="⭐️ Kurzschreibweise" webKey="e2368d96-664c-4c52-86aa-496a5e936cdd">
+
+```py live_py slim
+from cowsay import beavis
+text = input('Berndeutschen Satz?')
+
+grüfnisch = text.lower()
+for vokal in 'aeiouäöü':
+    neu = f'{vokal}n{vokal}f{vokal}'
+    grüfnisch = grüfnisch.replace(vokal, neu)
+beavis(grüfnisch)
+```
+</Solution>
+
+<Solution title="⭐️ Zusatz: Diphthonge" webKey="e2368d96-664c-4c52-86aa-496a5e936cdd">
+
+```py live_py slim
+from cowsay import beavis
+import itertools
+text = input('Berndeutschen Satz?')
+
+grüfnisch = text.lower()
+# alle Diphdonge durch Grossbuchstaben ersetzen
+for diphdong in ['aa', 'ae', 'ai', 'ao', 'au', 'aä', 'aö', 'aü', 'ee', 'ea', 'ei', 'eo', 'eu', 'eä', 'eö', 'eü', 'ii', 'ia', 'ie', 'io', 'iu', 'iä', 'iö', 'iü', 'oo', 'oa', 'oe', 'oi', 'ou', 'oä', 'oö', 'oü', 'uu', 'ua', 'ue', 'ui', 'uo', 'uä', 'uö', 'uü', 'ää', 'äa', 'äe', 'äi', 'äo', 'äu', 'äö', 'äü', 'öö', 'öa', 'öe', 'öi', 'öo', 'öu', 'öä', 'öü', 'üü', 'üa', 'üe', 'üi', 'üo', 'üu', 'üä', 'üö']:
+    grüfnisch.replace(diphdong, diphdong.upper())
+
+for vokal in 'aeiouäöü':
+    neu = f'{vokal}n{vokal}f{vokal}'
+    grüfnisch = grüfnisch.replace(vokal, neu)
+
+# alle grossen Diphonge auf Grüfnisch übersetzen
+for diphdong in ['AA', 'AE', 'AI', 'AO', 'AU', 'AÄ', 'AÖ', 'AÜ', 'EE', 'EA', 'EI', 'EO', 'EU', 'EÄ', 'EÖ', 'EÜ', 'II', 'IA', 'IE', 'IO', 'IU', 'IÄ', 'IÖ', 'IÜ', 'OO', 'OA', 'OE', 'OI', 'OU', 'OÄ', 'OÖ', 'OÜ', 'UU', 'UA', 'UE', 'UI', 'UO', 'UÄ', 'UÖ', 'UÜ', 'ÄÄ', 'ÄA', 'ÄE', 'ÄI', 'ÄO', 'ÄU', 'ÄÖ', 'ÄÜ', 'ÖÖ', 'ÖA', 'ÖE', 'ÖI', 'ÖO', 'ÖU', 'ÖÄ', 'ÖÜ', 'ÜÜ', 'ÜA', 'ÜE', 'ÜI', 'ÜO', 'ÜU', 'ÜÄ', 'ÜÖ']:
+    vokal1 = diphdong[0].lower() # erster Buchstabe
+    vokal2 = diphdong[1].lower() # zweiter Buchstabe
+    neu = f'{vokal1}n{vokal1}f{vokal1}'
+    grüfnisch.replace(diphdong, f'{neu}{vokal2}')
+    
+beavis(grüfnisch)
+```
+</Solution>
 :::
 
 
