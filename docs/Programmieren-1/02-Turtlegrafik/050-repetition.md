@@ -230,14 +230,16 @@ sollte die folgende Ausgabe erzeugen:
 <Solution webKey="9dd6cc59-3264-4243-b654-d1ddcda0912d">
 
 ```py live_py slim
+
 def dreieck(grösse):
-    grösse = grösse + 1
+    # grösse mal wiederholen
     for i in range(grösse):
-        print('*' * i)
+        # i beginnt bei 0, deswegen +1 rechnen
+        print('*' * (i + 1))
 
 dreieck(1)
-dreieck(2)
 dreieck(3)
+dreieck(5)
 ```
 
 </Solution>
