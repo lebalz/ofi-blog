@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Typed from 'typed.js';
-import styles from '@docusaurus/theme-classic/lib/theme/Heading/styles.module.css'
-import clsx from 'clsx'
+import styles from '@docusaurus/theme-classic/src/theme/Heading/styles.module.css';
+import clsx from 'clsx';
 
 interface Props {
     type: keyof React.ReactHTML;
