@@ -1,5 +1,5 @@
 import { firstNameFromEmail, lastNameFromEmail } from './../helpers/name';
-import { computed, makeObservable } from 'mobx';
+import { action, computed, makeObservable, observable } from 'mobx';
 import { User as UserProps } from '../api/user';
 
 export default class User {
@@ -9,12 +9,16 @@ export default class User {
   readonly admin?: boolean;
   readonly createdAt: Date;
   readonly updatedAt: Date;
+  readonly groups: string[];
+  @observable
+  isOutdated: boolean = false;
 
   constructor(props: UserProps) {
     this.id = props.id;
     this.email = props.email;
     this.admin = props.admin;
     this.klasse = props.class;
+    this.groups = props.groups || [];
     this.createdAt = new Date(props.created_at);
     this.updatedAt = new Date(props.updated_at);
     makeObservable(this);
@@ -45,6 +49,7 @@ export default class User {
       id: this.id,
       email: this.email,
       class: this.klasse,
+      groups: this.groups,
       admin: this.admin,
       created_at: this.createdAt.toISOString(),
       updated_at: this.updatedAt.toISOString()

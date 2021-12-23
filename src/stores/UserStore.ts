@@ -1,16 +1,25 @@
 import { action, computed, makeObservable, observable, reaction } from 'mobx';
 import { computedFn } from 'mobx-utils';
 import { user as fetchUser } from '../api/user';
-import { users as fetchUsers } from '../api/admin';
+import { setUserProps, users as fetchUsers } from '../api/admin';
 import User from '../models/User';
 import { RootStore } from './stores';
 import _ from 'lodash';
+import axios from 'axios';
 
 export class UserStore {
     private readonly root: RootStore;
     users = observable<User>([]);
+    unpersistedGroups = observable<string>([]);
+    unpersistedKlasses = observable<string>([]);
     @observable.ref
     currentView?: User = undefined;
+
+    @observable
+    filterKlasse?: string;
+
+    @observable
+    filterEmailOrder: 'asc' | 'desc' = 'asc';
 
     @observable
     opendTurtleModalWebKey: string | undefined = undefined;
@@ -33,6 +42,90 @@ export class UserStore {
             }
         );
         makeObservable(this);
+    }
+
+    @computed
+    get filteredUsers(): User[] {
+        if (!this.current?.admin) {
+            return [];
+        }
+        let filtered = this.filterKlasse
+            ? this.byClass(this.filterKlasse).filter((u) => !!u.klasse)
+            : this.users.slice();
+        filtered = _.orderBy(filtered, ['email'], [this.filterEmailOrder]);
+        return filtered;
+    }
+
+    @computed
+    get klasses(): string[] {
+        console.log(this.unpersistedKlasses);
+        return [...new Set(this.users.reduce((p, u) => [...p, u.klasse], this.unpersistedKlasses))];
+    }
+
+    @computed
+    get groups(): string[] {
+        return [...new Set(this.users.reduce((p, u) => [...p, ...u.groups], this.unpersistedGroups))];
+    }
+
+    @action
+    createGroup(group: string) {
+        this.unpersistedGroups.push(group);
+    }
+
+    @action
+    createKlass(klass: string) {
+        this.unpersistedKlasses.push(klass);
+    }
+
+    @action
+    setKlasse(user: User, klass: string) {
+        user.isOutdated = true;
+        setUserProps(
+            user.id,
+            {
+                class: klass,
+            },
+            axios.CancelToken.source()
+        ).then(
+            action((data) => {
+                this.users.remove(user);
+                this.users.push(new User(data.data));
+            })
+        );
+    }
+
+    @action
+    addGroup(user: User, group: string) {
+        user.isOutdated = true;
+        setUserProps(
+            user.id,
+            {
+                groups: [...user.groups, group],
+            },
+            axios.CancelToken.source()
+        ).then(
+            action((data) => {
+                this.users.remove(user);
+                this.users.push(new User(data.data));
+            })
+        );
+    }
+
+    @action
+    removeGroup(user: User, group: string) {
+        user.isOutdated = true;
+        setUserProps(
+            user.id,
+            {
+                groups: user.groups.filter((g) => g !== group),
+            },
+            axios.CancelToken.source()
+        ).then(
+            action((data) => {
+                this.users.remove(user);
+                this.users.push(new User(data.data));
+            })
+        );
     }
 
     @action
@@ -73,12 +166,12 @@ export class UserStore {
                     action(({ data }) => {
                         const current = this.current;
                         if (current?.admin) {
-                            const ordered = _.orderBy(data, ['email']);
+                            const ordered = _.orderBy(data, ['email']).filter(u => u.email !== current.email).map(u => new User(u));
                             ordered.forEach((user) => {
-                                if (user.email !== current.email) {
-                                    this.users.push(new User(user));
-                                }
+                                this.users.push(user);
                             });
+                            this.unpersistedGroups.replace(this.groups);
+                            this.unpersistedKlasses.replace(this.klasses);
                         }
                     })
                 )

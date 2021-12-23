@@ -7,6 +7,7 @@ import { default as indexStyles } from './index.module.css';
 import { useStore } from '../stores/hooks';
 import { Link } from '@docusaurus/router';
 import { observer } from 'mobx-react-lite';
+import UserTable from './admin/UserTable';
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -20,43 +21,6 @@ function HomepageHeader() {
     );
 }
 
-const UserTable = observer(() => {
-    const userStore = useStore('userStore');
-    const { current } = userStore;
-    return (
-        <React.Fragment>
-            {current && current.admin && (
-                <div className={styles.users}>
-                    <h3>Benutzer</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Email</th>
-                                <th>Klasse</th>
-                                <th>Admin?</th>
-                                <th>Created At</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {userStore.users.map((user, idx) => (
-                                <tr key={idx}>
-                                    <td>{user.id}</td>
-                                    <td>{user.email}</td>
-                                    <td>{user.klasse}</td>
-                                    <td>
-                                        {user.admin && <span className="badge badge--primary">Admin</span>}
-                                    </td>
-                                    <td>{user.createdAt.toISOString().slice(0, 10)}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            )}
-        </React.Fragment>
-    );
-});
 
 const Login = observer(() => {
     const msalStore = useStore('msalStore');

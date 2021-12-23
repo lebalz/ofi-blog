@@ -1,12 +1,15 @@
 import api from './base';
 import { AxiosPromise, CancelTokenSource } from 'axios';
 
-export interface User {
+export interface UserProps {
+  class?: string;
+  groups: string[];
+}
+
+export interface User extends UserProps {
   id: number;
   email: string;
   admin: boolean;
-  class?: string;
-  groups: string[];
   created_at: string;
   updated_at: string;
 }

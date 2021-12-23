@@ -1,0 +1,33 @@
+.users {
+    align-self: flex-start;
+    table {
+        text-align: left;
+        td {
+            padding: 0.2em;
+        }
+        th {
+            padding-left: 0;
+        }
+        .button {
+            padding: 2px 8px;
+        }
+    }
+}
+.sort {
+    user-select: none;
+    cursor: pointer;
+    margin-right: 4px;
+    &:hover >svg {
+        transform: scale(1.2);
+    }
+}
+.group {
+    display: flex;
+    justify-content: space-between;
+    > svg {
+        cursor: pointer;
+    }
+    :hover >svg {
+        transform: scale(1.2);
+    }
+}
