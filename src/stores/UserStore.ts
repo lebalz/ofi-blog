@@ -88,6 +88,7 @@ export class UserStore {
             user.id,
             {
                 class: klass,
+                groups: user.groups
             },
             axios.CancelToken.source()
         ).then(
@@ -104,6 +105,7 @@ export class UserStore {
         setUserProps(
             user.id,
             {
+                class: user.klasse,
                 groups: [...user.groups, group],
             },
             axios.CancelToken.source()
