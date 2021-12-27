@@ -4,10 +4,22 @@ type: docker
 name: default
 
 steps:
+
 - name: submodules
   image: alpine/git
   commands:
   - git submodule update --init --recursive
+
+- name: restore-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
+
 - name: website
   image: node:16.11.1
   commands:
@@ -29,6 +41,21 @@ steps:
       include:
       - push
       - pull_request
+
+- name: rebuild-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
+
+volumes:
+  - name: cache
+    host: 
+      path: /tmp/cache
 
 trigger:
   branch:
