@@ -58,7 +58,9 @@ export class UserStore {
 
     @computed
     get klasses(): string[] {
-        return [...new Set(this.users.reduce((p, u) => [...p, u.klasse], [...this.unpersistedKlasses]))];
+        const cls = [...new Set(this.users.reduce((p, u) => [...p, u.klasse], [...this.unpersistedKlasses]))];
+        console.log(cls, this.users.reduce((p, u) => [...p, u.klasse], [...this.unpersistedKlasses]))
+        return cls;
     }
 
     @computed
