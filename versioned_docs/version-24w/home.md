@@ -3,9 +3,6 @@ sidebar_position: 0
 title: Home 24w
 ---
 import TypedText from '@site/src/components/VisualizationTools/TypedText'
-import Snowfall from 'react-snowfall';
-
-<Snowfall snowflakeCount={200} color="silver" />
 
 #
 
