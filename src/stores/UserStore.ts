@@ -60,15 +60,15 @@ export class UserStore {
     get klasses(): string[] {
         const cls = this.users.reduce((p, u) => [...p, u.klasse], [...this.unpersistedKlasses]);
         const uniq = new Set(cls);
-        console.log(cls, uniq, [...uniq]);
-        return [...uniq];
+        console.log(cls, uniq, [...uniq.values()]);
+        return [...uniq.values()];
     }
 
     @computed
     get groups(): string[] {
         const grps = this.users.reduce((p, u) => [...p, ...u.groups], [...this.unpersistedGroups]);
         const uniq = new Set(grps);
-        return [...uniq];
+        return [...uniq.values()];
     }
 
     @action

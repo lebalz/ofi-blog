@@ -55,7 +55,7 @@ steps:
 volumes:
   - name: cache
     host: 
-      path: /tmp/cache
+      path: /var/lib/dokku/data/storage/hfr-drone-runner/cache
 
 trigger:
   branch:
