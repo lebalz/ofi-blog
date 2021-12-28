@@ -82,13 +82,13 @@ export class UserStore {
     }
 
     @action
-    setKlasse(user: User, klass: string) {
+    private updateUserProps(user: User, klass: string, groups: string[]) {
         user.isOutdated = true;
         setUserProps(
             user.id,
             {
                 class: klass,
-                groups: user.groups
+                groups: groups
             },
             axios.CancelToken.source()
         ).then(
@@ -97,41 +97,21 @@ export class UserStore {
                 this.users.push(new User(data.data));
             })
         );
+    }
+
+    @action
+    setKlasse(user: User, klass: string) {
+        this.updateUserProps(user, klass, user.groups);
     }
 
     @action
     addGroup(user: User, group: string) {
-        user.isOutdated = true;
-        setUserProps(
-            user.id,
-            {
-                class: user.klasse,
-                groups: [...user.groups, group],
-            },
-            axios.CancelToken.source()
-        ).then(
-            action((data) => {
-                this.users.remove(user);
-                this.users.push(new User(data.data));
-            })
-        );
+        this.updateUserProps(user, user.klasse, [...user.groups, group]);
     }
 
     @action
     removeGroup(user: User, group: string) {
-        user.isOutdated = true;
-        setUserProps(
-            user.id,
-            {
-                groups: user.groups.filter((g) => g !== group),
-            },
-            axios.CancelToken.source()
-        ).then(
-            action((data) => {
-                this.users.remove(user);
-                this.users.push(new User(data.data));
-            })
-        );
+        this.updateUserProps(user, user.klasse, user.groups.filter((g) => g !== group));
     }
 
     @action
