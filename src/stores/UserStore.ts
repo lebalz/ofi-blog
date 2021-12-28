@@ -19,6 +19,9 @@ export class UserStore {
     filterKlasse?: string;
 
     @observable
+    filterGroup?: string;
+
+    @observable
     filterEmailOrder: 'asc' | 'desc' = 'asc';
 
     @observable
@@ -52,6 +55,9 @@ export class UserStore {
         let filtered = this.filterKlasse
             ? this.byClass(this.filterKlasse).filter((u) => !!u.klasse)
             : this.users.slice();
+        if (this.filterGroup) {
+            filtered = filtered.filter((u) => u.groups.includes(this.filterGroup));
+        }
         filtered = _.orderBy(filtered, ['email'], [this.filterEmailOrder]);
         return filtered;
     }

@@ -109,7 +109,33 @@ const UserTable = observer(() => {
                                 </ul>
                             </div>
                         </th>
-                        <th>Groups</th>
+                        <th>
+                            
+                        <div className="dropdown dropdown--hoverable">
+                                <button
+                                    className={clsx(styles.button, 'button', 'button--primary', 'button--sm')}
+                                >
+                                    {userStore.filterGroup || 'Gruppe'}
+                                </button>
+                                <ul className="dropdown__menu">
+                                    {[undefined, ...userStore.groups].map((group, idx) => {
+                                        return (
+                                            <li
+                                                className="dropdown__link"
+                                                key={idx}
+                                                onClick={() => {
+                                                    runInAction(() => {
+                                                        userStore.filterGroup = group;
+                                                    });
+                                                }}
+                                            >
+                                                {group || 'null'}
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
+                        </th>
                         <th>Admin?</th>
                         <th>Created At</th>
                     </tr>
