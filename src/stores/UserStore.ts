@@ -60,7 +60,6 @@ export class UserStore {
     get klasses(): string[] {
         const cls = this.users.reduce((p, u) => [...p, u.klasse], [...this.unpersistedKlasses]);
         const uniq = new Set(cls);
-        console.log(Array.from(uniq));
         return Array.from(uniq);
     }
 
