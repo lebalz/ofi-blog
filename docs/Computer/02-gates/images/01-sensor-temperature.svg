@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="66px" height="66px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Temperatursensor">
+        <rect x="1" y="1" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <g>
+            <path d="M34.561,42.644L34.561,14.09C34.561,11.32 32.295,9.054 29.525,9.054C26.755,9.054 24.489,11.32 24.489,14.09L24.489,42.644C22.626,44.155 21.468,46.471 21.468,48.888C21.468,53.32 25.094,56.946 29.525,56.946C33.957,56.946 37.532,53.32 37.532,48.888C37.532,46.471 36.424,44.155 34.561,42.644ZM29.525,55.234C26.05,55.234 23.23,52.413 23.23,48.939C23.23,46.723 24.389,44.709 26.252,43.55L26.252,14.14C26.252,12.328 27.712,10.817 29.576,10.817C31.389,10.817 32.899,12.277 32.899,14.14L32.899,43.55C34.712,44.709 35.921,46.723 35.921,48.939C35.82,52.413 33,55.234 29.525,55.234Z" style="fill-rule:nonzero;"/>
+            <path d="M31.086,44.608L31.086,14.14C31.086,13.284 30.381,12.579 29.525,12.579C28.669,12.579 27.964,13.284 27.964,14.14L27.964,44.608C26.202,45.262 24.943,46.924 24.943,48.888C24.943,51.406 27.007,53.471 29.525,53.471C32.043,53.471 34.108,51.406 34.108,48.888C34.108,46.924 32.849,45.262 31.086,44.608Z" style="fill-rule:nonzero;"/>
+            <rect x="36.324" y="14.191" width="8.209" height="1.712"/>
+            <rect x="36.324" y="19.881" width="3.878" height="1.712"/>
+            <rect x="36.324" y="25.622" width="8.209" height="1.712"/>
+            <rect x="36.324" y="31.313" width="3.878" height="1.712"/>
+            <rect x="36.324" y="37.004" width="8.209" height="1.712"/>
+        </g>
+    </g>
+</svg>

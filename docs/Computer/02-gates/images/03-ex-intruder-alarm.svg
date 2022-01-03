@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="352px" height="96px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+    <path d="M80,48L112,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M240,48L272,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Lautsprecher">
+        <rect x="272" y="16" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"/>
+        <path d="M308,30.46L308,34.58C313.78,36.3 318,41.66 318,48C318,54.34 313.78,59.68 308,61.4L308,65.54C316,63.72 322,56.56 322,48C322,39.44 316,32.28 308,30.46M313,48C313,44.46 311,41.42 308,39.94L308,56C311,54.58 313,51.52 313,48M286,42L286,54L294,54L304,64L304,32L294,42L286,42Z" style="fill-rule:nonzero;"/>
+    </g>
+    <text x="160.953px" y="62.531px" style="font-family:'Helvetica';font-size:40px;">?</text>
+    <g id="Bewegungssensor">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"/>
+        <path d="M57,34.5C59.194,34.5 61,32.694 61,30.5C61,28.306 59.194,26.5 57,26.5C54.806,26.5 53,28.306 53,30.5C53,32.694 54.806,34.5 57,34.5M49.8,62.3L51.8,53.5L56,57.5L56,69.5L60,69.5L60,54.5L55.8,50.5L57,44.5C59.78,47.68 63.78,49.5 68,49.5L68,45.5C64.48,45.56 61.2,43.72 59.4,40.7L57.4,37.5C56.68,36.3 55.4,35.5 54,35.5C53.4,35.5 53,35.7 52.4,35.7L42,40.1L42,49.5L46,49.5L46,42.7L49.6,41.3L46.4,57.5L36.6,55.5L35.8,59.5L49.8,62.3M32,41.5C30.903,41.5 30,40.597 30,39.5C30,38.403 30.903,37.5 32,37.5L38,37.5L38,41.5L32,41.5M34,33.5C32.903,33.5 32,32.597 32,31.5C32,30.403 32.903,29.5 34,29.5L44,29.5L44,33.5L34,33.5M30,49.5C28.903,49.5 28,48.597 28,47.5C28,46.403 28.903,45.5 30,45.5L38,45.5L38,49.5L30,49.5Z" style="fill-rule:nonzero;"/>
+    </g>
+</svg>

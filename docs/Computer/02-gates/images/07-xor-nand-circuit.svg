@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="448px" height="192px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M32.13,48L64.13,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="NAND-Gatter">
+        <path d="M384,96C384,100.389 380.389,104 376,104C371.611,104 368,100.389 368,96C368,91.611 371.611,88 376,88C380.386,88 383.996,91.606 384,95.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path id="AND-Gatter" d="M320,64L336,64C353.555,64 368,78.445 368,96C368,113.555 353.555,128 336,128L320,128L320,64Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+    <path d="M288,48L304,48L304,80L320,80" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M288,144L304,144L304,112L320,112" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <g id="NAND-Gatter1" serif:id="NAND-Gatter">
+        <path d="M288.13,48C288.13,52.389 284.519,56 280.13,56C275.741,56 272.13,52.389 272.13,48C272.13,43.611 275.741,40 280.13,40C284.516,40 288.125,43.606 288.13,47.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path id="AND-Gatter1" serif:id="AND-Gatter" d="M224.13,16L240.13,16C257.685,16 272.13,30.445 272.13,48C272.13,65.555 257.685,80 240.13,80L224.13,80L224.13,16Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+    <path d="M64,48L64,32L224.13,32" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M192,96L192.13,64L224.13,64" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <circle cx="64" cy="48" r="4"/>
+    <circle cx="192" cy="96" r="4"/>
+    <text x="15.954px" y="52.304px" style="font-family:'Helvetica';font-size:12px;">A</text>
+    <path d="M384,96L416,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <text x="423.824px" y="100.304px" style="font-family:'Helvetica';font-size:12px;">Y</text>
+    <path d="M32,144L64,144" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <text x="15.824px" y="148.607px" style="font-family:'Helvetica';font-size:12px;">B</text>
+    <g id="NAND-Gatter2" serif:id="NAND-Gatter">
+        <path d="M288,144C288,148.389 284.389,152 280,152C275.611,152 272,148.389 272,144C272,139.611 275.611,136 280,136C284.386,136 287.996,139.606 288,143.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path id="AND-Gatter2" serif:id="AND-Gatter" d="M224,112L240,112C257.555,112 272,126.445 272,144C272,161.555 257.555,176 240,176L224,176L224,112Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+    <path d="M192,96L192,128L224,128" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M96.13,112L64,112L64,160L224,160" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M64,48L64,80L96.13,80" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M160,96L192,96" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <g id="NAND-Gatter3" serif:id="NAND-Gatter">
+        <path d="M160.13,96C160.13,100.389 156.519,104 152.13,104C147.741,104 144.13,100.389 144.13,96C144.13,91.611 147.741,88 152.13,88C156.516,88 160.125,91.606 160.13,95.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path id="AND-Gatter3" serif:id="AND-Gatter" d="M96.13,64L112.13,64C129.685,64 144.13,78.445 144.13,96C144.13,113.555 129.685,128 112.13,128L96.13,128L96.13,64Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+    <circle cx="64" cy="144" r="4"/>
+</svg>

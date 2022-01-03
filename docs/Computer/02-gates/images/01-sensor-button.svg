@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="66px" height="66px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Taster">
+        <rect x="1" y="1" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <g>
+            <path d="M49,31.5L55.5,31.5L57.5,45.5L8.5,45.5L11.5,31.5L17,31.5" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M49,37C49,39.208 41.831,41 33,41C24.169,41 17,39.208 17,37" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M17,37L17,26" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M49,37L49,26" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <ellipse cx="33" cy="25" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;"/>
+        </g>
+    </g>
+</svg>

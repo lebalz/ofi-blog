@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="528px" height="272px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g>
+        <rect x="16" y="208" width="496" height="48" style="fill:rgb(224,224,224);stroke:black;stroke-width:2px;"/>
+        <text x="132.398px" y="237.176px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">Elektronik (Spannung, Strom)</text>
+    </g>
+    <g>
+        <rect x="16" y="160" width="496" height="48" style="fill:rgb(165,214,167);stroke:black;stroke-width:2px;"/>
+        <text x="177.447px" y="189.176px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">Digitale Logik (Bits)</text>
+    </g>
+    <g>
+        <rect x="16" y="112" width="496" height="48" style="fill:rgb(239,154,154);stroke:black;stroke-width:2px;"/>
+        <text x="99.61px" y="141.176px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">Rechnerarchitektur (Maschinencode)</text>
+    </g>
+    <g>
+        <rect x="16" y="12" width="496" height="100" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <text x="122.633px" y="45.561px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">Anwendungen (Programmcode)</text>
+    </g>
+    <g>
+        <rect x="192" y="64" width="320" height="48" style="fill:rgb(255,224,130);stroke:black;stroke-width:2px;"/>
+        <text x="283.558px" y="93.054px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;">Betriebssystem</text>
+    </g>
+</svg>

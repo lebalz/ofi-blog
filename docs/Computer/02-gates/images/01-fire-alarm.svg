@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="352px" height="192px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Lautsprecher">
+        <rect x="272" y="112" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M308,126.46L308,130.58C313.78,132.3 318,137.66 318,144C318,150.34 313.78,155.68 308,157.4L308,161.54C316,159.72 322,152.56 322,144C322,135.44 316,128.28 308,126.46M313,144C313,140.46 311,137.42 308,135.94L308,152C311,150.58 313,147.52 313,144M286,138L286,150L294,150L304,160L304,128L294,138L286,138Z" style="fill-rule:nonzero;"/>
+    </g>
+    <path d="M80,96L176,96L176,48L272,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;"/>
+    <path d="M176,96L176,144L272,144" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <g id="Temperatursensor">
+        <rect x="16" y="64" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <g>
+            <path d="M49.561,105.644L49.561,77.09C49.561,74.32 47.295,72.054 44.525,72.054C41.755,72.054 39.489,74.32 39.489,77.09L39.489,105.644C37.626,107.155 36.468,109.471 36.468,111.888C36.468,116.32 40.094,119.946 44.525,119.946C48.957,119.946 52.532,116.32 52.532,111.888C52.532,109.471 51.424,107.155 49.561,105.644ZM44.525,118.234C41.05,118.234 38.23,115.413 38.23,111.939C38.23,109.723 39.389,107.709 41.252,106.55L41.252,77.14C41.252,75.328 42.712,73.817 44.576,73.817C46.389,73.817 47.899,75.277 47.899,77.14L47.899,106.55C49.712,107.709 50.921,109.723 50.921,111.939C50.82,115.413 48,118.234 44.525,118.234Z" style="fill-rule:nonzero;"/>
+            <path d="M46.086,107.608L46.086,77.14C46.086,76.284 45.381,75.579 44.525,75.579C43.669,75.579 42.964,76.284 42.964,77.14L42.964,107.608C41.202,108.262 39.943,109.924 39.943,111.888C39.943,114.406 42.007,116.471 44.525,116.471C47.043,116.471 49.108,114.406 49.108,111.888C49.108,109.924 47.849,108.262 46.086,107.608Z" style="fill-rule:nonzero;"/>
+            <rect x="51.324" y="77.191" width="8.209" height="1.712"/>
+            <rect x="51.324" y="82.881" width="3.878" height="1.712"/>
+            <rect x="51.324" y="88.622" width="8.209" height="1.712"/>
+            <rect x="51.324" y="94.313" width="3.878" height="1.712"/>
+            <rect x="51.324" y="100.004" width="8.209" height="1.712"/>
+        </g>
+    </g>
+    <g id="Licht">
+        <rect x="272" y="16" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M292,38.8L287.74,34.56L290.56,31.74L294.8,36L292,38.8M306,27L306,33L302,33L302,27L306,27M320.26,34.56L316,38.8L313.2,36L317.44,31.74L320.26,34.56M289,46L289,50L283,50L283,46L289,46M319,46L325,46L325,50L319,50L319,46M292,65L316,65C318.194,65 320,66.806 320,69L288,69C288,66.806 289.806,65 292,65M304,35C310.583,35 316,40.417 316,47L316,63L292,63L292,47C292,40.417 297.417,35 304,35M304,39C299.611,39 296,42.611 296,47L296,59L312,59L312,47C312,42.611 308.389,39 304,39Z" style="fill-rule:nonzero;"/>
+    </g>
+    <circle cx="176" cy="96" r="4"/>
+    <text x="16.912px" y="30.316px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20px;fill:rgb(183,28,28);">V<tspan x="29.148px 40.271px " y="30.316px 30.316px ">er</tspan>zweigung</text>
+    <path d="M163.287,77.861L169,90L155.861,87.286L164.287,86.287L163.287,77.861Z" style="fill:rgb(183,28,28);"/>
+    <path d="M103,38C103,38 149.189,74.391 164.287,86.287" style="fill:none;stroke:rgb(183,28,28);stroke-width:2px;"/>
+</svg>

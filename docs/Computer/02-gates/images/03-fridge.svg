@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="352px" height="96px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+    <path d="M80,48L144,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M208,48L272,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Licht">
+        <rect x="272" y="16" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"/>
+        <path d="M292,38.8L287.74,34.56L290.56,31.74L294.8,36L292,38.8M306,27L306,33L302,33L302,27L306,27M320.26,34.56L316,38.8L313.2,36L317.44,31.74L320.26,34.56M289,46L289,50L283,50L283,46L289,46M319,46L325,46L325,50L319,50L319,46M292,65L316,65C318.194,65 320,66.806 320,69L288,69C288,66.806 289.806,65 292,65M304,35C310.583,35 316,40.417 316,47L316,63L292,63L292,47C292,40.417 297.417,35 304,35M304,39C299.611,39 296,42.611 296,47L296,59L312,59L312,47C312,42.611 308.389,39 304,39Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Taster">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"/>
+        <g>
+            <path d="M64,46.5L70.5,46.5L72.5,60.5L23.5,60.5L26.5,46.5L32,46.5" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:square;stroke-linejoin:round;"/>
+            <path d="M64,52C64,54.208 56.831,56 48,56C39.169,56 32,54.208 32,52" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;"/>
+            <path d="M32,52L32,41" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;"/>
+            <path d="M64,52L64,41" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;"/>
+            <ellipse cx="48" cy="40" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;"/>
+        </g>
+    </g>
+    <g id="Inverter">
+        <path d="M144,32L192,48L144,64L144,32Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:square;stroke-miterlimit:10;"/>
+        <path d="M208,48C208,52.389 204.389,56 200,56C195.611,56 192,52.389 192,48C192,43.611 195.611,40 200,40C204.386,40 207.996,43.606 208,47.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-miterlimit:10;"/>
+    </g>
+</svg>

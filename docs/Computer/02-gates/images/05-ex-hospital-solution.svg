@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="400px" height="192px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M288,96L320,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M80,144L112,144" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+    <path d="M80,48L112,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Licht">
+        <rect x="320" y="64" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <path d="M340,86.8L335.74,82.56L338.56,79.74L342.8,84L340,86.8M354,75L354,81L350,81L350,75L354,75M368.26,82.56L364,86.8L361.2,84L365.44,79.74L368.26,82.56M337,94L337,98L331,98L331,94L337,94M367,94L373,94L373,98L367,98L367,94M340,113L364,113C366.194,113 368,114.806 368,117L336,117C336,114.806 337.806,113 340,113M352,83C358.583,83 364,88.417 364,95L364,111L340,111L340,95C340,88.417 345.417,83 352,83M352,87C347.611,87 344,90.611 344,95L344,107L360,107L360,95C360,90.611 356.389,87 352,87Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Taster">
+        <rect x="16" y="112" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <g>
+            <path d="M64,142.5L70.5,142.5L72.5,156.5L23.5,156.5L26.5,142.5L32,142.5" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:square;"/>
+            <path d="M64,148C64,150.208 56.831,152 48,152C39.169,152 32,150.208 32,148" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <path d="M32,148L32,137" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <path d="M64,148L64,137" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <ellipse cx="48" cy="136" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+        </g>
+    </g>
+    <g id="Lösung">
+        <path d="M112,144L192,144L192,112L216,112" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M112,48L192,48L192,80L216,80" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M256,96L288,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path id="OR" d="M208,64C224,64 248,80 256,96C248,112 224,128 208,128C224,96 224,96 208,64Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+    <g id="Temperatursensor">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <g>
+            <path d="M49.561,57.644L49.561,29.09C49.561,26.32 47.295,24.054 44.525,24.054C41.755,24.054 39.489,26.32 39.489,29.09L39.489,57.644C37.626,59.155 36.468,61.471 36.468,63.888C36.468,68.32 40.094,71.946 44.525,71.946C48.957,71.946 52.532,68.32 52.532,63.888C52.532,61.471 51.424,59.155 49.561,57.644ZM44.525,70.234C41.05,70.234 38.23,67.413 38.23,63.939C38.23,61.723 39.389,59.709 41.252,58.55L41.252,29.14C41.252,27.328 42.712,25.817 44.576,25.817C46.389,25.817 47.899,27.277 47.899,29.14L47.899,58.55C49.712,59.709 50.921,61.723 50.921,63.939C50.82,67.413 48,70.234 44.525,70.234Z" style="fill-rule:nonzero;"/>
+            <path d="M46.086,59.608L46.086,29.14C46.086,28.284 45.381,27.579 44.525,27.579C43.669,27.579 42.964,28.284 42.964,29.14L42.964,59.608C41.202,60.262 39.943,61.924 39.943,63.888C39.943,66.406 42.007,68.471 44.525,68.471C47.043,68.471 49.108,66.406 49.108,63.888C49.108,61.924 47.849,60.262 46.086,59.608Z" style="fill-rule:nonzero;"/>
+            <rect x="51.324" y="29.191" width="8.209" height="1.712"/>
+            <rect x="51.324" y="34.881" width="3.878" height="1.712"/>
+            <rect x="51.324" y="40.622" width="8.209" height="1.712"/>
+            <rect x="51.324" y="46.313" width="3.878" height="1.712"/>
+            <rect x="51.324" y="52.004" width="8.209" height="1.712"/>
+        </g>
+    </g>
+</svg>

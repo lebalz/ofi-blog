@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="368px" height="112px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M80,64L112,64" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M112,64L112,80L168,80" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M240,64L240,16L144,16L144,48L168,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M208,64L288,64" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <g id="Lautsprecher">
+        <rect x="288" y="32" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M324,46.46L324,50.58C329.78,52.3 334,57.66 334,64C334,70.34 329.78,75.68 324,77.4L324,81.54C332,79.72 338,72.56 338,64C338,55.44 332,48.28 324,46.46M329,64C329,60.46 327,57.42 324,55.94L324,72C327,70.58 329,67.52 329,64M302,58L302,70L310,70L320,80L320,48L310,58L302,58Z" style="fill-rule:nonzero;"/>
+    </g>
+    <path id="OR" d="M160,32C176,32 200,48 208,64C200,80 176,96 160,96C176,64 176,64 160,32Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    <g id="Bewegungssensor">
+        <rect x="16" y="32" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <path d="M57,50.5C59.194,50.5 61,48.694 61,46.5C61,44.306 59.194,42.5 57,42.5C54.806,42.5 53,44.306 53,46.5C53,48.694 54.806,50.5 57,50.5M49.8,78.3L51.8,69.5L56,73.5L56,85.5L60,85.5L60,70.5L55.8,66.5L57,60.5C59.78,63.68 63.78,65.5 68,65.5L68,61.5C64.48,61.56 61.2,59.72 59.4,56.7L57.4,53.5C56.68,52.3 55.4,51.5 54,51.5C53.4,51.5 53,51.7 52.4,51.7L42,56.1L42,65.5L46,65.5L46,58.7L49.6,57.3L46.4,73.5L36.6,71.5L35.8,75.5L49.8,78.3M32,57.5C30.903,57.5 30,56.597 30,55.5C30,54.403 30.903,53.5 32,53.5L38,53.5L38,57.5L32,57.5M34,49.5C32.903,49.5 32,48.597 32,47.5C32,46.403 32.903,45.5 34,45.5L44,45.5L44,49.5L34,49.5M30,65.5C28.903,65.5 28,64.597 28,63.5C28,62.403 28.903,61.5 30,61.5L38,61.5L38,65.5L30,65.5Z" style="fill-rule:nonzero;"/>
+    </g>
+    <circle cx="240" cy="64" r="4"/>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="368px" height="192px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M80,144L112,144" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M80,48L112,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M256,96L288,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Motor">
+        <rect x="288" y="64" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <path d="M320,88C324.389,88 328,91.611 328,96C328,100.389 324.389,104 320,104C315.611,104 312,100.389 312,96C312,91.611 315.611,88 320,88M320,92C317.806,92 316,93.806 316,96C316,98.194 317.806,100 320,100C322.194,100 324,98.194 324,96C324,93.806 322.194,92 320,92M316,116C315.5,116 315.08,115.64 315,115.16L314.26,109.86C313,109.36 311.92,108.68 310.88,107.88L305.9,109.9C305.46,110.06 304.92,109.9 304.68,109.46L300.68,102.54C300.42,102.1 300.54,101.56 300.92,101.26L305.14,97.94L305,96L305.14,94L300.92,90.74C300.54,90.44 300.42,89.9 300.68,89.46L304.68,82.54C304.92,82.1 305.46,81.92 305.9,82.1L310.88,84.1C311.92,83.32 313,82.64 314.26,82.14L315,76.84C315.08,76.36 315.5,76 316,76L324,76C324.5,76 324.92,76.36 325,76.84L325.74,82.14C327,82.64 328.08,83.32 329.12,84.1L334.1,82.1C334.54,81.92 335.08,82.1 335.32,82.54L339.32,89.46C339.58,89.9 339.46,90.44 339.08,90.74L334.86,94L335,96L334.86,98L339.08,101.26C339.46,101.56 339.58,102.1 339.32,102.54L335.32,109.46C335.08,109.9 334.54,110.08 334.1,109.9L329.12,107.9C328.08,108.68 327,109.36 325.74,109.86L325,115.16C324.92,115.64 324.5,116 324,116L316,116M318.5,80L317.76,85.22C315.36,85.72 313.24,87 311.7,88.78L306.88,86.7L305.38,89.3L309.6,92.4C308.8,94.74 308.8,97.28 309.6,99.6L305.36,102.72L306.86,105.32L311.72,103.24C313.26,105 315.36,106.28 317.74,106.76L318.48,112L321.52,112L322.26,106.78C324.64,106.28 326.74,105 328.28,103.24L333.14,105.32L334.64,102.72L330.4,99.62C331.2,97.28 331.2,94.74 330.4,92.4L334.62,89.3L333.12,86.7L328.3,88.78C326.76,87 324.64,85.72 322.24,85.24L321.5,80L318.5,80Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Taster">
+        <rect x="16" y="112" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <g>
+            <path d="M64,142.5L70.5,142.5L72.5,156.5L23.5,156.5L26.5,142.5L32,142.5" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:square;"/>
+            <path d="M64,148C64,150.208 56.831,152 48,152C39.169,152 32,150.208 32,148" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <path d="M32,148L32,137" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <path d="M64,148L64,137" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <ellipse cx="48" cy="136" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+        </g>
+    </g>
+    <g id="Feuchtigkeitssensor">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <path d="M48,31.54L46.5,33.22C46.5,33.22 43.94,36.12 41.36,39.88C38.78,43.64 36,48.14 36,52.46C36,59.043 41.417,64.46 48,64.46C54.583,64.46 60,59.043 60,52.46C60,48.14 57.22,43.64 54.64,39.88C52.06,36.12 49.5,33.22 49.5,33.22L48,31.54M48,37.8C48.88,38.84 49.68,39.7 51.36,42.14C53.78,45.66 56,50.14 56,52.46C56,56.9 52.44,60.46 48,60.46C43.56,60.46 40,56.9 40,52.46C40,50.14 42.22,45.66 44.64,42.14C46.32,39.7 47.12,38.84 48,37.8Z" style="fill-rule:nonzero;"/>
+    </g>
+</svg>

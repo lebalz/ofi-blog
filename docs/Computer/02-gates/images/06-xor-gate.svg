@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="192px" height="96px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M32,32L76,32" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="XOR-Gatter">
+        <path d="M64,16C74.166,23.386 80,35.434 80,48C80,60.566 74.166,72.614 64,80" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path id="OR" d="M80,16C96,16 120,32 128,48C120,64 96,80 80,80C96,48 96,48 80,16Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+    <path d="M32,64L76,64" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M128,48L160,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <text x="16.824px" y="36.304px" style="font-family:'Helvetica';font-size:12px;">A</text>
+    <text x="16.824px" y="68.304px" style="font-family:'Helvetica';font-size:12px;">B</text>
+    <text x="167.824px" y="52.304px" style="font-family:'Helvetica';font-size:12px;">Y</text>
+</svg>

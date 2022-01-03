@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="176px" height="96px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M32,32L71,32" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path id="OR" d="M64,16C80,16 104,32 112,48C104,64 80,80 64,80C80,48 80,48 64,16Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    <path d="M32,64L71,64" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M112,48L144,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <text x="16.824px" y="36.304px" style="font-family:'Helvetica';font-size:12px;">A</text>
+    <text x="16.824px" y="68.304px" style="font-family:'Helvetica';font-size:12px;">B</text>
+    <text x="151.754px" y="52.304px" style="font-family:'Helvetica';font-size:12px;">Y</text>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="66px" height="66px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Feuchtigkeitssensor">
+        <rect x="1" y="1" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <path d="M33,16.54L31.5,18.22C31.5,18.22 28.94,21.12 26.36,24.88C23.78,28.64 21,33.14 21,37.46C21,44.043 26.417,49.46 33,49.46C39.583,49.46 45,44.043 45,37.46C45,33.14 42.22,28.64 39.64,24.88C37.06,21.12 34.5,18.22 34.5,18.22L33,16.54M33,22.8C33.88,23.84 34.68,24.7 36.36,27.14C38.78,30.66 41,35.14 41,37.46C41,41.9 37.44,45.46 33,45.46C28.56,45.46 25,41.9 25,37.46C25,35.14 27.22,30.66 29.64,27.14C31.32,24.7 32.12,23.84 33,22.8Z" style="fill-rule:nonzero;"/>
+    </g>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="66px" height="66px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Licht">
+        <rect x="1" y="1" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M21,23.8L16.74,19.56L19.56,16.74L23.8,21L21,23.8M35,12L35,18L31,18L31,12L35,12M49.26,19.56L45,23.8L42.2,21L46.44,16.74L49.26,19.56M18,31L18,35L12,35L12,31L18,31M48,31L54,31L54,35L48,35L48,31M21,50L45,50C47.194,50 49,51.806 49,54L17,54C17,51.806 18.806,50 21,50M33,20C39.583,20 45,25.417 45,32L45,48L21,48L21,32C21,25.417 26.417,20 33,20M33,24C28.611,24 25,27.611 25,32L25,44L41,44L41,32C41,27.611 37.389,24 33,24Z" style="fill-rule:nonzero;"/>
+    </g>
+</svg>

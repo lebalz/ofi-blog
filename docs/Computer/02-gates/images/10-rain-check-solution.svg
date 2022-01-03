@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="448px" height="176px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M80,48L112,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M80,128L112,128" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M336,80L368,80" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <g id="Lautsprecher">
+        <rect x="368" y="48" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M404,62.46L404,66.58C409.78,68.3 414,73.66 414,80C414,86.34 409.78,91.68 404,93.4L404,97.54C412,95.72 418,88.56 418,80C418,71.44 412,64.28 404,62.46M409,80C409,76.46 407,73.42 404,71.94L404,88C407,86.58 409,83.52 409,80M382,74L382,86L390,86L400,96L400,64L390,74L382,74Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Feuchtigkeitssensor">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <path d="M48,31.54L46.5,33.22C46.5,33.22 43.94,36.12 41.36,39.88C38.78,43.64 36,48.14 36,52.46C36,59.043 41.417,64.46 48,64.46C54.583,64.46 60,59.043 60,52.46C60,48.14 57.22,43.64 54.64,39.88C52.06,36.12 49.5,33.22 49.5,33.22L48,31.54M48,37.8C48.88,38.84 49.68,39.7 51.36,42.14C53.78,45.66 56,50.14 56,52.46C56,56.9 52.44,60.46 48,60.46C43.56,60.46 40,56.9 40,52.46C40,50.14 42.22,45.66 44.64,42.14C46.32,39.7 47.12,38.84 48,37.8Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Taster">
+        <rect x="16" y="96" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <g>
+            <path d="M64,126.5L70.5,126.5L72.5,140.5L23.5,140.5L26.5,126.5L32,126.5" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:square;"/>
+            <path d="M64,132C64,134.208 56.831,136 48,136C39.169,136 32,134.208 32,132" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M32,132L32,121" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M64,132L64,121" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <ellipse cx="48" cy="120" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;"/>
+        </g>
+    </g>
+    <g id="Lösung">
+        <path d="M112,48L112,80L151,80" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M304,80L336,80L336,16L128,16L128,48L151,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+        <path d="M224,128L224,96L256,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M224,128L176,128" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M256,64L192,64" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <circle cx="336" cy="80" r="4"/>
+        <path id="OR" d="M144,32C160,32 184,48 192,64C184,80 160,96 144,96C160,64 160,64 144,32Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path id="AND-Gatter" d="M256,48L272,48C289.555,48 304,62.445 304,80C304,97.555 289.555,112 272,112L256,112L256,48Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <g id="Inverter">
+            <path d="M112,112L160,128L112,144L112,112Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M176,128C176,132.389 172.389,136 168,136C163.611,136 160,132.389 160,128C160,123.611 163.611,120 168,120C172.386,120 175.996,123.606 176,127.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        </g>
+    </g>
+</svg>

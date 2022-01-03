@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="66px" height="66px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Bewegungssensor">
+        <rect x="1" y="1" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <path d="M42,19.5C44.194,19.5 46,17.694 46,15.5C46,13.306 44.194,11.5 42,11.5C39.806,11.5 38,13.306 38,15.5C38,17.694 39.806,19.5 42,19.5M34.8,47.3L36.8,38.5L41,42.5L41,54.5L45,54.5L45,39.5L40.8,35.5L42,29.5C44.78,32.68 48.78,34.5 53,34.5L53,30.5C49.48,30.56 46.2,28.72 44.4,25.7L42.4,22.5C41.68,21.3 40.4,20.5 39,20.5C38.4,20.5 38,20.7 37.4,20.7L27,25.1L27,34.5L31,34.5L31,27.7L34.6,26.3L31.4,42.5L21.6,40.5L20.8,44.5L34.8,47.3M17,26.5C15.903,26.5 15,25.597 15,24.5C15,23.403 15.903,22.5 17,22.5L23,22.5L23,26.5L17,26.5M19,18.5C17.903,18.5 17,17.597 17,16.5C17,15.403 17.903,14.5 19,14.5L29,14.5L29,18.5L19,18.5M15,34.5C13.903,34.5 13,33.597 13,32.5C13,31.403 13.903,30.5 15,30.5L23,30.5L23,34.5L15,34.5Z" style="fill-rule:nonzero;"/>
+    </g>
+</svg>

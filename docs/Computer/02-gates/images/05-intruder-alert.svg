@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="400px" height="192px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M112,48L112,80L216,80" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M176,144L192,144L192,112L216,112" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M257,96L320,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M80,144L112,144" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+    <path d="M80,48L112,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path id="OR" d="M208,64C224,64 248,80 256,96C248,112 224,128 208,128C224,96 224,96 208,64Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    <g id="Inverter">
+        <path d="M112,128L160,144L112,160L112,128Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path d="M176,144C176,148.389 172.389,152 168,152C163.611,152 160,148.389 160,144C160,139.611 163.611,136 168,136C172.386,136 175.996,139.606 176,143.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+    <g id="Lautsprecher">
+        <rect x="320" y="64" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <path d="M356,78.46L356,82.58C361.78,84.3 366,89.66 366,96C366,102.34 361.78,107.68 356,109.4L356,113.54C364,111.72 370,104.56 370,96C370,87.44 364,80.28 356,78.46M361,96C361,92.46 359,89.42 356,87.94L356,104C359,102.58 361,99.52 361,96M334,90L334,102L342,102L352,112L352,80L342,90L334,90Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Taster">
+        <rect x="16" y="112" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <g>
+            <path d="M64,142.5L70.5,142.5L72.5,156.5L23.5,156.5L26.5,142.5L32,142.5" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:square;"/>
+            <path d="M64,148C64,150.208 56.831,152 48,152C39.169,152 32,150.208 32,148" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <path d="M32,148L32,137" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <path d="M64,148L64,137" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <ellipse cx="48" cy="136" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+        </g>
+    </g>
+    <g id="Bewegungssensor">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <path d="M57,34.5C59.194,34.5 61,32.694 61,30.5C61,28.306 59.194,26.5 57,26.5C54.806,26.5 53,28.306 53,30.5C53,32.694 54.806,34.5 57,34.5M49.8,62.3L51.8,53.5L56,57.5L56,69.5L60,69.5L60,54.5L55.8,50.5L57,44.5C59.78,47.68 63.78,49.5 68,49.5L68,45.5C64.48,45.56 61.2,43.72 59.4,40.7L57.4,37.5C56.68,36.3 55.4,35.5 54,35.5C53.4,35.5 53,35.7 52.4,35.7L42,40.1L42,49.5L46,49.5L46,42.7L49.6,41.3L46.4,57.5L36.6,55.5L35.8,59.5L49.8,62.3M32,41.5C30.903,41.5 30,40.597 30,39.5C30,38.403 30.903,37.5 32,37.5L38,37.5L38,41.5L32,41.5M34,33.5C32.903,33.5 32,32.597 32,31.5C32,30.403 32.903,29.5 34,29.5L44,29.5L44,33.5L34,33.5M30,49.5C28.903,49.5 28,48.597 28,47.5C28,46.403 28.903,45.5 30,45.5L38,45.5L38,49.5L30,49.5Z" style="fill-rule:nonzero;"/>
+    </g>
+</svg>

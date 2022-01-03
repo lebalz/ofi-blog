@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="224px" height="96px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;">
+    <g id="NAND-Gatter">
+        <path d="M160,48C160,52.389 156.389,56 152,56C147.611,56 144,52.389 144,48C144,43.611 147.611,40 152,40C156.386,40 159.996,43.606 160,47.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+        <path id="AND-Gatter" d="M96,16L112,16C129.555,16 144,30.445 144,48C144,65.555 129.555,80 112,80L96,80L96,16Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+    </g>
+    <path d="M32,48L64,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+    <path d="M64,48L64,32L96,32" style="fill:none;stroke:black;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+    <path d="M64,48L64,64L96,64" style="fill:none;stroke:black;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+    <text x="16.824px" y="52.304px" style="font-family:'Helvetica';font-size:12px;">A</text>
+    <path d="M160,48L192,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+    <text x="199.824px" y="52.304px" style="font-family:'Helvetica';font-size:12px;">Y</text>
+    <circle cx="64" cy="48" r="4"/>
+</svg>

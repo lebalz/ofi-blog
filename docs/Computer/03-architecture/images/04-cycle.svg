@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="608px" height="256px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M179.589,34.905L192,40L180.477,46.872C183.247,43.658 182.803,37.675 179.589,34.905Z"/>
+    <path d="M128,104L128,103.998C128,71.906 151.622,45.331 182.426,40.711" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Befehl-ausführen" serif:id="Befehl ausführen">
+        <path d="M240,116C240,109.377 234.623,104 228,104L28,104C21.377,104 16,109.377 16,116L16,140C16,146.623 21.377,152 28,152L228,152C234.623,152 240,146.623 240,140L240,116Z" style="fill:rgb(165,214,167);stroke:black;stroke-width:1px;"/>
+        <text x="52.307px" y="135.075px" style="font-family:'Helvetica';font-size:20px;">Befehl ausführen</text>
+    </g>
+    <path d="M122.905,164.411L128,152L134.872,163.523C131.658,160.753 125.675,161.197 122.905,164.411Z"/>
+    <path d="M480,152L480,152.002C480,187.347 451.347,216 416.002,216C352.446,216 255.554,216 191.998,216C159.906,216 133.331,192.378 128.711,161.574" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Befehl-decodieren" serif:id="Befehl decodieren">
+        <path d="M592,116C592,109.377 586.623,104 580,104L380,104C373.377,104 368,109.377 368,116L368,140C368,146.623 373.377,152 380,152L580,152C586.623,152 592,146.623 592,140L592,116Z" style="fill:rgb(165,214,167);stroke:black;stroke-width:1px;"/>
+        <text x="399.302px" y="135.085px" style="font-family:'Helvetica';font-size:20px;">Befehl decodieren</text>
+    </g>
+    <path d="M485.094,91.588L480,104L473.127,92.478C476.341,95.247 482.325,94.802 485.094,91.588Z"/>
+    <path d="M416,40L416,40C448.093,40 474.668,63.621 479.289,94.426" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Befehl-laden" serif:id="Befehl laden">
+        <path d="M416,28C416,21.377 410.623,16 404,16L204,16C197.377,16 192,21.377 192,28L192,52C192,58.623 197.377,64 204,64L404,64C410.623,64 416,58.623 416,52L416,28Z" style="fill:rgb(165,214,167);stroke:black;stroke-width:1px;"/>
+        <text x="248.316px" y="47.09px" style="font-family:'Helvetica';font-size:20px;">Befehl laden</text>
+    </g>
+</svg>

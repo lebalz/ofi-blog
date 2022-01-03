@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="352px" height="192px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+    <path d="M144,80L112,80L112,48L80,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Motor">
+        <rect x="272" y="64" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"/>
+        <path d="M304,88C308.389,88 312,91.611 312,96C312,100.389 308.389,104 304,104C299.611,104 296,100.389 296,96C296,91.611 299.611,88 304,88M304,92C301.806,92 300,93.806 300,96C300,98.194 301.806,100 304,100C306.194,100 308,98.194 308,96C308,93.806 306.194,92 304,92M300,116C299.5,116 299.08,115.64 299,115.16L298.26,109.86C297,109.36 295.92,108.68 294.88,107.88L289.9,109.9C289.46,110.06 288.92,109.9 288.68,109.46L284.68,102.54C284.42,102.1 284.54,101.56 284.92,101.26L289.14,97.94L289,96L289.14,94L284.92,90.74C284.54,90.44 284.42,89.9 284.68,89.46L288.68,82.54C288.92,82.1 289.46,81.92 289.9,82.1L294.88,84.1C295.92,83.32 297,82.64 298.26,82.14L299,76.84C299.08,76.36 299.5,76 300,76L308,76C308.5,76 308.92,76.36 309,76.84L309.74,82.14C311,82.64 312.08,83.32 313.12,84.1L318.1,82.1C318.54,81.92 319.08,82.1 319.32,82.54L323.32,89.46C323.58,89.9 323.46,90.44 323.08,90.74L318.86,94L319,96L318.86,98L323.08,101.26C323.46,101.56 323.58,102.1 323.32,102.54L319.32,109.46C319.08,109.9 318.54,110.08 318.1,109.9L313.12,107.9C312.08,108.68 311,109.36 309.74,109.86L309,115.16C308.92,115.64 308.5,116 308,116L300,116M302.5,80L301.76,85.22C299.36,85.72 297.24,87 295.7,88.78L290.88,86.7L289.38,89.3L293.6,92.4C292.8,94.74 292.8,97.28 293.6,99.6L289.36,102.72L290.86,105.32L295.72,103.24C297.26,105 299.36,106.28 301.74,106.76L302.48,112L305.52,112L306.26,106.78C308.64,106.28 310.74,105 312.28,103.24L317.14,105.32L318.64,102.72L314.4,99.62C315.2,97.28 315.2,94.74 314.4,92.4L318.62,89.3L317.12,86.7L312.3,88.78C310.76,87 308.64,85.72 306.24,85.24L305.5,80L302.5,80Z" style="fill-rule:nonzero;"/>
+    </g>
+    <path d="M144,112L112,112L112,144L80,144" style="fill:none;stroke:black;stroke-width:2px;stroke-linejoin:round;"/>
+    <path d="M192,96L272,96" style="fill:none;stroke:black;stroke-width:2px;stroke-linejoin:round;"/>
+    <g id="Taster">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"/>
+        <g>
+            <path d="M64,46.5L70.5,46.5L72.5,60.5L23.5,60.5L26.5,46.5L32,46.5" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:square;stroke-linejoin:round;"/>
+            <path d="M64,52C64,54.208 56.831,56 48,56C39.169,56 32,54.208 32,52" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;"/>
+            <path d="M32,52L32,41" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;"/>
+            <path d="M64,52L64,41" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;"/>
+            <ellipse cx="48" cy="40" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;stroke-linejoin:round;"/>
+        </g>
+    </g>
+    <g id="Schalter">
+        <rect x="16" y="112" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"/>
+        <g>
+            <path d="M48,151.876C50.208,151.876 52,153.661 52,155.861C52,158.06 50.208,159.846 48,159.846C45.792,159.846 44,158.06 44,155.861C44,153.661 45.792,151.876 48,151.876ZM48,153.868C49.104,153.868 50,154.761 50,155.861C50,156.961 49.104,157.853 48,157.853C46.896,157.853 46,156.961 46,155.861C46,154.761 46.896,153.868 48,153.868Z"/>
+            <path d="M36,119.939L36,168.061L60,168.061L60,143.991L64,125.939L60,119.939L36,119.939ZM40,163.939L56,163.939L56,147.939L40,147.939L40,163.939ZM40,143.939L56,143.939L59,129.939L43,129.939L40,143.939ZM41,122.939L43,125.939L60,125.939L58,122.939L41,122.939Z"/>
+            <path d="M49.646,133.734C49.762,133.189 50.294,132.839 50.834,132.954C51.374,133.069 51.718,133.605 51.602,134.15L50.354,140.019L50.353,140.026C50.234,140.567 49.704,140.914 49.166,140.8C48.626,140.685 48.282,140.149 48.398,139.603L49.646,133.734Z"/>
+        </g>
+    </g>
+    <path id="AND-Gatter" d="M144,64L160,64C177.555,64 192,78.445 192,96C192,113.555 177.555,128 160,128L144,128L144,64Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-miterlimit:10;"/>
+</svg>

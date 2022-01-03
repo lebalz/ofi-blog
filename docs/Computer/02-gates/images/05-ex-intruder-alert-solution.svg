@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="512px" height="288px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M397.165,96L429.165,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M80,240L112,240" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M400,224L432,224" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M80,144L112,144" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+    <path d="M80,48L112,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Licht">
+        <rect x="432" y="192" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <path d="M452,214.8L447.74,210.56L450.56,207.74L454.8,212L452,214.8M466,203L466,209L462,209L462,203L466,203M480.26,210.56L476,214.8L473.2,212L477.44,207.74L480.26,210.56M449,222L449,226L443,226L443,222L449,222M479,222L485,222L485,226L479,226L479,222M452,241L476,241C478.194,241 480,242.806 480,245L448,245C448,242.806 449.806,241 452,241M464,211C470.583,211 476,216.417 476,223L476,239L452,239L452,223C452,216.417 457.417,211 464,211M464,215C459.611,215 456,218.611 456,223L456,235L472,235L472,223C472,218.611 468.389,215 464,215Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Lautsprecher">
+        <rect x="432" y="64" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <path d="M468,78.46L468,82.58C473.78,84.3 478,89.66 478,96C478,102.34 473.78,107.68 468,109.4L468,113.54C476,111.72 482,104.56 482,96C482,87.44 476,80.28 468,78.46M473,96C473,92.46 471,89.42 468,87.94L468,104C471,102.58 473,99.52 473,96M446,90L446,102L454,102L464,112L464,80L454,90L446,90Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Taster">
+        <rect x="16" y="112" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <g>
+            <path d="M64,142.5L70.5,142.5L72.5,156.5L23.5,156.5L26.5,142.5L32,142.5" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:square;"/>
+            <path d="M64,148C64,150.208 56.831,152 48,152C39.169,152 32,150.208 32,148" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <path d="M32,148L32,137" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <path d="M64,148L64,137" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+            <ellipse cx="48" cy="136" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:round;"/>
+        </g>
+    </g>
+    <g id="Schalter">
+        <rect x="16" y="208" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <g>
+            <path d="M48,247.876C50.208,247.876 52,249.661 52,251.861C52,254.06 50.208,255.846 48,255.846C45.792,255.846 44,254.06 44,251.861C44,249.661 45.792,247.876 48,247.876ZM48,249.868C49.104,249.868 50,250.761 50,251.861C50,252.961 49.104,253.853 48,253.853C46.896,253.853 46,252.961 46,251.861C46,250.761 46.896,249.868 48,249.868Z"/>
+            <path d="M36,215.939L36,264.061L60,264.061L60,239.991L64,221.939L60,215.939L36,215.939ZM40,259.939L56,259.939L56,243.939L40,243.939L40,259.939ZM40,239.939L56,239.939L59,225.939L43,225.939L40,239.939ZM41,218.939L43,221.939L60,221.939L58,218.939L41,218.939Z"/>
+            <path d="M49.646,229.734C49.762,229.189 50.294,228.839 50.834,228.954C51.374,229.069 51.718,229.605 51.602,230.15L50.354,236.019L50.353,236.026C50.234,236.567 49.704,236.914 49.166,236.8C48.626,236.685 48.282,236.149 48.398,235.603L49.646,229.734Z"/>
+        </g>
+    </g>
+    <g id="Bewegungssensor">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;stroke-linecap:round;"/>
+        <path d="M57,34.5C59.194,34.5 61,32.694 61,30.5C61,28.306 59.194,26.5 57,26.5C54.806,26.5 53,28.306 53,30.5C53,32.694 54.806,34.5 57,34.5M49.8,62.3L51.8,53.5L56,57.5L56,69.5L60,69.5L60,54.5L55.8,50.5L57,44.5C59.78,47.68 63.78,49.5 68,49.5L68,45.5C64.48,45.56 61.2,43.72 59.4,40.7L57.4,37.5C56.68,36.3 55.4,35.5 54,35.5C53.4,35.5 53,35.7 52.4,35.7L42,40.1L42,49.5L46,49.5L46,42.7L49.6,41.3L46.4,57.5L36.6,55.5L35.8,59.5L49.8,62.3M32,41.5C30.903,41.5 30,40.597 30,39.5C30,38.403 30.903,37.5 32,37.5L38,37.5L38,41.5L32,41.5M34,33.5C32.903,33.5 32,32.597 32,31.5C32,30.403 32.903,29.5 34,29.5L44,29.5L44,33.5L34,33.5M30,49.5C28.903,49.5 28,48.597 28,47.5C28,46.403 28.903,45.5 30,45.5L38,45.5L38,49.5L30,49.5Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Lösung">
+        <path d="M112,48L112,80L216,80" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M336,224L304,224" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M176,144L192,144L192,112L216,112" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M368,96L400,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M256,96L273,96L273,79L320,79" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path d="M112,240L304,240L304,111L320,111" style="fill:none;stroke:black;stroke-width:2px;"/>
+        <path id="OR" d="M208,64C224,64 248,80 256,96C248,112 224,128 208,128C224,96 224,96 208,64Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path id="AND-Gatter" d="M320,64L336,64C353.555,64 368,78.445 368,96C368,113.555 353.555,128 336,128L320,128L320,64Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <g id="Inverter">
+            <path d="M112,128L160,144L112,160L112,128Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M176,144C176,148.389 172.389,152 168,152C163.611,152 160,148.389 160,144C160,139.611 163.611,136 168,136C172.386,136 175.996,139.606 176,143.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        </g>
+        <g id="Inverter1" serif:id="Inverter">
+            <path d="M336,208L384,224L336,240L336,208Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M400,224C400,228.389 396.389,232 392,232C387.611,232 384,228.389 384,224C384,219.611 387.611,216 392,216C396.386,216 399.996,219.606 400,223.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        </g>
+    </g>
+</svg>

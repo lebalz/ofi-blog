@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="66px" height="66px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Mikrofon">
+        <rect x="1" y="1" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <path d="M33,14C36.292,14 39,16.708 39,20L39,32C39,35.292 36.292,38 33,38C29.708,38 27,35.292 27,32L27,20C27,16.708 29.708,14 33,14M47,32C47,39.06 41.78,44.88 35,45.86L35,52L31,52L31,45.86C24.22,44.88 19,39.06 19,32L23,32C23,37.486 27.514,42 33,42C38.486,42 43,37.486 43,32L47,32Z" style="fill-rule:nonzero;"/>
+    </g>
+</svg>

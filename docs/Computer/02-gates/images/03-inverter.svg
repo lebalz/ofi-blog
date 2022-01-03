@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="192px" height="64px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M32,32L64,32" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M128,32L160,32" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <text x="16.824px" y="36.304px" style="font-family:'Helvetica';font-size:12px;">A</text>
+    <text x="167.824px" y="36.304px" style="font-family:'Helvetica';font-size:12px;">Y</text>
+    <g id="Inverter">
+        <path d="M64,16L112,32L64,48L64,16Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path d="M128,32C128,36.389 124.389,40 120,40C115.611,40 112,36.389 112,32C112,27.611 115.611,24 120,24C124.386,24 127.996,27.606 128,31.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+</svg>

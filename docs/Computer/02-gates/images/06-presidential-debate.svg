@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="400px" height="176px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M80,144L112,144" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M112,144L112,112L188,112" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M240,96L320,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M80,48L112,48" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M112,48L112,80L188,80" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <g id="Mikrofon">
+        <rect x="16" y="96" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <path d="M48,109C51.292,109 54,111.708 54,115L54,127C54,130.292 51.292,133 48,133C44.708,133 42,130.292 42,127L42,115C42,111.708 44.708,109 48,109M62,127C62,134.06 56.78,139.88 50,140.86L50,147L46,147L46,140.86C39.22,139.88 34,134.06 34,127L38,127C38,132.486 42.514,137 48,137C53.486,137 58,132.486 58,127L62,127Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Mikrofon1" serif:id="Mikrofon">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <path d="M48,29C51.292,29 54,31.708 54,35L54,47C54,50.292 51.292,53 48,53C44.708,53 42,50.292 42,47L42,35C42,31.708 44.708,29 48,29M62,47C62,54.06 56.78,59.88 50,60.86L50,67L46,67L46,60.86C39.22,59.88 34,54.06 34,47L38,47C38,52.486 42.514,57 48,57C53.486,57 58,52.486 58,47L62,47Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="XOR-Gatter">
+        <path d="M176,64C186.166,71.386 192,83.434 192,96C192,108.566 186.166,120.614 176,128" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path id="OR" d="M192,64C208,64 232,80 240,96C232,112 208,128 192,128C208,96 208,96 192,64Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+    <g id="Lautsprecher">
+        <rect x="320" y="64" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M356,78.46L356,82.58C361.78,84.3 366,89.66 366,96C366,102.34 361.78,107.68 356,109.4L356,113.54C364,111.72 370,104.56 370,96C370,87.44 364,80.28 356,78.46M361,96C361,92.46 359,89.42 356,87.94L356,104C359,102.58 361,99.52 361,96M334,90L334,102L342,102L352,112L352,80L342,90L334,90Z" style="fill-rule:nonzero;"/>
+    </g>
+</svg>

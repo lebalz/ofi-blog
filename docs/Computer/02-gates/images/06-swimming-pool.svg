@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="400px" height="192px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M80,144L112,144" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M80,48L112,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <g id="Motor">
+        <rect x="320" y="16" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M352,40C356.389,40 360,43.611 360,48C360,52.389 356.389,56 352,56C347.611,56 344,52.389 344,48C344,43.611 347.611,40 352,40M352,44C349.806,44 348,45.806 348,48C348,50.194 349.806,52 352,52C354.194,52 356,50.194 356,48C356,45.806 354.194,44 352,44M348,68C347.5,68 347.08,67.64 347,67.16L346.26,61.86C345,61.36 343.92,60.68 342.88,59.88L337.9,61.9C337.46,62.06 336.92,61.9 336.68,61.46L332.68,54.54C332.42,54.1 332.54,53.56 332.92,53.26L337.14,49.94L337,48L337.14,46L332.92,42.74C332.54,42.44 332.42,41.9 332.68,41.46L336.68,34.54C336.92,34.1 337.46,33.92 337.9,34.1L342.88,36.1C343.92,35.32 345,34.64 346.26,34.14L347,28.84C347.08,28.36 347.5,28 348,28L356,28C356.5,28 356.92,28.36 357,28.84L357.74,34.14C359,34.64 360.08,35.32 361.12,36.1L366.1,34.1C366.54,33.92 367.08,34.1 367.32,34.54L371.32,41.46C371.58,41.9 371.46,42.44 371.08,42.74L366.86,46L367,48L366.86,50L371.08,53.26C371.46,53.56 371.58,54.1 371.32,54.54L367.32,61.46C367.08,61.9 366.54,62.08 366.1,61.9L361.12,59.9C360.08,60.68 359,61.36 357.74,61.86L357,67.16C356.92,67.64 356.5,68 356,68L348,68M350.5,32L349.76,37.22C347.36,37.72 345.24,39 343.7,40.78L338.88,38.7L337.38,41.3L341.6,44.4C340.8,46.74 340.8,49.28 341.6,51.6L337.36,54.72L338.86,57.32L343.72,55.24C345.26,57 347.36,58.28 349.74,58.76L350.48,64L353.52,64L354.26,58.78C356.64,58.28 358.74,57 360.28,55.24L365.14,57.32L366.64,54.72L362.4,51.62C363.2,49.28 363.2,46.74 362.4,44.4L366.62,41.3L365.12,38.7L360.3,40.78C358.76,39 356.64,37.72 354.24,37.24L353.5,32L350.5,32Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Motor1" serif:id="Motor">
+        <rect x="320" y="112" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M352,136C356.389,136 360,139.611 360,144C360,148.389 356.389,152 352,152C347.611,152 344,148.389 344,144C344,139.611 347.611,136 352,136M352,140C349.806,140 348,141.806 348,144C348,146.194 349.806,148 352,148C354.194,148 356,146.194 356,144C356,141.806 354.194,140 352,140M348,164C347.5,164 347.08,163.64 347,163.16L346.26,157.86C345,157.36 343.92,156.68 342.88,155.88L337.9,157.9C337.46,158.06 336.92,157.9 336.68,157.46L332.68,150.54C332.42,150.1 332.54,149.56 332.92,149.26L337.14,145.94L337,144L337.14,142L332.92,138.74C332.54,138.44 332.42,137.9 332.68,137.46L336.68,130.54C336.92,130.1 337.46,129.92 337.9,130.1L342.88,132.1C343.92,131.32 345,130.64 346.26,130.14L347,124.84C347.08,124.36 347.5,124 348,124L356,124C356.5,124 356.92,124.36 357,124.84L357.74,130.14C359,130.64 360.08,131.32 361.12,132.1L366.1,130.1C366.54,129.92 367.08,130.1 367.32,130.54L371.32,137.46C371.58,137.9 371.46,138.44 371.08,138.74L366.86,142L367,144L366.86,146L371.08,149.26C371.46,149.56 371.58,150.1 371.32,150.54L367.32,157.46C367.08,157.9 366.54,158.08 366.1,157.9L361.12,155.9C360.08,156.68 359,157.36 357.74,157.86L357,163.16C356.92,163.64 356.5,164 356,164L348,164M350.5,128L349.76,133.22C347.36,133.72 345.24,135 343.7,136.78L338.88,134.7L337.38,137.3L341.6,140.4C340.8,142.74 340.8,145.28 341.6,147.6L337.36,150.72L338.86,153.32L343.72,151.24C345.26,153 347.36,154.28 349.74,154.76L350.48,160L353.52,160L354.26,154.78C356.64,154.28 358.74,153 360.28,151.24L365.14,153.32L366.64,150.72L362.4,147.62C363.2,145.28 363.2,142.74 362.4,140.4L366.62,137.3L365.12,134.7L360.3,136.78C358.76,135 356.64,133.72 354.24,133.24L353.5,128L350.5,128Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="XOR-Gatter">
+        <path d="M128,64C138.166,71.386 144,83.434 144,96C144,108.566 138.166,120.614 128,128" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+        <path id="OR" d="M144,64C160,64 184,80 192,96C184,112 160,128 144,128C160,96 160,96 144,64Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    </g>
+    <path d="M288,48L320,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M288,144L320,144" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M112,48L112,80L140,80" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M112,144L112,112L140,112" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M112,48L112,32L240,32" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M112,144L112,160L240,160" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M192,96L208,96L208,64L240,64" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M208,96L208,128L240,128" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path id="AND-Gatter" d="M240,16L256,16C273.555,16 288,30.445 288,48C288,65.555 273.555,80 256,80L240,80L240,16Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    <path id="AND-Gatter1" serif:id="AND-Gatter" d="M240,112L256,112C273.555,112 288,126.445 288,144C288,161.555 273.555,176 256,176L240,176L240,112Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+    <g id="Taster">
+        <rect x="16" y="112" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <g>
+            <path d="M64,142.5L70.5,142.5L72.5,156.5L23.5,156.5L26.5,142.5L32,142.5" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:square;"/>
+            <path d="M64,148C64,150.208 56.831,152 48,152C39.169,152 32,150.208 32,148" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M32,148L32,137" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M64,148L64,137" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <ellipse cx="48" cy="136" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;"/>
+        </g>
+    </g>
+    <g id="Taster1" serif:id="Taster">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <g>
+            <path d="M64,46.5L70.5,46.5L72.5,60.5L23.5,60.5L26.5,46.5L32,46.5" style="fill:none;stroke:black;stroke-width:4px;stroke-linecap:square;"/>
+            <path d="M64,52C64,54.208 56.831,56 48,56C39.169,56 32,54.208 32,52" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M32,52L32,41" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M64,52L64,41" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <ellipse cx="48" cy="40" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;"/>
+        </g>
+    </g>
+</svg>

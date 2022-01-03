@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="240px" height="96px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;">
+    <path id="AND-Gatter" d="M48,16L64,16C81.555,16 96,30.445 96,48C96,65.555 81.555,80 64,80L48,80L48,16Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+    <g id="Inverter">
+        <path d="M128,32L176,48L128,64L128,32Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-linecap:square;"/>
+        <path d="M192,48C192,52.389 188.389,56 184,56C179.611,56 176,52.389 176,48C176,43.611 179.611,40 184,40C188.386,40 191.996,43.606 192,47.992" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+    </g>
+    <path d="M16,32L48,32" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+    <path d="M16,64L48,64" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+    <path d="M96,48L128,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+    <path d="M192,48L224,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="512px" height="128px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g>
+        <rect x="128.024" y="16" width="239.976" height="97.146" style="fill:rgb(239,154,154);stroke:black;stroke-width:2px;"/>
+        <text x="203.73px" y="69.715px" style="font-family:'Helvetica';font-size:20px;">Schaltung</text>
+    </g>
+    <text x="14.291px" y="69.715px" style="font-family:'Helvetica';font-size:20px;">Eingänge</text>
+    <path d="M119.024,27.5L128.024,32L119.024,36.5L123.524,32L119.024,27.5Z"/>
+    <path d="M80,32L123.524,32" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M119.024,91.5L128.024,96L119.024,100.5L123.524,96L119.024,91.5Z"/>
+    <path d="M80,96L123.524,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M407.024,27.5L416.024,32L407.024,36.5L411.524,32L407.024,27.5Z"/>
+    <path d="M368,32L411.524,32" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <path d="M407.024,91.5L416.024,96L407.024,100.5L411.524,96L407.024,91.5Z"/>
+    <path d="M368,96L411.524,96" style="fill:none;stroke:black;stroke-width:2px;"/>
+    <text x="396.291px" y="69.715px" style="font-family:'Helvetica';font-size:20px;">Ausgänge</text>
+    <text x="67.229px" y="36.304px" style="font-family:'Helvetica';font-size:12px;">A</text>
+    <text x="66.521px" y="100.304px" style="font-family:'Helvetica';font-size:12px;">B</text>
+    <text x="422.209px" y="36.304px" style="font-family:'Helvetica';font-size:12px;">X</text>
+    <text x="422.098px" y="100.304px" style="font-family:'Helvetica';font-size:12px;">Y</text>
+</svg>

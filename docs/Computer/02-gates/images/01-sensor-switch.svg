@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="66px" height="66px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Schalter">
+        <rect x="1" y="1" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <g>
+            <path d="M33,40.876C35.208,40.876 37,42.661 37,44.861C37,47.06 35.208,48.846 33,48.846C30.792,48.846 29,47.06 29,44.861C29,42.661 30.792,40.876 33,40.876ZM33,42.868C34.104,42.868 35,43.761 35,44.861C35,45.961 34.104,46.853 33,46.853C31.896,46.853 31,45.961 31,44.861C31,43.761 31.896,42.868 33,42.868Z"/>
+            <path d="M21,8.939L21,57.061L45,57.061L45,32.991L49,14.939L45,8.939L21,8.939ZM25,52.939L41,52.939L41,36.939L25,36.939L25,52.939ZM25,32.939L41,32.939L44,18.939L28,18.939L25,32.939ZM26,11.939L28,14.939L45,14.939L43,11.939L26,11.939Z"/>
+            <path d="M34.646,22.734C34.762,22.189 35.294,21.839 35.834,21.954C36.374,22.069 36.718,22.605 36.602,23.15L35.354,29.019L35.353,29.026C35.234,29.567 34.704,29.914 34.166,29.8C33.626,29.685 33.282,29.149 33.398,28.603L34.646,22.734Z"/>
+        </g>
+    </g>
+</svg>

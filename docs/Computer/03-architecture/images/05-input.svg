@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="944px" height="416px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Ausgabe">
+        <rect x="800" y="208" width="128" height="48" style="fill:rgb(239,154,154);stroke:black;stroke-width:1px;"/>
+        <text x="824.811px" y="236.985px" style="font-family:'Helvetica';font-size:20px;">Ausgabe</text>
+    </g>
+    <g id="Speicherwerk">
+        <rect x="144" y="304" width="655" height="96" style="fill:rgb(144,202,249);stroke:black;stroke-width:1px;"/>
+        <text x="410.475px" y="388.707px" style="font-family:'Helvetica';font-size:20px;">Speicherwerk</text>
+        <g id="Speicherzelle-n" serif:id="Speicherzelle n">
+            <rect x="656" y="320" width="128" height="32" style="fill:white;stroke:black;stroke-width:1px;"/>
+            <text x="665.246px" y="340.215px" style="font-family:'Helvetica';font-size:16px;">Speicherzelle n</text>
+        </g>
+        <circle cx="592" cy="336" r="4"/>
+        <circle cx="608" cy="336" r="4"/>
+        <circle cx="624" cy="336" r="4"/>
+        <circle cx="640" cy="336" r="4"/>
+        <g id="Speicherzelle-3" serif:id="Speicherzelle 3">
+            <rect x="448" y="320" width="128" height="32" style="fill:white;stroke:black;stroke-width:1px;"/>
+            <text x="457.246px" y="340.215px" style="font-family:'Helvetica';font-size:16px;">Speicherzelle 3</text>
+        </g>
+        <g id="Speicherzelle-2" serif:id="Speicherzelle 2">
+            <rect x="304" y="320" width="128" height="32" style="fill:white;stroke:black;stroke-width:1px;"/>
+            <text x="313.246px" y="340.215px" style="font-family:'Helvetica';font-size:16px;">Speicherzelle 2</text>
+        </g>
+        <g id="Speicherzelle-1" serif:id="Speicherzelle 1">
+            <rect x="160" y="320" width="128" height="32" style="fill:white;stroke:black;stroke-width:1px;"/>
+            <text x="170.531px" y="340.215px" style="font-family:'Helvetica';font-size:16px;">Speicherzelle 1</text>
+        </g>
+    </g>
+    <g id="Prozessor">
+        <rect x="144" y="16" width="656" height="176" style="fill:rgb(200,230,201);stroke:black;stroke-width:1px;"/>
+        <text x="426.248px" y="36.346px" style="font-family:'Helvetica';font-size:20px;">Prozessor</text>
+        <g id="Rechenwerk">
+            <rect x="480" y="48.5" width="304" height="128" style="fill:rgb(165,214,167);stroke:black;stroke-width:1px;"/>
+            <text x="592.916px" y="68.895px" style="font-family:'Helvetica';font-size:20px;">Rechenwerk</text>
+            <g id="Register-2" serif:id="Register 2">
+                <rect x="640" y="128.5" width="128" height="32" style="fill:white;stroke:black;stroke-width:1px;"/>
+                <text x="667.168px" y="148.469px" style="font-family:'Helvetica';font-size:16px;">Register 2</text>
+            </g>
+            <g id="Register-1" serif:id="Register 1">
+                <rect x="496" y="128.5" width="128" height="32" style="fill:white;stroke:black;stroke-width:1px;"/>
+                <text x="524.453px" y="148.469px" style="font-family:'Helvetica';font-size:16px;">Register 1</text>
+            </g>
+        </g>
+        <g id="Steuerwerk">
+            <rect x="160" y="48.5" width="304" height="128" style="fill:rgb(165,214,167);stroke:black;stroke-width:1px;"/>
+            <text x="260.98px" y="69.08px" style="font-family:'Helvetica';font-size:20px;">Steuerwerk</text>
+            <g id="Befehlsregister">
+                <rect x="320" y="128.5" width="128" height="32" style="fill:white;stroke:black;stroke-width:1px;"/>
+                <text x="330.145px" y="148.551px" style="font-family:'Helvetica';font-size:16px;">Befehlsregister</text>
+            </g>
+            <text x="322.101px" y="121.895px" style="font-family:'Helvetica';font-size:20px;">Dekodierwerk</text>
+            <g id="Programmzähler">
+                <rect x="176" y="128.5" width="128" height="32" style="fill:white;stroke:black;stroke-width:1px;"/>
+                <text x="180.281px" y="148.488px" style="font-family:'Helvetica';font-size:16px;">Programmzähler</text>
+            </g>
+            <text x="199.243px" y="121.895px" style="font-family:'Helvetica';font-size:20px;">Zählwerk</text>
+        </g>
+    </g>
+    <g id="Systembus">
+        <rect x="192" y="208" width="560" height="48" style="fill:rgb(176,190,197);stroke:black;stroke-width:1px;"/>
+        <text x="423.011px" y="236.937px" style="font-family:'Helvetica';font-size:20px;">Bussystem</text>
+    </g>
+    <g id="Eingabe">
+        <rect x="16" y="208" width="128" height="48" style="fill:rgb(255,204,128);stroke:black;stroke-width:1px;"/>
+        <text x="42.881px" y="236.985px" style="font-family:'Helvetica';font-size:20px;">Eingabe</text>
+    </g>
+    <path d="M180,226L192,232L180,238C183,235 183,229 180,226Z"/>
+    <path d="M144,232L182.4,232" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M234,196.5L240,208.5L246,196.5C243,199.5 237,199.5 234,196.5Z"/>
+    <path d="M234,172.5L240,160.5L246,172.5C243,169.5 237,169.5 234,172.5Z"/>
+    <path d="M240,198.9L240,170.1" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M788,226L800,232L788,238C791,235 791,229 788,226Z"/>
+    <path d="M752,232L790.4,232" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M566,172.5L560,160.5L554,172.5C557,169.5 563,169.5 566,172.5Z"/>
+    <path d="M566,196.5L560,208.5L554,196.5C557,199.5 563,199.5 566,196.5Z"/>
+    <path d="M560,170.1L560,198.9" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M710,172.5L704,160.5L698,172.5C701,169.5 707,169.5 710,172.5Z"/>
+    <path d="M710,196.5L704,208.5L698,196.5C701,199.5 707,199.5 710,196.5Z"/>
+    <path d="M704,170.1L704,198.9" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M390,172.5L384,160.5L378,172.5C381,169.5 387,169.5 390,172.5Z"/>
+    <path d="M390,196.5L384,208.5L378,196.5C381,199.5 387,199.5 390,196.5Z"/>
+    <path d="M384,170.1L384,198.9" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <path d="M477.5,268L471.5,256L465.5,268C468.5,265 474.5,265 477.5,268Z"/>
+    <path d="M477.5,292L471.5,304L465.5,292C468.5,295 474.5,295 477.5,292Z"/>
+    <path d="M471.5,265.6L471.5,294.4" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;"/>
+    <g id="Input">
+        <rect x="16" y="208" width="128" height="48" style="fill:none;stroke:rgb(213,0,0);stroke-width:6px;stroke-linecap:butt;"/>
+        <rect x="656" y="320" width="128" height="32" style="fill:none;stroke:rgb(213,0,0);stroke-width:6px;stroke-linecap:butt;"/>
+        <path d="M701.5,293L688,320L674.5,293C681.25,299.75 694.75,299.75 701.5,293Z" style="fill:rgb(213,0,0);"/>
+        <path d="M144,232L688,232L688,298.4" style="fill:none;stroke:rgb(213,0,0);stroke-width:6px;stroke-linecap:butt;"/>
+    </g>
+</svg>

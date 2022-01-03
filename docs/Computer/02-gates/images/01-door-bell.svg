@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="352px" height="96px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Lautsprecher">
+        <rect x="272" y="16" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M308,30.46L308,34.58C313.78,36.3 318,41.66 318,48C318,54.34 313.78,59.68 308,61.4L308,65.54C316,63.72 322,56.56 322,48C322,39.44 316,32.28 308,30.46M313,48C313,44.46 311,41.42 308,39.94L308,56C311,54.58 313,51.52 313,48M286,42L286,54L294,54L304,64L304,32L294,42L286,42Z" style="fill-rule:nonzero;"/>
+    </g>
+    <g id="Taster">
+        <rect x="16" y="16" width="64" height="64" style="fill:rgb(144,202,249);stroke:black;stroke-width:2px;"/>
+        <g>
+            <path d="M64,46.5L70.5,46.5L72.5,60.5L23.5,60.5L26.5,46.5L32,46.5" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M64,52C64,54.208 56.831,56 48,56C39.169,56 32,54.208 32,52" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M32,52L32,41" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <path d="M64,52L64,41" style="fill:none;stroke:black;stroke-width:4px;"/>
+            <ellipse cx="48" cy="40" rx="16" ry="4" style="fill:none;stroke:black;stroke-width:4px;"/>
+        </g>
+    </g>
+    <path d="M80,48L272,48" style="fill:none;stroke:black;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;"/>
+</svg>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="800px" height="360px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="extern">
+        <rect x="400" y="208" width="384" height="96" style="fill:rgb(187,222,251);stroke:black;stroke-width:1px;"/>
+        <g transform="matrix(1,0,0,1,633.244,215.717)">
+            <text x="36.742px" y="37.28px" style="font-family:'Helvetica';font-size:20px;">ausserhalb</text>
+            <text x="36.742px" y="57.28px" style="font-family:'Helvetica';font-size:20px;">des Geräts</text>
+        </g>
+    </g>
+    <g id="Gerät">
+        <rect x="400" y="112" width="384" height="96" style="fill:rgb(200,230,201);stroke:black;stroke-width:1px;"/>
+        <text x="717.535px" y="167.168px" style="font-family:'Helvetica';font-size:20px;">Gerät</text>
+    </g>
+    <g id="Prozessor">
+        <rect x="400" y="16" width="384" height="96" style="fill:rgb(255,224,178);stroke:black;stroke-width:1px;"/>
+        <text x="677.291px" y="70.973px" style="font-family:'Helvetica';font-size:20px;">Prozessor</text>
+    </g>
+    <g id="persistent">
+        <rect x="16" y="160" width="384" height="144" style="fill:rgb(189,189,189);stroke:black;stroke-width:1px;"/>
+        <text x="30.848px" y="237.088px" style="font-family:'Helvetica';font-size:20px;">persistent</text>
+    </g>
+    <g id="flüchtig">
+        <rect x="16" y="16" width="384" height="144" style="fill:rgb(255,205,210);stroke:black;stroke-width:1px;"/>
+        <text x="31.727px" y="93.063px" style="font-family:'Helvetica';font-size:20px;">ﬂüchtig</text>
+    </g>
+    <g id="Cloudspeicher">
+        <rect x="144" y="256" width="512" height="48" style="fill:rgb(144,202,249);stroke:black;stroke-width:1px;"/>
+        <text x="335.752px" y="285.283px" style="font-family:'Helvetica';font-size:20px;">Cloudspeicher</text>
+    </g>
+    <g id="Wechseldatenträger">
+        <rect x="176" y="208" width="448" height="48" style="fill:rgb(144,202,249);stroke:black;stroke-width:1px;"/>
+        <text x="310.444px" y="236.985px" style="font-family:'Helvetica';font-size:20px;">Wechseldatenträger</text>
+    </g>
+    <g id="Massenspeicher">
+        <rect x="208" y="160" width="384" height="48" style="fill:rgb(165,214,167);stroke:black;stroke-width:1px;"/>
+        <text x="326.567px" y="189.112px" style="font-family:'Helvetica';font-size:20px;">Massenspeicher</text>
+    </g>
+    <g id="Arbeitsspeicher">
+        <rect x="240" y="112" width="320" height="48" style="fill:rgb(165,214,167);stroke:black;stroke-width:1px;"/>
+        <text x="332.803px" y="141.112px" style="font-family:'Helvetica';font-size:20px;">Arbeitsspeicher</text>
+    </g>
+    <g id="Prozessorcache">
+        <rect x="272" y="64" width="256" height="48" style="fill:rgb(255,204,128);stroke:black;stroke-width:1px;"/>
+        <text x="327.881px" y="94.997px" style="font-family:'Helvetica';font-size:20px;">Prozessorcache</text>
+    </g>
+    <g id="Prozessorregister">
+        <rect x="304" y="16" width="192" height="48" style="fill:rgb(255,204,128);stroke:black;stroke-width:1px;"/>
+        <text x="320.903px" y="44.961px" style="font-family:'Helvetica';font-size:20px;">Prozessorregister</text>
+    </g>
+</svg>

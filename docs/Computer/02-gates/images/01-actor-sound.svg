@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="66px" height="66px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Lautsprecher">
+        <rect x="1" y="1" width="64" height="64" style="fill:rgb(255,204,128);stroke:black;stroke-width:2px;"/>
+        <path d="M37,15.46L37,19.58C42.78,21.3 47,26.66 47,33C47,39.34 42.78,44.68 37,46.4L37,50.54C45,48.72 51,41.56 51,33C51,24.44 45,17.28 37,15.46M42,33C42,29.46 40,26.42 37,24.94L37,41C40,39.58 42,36.52 42,33M15,27L15,39L23,39L33,49L33,17L23,27L15,27Z" style="fill-rule:nonzero;"/>
+    </g>
+</svg>
