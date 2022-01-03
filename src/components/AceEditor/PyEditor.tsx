@@ -59,6 +59,7 @@ const PyEditor = observer((props: Props) => {
         {store.opendTurtleModalWebKey === pyScript.webKey && (
           <TurtleResult webKey={props.webKey}/>
         )}
+        <div id={DOM_ELEMENT_IDS.outputDiv(pyScript.codeId)}></div>
       </div>
     </React.Fragment>
   );

@@ -104,7 +104,9 @@ def run(code, node_id):
     sys.stderr = EventOutput(node_id, 'stderr')
     notify(node_id, {'type': 'start', 'time': time.time()})
     try:
-        ns = {'__name__': node_id}
+        res_div = f'{node_id}_brython_result'
+        document[res_div].clear()
+        ns = {'__name__': node_id, 'RESULT_DIV': document[res_div]}
         loc = {}
         exec(py_script, ns, loc)
         # if len(code.splitlines()) < 10:

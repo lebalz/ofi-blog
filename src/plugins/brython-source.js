@@ -5,7 +5,8 @@ module.exports = function (context, options) {
             const remoteHeadTags = content ? content.remoteHeadTags : [];
             const brython_pips = [];
             ([
-                'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js'
+                'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js',
+                'https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js'
             ]).forEach(pip => {
                 brython_pips.push(
                     {
@@ -24,7 +25,7 @@ module.exports = function (context, options) {
                         tagName: 'script',
                         attributes: {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython.js",
-                            src: "https://cdn.jsdelivr.net/npm/brython@3.10.3/brython.min.js",
+                            src: "https://cdn.jsdelivr.net/npm/brython@3.10.4/brython.min.js",
                             crossorigin: "anonymous",
                             referrerpolicy: "no-referrer"
                         },
@@ -33,7 +34,7 @@ module.exports = function (context, options) {
                         tagName: 'script',
                         attributes: {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js",
-                            src: "https://cdn.jsdelivr.net/npm/brython@3.10.3/brython_stdlib.js",
+                            src: "https://cdn.jsdelivr.net/npm/brython@3.10.4/brython_stdlib.js",
                             crossorigin: "anonymous",
                             referrerpolicy: "no-referrer"
                         },
