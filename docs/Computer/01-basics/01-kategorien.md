@@ -35,5 +35,5 @@ Computer gibt es in sehr unterschiedlichen Grössen. Supercomputer füllen gross
 ![Kei Supercomputer](images/01-kei-supercomputer.jpg)
 :::
 
-[^1]: Quelle: [informatik.mygymer.ch](informatik.mygymer.ch)
+[^1]: Quelle: [informatik.mygymer.ch](https://informatik.mygymer.ch)
 [^2]: Andrew S. Tanenbaum und Todd Austin: Rechnerarchitektur, 2014, 6. Auflage, S. 49
