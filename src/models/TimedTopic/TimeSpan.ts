@@ -1,4 +1,4 @@
-import { CancelTokenSource } from 'axios';
+import axios, { CancelTokenSource } from 'axios';
 import _ from 'lodash';
 import { action, computed, makeObservable, observable } from 'mobx';
 import moment from 'moment';
@@ -6,14 +6,13 @@ import { stopTimeSpan, TimeSpan as TimeSpanProps } from '../../api/time_span';
 import { formatDate, HOUR_MS, MINUTE_MS, SECOND_MS, WeekDay, WEEK_DAYS } from '../../helpers/time';
 import { rootStore } from '../../stores/stores';
 import { TimedTopicStore } from '../../stores/TimedTopicStore';
-import SaveService, { ApiModel } from '../SaveService';
 import TimedExercise from './TimedExercise';
 
 const save = (model: TimeSpan, cancelToken: CancelTokenSource) => {
     return stopTimeSpan(model.topicId, model.exerciseId, model.id, cancelToken);
 };
 
-export default class TimeSpan implements ApiModel {
+export default class TimeSpan {
     private readonly store: TimedTopicStore;
     readonly start: Date;
     readonly id: number;
@@ -21,23 +20,20 @@ export default class TimeSpan implements ApiModel {
     exercise: TimedExercise;
     @observable
     end?: Date;
-    @observable.ref
-    saveService: SaveService;
+    @observable
+    stoppInProgress: boolean = false;
     constructor(data: TimeSpanProps, exercise: TimedExercise) {
         this.store = rootStore.timedTopicStore;
         this.exercise = exercise;
-        this.end = data.end ? new Date(data.end) : undefined;
+        this.end = data.stop ? new Date(data.stop) : undefined;
         this.start = new Date(data.start);
         this.id = data.id;
         makeObservable(this);
-        if (this.isRunning) {
-            this.saveService = new SaveService(this, save);
-        }
     }
 
     @computed
     get dayOfYear() {
-        return moment(this.start).dayOfYear()
+        return moment(this.start).dayOfYear();
     }
 
     @computed
@@ -59,28 +55,41 @@ export default class TimeSpan implements ApiModel {
     get umami() {
         return {
             event: 'update-time-span',
-            message: ''
-        }
+            message: '',
+        };
     }
 
     @action
     stop() {
-        if (!this.isRunning) {
+        if (!this.isRunning || this.stoppInProgress) {
             return;
         }
-        this.end = new Date();
+        this.stoppInProgress = true;
+        const ct = axios.CancelToken.source();
+        stopTimeSpan(this.topicId, this.exerciseId, this.id, ct)
+            .then(
+                action(({ data }) => {
+                    console.log(data);
+                    this.end = new Date(data.stop);
+                })
+            )
+            .catch(
+                action(() => {
+                    this.stoppInProgress = false;
+                })
+            );
     }
 
     @computed
     get offsets() {
         const start = this.start.getTime() - this.exercise.startTime;
         if (this.isRunning) {
-            return { start: start, end: 0};
+            return { start: start, end: 0 };
         }
         return {
             start: start,
-            end: this.exercise.endTime - this.end.getTime()
-        }
+            end: this.exercise.endTime - this.end.getTime(),
+        };
     }
 
     @computed
@@ -150,7 +159,7 @@ export default class TimeSpan implements ApiModel {
         return {
             id: this.id,
             start: this.start.toISOString(),
-            end: this.end?.toISOString(),
+            stop: this.end?.toISOString(),
         };
     }
 }

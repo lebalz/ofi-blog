@@ -4,7 +4,7 @@ import api from "./base";
 export interface TimeSpan {
     id: number;
     start: string;
-    end: string;
+    stop: string;
 }
 
 
@@ -24,7 +24,7 @@ export function stopTimeSpan(
     exerciseId: number,
     tsId: number,
     cancelToken: CancelTokenSource
-): AxiosPromise<{ updated_at: string }> {
+): AxiosPromise<TimeSpan> {
     return api.put(
         `timed_topics/${topicId}/${exerciseId}/${tsId}`,
         { cancelToken: cancelToken.token }

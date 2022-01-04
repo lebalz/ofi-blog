@@ -129,7 +129,8 @@ const Exercise = observer((props: Props) => {
                         {ex.timeSpans.map((ts, idx) => {
                             const next = idx < ex.timeSpans.length - 1 ? ex.timeSpans[idx + 1] : ts;
                             const last = idx === 0 ? ts : ex.timeSpans[idx - 1];
-                            const dateChanged = ts.fStartDate !== last.fStartDate || ts.fStartDate !== next.fStartDate;
+                            const dateChanged =
+                                ts.fStartDate !== last.fStartDate || ts.fStartDate !== next.fStartDate;
                             return <TimeSpan timeSpan={ts} key={idx} showDate={dateChanged} />;
                         })}
                     </div>
