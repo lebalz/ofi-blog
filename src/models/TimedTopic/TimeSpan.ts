@@ -69,7 +69,6 @@ export default class TimeSpan {
         stopTimeSpan(this.topicId, this.exerciseId, this.id, ct)
             .then(
                 action(({ data }) => {
-                    console.log(data);
                     this.end = new Date(data.stop);
                 })
             )
