@@ -2,6 +2,8 @@
 title: 6. Netzwerkkarte
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # 6. Netzwerkkarte
 
 Ein Computer ohne Möglichkeiten zur Kommunikation ist nicht mehr vorstellbar. Damit ein Computer sich in ein LAN einbinden kann, benötigt er eine Netzwerkkarte – sei es eine mit Kabelanschluss oder eine drahtlose für die Teilnahme in einem WLAN.
@@ -40,4 +42,22 @@ Netzwerkkarten zur Verbindung mit einem drahtlosen Netzwerk (WLAN) gibt es in et
 
 :::aufgabe Netzwerkkarte
 Angenommen, eine Netzwerkkarte hat eine Übertragungsrate von 1 Gbps. Wie lange dauert die Übertragung einer 10 GB grossen Datei in Sekunden unter idealen Bedingungen?
+
+<Answer type="text" webKey="7f1a6b64-24e0-40f7-b1f4-ef10faf66209" />
+:::
+
+
+:::aufgabe Netzwerkkarte
+
+Sie wollen für die Ferien einige Filme von Netflix offline verfügbar machen und müssen insgesamt `10 GB` Daten herunterladen. Ihr WLAN kann in ihr Zimmer maximal `150 MBit/s` übertragen. Wie viel Zeit gewinnen Sie, wenn Sie aufstehen um das Gerät per Ethernet an Ihren Glasfaser-Router mit `1 Gb/s` anschliessen?\*
+
+Berechnen Sie:
+- die Download Dauer per WLAN
+- die Download Dauer per Ethernet
+- den Zeitgewinn
+
+<Answer type="text" webKey="f1c25b7d-6186-4cbf-9b8d-ca2728017b0c" />
+
+
+*\* Die Voraussetzung für diesen Vergleich wäre natürlich, dass die Netflix-Server die Filme auch effektiv mit 1Gbps bereitstellen würden.*
 :::

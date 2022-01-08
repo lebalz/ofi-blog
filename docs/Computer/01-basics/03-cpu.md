@@ -2,6 +2,8 @@
 title: 3. Prozessor
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # 3. Prozessor
 ---
 
@@ -44,3 +46,12 @@ In moderne Prozessor-Chips werden auch weitere Funktionen integriert, welche fr�
 Moderne Desktop-Prozessoren enthalten normalerweise eine Grafikeinheit, welche die Darstellung von Text, Bild und Video auf einem Bildschirm übernimmt.
 
 Bei Prozessoren für Mobiltelefone werden üblicherweise spezialisierte Funktionen für GPS, W-LAN, Mobilfunk und Bluetooth auf dem Chip integriert. Dabei spricht man von einem Ein-Chip-System oder SoC (engl. *system on a chip*).
+
+:::aufgabe Meine CPU
+
+1. Welche Merkmale weist der Prozessor Ihres Laptops auf?
+2. Vergleichen Sie Ihre Werte mit herkömmlichen Prozessoren für Desktop-Computer auf Digitec. Beschränken Sie sich dabei auf Prozessoren von den beiden grössten CPU-Herstellern **AMD** und **Intel**. [https://www.digitec.ch](https://www.digitec.ch/de/s1/producttype/prozessor-83)
+   1. Welche Taktrate hat die günstigste/teuerste CPU, wenn die CPU dieselbe Anzahl Kerne hat wie Ihr Gerät?
+   2. Worin könnte der grosse Unterschied bei den Taktraten zwischen Laptop- und Desktop-Computer liegen?
+<Answer type="text" webKey="bd480f52-a373-40fc-8666-33b977b4bc1f" />
+:::

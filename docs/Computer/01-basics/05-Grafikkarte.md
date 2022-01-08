@@ -2,6 +2,8 @@
 title: 5. Grafikkarte
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # 5. Grafikkarte
 
 Die Grafikkarte ist neben dem Prozessor die zweite wichtige Komponente, welche im Computer für die **Verarbeitung** von Daten zuständig ist. Grafikkarten haben folgende Aufgaben:
@@ -23,21 +25,21 @@ Für Grafikkarten gibt es drei wichtige Kenngrössen:
 :::cards --columns=2
 ![Hercules-Grafikkarte](images/05-hercules.png)
 #### Hercules Graphics Card
-Hochauflösende monochrome Grafikkarte (720×348 Pixel, 1 Bit Farbe) mit 64 KB Video-RAM aus dem Jahr 1982.
+Hochauflösende monochrome Grafikkarte (720×348 Pixel, 1 Bit Farbe) mit 64 KB Video-RAM aus dem Jahr **1982**.
 
 ***
-![NVIDIA RTX 2080 TI-Grafikkarte](images/05-nvidia-rtx-2080-ti.jpg)
-#### NVIDIA RTX 2080 TI
-Aktuelle Grafikkarte aus dem Jahr 2018 mit einer maximalen Auflösung von 7680×4320 Pixel pro Bildschirm, 11 GB Video-RAM und Unterstützung von Echtzeit-Raytracing.
+![NVIDIA RTX 3080 Ti Trinity-Grafikkarte](images/05-nvidia-rtx-3080-trinity.jpg)
+#### NVIDIA RTX 3080 Ti Trinity
+Aktuelle Grafikkarte aus dem Jahr **2022** mit einer maximalen Auflösung von `7680×4320` Pixel pro Bildschirm, `12` GB Video-RAM und Unterstützung von Echtzeit-Raytracing.
 :::
 
 Frühe Grafikkarten konnten nur aus Text selbständig eine Pixelgrafik erzeugen. Um etwas anderes auf dem Bildschirm darzustellen, mussten Programme oder das Betriebssystem die Grafik selbst berechnen und pixelweise an die Grafikkarte übermitteln.
 
-mit der Zeit konnten neuere Grafikkarten immer mehr Funktionen der Bilderzeugung übernehmen:
+Mit der Zeit konnten neuere Grafikkarten immer mehr Funktionen der Bilderzeugung übernehmen:
 
 - **2D-Rasterung:** Zeichnen von Linien, Rechtecken und Kreisen,
 - **3D-Rasterung:** Verdeckungsberechnung und Lichtsimulation,
-- **3D-Raytracing:** fotorealistische Berechnung basierend auf der Rückverfolgung von Lichtstrahlen.
+- **3D-Raytracing:** fotorealistische Berechnung basierend auf der Simulation von Lichtstrahlen.
 
 Ausserdem werden heute Grafikkarten auch für aufwändige Berechnungen in anderen Bereichen eingesetzt, z.B. für **neuronale Netze** oder für das Mining von **Kryptowährungen**.
 
@@ -59,6 +61,18 @@ Für die Steuerung des Bildschirms gibt es vier aktuelle Technologien.
 
 :::
 
+:::note USB-C
+Heutige Laptops haben oft keine separaten Ausgänge für Bildschirme - dank USB-C. Die verwendete Technologie sowie die Protokolle bleiben aber dieselben, weshalb ohne weiteres Adapter für entsprechende Technologien (DP, DVI, HDMI, VGA) angeschlossen werden können.
+
+![USB-C Displayadapter --width=300px](images/05-usbc-adapter.jpg)
+:::
+
 :::aufgabe Aufgabe Grafikkarte
-Wieso ist die Grafikkarte eigentlich ein ganzer Computer (mit eigenem Prozessor, eigenem RAM)?
+Recherchieren Sie den Begriff "Rendering".
+
+<Answer type="text" webKey="30ee181c-fe31-4362-8274-68fd87478824" />
+
+Welche Aufgaben erfordern eine hohe Rendering-Leistung? Für welche Zielgruppen nebst Gamern sind gute Grafikkarten essenziell?
+
+<Answer type="text" webKey="bdf478bd-68f0-4980-b98e-74fd2be9065b" />
 :::
