@@ -13,8 +13,8 @@ Moderne Prozessoren enthalten mehrere **Kerne**, welche unabhängig voneinander 
 
 Für den Prozessor gibt es folgende wichtige Kenngrössen:
 
-- Die Anzahl **Kerne** gibt an, wie viele Berechnungen ein Prozessor gleichzeitig ausführen kann.
-- Die **Taktfrequenz** gibt an, wie schnell der Prozessor Berechnungen durchführen kann. Sie wird in der Einheit **Hertz** angegeben, was «pro Sekunde» bedeutet.
+- Die Anzahl **Kerne** gibt an, wie viele Berechnungen ein Prozessor gleichzeitig, also parallel, ausführen kann.
+- Die **Taktfrequenz** gibt an, wie schnell der Prozessor Berechnungen durchführen kann. Sie wird in der Einheit **Hertz** angegeben, was «pro Sekunde» bedeutet. `2.1 GHz` sind "2.1 Gigahertz", also `2'100'000'000 Hz` und somit 2.1 Milliarden Operationen, die pro Sekunden berechnet werden können. 
 
 :::cards --columns=3
 ![AMD Ryzen-Prozessor](images/03-cpu-top.png)
@@ -35,12 +35,12 @@ Andererseits **verarbeitet** der Prozessor Daten. Das heisst, er führt mathemat
 - Multiplizieren
 - Bits um eine Stelle nach links schieben
 
-Im Kapitel [Rechnerarchitektur](?page=.images/03-.images/03-4-architecture/) wird die Funktionsweise des Prozessors genauer erklärt.
+Im Kapitel [Rechnerarchitektur](../03-architecture/03-cpu.md) wird die Funktionsweise des Prozessors genauer erklärt.
 
 ## Weitere Funktionen
 
-Im moderne Prozessor-Chips werden auch weitere Funktionen integriert, welche früher von separaten Bauteilen übernommen wurden.
+In moderne Prozessor-Chips werden auch weitere Funktionen integriert, welche früher von separaten Bauteilen übernommen wurden.
 
 Moderne Desktop-Prozessoren enthalten normalerweise eine Grafikeinheit, welche die Darstellung von Text, Bild und Video auf einem Bildschirm übernimmt.
 
-Bei Prozessoren für Mobiltelefon werden üblicherweise spezialisierte Funktionen für GPS, W-LAN, Mobilfunk und Bluetooth auf dem Chip integriert. Dabei spricht man von einem Ein-Chip-System oder SoC (engl. *system on a chip*).
+Bei Prozessoren für Mobiltelefone werden üblicherweise spezialisierte Funktionen für GPS, W-LAN, Mobilfunk und Bluetooth auf dem Chip integriert. Dabei spricht man von einem Ein-Chip-System oder SoC (engl. *system on a chip*).
