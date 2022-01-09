@@ -1,5 +1,9 @@
 # Phaser
 
+## 3d-Animation
+
+Inspired by [@dwitter](https://phaser.io/examples/v3/view/dwitter/5479)
+
 ```py live_py title=phaser-demo.py id=1efa38ff-1c08-4422-86b2-2d35fc986105
 
 from browser import window, document, html
