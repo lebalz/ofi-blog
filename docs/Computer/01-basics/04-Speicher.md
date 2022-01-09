@@ -117,6 +117,8 @@ Führen Sie auf [Digitec](https://digitec.ch) eine Recherche zu den Speicherprei
 - den **Datendurchsatz** fürs *Schreiben* und *Lesen*.
 für ein Modell im mittleren Preissegment.
 
+SSD, Mobile SSD, HDD, Externe HDD, USB-Stick, SD/microSD Karte 
+
 <Answer type="text" webKey="1e665ad1-531f-4d31-a9b5-a3a4c4dc80ff" />
 :::
 
