@@ -43,6 +43,14 @@ Mit der Zeit konnten neuere Grafikkarten immer mehr Funktionen der Bilderzeugung
 
 Ausserdem werden heute Grafikkarten auch für aufwändige Berechnungen in anderen Bereichen eingesetzt, z.B. für **neuronale Netze** oder für das Mining von **Kryptowährungen**.
 
+
+:::info ⭐️ Raytracing
+
+Was ist Raytracing und was bringt es mir?
+
+[@youtube](https://www.youtube-nocookie.com/embed/vy8kHdw9gCI?start=66)
+:::
+
 ### Steuerung des Bildschirms
 
 Für die Steuerung des Bildschirms gibt es vier aktuelle Technologien.
@@ -67,7 +75,7 @@ Heutige Laptops haben oft keine separaten Ausgänge für Bildschirme - dank USB-
 ![USB-C Displayadapter --width=300px](images/05-usbc-adapter.jpg)
 :::
 
-:::aufgabe Aufgabe Grafikkarte
+:::aufgabe Aufgabe Grafikkarte: Rendering
 Recherchieren Sie den Begriff "Rendering".
 
 <Answer type="text" webKey="30ee181c-fe31-4362-8274-68fd87478824" />

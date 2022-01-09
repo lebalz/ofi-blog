@@ -1,0 +1,32 @@
+.pdfWrapper {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    height: max-content;
+    &.singlepage {
+        box-shadow: var(--ifm-global-shadow-lw);
+    }
+    .doc {
+        display: flex;
+        justify-content: center;
+        box-shadow: var(--ifm-global-shadow-lw);
+        position: relative;
+        .download {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            opacity: 0.2;
+        }
+        &:hover {
+            .download {
+                opacity: 1;
+            }
+        }
+    }
+    .controls {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

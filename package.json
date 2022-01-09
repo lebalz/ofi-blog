@@ -44,6 +44,7 @@
     "ace-builds": "^1.4.13",
     "animejs": "^3.2.1",
     "axios": "^0.23.0",
+    "canvas": "^2.8.0",
     "clsx": "^1.1.1",
     "docusaurus-plugin-sass": "^0.2.1",
     "file-loader": "^6.2.0",
@@ -66,6 +67,7 @@
     "react-dom": "^17.0.1",
     "react-draggable": "^4.4.4",
     "react-image-gallery": "^1.1.1",
+    "react-pdf": "^5.6.0",
     "react-quill": "^1.3.5",
     "react-switch": "^6.0.0",
     "recharts": "^2.1.5",
@@ -105,6 +107,7 @@
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
     "minimist": "^1.2.5",
+    "null-loader": "^4.0.1",
     "rsync": "^0.6.1",
     "stringify-object": "^4.0.0",
     "typescript": "^4.3.4"

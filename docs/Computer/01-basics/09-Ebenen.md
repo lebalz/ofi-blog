@@ -2,6 +2,8 @@
 title: 9. Ebenen
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # 9. Ebenen
 
 Wie die Netzwerken kann auch den Computer selber auf verschiedenen **Ebenen** betrachtet werden.
@@ -11,6 +13,17 @@ Wie die Netzwerken kann auch den Computer selber auf verschiedenen **Ebenen** be
 ## Elektronik
 
 Auf der Ebene der **Elektronik** werden die Zustände 0 und 1 durch unterschiedliche Spannungen dargestellt. Das grundlegende Bauelement für digitale Schaltungen ist der **Transistor**.
+
+[@youtube --height=315](https://www.youtube-nocookie.com/embed/5wIRJN3DN_8)
+
+:::aufgabe Transistoren
+
+Sehen Sie sich das obige Video an. Und beschreiben Sie in eigenen Worten:
+- welche Analogie aus dem Alltag passt zum Transistor?
+- wozu wird ein Transistor bei Computern eingesetzt?
+
+<Answer type="text" webKey="77218889-54e7-4ff2-ac32-10a2de6cb927" />
+:::
 
 ## Digitale Logik
 

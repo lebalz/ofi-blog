@@ -4,9 +4,11 @@ const path = require("path");
 const math = require('remark-math');
 const katex = require('rehype-katex');
 const transformImage = require('./src/plugins/transform-images');
-// const validateUuids = require('./src/plugins/validate-uuids');
+const validateUuids = require('./src/plugins/validate-uuids');
 const remarkFlex = require('./src/plugins/remark-flex');
 const admonitions = require('@lebalz/remark-admonitions');
+const remarkLinks = require('./src/plugins/remark-links');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -147,10 +149,11 @@ module.exports = {
             }
           },
           admonitions: false,
-          beforeDefaultRemarkPlugins: [transformImage],
+          beforeDefaultRemarkPlugins: [validateUuids, transformImage],
           remarkPlugins: [
             math,
             remarkFlex,
+            remarkLinks,
             [admonitions, {
               customTypes: {
                 aufgabe: {
@@ -213,7 +216,43 @@ module.exports = {
           return [`${staticPath}/p/*.{md, html}`];
         }
       };
-    }
+    },
+    function (context, options) {
+      return {
+        name: 'pdf-src-loader',
+        configureWebpack(config, isServer, utils) {
+          return {
+            module: {
+              rules: [
+                {
+                  test: /canvas/,
+                  use: 'null-loader'
+                },
+              ],
+            },
+          };
+        },
+      };
+    },
+    function (context, options) {
+      return {
+        name: 'pdf-cmaps',
+        configureWebpack(config, isServer, utils) {
+          return {
+            plugins: [
+              new CopyWebpackPlugin({
+                patterns: [
+                  {
+                    from: 'node_modules/pdfjs-dist/cmaps/',
+                    to: 'cmaps/'
+                  },
+                ]
+              }),
+            ]
+          };
+        },
+      };
+    },
   ],
   themes: [
   ],
