@@ -1,8 +1,12 @@
 const path = require('path');
 const fs = require('fs-extra');
 const UUID_REGEX = new RegExp(/live_py(.*)?id=(?<uuid>[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})/, 'g')
-const UUID_REGEX2 = new RegExp(/webKey="(?<uuid>[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})/, 'g')
+const UUID_REGEX2 = new RegExp(/Answer(.*)?webKey="(?<uuid>[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})/, 'g')
 
+const EXCEPTIONS = [
+  '53ff56be-1a4b-4ad0-86fb-a98590d83d50',
+  'f20e9df7-4811-4856-a487-02e2ed6b883b'
+]
 
 function UUIDInUseException(message) {
   const error = new Error(message);
@@ -34,6 +38,9 @@ const plugin = (options) => {
     if (match.length > 0) {
       uuids = match.map((p) => p.slice(p.length - 36))
       uuids.forEach((uuid) => {
+        if (EXCEPTIONS.includes(uuid)) {
+          return;
+        }
         if (used_uuids.includes(uuid)) {
           throw new UUIDInUseException(`The uuid ${filePath}#${uuid} was used before!`);
         } else {
