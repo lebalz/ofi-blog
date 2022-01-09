@@ -149,11 +149,14 @@ module.exports = {
             }
           },
           admonitions: false,
-          beforeDefaultRemarkPlugins: [validateUuids, transformImage],
+          beforeDefaultRemarkPlugins: [
+            validateUuids, 
+            remarkLinks,
+            transformImage,
+          ],
           remarkPlugins: [
             math,
             remarkFlex,
-            remarkLinks,
             [admonitions, {
               customTypes: {
                 aufgabe: {
