@@ -155,7 +155,7 @@ Zwei Namensfehler, die Fehlermeldung sagt die Zeilennummer und schlägt den rich
 
 ## Einrückungsfehler (`IndentationError`)
 
-Python erwartet nach jedem Doppelpunkt `:`, dass ein **eingerückter** Codeblock kommt. Falls kein eingerückter Codeblock gefunden wird, entsteht ein `IndentationError`. Wird jedoch fälschlicherweise eine Zeile nicht falsch eingerückt, so wird ebenfalls dieser Fehler angezeigt.
+Python erwartet nach jedem Doppelpunkt `:`, dass ein **eingerückter** Codeblock kommt. Falls kein eingerückter Codeblock gefunden wird, entsteht ein `IndentationError`. Wird jedoch fälschlicherweise eine Zeile eingerückt, so wird ebenfalls dieser Fehler angezeigt.
 
 :::caution Häufigste Ursachen
 - Die nächste Zeile nach einem Doppelunkt `:` ist nicht eingerückt

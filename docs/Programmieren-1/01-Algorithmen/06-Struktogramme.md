@@ -102,4 +102,25 @@ zick_zack()
 - Den Namen für Unterprogramm kann beliebig gewählt werden, sofern er nicht mit einer Zahl beginnt und keine Sonderzeichen enthält. **Leerschläge** und **Bindestriche** sind nicht erlaubt - stattdessen werden Unterstriche `_` verwendet: Statt `zick zack` wird der Name `zick_zack` verwendet. 
 :::
 
+## Parameter ⊕ ⊖
+
+Ein Unterprogramm kann mit **Parametern** aufgerufen werden.
+
+Parameter werden jeweils <u>unterstrichen</u>, so dass klar ist, welche Werte sich ändern können.
+
+### Variablen
+Bei Programmen wird zwischen Parametern und Variablen unterschieden. Genau wie Paramter können diese das Ergebnis eines Algorithmus ändern. Sie werden in einem Struktogramm speziell als markiert, damit klar ist, dass eigentlich der in der Variable gespeicherte Wert gemeint ist.
+
+:::flex --width=250px
+```py live_py slim
+grösse = input('Wie gross bist du [cm]?')
+print(f'Ich bin {grösse} cm gross')
+```
+***
+<Strukto program={[
+    {type: 'input', code: <span><span className="var">grösse</span> = Wie gross bist du [cm]?</span>},
+    {type: 'step', code: <span>Ausgabe: Ich bin <span className="var">grösse</span> cm gross.</span>}
+]} />
+:::
+
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=prog1&p=905106)

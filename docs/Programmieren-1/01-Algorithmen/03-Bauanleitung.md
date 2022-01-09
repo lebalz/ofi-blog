@@ -19,4 +19,4 @@ Muss ein Schritt wiederholt ausgeführt werden, z.B. das Eindrehen von Schrauben
 
 Fehlt ein Stück oder ist die Anleitung unklar, so soll der Kundendienst kontaktiert werden (oben rechts...).
 
-![](images/ikea-norden.svg)
+![Ikea Bauanleitung --width=100%](images/ikea-norden.svg)
