@@ -11,6 +11,10 @@ interface Props {
 const Result = observer((props: Props) => {
     const store = useStore('documentStore');
     const pyScript = store.find<Script>(props.webKey);
+
+    if (pyScript.logMessages.length === 0 || /^\s*$/.test(pyScript.logMessages.map((msg) => msg.output).join(''))) {
+        return null;
+    }
     return (
         <div className={styles.brythonOut}>
             {pyScript.logMessages.length > 0 && (
