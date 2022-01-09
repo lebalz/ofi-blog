@@ -1,6 +1,6 @@
 # Bedingte Ausführung ⑂
 
-Einer oder mehrere Schritte werden nur ausgeführt, wenn eine bestimmte Bedingung erfüllt ist.
+Ein- oder mehrere Schritte werden nur ausgeführt, wenn eine bestimmte **Bedingung** erfüllt ist.
 
 
 ## Vergleichen
@@ -66,11 +66,12 @@ else:
 
 
 
-# Ausgabe mit `alert``
+# Ausgabe mit `alert`
 
 ```py
 from browser import alert
 
-alter = int(input('Wie alt bist du?'))
+alter = input('Wie alt bist du?')
+alter = int(alter)
 alert(f'In einem Jahr bist du {alter + 1} jährig.')
 ```
