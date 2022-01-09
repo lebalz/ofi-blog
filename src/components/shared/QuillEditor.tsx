@@ -83,15 +83,15 @@ const getToolbar = (options: ToolbarOptions) => {
     if (options.formula || options.image) {
         const visuals = [];
         if (options.formula) {
-            visuals.push('formula')
+            visuals.push('formula');
         }
         if (options.image) {
-            visuals.push('image')
+            visuals.push('image');
         }
         toolbar.push(visuals);
     }
     if (options.code) {
-        toolbar.push(['code-block'])
+        toolbar.push(['code-block']);
     }
     return toolbar;
 };
@@ -106,17 +106,14 @@ const loadQuill = (callback, options: ToolbarOptions = {}) => {
         import('quill-image-compress'),
         import('react-quill/dist/quill.snow.css'),
     ];
-    const importPosition: {[key: string]: number} = {
+    const importPosition: { [key: string]: number } = {
         'react-quill': 0,
-        'quill': 1,
-        'react-image-compress': 2
-    }
+        quill: 1,
+        'react-image-compress': 2,
+    };
     if (options.formula && !(window as any).katex) {
         importPosition['katex'] = loadLibs.length;
-        loadLibs.push(
-            import('katex'),
-            import('katex/dist/katex.min.css')
-        )
+        loadLibs.push(import('katex'), import('katex/dist/katex.min.css'));
     }
     Promise.all(loadLibs).then((packages) => {
         ReactQuill = packages[importPosition['react-quill']].default;
@@ -145,6 +142,7 @@ interface Props {
     monospace?: boolean;
     default?: string | React.ReactNode;
     toolbar?: ToolbarOptions;
+    toolbarAdd?: ToolbarOptions;
     placeholder?: string;
 }
 
@@ -160,16 +158,19 @@ const QuillEditor = observer((props: Props) => {
 
     React.useEffect(() => {
         let isMounted = true;
-        loadQuill(() => {
-            if (isMounted) {
-                setQuillLoaded(true);
-                if (quillRef && quillRef.current) {
-                    quillRef.current.editor
-                        .getModule('toolbar')
-                        .container.addEventListener('mousedown', onQuillToolbarMouseDown);
+        loadQuill(
+            () => {
+                if (isMounted) {
+                    setQuillLoaded(true);
+                    if (quillRef && quillRef.current) {
+                        quillRef.current.editor
+                            .getModule('toolbar')
+                            .container.addEventListener('mousedown', onQuillToolbarMouseDown);
+                    }
                 }
-            }
-        }, props.toolbar);
+            },
+            { ...(props.toolbar || {}), ...(props.toolbarAdd || {}) }
+        );
         return () => {
             isMounted = false;
             if (quillRef && quillRef.current) {
@@ -194,7 +195,10 @@ const QuillEditor = observer((props: Props) => {
         return <Loader />;
     }
     return (
-        <div onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)} className={clsx(styles.quillEditor)}>
+        <div
+            onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)}
+            className={clsx(styles.quillEditor)}
+        >
             <ReactQuill
                 ref={quillRef}
                 theme="snow"
@@ -209,7 +213,7 @@ const QuillEditor = observer((props: Props) => {
                     onChange(content);
                 }}
                 modules={{
-                    toolbar: props.toolbar ? getToolbar(props.toolbar) : TOOLBAR,
+                    toolbar: props.toolbar ? getToolbar(props.toolbar) : [...TOOLBAR, ...getToolbar(props.toolbarAdd || {})],
                     imageCompress: {
                         quality: 0.5, // default
                         maxWidth: 1024, // default
