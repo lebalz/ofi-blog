@@ -37,7 +37,7 @@ Andererseits **verarbeitet** der Prozessor Daten. Das heisst, er führt mathemat
 - Multiplizieren
 - Bits um eine Stelle nach links schieben
 
-Im Kapitel [Rechnerarchitektur](../03-architecture/03-cpu.md) wird die Funktionsweise des Prozessors genauer erklärt.
+Im Kapitel Rechnerarchitektur wird die Funktionsweise des Prozessors genauer erklärt.
 
 ## Weitere Funktionen
 
