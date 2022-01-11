@@ -12,6 +12,7 @@ import LegacyResolver from './LegacyResolver';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { reaction } from 'mobx';
 import Loader from '../shared/Loader';
+import CodeHistory from './CodeHistory';
 
 interface Props {
     webKey: string;
@@ -79,6 +80,7 @@ const PyAceEditor = observer((props: Props) => {
             >
                 <BrythonCommunicator webKey={props.webKey} />
                 <PyEditor {...props} />
+                <CodeHistory webKey={props.webKey} />
             </div>
         </div>
     );

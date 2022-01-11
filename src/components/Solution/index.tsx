@@ -27,6 +27,7 @@ const Icon = () => {
 
 const Solution = observer((props: Props) => {
     const store = useStore('policyStore');
+    const userStore = useStore('userStore');
     const inBrowser = useIsBrowser();
     useSolution(props.webKey);
 
@@ -40,9 +41,9 @@ const Solution = observer((props: Props) => {
     }
     return (
         <div data--web-key={props.webKey} className={clsx(styles.wrapper, 'solution-wrapper')}>
-            {model.show ? (
+            {(model.show || userStore.current.admin) ? (
                 <Details
-                    summary={<summary>{props.title || 'Lösung'} <Icon /></summary>}
+                    summary={<summary>{props.title || 'Lösung'} <Icon />{!model.show && <span className="badge badge--secondary">Hidden</span>}</summary>}
                     className={clsx('alert alert--success', styles.solution)}
                     open={props.open}
                 >

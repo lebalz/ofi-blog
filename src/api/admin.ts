@@ -19,9 +19,9 @@ export function setUserProps(uid: number, data: Partial<UserProps>, cancelToken:
     );
 }
 
-export function getDocument<T>(uid: number, webKey: string, cancelToken: CancelTokenSource): AxiosPromise<Document<T>> {
+export function getDocument<T>(uid: number, webKey: string, versions: boolean, cancelToken: CancelTokenSource): AxiosPromise<Document<T>> {
     return api.get(
-        `admin/document/${uid}/${webKey}`,
+        `admin/document/${uid}/${webKey}&versions=${versions}`,
         { cancelToken: cancelToken.token }
     );
 }

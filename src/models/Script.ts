@@ -1,6 +1,6 @@
 import { runInAction } from 'mobx';
-import { CancelTokenSource } from 'axios';
-import { Document, putDocument } from './../api/document';
+import axios, { CancelTokenSource } from 'axios';
+import { Document, putDocument, Version } from './../api/document';
 import { action, computed, makeObservable, observable } from 'mobx';
 import { CodeModel } from './iModel';
 import { DocumentStore } from '../stores/DocumentStore';
@@ -83,7 +83,13 @@ export default class Script implements CodeModel, ApiModel {
 
     versioned: boolean;
     @observable
+    versionsLoaded: false | 'loading' | 'loaded' = false;
+    versions = observable.array<Version<PyDoc>>([]);
+
+    @observable
     pastedEdit: boolean;
+
+    versionsCT: CancelTokenSource;
 
     constructor(
         doc: Document<PyDoc>,
@@ -133,6 +139,28 @@ export default class Script implements CodeModel, ApiModel {
     @action
     setData(data: PyDoc) {
         this.code = data.code;
+    }
+
+    @action
+    loadVersions() {
+        if (!this.versioned) {
+            return;
+        }
+        if (this.versionsCT) {
+            this.versionsCT.cancel();
+        }
+        this.versionsLoaded = 'loading';
+        this.versionsCT = axios.CancelToken.source();
+        this.store
+            .apiGetDocument<PyDoc>(this.webKey, true, this.versionsCT)
+            .then(action((res) => {
+                if (res) {
+                    this.versions.replace(res.versions);
+                    this.versionsLoaded = 'loaded';
+                } else {
+                    this.versionsLoaded = false;
+                }
+            }));
     }
 
     @computed

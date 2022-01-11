@@ -143,7 +143,7 @@ export class DocumentStore {
         }
         const ct = axios.CancelToken.source();
         const { isMyView } = this.root.userStore;
-        return this.apiGetDocument<typeof model.data>(model.webKey, ct)
+        return this.apiGetDocument<typeof model.data>(model.webKey, false, ct)
             .then((data) => {
                 if (data) {
                     return { data: data, returnDummy: false };
@@ -195,6 +195,7 @@ export class DocumentStore {
     @action
     apiGetDocument<T extends Object = Object>(
         webKey: string,
+        versions: boolean,
         cancelToken: CancelTokenSource
     ): Promise<DocumentProps<T> | void> {
         return this.root.msalStore.withToken().then((ok) => {
@@ -203,7 +204,7 @@ export class DocumentStore {
                     this.root.userStore.currentView &&
                     this.root.userStore.currentView.id !== this.root.userStore.current?.id;
                 if (!isOthersView) {
-                    return getDocument<T>(webKey, cancelToken)
+                    return getDocument<T>(webKey, versions, cancelToken)
                         .then(({ data }) => {
                             return data;
                         })
@@ -215,7 +216,7 @@ export class DocumentStore {
                             }
                         });
                 }
-                return getDocumentAsAdmin<T>(this.root.userStore.currentView.id, webKey, cancelToken)
+                return getDocumentAsAdmin<T>(this.root.userStore.currentView.id, webKey, versions, cancelToken)
                     .then(({ data }) => {
                         return data;
                     })
