@@ -64,7 +64,7 @@ for i in range(5):
 :::
 
 ```py live_py title=aufgabe2.py versioned id=4b72a23e-4835-42da-bc65-4142b8aa59fa
-
+from turtle import * 
 ```
 
 ## Aufgabe 3
