@@ -568,6 +568,11 @@
       "from": "docs/Programmieren-1/00-Lernziele.md",
       "to": "versioned_docs/version-25h/04-Programmieren-1/00-Lernziele.md",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/04-Testumgebung/25h-test/",
+      "to": "versioned_docs/version-25h/04-Programmieren-1/04-Test",
+      "ignore": []
     }
   ],
   "24w": [
