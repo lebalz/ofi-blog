@@ -41,7 +41,7 @@ const Solution = observer((props: Props) => {
     }
     return (
         <div data--web-key={props.webKey} className={clsx(styles.wrapper, 'solution-wrapper')}>
-            {(model.show || userStore.current.admin) ? (
+            {(model.show || userStore.current?.admin) ? (
                 <Details
                     summary={<summary>{props.title || 'Lösung'} <Icon />{!model.show && <span className="badge badge--secondary">Hidden</span>}</summary>}
                     className={clsx('alert alert--success', styles.solution)}
