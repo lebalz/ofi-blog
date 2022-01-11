@@ -205,6 +205,11 @@
       "from": "docs/Kryptologie/07-Alltag/",
       "to": "versioned_docs/version-24i/06-Kryptologie/07-Alltag",
       "ignore": []
+    },
+    {
+      "from": "docs/Computer/01-basics/",
+      "to": "versioned_docs/version-24i/07-Computer/01-Grundlagen",
+      "ignore": []
     }
   ],
   "24K": [
