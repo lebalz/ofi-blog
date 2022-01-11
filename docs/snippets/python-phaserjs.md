@@ -32,7 +32,7 @@ class Game(object):
         })
     
     def destroy(self, *args):
-        self.game.destroy(True);
+        self.game.destroy(True)
 
     def create(self, *args):
         this = javascript.this()
@@ -40,7 +40,7 @@ class Game(object):
         self.c = self.texture.getCanvas()
         self.x = self.c.getContext('2d')
         this.add.image(0, 0, 'dwitter').setOrigin(0).setScale(0.4)
-        this.input.on('pointerdown', self.destroy, this);
+        this.input.on('pointerdown', self.destroy, this)
 
     def update(self, *args):
         self.time = self.frame / 60
