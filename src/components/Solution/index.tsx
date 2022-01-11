@@ -10,6 +10,7 @@ import styles from './styles.module.scss';
 interface Props {
     webKey: string;
     title?: string;
+    open?: boolean;
     children?: React.ReactNode;
 }
 
@@ -43,6 +44,7 @@ const Solution = observer((props: Props) => {
                 <Details
                     summary={<summary>{props.title || 'Lösung'} <Icon /></summary>}
                     className={clsx('alert alert--success', styles.solution)}
+                    open={props.open}
                 >
                     {props.children}
                 </Details>
