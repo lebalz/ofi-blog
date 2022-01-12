@@ -101,6 +101,11 @@
       "from": "docs/Kryptologie/07-Alltag/",
       "to": "versioned_docs/version-24f/06-Kryptologie/07-Alltag",
       "ignore": []
+    },
+    {
+      "from": "docs/Computer/01-basics/",
+      "to": "versioned_docs/version-24f/07-Computer/01-Grundlagen",
+      "ignore": []
     }
   ],
   "24i": [
@@ -313,6 +318,11 @@
     {
       "from": "docs/Kryptologie/07-Alltag/",
       "to": "versioned_docs/version-24K/06-Kryptologie/07-Alltag",
+      "ignore": []
+    },
+    {
+      "from": "docs/Computer/01-basics/",
+      "to": "versioned_docs/version-24K/07-Computer/01-Grundlagen",
       "ignore": []
     }
   ],
