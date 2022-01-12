@@ -53,11 +53,14 @@ const CodeHistory = observer((props: Props) => {
     const [open, setOpen] = React.useState(false);
     React.useEffect(() => {
         return reaction(
-            () => store.find<Script>(props.webKey),
-            (pyscr) => {
-                setVersion(1);
-                if (open) {
-                    pyscr.loadVersions();
+            () => store.find<Script>(props.webKey)?.id,
+            (id) => {
+                if (id && id > 0) {
+                    setVersion(1);
+                    if (open) {
+                        store.find<Script>(props.webKey)?.loadVersions();
+                        console.log('New V');
+                    }
                 }
             }
         );
