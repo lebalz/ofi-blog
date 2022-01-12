@@ -11,6 +11,7 @@ import { Prism } from 'prism-react-renderer';
 import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
 import { Handle, SliderTooltip } from 'rc-slider';
+import { reaction } from 'mobx';
 
 interface Props {
     webKey: string;
@@ -50,6 +51,18 @@ const CodeHistory = observer((props: Props) => {
     const pyScript = store.find<Script>(props.webKey);
     const [version, setVersion] = React.useState(1);
     const [open, setOpen] = React.useState(false);
+    React.useEffect(() => {
+        return reaction(
+            () => store.find<Script>(props.webKey),
+            (pyscr) => {
+                setVersion(1);
+                if (open) {
+                    pyscr.loadVersions();
+                }
+            }
+        );
+    }, []);
+
     if (!pyScript.versioned || !userStore.current?.admin) {
         return null;
     }
@@ -63,44 +76,55 @@ const CodeHistory = observer((props: Props) => {
                     if (!open) {
                         pyScript.loadVersions();
                     }
-                    setOpen(!open)
+                    setOpen(!open);
                 }}
                 className={clsx('alert alert--info', styles.historyDetails)}
             >
-                    <summary>
-                        <span className="badge badge--secondary">{pyScript.versionsLoaded ? `${pyScript.versions.length} Versions` : 'Load Versions'}</span>
-                    </summary>
-                <div className={clsx(styles.versionControl)}>
-                    <Slider
-                        value={version}
-                        handle={handle}
-                        onChange={(c) => {
-                            setVersion(c);
-                        }}
-                        min={1}
-                        max={pyScript.versions.length - 1}
-                        dots={pyScript.versions.length < 50}
-                    />
-                </div>
-                <div className={clsx(styles.diffViewer)}>
-                    {pyScript.versions.length > 1 && (
-                        <DiffViewer
-                            leftTitle={pyScript.versions[version - 1].version}
-                            rightTitle={(
-                                <div>
-                                    {pyScript.versions[version].version}
-                                    {pyScript.versions[version].pasted && (
-                                        <span style={{float: 'right'}} className="badge badge--danger">Pasted</span>
-                                    )}
-                                </div>
-                                
-                            )}
-                            splitView
-                            oldValue={pyScript.versions[version - 1].data.code}
-                            newValue={pyScript.versions[version].data.code}
-                            renderContent={highlightSyntax}
+                <summary>
+                    <span className="badge badge--secondary">
+                        {pyScript.versionsLoaded ? `${pyScript.versions.length} Versions` : 'Load Versions'}
+                    </span>
+                </summary>
+                <div
+                    className={clsx(styles.content)}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }}
+                >
+                    <div className={clsx(styles.versionControl)}>
+                        <Slider
+                            value={version}
+                            handle={handle}
+                            onChange={(c) => {
+                                setVersion(c);
+                            }}
+                            min={1}
+                            max={pyScript.versions.length - 1}
+                            dots={pyScript.versions.length < 50}
                         />
-                    )}
+                    </div>
+                    <div className={clsx(styles.diffViewer)}>
+                        {pyScript.versions.length > 1 && (
+                            <DiffViewer
+                                leftTitle={pyScript.versions[version - 1].version}
+                                rightTitle={
+                                    <div>
+                                        {pyScript.versions[version].version}
+                                        {pyScript.versions[version].pasted && (
+                                            <span style={{ float: 'right' }} className="badge badge--danger">
+                                                Pasted
+                                            </span>
+                                        )}
+                                    </div>
+                                }
+                                splitView
+                                oldValue={pyScript.versions[version - 1].data.code}
+                                newValue={pyScript.versions[version].data.code}
+                                renderContent={highlightSyntax}
+                            />
+                        )}
+                    </div>
                 </div>
             </details>
         </div>
