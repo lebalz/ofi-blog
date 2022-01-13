@@ -53,6 +53,10 @@ const Header = observer(({ slim, title, resettable, webKey }: Props) => {
         if (!resettable) {
             return;
         }
+        if (pyScript.readonly) {
+            pyScript.setData({ code: pyScript.pristine.code });
+            return;
+        }
         const shouldReset = window.confirm('Änderungen verwerfen? (Ihre Version geht verloren!)');
         if (shouldReset) {
             pyScript.setData({ code: pyScript.rawScript });

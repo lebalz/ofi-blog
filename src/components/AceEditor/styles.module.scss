@@ -213,8 +213,9 @@
         cursor: pointer;
     }
     .versionControl {
-        padding: 0 2em;
-        margin: 0.5em 0;
+        padding: 1em 2em;
+        box-shadow: var(--ifm-global-shadow-lw);
+        border-radius: var(--ifm-global-radius);
     }
     .diffViewer {
         --ifm-pre-background: rgba(255, 255, 255, 0);

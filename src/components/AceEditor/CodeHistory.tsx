@@ -50,12 +50,13 @@ const CodeHistory = observer((props: Props) => {
     const userStore = useStore('userStore');
     const pyScript = store.find<Script>(props.webKey);
     const [version, setVersion] = React.useState(1);
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
     React.useEffect(() => {
         return reaction(
             () => store.find<Script>(props.webKey)?.id,
             (id) => {
                 if (id && id > 0) {
+                    console.log(id, open)
                     setVersion(1);
                     if (open) {
                         store.find<Script>(props.webKey)?.loadVersions();

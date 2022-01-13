@@ -19,6 +19,7 @@ interface Props {
     codeId: string;
     code: string;
     slim: boolean;
+    readonly: boolean;
     children: React.ReactNode;
     contextId: string;
     title: string;
@@ -58,7 +59,15 @@ const getLegacyResolver = (props: Props) => {
 const PyAceEditor = observer((props: Props) => {
     const store = useStore('documentStore');
     const msalStore = useStore('msalStore');
-    useDocument(() => getDefault(props), 'code', props.webKey, !props.slim, getLegacyResolver(props), undefined, props.versioned);
+    useDocument(
+        () => getDefault(props), 
+        'code', 
+        props.webKey, 
+        !props.slim, 
+        getLegacyResolver(props), 
+        props.readonly,
+        props.versioned
+    );
     const model = store.find<Script>(props.webKey);
     const inBrowser = useIsBrowser();
     if (!inBrowser) {

@@ -12,7 +12,7 @@ Das Programm zeichnet einen 5er Stern.
 1. Ändern Sie das Programm so ab, dass es nun einen 7er Stern zeichnet.
 2. Füllen Sie den Stern mit Ihrer Lieblingsfarbe.
 
-```py live_py title=aufgabe1.py id=91bd2392-e7fc-40b4-945f-fce6e24e4daf versioned
+```py live_py title=aufgabe1.py id=91bd2392-e7fc-40b4-945f-fce6e24e4daf versioned readonly
 from turtle import *
 speed(0)
 
@@ -63,7 +63,7 @@ for i in range(5):
 ]} />
 :::
 
-```py live_py title=aufgabe2.py versioned id=4b72a23e-4835-42da-bc65-4142b8aa59fa
+```py live_py title=aufgabe2.py versioned id=4b72a23e-4835-42da-bc65-4142b8aa59fa readonly
 from turtle import * 
 ```
 
@@ -74,7 +74,7 @@ Finden und korrigieren Sie alle Fehler, so dass die folgende Ausgabe entsteht. E
 
 ![](images/italy.svg)
 
-```py live_py title=aufgabe3.py id=ed0a9530-ec45-49be-9c50-eb612e4ee8f3 versioned
+```py live_py title=aufgabe3.py id=ed0a9530-ec45-49be-9c50-eb612e4ee8f3 versioned readonly
 from turtle import *
 
 def streifen(farbe):
@@ -105,7 +105,7 @@ Schreiben Sie ein Programm, welches folgende Zeichnung erzeugt. Die Seitenlänge
 
 ![Ein zickzack --width=200px](images/triangle.png)
 
-```py live_py title=aufgabe4.py versioned id=c6d2731d-bbd8-42cc-971a-bc8ee6303f21
+```py live_py title=aufgabe4.py versioned id=c6d2731d-bbd8-42cc-971a-bc8ee6303f21 readonly
 from turtle import *
 ```
 
@@ -120,7 +120,7 @@ Auf https://de.acervolima.com/zeichnen-sie-herz-mit-turtle-graphics-in-python/ f
 - Schreiben Sie Ihren eigenen Namen in das Herz
 - Machen Sie den Rand einen Stift der Breite `10` 
 
-```py live_py title=zusatzaufgabe.py id=400ec5b0-ac1b-47b9-96c0-0f37ad8c7731 versioned
+```py live_py title=zusatzaufgabe.py id=400ec5b0-ac1b-47b9-96c0-0f37ad8c7731 versioned readonly
 
 ```
 

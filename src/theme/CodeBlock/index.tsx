@@ -55,6 +55,7 @@ const withLiveEditor = (Component) => {
           webKey={webKey}
           code={code}
           codeId={codeId}
+          readonly={!!props.readonly}
           contextId={contextId}
           resettable={!props.persist}
           slim={!!props.slim}
