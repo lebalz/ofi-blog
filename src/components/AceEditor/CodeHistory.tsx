@@ -12,6 +12,8 @@ import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
 import { Handle, SliderTooltip } from 'rc-slider';
 import { reaction } from 'mobx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSync } from '@fortawesome/free-solid-svg-icons';
 
 interface Props {
     webKey: string;
@@ -50,7 +52,7 @@ const CodeHistory = observer((props: Props) => {
     const userStore = useStore('userStore');
     const pyScript = store.find<Script>(props.webKey);
     const [version, setVersion] = React.useState(1);
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
     React.useEffect(() => {
         return reaction(
             () => store.find<Script>(props.webKey)?.id,
@@ -67,7 +69,7 @@ const CodeHistory = observer((props: Props) => {
         );
     }, []);
 
-    if (!pyScript.versioned || !userStore.current?.admin) {
+    if (!pyScript.versioned) {
         return null;
     }
     return (
@@ -88,6 +90,17 @@ const CodeHistory = observer((props: Props) => {
                     <span className="badge badge--secondary">
                         {pyScript.versionsLoaded ? `${pyScript.versions.length} Versions` : 'Load Versions'}
                     </span>
+                    <FontAwesomeIcon
+                        className={clsx(styles.faButton)}
+                        color={'var(--ifm-color-primary)'}
+                        spin={pyScript.versionsLoaded === 'loading'}
+                        icon={faSync}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            pyScript.loadVersions();
+                        }}
+                    />
                 </summary>
                 <div
                     className={clsx(styles.content)}
@@ -115,7 +128,7 @@ const CodeHistory = observer((props: Props) => {
                                 rightTitle={
                                     <div>
                                         {pyScript.versions[version].version}
-                                        {pyScript.versions[version].pasted && (
+                                        {pyScript.versions[version].pasted && userStore.current?.admin && (
                                             <span style={{ float: 'right' }} className="badge badge--danger">
                                                 Pasted
                                             </span>

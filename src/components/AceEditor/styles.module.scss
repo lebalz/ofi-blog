@@ -217,6 +217,12 @@
         box-shadow: var(--ifm-global-shadow-lw);
         border-radius: var(--ifm-global-radius);
     }
+    .faButton {
+        margin-left: 1em;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
     .diffViewer {
         --ifm-pre-background: rgba(255, 255, 255, 0);
         --ifm-alert-background-color: rgba(255, 255, 255, 0);
