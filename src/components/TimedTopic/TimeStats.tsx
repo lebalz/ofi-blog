@@ -21,8 +21,8 @@ const TimeStats = observer((props: Props) => {
     const rows: iRow[] = [];
     const { totalTimeGroupedByDate, totalTime, firstDayOfWeek } = props;
     const shift = -1 * WEEK_DAYS.indexOf(firstDayOfWeek || 'So');
-    const firstDayOfYear = moment().startOf('year').day();
     orderBy(Object.values(totalTimeGroupedByDate), ['date'], ['asc']).forEach((item) => {
+        const firstDayOfYear = moment(item.date).startOf('year').day();
         const weekNr = Math.floor((item.day - 1 + firstDayOfYear + shift) / 7);
         rows.push({ cells: [item.fDate, formatTime(item.total)], className: clsx(weekNr % 2 === 0 ? styles.even : styles.odd) });
     })
