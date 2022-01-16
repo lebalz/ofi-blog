@@ -29,7 +29,7 @@ Zeigen Sie für die relevanten Bausteine auch die Wahrheitstabellen.
    - Erarbeiten der Grundlagen (Kapitel 2)
    - Bearbeiten der Übungen
    - Arbeiten mit CircuitVerse
-   - In der Gruppe die Aufgaben zum [Kapitel 9](./09-adder.md#)
+   - In der Gruppe die Aufgaben zum [Kapitel 8: Addierer](./08-adder.md#aufgabe-4-bit-addierer) bearbeiten
 2. Doppellektion
    - Fertigstellen der Übungen aus Kapitel 2
    - Idee und Skript für das Video zusammenstellen
@@ -45,7 +45,6 @@ Zeigen Sie für die relevanten Bausteine auch die Wahrheitstabellen.
 
 - Video
 - CircuitVerse Projekt
-   
 
 ## Beurteilungskriterien
 
@@ -56,4 +55,4 @@ Zeigen Sie für die relevanten Bausteine auch die Wahrheitstabellen.
 - Kreativität
 - Projekt auf CircuitVerse funktioniert
 
-Die Note zählt 0.5
+Die Note zählt **0.5**
