@@ -6,7 +6,7 @@ import Answer from '@site/src/components/Answer'
 
 # 9. Ebenen
 
-Wie die Netzwerken kann auch den Computer selber auf verschiedenen **Ebenen** betrachtet werden.
+Wie die Netzwerke kann auch der Computer selber auf verschiedenen **Ebenen** betrachtet werden.
 
 ![Hardware-Ebenen](images/09-layers.svg)
 

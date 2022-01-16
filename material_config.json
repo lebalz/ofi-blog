@@ -103,8 +103,13 @@
       "ignore": []
     },
     {
+      "from": "docs/Computer/02-gates/",
+      "to": "versioned_docs/version-24f/07-Computer/02-gates",
+      "ignore": []
+    },
+    {
       "from": "docs/Computer/01-basics/",
-      "to": "versioned_docs/version-24f/07-Computer/01-Grundlagen",
+      "to": "versioned_docs/version-24f/07-Computer/01-basics",
       "ignore": []
     }
   ],
@@ -212,8 +217,13 @@
       "ignore": []
     },
     {
+      "from": "docs/Computer/02-gates/",
+      "to": "versioned_docs/version-24i/07-Computer/02-gates",
+      "ignore": []
+    },
+    {
       "from": "docs/Computer/01-basics/",
-      "to": "versioned_docs/version-24i/07-Computer/01-Grundlagen",
+      "to": "versioned_docs/version-24i/07-Computer/01-basics",
       "ignore": []
     }
   ],
@@ -321,8 +331,13 @@
       "ignore": []
     },
     {
+      "from": "docs/Computer/02-gates/",
+      "to": "versioned_docs/version-24K/07-Computer/02-gates",
+      "ignore": []
+    },
+    {
       "from": "docs/Computer/01-basics/",
-      "to": "versioned_docs/version-24K/07-Computer/01-Grundlagen",
+      "to": "versioned_docs/version-24K/07-Computer/01-basics",
       "ignore": []
     }
   ],
@@ -430,8 +445,13 @@
       "ignore": []
     },
     {
+      "from": "docs/Computer/02-gates/",
+      "to": "versioned_docs/version-24L/07-Computer/02-gates",
+      "ignore": []
+    },
+    {
       "from": "docs/Computer/01-basics/",
-      "to": "versioned_docs/version-24L/07-Computer/01-Grundlagen",
+      "to": "versioned_docs/version-24L/07-Computer/01-basics",
       "ignore": []
     }
   ],
@@ -539,8 +559,13 @@
       "ignore": []
     },
     {
+      "from": "docs/Computer/02-gates/",
+      "to": "versioned_docs/version-24o/07-Computer/02-gates",
+      "ignore": []
+    },
+    {
       "from": "docs/Computer/01-basics/",
-      "to": "versioned_docs/version-24o/07-Computer/01-Grundlagen",
+      "to": "versioned_docs/version-24o/07-Computer/01-basics",
       "ignore": []
     }
   ],
