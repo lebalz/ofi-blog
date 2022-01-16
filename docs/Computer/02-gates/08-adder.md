@@ -1,19 +1,26 @@
 ---
-title: 9. Addierer
+title: 8. Addierer
 ---
 
-# 9. Addierer
+import Answer from '@site/src/components/Answer'
+import Solution from '@site/src/components/Solution'
+import Hint from "@site/src/components/Solution/Hint";
+
+# 8. Addierer
 
 ## Binäre Addition
 
-<v-video source="youtube" id="x7ka0QwKciA"/>
+[@youtube](https://www.youtube-nocookie.com/embed/x7ka0QwKciA)
 
 :::aufgabe Binäre Addition
-Führe eine schriftliche Addition für die folgenden binären Zahlen durch:
+Führen Sie eine schriftliche Addition für die folgenden binären Zahlen durch:
 
 - $1001_2 + 110_2$
+  <Answer type="string" webKey="c862b993-8074-46fa-bf4f-6856b29ebcdf" solution="1111" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')}/>
 - $111_2 + 1_2$
+  <Answer type="string" webKey="61ea2f9c-86d8-4a36-a882-2ff3416def8b" solution="1000" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')}/>
 - $101_2 + 101_2$
+  <Answer type="string" webKey="b2e85cad-8403-42b6-aaee-e390cebb2a13" solution="1010" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')}/>
 
 :::
 
@@ -30,6 +37,8 @@ $$\begin{aligned}
 
 Die entsprechende Schaltung benötigt zwei Eingänge und zwei Ausgänge. Die beiden Eingänge werden für die zwei Summanden verwendet. Die Ausgänge für die Einer- und Zweierstelle des Resultats. Die gesuchte Schaltung muss also folgende Wertetabelle haben:
 
+<div className="slim-table">
+
 | A    | B    | Zweier | Einer |
 | :--- | :--- | -----: | ----: |
 | 0    | 0    |      0 |     0 |
@@ -37,15 +46,17 @@ Die entsprechende Schaltung benötigt zwei Eingänge und zwei Ausgänge. Die bei
 | 1    | 0    |      0 |     1 |
 | 1    | 1    |      1 |     0 |
 
+</div>
+
 Der Wert der Einerstelle kann durch ein XOR-Gatter berechnet werden, der Wert der Zweierstelle durch ein AND-Gatter. Die Schaltung sieht somit so aus:
 
-<v-circuit id="rothe-half-adder-vertical"/>
+[@circuitvert](https://circuitverse.org/simulator/embed/rothe-half-adder-vertical)
 
 :::aufgabe Aufgabe Halbaddierer
-1. Erstelle ein neues Projekt in CircuitVerse und nenne es Addierer.
-2. Baue den Halbaddierer in CircuitVerse nach und probiere aus, ob die Addition von zwei Bits (inklusive Übertrag) korrekt funktioniert.
-3. Benenne die Eingänge mit «A» und «B», sowie die Ausgänge korrekt mit «S» (für «Summe») und «Ü» (für «Übertrag»).
-4. Benenne die Schaltung (sprich die Registerkarte) «HA» (für Halbaddierer).
+1. Erstellen Sie ein neues Projekt in CircuitVerse und nennen Sie es Addierer.
+2. Bauen Sie den Halbaddierer in CircuitVerse nach und probieren Sie aus, ob die Addition von zwei Bits (inklusive Übertrag) korrekt funktioniert.
+3. Benennen Sie die Eingänge mit «A» und «B», sowie die Ausgänge korrekt mit «S» (für «Summe») und «Ü» (für «Übertrag»).
+4. Benennen Sie die Schaltung (sprich die Registerkarte) «HA» (für Halbaddierer).
 :::
 
 ## Volladdierer
@@ -62,12 +73,12 @@ Wenn zwei mehrstellige binäre Zahlen addiert werden sollen, muss der **Übertra
 
 Dies kann mit der folgenden Schaltung realisiert werden. Sie besteht aus zwei Halbaddierern sowie einem OR-Gatter. Mit dem OR-Gatter werden die beiden möglichen Überträge zusammengefasst.
 
-<v-circuit id="rothe-full-adder-vertical"/>
+[@circuitvert](https://circuitverse.org/simulator/embed/rothe-full-adder-vertical)
 
 :::aufgabe Aufgabe Volladdierer
-Baue basierend auf deiner Halbaddierer-Schaltung einen Volladdierer:
+Bauen Sie basierend auf deiner Halbaddierer-Schaltung einen Volladdierer:
 
-1. Erstelle dazu zuerst die Wahrheitstabelle für den Volladdierer. Der Volladdierer hat drei Eingänge:
+1. Erstellen Sie dazu zuerst die Wahrheitstabelle für den Volladdierer. Der Volladdierer hat drei Eingänge:
     - A (erste Zahl)
     - B (zweite Zahl)
     - Ü (Übertrag)
@@ -77,10 +88,13 @@ Baue basierend auf deiner Halbaddierer-Schaltung einen Volladdierer:
     - S (Summe)
     - V (Übertrag)
 
-2. Baue in CircuitVerse eine neue Schaltung (in einer neuen Registerkarte) im Addierer-Projekt und nenne sie «VA» (für Volladdierer).
-3. Verwende zum Erstellen des Volladdierers als Baustein die Schaltung «HA», die du bereits hast als Baustein, indem du im Menü _Circuit_ auf _Insert SubCircuit_ klickst und den Halbaddierer einfügst. So wird die Schaltung übersichtlicher.
+2. Bauen Sie in CircuitVerse eine neue Schaltung (in einer neuen Registerkarte) im Addierer-Projekt und nenne sie «VA» (für Volladdierer).
+3. Verwenden Sie zum Erstellen des Volladdierers als Baustein die Schaltung «HA», die Sie bereits als Baustein haben, indem Sie im Menü _Circuit_ auf _Insert SubCircuit_ klicken und den Halbaddierer einfügen. So wird die Schaltung übersichtlicher.
 
-***
+<Solution webKey="e46e1f4f-3032-4c10-94c5-3bd0db8df748">
+
+<div className="slim-table">
+
 | A    | B    | Ü    |    V |    S |
 | :--- | :--- | :--- | ---: | ---: |
 | 0    | 0    | 0    |    0 |    0 |
@@ -92,20 +106,30 @@ Baue basierend auf deiner Halbaddierer-Schaltung einen Volladdierer:
 | 1    | 1    | 0    |    1 |    0 |
 | 1    | 1    | 1    |    1 |    1 |
 
+</div>
+
 ![](images/09-cv-va.png)
+</Solution>
 :::
 
 ## 4-Bit-Addierer
 Wir haben mit dem Volladdierer einen Baustein, der zwei 1-Bit-Zahlen addieren kann – inklusive korrekte Behandlung des Übertrags. Nun wollen wir aus mehreren solchen Bausteinen einen kompletten Addierer bauen, der mehrere Stellen gleichzeitig addieren kann.
 
 :::aufgabe
-#### ⭐️ Zusatzaufgabe 4-Bit-Addierer
+
+#### Aufgabe 4-Bit-Addierer
 Versuche, die Halbaddierer-Schaltung so auszubauen, dass drei Eingänge zur Verfügung stehen, damit auch ein vorhandener Übertrag bei der Addition berücksichtigt wird:
 
-1. Baue in CircuitVerse eine neue Schaltung (d.h. eine neue Registerkarte) im Addierer-Projekt und nenne sie «4-Bit-Addierer».
-2. Verwende zum Zeichnen der Schaltung einen Halbaddierer-Baustein «HA» sowie drei Volladdierer-Bausteine «VA».
-***
-**Hinweis**: Zum Addieren der Einer-Stelle braucht es nur einen Halbaddierer, da dort noch kein Übertrag vorhanden sein kann.
-***
+1. Bauen Sie in CircuitVerse eine neue Schaltung (d.h. eine neue Registerkarte) im Addierer-Projekt und nennen Sie diese «4-Bit-Addierer».
+2. Verwenden Sie zum Zeichnen der Schaltung einen Halbaddierer-Baustein «HA» sowie drei Volladdierer-Bausteine «VA».
+
+<Hint>
+
+Zum Addieren der Einer-Stelle braucht es nur einen Halbaddierer, da dort noch kein Übertrag vorhanden sein kann.
+</Hint>
+
+<Solution webKey="e46e1f4f-3032-4c10-94c5-3bd0db8df748">
+
 ![](images/09-cv-4-bit-adder.png)
+</Solution>
 :::

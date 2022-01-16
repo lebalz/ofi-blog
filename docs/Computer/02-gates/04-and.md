@@ -2,11 +2,16 @@
 title: 4. AND-Gatter
 ---
 
+import Answer from '@site/src/components/Answer'
+import Solution from '@site/src/components/Solution'
+
 # 4. AND-Gatter
 
 Ein AND-Gatter ist eine digitale Schaltung, welche zwei Eingänge und einen Ausgang hat. Der Ausgang Y hat nur dann den Wert 1️⃣, wenn Eingange A **und** Eingang B den Wert 1️⃣ haben.
 
 ## Wahrheitstabelle
+
+<div className="slim-table">
 
 |   A   |   B   |   Y   |
 | :---: | :---: | :---: |
@@ -14,6 +19,7 @@ Ein AND-Gatter ist eine digitale Schaltung, welche zwei Eingänge und einen Ausg
 |   0   |   1   |   0   |
 |   1   |   0   |   0   |
 |   1   |   1   |   1   |
+</div>
 
 In Schaltplänen wird ein AND-Gatter mit folgendem Symbol dargestellt:
 
@@ -21,7 +27,7 @@ In Schaltplänen wird ein AND-Gatter mit folgendem Symbol dargestellt:
 
 ## Interaktive Schaltung
 
-<v-circuit id="rothe-and-gate"/>
+[@circuitvert](https://circuitverse.org/simulator/embed/rothe-and-gate)
 
 ## Beispiele
 
@@ -38,46 +44,60 @@ Natürlich können auch mehrere Gatter zu einer Schaltung kombiniert werden. Im 
 ![](images/04-heating-2.svg)
 
 :::aufgabe Aufgaben
-Entwirf je eine Schaltung für die folgenden Szenarien. Du kannst **Inverter** und **AND-Gatter** verwenden. Gehe für jedes Szenario so vor:
+Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können **Inverter** und **AND-Gatter** verwenden. Gehen Sie für jedes Szenario so vor:
 
-- Erstelle eine Wahrheitstabelle für das Szenario.
-- Entwirf die Schaltung in CircuitVerse inklusive Beschriftung.
-- Überprüfe, ob die Schaltung mit der Wahrheitstabelle übereinstimmt.
+- Erstellen Sie eine Wahrheitstabelle für das Szenario.
+- Entwerfen Sie die Schaltung in CircuitVerse inklusive Beschriftung.
+- Überprüfen Sie, ob die Schaltung mit der Wahrheitstabelle übereinstimmt.
+
+Lesen Sie die Symbole für die Eingaben/Ausgaben [hier](./01-Schaltung.md#eingabe) nach.
 
 1. **Heizung:** Eine Heizung soll nur tagsüber eingeschaltet werden, wenn es kalt ist.
 
     ![](images/04-ex-heating.svg)
 
+<Answer type="text" webKey="aeb19fdb-cce6-4bfd-99b9-a7fa5004501e" />
+
+<Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
+
+![](images/04-ex-heating-solution.svg)
+
+</Solution>
+
 2. **Automatische Tür:** Die Tür wird durch einen Motor betrieben. Sie soll nur aufgehen, wenn eine Bewegung entdeckt wird und der Hauptschalter eingeschaltet ist.
 
     ![](images/04-ex-automatic-door.svg)
+
+<Answer type="text" webKey="fd529132-f8aa-491d-a67c-461913169d75" />
+
+<Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
+
+![](images/04-ex-automatic-door-solution.svg)
+
+</Solution>
 
 3. **Dachfenster:** Ein Dachfenster soll durch einen Motor automatisch geschlossen werden, sobald es regenet. Wenn das Fenster zu ist, drückt es einen Knopf, der bewirkt, dass der Motor ausschaltet wird.
 
     ![](images/04-ex-roof-window.svg)
 
-***
+<Answer type="text" webKey="47bfba00-65fe-466a-a859-036d8b572cad" />
 
-**Heizung**
-
-![](images/04-ex-heating-solution.svg)
-
-**Automatische Tür**
-
-![](images/04-ex-automatic-door-solution.svg)
-
-**Dachfenster**
+<Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
 
 ![](images/04-ex-roof-window-solution.svg)
+
+</Solution>
 
 :::
 
 
 :::aufgabe
 
-Analysiere die folgende Schaltung, indem du eine Wahrheitstabelle erstellst. Was macht die Schaltung eigentlich?
+Analysieren Sie die folgende Schaltung, indem Sie eine Wahrheitstabelle erstellen. Was macht die Schaltung eigentlich?
 
 ![](images/04-cv-3-and.png)
+
+<Answer type="text" webKey="494fb9e1-8dcf-4652-96a5-16355cffdb7e" />
 :::
 
 
@@ -85,4 +105,6 @@ Analysiere die folgende Schaltung, indem du eine Wahrheitstabelle erstellst. Was
 #### ⭐️ Zusatzaufgabe
 
 Wie viele unterschiedliche digitale Schaltungen mit zwei Eingängen und einem Ausgang sind möglich?
+
+<Answer type="text" webKey="08e83c65-07b0-47a3-95b5-cddde78b21a2" />
 :::

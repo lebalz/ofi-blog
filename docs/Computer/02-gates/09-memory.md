@@ -1,8 +1,8 @@
 ---
-title: 10. ⭐️ Speicher
+title: 9. ⭐️ Speicher
 ---
 
-# 10. ⭐️ Speicher
+# 9. ⭐️ Speicher
 
 Die bisherigen Schaltungen für den Einbruchsalarm haben einen grossen Nachteil: sobald der Bewegungsmelder keine Bewegung mehr entdeckt, wird der Alarm abgestellt.
 
@@ -16,7 +16,7 @@ Mit Hilfe eines OR-Gatter kann dies realisiert werden. Dazu wird das Ausgangssig
 
 In dieser interaktiven Schaltung kannst du die Rückkopplung testen:
 
-<v-circuit id="rothe-feedback"/>
+[@circuitvert](https://circuitverse.org/simulator/embed/rothe-feedback)
 
 :::info
 #### Rückkopplung
@@ -29,7 +29,7 @@ Schaltungen mit Rückkopplung ermöglichen das **Speichern** von Daten sowie die
 
 Natürlich will man die Alarmanlage auch wieder Abschalten können. Dazu kann in der Rückkopplungsschleife ein Reset-Knopf eingebaut werden:
 
-<v-circuit id="rothe-feedback-with-reset"/>
+[@circuitvert](https://circuitverse.org/simulator/embed/rothe-feedback-with-reset)
 
 :::aufgabe
 1. Da manchmal Wasser in deinen Keller eindringt, möchtest du wissen, ob es seit der letzten Kontrolle besonders stark geregnet hat. Ein Feuchtigkeitssensor alleine reicht nicht. Baue in **CircuitVerse** eine entsprechend beschriftete Schaltung mit einer Rückkopplung, die speichert, wenn der Niederschlag zu stark war.
@@ -54,4 +54,4 @@ Diese Schaltung bildet die Grundlage für den Bau von Speicher (RAM). Um ein Bit
 - Daten: gibt an, welcher Wert gespeichert werden soll.
 - Speichern: gibt durch ein 1 an, ob nun der Datenwert abgespeichert werden soll.
 
-<v-circuit id="rothe-d-flip-flop"/>
+[@circuitvert](https://circuitverse.org/simulator/embed/rothe-d-flip-flop)

@@ -2,6 +2,8 @@
 title: 2. Circuit Verse
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # 2. CircuitVerse
 
 Wir arbeiten in diesem Kapitel zu den Logikgattern mit der Online-Plattform [CircuitVerse](https://circuitverse.org/). Dort können Schaltungen einfach geplant werden. Über diverse Eingabeelemente kann gesteuert werden, ob an den Eingängen eine 1️⃣ oder eine 0️⃣ anliegt. Mit verschiedenen Ausgabeelementen kann die gezeichnete Schaltung überprüft werden.
@@ -23,12 +25,12 @@ Schliesslich füllst du die Benutzerdaten aus (am besten die Schul-E-Mail-Adress
 ![](images/cv-signup-3.png)
 
 :::aufgabe
-Erstelle ein eigenes Benutzerkonto bei [CircuitVerse](https://circuitverse.org/users/sign_up), damit du die eigenen Schaltungen abspeichern kannst (bitte den richtigen Namen und die Schul-E-Mail-Adresse verwenden).
+Erstellen Sie ein eigenes Benutzerkonto bei [CircuitVerse](https://circuitverse.org/users/sign_up), damit Sie die eigenen Schaltungen abspeichern können (bitte den richtigen Namen und die Schul-E-Mail-Adresse verwenden).
 :::
 
 ## Simulator starten
 
-Nach dem Einloggen klickst du im Menü oben rechts auf _Simulator_, um in den Simulator zu wechseln:
+Nach dem Einloggen klicken Sie im Menü oben rechts auf _Simulator_, um in den Simulator zu wechseln:
 
 ![](images/cv-simulator.svg)
 
@@ -44,7 +46,7 @@ Das Element _Button_ (oberste Zeile Mitte) ist stets ausgeschaltet (also 0️⃣
 
 ## Ausgabeelemente
 
-Im Bereich _Output_ hier stehen wiederum etliche Elemente zur Verfügung. Wir verwenden ausschliesslich die beiden oben links (_Output_) und oben rechts (_DigitalLed_).
+Im Bereich _Output_ stehen wiederum etliche Elemente zur Verfügung. Wir verwenden ausschliesslich die beiden oben links (_Output_) und oben rechts (_DigitalLed_).
 
 Das Element _Output_ zeigt als Ausgabe eine **1** oder eine **0** an, während die _DigitalLed_ im Zustand 1️⃣ leuchtet.
 
@@ -52,7 +54,7 @@ Das Element _Output_ zeigt als Ausgabe eine **1** oder eine **0** an, während d
 
 ## Elemente verbinden
 
-An sämtlichen Elementen ist mit grünen Punkten markiert, wo Verbindungen angeschlossen werden können. Um Komponenten zu verbinden, klickst du auf einen Punkt, hältst die Maustaste gedrückt und ziehst die Leitung bis zum anderen Punkt.
+An sämtlichen Elementen ist mit grünen Punkten markiert, wo Verbindungen angeschlossen werden können. Um Komponenten zu verbinden, klicken Sie auf einen Punkt, halten die Maustaste gedrückt und ziehen die Leitung bis zum anderen Punkt.
 
 ![Verbindungen](images/cv-connections.png)
 
@@ -81,36 +83,39 @@ Im nächsten Bereich _Gates_ befinden sich alle benötigten Logikgatter. Diese w
 
 ## Projekt speichern
 
-Sobald du auf das weisse Häuschenblatt klickst, werden rechts die _Project Properties_ angezeigt. Dort kannst du das Projekt _Project_ und die aktuelle Registerkarte _Circuit_ benennen:
+Sobald Sie auf das weisse Häuschenblatt klicken, werden rechts die _Project Properties_ angezeigt. Dort können Sie das Projekt _Project_ und die aktuelle Registerkarte _Circuit_ benennen:
 
-![](images/cv-project-properties.png)
+![--width=250px](images/cv-project-properties.png)
 
-Anschliessend kannst du das Projekt speichern. Dabei wählst du am besten aus, dass es sich um ein privates Projekt handelt. Schliesslich klickst du auf _Update Project_:
+Anschliessend können Sie das Projekt speichern (durch Klicken auf _Save Online_ in der Toolbar). Dabei wählen Sie am besten aus, dass es sich um ein privates Projekt handelt. Schliesslich klicken Sie auf _Update Project_.
+Nun sehen Sie das Projekt in der Übersicht. Es ist gespeichert und Sie können es jederzeit wieder durch einen Klick auf _Launch simulator_ öffnen.
 
 ![](images/cv-save-project.png)
 
-Nun siehst du das Projekt in der Übersicht. Es ist gespeichert und du kannst es jederzeit wieder durch einen Klick auf _Launch simulator_ öffnen:
-
-![](images/cv-project.png)
 
 :::aufgabe
-1. Nach dem Login wechselst du zum [Simulator](https://circuitverse.org/simulator).
-2. Benenne das Projekt «Aufgaben» und die aktuelle Registerkarte «Erste Schritte».
-3. Platziere die beiden ersten Eingabeelemente **Input** und **Button** in der Registerkarte **Erste Schritte** untereinander und lege rechts davon die beiden Ausgabeelemente **Output** und **DigitalLed** ab. Verbinde jeweils ein Eingabeelement mit einem Ausgabeelement und teste die Ein- und Ausgabe durch umschalten der Eingabewerte.
-4. Speichere das Projekt und öffne es wieder.
-5. Beschrifte sämtliche Ein- und Ausgabeelemente und wähle einen sinnvollen Platz für die Beschriftungen.
-6. Speichere die Aufgabe ab (dies wird in Zukunft nicht mehr erwähnt, sondern versteht sich von selbst).
+1. Nach dem Login wechseln Sie zum [Simulator](https://circuitverse.org/simulator).
+2. Benennen Sie das Projekt «Aufgaben» und die aktuelle Registerkarte «Erste Schritte».
+3. Platzieren Sie die beiden ersten Eingabeelemente **Input** und **Button** in der Registerkarte **Erste Schritte** untereinander und legen Sie rechts davon die beiden Ausgabeelemente **Output** und **DigitalLed** ab. Verbinden Sie jeweils ein Eingabeelement mit einem Ausgabeelement und testen Sie die Ein- und Ausgabe durch umschalten der Eingabewerte.
+4. Speichern Sie das Projekt und öffnen Sie es wieder.
+5. Beschriften Sie sämtliche Ein- und Ausgabeelemente und wählen Sie einen sinnvollen Platz für die Beschriftungen.
+6. Speichern Sie die Aufgabe ab (dies wird in Zukunft nicht mehr erwähnt, sondern versteht sich von selbst).
+7. Der Link zur Aufgabe können Sie bei Bedarf direkt im Antwort-Feld hier auf der Webseite festhalten.
+
+<Answer type="text" webKey="74397b5a-3ab0-453e-8551-b11475199871" />
 :::
 
-Am besten legst du für jede Aufgabe oder zumindest für jedes Kapitel eine neue Registerkarte an, indem du oben im Menü auf _Circuit_ und dann _New Circuit +_ klickst:
+Am besten legen Sie für jede Aufgabe oder zumindest für jedes Kapitel eine neue Registerkarte an, indem Sie oben im Menü auf _Circuit_ und dann _New Circuit +_ klickst:
 
 ![](images/cv-new-circuit.png)
 
 :::aufgabe
-1. Erstelle eine neue Registerkarte für die Inverter-Aufgaben im nächsten Kapitel.
-2. Vergiss nicht, die Aufgaben immer wieder zu speichern – insbesondere am Lektionsende!
+1. Erstellen Sie eine neue Registerkarte für die Inverter-Aufgaben im nächsten Kapitel.
+2. Vergessen Sie nicht, die Aufgaben immer wieder zu speichern – insbesondere am Lektionsende!
+
+<Answer type="text" webKey="6603f801-28c5-47b1-95ba-9d3f361789c0" />
 :::
 
 Im Dashboard – zugänglich oben rechts im Menü beim eigenen Namen – kannst du stets eine Übersicht deiner gespeicherten Projekte erhalten:
 
-![](images/cv-dashboard.png)
+![--width=180px](images/cv-dashboard.png)

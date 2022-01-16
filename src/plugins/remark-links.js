@@ -131,6 +131,29 @@ const plugin = (options) => {
           }
           promises.push(processVideo())
         }
+        if (/@circuitvert/.test(text)) {
+          const options = parseOptions(text, true);
+          const processCV = async () => {
+            prepareWrapperNode(node);
+            linkNode.type = 'jsx';
+            const url = linkNode.url;
+            linkNode.value = `<iframe
+              width="${options.width || '100%'}"
+              height="${options.height || '315px'}"
+              src="${url}"
+              title="Circuit Vert"
+              scrolling="no"
+              frameBorder="0"
+              webkitAllowFullScreen
+              mozAllowFullScreen
+              allowFullScreen
+              ></iframe>`;
+            if (linkNode.url) {
+              delete linkNode.url;
+            }
+          }
+          promises.push(processCV())
+        }
         if (/@vimeo/.test(text)) {
           const options = parseOptions(text, true);
           const processVideo = async () => {
