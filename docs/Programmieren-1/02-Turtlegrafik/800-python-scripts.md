@@ -65,3 +65,47 @@ Beliebige Python Programme
 
 ```
 
+
+
+## Programm 11
+
+
+```py live_py title=Programm11.py id=a826070e-dce5-459f-9f06-f25d52e2f176
+
+```
+
+
+
+## Programm 12
+
+
+```py live_py title=Programm12.py id=a8bcbb75-26f0-451a-b814-a0b8ac0e6328
+
+```
+
+
+
+## Programm 13
+
+
+```py live_py title=Programm13.py id=dc575443-4079-46ed-8f67-5391b6ce4ac7
+
+```
+
+
+
+## Programm 14
+
+
+```py live_py title=Programm14.py id=c954acbe-9978-4906-ae2b-c8c0c3ac0f9d
+
+```
+
+
+
+## Programm 15
+
+
+```py live_py title=Programm15.py id=b7d08da5-b132-4169-9802-da9e8b0a7dbb
+
+```
