@@ -119,9 +119,6 @@ const UserTable = observer(() => {
                                 </button>
                                 <ul className="dropdown__menu">
                                     {Array.from(new Set([undefined, ...userStore.groups, ...policyStore.groups])).map((group, idx) => {
-                                        if (group === '') {
-                                            return null;
-                                        }
                                         return (
                                             <li
                                                 className="dropdown__link"
@@ -202,9 +199,6 @@ const UserTable = observer(() => {
                                     </button>
                                     <ul className="dropdown__menu">
                                         {Array.from(new Set([undefined, ...userStore.groups, ...policyStore.groups])).map((group, idx) => {
-                                            if (group === '') {
-                                                return null;
-                                            }
                                             return (
                                                 <li
                                                     className={clsx('dropdown__link')}

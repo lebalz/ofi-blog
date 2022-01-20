@@ -14,18 +14,18 @@ type PolicyColumns = 'class' | 'group' | 'user';
 export default class SolutionPolicy {
     readonly webKey: string;
     readonly store: PolicyStore;
-    readonly groups: Set<string>;
-    readonly users: Set<string>;
-    readonly klasses: Set<string>;
+    readonly groups: string[];
+    readonly users: string[];
+    readonly klasses: string[];
     @observable
     locked: boolean = false;
 
     constructor(auth: SolutionPolicyProps, store: PolicyStore) {
         this.webKey = auth.web_key;
         this.store = store;
-        this.groups = new Set(auth.authorized_groups);
-        this.users = new Set(auth.authorized_users);
-        this.klasses = new Set(auth.authorized_classes);
+        this.groups = auth.authorized_groups;
+        this.users = auth.authorized_users;
+        this.klasses = auth.authorized_classes;
         makeObservable(this);
     }
 
