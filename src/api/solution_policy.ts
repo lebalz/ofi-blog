@@ -8,14 +8,22 @@ export interface SolutionPolicyData {
 
 export interface SolutionPolicy extends SolutionPolicyData {
     authorized_classes: string[];
-    authoirzed_users: string[];
-    authoirzed_groups: string[];
+    authorized_users: string[];
+    authorized_groups: string[];
 }
 
 export interface Authorization {
     show: boolean;
     web_key: string;
     user_id: number;
+}
+
+type PolicyColumns = 'class' | 'group' | 'user';
+
+export interface PolicyModifier {
+    action: 'add' | 'remove';
+    auth_type: PolicyColumns;
+    values: string[];
 }
 
 export function authorized(webKey: string, cancelToken: CancelTokenSource): AxiosPromise<Authorization> {

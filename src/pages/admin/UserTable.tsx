@@ -40,6 +40,7 @@ const UserTable = observer(() => {
     const [newGroup, setNewGroup] = React.useState('');
     const [newKlass, setNewKlass] = React.useState('');
     const userStore = useStore('userStore');
+    const policyStore = useStore('policyStore');
     const { current } = userStore;
     if (!current || !current.admin) {
         return null;
@@ -110,7 +111,6 @@ const UserTable = observer(() => {
                             </div>
                         </th>
                         <th>
-                            
                         <div className="dropdown dropdown--hoverable">
                                 <button
                                     className={clsx(styles.button, 'button', 'button--primary', 'button--sm')}
@@ -118,7 +118,7 @@ const UserTable = observer(() => {
                                     {userStore.filterGroup || 'Gruppe'}
                                 </button>
                                 <ul className="dropdown__menu">
-                                    {[undefined, ...userStore.groups].map((group, idx) => {
+                                    {Array.from(new Set([undefined, ...userStore.groups, ...policyStore.groups])).map((group, idx) => {
                                         return (
                                             <li
                                                 className="dropdown__link"

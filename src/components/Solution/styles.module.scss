@@ -7,6 +7,7 @@ html[data-theme='dark'] {
     }
 }
 .wrapper {
+    position: relative;
     --current-alert-padding-vertical: var(--ifm-alert-padding-vertical);
     --current-alert-padding-horizontal: var(--ifm-alert-padding-horizontal);
 
@@ -21,7 +22,7 @@ html[data-theme='dark'] {
         );
         .alert {
             border-top-left-radius: var(--ifm-alert-border-radius);
-            border-bottom-left-radius: 0var(--ifm-alert-border-radius);
+            border-bottom-left-radius: var(--ifm-alert-border-radius);
             --ifm-alert-padding-vertical: var(--current-alert-padding-vertical);
             --ifm-alert-padding-horizontal: var(--current-alert-padding-horizontal);
             margin-right: 0;
@@ -38,10 +39,10 @@ html[data-theme='dark'] {
         cursor: pointer;
         padding-left: 0.5em;
         > svg {
-          float: right;
-          fill: var(--ifm-color-success);
-          margin-right: 0.2em;
-      }
+            float: right;
+            fill: var(--ifm-color-success);
+            margin-right: 0.2em;
+        }
     }
 
     details.hint,
@@ -64,13 +65,44 @@ html[data-theme='dark'] {
             }
         }
     }
+    .configContainer {
+        .showControl {
+            background-color: unset;
+            position: absolute;
+            top: 4px;
+            right: 1.2em;
+            > svg {
+                cursor: pointer;
+            }
+            &:hover > svg {
+                transform: scale(1.2);
+            }
+        }
+        .config {
+            background-color: var(--ifm-color-info);
+            padding: 4px;
+            border-radius: var(--ifm-alert-border-radius);
+            .permissions {
+                display: flex;
+                flex-wrap: wrap;
+                .policy {
+                    > svg {
+                        cursor: pointer;
+                    }
+                    &:hover > svg {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
 }
 
 :global .admonition {
     :last-child {
         &.hint-wrapper,
         &.solution-wrapper {
-            >.alert {
+            > .alert {
                 margin-bottom: calc(-1 * var(--current-alert-padding-vertical));
                 border-bottom-left-radius: var(--ifm-alert-border-radius);
             }

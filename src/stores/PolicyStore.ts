@@ -1,11 +1,12 @@
 import axios, { CancelTokenSource } from 'axios';
 import { action, computed, makeObservable, observable, reaction, runInAction } from 'mobx';
 import { computedFn } from 'mobx-utils';
-import { getSolutionAuthorizationAsAdmin, solutionPolicies } from '../api/admin';
+import { getSolutionAuthorizationAsAdmin, solutionPolicies, updateSolutionPolicy } from '../api/admin';
 import { RootStore } from './stores';
 import {
     Authorization,
     authorized,
+    PolicyModifier,
     postSolutionPolicy,
     SolutionPolicy as SolutionPolicyProps,
     SolutionPolicyData,
@@ -33,6 +34,8 @@ export class PolicyStore {
     policies = observable<SolutionPolicy>([]);
 
     @observable initialized: boolean = false;
+    @observable
+    openPolicyConfigWebKey = '';
 
     constructor(root: RootStore) {
         this.root = root;
@@ -43,6 +46,11 @@ export class PolicyStore {
             }
         );
         makeObservable(this);
+    }
+
+    @action
+    setOpenPolicyConfigWebKey(webKey: string) {
+        this.openPolicyConfigWebKey = webKey;
     }
 
     @computed
@@ -60,6 +68,19 @@ export class PolicyStore {
         },
         { keepAlive: true }
     );
+
+    findPolicy = computedFn(
+        function (this: PolicyStore, webKey: string): SolutionPolicy | undefined {
+            return this.policies.find((q) => q.webKey === webKey);
+        },
+        { keepAlive: true }
+    );
+
+    @computed
+    get groups() {
+        const grps = this.policies.reduce((g, p) => [...g, ...p.groups], []);
+        return Array.from(grps);
+    }
 
     @action
     provideAuthorization(webKey: string, forceReload?: boolean): Promise<SolutionAuthorization> {
@@ -81,7 +102,7 @@ export class PolicyStore {
             return Promise.resolve(model);
         }
         const ct = axios.CancelToken.source();
-        return this.apiAuthorized(model.webKey, ct)
+        return this.apiFetchAuthorizationFor(model.webKey, ct)
             .then((data) => {
                 if (data) {
                     return data;
@@ -123,6 +144,7 @@ export class PolicyStore {
             this.loadPolicies();
         }
     }
+
     @action
     loadPolicies() {
         if (!this.root.userStore.current?.admin) {
@@ -136,7 +158,7 @@ export class PolicyStore {
                         if (current?.admin) {
                             this.policies.replace(
                                 data.map((prop) => {
-                                    return new SolutionPolicy(prop);
+                                    return new SolutionPolicy(prop, this);
                                 })
                             );
                         }
@@ -158,7 +180,27 @@ export class PolicyStore {
     }
 
     @action
-    apiAuthorized(webKey: string, cancelToken: CancelTokenSource): Promise<Authorization> {
+    updatePolicy(policy: SolutionPolicy, delta: PolicyModifier) {
+        if (policy.locked) {
+            return;
+        }
+        policy.setLocked(true);
+        const ct = axios.CancelToken.source();
+        this.apiUpdateAuthorization(policy.webKey, delta, ct).then(
+            action((res) => {
+                if (res) {
+                    this.policies.remove(policy);
+                    this.policies.push(new SolutionPolicy(res, this));
+                } else {
+                    // error happend - unlock
+                    policy.setLocked(false);
+                }
+            })
+        );
+    }
+
+    @action
+    private apiFetchAuthorizationFor(webKey: string, cancelToken: CancelTokenSource): Promise<Authorization> {
         return this.root.msalStore.withToken().then((ok) => {
             if (ok) {
                 const isOthersView =
@@ -197,7 +239,7 @@ export class PolicyStore {
     }
 
     @action
-    apiCreateSolutionAuthorization(
+    private apiCreateSolutionAuthorization(
         data: SolutionPolicyData,
         cancelToken: CancelTokenSource
     ): Promise<void | SolutionPolicyProps> {
@@ -208,6 +250,34 @@ export class PolicyStore {
                     return postSolutionPolicy(data, cancelToken).then(({ data }) => {
                         return data;
                     });
+                }
+            })
+            .catch((err) => {
+                if (err.message?.startsWith('Network Error')) {
+                    this.root.msalStore.setApiOfflineState(true);
+                } else {
+                    return undefined;
+                }
+            });
+    }
+
+    @action
+    private apiUpdateAuthorization(
+        webKey: string,
+        delta: PolicyModifier,
+        cancelToken: CancelTokenSource
+    ): Promise<void | SolutionPolicyProps> {
+        return this.root.msalStore
+            .withToken()
+            .then((ok) => {
+                if (ok) {
+                    return updateSolutionPolicy(webKey, delta, cancelToken);
+                }
+            }).then((res) => {
+                if (res) {
+                    return res.data;
+                } else {
+                    throw new Error('No data provided')
                 }
             })
             .catch((err) => {

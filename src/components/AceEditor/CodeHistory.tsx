@@ -58,11 +58,9 @@ const CodeHistory = observer((props: Props) => {
             () => store.find<Script>(props.webKey)?.id,
             (id) => {
                 if (id && id > 0) {
-                    console.log(id, open)
                     setVersion(1);
                     if (open) {
                         store.find<Script>(props.webKey)?.loadVersions();
-                        console.log('New V');
                     }
                 }
             }
