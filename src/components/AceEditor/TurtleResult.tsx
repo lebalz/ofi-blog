@@ -5,7 +5,7 @@ import Draggable from 'react-draggable';
 import { checkForButtonClick } from '../../utils/check_for_button_click';
 import { saveSvg } from '../../utils/save_svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faTimes, faRunning } from '@fortawesome/free-solid-svg-icons';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/hooks';
 import Script from '../../models/Script';
@@ -25,6 +25,19 @@ const TurtleResult = observer((props: Props) => {
                 <div className={styles.brythonTurtleResultHead}>
                     <span>Output</span>
                     <span className={styles.spacer} ></span>
+                    <button
+                        aria-label="Download Animated SVG"
+                        type="button"
+                        className={styles.slimStrippedButton}
+                        style={{ zIndex: 1000 }}
+                        onClick={() => {
+                            const turtleResult = (document.getElementById(DOM_ELEMENT_IDS.turtleSvgContainer(pyScript.codeId)) as any) as SVGSVGElement;
+                            if (turtleResult) {
+                                saveSvg(turtleResult, `${pyScript.codeId}.svg`, pyScript.executedScriptSource, true)
+                            }
+                        }}>
+                        <span aria-hidden="true"><FontAwesomeIcon icon={faRunning} /></span>
+                    </button>
                     <button
                         aria-label="Download SVG"
                         type="button"

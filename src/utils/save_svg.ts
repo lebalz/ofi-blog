@@ -1,5 +1,5 @@
 import { removeAnimations } from "./svg_without_animations";
-const saveSvg = (svgEl: SVGSVGElement, name: string, code?: string) => {
+const saveSvg = (svgEl: SVGSVGElement, name: string, code?: string, animated?: boolean) => {
     svgEl.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     
     const bbox = svgEl.getBBox();
@@ -10,13 +10,25 @@ const saveSvg = (svgEl: SVGSVGElement, name: string, code?: string) => {
     }
     var svgData = svgEl.outerHTML;
     var preface = '<?xml version="1.0" standalone="no"?>';
-    const svgWithoutAnim = removeAnimations(`${preface}${svgData}`, svgProps)
     const wrapper = document.createElement('div');
-
-    // if no metadata should be added, set window.__DISABLE_TURTLE_METADATA__ = true
-    if ((window as any).__KEEP_TURTLE_ANIMATIONS__) {
+    
+    // if animations should be rendered, set window.__KEEP_TURTLE_ANIMATIONS__ = true
+    if (animated || (window as any).__KEEP_TURTLE_ANIMATIONS__) {
+      const anims = svgEl.querySelectorAll('animate');
+      const frameIds =Array.from(anims).map((n) => (n.id.match(/\d+/) || [])[0]).filter((nr) => nr).map(nr => Number.parseInt(nr)).sort((a,b) => a > b ? 1 : -1);
+      if (frameIds.length > 0) {
+        const lastAnim = frameIds[frameIds.length - 1];
+        const firstAnim = svgEl.getElementById('animation_frame0') as SVGAnimateElement;
+        if (firstAnim) {
+          const looper = document.createElement("rect");
+          looper.innerHTML = `  <rect><animate id="looper_animation" begin="0;animation_frame${lastAnim}.end" dur="1ms" attributeName="visibility" from="hide" to="hide"/></rect>`
+          firstAnim.parentElement.insertBefore(looper, firstAnim);
+          firstAnim.setAttribute('begin', 'looper_animation.end');
+        }
+      }
       wrapper.innerHTML = `${preface}\r\n${svgEl.outerHTML}`;
     } else {
+      const svgWithoutAnim = removeAnimations(`${preface}${svgData}`, svgProps)
       wrapper.innerHTML = svgWithoutAnim;
     }
     // if no metadata should be added, set window.__DISABLE_TURTLE_METADATA__ = true
