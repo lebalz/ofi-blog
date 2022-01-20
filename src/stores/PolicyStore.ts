@@ -77,7 +77,7 @@ export class PolicyStore {
     );
 
     @computed
-    get groups() {
+    get groups(): string[] {
         const grps = this.policies.reduce((g, p) => [...g, ...p.groups], []);
         return Array.from(grps);
     }
