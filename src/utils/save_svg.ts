@@ -1,4 +1,15 @@
 import { removeAnimations } from "./svg_without_animations";
+
+const duration = (anim: SVGAnimateElement) => {
+  const dur = anim.getAttribute('dur');
+  if (/ms$/.test(dur)) {
+    return Number.parseFloat(dur) / 1000 || 0;
+  } else if (/s$/.test(dur)) {
+    return Number.parseFloat(dur) || 0;
+  }
+  return 0;
+}
+
 const saveSvg = (svgEl: SVGSVGElement, name: string, code?: string, animated?: boolean) => {
     svgEl.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     
@@ -11,7 +22,7 @@ const saveSvg = (svgEl: SVGSVGElement, name: string, code?: string, animated?: b
     var svgData = svgEl.outerHTML;
     var preface = '<?xml version="1.0" standalone="no"?>';
     const wrapper = document.createElement('div');
-    
+    let animDuration = 0;
     // if animations should be rendered, set window.__KEEP_TURTLE_ANIMATIONS__ = true
     if (animated || (window as any).__KEEP_TURTLE_ANIMATIONS__) {
       const saveSvg = svgEl.cloneNode(true) as SVGSVGElement;
@@ -38,6 +49,8 @@ const saveSvg = (svgEl: SVGSVGElement, name: string, code?: string, animated?: b
       saveSvg.setAttribute('height', `${svgProps.height}`);
       saveSvg.setAttribute('width', `${svgProps.width}`);
       wrapper.innerHTML = `${preface}\r\n${saveSvg.outerHTML}`;
+      animDuration = Array.from(saveSvg.querySelectorAll('animate')).map(duration).reduce((d, c) => d + c, 0)
+
     } else {
       const svgWithoutAnim = removeAnimations(`${preface}${svgData}`, svgProps)
       wrapper.innerHTML = svgWithoutAnim;
@@ -56,7 +69,7 @@ const saveSvg = (svgEl: SVGSVGElement, name: string, code?: string, animated?: b
     var svgUrl = URL.createObjectURL(svgBlob);
     var downloadLink = document.createElement("a");
     downloadLink.href = svgUrl;
-    downloadLink.download = name;
+    downloadLink.download = animDuration > 0 ? `${name}__${(Math.round(animDuration*10)/10).toString().replace('.','_')}s.svg` : `${name}.svg`;
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);

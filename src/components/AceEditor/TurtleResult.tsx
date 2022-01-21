@@ -33,7 +33,7 @@ const TurtleResult = observer((props: Props) => {
                         onClick={() => {
                             const turtleResult = (document.getElementById(DOM_ELEMENT_IDS.turtleSvgContainer(pyScript.codeId)) as any) as SVGSVGElement;
                             if (turtleResult) {
-                                saveSvg(turtleResult, `${pyScript.codeId}.svg`, pyScript.executedScriptSource, true)
+                                saveSvg(turtleResult, `${pyScript.codeId}`, pyScript.executedScriptSource, true)
                             }
                         }}>
                         <span aria-hidden="true"><FontAwesomeIcon icon={faRunning} /></span>
@@ -46,7 +46,7 @@ const TurtleResult = observer((props: Props) => {
                         onClick={() => {
                             const turtleResult = (document.getElementById(DOM_ELEMENT_IDS.turtleSvgContainer(pyScript.codeId)) as any) as SVGSVGElement;
                             if (turtleResult) {
-                                saveSvg(turtleResult, `${pyScript.codeId}.svg`, pyScript.executedScriptSource)
+                                saveSvg(turtleResult, `${pyScript.codeId}`, pyScript.executedScriptSource)
                             }
                         }}>
                         <span aria-hidden="true"><FontAwesomeIcon icon={faDownload} /></span>
