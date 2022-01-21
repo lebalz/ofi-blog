@@ -14,19 +14,30 @@ const saveSvg = (svgEl: SVGSVGElement, name: string, code?: string, animated?: b
     
     // if animations should be rendered, set window.__KEEP_TURTLE_ANIMATIONS__ = true
     if (animated || (window as any).__KEEP_TURTLE_ANIMATIONS__) {
-      const anims = svgEl.querySelectorAll('animate');
+      const saveSvg = svgEl.cloneNode(true) as SVGSVGElement;
+      const anims = saveSvg.querySelectorAll('animate');
       const frameIds =Array.from(anims).map((n) => (n.id.match(/\d+/) || [])[0]).filter((nr) => nr).map(nr => Number.parseInt(nr)).sort((a,b) => a > b ? 1 : -1);
       if (frameIds.length > 0) {
         const lastAnim = frameIds[frameIds.length - 1];
-        const firstAnim = svgEl.getElementById('animation_frame0') as SVGAnimateElement;
+        const firstAnim = saveSvg.getElementById('animation_frame0') as SVGAnimateElement;
         if (firstAnim) {
           const looper = document.createElement("rect");
           looper.innerHTML = `  <rect><animate id="looper_animation" begin="0;animation_frame${lastAnim}.end" dur="1ms" attributeName="visibility" from="hide" to="hide"/></rect>`
           firstAnim.parentElement.insertBefore(looper, firstAnim);
           firstAnim.setAttribute('begin', 'looper_animation.end');
+          firstAnim.setAttribute('width', `${svgProps.width}`);
         }
       }
-      wrapper.innerHTML = `${preface}\r\n${svgEl.outerHTML}`;
+      saveSvg.querySelectorAll('animate[attributeName="width"]').forEach((anim) => {
+        if (anim.getAttribute('from') === anim.getAttribute('to')) {
+          anim.setAttribute('from', `${svgProps.width}`);
+        }
+        anim.setAttribute('to', `${svgProps.width}`);
+      })
+      saveSvg.setAttribute('viewBox', svgProps.viewBox);
+      saveSvg.setAttribute('height', `${svgProps.height}`);
+      saveSvg.setAttribute('width', `${svgProps.width}`);
+      wrapper.innerHTML = `${preface}\r\n${saveSvg.outerHTML}`;
     } else {
       const svgWithoutAnim = removeAnimations(`${preface}${svgData}`, svgProps)
       wrapper.innerHTML = svgWithoutAnim;
