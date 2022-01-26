@@ -9,7 +9,9 @@ Damit ein Betriebssystem von einem USB-Stick geladen werden kann, muss
 - die Startreihenfolge (*Boot Order*) so eingestellt werden, dass der Computer zuerst die USB-Eingänge nach Startfähigem Speicher überprüft
 - der USB-Stick muss startfähig (*bootfähig*) sein.
 
-Die einfachste Variante, um einen USB-Stick startfähig zu machen, ist mit [balenaEtcher](https://www.balena.io/etcher/).
+Das kostenlose und wohl bekannteste Linux-Betriebssystem heisst Ubuntu und kann [hier](https://ubuntu.com/download/desktop) heruntergeladen werden.
+
+Die einfachste Variante um das heruntergeladene Betriebssystem auf einem USB-Stick startfähig zu machen, ist [balenaEtcher](https://www.balena.io/etcher/).
 
 ![balenaEtcher](images/balenaEtcher.png)
 
