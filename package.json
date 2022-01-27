@@ -64,7 +64,7 @@
     "quill-image-compress": "^1.2.16",
     "rc-slider": "^9.7.5",
     "react": "^17.0.1",
-    "react-ace": "^9.4.4",
+    "react-ace": "^9.5.0",
     "react-diff-viewer": "^3.1.1",
     "react-dom": "^17.0.1",
     "react-draggable": "^4.4.4",
