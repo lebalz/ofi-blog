@@ -20,7 +20,7 @@ export interface Document<T> {
 }
 
 export function getDocument<T>(webKey: string, versions: boolean, cancelToken: CancelTokenSource): AxiosPromise<Document<T>> {
-    return api.get(`document/${webKey}&versions=${versions}`, { cancelToken: cancelToken.token });
+    return api.get(`document/${webKey}?versions=${versions}`, { cancelToken: cancelToken.token });
 }
 
 export function postDocument<T>(
