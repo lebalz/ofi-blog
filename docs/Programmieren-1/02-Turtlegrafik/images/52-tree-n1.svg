@@ -1,5 +1,5 @@
 <!--?xml version="1.0" standalone="no"?-->
-<svg id="ofi_dbe85782_28e5_4ba2_8ba4_ffc78adc259e_svg" width="38.28428649902344" height="64.14213562011719" xmlns="http://www.w3.org/2000/svg" viewBox="230.8578643798828,190.8578643798828,38.28428649902344,64.14213562011719">
+<svg id="ofi_db324399_dfd9_4462_90a7_a5c4d98d2f98_svg" width="38.28428649902344" height="64.14213562011719" xmlns="http://www.w3.org/2000/svg" viewBox="230.8578643798828,190.8578643798828,38.28428649902344,64.14213562011719">
 <g transform="translate(250 250)">
 <line x1="0" y1="0" x2="0" y2="0" style="stroke: black; stroke-width: 1;"></line>
 <line x1="0" y1="0" x2="2.4492935982947065e-15" y2="-40" style="stroke: black; stroke-width: 1;"></line>
@@ -9,7 +9,7 @@
 <line x1="14.142135623730953" y1="-54.14213562373095" x2="1.7763568394002505e-15" y2="-40" style="stroke: black; stroke-width: 1;"></line>
 </g>
 <g transform="translate(250 250)">
-<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(1.7763568394002505e-15,-40.0) rotate(-135,0,0)"></polygon>
+<polygon points="0,0 ,-5,-9 ,0,-7 ,5,-9 " stroke="black" fill="black" stroke-width="1" opacity="1" transform="translate(1.7763568394002505e-15,-40.0) rotate(-180,0,0)"></polygon>
 </g>
 <metadata><raw>from turtle import *
 
@@ -22,4 +22,5 @@ def baum(grösse):
     right(90)
     forward(grösse / 2)
     backward(grösse / 2)
+    left(45)
 baum(40) </raw></metadata></svg>

@@ -25,6 +25,7 @@ def baum(grösse):
     right(90)
     forward(grösse / 2)
     backward(grösse / 2)
+    left(45)
 baum(40)
 ```
 
