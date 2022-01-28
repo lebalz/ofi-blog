@@ -50,7 +50,7 @@ Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können **OR-G
 - Entwerfen Sie die Schaltung in CircuitVerse inklusive Beschriftung.
 - Überprüfen Sie, ob die Schaltung mit der Wahrheitstabelle übereinstimmt.
 
-1. **Anna und Bert**: Anna und Bert arbeiten in einem dunklen Archiv im Keller. Immer wenn jemand von ihnen im Archiv ist, soll Licht brennen. Sie hören gerne Musik – allerdings nicht, wenn beide arbeiten, dann haben sie stets viel zu besprechen. Anna und Bert gegen an, ob sie im Büro sind, indem sie je einen eigenen Schalter betätigen.
+1. **Anna und Bert**: Anna und Bert arbeiten in einem dunklen Archiv im Keller. Immer wenn jemand von ihnen im Archiv ist, soll Licht brennen. Sie hören gerne Musik – allerdings nicht, wenn beide arbeiten, dann haben sie stets viel zu besprechen. Anna und Bert geben an, ob sie im Büro sind, indem sie je einen eigenen Schalter betätigen.
 
     ![](images/06-ex-anna-bert.svg)
 
