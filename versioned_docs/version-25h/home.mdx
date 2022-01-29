@@ -6,6 +6,41 @@ import Table from "@site/src/components/Table";
 
 # 25h
 
+
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={[
+  { cells: [ '04.02.2022', '', '' ] },
+  { cells: [ '11.02.2022', '', '' ] },
+  { cells: [ '18.02.2022', 'Sportwoche', '' ], type: 'holiday' },
+  { cells: [ '25.02.2022', '', '' ] },
+  { cells: [ '04.03.2022', '', '' ] },
+  { cells: [ '11.03.2022', '', '' ] },
+  { cells: [ '18.03.2022', '', '' ] },
+  { cells: [ '25.03.2022', '', '' ] },
+  { cells: [ '01.04.2022', '', '' ] },
+  { cells: [ '08.04.2022', 'Sonderwoche', '' ], type: 'holiday' },
+  { cells: [ '15.04.2022', 'Frühlingsferien', '' ], type: 'holiday' },
+  { cells: [ '22.04.2022', 'Frühlingsferien', '' ], type: 'holiday' },
+  { cells: [ '29.04.2022', '', '' ] },
+  { cells: [ '06.05.2022', '', '' ] },
+  { cells: [ '13.05.2022', '', '' ] },
+  { cells: [ '20.05.2022', '', '' ] },
+  { cells: [ '27.05.2022', 'Auffahrt', '' ], type: 'holiday' },
+  { cells: [ '03.06.2022', '', '' ] },
+  { cells: [ '10.06.2022', '', '' ] },
+  { cells: [ '17.06.2022', 'Präventionswoche', '' ], type: 'holiday' },
+  { cells: [ '24.06.2022', '', '' ] },
+  { cells: [ '30.06.2022', 'Notenschluss', '' ], type: 'event' },
+  { cells: [ '01.07.2022', 'Filmanlass', '' ], type: 'event' },
+  { cells: [ '08.07.2022', '', '' ] }
+]}
+/>
+
+<details><summary>1. Semester</summary>
+
 <Table
   header={["Datum", "Thema", "Inhalt"]}
   compact
@@ -75,3 +110,4 @@ import Table from "@site/src/components/Table";
     { cells: ['24.01.2022', 'A', '🚧', ''] },
   ]}
 />
+</details>
