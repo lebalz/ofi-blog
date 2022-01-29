@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[67354],{26441:function(e){e.exports=JSON.parse('{"title":"ms-word","slug":"/category/ms-word","permalink":"/category/ms-word","navigation":{"previous":{"title":"VueJS","permalink":"/notes/vuejs"},"next":{"title":"Dateiformat","permalink":"/dokumente/ms-word/dateiverwaltung"}}}')}}]);
