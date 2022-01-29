@@ -1,0 +1,91 @@
+[
+    {
+        "cells": ["25.01.2022","Computer","Logische Schaltungen 1"]
+    },
+    {
+        "cells": ["01.02.2022","Computer","Logische Schaltungen 2"]
+    },
+    {
+        "cells": ["08.02.2022","Computer","Video erstellen: Halbaddierer"]
+    },
+    {
+        "cells": ["15.02.2022","Sportwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["22.02.2022","Computer","Video finalisieren&schneiden"]
+    },
+    {
+        "cells": ["01.03.2022","Computer","Rechnerarchitektur"]
+    },
+    {
+        "cells": ["06.03.2022","Abgabe","Video abgeben"],
+        "type": "test"
+    },
+    {
+        "cells": ["08.03.2022","Computer","Rechnerarchitektur"]
+    },
+    {
+        "cells": ["15.03.2022","Computer","Betriebssysteme"]
+    },
+    {
+        "cells": ["22.03.2022","Bilder","Grafikformate"]
+    },
+    {
+        "cells": ["29.03.2022","Bilder","Grafikformate"]
+    },
+    {
+        "cells": ["05.04.2022","Sonderwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["12.04.2022","Frühlingsferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["19.04.2022","Frühlingsferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["26.04.2022","Bilder","Kompression"]
+    },
+    {
+        "cells": ["03.05.2022","Bilder","Urheberrecht"]
+    },
+    {
+        "cells": ["10.05.2022","Projekt",""]
+    },
+    {
+        "cells": ["17.05.2022","Projekt",""]
+    },
+    {
+        "cells": ["24.05.2022","Projekt",""]
+    },
+    {
+        "cells": ["31.05.2022","Projekt",""]
+    },
+    {
+        "cells": ["07.06.2022","Projekt",""]
+    },
+    {
+        "cells": ["14.06.2022","Präventionswoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["21.06.2022","Projekt",""]
+    },
+    {
+        "cells": ["23.06.2022","Projektabgabe",""],
+        "type": "test"
+    },
+    {
+        "cells": ["28.06.2022","Projekt Austauschen",""]
+    },
+    {
+        "cells": ["30.06.2022","Notenschluss",""],
+        "type": "event"
+    },
+    {
+        "cells": ["05.07.2022","🚧",""]
+    }
+]

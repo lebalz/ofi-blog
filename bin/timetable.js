@@ -1,4 +1,7 @@
 const moment = require("moment");
+const fs = require('fs');
+const path = require('path');
+
 
 const DAYS = {
     mo: 'Moday',
@@ -40,7 +43,9 @@ const CLASS_EVENTS = {
 }
 
 SCHOOL_EVENTS = {
-    [26]: {desc: 'Notenschluss', type: 'event', date: '30.06.2022'}
+    [9]: {desc: 'Videoabgabe', type: 'test', date: '06.03.2022'},
+    [24]: {desc: 'Projektabgabe', type: 'test', date: '23.06.2022'},
+    [26]: {desc: 'Notenschluss', type: 'event', date: '30.06.2022'},
 }
 
 const CLASS_DAY = {
@@ -51,25 +56,64 @@ const CLASS_DAY = {
     ['24K']: 'mi',
     ['25h']: 'fr',
 }
-const KLASSE = '25h'
+const YEAR = 2022
+const SEMESTER = 'FS'
 
-const cells = [];
-Array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27).forEach((weekNr) => {
-    const date = moment().day(DAYS[CLASS_DAY[KLASSE]]).year(2022).week(weekNr + 1).format('DD.MM.YYYY');
-    if (EVENTS[date]) {
-        cells.push({ cells: [date, EVENTS[date].desc, ''], type: EVENTS[date].type });
-    } else if (EVENTS[weekNr]) {
-        cells.push({ cells: [date, EVENTS[weekNr].desc, ''], type: EVENTS[weekNr].type });
-    } else if (CLASS_EVENTS[KLASSE][date]) {
-        cells.push({ cells: [date, CLASS_EVENTS[KLASSE][date].desc, ''], type: CLASS_EVENTS[KLASSE][date].type });
-    } else if (CLASS_EVENTS[KLASSE][weekNr]) {
-        cells.push({ cells: [date, CLASS_EVENTS[KLASSE][weekNr].desc, ''], type: CLASS_EVENTS[KLASSE][weekNr].type });
-    } else {
-        cells.push({ cells: [date, '', '']});
-    }
-    if (SCHOOL_EVENTS[weekNr]) {
-        cells.push({ cells: [SCHOOL_EVENTS[weekNr].date, SCHOOL_EVENTS[weekNr].desc, ''], type: SCHOOL_EVENTS[weekNr].type});
-    }
+
+const SCHEDULE = [
+    ["Computer","Logische Schaltungen 1"],
+    ["Computer","Logische Schaltungen 2"],
+    ["Computer","Video erstellen: Halbaddierer"],
+    ["Computer","Video finalisieren&schneiden"],
+    ["Computer","Rechnerarchitektur"],
+    ["Computer","Rechnerarchitektur"],
+    ["Computer","Betriebssysteme"],
+    ["Bilder","Grafikformate"],
+    ["Bilder","Kompression"],
+    ["Bilder","Urheberrecht"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt Austauschen",""],
+    ["🚧",""]
+]
+
+Array('24f', '24i', '24o', '24L', '24K').forEach((klasse) =>{
+    const cells = [];
+    let subjectNr = 0
+    Array(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27).forEach((weekNr) => {
+        const date = moment().day(DAYS[CLASS_DAY[klasse]]).year(YEAR).week(weekNr + 1).format('DD.MM.YYYY');
+        if (EVENTS[date]) {
+            cells.push({ cells: [date, EVENTS[date].desc, ''], type: EVENTS[date].type });
+        } else if (EVENTS[weekNr]) {
+            cells.push({ cells: [date, EVENTS[weekNr].desc, ''], type: EVENTS[weekNr].type });
+        } else if (CLASS_EVENTS[klasse][date]) {
+            cells.push({ cells: [date, CLASS_EVENTS[klasse][date].desc, ''], type: CLASS_EVENTS[klasse][date].type });
+        } else if (CLASS_EVENTS[klasse][weekNr]) {
+            cells.push({ cells: [date, CLASS_EVENTS[klasse][weekNr].desc, ''], type: CLASS_EVENTS[klasse][weekNr].type });
+        } else {
+            cells.push({ cells: [date, ...SCHEDULE[subjectNr]]});
+            subjectNr += 1;
+        }
+        if (SCHOOL_EVENTS[weekNr]) {
+            cells.push({ cells: [SCHOOL_EVENTS[weekNr].date, SCHOOL_EVENTS[weekNr].desc, ''], type: SCHOOL_EVENTS[weekNr].type});
+        }
+    })
+    
+    let first = true;
+    const prettyJson = JSON.stringify(cells, function(k,v){
+        if(v instanceof Array && !first) {
+            return JSON.stringify(v);
+        }
+        first = false;
+        return v;
+     },4).replace(/"\[/g, '[')
+        .replace(/\]"/g, ']')
+        .replace(/\\"/g, '"')
+        .replace(/""/g, '""');
+    
+    fs.writeFileSync(`versioned_docs/version-${klasse}/${klasse}_${SEMESTER}${YEAR}.json`, prettyJson)
 })
-
-console.log(cells)
