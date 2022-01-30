@@ -5,7 +5,6 @@ import clsx from 'clsx';
 import styles from './styles.module.scss';
 import { useStore } from '../../stores/hooks';
 import Script from '../../models/Script';
-import Details from '@docusaurus/theme-common/lib/components/Details';
 import DiffViewer from 'react-diff-viewer';
 import { Prism } from 'prism-react-renderer';
 import Slider from 'rc-slider/lib/Slider';

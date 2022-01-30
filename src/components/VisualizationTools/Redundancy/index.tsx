@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import * as React from 'react';
-import styles from './styles.module.scss';
+import styles from '../../styles/container.module.scss';
 const ALPHABET_FREQUENT = /[ENIR]/gi;
 const ALPHABET_RARE = /[BCDFGHJKLMOPQUVWXYZ]/gi;
 const SANITIZE = [
