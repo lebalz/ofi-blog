@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[57329],{94112:function(e){e.exports=JSON.parse('{"title":"v24","slug":"/category/v24","permalink":"/category/v24","navigation":{"previous":{"title":"test.nosync","permalink":"/Programmieren-1/test.nosync"},"next":{"title":"Aufgaben","permalink":"/category/aufgaben"}}}')}}]);
