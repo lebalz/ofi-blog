@@ -623,7 +623,7 @@
       "ignore": []
     },
     {
-      "from": "docs/Codierung/",
+      "from": "docs/Codes-and-Data/01-Codierung/",
       "to": "versioned_docs/version-25h/05-Codierung",
       "ignore": [
         "_category_.json"
