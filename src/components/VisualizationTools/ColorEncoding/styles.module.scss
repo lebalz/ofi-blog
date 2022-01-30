@@ -4,7 +4,7 @@
 .image {
   background-image: url(/img/index/robot_thinking.jpg);
   background-size: contain;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   border-radius: var(--ifm-global-radius);
   padding: 0;
 }
@@ -20,7 +20,7 @@
     margin-right: 1em;
     color: black;
     padding: 0px 4px;
-    width: 50px;
+    width: 60px;
     white-space: nowrap;
   }
   .value {
@@ -29,41 +29,49 @@
     border-radius: 4px;
     margin-left: 1em;
     width: 50px;
+    white-space: nowrap;
   }
   .transformed {
     color: black;
     white-space: nowrap;
   }
+  --rc-color: black;
   &.red {
-    :global .rc-slider-track {
-      background: red;
-    }
-    :global .rc-slider-handle {
-      border-color: red;
-    }
+    --rc-color: red;
   }
   &.green {
-    :global .rc-slider-track {
-      background: green;
-    }
-    :global .rc-slider-handle {
-      border-color: green;
-    }
+    --rc-color: green;
   }
   &.blue {
-    :global .rc-slider-track {
-      background: blue;
-    }
-    :global .rc-slider-handle {
-      border-color: blue;
-    }
+    --rc-color: blue;
   }
   &.alpha {
-    :global .rc-slider-track {
-      background: black;
-    }
-    :global .rc-slider-handle {
-      border-color: black;
+    --rc-color: black;
+  }
+  &.cyan {
+    --rc-color: cyan;
+  }
+  &.magenta {
+    --rc-color: magenta;
+  }
+  &.yellow {
+    --rc-color: yellow
+  }
+  &.key {
+    --rc-color: black;
+  }
+  :global .rc-slider-track {
+    background: var(--rc-color);
+  }
+  :global .rc-slider-handle {
+    border-color: var(--rc-color);
+  }
+}
+
+.cmyk {
+  .color {
+    .label {
+      width: 150px;
     }
   }
 }
