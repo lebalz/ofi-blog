@@ -33,7 +33,7 @@ const CMYK = () => {
         const g = Math.round(255 * (1 - m * 0.01) * (1 - k * 0.01));
         const b = Math.round(255 * (1 - y * 0.01) * (1 - k * 0.01));
         setRgb(`rgb(${r}, ${g}, ${b})`);
-    }, [c, m, y]);
+    }, [c, m, y, k]);
 
     return (
         <div
