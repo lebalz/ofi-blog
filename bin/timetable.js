@@ -81,10 +81,10 @@ const SCHEDULE = [
     ["🚧",""]
 ]
 
-Array('24f', '24i', '24o', '24L', '24K').forEach((klasse) =>{
+Array('24L', '24o').forEach((klasse) =>{
     const cells = [];
     let subjectNr = 0
-    Array(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27).forEach((weekNr) => {
+    Array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27).forEach((weekNr) => {
         const date = moment().day(DAYS[CLASS_DAY[klasse]]).year(YEAR).week(weekNr + 1).format('DD.MM.YYYY');
         if (EVENTS[date]) {
             cells.push({ cells: [date, EVENTS[date].desc, ''], type: EVENTS[date].type });

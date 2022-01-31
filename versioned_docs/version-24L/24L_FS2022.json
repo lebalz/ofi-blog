@@ -1,22 +1,19 @@
 [
     {
-        "cells": ["24.01.2022","Computer","Logische Schaltungen 1"]
+        "cells": ["31.01.2022","Computer","Logische Schaltungen 1"]
     },
     {
-        "cells": ["31.01.2022","Computer","Logische Schaltungen 2"]
-    },
-    {
-        "cells": ["07.02.2022","Computer","Video erstellen: Halbaddierer"]
+        "cells": ["07.02.2022","Computer","Logische Schaltungen 2"]
     },
     {
         "cells": ["14.02.2022","Sportwoche",""],
         "type": "holiday"
     },
     {
-        "cells": ["21.02.2022","Computer","Video finalisieren&schneiden"]
+        "cells": ["21.02.2022","Computer","Video erstellen: Halbaddierer"]
     },
     {
-        "cells": ["28.02.2022","Computer","Rechnerarchitektur"]
+        "cells": ["28.02.2022","Computer","Video finalisieren&schneiden"]
     },
     {
         "cells": ["06.03.2022","Videoabgabe",""],
@@ -26,13 +23,13 @@
         "cells": ["07.03.2022","Computer","Rechnerarchitektur"]
     },
     {
-        "cells": ["14.03.2022","Computer","Betriebssysteme"]
+        "cells": ["14.03.2022","Computer","Rechnerarchitektur"]
     },
     {
-        "cells": ["21.03.2022","Bilder","Grafikformate"]
+        "cells": ["21.03.2022","Computer","Betriebssysteme"]
     },
     {
-        "cells": ["28.03.2022","Bilder","Kompression"]
+        "cells": ["28.03.2022","Bilder","Grafikformate"]
     },
     {
         "cells": ["04.04.2022","Sonderwoche",""],
@@ -47,10 +44,10 @@
         "type": "holiday"
     },
     {
-        "cells": ["25.04.2022","Bilder","Urheberrecht"]
+        "cells": ["25.04.2022","Bilder","Kompression"]
     },
     {
-        "cells": ["02.05.2022","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
+        "cells": ["02.05.2022","Bilder","Urheberrecht"]
     },
     {
         "cells": ["09.05.2022","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
@@ -73,20 +70,20 @@
         "type": "holiday"
     },
     {
+        "cells": ["20.06.2022","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
+    },
+    {
         "cells": ["23.06.2022","Projektabgabe",""],
         "type": "test"
     },
     {
-        "cells": ["20.06.2022","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
-    },
-    {
-        "cells": ["27.06.2022","Projekt Austauschen",""]
+        "cells": ["27.06.2022","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
     },
     {
         "cells": ["30.06.2022","Notenschluss",""],
         "type": "event"
     },
     {
-        "cells": ["04.07.2022","🚧",""]
+        "cells": ["04.07.2022","Projekt Austauschen",""]
     }
 ]
