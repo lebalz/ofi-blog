@@ -1,7 +1,6 @@
 {
   "author_name": "Kallerna",
-  "author_uri": "https://commons.wikimedia.org/wiki/User:Kallerna",
   "licence": "CC-BY-SA-3.0",
-  "source_name": "Wikimedia Commons",
-  "source_uri": "https://commons.wikimedia.org/wiki/File:Tv_pixels.JPG"
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Tv_pixels.JPG"
 }
