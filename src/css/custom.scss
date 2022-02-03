@@ -254,6 +254,7 @@ div.flex {
             figure {
                 margin: 0;
                 line-height: 0;
+                flex-grow: 1;
                 > * {
                     line-height: normal;
                 }

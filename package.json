@@ -9,6 +9,7 @@
     "build": "docusaurus build",
     "build:dev": "docusaurus build",
     "swizzle": "docusaurus swizzle",
+    "create_refs": "node create_refs.js",
     "add": "node material_add.js",
     "postadd": "node material_sync.js",
     "sync": "node material_sync.js",

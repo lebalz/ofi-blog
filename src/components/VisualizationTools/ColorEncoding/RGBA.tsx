@@ -5,6 +5,9 @@ import styles from './styles.module.scss';
 import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
 import { Handle, SliderTooltip } from 'rc-slider';
+import Hex from './Hex';
+import Css from './Css';
+import Bin from './Bin';
 
 const handle = (props) => {
     const { value, dragging, index, ...restProps } = props;
@@ -113,6 +116,8 @@ const RGBA = () => {
                         {a}
                     </span>
                 </div>
+                <Bin values={[r, g, b, Math.round(a * 255)]} />
+                <Css hex={[r, g, b, Math.round(a * 255)]} value={`rgba(${r}, ${g}, ${b}, ${a})`}/>
             </div>
         </div>
     );

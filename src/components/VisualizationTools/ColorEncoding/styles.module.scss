@@ -16,6 +16,9 @@
   border-radius: var(--ifm-global-radius);
   align-items: center;
   background-color: rgba(199, 199, 199, 0.425);
+  &.property {
+    flex-wrap: wrap;
+  }
   .label {
     margin-right: 1em;
     color: black;
@@ -72,6 +75,26 @@
   .color {
     .label {
       width: 150px;
+    }
+  }
+}
+
+.copyBadge {
+  cursor: pointer;
+  position: relative;
+  transition-property: padding;
+  transition-duration: 1s;
+  font-family: monospace;
+  font-size: inherit;
+  .copyIcon {
+    display: none;
+    position: absolute;
+    right: 4px;
+  }
+  &:hover {
+    padding-right: 18px;
+    .copyIcon {
+      display: inline;
     }
   }
 }

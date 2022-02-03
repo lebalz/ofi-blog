@@ -5,6 +5,7 @@ import styles from './styles.module.scss';
 import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
 import { Handle, SliderTooltip } from 'rc-slider';
+import Css from './Css';
 
 const handle = (props) => {
     const { value, dragging, index, ...restProps } = props;
@@ -26,19 +27,20 @@ const CMYK = () => {
     const [m, setM] = React.useState(70);
     const [y, setY] = React.useState(50);
     const [k, setK] = React.useState(30);
-    const [rgb, setRgb] = React.useState('rgb(0,0,0)');
+    const [r, setR] = React.useState(0);
+    const [g, setG] = React.useState(0);
+    const [b, setB] = React.useState(0);
 
     React.useEffect(() => {
-        const r = Math.round(255 * (1 - c * 0.01) * (1 - k * 0.01));
-        const g = Math.round(255 * (1 - m * 0.01) * (1 - k * 0.01));
-        const b = Math.round(255 * (1 - y * 0.01) * (1 - k * 0.01));
-        setRgb(`rgb(${r}, ${g}, ${b})`);
+        setR(Math.round(255 * (1 - c * 0.01) * (1 - k * 0.01)));
+        setG(Math.round(255 * (1 - m * 0.01) * (1 - k * 0.01)));
+        setB(Math.round(255 * (1 - y * 0.01) * (1 - k * 0.01)));
     }, [c, m, y, k]);
 
     return (
         <div
             className={clsx('hero', 'shadow--lw', containerStyles.container, styles.cmyk)}
-            style={{ background: rgb }}
+            style={{ background: `rgb(${r},${g},${b})` }}
         >
             <div className="container">
                 <p className="hero__subtitle">CMYK</p>
@@ -71,7 +73,9 @@ const CMYK = () => {
                     <span className={clsx(styles.value)}>{`${m} %`}</span>
                 </div>
                 <div className={clsx(styles.color, styles.yellow)}>
-                    <span className={clsx(styles.label)} title="Yellow">Yellow</span>
+                    <span className={clsx(styles.label)} title="Yellow">
+                        Yellow
+                    </span>
                     <Slider
                         value={y}
                         handle={handle}
@@ -98,6 +102,7 @@ const CMYK = () => {
                     />
                     <span className={clsx(styles.value)}>{`${k} %`}</span>
                 </div>
+                <Css hex={[r, g, b]} value={`rgb(${r}, ${g}, ${b})`} />
             </div>
         </div>
     );
