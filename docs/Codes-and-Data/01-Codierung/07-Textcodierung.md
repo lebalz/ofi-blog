@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindows } from "@fortawesome/free-brands-svg-icons"
 import Hint from '@site/src/components/Solution/Hint'
 import Answer from '@site/src/components/Answer'
+import DecBinHexTransformer from "@site/src/components/VisualizationTools/DecBinHexTransformer";
 
 # 7. Textcodierung [^1]
 
@@ -116,6 +117,8 @@ Die Bytes werden wie in der Informatik üblich als *Hexadezimalzahlen* angegeben
 01110011 01110011 00100000 11110000 10011111 10011000
 10000000 00100001
 ```
+
+<DecBinHexTransformer />
 
 In der binären Darstellung sehen Sie sofort die Zeichen, welche mehrere Bytes benötigen. Sie beginnen mit einer 1. So ist `11000011 10111100` die Codierung des Buchstabens «ü».
 
