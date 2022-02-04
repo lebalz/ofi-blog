@@ -117,12 +117,15 @@ Die Bytes werden wie in der Informatik üblich als *Hexadezimalzahlen* angegeben
 10000000 00100001
 ```
 
-In der binären Darstellung sehen Sie sofort die Zeichen, welche mehrere Bytes benötigen. Sie beginnen mit einer 1. So ist `11000011 10111100` die Codierung der Buchstabens «ü».
+In der binären Darstellung sehen Sie sofort die Zeichen, welche mehrere Bytes benötigen. Sie beginnen mit einer 1. So ist `11000011 10111100` die Codierung des Buchstabens «ü».
 
 Nun können Sie mit folgenden Hilfsmitteln überprüfen, ob die Bytes tatsächlich der Unicode/UTF-8-Codierung Ihres Textes entsprechen:
 
-- [ASCII-Tabelle](./03-Zeichencodierung.mdx#)
-- [Unicode-Tabelle](https://unicode-table.com/de/)
+- [ASCII-Tabelle](./03-Zeichencodierung.mdx#) für Bytes, die mit einer `0` starteb
+- [Unicode-Tabelle](https://unicode-table.com/de/) für zusammengesetzte Zeichen mit mehreren Bytes
+
+- Halten Sie die Hexadezimalzeichen Ihres Textes fest.
+- 
 
 <Answer type="text" webKey="a12363b7-4403-481e-8226-97f28624465f" />
 
