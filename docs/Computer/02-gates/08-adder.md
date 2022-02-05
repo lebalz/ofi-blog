@@ -50,7 +50,7 @@ Die entsprechende Schaltung benötigt zwei Eingänge und zwei Ausgänge. Die bei
 
 Der Wert der Einerstelle kann durch ein XOR-Gatter berechnet werden, der Wert der Zweierstelle durch ein AND-Gatter. Die Schaltung sieht somit so aus:
 
-[@circuitvert](https://circuitverse.org/simulator/embed/rothe-half-adder-vertical)
+[@circuitverse](https://circuitverse.org/simulator/embed/rothe-half-adder-vertical)
 
 :::aufgabe Aufgabe Halbaddierer
 1. Erstellen Sie ein neues Projekt in CircuitVerse und nennen Sie es Addierer.
@@ -73,7 +73,7 @@ Wenn zwei mehrstellige binäre Zahlen addiert werden sollen, muss der **Übertra
 
 Dies kann mit der folgenden Schaltung realisiert werden. Sie besteht aus zwei Halbaddierern sowie einem OR-Gatter. Mit dem OR-Gatter werden die beiden möglichen Überträge zusammengefasst.
 
-[@circuitvert](https://circuitverse.org/simulator/embed/rothe-full-adder-vertical)
+[@circuitverse](https://circuitverse.org/simulator/embed/rothe-full-adder-vertical)
 
 :::aufgabe Aufgabe Volladdierer
 Bauen Sie basierend auf deiner Halbaddierer-Schaltung einen Volladdierer:

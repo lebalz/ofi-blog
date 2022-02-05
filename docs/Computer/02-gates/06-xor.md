@@ -25,7 +25,7 @@ In Schaltplänen wird ein XOR-Gatter mit folgendem Symbol dargestellt:
 
 ## Interaktive Schaltung
 
-[@circuitvert](https://circuitverse.org/simulator/embed/rothe-xor-gate)
+[@circuitverse](https://circuitverse.org/simulator/embed/rothe-xor-gate)
 
 ## Beispiele
 

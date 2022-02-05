@@ -22,7 +22,7 @@ In Schaltungen wird das folgende Symbol für einen Inverter verwendet:
 
 ## Interaktive Schaltung
 
-[@circuitvert](https://circuitverse.org/simulator/embed/rothe-inverter)
+[@circuitverse](https://circuitverse.org/simulator/embed/rothe-inverter)
 
 ## Beispiele
 

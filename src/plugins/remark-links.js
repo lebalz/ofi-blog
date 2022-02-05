@@ -131,7 +131,7 @@ const plugin = (options) => {
           }
           promises.push(processVideo())
         }
-        if (/@circuitvert/.test(text)) {
+        if (/@circuitverse/.test(text)) {
           const options = parseOptions(text, true);
           const processCV = async () => {
             prepareWrapperNode(node);
