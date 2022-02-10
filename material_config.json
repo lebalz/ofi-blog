@@ -624,10 +624,8 @@
     },
     {
       "from": "docs/Codes-and-Data/01-Codierung/",
-      "to": "versioned_docs/version-25h/05-Codierung",
-      "ignore": [
-        "_category_.json"
-      ]
+      "to": "versioned_docs/version-25h/05-Codierung/01-Zeichencodierung",
+      "ignore": []
     },
     {
       "from": "docs/Programmieren-1/00-Lernziele.md",
@@ -638,6 +636,13 @@
       "from": "docs/Programmieren-1/04-Testumgebung/25h-test/",
       "to": "versioned_docs/version-25h/04-Programmieren-1/04-Test",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/02-Grafikformate/",
+      "to": "versioned_docs/version-25h/05-Codierung/02-Grafikformate",
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "24w": [
