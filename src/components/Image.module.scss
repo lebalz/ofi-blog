@@ -33,14 +33,16 @@ figure.container {
                   user-select: none; /* Non-prefixed version, currently
                                         supported by Chrome, Edge, Opera and Firefox */
     }
-    figcaption {
-        font-style: italic;
-        > .details {
-            display: flex;
-            align-items: flex-end;
-            justify-content: start;
-            flex-wrap: wrap;
-            gap: 1em;
+    figure {
+        figcaption {
+            font-style: italic;
+            > .details {
+                display: flex;
+                align-items: flex-end;
+                justify-content: start;
+                flex-wrap: wrap;
+                gap: 1em;
+            }
         }
     }
     &.noMargins {
