@@ -1,3 +1,7 @@
+---
+title: 1. Grundlagen
+label: 1. Grundlagen
+---
 
 import ColorDepth from "@site/src/components/VisualizationTools/ColorEncoding/ColorDepth";
 import Answer from '@site/src/components/Answer';
