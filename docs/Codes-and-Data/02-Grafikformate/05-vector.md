@@ -3,7 +3,7 @@ title: 5. Vektorgrafik
 label: 5. Vektorgrafik
 ---
 
-# 5. Vektorgrafik
+# 5. Vektorgrafik [^1]
 
 Eine SVG-Datei ist eine Textdatei, welche «Befehle» enthält, wie Formen gezeichnet werden sollen.
 
@@ -66,3 +66,5 @@ Erstellen Sie eine neue SVG-Datei und probieren Sie die Grundformen aus.
 
 Erstellen Sie mit SVG eine winterliche oder festliche Grafik.
 :::
+
+[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=860740)

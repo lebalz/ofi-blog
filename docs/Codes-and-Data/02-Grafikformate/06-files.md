@@ -3,7 +3,7 @@ title: 6. Dateiformate erkennen
 label: 6. Dateiformate erkennen
 ---
 
-# 6. Dateiformate erkennen
+# 6. Dateiformate erkennen [^1]
 
 Eine Datei ist eine Ansammlung binärer Daten, also eine Aneinanderreihung von Bits. Die binäre Darstellung der Datei, in welcher dieser Text gespeichert ist, beginnt so:
 
@@ -65,3 +65,5 @@ Ein *Internet Media Type* besteht immer aus einem Haupt- und einem Untertype. Es
 | Python-Programm           | _.py_            | `text/python`                     | reine Textdatei<br/>(ohne magische Bytes)         |
 
 </div>
+
+[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=206603)
