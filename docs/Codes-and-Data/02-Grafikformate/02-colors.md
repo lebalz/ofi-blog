@@ -47,6 +47,31 @@ Für das **RGBA-Farbmodell** wird das RBG-Farbmodell um einen Kanal erweitert. D
 
 <RGBA />
 
+:::aufgabe Farben ausprobieren
+
+Füllen Sie die drei Kreise mit unterschiedlichen Farben - Sie können direkt den `hex` Wert einsetzen, z.b. `color('#3ed92161')`.
+
+```py live_py title=farben.py id=a7de7bbd-4e4b-455c-915c-417e830727a0
+from turtle import *
+
+def move(x, y):
+  penup()
+  goto(x, y)
+  pendown()
+
+move(0, 50)
+circle(100)
+
+move(50, -43)
+circle(100)
+
+move(-50, -43)
+circle(100)
+```
+
+Können Sie in der Mitte **Weisse** oder **Schwarze** Farbe erzeugen?
+:::
+
 ## CMYK-Farbmodell
 
 Das **CMYK-Farbmodell** basiert auf der Weise, wie Gegenstände farbig erscheinen. Ein Gegenstand wird üblicherweise mit weissem Licht, also Licht verschiedener Wellenlängen (Rot, Grün und Blau) angestrahlt. Beispielsweise erscheint ein gelber Gegenstand deshalb in dieser Farbe, weil er blaues Licht **absorbiert** und rotes und grünes Licht **reflektiert**.
