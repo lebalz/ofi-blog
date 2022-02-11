@@ -54,6 +54,7 @@ Füllen Sie die drei Kreise mit unterschiedlichen Farben - Sie können direkt de
 ```py live_py title=farben.py id=a7de7bbd-4e4b-455c-915c-417e830727a0
 from turtle import *
 
+speed(10)
 def move(x, y):
   penup()
   goto(x, y)
@@ -68,8 +69,6 @@ circle(100)
 move(-50, -43)
 circle(100)
 ```
-
-Können Sie in der Mitte **Weisse** oder **Schwarze** Farbe erzeugen?
 :::
 
 ## CMYK-Farbmodell
