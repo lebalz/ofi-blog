@@ -31,5 +31,32 @@
 		"body": "<Solution webKey=\"$1\">$2</Solution",
 		"description": "insert a solution component"
 	},
+	"import_os_tabs": {
+		"prefix": "imp",
+		"body": [
+			"import OsTabs from '@site/src/components/OsTabs';" \
+			"import TabItem from '@theme/TabItem';"
+		],
+		"description": "import os tabs from components"
+	},
+	"os_tabs": {
+		"prefix": "<OsTabs />",
+		"body": [
+			"" \
+			"<OsTabs>" \
+				"<TabItem value=\"win\">" \
+			""\
+			"$1"\
+			""\
+				"</TabItem>" \
+				"<TabItem value=\"mac\">" \
+			""\
+			"$2"\
+			""\
+				"</TabItem>" \
+			"</OsTabs"
+		],
+		"description": "insert os tabs"
+	},
 	
 }
