@@ -116,6 +116,11 @@
       "from": "docs/Computer/05-praktikum/",
       "to": "versioned_docs/version-24f/07-Computer/05-praktikum",
       "ignore": []
+    },
+    {
+      "from": "docs/Video-Editor/",
+      "to": "versioned_docs/version-24f/07-Computer/06-Video-Editor",
+      "ignore": []
     }
   ],
   "24i": [
@@ -234,6 +239,11 @@
     {
       "from": "docs/Computer/05-praktikum/",
       "to": "versioned_docs/version-24i/07-Computer/05-praktikum",
+      "ignore": []
+    },
+    {
+      "from": "docs/Video-Editor/",
+      "to": "versioned_docs/version-24i/07-Computer/06-Video-Editor",
       "ignore": []
     }
   ],
@@ -354,6 +364,11 @@
       "from": "docs/Computer/05-praktikum/",
       "to": "versioned_docs/version-24K/07-Computer/05-praktikum",
       "ignore": []
+    },
+    {
+      "from": "docs/Video-Editor/",
+      "to": "versioned_docs/version-24K/07-Computer/06-Video-Editor",
+      "ignore": []
     }
   ],
   "24L": [
@@ -473,6 +488,11 @@
       "from": "docs/Computer/05-praktikum/",
       "to": "versioned_docs/version-24L/07-Computer/05-praktikum",
       "ignore": []
+    },
+    {
+      "from": "docs/Video-Editor/",
+      "to": "versioned_docs/version-24L/07-Computer/06-Video-Editor",
+      "ignore": []
     }
   ],
   "24o": [
@@ -591,6 +611,11 @@
     {
       "from": "docs/Computer/05-praktikum/",
       "to": "versioned_docs/version-24o/07-Computer/05-praktikum",
+      "ignore": []
+    },
+    {
+      "from": "docs/Video-Editor/",
+      "to": "versioned_docs/version-24o/07-Computer/06-Video-Editor",
       "ignore": []
     }
   ],
