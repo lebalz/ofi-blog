@@ -119,37 +119,3 @@ Am besten legen Sie für jede Aufgabe oder zumindest für jedes Kapitel eine neu
 Im Dashboard – zugänglich oben rechts im Menü beim eigenen Namen – kannst du stets eine Übersicht deiner gespeicherten Projekte erhalten:
 
 ![--width=180px](images/cv-dashboard.png)
-
-## ⭐️ Hex-Display
-
-[@circuitverse](https://circuitverse.org/simulator/embed/hexdisplay-bb9aa46e-4626-442a-ba98-6589c6ab9df1)
-
-Um Bits darzustellen, kann ein Hex-Display als Ausgabe verwendet werden. Damit vier Eingänge angeschlossen werden können, braucht es einen Splitter, welcher vier Eingänge zusammenfasst.
-
-Dieser kann über `Misc > Splitter` eingefügt werden, wobei nacheinander zwei Eingabeboxen angezeigt werden. In der ersten wird `4` (die Anzahl Leitungen) eingegeben, in der zweiten `1 1 1 1` (wie viele Anschlussmöglichkeiten):
-
-:::cards
-![1. Inputbox](images/02-hex-display-q1.png)
-***
-![2. Inputbox](images/02-hex-display-q2.png)
-:::
-
-:::info Hexadezimal System
-Die Zahlen werden im Hexadezimalsystem angezeigt, also im Sechzehnersystem:
-
-<div className="slim-table">
-
-| Dezimal | Hexadezimal | Dezimal | Hexadezimal |
-| ------: | :---------- | ------: | :---------- |
-|     `0` | `0`         |     `8` | `8`         |
-|     `1` | `1`         |     `9` | `9`         |
-|     `2` | `2`         |    `10` | `A`         |
-|     `3` | `3`         |    `11` | `B`         |
-|     `4` | `4`         |    `12` | `C`         |
-|     `5` | `5`         |    `13` | `D`         |
-|     `6` | `6`         |    `14` | `E`         |
-|     `7` | `7`         |    `15` | `F`         |
-
-</div>
-
-:::

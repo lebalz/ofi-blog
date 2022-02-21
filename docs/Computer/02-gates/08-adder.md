@@ -53,19 +53,19 @@ Der Wert der Einerstelle kann durch ein XOR-Gatter berechnet werden, der Wert de
 [@circuitverse](https://circuitverse.org/simulator/embed/rothe-half-adder-vertical)
 
 :::aufgabe Aufgabe Halbaddierer
-1. Erstellen Sie ein neues Projekt in CircuitVerse und nennen Sie es Addierer.
+1. Erstellen Sie ein neues Projekt in CircuitVerse und nennen Sie es "Addierer".
 2. Bauen Sie den Halbaddierer in CircuitVerse nach und probieren Sie aus, ob die Addition von zwei Bits (inklusive Übertrag) korrekt funktioniert.
 3. Benennen Sie die Eingänge mit «A» und «B», sowie die Ausgänge korrekt mit «S» (für «Summe») und «Ü» (für «Übertrag»).
-4. Benennen Sie die Schaltung (sprich die Registerkarte) «HA» (für Halbaddierer).
+4. Benennen Sie die Schaltung (sprich die Registerkarte) mit «HA» (für Halbaddierer).
 :::
 
 ## Volladdierer
 
 Ein Halbaddierer addiert also 2 separate Bit und sorgt dafür, dass neben dem Resultat auch der Übertrag für die nächste Stelle mittels zweitem Ausgang bereitsteht.
 
-Allerdings berücksichtigt ein Halbaddierer nur die beiden zu addierenden Bits am Eingang, ein allfällig zu berücksichtigender Übertrag bleibt unbeachtet.
+Allerdings berücksichtigt ein Halbaddierer nur die beiden zu addierenden Bits am Eingang, ein allfällig zu berücksichtigender Übertrag von der vorherigen Stelle bleibt unbeachtet.
 
-Wenn zwei mehrstellige binäre Zahlen addiert werden sollen, muss der **Übertrag** berücksichtigt werden. Ab der zweithintersten Stelle muss folgendermassen vorgegangen werden:
+Wenn zwei mehrstellige binäre Zahlen addiert werden sollen, muss der **Übertrag** der vorhergehenden Stelle berücksichtigt werden. Ab der zweithintersten Stelle muss wie folgt vorgegangen werden:
 
 1. Die Zifferen an der aktuellen Stelle werden addiert.
 2. Zum Resultat wird der Übertrag der vorherigen Stelle addiert.
@@ -76,7 +76,7 @@ Dies kann mit der folgenden Schaltung realisiert werden. Sie besteht aus zwei Ha
 [@circuitverse](https://circuitverse.org/simulator/embed/rothe-full-adder-vertical)
 
 :::aufgabe Aufgabe Volladdierer
-Bauen Sie basierend auf deiner Halbaddierer-Schaltung einen Volladdierer:
+Bauen Sie basierend auf Ihrer Halbaddierer-Schaltung einen Volladdierer:
 
 1. Erstellen Sie dazu zuerst die Wahrheitstabelle für den Volladdierer. Der Volladdierer hat drei Eingänge:
     - A (erste Zahl)
@@ -118,10 +118,16 @@ Wir haben mit dem Volladdierer einen Baustein, der zwei 1-Bit-Zahlen addieren ka
 :::aufgabe
 
 #### Aufgabe 4-Bit-Addierer
-Versuche, die Halbaddierer-Schaltung so auszubauen, dass drei Eingänge zur Verfügung stehen, damit auch ein vorhandener Übertrag bei der Addition berücksichtigt wird:
+
+Erzeugen Sie eine neue Schaltung, welche zwei 4-Bit Zahlen miteinander addieren kann. Testen Sie Ihre Schaltung, indem Sie einige Rechnungen berechnen lassen:
+
+- `0011 + 0001` soll `0100` ergeben
+- `0111 + 0101` soll `1100` ergeben
+- `1100 + 0011` soll `1111` ergeben
 
 1. Bauen Sie in CircuitVerse eine neue Schaltung (d.h. eine neue Registerkarte) im Addierer-Projekt und nennen Sie diese «4-Bit-Addierer».
 2. Verwenden Sie zum Zeichnen der Schaltung einen Halbaddierer-Baustein «HA» sowie drei Volladdierer-Bausteine «VA».
+3. Machen Sie durch Beschriftungen erkennbar, wo die erste Zahl, die zweite Zahl und das Resultat steht. 
 
 <Hint>
 
@@ -132,4 +138,40 @@ Zum Addieren der Einer-Stelle braucht es nur einen Halbaddierer, da dort noch ke
 
 ![](images/09-cv-4-bit-adder.png)
 </Solution>
+:::
+
+## ⭐️ Hex-Display
+
+Die Eingaben und das Resultat kann auch mit einem Hexadezimal-Display dargestellt werden.
+
+[@circuitverse](https://circuitverse.org/simulator/embed/hexdisplay-bb9aa46e-4626-442a-ba98-6589c6ab9df1)
+
+Um Bits darzustellen, kann ein Hex-Display als Ausgabe verwendet werden. Damit vier Eingänge angeschlossen werden können, braucht es einen Splitter, welcher vier Eingänge zusammenfasst.
+
+Dieser kann über `Misc > Splitter` eingefügt werden, wobei nacheinander zwei Eingabeboxen angezeigt werden. In der ersten wird `4` (die Anzahl Leitungen) eingegeben, in der zweiten `1 1 1 1` (wie viele Anschlussmöglichkeiten):
+
+:::cards
+![1. Inputbox](images/02-hex-display-q1.png)
+***
+![2. Inputbox](images/02-hex-display-q2.png)
+:::
+
+:::info Hexadezimal System
+Die Zahlen werden im Hexadezimalsystem angezeigt, also im Sechzehnersystem:
+
+<div className="slim-table">
+
+| Dezimal | Hexadezimal | Dezimal | Hexadezimal |
+| ------: | :---------- | ------: | :---------- |
+|     `0` | `0`         |     `8` | `8`         |
+|     `1` | `1`         |     `9` | `9`         |
+|     `2` | `2`         |    `10` | `A`         |
+|     `3` | `3`         |    `11` | `B`         |
+|     `4` | `4`         |    `12` | `C`         |
+|     `5` | `5`         |    `13` | `D`         |
+|     `6` | `6`         |    `14` | `E`         |
+|     `7` | `7`         |    `15` | `F`         |
+
+</div>
+
 :::
