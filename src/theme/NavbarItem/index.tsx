@@ -22,14 +22,11 @@ const currentVersion = (versions: (typeof NavbarItem)[]): typeof NavbarItem | un
 
 const withLoginNavbar = (Component) => {
     const WrappedComponent = observer((props: typeof NavbarItem) => {
-        if (!ExecutionEnvironment.canUseDOM || props.to !== 'login') {
-            return <Component {...props} />;
-        }
         const userStore = useStore('userStore');
-        if (!userStore.current) {
+        const { globalData } = useDocusaurusContext();
+        if (!ExecutionEnvironment.canUseDOM || props.to !== 'login' || !userStore.current) {
             return <Component {...props} />;
         }
-        const { globalData } = useDocusaurusContext();
         const versions = globalData['docusaurus-plugin-content-docs']['default'].versions;
         const version = currentVersion(versions);
         if (userStore.current.admin) {

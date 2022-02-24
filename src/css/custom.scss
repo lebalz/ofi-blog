@@ -19,6 +19,12 @@
     --ifm-background-color: white;
     --ifm-card-background-color: #f7f7f7;
     --ifm-blockquote-shadow: var(--ifm-global-shadow-md);
+
+    .heroBanner_src-pages-index-module {
+        .hero__subtitle {
+            color: rgb(197, 197, 197);
+        }
+    }
 }
 
 html[data-theme='dark'] {
