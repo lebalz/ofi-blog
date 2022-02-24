@@ -3,6 +3,8 @@ title: 5. Vektorgrafik
 label: 5. Vektorgrafik
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # 5. Vektorgrafik [^1]
 
 Eine SVG-Datei ist eine Textdatei, welche «Befehle» enthält, wie Formen gezeichnet werden sollen.
@@ -49,6 +51,8 @@ Das folgende Beispiel stellt die französische Flagge dar:
 Erstellen Sie eine SVG-Datei, welche die Deutsche Flagge darstellt. Die Flagge ist 500 Pixel breit, jeder Streifen ist 100 Pixel hoch. Das Rot ist rein (d.h. 255 Rot, 0 Grün und 0 Blau). Das Gelb hat einen Rotanteil von 255 und einen Grünanteil von 204.
 
 ![](images/05-svg/de.svg)
+
+<Answer type="text" webKey="c827cf8f-69f5-4a2f-adbf-db8f187380ca" />
 :::
 
 ## Grundformen
@@ -60,11 +64,15 @@ Auf der folgenden Seite sind die Grundformen von SVG zusammengefasst:
 :::aufgabe Grundformen
 
 Erstellen Sie eine neue SVG-Datei und probieren Sie die Grundformen aus.
+
+<Answer type="text" webKey="2aa43ec6-d61b-412f-b7b8-e98b227c1696" />
 :::
 
 :::aufgabe Eigene Zeichnung
 
 Erstellen Sie mit SVG eine winterliche oder festliche Grafik.
+
+<Answer type="text" webKey="f8f6dc01-5264-4115-a4df-4965e7912d95" />
 :::
 
 [^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=860740)

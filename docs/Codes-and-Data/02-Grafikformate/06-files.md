@@ -3,6 +3,8 @@ title: 6. Dateiformate erkennen
 label: 6. Dateiformate erkennen
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # 6. Dateiformate erkennen [^1]
 
 Eine Datei ist eine Ansammlung binärer Daten, also eine Aneinanderreihung von Bits. Die binäre Darstellung der Datei, in welcher dieser Text gespeichert ist, beginnt so:
@@ -65,5 +67,22 @@ Ein *Internet Media Type* besteht immer aus einem Haupt- und einem Untertype. Es
 | Python-Programm           | _.py_            | `text/python`                     | reine Textdatei<br/>(ohne magische Bytes)         |
 
 </div>
+
+:::aufgabe Verlorene Dateiendungen
+
+Bei den folgenden Dateien ging die Dateiendung verloren. Finden Sie mit https://hexed.it/ heraus, welche Dateiendung die jeweilige Datei hat, fügen Sie die Dateiendung hinzu und öffnen Sie diese.
+
+[download](./assets/files.zip)
+
+
+<Answer type="text" webKey="56a24e71-16af-409b-9e36-9049e30413b3">
+
+- file1: 
+- file2: 
+- file3:
+
+</Answer>
+
+:::
 
 [^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=206603)
