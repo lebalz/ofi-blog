@@ -668,6 +668,13 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/Codes-and-Data/03-Compression/",
+      "to": "versioned_docs/version-25h/05-Codierung/03-Compression",
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "24w": [
