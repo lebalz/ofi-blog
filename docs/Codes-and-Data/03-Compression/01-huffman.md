@@ -28,15 +28,18 @@ Zuerst zählt man, wie oft jedes Zeichen im Text vorkommt und erstellt eine Häu
 <div className="slim-table">
 
 | Zeichen | Häufigkeit |
-| :------ | ---------: |
-| E       |          2 |
-| I       |          3 |
-| N       |          1 |
-| T       |          3 |
-| R       |          2 |
-| ␣       |          1 |
-| F       |          1 |
+| :------ | :--------- |
+| ␣       | 1          |
+| F       | 1          |
+| N       | 1          |
+| R       | 2          |
+| E       | 2          |
+| T       | 3          |
+| I       | 3          |
+
 </div>
+
+
 
 Nun geht es darum, einen Codierungsbaum zu erstellen. Die Häufigkeiten der Buchstaben bilden je einen Knoten. Die Häufigkeit steht im Knoten, der Buchstaben darunter. **Die Knoten werden nach Häufigkeit sortiert**:
 
@@ -46,7 +49,7 @@ Nun werden die **zwei Knoten mit den kleinsten Häufigkeiten** an einen neuen Kn
 
 ![](images/01-huffman/huffman-eintrittfrei-2.svg)
 
-<span className="badge badge--success">Dies wird wiederholt</span> bis alle Knoten miteinander verbunden sind. <b>Wenn zwei Knoten die gleiche Häufigkeit haben, spielt es keine Rolle, welcher gewählt wird</b>. Im nächsten Schritt wird der kleinste Knoten «N» mit «R» zusammengefasst. Man könnte aber «N» auch mit «E» zusammenfassen.
+<span className="badge badge--success">Dies wird wiederholt</span> bis alle Knoten miteinander verbunden sind. <b>Wenn zwei Knoten die gleiche Häufigkeit haben, spielt es keine Rolle, welcher gewählt wird</b>. Im nächsten Schritt wird der kleinste Knoten «N» mit «R» zusammengefasst. Man könnte aber «N» auch mit «E» oder dem neuen Knoten «2» zusammenfassen.
 
 ![](images/01-huffman/huffman-eintrittfrei-3.svg)
 
@@ -72,8 +75,8 @@ Nun kann eine Codierungstabelle erstellt werden, indem der Code für jedes Zeich
 | :------ | ---: |
 | I       |   00 |
 | T       |   01 |
-| R       |  100 |
-| N       |  101 |
+| N       |  100 |
+| R       |  101 |
 | E       |  111 |
 | ⎵       | 1100 |
 | F       | 1101 |
@@ -105,6 +108,8 @@ Decodieren Sie diese Bitfolge mit dem obenstehenden Codebaum. Das Symbol `⎵` s
 1. Erstellen Sie zum Wort «MISSISSIPPI» eine Häufigkeitstabelle.
 2. Erstellen Sie einen Huffman-Baum
 3. Codieren Sie das Wort.
+4. Angenommen, der Text würde mit UTF-8 codiert. Wie viele Bits können eingespart werden? 
+5. Angenommen die 4 Buchstaben würden ohne Huffman-Baum Codiert. Wie viele Bits wären dann nötig? Wie viele Bits werden im Vergleich dazu eingespart?
 
 <Answer type="text" webKey="04c0acd5-329d-4ef9-a114-7e46294d5cb6" />
 <Solution webKey="990f599b-58ac-4c72-a2a4-d08482a0ca1c">
@@ -115,25 +120,49 @@ Decodieren Sie diese Bitfolge mit dem obenstehenden Codebaum. Das Symbol `⎵` s
 
 ![](images/01-huffman/huffman-mississippi-5.svg)
 
-Codierung: `100110011001110110111`, Total 21 Bit
+Codierung: `100 11 0 0 11 0 0 11 101 101 11`, Total 21 Bit
+
+
+**Einsparung zu UTF8**: $11 \cdot 8 - 21 = 88 -21 = 67$ Bits oder -76 % Daten.
+
+
+**Ohne Huffman**: 4 Buchstaben -> Pro Buchstabe 2 Bit, also $11\cdot2=22$
+
+Einsparung: Es braucht 1 Bit weniger.
+
+
+<details><summary>Alternativ: MPSI</summary>
+
+| Zeichen        | M    | P    | S    | I    |
+| :------------- | :--- | :--- | :--- | :--- |
+| **Häufigkeit** | 1    | 2    | 4    | 4    |
+
+![](images/01-huffman/huffman-mississippi-5-b.svg)
+
+Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
+
+</details>
+
 </Solution>
 
 :::
 
 :::aufgabe 3. Huffman-Codierung 2
 
-1. Erstelle zum Wort «EXTERNER EFFEKT» eine Häufigkeitstabelle.
-2. Erstelle einen Huffman-Baum
-3. Codiere das Wort.
+1. Erstellen Sie zum Wort «EXTERNER EFFEKT» eine Häufigkeitstabelle.
+2. Erstellen Sie einen Huffman-Baum
+3. Codieren Sie das Wort.
 
 <Solution webKey="990f599b-58ac-4c72-a2a4-d08482a0ca1c">
 
-| Zeichen        | X    | N    | K    | T    | R   | F   | E   |
-| :------------- | :--- | :--- | :--- | :--- | --- | --- | --- |
-| **Häufigkeit** | 1    | 1    | 1    | 2    | 2   | 2   | 5   |
+| Zeichen        | ⎵    | X    | N    | K    | T    | R   | F   | E   |
+| :------------- | :--- | :--- | :--- | :--- | :--- | --- | --- | --- |
+| **Häufigkeit** | 1    | 1    | 1    | 1    | 2    | 2   | 2   | 5   |
 
 
-Codierung: ``, Total Bit
+Codierung: `11 1001 010 11 011 000 11 011 1000 11 101 101 11 001 010`, Total `42` Bits
+
+Ohne Huffmann: `8` Buchstaben, also braucht jeder Buchstabe 3 Bits. --> $15 \cdot 3 = 45$ 
 
 </Solution>
 
