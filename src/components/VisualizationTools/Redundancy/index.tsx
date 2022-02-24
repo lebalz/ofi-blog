@@ -83,7 +83,8 @@ const Redundancy = () => {
                         Seltene entfernen
                     </button>
                 </div>
-                <h4>Geheimtext</h4>
+                <h4>Ausgabe</h4>
+                <p>Ohne: {(mode === 'frequent' ? ALPHABET_FREQUENT : ALPHABET_RARE).source.slice(1, -1).split('').join(', ')}</p>
                 <textarea
                     className={clsx(styles.input)}
                     value={output}

@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Obligatorisches Fach Informatik
 
+Links:
+- [Codes und Daten: https://lehrerfortbildung-bw.de](https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb1/1_i1_duc/)
 
 
 ## Präsentationen
