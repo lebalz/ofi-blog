@@ -9,8 +9,8 @@ import ImageGallery from 'react-image-gallery';
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+    <header className={clsx('hero hero--primary index-page', styles.heroBanner)}>
+      <div className="container index-page-title">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
       </div>

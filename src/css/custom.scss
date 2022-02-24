@@ -20,7 +20,7 @@
     --ifm-card-background-color: #f7f7f7;
     --ifm-blockquote-shadow: var(--ifm-global-shadow-md);
 
-    .heroBanner_src-pages-index-module {
+    .index-page-title {
         .hero__subtitle {
             color: rgb(197, 197, 197);
         }
@@ -38,9 +38,11 @@ html[data-theme='dark'] {
     --ifm-color-primary-lightest: #6c7caf;
     --ifm-card-background-color: #242526;
     --ifm-color-snow: white;
-    .heroBanner_src-pages-index-module {
-        color: white;
+    .index-page {
         background: #232a40;
+        .index-page-title {
+            color: white;
+        }
     }
     --ifm-blockquote-shadow: 0 5px 40px rgba(77, 92, 141, 0.3);
 }
