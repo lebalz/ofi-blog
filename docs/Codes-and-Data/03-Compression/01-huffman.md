@@ -34,8 +34,8 @@ Zuerst zählt man, wie oft jedes Zeichen im Text vorkommt und erstellt eine Häu
 | N       | 1          |
 | R       | 2          |
 | E       | 2          |
-| T       | 3          |
 | I       | 3          |
+| T       | 3          |
 
 </div>
 
