@@ -29,6 +29,7 @@ const TOOLBAR = [
     [{ header: [1, 2, 3, false] }],
     [{ color: [] }, { background: [] }], // dropdown with defaults from theme
     [{ list: 'ordered' }, { list: 'bullet' }],
+    ['image']
 ];
 
 const getToolbar = (options: ToolbarOptions) => {
@@ -218,7 +219,7 @@ const QuillEditor = observer((props: Props) => {
                         quality: 0.5, // default
                         maxWidth: 1024, // default
                         maxHeight: 1024, // default
-                        imageType: 'image/png', // default
+                        imageType: 'image/jpeg',
                         debug: false, // default
                         suppressErrorLogging: false, // default
                     },

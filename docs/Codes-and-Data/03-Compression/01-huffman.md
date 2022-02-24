@@ -123,12 +123,26 @@ Decodieren Sie diese Bitfolge mit dem obenstehenden Codebaum. Das Symbol `⎵` s
 Codierung: `100 11 0 0 11 0 0 11 101 101 11`, Total 21 Bit
 
 
-**Einsparung zu UTF8**: $11 \cdot 8 - 21 = 88 -21 = 67$ Bits oder -76 % Daten.
+**Einsparung zu UTF8**: $11 \cdot 8 - 21 = 88-21 = 67$ Bits oder -76 % Daten.
 
 
-**Ohne Huffman**: 4 Buchstaben -> Pro Buchstabe 2 Bit, also $11\cdot2=22$
+**Ohne Huffman**: 
 
-Einsparung: Es braucht 1 Bit weniger.
+Für 4 Buchstaben reichen 2 bit Information pro Buchstaben aus:
+
+<div className="slim-table">
+
+| Buchstabe | Code |
+| :-------- | :--- |
+| M         | `00` |
+| I         | `01` |
+| S         | `10` |
+| P         | `11` |
+</div>
+
+Also braucht es: $11\cdot2=22$ Zeichen.
+
+**Einsparung**: Es braucht 1 Bit weniger.
 
 
 <details><summary>Alternativ: MPSI</summary>
@@ -159,13 +173,25 @@ Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
 | :------------- | :--- | :--- | :--- | :--- | :--- | --- | --- | --- |
 | **Häufigkeit** | 1    | 1    | 1    | 1    | 2    | 2   | 2   | 5   |
 
+```
+                ___15___
+           ____╱        ╲____
+          ╱                  ╲
+     ___6___                 _9_
+    ╱       ╲               ╱   ╲
+   2         4             4     5
+ ╱   ╲      ╱ ╲          ╱   ╲   E
+1     1    2   2        2     2
+N     K    T   R      ╱   ╲   F
+                     1     1
+                     ⎵     X
+```           
 
 Codierung: `11 1001 010 11 011 000 11 011 1000 11 101 101 11 001 010`, Total `42` Bits
 
 Ohne Huffmann: `8` Buchstaben, also braucht jeder Buchstabe 3 Bits. --> $15 \cdot 3 = 45$ 
 
 </Solution>
-
 :::
 
 
