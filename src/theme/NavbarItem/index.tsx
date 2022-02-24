@@ -22,44 +22,44 @@ const currentVersion = (versions: (typeof NavbarItem)[]): typeof NavbarItem | un
 
 const withLoginNavbar = (Component) => {
     const WrappedComponent = observer((props: typeof NavbarItem) => {
-        if (!ExecutionEnvironment.canUseDOM) {
+        if (!ExecutionEnvironment.canUseDOM || props.to !== 'login') {
             return <Component {...props} />;
         }
         const userStore = useStore('userStore');
+        if (!userStore.current) {
+            return <Component {...props} />;
+        }
         const { globalData } = useDocusaurusContext();
         const versions = globalData['docusaurus-plugin-content-docs']['default'].versions;
         const version = currentVersion(versions);
-        if (props.to === 'login' && userStore.current) {
-            if (userStore.current.admin) {
-                return (
-                    <div className={clsx(styles.navBadge, 'dropdown', 'dropdown--hoverable')}>
-                        <button
-                            className={clsx(
-                                'badge',
-                                userStore.isMyView ? 'badge--primary' : 'badge--warning'
-                            )}
-                        >
-                            {userStore.currentView.name}
-                        </button>
-                        <ul className="dropdown__menu">
-                            {userStore.byClass(version?.name).map((user, idx) => (
-                                    <li key={idx} onClick={() => userStore.setView(user)}>
-                                        <div className={clsx(styles.userBadge, 'badge', 'badge--secondary', 'dropdown__link')}>
-                                            {user.name}
-                                        </div>
-                                    </li>
-                                ))}
-                        </ul>
-                    </div>
-                );
-            }
+        if (userStore.current.admin) {
             return (
-                <Link to={`/${props.to}`} className="badge badge--primary margin--xs">
-                    <span>{userStore.current.name}</span>
-                </Link>
+                <div className={clsx(styles.navBadge, 'dropdown', 'dropdown--hoverable')}>
+                    <button
+                        className={clsx(
+                            'badge',
+                            userStore.isMyView ? 'badge--primary' : 'badge--warning'
+                        )}
+                    >
+                        {userStore.currentView.name}
+                    </button>
+                    <ul className="dropdown__menu">
+                        {userStore.byClass(version?.name).map((user, idx) => (
+                                <li key={idx} onClick={() => userStore.setView(user)}>
+                                    <div className={clsx(styles.userBadge, 'badge', 'badge--secondary', 'dropdown__link')}>
+                                        {user.name}
+                                    </div>
+                                </li>
+                            ))}
+                    </ul>
+                </div>
             );
         }
-        return <Component {...props} />;
+        return (
+            <Link to={`/${props.to}`} className="badge badge--primary margin--xs">
+                <span>{userStore.current.name}</span>
+            </Link>
+        );
     });
 
     return WrappedComponent;
