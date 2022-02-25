@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { default as indexStyles } from './index.module.css';
 import { useStore } from '../stores/hooks';
-import { Link } from '@docusaurus/router';
+import Link from '@docusaurus/Link';
 import { observer } from 'mobx-react-lite';
 import UserTable from './admin/UserTable';
 

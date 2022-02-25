@@ -9,7 +9,7 @@ import React from 'react';
 // @ts-ignore
 import NavbarItem from '@theme-original/NavbarItem';
 import { useStore } from '../../stores/hooks';
-import { Link } from '@docusaurus/router';
+import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { observer } from 'mobx-react-lite';

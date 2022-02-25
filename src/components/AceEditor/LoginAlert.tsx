@@ -1,6 +1,6 @@
 import * as React from "react";
 import styles from "./LoginAlert.module.scss";
-import { Link } from "@docusaurus/router";
+import Link from '@docusaurus/Link';
 import { observer } from "mobx-react-lite";
 import { useStore } from "../../stores/hooks";
 
