@@ -273,7 +273,7 @@ module.exports = {
   scripts: [
     // Object format.
     {
-      src: 'https://umami.gbsl.website/umami.js',
+      src: 'https://umami.gbsl.website/schmackhaft.js',
       ['data-website-id']: '8fc2386c-353f-487d-b58b-1e5c1f4301d7',
       ['data-domains']: 'ofi.gbsl.website',
       async: true,
