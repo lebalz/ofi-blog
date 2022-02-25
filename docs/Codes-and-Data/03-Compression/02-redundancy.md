@@ -4,6 +4,7 @@ label: 2. Informationsgehalt
 ---
 
 import Redundancy from "@site/src/components/VisualizationTools/Redundancy";
+import Answer from '@site/src/components/Answer'
 
 # 2. Informationsgehalt [^1]
 
@@ -17,9 +18,12 @@ Die Buchstabenhäufigkeit gibt an, wie oft ein Buchstabe in einem Text vorkommen
 
 Wir führen ein Experiment durch. Aus einem deutschen Text werden etwa 40% der Buchstaben entfernt. Zuerst werden die vier häufigsten Buchstaben `E`, `N`, `R` und `I` entfernt. Danach werden diese Buchstaben sowie `T`, `S` und `A` beibehalten und die restlichen entfernt. Obschon etwa die gleiche Menge Buchstaben entfernt worden sind, bleibt der Text nach dem Entfernen der häufigen Buchstaben verständlicher.
 
+*Notizen*
 <Redundancy />
 
 Offenbar tragen die häufigen Buchstaben weniger zum Inhalt des Textes bei. Sie haben einen kleineren **Informationsgehalt**.
+
+<Answer type="text" webKey="18b21da1-1e49-4d1a-a7ea-1c930205abf1" />
 
 <details><summary>⭐️ Huffman Codierung für die deutsche Sprache</summary>
 
