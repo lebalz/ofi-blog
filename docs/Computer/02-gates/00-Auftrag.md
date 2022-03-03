@@ -2,6 +2,8 @@
 title: Auftrag
 ---
 
+import Answer from '@site/src/components/Answer'
+
 # Video-Auftrag
 
 Sie fertigen in Kleingruppen von 3 bis max. 4 Personen ein kurzes, 3 bis 4 minütiges Video an, welches die Funktionsweise der 4-bit Addition erklärt. Erklären Sie dabei
@@ -43,8 +45,12 @@ Zeigen Sie für die relevanten Bausteine auch die Wahrheitstabellen.
 
 ## Abgabe
 
-- Video
+- Video: [Hier Hochladen](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EpXVr0g1RvdJhgKHCwFPBRsBQXv4dccZOA8K8YAhrH0KpA)
 - CircuitVerse Projekt
+
+Link zum CircuitVerse Projekt des 4-bit Addierers hier einfügen. **Achtung**: Das Projekt muss öffentlich zugängig sein.
+
+<Answer type="text" webKey="9a26f836-e970-46b6-a7c4-bc568443ff43" />
 
 ## Beurteilungskriterien
 
