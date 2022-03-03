@@ -2,7 +2,7 @@ const visit = require('unist-util-visit');
 const escapeHtml = require('escape-html');
 const posixPath = require('@docusaurus/utils').posixPath;
 const escapePath = require('@docusaurus/utils').escapePath;
-const { parseOptions, getFileUrl } = require('./helpers');
+const { parseOptions, getFileUrl, cleanedText } = require('./helpers');
 const getFileLoaderUtils = require('@docusaurus/utils').getFileLoaderUtils;
 const path = require('path');
 
@@ -173,6 +173,26 @@ const plugin = (options) => {
             }
           }
           promises.push(processVideo())
+        }
+        if (/@button/.test(text)) {
+          const options = parseOptions(text, true);
+          const processButton = async () => {
+            const btype = options.type || 'primary';
+            // console.log(linkNode, linkNode.children[0].position);
+            linkNode.data = {
+              hProperties: {
+                className: ['button', `button--${btype}`]
+              }
+            }
+            const val = cleanedText(text).replace(/\s*@button\s*/, '');
+            linkNode.children = [
+              {
+                type: 'text',
+                value: val
+              }
+            ]
+          }
+          promises.push(processButton())
         }
       }
     )

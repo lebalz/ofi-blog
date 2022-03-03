@@ -45,7 +45,8 @@ Zeigen Sie für die relevanten Bausteine auch die Wahrheitstabellen.
 
 ## Abgabe
 
-- Video: [Hier Hochladen](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EpXVr0g1RvdJhgKHCwFPBRsBQXv4dccZOA8K8YAhrH0KpA)
+[@button Video Hochladen --type=success](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EpXVr0g1RvdJhgKHCwFPBRsBQXv4dccZOA8K8YAhrH0KpA)
+
 - CircuitVerse Projekt
 
 Link zum CircuitVerse Projekt des 4-bit Addierers hier einfügen. **Achtung**: Das Projekt muss öffentlich zugängig sein.
