@@ -19,15 +19,15 @@ Die **Von-Neumann-Architektur** hat folgende Eigenschaften:
 
 - Die Maschine ist nicht auf eine bestimmte Aufgabe zugeschnitten.
 - Zur Lösung einer Aufgabe dient ein austauschbares Programm.
-- Programme und Daten werden im Speicher abgelegt
+- Programme und Daten werden im Speicher abgelegt.
 - Ein Programm besteht aus einer Abfolge von einfachen Befehlen.
-- Zu jedem Zeitpunkt wird genau ein Befehl ausgeführt, der genau einen Datenwert ändern kann.
+- Zu jedem Zeitpunkt wird genau ein Befehl ausgeführt, der **genau einen Datenwert ändern** kann.
 
 ![Von-Neumann-Architektur](images/01-von-neumann-roles.svg)
 
 Ein Von-Neumann-Computer besteht aus folgenden Komponenten:
 
-- Das **Rechenwerk** führt numerische und logische Berechnungen durch.
+- Das **Rechenwerk** führt numerische und logische Berechnungen durch (bspw. eine binäre Addition).
 - Das **Steuerwerk** steuert die Befehlsverarbeitung im Computer.
 - Das **Speicher** speichert Befehle und Daten.
 - Das **Ein- und Ausgabewerk** dient der Kommunikation mit der Aussenwelt.

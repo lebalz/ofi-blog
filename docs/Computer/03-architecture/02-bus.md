@@ -19,7 +19,7 @@ Wenn alle Komponenten direkt miteinander kommunizieren, muss zwischen allen Komp
 ## Beispiele
 
 - Systembus in einem Computer
-- Serial AT Attachment (SATA)
+- Serial AT Attachment (SATA, für Computerfestplatten)
 - Universal Serial Bus (USB)
 
 [^1]: Quelle: [Wikipedia: Bus (Datenverarbeitung)](https://de.wikipedia.org/wiki/Bus_(Datenverarbeitung))

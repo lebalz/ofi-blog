@@ -16,7 +16,11 @@ Der nächste Befehl wird aus dem Speicher in das Befehlsregister geladen. Dazu w
 
 ## 2. Befehl decodieren
 
-Nun wird der Befehl, welcher in das Befehlsregister geladen worden ist, decodiert. Das bedeutet, dass das Dekodierwerk die Aktionen, welche für diesen Befehl ausgeführt werden müssen, in Steuersignale an die verschiedenen Komponenten übersetzt.
+Nun wird der Befehl, welcher in das Befehlsregister geladen worden ist, decodiert. Das Steuerwerk übersetzt also einen Code zu einer Anweisung und konfiguriert dann das Rechenwerk so, dass die gewünschte Operation auch ausgeführt wird.
+
+Beispiel Addition:
+- **Decodieren**: Das Rechenwerk sieht den Code `001000` und weiss (decodiert), dass dies der Befehl für die Addition ist.
+- **Konfiguration**: Das Rechenwerk konfiguriert nun das Rechenwerk so, dass es zwei Zahlen miteinander Addiert.
 
 ![](images/04-decode.svg)
 
