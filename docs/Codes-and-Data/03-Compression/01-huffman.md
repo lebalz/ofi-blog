@@ -166,6 +166,9 @@ Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
 1. Erstellen Sie zum Wort «EXTERNER EFFEKT» eine Häufigkeitstabelle.
 2. Erstellen Sie einen Huffman-Baum
 3. Codieren Sie das Wort.
+4. Lohnt sich die Huffman-Codierung? Wo würden Sie diese allenfalls einsetzen?
+
+<Answer type="text" webKey="a282cec4-8f57-4c57-847b-055d9d8002e5" />
 
 <Solution webKey="990f599b-58ac-4c72-a2a4-d08482a0ca1c">
 
@@ -191,9 +194,15 @@ Codierung: `11 1001 010 11 011 000 11 011 1000 11 101 101 11 001 010`, Total `42
 
 Ohne Huffmann: `8` Buchstaben, also braucht jeder Buchstabe 3 Bits. --> $15 \cdot 3 = 45$ 
 
+Die Huffman Codierung bewirkt erst bei längeren Texten eine grosse Speicherplatzeinsparung.
+
 </Solution>
 :::
 
+:::success Take-Home Message
+
+<Answer type="text" webKey="168db824-a49b-42b2-a586-112547749e02" />
+:::
 
 [^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=597080)
 [^2]: Quelle: [Wikipedia: Huffman coding](https://en.wikipedia.org/wiki/Huffman_coding#Applications)
