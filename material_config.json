@@ -121,6 +121,11 @@
       "from": "docs/Video-Editor/",
       "to": "versioned_docs/version-24f/07-Computer/06-Video-Editor",
       "ignore": []
+    },
+    {
+      "from": "docs/Computer/03-architecture/",
+      "to": "versioned_docs/version-24f/07-Computer/07-Rechnerarchitektur",
+      "ignore": []
     }
   ],
   "24i": [
