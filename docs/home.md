@@ -23,3 +23,7 @@ Links:
 
 [01-Codierung](/p/Netzwerke/Codierung/01-codierung.html)
 [02-Routing](/p/Netzwerke/Routing/presentation.html)
+
+# Unterlagen
+
+[scg](https://erzbe-my.sharepoint.com/personal/andres_scheidegger_gbsl_ch/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fandres%5Fscheidegger%5Fgbsl%5Fch%2FDocuments%2FIN)
