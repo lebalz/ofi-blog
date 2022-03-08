@@ -2,6 +2,9 @@
 title: 5. Befehlssatz
 ---
 
+import Answer from '@site/src/components/Answer';
+
+
 # 5. Befehlssatz
 
 Der Befehlssatz ist die komplette Sammlung von Befehlen, welche ein Prozessor versteht und ausführen kann. Im folgenden werden einige typische Befehle betrachtet.
@@ -35,3 +38,10 @@ Ein Wert kann aus einem Eingabegerät in den Hauptspeicher eingelesen werden.
 Ein Wert kann aus dem Hauptspeicher auf ein Ausgabegerät ausgegeben werden.
 
 ![](images/05-output.svg)
+
+
+:::success Take-Home Message aus CPU-Rollenspiel
+
+<Answer type="text" webKey="c7958ed6-c67d-4154-8051-6d9c1fadd5e2" />
+
+:::

@@ -2,6 +2,8 @@
 title: 4. Von-Neumann-Zyklus
 ---
 
+import Answer from '@site/src/components/Answer';
+
 # 4. Von-Neumann-Zyklus
 
 Der Prozessor führt immer wieder den gleichen zyklischen Ablauf aus. Dieser Ablauf wird auch **Von-Neumann-Zyklus** genannt und besteht aus folgenden Schritten:
@@ -27,3 +29,13 @@ Beispiel Addition:
 ## 3. Befehl ausführen
 
 Schliesslich wird der eigentliche Befehl ausgeführt, indem das Dekodierwerk die Steuersignale an die Komponenten auslöst. Im nächsten Abschnitt werden einige typische Befehle erläutert.
+
+
+:::success Take-Home Message aus CPU-Rollenspiel
+
+- Wie schnell war ein schneller/langsamer/durchschnittlicher Zyklus in der Menschen-CPU?
+- Wie viele Zyklen sind waren für ein simples Programm nötig?
+
+<Answer type="text" webKey="56120b26-1904-4dd4-ae34-d5457d98b401" />
+
+:::
