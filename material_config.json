@@ -680,6 +680,11 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/Math/Taschenrechner/",
+      "to": "versioned_docs/version-25h/Math/Taschenrechner/",
+      "ignore": []
     }
   ],
   "24w": [

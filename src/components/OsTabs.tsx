@@ -12,7 +12,7 @@ export default class OsTabs extends React.Component {
           { label: 'macOS', value: 'mac' },
         ]
         }>
-        {this.props.children}
+        {this.props.children as React.ReactElement[]}
       </Tabs>
     );
   }
