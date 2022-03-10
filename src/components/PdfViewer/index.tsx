@@ -21,43 +21,15 @@ interface Props {
   noDownload?: boolean;
 }
 
-// var Document: any | undefined = undefined;
-// var Page: any | undefined = undefined;
-
-// const loadReactPdf = (callback) => {
-//     if (Document) {
-//         return callback();
-//     }
-//     const loadLibs = [
-//         import('react-pdf/dist/esm/entry.webpack')
-//     ];
-//     const importPosition: {[key: string]: number} = {
-//         'react-pdf': 0,
-//     }
-//     Promise.all(loadLibs).then((packages) => {
-//         Document = packages[importPosition['react-pdf']].Document;
-//         Page = packages[importPosition['react-pdf']].Page;
-//         callback();
-//     });
-// };
-// const [pdfLoaded, setPdfLoaded] = React.useState(false);
-//   React.useEffect(() => {
-//     let isMounted = true;
-//     loadReactPdf(() => {
-//         if (isMounted) {
-//             setPdfLoaded(true);
-//         }
-//     });
-//     return () => {
-//         isMounted = false;
-//     };
-// }, [props]);
+const SCALE = 0.98;
 
 const PdfViewer = (props: Props) => {
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(props.page || 1);
+  const [pageNumber, setPageNumber] = useState(-1);
   const [width, setWidth] = useState(props.width);
+  const [height, setHeight] = useState(150);
   const inBrowser = useIsBrowser();
+  const [overflowing, setOverflowing] = useState(false);
   React.useEffect(() => {
     window.addEventListener("resize", onResize);
     return () => {
@@ -66,12 +38,26 @@ const PdfViewer = (props: Props) => {
   }, []);
   const ref = React.useRef<HTMLDivElement>(null);
 
+  const onHeightChange = () => {
+    if (!ref.current) {
+      return;
+    }
+    const canv = ref.current.querySelector("canvas.react-pdf__Page__canvas");
+    if (canv) {
+      const h = canv.getBoundingClientRect().height;
+      setHeight(h);
+    }
+  }
+
   const onResize = () => {
     if (!ref.current) {
       return;
     }
-    const maxWidth = ref.current.getBoundingClientRect().width * 0.92;
+    const rect = ref.current.getBoundingClientRect();
+    const maxWidth = rect.width * SCALE;
+    onHeightChange()
     let newWidth = maxWidth;
+    let overflow = false;
     if (props.width && props.scale) {
       newWidth = Math.min(props.width * props.scale, maxWidth);
     } else if (props.width) {
@@ -81,14 +67,19 @@ const PdfViewer = (props: Props) => {
     }
     if (props.minWidth && newWidth < props.minWidth) {
       newWidth = props.minWidth;
+      overflow = true;
+    }
+    if (overflow !== overflowing) {
+      setOverflowing(overflow);
     }
     setWidth(newWidth);
-    setPageNumber(props.page || pageNumber);
   };
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
-    setPageNumber(1);
+    if (pageNumber<0) {
+      setPageNumber(props.page || 1);
+    }
     onResize();
   };
 
@@ -114,7 +105,6 @@ const PdfViewer = (props: Props) => {
     changePage(1);
   };
 
-  // if (!inBrowser || !Document || !Page || !pdfLoaded) {
   if (!inBrowser) {
     return <div>Loading...</div>;
   }
@@ -123,35 +113,47 @@ const PdfViewer = (props: Props) => {
     <div
       className={clsx(
         styles.pdfWrapper,
+        overflowing && styles.overflowing,
         (numPages <= 1 || props.page !== undefined) && styles.singlepage
       )}
       ref={ref}
     >
-      <Document
-        file={props.file}
-        onLoadSuccess={onDocumentLoadSuccess}
-        className={clsx(styles.doc)}
-        options={{
-          cMapUrl: "cmaps/",
-          cMapPacked: true,
-        }}
-      >
-        <Page pageNumber={pageNumber} width={width} />
-        {!props.noDownload && (
-          <a
-            href={props.file}
-            className={clsx(
-              styles.download,
-              "button",
-              "button--secondary",
-              "button--sm"
-            )}
-            download={props.name}
-          >
-            <FontAwesomeIcon icon={faDownload} />
-          </a>
-        )}
-      </Document>
+      <div style={{ height: `${height + 8}px` }}>
+        <Document
+          file={props.file}
+          onLoadSuccess={onDocumentLoadSuccess}
+          className={clsx(styles.doc)}
+          options={{
+            cMapUrl: "cmaps/",
+            cMapPacked: true,
+          }}
+        >
+          {
+            pageNumber > 0 && (
+              <Page
+                pageNumber={pageNumber}
+                width={width}
+                onLoadSuccess={onHeightChange}
+              />
+            )
+          }
+          {!props.noDownload && (
+            <a
+              href={props.file}
+              className={clsx(
+                styles.download,
+                "button",
+                "button--secondary",
+                "button--sm"
+              )}
+              download={props.name}
+            >
+              <FontAwesomeIcon icon={faDownload} />
+            </a>
+          )}
+        </Document>
+      </div>
+
       <div className={clsx(styles.controls)}>
         {numPages > 1 && props.page === undefined && (
           <div className={clsx("button-group")}>

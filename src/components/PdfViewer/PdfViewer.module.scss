@@ -1,15 +1,16 @@
 .pdfWrapper {
     max-width: 100%;
     width: 100%;
-    overflow-x: auto;
     height: max-content;
-    &.singlepage {
-        box-shadow: var(--ifm-global-shadow-lw);
+    &.overflowing {
+        overflow-x: auto;
     }
     .doc {
         display: flex;
         justify-content: center;
-        box-shadow: var(--ifm-global-shadow-lw);
+        :global(.react-pdf__Page) {
+            box-shadow: var(--ifm-global-shadow-lw);
+        }
         position: relative;
         .download {
             position: absolute;
