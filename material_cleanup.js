@@ -46,6 +46,9 @@ klassen.forEach((klass) => {
         }
     });
     copyBack.forEach((f) => {
+        if (!fs.existsSync(`${tmp_dir}/${f}`)) {
+            return;
+        }
         if (!fs.existsSync(path.dirname(f))) {
             fs.mkdirSync(path.dirname(f), {recursive: true});
         }

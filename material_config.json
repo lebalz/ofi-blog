@@ -685,6 +685,13 @@
       "from": "docs/Math/Taschenrechner/",
       "to": "versioned_docs/version-25h/Math/Taschenrechner/",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/04-Anwendungen/",
+      "to": "versioned_docs/version-25h/05-Codierung/04-Anwendungen",
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "24w": [

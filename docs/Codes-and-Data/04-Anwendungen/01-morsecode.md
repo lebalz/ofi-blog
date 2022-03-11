@@ -40,7 +40,8 @@ Schreiben Sie ein Wort mit 6 Buchstaben in Morse-Code.
 
 <Solution webKey="3673feb3-e73e-4ebd-b152-024b8826c571">
 
-Auch die 
+Das Decodieren von Morse-Code ist bedeutend einfacher, wenn die Tabelle als binären Baum dargestellt wird. Es ist zu sehen, dass die häufigen Buchstaben weniger Zeichen benötigen, als die seltenen Buchstaben. Das Prinzip ist dasselbe wie bei den Huffman-Bäumen, ausser dass hier ein Punkt "nach Links" und ein Strich "nach Rechts" bedeutet.
+ 
 ```
                                 ← ·                - →
                     E                                           T
