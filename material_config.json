@@ -250,6 +250,11 @@
       "from": "docs/Video-Editor/",
       "to": "versioned_docs/version-24i/07-Computer/06-Video-Editor",
       "ignore": []
+    },
+    {
+      "from": "docs/Computer/03-architecture/",
+      "to": "versioned_docs/version-24i/07-Computer/07-Rechnerarchitektur",
+      "ignore": []
     }
   ],
   "24K": [
@@ -373,6 +378,11 @@
     {
       "from": "docs/Video-Editor/",
       "to": "versioned_docs/version-24K/07-Computer/06-Video-Editor",
+      "ignore": []
+    },
+    {
+      "from": "docs/Computer/03-architecture/",
+      "to": "versioned_docs/version-24K/07-Computer/07-Rechnerarchitektur",
       "ignore": []
     }
   ],
@@ -498,6 +508,11 @@
       "from": "docs/Video-Editor/",
       "to": "versioned_docs/version-24L/07-Computer/06-Video-Editor",
       "ignore": []
+    },
+    {
+      "from": "docs/Computer/03-architecture/",
+      "to": "versioned_docs/version-24L/07-Computer/07-Rechnerarchitektur",
+      "ignore": []
     }
   ],
   "24o": [
@@ -621,6 +636,11 @@
     {
       "from": "docs/Video-Editor/",
       "to": "versioned_docs/version-24o/07-Computer/06-Video-Editor",
+      "ignore": []
+    },
+    {
+      "from": "docs/Computer/03-architecture/",
+      "to": "versioned_docs/version-24o/07-Computer/07-Rechnerarchitektur",
       "ignore": []
     }
   ],
