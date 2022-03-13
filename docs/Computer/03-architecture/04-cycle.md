@@ -34,7 +34,7 @@ Schliesslich wird der eigentliche Befehl ausgeführt, indem das Dekodierwerk die
 :::success Take-Home Message aus CPU-Rollenspiel
 
 - Wie schnell war ein schneller/langsamer/durchschnittlicher Zyklus in der Menschen-CPU?
-- Wie viele Zyklen sind waren für ein simples Programm nötig?
+- Wie viele Zyklen waren für die Ausführung eines simplen Programms nötig?
 
 <Answer type="text" webKey="56120b26-1904-4dd4-ae34-d5457d98b401" />
 
