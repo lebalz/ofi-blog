@@ -51,7 +51,7 @@ Jede Expertin und jeder Experte ist nach der Expertenrunde bereit, das zugeteilt
 ### Auftrag
 1. **Lesen und Bearbeiten** Sie die Texte und Inhalte gemäss den Angaben zu Ihrem Thema.
 2. Diskutieren Sie in der Gruppe, welches Lernziel später in der Unterrichtsrunde erreicht werden soll. Was sollen Ihre Kolleginnen/Kollegen wissen, können, verstehen?
-3. Erstellen Sie in der Expertenrunde eine **kleine Präsentation** (2 is 3 Folien maximal), welche Sie dann in der Unterrichtsrunde benutzen, um Ihren Kolleginnen und Kollegen Ihr Thema zu vermitteln.
+3. Erstellen Sie in der Expertenrunde eine **kleine Präsentation** (2 bis 3 Folien maximal), welche Sie dann in der Unterrichtsrunde benutzen, um Ihren Kolleginnen und Kollegen Ihr Thema zu vermitteln.
 4. Formulieren Sie eine **Testfrage**, um in der Unterrichtsrunde zu überprüfen, ob das Lernziel erreicht wurde.
 5. Bereiten Sie sich darauf vor, in der Unterrichtsrunde Ihren Kolleg:innen direkt auf dem Notebook das **Verwaltungsprogramm**, welches zu Ihrem Thema gehört, zu demonstrieren. Im Idealfall werden Ihre Kolleg:innen unter Ihrer Anleitung das Programm auf den eigenen Notebooks öffnen.
 
