@@ -17,7 +17,7 @@ Im Unterricht haben Sie gesehen, wie die umgedrehte Karte sofort entdeckt wurde 
 
     <Answer type="text" webKey="18145a45-4a97-47aa-9905-aeb5c332a7da" />
 
-2. Spielen Sie das `XO`-Spiel mit verschiedenen Mustern durch. Jede Spieler:in darf zweimal „raten“.
+2. Spielen Sie das `XO`-Spiel[^1] mit verschiedenen Mustern durch. Jede Spieler:in darf zweimal „raten“.
 
 **Von nun an soll das gelegte `6x6`-Muster nicht mehr geändert werden.**
 
@@ -146,3 +146,6 @@ Nach einer kurzen Recherche: Die Strichcodes auf Verpackungen sind sog. **EAN-13
 400781730180
 
 </Answer>
+
+
+[^1]: Inspirationsquelle: [lehrerfortbildung-bw.de](https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb1/1_i1_duc/2_kopiervorlagen/2_xo/)

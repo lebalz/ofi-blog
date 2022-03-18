@@ -717,6 +717,11 @@
       "ignore": [
         "_category_.json"
       ]
+    },
+    {
+      "from": "docs/Codes-and-Data/00-Lernziele.md",
+      "to": "versioned_docs/version-25h/05-Codierung/00-Lernziele.md",
+      "ignore": []
     }
   ],
   "24w": [
