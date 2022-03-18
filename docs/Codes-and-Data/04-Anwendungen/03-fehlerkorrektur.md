@@ -77,7 +77,7 @@ Sie erhalten 10 Bit-Sequenzen, wobei jede Sequenz mit einem Paritätsbit abgesch
 11100001
 11001010
 11100100
-01110010
+01110011
 11001010
 11010010
 ```
