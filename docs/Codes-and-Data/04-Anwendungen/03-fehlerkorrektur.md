@@ -141,7 +141,7 @@ Nach einer kurzen Recherche: Die Strichcodes auf Verpackungen sind sog. **EAN-13
 
 </Answer>
 
-<Answer type="string" webKey="3a0d5a1c-4eac-4dea-874d-c6ca5d9c4200" solution="9">
+<Answer type="string" webKey="3a0d5a1c-4eac-4dea-874d-c6ca5d9c4200" solution="7">
 
 400781730180
 
