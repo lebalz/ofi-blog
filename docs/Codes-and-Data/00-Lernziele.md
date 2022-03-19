@@ -47,4 +47,6 @@ label: Lernziele
 - Sie wissen, was wie ein EAN-13 Code aufgebaut ist und wie die Prüfsumme berechnet wird.
 :::
 
-Es können auch Inhalte aus dem Unterricht abgefragt werden, die nicht auf der Website zu finden sind.
+:::caution Unterrichtsinhalte
+An der Prüfung können auch Inhalte/Diskussionen/Experimente zu den obigen Themen aufgegriffen werden, welche nur im Unterricht behandelt/diskutiert wurden.
+:::
