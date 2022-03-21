@@ -260,6 +260,11 @@
       "from": "docs/Computer/03-architecture/",
       "to": "versioned_docs/version-24i/07-Computer/07-Rechnerarchitektur",
       "ignore": []
+    },
+    {
+      "from": "docs/Computer/04-os/",
+      "to": "versioned_docs/version-24i/07-Computer/08-Betriebssystem",
+      "ignore": []
     }
   ],
   "24K": [
@@ -388,6 +393,11 @@
     {
       "from": "docs/Computer/03-architecture/",
       "to": "versioned_docs/version-24K/07-Computer/07-Rechnerarchitektur",
+      "ignore": []
+    },
+    {
+      "from": "docs/Computer/04-os/",
+      "to": "versioned_docs/version-24K/07-Computer/08-Betriebssystem",
       "ignore": []
     }
   ],
@@ -646,6 +656,11 @@
     {
       "from": "docs/Computer/03-architecture/",
       "to": "versioned_docs/version-24o/07-Computer/07-Rechnerarchitektur",
+      "ignore": []
+    },
+    {
+      "from": "docs/Computer/04-os/",
+      "to": "versioned_docs/version-24o/07-Computer/08-Betriebssystem",
       "ignore": []
     }
   ],
