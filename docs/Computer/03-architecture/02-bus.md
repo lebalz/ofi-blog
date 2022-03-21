@@ -6,6 +6,8 @@ import Answer from '@site/src/components/Answer';
 
 # 2. Bussystem
 
+![Witz des Tages by 24i --width=350px](images/02-bus_joke.jpg)
+
 In der Informatik ist ein *Bus* ein System zur Datenübertragung zwischen mehreren Komponenten über einen gemeinsamen Übertragungsweg. Findet eine Datenübertragung zwischen zwei Komponenten statt, so müssen die übrigen Komponenten schweigen, da sie sich sonst gegenseitig stören würden.[^1]
 
 :::cards
