@@ -258,6 +258,8 @@ div.flex {
         .card__image {
             :first-child {
                 margin: 0;
+                margin-left: auto;
+                margin-right: auto;
             }
             figure {
                 margin: 0;
