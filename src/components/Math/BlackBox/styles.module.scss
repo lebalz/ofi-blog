@@ -1,0 +1,12 @@
+.blackBox {
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    .box {
+        padding: 3em;
+        margin: 0 2em;
+        border: 2px solid var(--ifm-color-primary);
+        border-radius: 8px;
+        background-color: var(--ifm-color-contrast);
+    }
+}

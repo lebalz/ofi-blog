@@ -737,6 +737,11 @@
       "from": "docs/Codes-and-Data/00-Lernziele.md",
       "to": "versioned_docs/version-25h/05-Codierung/00-Lernziele.md",
       "ignore": []
+    },
+    {
+      "from": "docs/Math/BlackBox/",
+      "to": "versioned_docs/version-25h/Math/BlackBox",
+      "ignore": []
     }
   ],
   "24w": [
