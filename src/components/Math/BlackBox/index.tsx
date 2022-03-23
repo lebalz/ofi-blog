@@ -17,6 +17,7 @@ const BlackBox = (props: Props) => {
 
     React.useEffect(() => {
         setProcessing(true);
+        setResult(Number.NaN);
         clearTimeout(timer);
         const timeoutId = setTimeout(() => {
             setResult(props.func(input));
