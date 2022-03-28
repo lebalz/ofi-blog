@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
-import Details from '@docusaurus/theme-common/lib/components/Details';
+import Details from "@theme/Details";
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 

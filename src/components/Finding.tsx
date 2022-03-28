@@ -1,5 +1,5 @@
 import React from "react";
-import Details from "@docusaurus/theme-common/lib/components/Details";
+import Details from "@theme/Details";
 import styles from "./Finding.module.scss";
 import clsx from "clsx";
 

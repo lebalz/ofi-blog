@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../../url_data.json'
+import data from '@site/url_data.json';
 import { baseUrl } from '../../docusaurus.config'
 
 

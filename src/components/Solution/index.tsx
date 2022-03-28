@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 import { useSolution, useStore } from '../../stores/hooks';
 import Loader from '../shared/Loader';
-import Details from '@docusaurus/theme-common/lib/components/Details';
+import Details from "@theme/Details";
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
