@@ -22,3 +22,5 @@ yarn-error.log*
 bin/brython-libs/*
 /no-docs
 .uuids
+
+bin/*/feedbacks
