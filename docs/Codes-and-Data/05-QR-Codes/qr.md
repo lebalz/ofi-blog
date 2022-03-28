@@ -21,7 +21,7 @@ Mit einem 3D-Drucker lassen sich dreidimensionale Objekte erzeugen. Dabei arbeit
 ![](images/prusa-timelapse-04.gif)
 :::
 
-Um ein Objekt zu drucken, braucht es
+Um ein Objekt zu drucken, muss in einem ersten Schritt ein 3D-Modell erstellt werden und einem zweiten Schritt muss dieses Modell in einen konkreten Druck-Ablaufplan erstellt werden, welcher Schicht-für-Schicht vorgibt, wo sich der Druck-Kopf durchbewegen soll.
 - ein 3D Modell - [tinkercad.com](https://www.tinkercad.com/)
 - den Druck-Ablaufplan Plan für das Modell - [slicer](https://www.prusa3d.com/de/page/prusaslicer_424/)
 
