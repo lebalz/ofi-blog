@@ -65,3 +65,9 @@ Either
 - Let Github generate SSL certificates for you
 - Check "Enforce https:"
 - Re-Enable DNS Proxy on Cloudflare again.
+
+## Start Postgres on osx
+
+```bash
+postgres -D /usr/local/var/postgres
+```
