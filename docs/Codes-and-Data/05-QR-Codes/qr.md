@@ -1,5 +1,5 @@
 ---
-title: Schlüsselanhänger
+title: 3D Schlüsselanhänger
 ---
 
 import Tabs from '@theme/Tabs';

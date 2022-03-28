@@ -131,6 +131,11 @@
       "from": "docs/Computer/04-os/",
       "to": "versioned_docs/version-24f/07-Computer/08-Betriebssystem",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/05-QR-Codes/",
+      "to": "versioned_docs/version-24f/20-QR-Codes",
+      "ignore": []
     }
   ],
   "24i": [
