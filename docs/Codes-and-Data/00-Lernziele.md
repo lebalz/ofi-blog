@@ -6,7 +6,7 @@ label: Lernziele
 
 :::finding Prüfung
 - Die Prüfung findet auf Papier statt
-- Erlaubte Hilfsmittel: Keine (*Codierungs-Tabellen werden zur Verfügung gestellt*)
+- Erlaubte Hilfsmittel: Taschenrechner (*Codierungs-Tabellen werden zur Verfügung gestellt*)
 - Gewichtung der Note: 1
 - Zeit: 60 Minuten
 :::
