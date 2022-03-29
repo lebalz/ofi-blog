@@ -277,7 +277,6 @@ Im letzten Schritt wird nun der Druck vorbereitet. Das exportierte `.stl` Modell
 
 ![](images/slicer-01.png)
 
-
 Schliesslich kann das Modell "geslicet" werden und als **G-Code** für den Drucker heruntergeladen werden.
 
 [@button G-Code hochladen --type=success](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/El4N9CTUXFBEhkP_Zau_1n8BuzP1AbyqC_PRQ3Qc_WhLXg)
