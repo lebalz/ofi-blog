@@ -40,16 +40,16 @@ Das Grundgerüst für den QR-Code kann direkt über die Webapplikation von https
   ]}>
   <TabItem value="step-1">
 
-![QR Code Options --max-width=500px](images/qr01.png)
+![QR Code Options --max-width=min(100%,500px)](images/qr01.png)
 
 </TabItem>
 <TabItem value="step-2">
 
-![3D Model Options --max-width=500px](images/qr02.png)
+![3D Model Options --max-width=min(100%,500px)](images/qr02.png)
 
 und das Modell generieren:
 
-![--max-width=150px](images/qr03.png)
+![--max-width=min(100%,150px)](images/qr03.png)
 
 </TabItem>
 <TabItem value="step-3">
