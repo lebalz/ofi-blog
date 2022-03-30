@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 import { useStore, useTimedTopic } from '../../stores/hooks';
-import LoginAlert from '../AceEditor/LoginAlert';
+import LoginAlert from '../CodeEditor/LoginAlert';
 import Topic from './Topic';
 import TimeStats from './TimeStats';
 import Loader from '../shared/Loader';

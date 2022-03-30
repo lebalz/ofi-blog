@@ -12,7 +12,7 @@ import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { sanitizedTitle, sanitizeId } from '../../utils/sanitizers';
 import hashCode from '../../utils/hash_code';
 // @ts-ignore
-import PyAceEditor from '@theme/../../src/components/AceEditor';
+import PyAceEditor from '@site/src/components/CodeEditor';
 import { v4 as uuidv4 } from 'uuid';
 
 function pageId() {

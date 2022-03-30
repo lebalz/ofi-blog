@@ -6,7 +6,7 @@ import { CodeModel } from './iModel';
 import { DocumentStore } from '../stores/DocumentStore';
 import { rootStore } from '../stores/stores';
 import SaveService, { ApiModel } from './SaveService';
-import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER } from '../components/AceEditor/constants';
+import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER } from '../components/CodeEditor/constants';
 
 export interface PyDoc {
     code: string;

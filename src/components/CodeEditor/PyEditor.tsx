@@ -1,7 +1,7 @@
 import * as React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
-import Editor from "./Editor";
+import Editor from "./EditorAce";
 import {
   DOM_ELEMENT_IDS,
 } from "./constants";

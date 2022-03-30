@@ -3,7 +3,7 @@ import StringAnswer from './StringAnswer';
 import ArrayAnswer from './ArrayAnswer';
 import TextAnswer from './TextAnswer';
 import { useDocument, useStore } from '../../stores/hooks';
-import LoginAlert from '../AceEditor/LoginAlert';
+import LoginAlert from '../CodeEditor/LoginAlert';
 import { observer } from 'mobx-react-lite';
 import LegacyResolver from './LegacyResolver';
 import OfflineChecker from './OfflineChecker';
