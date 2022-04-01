@@ -279,4 +279,12 @@ Im letzten Schritt wird nun der Druck vorbereitet. Das exportierte `.stl` Modell
 
 Schliesslich kann das Modell "geslicet" werden und als **G-Code** für den Drucker heruntergeladen werden.
 
-[@button G-Code hochladen --type=success](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/El4N9CTUXFBEhkP_Zau_1n8BuzP1AbyqC_PRQ3Qc_WhLXg)
+
+---
+
+:::aufgabe .3mf Dateien zusammenfügen
+
+Damit mehrere Modelle in einem Umgang gedruckt werden können, müssen die entsprechenden Modelle zusammengefügt werden. Dazu muss das Projekt im `.3mf`-Format gespeichert werden.
+
+Diejenige Person, welche alle Modelle zusammenfügt, importiert die entsprechenden `.3mf` Dateien der anderen Gruppen und positioniert die Objekte auf der Druckplatte ohne Überlagerung.
+:::
