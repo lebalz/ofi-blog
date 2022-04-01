@@ -747,6 +747,11 @@
       "from": "docs/Math/BlackBox/",
       "to": "versioned_docs/version-25h/Math/BlackBox",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/05-QR-Codes/",
+      "to": "versioned_docs/version-25h/05-Codierung/04-Anwendungen/3d-druck",
+      "ignore": []
     }
   ],
   "24w": [
