@@ -1,6 +1,8 @@
 import React from 'react';
+// @ts-ignore
 import data from '@site/url_data.json';
 import { baseUrl } from '../../docusaurus.config'
+import axios from 'axios';
 
 
 /**
@@ -17,9 +19,9 @@ export default class VersionedLink extends React.Component<Props> {
   constructor(props) {
     super(props);
 
-    fetch('/versions.json')
-      .then(response => response.json())
+    axios.get('/versions.json')
       .then(json => {
+        console.log(json);
         this.setState({ courses: json })
       }).then(() => {
         this.setState({ course: this.getCourse() })

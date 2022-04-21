@@ -1,12 +1,8 @@
 {
-  "Programmieren 1": {
-    "Turtles": {
-      "001-intro": {
-        "upload": {
-          "24f": "https://srf.ch",
-          "24i": "https://github.com"
-        }
-      }
+  "TinkerCad": {
+    "Classroom": {
+      "24f": "https://www.tinkercad.com/joinclass/1W8JWGIB7DWG",
+      "25h": "https://www.tinkercad.com/joinclass/A6REDIBCKQFB"
     }
   }
 }
