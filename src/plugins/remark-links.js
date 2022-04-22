@@ -35,7 +35,7 @@ const plugin = (options) => {
       },
       (node) => {
         const linkNode = node.children[0];
-        const text = (linkNode.children || []).reduce((prev, val) => {
+        let text = (linkNode.children || []).reduce((prev, val) => {
           if (val.type === 'text') {
             return [...prev, val.value];
           }
@@ -173,6 +173,14 @@ const plugin = (options) => {
             }
           }
           promises.push(processVideo())
+        }
+        if (/@upload/.test(text)) {
+          text = text.replace(/\s*@download\s*/, '')
+          text += ' @button --type=success'
+        }
+        if (/@download/.test(text)) {
+          text = text.replace(/\s*@download\s*/, '')
+          text += ' @button --type=warning'
         }
         if (/@button/.test(text)) {
           const options = parseOptions(text, true);
