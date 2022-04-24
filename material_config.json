@@ -136,6 +136,11 @@
       "from": "docs/Codes-and-Data/05-QR-Codes/",
       "to": "versioned_docs/version-24f/20-QR-Codes",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/03-Compression/",
+      "to": "versioned_docs/version-24f/08-Codes-and-Data/01-compression",
+      "ignore": []
     }
   ],
   "24i": [
@@ -269,6 +274,11 @@
     {
       "from": "docs/Computer/04-os/",
       "to": "versioned_docs/version-24i/07-Computer/08-Betriebssystem",
+      "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/03-Compression/",
+      "to": "versioned_docs/version-24i/08-Codes-and-Data/01-compression",
       "ignore": []
     }
   ],
@@ -404,6 +414,11 @@
       "from": "docs/Computer/04-os/",
       "to": "versioned_docs/version-24K/07-Computer/08-Betriebssystem",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/03-Compression/",
+      "to": "versioned_docs/version-24K/08-Codes-and-Data/01-compression",
+      "ignore": []
     }
   ],
   "24L": [
@@ -532,6 +547,11 @@
     {
       "from": "docs/Computer/03-architecture/",
       "to": "versioned_docs/version-24L/07-Computer/07-Rechnerarchitektur",
+      "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/03-Compression/",
+      "to": "versioned_docs/version-24L/08-Codes-and-Data/01-compression",
       "ignore": []
     }
   ],
@@ -666,6 +686,11 @@
     {
       "from": "docs/Computer/04-os/",
       "to": "versioned_docs/version-24o/07-Computer/08-Betriebssystem",
+      "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/03-Compression/",
+      "to": "versioned_docs/version-24o/08-Codes-and-Data/01-compression",
       "ignore": []
     }
   ],
