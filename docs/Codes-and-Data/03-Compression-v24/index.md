@@ -1,8 +1,12 @@
 ---
 title: Kompression
+description: "Die Datenkompression ist ein Vorgang, bei dem die Menge digitaler Daten reduziert wird."
+image: ./images/compression.png
 ---
 
 # Kompression
+
+![](images/compression.png)
 
 Die Datenkompression (abgeleitet aus dem lateinischen Wort „Compressio“: „Zusammendrücken“) – oder auch Datenkomprimierung genannt – ist ein Vorgang, bei dem die Menge digitaler Daten **verdichtet oder reduziert** wird. Dadurch sinkt der benötigte Speicherplatz, und die Übertragungszeit der Daten verkürzt sich.
 
