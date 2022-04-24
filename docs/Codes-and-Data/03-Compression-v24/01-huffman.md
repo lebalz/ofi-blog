@@ -108,10 +108,10 @@ Decodieren Sie diese Bitfolge mit dem obenstehenden Codebaum. Das Symbol `⎵` s
 :::aufgabe 2. Huffman-Codierung 1
 
 1. Erstellen Sie zum Wort «MISSISSIPPI» eine Häufigkeitstabelle.
-2. Erstellen Sie einen Huffman-Baum
+2. Erstellen Sie einen Huffman-Baum. (Laden Sie ein Foto davon hier hoch)
 3. Codieren Sie das Wort.
-4. Angenommen, der Text würde mit UTF-8 codiert. Wie viele Bits können eingespart werden? 
-5. Angenommen die 4 Buchstaben würden ohne Huffman-Baum Codiert. Wie viele Bits wären dann nötig? Wie viele Bits werden im Vergleich dazu eingespart?
+4. Angenommen, der Text würde mit UTF-8 codiert. Wie viele Bits wurden mit der Huffman-Codierung eingespart? 
+5. Angenommen die 4 Buchstaben mit einer naiven Codierung ohne Huffman-Baum codiert. Wie viele Bits wären dann nötig? Wie viele Bits werden im Vergleich dazu eingespart?
 
 <Answer type="text" webKey="04c0acd5-329d-4ef9-a114-7e46294d5cb6" />
 <Solution webKey="c44c132d-ab3a-4560-ba7e-12c3a3e4f9ee">
@@ -130,7 +130,7 @@ Codierung: `100 11 0 0 11 0 0 11 101 101 11`, Total 21 Bit
 
 **Ohne Huffman**: 
 
-Für 4 Buchstaben reichen 2 bit Information pro Buchstaben aus:
+Für 4 Buchstaben reichen 2 Bit Information pro Buchstaben aus:
 
 <div className="slim-table">
 
@@ -166,9 +166,10 @@ Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
 :::aufgabe 3. Huffman-Codierung 2
 
 1. Erstellen Sie zum Wort «EXTERNER EFFEKT» eine Häufigkeitstabelle.
-2. Erstellen Sie einen Huffman-Baum
+2. Erstellen Sie einen Huffman-Baum. (Laden Sie ein Bild davon hier hoch).
 3. Codieren Sie das Wort.
-4. Lohnt sich die Huffman-Codierung? Wo würden Sie diese allenfalls einsetzen?
+4. Wie viele Bits können durch die Huffman-Codierung hier im Vergleich zu (i) UTF-8 und (ii) zu einer naiven Codierung eingespart werden? 
+5. Bei welcher Art von Text würden Sie diese allenfalls eher einsetzen?
 
 <Answer type="text" webKey="a282cec4-8f57-4c57-847b-055d9d8002e5" />
 
@@ -194,7 +195,10 @@ N     K    T   R      ╱   ╲   F
 
 Codierung: `11 1001 010 11 011 000 11 011 1000 11 101 101 11 001 010`, Total `42` Bits
 
-Ohne Huffmann: Für `8` Buchstaben braucht es 3 Bits ($2^3=8$, daher lassen sich damit 8 Zustände speichern):
+4. Ohne Huffman: 
+(i) Es bräuchte es $15 \cdot 8 = 120$ bits.
+
+(ii) Für `8` Buchstaben braucht es 3 Bits ($2^3=8$, daher lassen sich damit 8 Zustände speichern):
 
 | Buchstab | Code  |
 | :------- | :---- |
@@ -211,7 +215,7 @@ Ohne Huffmann: Für `8` Buchstaben braucht es 3 Bits ($2^3=8$, daher lassen sich
   
 Die Huffman Codierung spart damit in diesem Beipsiel `3` bits ein.
 
-Die Huffman Codierung bewirkt erst bei längeren Texten eine noch grössere Speicherplatzeinsparung.
+5. Die Huffman Codierung bewirkt erst bei längeren Texten eine noch grössere Speicherplatzeinsparung.
 
 </Solution>
 :::
