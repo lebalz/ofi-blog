@@ -79,9 +79,9 @@ Nun kann eine Codierungstabelle erstellt werden, indem der Code für jedes Zeich
 | T       |   01 |
 | N       |  100 |
 | R       |  101 |
-| E       |  111 |
-| ⎵       | 1100 |
-| F       | 1101 |
+| E       |  110 |
+| ⎵       | 1110 |
+| F       | 1111 |
 
 </div>
 
@@ -114,7 +114,7 @@ Decodieren Sie diese Bitfolge mit dem obenstehenden Codebaum. Das Symbol `⎵` s
 5. Angenommen die 4 Buchstaben würden ohne Huffman-Baum Codiert. Wie viele Bits wären dann nötig? Wie viele Bits werden im Vergleich dazu eingespart?
 
 <Answer type="text" webKey="04c0acd5-329d-4ef9-a114-7e46294d5cb6" />
-<Solution webKey="990f599b-58ac-4c72-a2a4-d08482a0ca1c">
+<Solution webKey="c44c132d-ab3a-4560-ba7e-12c3a3e4f9ee">
 
 | Zeichen        | M    | P    | I    | S    |
 | :------------- | :--- | :--- | :--- | :--- |
@@ -172,7 +172,7 @@ Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
 
 <Answer type="text" webKey="a282cec4-8f57-4c57-847b-055d9d8002e5" />
 
-<Solution webKey="990f599b-58ac-4c72-a2a4-d08482a0ca1c">
+<Solution webKey="c44c132d-ab3a-4560-ba7e-12c3a3e4f9ee">
 
 | Zeichen        | ⎵    | X    | N    | K    | T    | R   | F   | E   |
 | :------------- | :--- | :--- | :--- | :--- | :--- | --- | --- | --- |
