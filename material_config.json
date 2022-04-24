@@ -138,8 +138,8 @@
       "ignore": []
     },
     {
-      "from": "docs/Codes-and-Data/03-Compression/",
-      "to": "versioned_docs/version-24f/08-Codes-and-Data/01-compression",
+      "from": "docs/Codes-and-Data/03-Compression-v24/",
+      "to": "versioned_docs/version-24f/08-Codes und Daten/01-compression",
       "ignore": []
     }
   ],
@@ -277,8 +277,8 @@
       "ignore": []
     },
     {
-      "from": "docs/Codes-and-Data/03-Compression/",
-      "to": "versioned_docs/version-24i/08-Codes-and-Data/01-compression",
+      "from": "docs/Codes-and-Data/03-Compression-v24/",
+      "to": "versioned_docs/version-24i/08-Codes und Daten/01-compression",
       "ignore": []
     }
   ],
@@ -416,8 +416,8 @@
       "ignore": []
     },
     {
-      "from": "docs/Codes-and-Data/03-Compression/",
-      "to": "versioned_docs/version-24K/08-Codes-and-Data/01-compression",
+      "from": "docs/Codes-and-Data/03-Compression-v24/",
+      "to": "versioned_docs/version-24K/08-Codes und Daten/01-compression",
       "ignore": []
     }
   ],
@@ -550,8 +550,8 @@
       "ignore": []
     },
     {
-      "from": "docs/Codes-and-Data/03-Compression/",
-      "to": "versioned_docs/version-24L/08-Codes-and-Data/01-compression",
+      "from": "docs/Codes-and-Data/03-Compression-v24/",
+      "to": "versioned_docs/version-24L/08-Codes und Daten/01-compression",
       "ignore": []
     }
   ],
@@ -689,8 +689,8 @@
       "ignore": []
     },
     {
-      "from": "docs/Codes-and-Data/03-Compression/",
-      "to": "versioned_docs/version-24o/08-Codes-and-Data/01-compression",
+      "from": "docs/Codes-and-Data/03-Compression-v24/",
+      "to": "versioned_docs/version-24o/08-Codes und Daten/01-compression",
       "ignore": []
     }
   ],
