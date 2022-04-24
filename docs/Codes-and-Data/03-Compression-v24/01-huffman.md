@@ -47,7 +47,7 @@ Nun geht es darum, einen Codierungsbaum zu erstellen. Die Häufigkeiten der Buch
 
 ![](images/01-huffman/huffman-eintrittfrei-1.svg)
 
-Nun werden die **zwei Knoten mit den kleinsten Häufigkeiten** an einen neuen Knoten angehängt. Der neue Knoten enthält die **Summe der Häufigkeiten** der ursprünglichen Knoten:
+Nun werden die **zwei Knoten mit den kleinsten Häufigkeiten** an einen neuen Knoten angehängt. Der neue Knoten enthält die **Summe der Häufigkeiten** der ursprünglichen Knoten und wird gemäss der Summe neu eingeordnet.
 
 ![](images/01-huffman/huffman-eintrittfrei-2.svg)
 
@@ -196,16 +196,16 @@ Codierung: `11 1001 010 11 011 000 11 011 1000 11 101 101 11 001 010`, Total `42
 
 Ohne Huffmann: Für `8` Buchstaben braucht es 3 Bits ($2^3=8$, daher lassen sich damit 8 Zustände speichern):
 
-|Buchstab|Code |
-|:-------|:----|
-|`⎵`     |`000`|
-|`X`     |`001`|
-|`N`     |`010`|
-|`K`     |`011`|
-|`T`     |`100`|
-|`R`     |`101`|
-|`F`     |`110`|
-|`E`     |`111`|
+| Buchstab | Code  |
+| :------- | :---- |
+| `⎵`      | `000` |
+| `X`      | `001` |
+| `N`      | `010` |
+| `K`      | `011` |
+| `T`      | `100` |
+| `R`      | `101` |
+| `F`      | `110` |
+| `E`      | `111` |
  
 --> Somit braucht es für 15 Buchstaben $15 \cdot 3 = 45$ bits.
   
