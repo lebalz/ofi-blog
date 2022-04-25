@@ -173,7 +173,7 @@ Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
 
 <Answer type="text" webKey="a282cec4-8f57-4c57-847b-055d9d8002e5" />
 
-<Solution webKey="c44c132d-ab3a-4560-ba7e-12c3a3e4f9ee">
+<Solution webKey="7ce76b1a-c37c-4725-97db-865a90a09c99">
 
 | Zeichen        | ⎵    | X    | N    | K    | T    | R   | F   | E   |
 | :------------- | :--- | :--- | :--- | :--- | :--- | --- | --- | --- |
