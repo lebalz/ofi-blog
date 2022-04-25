@@ -7,3 +7,19 @@
         --ifm-badge-background-color: var(--ifm-contrast-background-value);
     }
 }
+
+.badgeButton {
+    cursor: pointer;
+    user-select: none;
+    --ifm-badge-background-color: var(--ifm-contrast-background-value);
+    &:hover {
+        --ifm-badge-background-color: var(--ifm-color-primary);
+        color: var(--ifm-color-secondary);
+    }
+}
+
+html[data-theme='dark'] {
+    .badgeButton {
+        color: white;
+    }
+}
