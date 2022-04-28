@@ -781,7 +781,9 @@
     {
       "from": "docs/Big-Data/",
       "to": "versioned_docs/version-25h/06-Big-Data",
-      "ignore": []
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "24w": [
