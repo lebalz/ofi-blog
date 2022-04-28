@@ -41,26 +41,27 @@
         "type": "holiday"
     },
     {
-        "cells": ["29.04.2022","Präsentieren",""]
+        "cells": ["29.04.2022","Big Data","Gesellschaft"]
     },
     {
-        "cells": ["06.05.2022","Big Data",""]
+        "cells": ["06.05.2022","Big Data","Präsentieren"]
     },
     {
-        "cells": ["13.05.2022","Big Data",""]
+        "cells": ["13.05.2022","Big Data","Gesellschaft - Gruppendiskussion"]
     },
     {
-        "cells": ["20.05.2022","Big Data",""]
+        "cells": ["20.05.2022","Big Data","Gesellschaft"]
     },
     {
         "cells": ["27.05.2022","Auffahrt",""],
         "type": "holiday"
     },
     {
-        "cells": ["03.06.2022","Internet, Privatsphäre, Datenschutz",""]
+        "cells": ["03.06.2022","Big Data","Vorträge"],
+        "type": "test"
     },
     {
-        "cells": ["10.06.2022","Test",""],
+        "cells": ["10.06.2022","Big Data","Vorträge"],
         "type": "test"
     },
     {

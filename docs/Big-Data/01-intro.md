@@ -1,5 +1,5 @@
 ---
-title: Big Data
+title: Gesellschaft
 ---
 
 # Big Data [^1]
@@ -27,10 +27,12 @@ Im Buch gibt es sechs Kapitel zu Spezialthemen. Sie wählen eines dieser Themen 
 - Kriminalität
 - Kunst
 
-Jedes Thema kann von maximal vier Schüler:innen gewählt werden. Jede Gruppe bestimmt eine Grupenchef:in.
+Jedes Thema kann von maximal vier Schüler:innen gewählt werden. Jede Gruppe bestimmt eine Gruppenchef:in.
 
 ### 2. Lesen
-Sie lesen alle je nach Thema mindestens die folgenden Kapitel
+Alle lesen zwei bis drei Kapitel - die Einleitung und die zum Thema passenden Kapitel gem. untenstehender Tabelle.
+
+<div className="slim-table">
 
 | Thema         | Kapitel                  |
 | :------------ | :----------------------- |
@@ -40,8 +42,9 @@ Sie lesen alle je nach Thema mindestens die folgenden Kapitel
 | Autos         | Einleitung, Autos        |
 | Kriminalität  | Einleitung, Kriminalität |
 | Macht / Kunst | Einleitung, Macht, Kunst |
+</div>
 
-Sie machen sich Notizen. Selbstverständlich dürfen Sie auch weitere Kapitel oder gar das ganze Buch lesen.
+**Machen Sie sich Notizen, damit Sie sich später schnell wieder im Buch zurecht finden**. Selbstverständlich dürfen Sie auch weitere Kapitel oder gar das ganze Buch lesen.
 
 ### 3. Zusätzliche Quellen
 Informieren Sie sich bei zusätzlichen Quellen über Ihr Thema:
@@ -54,16 +57,25 @@ Informieren Sie sich bei zusätzlichen Quellen über Ihr Thema:
 #### 1. Daten
 - https://www.deutschlandfunk.de/alles-unter-kontrolle-chinas-intelligenter-schule-entgeht.680.de.html?dram:article_id=438868
 - https://netzpolitik.org/2014/algorithmen-allmaechtig-freiheit-in-den-zeiten-der-statistik/
+- https://www.srf.ch/news/schweiz/automatische-gesichtserkennung-wir-muessen-vorsichtiger-mit-unseren-fotos-umgehen
 
 #### 2. Justiz
 
+- https://www.srf.ch/news/schweiz/datenschuetzer-raet-davon-ab-neue-fahndungs-app-sammelt-ueber-drei-milliarden-internet-fotos
 - https://heise.de/-5001003
 - [TV Serie: Bull](https://de.wikipedia.org/wiki/Bull_(Fernsehserie,_2016))
   - https://www.vijilent.com/real-data-scientist-reviews-tv-trial-science/
 
-
 #### 3. Medizin
 
+- https://www.datarevenue.com/de-blog/kuenstliche-intelligenz-in-der-medizin
+- https://www.nzz.ch/wissenschaft/ki-in-der-medizin-hilfe-bei-einfachen-und-repetitiven-aufgaben-ld.1497525
+
+  [NZZ-Artikel @download](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ee6GsaogqrxButD8uvg7H2kBCb98H2AUM0Xsz6ymBN1FbA?e=bi5K4K)
+- https://www.srf.ch/news/panorama/schlechter-datenschutz-menstruations-apps-intimste-angaben-landen-bei-facebook
+- https://www.nzz.ch/meinung/ki-in-der-medizin-es-braucht-vor-allem-menschliche-intelligenz-ld.1521205
+
+  [NZZ-Kommentar @download](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ETA2nUUtE_5Koq5b7LgcerMB2U1A8uODTIYklEvvgHPtzA?e=qNhaeV)
 
 #### 4. Autos
 
@@ -73,11 +85,17 @@ Informieren Sie sich bei zusätzlichen Quellen über Ihr Thema:
 #### 5. Kriminalität
 
 - https://geschichtedergegenwart.ch/die-pre-cops-wie-algorithmen-die-polizeiarbeit-veraendern/
+- https://magazin.nzz.ch/wirtschaft/kameras-in-der-migros-datenschuetzer-greifen-ein-ld.1536443  
+
+  [NZZ-Artikel @download](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ESCo9wI4-7JNvnzM_e238LwBAF-Q5qKJDqgL9obULer2BA?e=fOkpHf)
 - https://youtu.be/sxRkwdDI9Yg
+- https://www.srf.ch/news/panorama/automatische-gesichtserkennung-heute-im-stadion-morgen-ueberall
+
 
 #### 6. Kunst
 
 - https://srf.ch/play/tv/redirect/detail/4b6a8647-b179-4dd8-89ec-3445e01dcda5
+- https://mixed.de/neue-bild-ki-zeigt-das-potenzial-riesiger-ki-modelle/
 
 </details>
 
@@ -103,7 +121,8 @@ Die Folien geben Sie als PDF per E-Mail bis um 17.00 Uhr am Abend vor der Präse
 
 ### 6. Vortrag halten
 
-Der Vortrag dauert ca. 10 bis 15 Minuten
+Der Vortrag dauert ca. 10 bis 15 Minuten.
+
 Sie führen den Vortrag als Gruppe durch. Das bedeutet, dass alle Gruppenmitglieder ein Teil des Vortrags halten und alle während der ganzen Dauer des Vortrags vorne stehen.
 
 ### 7. Bewertung
