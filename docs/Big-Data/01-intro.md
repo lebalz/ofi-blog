@@ -34,14 +34,14 @@ Alle lesen zwei bis drei Kapitel - die Einleitung und die zum Thema passenden Ka
 
 <div className="slim-table">
 
-| Thema         | Kapitel                  |
-| :------------ | :----------------------- |
-| Daten         | Einleitung, Daten        |
-| Justiz        | Einleitung, Justiz       |
-| Medizin       | Einleitung, Medizin      |
-| Autos         | Einleitung, Autos        |
-| Kriminalität  | Einleitung, Kriminalität |
-| Macht / Kunst | Einleitung, Macht, Kunst |
+| Thema         | Kapitel                  | Gruppe                      |
+| :------------ | :----------------------- |:----------------------------|
+| Daten         | Einleitung, Daten        | Jael, Noemi, Rownok, Matteo |
+| Justiz        | Einleitung, Justiz       | Uma, Alessia, Kyra, Annic   |
+| Medizin       | Einleitung, Medizin      | Mia, Berenike, Eline        |
+| Autos         | Einleitung, Autos        | Maëlle N., Maëlle A., Luana |
+| Kriminalität  | Einleitung, Kriminalität | Cedric, Julien, Emil        |
+| Macht / Kunst | Einleitung, Macht, Kunst | Cindy, Léonie, Jana, Riana  |
 </div>
 
 **Machen Sie sich Notizen, damit Sie sich später schnell wieder im Buch zurecht finden**. Selbstverständlich dürfen Sie auch weitere Kapitel oder gar das ganze Buch lesen.
