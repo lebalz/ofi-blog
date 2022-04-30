@@ -19,6 +19,7 @@ interface Props {
   title: string;
   resettable: boolean;
   webKey: string;
+  lang: string;
 }
 
 const PyEditor = observer((props: Props) => {
@@ -32,7 +33,7 @@ const PyEditor = observer((props: Props) => {
     return reaction(
       () => pyScript.execCounter,
       (counter) => {
-        if (counter > 0) {
+        if (props.lang === 'python' && counter > 0) {
           pyScript.clearLogMessages();
           if (window && (window as any).umami) {
             (window as any).umami.trackEvent(`${pyScript.isDummy ? 'py' : pyScript.webKey}`, `exec-script-${pyScript.isDummy ? 'temp' : 'persisted'}`);
@@ -52,15 +53,18 @@ const PyEditor = observer((props: Props) => {
         title={props.title}
         resettable={props.resettable}
         webKey={props.webKey}
+        lang={props.lang}
       />
-      <Editor webKey={props.webKey} />
-      <div className={clsx(styles.result)}>
-        <Result webKey={props.webKey}/>
-        {store.opendTurtleModalWebKey === pyScript.webKey && (
-          <TurtleResult webKey={props.webKey}/>
-        )}
-        <div id={DOM_ELEMENT_IDS.outputDiv(pyScript.codeId)}></div>
-      </div>
+      <Editor webKey={props.webKey} lang={props.lang}/>
+      {props.lang === 'python' &&
+        <div className={clsx(styles.result)}>
+          <Result webKey={props.webKey}/>
+          {store.opendTurtleModalWebKey === pyScript.webKey && (
+            <TurtleResult webKey={props.webKey}/>
+          )}
+          <div id={DOM_ELEMENT_IDS.outputDiv(pyScript.codeId)}></div>
+        </div>
+      }
     </React.Fragment>
   );
 });

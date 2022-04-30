@@ -5,7 +5,6 @@ import { ArrayProps, Types } from ".";
 import Option from "./Option";
 import { useStore } from "../../stores/hooks";
 import {default as ArrayAnswerModel} from "../../models/Answer/Array";
-import { ArrayModel } from "../../models/iModel";
 import Loader from "../shared/Loader";
 
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
@@ -26,9 +25,6 @@ const ArrayAnswer = observer((props: ArrayProps) => {
   const doc = store.find<ArrayAnswerModel>(props.webKey);
 
   const onChange = (newVal: string, idx: number = 0) => {
-    if (props.isLegacy || !doc.loaded) {
-      return;
-    }
     const newArr = [
       ...doc.data.value.slice(0, idx),
       newVal,
@@ -43,7 +39,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
   return (
     <div className={styles.answer}>
       {props.label && <label>{props.label}</label>}
-      {(props.isLegacy ? doc.legacyData?.value || [] : doc.data.value).map((c, i) => {
+      {doc.data.value.map((c, i) => {
         if (props.select) {
           return (
             <select
@@ -51,7 +47,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
               onChange={(e) => onChange(e.target.value, i)}
               value={c}
               className={getClassName(c)}
-              disabled={!doc.loaded || props.isLegacy}
+              disabled={!doc.loaded}
             >
               {props.select.map((v, idx) => (
                 <Option value={v} key={idx} />

@@ -47,9 +47,6 @@ export default class ArrayAnswer implements ArrayModel, ApiModel {
 
     @observable
     loaded: boolean = false;
-    @observable.ref
-    legacyData?: ArrayDoc;
-    legacyCleanup?: () => void;
 
     value = observable<string>([]);
 

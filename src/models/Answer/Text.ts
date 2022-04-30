@@ -40,9 +40,6 @@ export default class Text implements TextModel, ApiModel, iTextData {
 
     @observable
     loaded: boolean = false;
-    @observable.ref
-    legacyData?: TextDoc;
-    legacyCleanup?: () => void;
 
     @observable.ref
     saveService: SaveService;
@@ -50,7 +47,7 @@ export default class Text implements TextModel, ApiModel, iTextData {
     @observable
     value: React.ReactNode;
 
-    constructor(doc: Document<TextDoc>, readonly: boolean = false, showLegacy: boolean = false) {
+    constructor(doc: Document<TextDoc>, readonly: boolean = false) {
         this.readonly = readonly;
         this.webKey = doc.web_key;
         this.id = doc.id;
@@ -71,9 +68,6 @@ export default class Text implements TextModel, ApiModel, iTextData {
 
     @computed
     get text(): string | React.ReactNode {
-        if (this.legacyData && this.legacyData.value) {
-            return this.legacyData.value;
-        }
         return this.value;
     }
 

@@ -1,0 +1,10 @@
+.playgroundWrapper {
+    overflow: auto;
+    .playgroundContainer {
+        min-width: max-content;
+        >div {
+            margin-bottom: 0;
+        }
+    }
+    margin-bottom: var(--ifm-leading);
+}

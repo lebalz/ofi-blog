@@ -46,7 +46,7 @@ const StringAnswer = observer((props: StringProps) => {
   const doc = store.find<StringModel>(props.webKey);
 
   const onChange = (newVal: string) => {
-    if (props.isLegacy || !doc.loaded) {
+    if (!doc.loaded) {
       return;
     }
     setCorrectState("unchecked");
@@ -94,9 +94,9 @@ const StringAnswer = observer((props: StringProps) => {
         <select
           onChange={(e) => onChange(e.target.value)}
           style={{width: props.width}}
-          value={props.isLegacy ? doc.legacyData?.value : doc.value}
+          value={doc.value}
           className={getClassName(doc.value)}
-          disabled={!doc.loaded || props.isLegacy}
+          disabled={!doc.loaded}
         >
           {props.select.map((v, idx) => (
             <Option value={v} key={idx} />
@@ -107,7 +107,7 @@ const StringAnswer = observer((props: StringProps) => {
           type="text"
           style={{width: props.width}}
           onChange={(e) => onChange(e.target.value)}
-          value={props.isLegacy ? doc.legacyData?.value : doc.value}
+          value={doc.value}
           disabled={!doc.loaded || doc.readonly || props.disabled}
         />
       )}

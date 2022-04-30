@@ -45,9 +45,6 @@ export default class StringAnswer implements StringModel, ApiModel {
 
     @observable
     loaded: boolean = false;
-    @observable.ref
-    legacyData?: StringDoc;
-    legacyCleanup?: () => void;
 
     @observable
     value: string;

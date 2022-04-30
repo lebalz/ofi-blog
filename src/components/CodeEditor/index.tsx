@@ -7,10 +7,7 @@ import Script, { PyDoc } from '../../models/Script';
 import BrythonCommunicator from './BrythonCommunicator';
 import clsx from 'clsx';
 import LoginAlert from './LoginAlert';
-import { getItem, removeItem, _1_YEAR } from '../../utils/storage';
-import LegacyResolver from './LegacyResolver';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { reaction } from 'mobx';
 import Loader from '../shared/Loader';
 import CodeHistory from './CodeHistory';
 
@@ -21,10 +18,10 @@ interface Props {
     slim: boolean;
     readonly: boolean;
     children: React.ReactNode;
-    contextId: string;
     title: string;
     versioned: boolean;
     resettable: boolean;
+    lang: string;
 }
 
 // export const ScriptContext = React.createContext<Script>(undefined);
@@ -39,32 +36,13 @@ const getDefault = (props: Props): PyDoc => {
     };
 };
 
-const getLegacyResolver = (props: Props) => {
-    if (props.slim) {
-        return () => undefined;
-    }
-
-    const old = getItem<{ edited: string; expiry: number }>(props.codeId, props.contextId);
-    if (!old || !old.edited) {
-        return () => undefined;
-    }
-    return () => {
-        return {
-            data: { code: old.edited },
-            cleanup: () => removeItem(props.codeId, props.contextId),
-        };
-    };
-};
-
 const PyAceEditor = observer((props: Props) => {
     const store = useStore('documentStore');
-    const msalStore = useStore('msalStore');
     useDocument(
         () => getDefault(props), 
         'code', 
         props.webKey, 
-        !props.slim, 
-        getLegacyResolver(props), 
+        !props.slim,
         props.readonly,
         props.versioned
     );
@@ -79,7 +57,6 @@ const PyAceEditor = observer((props: Props) => {
     return (
         <div className={clsx(styles.wrapper)}>
             {!props.slim && <LoginAlert />}
-            {msalStore.loggedIn && !props.slim && <LegacyResolver webKey={props.webKey} />}
             <div
                 className={clsx(
                     styles.playgroundContainer,
@@ -87,7 +64,7 @@ const PyAceEditor = observer((props: Props) => {
                     'live_py'
                 )}
             >
-                <BrythonCommunicator webKey={props.webKey} />
+                {props.lang === 'python' && <BrythonCommunicator webKey={props.webKey} />}
                 <PyEditor {...props} />
                 <CodeHistory webKey={props.webKey} />
             </div>

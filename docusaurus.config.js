@@ -197,6 +197,31 @@ module.exports = {
   plugins: [
     'docusaurus-plugin-sass',
     './src/plugins/brython-source.js',
+    // function (context, options) {
+    //   return  {
+    //     name: 'polyfills-for-react-live',
+    //     configureWebpack(config, isServer, utils) {
+    //       return {
+    //         resolve: {
+    //           alias: {
+    //             path: require.resolve('path-browserify'),
+    //           },
+    //           fallback: {
+    //             fs: false,
+    //             url: require.resolve("url/"),
+    //             os: require.resolve('os-browserify/browser'),
+    //             util: require.resolve("util/"),
+    //             assert: require.resolve("assert/"),
+    //             stream: require.resolve("stream-browserify"),
+    //             buffer: require.resolve("buffer/"),
+    //             crypto: require.resolve("crypto-browserify"),
+    //             constants: require.resolve("constants-browserify")
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // },
     function (context, options) {
       return {
         name: 'raw-src-loader',
@@ -260,8 +285,6 @@ module.exports = {
       };
     },
   ],
-  themes: [
-  ],
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
@@ -279,5 +302,8 @@ module.exports = {
       async: true,
       defer: true
     },
+  ],
+  themes: [
+    '@docusaurus/theme-live-codeblock'
   ],
 };

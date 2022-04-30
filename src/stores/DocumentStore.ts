@@ -115,12 +115,10 @@ export class DocumentStore {
         type: DocType,
         webKey: string,
         persist: boolean,
-        getLegacyData: () => { data: ModelTypes | undefined; cleanup?: () => void },
         readonly?: boolean,
         forceReload?: boolean,
         versioned?: boolean
     ): Promise<T> {
-        const legacy = getLegacyData();
         const loadedModel = this.find<T>(webKey);
         if (loadedModel) {
             if (loadedModel.loaded && !forceReload) {
@@ -173,10 +171,6 @@ export class DocumentStore {
                     }) as T;
                     fromApi.loaded = true;
                     runInAction(() => {
-                        if (legacy) {
-                            fromApi.legacyCleanup = legacy.cleanup;
-                            fromApi.legacyData = legacy.data as any;
-                        }
                         fromApi.loaded = true;
                         this.documents.remove(model);
                         this.documents.push(fromApi);

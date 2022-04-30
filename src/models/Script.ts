@@ -52,9 +52,6 @@ export default class Script implements CodeModel, ApiModel {
 
     @observable
     loaded: boolean = false;
-    @observable.ref
-    legacyData?: PyDoc;
-    legacyCleanup?: () => void;
 
     /** model specific props */
 

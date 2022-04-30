@@ -39,9 +39,10 @@ interface Props {
     title: string;
     resettable: boolean;
     webKey: string;
+    lang: string;
 }
 
-const Header = observer(({ slim, title, resettable, webKey }: Props) => {
+const Header = observer(({ slim, title, resettable, webKey, lang }: Props) => {
     const [showSavedNotification, setShowSavedNotification] = React.useState(false);
     const store = useStore('documentStore');
     const pyScript = store.find<Script>(webKey);
@@ -146,7 +147,7 @@ const Header = observer(({ slim, title, resettable, webKey }: Props) => {
                     )}
                 </React.Fragment>
             )}
-            <PlayButton webKey={webKey} />
+            {lang === 'python' && <PlayButton webKey={webKey} />}
         </div>
     );
 });

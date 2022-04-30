@@ -10,6 +10,7 @@ import Script from "../../models/Script";
 
 interface Props {
   webKey: string;
+  lang: string;
 }
 
 const PlaceholderEditor = observer((props: Props) => {
@@ -26,23 +27,23 @@ const loadLibs = (callback) => {
   if (AceEditor) {
     return callback();
   }
-
   import("react-ace").then((aceModule) => {
     return Promise.all([
       import("ace-builds/src-noconflict/ext-searchbox"),
       import("ace-builds/src-noconflict/mode-python"),
+      import("ace-builds/src-noconflict/mode-svg"),
       // import 'ace-builds/src-noconflict/theme-textmate';
       import("ace-builds/src-noconflict/theme-dracula"),
 
       // import('ace-builds/src-noconflict/snippets/python'),
       import("ace-builds/src-noconflict/ext-language_tools"),
+      import('ace-builds/webpack-resolver'),
     ]).then((obj) => {
       AceEditor = aceModule.default;
       callback();
     });
   });
 };
-
 const Editor = observer((props: Props) => {
   const store = useStore('documentStore');
   const pyScript = store.find<Script>(props.webKey);
@@ -63,7 +64,7 @@ const Editor = observer((props: Props) => {
   const editorRef = React.useCallback(
     (node) => {
       if (node !== null) {
-        if (node.editor) {
+        if (node.editor && props.lang === 'python') {
           node.editor.commands.addCommand({
             // commands is array of key bindings.
             name: "execute",
@@ -81,7 +82,7 @@ const Editor = observer((props: Props) => {
         }
       }
       return () => {
-        if (node && node.editor) {
+        if (node && node.editor && props.lang === 'python') {
           const cmd = node.editor.commands.commands["execute"];
           if (cmd) {
             node.editor.commands.removeCommand(cmd, true);
@@ -115,7 +116,7 @@ const Editor = observer((props: Props) => {
           }}
           maxLines={25}
           ref={editorRef}
-          mode="python"
+          mode={props.lang}
           theme="dracula"
           keyBindings="VSCode"
           onChange={(value: string) => {
@@ -129,7 +130,7 @@ const Editor = observer((props: Props) => {
           setOptions={{
             displayIndentGuides: true,
             vScrollBarAlwaysVisible: false,
-            highlightGutterLine: false,
+            highlightGutterLine: false
           }}
           showPrintMargin={false}
           highlightActiveLine={false}
@@ -139,9 +140,9 @@ const Editor = observer((props: Props) => {
           showGutter
         />
       ) : (
-        <PlaceholderEditor webKey={props.webKey} />
+        <PlaceholderEditor webKey={props.webKey} lang={props.lang} />
       )}
-      <PyScriptSrc webKey={props.webKey}/>
+      {props.lang === 'python' && <PyScriptSrc webKey={props.webKey}/>}
     </div>
   );
 });

@@ -7,13 +7,18 @@
 
 import React from 'react';
 // @ts-ignore
-import CodeBlock from '@theme-original/CodeBlock';
+import CodeBlock from '@theme-init/CodeBlock';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { sanitizedTitle, sanitizeId } from '../../utils/sanitizers';
 import hashCode from '../../utils/hash_code';
 // @ts-ignore
 import PyAceEditor from '@site/src/components/CodeEditor';
 import { v4 as uuidv4 } from 'uuid';
+
+ // @ts-ignore
+ import Playground from '@theme/Playground';
+ // @ts-ignore
+ import ReactLiveScope from '@theme/ReactLiveScope';
 
 function pageId() {
   try {
@@ -42,11 +47,19 @@ const getCodeId = (title, children) => {
 
 const withLiveEditor = (Component) => {
   const WrappedComponent = function(props) {
+    const langMatch = ((props.className || '') as string).match(/language-(?<lang>\w*)/);
+    let lang = langMatch?.groups?.lang?.toLocaleLowerCase() ?? '';
+    if (lang === 'py') {
+      lang = 'python';
+    }
+    if (props.live_jsx) {
+      return <Playground scope={ReactLiveScope} {...props} />;
+    }
     if (props.live_py && ExecutionEnvironment.canUseDOM) {
       if (!props.id && !props.slim) {
         return <Component {...props} />
       }
-      const contextId = pageId();
+
       const code = props.children.replace(/\n$/, '');
       const codeId = getCodeId(props.title, code);
       const [webKey] = React.useState(props.id || uuidv4());
@@ -56,17 +69,17 @@ const withLiveEditor = (Component) => {
           code={code}
           codeId={codeId}
           readonly={!!props.readonly}
-          contextId={contextId}
+          lang={lang}
           resettable={!props.persist}
           slim={!!props.slim}
           versioned={!!props.versioned}
-          title={sanitizedTitle(props.title) || 'Python'}
+          title={sanitizedTitle(props.title) || lang}
         />
       ;
     }
-
     return <Component {...props} />;
   };
+
   return WrappedComponent;
 };
 

@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import { Handle, SliderTooltip } from 'rc-slider';
 import Slider from 'rc-slider/lib/Slider';
 import * as React from 'react';
-import CopyBadge from './CopyBadge';
 import containerStyles from '../../styles/container.module.scss';
 import styles from './styles.module.scss';
 
@@ -66,7 +65,7 @@ const ColorDepth = () => {
             className={clsx('hero', 'shadow--lw', containerStyles.container, styles.cmyk)}
         >
             <div className="container">
-                <p className="hero__subtitle">Farbtiefen-Tool</p>
+                <p className="hero__subtitle">Farbtiefen</p>
                 <div className={clsx(styles.color)}>
                     <span className={clsx(styles.label)}>Farbabstufungen</span>
                     <Slider
@@ -114,9 +113,10 @@ const ColorDepth = () => {
                         tiles.map((colrs) => {
                             return (
                                 <div className={clsx(styles.tileRow)}>
-                                    {colrs.map((colr) => {
+                                    {colrs.map((colr, idx) => {
                                         return (
                                             <Tile
+                                                key={idx}
                                                 r={colr.r}
                                                 g={colr.g}
                                                 b={colr.b}

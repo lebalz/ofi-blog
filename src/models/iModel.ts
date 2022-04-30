@@ -17,33 +17,28 @@ export interface BaseModel {
 
     readonly: boolean;
     canUpdate: boolean;
-    legacyCleanup?: () => void;
     saveService: SaveService;
 }
 
 export interface ArrayModel extends BaseModel {
     type: 'array';
     data: ArrayDoc;
-    legacyData?: ArrayDoc;
     size: number;
     setData: (data: ArrayDoc) => void;
 }
 export interface StringModel extends BaseModel {
     type: 'string';
     data: StringDoc;
-    legacyData?: StringDoc;
     setData: (data: StringDoc) => void;
 }
 export interface TextModel extends BaseModel {
     type: 'text';
     data: TextDoc;
-    legacyData?: TextDoc;
     setData: (data: TextDoc) => void;
 }
 export interface CodeModel extends BaseModel {
     type: 'code';
     data: PyDoc;
-    legacyData?: PyDoc;
     setData: (data: PyDoc) => void;
 }
 
