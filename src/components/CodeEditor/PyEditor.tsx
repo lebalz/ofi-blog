@@ -18,8 +18,10 @@ interface Props {
   children: React.ReactNode;
   title: string;
   resettable: boolean;
+  download: boolean;
   webKey: string;
   lang: string;
+  noCompare: boolean;
 }
 
 const PyEditor = observer((props: Props) => {
@@ -52,6 +54,8 @@ const PyEditor = observer((props: Props) => {
         slim={props.slim}
         title={props.title}
         resettable={props.resettable}
+        download={props.download}
+        noCompare={props.noCompare}
         webKey={props.webKey}
         lang={props.lang}
       />

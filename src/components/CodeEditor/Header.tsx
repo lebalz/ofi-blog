@@ -11,6 +11,7 @@ import {
     faFileCode,
     faCheckCircle,
     faSync,
+    faDownload,
 } from '@fortawesome/free-solid-svg-icons';
 import { observer } from 'mobx-react-lite';
 import { action, reaction } from 'mobx';
@@ -38,11 +39,13 @@ interface Props {
     slim: boolean;
     title: string;
     resettable: boolean;
+    download: boolean;
+    noCompare: boolean;
     webKey: string;
     lang: string;
 }
 
-const Header = observer(({ slim, title, resettable, webKey, lang }: Props) => {
+const Header = observer(({ slim, title, resettable, webKey, lang, noCompare, download }: Props) => {
     const [showSavedNotification, setShowSavedNotification] = React.useState(false);
     const store = useStore('documentStore');
     const pyScript = store.find<Script>(webKey);
@@ -128,7 +131,30 @@ const Header = observer(({ slim, title, resettable, webKey, lang }: Props) => {
                             <FontAwesomeIcon icon={faUndo} />
                         </button>
                     )}
-                    {pyScript.hasEdits && (
+                    {download && !pyScript.showRaw && (
+                        <button
+                            className={clsx(
+                                styles.headerButton
+                            )}
+                            onClick={() => {
+                                const downloadLink = document.createElement("a");
+                                const file = new Blob([pyScript.code],    
+                                            {type: 'text/plain;charset=utf-8'});
+                                downloadLink.href = URL.createObjectURL(file);
+                                const fExt = lang === 'python' ? '.py' : `.${lang}`;
+                                const fTitle = title === lang ? pyScript.webKey : title
+                                const fName = fTitle.endsWith(fExt) ? fTitle : `${fTitle}${fExt}`;
+                                downloadLink.download = fName;
+                                document.body.appendChild(downloadLink);
+                                downloadLink.click();
+                                document.body.removeChild(downloadLink);
+                            }}
+                            title="Download"
+                        >
+                            <FontAwesomeIcon icon={faDownload} />
+                        </button>
+                    )}
+                    {pyScript.hasEdits && !noCompare && (
                         <button
                             className={clsx(
                                 styles.showRawButton,

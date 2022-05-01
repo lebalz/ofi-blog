@@ -71,8 +71,10 @@ const withLiveEditor = (Component) => {
           readonly={!!props.readonly}
           lang={lang}
           resettable={!props.persist}
+          download={!props.versioned && !props.noDownload}
           slim={!!props.slim}
           versioned={!!props.versioned}
+          noCompare={!!props.noCompare}
           title={sanitizedTitle(props.title) || lang}
         />
       ;

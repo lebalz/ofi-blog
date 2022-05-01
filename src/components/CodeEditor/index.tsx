@@ -18,9 +18,11 @@ interface Props {
     slim: boolean;
     readonly: boolean;
     children: React.ReactNode;
+    noCompare: boolean;
     title: string;
     versioned: boolean;
     resettable: boolean;
+    download: boolean;
     lang: string;
 }
 

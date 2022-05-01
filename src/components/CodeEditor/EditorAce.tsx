@@ -64,13 +64,15 @@ const Editor = observer((props: Props) => {
   const editorRef = React.useCallback(
     (node) => {
       if (node !== null) {
-        if (node.editor && props.lang === 'python') {
-          node.editor.commands.addCommand({
-            // commands is array of key bindings.
-            name: "execute",
-            bindKey: { win: "Ctrl-Enter", mac: "Command-Enter" },
-            exec: () => pyScript.execScript(document),
-          });
+        if (node.editor) {
+          if (props.lang === 'python') {
+            node.editor.commands.addCommand({
+              // commands is array of key bindings.
+              name: "execute",
+              bindKey: { win: "Ctrl-Enter", mac: "Command-Enter" },
+              exec: () => pyScript.execScript(document),
+            });
+          }
           node.editor.commands.addCommand({
             // commands is array of key bindings.
             name: "save",
@@ -82,7 +84,7 @@ const Editor = observer((props: Props) => {
         }
       }
       return () => {
-        if (node && node.editor && props.lang === 'python') {
+        if (node && node.editor) {
           const cmd = node.editor.commands.commands["execute"];
           if (cmd) {
             node.editor.commands.removeCommand(cmd, true);
