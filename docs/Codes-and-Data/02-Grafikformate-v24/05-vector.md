@@ -57,7 +57,7 @@ Halten Sie den verwendeten Code separat im untenstehenden Textfeld fest.
 Änderungen im Live-Editor werden nicht gespeichert!
 :::
 
-```svg live_py id=642aff2d-c564-4f5a-a32d-09bb1ce461ed
+```svg live_py persist noCompare id=642aff2d-c564-4f5a-a32d-09bb1ce461ed
 ```
 
 ```jsx live_jsx
@@ -83,7 +83,7 @@ Auf der folgenden Seite sind die Grundformen von SVG zusammengefasst:
 
 Erstellen Sie eine neue SVG-Datei und probieren Sie die Grundformen aus.
 
-```svg live_py id=cc4d54db-764e-411e-8577-d1f6d58e76ec
+```svg live_py persist noCompare id=cc4d54db-764e-411e-8577-d1f6d58e76ec
 ```
 
 ```jsx live_jsx
@@ -100,7 +100,7 @@ Erstellen Sie eine neue SVG-Datei und probieren Sie die Grundformen aus.
 
 Erstellen Sie mit SVG eine winterliche oder festliche Grafik.
 
-```svg live_py id=4848dc26-9feb-4708-80bc-c17144d3a5e3
+```svg live_py persist noCompare id=4848dc26-9feb-4708-80bc-c17144d3a5e3
 ```
 
 ```jsx live_jsx
