@@ -3,6 +3,9 @@ title: 4. Übung
 label: 4. Übung
 ---
 
+import OsTabs from '@site/src/components/OsTabs'
+import TabItem from '@theme/TabItem';
+
 import Answer from '@site/src/components/Answer'
 
 # Rastergrafik praktisch
@@ -23,15 +26,36 @@ import Answer from '@site/src/components/Answer'
 
 Das folgende Foto hat im Original eine Auflösung von `6016×4016` Pixel mit einer Farbtiefe von 3 Byte.
 
+
+
 1. Berechnen Sie die theoretische Speichergrösse in Megabyte.
 2. Laden Sie das Originalbild unter dem folgenden Link herunter:
 
    [Originalbild @download](assets/iceland.jpg)
 
 3. Finden Sie heraus, wie gross der tatsächliche Speicherbedarf des Bildes in Megabyte ist. Notieren Sie diese Zahl.
-4. Öffnen Sie das Bild in einer Foto-App.
-5. Ändern Sie die Grösse des Bildes auf 20%.
-6. Exportieren Sie das Bild mehrmals nacheinander als JPEG-Datei mit den Qualitäten 100%, 75%, 50% und 0%. Vergleichen Sie die Bilder und die Dateigrössen. Was stellen Sie fest?
+4. Öffnen Sie das Bild in einer Foto-App (unter **Mac**: in der Vorschau).
+5. Exportieren Sie das Bild mehrmals nacheinander als JPEG-Datei mit den Qualitäten 90%, 80%, 50% und 10%. Vergleichen Sie die Bilder und die Dateigrössen. Was stellen Sie fest?
+
+
+<OsTabs>
+  <TabItem value="win">
+
+Im Foto App öffnen und als Kopie exportieren:
+
+![](images/04-uebung/jpeg-quality-windows.gif)
+  </TabItem>
+  <TabItem value="mac">
+
+Mac: `Ablage > Exportieren`, als Dateiformat `JPEG` wählen, die Qualität muss auf dem Slider abgeschätzt werden.
+
+![](images/04-uebung/jpeg-quality-1-osx.png)
+
+![](images/04-uebung/jpeg-quality-2-osx.png)
+  </TabItem>
+</OsTabs>
+
+6. Kann die Qualität wiederhergestellt werden? Öffnen Sie das zuvor mit der Qualität von 10% exportierte Bild und exportieren Sie es erneut mit einer Qualität von 100%. Was stellen Sie fest? Wie widerspiegelt sich dies in der Dateigrösse und der Bildqualität beim Betrachten?
 
 ![Island](images/04-uebung/iceland.jpg)
 

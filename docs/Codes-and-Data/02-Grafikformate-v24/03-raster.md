@@ -82,4 +82,19 @@ Die folgende Tabelle zeigt die Dateigrössen des gleichen Bildes (640×360) mit 
 
 </div>
 
+:::aufgabe Jupyterhub
+
+Loggen Sie sich auf https://jupyter.gbsl.website ein und öffnen Sie das Notebook unter `shared/Rastergrafik/csv_to_jpeg.ipynb`. Im selben Ordner finden Sie auch eine Datei `Bild.csv` - es enthält eine `8x8` Pixel grosse Rastergrafik. Mit `Rechtsklick > Öffnen mit > editor` kann das Bild bearbeitet werden.
+
+Ändern Sie die Farben so ab, dass ein Schweizerkreuz entsteht.
+
+Um das Bild zu betrachten, muss das Programm `csv_to_jpeg` gestartet werden (mit `shift+enter`).
+
+Tipp: verwenden Sie für jeden Farbkanal genau 3 Ziffern, damit die Zeilen nicht verrücken. Beispiel:
+
+```
+255:255:000, 200:000:030, 255:255:255
+```
+:::
+
 [^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=943166)
