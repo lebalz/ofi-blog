@@ -141,6 +141,11 @@
       "from": "docs/Codes-and-Data/03-Compression-v24/",
       "to": "versioned_docs/version-24f/08-Codes und Daten/01-compression",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
+      "to": "versioned_docs/version-24f/08-Codes und Daten/02-Grafikformate",
+      "ignore": []
     }
   ],
   "24i": [
@@ -279,6 +284,11 @@
     {
       "from": "docs/Codes-and-Data/03-Compression-v24/",
       "to": "versioned_docs/version-24i/08-Codes und Daten/01-compression",
+      "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
+      "to": "versioned_docs/version-24i/08-Codes und Daten/02-Grafikformate",
       "ignore": []
     }
   ],
@@ -419,6 +429,11 @@
       "from": "docs/Codes-and-Data/03-Compression-v24/",
       "to": "versioned_docs/version-24K/08-Codes und Daten/01-compression",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
+      "to": "versioned_docs/version-24K/08-Codes und Daten/02-Grafikformate",
+      "ignore": []
     }
   ],
   "24L": [
@@ -552,6 +567,11 @@
     {
       "from": "docs/Codes-and-Data/03-Compression-v24/",
       "to": "versioned_docs/version-24L/08-Codes und Daten/01-compression",
+      "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
+      "to": "versioned_docs/version-24L/08-Codes und Daten/02-Grafikformate",
       "ignore": []
     }
   ],
@@ -691,6 +711,11 @@
     {
       "from": "docs/Codes-and-Data/03-Compression-v24/",
       "to": "versioned_docs/version-24o/08-Codes und Daten/01-compression",
+      "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
+      "to": "versioned_docs/version-24o/08-Codes und Daten/02-Grafikformate",
       "ignore": []
     }
   ],
