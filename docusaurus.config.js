@@ -24,6 +24,10 @@ module.exports = {
   projectName: 'ofi-blog', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
+  i18n: {
+    defaultLocale: 'de',
+    locales: ['de'],
+  },
   themeConfig: {
     navbar: {
       title: 'Informatik',
@@ -294,11 +298,22 @@ module.exports = {
         // 3...
         //
         // Do _not_ use Infinity, the value must be a JSON-serializable integer.
-        indexDocSidebarParentCategories: 5,
+        indexDocSidebarParentCategories: 1,
+
+
+        // whether to index blog pages
+        indexBlog: false,
 
         // whether to index static pages
         // /404.html is never indexed
         indexPages: false,
+        // language of your documentation, see next section
+        language: "de",
+        // setting this to "none" will prevent the default CSS to be included. The default CSS
+        // comes from autocomplete-theme-classic, which you can read more about here:
+        // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/
+        style: undefined,
+
       }
     ]
   ],
