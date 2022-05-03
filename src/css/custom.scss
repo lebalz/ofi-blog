@@ -331,3 +331,29 @@ html[data-theme='dark'] {
         }
     }
 }
+
+
+.dsla-search-wrapper {
+    display: none;
+    order: 0;
+    --aa-search-input-height: 34px;
+    --aa-primary-color-rgb: 35, 42, 64;
+    .dsla-search-field {
+        .aa-DetachedSearchButton {
+        border-radius: 20px;
+        }
+    }
+}
+
+.plugin-docs {
+    .dsla-search-wrapper {
+        display: block;
+    }
+}
+
+html[data-theme='dark'] {
+    .dsla-search-wrapper {
+        --aa-primary-color-rgb: 103, 125, 195;
+        --aa-muted-color-rgb: 65, 78, 120;
+    }
+}

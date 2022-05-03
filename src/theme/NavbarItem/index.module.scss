@@ -23,3 +23,15 @@ html[data-theme='dark'] {
         color: white;
     }
 }
+
+.nameBadge {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 567px) {
+    .nameBadge {
+        max-width: 45px;
+    }
+}

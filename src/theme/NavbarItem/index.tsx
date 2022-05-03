@@ -71,6 +71,7 @@ const withLoginNavbar = (Component) => {
                         <button
                             className={clsx(
                                 'badge',
+                                styles.nameBadge,
                                 userStore.isMyView ? 'badge--primary' : 'badge--warning'
                             )}
                             style={{ textOverflow: 'ellipsis', width: '100px', whiteSpace: 'nowrap', overflow: 'hidden' }}
@@ -112,7 +113,7 @@ const withLoginNavbar = (Component) => {
             );
         }
         return (
-            <Link to={`/${props.to}`} className="badge badge--primary margin--xs">
+            <Link to={`/${props.to}`} className={clsx('badge', 'badge--primary', 'margin--xs', styles.nameBadge)}>
                 <span>{userStore.current.name}</span>
             </Link>
         );
