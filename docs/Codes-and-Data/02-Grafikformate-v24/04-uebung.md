@@ -60,6 +60,6 @@ Mac: `Ablage > Exportieren`, als Dateiformat `JPEG` wählen, die Qualität muss 
 ![Island](images/04-uebung/iceland.jpg)
 
 <Answer type="text" webKey="2e1c4773-da2e-42da-b506-f158fa968916" />
-:::
+::: 
 
 [^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=922802)
