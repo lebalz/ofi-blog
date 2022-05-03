@@ -106,7 +106,7 @@ print('rgb: ', cmyk2rgb(80, 60, 40, 20))
 
 </details>
 
-### Farbtiefe
+## Farbtiefe
 
 Die Farbtiefe gibt an, in wie vielen Abstufungen jeder Farbkanal vorliegt. Im interaktiven Tool lässt sich die Farbtiefe untersuchen. Dabei werden alle Farbabstufungen der drei Farbkanäle Grün, Rot und Blau wie folgt kombiniert.
 
