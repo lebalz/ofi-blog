@@ -84,7 +84,7 @@ Die folgende Tabelle zeigt die Dateigrössen des gleichen Bildes (640×360) mit 
 
 :::aufgabe Jupyterhub ⭐
 
-Loggen Sie sich auf https://jupyter.gbsl.website ein und kopieren Sie den Ordner `shared/Rastergrafik` in ihr Home-Verzeichnis (per Drag-and-Drop auf den kleinen Ordner oben links ziehen). Öffnen Sie danach den kopierten Ordner `Rastergrafik/`. In diesem Ordner finden Sie eine Datei `Bild.csv` - es enthält eine `5x5` Pixel grosse Rastergrafik. Mit `Rechtsklick > Öffnen mit > editor` kann das Bild bearbeitet werden.
+Loggen Sie sich auf https://jupyter.gbsl.website ein und kopieren Sie den Ordner `shared/Rastergrafik` in ihr Home-Verzeichnis (per Drag-and-Drop auf den kleinen Ordner oben links ziehen - es erscheint eine Fehlermeldung, die jedoch ignoriert werden kann). Öffnen Sie danach den kopierten Ordner `Rastergrafik/`. In diesem Ordner finden Sie eine Datei `Bild.csv` - es enthält eine `5x5` Pixel grosse Rastergrafik. Mit `Rechtsklick > Öffnen mit > editor` kann das Bild bearbeitet werden.
 
 Ändern Sie die Farben so ab, dass ein Schweizerkreuz entsteht.
 
