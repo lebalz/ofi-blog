@@ -44,7 +44,7 @@ const CLASS_EVENTS = {
 
 SCHOOL_EVENTS = {
     [9]: {desc: 'Videoabgabe', type: 'test', date: '06.03.2022'},
-    [24]: {desc: 'Projektabgabe', type: 'test', date: '23.06.2022'},
+    [24]: {desc: 'Projektabgabe', type: 'test', date: '22.06.2022'},
     [26]: {desc: 'Notenschluss', type: 'event', date: '30.06.2022'},
 }
 
