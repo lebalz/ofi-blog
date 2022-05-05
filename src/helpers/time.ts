@@ -1,3 +1,7 @@
+import _ from "lodash";
+import moment from "moment";
+import { iRow } from "../components/Table";
+
 export const SECOND_MS = 1000;
 export const MINUTE_MS = 60 * SECOND_MS;
 export const HOUR_MS = 60 * MINUTE_MS;
@@ -28,3 +32,16 @@ export const formatDate = (date: Date) => {
     const [year, month, day] = date.toISOString().slice(0, 10).split('-');
     return `${day}.${month}.${year}`;
 };
+
+/**
+ * Expects the date in the first column. Format: dd.mm.YYYY
+ */
+export const SortTimeTableByDate = (rows: iRow[]): iRow[] => {
+    rows.sort((a: iRow, b: iRow) => {
+        const dateA = moment(a.cells[0] as string, 'DD.MM.YYYY');
+        const dateB = moment(b.cells[0] as string, 'DD.MM.YYYY');
+        console.log(dateA, dateB, dateA.diff(dateB));
+        return dateA.diff(dateB);
+    })
+    return rows;
+}

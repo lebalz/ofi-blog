@@ -139,11 +139,13 @@ interface TableProps {
   striped?: boolean;
   collapsing?: boolean;
   selectable?: boolean;
+  order?: (rows: iRow[]) => iRow[]
 }
 
 export default class Table extends React.Component<TableProps> {
   render() {
     const dateIndex = (this.props.header || []).indexOf('Datum');
+    const rows = this.props.order ? this.props.order(this.props.rows) : this.props.rows;
     return (
       <table
         style={{ display: 'table', borderCollapse: 'collapse' }}
@@ -174,7 +176,7 @@ export default class Table extends React.Component<TableProps> {
         </thead>
         <tbody>
           {
-            this.props.rows.map((row, idx) => {
+            rows.map((row, idx) => {
               return <Row alignments={this.props.alignments} {...row} key={idx} dateIndex={dateIndex} />
             })
           }
