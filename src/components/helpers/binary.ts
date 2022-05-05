@@ -61,7 +61,6 @@ const fromUTF8 = (bin: string) => {
                 toEat = controlBits(seq);
             }
         }
-        console.log(seq, toEat);
         const data = seq.replace(/^1{1,4}0/, '');
         tmp.push(data)
         toEat = toEat - 1;
@@ -70,7 +69,6 @@ const fromUTF8 = (bin: string) => {
             tmp.splice(0);
         }
     });
-    console.log('-->', res);
     return res.map((chr) => fromBin(chr)).join('')
 };
 

@@ -29,7 +29,6 @@ const Redundancy = () => {
             return;
         }
         const sanitized = sanitizer(text);
-        console.log(sanitized, sanitized.replace(ALPHABET_FREQUENT, ''), sanitized.replace(ALPHABET_RARE, ''))
         switch (mode) {
             case 'frequent':
                 setOutput(sanitized.replace(ALPHABET_FREQUENT, ''));

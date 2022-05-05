@@ -21,7 +21,6 @@ export default class VersionedLink extends React.Component<Props> {
 
     axios.get('/versions.json')
       .then(json => {
-        console.log(json);
         this.setState({ courses: json })
       }).then(() => {
         this.setState({ course: this.getCourse() })

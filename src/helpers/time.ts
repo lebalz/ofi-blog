@@ -40,7 +40,6 @@ export const SortTimeTableByDate = (rows: iRow[]): iRow[] => {
     rows.sort((a: iRow, b: iRow) => {
         const dateA = moment(a.cells[0] as string, 'DD.MM.YYYY');
         const dateB = moment(b.cells[0] as string, 'DD.MM.YYYY');
-        console.log(dateA, dateB, dateA.diff(dateB));
         return dateA.diff(dateB);
     })
     return rows;

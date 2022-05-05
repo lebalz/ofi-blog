@@ -14,7 +14,6 @@ const Bin2Text = (props: Props) => {
     React.useEffect(() => {
         const lines = bin.split('\n');
         const txt = lines.map((t) => fromUTF8(t)).join('\n');
-        console.log(txt);
         setText(txt);
     }, [bin]);
     return (
