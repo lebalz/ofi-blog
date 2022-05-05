@@ -332,6 +332,15 @@ html[data-theme='dark'] {
     }
 }
 
+// @media (max-width: 996px) {
+    .navbar__inner {
+        .navbar__items {
+            div[class^='searchBox'] {
+                position: static;
+            }
+        }
+    }
+// }
 
 .dsla-search-wrapper {
     display: none;
@@ -340,7 +349,7 @@ html[data-theme='dark'] {
     --aa-primary-color-rgb: 35, 42, 64;
     .dsla-search-field {
         .aa-DetachedSearchButton {
-        border-radius: 20px;
+            border-radius: 20px;
         }
     }
 }
