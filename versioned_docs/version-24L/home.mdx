@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
 ---
-import Table from '@site/src/components/Table'
-import fs2022 from "./24L_FS2022.json"
+import Table from '@site/src/components/Table';
+import {SortTimeTableByDate} from '@site/src/helpers/time';
+import fs2022 from "./24L_FS2022.json";
 
 # 24L
 
@@ -11,6 +12,7 @@ import fs2022 from "./24L_FS2022.json"
   compact
   selectable
   rows={fs2022}
+  order={SortTimeTableByDate}
 />
 
 <details>

@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 import Table from '@site/src/components/Table'
 import fs2022 from "./24K_FS2022.json"
+import {SortTimeTableByDate} from '@site/src/helpers/time';
 
 # 24K
 
@@ -11,6 +12,7 @@ import fs2022 from "./24K_FS2022.json"
   compact
   selectable
   rows={fs2022}
+  order={SortTimeTableByDate}
 />
 
 <details><summary>3. Semester</summary>
