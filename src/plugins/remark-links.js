@@ -175,7 +175,7 @@ const plugin = (options) => {
           promises.push(processVideo())
         }
         if (/@upload/.test(text)) {
-          text = text.replace(/\s*@download\s*/, '')
+          text = text.replace(/\s*@upload\s*/, '')
           text += ' @button --type=success'
         }
         if (/@download/.test(text)) {
