@@ -58,6 +58,7 @@ Informieren Sie sich bei zusätzlichen Quellen über Ihr Thema:
 - https://www.deutschlandfunk.de/alles-unter-kontrolle-chinas-intelligenter-schule-entgeht.680.de.html?dram:article_id=438868
 - https://netzpolitik.org/2014/algorithmen-allmaechtig-freiheit-in-den-zeiten-der-statistik/
 - https://www.srf.ch/news/schweiz/automatische-gesichtserkennung-wir-muessen-vorsichtiger-mit-unseren-fotos-umgehen
+- https://www.srf.ch/news/wirtschaft/datenauskunft-post-von-amazon-164-zip-files
 
 #### 2. Justiz
 
