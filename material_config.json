@@ -146,6 +146,13 @@
       "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
       "to": "versioned_docs/version-24f/08-Codes und Daten/02-Grafikformate",
       "ignore": []
+    },
+    {
+      "from": "docs/OFI-Projekt/",
+      "to": "versioned_docs/version-24f/09-Abschlussprojekt",
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "24i": [
@@ -290,6 +297,13 @@
       "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
       "to": "versioned_docs/version-24i/08-Codes und Daten/02-Grafikformate",
       "ignore": []
+    },
+    {
+      "from": "docs/OFI-Projekt/",
+      "to": "versioned_docs/version-24i/09-Abschlussprojekt",
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "24K": [
@@ -434,6 +448,13 @@
       "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
       "to": "versioned_docs/version-24K/08-Codes und Daten/02-Grafikformate",
       "ignore": []
+    },
+    {
+      "from": "docs/OFI-Projekt/",
+      "to": "versioned_docs/version-24K/09-Abschlussprojekt",
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "24L": [
@@ -573,6 +594,13 @@
       "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
       "to": "versioned_docs/version-24L/08-Codes und Daten/02-Grafikformate",
       "ignore": []
+    },
+    {
+      "from": "docs/OFI-Projekt/",
+      "to": "versioned_docs/version-24L/09-Abschlussprojekt",
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "24o": [
@@ -717,6 +745,13 @@
       "from": "docs/Codes-and-Data/02-Grafikformate-v24/",
       "to": "versioned_docs/version-24o/08-Codes und Daten/02-Grafikformate",
       "ignore": []
+    },
+    {
+      "from": "docs/OFI-Projekt/",
+      "to": "versioned_docs/version-24o/09-Abschlussprojekt",
+      "ignore": [
+        "_category_.json"
+      ]
     }
   ],
   "25h": [
