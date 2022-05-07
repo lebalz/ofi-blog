@@ -4,8 +4,11 @@ sidebar_position: 1
 
 # Obligatorisches Fach Informatik
 
-Links:
+## Links:
+### Codes und Daten
 - [Codes und Daten: https://lehrerfortbildung-bw.de](https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb1/1_i1_duc/)
+### Big Data
+- [Datenkrake Amazon](https://www.srf.ch/news/wirtschaft/datenauskunft-post-von-amazon-164-zip-files)
 
 
 ## Präsentationen
