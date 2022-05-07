@@ -36,7 +36,7 @@ Die Schule bietet begrenzte Hardware-Stückzahlen, um sich z.B. im Rahmen eines 
 
 Informieren Sie sich über Themen, die Sie spannend finden. Tauschen Sie sich anschliessend mit den Klassenkamerad:innen aus und finden Sie eine Projektpartner:in, welche Ihre Interessen teilt. Entscheiden Sie sich für ein Thema und schreiben Sie einen Projektantrag in folgender Vorlage:
 
-[@download Vorlage Herunterladen](https://erzbe-my.sharepoint.com/:w:/g/personal/balthasar_hofer_gbsl_ch/EcKlfnWD2TtLspneUsiwOsMBQR7xaockSJxd3gWfmRBeXQ?e=hOZ1nT)
+[@download Vorlage Herunterladen](https://erzbe-my.sharepoint.com/:w:/g/personal/balthasar_hofer_gbsl_ch/EcKlfnWD2TtLspneUsiwOsMBQR7xaockSJxd3gWfmRBeXQ?e=rs2BeS)
 
 Füllen Sie den Projektantrag aus und laden Sie den Antrag bis am Mittwoch, 11.05.2022 um 22:00 Uhr hoch:
 
@@ -94,6 +94,8 @@ Mögliche Ideen - Sie dürfen aber auch einen eigenen Projektvorschlag ausarbeit
 #### Wie funktionieren Bitcoins?
 Sie setzen sich mit dem Thema Blockchain und Bitcoins auseinander. 
 
+![](https://www.leparisien.fr/resizer/pgNoLN8LeaWEP6mjBtM5JTPYJhE=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/J5WMRGQC4NEZXAPJERTHG7MXBA.jpg)
+
 ### Big Data / Data Mining
 
 #### Was ist Big Data und wie beeinflusst es unser Leben?
@@ -114,21 +116,32 @@ Sie arbeiten sich in ein Simulationsprogramm, bspw. ins kostenlose [Insightmaker
 
 Die beiden Seiten https://oinf.ch/kurs/simulationen und https://craft.dos/bwNrfufaSrdE3V geben einen guten Überblick und Hilfestellungen für das Vorgehen und entsprechende Simulationen.
 
+![](https://insightmaker.com/images/diagram_slide.png)
+
 ### Sensoren
 
 #### Feuchtigkeits- und Temperaturanzeige
 Sie schliessen einen Feuchtigkeitssensor sowie einen Temperatursensor an einen Arduino an. Über die Arduino IDE werden die Sensorwerte eingelesen und auf einem Ausgabegerät angezeigt.
+
+![](https://www.circuitbasics.com/wp-content/uploads/2015/12/Arduino-DHT11-Humidity-and-Temperature-Sensor-With-LCD-Output.png)
 
 ### Machine Learning
 #### Artificial Intelligence, Machine Learning, Deep Learning - was bedeuten diese Begriffe?
 
 Sie recherchieren über die Bedeutung der Modewörter AI, ML und DL und setzen diese in einen Kontext.
 
+https://www.mygreatlearning.com/blog/what-is-artificial-intelligence/
+
 #### Wie funktionieren Suchvorschläge auf Google?
 
-Sie lesen sich ins Buch von Manning, [Deep Learning for Search_2019](https://todo)[^1] ein und berichten über die Funktionsweise von Suchalgorithmen.
+Sie lesen sich ins Buch von Tommaso Teofili, [Deep Learning for Search_2019](https://www.manning.com/books/deep-learning-for-search)[^1] ein und berichten über die Funktionsweise von Suchalgorithmen.
 
-[@download Herunterladen]((https://todo))
+
+> A practical approach that shows you the state of the art in using neural networks, AI, and deep learning in the development of search engines.
+
+![--width=300px](https://human-centered.ai/wordpress/wp-content/uploads/2017/11/Deep-Learning-subset-of-Machine-Learning-subset-of-Artificial-Intelligence.jpg)
+
+[@download Herunterladen](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ec6EDPPeV8ZFuZ137SimNOwBtbqfQDqe6nWwlzjNVWKkcQ?e=qjlZVW)
 
 
 [^1]: *Die Buchausschnitte sind urheberrechtlich geschützt und dürfen ausschliesslich für den schulischen Gebrauch verwendet werden. Die Weitergabe ist verboten.*
