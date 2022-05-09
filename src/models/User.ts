@@ -55,4 +55,8 @@ export default class User {
       updated_at: this.updatedAt.toISOString()
     };
   }
+
+  clone(): User {
+    return new User(this.props);
+  }
 }

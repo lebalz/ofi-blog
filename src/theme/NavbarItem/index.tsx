@@ -39,16 +39,13 @@ const withLoginNavbar = (Component) => {
                     <button
                         className={clsx('badge', 'badge--secondary', 'badge--sm', styles.badgeButton)}
                         onClick={() => {
-                            const students = userStore.byClass(version?.name);
-                            const currentIdx = students.indexOf(userStore.currentView);
                             runInAction(() => {
                                 if (userStore.isMyView) {
                                     userStore.reload();
                                 } else {
-                                    userStore.setView(userStore.current);
+                                    userStore.setView(userStore.currentView?.clone());
                                 }
                             });
-                            userStore.setView(students[currentIdx]);
                         }}
                     >
                         <FontAwesomeIcon icon={faSync} />
