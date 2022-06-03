@@ -16,7 +16,15 @@ Im Partnerpraktikum suchen Sie sich in Zweiergruppen selbständig ein Thema aus,
 
 Suchen Sie sich ein Thema, in welches Sie sich innerhalb von 5 Doppellektionen einarbeiten können. Ihr Projekt darf auch einen praktischen Teil beinhalten (muss aber nicht).
 
-Das Endprodukt ihres Projekts ist ein **Podcast** oder wenn Visualisierungen zwingend sind ein Videobeitrag. Zudem wird eine schriftliche Reflexion zum Arbeitsprozess und dem Projekt verfasst, der in die Beurteilung einfliesst (dazu später mehr).
+Das Endprodukt ihres Projekts ist ein **Podcast** oder wenn Visualisierungen zwingend sind ein Videobeitrag. Zudem wird eine schriftliche Reflexion zum Arbeitsprozess und dem Projekt verfasst, der in die Beurteilung einfliesst.
+
+## Beurteilung
+
+![](images/beurteilung_theorie.png)
+
+![](images/beurteilung_praktisch.png)
+
+---
 
 :::info Verfügbare Hardware an der Schule
 Die Schule bietet begrenzte Hardware-Stückzahlen, um sich z.B. im Rahmen eines Hardware-Projekts mit den Möglichkeiten der folgenden Geräte\* auseinanderzusetzen.
