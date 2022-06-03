@@ -93,7 +93,7 @@ Lesen Sie den verlinkten Artikel
 :::aufgabe EFF Cover your tracks
 Mit "EFF Cover your tracks" können Sie ebenfalls Ihren digitalen Fingerabdruck testen. Zusätzlich gibt Ihnen diese Website aber auch Hinweise dazu, wie gut Sie bspw. gegen Cookie-Tracking abgesichert sind. Wie steht es um Ihre Absicherung?
 
-- [https://coveryourtracks.eff.org/]()
+- [https://coveryourtracks.eff.org/](https://coveryourtracks.eff.org/)
 
 <Answer type="text" webKey="7aaef1f4-ebc2-4809-bcf2-cbe6540be1d1" />
 
