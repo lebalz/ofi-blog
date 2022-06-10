@@ -133,8 +133,7 @@ Die folgenden Kriterien werden mit je 1 bis 4 Punkten bewertet. Es können also 
 Gruppenbewertung
 - **Inhalt**: sich intensiv und kritisch mit dem Thema auseinandersetzen, die wichtigsten Aspekte des Themas auf den Punkt bringen und dem Publikum vermitteln
 - **Visualisierung**: gestalterisch passende und ansprechende Folien gestalten, welche mit passenden Visualisierungstechniken den Inhalt des Vortrags gut unterstützen.
-- **Strukturierung**: eine gute Einleitung 
-Individuelle Bewertung
+- **Strukturierung**: eine gute Einleitung, roter Faden, angemessener Inhaltsrahmen und Zeitrahmen (10-15 Minuten)
 - **Sprache**: Laut und deutlich sprechen,  frei sprechen (d.h. nicht ablesen), nicht zu schnell sprechen, keine Fülllaute wie «ähm» verwenden
 - **Haltung**: Gerade und stabil stehen, Publikum anschauen, Gestik
 - **Arbeitsprozess**
