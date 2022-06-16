@@ -21,7 +21,7 @@ steps:
       - ./node_modules
 
 - name: website
-  image: node:16.11.1
+  image: node:18
   commands:
   - apt-get update && apt-get install rsync -y
   - mkdir -p $HOME/.ssh
