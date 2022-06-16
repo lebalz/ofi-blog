@@ -1,0 +1,37 @@
+.bib {
+    font-size: small;
+    background-color: var(--ifm-background-color);
+    color: var(--ifm-color-primary);
+    border-radius: 8px;
+    padding: 2px 4px;
+    cursor: pointer;
+    order: 999;
+
+    &:hover {
+        background-color: var(--ifm-color-info-lightest);
+        color: var(--ifm-color-primary);
+    }
+
+    &.visible {
+        // background-color: var(--ifm-color-info-lightest);
+        color: var(--ifm-color-success);
+    }
+
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+    .refItem {
+        flex-shrink: 0;
+    }
+}

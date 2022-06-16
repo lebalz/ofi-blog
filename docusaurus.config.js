@@ -3,7 +3,7 @@ const BASE_URL = '/';
 const path = require("path");
 const math = require('remark-math');
 const katex = require('rehype-katex');
-const transformImage = require('./src/plugins/transform-images');
+const remarkImg2Fig = require('./src/plugins/remark-img2fig');
 // const validateUuids = require('./src/plugins/validate-uuids');
 const remarkFlex = require('./src/plugins/remark-flex');
 const admonitions = require('@lebalz/remark-admonitions');
@@ -163,7 +163,7 @@ module.exports = {
           admonitions: false,
           beforeDefaultRemarkPlugins: [
             remarkLinks,
-            transformImage,
+            remarkImg2Fig
           ],
           remarkPlugins: [
             math,

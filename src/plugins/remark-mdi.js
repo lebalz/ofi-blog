@@ -1,17 +1,5 @@
 const visit = require("unist-util-visit");
 
-// create a node that will compile to HTML
-const element = (icon) => {
-    return {
-        type: 'mdiHTML',
-        data: {
-            hName: 'a',
-            hProperties: { className: [`mdi-${icon}`, 'mdi'] }
-        },
-        children: children
-    };
-};
-
 // passed to unified.use()
 // you have to use a named function for access to `this` :(
 function attacher(options) {
