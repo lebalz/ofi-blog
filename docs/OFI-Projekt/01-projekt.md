@@ -10,6 +10,26 @@ import Answer from '@site/src/components/Answer';
 
 Im Partnerpraktikum suchen Sie sich in Zweiergruppen selbständig ein Thema aus, welches Sie interessiert.
 
+:::success Abgabe per [OneDrive](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EjYULtxVY2JEpvpliLzFdNQBjoQqzTXeQUvrJyodr9-3Fg)
+
+Es wird ein **.zip-Ordner** mit dem Namen `name_vorname.zip` (bzw. für Gruppen `name1_vorname_1_name2_vorname2.zip`) per untenstehndem *Hochladen-Knopf* auf OneDrive abgegeben.
+
+Darin enthalten sind:
+
+| Was                                              | Format                |                                Dateiname |
+| :----------------------------------------------- | :-------------------- | ---------------------------------------: |
+| Selbstkritische Reflexion (eine pro Gruppe)      | `.pdf`                |                          `reflexion.pdf` |
+| Podcast / Videobeitrag                           | `.mp3` / <br/> `.mp4` | `podcast.mp3` / <br/> `videobeitrag.mp4` |
+| Skript (Gliederung) des Podcasts / Videobeitrags | `.pdf`                |                             `skript.pdf` |
+| Projektmaterial (Programmcode, Projektdateien)   | Ordner                |                              `material/` |
+| (ev. Tagebucheinträge \*)                        | `.pdf`                |                   `tagebuch_vorname.pdf` |
+
+\* Wer das Tagebuch nicht auf der Website erfasst hat, kann dieses auch als PDF abgeben. Die auf der Website erfassten Tagebücher werden zum Abgabezeitpunkt eingesammelt.
+
+[@upload Projekt hochladen](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EjYULtxVY2JEpvpliLzFdNQBjoQqzTXeQUvrJyodr9-3Fg)
+
+:::
+
 ## Ablauf
 
 **Gruppengrösse**: max. 2 Personen
@@ -23,6 +43,35 @@ Das Endprodukt ihres Projekts ist ein **Podcast** oder wenn Visualisierungen zwi
 ![](images/beurteilung_theorie.png)
 
 ![](images/beurteilung_praktisch.png)
+
+
+### Selbstkritische Reflexion
+
+In der schriftlichen Selbstreflexion blicken Sie auf Ihr Praktikumsprojekt zurück. Sie gehen dabei auf die folgenden Punkte ein und beleuchten diese differenziert und durchaus selbstkritisch:
+- Arbeitsprozess
+  - Zeiteinteilung
+  - Nutzen der Unterrichtszeit
+  - Nutzen von Hilfestellungen
+  - Konzentrationsphasen
+  - ev. Arbeiten und Koordination im Team
+- Lernerfolg
+  - Wie viel konnte ich neu dazulernen?
+  - Bin ich zufrieden damit? 
+  - Wo hätten Sie sich mehr erwünscht? 
+  - Inwiefern wurden Ihre Erwartungen an die Lernerfahrung erfüllt?
+- Podcast
+  - Wie zufrieden sind Sie mit dem Podcast/Videobeitrag?
+  - Wo bestünde noch Verbesserungspotential?
+- Selbstbeurteilung
+  - Wie beurteilen Sie Ihre Leistung? 
+  - Was würden Sie anders machen, was würden Sie besser machen? 
+  - Sind Sie zufrieden mit dem Endprodukt? 
+  - Wo liegen die Stärken, wo die schwächen Ihres Projekts? 
+  - Was gefiel Ihnen gut? 
+  - Was gefiel Ihnen weniger gut? 
+  - Welche Aspekte erscheinen Ihnen besonders relevant/erwähnenswert?
+
+Die selbstkritische Reflexion sollte im Minimum **500** Wörter lang sein.
 
 ---
 
