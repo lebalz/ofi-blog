@@ -52,6 +52,8 @@ Das Dateiformat `.M4A` enthält auch Audiodateien, die mit Audacity allerdings n
 <OsTabs>
 <TabItem value="win">
 
+Laden Sie ffmpeg [hier https://lame.buanzo.org/ffmpeg64audacity.php](https://lame.buanzo.org/ffmpeg64audacity.php) herunter und installieren Sie es (nicht den Link im Video verwenden!).
+
 [@youtube](https://www.youtube.com/embed/JAjb0aLj_yw)
 
 </TabItem>
