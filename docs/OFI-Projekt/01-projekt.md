@@ -10,9 +10,11 @@ import Answer from '@site/src/components/Answer';
 
 Im Partnerpraktikum suchen Sie sich in Zweiergruppen selbständig ein Thema aus, welches Sie interessiert.
 
-:::success Abgabe per [OneDrive](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EjYULtxVY2JEpvpliLzFdNQBjoQqzTXeQUvrJyodr9-3Fg)
+:::success Abgabe per [OneDrive](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EjYULtxVY2JEpvpliLzFdNQBjoQqzTXeQUvrJyodr9-3Fg) bis am 22.06.2022 um 20:00 Uhr
 
-Es wird ein **.zip-Ordner** mit dem Namen `name_vorname.zip` (bzw. für Gruppen `name1_vorname_1_name2_vorname2.zip`) per untenstehndem *Hochladen-Knopf* auf OneDrive abgegeben.
+**Abgabe**: Bis am 22.06.2022 um **20:00 Uhr**
+
+Es wird ein **.zip-Ordner** mit dem Namen `name_vorname.zip` (bzw. für Gruppen `name1_vorname1_name2_vorname2.zip`) per untenstehndem *Hochladen-Knopf* auf OneDrive abgegeben.
 
 Darin enthalten sind:
 
