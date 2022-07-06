@@ -2,7 +2,7 @@
   "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": ["docusaurus-theme-frontmatter"],
+    "types": ["docusaurus-theme-frontmatter", "node"],
     "useDefineForClassFields": true,
     "experimentalDecorators": true,
     "downlevelIteration": true

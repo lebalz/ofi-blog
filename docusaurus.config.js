@@ -3,6 +3,9 @@ const BASE_URL = '/';
 const path = require("path");
 const math = require('remark-math');
 const katex = require('rehype-katex');
+const remarkMdi = require('remark-mdi');
+const remarkDeflist = require('remark-deflist-simple');
+const remarkKbd = require('remark-kbd-simple');
 const remarkImg2Fig = require('./src/plugins/remark-img2fig');
 // const validateUuids = require('./src/plugins/validate-uuids');
 const remarkFlex = require('./src/plugins/remark-flex');
@@ -162,11 +165,14 @@ module.exports = {
           },
           admonitions: false,
           beforeDefaultRemarkPlugins: [
+            remarkKbd,
             remarkLinks,
-            remarkImg2Fig
+            remarkImg2Fig,
           ],
           remarkPlugins: [
             math,
+            remarkDeflist,
+            remarkMdi(),
             remarkFlex,
             [admonitions, {
               customTypes: {
