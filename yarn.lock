@@ -9408,6 +9408,13 @@ remark-deflist-simple@^1.0.0:
   dependencies:
     unist-util-visit "^2.0.3"
 
+remark-details-simple@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/remark-details-simple/-/remark-details-simple-1.0.1.tgz#85cbcb7e3cc52af088d1e5ae3a8e62c723b3ee60"
+  integrity sha512-s6QK67MMfDVT0FRDxmSQdxbUvkAvSynXmMpe8sLpEJOxby9O2tsyJlsc/t9KUANCTiS0cjP0UBIrVVYwvCZpbA==
+  dependencies:
+    unist-util-visit "^2.0.3"
+
 remark-docusaurus-tabs@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/remark-docusaurus-tabs/-/remark-docusaurus-tabs-0.1.0.tgz#c839ac7fd429a5558e5f96a33db3e7ba689c390f"
@@ -9439,10 +9446,10 @@ remark-math@3:
   resolved "https://registry.yarnpkg.com/remark-math/-/remark-math-3.0.1.tgz#85a02a15b15cad34b89a27244d4887b3a95185bb"
   integrity sha512-epT77R/HK0x7NqrWHdSV75uNLwn8g9qTyMqCRCDujL0vj/6T6+yhdrR7mjELWtkse+Fw02kijAaBuVcHBor1+Q==
 
-remark-mdi@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/remark-mdi/-/remark-mdi-1.0.1.tgz#8b3db96afb5d5fde74f8a3693979b45bc4cdacdc"
-  integrity sha512-YWNOV0v3bv+ZICFQI2u1lz8nWAVR5xA61UKHNSQpPiaEER3li96d08HfHDRYSVR/Lvsy0D3+JpmzWBl/aiIt6w==
+remark-mdi@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/remark-mdi/-/remark-mdi-1.0.2.tgz#aff3e9ede36d86adf79a671f58135b050959f0f8"
+  integrity sha512-siEnVQfj9Vy2vJv2UCagdGYGHMe4MMwO62Xgs1DJitdsmHIuaLoLzMs1hi6vRV1va12mka83eP6bU6WIayhGOA==
 
 remark-mdx@1.6.22:
   version "1.6.22"
@@ -9486,6 +9493,11 @@ remark-squeeze-paragraphs@4.0.0:
   integrity sha512-8qRqmL9F4nuLPIgl92XUuxI3pFxize+F1H0e/W3llTk0UsjJaj01+RrirkMw7P21RKe4X6goQhYRSvNWX+70Rw==
   dependencies:
     mdast-squeeze-paragraphs "^4.0.0"
+
+remark-underline@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/remark-underline/-/remark-underline-1.0.5.tgz#7526408f4440be7fb2afdaf19ba4460341cf9d42"
+  integrity sha512-+3+O9aQZ6Z1WESGTxrXGneV6caref2CdaTB3bsbmyWWL9z4hdScy3e1/kwudcEXKH36YqevjDFnUXlGS9bN4yQ==
 
 remove-bom-buffer@^3.0.0:
   version "3.0.0"

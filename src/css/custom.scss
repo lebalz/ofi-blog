@@ -371,3 +371,30 @@ html[data-theme='dark'] {
         --aa-muted-color-rgb: 65, 78, 120;
     }
 }
+
+html[data-theme='dark'] {
+    figure > img{
+        background: white;
+    }
+}
+
+kbd {
+	padding: 0.3em 0.5em;
+	padding-bottom: 0.35em;
+	padding-top: 0.25em;
+    border-radius: 0.5em;
+    box-shadow: inset 1px -2px 0 var(--ifm-color-emphasis-400);
+}
+
+
+strong.underline {
+	color: #3348b5;
+	font-weight: normal;
+	border: 1px solid var(--ifm-color-gray-600);
+	padding: 0.15em 0.4em 0.15em 0.3em;
+	border-radius: 2px;
+	-moz-border-radius: .2em;
+	-webkit-border-radius: .2em;
+	border-radius: .2em;
+	white-space: nowrap;
+}

@@ -6,6 +6,8 @@ const katex = require('rehype-katex');
 const remarkMdi = require('remark-mdi');
 const remarkDeflist = require('remark-deflist-simple');
 const remarkKbd = require('remark-kbd-simple');
+const remarkDetails = require('remark-details-simple');
+const remarkUnderline = require('remark-underline');
 const remarkImg2Fig = require('./src/plugins/remark-img2fig');
 // const validateUuids = require('./src/plugins/validate-uuids');
 const remarkFlex = require('./src/plugins/remark-flex');
@@ -168,11 +170,13 @@ module.exports = {
             remarkKbd,
             remarkLinks,
             remarkImg2Fig,
+            [remarkUnderline, { marker: '__', classNames: ['underline'], tagType: 'strong'}]
           ],
           remarkPlugins: [
             math,
             remarkDeflist,
-            remarkMdi(),
+            remarkMdi,
+            [remarkDetails, {marker: ':::', tags: ['details'], classNameMap: {details: undefined }}],
             remarkFlex,
             [admonitions, {
               customTypes: {
