@@ -1,0 +1,38 @@
+
+// Horizontal Definition Lists
+.dl {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    max-width: 670px;
+    > * {
+        padding-top: 0.5em;
+    }
+    dt {
+        width:30%;
+        font-weight: bold;
+        text-align:right;
+        max-height: 1px;
+    }
+    dd {
+        width:60%;
+        padding-left:1em;
+        margin-left: 0px;
+    }
+    dd + dd {
+        width: 100%;
+        padding-left: calc(30% + 1em);
+        padding-top:4px;
+    }
+    dt + dt {
+        padding-right: 60%;
+    }
+    dt + dt + dd {
+        margin-top: -1.625em; /* own height including padding */
+        padding-left: calc(30% + 1em);
+    }
+    
+    dd p, dd ul, dd ol {
+        line-height: inherit;
+    }
+}
