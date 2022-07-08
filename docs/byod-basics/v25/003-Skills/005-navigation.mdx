@@ -102,12 +102,18 @@ import TabItem from '@theme/TabItem';
 <OsTabs>
 <TabItem value="win">
 
-- `()` (normalerweise: [[Shift]] + [[8]] / [[Shift]] + [[9]])
-- `{}` (normalerweise: [[Alt Gr]] + [[ä]] / [[Alt Gr]] + [[$]])
-- `[]` (normalerweise: [[Alt Gr]] + [[ü]] / [[Alt Gr]] + [[!]])
-
-- Backtick <code>\`</code>: `Shift + ^` und dann ein Leerschlag
-- Link öffnen: `Ctrl+Click`
+`(`
+: [[Shift]] + [[8]]
+`)`
+: [[Shift]] + [[9]]
+`{`
+: Normalerweise [[Alt Gr]] + [[ä]]
+`}`
+: Normalerweise [[Alt Gr]] + [[$]]
+`[`
+: Normalerweise [[Alt Gr]] + [[ü]]
+`]`
+: Normalerweise [[Alt Gr]] + [[!]]
 
 </TabItem>
 <TabItem value="mac">
@@ -125,10 +131,6 @@ import TabItem from '@theme/TabItem';
 : [[Option :mdi-apple-keyboard-option:]] + [[5]]
 `]`
 : [[Option :mdi-apple-keyboard-option:]] + [[6]]
-<code>\`</code> 
-: [[Shift]] + [[^]] + [[Leerschlage]] (Backtick)
-Link öffnen
-: [[Cmd]] + :mdi-mouse: *Click*
 
 </TabItem>
 </OsTabs>
@@ -139,34 +141,64 @@ Link öffnen
 <OsTabs>
 <TabItem value="win">
 
-- `@`: `Alt Gr + 2`
-- `#`: `Alt Gr + 3`
-- `*`: `Shift + 3`
-- `*`: `Shift + 3`
-- `%`: `Shift + 5`
-- `&`: `Shift + 6`
-- `/`: `Shift + 7`
-- `\`: `Shift + 7`
-- `<`: `<`
-- `>`: `Shift + <`
+<code>\`</code> 
+: [[Shift]] + [[^]] + [[Leerschlage]] (Backtick)
+`@`
+: [[Alt Gr]] + [[2]]
+`#`
+: [[Alt Gr]] + [[3]]
+`*`
+: [[Shift]] + [[3]]
+`*`
+: [[Shift]] + [[3]]
+`%`
+: [[Shift]] + [[5]]
+`&`
+: [[Shift]] + [[6]]
+`/`
+: [[Shift]] + [[7]]
+`\`
+: [[Shift]] + [[7]]
+`<`
+: [[<]]
+`>`
+: [[Shift]] + [[<]]
 
 </TabItem>
 <TabItem value="mac">
 
-- `@`: `option + g`
-- `+`: `option + 1`
-- `#`: `option + 3`
-- `*`: `shift + 3`
-- `%`: `shift + 5`
-- `&`: `shift + 6`
-- `/`: `shift + 7`
-- `\`: `shift + option + 7`
-- `<`: `<`
-- `>`: `shift + >`
+<code>\`</code> 
+: [[Shift]] + [[^]] + [[Leerschlage]] (Backtick)
+`@`
+: [[option]] + [[g]]
+`+`
+: [[option]] + [[1]]
+`#`
+: [[option]] + [[3]]
+`*`
+: [[shift]] + [[3]]
+`%`
+: [[shift]] + [[5]]
+`&`
+: [[shift]] + [[6]]
+`/`
+: [[shift]] + [[7]]
+`\`
+: [[shift]] + [[option]] + [[7]]
+`<`
+: [[<]]
+`>`
+: [[shift]] + [[>]]
 
 </TabItem>
 </OsTabs>
 
+### Link Öffnen
+- Links in bspw. in Word/Powerpoint öffnen 
+- Link auf einer Webseite in einem neuen Tab öffnen
+- ...
+
+[[Cmd]] + :mdi-mouse: *Click*
 ## Touch-Gesten
 
 ### Klicken durch Tippen
@@ -188,7 +220,7 @@ Auf modernen Touchpads reicht ein Antippen aus, um einen Klick auszulösen.
 
 ### Rechtsklick
 
-Auch hier kann wahlweise Geklickt oder nur getippt werdem.
+Auch hier kann wahlweise Geklickt oder nur getippt werden.
 
 <OsTabs>
 <TabItem value="win">
@@ -246,7 +278,7 @@ Mit virtuellen Desktops lassen sich mehrere Arbeitsbereiche und Fensteranordnung
 <OsTabs>
 <TabItem value="win">
 
-Virtuelle Desktops: Mit `Win-Tabulatortaste` alle geöffneten Fenster anzeigen und oben im Fenster einen neuen Virtuellen Desktop erstellen:
+Virtuelle Desktops: Mit [[:mdi-microsoft-windows:]]+[[Tabulator :mdi-keyboard-tab:]] alle geöffneten Fenster anzeigen und oben im Fenster einen neuen Virtuellen Desktop erstellen:
 
 
 <Video src={useBaseUrl('/img/byod-basics/win/create_virtual_desktops.mp4')} />
