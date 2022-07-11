@@ -157,12 +157,6 @@ module.exports = {
             },
             '24o': {
               banner: 'none'
-            },
-            '25h': {
-              banner: 'none'
-            },
-            '24w': {
-              banner: 'none'
             }
           },
           admonitions: false,
@@ -343,8 +337,8 @@ module.exports = {
     // Object format.
     {
       src: 'https://umami.gbsl.website/tell-me.js',
-      ['data-website-id']: '8fc2386c-353f-487d-b58b-1e5c1f4301d7',
-      ['data-domains']: 'ofi.gbsl.website',
+      ['data-website-id']: 'ffcd8698-d1b2-4fe0-9d39-cccabc5a5970',
+      ['data-domains']: 'ofi.24.gbsl.website',
       async: true,
       defer: true
     },

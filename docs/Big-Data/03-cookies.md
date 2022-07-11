@@ -52,7 +52,7 @@ In den meisten Browsern (alle ausser Safari) können Cookies auch direkt über d
 ## Der eigentliche Zweck von Cookies
 
 :::aufgabe
-Löschen Sie alle Cookies der Seite https://ofi.gbsl.website und aktualisieren Sie die Webseite. Was stellen Sie fest?
+Löschen Sie alle Cookies der Seite https://ofi.24.gbsl.website und aktualisieren Sie die Webseite. Was stellen Sie fest?
 
 <Answer type="text" webKey="355d500a-dfed-43a9-8f32-6f11fc37bdf9" />
 :::

@@ -5,17 +5,10 @@ import Table from '@site/src/components/Table'
 import fs2022 from "./24K_FS2022.json"
 import {SortTimeTableByDate} from '@site/src/helpers/time';
 
-# 24K
+# 24K Informatik
 
-<Table
-  header={['Datum', 'Thema', 'Inhalt']}
-  compact
-  selectable
-  rows={fs2022}
-  order={SortTimeTableByDate}
-/>
 
-<details><summary>3. Semester</summary>
+:::details 3. Semester
 <Table
   header={['Datum', 'Thema', 'Inhalt']}
   compact
@@ -48,4 +41,14 @@ import {SortTimeTableByDate} from '@site/src/helpers/time';
     { cells: ['26.01.2022', 'Computer', ''] }
   ]}
 />
-</details>
+:::
+
+:::details 4. Semester
+<Table
+  header={['Datum', 'Thema', 'Inhalt']}
+  compact
+  selectable
+  rows={fs2022}
+  order={SortTimeTableByDate}
+/>
+:::

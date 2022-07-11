@@ -10,25 +10,13 @@ interface Course {
 
 const CourseList: Course[] = [
   {
-    title: 'Gym 1',
-    classes: [
-      '25h'
-    ]
-  },
-  {
-    title: 'Gym 2',
+    title: 'Abschlussjahrgang 2024',
     classes: [
       '24f',
       '24i',
       '24K',
       '24L',
       '24o',
-    ]
-  },
-  {
-    title: 'WMS',
-    classes: [
-      '24w'
     ]
   }
 ];
