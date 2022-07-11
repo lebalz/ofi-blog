@@ -143,25 +143,19 @@ module.exports = {
               label: 'Material',
               banner: 'none'
             },
-            '24f': {
-              banner: 'none'
-            },
-            '24i': {
-              banner: 'none'
-            },
-            '24L': {
-              banner: 'none'
-            },
-            '24K': {
-              banner: 'none'
-            },
-            '24o': {
-              banner: 'none'
-            },
             '25h': {
               banner: 'none'
             },
             '24w': {
+              banner: 'none'
+            },
+            '26e': {
+              banner: 'none'
+            },
+            '26P': {
+              banner: 'none'
+            },
+            '24ef': {
               banner: 'none'
             }
           },

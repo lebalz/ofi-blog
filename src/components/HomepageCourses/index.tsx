@@ -1,28 +1,39 @@
 import React from 'react';
+import styles from './styles.module.scss';
 import clsx from 'clsx';
-import styles from './HomepageCourses.module.scss';
 import Link from '@docusaurus/Link';
+
+interface Klass {
+  label: string;
+  uri: string;
+}
 
 interface Course {
   title: string;
-  classes: string[];
+  classes: (string | Klass)[];
 }
 
 const CourseList: Course[] = [
   {
     title: 'Gym 1',
     classes: [
-      '25h'
+      '26e',
+      '26P'
     ]
   },
   {
     title: 'Gym 2',
     classes: [
-      '24f',
-      '24i',
-      '24K',
-      '24L',
-      '24o',
+      '25h',
+    ]
+  },
+  {
+    title: 'Gym EF',
+    classes: [
+      {
+        uri: '24ef/home',
+        label: 'EF'
+      },
     ]
   },
   {
@@ -30,11 +41,20 @@ const CourseList: Course[] = [
     classes: [
       '24w'
     ]
+  },
+  {
+    title: 'Ehemalige',
+    classes: [
+      {
+        uri: 'https://ofi.24.gbsl.website',
+        label: '24er'
+      }
+    ]
   }
 ];
 
 // const CourseComponent = (course: Course) => {
-const CourseComponent = ({ course }) => {
+const CourseComponent = ({ course }: {course: Course}) => {
   return (
     <div className={clsx('card margin--md shadow--md')}>
       <div className="card__header">
@@ -42,13 +62,16 @@ const CourseComponent = ({ course }) => {
       </div>
       <div className="card__body" >
         {course.classes.map((cl, idx) => {
+          const isString = typeof cl === 'string';
+          const to = isString ? `${cl}/home` : cl.uri;
+          const label = isString ? cl : cl.label;
           return (
             <Link
               key={idx}
-              to={`${cl}/home`}
+              to={to}
               className="button button--outline button--secondary margin--xs"
             >
-              {cl}
+              {label}
             </Link>
           )
         })}

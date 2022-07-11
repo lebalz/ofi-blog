@@ -5,6 +5,7 @@ sidebar_position: 1
 import Table from "@site/src/components/Table";
 import {SortTimeTableByDate} from '@site/src/helpers/time';
 import fs2022 from "./25h_FS2022.json"
+import hs2022 from "./25h_HS2022.json"
 
 # 25h
 
@@ -13,12 +14,11 @@ import fs2022 from "./25h_FS2022.json"
   header={["Datum", "Thema", "Inhalt"]}
   compact
   selectable
-  rows={fs2022}
+  rows={hs2022}
   order={SortTimeTableByDate}
 />
 
-<details><summary>1. Semester</summary>
-
+:::details 1. Semester
 <Table
   header={["Datum", "Thema", "Inhalt"]}
   compact
@@ -88,4 +88,15 @@ import fs2022 from "./25h_FS2022.json"
     { cells: ['24.01.2022', 'A', '🚧', ''] },
   ]}
 />
-</details>
+
+:::
+
+:::details 2. Semester
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={fs2022}
+  order={SortTimeTableByDate}
+/>
+:::
