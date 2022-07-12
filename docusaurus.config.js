@@ -150,13 +150,13 @@ module.exports = {
               banner: 'none'
             },
             '26e': {
-              banner: 'none'
+              banner: 'unreleased'
             },
             '26P': {
-              banner: 'none'
+              banner: 'unreleased'
             },
             '24ef': {
-              banner: 'none'
+              banner: 'unreleased'
             }
           },
           admonitions: false,

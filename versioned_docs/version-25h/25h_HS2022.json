@@ -1,89 +1,93 @@
 [
     {
-        "cells": ["04.02.2022","Codes und Daten","Textcodierung"]
+        "cells": ["17.08.2022","Netzwerke","Schichtenmodell, TCP/IP"]
     },
     {
-        "cells": ["11.02.2022","Codes und Daten","Farbdarstellung"]
+        "cells": ["24.08.2022","Netzwerke","Codierung, IP-Adresse"]
     },
     {
-        "cells": ["18.02.2022","Sportwoche",""],
+        "cells": ["31.08.2022","Netzwerke","Routing & DNS"]
+    },
+    {
+        "cells": ["07.09.2022","Netzwerke","Protokolle, World Wide Web"]
+    },
+    {
+        "cells": ["14.09.2022","Netzwerke","Workshop"]
+    },
+    {
+        "cells": ["21.09.2022","Sonderwoche",""],
         "type": "holiday"
     },
     {
-        "cells": ["25.02.2022","Codes und Daten","Grafikformate"]
+        "cells": ["28.09.2022","Herbstferien",""],
+        "type": "holiday"
     },
     {
-        "cells": ["04.03.2022","Codes und Daten","Kompression"]
+        "cells": ["05.10.2022","Herbstferien",""],
+        "type": "holiday"
     },
     {
-        "cells": ["11.03.2022","Codes und Daten","Anwendungen"]
+        "cells": ["12.10.2022","Herbstferien",""],
+        "type": "holiday"
     },
     {
-        "cells": ["18.03.2022","Codes und Daten","Wiederholung"]
+        "cells": ["19.10.2022","Netzwerke","Wiederholung"]
     },
     {
-        "cells": ["25.03.2022","Codes und Daten","Test"],
+        "cells": ["26.10.2022","Netzwerke","Test"],
         "type": "test"
     },
     {
-        "cells": ["01.04.2022","Codes und Daten","QR Codes"]
+        "cells": ["02.11.2022","Kryptologie","Antike Verschlüsselungsverfahren"]
     },
     {
-        "cells": ["08.04.2022","Sonderwoche",""],
-        "type": "holiday"
+        "cells": ["09.11.2022","Kryptologie","Symmetrische Verschlüsselung"]
     },
     {
-        "cells": ["15.04.2022","Frühlingsferien",""],
-        "type": "holiday"
+        "cells": ["16.11.2022","Kryptologie","Asymmetrische Verschlüsselung"]
     },
     {
-        "cells": ["22.04.2022","Frühlingsferien",""],
-        "type": "holiday"
+        "cells": ["23.11.2022","Kryptologie","Hashfunktion"]
     },
     {
-        "cells": ["29.04.2022","Big Data","Gesellschaft"]
+        "cells": ["30.11.2022","Kryptologie","Digitale Signaturen"]
     },
     {
-        "cells": ["06.05.2022","Big Data","Präsentieren"]
+        "cells": ["07.12.2022","Kryptologie","Kryptologie im Alltag"]
     },
     {
-        "cells": ["13.05.2022","Big Data","Gesellschaft - Gruppendiskussion"]
-    },
-    {
-        "cells": ["20.05.2022","Big Data","Gesellschaft"]
-    },
-    {
-        "cells": ["27.05.2022","Auffahrt",""],
-        "type": "holiday"
-    },
-    {
-        "cells": ["03.06.2022","Big Data","Vorträge"],
+        "cells": ["14.12.2022","Kryptologie","Test"],
         "type": "test"
     },
     {
-        "cells": ["10.06.2022","Big Data","Vorträge"],
-        "type": "test"
+        "cells": ["21.12.2022","Kryptologie","Steganographie"]
     },
     {
-        "cells": ["17.06.2022","Sportwoche",""],
+        "cells": ["28.12.2022","Winterferien",""],
         "type": "holiday"
     },
     {
-        "cells": ["24.06.2022","Tabellenkalkulation",""]
+        "cells": ["05.01.2023","Winterferien",""],
+        "type": "holiday"
     },
     {
-        "cells": ["01.07.2022","Tabellenkalkulation",""]
+        "cells": ["12.01.2023","Programmieren 2","Listen & Game"]
     },
     {
-        "cells": ["01.07.2022","Filmanlass",""],
+        "cells": ["19.01.2023","Programmieren 2","Game"]
+    },
+    {
+        "cells": ["26.01.2023","Programmieren 2","Game"]
+    },
+    {
+        "cells": ["02.02.2023","Programmieren 2","Game"]
+    },
+    {
+        "cells": ["25.01.2023","Notenschluss",""],
         "type": "event"
     },
     {
-        "cells": ["30.06.2022","Notenschluss",""],
+        "cells": ["03.02.2023","Semesterende",""],
         "type": "event"
-    },
-    {
-        "cells": ["08.07.2022","Schulschluss",""],
-        "type": "holiday"
     }
 ]

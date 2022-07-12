@@ -1,89 +1,98 @@
 [
     {
-        "cells": ["04.02.2022","Codes und Daten","Textcodierung"]
+        "cells": ["16.08.2022","Einstieg","ICT Einstieg"]
     },
     {
-        "cells": ["11.02.2022","Codes und Daten","Farbdarstellung"]
+        "cells": ["23.08.2022","ICT","BYOD Basics"]
     },
     {
-        "cells": ["18.02.2022","Sportwoche",""],
+        "cells": ["30.08.2022","ICT","BYOD Basics"]
+    },
+    {
+        "cells": ["06.09.2022","ICT","Office: Layout und Gliederung"]
+    },
+    {
+        "cells": ["13.09.2022","ICT","Office: Layout und Gliederung"]
+    },
+    {
+        "cells": ["20.09.2022","Sonderwoche",""],
         "type": "holiday"
     },
     {
-        "cells": ["25.02.2022","Codes und Daten","Grafikformate"]
+        "cells": ["27.09.2022","Herbstferien",""],
+        "type": "holiday"
     },
     {
-        "cells": ["04.03.2022","Codes und Daten","Kompression"]
+        "cells": ["04.10.2022","Herbstferien",""],
+        "type": "holiday"
     },
     {
-        "cells": ["11.03.2022","Codes und Daten","Anwendungen"]
+        "cells": ["11.10.2022","Herbstferien",""],
+        "type": "holiday"
     },
     {
-        "cells": ["18.03.2022","Codes und Daten","Wiederholung"]
+        "cells": ["18.10.2022","ICT","Office: Layout und Gliederung"]
     },
     {
-        "cells": ["25.03.2022","Codes und Daten","Test"],
+        "cells": ["25.10.2022","ICT","Kurztest Office"],
         "type": "test"
     },
     {
-        "cells": ["01.04.2022","Codes und Daten","QR Codes"]
+        "cells": ["01.11.2022","Daten","Office: Tabellenkalkulation"]
     },
     {
-        "cells": ["08.04.2022","Sonderwoche",""],
-        "type": "holiday"
+        "cells": ["08.11.2022","Daten","Office: Tabellenkalkulation"]
     },
     {
-        "cells": ["15.04.2022","Frühlingsferien",""],
-        "type": "holiday"
+        "cells": ["15.11.2022","Daten","Office: Tabellenkalkulation"]
     },
     {
-        "cells": ["22.04.2022","Frühlingsferien",""],
-        "type": "holiday"
-    },
-    {
-        "cells": ["29.04.2022","Big Data","Gesellschaft"]
-    },
-    {
-        "cells": ["06.05.2022","Big Data","Präsentieren"]
-    },
-    {
-        "cells": ["13.05.2022","Big Data","Gesellschaft - Gruppendiskussion"]
-    },
-    {
-        "cells": ["20.05.2022","Big Data","Gesellschaft"]
-    },
-    {
-        "cells": ["27.05.2022","Auffahrt",""],
-        "type": "holiday"
-    },
-    {
-        "cells": ["03.06.2022","Big Data","Vorträge"],
-        "type": "test"
-    },
-    {
-        "cells": ["10.06.2022","Big Data","Vorträge"],
-        "type": "test"
-    },
-    {
-        "cells": ["17.06.2022","Sportwoche",""],
-        "type": "holiday"
-    },
-    {
-        "cells": ["24.06.2022","Tabellenkalkulation",""]
-    },
-    {
-        "cells": ["01.07.2022","Tabellenkalkulation",""]
-    },
-    {
-        "cells": ["01.07.2022","Filmanlass",""],
+        "cells": ["17.11.2022","Notenschluss Zwischenzeugnis",""],
         "type": "event"
     },
     {
-        "cells": ["30.06.2022","Notenschluss",""],
+        "cells": ["22.11.2022","Daten","Datenbanken"]
+    },
+    {
+        "cells": ["29.11.2022","Daten","Datenbanken"]
+    },
+    {
+        "cells": ["06.12.2022","Kantonaler Fachschaftstag",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["13.12.2022","Daten","Datenbanken"]
+    },
+    {
+        "cells": ["20.12.2022","Daten","Datenbanken"]
+    },
+    {
+        "cells": ["27.12.2022","Winterferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["04.01.2023","Winterferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["11.01.2023","Daten","Wiederholung"]
+    },
+    {
+        "cells": ["18.01.2023","Daten","Kurztest Daten"],
+        "type": "test"
+    },
+    {
+        "cells": ["25.01.2023","Codes und Daten","Zeichencodierung"]
+    },
+    {
+        "cells": ["01.02.2023","Codes und Daten","Zahlensysteme"]
+    },
+    {
+        "cells": ["25.01.2023","Notenschluss",""],
         "type": "event"
     },
     {
-        "cells": ["08.07.2022","Schulschluss",""],
-        "type": "holiday"
+        "cells": ["03.02.2023","Semesterende",""],
+        "type": "event"
     }
 ]

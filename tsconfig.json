@@ -5,6 +5,7 @@
     // "types": ["docusaurus-theme-frontmatter", "node"],
     "useDefineForClassFields": true,
     "experimentalDecorators": true,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "esModuleInterop":true
   }
 }
