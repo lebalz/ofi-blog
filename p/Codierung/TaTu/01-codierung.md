@@ -1,6 +1,6 @@
 # OF Informatik
 
-![](images/robot_thinking.jpg)
+![](images/robot-hand.jpg)
 
 
 
