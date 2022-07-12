@@ -5,7 +5,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageCourses from '../components/HomepageCourses';
 import ImageGallery from 'react-image-gallery';
-import _ from 'lodash';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -45,7 +44,7 @@ export default function Home() {
       <main>
         <div className="gallery-wrapper">
           <ImageGallery
-            items={_.shuffle(images)}
+            items={images}
             infinite
             lazyLoad
             showNav={false}
