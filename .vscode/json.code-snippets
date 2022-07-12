@@ -27,5 +27,15 @@
 			"}"
 		],
 		"description": "licence information for a picture"
+	},
+	"cc0": {
+		"prefix": "cc0",
+		"body": "https://creativecommons.org/share-your-work/public-domain/cc0/",
+		"description": "Creative Commons 0"
+	},
+	"cc4": {
+		"prefix": "cc4",
+		"body": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de",
+		"description": "Creative Commons 4.0"
 	}
 }

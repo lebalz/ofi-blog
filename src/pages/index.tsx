@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageCourses from '../components/HomepageCourses';
 import ImageGallery from 'react-image-gallery';
+import _ from 'lodash';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -21,13 +22,20 @@ function HomepageHeader() {
 export default function Home() {
   const images = [
     {
-      original: './img/index/robot_thinking.jpg',
-      description: <span>© Mike McKenzie - <a href="https://creativecommons.org/licenses/by/2.0/" style={{ color: 'white' }} >CC 2.0</a></span>
+      original: './img/index/artificial-intelligence.jpg'
     },
     {
-      original: './img/index/coding.jpeg',
-      description: <span>Bild von <a href="https://www.information-age.com/software-123466740/">Information-Age</a></span>
+      original: './img/index/robot-hand.jpg'
     },
+    {
+      original: './img/index/security.jpg'
+    },
+    {
+      original: './img/index/network.jpg'
+    },
+    {
+      original: './img/index/computer.jpg'
+    }
   ];
 
   return (
@@ -37,7 +45,7 @@ export default function Home() {
       <main>
         <div className="gallery-wrapper">
           <ImageGallery
-            items={images}
+            items={_.shuffle(images)}
             infinite
             lazyLoad
             showNav={false}
