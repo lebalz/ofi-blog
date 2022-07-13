@@ -8,6 +8,10 @@ import { useStore } from '../stores/hooks';
 import Link from '@docusaurus/Link';
 import { observer } from 'mobx-react-lite';
 import UserTable from './admin/UserTable';
+import { data } from '../api/user';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -24,7 +28,9 @@ function HomepageHeader() {
 
 const Login = observer(() => {
     const msalStore = useStore('msalStore');
+    const userStore = useStore('userStore');
     const { account, loggedIn } = msalStore;
+    const { current } = userStore;
     return (
         <Layout description="OF Informatik Website by B. Hofer">
             <HomepageHeader />
@@ -33,6 +39,44 @@ const Login = observer(() => {
                     {loggedIn ? (
                         <>
                             <h3>Eingeloggt als {account.username}</h3>
+                            <button
+                                className={clsx(
+                                    'button',
+                                    'button--primary'
+                                )}
+                                onClick={() => {
+                                    data().then((res) => {
+                                        const downloadLink = document.createElement("a");
+                                        const file = new Blob([JSON.stringify(res.data)],    
+                                                    {type: 'application/json;charset=utf-8'});
+                                        downloadLink.href = URL.createObjectURL(file);
+                                        downloadLink.download = `data-${account.username}.json`;
+                                        document.body.appendChild(downloadLink);
+                                        downloadLink.click();
+                                        document.body.removeChild(downloadLink);
+                                    })
+                                }}
+                                title="Download"
+                            >
+                                Alle Persönliche Daten herunterladen <FontAwesomeIcon icon={faDownload as IconProp} />
+                            </button>
+                            <div style={{height: '3em'}}></div>
+
+                            <a className={clsx('button', 'button--secondary')} href={`mailto:balthasar.hofer@gbsl.ch?subject=[${window.location.hostname}]: Datenlöschung für ${account.username}&body=Guten Tag%0D%0A%0D%0A
+Hiermit beantrage ich die vollständige und unwiderrufliche Löschung meiner Daten der Webseite ${window.location.hostname}.%0D%0A%0D%0A
+
+E-Mail: ${account.username}%0D%0A
+Account-ID: ${current?.id}%0D%0A%0D%0A
+
+Bitte bestätigen Sie die Löschung meiner Daten.%0D%0A%0D%0A
+
+Freundliche Grüsse,%0D%0A
+${current?.firstName} ${current?.lastName}, ${current?.klasse ?? ''}&cc=${account.username}`}>
+                                    Datenlöschung beantragen
+                            </a>
+
+                            <div style={{height: '3em'}}></div>
+
                             <button className="button button--danger" onClick={() => msalStore.logout()}>
                                 Logout
                             </button>

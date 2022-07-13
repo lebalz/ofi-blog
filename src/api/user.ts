@@ -1,5 +1,7 @@
 import api from './base';
 import { AxiosPromise, CancelTokenSource } from 'axios';
+import { Document } from './document';
+import { TimedTopic } from './timed_topic';
 
 export interface UserProps {
   class?: string;
@@ -16,4 +18,8 @@ export interface User extends UserProps {
 
 export function user(): AxiosPromise<User> {
   return api.get('user');
+}
+
+export function data(): AxiosPromise<{user: User, documents: Document<any>[], timed_topics: TimedTopic[]}> {
+  return api.get('user/data');
 }
