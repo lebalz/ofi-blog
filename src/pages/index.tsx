@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <Layout
-      description="OF Informatik Website by B. Hofer">
+      description="Informatik Website by B. Hofer">
       <HomepageHeader />
       <main>
         <div className="gallery-wrapper">

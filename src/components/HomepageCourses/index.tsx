@@ -28,18 +28,12 @@ const CourseList: Course[] = [
     ]
   },
   {
-    title: 'Gym EF',
+    title: 'Gym 3',
     classes: [
       {
         uri: '24ef/home',
         label: 'EF'
       },
-    ]
-  },
-  {
-    title: 'WMS',
-    classes: [
-      '24w'
     ]
   },
   {
@@ -49,6 +43,12 @@ const CourseList: Course[] = [
         uri: 'https://ofi.24.gbsl.website',
         label: '24er'
       }
+    ]
+  },
+  {
+    title: 'WMS',
+    classes: [
+      '24w'
     ]
   }
 ];

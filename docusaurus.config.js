@@ -18,7 +18,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'OF Informatik',
+  title: 'Informatik',
   tagline: 'Gymnasium Biel Seeland',
   url: 'https://lebalz.github.io',
   baseUrl: BASE_URL,
