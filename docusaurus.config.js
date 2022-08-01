@@ -251,15 +251,36 @@ module.exports = {
         },
       };
     },
-    function (context, options) {
-      return {
-        name: 'watch-presentations',
-        getPathsToWatch() {
-          const staticPath = path.resolve(context.siteDir, 'static');
-          return [`${staticPath}/p/*.{md, html}`];
-        }
-      };
-    },
+    // function (context, options) {
+    //   return {
+    //     name: 'watch-presentations',
+    //     getPathsToWatch() {
+    //       const staticPath = path.resolve(context.siteDir, 'static');
+    //       return [`${staticPath}/p/*.{md, html}`];
+    //     }
+    //   };
+    // },
+    // function (context, options) {
+    //   return {
+    //     name: 'watch-presentations',
+    //     configureWebpack(config, isServer, utils) {
+    //       return {
+    //         devServer: {
+    //           watchFiles: ['presentations/**/*'],
+    //           // watchFiles: {
+    //           //   paths: [path.join(__dirname, 'static/p/**/*.js'), path.join(__dirname, 'static/p/**/*.md'), path.join(__dirname, 'static/p/**/*.html'), path.join(__dirname, 'static/p/**/*.css'), path.join(__dirname, 'static/p/**/*.scss')],
+    //           //   // options: {
+    //           //   //   cwd: '.'
+    //           //   // }
+    //           // },
+    //           // static: {
+    //           //   directory: path.join(__dirname, 'static'),
+    //           // }
+    //         },
+    //       };
+    //     },
+    //   };
+    // },
     function (context, options) {
       return {
         name: 'pdf-src-loader',
