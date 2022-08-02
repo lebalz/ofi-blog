@@ -2,7 +2,6 @@
 title: Begriffe
 ---
 
-import Solution from '@site/src/components/Solution'
 
 # Begriffe
 

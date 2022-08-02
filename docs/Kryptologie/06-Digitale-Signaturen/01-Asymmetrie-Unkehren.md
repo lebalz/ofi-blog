@@ -2,7 +2,6 @@
 title: Asymmetrie umkehren
 ---
 
-import Solution from '@site/src/components/Solution'
 
 # Asymmetrie umkehren [^1]
 Wir erinnern uns an das Prinzip der reinen [asymmetrische Verschlüsselung](../04-Asymmetrisch/03-asymmetrie.md):

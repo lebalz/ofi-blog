@@ -1,4 +1,3 @@
-import Solution from '@site/src/components/Solution'
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
 # Test 25h

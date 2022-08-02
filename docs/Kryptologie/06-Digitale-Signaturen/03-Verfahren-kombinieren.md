@@ -2,7 +2,6 @@
 title: Verfahren kombinieren
 ---
 
-import Solution from '@site/src/components/Solution'
 
 # Verfahren kombinieren [^1]
 

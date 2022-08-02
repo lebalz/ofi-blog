@@ -3,7 +3,6 @@ title: 9. ⭐️ While
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
-import Solution from '@site/src/components/Solution'
 
 ## Wiederholen, solange die Frage mit "Ja"  beantwortet wird
 Eine Wiederholung mit einer Frage führt einen Codeblock so lange aus, bis die Frage nicht mehr mit "Ja" beantwortet wird.

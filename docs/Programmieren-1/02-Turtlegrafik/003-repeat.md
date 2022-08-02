@@ -4,7 +4,6 @@ title: 3. Wiederholung 🔁
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Finding from "@site/src/components/Finding";
-import Solution from '@site/src/components/Solution'
 import Hint from "@site/src/components/Solution/Hint";
 
 # 3. Wiederholung 🔁

@@ -2,7 +2,6 @@
 title: XOR-Verschlüsselung
 ---
 
-import Solution from '@site/src/components/Solution'
 
 # XOR-Verschlüsselung [^1]
 

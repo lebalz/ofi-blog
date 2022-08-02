@@ -2,7 +2,6 @@
 title: 6. XOR-Gatter
 ---
 
-import Solution from '@site/src/components/Solution'
 
 # 6. XOR-Gatter
 

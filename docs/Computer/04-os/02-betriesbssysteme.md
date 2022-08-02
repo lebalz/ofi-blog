@@ -2,7 +2,6 @@
 title: 2. Betriebssysteme
 ---
 
-import Solution from '@site/src/components/Solution';
 
 # 2. Betriebssysteme
 

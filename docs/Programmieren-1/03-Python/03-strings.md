@@ -3,7 +3,6 @@ title: Textverarbeitung
 ---
 
 import Hint from '@site/src/components/Solution/Hint'
-import Solution from '@site/src/components/Solution'
 
 # Textverarbeitung
 

@@ -2,7 +2,6 @@
 title: Asymm. Verschlüsselung
 ---
 
-import Solution from '@site/src/components/Solution'
 
 # Asymmetrische Verschlüsselung [^1]
 

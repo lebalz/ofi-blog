@@ -2,7 +2,6 @@
 title: 4. AND-Gatter
 ---
 
-import Solution from '@site/src/components/Solution'
 
 # 4. AND-Gatter
 

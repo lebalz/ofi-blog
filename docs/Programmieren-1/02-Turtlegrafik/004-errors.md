@@ -2,7 +2,6 @@
 title: 4. Fehler
 ---
 
-import Solution from '@site/src/components/Solution'
 import Hint from '@site/src/components/Solution/Hint'
 
 # 4. Fehler

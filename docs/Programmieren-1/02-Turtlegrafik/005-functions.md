@@ -2,7 +2,6 @@
 title: 5. Unterprogramme
 ---
 import Strukto from '@site/src/components/struktogramm/Strukto';
-import Solution from '@site/src/components/Solution'
 
 # 5. Unterprogramme [^1]
 

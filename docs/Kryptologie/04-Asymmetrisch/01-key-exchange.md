@@ -2,7 +2,6 @@
 title: Schlüsselaustausch
 ---
 
-import Solution from '@site/src/components/Solution'
 
 # Schlüsselaustausch [^1]
 

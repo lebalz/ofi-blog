@@ -4,7 +4,6 @@ label: 1. Grundlagen
 ---
 
 import ColorDepth from "@site/src/components/VisualizationTools/ColorEncoding/ColorDepth";
-import Solution from '@site/src/components/Solution';
 
 
 # 1. Grundlagen [^1]

@@ -7,7 +7,6 @@ label: 2. Farbdarstellung
 import RGB from "@site/src/components/VisualizationTools/ColorEncoding/RGB";
 import RGBA from "@site/src/components/VisualizationTools/ColorEncoding/RGBA";
 import CMYK from "@site/src/components/VisualizationTools/ColorEncoding/CMYK";
-import Solution from '@site/src/components/Solution';
 import ColorDepth from "@site/src/components/VisualizationTools/ColorEncoding/ColorDepth";
 
 ## Farbkanäle [^1]

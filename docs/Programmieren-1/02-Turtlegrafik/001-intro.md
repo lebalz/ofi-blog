@@ -2,7 +2,6 @@
 title: 1. Einführung
 ---
 
-import Solution from "@site/src/components/Solution";
 import Hint from "@site/src/components/Solution/Hint";
 
 # 1. Einführung Python

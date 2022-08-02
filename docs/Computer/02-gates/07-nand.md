@@ -2,7 +2,6 @@
 title: 7. NAND-Gatter
 ---
 
-import Solution from '@site/src/components/Solution'
 
 # 7. NAND-Gatter
 
