@@ -3,7 +3,6 @@ title: 1. Huffman-Codierung
 ---
 
 import Solution from '@site/src/components/Solution';
-import Answer from '@site/src/components/Answer';
 
 # 1. Huffman-Codierung [^1]
 
@@ -196,16 +195,16 @@ Codierung: `11 1001 010 11 011 000 11 011 1000 11 101 101 11 001 010`, Total `42
 
 Ohne Huffmann: Für `8` Buchstaben braucht es 3 Bits ($2^3=8$, daher lassen sich damit 8 Zustände speichern):
 
-|Buchstab|Code |
-|:-------|:----|
-|`⎵`     |`000`|
-|`X`     |`001`|
-|`N`     |`010`|
-|`K`     |`011`|
-|`T`     |`100`|
-|`R`     |`101`|
-|`F`     |`110`|
-|`E`     |`111`|
+| Buchstab | Code  |
+| :------- | :---- |
+| `⎵`      | `000` |
+| `X`      | `001` |
+| `N`      | `010` |
+| `K`      | `011` |
+| `T`      | `100` |
+| `R`      | `101` |
+| `F`      | `110` |
+| `E`      | `111` |
  
 --> Somit braucht es für 15 Buchstaben $15 \cdot 3 = 45$ bits.
   

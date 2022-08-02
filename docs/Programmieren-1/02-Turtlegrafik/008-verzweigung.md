@@ -6,7 +6,6 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 import PyAlert from '@site/docs/Programmieren-1/03-Python/_def-python-alert.md';
 import PyBreak from '@site/docs/Programmieren-1/03-Python/_def-python-break.md';
 import Ratespiel from '@site/src/components/Ratespiel'
-import Answer from '@site/src/components/Answer'
 import Solution from '@site/src/components/Solution'
 import Hint from '@site/src/components/Solution/Hint'
 

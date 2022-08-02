@@ -413,3 +413,28 @@ strong.underline {
 	border-radius: .2em;
 	white-space: nowrap;
 }
+
+
+i.mdi {
+    &.green {
+        color: var(--ifm-color-success);
+    }
+    &.red {
+        color: var(--ifm-color-danger);
+    }
+    &.orange {
+        color: var(--ifm-color-warning);
+    }
+    &.blue {
+        color: #3578e5;
+    }
+    &.m {
+        font-size: 1.25em;
+    }
+    &.l {
+        font-size: 1.6em;
+    }
+    &.xl {
+        font-size: 2rem;
+    }
+}

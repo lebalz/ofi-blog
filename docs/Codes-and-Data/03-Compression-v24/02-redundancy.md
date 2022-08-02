@@ -4,7 +4,6 @@ label: 2. Informationsgehalt
 ---
 
 import Redundancy from "@site/src/components/VisualizationTools/Redundancy";
-import Answer from '@site/src/components/Answer'
 
 # 2. Informationsgehalt [^1]
 

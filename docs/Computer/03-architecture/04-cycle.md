@@ -2,7 +2,6 @@
 title: 4. Von-Neumann-Zyklus
 ---
 
-import Answer from '@site/src/components/Answer';
 
 # 4. Von-Neumann-Zyklus
 

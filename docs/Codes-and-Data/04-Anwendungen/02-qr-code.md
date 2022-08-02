@@ -3,7 +3,6 @@ title: 2. QR Code
 label: 2. QR Code
 ---
 
-import Answer from '@site/src/components/Answer'
 
 ![Was enthält der QR-Code? 🏴‍☠️☠️𝜋](images/qr-code/piraten.svg)
 

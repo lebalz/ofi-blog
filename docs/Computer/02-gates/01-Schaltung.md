@@ -2,7 +2,6 @@
 title: 1. Schaltung
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 1. Schaltung
 

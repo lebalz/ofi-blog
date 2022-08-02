@@ -2,7 +2,6 @@
 title: Zertifizierungsstellen
 ---
 
-import Answer from '@site/src/components/Answer'
 import Solution from '@site/src/components/Solution'
 
 # Zertifizierungsstellen [^1]

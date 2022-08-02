@@ -2,7 +2,6 @@
 title: Asymmetrie umkehren
 ---
 
-import Answer from '@site/src/components/Answer'
 import Solution from '@site/src/components/Solution'
 
 # Asymmetrie umkehren [^1]

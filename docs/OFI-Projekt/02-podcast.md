@@ -3,7 +3,6 @@ title: Podcast
 ---
 import OsTabs from '@site/src/components/OsTabs';
 import TabItem from '@theme/TabItem';
-import Answer from '@site/src/components/Answer';
 
 # Erstellen eines Podcast
 

@@ -2,7 +2,6 @@
 title: 7. Hauptplatine
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 7. Hauptplatine
 

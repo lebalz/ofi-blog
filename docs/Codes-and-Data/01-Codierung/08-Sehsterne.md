@@ -2,7 +2,6 @@
 title: 8. Sehsterne
 ---
 
-import Answer from '@site/src/components/Answer';
 import Solution from '@site/src/components/Solution';
 
 # 8. Sehsterne [^1]

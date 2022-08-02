@@ -3,7 +3,6 @@ title: WIFI Sniffing
 ---
 
 import Finding from "@site/src/components/Finding";
-import Answer from "@site/src/components/Answer";
 
 # WIFI Sniffing
 

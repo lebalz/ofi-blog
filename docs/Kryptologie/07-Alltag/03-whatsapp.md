@@ -2,7 +2,6 @@
 title: WhatsApp-Verschlüsselung
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # WhatsApp-Verschlüsselung [^1]
 

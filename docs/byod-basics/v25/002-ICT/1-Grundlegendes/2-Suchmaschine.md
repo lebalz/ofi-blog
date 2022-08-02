@@ -21,15 +21,16 @@ Eine Suchmaschine hat drei Hauptaufgaben:
 - Verarbeiten von Suchanfragen
 - Bewerten und Filtern der Suchergebnisse
 
-Bevor eine Suchmaschine eine Abfrage beantworten kann, muss erst eine Datenbank mit entsprechenden Informationen zu Webseiten erstellt werden. Diese Aufgabe wird von automatischen Programmen, sogenannten *Webcrawler*, übernommen. Sie durchsuchen das World Wide Web ständig nach neuen und geänderten Seiten. Die Seiten werden analysiert und in einer riesigen Datenbank eingetragen. Dabei wird jeder Eintrag mit Stichworten versehen, welche sich aus der Analyse ergeben.
+Bevor eine Suchmaschine eine Abfrage beantworten kann, muss erst eine Datenbank mit entsprechenden Informationen zu Webseiten erstellt werden. Diese Aufgabe wird von automatischen Programmen, sogenannten *Webcrawlern*, übernommen. Sie durchsuchen das World Wide Web ständig nach neuen und geänderten Seiten. Die Seiten werden analysiert und in einer riesigen Datenbank eingetragen. Dabei wird jeder Eintrag mit Stichworten versehen, welche sich aus der Analyse ergeben.
 
-Wenn ein Benutzer eine Suchanfrage an die Maschine schickt, wird die Anfrage erst sprachlich analysiert. Beispielsweise werden falsch geschrieben Worte korrigiert. Anschliessend wird in der Datenbank nach Einträgen gesucht, deren Stichworte möglichst gut mit der Anfrage übereinstimmen.
+Wenn eine Benutzer:in eine Suchanfrage an die Maschine schickt, wird die Anfrage erst sprachlich analysiert. Beispielsweise werden falsch geschrieben Worte korrigiert. Anschliessend wird in der Datenbank nach Einträgen gesucht, deren Stichworte möglichst gut mit der Anfrage übereinstimmen.
 
 Schliesslich werden die Resultate bewertet und entsprechend geordnet.
 
-## Achtung
+:::danger Achtung
 Suchergebnisse werden von einem automatischen Lernsystem (künstliche Intelligenz) beeinflusst.
 
 Zusätzlich erfassbare Informationen wie Person, Ort, Gerät oder der verwendete Browser geben der Suchmaschine Hinweise darauf, welche Informationen relevanter sind.
+:::
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?page=ict/1-basics/2-search-engine/)

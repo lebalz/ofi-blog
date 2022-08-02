@@ -2,7 +2,6 @@
 title: 3. Fehlerkorrektur
 ---
 
-import Answer from '@site/src/components/Answer';
 import Bin2Text from '@site/src/components/VisualizationTools/Bin2Text';
 
 # 3. Fehlerkorrektur

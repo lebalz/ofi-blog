@@ -15,7 +15,7 @@ Ein **Link oder URL** (engl. uniform resource locator) ist eine globale, weltwei
 - Das **Protokoll** ist die Übertragungsart der Datei, normalerweise `https://`, was bedeutet, dass die Übertragung verschlüsselt ist.
   :::danger Achtung!
   Wenn das unverschlüsselte Protokoll `http://` verwendet wird, können die übertragenen Informationen von anderen Personen im gleichen Netzwerk mitgelesen werden. Dadurch können Passwörter oder Kreditkarteninformationen leicht abgegriffen werden!
-  Gerade bei Zahlungen muss unbedingt darauf geachtet werden, dass das `https://` Protokoll verwendet wird.
+  Gerade bei **Zahlungen** muss unbedingt darauf geachtet werden, dass das `https://` Protokoll verwendet wird.
   :::
 
 - Der Name des **Servers** oder Domänenname ist ein weltweit eindeutiger Name für den Computer, auf welchem die Datei gespeichert ist.

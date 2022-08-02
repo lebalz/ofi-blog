@@ -2,7 +2,6 @@
 title: Codierung
 ---
 
-import Answer from '@site/src/components/Answer'
 import {TextEditor, PixelEditor} from "@site/src/components/VisualizationTools/Pentacode";
 
 # Codierung

@@ -2,7 +2,6 @@
 title: Krypto-Familie
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # Krypto-Familie
 

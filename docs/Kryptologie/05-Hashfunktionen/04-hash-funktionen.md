@@ -2,7 +2,6 @@
 title: Hash Funktionen
 ---
 
-import Answer from '@site/src/components/Answer'
 import HashSHA2 from '@site/src/components/VisualizationTools/Crypto/HashSHA2'
 
 # Hashfunktionen [^1]

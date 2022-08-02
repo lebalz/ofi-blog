@@ -2,7 +2,6 @@
 title: Domain Name System
 ---
 
-import Answer from "@site/src/components/Answer";
 
 # Domain-Name-System [^1]
 

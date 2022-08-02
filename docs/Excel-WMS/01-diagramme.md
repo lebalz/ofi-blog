@@ -2,7 +2,6 @@
 title: Diagramme
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # Excel Diagramme
 

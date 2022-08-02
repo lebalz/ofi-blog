@@ -3,7 +3,6 @@ title: Sichere Passwörter
 ---
 
 import PasswordChecker from '@site/src/components/PasswordChecker'
-import Answer from '@site/src/components/Answer'
 
 # Sichere Passwörter
 

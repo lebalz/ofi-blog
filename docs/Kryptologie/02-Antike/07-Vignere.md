@@ -2,7 +2,6 @@
 title: Vignère-Chiffre
 ---
 
-import Answer from "@site/src/components/Answer";
 
 
 # Vignère-Chiffre [^1]

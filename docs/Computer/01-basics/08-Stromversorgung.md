@@ -2,7 +2,6 @@
 title: 8. Stromversorgung
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 8. Stromversorgung
 

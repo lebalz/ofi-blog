@@ -2,7 +2,6 @@
 title: Kerckhoffs' Prinzip
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # Kerckhoffs' Prinzip
 

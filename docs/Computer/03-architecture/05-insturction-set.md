@@ -2,7 +2,6 @@
 title: 5. Befehlssatz
 ---
 
-import Answer from '@site/src/components/Answer';
 
 
 # 5. Befehlssatz

@@ -2,7 +2,6 @@
 title: 3. Prozessor
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 3. Prozessor
 ---

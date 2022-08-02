@@ -3,7 +3,6 @@ title: 4. Übung
 label: 4. Übung
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # Rastergrafik praktisch [^1]
 

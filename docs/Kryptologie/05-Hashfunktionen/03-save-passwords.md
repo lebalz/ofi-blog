@@ -2,7 +2,6 @@
 title: Passwörter Speichern
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # Passwörter speichern [^1]
 Passwörter sind wichtig, wir sollten sie beschützen. Doch dies gilt nicht nur für unsere eigenen Passwörter, auch Firmen sollten die Passwörter ihrer Kunden schützen.

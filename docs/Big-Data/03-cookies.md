@@ -1,4 +1,3 @@
-import Answer from '@site/src/components/Answer'
 
 # Cookies
 

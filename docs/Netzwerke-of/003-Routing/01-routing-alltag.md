@@ -2,7 +2,6 @@
 title: Routing im Alltag
 ---
 
-import Answer from "@site/src/components/Answer";
 import Finding from "@site/src/components/Finding";
 import TabItem from '@theme/TabItem';
 import OsTabs from '@site/src/components/OsTabs';

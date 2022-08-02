@@ -3,7 +3,6 @@ title: 1. Morsecode
 label: 1. Morsecode
 ---
 
-import Answer from '@site/src/components/Answer'
 import Solution from '@site/src/components/Solution'
 
 > Der Morsecode (auch Morsealphabet oder Morsezeichen genannt) ist ein gebräuchlicher Code zur telegrafischen Übermittlung von Buchstaben, Ziffern und weiterer Zeichen. Er bestimmt das Zeitschema, nach dem ein diskretes Signal ein- und ausgeschaltet wird.[^1]

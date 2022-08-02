@@ -3,7 +3,6 @@ title: 10. Repetition
 ---
 
 import Solution from '@site/src/components/Solution'
-import Answer from '@site/src/components/Answer'
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
 # 10. Repetitionsfragen

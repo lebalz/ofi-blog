@@ -2,7 +2,6 @@
 title: 3. Inverter
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 3. Inverter
 

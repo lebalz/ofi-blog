@@ -2,7 +2,6 @@
 title: Blockchiffre
 ---
 
-import Answer from "@site/src/components/Answer";
 
 # Blockchiffre [^1]
 

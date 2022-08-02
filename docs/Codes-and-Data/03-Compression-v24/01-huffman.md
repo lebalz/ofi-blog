@@ -3,7 +3,6 @@ title: 1. Huffman-Codierung
 ---
 
 import Solution from '@site/src/components/Solution';
-import Answer from '@site/src/components/Answer';
 
 # 1. Huffman-Codierung [^1]
 

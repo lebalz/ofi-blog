@@ -2,7 +2,6 @@
 title: 9. Ebenen
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 9. Ebenen
 

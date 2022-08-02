@@ -3,7 +3,6 @@ title: 5. Vektorgrafik
 label: 5. Vektorgrafik
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 5. Vektorgrafik [^1]
 

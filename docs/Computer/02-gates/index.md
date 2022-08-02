@@ -2,7 +2,6 @@
 title: 2. Logische Gatter
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 2. Logische Gatter
 

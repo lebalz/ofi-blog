@@ -78,7 +78,7 @@
     "remark-docusaurus-tabs": "^0.1.0",
     "remark-kbd-simple": "^1.0.1",
     "remark-math": "3",
-    "remark-mdi": "^1.0.2",
+    "remark-mdi": "^1.0.3",
     "remark-underline": "^1.0.5",
     "rlcolormixer": "^0.6.0",
     "sass": "^1.52.3",

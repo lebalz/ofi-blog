@@ -4,7 +4,6 @@ title: 1. Aufgaben eines Betriebssystems
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import Answer from '@site/src/components/Answer'
 
 # 1. Aufgaben eines Betriebssystems
 

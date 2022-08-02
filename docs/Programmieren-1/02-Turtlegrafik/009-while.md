@@ -3,7 +3,6 @@ title: 9. ⭐️ While
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
-import Answer from '@site/src/components/Answer';
 import Solution from '@site/src/components/Solution'
 
 ## Wiederholen, solange die Frage mit "Ja"  beantwortet wird

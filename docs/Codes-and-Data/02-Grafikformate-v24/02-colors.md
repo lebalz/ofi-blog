@@ -9,7 +9,6 @@ import RGBA from "@site/src/components/VisualizationTools/ColorEncoding/RGBA";
 import CMYK from "@site/src/components/VisualizationTools/ColorEncoding/CMYK";
 import Solution from '@site/src/components/Solution';
 import ColorDepth from "@site/src/components/VisualizationTools/ColorEncoding/ColorDepth";
-import Answer from '@site/src/components/Answer';
 
 ## Farbkanäle [^1]
 

@@ -2,7 +2,6 @@
 title: Kombinierte Verfahren
 ---
 
-import Answer from '@site/src/components/Answer'
 import Solution from '@site/src/components/Solution'
 
 # Kombinierte Verfahren [^1]

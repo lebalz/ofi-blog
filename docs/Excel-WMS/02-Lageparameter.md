@@ -2,7 +2,6 @@
 title: Statsistische Kenngrössen
 ---
 
-import Answer from '@site/src/components/Answer'
 import Finding from '@site/src/components/Finding'
 
 # Statsistische Kenngrössen

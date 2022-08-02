@@ -2,7 +2,6 @@
 title: Häufigkeitsanalyse
 ---
 import FrequencyAnalysis from "@site/src/components/VisualizationTools/Crypto/FrequencyTextAnalysis";
-import Answer from "@site/src/components/Answer";
 
 # Häufigkeitsanalyse [^1]
 

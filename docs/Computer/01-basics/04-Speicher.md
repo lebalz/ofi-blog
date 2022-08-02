@@ -2,7 +2,6 @@
 title: 4. Speicher
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 4. Speicher
 

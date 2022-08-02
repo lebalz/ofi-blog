@@ -9813,10 +9813,10 @@ remark-math@3:
   resolved "https://registry.yarnpkg.com/remark-math/-/remark-math-3.0.1.tgz#85a02a15b15cad34b89a27244d4887b3a95185bb"
   integrity sha512-epT77R/HK0x7NqrWHdSV75uNLwn8g9qTyMqCRCDujL0vj/6T6+yhdrR7mjELWtkse+Fw02kijAaBuVcHBor1+Q==
 
-remark-mdi@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/remark-mdi/-/remark-mdi-1.0.2.tgz#aff3e9ede36d86adf79a671f58135b050959f0f8"
-  integrity sha512-siEnVQfj9Vy2vJv2UCagdGYGHMe4MMwO62Xgs1DJitdsmHIuaLoLzMs1hi6vRV1va12mka83eP6bU6WIayhGOA==
+remark-mdi@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/remark-mdi/-/remark-mdi-1.0.3.tgz#938fbe28d8ea800d507199d305c75d09f7703510"
+  integrity sha512-z0cRlQWCnL8kfctdME+/C+GpBw10o5Vo5pEXxO2UWExOl3h4+SMbrTOCtzkC9kXZlXYT2iTznFS2+luIq1VWKA==
 
 remark-mdx@1.6.22:
   version "1.6.22"

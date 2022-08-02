@@ -2,7 +2,6 @@
 title: 2. Bussystem
 ---
 
-import Answer from '@site/src/components/Answer';
 
 # 2. Bussystem
 

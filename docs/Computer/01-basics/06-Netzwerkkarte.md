@@ -2,7 +2,6 @@
 title: 6. Netzwerkkarte
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 6. Netzwerkkarte
 

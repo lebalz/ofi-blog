@@ -2,7 +2,6 @@
 title: Auftrag
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # Video-Auftrag
 

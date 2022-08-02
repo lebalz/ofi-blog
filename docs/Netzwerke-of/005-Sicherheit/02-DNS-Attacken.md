@@ -2,7 +2,6 @@
 title: DNS Attacken
 ---
 
-import Answer from "@site/src/components/Answer";
 
 # ⭐️ DNS Attacken
 

@@ -3,7 +3,6 @@ title: 6. Dateiformate erkennen
 label: 6. Dateiformate erkennen
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 6. Dateiformate erkennen [^1]
 

@@ -4,7 +4,6 @@ label: Black Box
 ---
 
 import BlackBox from '@site/src/components/Math/BlackBox'
-import Answer from '@site/src/components/Answer'
 
 # Black Box
 

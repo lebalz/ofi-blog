@@ -2,7 +2,6 @@
 title: 8. Addierer
 ---
 
-import Answer from '@site/src/components/Answer'
 import Solution from '@site/src/components/Solution'
 import Hint from "@site/src/components/Solution/Hint";
 

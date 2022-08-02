@@ -2,7 +2,6 @@
 title: 6. Parameter
 ---
 import Strukto from '@site/src/components/struktogramm/Strukto';
-import Answer from '@site/src/components/Answer'
 import Solution from '@site/src/components/Solution'
 
 # 6. Parameter

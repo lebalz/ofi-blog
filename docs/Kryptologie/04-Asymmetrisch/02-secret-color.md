@@ -3,7 +3,6 @@ title: Geheime Farbe
 ---
 
 import ColorExchange from "@site/src/components/VisualizationTools/ColorExchange";
-import Answer from '@site/src/components/Answer'
 
 # Geheime Farbe [^1]
 

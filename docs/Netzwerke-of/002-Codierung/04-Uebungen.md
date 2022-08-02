@@ -2,7 +2,6 @@
 title: Übungen
 ---
 
-import Answer from "@site/src/components/Answer";
 
 # Übungen UTF-8
 

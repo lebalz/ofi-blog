@@ -2,7 +2,6 @@
 title: Powerpoint
 ---
 
-import Answer from '@site/src/components/Answer'
 import Hint from '@site/src/components/Solution/Hint'
 
 # Powerpoint

@@ -2,7 +2,6 @@
 title: 5. Grafikkarte
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # 5. Grafikkarte
 

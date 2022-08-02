@@ -7,7 +7,6 @@ import TabItem from '@theme/TabItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindows } from "@fortawesome/free-brands-svg-icons"
 import Hint from '@site/src/components/Solution/Hint'
-import Answer from '@site/src/components/Answer'
 import DecBinHexTransformer from "@site/src/components/VisualizationTools/DecBinHexTransformer";
 
 # 7. Textcodierung [^1]

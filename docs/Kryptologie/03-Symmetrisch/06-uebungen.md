@@ -2,7 +2,7 @@
 title: Übungen
 ---
 
-import Answer, {UPPER_NOSPACE} from '@site/src/components/Answer';
+import {UPPER_NOSPACE} from '@site/src/components/Answer';
 import {TextEditor} from "@site/src/components/VisualizationTools/Pentacode";
 
 # Übungen

@@ -3,7 +3,6 @@ title: Asymmetrie
 ---
 
 import PrimfactorizationTiming from "@site/src/components/VisualizationTools/Crypto/PrimfactorizationTiming";
-import Answer from "@site/src/components/Answer";
 
 # Asymmetrie [^1]
 

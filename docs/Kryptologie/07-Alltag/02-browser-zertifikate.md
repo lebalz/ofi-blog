@@ -2,7 +2,6 @@
 title: Browserzertifikate
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # Browserzertifikate [^1]
 Während früher sämtliche Informationen im Internet unverschlüsselt übertragen worden sind, werden die meisten Verbindungen heutzutage mit kryptographischen Mitteln geschützt.

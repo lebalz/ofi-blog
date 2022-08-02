@@ -2,7 +2,6 @@
 title: Schlüsselaustausch
 ---
 
-import Answer from '@site/src/components/Answer'
 import Solution from '@site/src/components/Solution'
 
 # Schlüsselaustausch [^1]

@@ -2,7 +2,6 @@
 title: 6. Übungen
 ---
 
-import Answer from "@site/src/components/Answer";
 import BinDecoder from '@site/src/components/VisualizationTools/BinDecoder'
 
 # Übungen UTF-8

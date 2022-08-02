@@ -2,7 +2,6 @@
 title: Umwandlung ins Binärsystem
 ---
 
-import Answer from '@site/src/components/Answer'
 
 # Umwandlung ins Binärsystem [^1]
 In diesem Kapitel dringen wir in unsere Zeit vor. Wir verwenden Computer, die mit binären Zahlen arbeiten. Somit muss der Klartext vor der Verschlüsselung in binäre Zahlen umgewandelt werden.
