@@ -9,6 +9,10 @@ import { useQuill } from 'react-quilljs';
 import type { default as HeicType } from 'heic2any';
 import { resolve } from 'node:path/win32';
 import { downscaleImage } from './quill-img-compress/downscaleImage';
+import { file2b64 } from './quill-img-compress/file2b64';
+import dropImage from './quill-img-compress/dropImage';
+import config from './quill-img-compress/config';
+import pasteImage from './quill-img-compress/pasteImage';
 
 export interface ToolbarOptions {
     bold?: boolean;
@@ -156,9 +160,7 @@ const QuillEditor = observer((props: Props) => {
     ];
 
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
-    const [heic2any, setHeic2Any] = React.useState<{ default: typeof HeicType }>(undefined);
 
-    const counterRef = React.useRef();
     const { quill, quillRef, Quill } = useQuill({ theme, modules, formats, placeholder });
 
     React.useEffect(() => {
@@ -170,24 +172,6 @@ const QuillEditor = observer((props: Props) => {
     }, [quill]);
 
     React.useEffect(() => {
-        mounted.current = true;
-
-        const prom = import('heic2any')
-            .then((module) => {
-                if (module && mounted.current) {
-                    setHeic2Any(module);
-                }
-            })
-            .catch((err) => {
-                console.log('Could not load heic2any', err);
-            });
-
-        return () => {
-            mounted.current = false;
-        };
-    }, []);
-
-    React.useEffect(() => {
         if (quill) {
             quill.clipboard.dangerouslyPasteHTML((model.text as string) || '');
             quill.blur();
@@ -195,6 +179,8 @@ const QuillEditor = observer((props: Props) => {
                 quill.disable();
             }
             quill.getModule('toolbar').addHandler('image', selectLocalImage);
+            quill.root.addEventListener('drop', dropHandler);
+            quill.root.addEventListener('paste', pasteHandler);
             quill.getModule('toolbar').container.addEventListener('mousedown', onQuillToolbarMouseDown);
         }
         return () => {
@@ -204,7 +190,7 @@ const QuillEditor = observer((props: Props) => {
                     .container.removeEventListener('mousedown', onQuillToolbarMouseDown);
             }
         };
-    }, [quill, heic2any]);
+    }, [quill]);
 
     // Insert Image(selected by user) to quill
     const insertToEditor = (url) => {
@@ -213,7 +199,7 @@ const QuillEditor = observer((props: Props) => {
         range.index++;
         quill.setSelection(range, 'api');
         // add new line
-        quill.insertText(range.index, "\n")
+        quill.insertText(range.index, '\n');
         range.index++;
         quill.setSelection(range, 'api');
     };
@@ -222,41 +208,39 @@ const QuillEditor = observer((props: Props) => {
     const selectLocalImage = () => {
         const input = document.createElement('input');
         input.setAttribute('type', 'file');
-        input.setAttribute('accept', 'image/*,image/heic,image/heif');
+        input.setAttribute('accept', config.fileTypes.accept);
         input.click();
 
         input.onchange = () => {
-            let promise: Promise<Blob>;
             const file = input.files[0];
-            if (file.type.toLowerCase() === 'image/heic' || file.type.toLowerCase() === 'image/heif') {
-                if (heic2any) {
-                    promise = heic2any.default({
-                        blob: file,
-                        toType: 'image/jpeg',
-                        quality: 0.9,
-                    }) as Promise<Blob>;
-                }
-            } else {
-                promise = Promise.resolve(file);
-            }
-            if (promise) {
-                promise.then((img) => {
-                    const prom = new Promise(resolve => {
-                        const reader = new FileReader();
-                        reader.onload = e => {
-                            resolve(e.target.result as string);
-                        };
-                        reader.readAsDataURL(img)
-                    });
-                    prom.then((img: string) => {
-                        return downscaleImage(img, 1024, 1024, 'image/jpeg', undefined,undefined,0.5)
-                    }).then(img => {
-                        insertToEditor(img)
-                    })
+            file2b64(file)
+                .then((img: string) => {
+                    return downscaleImage(img);
                 })
-            }
-
+                .then((img) => {
+                    insertToEditor(img);
+                });
         };
+    };
+
+    const dropHandler = (event: DragEvent) => {
+        dropImage(event)
+            .then((img: string) => {
+                return downscaleImage(img);
+            })
+            .then((img) => {
+                insertToEditor(img);
+            });
+    };
+
+    const pasteHandler = (event: ClipboardEvent) => {
+        pasteImage(event)
+            .then((img: string) => {
+                return downscaleImage(img);
+            })
+            .then((img) => {
+                insertToEditor(img);
+            });
     };
 
     if (Quill && !quill) {
@@ -285,7 +269,6 @@ const QuillEditor = observer((props: Props) => {
                 )}
             >
                 <div ref={quillRef} />
-                <div ref={counterRef} />
             </div>
         </div>
     );
