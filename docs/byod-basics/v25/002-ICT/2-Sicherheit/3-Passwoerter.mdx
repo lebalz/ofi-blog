@@ -2,6 +2,8 @@
 title: Passwörter
 ---
 
+import PasswordChecker from '@site/src/components/PasswordChecker'
+
 # Passwörter
 
 Unter https://howsecureismypassword.net/ kann die Sicherheit Ihres Passworts analysiert werden - insbesondere spannend ist die geschätzte Zeit, um das Passwort zu knacken.
@@ -32,7 +34,11 @@ Weiter können Buchstaben durch Sonderzeichen und Zahlen ersetzt werden, z.B. je
 
 `Wahr$chein1ichUt0pi$chFuturl0$Pr0pe1ler`
 
-### 3. Passwortmanager 🏅 
+### 3. Passwort überprüfen
+
+<PasswordChecker />
+
+### 4. Passwortmanager 🏅 
 Am sichersten ist es, zufällige Passwörter zu verwenden, welche Sie in einem Passwortmanager verwalten.
 So müssen Sie sich nur ein (sicheres!) Passwort merken; dasjenige für den Passwortmanager.
 Im Manager können Sie für jeden Dienst automatisch ein sicheres Passwort erzeugen lassen.

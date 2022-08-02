@@ -22,15 +22,13 @@ Bei einer E-Mail wird immer auch ein **Betreff** angegeben. Dieser sollte so gew
 
 ## Anrede
 
-Die übliche Andere ist «Sehr geehrte/r Frau/Herr». Sind mehrere Personen angesprochen, schreibt man «Sehr geehrte Damen und Herren». Wenn die angesprochene Person unbekannt ist (z.B. bei einer Support-E-Mail-Adresse), so kann man «Guten Tag» schreiben.
-
-Ist man mit der angeschriebenen Person vertrauter, schreibt man «Liebe/r».
-
-Am Schluss der Anrede steht kein Satzzeichen. Es folgt eine Leerzeile, dann der erste Satz.
+- Die **übliche Andere** ist «Sehr geehrte/r Frau/Herr». Sind **mehrere Personen** angesprochen, schreibt man «Sehr geehrte Damen und Herren». Wenn die angesprochene Person **unbekannt** ist (z.B. bei einer Support-E-Mail-Adresse), so kann man «Guten Tag» schreiben.
+- Ist man mit der angeschriebenen Person **vertrauter**, schreibt man «Liebe/r».
+- Am Schluss der Anrede steht **kein Satzzeichen**. Es folgt eine Leerzeile, dann der erste Satz.
 
 ## Grussformel
 
-Zwischen Text und Grussformel befindet sich eine Leerzeile. Die Grussformel lautet «Freundliche Grüsse» ohne Satzzeichen. Ist man vertrauter, schreibt man «Liebe Grüsse».
+Zwischen Text und Grussformel befindet sich eine **Leerzeile**. Die Grussformel lautet «Freundliche Grüsse» ohne Satzzeichen. Ist man vertrauter, schreibt man «Liebe Grüsse».
 
 ## Wann antworten? Wann nicht?
 
@@ -41,14 +39,16 @@ Wenn Sie jemandem eine neue Nachricht schreiben, sich also nicht auf vorhergehen
 ## Allen Antworten
 Die Funktion *allen Antworten* sollte man normalerweise nicht benutzen.
 
-## CC, BCC
+## Optionen CC und BCC
 
-:::info CC
+![Optionen im Mailprogramm](images/mail-programm.png)
+
+:::info Kopie/CC
 
 In das An-Feld wird der eigentliche Empfänger geschrieben. Will man gleichzeitig eine Kopie der E-Mail versenden, nutzt man das **Cc-Feld**. Die Abkürzung Cc steht für *Carbon copy* und bedeutet so viel wie Kohlepapierdurchschlag. Es ist üblich, dass die Personen, die in Cc stehen, die E-Mail lediglich zur Kenntnis bekommen. **Die Empfänger in den Feldern An und Cc können die E-Mail-Adressen der anderen lesen und wissen somit, wer die E-Mail noch bekommen hat.** Und hier lauert die Gefahr! Denn diese Art der Versendung sollte man nur wählen, wenn es sich um eine geschlossene Nutzergruppe, wie z.B. innerhalb einer Organisation handelt.[^2]
 :::
 
-:::info BCC
+:::info Blindkopie/BCC
 
 Möchte man dagegen eine E-Mail an mehrere Empfänger versenden, die sich **untereinander nicht kennen**, sollte man auf jeden Fall das **Bcc-Feld** nutzen. Bcc steht für *Blind carbon copy* und wird mit „unsichtbarer Durchschlag“ übersetzt. Der Name sagt es schon: Die Empfänger in diesem Feld werden weder von den anderen Empfängern gesehen, noch können sie selbst andere Adressen sehen. Lediglich das An-Feld ist für alle Teilnehmer sichtbar.[^2]
 :::
