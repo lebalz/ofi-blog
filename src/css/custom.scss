@@ -176,6 +176,21 @@ div.small-m {
     }
 }
 
+.admonition {
+    margin-bottom: 1em;
+
+    h5 {
+        margin-bottom: 8px;
+        margin-top: 0;
+        text-transform: uppercase;
+        .admonition-icon {
+            display: inline-block;
+            margin-right: .4em;
+            vertical-align: middle;
+        }
+    }
+}
+
 html[data-theme='dark'] {
     .admonition.admonition-def {
         --ifm-alert-background-color: var(--ifm-color-primary-darkest);
