@@ -98,7 +98,19 @@
       ]
     }
   ],
-  "26e": [],
-  "26P": [],
+  "26e": [
+    {
+      "from": "docs/ICT/",
+      "to": "versioned_docs/version-26e/01-ICT-Grundlagen",
+      "ignore": []
+    }
+  ],
+  "26P": [
+    {
+      "from": "docs/ICT/",
+      "to": "versioned_docs/version-26P/01-ICT-Grundlagen",
+      "ignore": []
+    }
+  ],
   "24ef": []
 }

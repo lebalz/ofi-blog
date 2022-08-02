@@ -1,0 +1,48 @@
+---
+title: Cloud
+---
+
+import Video from '@site/src/components/Video'
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# Cloud [^1]
+
+«Cloud» bedeutet, dass Ihre Dateien auf einem Server des Cloud-Betreibers gespeichert werden. Eine Cloud kann aber auch bspw. Rechenleistung zur Verfügung stellen und Teile einer Anwendung ausführen.
+Üblicherweise steht auf dem Server ebenfalls eine [Web-App](#Web-App) zu Verfügung, damit die Dateien im Browser betrachtet oder bearbeitet werden können.
+
+## Desktop-App :mdi-file-word--blue m:
+Damit die Desktop-App verwendet werden kann, muss diese erst auf dem Gerät installiert worden sein. Desktop-Apps bieten meistens einen grösseren Funktionsumfang, können ohne aktive Internetverbindung gestartet und verwendet werden und sind meist performanter.
+
+## Web-App :mdi-file-word-outline--blue m:
+
+Die Web-App wird beim Öffnen des Dokuments vom Server des Anbieters heruntergeladen und im Browser (daher auf dem Prozessor des Laptops) ausgeführt.
+
+![Web-App Architektur](images/cloud-app.svg)
+
+Einzelne Berechnungen können auch in die Cloud ausgelagert werden, z.B. die Autokorrektur in der Word Web-App:
+Bei jeder Änderung wird der aktuelle Abschnitt an die Cloud geschickt und auf Fehler überprüft:
+
+<Video src={useBaseUrl('/video/cloud-webapp-word-autokorrektur.mp4')} title="Autokorrektur in Word Onine" expanded>
+
+Auf der rechten Seite ist der Datenaustausch, der für die Autokorrektur notwendig ist, **vom Laptop zur Cloud** zu sehen. Bei **jeder Änderung** des Dokuments wird der **ganze Inhalt** des aktuellen Abschnitts an die Cloud geschickt.
+
+</Video>
+
+Web-Apps brauchen eine **aktive Internetverbindung** und sind oft auch etwas langsamer als Desktop-Apps. Meist ist zudem der Funktionsumfang eingeschränkt.
+
+## Microsoft 365
+
+### OneDrive im Browser
+
+In **OneDrive im Browser** kann eine Datei wahlweise in der Web-App oder in der Desktop-App geöffnet werden. Mit einem Doppelklick wird die Datei in der Web-App geöffnet. Klicke auf die drei vertikalen Punkte [[⋮]], dann auf Öffnen und In der App öffnen, um die Datei in der Desktop-App zu öffnen.
+
+![](images/onedrive-open.png)
+
+## Teams-App
+
+In der **Teams-App** muss auf die drei horizontalen Punkte [[⋮]] geklickt werden. Es gibt zusätzlich die Möglichkeit `In Teams bearbeiten`. In diesem Fall wird die Web-App verwendet, diese wird jedoch innerhalb der Team-App gestartet (die Teams-App kann einen Browser anzeigen).
+
+![](images/teams-open.png)
+
+
+[^1]: Quelle (Bearbeitete): [rothe.io](https://rothe.io/?page=ict/writing/2-0-cloud) 
