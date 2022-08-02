@@ -39,7 +39,7 @@
         }
 
         &.disableToolbar {
-            :global .ql-toolbar {
+            :global .ql-toolbar.ql-snow {
                 display: none;
             }
             .ql-container {
