@@ -1,17 +1,21 @@
 import * as React from 'react';
 import clsx from 'clsx';
 import styles from './Loader.module.scss';
-import { observer } from 'mobx-react-lite';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCircleNotch} from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-const Loader = observer(() => {
+interface Props {
+    caption?: string;
+    overlay?: boolean; 
+}
+const Loader = (props: Props) => {
     return (
-        <div className={clsx(styles.loader)}>
-            <FontAwesomeIcon icon={faCircleNotch} spin />
-            <span className={clsx('badge', styles.badge)}>Laden...</span>
+        <div className={clsx(styles.loader, props.overlay && styles.overlay)}>
+            <FontAwesomeIcon icon={faCircleNotch as IconProp} spin />
+            <span className={clsx('badge', styles.badge)}>{props.caption || 'Laden...'}</span>
         </div>
     )
-});
+};
 
 export default Loader;

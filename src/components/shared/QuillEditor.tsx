@@ -44,6 +44,7 @@ const QuillEditor = observer((props: Props) => {
     const { model } = props;
 
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
+    const [processingImage, setProcessingImage] = React.useState(false);
 
     const resizeModules: any[] = [Toolbar]
     // if it has a fine cursor
@@ -109,6 +110,17 @@ const QuillEditor = observer((props: Props) => {
         };
     }, [quill]);
 
+    // return early server side
+    if (!useIsBrowser()) {
+        return (
+            <div
+                className={clsx(styles.quillEditor)}
+            >
+                <Loader caption='Editor laden...' overlay />
+            </div>
+
+        )
+    }
     // Insert Image(selected by user) to quill
     const insertToEditor = (url) => {
         if (!mounted.current) {
@@ -163,7 +175,7 @@ const QuillEditor = observer((props: Props) => {
             });
     };
 
-    if (useIsBrowser() && Quill && !quill) {
+    if (Quill && !quill) {
         var BaseImageFormat = Quill.import('formats/image');
         const ImageFormatAttributesList = ['alt', 'height', 'width', 'style'];
 
@@ -217,6 +229,7 @@ const QuillEditor = observer((props: Props) => {
                 )}
             >
                 <div ref={quillRef} />
+                {processingImage && <Loader caption='Bild Einfügen...' overlay />}
             </div>
         </div>
     );

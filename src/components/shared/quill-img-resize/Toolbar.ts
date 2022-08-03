@@ -74,7 +74,6 @@ export default class Toolbar extends BaseModule {
 		this.alignments.forEach((alignment, idx) => {
 			const button = document.createElement('span');
 			buttons.push(button);
-            console.log(alignment.icon);
 			button.innerHTML = `<i class="mdi mdi-${alignment.icon}" style="font-size: 20px"/>`;
 			button.addEventListener('click', () => {
 					// deselect all buttons
