@@ -11,7 +11,7 @@ import dropImage from './quill-img-compress/dropImage';
 import config from './quill-img-compress/config';
 import pasteImage from './quill-img-compress/pasteImage';
 
-import ImageResize from 'quill-image-resize-module-react';
+import ImageResize from './quill-img-resize';
 // import Resize from './quill-img-resize/Resize';
 // import Size from './quill-img-resize/Size';
 // import Toolbar from './quill-img-resize/Toolbar';
@@ -55,11 +55,9 @@ const QuillEditor = observer((props: Props) => {
             ? getToolbar(props.toolbar)
             : [...TOOLBAR, ...getToolbar(props.toolbarAdd || {})],
         imageResize: {
-            modules: []
-            // modules: resizeModules,
-            // handleStyles: {
-            //     borderRadius: '50%'
-            // },
+            handleStyles: {
+                borderRadius: '50%'
+            },
         },
     };
     const theme = 'snow';
@@ -85,10 +83,10 @@ const QuillEditor = observer((props: Props) => {
         }
     }, [quill]);
 
-    const onQuillToolbarMouseDown = (e: any) => {
-        e.preventDefault();
-    };
     React.useEffect(() => {
+        const onQuillToolbarMouseDown = (e: any) => {
+            e.preventDefault();
+        };
         if (quill) {
             quill.clipboard.dangerouslyPasteHTML((model.text as string) || '');
             quill.blur();
@@ -110,16 +108,16 @@ const QuillEditor = observer((props: Props) => {
     }, [quill]);
 
     // return early server side
-    if (!useIsBrowser()) {
-        return (
-            <div
-                className={clsx(styles.quillEditor)}
-            >
-                <Loader caption='Editor laden...' overlay />
-            </div>
+    // if (!useIsBrowser()) {
+    //     return (
+    //         <div
+    //             className={clsx(styles.quillEditor)}
+    //         >
+    //             <Loader caption='Editor laden...' overlay />
+    //         </div>
 
-        )
-    }
+    //     )
+    // }
 
     // Insert Image(selected by user) to quill
     const insertToEditor = (url) => {
@@ -149,7 +147,9 @@ const QuillEditor = observer((props: Props) => {
             console.log('Could not insert image')
         })
         .finally(() => {
-            setProcessingImage(false);
+            if (mounted.current) {
+                setProcessingImage(false);
+            }
         });
     }
 
@@ -203,7 +203,6 @@ const QuillEditor = observer((props: Props) => {
 
         Quill.register(ImageFormat, true);
         (window as any).Quill = Quill;
-        // // For execute this line only once.
         Quill.register('modules/imageResize', ImageResize);
 
     }

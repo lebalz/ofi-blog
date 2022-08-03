@@ -36,7 +36,7 @@ export class BaseModule {
         use your own absolute positioning and the 'top', 'right', etc. styles to be positioned relative to the element
         on-screen.
      */
-    onCreate = () => {};
+    onCreate = (parchment?: any) => {};
 
     /*
         onDestroy will be called when the element is de-selected, or when this module otherwise needs to tidy up.
