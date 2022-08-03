@@ -1,6 +1,8 @@
 ---
 title: 2. Farbdarstellung
 label: 2. Farbdarstellung
+sidebar_custom_props:
+  id: 64749e7e-c23b-40e9-8ae0-52cceba7efcb
 ---
 
 

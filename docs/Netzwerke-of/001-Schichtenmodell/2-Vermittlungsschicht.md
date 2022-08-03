@@ -1,6 +1,8 @@
 ---
 sidebar_label: 2. Vermittlungsschicht
 sidebar_position: 5
+sidebar_custom_props:
+  id: aabd7dfc-f69c-49cd-ad91-4d9b214e8d1f
 ---
 
 #  Schicht 2: Vermittlungsschicht [^1]

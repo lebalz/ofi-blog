@@ -1,5 +1,7 @@
 ---
 title: Authentifizierung
+sidebar_custom_props:
+  id: a1dc8bc7-653e-4e55-9197-c9cdb7fd2234
 ---
 
 # Authentifizierung [^1]

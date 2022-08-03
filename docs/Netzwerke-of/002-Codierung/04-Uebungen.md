@@ -1,5 +1,7 @@
 ---
 title: Übungen
+sidebar_custom_props:
+  id: 94931c1a-932a-4c2a-a32a-4f61925cc2fc
 ---
 
 

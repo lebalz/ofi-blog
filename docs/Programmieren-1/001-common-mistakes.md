@@ -1,5 +1,7 @@
 ---
 title: Häufige Fehler
+sidebar_custom_props:
+  id: b45ab1fa-8e0c-400c-bdaa-a1d4d1acd5eb
 ---
 
 # Häufige Fehler [^1]

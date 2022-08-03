@@ -1,6 +1,8 @@
 ---
 sidebar_label: Schichten und Adressen
 sidebar_position: 7
+sidebar_custom_props:
+  id: 7e399ee9-65df-45de-8b75-414e4cc87879
 ---
 
 # Schichten und Adressen [^1]

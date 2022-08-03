@@ -1,5 +1,7 @@
 ---
 title: Flussdiagramm
+sidebar_custom_props:
+  id: 7bf4440d-dbc1-40a0-9002-ff0b1d894686
 ---
 
 # Flussdiagramm [^1]

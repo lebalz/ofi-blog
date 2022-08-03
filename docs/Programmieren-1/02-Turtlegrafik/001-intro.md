@@ -1,5 +1,7 @@
 ---
 title: 1. Einführung
+sidebar_custom_props:
+  id: 4ac09d00-bd4c-4920-bc98-21343e21549b
 ---
 
 import Hint from "@site/src/components/Solution/Hint";

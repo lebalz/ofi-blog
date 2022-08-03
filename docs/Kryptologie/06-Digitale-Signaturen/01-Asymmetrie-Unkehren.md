@@ -1,5 +1,7 @@
 ---
 title: Asymmetrie umkehren
+sidebar_custom_props:
+  id: 1161bd5d-ed3c-4517-9bab-4b13629f07e1
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: Statsistische Kenngrössen
+sidebar_custom_props:
+  id: bc16495e-e9ba-42f7-b580-5e5885be5fa7
 ---
 
 import Finding from '@site/src/components/Finding'

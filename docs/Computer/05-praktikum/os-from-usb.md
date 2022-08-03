@@ -1,6 +1,8 @@
 ---
 title: Vom USB-Stick starten
 label: Vom USB-Stick starten
+sidebar_custom_props:
+  id: aa61b6d6-743b-4cbe-a24c-71f430c63659
 ---
 
 # Vom USB-Stick starten

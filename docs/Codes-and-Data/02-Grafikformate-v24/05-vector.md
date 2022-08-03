@@ -1,6 +1,8 @@
 ---
 title: 5. Vektorgrafik
 label: 5. Vektorgrafik
+sidebar_custom_props:
+  id: 87b16e84-0e84-48ed-a03a-ed26446b0545
 ---
 
 

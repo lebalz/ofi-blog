@@ -1,5 +1,7 @@
 ---
 title: Codierung
+sidebar_custom_props:
+  id: 2d367a2f-7784-4cf9-b4c2-365f8979f649
 ---
 
 import {TextEditor, PixelEditor} from "@site/src/components/VisualizationTools/Pentacode";

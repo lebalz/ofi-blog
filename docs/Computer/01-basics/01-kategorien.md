@@ -1,5 +1,7 @@
 ---
 title: 1. Computerkategorien
+sidebar_custom_props:
+  id: 485bdbaa-d678-41d0-aabe-f7b849198a75
 ---
 
 # 1. Computerkategorien [^1]

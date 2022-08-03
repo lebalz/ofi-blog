@@ -1,5 +1,7 @@
 ---
 title: 8. Verzweigungen
+sidebar_custom_props:
+  id: 3170b4a4-73fd-4460-9518-9bc9cab7c5a9
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';

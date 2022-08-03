@@ -1,5 +1,7 @@
 ---
 title: Polybios-Chiffre
+sidebar_custom_props:
+  id: 1eada906-fef6-4800-b3fc-3b0ed4a54ae9
 ---
 
 import Polybios from "@site/src/components/VisualizationTools/Crypto/Polybios";

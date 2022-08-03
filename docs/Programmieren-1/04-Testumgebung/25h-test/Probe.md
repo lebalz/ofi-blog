@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: b628509e-080a-49a2-8423-caa587fc7274
+---
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
 # Test 25h

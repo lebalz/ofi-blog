@@ -1,5 +1,7 @@
 ---
 title: Sichere Passwörter
+sidebar_custom_props:
+  id: 96d93258-8ba5-459f-be30-772aa5bd2895
 ---
 
 import PasswordChecker from '@site/src/components/PasswordChecker'

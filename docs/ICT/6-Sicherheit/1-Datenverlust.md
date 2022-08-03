@@ -1,5 +1,7 @@
 ---
 title: Datenverlust
+sidebar_custom_props:
+  id: 73c81d4b-ceac-4db9-95e2-c562ec5691ba
 ---
 
 # Datenverlust [^1]

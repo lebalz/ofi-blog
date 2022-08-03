@@ -1,5 +1,7 @@
 ---
 title: 3. Fehlerkorrektur
+sidebar_custom_props:
+  id: 01beb2d3-ccba-4eeb-bd1b-e0ca943a9b01
 ---
 
 import Bin2Text from '@site/src/components/VisualizationTools/Bin2Text';

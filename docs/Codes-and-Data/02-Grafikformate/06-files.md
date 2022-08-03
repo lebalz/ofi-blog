@@ -1,6 +1,8 @@
 ---
 title: 6. Dateiformate erkennen
 label: 6. Dateiformate erkennen
+sidebar_custom_props:
+  id: 00ddb460-744a-4894-b4ae-da205bd3cf21
 ---
 
 

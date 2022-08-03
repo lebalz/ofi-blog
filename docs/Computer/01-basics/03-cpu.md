@@ -1,5 +1,7 @@
 ---
 title: 3. Prozessor
+sidebar_custom_props:
+  id: 5d818ab7-d01f-4cbb-906d-b8f474b7a42d
 ---
 
 

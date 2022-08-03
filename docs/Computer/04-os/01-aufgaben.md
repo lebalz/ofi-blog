@@ -1,5 +1,7 @@
 ---
 title: 1. Aufgaben eines Betriebssystems
+sidebar_custom_props:
+  id: 4e636e5b-b698-4ce4-b467-0ee0e8872c3a
 ---
 
 import Tabs from '@theme/Tabs';

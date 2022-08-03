@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: eed6d5e8-5522-4c7d-92ab-5d913654dc12
+---
 # Uhren
 
 [10_uhren.zip](skeletons/10_uhren.zip)

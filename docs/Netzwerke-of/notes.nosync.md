@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 36feb9ec-a273-4e66-be81-1d1145ffab32
+---
 # Notizen
 
 ## 2021

@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: bc5df026-3490-496f-9300-cfdee791d4d6
+---
 # Ein Python Algorithmus
 
 - Was ist die Ausgabe des folgenden Algorithmus? Versuchen Sie die Ausgabe zu zeichnen.

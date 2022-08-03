@@ -1,5 +1,7 @@
 ---
 title: Projekt
+sidebar_custom_props:
+  id: 4ef991fc-8ad4-46e8-99ff-330ec7ffddad
 ---
 import OsTabs from '@site/src/components/OsTabs';
 import TabItem from '@theme/TabItem';

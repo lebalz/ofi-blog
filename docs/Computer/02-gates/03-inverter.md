@@ -1,5 +1,7 @@
 ---
 title: 3. Inverter
+sidebar_custom_props:
+  id: c4d0ceba-1b63-4a67-9539-5afc7848bc65
 ---
 
 

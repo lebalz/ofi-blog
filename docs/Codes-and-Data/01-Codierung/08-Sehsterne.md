@@ -1,5 +1,7 @@
 ---
 title: 8. Sehsterne
+sidebar_custom_props:
+  id: b99704f9-ef1a-490f-b457-06d8ae120ada
 ---
 
 

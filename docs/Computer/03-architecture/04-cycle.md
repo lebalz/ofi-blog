@@ -1,5 +1,7 @@
 ---
 title: 4. Von-Neumann-Zyklus
+sidebar_custom_props:
+  id: a4cf1687-471b-479c-94c7-fcebaf3236ab
 ---
 
 

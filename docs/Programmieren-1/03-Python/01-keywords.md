@@ -1,5 +1,7 @@
 ---
 title: Schlüsselwörter
+sidebar_custom_props:
+  id: f42675f8-60e7-4023-9f9a-53f556343cd8
 ---
 
 # Schlüsselwörter in Python

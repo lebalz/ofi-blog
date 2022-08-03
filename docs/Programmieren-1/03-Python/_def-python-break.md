@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: d6ce7ca7-9063-454e-be8d-dc92ae1d9ec0
+---
 :::def `break`
 Mit `break` kann eine Wiederholter Codeblock beendet werden. Die Ausführung geht mit der nächsten Zeile nach dem Codeblock weiter.
 

@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 98562b28-7c5d-49f1-b467-76085f068544
+---
 # Zufallszahl
 
 [07_zufallszahl.zip](skeletons/07_zufallszahl.zip)

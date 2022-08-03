@@ -1,5 +1,7 @@
 ---
 title: Integrität
+sidebar_custom_props:
+  id: 8d2ca844-98be-499a-9ac1-24a4d93b01b5
 ---
 
 # Integrität [^1]

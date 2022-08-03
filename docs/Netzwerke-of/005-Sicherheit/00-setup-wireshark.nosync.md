@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 96a6ac1a-1147-4a3e-af95-902658562aa6
+---
 # WIFI Sniffing Demo
 
 - Wireshark im Monitor Mode (Achtung, aktive WLAN-Verbindungen müssen deaktiviert werden, damit der Monitor Mode auf MacOSX funktionert)

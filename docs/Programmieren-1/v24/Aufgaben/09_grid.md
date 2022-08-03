@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 1a433856-95a0-4cba-ac12-03aa35e679ca
+---
 # Sieb des Eratosthenes
 
 [09_grid.zip](skeletons/09_grid.zip)

@@ -1,6 +1,8 @@
 ---
 title: 2. Informationsgehalt
 label: 2. Informationsgehalt
+sidebar_custom_props:
+  id: dd57c06c-5454-41d5-b10d-8fbdeb318933
 ---
 
 import Redundancy from "@site/src/components/VisualizationTools/Redundancy";

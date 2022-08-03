@@ -1,6 +1,8 @@
 ---
 title: 1. Morsecode
 label: 1. Morsecode
+sidebar_custom_props:
+  id: 044f0a00-ba28-4e7b-99bd-96c788755bf0
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: 6. Netzwerkkarte
+sidebar_custom_props:
+  id: 10a4d276-234c-4f46-a055-d13236ffeea3
 ---
 
 

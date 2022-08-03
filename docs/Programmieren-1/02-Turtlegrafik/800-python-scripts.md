@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: b7ed7176-4e9a-42b8-9aed-7768d4965cf5
+---
 # Python Programme
 
 Beliebige Python Programme

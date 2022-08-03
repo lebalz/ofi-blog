@@ -1,5 +1,7 @@
 ---
 title: 7. Variablen
+sidebar_custom_props:
+  id: 3aca4fb7-1b4c-4eea-8dc4-150b29d6ac2b
 ---
 
 import PyOps from '@site/docs/Programmieren-1/03-Python/_def-python-operatoren.md';

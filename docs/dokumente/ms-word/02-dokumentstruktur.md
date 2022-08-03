@@ -1,5 +1,7 @@
 ---
 title: Dokumentstruktur
+sidebar_custom_props:
+  id: ddcd6ef9-5eb0-4bb9-96e1-87baa48840c0
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

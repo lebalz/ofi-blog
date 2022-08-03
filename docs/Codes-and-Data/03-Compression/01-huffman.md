@@ -1,5 +1,7 @@
 ---
 title: 1. Huffman-Codierung
+sidebar_custom_props:
+  id: e26efcbb-61e9-424e-89cf-a31466e2cbca
 ---
 
 

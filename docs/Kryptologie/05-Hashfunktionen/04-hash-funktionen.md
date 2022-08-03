@@ -1,5 +1,7 @@
 ---
 title: Hash Funktionen
+sidebar_custom_props:
+  id: 79c8cca9-e452-4e59-9445-e5c06cb23b90
 ---
 
 import HashSHA2 from '@site/src/components/VisualizationTools/Crypto/HashSHA2'

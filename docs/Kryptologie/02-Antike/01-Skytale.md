@@ -1,5 +1,7 @@
 ---
 title: Skytale
+sidebar_custom_props:
+  id: 11cd1b8e-ea1a-4ff1-9d01-eabde2c13142
 ---
 
 import Skytale from "@site/src/components/VisualizationTools/Crypto/Skytale";

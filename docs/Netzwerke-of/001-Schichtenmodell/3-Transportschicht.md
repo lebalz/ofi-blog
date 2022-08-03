@@ -1,6 +1,8 @@
 ---
 sidebar_label: 3. Transportschicht
 sidebar_position: 3
+sidebar_custom_props:
+  id: 8e76c74f-7333-4dea-bfc3-f58f5dabf811
 ---
 
 #  Schicht 3: Transportschicht [^1]

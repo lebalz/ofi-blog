@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: db6a09c4-c708-477b-8121-fdba7b01e7f5
+---
 # ✍️ Python Material für die BYOD Prüfung
 
 <a href="https://ofi.gbsl.website/files/material_byod.zip">⬇ Download BYOD Material</a>

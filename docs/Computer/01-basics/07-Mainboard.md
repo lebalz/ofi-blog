@@ -1,5 +1,7 @@
 ---
 title: 7. Hauptplatine
+sidebar_custom_props:
+  id: 4bc25140-1a8f-4c37-8058-43a3e4ad447d
 ---
 
 

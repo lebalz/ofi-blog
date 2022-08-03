@@ -1,5 +1,7 @@
 ---
 title: 4. AND-Gatter
+sidebar_custom_props:
+  id: e8e661f2-5c6a-453d-8410-0a5478abe1cd
 ---
 
 

@@ -1,5 +1,7 @@
 ---
 title: Verkettung von Blöcken
+sidebar_custom_props:
+  id: 106dd131-0dd1-454d-a369-1e44e466737a
 ---
 
 import Finding from "@site/src/components/Finding";

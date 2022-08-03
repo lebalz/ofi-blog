@@ -1,5 +1,7 @@
 ---
 title: 8. Stromversorgung
+sidebar_custom_props:
+  id: 60f7cadd-349a-4bec-8860-d3dc6b9de6bd
 ---
 
 

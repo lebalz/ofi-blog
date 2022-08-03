@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: eb0ef584-948f-4087-be07-08305c23f5e5
+---
 # Phaser
 
 ## 3d-Animation

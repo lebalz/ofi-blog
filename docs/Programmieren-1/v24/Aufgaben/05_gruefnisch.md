@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 4667baab-28b5-42bd-98c9-b2fe5af85d55
+---
 # Grüfnisch
 
 [05_gruefnisch.zip](skeletons/05_gruefnisch.zip)

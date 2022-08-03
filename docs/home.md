@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sidebar_custom_props:
+  id: cc85d68a-1018-4d3e-8742-cc04a9341cea
 ---
 
 # Obligatorisches Fach Informatik

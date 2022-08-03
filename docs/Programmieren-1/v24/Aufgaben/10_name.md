@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 4848033a-bf9f-476e-9784-929638f4edbb
+---
 # Name
 
 [10_name.zip](skeletons/10_name.zip)

@@ -1,5 +1,7 @@
 ---
 title: Häufigkeitsanalyse
+sidebar_custom_props:
+  id: 0b4e3ced-74a8-4416-93ed-3934c34c320c
 ---
 import FrequencyAnalysis from "@site/src/components/VisualizationTools/Crypto/FrequencyTextAnalysis";
 

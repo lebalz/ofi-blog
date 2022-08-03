@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 0c56b0b2-9b28-4a13-b783-ee7c4833158c
+---
 # Browser
 
 ## Begriff

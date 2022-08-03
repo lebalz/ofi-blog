@@ -1,5 +1,7 @@
 ---
 title: 3. Freie Open Source Software
+sidebar_custom_props:
+  id: 83a10135-9938-4cc9-ab43-eb67f816f6bd
 ---
 
 # 3. Freie Open Source Software

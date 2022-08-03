@@ -1,5 +1,7 @@
 ---
 title: IP-Adresse
+sidebar_custom_props:
+  id: 9c31633b-d6d0-4655-8972-70a1c094a6e0
 ---
 
 # IP-Adresse [^1]

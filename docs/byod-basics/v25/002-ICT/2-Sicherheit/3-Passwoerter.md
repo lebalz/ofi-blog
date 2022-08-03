@@ -1,5 +1,7 @@
 ---
 title: Passwörter
+sidebar_custom_props:
+  id: ebe4ae20-e88b-48c1-bbe2-827ba69d58bc
 ---
 
 import PasswordChecker from '@site/src/components/PasswordChecker'

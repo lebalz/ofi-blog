@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: b2fd3905-c0e8-4fc9-97e4-89d8cf357d4b
+---
 # While Schleife
 
 Programmiersprachen können Code-Teile mehrfach nacheinander ausführen. In Python gibt es dabei zwei Konzepte. Die `for` Schleife und die `while` Schleife.

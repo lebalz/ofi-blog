@@ -1,5 +1,7 @@
 ---
 title: Begriffe
+sidebar_custom_props:
+  id: ec9c4bd3-79be-454f-bfcc-66166bd39a82
 ---
 
 

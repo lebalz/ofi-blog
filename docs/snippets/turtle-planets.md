@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 93bae220-fdb4-4ffa-a415-226324f27b23
+---
 # Planeten mit Monden
 
 ![](images/turtle-planets.svg)

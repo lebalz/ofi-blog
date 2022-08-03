@@ -1,5 +1,7 @@
 ---
 title: Umwandlung ins Binärsystem
+sidebar_custom_props:
+  id: 4d1e2574-f77e-450b-babc-315b87aae00f
 ---
 
 

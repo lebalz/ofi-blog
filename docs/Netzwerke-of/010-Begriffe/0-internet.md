@@ -1,5 +1,7 @@
 ---
 title: Internet
+sidebar_custom_props:
+  id: c659caba-da58-4ba2-92e3-bd1ce8ed2d6b
 ---
 
 # Wie funktioniert das Internet?

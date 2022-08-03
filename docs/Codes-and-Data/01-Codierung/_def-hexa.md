@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 8432c0ec-3f1d-4636-b53e-be290e15a611
+---
 Anstatt Zahlen im Dezimalsystem oder Binärsystem zu schreiben, kann auch das Hexadezimalsystem mit `16` eindeutigen Zeichen verwendet werden. Dabei werden die zehn Zahlenziffern mit den ersten 6 Buchstaben des Alphabets ergänzt:
 
 <div className="slim-table no-header">

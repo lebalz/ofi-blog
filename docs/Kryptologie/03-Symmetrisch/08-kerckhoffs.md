@@ -1,5 +1,7 @@
 ---
 title: Kerckhoffs' Prinzip
+sidebar_custom_props:
+  id: 718f1455-9885-48ee-9465-298be0c1227d
 ---
 
 

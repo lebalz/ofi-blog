@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: fe979125-896c-4947-89a8-7c349e6a96fb
+---
 # Regenbogen Display
 
 [02_smartphone_rainbow.zip](skeletons/02_smartphone_rainbow.zip)

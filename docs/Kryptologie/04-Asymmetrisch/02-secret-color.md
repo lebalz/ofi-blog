@@ -1,5 +1,7 @@
 ---
 title: Geheime Farbe
+sidebar_custom_props:
+  id: 035b0ee7-407c-4047-90de-10ae0ff2bcff
 ---
 
 import ColorExchange from "@site/src/components/VisualizationTools/ColorExchange";

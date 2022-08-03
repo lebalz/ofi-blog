@@ -1,5 +1,7 @@
 ---
 label: Lernziele
+sidebar_custom_props:
+  id: 4d744a64-5d85-41a0-af70-2454bc432941
 ---
 
 # Lernziele Codes und Daten

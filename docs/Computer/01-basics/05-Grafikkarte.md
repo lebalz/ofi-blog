@@ -1,5 +1,7 @@
 ---
 title: 5. Grafikkarte
+sidebar_custom_props:
+  id: d612c58d-1ae6-4d62-b94a-d834c7d2b195
 ---
 
 

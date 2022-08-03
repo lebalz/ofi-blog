@@ -1,5 +1,7 @@
 ---
 title: 4. Fehler
+sidebar_custom_props:
+  id: 975c2237-7335-428d-96db-2e7f507c1d31
 ---
 
 import Hint from '@site/src/components/Solution/Hint'

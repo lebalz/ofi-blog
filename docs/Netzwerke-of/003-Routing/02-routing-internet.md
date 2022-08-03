@@ -1,5 +1,7 @@
 ---
 title: Routing im Internet
+sidebar_custom_props:
+  id: eb6efc06-c76e-4907-8e49-ddfe8de30177
 ---
 
 import Finding from "@site/src/components/Finding";

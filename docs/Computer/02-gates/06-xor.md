@@ -1,5 +1,7 @@
 ---
 title: 6. XOR-Gatter
+sidebar_custom_props:
+  id: 40fc24cc-0c6b-4f99-83d9-3db243caac51
 ---
 
 

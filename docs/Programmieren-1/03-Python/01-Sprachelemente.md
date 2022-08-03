@@ -1,5 +1,7 @@
 ---
 title: Sprachelemente
+sidebar_custom_props:
+  id: 1df76494-f468-457a-98e0-bc527bf48697
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';

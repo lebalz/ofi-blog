@@ -1,5 +1,7 @@
 ---
 title: 3D Schlüsselanhänger
+sidebar_custom_props:
+  id: 6504bb27-b4a9-4534-a0a1-571fd6cc066e
 ---
 
 import Tabs from '@theme/Tabs';

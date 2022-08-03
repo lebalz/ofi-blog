@@ -1,6 +1,8 @@
 ---
 sidebar_label: 4. Anwendungsschicht
 sidebar_position: 2
+sidebar_custom_props:
+  id: 2108d2f9-f98f-459e-ae5b-1f5114a5b5a3
 ---
 
 # Schicht 4: Anwendungsschicht [^1]

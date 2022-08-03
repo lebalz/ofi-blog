@@ -1,5 +1,7 @@
 ---
 title: Prüfung
+sidebar_custom_props:
+  id: 5180e193-fb23-42bb-aeea-bf80b79612ec
 ---
 
 # Prüfung
