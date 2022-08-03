@@ -52,9 +52,9 @@ const QuillEditor = observer((props: Props) => {
 
 
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
-    const hasCursor = matchMedia('(pointer:fine)').matches;
     const resizeModules: any[] = [Toolbar]
-    if (useIsBrowser() && hasCursor) {
+    // if it has a fine cursor
+    if (useIsBrowser() && matchMedia('(pointer:fine)').matches) {
         resizeModules.push(Resize);
         resizeModules.push(Size);
     }
