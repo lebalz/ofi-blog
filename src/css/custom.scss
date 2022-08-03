@@ -187,6 +187,13 @@ div.small-m {
             display: inline-block;
             margin-right: .4em;
             vertical-align: middle;
+            svg {
+                stroke-width: 0;
+                stroke: var(--ifm-alert-foreground-color);
+                display: inline-block;
+                height: 22px;
+                width: 22px;
+            }
         }
     }
 }
