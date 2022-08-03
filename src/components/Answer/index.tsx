@@ -10,7 +10,7 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 import { sanitizeId } from '../../utils/sanitizers';
 import { ModelTypes } from '../../models/iModel';
 import ReactDomServer from 'react-dom/server';
-import { ToolbarOptions } from '../shared/QuillEditor';
+import { ToolbarOptions } from '../shared/quillConfig';
 import Loader from '../shared/Loader';
 
 export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();

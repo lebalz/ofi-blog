@@ -22,6 +22,7 @@ import TimedExercise from '../../models/TimedTopic/TimedExercise';
 import TimeSpan from './TimeSpan';
 import QuillEditor from '../shared/QuillEditor';
 import { useStore } from '../../stores/hooks';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 const LabelIcon: { [k in ExerciseLabel]: IconDefinition } = {
     solved: faCheckCircle,
     fail: faTimesCircle,
@@ -75,14 +76,14 @@ const Exercise = observer((props: Props) => {
                         <FontAwesomeIcon
                             className={clsx(styles.faButton)}
                             color="var(--ifm-color-primary)"
-                            icon={faStop}
+                            icon={faStop as IconProp}
                             onClick={() => ex.stop()}
                         />
                     ) : (
                         <FontAwesomeIcon
                             className={clsx(styles.faButton)}
                             color="var(--ifm-color-success)"
-                            icon={faPlay}
+                            icon={faPlay as IconProp}
                             onClick={() => ex.start()}
                         />
                     )}
@@ -98,7 +99,7 @@ const Exercise = observer((props: Props) => {
                     <FontAwesomeIcon
                         className={clsx(styles.icon)}
                         color={'var(--ifm-color-primary)'}
-                        icon={ex.hasText ? faComment : farComment}
+                        icon={(ex.hasText ? faComment : farComment) as IconProp}
                         onClick={() => setShowDetails(!showDetails)}
                     />
 
@@ -109,7 +110,7 @@ const Exercise = observer((props: Props) => {
                                 key={idx}
                                 className={clsx(styles.icon)}
                                 color={active ? LabelColor[label] : 'gray'}
-                                icon={LabelIcon[label]}
+                                icon={LabelIcon[label] as IconProp}
                                 onClick={() => ex.toggleLabel(label)}
                             />
                         );
@@ -119,7 +120,7 @@ const Exercise = observer((props: Props) => {
                 <FontAwesomeIcon
                     className={clsx(styles.faButton)}
                     color="red"
-                    icon={faTrash}
+                    icon={faTrash as IconProp}
                     onClick={onDelete}
                 />
             </div>

@@ -12,11 +12,11 @@ import config from './quill-img-compress/config';
 import pasteImage from './quill-img-compress/pasteImage';
 
 import ImageResize from 'quill-image-resize-module-react';
-import Resize from './quill-img-resize/Resize';
-import Size from './quill-img-resize/Size';
+// import Resize from './quill-img-resize/Resize';
+// import Size from './quill-img-resize/Size';
 // import Toolbar from './quill-img-resize/Toolbar';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { FORMATS, getToolbar, TOOLBAR, ToolbarOptions } from './config';
+import { FORMATS, getToolbar, TOOLBAR, ToolbarOptions } from './quillConfig';
 
 export interface iTextData {
     text: React.ReactNode;
@@ -43,22 +43,23 @@ const QuillEditor = observer((props: Props) => {
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
     const [processingImage, setProcessingImage] = React.useState(false);
 
-    const resizeModules: any[] = []
-    // const resizeModules: any[] = [Toolbar]
-    // if it has a fine cursor
-    if (useIsBrowser() && matchMedia('(pointer:fine)').matches) {
-        resizeModules.push(Resize);
-        resizeModules.push(Size);
-    }
+    // const resizeModules: any[] = []
+    // const resizeModules: any[] = [Toolbar];
+    // // if it has a fine cursor
+    // if (useIsBrowser() && matchMedia('(pointer:fine)').matches) {
+    //     resizeModules.push(Resize);
+    //     resizeModules.push(Size);
+    // }
     const modules = {
         toolbar: props.toolbar
             ? getToolbar(props.toolbar)
             : [...TOOLBAR, ...getToolbar(props.toolbarAdd || {})],
         imageResize: {
-            modules: resizeModules,
-            handleStyles: {
-                borderRadius: '50%'
-            },
+            modules: []
+            // modules: resizeModules,
+            // handleStyles: {
+            //     borderRadius: '50%'
+            // },
         },
     };
     const theme = 'snow';
@@ -108,7 +109,6 @@ const QuillEditor = observer((props: Props) => {
         };
     }, [quill]);
 
-
     // return early server side
     if (!useIsBrowser()) {
         return (
@@ -120,6 +120,7 @@ const QuillEditor = observer((props: Props) => {
 
         )
     }
+
     // Insert Image(selected by user) to quill
     const insertToEditor = (url) => {
         if (!mounted.current) {
@@ -175,35 +176,36 @@ const QuillEditor = observer((props: Props) => {
     };
 
     if (Quill && !quill) {
-        // var BaseImageFormat = Quill.import('formats/image');
-        // const ImageFormatAttributesList = ['alt', 'height', 'width', 'style'];
+        var BaseImageFormat = Quill.import('formats/image');
+        const ImageFormatAttributesList = ['alt', 'height', 'width', 'style'];
 
-        // class ImageFormat extends BaseImageFormat {
-        //     static formats(domNode) {
-        //         return ImageFormatAttributesList.reduce(function (formats, attribute) {
-        //             if (domNode.hasAttribute(attribute)) {
-        //                 formats[attribute] = domNode.getAttribute(attribute);
-        //             }
-        //             return formats;
-        //         }, {});
-        //     }
-        //     format(name, value) {
-        //         if (ImageFormatAttributesList.indexOf(name) > -1) {
-        //             if (value) {
-        //                 this.domNode.setAttribute(name, value);
-        //             } else {
-        //                 this.domNode.removeAttribute(name);
-        //             }
-        //         } else {
-        //             super.format(name, value);
-        //         }
-        //     }
-        // }
+        class ImageFormat extends BaseImageFormat {
+            static formats(domNode) {
+                return ImageFormatAttributesList.reduce(function (formats, attribute) {
+                    if (domNode.hasAttribute(attribute)) {
+                        formats[attribute] = domNode.getAttribute(attribute);
+                    }
+                    return formats;
+                }, {});
+            }
+            format(name, value) {
+                if (ImageFormatAttributesList.indexOf(name) > -1) {
+                    if (value) {
+                        this.domNode.setAttribute(name, value);
+                    } else {
+                        this.domNode.removeAttribute(name);
+                    }
+                } else {
+                    super.format(name, value);
+                }
+            }
+        }
 
-        // Quill.register(ImageFormat, true);
-        // (window as any).Quill = Quill;
+        Quill.register(ImageFormat, true);
+        (window as any).Quill = Quill;
         // // For execute this line only once.
         Quill.register('modules/imageResize', ImageResize);
+
     }
 
     return (
