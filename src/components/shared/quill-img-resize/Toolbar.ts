@@ -14,7 +14,7 @@ export default class Toolbar extends BaseModule {
     }[]
     onCreate = () => {
         // Initilize styles
-        if ((window as any).Quill) {
+        if (window && (window as any).Quill) {
             Parchment = (window as any).Quill.import('parchment');
             FloatStyle = new Parchment.Attributor.Style('float', 'float');
             MarginStyle = new Parchment.Attributor.Style('margin', 'margin');
