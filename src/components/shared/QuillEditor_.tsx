@@ -12,10 +12,6 @@ import config from './quill-img-compress/config';
 import pasteImage from './quill-img-compress/pasteImage';
 
 import ImageResize from './quill-img-resize';
-// import Resize from './quill-img-resize/Resize';
-// import Size from './quill-img-resize/Size';
-// import Toolbar from './quill-img-resize/Toolbar';
-import useIsBrowser from '@docusaurus/useIsBrowser';
 import { FORMATS, getToolbar, TOOLBAR, ToolbarOptions } from './quillConfig';
 
 export interface iTextData {
@@ -43,13 +39,6 @@ const QuillEditor = observer((props: Props) => {
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
     const [processingImage, setProcessingImage] = React.useState(false);
 
-    // const resizeModules: any[] = []
-    // const resizeModules: any[] = [Toolbar];
-    // // if it has a fine cursor
-    // if (useIsBrowser() && matchMedia('(pointer:fine)').matches) {
-    //     resizeModules.push(Resize);
-    //     resizeModules.push(Size);
-    // }
     const modules = {
         toolbar: props.toolbar
             ? getToolbar(props.toolbar)
@@ -107,27 +96,15 @@ const QuillEditor = observer((props: Props) => {
         };
     }, [quill]);
 
-    // return early server side
-    // if (!useIsBrowser()) {
-    //     return (
-    //         <div
-    //             className={clsx(styles.quillEditor)}
-    //         >
-    //             <Loader caption='Editor laden...' overlay />
-    //         </div>
-
-    //     )
-    // }
-
     // Insert Image(selected by user) to quill
     const insertToEditor = (url) => {
-        if (!mounted.current) {
+        if (!mounted.current || !quill) {
             return;
         }
-        if (!quill.hasFocus()) {
-            quill.focus();
-        }
-        const range = quill.getSelection();
+        // if (!quill?.hasFocus()) {
+        //     quill?.focus();
+        // }
+        const range = quill.getSelection(true);
         quill.insertEmbed(range.index, 'image', url);
         range.index++;
         quill.setSelection(range, 'api');
@@ -138,7 +115,10 @@ const QuillEditor = observer((props: Props) => {
     };
 
 
-    const insertImage = async (img: string) => {
+    const insertImage = async (img?: string) => {
+        if (!img) {
+            return setProcessingImage(false);
+        }
         downscaleImage(img).then(
             (img) => {
                 insertToEditor(img);
@@ -161,6 +141,9 @@ const QuillEditor = observer((props: Props) => {
         input.click();
 
         input.onchange = () => {
+            if (!input.files || input.files.length < 1) {
+                return;
+            }
             const file = input.files[0];
             setProcessingImage(true);
             file2b64(file).then(insertImage);
