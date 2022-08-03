@@ -21,7 +21,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "present": "gulp serve"
+    "present": "gulp serve",
+    "edit-fm": "node bin/edit_front_matter.js"
   },
   "dependencies": {
     "@azure/msal-browser": "^2.18.0",
@@ -119,9 +120,10 @@
     "@types/react-helmet": "^6.1.1",
     "@types/react-router-dom": "^5.1.7",
     "@types/uuid": "^8.3.1",
+    "gray-matter": "^4.0.3",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "null-loader": "^4.0.1",
     "rsync": "^0.6.1",
     "stringify-object": "^4.0.0",
