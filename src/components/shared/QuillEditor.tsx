@@ -30,7 +30,6 @@ const QuillEditor = observer((props: Props) => {
             setQuill(quill)
         })
     }, []);
-    console.log('rerender')
     if (!useIsBrowser()) {
         return <div>{props.model.text}</div>
     }

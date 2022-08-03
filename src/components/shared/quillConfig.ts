@@ -113,4 +113,5 @@ export const FORMATS = [
     'blockquote',
     'script',
     'code',
+    'style'
 ];

@@ -13,7 +13,7 @@ import pasteImage from './quill-img-compress/pasteImage';
 
 import ImageResize from './quill-img-resize';
 import { FORMATS, getToolbar, TOOLBAR, ToolbarOptions } from './quillConfig';
-
+ 
 export interface iTextData {
     text: React.ReactNode;
     setText: (text: React.ReactNode) => void;
@@ -80,7 +80,7 @@ const QuillEditor = observer((props: Props) => {
             quill.clipboard.dangerouslyPasteHTML((model.text as string) || '');
             quill.blur();
             if (props.readonly) {
-                quill.disable();
+                quill.disable(); 
             }
             quill.getModule('toolbar').addHandler('image', selectLocalImage);
             quill.root.addEventListener('drop', dropHandler);
@@ -101,9 +101,6 @@ const QuillEditor = observer((props: Props) => {
         if (!mounted.current || !quill) {
             return;
         }
-        // if (!quill?.hasFocus()) {
-        //     quill?.focus();
-        // }
         const range = quill.getSelection(true);
         quill.insertEmbed(range.index, 'image', url);
         range.index++;
@@ -175,7 +172,7 @@ const QuillEditor = observer((props: Props) => {
                 if (ImageFormatAttributesList.indexOf(name) > -1) {
                     if (value) {
                         this.domNode.setAttribute(name, value);
-                    } else {
+                    } else { 
                         this.domNode.removeAttribute(name);
                     }
                 } else {
