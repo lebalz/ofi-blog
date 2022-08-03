@@ -2,17 +2,7 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 import { ToolbarOptions } from './quillConfig';
-import {default as QuillType} from './QuillEditor_';
-
-
-export interface iTextData {
-    text: React.ReactNode;
-    setText: (text: React.ReactNode) => void;
-    canUpdate: boolean;
-    loaded: boolean;
-    readonly?: boolean;
-}
-
+import type {default as QuillType, iTextData} from './QuillEditor_';
 interface Props {
     model: iTextData;
     readonly?: boolean;

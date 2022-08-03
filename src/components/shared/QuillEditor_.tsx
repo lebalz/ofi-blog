@@ -13,13 +13,19 @@ import pasteImage from './quill-img-compress/pasteImage';
 
 import ImageResize from './quill-img-resize';
 import { FORMATS, getToolbar, TOOLBAR, ToolbarOptions } from './quillConfig';
- 
+import SaveService from '@site/src/models/SaveService';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faSync } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { reaction } from 'mobx';
+
 export interface iTextData {
     text: React.ReactNode;
     setText: (text: React.ReactNode) => void;
     canUpdate: boolean;
     loaded: boolean;
     readonly?: boolean;
+    saveService: SaveService;
 }
 
 interface Props {
@@ -38,6 +44,8 @@ const QuillEditor = observer((props: Props) => {
 
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
     const [processingImage, setProcessingImage] = React.useState(false);
+    const [showSavedNotification, setShowSavedNotification] = React.useState(false);
+
 
     const modules = {
         toolbar: props.toolbar
@@ -45,7 +53,7 @@ const QuillEditor = observer((props: Props) => {
             : [...TOOLBAR, ...getToolbar(props.toolbarAdd || {})],
         imageResize: {
             handleStyles: {
-                borderRadius: '50%'
+                borderRadius: '50%',
             },
         },
     };
@@ -59,6 +67,28 @@ const QuillEditor = observer((props: Props) => {
             mounted.current = false;
         };
     }, []);
+
+    React.useEffect(() => {
+        let timeoutId: NodeJS.Timeout;
+        const disposer = reaction(
+            () => model.saveService.state,
+            (current, last) => {
+                if (last === 'save' && current === 'done') {
+                    setShowSavedNotification(true);
+                    timeoutId = setTimeout(() => {
+                        setShowSavedNotification(false);
+                        timeoutId = undefined;
+                    }, 1500);
+                }
+            }
+        );
+        return () => {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+            disposer();
+        };
+    }, [model]);
 
     React.useEffect(() => {
         if (quill) {
@@ -80,12 +110,18 @@ const QuillEditor = observer((props: Props) => {
             quill.clipboard.dangerouslyPasteHTML((model.text as string) || '');
             quill.blur();
             if (props.readonly) {
-                quill.disable(); 
+                quill.disable();
             }
             quill.getModule('toolbar').addHandler('image', selectLocalImage);
             quill.root.addEventListener('drop', dropHandler);
             quill.root.addEventListener('paste', pasteHandler);
             quill.getModule('toolbar').container.addEventListener('mousedown', onQuillToolbarMouseDown);
+            const isMac = navigator.userAgent.includes('Mac');
+            quill.keyboard.addBinding({
+                key: 's',
+                metaKey: isMac,
+                ctrlKey: !isMac
+            }, () => model.saveService.saveNow())
         }
         return () => {
             if (quill) {
@@ -111,24 +147,23 @@ const QuillEditor = observer((props: Props) => {
         quill.setSelection(range, 'api');
     };
 
-
     const insertImage = async (img?: string) => {
         if (!img) {
             return setProcessingImage(false);
         }
-        downscaleImage(img).then(
-            (img) => {
+        downscaleImage(img)
+            .then((img) => {
                 insertToEditor(img);
             })
-        .catch(() => {
-            console.log('Could not insert image')
-        })
-        .finally(() => {
-            if (mounted.current) {
-                setProcessingImage(false);
-            }
-        });
-    }
+            .catch(() => {
+                console.log('Could not insert image');
+            })
+            .finally(() => {
+                if (mounted.current) {
+                    setProcessingImage(false);
+                }
+            });
+    };
 
     // Open Dialog to select Image File
     const selectLocalImage = () => {
@@ -172,7 +207,7 @@ const QuillEditor = observer((props: Props) => {
                 if (ImageFormatAttributesList.indexOf(name) > -1) {
                     if (value) {
                         this.domNode.setAttribute(name, value);
-                    } else { 
+                    } else {
                         this.domNode.removeAttribute(name);
                     }
                 } else {
@@ -184,7 +219,6 @@ const QuillEditor = observer((props: Props) => {
         Quill.register(ImageFormat, true);
         (window as any).Quill = Quill;
         Quill.register('modules/imageResize', ImageResize);
-
     }
 
     return (
@@ -200,7 +234,15 @@ const QuillEditor = observer((props: Props) => {
                 )}
             >
                 <div ref={quillRef} />
-                {processingImage && <Loader caption='Bild Einfügen... (Klicken um abzubrechen)' overlay />}
+                {processingImage && <Loader caption="Bild Einfügen..." overlay />}
+                <span style={{ minWidth: '1em' }} className={styles.saveIndicator}>
+                    {model.saveService.state === 'save' && (
+                        <FontAwesomeIcon icon={faSync as IconProp} style={{ color: '#3578e5' }} spin />
+                    )}
+                    {showSavedNotification && (
+                        <FontAwesomeIcon icon={faCheckCircle as IconProp} style={{ color: 'var(--ifm-color-success)' }} />
+                    )}
+                </span>
             </div>
         </div>
     );

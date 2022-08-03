@@ -24,9 +24,6 @@ export default class SaveService {
     @observable
     state: RequestState = 'init';
 
-    @observable
-    private _isOffline: boolean = false;
-
     cancelToken: CancelTokenSource = axios.CancelToken.source();
 
     @observable.ref
@@ -38,12 +35,6 @@ export default class SaveService {
         this.endpoint = endpoint;
         this.model = model;
         makeObservable(this);
-        reaction(
-            () => this._isOffline,
-            (isOffline) => {
-                this.rootStore.msalStore.setApiOfflineState(isOffline);
-            }
-        );
         reaction(
             () => this.model.data,
             (props) => {
@@ -96,7 +87,7 @@ export default class SaveService {
             })
             .then(
                 action((res) => {
-                    this._isOffline = false;
+                    this.rootStore.msalStore.setApiOfflineState(false);
                     this.state = 'done';
                     return res;
                 })
@@ -105,7 +96,7 @@ export default class SaveService {
                 action((error) => {
                     console.warn('err', error);
                     this.state = 'error';
-                    this._isOffline = true;
+                    this.rootStore.msalStore.setApiOfflineState(true);
                 })
             );
     }
