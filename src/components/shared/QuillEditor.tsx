@@ -12,8 +12,8 @@ import config from './quill-img-compress/config';
 import pasteImage from './quill-img-compress/pasteImage';
 
 import ImageResize from 'quill-image-resize-module-react';
-// import Resize from './quill-img-resize/Resize';
-// import Size from './quill-img-resize/Size';
+import Resize from './quill-img-resize/Resize';
+import Size from './quill-img-resize/Size';
 // import Toolbar from './quill-img-resize/Toolbar';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { FORMATS, getToolbar, TOOLBAR, ToolbarOptions } from './config';
@@ -43,23 +43,23 @@ const QuillEditor = observer((props: Props) => {
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
     const [processingImage, setProcessingImage] = React.useState(false);
 
-    // const resizeModules: any[] = []
+    const resizeModules: any[] = []
     // const resizeModules: any[] = [Toolbar]
     // if it has a fine cursor
-    // if (useIsBrowser() && matchMedia('(pointer:fine)').matches) {
-    //     resizeModules.push(Resize);
-    //     resizeModules.push(Size);
-    // }
+    if (useIsBrowser() && matchMedia('(pointer:fine)').matches) {
+        resizeModules.push(Resize);
+        resizeModules.push(Size);
+    }
     const modules = {
         toolbar: props.toolbar
             ? getToolbar(props.toolbar)
             : [...TOOLBAR, ...getToolbar(props.toolbarAdd || {})],
-        // imageResize: {
-        //     modules: resizeModules,
-        //     handleStyles: {
-        //         borderRadius: '50%'
-        //     },
-        // },
+        imageResize: {
+            modules: resizeModules,
+            handleStyles: {
+                borderRadius: '50%'
+            },
+        },
     };
     const theme = 'snow';
     const placeholder = props.placeholder || '✍️ Antwort...';
@@ -203,17 +203,7 @@ const QuillEditor = observer((props: Props) => {
         // Quill.register(ImageFormat, true);
         // (window as any).Quill = Quill;
         // // For execute this line only once.
-        // Quill.register('modules/imageResize', ImageResize);
-
-        // Quill.register('modules/imageDrop', ImageDrop);
-        // Quill.register('modules/counter', function(quill, options) {
-        // quill.on('text-change', function() {
-        //     const text = quill.getText();
-        //     // There are a couple issues with counting words
-        //     // this way but we'll fix these later
-        //     // counterRef.current.innerText = text.split(/\s+/).length;
-        // });
-        // });
+        Quill.register('modules/imageResize', ImageResize);
     }
 
     return (
