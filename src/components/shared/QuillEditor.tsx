@@ -3,11 +3,8 @@ import styles from './QuillEditor.module.scss';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
 import Loader from './Loader';
-
 import 'quill/dist/quill.snow.css'; // Add css for snow theme
 import { useQuill } from 'react-quilljs';
-// import type { default as HeicType } from 'heic2any';
-// import { resolve } from 'node:path/win32';
 import { downscaleImage } from './quill-img-compress/downscaleImage';
 import { file2b64 } from './quill-img-compress/file2b64';
 import dropImage from './quill-img-compress/dropImage';
@@ -15,9 +12,9 @@ import config from './quill-img-compress/config';
 import pasteImage from './quill-img-compress/pasteImage';
 
 import ImageResize from 'quill-image-resize-module-react';
-import Resize from './quill-img-resize/Resize';
-import Size from './quill-img-resize/Size';
-import Toolbar from './quill-img-resize/Toolbar';
+// import Resize from './quill-img-resize/Resize';
+// import Size from './quill-img-resize/Size';
+// import Toolbar from './quill-img-resize/Toolbar';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { FORMATS, getToolbar, TOOLBAR, ToolbarOptions } from './config';
 
@@ -46,22 +43,23 @@ const QuillEditor = observer((props: Props) => {
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
     const [processingImage, setProcessingImage] = React.useState(false);
 
-    const resizeModules: any[] = [Toolbar]
+    // const resizeModules: any[] = []
+    // const resizeModules: any[] = [Toolbar]
     // if it has a fine cursor
-    if (useIsBrowser() && matchMedia('(pointer:fine)').matches) {
-        resizeModules.push(Resize);
-        resizeModules.push(Size);
-    }
+    // if (useIsBrowser() && matchMedia('(pointer:fine)').matches) {
+    //     resizeModules.push(Resize);
+    //     resizeModules.push(Size);
+    // }
     const modules = {
         toolbar: props.toolbar
             ? getToolbar(props.toolbar)
             : [...TOOLBAR, ...getToolbar(props.toolbarAdd || {})],
-        imageResize: {
-            modules: resizeModules,
-            handleStyles: {
-                borderRadius: '50%'
-            },
-        },
+        // imageResize: {
+        //     modules: resizeModules,
+        //     handleStyles: {
+        //         borderRadius: '50%'
+        //     },
+        // },
     };
     const theme = 'snow';
     const placeholder = props.placeholder || '✍️ Antwort...';
@@ -110,6 +108,7 @@ const QuillEditor = observer((props: Props) => {
         };
     }, [quill]);
 
+
     // return early server side
     if (!useIsBrowser()) {
         return (
@@ -126,6 +125,9 @@ const QuillEditor = observer((props: Props) => {
         if (!mounted.current) {
             return;
         }
+        if (!quill.hasFocus()) {
+            quill.focus();
+        }
         const range = quill.getSelection();
         quill.insertEmbed(range.index, 'image', url);
         range.index++;
@@ -136,6 +138,20 @@ const QuillEditor = observer((props: Props) => {
         quill.setSelection(range, 'api');
     };
 
+
+    const insertImage = async (img: string) => {
+        downscaleImage(img).then(
+            (img) => {
+                insertToEditor(img);
+            })
+        .catch(() => {
+            console.log('Could not insert image')
+        })
+        .finally(() => {
+            setProcessingImage(false);
+        });
+    }
+
     // Open Dialog to select Image File
     const selectLocalImage = () => {
         const input = document.createElement('input');
@@ -145,66 +161,50 @@ const QuillEditor = observer((props: Props) => {
 
         input.onchange = () => {
             const file = input.files[0];
-            file2b64(file)
-                .then((img: string) => {
-                    return downscaleImage(img);
-                })
-                .then((img) => {
-                    insertToEditor(img);
-                });
+            setProcessingImage(true);
+            file2b64(file).then(insertImage);
         };
     };
 
     const dropHandler = (event: DragEvent) => {
-        dropImage(event)
-            .then((img: string) => {
-                return downscaleImage(img);
-            })
-            .then((img) => {
-                insertToEditor(img);
-            });
+        dropImage(event).then(insertImage);
     };
 
     const pasteHandler = (event: ClipboardEvent) => {
-        pasteImage(event)
-            .then((img: string) => {
-                return downscaleImage(img);
-            })
-            .then((img) => {
-                insertToEditor(img);
-            });
+        pasteImage(event).then(insertImage);
     };
 
     if (Quill && !quill) {
-        var BaseImageFormat = Quill.import('formats/image');
-        const ImageFormatAttributesList = ['alt', 'height', 'width', 'style'];
+        // var BaseImageFormat = Quill.import('formats/image');
+        // const ImageFormatAttributesList = ['alt', 'height', 'width', 'style'];
 
-        class ImageFormat extends BaseImageFormat {
-            static formats(domNode) {
-                return ImageFormatAttributesList.reduce(function (formats, attribute) {
-                    if (domNode.hasAttribute(attribute)) {
-                        formats[attribute] = domNode.getAttribute(attribute);
-                    }
-                    return formats;
-                }, {});
-            }
-            format(name, value) {
-                if (ImageFormatAttributesList.indexOf(name) > -1) {
-                    if (value) {
-                        this.domNode.setAttribute(name, value);
-                    } else {
-                        this.domNode.removeAttribute(name);
-                    }
-                } else {
-                    super.format(name, value);
-                }
-            }
-        }
+        // class ImageFormat extends BaseImageFormat {
+        //     static formats(domNode) {
+        //         return ImageFormatAttributesList.reduce(function (formats, attribute) {
+        //             if (domNode.hasAttribute(attribute)) {
+        //                 formats[attribute] = domNode.getAttribute(attribute);
+        //             }
+        //             return formats;
+        //         }, {});
+        //     }
+        //     format(name, value) {
+        //         if (ImageFormatAttributesList.indexOf(name) > -1) {
+        //             if (value) {
+        //                 this.domNode.setAttribute(name, value);
+        //             } else {
+        //                 this.domNode.removeAttribute(name);
+        //             }
+        //         } else {
+        //             super.format(name, value);
+        //         }
+        //     }
+        // }
 
-        Quill.register(ImageFormat, true);
-        (window as any).Quill = Quill;
-        // For execute this line only once.
-        Quill.register('modules/imageResize', ImageResize);
+        // Quill.register(ImageFormat, true);
+        // (window as any).Quill = Quill;
+        // // For execute this line only once.
+        // Quill.register('modules/imageResize', ImageResize);
+
         // Quill.register('modules/imageDrop', ImageDrop);
         // Quill.register('modules/counter', function(quill, options) {
         // quill.on('text-change', function() {
@@ -229,7 +229,7 @@ const QuillEditor = observer((props: Props) => {
                 )}
             >
                 <div ref={quillRef} />
-                {processingImage && <Loader caption='Bild Einfügen...' overlay />}
+                {processingImage && <Loader caption='Bild Einfügen... (Klicken um abzubrechen)' overlay />}
             </div>
         </div>
     );

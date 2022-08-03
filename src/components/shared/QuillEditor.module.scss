@@ -1,6 +1,6 @@
 .quillEditor {
-    position: relative;
     .quillAnswer {
+        position: relative;
         border-radius: var(--ifm-alert-border-radius);
         border: 1px solid var(--ifm-color-primary);
         &.edited {

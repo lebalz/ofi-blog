@@ -11,5 +11,8 @@
         left: 0;
         width: 100%;
         height: 100%;
+        background: rgba(164, 166, 168, 0.536);
+        cursor: pointer;
+        border-radius: var(--ifm-alert-border-radius);
     }
 }
