@@ -1,5 +1,4 @@
 import { BaseModule } from './BaseModule';
-
 export default class Resize extends BaseModule {
     boxes: HTMLDivElement[];
     dragBox: HTMLElement;

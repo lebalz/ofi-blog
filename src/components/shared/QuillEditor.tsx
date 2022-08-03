@@ -18,6 +18,7 @@ import ImageResize from 'quill-image-resize-module-react';
 import Resize from './quill-img-resize/Resize';
 import Size from './quill-img-resize/Size';
 import Toolbar from './quill-img-resize/Toolbar';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 
 export interface ToolbarOptions {
     bold?: boolean;
@@ -159,7 +160,6 @@ const QuillEditor = observer((props: Props) => {
         'color',
         'background',
         'clean',
-        'style',
         'code-block',
         'indent',
         'blockquote',
@@ -170,7 +170,7 @@ const QuillEditor = observer((props: Props) => {
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
     const hasCursor = matchMedia('(pointer:fine)').matches;
     const resizeModules: any[] = [Toolbar]
-    if (hasCursor) {
+    if (useIsBrowser() && hasCursor) {
         resizeModules.push(Resize);
         resizeModules.push(Size);
     }
