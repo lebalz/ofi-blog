@@ -42,16 +42,9 @@ interface Props {
 const QuillEditor = observer((props: Props) => {
     const mounted = React.useRef(false);
     const { model } = props;
-    const theme = 'snow';
-    // const theme = 'bubble';
-
-    const onQuillToolbarMouseDown = (e: any) => {
-        e.preventDefault();
-    };
-    const placeholder = props.placeholder || '✍️ Antwort...';
-
 
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
+
     const resizeModules: any[] = [Toolbar]
     // if it has a fine cursor
     if (useIsBrowser() && matchMedia('(pointer:fine)').matches) {
@@ -69,6 +62,8 @@ const QuillEditor = observer((props: Props) => {
             },
         },
     };
+    const theme = 'snow';
+    const placeholder = props.placeholder || '✍️ Antwort...';
     const { quill, quillRef, Quill } = useQuill({ theme, modules, formats: FORMATS, placeholder });
 
     React.useEffect(() => {
@@ -90,6 +85,9 @@ const QuillEditor = observer((props: Props) => {
         }
     }, [quill]);
 
+    const onQuillToolbarMouseDown = (e: any) => {
+        e.preventDefault();
+    };
     React.useEffect(() => {
         if (quill) {
             quill.clipboard.dangerouslyPasteHTML((model.text as string) || '');
@@ -165,7 +163,7 @@ const QuillEditor = observer((props: Props) => {
             });
     };
 
-    if (Quill && !quill) {
+    if (useIsBrowser() && Quill && !quill) {
         var BaseImageFormat = Quill.import('formats/image');
         const ImageFormatAttributesList = ['alt', 'height', 'width', 'style'];
 
