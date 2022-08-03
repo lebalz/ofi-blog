@@ -6,13 +6,18 @@ import Loader from './Loader';
 
 import 'quill/dist/quill.snow.css'; // Add css for snow theme
 import { useQuill } from 'react-quilljs';
-import type { default as HeicType } from 'heic2any';
-import { resolve } from 'node:path/win32';
+// import type { default as HeicType } from 'heic2any';
+// import { resolve } from 'node:path/win32';
 import { downscaleImage } from './quill-img-compress/downscaleImage';
 import { file2b64 } from './quill-img-compress/file2b64';
 import dropImage from './quill-img-compress/dropImage';
 import config from './quill-img-compress/config';
 import pasteImage from './quill-img-compress/pasteImage';
+
+import ImageResize from 'quill-image-resize-module-react';
+import Resize from './quill-img-resize/Resize';
+import Size from './quill-img-resize/Size';
+import Toolbar from './quill-img-resize/Toolbar';
 
 export interface ToolbarOptions {
     bold?: boolean;
@@ -37,8 +42,11 @@ const TOOLBAR = [
     [{ header: [1, 2, 3, false] }],
     [{ color: [] }, { background: [] }], // dropdown with defaults from theme
     [{ list: 'ordered' }, { list: 'bullet' }],
+    [{ align: [] }],
     ['image'],
 ];
+
+const isTouchDevice = ('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
 const getToolbar = (options: ToolbarOptions) => {
     const toolbar = [];
@@ -129,13 +137,6 @@ const QuillEditor = observer((props: Props) => {
     const theme = 'snow';
     // const theme = 'bubble';
 
-    const modules = {
-        toolbar: props.toolbar
-            ? getToolbar(props.toolbar)
-            : [...TOOLBAR, ...getToolbar(props.toolbarAdd || {})],
-        // imageDrop: true
-    };
-
     const onQuillToolbarMouseDown = (e: any) => {
         e.preventDefault();
     };
@@ -150,6 +151,7 @@ const QuillEditor = observer((props: Props) => {
         'list',
         'indent',
         'size',
+        'width',
         'header',
         'link',
         'image',
@@ -157,15 +159,49 @@ const QuillEditor = observer((props: Props) => {
         'color',
         'background',
         'clean',
+        'style',
+        'code-block',
+        'indent',
+        'blockquote',
+        'script',
+        'code',
     ];
 
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
-
+    const hasCursor = matchMedia('(pointer:fine)').matches;
+    const resizeModules: any[] = [Toolbar]
+    if (hasCursor) {
+        resizeModules.push(Resize);
+        resizeModules.push(Size);
+    }
+    const modules = {
+        toolbar: props.toolbar
+            ? getToolbar(props.toolbar)
+            : [...TOOLBAR, ...getToolbar(props.toolbarAdd || {})],
+        imageResize: {
+            modules: resizeModules,
+            handleStyles: {
+                borderRadius: '50%'
+            },
+        },
+        // imageDrop: true
+    };
     const { quill, quillRef, Quill } = useQuill({ theme, modules, formats, placeholder });
+
+    React.useEffect(() => {
+        mounted.current = true;
+        return () => {
+            mounted.current = false;
+        };
+    }, []);
 
     React.useEffect(() => {
         if (quill) {
             quill.on('text-change', (delta, oldDelta, source) => {
+                // console.log(quill.getText()); // Get text only
+                // console.log(quill.getContents()); // Get delta contents
+                // console.log(quill.root.innerHTML); // Get innerHTML using quill
+                // console.log(quillRef.current.firstChild.innerHTML); // Get innerHTML using quillRef
                 model.setText(quill.root.innerHTML);
             });
         }
@@ -194,6 +230,9 @@ const QuillEditor = observer((props: Props) => {
 
     // Insert Image(selected by user) to quill
     const insertToEditor = (url) => {
+        if (!mounted.current) {
+            return;
+        }
         const range = quill.getSelection();
         quill.insertEmbed(range.index, 'image', url);
         range.index++;
@@ -244,8 +283,36 @@ const QuillEditor = observer((props: Props) => {
     };
 
     if (Quill && !quill) {
-        // Quill.register('modules/imageDrop', ImageDrop);
+        var BaseImageFormat = Quill.import('formats/image');
+        const ImageFormatAttributesList = ['alt', 'height', 'width', 'style'];
+
+        class ImageFormat extends BaseImageFormat {
+            static formats(domNode) {
+                return ImageFormatAttributesList.reduce(function (formats, attribute) {
+                    if (domNode.hasAttribute(attribute)) {
+                        formats[attribute] = domNode.getAttribute(attribute);
+                    }
+                    return formats;
+                }, {});
+            }
+            format(name, value) {
+                if (ImageFormatAttributesList.indexOf(name) > -1) {
+                    if (value) {
+                        this.domNode.setAttribute(name, value);
+                    } else {
+                        this.domNode.removeAttribute(name);
+                    }
+                } else {
+                    super.format(name, value);
+                }
+            }
+        }
+
+        Quill.register(ImageFormat, true);
+        (window as any).Quill = Quill;
         // For execute this line only once.
+        Quill.register('modules/imageResize', ImageResize);
+        // Quill.register('modules/imageDrop', ImageDrop);
         // Quill.register('modules/counter', function(quill, options) {
         // quill.on('text-change', function() {
         //     const text = quill.getText();
