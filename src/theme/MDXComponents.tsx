@@ -6,6 +6,7 @@ import SourceRef from '../components/SourceRef';
 import DefinitionList from '../components/DefinitionList';
 import Answer from '../components/Answer';
 import Solution from '../components/Solution';
+import Comment from '../components/Comment';
 
 export default {
   // Re-use the default mapping
@@ -14,5 +15,6 @@ export default {
   SourceRef: SourceRef,
   dl: DefinitionList,
   Answer: Answer,
-  Solution: Solution
+  Solution: Solution,
+  Comment: Comment
 };

@@ -11,6 +11,7 @@ interface Props {
     toolbar?: ToolbarOptions;
     toolbarAdd?: ToolbarOptions;
     placeholder?: string;
+    theme?: 'snow' | 'bubble';
 }
 
 const QuillEditor = observer((props: Props) => {

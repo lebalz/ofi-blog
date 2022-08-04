@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
 import Loader from './Loader';
 import 'quill/dist/quill.snow.css'; // Add css for snow theme
+import 'quill/dist/quill.bubble.css'; // Add css for snow theme
 import { useQuill } from 'react-quilljs';
 import { downscaleImage } from './quill-img-compress/downscaleImage';
 import { file2b64 } from './quill-img-compress/file2b64';
@@ -20,8 +21,8 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { reaction } from 'mobx';
 
 export interface iTextData {
-    text: React.ReactNode;
-    setText: (text: React.ReactNode) => void;
+    text: string;
+    setText: (text: string) => void;
     canUpdate: boolean;
     loaded: boolean;
     readonly?: boolean;
@@ -32,10 +33,11 @@ interface Props {
     model: iTextData;
     readonly?: boolean;
     monospace?: boolean;
-    default?: string | React.ReactNode;
+    default?: string;
     toolbar?: ToolbarOptions;
     toolbarAdd?: ToolbarOptions;
     placeholder?: string;
+    theme?: 'snow' | 'bubble';
 }
 
 const QuillEditor = observer((props: Props) => {
@@ -57,7 +59,7 @@ const QuillEditor = observer((props: Props) => {
             },
         },
     };
-    const theme = 'snow';
+    const theme = props.theme || 'snow';
     const placeholder = props.placeholder || '✍️ Antwort...';
     const { quill, quillRef, Quill } = useQuill({ theme, modules, formats: FORMATS, placeholder });
 

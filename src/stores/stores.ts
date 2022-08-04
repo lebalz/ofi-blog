@@ -6,12 +6,14 @@ import React from "react";
 import { makeObservable, observable } from "mobx";
 import { UserStore } from "./UserStore";
 import { TimedTopicStore } from "./TimedTopicStore";
+import { CommentStore } from './CommentStore';
 
 export class RootStore {
   stores = observable([]);
   @observable initialized = false;
 
   documentStore: DocumentStore;
+  commentStore: CommentStore;
   msalStore: MSALStore;
   userStore: UserStore;
   timedTopicStore: TimedTopicStore;
@@ -20,6 +22,7 @@ export class RootStore {
     makeObservable(this);
     this.msalStore = new MSALStore(this);
     this.documentStore = new DocumentStore(this);
+    this.commentStore = new CommentStore(this);
     this.userStore = new UserStore(this);
     this.timedTopicStore = new TimedTopicStore(this);
     this.policyStore = new PolicyStore(this);

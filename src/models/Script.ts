@@ -1,4 +1,3 @@
-import { runInAction } from 'mobx';
 import axios, { CancelTokenSource } from 'axios';
 import { Document, putDocument, Version } from './../api/document';
 import { action, computed, makeObservable, observable } from 'mobx';

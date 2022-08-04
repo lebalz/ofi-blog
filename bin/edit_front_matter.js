@@ -16,7 +16,7 @@ const getFilesRecursively = (directory) => {
         const absolute = path.join(directory, f);
         if (fs.statSync(absolute).isDirectory()) {
             files.push(...getFilesRecursively(absolute));
-        } else if (/\.mdx?/.test(f)) {
+        } else if (/\.mdx?/.test(f) && !f.startsWith('_')) {
             files.push(absolute);
         }
     }

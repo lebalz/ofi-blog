@@ -1,11 +1,14 @@
 {
   "extends": "@tsconfig/docusaurus/tsconfig.json",  
   "compilerOptions": {
+    "lib": ["DOM"],
+    "target": "ES5",
     "baseUrl": ".",
     // "types": ["docusaurus-theme-frontmatter", "node"],
     "useDefineForClassFields": true,
     "experimentalDecorators": true,
     "downlevelIteration": true,
-    "esModuleInterop":true
+    "esModuleInterop":true,
+    "types": ["docusaurus-theme-frontmatter"],
   }
 }

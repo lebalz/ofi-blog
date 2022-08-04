@@ -42,6 +42,12 @@ export interface CodeModel extends BaseModel {
     setData: (data: PyDoc) => void;
 }
 
+export interface CodeModel extends BaseModel {
+    type: 'code';
+    data: PyDoc;
+    setData: (data: PyDoc) => void;
+}
+
 
 export type ModelTypes = ArrayDoc | PyDoc | StringDoc | TextDoc;
 export type IModel = CodeModel | TextModel | StringModel | ArrayModel ;

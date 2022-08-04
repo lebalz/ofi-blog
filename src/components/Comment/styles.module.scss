@@ -1,0 +1,38 @@
+
+:global .commentable {
+    position: relative;
+    // border: 1px dashed silver;
+}
+.comment {
+    position: absolute;
+    right: -10px; 
+    top: -2px;
+    width: 120px;
+    height: 100%;
+    border-color: var(--ifm-color-primary);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+        transition: all;
+        transition-duration: 1s;
+    }    
+    &.loaded {
+        opacity: 1;
+        color: var(--ifm-color-primary);
+    }
+    .commentRef {
+        position: relative;
+        .quill {
+            background: white;
+            z-index: 22;
+            position: absolute;
+            min-width: 200px;
+            margin-bottom: 0;
+        }
+    }
+}

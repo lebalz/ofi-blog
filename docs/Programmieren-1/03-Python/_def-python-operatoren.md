@@ -1,7 +1,3 @@
----
-sidebar_custom_props:
-  id: ac384772-094b-4aca-a785-40aff4c4852f
----
 <div className="slim-table">
 
 | Operation      | mathematisch | Python   |

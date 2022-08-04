@@ -3,12 +3,12 @@ import { Document, putDocument } from './../../api/document';
 import { action, computed, makeObservable, observable } from "mobx";
 import { TextModel } from '../iModel';
 import SaveService, { ApiModel } from '../SaveService';
-import { iTextData } from '../../components/shared/QuillEditor';
+import { iTextData } from '../../components/shared/QuillEditor_';
 
 export interface TextDoc {
-    value: React.ReactNode;
+    value: string;
     type: "text";
-    default?: string | React.ReactNode;
+    default?: string;
   }
 
 export const DEFAULT_DATA: TextDoc = {
@@ -45,7 +45,7 @@ export default class Text implements TextModel, ApiModel, iTextData {
     saveService: SaveService;
 
     @observable
-    value: React.ReactNode;
+    value: string;
 
     constructor(doc: Document<TextDoc>, readonly: boolean = false) {
         this.readonly = readonly;
@@ -67,12 +67,12 @@ export default class Text implements TextModel, ApiModel, iTextData {
     }
 
     @computed
-    get text(): string | React.ReactNode {
+    get text(): string {
         return this.value;
     }
 
     @action
-    setText(text: React.ReactNode) {
+    setText(text: string) {
         this.value = text;
     }
 
