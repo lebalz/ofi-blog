@@ -45,24 +45,24 @@ export const useDocument = (
         );
     }, [initialized]);
     /** load when api is online again */
-    React.useEffect(() => {
-        return reaction(
-            () => rootStore.msalStore.isApiOffline,
-            (isOffline) => {
-                if (initialized && !isOffline) {
-                    rootStore.documentStore.provideDocument(
-                        defaultData(),
-                        type,
-                        webKey,
-                        persist,
-                        readonly,
-                        true,
-                        versioned
-                    );
-                }
-            }
-        );
-    }, [initialized]);
+    // React.useEffect(() => {
+    //     return reaction(
+    //         () => rootStore.msalStore.isApiOffline,
+    //         (isOffline) => {
+    //             if (initialized && !isOffline) {
+    //                 rootStore.documentStore.provideDocument(
+    //                     defaultData(),
+    //                     type,
+    //                     webKey,
+    //                     persist,
+    //                     readonly,
+    //                     true,
+    //                     versioned
+    //                 );
+    //             }
+    //         }
+    //     );
+    // }, [initialized]);
 };
 
 
@@ -94,19 +94,19 @@ export const useTimedTopic = (
         );
     }, [initialized]);
     /** load when api is online again */
-    React.useEffect(() => {
-        return reaction(
-            () => rootStore.msalStore.isApiOffline,
-            (isOffline, prev) => {
-                if (initialized && !isOffline && prev) {
-                    rootStore.timedTopicStore.provideTopic(
-                        webKey,
-                        true
-                    );
-                }
-            }
-        );
-    }, [initialized]);
+    // React.useEffect(() => {
+    //     return reaction(
+    //         () => rootStore.msalStore.isApiOffline,
+    //         (isOffline, prev) => {
+    //             if (initialized && !isOffline && prev) {
+    //                 rootStore.timedTopicStore.provideTopic(
+    //                     webKey,
+    //                     true
+    //                 );
+    //             }
+    //         }
+    //     );
+    // }, [initialized]);
 };
 
 
@@ -138,19 +138,19 @@ export const useSolution = (
         );
     }, [initialized]);
     /** load when api is online again */
-    React.useEffect(() => {
-        return reaction(
-            () => rootStore.msalStore.isApiOffline,
-            (isOffline, prev) => {
-                if (initialized && !isOffline && prev) {
-                    rootStore.policyStore.provideAuthorization(
-                        webKey,
-                        true
-                    );
-                }
-            }
-        );
-    }, [initialized]);
+    // React.useEffect(() => {
+    //     return reaction(
+    //         () => rootStore.msalStore.isApiOffline,
+    //         (isOffline, prev) => {
+    //             if (initialized && !isOffline && prev) {
+    //                 rootStore.policyStore.provideAuthorization(
+    //                     webKey,
+    //                     true
+    //                 );
+    //             }
+    //         }
+    //     );
+    // }, [initialized]);
 };
 
 
@@ -177,15 +177,15 @@ export const useComments = (pageKey: string) => {
         );
     }, [initialized]);
     /** load when api is online again */
-    React.useEffect(() => {
-        return reaction(
-            () => rootStore.msalStore.isApiOffline,
-            (isOffline, prev) => {
-                if (initialized && !isOffline && prev) {
-                    rootStore.commentStore.loadComments(pageKey)
-                }
-            }
-        );
-    }, [initialized]);
+    // React.useEffect(() => {
+    //     return reaction(
+    //         () => rootStore.msalStore.isApiOffline,
+    //         (isOffline, prev) => {
+    //             if (initialized && !isOffline && prev) {
+    //                 rootStore.commentStore.loadComments(pageKey)
+    //             }
+    //         }
+    //     );
+    // }, [initialized]);
 };
 
