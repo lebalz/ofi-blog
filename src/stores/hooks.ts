@@ -152,3 +152,40 @@ export const useSolution = (
         );
     }, [initialized]);
 };
+
+
+export const useComments = (pageKey: string) => {
+    const [initialized, setInitialized] = React.useState(false);
+    /** initial load */
+    React.useEffect(() => {
+        rootStore.commentStore
+            .loadComments(pageKey)
+            .catch(() => 'ignore load errors here')
+            .finally(() => {
+                setInitialized(true);
+            });
+    }, []);
+    /** load when view changes */
+    React.useEffect(() => {
+        return reaction(
+            () => rootStore.userStore.currentView,
+            (currentView, prev) => {
+                if (initialized && currentView) {
+                    rootStore.commentStore.loadComments(pageKey)
+                }
+            }
+        );
+    }, [initialized]);
+    /** load when api is online again */
+    React.useEffect(() => {
+        return reaction(
+            () => rootStore.msalStore.isApiOffline,
+            (isOffline, prev) => {
+                if (initialized && !isOffline && prev) {
+                    rootStore.commentStore.loadComments(pageKey)
+                }
+            }
+        );
+    }, [initialized]);
+};
+

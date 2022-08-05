@@ -18,7 +18,12 @@ const reposition = (el: HTMLDivElement) => {
         const mdRight = md.getBoundingClientRect().right;
         const parentRight = el.parentElement.getBoundingClientRect().right;
         const offset = parentRight - mdRight - 10;
-        el.style.right = `${offset}px`;
+        if (el.classList.contains('table')) {
+            console.log('reposition table')
+            el.style.right = '2px';
+        } else {
+            el.style.right = `${offset}px`;
+        }
     }
 };
 
@@ -46,7 +51,7 @@ const Comment = observer((props: Props) => {
     return (
         <>
             <div
-                className={clsx(styles.commentIcon, model && styles.loaded, model?.open && styles.open)}
+                className={clsx(styles.commentIcon, props.type, model && styles.loaded, model?.open && styles.open)}
                 ref={ref}
                 onClick={() => {
                     if (model) {

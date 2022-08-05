@@ -44,6 +44,7 @@ const QuillEditor = observer((props: Props) => {
     const mounted = React.useRef(false);
     const { model } = props;
 
+    const [initialLoad, setInitialLoad] = React.useState(false);
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
     const [processingImage, setProcessingImage] = React.useState(false);
     const [showSavedNotification, setShowSavedNotification] = React.useState(false);
@@ -119,7 +120,8 @@ const QuillEditor = observer((props: Props) => {
                 key: 's',
                 metaKey: isMac,
                 ctrlKey: !isMac
-            }, () => model.saveService.saveNow())
+            }, () => model.saveService.saveNow());
+            setInitialLoad(true);
         }
         return () => {
             if (quill) {
@@ -231,6 +233,7 @@ const QuillEditor = observer((props: Props) => {
                     props.monospace && styles.monospace,
                     showQuillToolbar ? undefined : styles.disableToolbar
                 )}
+                style={{display: initialLoad ? undefined : 'none'}}
             >
                 <div ref={quillRef} />
                 {processingImage && <Loader caption="Bild Einfügen..." overlay />}
