@@ -17,7 +17,7 @@ export default class Comment implements ApiModel, iTextData {
     pageKey: string;
 
     @observable
-    nr: number;
+    _nr: number;
 
     @observable
     open: boolean;
@@ -58,7 +58,7 @@ export default class Comment implements ApiModel, iTextData {
         this.comment = comment.data.comment;
         this.open = comment.data.open;
         this.pageKey = comment.page_key;
-        this.nr = comment.locator.nr;
+        this._nr = comment.locator.nr;
         this.type = comment.locator.type;
         this.id = comment.id;
         this.userId = comment.user_id;
@@ -68,6 +68,20 @@ export default class Comment implements ApiModel, iTextData {
         makeObservable(this);
         /** order depends, initialize AFTER making this observable! */
         this.saveService = new SaveService(this, save);
+    }
+
+    @computed
+    get nr(): number {
+        const max = this.store.commentableNodes.get(this.pageKey).get(this.type);
+        return this._nr < max ? this._nr : max;
+    }
+
+    @action
+    setNr(nr: number) {
+        const max = this.store.commentableNodes.get(this.pageKey).get(this.type);
+        if (nr > 0 && nr < max) {
+            this._nr = nr;
+        }
     }
 
     @computed

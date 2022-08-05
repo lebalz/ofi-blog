@@ -6,7 +6,6 @@ import { useStore } from '@site/src/stores/hooks';
 import { LocatorType } from '@site/src/api/comment';
 import { observer } from 'mobx-react-lite';
 import QuillEditor from '../shared/QuillEditor';
-import { action } from 'mobx';
 
 interface Props {
     nr: number;
@@ -39,6 +38,10 @@ const Comment = observer((props: Props) => {
             return () => window.removeEventListener('resize', onResize);
         }
     }, [ref]);
+
+    React.useEffect(() => {
+        store.notifyPresence(sidebar_custom_props.id, props.type, props.nr);
+    }, [store])
 
     return (
         <>

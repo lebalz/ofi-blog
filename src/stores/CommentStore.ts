@@ -3,9 +3,6 @@ import { action, computed, makeObservable, observable, runInAction } from 'mobx'
 import { computedFn } from 'mobx-utils';
 import { getComments, postComment, Comment as CommentProps, Locator, CommentData, deleteComment } from '../api/comment';
 import { getComments as getCommentsAsAdmin } from '../api/admin';
-import ArrayAnswer from '../models/Answer/Array';
-import StringAnswer from '../models/Answer/String';
-import Text from '../models/Answer/Text';
 import { RootStore } from './stores';
 import Comment from '../models/Comment';
 import { LocatorType } from '../api/comment';
@@ -13,6 +10,7 @@ import { LocatorType } from '../api/comment';
 export class CommentStore {
     private readonly root: RootStore;
     comments = observable<Comment>([]);
+    commentableNodes = observable(new Map<string, Map<LocatorType, number>>());
     loadedPages = observable.set<string>();
     
     @observable 
@@ -53,6 +51,19 @@ export class CommentStore {
         },
         { keepAlive: false }
     );
+
+    @action
+    notifyPresence(pageKey: string, type: LocatorType, nr: number) {
+        if (!this.commentableNodes.has(pageKey)) {
+            this.commentableNodes.set(pageKey, new Map<LocatorType, number>);
+        }
+        if (!this.commentableNodes.get(pageKey).has(type)) {
+            this.commentableNodes.get(pageKey).set(type, 0);
+        }
+        if (nr > this.commentableNodes.get(pageKey).get(type)) {
+            this.commentableNodes.get(pageKey).set(type, nr);
+        }
+    }
 
     @action
     openComment(pageKey: string, type: LocatorType, nr: number) {
