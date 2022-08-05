@@ -3,6 +3,7 @@ import { AxiosPromise, CancelTokenSource } from 'axios';
 
 export interface CommentData {
     comment: string;
+    open: boolean;
 }
 
 export type LocatorType = 'paragraph' | 'table' | 'heading' | 'figure';

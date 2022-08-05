@@ -7,7 +7,7 @@ interface Props {
     model: iTextData;
     readonly?: boolean;
     monospace?: boolean;
-    default?: string | React.ReactNode;
+    default?: string;
     toolbar?: ToolbarOptions;
     toolbarAdd?: ToolbarOptions;
     placeholder?: string;
@@ -27,7 +27,7 @@ const QuillEditor = observer((props: Props) => {
     if (quill) {
         return <quill.default {...props} />
     }
-    return <div>Lade Editor</div>
+    return <div></div>
 
 });
 

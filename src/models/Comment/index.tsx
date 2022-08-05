@@ -42,14 +42,21 @@ export default class Comment implements ApiModel, iTextData {
 
     @observable
     loaded: boolean = true;
-
+    
     /** model specific props */
+    @observable
+    showMenu: boolean = false;
+
+    @observable
+    markDeleted: boolean = false;
+
 
     versionsCT: CancelTokenSource;
 
     constructor(comment: CommentProps) {
         this.store = rootStore.commentStore;
         this.comment = comment.data.comment;
+        this.open = comment.data.open;
         this.pageKey = comment.page_key;
         this.nr = comment.locator.nr;
         this.type = comment.locator.type;
@@ -66,6 +73,11 @@ export default class Comment implements ApiModel, iTextData {
     @computed
     get text(): string {
         return this.comment;
+    }
+
+    @action
+    setShowMenu(show: boolean) {
+        this.showMenu = show;
     }
 
     @action
@@ -103,6 +115,7 @@ export default class Comment implements ApiModel, iTextData {
     get data(): CommentData {
         return {
             comment: this.comment,
+            open: this.open
         };
     }
 
@@ -122,5 +135,10 @@ export default class Comment implements ApiModel, iTextData {
             created_at: this.createdAt.toISOString(),
             updated_at: this.updatedAt.toISOString(),
         };
+    }
+
+    @action
+    delete() {
+        this.store.remove(this);
     }
 }

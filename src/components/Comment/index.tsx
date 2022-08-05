@@ -6,6 +6,7 @@ import { useStore } from '@site/src/stores/hooks';
 import { LocatorType } from '@site/src/api/comment';
 import { observer } from 'mobx-react-lite';
 import QuillEditor from '../shared/QuillEditor';
+import { action } from 'mobx';
 
 interface Props {
     nr: number;
@@ -20,15 +21,16 @@ const reposition = (el: HTMLDivElement) => {
         const offset = parentRight - mdRight - 10;
         el.style.right = `${offset}px`;
     }
-}
+};
 
 const Comment = observer((props: Props) => {
     const store = useStore('commentStore');
     const { sidebar_custom_props } = useFrontMatter();
-    
+
     const ref = React.useRef<HTMLDivElement>(null);
+    const [promptDelete, setPromptDelete] = React.useState(false);
     const model = store.find(sidebar_custom_props.id, props.type, props.nr);
-    
+
     React.useEffect(() => {
         if (ref.current) {
             reposition(ref.current);
@@ -36,41 +38,76 @@ const Comment = observer((props: Props) => {
             window.addEventListener('resize', onResize);
             return () => window.removeEventListener('resize', onResize);
         }
-    }, [ref])
+    }, [ref]);
 
     return (
-        <div
-            className={clsx(styles.comment,  model && styles.loaded)}
-            ref={ref}
-            onClick={() => {
-                if (model) {
-                    model.toggleOpen();
-                } else {
-                    store.openComment(sidebar_custom_props.id, props.type, props.nr);
-                }
-            }}
-        >
-            <div className={styles.commentRef}>
-                <i className={clsx('mdi', 'mdi-comment-text-outline', styles.icon)}></i>
-                {
-                    model?.open && (
-                        <div 
-                            className={styles.quill}
-                            onClick={(e) => {
-                                e.preventDefault()
-                                e.stopPropagation()
-                            }}
-                        >
-                            <QuillEditor
-                                model={model}
-                                theme="bubble"
-                                placeholder=''
-                            />
-                        </div>
-                    )
-                }
+        <>
+            <div
+                className={clsx(styles.commentIcon, model && styles.loaded, model?.open && styles.open)}
+                ref={ref}
+                onClick={() => {
+                    if (model) {
+                        model.toggleOpen();
+                    } else {
+                        if (store.isLoggedIn) {
+                            store.openComment(sidebar_custom_props.id, props.type, props.nr);
+                        } else {
+                            window.alert('Melden Sie sich an, um Kommentare zu erfassen');
+                        }
+                    }
+                }}
+            >
+                <div 
+                    className={clsx(styles.controls, model?.showMenu && styles.active)}
+                    onMouseLeave={() => {
+                        model?.setShowMenu(false);
+                        setPromptDelete(false);
+                    }}
+                >
+                    {model?.showMenu && (
+                        <span className={clsx(styles.delete)}>
+                            <i
+                                className={clsx('mdi', 'mdi-trash-can', styles.icon)}
+                                style={{ color: 'var(--ifm-color-danger' }}
+                                data-toggle="dropdown"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    e.preventDefault();
+                                    setPromptDelete(true);
+                                }}
+                            ></i>
+                            {promptDelete && (
+                                <div 
+                                    className={clsx(styles.button, 'button', 'button--danger')}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        e.preventDefault();
+                                        model?.delete();
+                                    }}
+                                >
+                                    Ja, Löschen!
+                                </div>
+                            )}
+                        </span>
+                    )}
+                    <i
+                        onMouseEnter={() => model?.setShowMenu(true)}
+                        className={clsx('mdi', 'mdi-comment-text-outline', styles.icon)}
+                    ></i>
+                </div>
             </div>
-        </div>
+            {model?.open && (
+                <div
+                    className={clsx(styles.comment)}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }}
+                >
+                    <QuillEditor model={model} theme={'bubble'} placeholder="💬 ..." />
+                </div>
+            )}
+        </>
     );
 });
 

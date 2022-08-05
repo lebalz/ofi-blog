@@ -1,7 +1,7 @@
 import axios, { CancelTokenSource } from 'axios';
 import { action, computed, makeObservable, observable, runInAction } from 'mobx';
 import { computedFn } from 'mobx-utils';
-import { getComments, postComment, Comment as CommentProps, Locator, CommentData } from '../api/comment';
+import { getComments, postComment, Comment as CommentProps, Locator, CommentData, deleteComment } from '../api/comment';
 import { getComments as getCommentsAsAdmin } from '../api/admin';
 import ArrayAnswer from '../models/Answer/Array';
 import StringAnswer from '../models/Answer/String';
@@ -14,12 +14,18 @@ export class CommentStore {
     private readonly root: RootStore;
     comments = observable<Comment>([]);
     loadedPages = observable.set<string>();
-
-    @observable initialized: boolean = false;
+    
+    @observable 
+    initialized: boolean = false;
+    
+    @observable 
+    displayInline: boolean = false;
+    
     constructor(root: RootStore) {
         this.root = root;
         makeObservable(this);
     }
+
 
     @computed
     get viewedComments() {
@@ -27,7 +33,7 @@ export class CommentStore {
         if (!view) {
             return this.comments;
         }
-        return this.comments.filter((doc) => doc.userId === view.id || doc.userId < 0);
+        return this.comments.filter((doc) => doc.userId === view.id && !doc.markDeleted);
     }
 
     byPage = computedFn(
@@ -38,7 +44,7 @@ export class CommentStore {
     );
 
     isLoaded(pageKey: string): boolean {
-        return this.byPage(pageKey).length > 0;
+        return this.loadedPages.has(pageKey);
     }
 
     find = computedFn(
@@ -56,7 +62,7 @@ export class CommentStore {
                 return loaded.toggleOpen();
             }
             const ct = axios.CancelToken.source();
-            return this.apiCreateComment(pageKey, { comment: '' }, { type, nr }, ct).then(action((comment) => {
+            return this.apiCreateComment(pageKey, { comment: '', open: true }, { type, nr }, ct).then(action((comment) => {
                 if (comment) {
                     this.comments.push(new Comment(comment));
                 }
@@ -70,10 +76,9 @@ export class CommentStore {
     }
 
     @action
-    loadComments(pageKey: string, forceReload: boolean) {
-        const loadedModel = this.byPage(pageKey);
-        if (loadedModel.length > 0 && !forceReload) {
-            return Promise.reject('Nothin to load');
+    loadComments(pageKey: string, forceReload: boolean = false) {
+        if (this.isLoaded(pageKey) && !forceReload) {
+            return Promise.reject('Nothing to load');
         }
         this.loadedPages.add(pageKey);
         const ct = axios.CancelToken.source();
@@ -158,5 +163,30 @@ export class CommentStore {
                     return;
                 }
             });
+    }
+
+    @action
+    remove(comment: Comment) {
+        const ct = axios.CancelToken.source();
+        comment.markDeleted = true;
+        this.apiRemoveComment(comment.id, ct).then((res) => {
+            if (res.status === 200) {
+                this.comments.remove(comment);
+            }
+        }).catch(action(() => {
+            comment.markDeleted = false;
+        }))
+    }
+
+    @action
+    apiRemoveComment(id: number, cancelToken: CancelTokenSource) {
+        return this.root.msalStore
+            .withToken()
+            .then((ok) => {
+                if (ok) {
+                    return deleteComment(id, cancelToken);
+                }
+            });
+
     }
 }
