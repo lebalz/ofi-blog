@@ -47,7 +47,7 @@ const UserTable = observer(() => {
     }
     return (
         <div className={styles.users}>
-            <h3>Benutzer</h3>
+            <h3>Benutzer:in</h3>
             <input
                 type="text"
                 placeholder="Gruppe"

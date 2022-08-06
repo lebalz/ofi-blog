@@ -19,7 +19,6 @@ const reposition = (el: HTMLDivElement) => {
         const parentRight = el.parentElement.getBoundingClientRect().right;
         const offset = parentRight - mdRight - 10;
         if (el.classList.contains('table')) {
-            console.log('reposition table')
             el.style.right = '2px';
         } else {
             el.style.right = `${offset}px`;

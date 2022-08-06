@@ -101,12 +101,9 @@ export class CommentStore {
         return this.apiGetComments(pageKey, ct).then((comms) => {
             if (comms) {
                 runInAction(() => {
-                    this.byPage(pageKey).forEach((c) => {
-                        this.comments.remove(c);
-                    });
-                    comms.forEach((com) => {
-                        this.comments.push(new Comment(com));
-                    });
+                    const view = this.root.userStore.currentView;
+                    const existing = this.comments.filter((cm) => cm.pageKey !== pageKey && cm.userId !== view.id);
+                    this.comments.replace([...existing, ...comms.map((cm) => new Comment(cm))]);
                 });
                 return comms;
             }

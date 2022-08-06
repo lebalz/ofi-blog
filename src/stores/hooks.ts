@@ -158,9 +158,12 @@ export const useComments = (pageKey: string) => {
     const [initialized, setInitialized] = React.useState(false);
     /** initial load */
     React.useEffect(() => {
+        if (!rootStore.msalStore.loggedIn) {
+            return;
+        }
         rootStore.commentStore
             .loadComments(pageKey)
-            .catch(() => 'ignore load errors here')
+            .catch((e) => console.log(e))
             .finally(() => {
                 setInitialized(true);
             });

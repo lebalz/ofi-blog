@@ -32,7 +32,7 @@ const Login = observer(() => {
     const { account, loggedIn } = msalStore;
     const { current } = userStore;
     return (
-        <Layout description="OF Informatik Website by B. Hofer">
+        <Layout>
             <HomepageHeader />
             <main>
                 <div className={styles.loginPage}>
