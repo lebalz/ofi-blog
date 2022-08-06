@@ -44,6 +44,7 @@ const QuillEditor = observer((props: Props) => {
     const mounted = React.useRef(false);
     const { model } = props;
 
+    const ref = React.useRef<HTMLDivElement>(null);
     const [initialLoad, setInitialLoad] = React.useState(false);
     const [showQuillToolbar, setShowQuillToolbar] = React.useState(false);
     const [processingImage, setProcessingImage] = React.useState(false);
@@ -62,7 +63,7 @@ const QuillEditor = observer((props: Props) => {
     };
     const theme = props.theme || 'snow';
     const placeholder = props.placeholder || '✍️ Antwort...';
-    const { quill, quillRef, Quill } = useQuill({ theme, modules, formats: FORMATS, placeholder });
+    const { quill, quillRef, Quill } = useQuill({ theme, modules, formats: FORMATS, placeholder, bounds: ref?.current});
 
     React.useEffect(() => {
         mounted.current = true;
@@ -228,6 +229,7 @@ const QuillEditor = observer((props: Props) => {
         <div
             className={clsx(styles.quillEditor)}
             onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)}
+            ref={ref}
         >
             <div
                 className={clsx(
