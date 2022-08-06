@@ -47,10 +47,15 @@ export class CommentStore {
 
     find = computedFn(
         function (this: CommentStore, pageKey: string, type: LocatorType, nr: number) {
-            return this.byPage(pageKey).find((q) => q.nr === nr && q.type === type);
+            return this.byPage(pageKey).find((q) => q.displayNr === nr && q.type === type);
         },
         { keepAlive: false }
     );
+
+    @computed
+    get isMyView(): boolean {
+        return this.root.userStore.isMyView;
+    }
 
     @action
     notifyPresence(pageKey: string, type: LocatorType, nr: number) {
@@ -178,6 +183,9 @@ export class CommentStore {
 
     @action
     remove(comment: Comment) {
+        if (!this.isMyView) {
+            return;
+        }
         const ct = axios.CancelToken.source();
         comment.markDeleted = true;
         this.apiRemoveComment(comment.id, ct).then((res) => {

@@ -171,7 +171,7 @@ export const useComments = (pageKey: string) => {
             () => rootStore.userStore.currentView,
             (currentView, prev) => {
                 if (initialized && currentView) {
-                    rootStore.commentStore.loadComments(pageKey)
+                    rootStore.commentStore.loadComments(pageKey, true)
                 }
             }
         );

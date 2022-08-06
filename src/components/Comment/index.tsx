@@ -72,7 +72,7 @@ const Comment = observer((props: Props) => {
                         setPromptDelete(false);
                     }}
                 >
-                    {model?.showMenu && (
+                    {model?.showMenu && store.isMyView && (
                         <span className={clsx(styles.delete)}>
                             <i
                                 className={clsx('mdi', 'mdi-trash-can', styles.icon)}

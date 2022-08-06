@@ -2210,10 +2210,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@lebalz/remark-admonitions@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@lebalz/remark-admonitions/-/remark-admonitions-1.2.3.tgz#19a8307bea3589739bbf3c738947c54b2aeaa9c5"
-  integrity sha512-BoDd8SpcFQH8Kf2j2jeF2PCqp6RnPy3QuYxspXWkE1aetfKZYwNoV/UqVfwju1Z/xrdDAwsoV5w+IK/FfrHdlA==
+"@lebalz/remark-admonitions@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@lebalz/remark-admonitions/-/remark-admonitions-1.2.5.tgz#9fd1786f8c86b602efe6df0d359765040837de08"
+  integrity sha512-p3HTjSvvZ81Bm4eVE/Y8802Bly8M/5u6gZhZy1eU3PaQNdvJ7sw+hecEz1ShEG0OBSdXuDy1teYwSRIMweNeSw==
   dependencies:
     github-slugger "^1.4.0"
     rehype-parse "^7.0.0"
