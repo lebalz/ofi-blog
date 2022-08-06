@@ -4,7 +4,6 @@
 }
 
 .commentIcon {
-    z-index: 999;
     position: absolute;
     right: -10px;
     top: -2px;
@@ -55,7 +54,6 @@
 .comments {
     margin-top: calc(-0.5 * var(--ifm-spacing-vertical));
     margin-bottom: 0.8rem;
-    z-index: 999;
     .comment {
         margin-top: 0.2em;
         &:first-of-type {

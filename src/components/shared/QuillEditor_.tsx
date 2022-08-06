@@ -63,6 +63,7 @@ const QuillEditor = observer((props: Props) => {
     };
     const theme = props.theme || 'snow';
     const placeholder = props.placeholder || '✍️ Antwort...';
+    /* "bounds: ref.current" ensures the snow toolbar is shown correctly on top of the current selection */
     const { quill, quillRef, Quill } = useQuill({ theme, modules, formats: FORMATS, placeholder, bounds: ref?.current});
 
     React.useEffect(() => {
@@ -93,6 +94,28 @@ const QuillEditor = observer((props: Props) => {
             disposer();
         };
     }, [model]);
+
+    React.useEffect(() => {
+        if (ref.current) {
+            const onContext = (e: MouseEvent) => {
+                e.preventDefault();
+                if (props.theme === 'bubble') {
+                    try {
+                        (quill as any).theme.tooltip.edit();
+                        (quill as any).theme.tooltip.show();
+                    } catch (e) {
+                        console.log(e)
+                    }
+                }
+            }
+            ref.current.addEventListener('contextmenu', onContext);
+            return () => {
+                if (ref.current) {
+                    ref.current.removeEventListener('contextmenu', onContext);
+                }
+            }
+        }
+    }, [ref, quill])
 
     React.useEffect(() => {
         if (quill) {
