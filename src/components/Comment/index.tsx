@@ -4,8 +4,10 @@ import styles from './styles.module.scss';
 import useFrontMatter from '@theme/useFrontMatter';
 import { useStore } from '@site/src/stores/hooks';
 import { LocatorType } from '@site/src/api/comment';
+import { default as CommentModel } from '@site/src/models/Comment';
 import { observer } from 'mobx-react-lite';
 import QuillEditor from '../shared/QuillEditor';
+import { action } from 'mobx';
 
 interface Props {
     nr: number;
@@ -24,6 +26,17 @@ const reposition = (el: HTMLDivElement) => {
             el.style.right = `${offset}px`;
         }
     }
+};
+
+const setColor = (model: CommentModel | undefined, color: 'red' | 'orange' | 'green' | 'blue' | 'yellow') => {
+    if (!model) {
+        return undefined;
+    }
+    return action((e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+        e.preventDefault();
+        e.stopPropagation();
+        model.color = color;
+    });
 };
 
 const Comment = observer((props: Props) => {
@@ -69,6 +82,7 @@ const Comment = observer((props: Props) => {
                         }
                     }
                 }}
+                style={{ ['--comment-color']: models[0]?.cssColor } as React.CSSProperties}
             >
                 <div
                     className={clsx(styles.controls, models[0]?.showMenu && styles.active)}
@@ -78,30 +92,82 @@ const Comment = observer((props: Props) => {
                     }}
                 >
                     {models[0]?.showMenu && store.isMyView && (
-                        <span className={clsx(styles.delete)}>
-                            <i
-                                className={clsx('mdi', 'mdi-trash-can', styles.icon)}
-                                style={{ color: 'var(--ifm-color-danger' }}
-                                data-toggle="dropdown"
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    e.preventDefault();
-                                    setPromptDelete(true);
-                                }}
-                            ></i>
-                            {promptDelete && (
-                                <div
-                                    className={clsx(styles.button, 'button', 'button--danger')}
+                        <>
+                            <span className={clsx(styles.delete)}>
+                                <i
+                                    className={clsx('mdi', 'mdi-trash-can', styles.icon)}
+                                    style={{ color: 'var(--ifm-color-danger' }}
+                                    data-toggle="dropdown"
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         e.preventDefault();
-                                        models[models.length - 1].delete();
+                                        setPromptDelete(true);
                                     }}
-                                >
-                                    Ja, Löschen!
+                                ></i>
+                                {promptDelete && (
+                                    <div
+                                        className={clsx(styles.button, 'button', 'button--danger')}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            e.preventDefault();
+                                            models[models.length - 1].delete();
+                                        }}
+                                    >
+                                        Ja, Löschen!
+                                    </div>
+                                )}
+                            </span>
+                            <div className={clsx(styles.colorPicker, 'dropdown', 'dropdown--hoverable')}>
+                                <span className={clsx(styles.color)}></span>
+                                <div className={'dropdown__menu'}>
+                                    <span
+                                        onClick={setColor(models[0], 'red')}
+                                        className={clsx(
+                                            'dropdown__link',
+                                            styles.color,
+                                            styles.red,
+                                            models[0]?.color === 'red' && styles.active
+                                        )}
+                                    ></span>
+                                    <span
+                                        onClick={setColor(models[0], 'orange')}
+                                        className={clsx(
+                                            'dropdown__link',
+                                            styles.color,
+                                            styles.orange,
+                                            models[0]?.color === 'orange' && styles.active
+                                        )}
+                                    ></span>
+                                    <span
+                                        onClick={setColor(models[0], 'green')}
+                                        className={clsx(
+                                            'dropdown__link',
+                                            styles.color,
+                                            styles.green,
+                                            models[0]?.color === 'green' && styles.active
+                                        )}
+                                    ></span>
+                                    <span
+                                        onClick={setColor(models[0], 'blue')}
+                                        className={clsx(
+                                            'dropdown__link',
+                                            styles.color,
+                                            styles.blue,
+                                            models[0]?.color === 'blue' && styles.active
+                                        )}
+                                    ></span>
+                                    <span
+                                        onClick={setColor(models[0], 'yellow')}
+                                        className={clsx(
+                                            'dropdown__link',
+                                            styles.color,
+                                            styles.yellow,
+                                            models[0]?.color === 'yellow' && styles.active
+                                        )}
+                                    ></span>
                                 </div>
-                            )}
-                        </span>
+                            </div>
+                        </>
                     )}
                     <i
                         onMouseEnter={() => models[0]?.setShowMenu(true)}
@@ -110,7 +176,10 @@ const Comment = observer((props: Props) => {
                 </div>
             </div>
             {models[0]?.open && (
-                <div className={styles.comments}>
+                <div
+                    className={styles.comments}
+                    style={{ ['--comment-color']: models[0]?.cssColor } as React.CSSProperties}
+                >
                     {models.map((m, idx) => {
                         return (
                             <div

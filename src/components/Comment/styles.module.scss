@@ -1,7 +1,9 @@
 :global .commentable {
     position: relative;
+    --comment-color: #3578e5;
     // border: 1px dashed silver;
 }
+
 
 .commentIcon {
     position: absolute;
@@ -26,7 +28,7 @@
 
     &.loaded {
         opacity: 1;
-        color: #3578e5;
+        color: var(--comment-color);
     }
 
     .controls {
@@ -41,6 +43,42 @@
                 right: 0px;
                 transform: translateY(70%);
                 z-index: 999;
+            }
+        }
+        .colorPicker {
+            .color {
+                background: var(--comment-color);
+                border: 2px solid var(--ifm-color-secondary);
+                border-radius: var(--ifm-global-radius);
+                width: 22px;
+                height: 22px;
+                margin-top: auto;
+                margin-bottom: auto;
+                &.red {
+                    background: #fa383e;
+                }
+                &.orange {
+                    background: #ffba00;
+                }
+                &.green {
+                    background: #00a400;
+                }
+                &.yellow {
+                    background: #fff700;
+                }
+                &.blue {
+                    background: #3578e5;
+                }
+                &.active,
+                &:hover {
+                    border-color: var(--ifm-color-primary)
+                }
+            }
+            :global .dropdown__menu {
+                min-width: 2px;
+                display: flex;
+                right: 0;
+                left: unset;
             }
         }
         &.active {
@@ -61,7 +99,7 @@
         }
         :global .quill-editor-container {
             // background: rgba(152, 201, 237, 0.77);
-            border-color: #3578e5;
+            border-color: var(--comment-color);
         }
     }
 }

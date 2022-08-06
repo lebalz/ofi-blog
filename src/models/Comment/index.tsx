@@ -6,6 +6,14 @@ import { CancelTokenSource } from "axios";
 import { action, computed, makeObservable, observable } from "mobx";
 import SaveService, { ApiModel } from "../SaveService";
 
+const COLOR_MAPPING = {
+    red: '#fa383e',
+    orange: '#ffba00',
+    green: '#00a400',
+    yellow: '#fff700',
+    blue: '#3578e5'
+};
+
 const save = (model: Comment, cancelToken: CancelTokenSource) => {
     return putComment(model.id, model.data, model.locator, cancelToken);
 };
@@ -21,6 +29,9 @@ export default class Comment implements ApiModel, iTextData {
 
     @observable
     open: boolean;
+
+    @observable
+    color: 'red' | 'orange' | 'green' | 'blue' | 'yellow';
 
     @observable
     type: LocatorType;
@@ -57,6 +68,7 @@ export default class Comment implements ApiModel, iTextData {
         this.store = rootStore.commentStore;
         this.comment = comment.data.comment;
         this.open = comment.data.open;
+        this.color = comment.data.color || 'blue';
         this.pageKey = comment.page_key;
         this.nr = comment.locator.nr;
         this.type = comment.locator.type;
@@ -87,6 +99,11 @@ export default class Comment implements ApiModel, iTextData {
     @computed
     get text(): string {
         return this.comment;
+    }
+
+    @computed
+    get cssColor(): string {
+        return COLOR_MAPPING[this.color];
     }
 
     @action
@@ -129,13 +146,9 @@ export default class Comment implements ApiModel, iTextData {
     get data(): CommentData {
         return {
             comment: this.comment,
-            open: this.open
+            open: this.open,
+            color: this.color
         };
-    }
-
-    @action
-    setData(data: CommentData) {
-        this.comment = data.comment;
     }
 
     @computed

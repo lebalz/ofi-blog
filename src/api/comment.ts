@@ -4,6 +4,7 @@ import { AxiosPromise, CancelTokenSource } from 'axios';
 export interface CommentData {
     comment: string;
     open: boolean;
+    color?: 'red' | 'orange' | 'green' | 'blue' | 'yellow';
 }
 
 export type LocatorType = 'paragraph' | 'table' | 'heading' | 'figure';
