@@ -77,7 +77,6 @@
     "rehype-katex": "4",
     "remark-deflist-simple": "^1.0.0",
     "remark-details-simple": "^1.0.1",
-    "remark-docusaurus-tabs": "^0.1.0",
     "remark-kbd-simple": "^1.0.1",
     "remark-math": "3",
     "remark-mdi": "^1.0.3",

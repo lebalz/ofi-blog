@@ -8,9 +8,18 @@ sidebar_custom_props:
 import Table from "@site/src/components/Table";
 import {SortTimeTableByDate} from '@site/src/helpers/time';
 import hs2022 from "./26e_HS2022.json"
+import hk2022 from "./26e-HK_HS2022.json"
 
 # 26e Informatik
 
+<Tabs
+    defaultValue="theorie"
+    values={[
+      {label: 'Einzellektion', value: 'theorie'},
+      {label: 'Praktikum', value: 'hk'}
+    ]}
+>
+<TabItem value="theorie">
 <Table
   header={["Datum", "Thema", "Inhalt"]}
   compact
@@ -18,3 +27,16 @@ import hs2022 from "./26e_HS2022.json"
   rows={hs2022}
   order={SortTimeTableByDate}
 />
+
+</TabItem>
+
+<TabItem value="hk">
+<Table
+  header={["Datum", "Halbklasse", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={hk2022}
+  order={SortTimeTableByDate}
+/>
+</TabItem>
+</Tabs>

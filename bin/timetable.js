@@ -34,7 +34,7 @@ const CLASS_EVENTS = {
         [49]: {desc: 'Kantonaler Fachschaftstag', type: 'holiday', date: '06.12.2022'},
     },
     ['26e']: {
-        [49]: {desc: 'Kantonaler Fachschaftstag', type: 'holiday', date: '06.12.2022'},
+        // [49]: {desc: 'Kantonaler Fachschaftstag', type: 'holiday', daxte: '06.12.2022'},
     },
     // ['24L']: {
     //     [23]: { desc: 'Pfingsten', type: 'holiday'}
@@ -88,6 +88,34 @@ const SCHEDULE_GYM1_HS = [
     ["Codes und Daten","Zahlensysteme"],
 ]
 
+const SCHEDULE_GYM1_PRAKTIKUM = [
+    ["Programmieren 1", "Algorithmen & RoboZZle"],
+    ["Programmieren 1", "Algorithmen & Einstieg Turtlegrafik"],
+    ["Programmieren 1", "Wiederholte Ausführung"],
+    ["Programmieren 1", "Unterprogramme"],
+    ["Programmieren 1", "Parameter"],
+    ["Programmieren 1", "Variablen, Eingabe & Ausgabe"],
+    ["Programmieren 1", "Variablen, Eingabe & Ausgabe"],
+    ["Programmieren 1", "Verzweigungen"],
+    ["Programmieren 1", "Mini Projekt"],
+    ["Programmieren 1", "Mini Projekt"],
+]
+
+/**
+ * 
+ * @param {string[][]} schedule 
+ */
+const prepareHK = (schedule) => {
+    const newSchedule = []
+    const HK = ['A', 'B']
+    schedule.forEach((data) => {
+        HK.forEach((hk) => {
+            newSchedule.push([hk, ...data])
+        })
+    })
+    return newSchedule;
+}
+
 const SCHEDULE_GYM2_HS = [
     ["Netzwerke","Schichtenmodell, TCP/IP"],
     ["Netzwerke","Codierung, IP-Adresse"],
@@ -132,27 +160,36 @@ const SCHEDULE_GYM2_FS = [
     ["🚧",""]
 ]
 
-const SCHEDULE = SCHEDULE_GYM2_HS;
+// const SCHEDULE = SCHEDULE_GYM1_HS;
+const SCHEDULE = prepareHK(SCHEDULE_GYM1_PRAKTIKUM);
 
-Array('25h').forEach((klasse) =>{
+Array('26e-HK').forEach((klasse) =>{
     const cells = [];
     let subjectNr = 0
+    const klass = klasse.split('-')[0];
+    const colSize = SCHEDULE[0].length + 1;
+    console.log(colSize)
     Array(33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 0, 1, 2, 3, 4, 5).forEach((weekNr) => {
         const date = moment().day(DAYS[CLASS_DAY[klasse]]).year(YEAR + (weekNr < 30 ? 1 : 0)).week(weekNr + 1).format('DD.MM.YYYY');
         if (EVENTS[date]) {
             cells.push({ cells: [date, EVENTS[date].desc, ''], type: EVENTS[date].type });
         } else if (EVENTS[weekNr]) {
             cells.push({ cells: [date, EVENTS[weekNr].desc, ''], type: EVENTS[weekNr].type });
-        } else if (CLASS_EVENTS[klasse][date]) {
-            cells.push({ cells: [date, CLASS_EVENTS[klasse][date].desc, ''], type: CLASS_EVENTS[klasse][date].type });
-        } else if (CLASS_EVENTS[klasse][weekNr]) {
-            cells.push({ cells: [date, CLASS_EVENTS[klasse][weekNr].desc, ''], type: CLASS_EVENTS[klasse][weekNr].type });
+        } else if (CLASS_EVENTS[klass][date]) {
+            cells.push({ cells: [date, CLASS_EVENTS[klass][date].desc, ''], type: CLASS_EVENTS[klass][date].type });
+        } else if (CLASS_EVENTS[klass][weekNr]) {
+            cells.push({ cells: [date, CLASS_EVENTS[klass][weekNr].desc, ''], type: CLASS_EVENTS[klass][weekNr].type });
         } else if (SCHEDULE[subjectNr]) {
             cells.push({ cells: [date, ...SCHEDULE[subjectNr]], type: SCHEDULE[subjectNr][1].toLowerCase().includes('test') ? 'test' : undefined});
             subjectNr += 1;
         }
         if (SCHOOL_EVENTS[weekNr]) {
             cells.push({ cells: [SCHOOL_EVENTS[weekNr].date, SCHOOL_EVENTS[weekNr].desc, ''], type: SCHOOL_EVENTS[weekNr].type});
+        }
+    })
+    cells.forEach((row, idx) => {
+        while (row.cells.length < colSize) {
+            row.cells.push('')
         }
     })
     
@@ -168,5 +205,6 @@ Array('25h').forEach((klasse) =>{
         .replace(/\\"/g, '"')
         .replace(/""/g, '""');
     
-    fs.writeFileSync(`versioned_docs/version-${klasse}/${klasse}_${SEMESTER}${YEAR}.json`, prettyJson)
+    fs.writeFileSync(`versioned_docs/version-${klass}/${klasse}_${SEMESTER}${YEAR}.json`, prettyJson, 'utf-8');
+    // fs.writeFileSync(`./bin/${klasse}_${SEMESTER}${YEAR}.json`, prettyJson, 'utf8');
 })

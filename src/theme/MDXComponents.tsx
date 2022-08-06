@@ -7,6 +7,8 @@ import DefinitionList from '../components/DefinitionList';
 import Answer from '../components/Answer';
 import Solution from '../components/Solution';
 import Comment from '../components/Comment';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 export default {
   // Re-use the default mapping
@@ -16,5 +18,7 @@ export default {
   dl: DefinitionList,
   Answer: Answer,
   Solution: Solution,
-  Comment: Comment
+  Comment: Comment,
+  Tabs: Tabs,
+  TabItem: TabItem
 };

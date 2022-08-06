@@ -9758,13 +9758,6 @@ remark-details-simple@^1.0.1:
   dependencies:
     unist-util-visit "^2.0.3"
 
-remark-docusaurus-tabs@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/remark-docusaurus-tabs/-/remark-docusaurus-tabs-0.1.0.tgz#c839ac7fd429a5558e5f96a33db3e7ba689c390f"
-  integrity sha512-awDi0Dnb98FWDQDw5nuyHPa8oInOD4moYJhFB3b2uPn+QVQTg5pJOrO3+HNTyOF6AH16dRHzA4EKXlWq5B2QhA==
-  dependencies:
-    unist-util-visit "^2.0.3"
-
 remark-emoji@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/remark-emoji/-/remark-emoji-2.2.0.tgz#1c702090a1525da5b80e15a8f963ef2c8236cac7"
