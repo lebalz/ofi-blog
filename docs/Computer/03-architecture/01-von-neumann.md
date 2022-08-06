@@ -1,8 +1,9 @@
 ---
-title: 1. Von-Neumann-Architektur
 sidebar_custom_props:
   id: d149fbea-9849-4877-9be9-4f07ea8d2272
 ---
+
+# 1. Von-Neumann-Architektur
 
 # 1 Von-Neumann-Architektur
 

@@ -1,8 +1,9 @@
 ---
-title: Vignère-Chiffre
 sidebar_custom_props:
   id: fa2db39b-bea9-4c76-a037-4a5d0c6d1ffa
 ---
+
+# Vignère-Chiffre
 
 
 

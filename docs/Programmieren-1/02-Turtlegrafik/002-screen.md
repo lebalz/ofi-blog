@@ -1,8 +1,9 @@
 ---
-title: 2. Zeichnungsfläche
 sidebar_custom_props:
   id: 9cc3cd1b-5a5c-46e4-843c-6e1039328ccc
 ---
+
+# 2. Zeichnungsfläche
 
 # 2. Zeichnungsfläche - Screen
 

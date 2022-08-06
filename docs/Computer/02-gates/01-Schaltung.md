@@ -1,8 +1,9 @@
 ---
-title: 1. Schaltung
 sidebar_custom_props:
   id: e12ef768-c95a-4d1b-824c-36a4caf0573d
 ---
+
+# 1. Schaltung
 
 
 # 1. Schaltung

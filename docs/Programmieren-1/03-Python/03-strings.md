@@ -1,8 +1,9 @@
 ---
-title: Textverarbeitung
 sidebar_custom_props:
   id: b3872ad6-c78b-4672-ad8f-7d86d8156dba
 ---
+
+# Textverarbeitung
 
 import Hint from '@site/src/components/Solution/Hint'
 

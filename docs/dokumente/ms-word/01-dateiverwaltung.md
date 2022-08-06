@@ -1,8 +1,9 @@
 ---
-title: Dateiformat
 sidebar_custom_props:
   id: 9e986252-eb4a-4027-8b13-11bf6d582f8a
 ---
+
+# Dateiformat
 
 # Dateiformat
 

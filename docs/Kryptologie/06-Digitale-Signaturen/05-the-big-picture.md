@@ -1,8 +1,9 @@
 ---
-title: Zusammenfassung
 sidebar_custom_props:
   id: a0d65303-c171-434f-9872-400e093c55a1
 ---
+
+# Zusammenfassung
 
 # Zusammenfassung
 

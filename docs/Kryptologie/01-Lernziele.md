@@ -1,8 +1,9 @@
 ---
-title: Lernziele
 sidebar_custom_props:
   id: f22a9316-bdda-4ffb-9ec0-680ccfe3d92c
 ---
+
+# Lernziele
 
 # Lernziele
 

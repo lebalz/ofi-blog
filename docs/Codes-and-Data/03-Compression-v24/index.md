@@ -1,5 +1,4 @@
 ---
-title: Kompression
 description: >-
   Die Datenkompression ist ein Vorgang, bei dem die Menge digitaler Daten
   reduziert wird.
@@ -7,6 +6,8 @@ image: ./images/compression.png
 sidebar_custom_props:
   id: 43e0f069-6e08-475a-961b-3fee729fd95c
 ---
+
+# Kompression
 
 # Kompression
 

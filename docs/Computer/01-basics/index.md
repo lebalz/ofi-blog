@@ -1,8 +1,9 @@
 ---
-title: 1. Grundlagen
 sidebar_custom_props:
   id: bc7ae9c4-0a44-4983-b1cc-61a57423bf81
 ---
+
+# 1. Grundlagen
 
 # 1. Grundlagen
 

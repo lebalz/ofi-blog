@@ -1,9 +1,10 @@
 ---
-title: 2. Farbdarstellung
 label: 2. Farbdarstellung
 sidebar_custom_props:
   id: 5b942488-99ea-414b-91e7-13585f3fc031
 ---
+
+# 2. Farbdarstellung
 
 
 import RGB from "@site/src/components/VisualizationTools/ColorEncoding/RGB";

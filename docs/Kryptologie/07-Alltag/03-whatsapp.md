@@ -1,8 +1,9 @@
 ---
-title: WhatsApp-Verschlüsselung
 sidebar_custom_props:
   id: f6a91697-18fb-4379-84aa-b6c17bd20f80
 ---
+
+# WhatsApp-Verschlüsselung
 
 
 # WhatsApp-Verschlüsselung [^1]

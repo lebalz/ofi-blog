@@ -1,9 +1,10 @@
 ---
-title: 4. Übung
 label: 4. Übung
 sidebar_custom_props:
   id: 30043ba8-dd09-4c10-aeee-d4c119daadfe
 ---
+
+# 4. Übung
 
 
 # Rastergrafik praktisch [^1]

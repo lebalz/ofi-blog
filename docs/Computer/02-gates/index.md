@@ -1,8 +1,9 @@
 ---
-title: 2. Logische Gatter
 sidebar_custom_props:
   id: f0a3ba28-0de8-407f-8d3e-1dc87a03bcd6
 ---
+
+# 2. Logische Gatter
 
 
 # 2. Logische Gatter

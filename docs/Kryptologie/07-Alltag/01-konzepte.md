@@ -1,8 +1,9 @@
 ---
-title: Ziele der Kryptologie
 sidebar_custom_props:
   id: 39930e47-1aa0-4842-ba57-1c744ff47d4a
 ---
+
+# Ziele der Kryptologie
 
 # Ziele der Kryptologie [^1]
 Als Zusammenfassung betrachten wir die Ziele der Kryptographie im Überblick:

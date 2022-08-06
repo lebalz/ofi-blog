@@ -1,9 +1,10 @@
 ---
 sidebar_label: Basics
-title: Basics
 sidebar_custom_props:
   id: bf43eff5-6c74-47a3-be14-b131f89bc270
 ---
+
+# Basics
 import TypedText from '@site/src/components/VisualizationTools/TypedText'
 
 # Basics

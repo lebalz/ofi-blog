@@ -1,8 +1,9 @@
 ---
-title: Struktos
 sidebar_custom_props:
   id: f20bb7f5-4433-4cee-bad6-b169bbcd4e37
 ---
+
+# Struktos
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 

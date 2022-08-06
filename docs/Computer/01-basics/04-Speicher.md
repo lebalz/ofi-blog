@@ -1,8 +1,9 @@
 ---
-title: 4. Speicher
 sidebar_custom_props:
   id: 65078055-6f40-46c7-bc39-2a33ab1fcbdb
 ---
+
+# 4. Speicher
 
 
 # 4. Speicher

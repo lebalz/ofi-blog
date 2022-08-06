@@ -1,8 +1,9 @@
 ---
-title: ⭐️ Antike Verschlüsselung mit Python
 sidebar_custom_props:
   id: 0acd82f5-e6b6-44b1-b146-3fbbc3e1b88d
 ---
+
+# ⭐️ Antike Verschlüsselung mit Python
 
 # ⭐️ Antike Verschlüsselung mit Python
 

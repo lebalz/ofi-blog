@@ -1,8 +1,9 @@
 ---
-title: Suchmaschinen
 sidebar_custom_props:
   id: e73d1e2d-6a64-4573-bf4e-b97b4a483b9d
 ---
+
+# Suchmaschinen
 
 # Suchmaschinen [^1]
 

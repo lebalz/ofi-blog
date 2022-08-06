@@ -1,8 +1,9 @@
 ---
-title: Videos Editieren
 sidebar_custom_props:
   id: 4cc087b3-7cc8-478e-a947-841b63f0198e
 ---
+
+# Videos Editieren
 
 import OsTabs from '@site/src/components/OsTabs';
 import TabItem from '@theme/TabItem';

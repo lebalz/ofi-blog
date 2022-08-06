@@ -1,8 +1,9 @@
 ---
-title: Zertifizierungsstellen
 sidebar_custom_props:
   id: 2697eeca-a55f-4e22-8af6-6437297cc1cd
 ---
+
+# Zertifizierungsstellen
 
 
 # Zertifizierungsstellen [^1]

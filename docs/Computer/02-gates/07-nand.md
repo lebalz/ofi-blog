@@ -1,8 +1,9 @@
 ---
-title: 7. NAND-Gatter
 sidebar_custom_props:
   id: 4fd34def-f8a4-4a01-90db-c9870b24839d
 ---
+
+# 7. NAND-Gatter
 
 
 # 7. NAND-Gatter

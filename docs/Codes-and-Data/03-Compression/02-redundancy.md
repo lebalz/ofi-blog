@@ -1,9 +1,10 @@
 ---
-title: 2. Informationsgehalt
 label: 2. Informationsgehalt
 sidebar_custom_props:
   id: 325532a6-58c3-4ae9-bba2-5a071af83b09
 ---
+
+# 2. Informationsgehalt
 
 import Redundancy from "@site/src/components/VisualizationTools/Redundancy";
 

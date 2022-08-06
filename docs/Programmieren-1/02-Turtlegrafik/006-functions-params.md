@@ -1,8 +1,9 @@
 ---
-title: 6. Parameter
 sidebar_custom_props:
   id: 9b50ed64-97d3-44d9-bd4c-25fa495af9ae
 ---
+
+# 6. Parameter
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
 # 6. Parameter

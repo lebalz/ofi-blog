@@ -1,8 +1,9 @@
 ---
-title: XOR-Verschlüsselung
 sidebar_custom_props:
   id: 38b6e2ac-d4e7-42bd-b2b0-f757577f5a82
 ---
+
+# XOR-Verschlüsselung
 
 
 # XOR-Verschlüsselung [^1]

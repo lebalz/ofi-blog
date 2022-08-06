@@ -1,8 +1,9 @@
 ---
-title: Faltanleitung
 sidebar_custom_props:
   id: 6107d921-37dd-402a-915c-b1751f8df3f7
 ---
+
+# Faltanleitung
 
 # Faltanleitung [^1]
 

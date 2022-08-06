@@ -1,8 +1,9 @@
 ---
-title: Übung
 sidebar_custom_props:
   id: a0324f66-045f-4594-817b-9fba7042adf6
 ---
+
+# Übung
 
 
 :::aufgabe

@@ -1,8 +1,9 @@
 ---
-title: Kryptowährung
 sidebar_custom_props:
   id: eef47ba6-4d66-4671-9d23-4fd6557b0ee9
 ---
+
+# Kryptowährung
 
 # Kryptowärhung
 

@@ -1,9 +1,10 @@
 ---
-title: Black Box
 label: Black Box
 sidebar_custom_props:
   id: e5468044-9be9-4755-885b-1fca3027143a
 ---
+
+# Black Box
 
 import BlackBox from '@site/src/components/Math/BlackBox'
 

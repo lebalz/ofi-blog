@@ -1,8 +1,9 @@
 ---
-title: Nummerierung und Bilder
 sidebar_custom_props:
   id: becbfa0a-7fc3-4d06-8d11-471ae5c09f92
 ---
+
+# Nummerierung und Bilder
 
 # Nummerierung und Bilder
 

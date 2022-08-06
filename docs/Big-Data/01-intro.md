@@ -1,8 +1,9 @@
 ---
-title: Gesellschaft
 sidebar_custom_props:
   id: ccfd9222-2758-4c15-8a1e-e78e51b4b81d
 ---
+
+# Gesellschaft
 
 # Big Data [^1]
 

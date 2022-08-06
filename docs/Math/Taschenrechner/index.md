@@ -1,8 +1,9 @@
 ---
-title: Taschenrechner
 sidebar_custom_props:
   id: ad525a57-dcbe-4ecf-a668-37b40c0ab41c
 ---
+
+# Taschenrechner
 
 import TRTabs from '@site/src/components/TRTabs';
 import TabItem from '@theme/TabItem';

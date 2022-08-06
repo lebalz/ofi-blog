@@ -1,8 +1,9 @@
 ---
-title: Auftrag
 sidebar_custom_props:
   id: 24208ac8-6e69-4e78-9b85-7d9a93eb4c63
 ---
+
+# Auftrag
 
 
 # Video-Auftrag

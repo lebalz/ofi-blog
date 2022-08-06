@@ -1,8 +1,9 @@
 ---
-title: Krypto-Familie
 sidebar_custom_props:
   id: 7586ac8e-8474-4b49-b584-fced9505ddf1
 ---
+
+# Krypto-Familie
 
 
 # Krypto-Familie

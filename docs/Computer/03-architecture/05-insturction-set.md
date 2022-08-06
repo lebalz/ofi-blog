@@ -1,8 +1,9 @@
 ---
-title: 5. Befehlssatz
 sidebar_custom_props:
   id: ba8dcba2-b38b-4fe6-9005-c1f0c9e43332
 ---
+
+# 5. Befehlssatz
 
 
 

@@ -1,8 +1,9 @@
 ---
-title: Blockchiffre
 sidebar_custom_props:
   id: 6ebe4267-65ee-4376-affa-910edd23b5df
 ---
+
+# Blockchiffre
 
 
 # Blockchiffre [^1]

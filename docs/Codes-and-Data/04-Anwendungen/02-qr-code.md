@@ -1,9 +1,10 @@
 ---
-title: 2. QR Code
 label: 2. QR Code
 sidebar_custom_props:
   id: b794d920-060f-4c8f-a509-f6c5013506a3
 ---
+
+# 2. QR Code
 
 
 ![Was enthält der QR-Code? 🏴‍☠️☠️𝜋](images/qr-code/piraten.svg)

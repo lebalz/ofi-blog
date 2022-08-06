@@ -1,10 +1,11 @@
 ---
-title: Algebra 1
 sidebar_label: Algebra 1
 sidebar_position: 2
 sidebar_custom_props:
   id: 2cbfabc9-92f7-4652-bf68-0633724713ac
 ---
+
+# Algebra 1
 
 import TimedTopic from '@site/src/components/TimedTopic'
 import TopicStats from '@site/src/components/TimedTopic/TopicStats'

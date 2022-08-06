@@ -1,9 +1,10 @@
 ---
 label: 12. ⭐ Rekursion
-title: 12. ⭐ Rekursion
 sidebar_custom_props:
   id: c7de479a-a1cd-4a29-a6cd-4b31ea899283
 ---
+
+# 12. ⭐ Rekursion
 
 # 12. ⭐ Rekursion
 

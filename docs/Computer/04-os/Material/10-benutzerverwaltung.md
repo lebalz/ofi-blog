@@ -1,8 +1,9 @@
 ---
-title: Benutzerverwaltung
 sidebar_custom_props:
   id: a61ade2b-ff78-4b2a-ae2c-1092ed95e15a
 ---
+
+# Benutzerverwaltung
 
 # Benutzerverwaltung [^1]
 

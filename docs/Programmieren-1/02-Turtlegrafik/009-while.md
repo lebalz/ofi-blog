@@ -1,8 +1,9 @@
 ---
-title: 9. ⭐️ While
 sidebar_custom_props:
   id: 80be419e-835c-48e6-9aef-33cc91af5d3d
 ---
+
+# 9. ⭐️ While
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 

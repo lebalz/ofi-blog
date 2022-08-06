@@ -1,8 +1,9 @@
 ---
-title: 7. Textcodierung
 sidebar_custom_props:
   id: 60a2d33a-09ab-498d-afa3-d61b50543668
 ---
+
+# 7. Textcodierung
 
 import OsTabs from '@site/src/components/OsTabs'
 import TabItem from '@theme/TabItem';

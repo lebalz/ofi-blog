@@ -1,8 +1,9 @@
 ---
-title: 9. ⭐️ Speicher
 sidebar_custom_props:
   id: 3468a2fd-2ce7-4d22-8620-4baae570349c
 ---
+
+# 9. ⭐️ Speicher
 
 # 9. ⭐️ Speicher
 

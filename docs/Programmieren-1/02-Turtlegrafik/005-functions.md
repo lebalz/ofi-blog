@@ -1,8 +1,9 @@
 ---
-title: 5. Unterprogramme
 sidebar_custom_props:
   id: 28f1e765-b19f-4f82-8819-5dd4eec8cad5
 ---
+
+# 5. Unterprogramme
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
 # 5. Unterprogramme [^1]

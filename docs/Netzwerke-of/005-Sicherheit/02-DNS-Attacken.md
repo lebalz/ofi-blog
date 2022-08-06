@@ -1,8 +1,9 @@
 ---
-title: DNS Attacken
 sidebar_custom_props:
   id: 26091a57-64c7-473d-a9bc-7c6947294f06
 ---
+
+# DNS Attacken
 
 
 # ⭐️ DNS Attacken

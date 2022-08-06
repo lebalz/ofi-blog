@@ -1,8 +1,9 @@
 ---
-title: 8. Verzweigungen
 sidebar_custom_props:
   id: 3170b4a4-73fd-4460-9518-9bc9cab7c5a9
 ---
+
+# 8. Verzweigungen
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import PyAlert from '@site/docs/Programmieren-1/03-Python/_def-python-alert.md';

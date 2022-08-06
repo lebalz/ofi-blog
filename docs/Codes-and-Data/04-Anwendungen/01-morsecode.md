@@ -1,9 +1,10 @@
 ---
-title: 1. Morsecode
 label: 1. Morsecode
 sidebar_custom_props:
   id: 044f0a00-ba28-4e7b-99bd-96c788755bf0
 ---
+
+# 1. Morsecode
 
 
 > Der Morsecode (auch Morsealphabet oder Morsezeichen genannt) ist ein gebräuchlicher Code zur telegrafischen Übermittlung von Buchstaben, Ziffern und weiterer Zeichen. Er bestimmt das Zeitschema, nach dem ein diskretes Signal ein- und ausgeschaltet wird.[^1]

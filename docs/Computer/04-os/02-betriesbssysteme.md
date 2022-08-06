@@ -1,8 +1,9 @@
 ---
-title: 2. Betriebssysteme
 sidebar_custom_props:
   id: 7c96539f-6c3b-4cb6-94f8-42eb678a9257
 ---
+
+# 2. Betriebssysteme
 
 
 # 2. Betriebssysteme

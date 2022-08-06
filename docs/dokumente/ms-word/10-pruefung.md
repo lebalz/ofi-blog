@@ -1,8 +1,9 @@
 ---
-title: Prüfung
 sidebar_custom_props:
   id: 821b8715-d4f9-4e10-b74a-48ba871ce53a
 ---
+
+# Prüfung
 
 # Prüfung
 

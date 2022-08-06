@@ -1,9 +1,10 @@
 ---
-title: 1. Grundlagen
 label: 1. Grundlagen
 sidebar_custom_props:
   id: 72a98fbf-13fc-4bce-a4ba-93e98d933ac2
 ---
+
+# 1. Grundlagen
 
 import ColorDepth from "@site/src/components/VisualizationTools/ColorEncoding/ColorDepth";
 

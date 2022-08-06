@@ -1,9 +1,10 @@
 ---
-title: 3. Rastergrafik
 label: 3. Rastergrafik
 sidebar_custom_props:
   id: eff27b62-3577-43d1-a41d-56876eee40c7
 ---
+
+# 3. Rastergrafik
 
 # 3. Rastergrafik [^1]
 

@@ -1,8 +1,9 @@
 ---
-title: 2. Circuit Verse
 sidebar_custom_props:
   id: 9fb56ea9-eeff-4fd6-bf00-a9dac54afad5
 ---
+
+# 2. Circuit Verse
 
 
 # 2. CircuitVerse

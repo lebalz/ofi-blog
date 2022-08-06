@@ -1,8 +1,9 @@
 ---
-title: Caesar-Chiffre
 sidebar_custom_props:
   id: b4afdce9-5463-4a78-a0d4-cd6b137aaf04
 ---
+
+# Caesar-Chiffre
 
 import Caesar from "@site/src/components/VisualizationTools/Crypto/Caesar";
 

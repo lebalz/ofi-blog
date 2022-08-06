@@ -1,8 +1,9 @@
 ---
-title: Browserzertifikate
 sidebar_custom_props:
   id: be07c617-9637-4e0e-a1a4-fad0a3b334f2
 ---
+
+# Browserzertifikate
 
 
 # Browserzertifikate [^1]

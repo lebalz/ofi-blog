@@ -1,8 +1,9 @@
 ---
-title: Asymmetrie
 sidebar_custom_props:
   id: c0387f92-5a73-4431-b9ea-348fec74334b
 ---
+
+# Asymmetrie
 
 import PrimfactorizationTiming from "@site/src/components/VisualizationTools/Crypto/PrimfactorizationTiming";
 

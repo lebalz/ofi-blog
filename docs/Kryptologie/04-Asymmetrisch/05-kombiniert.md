@@ -1,8 +1,9 @@
 ---
-title: Kombinierte Verfahren
 sidebar_custom_props:
   id: 19d66cdc-04d7-4c11-8ccb-cf1b1de165fa
 ---
+
+# Kombinierte Verfahren
 
 
 # Kombinierte Verfahren [^1]
