@@ -33,21 +33,21 @@ export class CommentStore {
         }
         return this.comments.filter((doc) => doc.userId === view.id && !doc.markDeleted);
     }
+    isLoaded(pageKey: string): boolean {
+        return this.loadedPages.has(pageKey);
+    }
 
     byPage = computedFn(
-        function (this: CommentStore, pageKey: string) {
+        function (this: CommentStore, pageKey: string): Comment[] {
             return this.viewedComments.filter((comm) => comm.pageKey === pageKey);
         },
         { keepAlive: true }
     );
 
-    isLoaded(pageKey: string): boolean {
-        return this.loadedPages.has(pageKey);
-    }
 
     find = computedFn(
-        function (this: CommentStore, pageKey: string, type: LocatorType, nr: number) {
-            return this.byPage(pageKey).find((q) => q.displayNr === nr && q.type === type);
+        function (this: CommentStore, pageKey: string, type: LocatorType, nr: number): Comment[] {
+            return this.byPage(pageKey).filter((q) => q.displayNr === nr && q.type === type).sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
         },
         { keepAlive: false }
     );
@@ -74,8 +74,8 @@ export class CommentStore {
     openComment(pageKey: string, type: LocatorType, nr: number) {
         if (this.loadedPages.has(pageKey)) {
             const loaded = this.find(pageKey, type, nr);
-            if (loaded) {
-                return loaded.toggleOpen();
+            if (loaded.length > 0) {
+                return loaded.forEach(c => c.toggleOpen);
             }
             const ct = axios.CancelToken.source();
             return this.apiCreateComment(pageKey, { comment: '', open: true }, { type, nr }, ct).then(action((comment) => {

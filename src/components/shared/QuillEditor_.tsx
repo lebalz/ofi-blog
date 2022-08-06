@@ -218,7 +218,10 @@ const QuillEditor = observer((props: Props) => {
 
         Quill.register(ImageFormat, true);
         (window as any).Quill = Quill;
-        Quill.register('modules/imageResize', ImageResize);
+        /* Quill register method signature is => static register(path, target, overwrite = false)
+        Set overwrite to true to avoid warning
+        https://github.com/quilljs/quill/issues/2559#issuecomment-945605414 */
+        Quill.register('modules/imageResize', ImageResize, true);
     }
 
     return (

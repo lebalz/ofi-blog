@@ -27,7 +27,7 @@ export function getDocument<T>(uid: number, webKey: string, versions: boolean, c
     );
 }
 
-export function getComments<T>(uid: number, pageKey: string, cancelToken: CancelTokenSource): AxiosPromise<Comment[]> {
+export function getComments(uid: number, pageKey: string, cancelToken: CancelTokenSource): AxiosPromise<Comment[]> {
     return api.get(
         `admin/comments/${uid}/${pageKey}`,
         { cancelToken: cancelToken.token }

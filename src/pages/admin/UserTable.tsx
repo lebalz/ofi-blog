@@ -6,6 +6,7 @@ import styles from './styles.module.scss';
 import { runInAction } from 'mobx';
 import { faArrowDown, faArrowUp, faTimesCircle, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const SortArrow = observer(() => {
     const userStore = useStore('userStore');
@@ -18,7 +19,7 @@ const SortArrow = observer(() => {
                 });
             }}
         >
-            <FontAwesomeIcon icon={userStore.filterEmailOrder === 'asc' ? faArrowDown : faArrowUp} />
+            <FontAwesomeIcon icon={(userStore.filterEmailOrder === 'asc' ? faArrowDown : faArrowUp) as IconProp} />
         </span>
     );
 });
@@ -31,7 +32,7 @@ const GroupBadge = observer((props: GroupBadgeInterface) => {
     return (
         <span className={clsx(styles.group, 'badge', 'badge--primary')}>
             {props.name}
-            <FontAwesomeIcon icon={faTimesCircle} onClick={props.onRemove} />
+            <FontAwesomeIcon icon={faTimesCircle as IconProp} onClick={props.onRemove} />
         </span>
     );
 });
@@ -195,7 +196,7 @@ const UserTable = observer(() => {
                                             'button--sm'
                                         )}
                                     >
-                                        <FontAwesomeIcon icon={faPlus} />
+                                        <FontAwesomeIcon icon={faPlus as IconProp} />
                                     </button>
                                     <ul className="dropdown__menu">
                                         {Array.from(new Set([undefined, ...userStore.groups, ...policyStore.groups])).map((group, idx) => {

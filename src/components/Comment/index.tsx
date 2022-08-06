@@ -32,7 +32,8 @@ const Comment = observer((props: Props) => {
 
     const ref = React.useRef<HTMLDivElement>(null);
     const [promptDelete, setPromptDelete] = React.useState(false);
-    const model = store.find(sidebar_custom_props.id, props.type, props.nr);
+    const models = store.find(sidebar_custom_props.id, props.type, props.nr);
+    const hasModels = models.length > 0;
 
     React.useEffect(() => {
         if (ref.current) {
@@ -45,16 +46,21 @@ const Comment = observer((props: Props) => {
 
     React.useEffect(() => {
         store.notifyPresence(sidebar_custom_props.id, props.type, props.nr);
-    }, [store])
+    }, [store]);
 
     return (
         <>
             <div
-                className={clsx(styles.commentIcon, props.type, model && styles.loaded, model?.open && styles.open)}
+                className={clsx(
+                    styles.commentIcon,
+                    props.type,
+                    hasModels && styles.loaded,
+                    models[0]?.open && styles.open
+                )}
                 ref={ref}
                 onClick={() => {
-                    if (model) {
-                        model.toggleOpen();
+                    if (hasModels) {
+                        models.forEach((m) => m.toggleOpen());
                     } else {
                         if (store.isLoggedIn) {
                             store.openComment(sidebar_custom_props.id, props.type, props.nr);
@@ -64,14 +70,14 @@ const Comment = observer((props: Props) => {
                     }
                 }}
             >
-                <div 
-                    className={clsx(styles.controls, model?.showMenu && styles.active)}
+                <div
+                    className={clsx(styles.controls, models[0]?.showMenu && styles.active)}
                     onMouseLeave={() => {
-                        model?.setShowMenu(false);
+                        models[0]?.setShowMenu(false);
                         setPromptDelete(false);
                     }}
                 >
-                    {model?.showMenu && store.isMyView && (
+                    {models[0]?.showMenu && store.isMyView && (
                         <span className={clsx(styles.delete)}>
                             <i
                                 className={clsx('mdi', 'mdi-trash-can', styles.icon)}
@@ -84,12 +90,12 @@ const Comment = observer((props: Props) => {
                                 }}
                             ></i>
                             {promptDelete && (
-                                <div 
+                                <div
                                     className={clsx(styles.button, 'button', 'button--danger')}
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         e.preventDefault();
-                                        model?.delete();
+                                        models[models.length - 1].delete();
                                     }}
                                 >
                                     Ja, Löschen!
@@ -98,20 +104,27 @@ const Comment = observer((props: Props) => {
                         </span>
                     )}
                     <i
-                        onMouseEnter={() => model?.setShowMenu(true)}
+                        onMouseEnter={() => models[0]?.setShowMenu(true)}
                         className={clsx('mdi', 'mdi-comment-text-outline', styles.icon)}
                     ></i>
                 </div>
             </div>
-            {model?.open && (
-                <div
-                    className={clsx(styles.comment)}
-                    onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                    }}
-                >
-                    <QuillEditor model={model} theme={'bubble'} placeholder="💬 ..." />
+            {models[0]?.open && (
+                <div className={styles.comments}>
+                    {models.map((m, idx) => {
+                        return (
+                            <div
+                                key={idx}
+                                className={clsx(styles.comment)}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                }}
+                            >
+                                <QuillEditor model={m} theme={'bubble'} placeholder="💬 ..." />
+                            </div>
+                        );
+                    })}
                 </div>
             )}
         </>
