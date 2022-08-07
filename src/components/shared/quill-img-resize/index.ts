@@ -37,10 +37,10 @@ export default class ImageResize {
         this.removeModules();
 
         this.modules = [new Toolbar(this)];
-        if (matchMedia('(pointer:fine)').matches) {
+        // if (matchMedia('(pointer:fine)').matches) {
             this.modules.push(new Size(this));
             this.modules.push(new Resize(this));
-        }
+        // }
 
         this.modules.forEach(
             (module) => {

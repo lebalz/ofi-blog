@@ -50,7 +50,6 @@ const QuillEditor = observer((props: Props) => {
     const [processingImage, setProcessingImage] = React.useState(false);
     const [showSavedNotification, setShowSavedNotification] = React.useState(false);
 
-
     const modules = {
         toolbar: props.toolbar
             ? getToolbar(props.toolbar)
@@ -64,7 +63,13 @@ const QuillEditor = observer((props: Props) => {
     const theme = props.theme || 'snow';
     const placeholder = props.placeholder || '✍️ Antwort...';
     /* "bounds: ref.current" ensures the snow toolbar is shown correctly on top of the current selection */
-    const { quill, quillRef, Quill } = useQuill({ theme, modules, formats: FORMATS, placeholder, bounds: ref?.current});
+    const { quill, quillRef, Quill } = useQuill({
+        theme,
+        modules,
+        formats: FORMATS,
+        placeholder,
+        bounds: ref?.current,
+    });
 
     React.useEffect(() => {
         mounted.current = true;
@@ -104,18 +109,18 @@ const QuillEditor = observer((props: Props) => {
                         (quill as any).theme.tooltip.edit();
                         (quill as any).theme.tooltip.show();
                     } catch (e) {
-                        console.log(e)
+                        console.log(e);
                     }
                 }
-            }
+            };
             ref.current.addEventListener('contextmenu', onContext);
             return () => {
                 if (ref.current) {
                     ref.current.removeEventListener('contextmenu', onContext);
                 }
-            }
+            };
         }
-    }, [ref, quill])
+    }, [ref, quill]);
 
     React.useEffect(() => {
         if (quill) {
@@ -140,11 +145,14 @@ const QuillEditor = observer((props: Props) => {
             quill.root.addEventListener('paste', pasteHandler);
             quill.getModule('toolbar').container.addEventListener('mousedown', onQuillToolbarMouseDown);
             const isMac = navigator.userAgent.includes('Mac');
-            quill.keyboard.addBinding({
-                key: 's',
-                metaKey: isMac,
-                ctrlKey: !isMac
-            }, () => model.saveService.saveNow());
+            quill.keyboard.addBinding(
+                {
+                    key: 's',
+                    metaKey: isMac,
+                    ctrlKey: !isMac,
+                },
+                () => model.saveService.saveNow()
+            );
             setInitialLoad(true);
         }
         return () => {
@@ -207,10 +215,12 @@ const QuillEditor = observer((props: Props) => {
     };
 
     const dropHandler = (event: DragEvent) => {
+        setProcessingImage(true);
         dropImage(event).then(insertImage);
     };
 
     const pasteHandler = (event: ClipboardEvent) => {
+        setProcessingImage(true);
         pasteImage(event).then(insertImage);
     };
 
@@ -261,7 +271,7 @@ const QuillEditor = observer((props: Props) => {
                     props.monospace && styles.monospace,
                     showQuillToolbar ? undefined : styles.disableToolbar
                 )}
-                style={{display: initialLoad ? undefined : 'none'}}
+                style={{ display: initialLoad ? undefined : 'none' }}
             >
                 <div ref={quillRef} />
                 {processingImage && <Loader caption="Bild Einfügen..." overlay />}
@@ -270,7 +280,10 @@ const QuillEditor = observer((props: Props) => {
                         <FontAwesomeIcon icon={faSync as IconProp} style={{ color: '#3578e5' }} spin />
                     )}
                     {showSavedNotification && (
-                        <FontAwesomeIcon icon={faCheckCircle as IconProp} style={{ color: 'var(--ifm-color-success)' }} />
+                        <FontAwesomeIcon
+                            icon={faCheckCircle as IconProp}
+                            style={{ color: 'var(--ifm-color-success)' }}
+                        />
                     )}
                 </span>
             </div>
