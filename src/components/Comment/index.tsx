@@ -118,7 +118,7 @@ const Comment = observer((props: Props) => {
                                 )}
                             </span>
                             <div className={clsx(styles.colorPicker, 'dropdown', 'dropdown--hoverable')}>
-                                <span className={clsx(styles.color)}></span>
+                                <span className={clsx(styles.color)} onClick={(e) => {e.preventDefault();e.stopPropagation();}}></span>
                                 <div className={'dropdown__menu'}>
                                     <span
                                         onClick={setColor(models[0], 'red')}
@@ -183,7 +183,7 @@ const Comment = observer((props: Props) => {
                     {models.map((m, idx) => {
                         return (
                             <div
-                                key={idx}
+                                key={`${idx}@${m.initializedAt}`}
                                 className={clsx(styles.comment)}
                                 onClick={(e) => {
                                     e.preventDefault();

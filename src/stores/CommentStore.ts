@@ -98,19 +98,28 @@ export class CommentStore {
         }
         this.loadedPages.add(pageKey);
         const ct = axios.CancelToken.source();
-        return this.apiGetComments(pageKey, ct).then((comms) => {
+        return this.apiGetComments(pageKey, ct).then(action((comms) => {
             if (comms) {
-                runInAction(() => {
-                    const view = this.root.userStore.currentView;
-                    const existing = this.comments.filter((cm) => cm.pageKey !== pageKey && cm.userId !== view.id);
-                    this.comments.replace([...existing, ...comms.map((cm) => new Comment(cm))]);
+                const view = this.root.userStore.currentView;
+                const [toRemove, existing] = this.comments.reduce((partitioned, c) => {
+                    if (c.pageKey === pageKey && c.userId === view.id) {
+                        partitioned[0].push(c);
+                    } else {
+                        partitioned[1].push(c);
+                    }
+                    return partitioned;
+                }, [[],[]] as [Comment[], Comment[]]);
+                toRemove.forEach((c) => {
+                    c.cleanup();
                 });
+                // const existing = this.comments.filter((cm) => cm.pageKey !== pageKey && cm.userId !== view.id);
+                this.comments.replace([...existing, ...comms.map((cm) => new Comment(cm))]);
                 return comms;
             }
 
             this.loadedPages.delete(pageKey);
             return Promise.reject('Error during load');
-        });
+        }));
     }
 
     @computed
@@ -185,11 +194,12 @@ export class CommentStore {
         }
         const ct = axios.CancelToken.source();
         comment.markDeleted = true;
-        this.apiRemoveComment(comment.id, ct).then((res) => {
+        this.apiRemoveComment(comment.id, ct).then(action((res) => {
             if (res.status === 200) {
+                comment.cleanup();
                 this.comments.remove(comment);
             }
-        }).catch(action(() => {
+        })).catch(action(() => {
             comment.markDeleted = false;
         }))
     }

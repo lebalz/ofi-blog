@@ -61,6 +61,8 @@ export default class Comment implements ApiModel, iTextData {
     @observable
     markDeleted: boolean = false;
 
+    initializedAt: number;
+
 
     versionsCT: CancelTokenSource;
 
@@ -77,6 +79,7 @@ export default class Comment implements ApiModel, iTextData {
         this.createdAt = new Date(comment.created_at);
         this.updatedAt = new Date(comment.updated_at);
         this.pristine = comment.data;
+        this.initializedAt = Date.now();
         makeObservable(this);
         /** order depends, initialize AFTER making this observable! */
         this.saveService = new SaveService(this, save);
@@ -137,7 +140,7 @@ export default class Comment implements ApiModel, iTextData {
     @computed
     get umami() {
         return {
-            event: `update-document-${this.type}`,
+            event: `update-comment-${this.type}`,
             message: this.pageKey,
         };
     }
@@ -167,5 +170,10 @@ export default class Comment implements ApiModel, iTextData {
     @action
     delete() {
         this.store.remove(this);
+    }
+
+    @action
+    cleanup() {
+        this.saveService.cleanup();
     }
 }
