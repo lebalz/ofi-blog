@@ -41,7 +41,7 @@ export default class Resize extends BaseModule {
         // create div element for resize handle
         const box = document.createElement('div');
 
-        // Star with the specified styles
+        // Start with the specified styles
         Object.assign(box.style, this.options.handleStyles);
         box.style.cursor = cursor;
 
@@ -67,19 +67,23 @@ export default class Resize extends BaseModule {
         // set the proper cursor everywhere
         this.setCursor(this.dragBox.style.cursor);
         // listen for movement and mouseup
-        document.addEventListener('mousemove', this.handleDrag, false);
-        document.addEventListener('mouseup', this.handleMouseup, false);
+        // document.addEventListener('mousemove', this.handleDrag, false);
+        document.addEventListener('pointermove', this.handleDrag, false);
+        // document.addEventListener('mouseup', this.handleMouseup, false);
+        document.addEventListener('pointerup', this.handleMouseup, false);
     };
 
     handleMouseup = () => {
         // reset cursor everywhere
         this.setCursor('');
         // stop listening for movement and mouseup
-        document.removeEventListener('mousemove', this.handleDrag);
-        document.removeEventListener('mouseup', this.handleMouseup);
+        // document.removeEventListener('mousemove', this.handleDrag);
+        document.removeEventListener('pointermove', this.handleDrag);
+        // document.removeEventListener('mouseup', this.handleMouseup);
+        document.removeEventListener('pointerup', this.handleMouseup);
     };
 
-    handleDrag = (evt) => {
+    handleDrag = (evt: PointerEvent) => {
         if (!this.img) {
             // image not set yet
             return;
