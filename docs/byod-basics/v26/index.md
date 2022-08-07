@@ -1,13 +1,10 @@
 ---
-sidebar_label: Basics
+sidebar_label: BYOD Basics
 sidebar_custom_props:
   id: bf43eff5-6c74-47a3-be14-b131f89bc270
 ---
 
-# Basics
 import TypedText from '@site/src/components/VisualizationTools/TypedText'
-
-# Basics
 
 <TypedText type="h1" strings={[
     '<span style="color: lime">B</span><span style="color: springgreen">Y</span><span style="color: aquamarine">O</span><span style="color: turquoise">D</span>',
