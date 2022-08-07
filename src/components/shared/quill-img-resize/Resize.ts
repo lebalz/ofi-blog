@@ -50,7 +50,7 @@ export default class Resize extends BaseModule {
         box.style.height = `${this.options.handleStyles.height}px`;
 
         // listen for mousedown on each box
-        box.addEventListener('mousedown', this.handleMousedown, false);
+        box.addEventListener('pointerdown', this.handleMousedown, false);
         // add drag handle to document
         this.overlay.appendChild(box);
         // keep track of drag handle
@@ -66,18 +66,21 @@ export default class Resize extends BaseModule {
         this.preDragWidth = this.img.width || this.img.naturalWidth;
         // set the proper cursor everywhere
         this.setCursor(this.dragBox.style.cursor);
+        
+        // disable default behavior of touch gestures on document root, s.t. pointermove gets not interrupted
+        document.body.style.touchAction = 'none';
         // listen for movement and mouseup
-        // document.addEventListener('mousemove', this.handleDrag, false);
         document.addEventListener('pointermove', this.handleDrag, false);
-        // document.addEventListener('mouseup', this.handleMouseup, false);
         document.addEventListener('pointerup', this.handleMouseup, false);
     };
 
     handleMouseup = () => {
+        // enable default behavior of touch gestures on document root
+        document.body.style.touchAction = 'auto';
         // reset cursor everywhere
         this.setCursor('');
         // stop listening for movement and mouseup
-        // document.removeEventListener('mousemove', this.handleDrag);
+
         document.removeEventListener('pointermove', this.handleDrag);
         // document.removeEventListener('mouseup', this.handleMouseup);
         document.removeEventListener('pointerup', this.handleMouseup);
