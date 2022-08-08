@@ -266,20 +266,22 @@ module.exports = {
                   const cache = {};
                   let init = true;
                   compiler.hooks.watchRun.tap("Frontmatter-Plugin", () => {
-                    if (process.env.NODE_ENV === 'development' && compiler.modifiedFiles && compiler.fileTimestamps) {
-
-                      // fs.appendFileSync('message.txt', '+1\n');
-                      compiler.modifiedFiles.forEach((f) => {
-                        if (f.endsWith('.md') && !cache[f] && !f.includes('/versioned_docs/')) {
-                          EnsurePageId(f);
-                          cache[f] = true;
-                        }
-                      });
-                      compiler.removedFiles((f) => {
-                        if (f.endsWith('.md')) {
-                          cache[f] = undefined
-                        }
-                      })
+                    if (process.env.NODE_ENV === 'development') {
+                      if (compiler.modifiedFiles) {
+                        compiler.modifiedFiles.forEach((f) => {
+                          if (f.endsWith('.md') && !cache[f] && !f.includes('/versioned_docs/')) {
+                            EnsurePageId(f);
+                            cache[f] = true;
+                          }
+                        });
+                      }
+                      if (compiler.removedFiles) {
+                        compiler.removedFiles.forEach((f) => {
+                          if (f.endsWith('.md')) {
+                            delete cache[f]
+                          }
+                        })
+                      }
                     }
                   });
                 },

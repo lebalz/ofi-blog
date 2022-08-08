@@ -32,16 +32,21 @@ files.forEach((file, idx) => {
     // if (idx !== 0) {
     //     return;
     // }
-    fm.data.sidebar_custom_props = {
-        ...(fm.data.sidebar_custom_props || {}),
-    }
-    if (!fm.data.sidebar_custom_props.id) {
-        fm.data.sidebar_custom_props.id = uuid.v4()
+    // fm.data.sidebar_custom_props = {
+    //     ...(fm.data.sidebar_custom_props || {}),
+    // }
+    // if (!fm.data.sidebar_custom_props.id) {
+    //     fm.data.sidebar_custom_props.id = uuid.v4()
+    // }
+    const title = fm.data.title;
+    if (title) {
+        const data = {...fm.data, title: undefined} 
+        delete data.title
+        fs.writeFileSync(
+            file,
+            matter.stringify(`\n# ${title}\n${fm.content}`, data),
+            {encoding: 'utf8'}
+        )
     }
 
-    fs.writeFileSync(
-        file,
-        matter.stringify(fm.content, fm.data),
-        {encoding: 'utf8'}
-    )
 })
