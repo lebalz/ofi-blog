@@ -264,13 +264,14 @@ module.exports = {
               {
                 apply: (compiler) => {
                   const cache = {};
-                  let init = true;
                   compiler.hooks.watchRun.tap("Frontmatter-Plugin", () => {
                     if (process.env.NODE_ENV === 'development') {
                       if (compiler.modifiedFiles) {
                         compiler.modifiedFiles.forEach((f) => {
                           if (f.endsWith('.md') && !cache[f] && !f.includes('/versioned_docs/')) {
-                            EnsurePageId(f);
+                            if (EnsurePageId(f)) {
+                              console.log('Added Frontmatter to', f);
+                            }
                             cache[f] = true;
                           }
                         });

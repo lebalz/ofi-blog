@@ -21,7 +21,9 @@ function ensurePageId(file) {
             matter.stringify(fm.content, fm.data),
             {encoding: 'utf8'}
         )
+        return true;
     }
+    return false;
 }
 
 module.exports = ensurePageId;
