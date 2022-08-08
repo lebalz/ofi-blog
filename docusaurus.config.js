@@ -151,10 +151,10 @@ module.exports = {
               banner: 'none'
             },
             '26e': {
-              banner: 'unreleased'
+              banner: 'none'
             },
             '26P': {
-              banner: 'unreleased'
+              banner: 'none'
             },
             '24ef': {
               banner: 'unreleased'
