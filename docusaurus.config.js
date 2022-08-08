@@ -1,5 +1,6 @@
 const BASE_URL = '/';
 
+const fs = require('fs');
 const path = require("path");
 const math = require('remark-math');
 const katex = require('rehype-katex');
@@ -15,6 +16,7 @@ const admonitions = require('@lebalz/remark-admonitions');
 const remarkLinks = require('./src/plugins/remark-links');
 const remarkComments = require('./src/plugins/remark-comments');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const EnsurePageId = require('./bin/ensure-page-id');
 
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -261,9 +263,23 @@ module.exports = {
             plugins: [
               {
                 apply: (compiler) => {
-                  compiler.hooks.beforeRun.tap("Frontmatter-Plugin", () => {
-                    if (process.env.NODE_ENV === 'development') {
-                      console.log("This code is executed before the compilation begins.");
+                  const cache = {};
+                  let init = true;
+                  compiler.hooks.watchRun.tap("Frontmatter-Plugin", () => {
+                    if (process.env.NODE_ENV === 'development' && compiler.modifiedFiles && compiler.fileTimestamps) {
+
+                      // fs.appendFileSync('message.txt', '+1\n');
+                      compiler.modifiedFiles.forEach((f) => {
+                        if (f.endsWith('.md') && !cache[f] && !f.includes('/versioned_docs/')) {
+                          EnsurePageId(f);
+                          cache[f] = true;
+                        }
+                      });
+                      compiler.removedFiles((f) => {
+                        if (f.endsWith('.md')) {
+                          cache[f] = undefined
+                        }
+                      })
                     }
                   });
                 },
