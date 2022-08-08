@@ -6,7 +6,9 @@ const plugin = (options) => {
       paragraph: 0,
       table: 0,
       heading: 0,
-      figure: 0
+      figure: 0,
+      deflist: 0,
+      detailsWrapper: 0
     }
     visit(
       root,

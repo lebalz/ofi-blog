@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # 1. Aufgaben eines Betriebssystems
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # 1. Aufgaben eines Betriebssystems
 

@@ -5,7 +5,6 @@ sidebar_custom_props:
 
 # Podcast
 import OsTabs from '@site/src/components/OsTabs';
-import TabItem from '@theme/TabItem';
 
 # Erstellen eines Podcast
 
@@ -52,7 +51,7 @@ Das Dateiformat `.M4A` enthält auch Audiodateien, die mit Audacity allerdings n
 
 
 <OsTabs>
-<TabItem value="win">
+<TabItem value="win10">
 
 Laden Sie ffmpeg [hier https://lame.buanzo.org/ffmpeg64audacity.php](https://lame.buanzo.org/ffmpeg64audacity.php) herunter und installieren Sie es (nicht den Link im Video verwenden!).
 

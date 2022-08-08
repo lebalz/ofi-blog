@@ -6,7 +6,6 @@ sidebar_custom_props:
 # 7. Textcodierung
 
 import OsTabs from '@site/src/components/OsTabs'
-import TabItem from '@theme/TabItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindows } from "@fortawesome/free-brands-svg-icons"
 import Hint from '@site/src/components/Solution/Hint'
@@ -21,7 +20,7 @@ In dieser praktischen Übung speichern Sie auf Ihrem Computer eine Textdatei und
 Die Editor ist eine App, in welcher man Textdateien erstellen und bearbeiten kann. Das kann man auch mit Word, dies ist jedoch umständlicher. Word-Dateien sind keine reinen Textdateien, sie enthalten auch andere Daten wie Formatierungen und Bilder.
 
 <OsTabs>
-<TabItem value="win">
+<TabItem value="win10">
 
 Starten Sie die _Editor_-App, indem Sie im Startmenü nach «editor» suchen:
 
@@ -45,7 +44,7 @@ Geben Sie einen kurzen Text ein. Dieser sollte nicht nur ASCII-Zeichen enthalten
 
 
 <OsTabs>
-<TabItem value="win">
+<TabItem value="win10">
 
 Emojis können unter Windows mit dem Tastenkürzel <FontAwesomeIcon icon={faWindows} />+`.` eingefügt werden.
 
@@ -61,7 +60,7 @@ Alternativ findet man unter [Emojipedia](https://emojipedia.org) viele weitere E
 
 
 <OsTabs>
-<TabItem value="win">
+<TabItem value="win10">
 
 ![](images/07-notepad-input.png)
 
@@ -80,7 +79,7 @@ Speichern Sie die Textdatei unter dem Namen **Unicode-Test.txt** indem Sie
 
 
 <OsTabs>
-<TabItem value="win">
+<TabItem value="win10">
 
 - die Tastenkombination [Ctrl]+[S] drücken oder
 - den Menüpunkt `Datei > Speichern` auswählen.

@@ -6,7 +6,6 @@ sidebar_custom_props:
 # Routing im Internet
 
 import Finding from "@site/src/components/Finding";
-import TabItem from '@theme/TabItem';
 import OsTabs from '@site/src/components/OsTabs';
 
 # Routing im Internet [^1]
@@ -128,7 +127,7 @@ Der Befehl `traceroute` (macOS) resp. `tracert` (Windows) kann diese Route nachv
 
 
 <OsTabs>
-<TabItem value="win">
+<TabItem value="win10">
 
 Öffnen Sie eine Eingabeaufforderung (cmd) und geben Sie nacheinander die folgenden drei Befehl ein:
 
@@ -164,7 +163,7 @@ Für die Kommunikation mit Geräten ausserhalb des eigenen Netzwerks müssen die
 ### Standardgateway ihres Laptops
 
 <OsTabs>
-<TabItem value="win">
+<TabItem value="win10">
 
 ```.sh title="In der Kommandozeile (cmd) eingeben"
 ipconfig

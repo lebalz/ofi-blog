@@ -5,7 +5,6 @@ sidebar_custom_props:
 
 # Projekt
 import OsTabs from '@site/src/components/OsTabs';
-import TabItem from '@theme/TabItem';
 
 
 # Projekt: Partnerpraktikum

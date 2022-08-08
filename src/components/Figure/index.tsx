@@ -21,17 +21,17 @@ export default function Figure(props: Props): JSX.Element {
   const opts = props.options;
   if (opts) {
     if ('size' in opts) {
-      opts.maxWidth = `min(90vw, ${defaultUnit(opts['size'])})`;
+      opts.maxWidth = `min(90vw, ${defaultUnit(opts['size'])}, 100%)`;
       opts.maxHeight = defaultUnit(opts['size']);
       delete opts['size'];
     }
     if (opts.height) {
-      opts.maxWidth = '90vw';
+      opts.maxWidth = 'min(90vw, 100%)';
       opts.height = defaultUnit(opts.height);
       delete opts.height;
     }
     if (opts.width) {
-      opts.maxWidth = `min(90vw, ${defaultUnit(opts.width)})`;
+      opts.maxWidth = `min(90vw, ${defaultUnit(opts.width)}, 100%)`;
       opts.width = defaultUnit(opts.width);
       delete opts.width;
     }

@@ -6,7 +6,6 @@ sidebar_custom_props:
 # Routing im Alltag
 
 import Finding from "@site/src/components/Finding";
-import TabItem from '@theme/TabItem';
 import OsTabs from '@site/src/components/OsTabs';
 
 # Routing im Alltag [^1]

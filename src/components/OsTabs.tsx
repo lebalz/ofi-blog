@@ -6,9 +6,10 @@ export default class OsTabs extends React.Component {
     return (
       <Tabs
         groupId="operating-systems"
-        defaultValue="win"
+        defaultValue="win10"
         values={[
-          { label: 'Windows', value: 'win' },
+          { label: 'Windows 11', value: 'win11' },
+          { label: 'Windows 10', value: 'win10' },
           { label: 'macOS', value: 'mac' },
         ]
         }>

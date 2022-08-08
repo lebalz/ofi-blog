@@ -5,9 +5,7 @@ sidebar_custom_props:
 
 # 3D Schlüsselanhänger
 
-import Tabs from '@theme/Tabs';
 import OsTabs from '@site/src/components/OsTabs'
-import TabItem from '@theme/TabItem';
 
 # QR-Code 3D-Drucken
 
@@ -151,7 +149,7 @@ Leider gibt es unterschiedliche Konventionen für die Erzeugung von 3D-Objektmod
 
 
 <OsTabs>
-<TabItem value="win">
+<TabItem value="win10">
 
 Die heruntergeladene Datei im [slicer](https://www.prusa3d.com/de/page/prusaslicer_424/) öffnen.
 

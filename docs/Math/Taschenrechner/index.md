@@ -6,7 +6,6 @@ sidebar_custom_props:
 # Taschenrechner
 
 import TRTabs from '@site/src/components/TRTabs';
-import TabItem from '@theme/TabItem';
 
 
 Erlaubte Taschenrechner

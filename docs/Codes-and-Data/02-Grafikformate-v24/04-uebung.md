@@ -7,7 +7,6 @@ sidebar_custom_props:
 # 4. Übung
 
 import OsTabs from '@site/src/components/OsTabs'
-import TabItem from '@theme/TabItem';
 
 
 # Rastergrafik praktisch
@@ -41,7 +40,7 @@ Das folgende Foto hat im Original eine Auflösung von `6016×4016` Pixel mit ein
 
 
 <OsTabs>
-  <TabItem value="win">
+  <TabItem value="win10">
 
 Im Foto App öffnen und als Kopie exportieren:
 

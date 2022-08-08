@@ -7,7 +7,7 @@ export interface CommentData {
     color?: 'red' | 'orange' | 'green' | 'blue' | 'yellow';
 }
 
-export type LocatorType = 'paragraph' | 'table' | 'heading' | 'figure';
+export type LocatorType = 'paragraph' | 'table' | 'heading' | 'figure' | 'detailsWrapper' | 'deflist';
 export interface Locator {
     type: LocatorType;
     nr: number;

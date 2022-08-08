@@ -445,3 +445,26 @@ i.mdi {
         font-size: 2rem;
     }
 }
+
+.markdown {
+    .footnotes {
+        li {
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media print {
+    
+.markdown {
+    .footnotes {
+        li {
+            .footnote-backref {
+                display: none;
+            }
+        }
+    }
+}
+}
