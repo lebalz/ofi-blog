@@ -3,11 +3,10 @@ sidebar_custom_props:
   id: 6504bb27-b4a9-4534-a0a1-571fd6cc066e
 ---
 
-# 3D Schlüsselanhänger
-
 import OsTabs from '@site/src/components/OsTabs'
+import ImageTabs from '@site/src/components/ImageTabs'
 
-# QR-Code 3D-Drucken
+# 3D Schlüsselanhänger
 
 Mit einem 3D-Drucker lassen sich dreidimensionale Objekte erzeugen. Dabei arbeiten alle gängigen Druckverfahren schichtweise - das Objekt wird aus mehreren Schichten zusammengesetzt, wobei eine einzelne Schicht zweidimensional auf die darunterliegende Schicht aufgetragen wird.
 
@@ -31,36 +30,30 @@ Um ein Objekt zu drucken, muss in einem ersten Schritt ein **3D-Modell** erstell
 
 Das Grundgerüst für den QR-Code kann direkt über die Webapplikation von https://printer.tools/qrcode2stl/ erzeugt werden.
 
-
-<Tabs
-  defaultValue="step-1"
-  values={[
-    {label: 'QR Code', value: 'step-1'},
-    {label: '3D Model', value: 'step-2'},
-    {label: 'Speichern', value: 'step-3'},
-  ]}>
-  <TabItem value="step-1">
+<blockquote>
+<ImageTabs getLabel={(idx) => ['QR Code', '3D Modell', 'Speichern'][idx]} highlighted={[]}>
 
 ![QR Code Options --max-width=min(100%,500px)](images/qr01.png)
 
-</TabItem>
-<TabItem value="step-2">
+<div>
 
 ![3D Model Options --max-width=min(100%,500px)](images/qr02.png)
 
 und das Modell generieren:
 
 ![--max-width=min(100%,150px)](images/qr03.png)
+</div>
 
-</TabItem>
-<TabItem value="step-3">
+<div>
 
 Die einzelnen Teile des Modells können als `.zip`-Ordner heruntergeladen werden. Dazu muss die Option **Separate Parts** aktiviert sein.
 
 ![STL Herunterladen --max-width=500px](images/qr04.png)
 
-</TabItem>
-</Tabs>
+</div>
+</ImageTabs>
+</blockquote>
+
 
 Der heruntergeladene `.zip`-Ordner enthält die einzelnen Teile des 3D-Modells, so auch den QR-Code selbst: `qrcode-1645205191753.stl`:
 
@@ -72,83 +65,56 @@ Der heruntergeladene `.zip`-Ordner enthält die einzelnen Teile des 3D-Modells, 
 Der [Prusa Slicer](https://www.prusa3d.com/de/page/prusaslicer_424/) wird für den 3D-Druck an der Schule verwendet. Laden Sie ihn herunter und installieren Sie ihn: https://www.prusa3d.com/de/page/prusaslicer_424/
 
 
-<Tabs
-  defaultValue="step-1"
-  values={[
-    {label: '1.', value: 'step-1'},
-    {label: '2.', value: 'step-2'},
-    {label: '⚠️ 3.', value: 'step-3'},
-    {label: '4.', value: 'step-4'},
-    {label: '5.', value: 'step-5'},
-    {label: '6.', value: 'step-6'},
-    {label: '7.', value: 'step-7'},
-    {label: '8.', value: 'step-8'},
-    {label: '9.', value: 'step-9'},
-    {label: '10.', value: 'step-10'},
-    {label: '11.', value: 'step-11'}
-  ]}>
-  <TabItem value="step-1">
+<blockquote>
+<ImageTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[2, 9, 10]}>
 
 ![Installieren](images/slicer-install-01.png)
 
-</TabItem>
-<TabItem value="step-2">
-
-Überspringen...
-![](images/slicer-install-03.png)
-</TabItem>
-<TabItem value="step-3">
+![Überspringen...](images/slicer-install-03.png)
+<div>
 
 Original Prusa i3 MK3S & MK3S MMU2S mit der Düse `0.4mm` auswählen. Alle anderen Drucker können abgewählt werden.
 ![Original Prusa i3 MK3S & MK3S MMU2S](images/slicer-install-04.png)
-</TabItem>
-<TabItem value="step-4">
+</div>
 
-Überspringen...
-![](images/slicer-install-05.png)
-</TabItem>
-<TabItem value="step-5">
+![Überspringen...](images/slicer-install-05.png)
 
-Überspringen...
-![](images/slicer-install-06.png)
-</TabItem>
-<TabItem value="step-6">
+![Überspringen...](images/slicer-install-06.png)
 
-Überspringen...
-![](images/slicer-install-07.png)
-</TabItem>
-<TabItem value="step-7">
+![Überspringen...](images/slicer-install-07.png)
 
-Überspringen...
 ![Standard-Einstellungen passen](images/slicer-install-08.png)
-</TabItem>
-<TabItem value="step-8">
 
 ![](images/slicer-install-09.png)
-</TabItem>
-<TabItem value="step-9">
 
 ![](images/slicer-install-10.png)
-</TabItem>
-<TabItem value="step-10">
+<div>
 
 Experten-Modus auswählen, damit für jede Farbe ein anderes Filament gewählt werden kann. 
 ![Experten-Modus](images/slicer-install-11.png)
-</TabItem>
-<TabItem value="step-11">
+</div>
+<div>
 
 Den richtigen Drucker auswählen und die Option des Mehrfarbendrucks auswählen. Zudem soll immer im "Draft"-Modus gedruckt werden.
 ![](images/slicer-install-12.png)
-</TabItem>
-</Tabs>
-
+</div>
+</ImageTabs>
+</blockquote>
 
 
 :::danger Offene Kanten
 Leider gibt es unterschiedliche Konventionen für die Erzeugung von 3D-Objektmodellen. Obwohl unser erzeugter QR-Code auf den ersten Blick gut aussieht, wurden bei der Erzeugung nicht alle Kanten miteinander verbunden, so dass einige Flächen im Modell nicht abgeschlossen sind. Dies kann automatisch behoben werden:
 
-
+<blockquote>
 <OsTabs>
+<TabItem value="win11">
+
+Die heruntergeladene Datei im [slicer](https://www.prusa3d.com/de/page/prusaslicer_424/) öffnen.
+
+Es wird ein Warn-Symbol angezeigt - durch **Doppelklicken** auf das Symbol können die Fehler korrigiert werden. 
+![Doppelklicken auf das Symbol](images/qr-fix-win.png)
+
+</TabItem>
 <TabItem value="win10">
 
 Die heruntergeladene Datei im [slicer](https://www.prusa3d.com/de/page/prusaslicer_424/) öffnen.
@@ -169,6 +135,7 @@ Dort kann die `.stl` Datei hochgeladen, repariert und wieder heruntergeladen wer
 
 </TabItem>
 </OsTabs>
+</blockquote>
 
 Das Dateiformat ändert sich durch die Reparatur zu `.3mf`. Um im nächsten Schritt das 3D-Modell selber anzupassen, muss das Dateiformat aber wieder auf `.stl` geändert werden. Dies gelingt mit dem [slicer](https://www.prusa3d.com/de/page/prusaslicer_424/), welcher  `.3mf` in `.stl` Dateien konvertieren kann:
 
@@ -180,6 +147,7 @@ Das Dateiformat ändert sich durch die Reparatur zu `.3mf`. Um im nächsten Schr
 
 Das geflickte Modell kann nun in Tinkercad weiter bearbeitet werden. Melden Sie sich bei Ihrer Klasse mit ihrem "Nickname" bestehend aus `vorname.nachname` an.
 
+<blockquote>
 <Tabs
   defaultValue="k24f"
   values={[
@@ -195,82 +163,74 @@ https://www.tinkercad.com/joinclass/1W8JWGIB7DWG
 https://www.tinkercad.com/joinclass/A6REDIBCKQFB
 </TabItem>
 </Tabs>
+</blockquote>
 
-
-
-<Tabs
-  defaultValue="step-1"
-  values={[
-    {label: '1.', value: 'step-1'},
-    {label: '2.', value: 'step-2'},
-    {label: '3.', value: 'step-3'},
-    {label: '4.', value: 'step-4'},
-    {label: '5.', value: 'step-5'},
-    {label: '6.', value: 'step-6'},
-    {label: '7.', value: 'step-7'},
-    {label: '8.', value: 'step-8'},
-    {label: '9.', value: 'step-9'},
-  ]}>
-  <TabItem value="step-1">
+<blockquote>
+<ImageTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[2, 9, 10]}>
+<div>
 
 Das im Slicer geflickte und zu `.stl` exportierte Modell kann nun in Tinkercad weiter bearbeitet werden. Dazu muss es **importiert** werden. Die Standardeinstellungen beim Importieren passen.
 
 ![Import](images/tinker-01.png)
-</TabItem>
-<TabItem value="step-2">
+</div>
+<div>
 
 Durch Klicken auf einen weissen Ecken können die Dimensionen eingegeben werden. `21x21 mm` sind eine gute Referenz.
 
 ![21x21 mm](images/tinker-02.png)
-</TabItem>
-<TabItem value="step-3">
+</div>
+<div>
 
 Auch die Höhe kann eingegeben werden. Der QR-Code soll minim höher sein als der umliegende Teil. Deshalb wird die Höhe auf `2.02` mm festgelegt.
 
 ![2.02 mm Höhe](images/tinker-02b.png)
-</TabItem>
-<TabItem value="step-4">
+</div>
+<div>
 
 Nun muss eine umgebende Form hinzugefügt werden. Dazu kann unter "Shape Generators" eine `Softbox` in die Arbeitsfläche gezogen werden.
 
 `25x30 mm` sind eine angemessene grösse.
 
 ![25x30 mm](images/tinker-03.png)
-</TabItem>
-<TabItem value="step-5">
+</div>
+<div>
 
 Die Höhe wird nun auf `2 mm` festgelegt, also `0.02 mm` weniger hoch als der QR-Code. Dadurch sollte der QR-Code von beiden Seiten her lesbar sein.
 
 ![2mm dicke](images/tinker-03b.png)
-</TabItem>
-<TabItem value="step-6">
+</div>
+<div>
 
 Nun wird noch der leere Teil grossflächig ausgefüllt mit einer soliden Box von `2 mm` Höhe ausgefüllt.
 
 ![](images/tinker-04.png)
-</TabItem>
-<TabItem value="step-7">
+</div>
+<div>
 
 Die Box positionieren...
 ![](images/tinker-04b.png)
-</TabItem>
-<TabItem value="step-8">
+</div>
+<div>
 
 Der Schlüsselanhänger braucht ein Loch - das Einfügen eines "negativen" Zylinders im oberen Teil ist genau das, was wir suchen. Im Beispiel werden `3.3x5 mm` verwendet.
 
 ![](images/tinker-05.png)
-</TabItem>
-<TabItem value="step-9">
+</div>
+<div>
 
-Alles exportieren. **Wichtig!!**: die Option `Include Eveything in the design` muss ausgewählt sein.
+Alles exportieren. 
+
+**Wichtig!!**: die Option `Include Eveything in the design` muss ausgewählt sein.
+
 
 :::danger QR-Code prüfen
 Überprüfen Sie mit einem QR-Codescanner, ob der QR-Code funktioniert. Evtl. müssen Sie Farben mit einem hohen Kontrast wählen.
 :::
 
 ![](images/tinker-06-export.png)
-</TabItem>
-</Tabs>
+</div>
+</ImageTabs>
+</blockquote>
 
 ## Druck vorbereiten im Slicer
 
