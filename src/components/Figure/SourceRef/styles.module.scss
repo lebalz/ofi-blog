@@ -6,6 +6,7 @@
     padding: 2px 4px;
     cursor: pointer;
     order: 999;
+    z-index: 999;
 
     &:hover {
         background-color: var(--ifm-color-info-lightest);

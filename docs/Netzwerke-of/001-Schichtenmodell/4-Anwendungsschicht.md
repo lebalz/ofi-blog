@@ -12,7 +12,7 @@ Auf der Anwendungsschicht geht es um Dinge, die den Benutzer des Systems interes
 ## Beispiel «Schule»
 Im Beispiel «Schule» sind dies Pulte, welche von einem Schulhaus ins andere transportiert werden sollen. Wie genau Verpackung und Transport organisiert sind, wird auf dieser Ebene ausgeblendet. Hier geht es nur um den eigentlich Inhalt – also darum, welche und wie viele Pulte verschickt werden sollen.
 
-![@](img/4-school-example.svg)
+![](img/4-school-example.svg)
 
 ## Internet
 Typische Anwendungen im Internet sind Webseiten, Web-Apps oder E-Mail.
@@ -23,7 +23,7 @@ Typische Anwendungen im Internet sind Webseiten, Web-Apps oder E-Mail.
 
 **IMAP**: Das Internet Message Access Protocol wird zum Abrufen und Organisieren des eigenen Postfachs verwendet – sprich, um mit dem E-Mail-Server zu kommunizieren, der die eigene E-Mail-Box gespeichert hat.
 
-:::info ⠀
+:::info
 Sie sehen, dass zum Senden und Empfangen von E-Mails zwei verschiedene Protokolle zum Einsatz kommen, was auf den ersten Blick erstaunen mag. Natürlich kommen die E-Mails beim Versenden über SMTP auch ohne IMAP an – aber nicht bei dem/der Empfänger:in, sondern nur in dessen/deren Postfach. Um dieses abzurufen ist das zweite Protokoll (IMAP) nötig.
 :::
 

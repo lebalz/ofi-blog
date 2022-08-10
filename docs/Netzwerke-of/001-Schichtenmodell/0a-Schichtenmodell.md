@@ -13,7 +13,7 @@ Viele komplexe Vorgänge und Konstruktionen können mit Hilfe eines sogenannten 
 
 Wir wollen die Vorteile des Schichtenmodell an Hand eines Beispiels versuchen zu verstehen:
 
-# Beispiel "Schule"
+## Beispiel "Schule"
 
 Die Schule Madretsch feiert 100-jähriges Jubiläum und braucht für ihr Fest zusätzliche Schulpulte. Wir möchten helfen und einige Pulte schicken.
 
@@ -82,17 +82,27 @@ Ohne Probleme liesse sich das obenstehende Beispiel verwenden, um andere Inhalte
 
 :::aufgabe Aufbau auf bestehendem
 Was könnte noch Übertragen werden, wobei die unteren Schichten verwendet werden?
+<Answer type="text" webKey="64c4cfae-45dd-4961-b127-3d77964bcf96" />
 :::
 
 ### Austauschbare Schichten
 Die Schichten können ausgetauscht werden, solange sie ihre Aufgabe erfüllen und die Schnittstelle zwischen der darüber- und der darunterliegenden Schicht erfüllt wird.
 
-- Die Post kann auch mit dem Flugzeug oder dem Zug transportiert werden. (Daten können Kabelgebunden oder per Funk übertragen werden)
-- Statt der Post kann man einen privaten Transportservice engagieren. (Swisscom- oder UPC-Anschluss fürs Internet zu Hause)
-- Statt des Hauswartes können Schüler*innen die Pulte auseinanderschrauben und wieder zusammensetzen.
+- Die Post kann auch mit dem Flugzeug oder dem Zug transportiert werden. 
+- Statt der Post kann man einen privaten Transportservice engagieren.
+- Statt des Hauswartes können auch Schüler:innen die Pulte auseinanderschrauben und wieder zusammensetzen.
 
 :::aufgabe Schichten austauschen
-Sehen Sie andere Optionen zum Austauschen einer Schicht?
+Suchen Sie in anderen Bereichen des Alltags Schichtenmodelle und finden Sie dort Austauschbare Schichten.
+
+<Answer type="text" webKey="0e1a8f90-44df-4c82-8e81-7b98a3bf09f1" />
+<Solution webKey="818dd047-4ae7-4bce-84b3-4b95c7655292">
+
+#### Beispiel Daten
+- Daten können Kabelgebunden oder per Funk übertragen werden.
+- Es kann zwischen verschiedenen Technologien für den Internetzugang gewählt werden: Glasfaser __FTTH__, Koaxialkabel (Kabelanschluss von UPC), Kupferkabel (Telefonanschluss).
+
+</Solution>
 :::
 
 ## Andere Schichtenmondelle
@@ -106,10 +116,5 @@ Sehen Sie andere Optionen zum Austauschen einer Schicht?
 
 Verschiedene Naturwissenschaften bauen aufeinander auf und bilden so eine Art Schichtenmodell, um die ungeheure Komplexität der Natur in den Griff zu bekommen. Somit kann man sich z.B. auf sehr verschiedenen Abstraktionsebenen mit dem Organismus «Schwan» auseinandersetzen (Körperbau? Verhalten? DNA?) und kann die jeweils anderen Ebenen grösstenteils ausblenden.
 
-### Weitere...
-
-:::aufgabe Schichtenmodelle finden
-Finden Sie weitere Schichtenmodelle?
-:::
 
 [^1]: Quelle: [mygymer.ch](https://informatik.mygymer.ch/g23c/008.rechnernetze-kommunikation/01.schichtenmodell.html#beispiel-%C2%ABpaketversand%C2%BB)

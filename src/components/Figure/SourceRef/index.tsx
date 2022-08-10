@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface Bib {
     author?: string;
@@ -41,7 +42,7 @@ const SourceRef = (props: Props) => {
                     )}
                     <a href={bib.source} target="_blank" className={styles.refItem}>
                         <span className={clsx('badge badge--secondary')}>
-                            <FontAwesomeIcon icon={faExternalLinkAlt} />
+                            <FontAwesomeIcon icon={faExternalLinkAlt as IconProp} />
                         </span>
                     </a>
                 </>

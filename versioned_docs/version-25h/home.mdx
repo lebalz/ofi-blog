@@ -21,6 +21,15 @@ import hs2022 from "./25h_HS2022.json"
 />
 
 :::details 1. Semester
+
+<Tabs
+    defaultValue="theorie"
+    values={[
+      {label: 'Einzellektion', value: 'theorie'},
+      {label: 'Praktikum', value: 'hk'}
+    ]}
+>
+<TabItem value="theorie">
 <Table
   header={["Datum", "Thema", "Inhalt"]}
   compact
@@ -54,7 +63,9 @@ import hs2022 from "./25h_HS2022.json"
   ]}
 />
 
-## Praktikum in Halbklassen
+</TabItem>
+
+<TabItem value="hk">
 
 <Table
   header={["Datum", "Halbklasse", "Thema", "Inhalt"]}
@@ -90,6 +101,9 @@ import hs2022 from "./25h_HS2022.json"
     { cells: ['24.01.2022', 'A', '🚧', ''] },
   ]}
 />
+
+</TabItem>
+</Tabs>
 
 :::
 

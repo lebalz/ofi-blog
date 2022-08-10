@@ -6,7 +6,7 @@ sidebar_custom_props:
 ---
 #  Schicht 1: Physikalische Schicht (Netzzugangsschicht) [^1]
 
-Auf der phyikalischen Schicht geht es um das konkrete Transportmittel (Velokurier, Lastwagen, ... resp. WLAN, LAN, Mobilfunk, ...). Auch hier werden Adressen benötigt, es sind weltweit eindeutige Adressen, die fix an das Gerät geknüpft sind.
+Auf der physikalischen Schicht geht es um das konkrete Transportmittel (Velokurier, Lastwagen, ... resp. WLAN, LAN, Mobilfunk, ...). Auch hier werden Adressen benötigt, es sind weltweit eindeutige Adressen, die fix an das Gerät geknüpft sind.
 
 ## Beispiel «Schule»
 Im Beispiel «Schule» müssen die Säcke, die die vielen Pakete enthalten, nun endlich transportiert werden. Dies übernehmen Speditionsangestellte, die die Säcke mit Hilfe von Lastwagen an den nächsten Zielort (z.B. in ein Paketzentrum oder an die Lieferadresse) bringen. Die Spedition kümmert sich nur um den aktuellen Transportabschnitt.
@@ -21,6 +21,6 @@ Wieso braucht es zwei Adressen, logische Adressen (Vermittlungsschicht) und phys
 
 ### ⭐ Weitere Informationen
 
-<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/ZhEf7e4kopM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+[@youtube](https://www.youtube-nocookie.com/embed/ZhEf7e4kopM)
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=network&p=783655)

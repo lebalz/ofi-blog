@@ -6,6 +6,7 @@ import type { WrapperProps } from '@docusaurus/types';
 import { useComments, useStore } from '@site/src/stores/hooks';
 import useFrontMatter from '@theme/useFrontMatter';
 import { observer } from 'mobx-react-lite';
+import styles from "./styles.module.scss";
 
 type Props = WrapperProps<typeof ContentType>;
 
@@ -15,9 +16,9 @@ const ContentWrapper = observer((props: Props): JSX.Element => {
     useComments(sidebar_custom_props.id);
 
     return (
-        <>
+        <div className={styles.content}>
             <Content {...props} />
-        </>
+        </div>
     );
 });
 
