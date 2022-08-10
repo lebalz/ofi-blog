@@ -31,6 +31,11 @@
 		"body": "<Solution webKey=\"$1\">$2</Solution",
 		"description": "insert a solution component"
 	},
+	"image_tabs": {
+		"prefix": "<ImageTabs />",
+		"body": "<ImageTabs getLabel={${1:(idx) => `\\${idx + 1\\}.`}} highlighted={[$2]}>$3</ImageTabs",
+		"description": "insert a image tabs component"
+	},
 	"import_os_tabs": {
 		"prefix": "imp",
 		"body": [

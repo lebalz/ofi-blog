@@ -21,6 +21,7 @@
     --ifm-background-color: white;
     --ifm-card-background-color: #f7f7f7;
     --ifm-blockquote-shadow: var(--ifm-global-shadow-md);
+    --ifm-container-width: 720px;
 
     .index-page-title {
         .hero__subtitle {
@@ -470,6 +471,10 @@ i.mdi {
 
     &.orange {
         color: var(--ifm-color-warning);
+    }
+
+    &.yellow {
+        color: #edcb5a;
     }
 
     &.blue {

@@ -3,8 +3,8 @@ const path = require('path');
 const fs = require('fs-extra');
 
 // matches options in strings: "--width=200px --height=20%" -> {width: '20px', height='20%'}
-const OPTION_REGEX = /\s*--(?<key>[a-zA-Z\-]+)\s*=\s*(?<value>[\d\S-]+)/
-const BOOLEAN_REGEX = /\s*--(?<key>[a-zA-Z\-]+)\s*/
+const OPTION_REGEX = /(^|\s+)--(?<key>[a-zA-Z\-]+)\s*=\s*(?<value>[\d\S-]+)/
+const BOOLEAN_REGEX = /(^|\s+)--(?<key>[a-zA-Z\-]+)\s*/
 
 /**
  * 
