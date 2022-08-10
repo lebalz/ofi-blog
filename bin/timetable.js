@@ -105,11 +105,10 @@ const SCHEDULE_GYM1_PRAKTIKUM = [
  * 
  * @param {string[][]} schedule 
  */
-const prepareHK = (schedule) => {
+const prepareHK = (schedule, hk=['A', 'B']) => {
     const newSchedule = []
-    const HK = ['A', 'B']
     schedule.forEach((data) => {
-        HK.forEach((hk) => {
+        hk.forEach((hk) => {
             newSchedule.push([hk, ...data])
         })
     })
@@ -161,7 +160,7 @@ const SCHEDULE_GYM2_FS = [
 ]
 
 // const SCHEDULE = SCHEDULE_GYM1_HS;
-const SCHEDULE = prepareHK(SCHEDULE_GYM1_PRAKTIKUM);
+const SCHEDULE = prepareHK(SCHEDULE_GYM1_PRAKTIKUM, ['B', 'A']);
 
 Array('26e-HK').forEach((klasse) =>{
     const cells = [];
