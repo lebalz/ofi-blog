@@ -7,7 +7,7 @@ import ImageTabs from '@site/src/components/ImageTabs'
 
 # Git 2.37.1
 
-:mdi-hand-pointing-right--yellow: https://git-scm.com/downloads
+👉 https://git-scm.com/downloads
 
 
 <ImageTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[2,4,5,10,12]}>

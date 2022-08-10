@@ -6,6 +6,8 @@ import ImageTabs from '@site/src/components/ImageTabs';
 
 # Python 3.10.6
 
+👉 https://www.python.org/
+
 <ImageTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[0,1]}>
 
 ![:mdi-flash-triangle--orange: Python zum Pfad hinzufügen!](images/py-1.png)
