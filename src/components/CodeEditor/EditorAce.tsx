@@ -116,6 +116,8 @@ const Editor = observer((props: Props) => {
               pyScript.saveService.saveNow();
             }
           }}
+          focus={false}
+          navigateToFileEnd={false}
           maxLines={25}
           ref={editorRef}
           mode={props.lang}

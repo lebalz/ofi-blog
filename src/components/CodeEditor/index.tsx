@@ -29,12 +29,8 @@ interface Props {
 // export const ScriptContext = React.createContext<Script>(undefined);
 
 const getDefault = (props: Props): PyDoc => {
-    let code = (props.code || '').trim();
-    if (code.length > 0) {
-        code = `${code} `;
-    }
     return {
-        code: code,
+        code: (props.code || '').trim(),
     };
 };
 
