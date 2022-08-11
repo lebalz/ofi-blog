@@ -20,7 +20,7 @@ Im folgenden werden gängige Abläufe zu verschiedener Software auf dem BYOD-Ger
 <OsTabs>
 <TabItem value="win11">
 
-![Snipping Tool --size=150px](/img/byod-basics/win11/snipping-tool.png)
+![Snipping Tool --size=450px](/img/byod-basics/win11/snipping-tool.png)
 
 <br/>
 <br/>
@@ -65,7 +65,7 @@ Im folgenden werden gängige Abläufe zu verschiedener Software auf dem BYOD-Ger
 
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win11">
 
 Unter Windows gibt es aktuell keine Möglichkeit, den gesamten Bildschirm (inkl. dem Desktop und dem Dateiexplorer) aufzunehmen.
 Hier springt **Powerpoint** ein - in einem Powerpointdokument kann unter __Einfügen__ > __Bildschirmaufzeichnung__ eine Bildschirmaufnahme gestartet werden.

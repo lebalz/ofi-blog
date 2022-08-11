@@ -14,17 +14,24 @@ interface Props {
     type: LocatorType;
 }
 
+const getReferenceContainer = (el: HTMLElement) => {
+    if (el.getAttribute('role') === 'tabpanel' || el.classList.contains('markdown') || !el.parentElement) {
+        return el;
+    }
+    return getReferenceContainer(el.parentElement);
+}
+
 const reposition = (el: HTMLDivElement) => {
-    const md = document.querySelector<HTMLDivElement>('.markdown');
+    if (el.classList.contains('table')) {
+        el.style.right = '2px';
+        return;
+    }
+    const md = getReferenceContainer(el.parentElement);
     if (md) {
         const mdRight = md.getBoundingClientRect().right;
         const parentRight = el.parentElement.getBoundingClientRect().right;
         const offset = parentRight - mdRight - 10;
-        if (el.classList.contains('table')) {
-            el.style.right = '2px';
-        } else {
-            el.style.right = `${offset}px`;
-        }
+        el.style.right = `${offset}px`;
     }
 };
 
