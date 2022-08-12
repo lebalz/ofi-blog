@@ -125,6 +125,7 @@ module.exports = {
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
       darkTheme: require('prism-react-renderer/themes/vsDark'),
+      additionalLanguages: ['powershell', 'java', 'asm6502', 'ruby', 'csharp']
     },
   },
   presets: [
@@ -170,6 +171,7 @@ module.exports = {
             [remarkUnderline, { marker: '__', classNames: ['underline'], tagType: 'strong' }]
           ],
           remarkPlugins: [
+            require('mdx-mermaid'),
             math,
             remarkDeflist,
             remarkMdi,

@@ -379,19 +379,17 @@ div.flex {
     }
 }
 
+// TABS
 .tabs-container {
-    .margin-vert--md {
-        box-shadow: var(--ifm-global-shadow-md);
-        padding: 0.5em;
-        border-radius: 8px;
-    }
+    --ifm-tabs-padding-vertical: 0.5rem;
+    --ifm-tabs-padding-horizontal: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--ifm-global-shadow-md);
 }
 
 html[data-theme='dark'] {
     .tabs-container {
-        .margin-vert--md {
-            --ifm-global-shadow-md: 0 5px 40px rgba(77, 92, 141, 0.3);
-        }
+        --ifm-global-shadow-md: 0 5px 40px hsla(227, 15%, 46%, 0.2);
     }
 }
 

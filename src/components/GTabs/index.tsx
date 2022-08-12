@@ -17,7 +17,8 @@ const getValue = (idx: number) => {
     return `s-${idx}`;
 };
 
-const ImageCarousel = (props: Props) => {
+// Generated Tabs
+const GTabs = (props: Props) => {
     return (
         <Tabs
             defaultValue={getValue(0)}
@@ -41,4 +42,4 @@ const ImageCarousel = (props: Props) => {
     );
 };
 
-export default ImageCarousel;
+export default GTabs;
