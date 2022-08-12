@@ -3,13 +3,11 @@ sidebar_custom_props:
   id: 86626f26-ece4-4b76-88e7-e9ac1d1a13ec
 ---
 
-import ImageTabs from '@site/src/components/ImageTabs';
-
 # VS Code 1.70
 
 👉 https://code.visualstudio.com/
 
-<ImageTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[3]}>
+<GTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[3]}>
 
 ![](images/vsc-1.png)
 
@@ -23,4 +21,4 @@ import ImageTabs from '@site/src/components/ImageTabs';
 
 ![](images/vsc-6.png)
 
-</ImageTabs>
+</GTabs>

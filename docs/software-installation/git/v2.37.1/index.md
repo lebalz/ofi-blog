@@ -3,14 +3,12 @@ sidebar_custom_props:
   id: f989c844-97c0-4f04-b1d2-65c266cc862e
 ---
 
-import ImageTabs from '@site/src/components/ImageTabs'
-
 # Git 2.37.1
 
 👉 https://git-scm.com/downloads
 
 
-<ImageTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[2,4,5,10,12]}>
+<GTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[2,4,5,10,12]}>
 
 ![](images/git-1.png)
 
@@ -41,4 +39,4 @@ import ImageTabs from '@site/src/components/ImageTabs'
 ![](images/git-14.png)
 
 ![](images/git-15.png)
-</ImageTabs>
+</GTabs>
