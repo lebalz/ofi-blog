@@ -12,7 +12,7 @@ Weitere Beispiele...
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
 :::cards --min-width=250px
-***--code
+*** --code
 ```py live_py slim
 from turtle import *
 speed(5)
@@ -81,7 +81,7 @@ for i in range(4):
     left(90)
 end_fill() 
 ```
-***--alignSelf=center
+*** --alignSelf=center
 ![](images/triangles-and-squares.svg)
 :::
 

@@ -13,7 +13,7 @@ In einer Bildkomposition kommen Figuren wie Dreiecke und Quadrate mehrmals vor. 
 
 
 :::cards --min-width=250px
-***--code
+*** --code
 ```py live_py slim
 from turtle import *
 
@@ -42,7 +42,7 @@ for i in range(3):
     left(120)
 end_fill()
 ```
-***--alignSelf=center
+*** --alignSelf=center
 ![](images/triangles.svg)
 :::
 
@@ -74,7 +74,7 @@ left(120)
 fillcolor('blue')
 dreieck()
 ```
-***--align-self=end
+*** --align-self=end
 <Strukto program={[
     {
         type: 'def', 
@@ -152,7 +152,7 @@ Die Definition alleine führt das Programm noch nicht aus. Dazu muss der Befehl 
     {type: 'call', code: 'stufe zeichnen'},
     {type: 'call', code: 'stufe zeichnen'}
 ]} />
-***--code
+*** --code
 ```py live_py title=befehl1.py id=e8dc1f0a-d2b6-4a2a-9461-e8cc96811530
 from turtle import *
 ```
@@ -186,12 +186,12 @@ stufe()
 :::aufgabe Aufgabe 1 – Sechsecke
 
 :::cards --min-width=200px
-***--code --flex-grow=2
+*** --code --flex-grow=2
 ```py live_py title=sechseck.py id=6d4c82e3-ecaa-486e-a756-3a1a1a8a70fc
 from turtle import *
 
 ```
-***--flex-grow=1 --max-height=500px --overflow-y=auto
+*** --flex-grow=1 --max-height=500px --overflow-y=auto
 1. Zeichnen Sie ein Sechseck
 
 ![](images/sechseck.svg)
@@ -229,12 +229,12 @@ for i in range(10):
 :::aufgabe Aufgabe 2 – Häuser
 
 :::cards --min-width=200px
-***--code --flex-grow=2
+*** --code --flex-grow=2
 ```py live_py title=stadt.py id=b5c82672-65db-4725-8ec9-7a80ac835b3d
 from turtle import *
 
 ```
-***--flex-grow=1 --max-height=500px --overflow-y=auto
+*** --flex-grow=1 --max-height=500px --overflow-y=auto
 1. Definieren Sie einen Befehl `haus()`, der ein Haus des Nikolaus zeichnet:
 
 ![](images/haus_nikolaus.svg)
@@ -285,12 +285,12 @@ haus()
 Sie werden in dieser Aufgabe unter der Verwendung mehrerer Unterprogramme eine komplexe Aufgabe schrittweise lösen.
 
 :::cards --min-width=200px
-***--code --flex-grow=2
+*** --code --flex-grow=2
 ```py live_py title=blume.py id=b47c6d09-11ca-4bff-b676-09cb0d7399bf
 from turtle import *
 
 ```
-***--overflow-y=auto --max-height=550px --flex-grow=1
+*** --overflow-y=auto --max-height=550px --flex-grow=1
 1. Definieren Sie Unterprogramm `bogen()`, mit dem die Turtle einen Bogen zeichnet und sich dabei insgesamt um `90°` nach rechts dreht.
 
     ![](images/blume_01.svg)

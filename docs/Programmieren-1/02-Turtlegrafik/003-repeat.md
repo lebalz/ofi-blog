@@ -39,7 +39,7 @@ forward(17)
 right(90)
 forward(29)
 ```
-***--empty --grow=0.5 --min=50px
+*** --empty --grow=0.5 --min=50px
 ***
 ![](images/stairs.svg)
 :::
@@ -76,7 +76,7 @@ for i in range(5):
     right(90)
     forward(29)
 ```
-***--empty --grow=0.5 --min=50px
+*** --empty --grow=0.5 --min=50px
 ***
 <Strukto program={[
     {

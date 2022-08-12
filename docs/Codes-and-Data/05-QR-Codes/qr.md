@@ -4,16 +4,15 @@ sidebar_custom_props:
 ---
 
 import OsTabs from '@site/src/components/OsTabs'
-import ImageTabs from '@site/src/components/ImageTabs'
 
 # 3D Schlüsselanhänger
 
 Mit einem 3D-Drucker lassen sich dreidimensionale Objekte erzeugen. Dabei arbeiten alle gängigen Druckverfahren schichtweise - das Objekt wird aus mehreren Schichten zusammengesetzt, wobei eine einzelne Schicht zweidimensional auf die darunterliegende Schicht aufgetragen wird.
 
 :::cards --columns=2 --text-align=center --width=200px
-***--text-align=center
+*** --text-align=center
 ![--width=100%](images/prusa-timelapse-01.gif)
-***--text-align=center
+*** --text-align=center
 ![](images/prusa-timelapse-02.gif)
 ***
 ![](images/prusa-timelapse-03.gif)
@@ -30,8 +29,8 @@ Um ein Objekt zu drucken, muss in einem ersten Schritt ein **3D-Modell** erstell
 
 Das Grundgerüst für den QR-Code kann direkt über die Webapplikation von https://printer.tools/qrcode2stl/ erzeugt werden.
 
-<blockquote>
-<ImageTabs getLabel={(idx) => ['QR Code', '3D Modell', 'Speichern'][idx]} highlighted={[]}>
+
+<GTabs getLabel={(idx) => ['QR Code', '3D Modell', 'Speichern'][idx]} highlighted={[]}>
 
 ![QR Code Options --max-width=min(100%,500px)](images/qr01.png)
 
@@ -51,8 +50,7 @@ Die einzelnen Teile des Modells können als `.zip`-Ordner heruntergeladen werden
 ![STL Herunterladen --max-width=500px](images/qr04.png)
 
 </div>
-</ImageTabs>
-</blockquote>
+</GTabs>
 
 
 Der heruntergeladene `.zip`-Ordner enthält die einzelnen Teile des 3D-Modells, so auch den QR-Code selbst: `qrcode-1645205191753.stl`:
@@ -65,8 +63,8 @@ Der heruntergeladene `.zip`-Ordner enthält die einzelnen Teile des 3D-Modells, 
 Der [Prusa Slicer](https://www.prusa3d.com/de/page/prusaslicer_424/) wird für den 3D-Druck an der Schule verwendet. Laden Sie ihn herunter und installieren Sie ihn: https://www.prusa3d.com/de/page/prusaslicer_424/
 
 
-<blockquote>
-<ImageTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[2, 9, 10]}>
+
+<GTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[2, 9, 10]}>
 
 ![Installieren](images/slicer-install-01.png)
 
@@ -98,14 +96,14 @@ Experten-Modus auswählen, damit für jede Farbe ein anderes Filament gewählt w
 Den richtigen Drucker auswählen und die Option des Mehrfarbendrucks auswählen. Zudem soll immer im "Draft"-Modus gedruckt werden.
 ![](images/slicer-install-12.png)
 </div>
-</ImageTabs>
-</blockquote>
+</GTabs>
+
 
 
 :::danger Offene Kanten
 Leider gibt es unterschiedliche Konventionen für die Erzeugung von 3D-Objektmodellen. Obwohl unser erzeugter QR-Code auf den ersten Blick gut aussieht, wurden bei der Erzeugung nicht alle Kanten miteinander verbunden, so dass einige Flächen im Modell nicht abgeschlossen sind. Dies kann automatisch behoben werden:
 
-<blockquote>
+
 <OsTabs>
 <TabItem value="win11">
 
@@ -135,7 +133,7 @@ Dort kann die `.stl` Datei hochgeladen, repariert und wieder heruntergeladen wer
 
 </TabItem>
 </OsTabs>
-</blockquote>
+
 
 Das Dateiformat ändert sich durch die Reparatur zu `.3mf`. Um im nächsten Schritt das 3D-Modell selber anzupassen, muss das Dateiformat aber wieder auf `.stl` geändert werden. Dies gelingt mit dem [slicer](https://www.prusa3d.com/de/page/prusaslicer_424/), welcher  `.3mf` in `.stl` Dateien konvertieren kann:
 
@@ -147,7 +145,7 @@ Das Dateiformat ändert sich durch die Reparatur zu `.3mf`. Um im nächsten Schr
 
 Das geflickte Modell kann nun in Tinkercad weiter bearbeitet werden. Melden Sie sich bei Ihrer Klasse mit ihrem "Nickname" bestehend aus `vorname.nachname` an.
 
-<blockquote>
+
 <Tabs
   defaultValue="k24f"
   values={[
@@ -163,10 +161,10 @@ https://www.tinkercad.com/joinclass/1W8JWGIB7DWG
 https://www.tinkercad.com/joinclass/A6REDIBCKQFB
 </TabItem>
 </Tabs>
-</blockquote>
 
-<blockquote>
-<ImageTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[2, 9, 10]}>
+
+
+<GTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[2, 9, 10]}>
 <div>
 
 Das im Slicer geflickte und zu `.stl` exportierte Modell kann nun in Tinkercad weiter bearbeitet werden. Dazu muss es **importiert** werden. Die Standardeinstellungen beim Importieren passen.
@@ -229,8 +227,8 @@ Alles exportieren.
 
 ![](images/tinker-06-export.png)
 </div>
-</ImageTabs>
-</blockquote>
+</GTabs>
+
 
 ## Druck vorbereiten im Slicer
 

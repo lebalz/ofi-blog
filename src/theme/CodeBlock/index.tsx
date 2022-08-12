@@ -60,7 +60,7 @@ const withLiveEditor = (Component) => {
         return <Component {...props} />
       }
 
-      const code = props.children.replace(/\n$/, '');
+      const code = props.children.replace(/\s*\n$/, '');
       const codeId = getCodeId(props.title, code);
       const [webKey] = React.useState(props.id || uuidv4());
       return <PyAceEditor

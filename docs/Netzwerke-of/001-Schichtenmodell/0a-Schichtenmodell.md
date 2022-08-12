@@ -23,7 +23,6 @@ Die Schule Madretsch feiert 100-jähriges Jubiläum und braucht für ihr Fest zu
 - Wer ist alles involviert?
 
 
-<blockquote>
 <Tabs
   defaultValue="step-1"
   values={[
@@ -68,8 +67,6 @@ Im Verteilzentrum wird der Inhalt entladen und gemäss Adresse weitergeleitet.
   
   </TabItem>
 </Tabs>
-</blockquote>
-
 
 ## Vorteile des Schichtenmodells
 

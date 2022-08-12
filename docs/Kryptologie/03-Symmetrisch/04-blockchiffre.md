@@ -20,14 +20,14 @@ Beim Thema Blockchiffren wollen wir aber kurz eintauchen und uns anhand einer ei
 Da der Klartext dreimal so lange ist wie der Schlüssel, muss der Text in drei Teile aufgeteilt werden, welche wir separat verschlüsseln. Die Blocklänge entspricht also der Schlüssellänge:
 
 :::flex
-***--class=slim-table --flex-basis=13em
+*** --class=slim-table --flex-basis=13em
 
 | Klartext   |                                                                                                                              |
 | :--------- | :--------------------------------------------------------------------------------------------------------------------------- |
 | Buchstaben | `GEHEIMESTREFFEN`                                                                                                            |
 | Pentacode  | <span className="monospace">00111 00101 01000 00101 01001 01101 00101 10011 10100 10010 00101 00110 00110 00101 01110</span> |
 
-***--class=slim-table --flex-basis=13em
+*** --class=slim-table --flex-basis=13em
 | Schlüssel  |                                                                  |
 | :--------- | :--------------------------------------------------------------- |
 | Buchstaben | `PENTA`                                                          |

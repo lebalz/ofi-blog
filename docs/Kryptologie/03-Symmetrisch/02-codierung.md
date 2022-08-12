@@ -15,7 +15,7 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 ## Albhabet
 
 :::flex --columns=2 --gap=2em
-***--class=slim-table
+*** --class=slim-table
 | Buchstabe    | Zahl |   Binär |
 | :----------- | ---: | ------: |
 | *Leerschlag* |    0 | `00000` |
@@ -34,7 +34,7 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 | `M`          |   13 | `01101` |
 | `N`          |   14 | `01110` |
 | `O`          |   15 | `01111` |
-***--class=slim-table
+*** --class=slim-table
 
 | Buchstabe | Zahl |   Binär |
 | :-------- | ---: | ------: |

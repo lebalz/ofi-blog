@@ -7,6 +7,8 @@ import DefinitionList from '../components/DefinitionList';
 import Answer from '../components/Answer';
 import Solution from '../components/Solution';
 import Comment from '../components/Comment';
+import GTabs from '../components/GTabs';
+
 // @ts-ignore
 import Tabs from '@theme/Tabs';
 // @ts-ignore
@@ -22,5 +24,6 @@ export default {
   Answer: Answer,
   Solution: Solution,
   Tabs: Tabs,
+  GTabs: GTabs,
   TabItem: TabItem
 };

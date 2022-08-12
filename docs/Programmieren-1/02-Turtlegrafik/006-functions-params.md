@@ -36,7 +36,7 @@ for i in range(5):<br/>
 
 </Answer>
 
-***--empty --grow=0.5 --min=50px
+*** --empty --grow=0.5 --min=50px
 ***
 ```py live_py slim
 from turtle import *
@@ -146,12 +146,12 @@ Ein häufiger Fehler sind vergessene Kommas zwischen zwei Parameternamen. Dann e
 
 
 :::cards --min-width=200px
-***--code --flex-grow=2
+*** --code --flex-grow=2
 ```py live_py title=sechseck.py id=fcd69fed-4ed9-4706-954e-c49cf1c8b764
 from turtle import *
 
 ```
-***--overflow-y=auto --max-height=550px --flex-grow=1
+*** --overflow-y=auto --max-height=550px --flex-grow=1
 1. Definieren Sie das Unterprogramm `sechseck(size)` welches ein Sechseck mit der Grösse `size` zeichnet. Rufen Sie das Programm mit `sechseck(20)` auf. 
 
     ![](images/06_sechseck_1.svg)

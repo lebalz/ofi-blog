@@ -9,9 +9,9 @@ sidebar_custom_props:
 # 8. Sehsterne [^1]
 
 :::flex --gap=3em --align-items=center --min-width=150px
-***--max-width=250px
+*** --max-width=250px
 ![--width=250px](images/08-sehstern.png)
-***--min-width=250px
+*** --min-width=250px
 Sehsterne (das sind Seesterne mit Augen) kennen nur die fünf 
 Buchstaben `A` ,`C`, `I`, `N`, `T`, die sie auf einem gesunkenen Schiff entdeckt 
 haben. Alle Wörter setzen sie aus diesen Buchstaben zusammen.
@@ -48,14 +48,14 @@ IN CINCINNATI
 </Solution>
 
 :::
-***--max-width=250px
+*** --max-width=250px
 ![--width=180px](images/08-sehstern-codierung.png)
 
 :::
 
 ## Gebärdensprache
 :::flex
-***--min-width=430px
+*** --min-width=430px
 Die Sehsterne haben keinen Mund. Sie kommunizieren, indem sie
 nacheinander für jeden Buchstaben den entsprechenden Arm heben.
 Eines Tages entdecken die Sehsterne ein weiteres gesunkenes Schiff
@@ -99,7 +99,7 @@ Wenn die Sehsterne einen binären Code wählen, können sie maximal $2^5 = 32$ v
 </Solution>
 :::
 
-***--max-width=180px
+*** --max-width=180px
 ![--width=180px](images/08-sehstern-arme.png)
 :::
 

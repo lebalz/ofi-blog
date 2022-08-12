@@ -25,7 +25,7 @@ Nicht alle Buchstaben kommen in der deutschen Sprache gleich häufig vor. Nachfo
 
 :::flex --justify=space-between
 Im neunten Jahrhundert hat der arabische Gelehrte Abū Ya'qūb ibn Ishāq al-Kindī (oder kurz al-Kindi) durch eine Analyse des Korans entdeckt, dass die einzelnen Zeichen der arabischen Schrift in bestimmten Häufigkeiten auftreten. In seiner Abhandlung über die Entzifferung kryptographischer Botschaften schrieb er Folgendes:
-***--no-flex
+*** --no-flex
 ![--no-margins](images/al-kindi.jpg)
 :::
 
