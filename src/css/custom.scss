@@ -385,6 +385,10 @@ div.flex {
     --ifm-tabs-padding-horizontal: 1rem;
     border-radius: 8px;
     box-shadow: var(--ifm-global-shadow-md);
+    div[role="tabpanel"] {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
 }
 
 html[data-theme='dark'] {
@@ -458,7 +462,7 @@ strong.underline {
 }
 
 
-i.mdi {
+.mdi {
     &.green {
         color: var(--ifm-color-success);
     }
@@ -513,4 +517,9 @@ i.mdi {
             }
         }
     }
+}
+
+svg[id^="mermaid-svg-"] {
+    max-width: 100%;
+    padding-right: 1em;
 }
