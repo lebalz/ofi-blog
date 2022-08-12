@@ -43,12 +43,21 @@ class Trace:
 
 def syntax_error(args):
     trace = Trace()
-    info, [filename, lineno, offset, line] = args
+    info, [filename, lineno, offset, line, *extra] = args
     line_nr = lineno - log_line_number_shift if lineno > 0 else 0
 
     trace.write(f"  File {filename}, line {line_nr}\n")
-    trace.write("    " + line + "\n")
-    trace.write("    " + offset * " " + "^\n")
+    indent = len(line) - len(line.lstrip())
+    trace.write("    " + line.strip() + "\n")
+    nb_marks = 1
+    if extra:
+        end_lineno, end_offset = extra
+        if end_lineno > lineno:
+            nb_marks = len(line) - offset
+        else:
+            nb_marks = end_offset - offset
+    nb_marks = max(nb_marks, 1)
+    trace.write("    " + (offset - 1) * " " + "^" * nb_marks + "\n")
     trace.write("SyntaxError:", info, "\n")
     return trace.buf
 
@@ -57,7 +66,7 @@ def format_exc():
     exc_info = sys.exc_info()
     exc_class = exc_info[0].__name__
     exc_msg = str(exc_info[1])
-    tb = exc_info[2].tb_next
+    tb = exc_info[2]
     if exc_info[0] is SyntaxError:
         return syntax_error(exc_info[1].args)
     trace.write("Traceback (most recent call last):\n")
@@ -69,7 +78,10 @@ def format_exc():
         line_nr = tb.tb_lineno - log_line_number_shift if tb.tb_lineno > 0 else 0
         trace.write(f"  File {filename}, line {line_nr}, in {name}\n")
         if not filename.startswith("<"):
-            trace.write(f"    {tb.tb_lasti}\n")
+            src = open(filename, encoding='utf-8').read()
+            lines = src.split('\n')
+            line = lines[tb.tb_lineno - 1]
+            trace.write(f"    {line.strip()}\n")
         tb = tb.tb_next
     trace.write(f"{exc_class}: {exc_msg}\n")
     return trace.format()
@@ -108,7 +120,7 @@ def run(code, node_id):
         document[res_div].clear()
         ns = {'__name__': node_id, 'RESULT_DIV': document[res_div]}
         loc = {}
-        exec(py_script, ns, loc)
+        exec(py_script, ns)
         # if len(code.splitlines()) < 10:
         #    print('  --', '\n'.join([f'{x}: {loc[x]}' for x in loc.keys() if not x.startswith('__')]))
     except Exception as exc:
