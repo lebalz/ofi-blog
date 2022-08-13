@@ -31,6 +31,8 @@ Bei der Klassifizierung von Programmiersprachen wird aktuell unter vier Typen vo
 
 ## Maschinensprache
 
+Zu den Pionierzeiten der Computerentwicklung war die einzige Möglichkeit, ein Programm für einen Computer zu erstellen, dieses in binärem Maschinencode zu schreiben (bzw. auf Lochkarten zu stanzen). Aufgrund ihrere für Menschen extrem schwer verständlichen Form ist die Programmierung in Maschinensprache nicht mehr gebräuchlich.
+
 Die Maschinensprache kann direkt von einer CPU ausgeführt werden. 
 
 :::danger Achtung 
@@ -67,11 +69,14 @@ Maschinencode läuft nicht einfach auf allen Prozessoren - je nach Aufbau/Archit
 :::info
 - unlesbar, unveränderbar
 - nur [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), Erfinder von Linux, schreibt und ändert Maschinencode
+
+In einigen wenigen Spezialfällen (wenn z.B. der eigentliche Quellcode oder die ursprüngliche Programmierumgebung nicht mehr verfügbar ist) kann es unter Umständen erforderlich sein, direkt den Maschinencode zu bearbeiten.
 :::
 
 ## Assembler Sprache
 
-Die Assemblersprache ist gerade noch verständlich für einen Menschen und kann leicht von einem Programm, dem sogenannten **Compiler** in Maschinensprache übersetzt werden. Dennoch ist Assembler-Sprache bereits auf eine CPU-Architektur zugeschnitten und es muss im Voraus entschieden werden, welches Ziel man sich vornimmt.
+In Assembler gibt es als Erleichterung für die Programmierer:in sogenannte mnemonische Kürzel (Mnemonics), die eine Gedächtnisstütze für die entsprechend möglichen CPU-Befehle sein sollen, bspw. `addiu` für die *Addition von positiven ganzen Zahlen* (*Add Integer Unsigned*).
+Die Assemblersprache ist gerade noch verständlich für einen Menschen und kann leicht von einem Programm, dem sogenannten **Compiler** in Maschinensprache übersetzt werden, da für jeden Mnemonics ein CPU-Befehl existiert. Dennoch ist Assembler-Sprache bereits auf eine CPU-Architektur zugeschnitten und es muss im Voraus entschieden werden, welches Ziel man sich vornimmt (nicht jede CPU-Familie weist dieselbe Befehlspalette auf).
 
 
 ```mermaid
@@ -80,7 +85,7 @@ graph LR
     style B fill:#3578e5,color:white
 ```
 
-Ein einfaches Beispiel einer Addition
+Ein einfaches Beispiel einer Addition von zwei ganzen Zahlen
 
 ```mips {7-10} showLineNumbers
 sum:
@@ -100,6 +105,9 @@ sum:
 	nop
 ```
 
+:::info
+Aufgrund der mühseligen Programmierung und der fehlenden Portabilität von Programmen auf unterschiedliche Systeme ist Assembler nicht für komplexe Projekte zu empfehlen. Für bestimmte zeitkritische Aufgaben (Echtzeit), wo es auf Geschwindigkeit ankommt (bspw. Grafiktreiber) oder nur sehr wenig Platz zur Verfügung steht (embedded systems), wird auch heute noch auf Assembler zurückgegriffen.
+:::
 
 <!--
 Weitere Übersetzungen
