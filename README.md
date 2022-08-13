@@ -71,3 +71,14 @@ Either
 ```bash
 postgres -D /usr/local/var/postgres
 ```
+
+
+## Ejected Theme Components
+
+Make sure to check the compatibility after a docusaurus upgrade:
+
+| Component                                              | Swizzle                                                                           |
+| :----------------------------------------------------- | :-------------------------------------------------------------------------------- |
+| [DocVersionBadge](src/theme/DocVersionBadge/index.tsx) | `yarn run swizzle @docusaurus/theme-classic DocVersionBadge --eject --typescript` |
+| [NavbarItem](src/theme/NavbarItem/index.tsx)           | `yarn run swizzle @docusaurus/theme-classic NavbarItem --eject --typescript`      |
+| [NotFound (safe)](src/theme/NotFound.tsx)              | `yarn run swizzle @docusaurus/theme-classic NotFound --eject --typescript`        |

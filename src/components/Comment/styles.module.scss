@@ -4,6 +4,12 @@
     // border: 1px dashed silver;
 }
 
+:global li>.commentable {
+    >p {
+        margin-bottom: 0;
+    }
+}
+
 
 .commentIcon {
     position: absolute;
@@ -35,8 +41,10 @@
         position: relative;
         display: flex;
         gap: 8px;
+
         .delete {
             position: relative;
+
             .button {
                 position: absolute;
                 top: 0px;
@@ -45,6 +53,7 @@
                 z-index: 999;
             }
         }
+
         .colorPicker {
             .color {
                 background: var(--comment-color);
@@ -54,26 +63,33 @@
                 height: 22px;
                 margin-top: auto;
                 margin-bottom: auto;
+
                 &.red {
                     background: #fa383e;
                 }
+
                 &.orange {
                     background: #ffba00;
                 }
+
                 &.green {
                     background: #00a400;
                 }
+
                 &.yellow {
                     background: #fff700;
                 }
+
                 &.blue {
                     background: #3578e5;
                 }
+
                 &.active,
                 &:hover {
                     border-color: var(--ifm-color-primary)
                 }
             }
+
             :global .dropdown__menu {
                 min-width: 2px;
                 display: flex;
@@ -81,6 +97,7 @@
                 left: unset;
             }
         }
+
         &.active {
             background: var(--ifm-card-background-color);
             border-top-left-radius: 18px;
@@ -89,14 +106,18 @@
         }
     }
 }
+
 .comments {
     margin-top: calc(-0.5 * var(--ifm-spacing-vertical));
     margin-bottom: 0.8rem;
+
     .comment {
         margin-top: 0.2em;
+
         &:first-of-type {
             margin-top: 0;
         }
+
         :global .quill-editor-container {
             // background: rgba(152, 201, 237, 0.77);
             border-color: var(--comment-color);
