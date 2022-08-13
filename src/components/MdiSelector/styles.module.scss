@@ -1,0 +1,17 @@
+.icon {
+    width: 8em;
+    border: 1px dashed var(--ifm-font-color-base);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    align-items: center;
+    :global .copy-badge {
+        font-size: 10px;
+        break-inside: avoid;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+}

@@ -1,12 +1,14 @@
 import clsx from 'clsx';
 import * as React from 'react';
 import styles from './styles.module.scss';
-import { faCircleNotch, faClipboard, faClipboardCheck, faEllipsisH, faTimesCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faCircleNotch, faClipboard, faClipboardCheck, faTimesCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 
 interface Props {
     value: string;
+    label?: string;
 }
 type CopyState = 'none' | 'spin' | 'copied' | 'error';
 const CopyIcon: {[key in CopyState]: IconDefinition} = {
@@ -36,8 +38,10 @@ const CopyBadge = (props: Props) => {
 
     return (
         <span 
-            className={clsx(styles.transformed, styles.copyBadge, 'badge', 'badge--secondary')}
-            onClick={() => {
+            className={clsx(styles.transformed, styles.copyBadge, 'copy-badge', 'badge', 'badge--secondary')}
+            onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 setCopyState('spin');
                 navigator.clipboard.writeText(props.value).then(() => {
                     setCopyState('copied');
@@ -45,11 +49,11 @@ const CopyBadge = (props: Props) => {
                     setCopyState('error');
                 })
             }}
-            title="Copy Value"
+            title={`Copy ${props.value}`}
         >
-            {props.value}
+            {props.label || props.value}
             <span className={clsx(styles.copyIcon)}>
-                <FontAwesomeIcon icon={CopyIcon[copyState]} color={CopyColor[copyState]}/>
+                <FontAwesomeIcon icon={CopyIcon[copyState] as IconProp} color={CopyColor[copyState]}/>
             </span>
         </span>
     );
