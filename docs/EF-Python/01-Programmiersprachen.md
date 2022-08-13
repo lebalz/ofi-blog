@@ -281,4 +281,4 @@ Da kein eigentlicher Compile-Schritt notwendig ist, muss bei Skriptsprachen auch
 Insgesamt ist das Arbeiten mit Skriptsprachen mit weniger Konfigurationsaufwand, weniger Standardcode (Boilerplate Code) verbunden und daher effizienter. Der Nachteil ist, dass die Programme deutlich langsamer (ca. 10x langsamer) ausgeführt werden.
 
 
-[^1]: Jupyter Notebook: [⬇️ Visualize-AST.ipynb](./code/Visualize-AST.ipynb), [:mdi-github: Github](https://github.com/lebalz/ofi-blog/blob/main/docs/Programmieren-1/03-Python-EF/code/Visualize-AST.ipynb)
+[^1]: Jupyter Notebook: [⬇️ Visualize-AST.ipynb](./code/Visualize-AST.ipynb), [:mdi-github: Github](https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/code/Visualize-AST.ipynb)
