@@ -50,7 +50,7 @@ export default function MdiSelector(): JSX.Element {
               <div style={{ fontSize: '3rem' }} className={`mdi-${ico.name} mdi`}></div>
               <CopyBadge value={ico.name} />
               <CopyBadge label="mdi-" value={`mdi-${ico.name}`} />
-              <CopyBadge label=":mdi:" value={`:mdi-${ico.name}:`} />
+              <CopyBadge label=":mdi-:" value={`:mdi-${ico.name}:`} />
             </div>
           );
         })}
