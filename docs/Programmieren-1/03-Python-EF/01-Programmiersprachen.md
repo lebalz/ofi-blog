@@ -21,13 +21,15 @@ Mittlerweilen gibt es eine schier unüberschaubar grosse Anzahl an Programmiersp
 
 Bei der Klassifizierung von Programmiersprachen wird aktuell unter vier Typen von Programmiersprachen unterschieden:
 
-- Maschinensprache
-- Assemblersprache
-- Hochsprache
-  - Kompilierte Sprachen
-  - Interpretierte Sprachen (Skriptsprachen)
+```mermaid
+graph TD
+    A(Maschinensprache) --- B(Assembler)
+    B --- C(Hochsprache)
+    C --- D[Kompilierte Sprachen]
+    C --- E[Interpretierte Sprachen]
+```
 
-
+Wobei die Interpretierten Sprachen auch oft Skriptsprachen genannt werden
 
 ## Maschinensprache
 
