@@ -18,7 +18,7 @@
 
 	"import": {
 		"prefix": "imp",
-		"body": "import $1 from '@site/src/components/$1'",
+		"body": "import $1 from '@site/src/components/$1';",
 		"description": "import a component from components"
 	},
 	"answer": {
