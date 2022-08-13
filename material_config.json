@@ -100,7 +100,9 @@
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
       "to": "versioned_docs/version-25h/07-Netzwerke/01-Schichtenmodell",
-      "ignore": ["Schichten-und-Adressen.md"]
+      "ignore": [
+        "Schichten-und-Adressen.md"
+      ]
     },
     {
       "from": "docs/Netzwerke-of/090-Pruefung.md",
@@ -152,5 +154,31 @@
       "ignore": []
     }
   ],
-  "24ef": []
+  "24ef": [
+    {
+      "from": "docs/EF-Python/01-Programmiersprachen/",
+      "to": "versioned_docs/version-24ef/01-Programmieren/01-Programmiersprachen",
+      "ignore": []
+    },
+    {
+      "from": "docs/EF-Python/02-Infrastruktur/",
+      "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/python/v3.10.6/",
+      "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/04-Python",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/git/v2.37.1/",
+      "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/03-Git",
+      "ignore": []
+    },
+    {
+      "from": "docs/software-installation/vs-code/v1.70/",
+      "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/05-vscode",
+      "ignore": []
+    }
+  ]
 }
