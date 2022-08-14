@@ -6,6 +6,7 @@ import User from '../models/User';
 import { RootStore } from './stores';
 import _ from 'lodash';
 import axios from 'axios';
+import { SortCol } from '../pages/admin/UserTable';
 
 export class UserStore {
     private readonly root: RootStore;
@@ -22,7 +23,10 @@ export class UserStore {
     filterGroup?: string;
 
     @observable
-    filterEmailOrder: 'asc' | 'desc' = 'asc';
+    sortOrder: 'asc' | 'desc' = 'asc';
+
+    @observable
+    sortColumn: SortCol = 'id';
 
     @observable
     opendTurtleModalWebKey: string | undefined = undefined;
@@ -53,12 +57,19 @@ export class UserStore {
             return [];
         }
         let filtered = this.filterKlasse
-            ? this.byClass(this.filterKlasse).filter((u) => !!u.klasse)
+            ? this.byClass(this.filterKlasse).filter((u) => !!u.klasse).slice()
             : this.users.slice();
         if (this.filterGroup) {
             filtered = filtered.filter((u) => u.groups.includes(this.filterGroup));
         }
-        filtered = _.orderBy(filtered, ['email'], [this.filterEmailOrder]);
+        if (this.sortColumn === 'created_at') {
+            filtered.sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+            if (this.sortOrder === 'desc') {
+                filtered.reverse();
+            }
+        } else {
+            filtered = _.orderBy(filtered, [this.sortColumn], [this.sortOrder]);
+        }
         return filtered;
     }
 

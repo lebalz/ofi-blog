@@ -8,21 +8,37 @@ import { faArrowDown, faArrowUp, faTimesCircle, faPlus } from '@fortawesome/free
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-const SortArrow = observer(() => {
+
+export type SortCol = 'id' | 'email' | 'created_at';
+interface SortProps {
+    column: SortCol;
+}
+
+const SortArrow = observer((props: SortProps) => {
     const userStore = useStore('userStore');
     return (
         <span
             className={styles.sort}
             onClick={() => {
                 runInAction(() => {
-                    userStore.filterEmailOrder = userStore.filterEmailOrder === 'asc' ? 'desc' : 'asc';
+                    if (userStore.sortColumn !== props.column) {
+                        userStore.sortColumn = props.column;
+                        userStore.sortOrder = 'asc';
+                    } else {
+                        userStore.sortOrder = userStore.sortOrder === 'asc' ? 'desc' : 'asc';
+                    }
                 });
             }}
         >
-            <FontAwesomeIcon icon={(userStore.filterEmailOrder === 'asc' ? faArrowDown : faArrowUp) as IconProp} />
+            {userStore.sortColumn === props.column ? (
+                <FontAwesomeIcon icon={(userStore.sortOrder === 'asc' ? faArrowDown : faArrowUp) as IconProp} />
+            ) : (
+                <i className={clsx('mdi', 'mdi-arrow-up-down')}></i>
+            )}
         </span>
     );
 });
+
 interface GroupBadgeInterface {
     onRemove: () => void;
     name: string;
@@ -36,6 +52,7 @@ const GroupBadge = observer((props: GroupBadgeInterface) => {
         </span>
     );
 });
+
 
 const UserTable = observer(() => {
     const [newGroup, setNewGroup] = React.useState('');
@@ -80,9 +97,11 @@ const UserTable = observer(() => {
             <table>
                 <thead>
                     <tr>
-                        <th>Id</th>
                         <th>
-                            <SortArrow />
+                            <SortArrow column="id" />
+                            Id</th>
+                        <th>
+                            <SortArrow column="email" />
                             Email
                         </th>
                         <th>
@@ -138,7 +157,9 @@ const UserTable = observer(() => {
                             </div>
                         </th>
                         <th>Admin?</th>
-                        <th>Created At</th>
+                        <th>
+                        <SortArrow column="created_at" />
+                            Created At</th>
                     </tr>
                 </thead>
                 <tbody>
