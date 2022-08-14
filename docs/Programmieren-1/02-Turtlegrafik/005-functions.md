@@ -109,7 +109,8 @@ Voilà - und es hat im gleichen Zug auch noch den Vorteil, dass eine Änderung (
 
 ## Eigene Befehle definieren
 
-:::def `def name():`
+:::def
+### `def name():`
 Mit `def name():` wird ein neues Unterprogramm (ein neuer Befehl) definiert. Als Name sollte immer etwas gewählt werden, das die Tätigkeit dieser Sequenz widerspiegelt. Alle Anweisungen, die zum neuen Befehl gehören, müssen eingerückt sein.
 
 **Beispiel:**

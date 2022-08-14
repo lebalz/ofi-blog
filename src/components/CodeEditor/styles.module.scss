@@ -73,6 +73,27 @@
     .brythonCodeBlock {
         display: flex;
         flex-wrap: wrap;
+        // :global {
+        //     --ifm-scrollbar-track-background-color: #444444;
+        //     --ifm-scrollbar-thumb-background-color: #686868;
+        //     --ifm-scrollbar-thumb-hover-background-color: #7a7a7a;
+        // }
+
+        // :global .thin-scrollbar::-webkit-scrollbar {
+        //     height: unset;
+        //     width: unset;
+        // }
+        // :global .thin-scrollbar::-webkit-scrollbar-track {
+        //     background: unset;
+        //     border-radius: unset;
+        // }
+        // :global .thin-scrollbar::-webkit-scrollbar-thumb {
+        //     background: unset;
+        //     border-radius: unset;
+        // }
+        // :global .thin-scrollbar::-webkit-scrollbar-thumb:hover {
+        //     background: unset;
+        // }
     }
 
     .brythonTurtleResult {

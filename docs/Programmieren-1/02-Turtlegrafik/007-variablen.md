@@ -5,9 +5,7 @@ sidebar_custom_props:
 
 # 7. Variablen
 
-import PyOps from '@site/docs/Programmieren-1/03-Python/_def-python-operatoren.md';
 import Strukto from '@site/src/components/struktogramm/Strukto';
-import PyTemplateString from '@site/docs/Programmieren-1/03-Python/_def-python-template-string.md';
 
 # 7. Variablen
 
@@ -49,7 +47,16 @@ print(f'{anzahl} Tafeln Schokolade sind {anzahl * gewicht} g schwer')
 
 ### Formatierter Text
 
-<PyTemplateString />
+:::def
+### formatierter Text `f''`
+Variablenwerte lassen sich mit geschweiften Klammern `{}` in einen Text einfügen. Dazu muss zu Beginn des Textes ein kleines `f` (für "fromatierten Text") hinzugefügt werden.
+
+```py live_py slim
+name = 'Alfred'
+print(f'Hallo {name}')
+```
+:::
+
 
 </details>
 

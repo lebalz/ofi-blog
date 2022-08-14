@@ -6,8 +6,6 @@ sidebar_custom_props:
 # 8. Verzweigungen
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
-import PyAlert from '@site/docs/Programmieren-1/03-Python/_def-python-alert.md';
-import PyBreak from '@site/docs/Programmieren-1/03-Python/_def-python-break.md';
 import Ratespiel from '@site/src/components/Ratespiel'
 import Hint from '@site/src/components/Solution/Hint'
 
@@ -83,7 +81,15 @@ Bei der Überprüfung auf Gleichheit werden zwei Gleichheitszeichen `==` geschri
 
 In Python lassen sich Ausgaben nicht nur mit `print` sondern auch mit dem Befehl `alert()` (aus der Bibliothek `browser`) in einer Ausgabebox anzeigen. *Die Ausgabe mit `alert` wird hier verwendet, weil die Online-Version von Python die Ausgaben mit `print` erst am Ende des Programms anzeigt wird*.
 
-<PyAlert />
+:::def
+### `alert`
+Mit dem Befehl `alert` aus der Bibliothek `browser` können **Ausgabeboxen** erzeugt werden.
+
+```py live_py slim
+from browser import alert
+alert('Hello!')
+```
+:::
 
 ## Zufallszahlen erraten
 
@@ -110,7 +116,25 @@ from random import randint
 Wenn die Zahl gefunden wurde, soll die Spieler:in nicht mehr nach einer Eingabe gefragt werden. Mit dem Befehl `break` kann die Wiederholung abgebrochen werden.
 </Hint>
 <Hint title={<span><code>break</code></span>}>
-<PyBreak />
+
+
+:::def
+### `break`
+Mit `break` kann eine Wiederholter Codeblock beendet werden. Die Ausführung geht mit der nächsten Zeile nach dem Codeblock weiter.
+
+**Beispiel**
+
+```py live_py slim
+for i in range(10):
+    print('Zahl', i)
+    if i == 4:
+        break
+print('Ende')
+```
+
+**Bemerke**: Bei `i == 4` wird `break` aufgerufen und das Programm führt als nächstes die Zeile 5 aus.
+:::
+
 </Hint>
 <Solution webKey="fcf61032-e9fd-460a-a5d2-cf19c5a782e8">
 

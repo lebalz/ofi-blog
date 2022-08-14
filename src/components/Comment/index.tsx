@@ -28,6 +28,10 @@ const reposition = (el: HTMLDivElement) => {
     }
     const md = getReferenceContainer(el.parentElement);
     if (md) {
+        if (md.getAttribute('role') === 'tabpanel') {
+            el.style.right = '2px';
+            return;
+        }
         const mdRight = md.getBoundingClientRect().right;
         const parentRight = el.parentElement.getBoundingClientRect().right;
         const offset = parentRight - mdRight - 10;

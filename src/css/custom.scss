@@ -234,9 +234,15 @@ html[data-theme='dark'] {
 .admonition.admonition-def {
     --ifm-alert-border-color: rgb(30, 255, 0);
     --ifm-alert-background-color: rgba(0, 0, 0, 0.226);
-
+    --ifm-spacing-vertical: 0.5rem;
+    
     >.admonition-content>.admonition-heading,
     >.admonition-heading {
+        display: none;
+    }
+
+    .admonition-content h3 {
+        --ifm-h3-font-size: var(--ifm-h4-font-size);
         code {
             color: rgb(19, 165, 0);
             text-transform: none;
@@ -245,16 +251,6 @@ html[data-theme='dark'] {
             &:first-of-type {
                 background-color: var(--ifm-color-primary-dark);
                 color: var(--ifm-alert-border-color);
-            }
-
-            font-size: 120%;
-        }
-
-        .admonition-icon {
-            margin-right: 0;
-
-            svg {
-                display: none;
             }
         }
     }

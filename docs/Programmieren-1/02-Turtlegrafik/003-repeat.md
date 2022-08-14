@@ -92,7 +92,8 @@ for i in range(5):
 ]} />
 :::
 
-:::def `for i in range(n):`
+:::def
+### `for i in range(n):`
 Mit `for i in range(n):` wird eine wiederholte Ausführung vorbereitet. Der nachfolgende **Codeblock** wird `n` Mal wiederholt, bevor weitere Anweisungen ausgeführt werden.
 **Alles, was wiederholt werden soll, muss eingerückt sein.**
 

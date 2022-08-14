@@ -5,22 +5,48 @@ sidebar_custom_props:
 
 # Python Befehle
 
-import PyTemplateString from '@site/docs/Programmieren-1/03-Python/_def-python-template-string.md';
-import PyOperatoren from '@site/docs/Programmieren-1/03-Python/_def-python-operatoren.md';
-import PyBreak from '@site/docs/Programmieren-1/03-Python/_def-python-break.md';
-import PyAlert from '@site/docs/Programmieren-1/03-Python/_def-python-alert.md';
-
-# Python Befehle
-
 ### Alert
 
-<PyAlert />
+:::def
+### `alert`
+Mit dem Befehl `alert` aus der Bibliothek `browser` können **Ausgabeboxen** erzeugt werden.
+
+```py live_py slim
+from browser import alert
+alert('Hello!')
+```
+:::
+
 
 ### Formatierter Text
 
-<PyTemplateString />
+:::def
+### formatierter Text `f''`
+Variablenwerte lassen sich mit geschweiften Klammern `{}` in einen Text einfügen. Dazu muss zu Beginn des Textes ein kleines `f` (für "fromatierten Text") hinzugefügt werden.
+
+```py live_py slim
+name = 'Alfred'
+print(f'Hallo {name}')
+```
+:::
 
 ### Break
 
-<PyBreak />
+:::def
+### `break`
+Mit `break` kann eine Wiederholter Codeblock beendet werden. Die Ausführung geht mit der nächsten Zeile nach dem Codeblock weiter.
+
+**Beispiel**
+
+```py live_py slim
+for i in range(10):
+    print('Zahl', i)
+    if i == 4:
+        break
+print('Ende')
+```
+
+**Bemerke**: Bei `i == 4` wird `break` aufgerufen und das Programm führt als nächstes die Zeile 5 aus.
+:::
+
 
