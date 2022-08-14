@@ -1,10 +1,12 @@
 ---
+sidebar_label: "Listen 1D"
 sidebar_custom_props:
   id: ad4d9802-8e3b-4706-bf2f-b6cac09a6cbd
 ---
+import Hint from '@site/src/components/Solution/Hint'
+
 # Listen
 
-## Erklärung
 Zum Speichern von **mehreren Werten** unter einem **einzigen Namen** verwendet man in Python Listen. Man kann sich __Listen__ als Tabellen mit einer Spalte vorstellen. Die Zellen in der Tabelle werden als **Elemente** bezeichnet und sind durchnummeriert. So kann man einzelne in der Liste gespeichert Werte unterscheiden. Die Nummer eines Elements wird als dessen **Index** bezeichnet.
 
 :::important Wichtig:
@@ -191,142 +193,33 @@ print(noten)
 ```
 :::
 
-## Zweidimensionale Listen
+## Aufgaben
+:::aufgabe Primzahlen
 
-Man kann in Python auch zwei- oder gar *n*-dimensionale Listen haben. Für Python ist das nichts anderes, als eine Liste, deren Elemente wiederum Listen sind.
-Für jede zusätzlich Dimension wird eine weitere Verschachtelungsstufe hizugefügt.
-Bei zwei Dimensionen kann man auf diese Wiese in Python Matrizen, bzw. Tabellen mit mehreren Zeilen und Spalten darstellen.
+Schreiben Sie ein Programm welches eine Liste mit allen Primzahlen zwischen 1 und 100 erstellt und diese Liste am Schluss auf der Konsole ausgibt.
 
-:::def
-### 3 x 3 Matrix
-Eine Matrix ist eine Liste von Listen
-```py live_py slim
-matrix_3x3 = [
-    [1, 2, 3], 
-    [4, 5, 6], 
-    [7, 8, 9]
-]
-print(matrix_3x3)
-```
-:::
+Klonen Sie dazu zuerst Ihr EF-Projekt auf Ihren Laptop. Erstellen Sie innerhalb des Projekts einen Ordner mit dem Namen __Übungen__ und darin eine neue Datei mit dem Namen __Primzahlen.py__.
+
+Programmieren Sie anschliessend einen geeigneten Algorithmus zur Lösung des Problems.
+
+<Hint>
+
+Um den Rest bei einer Division zu berechnen, kann der Modulo-Operator verwendet werden.
 
 :::def
-### Zugriff `[][]`
-Auf einzelne Element in der Matrix zugreifen
-
+### Modulo `%`
+Um den ganzzahligen Rest bei der Division von zwei ganzen Zahlen zu bestimmen, wird der Modulo-Operator verwendet.
+Biespiel: Was ist der ganzzahlige Rest von $7 / 5$? --> 2
 ```py live_py slim
-# kann auch auf einer Zeile geschrieben werden:
-matrix_3x3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
-# 3. Wert in 1. Zeile verändern
-matrix_3x3[0][2] = 0
-# Werte ausgeben
-print(matrix_3x3[0][2])
-print(matrix_3x3[2][0])
+print(7 % 5)
 ```
 :::
+</Hint>
 
-:::def 
-### Schleife über Zeilen
+Wenn Ihr Programm fertig ist und tut, was es soll:
+- __Stagen__ Sie die Änderungen
+- schreiben eine Commit-Nachricht und erstellen einen __commit__ 
+- __Pushen__ Sie die Änderungen auf GitHub.
 
-Schleife über einzelne Zeilen -> Zeilen sind wieder Listen
-```py live_py slim
-matrix_3x3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-for zeile in matrix_3x3:
-    print(zeile)
-```
-:::
-
-:::def
-### Durch alle Elemente Iterieren
-Dazu wird eine **verschachtelte Schleife** über Zeilen und Spalten verwendet.
-```py live_py slim
-matrix_3x3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-for zeile in matrix_3x3:
-    for zahl in zeile:
-        print(zahl)
-```
-
-Oder man greift über Zeilen- (`i`) und Spaltenindices (`j`) auf die Elemente zu:
-```py live_py slim
-matrix_3x3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-for i in range(len(matrix_3x3)):
-    for j in range(len(matrix_3x3[i])):
-        print(f'(i: {i}, j: {j}) =', matrix_3x3[i][j])
-```
-:::
-
-:::warning Häufige Fehlerquellen
-
-Exotisches (und oft Grund für Fehler):
-- Innere Listen sind unterschiedlich lang durch
-    - Anhängen eines weiteren Elementes
-    - Anhängen einer weiteren Zeile mit unterschiedlicher Länge
-    - ...
-- Einfügen eines String (oder irgend etwas anderes) in die äussere oder innere Liste
-
-```py live_py slim
-matrix_3x3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
-matrix_3x3[1].append(13)
-matrix_3x3.append([31])
-matrix_3x3.insert(2, 'blabla')
-
-for zeile in matrix_3x3:
-    print(zeile)
-```
-:::
-
-## List Comprehension
-
-Hier sehen Sie, wie man auf einfache Art und Weise eine Liste erzeugen und gleich mit bestimmten Werten füllen kann, man sagt __intialisieren__. Der Teil zwischen den `[]` wird als Listen-Abstraktion (englisch **list comprehension**) bezeichnet.
-
-:::def
-### Liste mit `1` initialisieren
-Liste mit 10 Elementen. Alle enthalten den Wert 1.
-```py live_py slim
-ones = [1 for i in range(10)]
-print(ones)
-```
-:::
-
-:::def
-### Zahlen von 0 bis 9
-Liste mit den Zahlen 0 bis 9 initialisieren:
-```py live_py slim
-zahlen = [i for i in range(10)]
-print(zahlen)
-```
-:::
-
-:::def
-### Gerade Zahlen
-Liste mit 10 geraden Zahlen, beginnend bei 0.
-```py live_py slim
-gerade_zahlen = [2*i for i in range(10)]
-print(gerade_zahlen)
-```
-:::
-
-:::def
-### `5x10`-Matrix
-`5x10`-Matrix von lauter `0` (5 Zeilen, 10 Spalten)
-```py live_py slim
-zeros_5x10 = [
-    [0 for j in range(10)] for i in range(5)
-]
-print(zeros_5x10)
-```
-:::
-
-:::def
-### `5x10`-Matrix, Durchnummeriert
-Elemente haben aufsteigende Werte, beginnend bei `0`.
-Der
-```py live_py slim
-matrix = [
-    [i*10 + j for j in range(10)] for i in range(5)
-]
-print(matrix)
-```
+Die oben beschriebenen Schritte werden Ihnen im angehängten Screencast gezeigt.
 :::
