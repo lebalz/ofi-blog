@@ -7,7 +7,7 @@ import Hint from '@site/src/components/Solution/Hint'
 
 # Listen
 
-Zum Speichern von **mehreren Werten** unter einem **einzigen Namen** verwendet man in Python Listen. Man kann sich __Listen__ als Tabellen mit einer Spalte vorstellen. Die Zellen in der Tabelle werden als **Elemente** bezeichnet und sind durchnummeriert. So kann man einzelne in der Liste gespeichert Werte unterscheiden. Die Nummer eines Elements wird als dessen **Index** bezeichnet.
+Zum Speichern von **mehreren Werten** unter einem **einzigen Namen** verwendet man in Python Listen. Man kann sich __Listen__ als Tabellen mit einer Spalte vorstellen. Die Zellen in der Tabelle werden als **Elemente** bezeichnet und sind durchnummeriert. So kann man einzelne in der Liste gespeichert Werte unterscheiden. Die Nummer eines Elements wird als dessen **Index** bezeichnet. [^1]
 
 :::important Wichtig:
 - Das erste Element in der Liste trägte den Index 0.
@@ -223,3 +223,5 @@ Wenn Ihr Programm fertig ist und tut, was es soll:
 
 Die oben beschriebenen Schritte werden Ihnen im angehängten Screencast gezeigt.
 :::
+
+[^1]: Quelle [sdg](https://gitlab.gbsl.website/gymbefin23/material/-/snippets/11)

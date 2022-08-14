@@ -28,7 +28,7 @@ Dies kann man beliebig oft wiederholen und kommt so zu 3-, 4- bis n-dimensionale
 
 Man kann in Python auch zwei- oder gar *n*-dimensionale Listen haben. Für Python ist das nichts anderes, als eine Liste, deren Elemente wiederum Listen sind.
 Für jede zusätzlich Dimension wird eine weitere Verschachtelungsstufe hizugefügt.
-Bei zwei Dimensionen kann man auf diese Wiese in Python Matrizen, bzw. Tabellen mit mehreren Zeilen und Spalten darstellen.
+Bei zwei Dimensionen kann man auf diese Wiese in Python Matrizen, bzw. Tabellen mit mehreren Zeilen und Spalten darstellen. [^1]
 
 :::def
 ### 3 x 3 Matrix
@@ -109,3 +109,5 @@ for zeile in matrix_3x3:
     print(zeile)
 ```
 :::
+
+[^1]: Quelle [sdg](https://gitlab.gbsl.website/gymbefin23/material/-/snippets/11)
