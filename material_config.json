@@ -172,7 +172,7 @@
     },
     {
       "from": "docs/software-installation/git/v2.37.1/",
-      "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/03-Git",
+      "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/03-Git-install",
       "ignore": []
     },
     {
