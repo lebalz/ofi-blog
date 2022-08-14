@@ -7,7 +7,7 @@ const uuid = require('uuid');
  * @param {string} file 
  */
 function ensurePageId(file) {
-    if (!file.endsWith('.md')) {
+    if (!file.endsWith('.md') || file.startsWith('_')) {
         return;
     }
     const fm = matter.read(file);
