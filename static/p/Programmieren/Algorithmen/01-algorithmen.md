@@ -1,58 +1,42 @@
 # Praktikum Informatik
 
-- Arbeitsweise einer Maschine
-- Verständigung mit einer Maschine
-  - Einblick in eine Programmiersprache
-  - Python
-- Alle zwei Wochen
+- Arbeitsweise einer Maschine <!-- .element: class="fragment" data-fragment-index="1" -->
+- Verständigung mit einer Maschine <!-- .element: class="fragment" data-fragment-index="2" -->
+  - Einblick in eine Programmiersprache <!-- .element: class="fragment" data-fragment-index="3" -->
+  - Python <!-- .element: class="fragment" data-fragment-index="3" -->
+- Alle zwei Wochen <!-- .element: class="fragment" data-fragment-index="4" -->
 
 
 # Heute
 
-- Was ist ein Algorithmus?
-- Darstellungsformen von Algorithmen
-- RoboZZle
+- Was ist ein Algorithmus? <!-- .element: class="fragment" data-fragment-index="1" -->
+- Darstellungsformen von Algorithmen <!-- .element: class="fragment" data-fragment-index="2" -->
+- RoboZZle <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
 
 # Schatzsuche
 
 ### 5' Verstecken
-- in 2er Gruppen ein Schoggi-Schatz verstecken
-- Eine Schatzkarte\* anfertigen
+- in 2er Gruppen einen Schoggi-Schatz verstecken <!-- .element: class="fragment" data-fragment-index="1" -->
+- Eine Schatzkarte\* anfertigen <!-- .element: class="fragment" data-fragment-index="1" -->
 
-
-# Schatzsuche
-
-### 5' Verstecken
-- in 2er Gruppen einen Schoggi-Schatz verstecken
-- Eine Schatzkarte\* anfertigen
-
-### 3' Suchen
-- Schatzkarte mit einer anderen Gruppe tauschen
-- 🍫🍫 Suchen
+### 3' Suchen <!-- .element: class="fragment" data-fragment-index="2" -->
+- Schatzkarte mit einer anderen Gruppe tauschen <!-- .element: class="fragment" data-fragment-index="2" -->
+- 🍫🍫 Suchen <!-- .element: class="fragment" data-fragment-index="2" -->
 
 
 # \*Schatzkarte
 
 - Die Schatzkarte beginnt bei der Markierung ⬆️
 - Für die Beschreibung dürfen **ausschliesslich** folgende Symbole verwendet werden:
-  - ↑ (=1 Schritt vorwärts)
-  - ↰ (=90° nach links)
-  - ✅ (=gefunden)
+  - ↑ (=1 Schritt vorwärts) <!-- .element: class="fragment" data-fragment-index="1" -->
+  - ↰ (=90° nach links) <!-- .element: class="fragment" data-fragment-index="2" -->
+  - ✅ (=gefunden) <!-- .element: class="fragment" data-fragment-index="3" -->
 
-
-# \*Schatzkarte
-
-- Die Schatzkarte beginnt bei der Markierung ⬆️
-- Für die Beschreibung dürfen **ausschliesslich** folgende Symbole verwendet werden:
-  - ↑ (=1 Schritt vorwärts)
-  - ↰ (=90° nach links)
-  - ✅ (=gefunden)
-
-In dieser Sprache:
-- gibt es "`↱`" nicht ⚠️
-- kann z.B. "`3x ↑`" nicht interpretiert werden ⚠️
+In dieser Sprache: <!-- .element: class="fragment" data-fragment-index="4" -->
+- gibt es "↱" nicht ⚠️  <!-- .element: class="fragment" data-fragment-index="5" -->
+- kann z.B. "3x ↑" nicht interpretiert werden ⚠️ <!-- .element: class="fragment" data-fragment-index="6" -->
 
 
 
@@ -70,44 +54,35 @@ Note:
 | Musikstück spielen | Notenblatt    | Ein c' spielen                    |
 
 
-## Spezielle Sprachen
-
-- Fachsprache oder symbolische Sprache
-
 
 ## Spezielle Sprachen
 
-- Fachsprache oder symbolische Sprache
-- kürzere und klarere Beschreibung der einzelnen Schritte
-
-
-## Spezielle Sprachen
-
-- Fachsprache oder symbolische Sprache
-- kürzere und klarere Beschreibung der einzelnen Schritte
-- Einheitliche Verwendung = universell einsetzbar
+- Fachsprache oder symbolische Sprache <!-- .element: class="fragment" data-fragment-index="1" -->
+- kürzere und klarere Beschreibung der einzelnen Schritte <!-- .element: class="fragment" data-fragment-index="2" -->
+- Einheitliche Verwendung = universell einsetzbar <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
 
 # Struktur
 
-- Definiert die Reihenfolge der Einzelschritte 
-- Die Struktur eines Algorithmus ist universell
+- Definiert die Reihenfolge der Einzelschritte  <!-- .element: class="fragment" data-fragment-index="1" -->
+- Die Struktur eines Algorithmus ist universell <!-- .element: class="fragment" data-fragment-index="2" -->
 
 
 # Strukturen
-- Sequenz 👣
-- Wiederholung 🔁
-- Bedingte Ausführung ⑂
-- Unterprogramm: 🏷 Beschriftung einer Sequenz
-- Parameter ⊕ ⊖
+
+- Sequenz 👣  <!-- .element: class="fragment" data-fragment-index="1" -->
+- Wiederholung 🔁  <!-- .element: class="fragment" data-fragment-index="2" -->
+- Bedingte Ausführung ⑂  <!-- .element: class="fragment" data-fragment-index="3" -->
+- Unterprogramm: 🏷 Beschriftung einer Sequenz  <!-- .element: class="fragment" data-fragment-index="4" -->
+- Parameter ⊕ ⊖  <!-- .element: class="fragment" data-fragment-index="5" -->
 
 Note:
-Sequenz: Es wird ein Schritt nach dem anderen abgearbeitet.
-Wiederholung: Einer oder mehrere Schritte werden eine bestimmte Anzahl mal wiederholt.
-Bedingte Ausführung: bspw. Backen: Grundmasse gleich, für Schokokuchen oder Fruchtkuchen unterschiedlich...
-Unterprogramm: Mehrere Schritte können zusammengefasst und mit einem Namen versehen werden. Anstatt immer wieder alle Schritte aufzuführen, wird nur der Name angegeben.
-Parameter: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welche bei jeder Ausführung neu festgelegt werden.
+**Sequenz**: Es wird ein Schritt nach dem anderen abgearbeitet.
+**Wiederholung**: Einer oder mehrere Schritte werden eine bestimmte Anzahl mal wiederholt.
+**Bedingte Ausführung**: bspw. Backen: Grundmasse gleich, für Schokokuchen oder Fruchtkuchen unterschiedlich...
+**Unterprogramm**: Mehrere Schritte können zusammengefasst und mit einem Namen versehen werden. Anstatt immer wieder alle Schritte aufzuführen, wird nur der Name angegeben.
+**Parameter**: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welche bei jeder Ausführung neu festgelegt werden.
 
 
 
@@ -116,27 +91,10 @@ Parameter: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welc
 ⚠️ Ein Algorithmus muss nach endlich vielen Einzelschritten enden
 
 
-# Al-Chwarizmi
-
-Wer hats erfunden?
-
-«Algorismus»
-
-![](images/al-chwarizmi.png)
-
-Note:
-Abu Dschaʿfar Muhammad ibn Musa al-Chwārizmī war ein **Mathematiker** und **Universalgelehrter**. Er stammte zwar aus dem **iranischen** Choresmien, verbrachte jedoch den größten Teil seines Lebens in Bagdad und war dort im «Haus der Weisheit», einer Art Akademie, tätig.
-
-In der **lateinischen Übersetzung** eines Werkes von Al-Chwarizmi wurde sein Name als **«algorismus»** geschrieben. Davon leitet sich der heutige Begriff «Algorithmus» ab.
-
-
 
 # Falten
 
-<div style="background: white">
-
-![](images/origami-box.svg)
-</div>
+![](images/origami-box.svg)<!-- .element: class="r-stretch" -->
 
 Note:
 3 Arten von Schritten
@@ -147,10 +105,7 @@ Note:
 
 # Bauanleitung
 
-<div style="background: white">
-
-![](images/ikea-norden.svg)
-</div>
+![](images/ikea-norden.svg)<!-- .element: class="r-stretch" -->
 
 Note:
 - Schritt
@@ -160,10 +115,7 @@ Note:
 
 # Noten
 
-<div class="full" style="background: white">
-
-![](images/music-step.svg)
-</div>
+![](images/music-step.svg)<!-- .element: class="r-stretch" -->
 
 Note:
 Schritt
@@ -171,10 +123,7 @@ Schritt
 
 # Noten
 
-<div class="full" style="background: white">
-
-![](images/music-repeat.svg)
-</div>
+![](images/music-repeat.svg)<!-- .element: class="r-stretch" -->
 
 Note:
 Wiederholung
@@ -182,10 +131,7 @@ Wiederholung
 
 # Noten
 
-<div class="full" style="background: white">
-
-![](images/music-conditional.svg)
-</div>
+![](images/music-conditional.svg)<!-- .element: class="r-stretch" -->
 
 <audio controls>
     <source src="/sounds/music-conditional-1.mp3" type="audio/mpeg"/>
@@ -200,21 +146,14 @@ Bedingte Ausführung
 
 # Noten
 
-<div class="full" style="background: white">
-
-![](images/music-parameter.svg)
-</div>
+![](images/music-parameter.svg)<!-- .element: class="r-stretch" -->
 
 Note:
 Parameter
 
 
 # Flussdiagramm
-
-<div style="background: white">
-
-![Flussdiagramm](images/flowchart-spaghetti.svg)
-</div>
+![Flussdiagramm](images/flowchart-spaghetti.svg)<!-- .element: class="r-stretch" -->
 
 Note:
 **Programmablaufplan** ist eine grafische Darstellungsform eines Algorithmus. Es besteht aus Elementen, welche einzelne Schritte des Algorithmus darstellen.
@@ -227,12 +166,9 @@ Note:
 
 # RoboZZle
 
-<div class="small">
+![](images/RoboZZle_a1.png)<!-- .element: class="r-stretch" -->
 
-![](images/RoboZZle_a1.png)
-</div>
-
-- **Ziel**: Algorithmus finden, welcher alle Sterne auf dem Spielfeld erwischt
-- **Symbole**: ↑, ↰, ↱
-- **Unterprogramme**: `F1`, `F2`
-- **Bedingte Ausführung**: Farben
+- Ziel: Algorithmus finden, welcher alle Sterne auf dem Spielfeld erwischt<!-- .element: class="fragment" data-fragment-index="1" -->
+- Symbole: ↑, ↰, ↱<!-- .element: class="fragment" data-fragment-index="2" -->
+- Unterprogramme: F1, F2<!-- .element: class="fragment" data-fragment-index="3" -->
+- Bedingte Ausführung Farben<!-- .element: class="fragment" data-fragment-index="4" -->
