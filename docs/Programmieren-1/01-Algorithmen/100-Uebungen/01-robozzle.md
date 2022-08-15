@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # RoboZZle
 
-
-# RoboZZle
-
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/MmqBVWi_Pc0?start=21" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 :::aufgabe Aufgabe 1
@@ -105,7 +102,7 @@ sidebar_custom_props:
 
 :::
 
-:::aufgabe Aufgabe 10.
+:::aufgabe ⭐️ Aufgabe 10.
 
 [Puzzle 10](http://www.robozzle.com/beta/index.html?puzzle=87)
 
