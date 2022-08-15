@@ -1,9 +1,8 @@
 ---
+sidebar_label: E-Mail
 sidebar_custom_props:
   id: e2ec495d-e1ae-4eb2-b405-afa32f80df2d
 ---
-
-# E-Mail
 
 # E-Mail verwenden [^1]
 
