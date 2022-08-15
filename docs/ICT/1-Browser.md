@@ -21,7 +21,7 @@ Der Browser führt auch Programme aus, welche in der Webseite enthalten sind.
 | ![](images/logo-safari.png)  | [Safari](https://support.apple.com/de_CH/downloads/safari) | Apple      | :mdi-close-circle--red l: nur für Apple Produkte |
 
 
-## Technologien [^1]
+## ⭐️ Technologien [^1]
 Für moderne Webseiten werden hauptsächlich drei Technologien verwendet:
 
 - **HTML** (*Hypertext Markup Language*): Mit dieser Markup-Sprache wird die Struktur einer Webseite beschrieben. HTML-Dateien enthalten den «Bauplan» einer Webseite und Verweise auf alle anderen Dateien, welche für die Webseite benötigt werden.
