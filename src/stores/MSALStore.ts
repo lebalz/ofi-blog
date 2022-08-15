@@ -73,11 +73,11 @@ export class MSALStore {
             this.isApiOffline = offline;
             if (offline) {
                 this.offlineSince = new Date();
-                umamiReport('device-offline', this.offlineSince.toISOString());
+                umamiReport('device-offline', { time: this.offlineSince.toISOString(), userId: this.root.userStore.current.id });
             } else {
                 const period = this.offlineSince ? Date.now() - this.offlineSince.getTime() : -1;
                 this.offlineSince = undefined;
-                umamiReport('device-online-after', `${period}`);
+                umamiReport('device-online-after', { after: period, userId: this.root.userStore.current.id });
             }
         }
     }

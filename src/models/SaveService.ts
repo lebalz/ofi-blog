@@ -8,7 +8,7 @@ type RequestState = 'init' | 'save' | 'done' | 'pending' | 'deleted' | 'error';
 export interface ApiModel {
     umami?: {
         event: string;
-        message: string;
+        data: Object;
     };
     canUpdate: boolean;
     data: Object;
@@ -88,7 +88,7 @@ export default class SaveService {
             .withToken()
             .then((ok) => {
                 if (ok && this.model.umami) {
-                    umamiReport(this.model.umami.event, `${this.model.umami.message}`);
+                    umamiReport(this.model.umami.event, this.model.umami.data);
                 }
                 return this.endpoint(this.model, this.cancelToken);
             })
