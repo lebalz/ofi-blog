@@ -48,20 +48,42 @@ Oft sind Links nicht lange gültig. Wenn beispielsweise eine Website restrukturi
 
 :::aufgabe
 
-Die folgenden Quellenangaben stammen aus einem PDF zum korrekten Zitieren und Bibliographieren. Die Links funktionieren aber nicht mehr. Versuchen Sie, den richtigen Link zu finden:
+Die folgenden Quellenangaben stammen aus einem PDF zum korrekten Zitieren und Bibliographieren. Die Links funktionieren aber nicht mehr. Versuchen Sie, den richtigen Link zu finden und die Frage zu beantworten.
 
-1. Goethe-Universität Frankfurt a. M.: Neurolinguistik (geändert am 6. November 2007) http://www1.uni-frankfurt.de/fb/fb10/KogLi/Lehrstuehle/ehem__Lehrstuhl_Leuninger/Neurolinguistik/index.html (abgerufen am 03.03.2018).
-  
+1. Goethe-Universität Frankfurt a. M.: Neurolinguistik (geändert am 6. November 2007) http://www.uni-frankfurt.de/fb/fb10/KogLi/Lehrstuehle/ehem__Lehrstuhl_Leuninger/Neurolinguistik/index.html (abgerufen am 03.03.2018).  
+
+  Wer ist heute die vorstehende Professor:in?
   <Answer type="text" webKey="f9419997-fdd1-4a4c-ae37-40f07d353c21" />
+  
+<Solution webKey="99a0793d-e17c-448c-83d3-6d8cdde483d9">
 
-2. Baader, S.: Geometrie – Vorlesungsscript. Mitschrift von Alex Aeberli und Raoul Bourquin, Wintersemester 07. [PDF], Skript zur Vorlesung Geometrie an der ETHZ im Wintersemester 2007, (2007) https://www.mitschriften.ethz.ch/main.php?page=3&scrid=1&pid=29&eid=1 (abgerufen am 31.01.2018).
-   
-   <Answer type="text" webKey="9e968285-7d48-4b67-975c-3adb5b3b8b1c" />
+  - https://www.uni-frankfurt.de/65406913/Neurolinguistik (15.08.2022)
+  - Prof. Dr. Markus Bader
 
-3. ParlCH: «Erklär mir das Parlament». 18.02.2016 https://www.youtube.com/watchv=vtfEG0txhOU (abgerufen am 31.01.2018).
+</Solution>
+
+
+
+2. Baader, S.: Geometrie – Vorlesungsscript. Mitschrift von Alex Aeberli und Raoul Bourquin, Wintersemester 07. [PDF], Skript zur Vorlesung Geometrie an der ETHZ im Wintersemester 2007, (2007) https://www.mitschriften.ethz.ch/main.php?page=3&scrid=1&pid=29&eid=1 (abgerufen am 31.01.2018).  
+
+  Finden Sie das Dokument und halten Sie den Link fest.
+  <Answer type="text" webKey="9e968285-7d48-4b67-975c-3adb5b3b8b1c" />
+
+
+<Solution webKey="91a9c405-acda-41d8-955a-2272f57cc251">
+
+z.B. https://docplayer.org/47099510-Geometrie-vorlesungsscript.html (15.08.2022)
+</Solution>
+
+3. ParlCH: «Erklär mir das Parlament». 18.02.2016 https://www.youtube.com/watchv=vtfEG0txhOU (abgerufen am 31.01.2018).  
    
+   Finden Sie das Video und halten Si den Link fest.
    <Answer type="text" webKey="7f3adbb2-4591-4673-a9ae-5e1b0a809ee9" />
 
+<Solution webKey="34a4972b-e9c8-4787-9688-9783e691d826">
+
+https://www.youtube.com/watch?v=vtfEG0txhOU (15.08.2022)
+</Solution>
 :::
 
 ## Web Archiv - *Einmal im Internet, immer im Internet*

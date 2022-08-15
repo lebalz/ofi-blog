@@ -1,9 +1,8 @@
 ---
+sidebar_label: Datenverlust
 sidebar_custom_props:
   id: 73c81d4b-ceac-4db9-95e2-c562ec5691ba
 ---
-
-# Datenverlust
 
 # Datenverlust [^1]
 Eine oft unterschätzte Gefahr ist der Verlust von Daten.
