@@ -1,9 +1,8 @@
 ---
+sidebar_label: Notenblatt
 sidebar_custom_props:
   id: 583be0ff-e45a-4ff3-9a15-c0a7a99345b0
 ---
-
-# Notenblatt
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 

@@ -2,9 +2,6 @@
 sidebar_custom_props:
   id: 635e5614-3048-4412-adea-bd717a96bd05
 ---
-
-# Bauanleitung
-
 # Bauanleitung
 
 Eine Bauanleitung ist ein Algorithmus, welche das Zusammenbauen von Einzelteilen zu einem fertigen Möbel beschreibt und ist oft in einer Bildschrift verfasst.

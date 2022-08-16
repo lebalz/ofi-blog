@@ -1,9 +1,8 @@
 ---
+sidebar_label: Algorithmus
 sidebar_custom_props:
   id: c649390e-7880-46a5-a611-f938c1f6a100
 ---
-
-# Algorithmus
 
 # Algorithmus [^1]
 
