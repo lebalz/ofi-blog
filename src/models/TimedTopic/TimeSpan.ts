@@ -55,7 +55,7 @@ export default class TimeSpan {
     get umami() {
         return {
             event: 'update-time-span',
-            message: '',
+            data: {},
         };
     }
 

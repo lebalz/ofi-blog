@@ -6,7 +6,7 @@ export type ExerciseLabel = 'solved' | 'important' | 'question' | 'fail';
 
 export interface Data {
     labels: ExerciseLabel[];
-    text?: React.ReactNode;
+    text?: string;
 }
 
 export interface  TimedExerciseData {

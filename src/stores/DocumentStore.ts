@@ -9,8 +9,12 @@ import Text from '../models/Answer/Text';
 import { DocType, ModelTypes, IModel, TypedDoc, Model } from '../models/iModel';
 import Script from '../models/Script';
 import { RootStore } from './stores';
+import StateAnswer from '../models/Answer/State';
 
-const CreateModel = (data: DocumentProps<any>, options: { raw?: string; readonly?: boolean, versioned?: boolean } = {}) => {
+const CreateModel = (
+    data: DocumentProps<any>,
+    options: { raw?: string; readonly?: boolean; versioned?: boolean } = {}
+) => {
     switch (data.type) {
         case 'array':
             return new ArrayAnswer(data);
@@ -20,6 +24,8 @@ const CreateModel = (data: DocumentProps<any>, options: { raw?: string; readonly
             return new StringAnswer(data);
         case 'text':
             return new Text(data);
+        case 'state':
+            return new StateAnswer(data);
     }
 };
 
@@ -56,6 +62,9 @@ const CreateDummyModel = <T extends IModel = IModel>(
         case 'text':
             model = new Text({ ...dummy, versions: [], data: TypedDoc('text', data) });
             break;
+        
+        case 'state':
+            model = new StateAnswer({ ...dummy, versions: [], data: TypedDoc('state', data) });
     }
     return model as T;
 };
@@ -167,7 +176,7 @@ export class DocumentStore {
                     const fromApi = CreateModel(data.data, {
                         readonly: readonly,
                         raw: type === 'code' ? TypedDoc('code', defaultData).code : undefined,
-                        versioned: versioned
+                        versioned: versioned,
                     }) as T;
                     fromApi.loaded = true;
                     runInAction(() => {
@@ -210,7 +219,12 @@ export class DocumentStore {
                             }
                         });
                 }
-                return getDocumentAsAdmin<T>(this.root.userStore.currentView.id, webKey, versions, cancelToken)
+                return getDocumentAsAdmin<T>(
+                    this.root.userStore.currentView.id,
+                    webKey,
+                    versions,
+                    cancelToken
+                )
                     .then(({ data }) => {
                         return data;
                     })

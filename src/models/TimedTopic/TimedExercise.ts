@@ -14,7 +14,7 @@ import { postTimeSpan } from '../../api/time_span';
 import { sortBy, sumBy } from 'lodash';
 import { TimedTopicStore } from '../../stores/TimedTopicStore';
 import { rootStore } from '../../stores/stores';
-import { iTextData } from '../../components/shared/QuillEditor';
+import { iTextData } from '../../components/shared/QuillEditor_';
 
 
 const save = (model: TimedExercise, cancelToken: CancelTokenSource) => {
@@ -42,7 +42,7 @@ export default class TimedExercise implements ApiModel, iTextData {
     timeSpans = observable<TimeSpan>([]);
 
     @observable
-    text: React.ReactNode;
+    text: string;
 
     constructor(data: TimedExerciseProps, topic: TimedTopic) {
         this.store = rootStore.timedTopicStore;
@@ -76,7 +76,7 @@ export default class TimedExercise implements ApiModel, iTextData {
     }
 
     @action
-    setText(text: React.ReactNode) {
+    setText(text: string) {
         this.text = text;
     }
 
@@ -100,7 +100,7 @@ export default class TimedExercise implements ApiModel, iTextData {
     get umami() {
         return {
             event: `update-timed-exercise`,
-            message: ''
+            data: {},
         }
     }
 

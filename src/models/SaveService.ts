@@ -1,5 +1,5 @@
 import axios, { CancelTokenSource, Method } from 'axios';
-import { debounce } from 'lodash';
+import { debounce, DebouncedFunc } from 'lodash';
 import { action, computed, IReactionDisposer, makeObservable, observable, reaction } from 'mobx';
 import { umamiReport } from '../helpers/umami';
 import { RootStore, rootStore } from '../stores/stores';
@@ -16,8 +16,9 @@ export interface ApiModel {
 }
 
 export default class SaveService {
-    private readonly tDebounce: number = 1000;
+    private readonly tDebounce: number;
     private readonly rootStore: RootStore;
+    private save: DebouncedFunc<() => Promise<any>>;
     @observable
     method: Method;
 
@@ -30,9 +31,12 @@ export default class SaveService {
     model: ApiModel;
 
     disposer: IReactionDisposer;
+    offlineDisposer: IReactionDisposer;
     endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>;
     constructor(model: ApiModel, endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>, tDebounce: number = 1000) {
         this.tDebounce = tDebounce;
+        this.save = debounce(action(this._save), this.tDebounce, { leading: false, trailing: true, maxWait: 5000 });
+
         this.rootStore = rootStore;
         this.endpoint = endpoint;
         this.model = model;
@@ -43,11 +47,20 @@ export default class SaveService {
                 this.save();
             }
         );
+        this.offlineDisposer = reaction(
+            () => this.isOffline,
+            (isOff, prev) => {
+                if (prev && !isOff && this.state === 'error') {
+                    this.save();
+                }
+            }
+        );
     }
 
     @action
     cleanup() {
         this.disposer();
+        this.offlineDisposer();
     }
 
     @computed
@@ -66,8 +79,6 @@ export default class SaveService {
         this.save();
         return this.save.flush();
     }
-
-    save = debounce(action(this._save), this.tDebounce, { leading: false, trailing: true, maxWait: 5000 });
 
     @action
     _save() {

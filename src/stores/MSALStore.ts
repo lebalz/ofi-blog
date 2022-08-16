@@ -26,7 +26,7 @@ export class MSALStore {
     offlineSince?: Date = undefined;
 
     @observable
-    ignoreOfflineState = false;
+    offlineModeConfirmed = false;
     cancelToken: CancelTokenSource = axios.CancelToken.source();
 
     constructor(root: RootStore) {
@@ -36,7 +36,8 @@ export class MSALStore {
         reaction(
             () => this.offlineTimer,
             (offlineTime) => {
-                if (!offlineTime || this.ignoreOfflineState) {
+                // if (!offlineTime || this.ignoreOfflineState) {
+                if (!offlineTime) {
                     return;
                 }
                 this.cancelToken.cancel();
@@ -46,21 +47,23 @@ export class MSALStore {
                         if (res.status === 200) {
                             runInAction(() => {
                                 this.setApiOfflineState(false);
+                                this.offlineModeConfirmed = false;
                             });
                         }
                     })
                     .catch((err) => {
                         return;
                     });
-                if (offlineTime > 20000 && window) {
+                if (offlineTime > 20000 && window && !this.offlineModeConfirmed) {
                     const reload = window.confirm(
                         'Die Seite ist seit mehr als 20s offline. Ihre Arbeit kann nicht gespeichert werden. Seite neu laden?'
                     );
-                    runInAction(() => {
-                        this.ignoreOfflineState = true;
-                    });
                     if (reload) {
                         window.location.reload();
+                    } else {
+                        runInAction(() => {
+                            this.offlineModeConfirmed = true;
+                        });
                     }
                 }
             }

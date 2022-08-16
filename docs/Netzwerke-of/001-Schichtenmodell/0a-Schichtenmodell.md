@@ -78,7 +78,9 @@ Ohne Probleme liesse sich das obenstehende Beispiel verwenden, um andere Inhalte
 - Die Übertragung von E-Mails und die einer Webseite unterscheidet sich nur in der obersten Schicht. Beide bauen auf den 3 identischen unteren Schichten auf
 
 :::aufgabe Aufbau auf bestehendem
+
 Was könnte noch Übertragen werden, wobei die unteren Schichten verwendet werden?
+<Answer type="state" webKey="2b285845-e980-448e-9126-5b8dc7be9d20" />
 <Answer type="text" webKey="64c4cfae-45dd-4961-b127-3d77964bcf96" />
 :::
 
@@ -92,6 +94,7 @@ Die Schichten können ausgetauscht werden, solange sie ihre Aufgabe erfüllen un
 :::aufgabe Schichten austauschen
 Suchen Sie in anderen Bereichen des Alltags Schichtenmodelle und finden Sie dort Austauschbare Schichten.
 
+<Answer type="state" webKey="72e68783-ab68-4e2b-8501-45b7b7eb7dad" />
 <Answer type="text" webKey="0e1a8f90-44df-4c82-8e81-7b98a3bf09f1" />
 <Solution webKey="818dd047-4ae7-4bce-84b3-4b95c7655292">
 

@@ -1,31 +1,31 @@
 import { CancelTokenSource } from 'axios';
 import { Document, putDocument } from './../../api/document';
-import { action, computed, makeObservable, observable } from "mobx";
+import { action, computed, makeObservable, observable } from 'mobx';
 import { TextModel } from '../iModel';
 import SaveService, { ApiModel } from '../SaveService';
 import { iTextData } from '../../components/shared/QuillEditor_';
 
 export interface TextDoc {
     value: string;
-    type: "text";
+    type: 'text';
     default?: string;
-  }
+}
 
 export const DEFAULT_DATA: TextDoc = {
     value: '',
     type: 'text',
-}
+};
 
 const save = (model: Text, cancelToken: CancelTokenSource) => {
-    return putDocument<TextDoc>(model.webKey, model.data,  false, false, cancelToken);
-}
+    return putDocument<TextDoc>(model.webKey, model.data, false, false, cancelToken);
+};
 
 export default class Text implements TextModel, ApiModel, iTextData {
     type: 'text' = 'text';
     webKey: string;
     id: number;
     userId: number;
-    @observable 
+    @observable
     createdAt: Date;
     @observable
     updatedAt: Date;
@@ -36,7 +36,6 @@ export default class Text implements TextModel, ApiModel, iTextData {
 
     @observable
     isDummy: boolean;
-
 
     @observable
     loaded: boolean = false;
@@ -63,7 +62,7 @@ export default class Text implements TextModel, ApiModel, iTextData {
 
     @computed
     get canUpdate(): boolean {
-        return !this.readonly &&  this.loaded;
+        return !this.readonly && this.loaded;
     }
 
     @computed
@@ -80,7 +79,7 @@ export default class Text implements TextModel, ApiModel, iTextData {
     get data(): TextDoc {
         return {
             type: 'text',
-            value: this.value
+            value: this.value,
         };
     }
 
@@ -93,8 +92,8 @@ export default class Text implements TextModel, ApiModel, iTextData {
     get umami() {
         return {
             event: `update-doc-${this.type}`,
-            message: this.webKey
-        }
+            data: { webKey: this.webKey },
+        };
     }
 
     @computed
@@ -110,5 +109,4 @@ export default class Text implements TextModel, ApiModel, iTextData {
             updated_at: this.updatedAt.toISOString(),
         };
     }
-
 }

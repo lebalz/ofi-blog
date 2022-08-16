@@ -1,10 +1,11 @@
 import ArrayAnswer, { ArrayDoc } from './Answer/Array';
+import StateAnswer, { StateDoc } from './Answer/State';
 import StringAnswer, { StringDoc } from './Answer/String';
 import Text, { TextDoc } from './Answer/Text';
 import SaveService from './SaveService';
 import Script, { PyDoc } from './Script';
 
-export type DocType = 'code' | 'string' | 'text' | 'array';
+export type DocType = 'code' | 'string' | 'text' | 'array' | 'state';
 
 export interface BaseModel {
     webKey: string;
@@ -31,6 +32,11 @@ export interface StringModel extends BaseModel {
     data: StringDoc;
     setData: (data: StringDoc) => void;
 }
+export interface StateModel extends BaseModel {
+    type: 'state';
+    data: StateDoc;
+    setData: (data: StateDoc) => void;
+}
 export interface TextModel extends BaseModel {
     type: 'text';
     data: TextDoc;
@@ -48,11 +54,11 @@ export interface CodeModel extends BaseModel {
     setData: (data: PyDoc) => void;
 }
 
+export type ModelTypes = ArrayDoc | PyDoc | StringDoc | TextDoc | StateDoc;
+export type IModel = CodeModel | TextModel | StringModel | ArrayModel | StateModel;
+export type Model = Script | Text | ArrayAnswer | StringAnswer | StateAnswer;
 
-export type ModelTypes = ArrayDoc | PyDoc | StringDoc | TextDoc;
-export type IModel = CodeModel | TextModel | StringModel | ArrayModel ;
-export type Model = Script | Text | ArrayAnswer | StringAnswer;
-
+function TypedDoc(type: 'state', data: Object): StateDoc;
 function TypedDoc(type: 'array', data: Object): ArrayDoc;
 function TypedDoc(type: 'code', data: Object): PyDoc;
 function TypedDoc(type: 'string', data: Object): StringDoc;
@@ -67,7 +73,9 @@ function TypedDoc(type: DocType, data: Object) {
             return data as any as TextDoc;
         case 'array':
             return data as any as ArrayDoc;
+        case 'state':
+            return data as any as StateDoc;
     }
 }
 
-export {TypedDoc}
+export { TypedDoc };

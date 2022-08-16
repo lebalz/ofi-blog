@@ -1,0 +1,18 @@
+.state {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    .checkbox {
+        font-size: 1.2rem;
+        padding: 0px 5px;
+    }
+}
+
+:global .admonition-aufgabe {
+    position: relative;
+    .state-component:not(.no-header) {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}

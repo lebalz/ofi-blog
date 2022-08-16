@@ -7,6 +7,11 @@ sidebar_custom_props:
 
 # Schicht 4: Anwendungsschicht [^1]
 
+<Answer type="state" webKey="149a5e79-6b32-4361-844b-648d47eaa517">
+Gelesen?
+</Answer>
+<br />
+
 Auf der Anwendungsschicht geht es um Dinge, die den Benutzer des Systems interessieren.
 
 ## Beispiel «Schule»

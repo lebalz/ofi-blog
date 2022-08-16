@@ -6,6 +6,10 @@ sidebar_custom_props:
 ---
 #  Schicht 1: Physikalische Schicht (Netzzugangsschicht) [^1]
 
+<Answer type="state" webKey="9285e8bd-8411-45b6-890c-93aad1bd8b9c">
+Gelesen?
+</Answer><br />
+
 Auf der physikalischen Schicht geht es um das konkrete Transportmittel (Velokurier, Lastwagen, ... resp. WLAN, LAN, Mobilfunk, ...). Auch hier werden Adressen benötigt, es sind weltweit eindeutige Adressen, die fix an das Gerät geknüpft sind.
 
 ## Beispiel «Schule»

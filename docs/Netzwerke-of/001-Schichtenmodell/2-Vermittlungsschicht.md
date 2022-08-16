@@ -7,6 +7,10 @@ sidebar_custom_props:
 
 #  Schicht 2: Vermittlungsschicht [^1]
 
+<Answer type="state" webKey="dca07bc2-eefb-4cbd-ad94-93a641dc637a">
+Gelesen?
+</Answer><br />
+
 In der Vermittlungsschicht brauchen wir eine Adresse, an die die (Daten-)Pakete gesendet werden können. Es handelt sich um eine logische Adresse aus dem Netzwerk, in dem sich das Gerät gerade befindet.
 
 ## Beispiel «Schule»

@@ -7,6 +7,10 @@ sidebar_custom_props:
 
 #  Schicht 3: Transportschicht [^1]
 
+<Answer type="state" webKey="bfb4ed5e-ed95-4353-bb27-f1c1e2f4b0fe">
+Gelesen?
+</Answer><br />
+
 Die Transportschicht stellt sicher, dass der Transport korrekt abläuft. Die zu transportierenden Dinge oder Daten müssen zerlegt werden, damit sie in Pakete passen. Die Pakete müssen nummeriert werden, damit die Dinge/Daten am Zielort wieder richtig zusammengesetzt werden können.
 
 ## Beispiel «Schule»

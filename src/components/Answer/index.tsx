@@ -12,10 +12,12 @@ import { ModelTypes } from '../../models/iModel';
 import ReactDomServer from 'react-dom/server';
 import { ToolbarOptions } from '../shared/quillConfig';
 import Loader from '../shared/Loader';
+import StateAnswer from './StateAnswer';
+import clsx from 'clsx';
 
 export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();
 
-export type Types = 'array' | 'string' | 'text';
+export type Types = 'array' | 'string' | 'text' | 'state';
 
 export interface Base {
     webKey: string;
@@ -39,6 +41,12 @@ export interface ArrayProps extends Base {
     select?: string[];
 }
 
+export interface StateProps extends Base {
+    type: 'state';
+    noQuestion?: boolean;
+    noHeader?: boolean;
+}
+
 export interface StringProps extends Base {
     type: 'string';
     placeholder?: string;
@@ -52,7 +60,7 @@ export interface StringProps extends Base {
     disabled?: boolean;
 }
 
-export type Props = StringProps | ArrayProps | TextProps;
+export type Props = StringProps | ArrayProps | TextProps | StateProps;
 
 const getDefault = (props: Props): ModelTypes => {
     switch (props.type) {
@@ -72,6 +80,11 @@ const getDefault = (props: Props): ModelTypes => {
                 type: 'array',
                 size: props.size,
             };
+        case 'state':
+            return {
+                type: 'state',
+                value: 'unset'
+            };
     }
 };
 
@@ -81,7 +94,7 @@ const Answer = observer((props: Props) => {
     const model = store.find(props.webKey);
     const inBrowser = useIsBrowser();
     useDocument(() => getDefault(props), props.type, props.webKey, true);
-    
+
     if (!inBrowser) {
         return <div>SSR</div>;
     }
@@ -89,12 +102,13 @@ const Answer = observer((props: Props) => {
         return <Loader />;
     }
     return (
-        <div data--web-key={props.webKey}>
+        <div data--web-key={props.webKey} className={clsx('answer', props.type)}>
             <LoginAlert />
             {msalStore.loggedIn && <OfflineChecker webKey={props.webKey} />}
             {props.type === 'text' && <TextAnswer {...props} />}
             {props.type === 'string' && <StringAnswer {...props} />}
             {props.type === 'array' && <ArrayAnswer {...props} />}
+            {props.type === 'state' && <StateAnswer {...props} />}
         </div>
     );
 });

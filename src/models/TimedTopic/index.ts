@@ -143,7 +143,7 @@ export default class TimedTopic implements ApiModel {
     get umami() {
         return {
             event: 'update-timed-topic',
-            message: '',
+            data: {},
         };
     }
 

@@ -121,7 +121,7 @@ export default class Script implements CodeModel, ApiModel {
     get umami() {
         return {
             event: `update-doc-${this.type}`,
-            message: this.webKey,
+            data: { webKey: this.webKey }
         };
     }
 

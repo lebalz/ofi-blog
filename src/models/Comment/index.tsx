@@ -141,7 +141,7 @@ export default class Comment implements ApiModel, iTextData {
     get umami() {
         return {
             event: `update-comment-${this.type}`,
-            message: this.pageKey,
+            data: { pageKey: this.pageKey },
         };
     }
 

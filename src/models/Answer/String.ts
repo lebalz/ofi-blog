@@ -82,7 +82,7 @@ export default class StringAnswer implements StringModel, ApiModel {
     get umami() {
         return {
             event: `update-doc-${this.type}`,
-            message: this.webKey
+            data: {webKey: this.webKey, type: this.type}
         }
     }
 

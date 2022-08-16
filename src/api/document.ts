@@ -3,7 +3,7 @@ import { AxiosPromise, CancelTokenSource } from 'axios';
 import { DocType } from '../models/iModel';
 
 export interface Version<T> {
-    version: string; /** ISO Date */
+    version: string /** ISO Date */;
     data: T;
     pasted: boolean;
 }
@@ -19,7 +19,11 @@ export interface Document<T> {
     updated_at: string;
 }
 
-export function getDocument<T>(webKey: string, versions: boolean, cancelToken: CancelTokenSource): AxiosPromise<Document<T>> {
+export function getDocument<T>(
+    webKey: string,
+    versions: boolean,
+    cancelToken: CancelTokenSource
+): AxiosPromise<Document<T>> {
     return api.get(`document/${webKey}?versions=${versions}`, { cancelToken: cancelToken.token });
 }
 
@@ -47,13 +51,16 @@ export function putDocument<T extends Object = Object>(
     pasted: boolean,
     cancelToken: CancelTokenSource
 ): AxiosPromise<{ updated_at: string; state: string }> {
+    const payload: { data: T; snapshot?: boolean; pasted?: boolean } = { data };
+    if (snapshot) {
+        payload.snapshot = snapshot;
+    }
+    if (pasted) {
+        payload.pasted = pasted;
+    }
     return api.put(
         `document/${webKey}`,
-        {
-            data: data,
-            snapshot: snapshot,
-            pasted: pasted
-        },
+        payload,
         { cancelToken: cancelToken.token }
     );
 }
