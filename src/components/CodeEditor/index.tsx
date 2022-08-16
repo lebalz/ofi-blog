@@ -53,7 +53,7 @@ const PyAceEditor = observer((props: Props) => {
         return <Loader />;
     }
     return (
-        <div className={clsx(styles.wrapper)}>
+        <div className={clsx(styles.wrapper, 'notranslate')}>
             {!props.slim && <LoginAlert />}
             <div
                 className={clsx(

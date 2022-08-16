@@ -14,7 +14,7 @@ const TextAnswer = observer((props: TextProps) => {
         return <Loader />;
     }
     return (
-        <div>
+        <div className='notranslate'>
             {props.label && <h6>{props.label}</h6>}
             <QuillEditor model={doc} {...props} />
         </div>

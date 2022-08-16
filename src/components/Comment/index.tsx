@@ -76,6 +76,7 @@ const Comment = observer((props: Props) => {
         <>
             <div
                 className={clsx(
+                    'notranslate',
                     styles.commentIcon,
                     props.type,
                     hasModels && styles.loaded,

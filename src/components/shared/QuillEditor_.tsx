@@ -260,7 +260,7 @@ const QuillEditor = observer((props: Props) => {
 
     return (
         <div
-            className={clsx(styles.quillEditor)}
+            className={clsx(styles.quillEditor, 'notranslate')}
             onFocus={() => !showQuillToolbar && setShowQuillToolbar(true)}
             ref={ref}
         >
