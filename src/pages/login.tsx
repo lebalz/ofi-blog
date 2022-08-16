@@ -77,12 +77,12 @@ ${current?.firstName} ${current?.lastName}, ${current?.klasse ?? ''}&cc=${accoun
 
                             <div style={{height: '3em'}}></div>
 
-                            <button className="button button--danger" onClick={() => msalStore.logout()}>
+                            <button className="button button--danger" style={{color: 'black'}} onClick={() => msalStore.logout()}>
                                 Logout
                             </button>
                         </>
                     ) : (
-                        <Link to="/" onClick={() => msalStore.login()} className="button button--warning">
+                        <Link to="/" onClick={() => msalStore.login()} className="button button--warning" style={{color: 'black'}}>
                             Login mit GBSL Account
                         </Link>
                     )}
