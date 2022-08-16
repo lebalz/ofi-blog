@@ -96,7 +96,7 @@ const Answer = observer((props: Props) => {
     useDocument(() => getDefault(props), props.type, props.webKey, true);
 
     if (!inBrowser) {
-        return <div>SSR</div>;
+        return <div style={{height: '1em'}}></div>;
     }
     if (!model) {
         return <Loader />;
