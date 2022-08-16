@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 <Answer type="state" webKey="9285e8bd-8411-45b6-890c-93aad1bd8b9c">
 Gelesen?
-</Answer><br />
+</Answer>
 
 Auf der physikalischen Schicht geht es um das konkrete Transportmittel (Velokurier, Lastwagen, ... resp. WLAN, LAN, Mobilfunk, ...). Auch hier werden Adressen benötigt, es sind weltweit eindeutige Adressen, die fix an das Gerät geknüpft sind.
 
@@ -23,7 +23,9 @@ Die physikalische Schicht besteht aus der Hardware, also den Kabeln und Geräten
 
 Wieso braucht es zwei Adressen, logische Adressen (Vermittlungsschicht) und physikalische dieser Schicht? Innerhalb eines lokalen Netzwerks werden die physikalischen Adressen verwendet. Da es aber keine Möglichkeit gibt, alle physikalischen Adressen auf der Welt zu kennen und zu wissen, wie man diese Gerät erreichen kann, braucht es logische Adressen, die zu einem bestimmten Netzwerk gehören. Nur so ist es möglich, mit dem gleichen Gerät am Morgen zu Hause und später an der Schule online zu sein.
 
-### ⭐ Weitere Informationen
+### Weitere Informationen
+
+<Answer type="state" webKey="52593c0c-9652-4b36-9ed6-911c862a66aa">Gesehen?</Answer>
 
 [@youtube](https://www.youtube-nocookie.com/embed/ZhEf7e4kopM)
 

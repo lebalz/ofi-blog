@@ -11,7 +11,7 @@ import Stack from '@site/src/components/VisualizationTools/TCP_IP_Stack'
 
 <Answer type="state" webKey="ca2e69ab-8efb-4e57-b235-c4c564cab7f5">
 Gelesen?
-</Answer><br />
+</Answer>
 
 Genauso wie die Pakete im Beispiel übermittelt werden, geschieht dies auch am Computer – hier sprechen wir von Datenpaketen.
 

@@ -10,7 +10,6 @@ sidebar_custom_props:
 <Answer type="state" webKey="94beaff4-7ed8-4cb7-ae9f-13d11e0727bb">
 Gelesen?
 </Answer>
-<br />
 
 Was bedeuten die Adressen auf den verschiedenen Schichten?
 Damit wir uns besser vorstellen können, was die einzelnen Adressen bedeuten, arbeiten wir mit folgender Analogie:

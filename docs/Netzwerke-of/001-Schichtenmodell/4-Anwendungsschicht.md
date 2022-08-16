@@ -10,7 +10,6 @@ sidebar_custom_props:
 <Answer type="state" webKey="149a5e79-6b32-4361-844b-648d47eaa517">
 Gelesen?
 </Answer>
-<br />
 
 Auf der Anwendungsschicht geht es um Dinge, die den Benutzer des Systems interessieren.
 
@@ -32,7 +31,9 @@ Typische Anwendungen im Internet sind Webseiten, Web-Apps oder E-Mail.
 Sie sehen, dass zum Senden und Empfangen von E-Mails zwei verschiedene Protokolle zum Einsatz kommen, was auf den ersten Blick erstaunen mag. Natürlich kommen die E-Mails beim Versenden über SMTP auch ohne IMAP an – aber nicht bei dem/der Empfänger:in, sondern nur in dessen/deren Postfach. Um dieses abzurufen ist das zweite Protokoll (IMAP) nötig.
 :::
 
-### ⭐ Weitere Informationen
+### Weitere Informationen
+
+<Answer type="state" webKey="b70298e5-0bde-4c50-b4ae-2bc50ca54a1b">Gesehen?</Answer>
 
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/kBXQZMmiA4s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 

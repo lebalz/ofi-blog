@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 <Answer type="state" webKey="dca07bc2-eefb-4cbd-ad94-93a641dc637a">
 Gelesen?
-</Answer><br />
+</Answer>
 
 In der Vermittlungsschicht brauchen wir eine Adresse, an die die (Daten-)Pakete gesendet werden können. Es handelt sich um eine logische Adresse aus dem Netzwerk, in dem sich das Gerät gerade befindet.
 
@@ -27,7 +27,9 @@ Die Post hat keine Ahnung, welche Ware in wie viele Pakete aufgeteilt transporti
 
 Das wichtigste Protokoll der Vermittlungsschicht ist das Internet Protokoll (IP). Damit Computer in einem Netzwerk Daten austauschen können, brauchen sie eine Adresse (analog zur Postadresse in unserem Beispiel oben). Die Adressen der Vermittlungsschicht werden IP-Adressen (siehe Begriff IP-Adressen) genannt. Jedes vernetzte Gerät besitzt eine IP-Adresse, damit es mit anderen Geräten kommunizieren kann.
 
-### ⭐ Weitere Informationen
+### Weitere Informationen
+
+<Answer type="state" webKey="8521d5be-6786-4867-89b7-a6bf18997d15">Gesehen?</Answer>
 
 [@youtube](https://www.youtube-nocookie.com/embed/5o8CwafCxnU)
 

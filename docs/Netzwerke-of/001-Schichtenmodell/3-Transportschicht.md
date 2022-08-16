@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 <Answer type="state" webKey="bfb4ed5e-ed95-4353-bb27-f1c1e2f4b0fe">
 Gelesen?
-</Answer><br />
+</Answer>
 
 Die Transportschicht stellt sicher, dass der Transport korrekt abläuft. Die zu transportierenden Dinge oder Daten müssen zerlegt werden, damit sie in Pakete passen. Die Pakete müssen nummeriert werden, damit die Dinge/Daten am Zielort wieder richtig zusammengesetzt werden können.
 
@@ -26,11 +26,15 @@ Möglicherweise fehlt eine Schraube. In dem Fall schickt er dem GBSL-Hauswart ei
 
 Die zwei wichtigsten Protokolle der Transportschicht sind TCP und UDP. Hier werden die Daten der Anwendungsschicht in TCP- oder UDP-Pakete verpackt. Dabei muss natürlich notiert werden, worum es sich bei den Daten der Anwendungsschicht handelt (HTTP, SMTP, ...). Das Protokoll der Anwendungsschicht wird in Form einer Nummer, Port genannt, im TCP- oder UDP-Paket gespeichert (siehe Begriff Ports).
 
-**TCP**: Das Transmission Control Protocol ist verbindungsorientiert und wird bei unserer täglichen Arbeit im Internet in den allermeisten Fällen verwendet. Es garantiert, dass keine Pakete verlorengehen oder fehlerhaft ankommen – resp. falls Pakete nicht ankommen, dass diese nochmals angefordert werden. Dies ist in der Regel (z.B. beim Übertragen von Webseiten oder E-Mails) sinnvoll und erwünscht – schliesslich möchten wir nicht, dass einige Passagen auf Webseiten oder in E-Mails fehlen.
+TCP
+: Das *Transmission Control Protocol* garantiert die vollständige Übermittlung von Daten. Damit dies klappt, müssen sich die beiden Kommunikationsparteien zuerst verbinden, so dass die Absender:in einen allfälligen Datenverlust mitbekommt und das Paket nochmals schicken kann. Deswegen wird dieses Protokoll auch **verbindungsorientiert** genannt. In den allermeisten Fällen verwenden wir bei unserer täglichen Arbeit im Internet das TCP-Protokoll. Es garantiert, dass keine Pakete verlorengehen oder fehlerhaft ankommen – resp. falls Pakete nicht ankommen, dass diese nochmals angefordert werden. Dies ist in der Regel (z.B. beim Übertragen von Webseiten oder E-Mails) sinnvoll und erwünscht – schliesslich möchten wir nicht, dass einige Passagen auf Webseiten oder in E-Mails fehlen.
 
-**UDP**: Das User Datagram Protocol hingegen ist verbindungslos, d.h. es findet keine Kontrolle statt, ob sämtliche Pakete (fehlerfrei) ankommen. Dies ist insbesondere dann hilfreich, wenn wir Audio- oder Videostreams konsumieren. Wir möchten nicht lange auf ein verlorenes Paket warten, sondern nehmen eher ein kurzes Stocken in Kauf und sind froh, dass das Abspielen anschliessend direkt weitergeht.
+UDP
+: Das *User Datagram Protocol* hingegen braucht keine anfängliche Verbindung der Kommunikationsparteien, da es eher einer Einweg-Kommunikation gleicht. Es wird deshalb auch **verbindungslose** Kommunikation genannt. Bei UDP findet keine Kontrolle statt, ob sämtliche Pakete (fehlerfrei) ankommen. Da die Empfänger:in keine Empfangsbestätigung schicken muss, werden bei diesem Protokoll weniger Daten übertragen, was zu einer höheren Übertragungsgeschwindigkeit bei gleichzeitig tieferer Latenz führt. Dies ist insbesondere dann hilfreich, wenn wir Audio- oder Videostreams konsumieren. Wir möchten nicht lange auf ein verlorenes Paket warten, sondern nehmen eher ein kurzes Stocken in Kauf und sind froh, dass das Abspielen anschliessend direkt weitergeht.
 
-### ⭐ Weitere Informationen
+### Weitere Informationen
+
+<Answer type="state" webKey="b7117a47-5027-4cd7-a975-76110ce38c30">Gesehen?</Answer>
 
 [@youtube](https://www.youtube-nocookie.com/embed/AYdF7b3nMto)
 
