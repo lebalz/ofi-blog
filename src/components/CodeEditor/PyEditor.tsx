@@ -12,6 +12,7 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "../../stores/hooks";
 import { reaction } from "mobx";
 import Script from "../../models/Script";
+import { umamiReport } from "@site/src/helpers/umami";
 
 interface Props {
   slim: boolean;
@@ -37,9 +38,7 @@ const PyEditor = observer((props: Props) => {
       (counter) => {
         if (props.lang === 'python' && counter > 0) {
           pyScript.clearLogMessages();
-          if (window && (window as any).umami) {
-            (window as any).trackEvent('script-exec', { userId: pyScript.userId, type: pyScript.isDummy ? 'read-only' : 'editable', webKey: pyScript.webKey  });
-          }
+          umamiReport('script-exec', { userId: pyScript.userId, type: pyScript.isDummy ? 'read-only' : 'editable', webKey: pyScript.webKey  });
           (window as any).brython(1, {
             ids: [DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)],
           });
