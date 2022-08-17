@@ -1,17 +1,15 @@
 ---
 sidebar_custom_props:
   id: 62311a9a-917a-4591-9a9d-c40bdb09f173
-sidebar_label: Git
+sidebar_label: Git Grundlagen
 ---
 
 import DiffViewer from '@site/src/components/DiffViewer';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 
-# Git :mdi-git--orange:
+# Git Grundlagen :mdi-git--orange:
 
 👉 https://git-scm.com/
-
-
 
 
 <BrowserWindow url="https://www.lernmoment.de/alle/warum-git/">
