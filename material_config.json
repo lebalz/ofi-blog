@@ -179,6 +179,13 @@
       "from": "docs/software-installation/vs-code/v1.70/",
       "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/05-vscode",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/",
+      "to": "versioned_docs/version-24ef/01-Programmieren/03-Turtle-Repetition",
+      "ignore": [
+        "800-python-scripts.md"
+      ]
     }
   ]
 }
