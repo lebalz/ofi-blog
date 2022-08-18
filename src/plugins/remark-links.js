@@ -75,7 +75,7 @@ const plugin = (options) => {
             prepareWrapperNode(node);
             linkNode.type = 'jsx';
             linkNode.value = `<video
-              dataautoplay 
+              autoPlay={"autoplay"} 
               controls
               style={${JSON.stringify(options)}}
               src={${src}}
