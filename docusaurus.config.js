@@ -160,7 +160,7 @@ module.exports = {
               banner: 'none'
             },
             '24ef': {
-              banner: 'unreleased'
+              banner: 'none'
             }
           },
           admonitions: false,
