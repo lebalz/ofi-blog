@@ -166,6 +166,6 @@ gitGraph
     merge dev1
 ```
 
-Visual Studio Code verfügt über eine eingebaute Schnitstelle zu Git. Diese werden wir im Normallfall brauchen. Manchmal ist es aber nötig direkt mit Git zu arbeiten. Dazu dient die App Git Bash auf Windows. Auf dem Mac kann man dazu direkt das Terminal brauchen. Die nötigen Kommandos werden wir nach und nach kennenlernen.
+Visual Studio Code verfügt über eine eingebaute Schnittstelle zu Git. Diese werden wir im Normalfall brauchen. Manchmal ist es aber nötig direkt mit Git zu arbeiten. Dazu dient die App Git Bash auf Windows. Auf dem Mac kann man dazu direkt das Terminal brauchen. Die nötigen Kommandos werden wir nach und nach kennenlernen (halten Sie diese am besten in Ihrer Dokumentation fest).
 
 [^1]: Quelle: [Tobias Vetter](https://www.lernmoment.de/alle/warum-git/)
