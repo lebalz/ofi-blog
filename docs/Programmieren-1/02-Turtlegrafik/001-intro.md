@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 4ac09d00-bd4c-4920-bc98-21343e21549b
 ---
 
-# 1. Einführung
-
 import Hint from "@site/src/components/Solution/Hint";
 
 # 1. Einführung Python

@@ -1,4 +1,5 @@
 ---
+sidebar_label: 10. Repetitionsfragen 
 sidebar_custom_props:
   id: b4d081fd-943b-42de-a587-a91321b06fa3
 ---

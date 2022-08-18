@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # 2. Zeichnungsfläche
 
-# 2. Zeichnungsfläche - Screen
-
 Die Zeichenfläche kann konfiguriert werden, z.B. mit einer Hintergrundfarbe, oder aber auch die Dimensionen des Hintergrunds.
 
 Standarmässig ist keine Hintergrundfarbe gesetzt (=durchsichtig) und die Dimensionen die Koordinaten des Bildschirms sind `500x500` Pixel. Das zugrundeliegende Koordinatensystem hat den Ursprung immer in der Mitte des Bildschirms.

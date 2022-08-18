@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 53a34d81-4417-4351-b6f9-0b99ecabb5ff
 ---
 
-# 3. Wiederholung 🔁
-
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Finding from "@site/src/components/Finding";
 import Hint from "@site/src/components/Solution/Hint";

@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 975c2237-7335-428d-96db-2e7f507c1d31
 ---
 
-# 4. Fehler
-
 import Hint from '@site/src/components/Solution/Hint'
 
 # 4. Fehler

@@ -1,9 +1,9 @@
 ---
+sidebar_label: Turtle Befehle
 sidebar_custom_props:
   id: ed2978d9-3d4b-426d-b3fd-fe7d5a7cab9b
 ---
 
-# Turtle Befehle
 # Turtle Befehle [^1][^2]
 
 ## Bewegungen
