@@ -8,10 +8,10 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 
 # 6. Parameter
 
-Ein weiteres Strukturelement eines Algorithmus sind [**Parameter**](../01-Algorithmen/01-Algorithmus.md#struktur). Die Verwendung von Parametern haben wir bereits in Aktion gesehen -  im Struktogramm sind alle Parameter <u>unterstrichen</u>, in Python werden alle Parameter als Liste, abgetrennt mit Kommas, in den <u>runden Klammern</u> geschrieben.
+Ein weiteres Strukturelement eines Algorithmus sind __Parameter__. Die Verwendung von Parametern haben wir bereits in Aktion gesehen -  im Struktogramm sind alle Parameter <u>unterstrichen</u>, in Python werden alle Parameter als Liste, abgetrennt mit Kommas, in den <u>runden Klammern</u> geschrieben.
 
-:::info [Zur Erinnerung](../01-Algorithmen/01-Algorithmus.md#struktur)
-**Parameter ⊕ ⊖**: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welche bei jeder Ausführung neu festgelegt werden.
+:::info Zur Erinnerung
+__Parameter ⊕ ⊖__: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welche bei jeder Ausführung neu festgelegt werden.
 
 **Beispiel**: Bei einem Online-Rezept kann der Parameter *Anzahl Personen*  mit den Knöpfen `⊕` und `⊖` variiert werden - die Mengenangaben werden dann aktualisiert. 
 :::
@@ -99,7 +99,7 @@ quotient(12, 20 + 4)
 
 ## Unterprogramme mit Parametern
 
-Parameter sind also Werte, die an ein Unterprogramm **übergeben** werden können. Damit der übergebene Wert im Unterprogramm **wiederverwendet** werden kann, braucht jeder Parameter einen Namen. Der Wert ist dann über diesen Namen abrufbar. Der Parametername ist frei wählbar, sollte aber seine Bedeutung wiederspiegeln.
+Parameter sind also Werte, die an ein Unterprogramm **übergeben** werden können. Damit der übergebene Wert im Unterprogramm **wiederverwendet** werden kann, braucht jeder Parameter einen Namen. Der Wert ist dann über diesen Namen abrufbar. Der Parametername ist frei wählbar, sollte aber seine Bedeutung widerspiegeln.
 
 Beispiel:
 
