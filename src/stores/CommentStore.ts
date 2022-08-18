@@ -94,7 +94,7 @@ export class CommentStore {
     @action
     loadComments(pageKey: string, forceReload: boolean = false) {
         if (this.isLoaded(pageKey) && !forceReload) {
-            return;
+            return Promise.reject('Already Loaded');
         }
         this.loadedPages.add(pageKey);
         const ct = axios.CancelToken.source();

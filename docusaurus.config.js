@@ -349,10 +349,16 @@ module.exports = {
             plugins: [
               new CopyWebpackPlugin({
                 patterns: [
+                  // pdf-cmaps
                   {
                     from: 'node_modules/pdfjs-dist/cmaps/',
                     to: 'cmaps/'
                   },
+                  // radial color picker cmaps
+                  {
+                    from: 'node_modules/@radial-color-picker/react-color-picker/dist/react-color-picker.min.css.map',
+                    to: './static/'
+                  }
                 ]
               }),
             ]
