@@ -16,6 +16,8 @@ graph TD
     B --> F(VS Code)
     B --> D("<i class='mdi mdi-git'/>" Git)
     C --> G("<i class='mdi mdi-github'/>" Github)
+    F --> I("<i class='mdi mdi-script-text'/>" Programme)
+    F --> H("<i class='mdi mdi-language-markdown'/>" Dokumentation)
 ```
 
 :::info Ziele
