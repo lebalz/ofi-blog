@@ -71,7 +71,7 @@ git_code/
         └── README.md
 ```
 
-- Alle Dokumente mit Notizen etc. werden in den Ordner `docs` im als `*.md` abgelegt.
+- Alle Dokumente mit Notizen etc. werden in den Ordner `docs` als `*.md` abgelegt.
 - Übungen können Sie im Ordner `exercises` ablegen
 - für das Spiel `NumTrip` werden wir die Programme im Ordner `NumTrip` abspeichern.
 
