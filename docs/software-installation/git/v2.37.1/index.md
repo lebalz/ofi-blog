@@ -7,6 +7,8 @@ import OsTabs from '@site/src/components/OsTabs';
 
 # Git 2.37.1
 
+<Answer type="state" webKey="d24faf11-ba87-4e17-8e12-2fe834b60268">Installiert?</Answer>
+
 👉 https://git-scm.com/downloads
 
 
