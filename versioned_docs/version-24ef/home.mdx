@@ -5,6 +5,17 @@ sidebar_custom_props:
   id: 15bccea3-bcb9-4bf9-9329-cacab8149b2b
 ---
 
+import Table from "@site/src/components/Table";
+import {SortTimeTableByDate} from '@site/src/helpers/time';
+import hs2022 from "./24ef_HS2022.json"
+
 # EF Informatik
 
-🚧🚧🚧
+
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={hs2022}
+  order={SortTimeTableByDate}
+/>

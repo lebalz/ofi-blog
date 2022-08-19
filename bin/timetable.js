@@ -87,6 +87,13 @@ const SCHEDULE_GYM1_HS = [
     ["Codes und Daten","Zeichencodierung"],
     ["Codes und Daten","Zahlensysteme"],
 ]
+const SCHEDULE_EF_HS1 = [
+    ["Programmieren", "Infrastruktur, Installation, Git, Markdown, Python Grundlagen"],
+    ["Programmieren", "Datenstrukturen - Listen"],
+    ["Programmieren", "Strings, Eingabe, Game-Loop"],
+    ["Programmieren", "Funktionen, Referenzen"],
+    ["Programmieren", "Arbeiten am NumTrip Game"],
+]
 
 const SCHEDULE_GYM1_PRAKTIKUM = [
     ["Programmieren 1", "Algorithmen & RoboZZle"],
@@ -159,10 +166,10 @@ const SCHEDULE_GYM2_FS = [
     ["🚧",""]
 ]
 
-// const SCHEDULE = SCHEDULE_GYM1_HS;
-const SCHEDULE = prepareHK(SCHEDULE_GYM1_PRAKTIKUM, ['B', 'A']);
+const SCHEDULE = SCHEDULE_EF_HS1;
+// const SCHEDULE = prepareHK(SCHEDULE_GYM1_PRAKTIKUM, ['B', 'A']);
 
-Array('26e-HK').forEach((klasse) =>{
+Array('24ef').forEach((klasse) =>{
     const cells = [];
     let subjectNr = 0
     const klass = klasse.split('-')[0];

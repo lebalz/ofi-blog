@@ -72,10 +72,16 @@ const plugin = (options) => {
             const pathUrl = posixPath(videoPath);
             const src = `require("${inlineMarkdownLinkFileLoader}${escapePath(pathUrl)}").default`
             const options = parseOptions(text, true);
+            const {muted} = options;
+            if (muted) {
+              delete options.muted;
+            }
             prepareWrapperNode(node);
+
             linkNode.type = 'jsx';
             linkNode.value = `<video
               autoPlay={"autoplay"} 
+              muted={${!!muted}}
               controls
               style={${JSON.stringify(options)}}
               src={${src}}

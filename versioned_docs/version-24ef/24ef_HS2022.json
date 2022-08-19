@@ -1,0 +1,33 @@
+[
+    {
+        "cells": ["19.08.2022","Programmieren","Infrastruktur, Installation, Git, Markdown, Python Grundlagen"]
+    },
+    {
+        "cells": ["26.08.2022","Programmieren","Datenstrukturen - Listen"]
+    },
+    {
+        "cells": ["02.09.2022","Programmieren","Strings, Eingabe, Game-Loop"]
+    },
+    {
+        "cells": ["09.09.2022","Programmieren","Funktionen, Referenzen"]
+    },
+    {
+        "cells": ["16.09.2022","Programmieren","Arbeiten am NumTrip Game"]
+    },
+    {
+        "cells": ["23.09.2022","Sonderwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["30.09.2022","Herbstferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["07.10.2022","Herbstferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["14.10.2022","Herbstferien",""],
+        "type": "holiday"
+    }
+]
