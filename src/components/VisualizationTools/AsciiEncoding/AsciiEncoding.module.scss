@@ -7,11 +7,13 @@ table.asciiTable {
   font-family: monospace;
   text-align: center;
   cursor: pointer;
-  > tr > td {
-    height: 3em;
-    padding: 0px;
-    &:hover {
-      background-color: yellow;
+  tbody {
+    > tr > td {
+      height: 3em;
+      padding: 0px;
+      &:hover {
+        background-color: yellow;
+      }
     }
   }
 }
