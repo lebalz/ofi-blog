@@ -1,5 +1,5 @@
 import axios, { CancelTokenSource } from 'axios';
-import { action, computed, makeObservable, observable, runInAction } from 'mobx';
+import { action, computed, makeObservable, observable, runInAction, reaction } from 'mobx';
 import { computedFn } from 'mobx-utils';
 import { getDocument, postDocument, Document as DocumentProps } from '../api/document';
 import { getDocument as getDocumentAsAdmin } from '../api/admin';
@@ -62,7 +62,7 @@ const CreateDummyModel = <T extends IModel = IModel>(
         case 'text':
             model = new Text({ ...dummy, versions: [], data: TypedDoc('text', data) });
             break;
-        
+
         case 'state':
             model = new StateAnswer({ ...dummy, versions: [], data: TypedDoc('state', data) });
     }
@@ -106,6 +106,13 @@ export class DocumentStore {
         { keepAlive: true }
     );
 
+    findById = computedFn(
+        function <T extends Model = Model>(this: DocumentStore, id: number): T {
+            return this.documents.find((q) => q.id === id) as T;
+        },
+        { keepAlive: true }
+    );
+
     @action
     setOpendTurtleModal(webKey: string | undefined) {
         this.opendTurtleModalWebKey = webKey;
@@ -118,10 +125,18 @@ export class DocumentStore {
         { keepAlive: true }
     );
 
+    filterByClass = computedFn(
+        function <T extends Model = Model>(this: DocumentStore, klass: string) {
+            return this.documents.filter((doc) => this.root.userStore.findById(doc.userId)?.klasse === klass) as T[];
+        },
+        { keepAlive: true }
+    );
+
     @action
     provideDocument<T extends Model = Model>(
         defaultData: ModelTypes,
         type: DocType,
+        pageKey: string | undefined,
         webKey: string,
         persist: boolean,
         readonly?: boolean,
@@ -148,6 +163,7 @@ export class DocumentStore {
             model.loaded = true;
             return Promise.resolve(model);
         }
+        this.root.adminStore.batchDocument(pageKey, webKey);
         const ct = axios.CancelToken.source();
         const { isMyView } = this.root.userStore;
         return this.apiGetDocument<typeof model.data>(model.webKey, false, ct)

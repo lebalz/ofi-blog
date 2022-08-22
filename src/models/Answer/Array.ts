@@ -10,7 +10,7 @@ export interface ArrayDoc {
     value: string[];
     type: "array";
     size: number;
-    default?: string | React.ReactNode;
+    default?: string;
   }
 
 export const DEFAULT_DATA: ArrayDoc = {

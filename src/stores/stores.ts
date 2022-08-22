@@ -7,6 +7,7 @@ import { makeObservable, observable } from "mobx";
 import { UserStore } from "./UserStore";
 import { TimedTopicStore } from "./TimedTopicStore";
 import { CommentStore } from './CommentStore';
+import { AdminStore } from './AdminStore';
 
 export class RootStore {
   stores = observable([]);
@@ -18,6 +19,7 @@ export class RootStore {
   userStore: UserStore;
   timedTopicStore: TimedTopicStore;
   policyStore: PolicyStore;
+  adminStore: AdminStore;
   constructor() {
     makeObservable(this);
     this.msalStore = new MSALStore(this);
@@ -26,6 +28,7 @@ export class RootStore {
     this.userStore = new UserStore(this);
     this.timedTopicStore = new TimedTopicStore(this);
     this.policyStore = new PolicyStore(this);
+    this.adminStore = new AdminStore(this);
     this.initialized = true;
   }
 }

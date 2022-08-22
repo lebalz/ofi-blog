@@ -63,8 +63,7 @@ export default function Home() {
                     </div>
                     <div className="card__body">
                         <p>
-                            Programmierwettbewerb für Jugendliche. Die Erste Runde findet vom <b>16.9-30.11.2022</b>
-                            online statt.
+                            Programmierwettbewerb für Jugendliche. Die Erste Runde findet vom <b>16.9-30.11.2022</b> online statt.
                         </p>
                         <div className="card__image">
                             <a href="https://soi.ch" target="_blank">

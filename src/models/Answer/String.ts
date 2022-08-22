@@ -9,7 +9,7 @@ import SaveService, { ApiModel } from '../SaveService';
 export interface StringDoc {
     value: string;
     type: "string";
-    default?: string | React.ReactNode;
+    default?: string;
   }
 
 export const DEFAULT_DATA: StringDoc = {

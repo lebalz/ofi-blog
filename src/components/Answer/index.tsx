@@ -13,6 +13,8 @@ import { ToolbarOptions } from '../shared/quillConfig';
 import Loader from '../shared/Loader';
 import StateAnswer from './StateAnswer';
 import clsx from 'clsx';
+import { default as StateAnswerModel } from '../../models/Answer/State';
+import useFrontMatter from '@theme/useFrontMatter';
 
 export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();
 
@@ -81,24 +83,46 @@ const getDefault = (props: Props): ModelTypes => {
         case 'state':
             return {
                 type: 'state',
-                value: 'unset'
+                value: 'unset',
             };
     }
 };
 
+const AnswerComponent = (props: { type: Types }) => {
+    switch (props.type) {
+        case 'string':
+            return StringAnswer;
+        case 'text':
+            return TextAnswer;
+        case 'array':
+            return ArrayAnswer;
+        case 'state':
+            return StateAnswer;
+    }
+};
+
+const mdiIcon = {
+    checked: 'mdi-checkbox-marked-outline',
+    unset: 'mdi-checkbox-blank-outline',
+    question: 'mdi-account-question-outline',
+};
+
+const baseUrl = '/';
 const Answer = observer((props: Props) => {
     const store = useStore('documentStore');
     const msalStore = useStore('msalStore');
     const model = store.find(props.webKey);
     const inBrowser = useIsBrowser();
+
     useDocument(() => getDefault(props), props.type, props.webKey, true);
 
     if (!inBrowser) {
-        return <div style={{height: '1em'}}></div>;
+        return <div style={{ height: '1em' }}></div>;
     }
     if (!model) {
         return <Loader />;
     }
+    const Component = AnswerComponent(props);
     return (
         <div data--web-key={props.webKey} className={clsx('answer', props.type)}>
             <LoginAlert />

@@ -222,6 +222,13 @@ export class UserStore {
         { keepAlive: true }
     );
 
+    findById = computedFn(
+        function (this: UserStore, id: number): User | undefined {
+            return this.users.find((user) => user.id === id);
+        },
+        { keepAlive: true }
+    );
+
     byClass = computedFn(
         function (this: UserStore, klasse?: string): User[] {
             if (!klasse) {
