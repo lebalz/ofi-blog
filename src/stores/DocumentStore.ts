@@ -1,5 +1,5 @@
 import axios, { CancelTokenSource } from 'axios';
-import { action, computed, makeObservable, observable, runInAction } from 'mobx';
+import { action, computed, makeObservable, observable, runInAction, reaction } from 'mobx';
 import { computedFn } from 'mobx-utils';
 import { getDocument, postDocument, Document as DocumentProps } from '../api/document';
 import { getDocument as getDocumentAsAdmin } from '../api/admin';
@@ -10,6 +10,7 @@ import { DocType, ModelTypes, IModel, TypedDoc, Model } from '../models/iModel';
 import Script from '../models/Script';
 import { RootStore } from './stores';
 import StateAnswer from '../models/Answer/State';
+import BatchLoadService from '../models/BatchLoadService';
 
 const CreateModel = (
     data: DocumentProps<any>,
@@ -62,7 +63,7 @@ const CreateDummyModel = <T extends IModel = IModel>(
         case 'text':
             model = new Text({ ...dummy, versions: [], data: TypedDoc('text', data) });
             break;
-        
+
         case 'state':
             model = new StateAnswer({ ...dummy, versions: [], data: TypedDoc('state', data) });
     }
@@ -71,6 +72,7 @@ const CreateDummyModel = <T extends IModel = IModel>(
 export class DocumentStore {
     private readonly root: RootStore;
     documents = observable<Model>([]);
+    batchLoader: BatchLoadService;
 
     @observable
     timer = 0;
@@ -81,6 +83,7 @@ export class DocumentStore {
     @observable initialized: boolean = false;
     constructor(root: RootStore) {
         this.root = root;
+        this.batchLoader = new BatchLoadService(500, root);
         makeObservable(this);
         setInterval(
             action(() => {
@@ -106,6 +109,13 @@ export class DocumentStore {
         { keepAlive: true }
     );
 
+    findById = computedFn(
+        function <T extends Model = Model>(this: DocumentStore, id: number): T {
+            return this.documents.find((q) => q.id === id) as T;
+        },
+        { keepAlive: true }
+    );
+
     @action
     setOpendTurtleModal(webKey: string | undefined) {
         this.opendTurtleModalWebKey = webKey;
@@ -114,6 +124,13 @@ export class DocumentStore {
     filterBy = computedFn(
         function <T extends Model = Model>(this: DocumentStore, type: DocType) {
             return this.viewedDocuments.filter((doc) => doc.type === type) as T[];
+        },
+        { keepAlive: true }
+    );
+
+    filterByClass = computedFn(
+        function <T extends Model = Model>(this: DocumentStore, klass: string) {
+            return this.documents.filter((doc) => this.root.userStore.findById(doc.userId)?.klasse === klass) as T[];
         },
         { keepAlive: true }
     );
@@ -144,6 +161,8 @@ export class DocumentStore {
             !persist
         );
         this.documents.push(model);
+        console.log('load', type, webKey, defaultData);
+        this.batchLoader.push(webKey);
         if (!persist || !this.root.msalStore.loggedIn) {
             model.loaded = true;
             return Promise.resolve(model);
@@ -237,6 +256,25 @@ export class DocumentStore {
                     });
             }
         });
+    }
+
+    @action
+    addOrReplaceDocuments(docs: DocumentProps<any>[]) {
+        this.documents.slice();
+        const newDocIds = new Set([]);
+        const newDocs = docs
+            .map((doc) => {
+                if (doc.user_id === this.root.userStore.current.id) {
+                    return;
+                }
+                newDocIds.add(doc.id);
+                return CreateModel(doc, {
+                    readonly: true,
+                });
+            })
+            .filter((d) => !!d);
+        const currentDocs = this.documents.slice().filter((d) => !newDocIds.has(d.id));
+        this.documents.replace([...currentDocs, ...newDocs]);
     }
 
     @action

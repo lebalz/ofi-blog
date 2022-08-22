@@ -1,6 +1,7 @@
 import { reaction } from 'mobx';
 import React from 'react';
 import { DocType, ModelTypes } from '../models/iModel';
+import useFrontMatter from '@theme/useFrontMatter';
 import { rootStore, storesContext } from './stores';
 
 export const useStores = () => React.useContext(storesContext);
@@ -17,6 +18,8 @@ export const useDocument = (
     versioned?: boolean
 ) => {
     const [initialized, setInitialized] = React.useState(false);
+    const { sidebar_custom_props } = useFrontMatter();
+    const pageKey = sidebar_custom_props?.id;
     /** initial load */
     React.useEffect(() => {
         rootStore.documentStore

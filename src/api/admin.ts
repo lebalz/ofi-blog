@@ -27,6 +27,13 @@ export function getDocument<T>(uid: number, webKey: string, versions: boolean, c
     );
 }
 
+export function getAllDocumentsByClass<T>(klasse: string, webKeys: string[], cancelToken: CancelTokenSource): AxiosPromise<Document<T>[]> {
+    return api.get(
+        `admin/document/find_all_by?klasse=${klasse}&${webKeys.map((n, idx) => `web_keys=${n}`).join('&')}`,
+        { cancelToken: cancelToken.token }
+    );
+}
+
 export function getComments(uid: number, pageKey: string, cancelToken: CancelTokenSource): AxiosPromise<Comment[]> {
     return api.get(
         `admin/comments/${uid}/${pageKey}`,
