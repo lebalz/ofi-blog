@@ -82,3 +82,5 @@ Make sure to check the compatibility after a docusaurus upgrade:
 | [DocVersionBadge](src/theme/DocVersionBadge/index.tsx) | `yarn run swizzle @docusaurus/theme-classic DocVersionBadge --eject --typescript` |
 | [NavbarItem](src/theme/NavbarItem/index.tsx)           | `yarn run swizzle @docusaurus/theme-classic NavbarItem --eject --typescript`      |
 | [NotFound (safe)](src/theme/NotFound.tsx)              | `yarn run swizzle @docusaurus/theme-classic NotFound --eject --typescript`        |
+
+⚠️ If you change the baseUrl setting in `docusaurus.config.js`, then search for it in the project, to change all occurances!

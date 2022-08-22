@@ -21,7 +21,7 @@ Lesen Sie sich selbständig durch dieses Kapitel durch, wobei Sie
 
 :::
 
-Wir befinden uns auf der [Vermittlungs-Schicht](../001-Schichtenmodell/2-Vermittlungsschicht.md): Hier werden IP-Pakete vom Start- zum Zielgerät übertragen. Bei ihrem Weg durch das Internet müssen die Pakete geleitet werden – man spricht von **Routing**.
+Wir befinden uns auf der __Vermittlungs-Schicht__: Hier werden IP-Pakete vom Start- zum Zielgerät übertragen. Bei ihrem Weg durch das Internet müssen die Pakete geleitet werden – man spricht von **Routing**.
 
 ## Verkehrsbetriebe Biel
 
