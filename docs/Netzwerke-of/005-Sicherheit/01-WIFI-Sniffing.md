@@ -51,7 +51,7 @@ Passwortgeschützte WIFIs **verschlüsseln** den Inhalt der übertragenen Datenp
 
 Wie können Sie sich vor WIFI Sniffing schützen?
 
-<Answer type="text" id="q1" webKey="fa0bde47-cf19-4ae1-891d-40a6e976ce75"/>
+<Answer  type="text"  webKey="fa0bde47-cf19-4ae1-891d-40a6e976ce75"/>
 :::
 
 <details id="binärdaten-als-hexadezimal-zahl">

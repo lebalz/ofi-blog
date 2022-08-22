@@ -47,17 +47,17 @@ Geben Sie die Grösse des Schlüsselraumes für die folgenden Verschlüsselungsv
 
 
 #### Skytale
-<Answer type="text" id="q1" webKey="0b1ab3e2-40ff-4209-8451-b53acf3ff24f"></Answer>
+<Answer  type="text"  webKey="0b1ab3e2-40ff-4209-8451-b53acf3ff24f"></Answer>
 
 #### Caesar
-<Answer type="text" id="q2" webKey="fa51f7d3-35fa-4d7f-beb9-b089012eeec2"></Answer>
+<Answer  type="text"  webKey="fa51f7d3-35fa-4d7f-beb9-b089012eeec2"></Answer>
 
 #### ROT13
-<Answer type="text" id="q3" webKey="e10e6d11-13d4-47b3-b940-7bb7860fdaf6"></Answer>
+<Answer  type="text"  webKey="e10e6d11-13d4-47b3-b940-7bb7860fdaf6"></Answer>
 
 #### Substitution
 allgemeine monoalphabetische Substitution
-<Answer type="text" id="q4" webKey="87f42c57-7331-42b6-a77c-e7aa23d4cebe"></Answer>
+<Answer  type="text"  webKey="87f42c57-7331-42b6-a77c-e7aa23d4cebe"></Answer>
 
 <Solution webKey="2b2b5bad-9f90-4aa2-8cba-71c4e8f2dab0">
 

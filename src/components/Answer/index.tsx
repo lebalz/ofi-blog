@@ -7,7 +7,6 @@ import LoginAlert from '../CodeEditor/LoginAlert';
 import { observer } from 'mobx-react-lite';
 import OfflineChecker from './OfflineChecker';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { sanitizeId } from '../../utils/sanitizers';
 import { ModelTypes } from '../../models/iModel';
 import ReactDomServer from 'react-dom/server';
 import { ToolbarOptions } from '../shared/quillConfig';
@@ -21,15 +20,14 @@ export type Types = 'array' | 'string' | 'text' | 'state';
 
 export interface Base {
     webKey: string;
-    id?: string;
     label?: string;
-    children?: React.ReactNode;
+    children?: string;
 }
 
 export interface TextProps extends Base {
     type: 'text';
     placeholder?: string;
-    default?: string | React.ReactNode;
+    default?: string;
     monospace?: boolean;
     toolbar?: ToolbarOptions;
 }

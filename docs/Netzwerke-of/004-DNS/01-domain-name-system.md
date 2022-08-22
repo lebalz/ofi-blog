@@ -111,7 +111,7 @@ Man kann solche Anfragen aber auch von Hand machen. Dazu können Sie die Seite h
 
 Wie findet man die IP-Adresse, welche zu einem Domain-Name gehört? (Googeln Sie nach einer Website, welche einen Dienst anbietet, der dies tut.)
 
-<Answer type="text" id="q1" webKey="67acbe64-ea7b-46ea-b07a-c09376f21381"/>
+<Answer  type="text"  webKey="67acbe64-ea7b-46ea-b07a-c09376f21381"/>
 
 
 <details><summary>⭐️ The Hacky Way - Übers Terminal</summary>
@@ -130,7 +130,7 @@ Probieren Sie es aus, wenn Sie Lust auf mehr Hacker-Feeling haben.
 
 Finden Sie heraus, welches die IP-Adresse von www.instagram.com ist.
 
-<Answer type="text" id="q2" webKey="2f8ace83-ca0f-4d64-b584-836f960b9bae" label="IP-Adresse"/>
+<Answer  type="text"  webKey="2f8ace83-ca0f-4d64-b584-836f960b9bae" label="IP-Adresse"/>
 
 :::
 
@@ -150,7 +150,7 @@ Finden Sie mit https://tools.keycdn.com/dig und einer der Webseiten im Abschnitt
 - wem diese Domain gehört und 
 - in welchem Land der Besitzer zuhause ist.
 
-<Answer type="text" id="q3" webKey="fcd6a2b8-7112-4021-8f97-29bb6d9c3e4b" default="<p>IP-Adresse: </p><p>Eigentümer: </p><p>Land: </p>" />
+<Answer  type="text"  webKey="fcd6a2b8-7112-4021-8f97-29bb6d9c3e4b" default="<p>IP-Adresse: </p><p>Eigentümer: </p><p>Land: </p>" />
 
 :::
 
@@ -169,7 +169,7 @@ Solche Überprüfungen bietet z.B. die Seite 	https://sitecheck.sucuri.net/ an.
 
 **Achtung: Geben Sie diese URL auschliesslich in das für die Überprüfung vorgesehene Feld ein!**
 
-<Answer type="text" id="q4" webKey="880a65ab-0f42-409b-b4eb-85d16d1de961" placeholder="Resultat der Überprüfung"/>
+<Answer  type="text"  webKey="880a65ab-0f42-409b-b4eb-85d16d1de961" placeholder="Resultat der Überprüfung"/>
 :::
 
 
@@ -178,7 +178,7 @@ Sie möchten Ihr eigenes Unternehmen gründen, oder Sie möchten eine Kampagne f
 
 Überlegen Sie sich einen solchen Domain-Name und überprüfen Sie mit den oben beschriebenen Whois-Diensten, ob dieser Name noch frei ist.
 
-<Answer type="text" id="q5" webKey="d343df2b-4a0a-4e01-a3c9-ff531c28b06a" default="<b>Domain-Name: </b><b>Ist noch frei? </b>"/>
+<Answer  type="text"  webKey="d343df2b-4a0a-4e01-a3c9-ff531c28b06a" default="<b>Domain-Name: </b><b>Ist noch frei? </b>"/>
 
 :::
 
@@ -187,7 +187,7 @@ Ein Gedankenspiel: Die Berner Kantonalbank (BEKB) bietet ihren Kunden Internet-B
 
 Angenommen einem Angreifer gelingt es, Ihrem Computer eine beliebige, aber falsche IP-Adresse für den Domain-Name www.bekb.ch unterzuschieben, welche Möglichkeiten ergeben sich dem Angreifer dadurch?
 
-<Answer type="text" id="q6" webKey="61624728-4a05-44aa-bcf2-60e61096759e" placeholder="Möglichkeiten"/>
+<Answer  type="text"  webKey="61624728-4a05-44aa-bcf2-60e61096759e" placeholder="Möglichkeiten"/>
 :::
 
 
