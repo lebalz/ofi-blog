@@ -23,7 +23,7 @@ export const useDocument = (
     /** initial load */
     React.useEffect(() => {
         rootStore.documentStore
-            .provideDocument(defaultData(), type, webKey, persist, readonly, false, versioned)
+            .provideDocument(defaultData(), type, pageKey, webKey, persist, readonly, false, versioned)
             .finally(() => {
                 setInitialized(true);
             });
@@ -37,6 +37,7 @@ export const useDocument = (
                     rootStore.documentStore.provideDocument(
                         defaultData(),
                         type,
+                        pageKey,
                         webKey,
                         persist,
                         readonly,

@@ -10,7 +10,6 @@ import { DocType, ModelTypes, IModel, TypedDoc, Model } from '../models/iModel';
 import Script from '../models/Script';
 import { RootStore } from './stores';
 import StateAnswer from '../models/Answer/State';
-import BatchLoadService from '../models/BatchLoadService';
 
 const CreateModel = (
     data: DocumentProps<any>,
@@ -72,7 +71,6 @@ const CreateDummyModel = <T extends IModel = IModel>(
 export class DocumentStore {
     private readonly root: RootStore;
     documents = observable<Model>([]);
-    batchLoader: BatchLoadService;
 
     @observable
     timer = 0;
@@ -83,7 +81,6 @@ export class DocumentStore {
     @observable initialized: boolean = false;
     constructor(root: RootStore) {
         this.root = root;
-        this.batchLoader = new BatchLoadService(500, root);
         makeObservable(this);
         setInterval(
             action(() => {
@@ -139,6 +136,7 @@ export class DocumentStore {
     provideDocument<T extends Model = Model>(
         defaultData: ModelTypes,
         type: DocType,
+        pageKey: string | undefined,
         webKey: string,
         persist: boolean,
         readonly?: boolean,
@@ -161,12 +159,11 @@ export class DocumentStore {
             !persist
         );
         this.documents.push(model);
-        console.log('load', type, webKey, defaultData);
-        this.batchLoader.push(webKey);
         if (!persist || !this.root.msalStore.loggedIn) {
             model.loaded = true;
             return Promise.resolve(model);
         }
+        this.root.adminStore.batchDocument(pageKey, webKey);
         const ct = axios.CancelToken.source();
         const { isMyView } = this.root.userStore;
         return this.apiGetDocument<typeof model.data>(model.webKey, false, ct)
@@ -256,25 +253,6 @@ export class DocumentStore {
                     });
             }
         });
-    }
-
-    @action
-    addOrReplaceDocuments(docs: DocumentProps<any>[]) {
-        this.documents.slice();
-        const newDocIds = new Set([]);
-        const newDocs = docs
-            .map((doc) => {
-                if (doc.user_id === this.root.userStore.current.id) {
-                    return;
-                }
-                newDocIds.add(doc.id);
-                return CreateModel(doc, {
-                    readonly: true,
-                });
-            })
-            .filter((d) => !!d);
-        const currentDocs = this.documents.slice().filter((d) => !newDocIds.has(d.id));
-        this.documents.replace([...currentDocs, ...newDocs]);
     }
 
     @action

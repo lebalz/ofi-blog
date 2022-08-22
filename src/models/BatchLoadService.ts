@@ -1,9 +1,7 @@
-import axios, { CancelTokenSource, Method } from 'axios';
+import axios, { CancelTokenSource } from 'axios';
 import { debounce, DebouncedFunc } from 'lodash';
-import { action, computed, IReactionDisposer, makeObservable, observable, reaction } from 'mobx';
+import { action, computed, IReactionDisposer, makeObservable, observable } from 'mobx';
 import { getAllDocumentsByClass } from '../api/admin';
-// import { baseUrl } from '../../docusaurus.config'
-// import versions from '../../versions.json';
 import { RootStore } from '../stores/stores';
 type RequestState = 'init' | 'save' | 'done' | 'pending' | 'deleted' | 'error';
 
@@ -15,6 +13,7 @@ export default class BatchLoadService {
     cancelToken: CancelTokenSource = axios.CancelToken.source();
     disposer: IReactionDisposer;
     state: RequestState = 'init';
+    currentPageKey?: string = undefined; 
 
     loadKeys = observable.set<string>([]);
 
@@ -24,20 +23,21 @@ export default class BatchLoadService {
         this.load = debounce(action(this._load), this.tDebounce, { leading: false, trailing: true, maxWait: 5000 });
 
         makeObservable(this);
-        this.disposer = reaction(
-            () => this.loadKeys.size,
-            (len) => {
-                if (len > 0) {
-                    this.load();
-                }
-            }
-        );
     }
 
     @action
-    push(key: string) {
-        console.log(key);
-        this.loadKeys.add(key);
+    push(pageKey: string, webKey: string) {
+        if (!this.currentPageKey) {
+            this.currentPageKey = pageKey;
+        }
+        if (this.currentPageKey !== pageKey) {
+            console.log('page key missmatch, cancel!', this.currentPageKey, pageKey);
+            this.load.cancel();
+            this.loadKeys.clear();
+        }
+        this.currentPageKey = pageKey;
+        this.loadKeys.add(webKey);
+        this.load();
     }
 
     @action
@@ -57,27 +57,17 @@ export default class BatchLoadService {
     }
 
     @action
-    saveNow() {
-        this.load();
-        return this.load.flush();
-    }
-
-    @action
     _load() {
-        console.log(...this.loadKeys.values())
-        if (this.loadKeys.size < 1) {
+        if (this.loadKeys.size < 1 || !this.currentPageKey) {
             return;
         }
-        if (!this.rootStore.msalStore.loggedIn || !this.rootStore.userStore.current?.admin) {
+        if (!this.rootStore.msalStore.loggedIn || !this.rootStore.adminStore.isAdmin) {
             return;
         }
         const baseUrl = '/';
         const klass = window.location.pathname.replace(baseUrl, '').split('/')[0];
-        // console.log(versions);
-        // if (klass in versions) {
-        //     console.log(klass, 'in versions')
-        // }
-
+        const pageKey = this.currentPageKey;
+        
         this.cancelApiRequests();
         this.state = 'pending';
         const keys = [...this.loadKeys.values()];
@@ -91,7 +81,7 @@ export default class BatchLoadService {
             .then(
                 action(({data}) => {
                     this.state = 'done';
-                    this.rootStore.documentStore.addOrReplaceDocuments(data);
+                    this.rootStore.adminStore.setDocuments(klass, pageKey, data);
                 })
             )
             .catch(

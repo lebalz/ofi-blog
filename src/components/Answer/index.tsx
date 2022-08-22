@@ -15,6 +15,7 @@ import Loader from '../shared/Loader';
 import StateAnswer from './StateAnswer';
 import clsx from 'clsx';
 import { default as StateAnswerModel } from '../../models/Answer/State';
+import useFrontMatter from '@theme/useFrontMatter';
 
 export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();
 
@@ -112,11 +113,10 @@ const baseUrl = '/';
 const Answer = observer((props: Props) => {
     const store = useStore('documentStore');
     const msalStore = useStore('msalStore');
-    const userStore = useStore('userStore');
     const model = store.find(props.webKey);
     const inBrowser = useIsBrowser();
+
     useDocument(() => getDefault(props), props.type, props.webKey, true);
-    const [klasse] = React.useState(window.location.pathname.replace(baseUrl, '').split('/')[0]);
 
     if (!inBrowser) {
         return <div style={{ height: '1em' }}></div>;
@@ -133,19 +133,6 @@ const Answer = observer((props: Props) => {
             {props.type === 'string' && <StringAnswer {...props} />}
             {props.type === 'array' && <ArrayAnswer {...props} />}
             {props.type === 'state' && <StateAnswer {...props} />}
-            <div>
-                {store.filterByClass(klasse).map((m, idx) => {
-                    if (m.type === 'state' && m.userId !== userStore.current.id) {
-                        console.log(m.userId, m.props)
-                        return (<div key={idx}>
-                            <div className={clsx('button', `button--${(m as StateAnswerModel).viewClass}`)}>
-                                <i className={clsx('mdi', mdiIcon[(m as StateAnswerModel).value])} />
-                            </div>
-                            <div>{props.children}</div>
-                        </div>);
-                    }
-                })}
-            </div>
         </div>
     );
 });
