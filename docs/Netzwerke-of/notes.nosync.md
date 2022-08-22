@@ -4,10 +4,11 @@ sidebar_custom_props:
 ---
 # Notizen
 
-## 2021
+## 24er
 
 - Fehler: "www" bei DNS-Hierarchie wird oft zusammengefasst (für alle Seiten mit www)
 - Fehler: DNS-Schritt und Routing wird oft vermischt/im gleichen Prozessschritt verortet 
 
+## 25er
 
 [@pdf --scroll](assets/03_run_rollenspiel_netzwerk.pdf)
