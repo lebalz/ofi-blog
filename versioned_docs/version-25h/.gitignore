@@ -20,5 +20,5 @@ Math/BlackBox/*
 06-Big-Data/*
 !06-Big-Data/_category_.json
 07-Netzwerke/01-Schichtenmodell/*
-!07-Netzwerke/01-Schichtenmodell/Schichten-und-Adressen.md
 07-Netzwerke/00-Lernziele.md
+07-Netzwerke/02-Routing/*

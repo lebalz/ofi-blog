@@ -100,13 +100,16 @@
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
       "to": "versioned_docs/version-25h/07-Netzwerke/01-Schichtenmodell",
-      "ignore": [
-        "Schichten-und-Adressen.md"
-      ]
+      "ignore": []
     },
     {
       "from": "docs/Netzwerke-of/090-Pruefung.md",
       "to": "versioned_docs/version-25h/07-Netzwerke/00-Lernziele.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/003-Routing/",
+      "to": "versioned_docs/version-25h/07-Netzwerke/02-Routing",
       "ignore": []
     }
   ],
