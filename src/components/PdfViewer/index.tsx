@@ -10,11 +10,13 @@ import {
   faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 interface Props {
   file: string;
   name: string;
   page?: number;
+  scroll?: boolean;
   width?: number;
   minWidth?: number;
   scale?: number;
@@ -114,6 +116,7 @@ const PdfViewer = (props: Props) => {
       className={clsx(
         styles.pdfWrapper,
         overflowing && styles.overflowing,
+        props.scroll && styles.scroll,
         (numPages <= 1 || props.page !== undefined) && styles.singlepage
       )}
       ref={ref}
@@ -129,7 +132,12 @@ const PdfViewer = (props: Props) => {
           }}
         >
           {
-            pageNumber > 0 && (
+            props.scroll && (
+              Array.from({length: 3}, (_, idx) => (<Page pageNumber={idx + 1} width={width} onLoadSuccess={onHeightChange} key={idx} />))
+            )
+          }
+          {
+            !props.scroll && pageNumber > 0 && (
               <Page
                 pageNumber={pageNumber}
                 width={width}
@@ -148,36 +156,38 @@ const PdfViewer = (props: Props) => {
               )}
               download={props.name}
             >
-              <FontAwesomeIcon icon={faDownload} />
+              <FontAwesomeIcon icon={faDownload as IconProp} />
             </a>
           )}
         </Document>
       </div>
+      {!props.scroll && (
 
-      <div className={clsx(styles.controls)}>
-        {numPages > 1 && props.page === undefined && (
-          <div className={clsx("button-group")}>
-            <button
-              className={clsx("button", "button--secondary", "button--sm")}
-              onClick={previousPage}
-            >
-              <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-            </button>
-            <button
-              className={clsx("button", "button--secondary", "button--sm")}
-              disabled
-            >
-              {pageNumber || (numPages ? 1 : "--")} / {numPages || "--"}
-            </button>
-            <button
-              className={clsx("button", "button--secondary", "button--sm")}
-              onClick={nextPage}
-            >
-              <FontAwesomeIcon icon={faArrowAltCircleRight} />
-            </button>
-          </div>
-        )}
-      </div>
+        <div className={clsx(styles.controls)}>
+          {numPages > 1 && props.page === undefined && (
+            <div className={clsx("button-group")}>
+              <button
+                className={clsx("button", "button--secondary", "button--sm")}
+                onClick={previousPage}
+              >
+                <FontAwesomeIcon icon={faArrowAltCircleLeft as IconProp} />
+              </button>
+              <button
+                className={clsx("button", "button--secondary", "button--sm")}
+                disabled
+              >
+                {pageNumber || (numPages ? 1 : "--")} / {numPages || "--"}
+              </button>
+              <button
+                className={clsx("button", "button--secondary", "button--sm")}
+                onClick={nextPage}
+              >
+                <FontAwesomeIcon icon={faArrowAltCircleRight as IconProp} />
+              </button>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };

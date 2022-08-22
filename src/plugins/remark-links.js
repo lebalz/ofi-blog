@@ -54,6 +54,7 @@ const plugin = (options) => {
             linkNode.value = `<PdfViewer 
               file={${src}}
               name="${fileName}"
+              scroll={${options.scroll}}
               page={${options.page}}
               width={${options.width}}
               minWidth={${options.minWidth}}

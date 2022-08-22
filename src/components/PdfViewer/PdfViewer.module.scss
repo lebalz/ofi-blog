@@ -24,6 +24,15 @@
             }
         }
     }
+
+    &.scroll {
+        max-height: 85vh;
+        overflow-y: auto;
+        .doc {
+            flex-direction: column;
+        }
+    }
+
     .controls {
         position: relative;
         display: flex;
