@@ -111,6 +111,11 @@
       "from": "docs/Netzwerke-of/003-Routing/",
       "to": "versioned_docs/version-25h/07-Netzwerke/02-Routing",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/010-Begriffe/",
+      "to": "versioned_docs/version-25h/07-Netzwerke/010-Begriffe",
+      "ignore": []
     }
   ],
   "26e": [
