@@ -8,9 +8,6 @@
     .doc {
         display: flex;
         justify-content: center;
-        :global(.react-pdf__Page) {
-            box-shadow: var(--ifm-global-shadow-lw);
-        }
         position: relative;
         .download {
             position: absolute;
@@ -23,6 +20,9 @@
                 opacity: 1;
             }
         }
+        .pdfPage {
+            box-shadow: var(--ifm-global-shadow-lw);
+        }
     }
 
     &.scroll {
@@ -30,6 +30,14 @@
         overflow-y: auto;
         .doc {
             flex-direction: column;
+            .download {
+                position: sticky;
+                align-self: flex-end;
+            }
+
+            .pdfPage {
+                box-shadow: var(--ifm-global-shadow-md);
+            }
         }
     }
 
