@@ -9,7 +9,7 @@
     "experimentalDecorators": true,
     "downlevelIteration": true,
     "esModuleInterop":true,
-    "types": ["docusaurus-theme-frontmatter"],
+    "types": ["docusaurus-theme-frontmatter"]
     // "resolveJsonModule": true
   }
 }
