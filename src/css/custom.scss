@@ -134,16 +134,33 @@ table {
     }
 }
 
+.slim,
 .slim-table,
 .small-table {
     overflow-x: auto;
 
     table {
+        th,
         td {
             padding: 0.2em;
         }
     }
 }
+
+.center {
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        width: unset;
+        max-width: 100%;
+        td,
+        th {
+            padding-left: 0.6em;
+            padding-right: 0.6em;
+        }
+    }
+}
+
 
 .color-badge {
     border-radius: 4px;
@@ -234,7 +251,7 @@ html[data-theme='dark'] {
     --ifm-alert-border-color: rgb(30, 255, 0);
     --ifm-alert-background-color: rgba(0, 0, 0, 0.226);
     --ifm-spacing-vertical: 0.5rem;
-    
+
     >.admonition-content>.admonition-heading,
     >.admonition-heading {
         display: none;
@@ -242,6 +259,7 @@ html[data-theme='dark'] {
 
     .admonition-content h3 {
         --ifm-h3-font-size: var(--ifm-h4-font-size);
+
         code {
             color: rgb(19, 165, 0);
             text-transform: none;
@@ -380,6 +398,7 @@ div.flex {
     --ifm-tabs-padding-horizontal: 1rem;
     border-radius: 8px;
     box-shadow: var(--ifm-global-shadow-md);
+
     div[role="tabpanel"] {
         margin-left: 0.5rem;
         margin-right: 0.5rem;

@@ -56,7 +56,7 @@ Welchen Transportoptionen schlägt Ihnen [👉 Google Maps](https://www.google.c
 
 </Finding>
 
-## gefundene Analogien
+## Gefundene Analogien
 
 <div className="no-table-header">
 
@@ -74,13 +74,13 @@ Datenpakete sind – anders als wir als Passagiere vom *ÖV* – nicht intellige
 
 Ein Datenpaket im ÖV vom Gymer zum Sportplatz Mettmoos müsste
 1. an **jeder Haltestelle** wissen:
-  - ob man Aussteigen oder Umsteigen muss
-  - in welchen Bus man einsteigen muss
-  - ob man am Ziel angekommen ist.
+   - ob man Aussteigen oder Umsteigen muss
+   - in welchen Bus man als nächstes einsteigen muss
+   - ob man am Ziel angekommen ist.
 
-2. an jeder Strassenkreuzung (wenn zu Fuss unterwegs) wissen:
-  - welche Abzweigung es nehmen soll
-  - ob es am Ziel angekommen ist.
+2. an jeder **Strassenkreuzung** (wenn zu Fuss unterwegs) wissen:
+   - welche Abzweigung es nehmen soll
+   - ob es am Ziel angekommen ist.
 
 :::aufgabe Routing-Tabelle
 
@@ -92,7 +92,17 @@ Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für Date
 - Schulen Linde
 - Bahnhof Mett
 
-Beispiel-Anleitung: **Seehofweg** → Bus Nr. 9
+Beispiel-Anleitung:
+
+<div className="slim center">
+
+| Ort :mdi-pin: | Ziel :mdi-target: | :mdi-axis-y-arrow: Aktion             |
+| :------------ | :---------------- | :------------------------------------ |
+| Seehofweg     | Mettmoos          | :mdi-arrow-right-thin: Bus Nr. 9      |
+| Seehofweg     | Gymer             | :mdi-arrow-right-thin: Zu Fuss weiter |
+</div>
+
+Halten Sie Ihre Anleitung auf Papier fest und fügen Sie ein Foto unten ein.
 
 <Answer  type="text"  webKey="7bcc9f60-6fe8-4162-b45f-8cda4e248730"/>
 
