@@ -20,7 +20,7 @@ In dieser praktischen Übung speichern Sie auf Ihrem Computer eine Textdatei und
 Die Editor ist eine App, in welcher man Textdateien erstellen und bearbeiten kann. Das kann man auch mit Word, dies ist jedoch umständlicher. Word-Dateien sind keine reinen Textdateien, sie enthalten auch andere Daten wie Formatierungen und Bilder.
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 Starten Sie die _Editor_-App, indem Sie im Startmenü nach «editor» suchen:
 
@@ -44,7 +44,7 @@ Geben Sie einen kurzen Text ein. Dieser sollte nicht nur ASCII-Zeichen enthalten
 
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 Emojis können unter Windows mit dem Tastenkürzel <FontAwesomeIcon icon={faWindows} />+`.` eingefügt werden.
 
@@ -60,7 +60,7 @@ Alternativ findet man unter [Emojipedia](https://emojipedia.org) viele weitere E
 
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 ![](images/07-notepad-input.png)
 
@@ -79,7 +79,7 @@ Speichern Sie die Textdatei unter dem Namen **Unicode-Test.txt** indem Sie
 
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 - die Tastenkombination [Ctrl]+[S] drücken oder
 - den Menüpunkt `Datei > Speichern` auswählen.

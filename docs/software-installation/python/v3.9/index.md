@@ -11,7 +11,7 @@ import OsTabs from '@site/src/components/OsTabs';
 3. Folgende Optionen bei der Installation berücksichtigen:
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 1. Schritt: ![Installationsschritt 1.](images/win-01.png)
 2. Schritt: Warten... ![Installationsschritt 2.](images/win-02.png)

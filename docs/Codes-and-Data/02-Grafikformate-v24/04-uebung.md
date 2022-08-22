@@ -40,7 +40,7 @@ Das folgende Foto hat im Original eine Auflösung von `6016×4016` Pixel mit ein
 
 
 <OsTabs>
-  <TabItem value="win10">
+  <TabItem value="win">
 
 Im Foto App öffnen und als Kopie exportieren:
 

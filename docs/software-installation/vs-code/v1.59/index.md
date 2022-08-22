@@ -27,7 +27,7 @@ import OsTabs from '@site/src/components/OsTabs'
 <details>
 <summary>Installations-Optionen</summary>
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 1. Schritt: ![Installationsschritt 1.](images/win-01.png)
 2. Schritt: ![Installationsschritt 2.](images/win-02.png)
@@ -64,7 +64,7 @@ Damit die richtigen Voreinstellungen geladen werden, muss eine Erweiterung, ein 
 Um Python-Programme auszuführen, ist ein Übersetzer der Befehle zu Maschinenverständlichem Code notwendig. Diese Aufgabe übernimmt der **Python Interpreter**. Auf einem Gerät sind meist mehrere verschiedene Python-Interpreter installiert - in VS Code soll aber der von uns installierte Interpreter verwendet werden:
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 :::info
 Es muss immer überprüft werden, dass der von uns installierte Interpreter ausgewählt ist.

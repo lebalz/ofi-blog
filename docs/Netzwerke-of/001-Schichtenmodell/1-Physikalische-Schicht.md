@@ -21,7 +21,7 @@ Im Beispiel «Schule» müssen die Säcke, die die vielen Pakete enthalten, nun 
 
 Die physikalische Schicht besteht aus der Hardware, also den Kabeln und Geräten (mit ihren physikalischen Adressen). Die physikalische Adresse wird MAC-Adresse genannt (siehe Begriff MAC-Adressen).
 
-Wieso braucht es zwei Adressen, logische Adressen (Vermittlungsschicht) und physikalische dieser Schicht? Innerhalb eines lokalen Netzwerks werden die physikalischen Adressen verwendet. Da es aber keine Möglichkeit gibt, alle physikalischen Adressen auf der Welt zu kennen und zu wissen, wie man diese Gerät erreichen kann, braucht es logische Adressen, die zu einem bestimmten Netzwerk gehören. Nur so ist es möglich, mit dem gleichen Gerät am Morgen zu Hause und später an der Schule online zu sein.
+Wieso braucht es zwei Adressen, logische Adressen (Vermittlungsschicht) und physikalische dieser Schicht? Innerhalb eines lokalen Netzwerks werden die physikalischen Adressen verwendet. Da es aber keine Möglichkeit gibt, alle physikalischen Adressen auf der Welt zu kennen und zu wissen, wie man diese Geräte erreichen kann, braucht es logische Adressen, die zu einem bestimmten Netzwerk gehören. Nur so ist es möglich, mit dem gleichen Gerät am Morgen zu Hause und später an der Schule online zu sein.
 
 ### Weitere Informationen
 

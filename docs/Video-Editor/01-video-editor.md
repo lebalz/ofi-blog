@@ -34,7 +34,7 @@ Hilfreiche Links inkl. weiteren Anleitungen:
 ## Video Editor öffnen
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 Über die Fotos-App können auch Video-Projekte erstellt werden:
 
@@ -59,7 +59,7 @@ Zu Beginn eines Videos soll ein Titel angezeigt werden. Die mitwirkenden Persone
 Wichtige Aussagen im Video können zusätzlich mit Text untermauert werden. Die Dauer der Texteinblendung kann jeweils eingestellt werden und sollte min. `3s` dauern.
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 ![Hintergrundfarbe einstellen](images/win/02-video-editor-bg-color.png)
 
@@ -82,7 +82,7 @@ Das Aufteilen von Videos ist besonders hilfreich, wenn
 - die Geschwindigkeit einzelner Teile verändert werden muss.
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 ![Video aufteilen](images/win/04-video-editor-split.png)
 
@@ -97,7 +97,7 @@ Das Aufteilen von Videos ist besonders hilfreich, wenn
 ### Wiedergabegeschwindigkeit
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 ![Geschwindigkeit ändern --max-width=450px](images/win/05-video-editor-speed.png)
 
@@ -118,7 +118,7 @@ Die Tonspur mit gesprochenem Text soll immer klar und verständlich sein. Lieber
 :::
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 Oben rechts "Benutzerdefiniertes Audio" wählen und anschliessend mehrere Audiodateien hinzufügen. Die Audiospuren lassen sich durch verschieben der Regler direkt zuschneiden. Die Tonspuren können auch überlagert werden.   
 
@@ -146,7 +146,7 @@ Um die Lautstärke der Tonspur zu ändern, kann die horizontale Linie in der Ton
 Gesprochener Text wird am besten direkt zum Abspielen des Videos aufgenommen.
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 Unter Windows wird zum Aufnehmen einer Tonspur das Programm [Sprachrekorder](https://support.microsoft.com/de-de/windows/verwendung-des-sprachrekorders-6fbb53d5-0539-abda-a9a4-0bcb84a778e7) benötigt.
 
@@ -169,7 +169,7 @@ In iMovie ist ein Sprachrekorder direkt eingebaut:
 Ist das Video fertiggestellt, kann es als Videodatei exportiert werden. Beim exportieren wird die Darstellung jedes einzelnen Bildes *(für eine Sekunde Film sind es 30 Bilder)* berechnet, wobei Textüberlagerungen, Tondateien und Spezialeffekte zusammengefügt werden. Dieser Prozess kann sehr lange dauern und ist abhängig von der Geschwindigkeit der Grafikkarte. Dieser Prozess wird auch **Rendering** genannt.
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 Oben rechts auf "Fertig stellen" klicken und das Video abspeichern.
 

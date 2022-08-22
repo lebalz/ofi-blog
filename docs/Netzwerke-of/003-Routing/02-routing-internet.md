@@ -127,7 +127,7 @@ Der Befehl `traceroute` (macOS) resp. `tracert` (Windows) kann diese Route nachv
 
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 Öffnen Sie eine Eingabeaufforderung (cmd) und geben Sie nacheinander die folgenden drei Befehl ein:
 
@@ -163,7 +163,7 @@ Für die Kommunikation mit Geräten ausserhalb des eigenen Netzwerks müssen die
 ### Standardgateway ihres Laptops
 
 <OsTabs>
-<TabItem value="win10">
+<TabItem value="win">
 
 ```.sh title="In der Kommandozeile (cmd) eingeben"
 ipconfig

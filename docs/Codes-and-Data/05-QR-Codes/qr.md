@@ -105,15 +105,7 @@ Leider gibt es unterschiedliche Konventionen für die Erzeugung von 3D-Objektmod
 
 
 <OsTabs>
-<TabItem value="win11">
-
-Die heruntergeladene Datei im [slicer](https://www.prusa3d.com/de/page/prusaslicer_424/) öffnen.
-
-Es wird ein Warn-Symbol angezeigt - durch **Doppelklicken** auf das Symbol können die Fehler korrigiert werden. 
-![Doppelklicken auf das Symbol](images/qr-fix-win.png)
-
-</TabItem>
-<TabItem value="win10">
+<TabItem value="win">
 
 Die heruntergeladene Datei im [slicer](https://www.prusa3d.com/de/page/prusaslicer_424/) öffnen.
 

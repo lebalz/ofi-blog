@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import Tabs from '@theme/Tabs';
 
 type OsType = 'win10' | 'win11' | 'win' | 'mac';
@@ -19,11 +20,12 @@ const getValues = (os: OsType[]) => {
 } 
 
 const OsTabs = (props: Props) => {
+    const tabs = Array.isArray(props.children) ? props.children.map((tab) => tab.props.value) : ['win11', 'win10', 'macOS'];
     return (
         <Tabs
             groupId="operating-systems"
-            defaultValue={props.os ? props.os[0] : 'win11'}
-            values={getValues(props.os || ['win11', 'win10', 'mac'])}
+            defaultValue={props.os ? props.os[0] : tabs[0]}
+            values={getValues(props.os || tabs)}
         >
             {props.children}
         </Tabs>
