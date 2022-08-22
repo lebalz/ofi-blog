@@ -11,6 +11,7 @@ import Video from '@site/src/components/Video'
 
 ## Wichtige Tasten und ihre Namen
 
+
 <OsTabs>
 <TabItem value="win11">
 
@@ -185,6 +186,14 @@ import Video from '@site/src/components/Video'
 </TabItem>
 </OsTabs>
 
+:::aufgabe Quizz
+<Answer type="state" webKey="215e7040-8992-4ded-ac14-85acd782a0f9" />
+
+Lösen Sie das Quizz und markieren Sie die Aufgabe anschliessend als erledigt.
+
+<iframe src="https://learningapps.org/watch?app=26314721" style={{border:'0px',width:'100%',height:'500px'}} allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+:::
+
 ### Pfeiltasten
 
 
@@ -229,6 +238,7 @@ import Video from '@site/src/components/Video'
 </OsTabs>
 
 :::aufgabe Shortcuts Tastatur&Pfeiltasten ausprobieren
+<Answer type="state" webKey="1d692ff8-21b1-416b-ab51-79573dfece5c" />
 
 Probieren Sie die verschiedenen Shortcuts im untenstehenden Textfeld aus!
 
@@ -302,6 +312,8 @@ __]__
 </OsTabs>
 
 :::aufgabe Pfeiltasten schreiben
+<Answer type="state" webKey="887346bb-a996-4799-98f3-e7ac25fd0a19" />
+
 Versuchen Sie, alle Pfeiltasten selber zu tippen!
 
 <Answer type="text" webKey="7f8d0d23-6ee8-4eaa-90e2-1eed40a1208a" />
@@ -394,10 +406,28 @@ __>__
 
 
 :::aufgabe Sonderzeichen
+<Answer type="state" webKey="eb8771a6-681b-439c-b02e-d926d8c93fc5" />
+
 Können Sie die obigen Sonderzeichen selber erzeugen?
 
 <Answer type="text" webKey="015cfbd5-a051-4f7d-b965-858c208428b2" />
 
+:::
+
+:::aufgabe Quizz
+<Answer type="state" webKey="41b18d27-2066-482b-926d-c4fa4253d96e" />
+
+Werden Sie Millionär? 🤑💰🤑💰🤑💰
+
+<iframe src="https://learningapps.org/watch?app=2815114" style={{border:'0px',width:'100%',height:'500px'}} allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+:::
+
+:::aufgabe 🌟 Arcade Game (englisch)
+<Answer type="state" webKey="dd6bddb6-fea8-4d37-902d-3ea1c9529c6e" />
+
+Freiwillig: Spielen Sie das Tastenkürzel-Game
+
+👉 https://mattshaw.org/projects/shortcutgame/
 :::
 
 

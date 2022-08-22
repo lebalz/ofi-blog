@@ -70,6 +70,13 @@ Die heruntergeladenen Dateien müssen im Original vorliegen und die Programme au
 ## Szenario 3
 
 <OsTabs>
+<TabItem value="win11">
+
+- Ein Bilschirmfoto vom Programmfenster Datei-Explorer erstellen
+- Das Bilschirmfoto zu "01_explorer" umbenennen
+- Das Bilschirmfoto in den Ordner "material_byod" verschieben
+
+</TabItem>
 <TabItem value="win10">
 
 - Ein Bilschirmfoto vom Programmfenster Datei-Explorer erstellen
@@ -94,9 +101,15 @@ Die heruntergeladenen Dateien müssen im Original vorliegen und die Programme au
 ## Szenario 5
 - Öffnen Sie das Bild "sonnenuntergang.jpg" und fügen Sie die Beschriftungen "Palme" und "Sonne" hinzu.
 
-![Edited](/img/byod-basics/osx/sonnenuntergang_edited.jpg)
+:::flex
+![Original Bild](/img/byod-basics/osx/sonnenuntergang.jpg)
+***
+![Bearbeitetes Bild](/img/byod-basics/osx/sonnenuntergang_edited.jpg)
+:::
 
-*Die Schriftfarbe & Grösse kann frei gewählt werden, sie muss aber lesbar sein.*
+:::danger Schrift
+Die Schriftfarbe & Grösse kann frei gewählt werden, sie muss aber lesbar sein.
+:::
 
 ## Szenario 6
 - Einen neuen virtuellen Desktop erstellen
@@ -105,7 +118,7 @@ Die heruntergeladenen Dateien müssen im Original vorliegen und die Programme au
 
 ## Szenario 7
 - `sonnenuntergang.docx` öffnen
-- (ab jetzt nur mit der Tastatur und ohne Maus!)
+- **(ab jetzt nur mit der Tastatur und ohne Maus!)**
 - "ipsum dolor sit amet" auswählen und löschen
 - Den ganzen zweiten Absatz auswählen und löschen
 - Dokument abspeichern
@@ -211,5 +224,5 @@ Die heruntergeladenen Dateien müssen im Original vorliegen und die Programme au
 
 ## Szenario 30
 - Die Datei "sonnenuntergang.docx" auf Ihrem Laptop löschen
-- Online im OneDrive Papierkorb die Datei "sonnenuntergang.docx" wiederherstellen
+- Online unter https://onedrive.com im Papierkorb die Datei "sonnenuntergang.docx" wiederherstellen
 - Überprüfen dass die Datei wieder auf Ihren Laptop synchronisiert wird.
