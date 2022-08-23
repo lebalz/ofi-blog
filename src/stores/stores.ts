@@ -3,7 +3,7 @@ import { MSALStore } from "./MSALStore";
 import { DocumentStore } from "./DocumentStore";
 
 import React from "react";
-import { makeObservable, observable } from "mobx";
+import { makeObservable, observable, runInAction } from "mobx";
 import { UserStore } from "./UserStore";
 import { TimedTopicStore } from "./TimedTopicStore";
 import { CommentStore } from './CommentStore';
@@ -11,7 +11,8 @@ import { AdminStore } from './AdminStore';
 
 export class RootStore {
   stores = observable([]);
-  @observable initialized = false;
+  @observable 
+  initialized = false;
 
   documentStore: DocumentStore;
   commentStore: CommentStore;
@@ -29,7 +30,9 @@ export class RootStore {
     this.timedTopicStore = new TimedTopicStore(this);
     this.policyStore = new PolicyStore(this);
     this.adminStore = new AdminStore(this);
-    this.initialized = true;
+    runInAction(() => {
+      this.initialized = true;
+    })
   }
 }
 

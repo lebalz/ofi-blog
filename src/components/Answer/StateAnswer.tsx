@@ -74,7 +74,7 @@ const StateAnswer = observer((props: StateProps) => {
             {adminStore.isAdmin && adminStore.showAdminElements && (
                 <div className={clsx(styles.admin)}>
                     {adminStore
-                        .filteredBy<StateDoc>(klasse, sidebar_custom_props.id, 'state')
+                        .findByWebKey<StateDoc>(klasse, sidebar_custom_props.id, props.webKey)
                         .map((doc, idx) => (
                             <div className={clsx(styles.box)} key={idx}>
                                 <div className={clsx(styles.state)} style={{backgroundColor: `var(${mdiBgColor[doc.data.value]})`}}>

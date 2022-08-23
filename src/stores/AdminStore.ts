@@ -13,7 +13,10 @@ export class AdminStore {
     private readonly root: RootStore;
     @observable.ref
     batchLoader: BatchLoadService;
-    documents = observable.map<string, ObservableMap<string, DocumentProps<any>[]>>(undefined, { deep: false });
+
+    documents = observable.map<string, ObservableMap<string, DocumentProps<any>[]>>(undefined, {
+        deep: false,
+    });
 
     @observable
     showAdminElements = true;
@@ -30,7 +33,6 @@ export class AdminStore {
         this.showAdminElements = !this.showAdminElements;
     }
 
-
     @computed
     get isAdmin(): boolean {
         return !!this.root.userStore.current?.admin;
@@ -44,27 +46,33 @@ export class AdminStore {
         this.batchLoader.push(pageKey, webKey);
     }
 
-    find(klasse: string, pageKey?: string): DocumentProps<any>[] {
-        if (!pageKey) {
-            return [];
-        }
-        if (!this.documents.has(klasse)) {
-            return [];
-        }    
-        if (!this.documents.get(klasse).has(pageKey)) {
-            return [];
-        }
-        return this.documents.get(klasse).get(pageKey);
-    }
+    find = computedFn(
+        function (this: AdminStore, klasse: string, pageKey?: string): DocumentProps<any>[] {
+            if (!pageKey) {
+                return [];
+            }
+            if (!this.documents.has(klasse)) {
+                return [];
+            }
+            if (!this.documents.get(klasse).has(pageKey)) {
+                return [];
+            }
+            return this.documents.get(klasse).get(pageKey);
+        },
+        { keepAlive: true }
+    );
 
     filteredBy<T>(klasse: string, pageKey: string, type: DocType): DocumentProps<T>[] {
-        return this.find(klasse, pageKey).filter(doc => doc.type === type);
+        return this.find(klasse, pageKey).filter((doc) => doc.type === type);
+    }
+
+    findByWebKey<T>(klasse: string, pageKey: string, webKey: string): DocumentProps<T>[] {
+        return this.find(klasse, pageKey).filter((doc) => doc.web_key === webKey);
     }
 
     getUser(userId: number): User | undefined {
         return this.root.userStore.findById(userId);
     }
-
 
     @action
     setDocuments(klasse: string, pageKey: string, docs: DocumentProps<any>[]) {

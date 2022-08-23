@@ -1,10 +1,9 @@
 import axios, { CancelTokenSource } from 'axios';
 import { debounce, DebouncedFunc } from 'lodash';
-import { action, computed, IReactionDisposer, makeObservable, observable } from 'mobx';
+import { action, computed, IReactionDisposer, makeObservable, observable, reaction } from 'mobx';
 import { getAllDocumentsByClass } from '../api/admin';
 import { RootStore } from '../stores/stores';
 type RequestState = 'init' | 'save' | 'done' | 'pending' | 'deleted' | 'error';
-
 
 export default class BatchLoadService {
     private readonly tDebounce: number;
@@ -13,16 +12,43 @@ export default class BatchLoadService {
     cancelToken: CancelTokenSource = axios.CancelToken.source();
     disposer: IReactionDisposer;
     state: RequestState = 'init';
-    currentPageKey?: string = undefined; 
+    currentPageKey?: string = undefined;
 
     loadKeys = observable.set<string>([]);
 
     constructor(tDebounce: number = 1000, rootStore: RootStore) {
         this.tDebounce = tDebounce;
         this.rootStore = rootStore;
-        this.load = debounce(action(this._load), this.tDebounce, { leading: false, trailing: true, maxWait: 5000 });
 
         makeObservable(this);
+        this.load = debounce(action(this._load), this.tDebounce, {
+            leading: false,
+            trailing: true,
+            maxWait: 5000,
+        });
+        reaction(
+            () => this.rootStore.initialized && this.rootStore.adminStore.isAdmin,
+            (isAdmin, prev) => {
+                if (isAdmin && !prev) {
+                    this.load();
+                }
+            }
+        );
+        // reaction(
+        //     () => this.rootStore.initialized,
+        //     (isInit, prev) => {
+        //         if (isInit && !prev) {
+        //             reaction(
+        //                 () => this.rootStore.adminStore.isAdmin,
+        //                 (isAdmin, prev) => {
+        //                     if (isAdmin && !prev) {
+        //                         this.load();
+        //                     }
+        //                 }
+        //             );
+        //         }
+        //     }
+        // );
     }
 
     @action
@@ -64,10 +90,11 @@ export default class BatchLoadService {
         if (!this.rootStore.msalStore.loggedIn || !this.rootStore.adminStore.isAdmin) {
             return;
         }
+
         const baseUrl = '/';
         const klass = window.location.pathname.replace(baseUrl, '').split('/')[0];
         const pageKey = this.currentPageKey;
-        
+
         this.cancelApiRequests();
         this.state = 'pending';
         const keys = [...this.loadKeys.values()];
@@ -79,7 +106,7 @@ export default class BatchLoadService {
                 return getAllDocumentsByClass(klass, keys, this.cancelToken);
             })
             .then(
-                action(({data}) => {
+                action(({ data }) => {
                     this.state = 'done';
                     this.rootStore.adminStore.setDocuments(klass, pageKey, data);
                 })
