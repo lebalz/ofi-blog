@@ -83,7 +83,7 @@ const StateAnswer = observer((props: StateProps) => {
 
                                 <div className={clsx(styles.nameWrapper)}>
                                     <div className={clsx(styles.name)}>
-                                        {adminStore.getUser(doc.user_id).name}
+                                        {adminStore.getUser(doc.user_id)?.name || 'Name'}
                                     </div>
                                 </div>
                             </div>
