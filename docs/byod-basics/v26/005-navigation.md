@@ -311,10 +311,10 @@ __]__
 </TabItem>
 </OsTabs>
 
-:::aufgabe Pfeiltasten schreiben
+:::aufgabe Klammern schreiben
 <Answer type="state" webKey="887346bb-a996-4799-98f3-e7ac25fd0a19" />
 
-Versuchen Sie, alle Pfeiltasten selber zu tippen!
+Versuchen Sie, alle Klammern selber zu tippen!
 
 <Answer type="text" webKey="7f8d0d23-6ee8-4eaa-90e2-1eed40a1208a" />
 
@@ -343,7 +343,7 @@ __&__
 __/__
 : [[Shift]] + [[7]]
 __\__
-: [[Shift]] + [[7]]
+: [[ctrl]] + [[alt]] + [[<]] oder [[Alt Gr]] + [[<]]
 __<__
 : [[<]]
 __>__
@@ -369,7 +369,7 @@ __&__
 __/__
 : [[Shift]] + [[7]]
 __\__
-: [[Shift]] + [[7]]
+: [[ctrl]] + [[alt]] + [[<]] oder [[Alt Gr]] + [[<]]
 __<__
 : [[<]]
 __>__
