@@ -1,9 +1,6 @@
-import axios, { CancelTokenSource } from 'axios';
-import { action, computed, makeObservable, observable, runInAction, reaction, ObservableMap } from 'mobx';
+import { action, computed, makeObservable, observable, ObservableMap } from 'mobx';
 import { computedFn } from 'mobx-utils';
-import { getDocument, postDocument, Document as DocumentProps } from '../api/document';
-import { getDocument as getDocumentAsAdmin } from '../api/admin';
-import ArrayAnswer from '../models/Answer/Array';
+import { Document as DocumentProps } from '../api/document';
 import { RootStore } from './stores';
 import BatchLoadService from '../models/BatchLoadService';
 import { DocType } from '../models/iModel';
@@ -71,7 +68,8 @@ export class AdminStore {
     }
 
     findByWebKey<T>(klasse: string, pageKey: string, webKey: string): DocumentProps<T>[] {
-        return this.find(klasse, pageKey).filter((doc) => doc.web_key === webKey).sort((a, b) => {
+        const docs = this.find(klasse, pageKey).filter((doc) => doc.web_key === webKey);
+        docs.sort((a, b) => {
             const aName = this.userById(a.id)?.name;
             const bName = this.userById(b.id)?.name;
             if (!aName && !bName) {
@@ -90,8 +88,8 @@ export class AdminStore {
                 return 1;
             }
             return 0;
-        }
-        );
+        });
+        return docs;
     }
 
     getUser(userId: number): User | undefined {

@@ -2,14 +2,11 @@ import * as React from 'react';
 import styles from './state.module.scss';
 import { observer } from 'mobx-react-lite';
 import { StateProps } from '.';
-import Option from './Option';
 import { useStore } from '../../stores/hooks';
-import { Document } from './../../api/document';
 import { default as StateAnswerModel, StateDoc } from '../../models/Answer/State';
 import Loader from '../shared/Loader';
 import clsx from 'clsx';
 import useFrontMatter from '@theme/useFrontMatter';
-import { StateModel } from '@site/src/models/iModel';
 
 const mdiIcon = {
     checked: 'mdi-checkbox-marked-outline',
