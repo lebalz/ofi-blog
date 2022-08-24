@@ -1,9 +1,8 @@
 ---
+sidebar_label: MAC-Adresse
 sidebar_custom_props:
   id: 6bdd5d64-68fb-4fe9-ab48-ce69b6d2d198
 ---
-
-# MAC-Adresse
 
 # MAC-Adresse
 

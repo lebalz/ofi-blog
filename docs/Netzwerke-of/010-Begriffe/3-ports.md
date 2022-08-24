@@ -1,9 +1,8 @@
 ---
+sidebar_label: Ports
 sidebar_custom_props:
   id: ebeeda54-71e2-4de6-b4bc-ec987e8f8396
 ---
-
-# Ports
 
 # Ports [^1]
 
@@ -23,12 +22,12 @@ Einige bekannte Ports sind:
 
 | Portnummer | Dienst                                              |
 | ---------: | :-------------------------------------------------- |
-| `25`       | Simple Mail Transfer Protocol (SMTP)                |
-| `53`       | Domain Name System (DNS)                            |
-| `80`       | HyperText Transfer Protocol (HTTP)                  |
-| `143`      | Internet Message Access Protocol (IMAP)             |
-| `465`      | Simple Mail Transfer Protocol **Secure** (SMTPS)    |
-| `443`      | HyperText Transfer Protocol **Secure** (HTTPS)      |
-| `993`      | Internet Message Access Protocol **Secure** (IMAPS) |
+|       `25` | Simple Mail Transfer Protocol (SMTP)                |
+|       `53` | Domain Name System (DNS)                            |
+|       `80` | HyperText Transfer Protocol (HTTP)                  |
+|      `143` | Internet Message Access Protocol (IMAP)             |
+|      `465` | Simple Mail Transfer Protocol **Secure** (SMTPS)    |
+|      `443` | HyperText Transfer Protocol **Secure** (HTTPS)      |
+|      `993` | Internet Message Access Protocol **Secure** (IMAPS) |
 
 [^1]: Quelle: [rothe.io Ports](https://rothe.io/?b=network&p=240119)
