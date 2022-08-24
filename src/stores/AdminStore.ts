@@ -62,12 +62,36 @@ export class AdminStore {
         { keepAlive: true }
     );
 
+    userById(id: number): User | undefined {
+        return this.root.userStore.findById(id);
+    }
+
     filteredBy<T>(klasse: string, pageKey: string, type: DocType): DocumentProps<T>[] {
         return this.find(klasse, pageKey).filter((doc) => doc.type === type);
     }
 
     findByWebKey<T>(klasse: string, pageKey: string, webKey: string): DocumentProps<T>[] {
-        return this.find(klasse, pageKey).filter((doc) => doc.web_key === webKey);
+        return this.find(klasse, pageKey).filter((doc) => doc.web_key === webKey).sort((a, b) => {
+            const aName = this.userById(a.id)?.name;
+            const bName = this.userById(b.id)?.name;
+            if (!aName && !bName) {
+                return 0;
+            }
+            if (!aName) {
+                return -1;
+            }
+            if (!bName) {
+                return 1;
+            }
+            if (aName < bName) {
+                return -1;
+            }
+            if (aName > bName) {
+                return 1;
+            }
+            return 0;
+        }
+        );
     }
 
     getUser(userId: number): User | undefined {
