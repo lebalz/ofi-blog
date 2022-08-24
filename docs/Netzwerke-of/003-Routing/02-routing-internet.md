@@ -1,16 +1,15 @@
 ---
+sidebar_label: Routing im Internet
 sidebar_custom_props:
   id: eb6efc06-c76e-4907-8e49-ddfe8de30177
 ---
 
-# Routing im Internet
-
 import Finding from "@site/src/components/Finding";
-import OsTabs from '@site/src/components/OsTabs';
 
 # Routing im Internet [^1]
 
 Wie Pakete eine Postadresse haben, brauchen auch Datenpakete eine Adresse, damit sie korrekt zugestellt werden können. Diese Adressen nennt man **IP-Adressen**, wobei IP für *Internet Protocol* steht.
+
 ## Adressierung
 
 Normalerweise erhält jedes Gerät beim Beitritt zu einem Rechnernetz eine IP-Adresse zugewiesen. Die Adresse gehört zum entsprechenden Netz und erlaubt die Kommunikation mit allen Geräten die sich ebenfalls im selben Netz befinden. Deshalb erhält Ihr Gerät hier am GBSL eine andere Adresse als bei Ihnen zu Hause.
@@ -29,6 +28,7 @@ Es gibt also insgesamt $2^{32} = 4'294'967'296$ verschiedene IP-Adressen. Auf de
 Jedes Gerät das mit dem Internet verbunden ist, braucht eine IP-Adresse.
 
 :::aufgabe IP-Adresse finden
+<Answer type="state" webKey="03beb5fd-88d7-4ab8-ac33-c01d6d1fc88a" />
 
 Finden und notieren Sie die IP-Adresse
 
@@ -59,6 +59,7 @@ oder etwas Ähnliches, das auf Ihr Gerät resp. Ihr  Betriebssystem abgestimmt i
 :::
 
 :::aufgabe 🏠 IP-Adresse finden
+<Answer type="state" webKey="a570b6cd-7d9c-4089-9c4d-ce64b7190c9e" />
 
 Finden und notieren Sie die IP-Adresse
 
@@ -79,6 +80,7 @@ ping 194.124.132.216
 ```
     
 :::aufgabe Ping ausführen
+<Answer type="state" webKey="1b34609a-3aea-4206-be9d-cd05c3427c01" />
 
 Führen Sie einen Ping mit folgenden IP-Adressen aus:
 
@@ -123,7 +125,7 @@ Damit ein Router ein IP-Paket weiterleiten kann, braucht er folgende, im Paket e
 Der Befehl `traceroute` (macOS) resp. `tracert` (Windows) kann diese Route nachverfolgt werden. Dabei werden die Zwischenstationen – also dort wo das Paket entpackt und gemäss Ziel-IP-Adresse weitergeleitet wird – angezeigt.
 
 :::aufgabe `traceroute`
-
+<Answer type="state" webKey="f116343c-b7ec-44be-8819-e759f3832794" />
 
 
 <OsTabs>
@@ -188,17 +190,18 @@ Zu Hause haben Sie als Standardgateway die IP-Adresse Ihres Routers/Modems einge
 :::
 
 :::aufgabe
-Gehen Sie auf die Webseite https://whatsmyip.org/. Was wird angezeigt?
+<Answer type="state" webKey="625365a4-4044-4a18-a760-0028cedfba6a" />
+
+Gehen Sie auf die Webseite 👉 https://whatsmyip.org/. Was wird angezeigt?
 
 <Answer  type="text" webKey="84b69738-074c-4ee9-8e6c-073a6a896aeb" />
 
-<details><summary>Lösung</summary>
+<Solution webKey="6f704948-771f-4f27-a6a5-62223edf2514">
 
 Bei der angezeigten Adresse handelt es sich um die IP-Adresse, welche im Internet sichtbar ist. Ihr Gerät befindet sich meist nicht direkt im Internet, sondern ist über den Router damit verbunden. Sie sehen hier also die externe IP-Adresse Ihres Routers/Modems.
 
 (Router oder Hotspots haben immer mindestens zwei IP-Adressen, weil sie zwei Netze miteinander verbinden und deshalb in beiden Netzen eine IP-Adresse brauchen.)
-
-</details>
+</Solution>
 :::
 
 ## ⭐️ MAC-Adresse
@@ -237,6 +240,7 @@ Heute laufen zahlreiche «Highspeed-Routen» über den Grund der Meere.
 
 
 :::aufgabe Unterseekabel
+<Answer type="state" webKey="25937ab7-3aa0-42b3-b026-33620369f92a" />
 
 Wie kommt ein Datenpaket von Biel
 - in die USA?

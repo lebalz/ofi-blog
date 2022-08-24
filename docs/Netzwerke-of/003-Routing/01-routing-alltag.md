@@ -1,12 +1,10 @@
 ---
+sidebar_label: Routing im Alltag
 sidebar_custom_props:
   id: 2afa98e2-36be-4420-8c17-4bed33bd6bfa
 ---
 
-# Routing im Alltag
-
 import Finding from "@site/src/components/Finding";
-import OsTabs from '@site/src/components/OsTabs';
 
 # Routing im Alltag [^1]
 
@@ -38,6 +36,8 @@ Welche Möglichkeiten sehen Sie auf dem Liniennetz?
 :::
 
 :::aufgabe 💻 mit Google Maps
+<Answer type="state" webKey="ddb3960d-b91a-4bf2-9571-97b32e7169f2" />
+
 Welchen Transportoptionen schlägt Ihnen [👉 Google Maps](https://www.google.com/maps/dir/Gymnasium+Biel-Seeland,+L%C3%A4ndtestrasse+12,+2503+Biel/Sports+Ground+Mettmoos,+Parkplatz+Mettmoos,+2504+Biel/@47.1389934,7.2384864,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x478e195743e2cd43:0x7eeeab7e9cc7fa72!2m2!1d7.2359916!2d47.1334096!1m5!1m1!1s0x478e192b26b851e1:0x5e85058550f44003!2m2!1d7.2756948!2d47.1390779!3e3) vor, wenn Sie die Route _Ländtestrasse 12_ → *Sportplatz Mettmoos* suchen?
 
 - Welche Optionen werden vorgeschlagen?
@@ -83,6 +83,7 @@ Ein Datenpaket im ÖV vom Gymer zum Sportplatz Mettmoos müsste
    - ob es am Ziel angekommen ist.
 
 :::aufgabe Routing-Tabelle
+<Answer type="state" webKey="8c827967-6f40-46be-85e1-36476b786edf" />
 
 Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für Datenpakete gemäss obigem Punkt 1. für die folgenden Haltestellen:
 
@@ -110,6 +111,7 @@ Halten Sie Ihre Anleitung auf Papier fest und fügen Sie ein Foto unten ein.
 
 
 :::aufgabe Andere Ziele
+<Answer type="state" webKey="984b58cf-3230-4f06-93da-ea49161782ab" />
 
 Die Anleitungen müssten natürlich auch Anweisungen haben für andere Ziele.
 
@@ -141,8 +143,14 @@ Es gibt verschiedene Wege zum Ziel - auch nicht optimale Wege, die normalerweise
 
 ## Grosse Gruppe
 
-> 4 Parallelklassen – also ca. 100 Personen haben beim Sportplatz Mettmoos abgemacht.
-> Wie kommen sie am schnellsten dahin, wenn wir damit rechnen, dass wegen Corona und dem Feierabendverkehr maximal 25 Personen pro Bus Platz finden?
+:::aufgabe Grose Gruppen
+<Answer type="state" webKey="374b1bf7-cb9a-422e-b373-8376598a45b8" />
+
+4 Parallelklassen – also ca. 100 Personen haben beim Sportplatz Mettmoos abgemacht.
+Wie kommen sie am schnellsten dahin, wenn wir damit rechnen, dass wegen Corona und dem Feierabendverkehr maximal 25 Personen pro Bus Platz finden?
+
+<Answer type="text" webKey="a94b88da-f8ab-4cb5-9bdd-dd8f27eede43" />
+:::
 
 
 <Finding>
