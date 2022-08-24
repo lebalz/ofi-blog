@@ -70,8 +70,8 @@ export class AdminStore {
     findByWebKey<T>(klasse: string, pageKey: string, webKey: string): DocumentProps<T>[] {
         const docs = this.find(klasse, pageKey).filter((doc) => doc.web_key === webKey);
         docs.sort((a, b) => {
-            const aName = this.userById(a.id)?.name;
-            const bName = this.userById(b.id)?.name;
+            const aName = this.userById(a.user_id)?.name;
+            const bName = this.userById(b.user_id)?.name;
             if (!aName && !bName) {
                 return 0;
             }
