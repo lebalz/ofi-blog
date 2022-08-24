@@ -5,6 +5,7 @@ sidebar_custom_props:
 ---
 
 import Finding from "@site/src/components/Finding";
+import SearchBox from '@site/src/components/SearchBox';
 
 # Routing im Internet [^1]
 
@@ -39,23 +40,29 @@ Vergleichen Sie die beiden IP-Adressen. Was stellen Sie fest?
 
 <Answer  type="text"  webKey="f77e88bf-c6c6-401b-aa77-1b4eb3f0fa41" placeholder="IP-Adressen"/>
 
-<details><summary>Wie finde ich die IP-Adresse?</summary>
+:::details Wie finde ich die IP-Adresse?
+
 
 Sie wissen nicht, wie man die IP-Adresse des eigenen Geräts findet?
 
 Es gibt zahlreiche Anleitungen: Googeln Sie z.B.
 
-```
+
+<SearchBox>
+
 IP-Adresse finden Android
-```
+</SearchBox>
 
 oder
 
-```
-IP-Adresse finden Windows 10
-```
+<SearchBox>
+
+IP-Adresse finden Windows 11
+
+</SearchBox>
+
 oder etwas Ähnliches, das auf Ihr Gerät resp. Ihr  Betriebssystem abgestimmt ist.
-</details>
+:::
 :::
 
 :::aufgabe 🏠 IP-Adresse finden
