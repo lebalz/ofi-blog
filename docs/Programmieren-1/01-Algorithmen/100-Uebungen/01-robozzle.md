@@ -67,8 +67,8 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a6.png)
 
-<Answer  type="array"  webKey="ef5632a1-8885-415d-a1dc-50b810b19ba2" label="Lösung F1"  size={5} select={['', '↑', '↰', '↱', 'F1', 'F2', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', 'F2--blue', '↑--red', '↰--red', '↱--red', 'F1--red', 'F2--red', '↑--green', '↰--green', '↱--green', 'F1--green', 'F2--green']}/>
-<Answer  type="array"  webKey="49c1b7a8-b457-437a-a147-a5ad75c7f2fe" label="Lösung F2"  size={5} select={['', '↑', '↰', '↱', 'F1', 'F2', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', 'F2--blue', '↑--red', '↰--red', '↱--red', 'F1--red', 'F2--red', '↑--green', '↰--green', '↱--green', 'F1--green', 'F2--green']}/>
+<Answer  type="array"  webKey="ef5632a1-8885-415d-a1dc-50b810b19ba2" label="F1"  size={5} select={['', '↑', '↰', '↱', 'F1', 'F2', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', 'F2--blue', '↑--red', '↰--red', '↱--red', 'F1--red', 'F2--red', '↑--green', '↰--green', '↱--green', 'F1--green', 'F2--green']}/>
+<Answer  type="array"  webKey="49c1b7a8-b457-437a-a147-a5ad75c7f2fe" label="__"  size={5} select={['', '↑', '↰', '↱', 'F1', 'F2', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', 'F2--blue', '↑--red', '↰--red', '↱--red', 'F1--red', 'F2--red', '↑--green', '↰--green', '↱--green', 'F1--green', 'F2--green']}/>
 
 :::
 
