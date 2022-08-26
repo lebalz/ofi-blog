@@ -16,7 +16,7 @@ Zum Speichern von **mehreren Werten** unter einem **einzigen Namen** verwendet m
 
 Das folgende Bild illustriert dies für eine Liste mit 4 Noten. Die **Länge** der Liste ist **4**, das letzte Element trägt den **Index 3**.
 
-<div className="slim-table" style={{width: 'min-content'}}>
+<div className="slim-table center">
 
 | Index | Wert  |
 | ----: | :---- |
@@ -64,7 +64,7 @@ for note in noten:
 :::
 
 :::def
-### Schleife über Listen-Indexes
+### Schleife über Listen-Indices
 ```py live_py slim
 noten = [3.5, 6, 5, 4.5]
 

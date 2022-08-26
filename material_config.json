@@ -192,7 +192,9 @@
       "from": "docs/Programmieren-1/02-Turtlegrafik/",
       "to": "versioned_docs/version-24ef/01-Programmieren/03-Turtle-Repetition",
       "ignore": [
-        "800-python-scripts.md"
+        "800-python-scripts.md",
+        "051-art.md",
+        "050-repetition.md"
       ]
     },
     {

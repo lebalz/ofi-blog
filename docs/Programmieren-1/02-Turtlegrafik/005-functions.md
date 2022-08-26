@@ -132,6 +132,7 @@ Die Definition alleine führt das Programm noch nicht aus. Dazu muss der Befehl 
 ---
 
 :::aufgabe Struktogramm → Python
+<Answer type="state" webKey="202aff44-4ffd-4368-b74c-ab6682d0c805" />
 
 1. Erzeugen Sie ein Programm gemäss folgendem Struktogramm:
 
@@ -185,6 +186,7 @@ stufe()
 :::
 
 :::aufgabe Aufgabe 1 – Sechsecke
+<Answer type="state" webKey="b1940f0b-2d69-4d40-84fc-676bddc1b45a" />
 
 :::cards --min-width=200px
 *** --code --flex-grow=2
@@ -228,6 +230,7 @@ for i in range(10):
 :::
 
 :::aufgabe Aufgabe 2 – Häuser
+<Answer type="state" webKey="1bc32c1a-0345-494d-85b3-883ea40151cd" />
 
 :::cards --min-width=200px
 *** --code --flex-grow=2
@@ -283,6 +286,8 @@ haus()
 :::
 
 :::aufgabe Aufgabe 3 – Blume
+<Answer type="state" webKey="5f71b333-fd7d-446e-998b-d65c69bec060" />
+
 Sie werden in dieser Aufgabe unter der Verwendung mehrerer Unterprogramme eine komplexe Aufgabe schrittweise lösen.
 
 :::cards --min-width=200px

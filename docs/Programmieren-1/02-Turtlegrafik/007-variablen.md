@@ -77,6 +77,8 @@ Die Variable wird nicht rückwirkend verändert. Solange eine Variable nicht üb
 :::
 
 :::aufgabe
+<Answer type="state" webKey="62c07ab2-e5a8-4217-8f69-b877055cfd43" />
+
 Was geschieht im untenstehenden Programm? Fügen Sie bei jeder Zeile mit einem `print` einen Kommentar hinzu mit:
 - ausgegebene Zahl
 - aktuell gespeicherter Wert in der Variable `anzahl`
@@ -186,6 +188,8 @@ print(f'Ich bin {grösse} cm gross')
 :::
 
 :::aufgabe Aufgabe 1 - BMI
+<Answer type="state" webKey="cc20a8bd-6fd0-4d5a-bd18-970cf0d54d53" />
+
 Übersetzen Sie das folgende Struktogramm in Python Code:
 
 :::flex --width=250px
@@ -228,6 +232,8 @@ print(f'BMI: {bmi}')
 :::
 
 :::aufgabe Aufgabe 2 – `n-Eck`
+<Answer type="state" webKey="f84f8da0-180b-4089-8545-584ec4414230" />
+
 Nach Eingabe der Anzahl Ecken in einer Eingabebox soll die Turtle ein regelmässiges n-Eck zeichnen. Beispielsweise wird nach der Eingabe `8` ein 8-Eck gezeichnet. Den passenden Drehwinkel soll das Programm berechnen. 
 
 ```py live_py title=n-eck.py id=5e60a1fd-0c9c-4f6c-9e28-5455e7500d0c
@@ -250,6 +256,8 @@ hideturtle()
 :::
 
 :::aufgabe Aufgabe 3
+<Answer type="state" webKey="bf7f6694-f471-455b-8f35-30350e54bd5f" />
+
 Nach der Eingabe eines Winkels in einer Eingabebox zeichnet die Turtle `30` Strecken der Länge `100`, wobei sie nach jeder Strecke um den gegebenen Winkel nach links dreht. Experimentieren Sie mit verschiedenen Winkeln und zeichnen Sie schöne Figuren.
 
 Mit `speed(10)` können Sie das Zeichnen beschleunigen.

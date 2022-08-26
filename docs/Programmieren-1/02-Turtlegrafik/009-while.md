@@ -52,6 +52,8 @@ while distance(0, 0) < 200:
 Oft könnte man dies auch mit einer for-Schleife erreichen. Jedoch müsste man dann zuerst berechnen, wie viele Schritte nötig sind, bis dies der Fall ist. Im obigen Beispiel kann etwa der Schrumpf-Faktor (`0.99`) verändern, ohne die Frage (weniger als `200px` Abstand zum Zentrum?) zu ändern.
 
 :::aufgabe
+<Answer type="state" webKey="8ca0706a-e5a3-4437-b23a-4537e550f774" />
+
 Probieren Sie es aus und spielen Sie mit dem Schrumpf-Faktor `0.99` im obigen Bispiel.
 
 ```py live_py title=Spirale.py id=a9d06428-a918-450e-accc-99c81b5d07c7
@@ -85,6 +87,7 @@ while i < 4:
 ```
 
 :::aufgabe `for` zu `while`
+<Answer type="state" webKey="5c7d2980-3842-4b79-b1af-69ddad459b21" />
 
 Schreiben Sie das untenstehende Programm so um, dass nur noch `while` Schleifen verwendet werden.
 
@@ -127,6 +130,7 @@ while i < 5:
 :::
 
 :::aufgabe `while` zu `for`
+<Answer type="state" webKey="2c3ce7d3-264f-4607-b789-20e8ab1985d8" />
 
 Schreiben Sie das untenstehende Programm so um, dass nur noch `for` Schleifen verwendet werden.
 
@@ -194,6 +198,8 @@ for zeile in range(5):
 Die `while`-Schleife kommt oft bei Benutzerinteraktionen, Simulationen oder bei sich dynamisch ändernden Daten vor. Sonstige Wiederholungen lassen sich normalerweise einfacher mit einer `for`-Schleife umsetzen.
 
 :::aufgabe Ratespiel
+<Answer type="state" webKey="f5a8546d-ad02-47c9-a35a-9f680cffe497" />
+
 Ändern Sie das Ratespiel aus dem Kapitel [Verzweigungen](008-verzweigung.md#ratespiel) so ab, dass die Spieler:in unendlich viele Versuche hat um die Zahl zu finden.
 
 Wurde die gesuchte Zahl gefunden, soll die Anzahl Versuche zurückgemeldet werden.

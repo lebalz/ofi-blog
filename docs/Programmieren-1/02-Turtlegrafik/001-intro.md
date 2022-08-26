@@ -62,12 +62,16 @@ Befehlsname
 :::
 
 :::aufgabe Aufgabe 1
+<Answer type="state" webKey="240bbc14-fba9-4863-a522-efca0b1aa99e" />
+
 Markieren Sie auf dem Zusatzblatt die Elemente eines Algorithmus mit unterschiedlichen Farben:
 - Aufruf eines Unterprogramms (bzw. eines Befehls)
 - Parameter
 :::
 
 :::aufgabe Aufgabe 2
+<Answer type="state" webKey="80263b54-c75e-41d1-8ddd-3f8d39ccb056" />
+
 Ändern Sie die Parameter im Programm "QUADRAT.PY" so ab, dass:
 
 - das Quadrat doppelt so gross gezeichnet wird
@@ -205,6 +209,7 @@ Beachten Sie, dass bei Zahlen keine Anführungszeichen verwendet werden. *Eine V
 :::
 
 :::aufgabe Aufgabe 3: Zickzack
+<Answer type="state" webKey="e89c6ae9-ae02-43a1-a606-fc3eab08be7e" />
 
 Versuchen Sie, folgendes Zickzack-Muster mit einer Stiftdicke von `5` zu zeichnen. Die Streckenlänge und die Winkel dürfen Sie schätzen.
 
@@ -281,6 +286,8 @@ hideturtle()    # verstecke die Turtle
 
 
 :::aufgabe Aufgabe 4
+<Answer type="state" webKey="77e09573-8d92-443e-892d-c182c405a812" />
+
 Versuchen Sie nachzuvollziehen, welche Zeile was macht.
 
 Fügen Sie immer wenn ein Unterprogramm zum ersten Mal verwendet wird, einen **Kommentar** hinzu, was dieses Unterprogramm macht und, falls vorhanden, welchen Einfluss die Parameter haben.
@@ -310,6 +317,7 @@ forward(80)
 :::
 
 :::aufgabe Aufgabe 5: Würfel
+<Answer type="state" webKey="41c270a6-4046-415e-8eee-96c84b7b700c" />
 
 Ändern Sie dann das Programm so, dass die gewürfelte Zahl `5` gezeichnet wird:
 
@@ -372,6 +380,8 @@ hideturtle()
 ## Aufgaben
 
 :::aufgabe Aufgabe 6: Haus von Nikolaus
+<Answer type="state" webKey="98de0fb1-5032-43a2-b2b3-5d612f0aa49f" />
+
 Das "Haus vom Nikolaus" ist ein Zeichenspiel für Kinder. Ziel ist es, das besagte Haus in einem Linienzug aus genau acht Strecken zu zeichnen, ohne dabei eine Strecke zweimal zu durchlaufen. Zeichnen Sie das Haus vom Nikolaus.
 
 ![](images/haus_nikolaus.svg)
@@ -415,6 +425,7 @@ hideturtle()
 
 
 :::aufgabe Aufgabe 8: Treppe
+<Answer type="state" webKey="a9da2219-390c-4d3c-8af0-46b92cba6892" />
 
 Zeichnen Sie eine Treppe mit fünf Stufen, die eine Breite von `29` Pixeln und eine Höhe von `17` Pixeln haben.
 

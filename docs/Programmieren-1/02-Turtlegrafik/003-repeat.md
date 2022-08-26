@@ -105,6 +105,7 @@ for i in range(4):
 :::
 
 :::aufgabe Struktogramm → Python
+<Answer type="state" webKey="868ad50b-1772-45f5-852b-9cd4b8650267" />
 
 Übersetzen Sie das Struktogramm in ein Python Programm. Was entsteht?
 
@@ -142,6 +143,8 @@ hideturtle()
 :::
 
 :::aufgabe 1. Python → Struktogramm
+<Answer type="state" webKey="dfbdeec2-0728-4431-9a21-0bb26b2b526b" />
+
 Zeichnen Sie für folgendes Programm ein Struktogramm (auf ein Blatt Papier).
 
 ```py live_py slim
@@ -178,6 +181,8 @@ for i in range(5):
 :::
 
 :::aufgabe 2. Python → Struktogramm
+<Answer type="state" webKey="2bdc6e12-b4c4-4cc3-a876-6f0638d15ea8" />
+
 Zeichnen Sie auch für folgendes Programm ein Struktogramm.
 
 ```py live_py slim
@@ -219,6 +224,8 @@ for i in range(5):
 
 
 :::aufgabe 3. Treppe vol. 2
+<Answer type="state" webKey="1f478252-8656-47d2-9905-8dfa9f621af6" />
+
 Zeichnen Sie eine Treppe 20 Stufen. Die Treppe soll bei den Koordinaten `(-200, -200)` starten. Wählen Sie die Stufen-Breiten so, dass der verfügbare Platz möglichst gut ausgenutzt wird.
 
 ![](images/treppe2_py.svg)
@@ -249,6 +256,8 @@ for i in range(20):
 :::
 
 :::aufgabe 4. Schneestern
+<Answer type="state" webKey="739d205c-59af-4d11-ad53-7c32f0f39dee" />
+
 Zeichnen Sie einen Stern. Verwenden Sie dabei den Befehl `backward()`.
 
 ![](images/schneestern_py.svg)
@@ -272,6 +281,8 @@ for i in range(6):
 
 
 :::aufgabe 5. Weihnachtsstern
+<Answer type="state" webKey="32d650c6-4422-41c8-bb3b-c40a6e42c8b4" />
+
 1. Zeichnen Sie einen Weihnachtsstern mit den Drehwinkeln `140°` und `80°`.
 2. Füllen Sie den Stern mit Ihrer Lieblingsfarbe. Schauen Sie sich dazu den Abschnitt "Füllen" unter [Turtle Befehle](./100-turtle-commands.md#füllen) an.
 
@@ -301,6 +312,8 @@ end_fill()
 :::
 
 :::aufgabe 6. Quadrate
+<Answer type="state" webKey="13b8185f-9ffa-4553-8e10-8129ad8240f9" />
+
 1. Zeichnen Sie folgende Leiter.
 2. Können Sie das Programm mit noch weniger Zeilen Code schreiben?
 3. Schaffen Sie es, nur 6 Zeilen Code zu verwenden?
@@ -329,6 +342,8 @@ for i in range(7):
 :::
 
 :::aufgabe 7. Perlenkette
+<Answer type="state" webKey="64055a7b-64ff-4bf9-aaf5-f82acc56cbad" />
+
 Zeichnen Sie eine Perlenkette in Ihrer Lieblingsfarbe, die aus `18` Perlen (dots) besteht.
 
 ![](images/perlen18.svg)
@@ -359,6 +374,8 @@ hideturtle()
 :::
 
 :::aufgabe 8. Vogel
+<Answer type="state" webKey="15dbe59c-3d22-44d4-ae01-7dd63e2964ec" />
+
 Zeichnen Sie einen Vogel, indem Sie mehrmals nacheinander folgende Befehle wiederholen:
 
 ```py

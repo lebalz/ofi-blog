@@ -47,6 +47,8 @@ for i in range(4)
 :::
 
 :::aufgabe Fehler finden
+<Answer type="state" webKey="02a77086-17d0-4045-90dd-b47286b7110d" />
+
 Untersuchen Sie obenstehende Programmschnipsel. Was sagen Ihnen die Fehlermeldungen?
 
 - Auf welcher Zeile steht die Art des Fehlers?
@@ -118,6 +120,8 @@ forward(100)
 ```
 
 :::aufgabe Fehler finden
+<Answer type="state" webKey="4752b4a9-6a92-49fc-8641-40fa210f6113" />
+
 Finden und lösen Sie die entstandenen Fehler
 
 ```py live_py title=error.py id=2ec619fd-b01e-431c-84d2-227c5da79f6e
@@ -198,6 +202,8 @@ print('gehts?')
 :::
 
 :::aufgabe Fehler finden
+<Answer type="state" webKey="d5fc6d3b-9e28-4c82-af59-c5465efe87cb" />
+
 Finden und lösen Sie die entstandenen Fehler, so dass die Ausgabe
 ```sh
 Hallo zum 0
@@ -251,6 +257,7 @@ Auf Zeile 4 fehlen die runden Klammern - `pendown` wird nicht ausgeführt! Fehle
 ---
 
 :::aufgabe Fehler finden
+<Answer type="state" webKey="9fbdda43-73ca-43a1-9e51-ee20414b819b" />
 
 Finden und beheben Sie alle Fehler, so dass folgende Ausgabe entsteht:
 

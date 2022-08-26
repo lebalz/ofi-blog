@@ -17,6 +17,8 @@ __Parameter ⊕ ⊖__: Das Ergebnis eines Algorithmus kann variiert werden durch
 :::
 
 :::aufgabe
+<Answer type="state" webKey="a603eafc-7d9d-4745-b3cd-4613440c1317" />
+
 Markieren Sie im folgenden Programm (links) wie folgt:
 - Parameter <u>unterstreichen</u>
 - Befehlsnamen <span style={{background: 'yellow'}}>gelb</span> markieren
@@ -64,6 +66,7 @@ Untersuchen Sie die folgenden Unterprogramme (führen Sie diese aus!) und notier
 
 
 :::aufgabe Unterprogramme mit Parametern
+<Answer type="state" webKey="42ab260d-417d-4cda-a173-6e11abea1f76" />
 
 `hello.py`
 ```py live_py slim
@@ -143,7 +146,7 @@ Ein häufiger Fehler sind vergessene Kommas zwischen zwei Parameternamen. Dann e
 
 
 :::aufgabe Parameternamen
-
+<Answer type="state" webKey="a3f42726-24e0-4a66-8a08-5bc74976c567" />
 
 :::cards --min-width=200px
 *** --code --flex-grow=2
@@ -263,6 +266,7 @@ Im obigen Beispiel startet `i` bei `2` und wird solange um `3` erhöht, bis die 
 
 
 :::aufgabe
+<Answer type="state" webKey="222e78e2-9227-4696-916d-8f0c7e147b76" />
 
 1. Kopieren Sie die Definition eines Hauses aus der letzten Übung in dieses Programm. Modifizieren Sie das Unterprogramm `haus(size)` so ab, dass nun die Grösse des Hauses spezifiziert werden kann. Die Wurzel einer Zahl kann mit `sqrt(zahl)` berechnet werden.
 2. Schreiben Sie ein Unterprogramm `move(x, y)`, welches die Schritte
@@ -333,6 +337,8 @@ for i in range(30):
 
 
 :::aufgabe ⭐️ Zusatz
+<Answer type="state" webKey="d89c87d2-8c51-415a-9101-f577aa1f1c65" />
+
 Zeichnen Sie folgende Quadrate. Auf wie viele Zeilen können Sie Ihr Programm kürzen?
 
 ![](images/06_squares.svg)
