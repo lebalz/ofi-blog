@@ -194,7 +194,8 @@
       "ignore": [
         "800-python-scripts.md",
         "051-art.md",
-        "050-repetition.md"
+        "050-repetition.md",
+        "index.md"
       ]
     },
     {
