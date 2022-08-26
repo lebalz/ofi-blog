@@ -49,10 +49,11 @@
     /**/
 
     &:last-child {
-      .playgroundContainer {
-        margin-bottom: inherit;
-      }
+        .playgroundContainer {
+            margin-bottom: inherit;
+        }
     }
+
     .playgroundContainer {
         margin-bottom: var(--ifm-leading);
         border-radius: var(--ifm-global-radius);
@@ -114,7 +115,8 @@
         align-items: center;
         background-color: rgba(170, 170, 170, 0.8);
         border-radius: 8px 8px 0 0;
-        > span {
+
+        >span {
             font-family: var(--ifm-font-family-monospace);
             font-size: var(--ifm-code-font-size);
             color: var(--ifm-color-primary);
@@ -127,6 +129,7 @@
         border: 0px;
         padding: 6px;
         min-width: 4ch;
+
         &:hover {
             border: 2px solid var(--ifm-color-primary);
             padding: 4px;
@@ -146,12 +149,13 @@
     .brythonOut {
         flex-grow: 1;
         flex-basis: 80ch;
-        > pre {
+
+        >pre {
             margin-bottom: 0px;
         }
     }
 
-    .containerSlim > .brythonCodeBlockHeader {
+    .containerSlim>.brythonCodeBlockHeader {
         padding: 0px;
     }
 
@@ -173,17 +177,22 @@
     .playButton {
         background-color: var(--ifm-color-success);
         color: white;
+        z-index: 999;
     }
 
     .controls {
+        z-index: 999;
         grid-area: controls;
     }
+
     .headerButton {
+        z-index: 999;
         border: none;
         border-radius: 6px;
         padding: 6px 12px;
         cursor: pointer;
         margin: 0px 2px;
+
         &:hover {
             box-shadow: 2px 2px 45px var(--ifm-color-primary);
         }
@@ -191,6 +200,7 @@
 
     .containerSlim {
         .headerButton {
+            z-index: 999;
             height: 100%;
             border-radius: 0px;
             padding: 2px 6px;
@@ -210,7 +220,7 @@
         font-size: calc(var(--ifm-code-font-size) * 1.2);
     }
 
-    .brythonCodeBlockHeader > .title {
+    .brythonCodeBlockHeader>.title {
         flex-shrink: 1;
         flex-grow: 1;
         overflow-x: hidden;
@@ -222,6 +232,7 @@
         background-color: var(--ifm-color-primary);
         color: white;
     }
+
     .showRawButtonDisabled {
         background-color: transparent;
         border: 2px solid var(--ifm-color-primary);
@@ -229,21 +240,26 @@
         padding: 4px 10px;
     }
 }
-.codeHistory{
+
+.codeHistory {
     .historyDetails {
         cursor: pointer;
     }
+
     .versionControl {
         padding: 1em 2em;
         box-shadow: var(--ifm-global-shadow-lw);
         border-radius: var(--ifm-global-radius);
     }
+
     .faButton {
         margin-left: 1em;
+
         &:hover {
             transform: scale(1.2);
         }
     }
+
     .diffViewer {
         --ifm-pre-background: rgba(255, 255, 255, 0);
         --ifm-alert-background-color: rgba(255, 255, 255, 0);
@@ -251,12 +267,14 @@
         --ifm-table-stripe-background: rgba(255, 255, 255, 0);
         font-family: monospace;
         overflow: auto;
+
         table {
             tbody {
                 tr {
                     td {
-                            padding-top: 0;
-                            padding-bottom: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+
                         pre {
                             white-space: nowrap;
                             padding-top: 0;

@@ -4,6 +4,8 @@ sidebar_custom_props:
   id: ed2978d9-3d4b-426d-b3fd-fe7d5a7cab9b
 ---
 
+import RGB from "@site/src/components/VisualizationTools/ColorEncoding/RGB";
+
 # Turtle Befehle [^1][^2]
 
 ## Bewegungen
@@ -80,7 +82,8 @@ Beispiel:
 pencolor('red') 
 ```
 
-<details><summary>Farbpalette <span className="color-badge red">red</span> <span className="color-badge green">green</span> <span className="color-badge blue">blue</span></summary>
+:::details Farbpalette <span className="color-badge red">red</span> <span className="color-badge green">green</span> <span className="color-badge blue">blue</span>
+
 <div className="small-table no-table-header">
 
 |             |                                                                                 |
@@ -108,7 +111,33 @@ pencolor('red')
 | `white`     | <div style={{width: '8em', height: '1em', backgroundColor: 'white'}}></div>     |
 
 </div>
-</details>
+:::
+
+:::details __RGB-Farben__
+<RGB />
+
+```py live_py slim
+from turtle import *
+
+pencolor('rgb(255, 217, 0)')
+forward(100)
+
+left(120)
+
+r = 30
+g = 180
+b = 77
+# oder variabel
+pencolor(f'rgb({r}, {g}, {b}')
+
+forward(100)
+```
+:::danger Unterschiede zum offiziellen Turtle-Modul
+Das offizielle Turtle-Modul verwendet zur Anzeige von Grafiken nicht einen Browser, sonder [Tkinter](https://docs.python.org/3/library/tkinter.html). Dort können ebenfalls RGB-Farben verwendet werden, sie werden aber mit einer anderen Syntax übergeben:
+
+Mehr dazu hier 👉 https://docs.python.org/3/library/turtle.html#turtle.color
+:::
+:::
 :::
 
 :::def
