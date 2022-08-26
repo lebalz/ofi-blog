@@ -99,7 +99,7 @@ sum:
 	lw      $3,8($fp)
 	lw      $2,12($fp)
 	nop
-	addu    $2,$3,$2
+	addiu   $2,$3,$2
 	move    $sp,$fp
 	lw      $fp,4($sp)
 	addiu   $sp,$sp,8
