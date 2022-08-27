@@ -1,11 +1,12 @@
 ---
 sidebar_custom_props:
   id: 39930e47-1aa0-4842-ba57-1c744ff47d4a
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=177715
 ---
 
 # Ziele der Kryptologie
-
-# Ziele der Kryptologie [^1]
 Als Zusammenfassung betrachten wir die Ziele der Kryptographie im Überblick:
 
 :::info Vertraulichkeit
@@ -32,4 +33,4 @@ Unterschriebene Verträge sollen nicht bestritten werden können.
 Um die Verbindlichkeit (oder Nichtabstreitbarkeit) zu gewährleisten, werden digitale Signaturen eingesetzt.
 :::
 
-[^1]: Quelle [rothe.io](https://rothe.io/?b=crypto&p=177715)
+

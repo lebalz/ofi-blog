@@ -1,12 +1,14 @@
 ---
-sidebar_label: 5. Unterprogramme
 sidebar_custom_props:
   id: 28f1e765-b19f-4f82-8819-5dd4eec8cad5
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=prog1&p=416425
 ---
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
-# 5. Unterprogramme [^1]
+# 5. Unterprogramme
 
 ## Einführung
 In einer Bildkomposition kommen Figuren wie Dreiecke und Quadrate mehrmals vor. Die Turtle weiss aber nicht, was ein Dreieck oder ein Quadrat ist. Da in der Bildkomposition die Dreiecke und Quadrate nicht systematisch angeordnet sind, ist die Verwendung von Wiederholungen hier nicht naheliegend.
@@ -354,4 +356,4 @@ for i in range(10):
 :::
 
 
-[^1]: Inspiration: [rothe.io](https://rothe.io/?b=prog1&p=416425)
+

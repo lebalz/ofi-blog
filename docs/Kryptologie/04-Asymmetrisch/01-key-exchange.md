@@ -1,12 +1,12 @@
 ---
 sidebar_custom_props:
   id: 33e2009c-39fe-4689-9a7b-eaafc11a8970
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=280524
 ---
 
 # Schlüsselaustausch
-
-
-# Schlüsselaustausch [^1]
 
 Alice und Bob möchten sich geheime Unterlagen senden. Doch wie können sie den Schlüssel austauschen?
 
@@ -87,4 +87,4 @@ Hier handelt es sich eigentlich um die erste, einfache Variante mit nur einer Se
 
 :::
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=280524)
+

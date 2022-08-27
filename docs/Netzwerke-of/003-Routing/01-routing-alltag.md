@@ -2,11 +2,14 @@
 sidebar_label: Routing im Alltag
 sidebar_custom_props:
   id: 2afa98e2-36be-4420-8c17-4bed33bd6bfa
+  source:
+    name: informatik.mygymer.ch
+    ref: https://informatik.mygymer.ch/g23c/008.rechnernetze-kommunikation/05.routing.html
 ---
 
 import Finding from "@site/src/components/Finding";
 
-# Routing im Alltag [^1]
+# Routing im Alltag
 
 :::danger Vorgehensweise
 
@@ -159,4 +162,4 @@ Bei Engpässen können verschiedene Wege gleichzeitig benutzt werden. (Load-Bala
 
 </Finding>
 
-[^1]: Quelle: [informatik.mygymer.ch](https://informatik.mygymer.ch/g23c/008.rechnernetze-kommunikation/05.routing.html)
+

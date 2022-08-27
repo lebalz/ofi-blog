@@ -1,12 +1,13 @@
 ---
+sidebar_label: Asymm. Verschlüsselung
 sidebar_custom_props:
   id: 28e4cf06-7190-450d-babd-a461e62efdf8
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=952331
 ---
 
-# Asymm. Verschlüsselung
-
-
-# Asymmetrische Verschlüsselung [^1]
+# Asymmetrische Verschlüsselung
 
 Das Prinzip der asymmetrischen Verschlüsselung beruht also auf zwei verschiedenen Schlüsseln, dem sogenannten **Schlüsselpaar** (engl. key pair). Die beiden Schlüssel eines Schlüsselpaars nennt man **öffentlichen** und **privaten** Schlüssel (engl. public und private key).
 
@@ -62,7 +63,7 @@ Um Verwechslungen zu vermeiden, spricht man bei der symmetrischen Verschlüsselu
 </summary>
 
 
-Der **RSA** Algorithmus ist der aktuell am weitesten verbreitete asymmetrische Verschlüsselungsalgorithmus und wird etwa für die SSL/TLS Verschlüsselung beim HTTPS-Protokoll verwendet. Der Algorithmus wurde 1977 von Ronald **R**ivest, Adi **S**hamir und Leonard **A**dlerman unter dem Namen **RSA** entwickelt und publiziert[^2].
+Der **RSA** Algorithmus ist der aktuell am weitesten verbreitete asymmetrische Verschlüsselungsalgorithmus und wird etwa für die SSL/TLS Verschlüsselung beim HTTPS-Protokoll verwendet. Der Algorithmus wurde 1977 von Ronald **R**ivest, Adi **S**hamir und Leonard **A**dlerman unter dem Namen **RSA** entwickelt und publiziert[^1].
 
 ### Funktionsweise
 
@@ -147,5 +148,5 @@ Die RSA Schlüssel haben standardmässig `1024` oder `2048` bits, wobei Schlüss
 
 
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=952331)
-[^2]: Quelle: [techtarget.com](https://www.techtarget.com/searchsecurity/definition/asymmetric-cryptography)
+
+[^1]: Quelle: [techtarget.com](https://www.techtarget.com/searchsecurity/definition/asymmetric-cryptography)

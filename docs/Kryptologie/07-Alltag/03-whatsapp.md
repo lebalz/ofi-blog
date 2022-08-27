@@ -1,14 +1,15 @@
 ---
 sidebar_custom_props:
   id: f6a91697-18fb-4379-84aa-b6c17bd20f80
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=549311
 ---
+
 
 # WhatsApp-Verschlüsselung
 
-
-# WhatsApp-Verschlüsselung [^1]
-
-Gemäss WhatsApp sind sämtliche WhatsApp-Nachrichten Ende-zu-Ende verschlüsselt.[^2]
+Gemäss WhatsApp sind sämtliche WhatsApp-Nachrichten Ende-zu-Ende verschlüsselt.[^1]
 
 :::aufgabe WhatsApp-Verschlüsselung
 1. Was meint WhatsApp mit «Ende-zu-Ende-Verschlüsselung»?
@@ -34,5 +35,5 @@ Probieren Sie es zu zweit aus und diskutieren Sie, wie diese Nummer zustande kom
 
 :::
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=549311)
-[^2]: Quelle: [whatsapp.com](https://faq.whatsapp.com/general/security-and-privacy/end-to-end-encryption/?lang=de)
+
+[^1]: Quelle: [whatsapp.com](https://faq.whatsapp.com/general/security-and-privacy/end-to-end-encryption/?lang=de)

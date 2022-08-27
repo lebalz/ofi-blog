@@ -1,12 +1,12 @@
 ---
 sidebar_custom_props:
   id: 4d1e2574-f77e-450b-babc-315b87aae00f
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=4464
 ---
 
 # Umwandlung ins Binärsystem
-
-
-# Umwandlung ins Binärsystem [^1]
 In diesem Kapitel dringen wir in unsere Zeit vor. Wir verwenden Computer, die mit binären Zahlen arbeiten. Somit muss der Klartext vor der Verschlüsselung in binäre Zahlen umgewandelt werden.
 
 ## Prozess der Verschlüsselung
@@ -41,4 +41,4 @@ Für die folgenden Beispiele verwenden wir den etwas kürzeren Pentacode.
 
 <Answer type="text" webKey="e1cd3339-5234-42b3-90cd-9e777d74a88e" placeholder="Notizen..." />
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=4464)
+

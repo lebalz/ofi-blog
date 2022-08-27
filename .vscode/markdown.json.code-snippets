@@ -18,8 +18,15 @@
 
 	"import": {
 		"prefix": "imp",
+		"scope": "markdown,md",
 		"body": "import $1 from '@site/src/components/$1';",
 		"description": "import a component from components"
+	},
+
+	"src": {
+		"prefix": "src",
+		"body": "source:\n  name: $1\n  ref:$2",
+		"description": "add source to sidebar_custom_props"
 	},
 	"answer": {
 		"prefix": "<Answer />",

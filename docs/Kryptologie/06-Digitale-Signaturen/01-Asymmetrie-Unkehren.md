@@ -1,12 +1,13 @@
 ---
 sidebar_custom_props:
   id: 1161bd5d-ed3c-4517-9bab-4b13629f07e1
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=645224
 ---
 
+
 # Asymmetrie umkehren
-
-
-# Asymmetrie umkehren [^1]
 Wir erinnern uns an das Prinzip der reinen [asymmetrische Verschlüsselung](../04-Asymmetrisch/03-asymmetrie.md):
 
 ![](../04-Asymmetrisch/images/asymm-encryption.svg)
@@ -118,4 +119,4 @@ Die bisher kennengelernte Art der digitalen Signatur ist nicht optimal, denn es 
 - Wegen der «Signatur» ist der Klartext nicht mehr lesbar (er ist ja nun speziell «verschlüsselt»). Dies ist umständlich, denn wenn Sie ein Dokument auf Papier unterschreiben, bleibt dieses trotzdem lesbar.
 - Asymmetrische Verfahren sind langsam, d.h. wenn wir ein grosses Dokument (z.B. ein Video) signieren, dauert dieser Vorgang unnötig lange – ebenso das Überprüfen der Signatur (also das Entschlüsseln).
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=645224)
+

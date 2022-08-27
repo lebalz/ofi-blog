@@ -1,12 +1,12 @@
 ---
 sidebar_custom_props:
   id: f6c45e6b-b905-4115-be18-5d7708b3bfde
+  source:
+    name: rothe
+    ref: https://rothe.io/?b=crypto&p=994723
 ---
 
-# Passwörter Speichern
-
-
-# Passwörter speichern [^1]
+# Passwörter speichern
 Passwörter sind wichtig, wir sollten sie beschützen. Doch dies gilt nicht nur für unsere eigenen Passwörter, auch Firmen sollten die Passwörter ihrer Kunden schützen.
 
 ## Passwörter speichern
@@ -106,4 +106,4 @@ Wie funktioniert der Anmeldevorgang an den Computern der Schule, wenn Benutzerna
 
 <Answer type="text" webKey="b146e1f3-ef8c-4ed7-ade2-428829f619fa" placeholder="Notizen..."/>
 
-[^1]: Quelle: [rothe](https://rothe.io/?b=crypto&p=994723)
+

@@ -1,13 +1,12 @@
 ---
-label: 5. Vektorgrafik
 sidebar_custom_props:
   id: 87b16e84-0e84-48ed-a03a-ed26446b0545
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?b=code&p=860740
 ---
 
 # 5. Vektorgrafik
-
-
-# 5. Vektorgrafik [^1]
 
 Eine SVG-Datei ist eine Textdatei, welche «Befehle» enthält, wie Formen gezeichnet werden sollen.
 
@@ -115,4 +114,4 @@ Erstellen Sie mit SVG eine winterliche oder festliche Grafik.
 ```
 :::
 
-[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=860740)
+

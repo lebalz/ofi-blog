@@ -1,12 +1,12 @@
 ---
 sidebar_custom_props:
   id: b99704f9-ef1a-490f-b457-06d8ae120ada
+  source:
+    name: S. Rothe
+    ref: https://rothe.io/code/3-text/6-exercises/arbeitsblatt-textcodierung.pdf
 ---
 
 # 8. Sehsterne
-
-
-# 8. Sehsterne [^1]
 
 :::flex --gap=3em --align-items=center --min-width=150px
 *** --max-width=250px
@@ -161,4 +161,4 @@ Aus den Buchstaben A, C, I, N, T lässt sich TITANIC zusammensetzen.
 </Solution>
 :::
 
-[^1]: Quelle: [Stefan Rothe](https://rothe.io/code/3-text/6-exercises/arbeitsblatt-textcodierung.pdf)
+

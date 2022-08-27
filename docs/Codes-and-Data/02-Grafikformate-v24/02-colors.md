@@ -1,18 +1,18 @@
 ---
-label: 2. Farbdarstellung
 sidebar_custom_props:
   id: 5b942488-99ea-414b-91e7-13585f3fc031
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?b=code&p=96474
 ---
-
-# 2. Farbdarstellung
-
 
 import RGB from "@site/src/components/VisualizationTools/ColorEncoding/RGB";
 import RGBA from "@site/src/components/VisualizationTools/ColorEncoding/RGBA";
 import CMYK from "@site/src/components/VisualizationTools/ColorEncoding/CMYK";
 import ColorDepth from "@site/src/components/VisualizationTools/ColorEncoding/ColorDepth";
 
-## Farbkanäle [^1]
+# 2. Farbdarstellung
+## Farbkanäle
 
 Für die digitale Verarbeitung müssen Farben in Zahlen umgewandelt werden. Das geschieht, indem die Farben in verschiedene Komponenten, sogenannte **Farbkanäle** aufgeteilt werden. Pro Pixel kann so die Intensität je Farbkanal als Zahl bestimmt werden.
 
@@ -145,7 +145,3 @@ Die Anzahl Bits oder Bytes, welche **insgesamt** für die Speicherung einer Farb
 | Schwarzweiss          |     1 Bit | $b \cdot h \cdot \frac{1}{8}$ |
 
 </div>
-
-
-
-[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=96474)

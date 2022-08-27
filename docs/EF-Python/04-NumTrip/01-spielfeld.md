@@ -1,8 +1,8 @@
 ---
 sidebar_custom_props:
   id: e749e82c-0b7b-42f0-9596-27d86c257c6d
-  source: intern
-  author: sdg
+  source:
+    name: sdg
 ---
 
 # Spielfeld

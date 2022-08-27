@@ -2,14 +2,14 @@
 label: 1. Grundlagen
 sidebar_custom_props:
   id: 159d4e50-3401-4209-acce-c50e019ed3da
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?b=code&p=943166
 ---
-
-# 1. Grundlagen
 
 import ColorDepth from "@site/src/components/VisualizationTools/ColorEncoding/ColorDepth";
 
-
-# 1. Grundlagen [^1]
+# 1. Grundlagen
 
 ## Raster- und Vektorgrafik
 
@@ -81,4 +81,4 @@ Vektorgrafiken werden deshalb insbesondere für folgende Anwendungen eingesetzt:
 - Schriftarten
 - Strassen- und Landkarten
 
-[^1]: Inspiration: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=943166)
+

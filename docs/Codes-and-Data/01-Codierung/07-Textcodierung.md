@@ -1,9 +1,10 @@
 ---
 sidebar_custom_props:
   id: 60a2d33a-09ab-498d-afa3-d61b50543668
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?page=code/3-text/5a-practical-windows/
 ---
-
-# 7. Textcodierung
 
 import OsTabs from '@site/src/components/OsTabs'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,7 +12,7 @@ import { faWindows } from "@fortawesome/free-brands-svg-icons"
 import Hint from '@site/src/components/Solution/Hint'
 import DecBinHexTransformer from "@site/src/components/VisualizationTools/DecBinHexTransformer";
 
-# 7. Textcodierung [^1]
+# 7. Textcodierung
 
 In dieser praktischen Übung speichern Sie auf Ihrem Computer eine Textdatei und überprüfst anschliessend, ob die in der Datei gespeicherten Bits tatsächlich der Unicode/UTF-8-Codierung des Texts entsprechen.
 
@@ -166,4 +167,4 @@ Betrachten Sie andere Dateien in _HexEd.it_ und achten Sie auf folgendes:
 <Answer type="text" webKey="cd4a4497-1fcb-4cd9-a522-cd9c8e58b88b" />
 :::
 
-[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?page=code/3-text/5a-practical-windows/)
+

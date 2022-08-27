@@ -1,11 +1,12 @@
 ---
 sidebar_custom_props:
   id: 73c81d4b-ceac-4db9-95e2-c562ec5691ba
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?page=ict/2-security/1-data-loss/
 ---
 
 # Datenverlust
-
-# Datenverlust [^1]
 Eine oft unterschätzte Gefahr ist der Verlust von Daten.
 
 ![](images/crashed_laptop.jpg)
@@ -29,4 +30,4 @@ Daten sollten nie auf nur einem Gerät gespeichert werden. Mit Cloud-Lösung wer
 
 [Kapitel Schadsoftware](4-Schadsoftware.md)
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?page=ict/2-security/1-data-loss/)
+

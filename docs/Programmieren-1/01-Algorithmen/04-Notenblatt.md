@@ -1,12 +1,14 @@
 ---
-sidebar_label: Notenblatt
 sidebar_custom_props:
   id: 583be0ff-e45a-4ff3-9a15-c0a7a99345b0
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?page=prog1/1-algo/3-sheet-music/
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Notenblatt [^1]
+# Notenblatt
 
 Ein Notenblatt ist ein Algorithmus, welches den Prozess «Musikstück spielen» beschreibt. Notenblätter sind in einer symbolischen Sprache, der **Notenschrift**, verfasst.
 
@@ -62,4 +64,4 @@ Auf der Website [musescore.com](https://musescore.com/sheetmusic) sind Notenblä
 - [Super Mario Bros: Main Theme](https://musescore.com/user/2072681/scores/2601926)
 - [Jingle Bells](https://musescore.com/user/685336/scores/4797212)
 
-[^1]: Quelle [rothe.io](https://rothe.io/?page=prog1/1-algo/3-sheet-music/)
+

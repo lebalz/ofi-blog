@@ -1,12 +1,13 @@
 ---
 sidebar_custom_props:
   id: 19d66cdc-04d7-4c11-8ccb-cf1b1de165fa
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=559732
 ---
 
+
 # Kombinierte Verfahren
-
-
-# Kombinierte Verfahren [^1]
 
 ## Vergleich symmetrischer und asymmetrischer Verschlüsselung
 Wir haben in der letzten Aufgabe gesehen, dass asymmetrische Verschlüsselung auch Nachteile hat. Wir wollen die Vor- und Nachteile einander gegenüberstellen.
@@ -65,4 +66,4 @@ Stellen Sie dar, wie die Umkehrung – also die Entschlüsselung – funktionier
 
 :::
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=559732)
+

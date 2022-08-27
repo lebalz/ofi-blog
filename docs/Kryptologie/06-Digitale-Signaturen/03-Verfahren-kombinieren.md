@@ -1,12 +1,12 @@
 ---
 sidebar_custom_props:
   id: a234dbad-32da-47ed-9af3-e1c9fc95c9a4
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=559733
 ---
 
 # Verfahren kombinieren
-
-
-# Verfahren kombinieren [^1]
 
 Für uns ist Wichtig:
 - Die Dokumente sind stets lesbar und trotzdem vor Manipulationen geschützt.
@@ -37,4 +37,4 @@ Wir versuchen, mehrere Verfahren zu kombinieren und deren Vorteile zu nutzen. Ei
 </Solution>
 :::
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=559733)
+

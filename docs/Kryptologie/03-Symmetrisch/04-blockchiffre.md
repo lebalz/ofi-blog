@@ -1,12 +1,12 @@
 ---
 sidebar_custom_props:
   id: 6ebe4267-65ee-4376-affa-910edd23b5df
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=894637
 ---
 
 # Blockchiffre
-
-
-# Blockchiffre [^1]
 
 Im vorherigen Beispiel war der Schlüssel gleich lang wie der Klartext. Da dies in der Realität schwierig zu bewerkstelligen ist, wurden **Blockchiffren** erfunden. Sie heissen so, weil der Text nicht mehr als ganzes, sondern in **Blöcken** verschlüsselt wird.
 
@@ -87,4 +87,4 @@ Verschlüsseln Sie den folgenden Text mit der XOR-Blockchiffre:
 
 <Answer type="text" webKey="bcdeeca1-2a54-4cf3-9187-849376053664" placeholder="Notizen..." />
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=894637)
+

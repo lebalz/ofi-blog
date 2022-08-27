@@ -1,9 +1,12 @@
 ---
-sidebar_label: Faltanleitung
 sidebar_custom_props:
   id: 6107d921-37dd-402a-915c-b1751f8df3f7
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?page=prog1/1-algo/2-origami/
 ---
-# Faltanleitung [^1]
+
+# Faltanleitung
 
 Eine Faltanleitung ist ein Beispiel für einen Algorithmus. Das japanische Wort Origami bezeichnet die Kunst des Papierfaltens.
 
@@ -28,4 +31,4 @@ Der Kranich ist das klassische Motiv im japanischen *Origami*.
 
 ![Origami Kranich](images/origami-crane.svg)
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?page=prog1/1-algo/2-origami/)
+

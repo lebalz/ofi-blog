@@ -1,11 +1,12 @@
 ---
 sidebar_custom_props:
   id: 8d2ca844-98be-499a-9ac1-24a4d93b01b5
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=713066
 ---
 
 # Integrität
-
-# Integrität [^1]
 ## Lesbarkeit und Signatur
 Das im letzten Kapitel beschriebene Verfahren hat den grossen Nachteil, dass ein Dokument erst lesbar ist, wenn es «entschlüsselt» – oder anders ausgedrückt: wenn die **Signatur entfernt** – wurde. Das ist unpraktisch, schliesslich sind sämtliche deine von Hand unterschriebenen Dokumente trotzdem stets lesbar. Sobald das Dokument entschlüsselt (also lesbar) ist, ist aber auch die Signatur verschwunden – und somit auch die Überprüfbarkeit, welche Person was unterschrieben hat.
 
@@ -31,4 +32,4 @@ Auch wenn verschiedene Personen den Hashwert desselben Textes berechnen, ergibt 
 
 
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=713066)
+

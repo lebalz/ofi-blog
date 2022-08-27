@@ -1,13 +1,14 @@
 ---
 sidebar_custom_props:
   id: 1eada906-fef6-4800-b3fc-3b0ed4a54ae9
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=423844
 ---
-
-# Polybios-Chiffre
 
 import Polybios from "@site/src/components/VisualizationTools/Crypto/Polybios";
 
-# Polybios-Chiffre [^1]
+# Polybios-Chiffre
 
 Die Polybios-Chiffre wurde vom griechischen Geschichtsschreiber Polybios (200 v.Chr. bis 120 v.Chr.) entwickelt.
 
@@ -27,4 +28,4 @@ So wird der Klartext `HALLO` zum Geheimtext `23 11 31 31 34`.
 <Polybios />
 
 ---
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=423844)
+

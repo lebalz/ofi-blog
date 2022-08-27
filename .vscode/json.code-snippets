@@ -15,8 +15,10 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	
 	"licence": {
 		"prefix": "src",
+		"scope": "json",
 		"body": [
 			"{" \
 				"\"author\": \"$1\"," \

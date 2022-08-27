@@ -1,18 +1,18 @@
 ---
-label: 2. Informationsgehalt
 sidebar_custom_props:
   id: dd57c06c-5454-41d5-b10d-8fbdeb318933
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?b=code&p=195436
 ---
-
-# 2. Informationsgehalt
 
 import Redundancy from "@site/src/components/VisualizationTools/Redundancy";
 
-# 2. Informationsgehalt [^1]
+# 2. Informationsgehalt
 
 ## Buchstabenhäufigkeit
 
-Die Buchstabenhäufigkeit gibt an, wie oft ein Buchstabe in einem Text vorkommen. Die Häufigkeit der einzelnen Buchstaben ist je nach Sprache unterschiedlich. Das folgende Diagramm zeigt die durchschnittliche Buchstabenhäufigkeit in deutschen Texten[^2]:
+Die Buchstabenhäufigkeit gibt an, wie oft ein Buchstabe in einem Text vorkommen. Die Häufigkeit der einzelnen Buchstaben ist je nach Sprache unterschiedlich. Das folgende Diagramm zeigt die durchschnittliche Buchstabenhäufigkeit in deutschen Texten[^1]:
 
 ![](images/02-redundancy/letter-frequency-de.svg)
 
@@ -77,5 +77,5 @@ Daraus ergibt sich
 Würden bei Textdokumenten Algorithmen eingesetzt, welche Zeichen mit tiefem Informationsgehalt weglassen, so würde man von verlustbehafteter Kompression sprechen, da der Originaltext ggf. nicht wieder hergestellt werden kann. 
 :::
 
-[^1]: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=195436)
-[^2]: [Practical Cryptography: German Letter Frequencies](http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/german-letter-frequencies/)
+
+[^1]: [Practical Cryptography: German Letter Frequencies](http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/german-letter-frequencies/)

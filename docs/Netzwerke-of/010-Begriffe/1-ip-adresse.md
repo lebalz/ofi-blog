@@ -2,9 +2,12 @@
 sidebar_label: IP-Adresse
 sidebar_custom_props:
   id: 9c31633b-d6d0-4655-8972-70a1c094a6e0
+  source:
+    name: "inf-schule.de"
+    ref: https://www.inf-schule.de/rechnernetze/vermittlung/fachkonzept_ipadressierung
 ---
 
-# IP-Adresse [^1]
+# IP-Adresse
 
 ## Adressen
 Sämtliche Geräte in einem Netzwerk müssen eine Adresse erhalten, damit Datenpakete an die richtigen Stellen weitergeleitet werden können.
@@ -44,4 +47,4 @@ Diese Form der einheitlichen Adressierung erlaubt es, die Zugehörigkeit zu Teil
 
 
 
-[^1]: Quelle: [inf-schule: Fachkonzept IP-Adressierung](https://www.inf-schule.de/rechnernetze/vermittlung/fachkonzept_ipadressierung)
+

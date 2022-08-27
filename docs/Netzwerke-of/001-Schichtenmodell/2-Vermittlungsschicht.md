@@ -3,9 +3,12 @@ sidebar_label: 2. Vermittlungsschicht
 sidebar_position: 5
 sidebar_custom_props:
   id: aabd7dfc-f69c-49cd-ad91-4d9b214e8d1f
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=network&p=750322
 ---
 
-#  Schicht 2: Vermittlungsschicht [^1]
+#  Schicht 2: Vermittlungsschicht
 
 <Answer type="state" webKey="dca07bc2-eefb-4cbd-ad94-93a641dc637a">
 Gelesen?
@@ -33,4 +36,4 @@ Das wichtigste Protokoll der Vermittlungsschicht ist das Internet Protokoll (IP)
 
 [@youtube](https://www.youtube-nocookie.com/embed/5o8CwafCxnU)
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=network&p=750322)
+

@@ -1,15 +1,15 @@
 ---
 sidebar_custom_props:
   id: be07c617-9637-4e0e-a1a4-fad0a3b334f2
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=351437
 ---
 
 # Browserzertifikate
-
-
-# Browserzertifikate [^1]
 Während früher sämtliche Informationen im Internet unverschlüsselt übertragen worden sind, werden die meisten Verbindungen heutzutage mit kryptographischen Mitteln geschützt.
 
-Insbesondere nutzen momentan (*März 2021*) gemäss W3Techs[^2] über 70% aller Webseiten **HTTPS**. HTTPS ist eine Erweiterung des HyperText Transfer Protocols, der Buchstabe «S» steht für Secure.
+Insbesondere nutzen momentan (*März 2021*) gemäss W3Techs[^1] über 70% aller Webseiten **HTTPS**. HTTPS ist eine Erweiterung des HyperText Transfer Protocols, der Buchstabe «S» steht für Secure.
 
 Damit wird der Datenverkehr in **beiden Richtungen** verschlüsselt:
 - alle Daten, die vom Webserver zum Browser übertragen werden (also der Inhalt der Seite wie z.B. Text, Bilder, Videos, heruntergeladene Dateien, ...)
@@ -18,7 +18,7 @@ Damit wird der Datenverkehr in **beiden Richtungen** verschlüsselt:
 ## Symmetrische und asymmetrische Verschlüsselung
 Die **Daten werden symmetrisch** verschlüsselt, der **Sitzungsschlüssel asymmetrisch**.
 
-Da die Browser nicht jeden einzelnen öffentlichen Schlüssel der Webseiten (dies sind gemäss internet live stats hunderte Millionen[^3]) kennen können, vertrauen sie ausgewählten **Zertifizierungsstellen**. Der öffentliche Schlüssel einer Webseite wird von einer Zertifizierungsstelle digital signiert. Das so entstandene Zertifikat wird beim Verbindungsaufbau übertragen und kann vom Browser überprüft werden.
+Da die Browser nicht jeden einzelnen öffentlichen Schlüssel der Webseiten (dies sind gemäss internet live stats hunderte Millionen[^2]) kennen können, vertrauen sie ausgewählten **Zertifizierungsstellen**. Der öffentliche Schlüssel einer Webseite wird von einer Zertifizierungsstelle digital signiert. Das so entstandene Zertifikat wird beim Verbindungsaufbau übertragen und kann vom Browser überprüft werden.
 
 ![Webseitenzertifikate --width=400px](images/https-gbsl.ch.png)
 
@@ -76,6 +76,6 @@ Wo ist trotzdem Vorsicht geboten?
 2. Die Webseite kann z.B. Malware verbreiten resp. gehackt worden sein. D.h. der «Inhalt» wird nicht überprüft.
 
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=351437)
-[^2]: Quelle: [W3Techs](https://w3techs.com/technologies/details/ce-httpsdefault)
-[^3]: Quelle: [internet live stats](https://www.internetlivestats.com/total-number-of-websites/)
+
+[^1]: Quelle: [W3Techs](https://w3techs.com/technologies/details/ce-httpsdefault)
+[^2]: Quelle: [internet live stats](https://www.internetlivestats.com/total-number-of-websites/)

@@ -1,13 +1,13 @@
 ---
 sidebar_custom_props:
   id: fa2db39b-bea9-4c76-a037-4a5d0c6d1ffa
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=254616
 ---
 
+
 # Vignère-Chiffre
-
-
-
-# Vignère-Chiffre [^1]
 
 Die Vigenère-Chiffre wurde vom Franzosen Blaise de Vigenère (1523-1596) erfunden und galt fast 300 Jahre lang als unknackbar. Es handelt sich um ein polyalphabetisches Verschlüsselungsverfahren, da mehrere Alphabete genutzt werden. Als Schlüssel dient ein Wort, das die Anzahl der verwendeten Substitutions-Alphabete bestimmt: Für jeden Buchstaben des Schlüsselwortes wird die Caesar-Chiffre mit dem jeweiligen Buchstaben als Schlüssel verwendet. Die Buchstaben des Klartextes werden abwechslungsweise durch diese Caesar-Chiffren verschlüsselt.
 
@@ -20,4 +20,4 @@ Verschlüsseln Sie den Text `RUDERN AUF DEM SEE` mit der Vigenère-Chiffre. Verw
 
 :::
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=254616)
+

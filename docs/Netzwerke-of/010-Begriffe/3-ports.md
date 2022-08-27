@@ -2,9 +2,12 @@
 sidebar_label: Ports
 sidebar_custom_props:
   id: ebeeda54-71e2-4de6-b4bc-ec987e8f8396
+  source:
+    name: rothe.io Ports
+    ref: https://rothe.io/?b=network&p=240119
 ---
 
-# Ports [^1]
+# Ports
 
 ## Wozu benötigt man Ports?
 
@@ -30,4 +33,4 @@ Einige bekannte Ports sind:
 |      `443` | HyperText Transfer Protocol **Secure** (HTTPS)      |
 |      `993` | Internet Message Access Protocol **Secure** (IMAPS) |
 
-[^1]: Quelle: [rothe.io Ports](https://rothe.io/?b=network&p=240119)
+

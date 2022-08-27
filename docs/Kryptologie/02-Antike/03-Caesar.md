@@ -1,14 +1,15 @@
 ---
 sidebar_custom_props:
   id: b4afdce9-5463-4a78-a0d4-cd6b137aaf04
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=544692
 ---
-
-# Caesar-Chiffre
 
 import Caesar from "@site/src/components/VisualizationTools/Crypto/Caesar";
 
 
-# Caesar-Chiffre [^1]
+# Caesar-Chiffre
 
 Der römische Feldherr _Gaius Julius Caesar_ hat seine militärischen Nachrichten verschlüsselt. Der römische Schriftsteller Sueton hat Folgendes überliefert:
 
@@ -54,4 +55,4 @@ Die Nachricht `KOMM ALLEINE` wird verschlüsselt zu `XBZZ NYYRVAR`.
 
 <Caesar />
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=544692)
+

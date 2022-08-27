@@ -1,13 +1,14 @@
 ---
 sidebar_custom_props:
   id: 035b0ee7-407c-4047-90de-10ae0ff2bcff
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=242355
 ---
-
-# Geheime Farbe
 
 import ColorExchange from "@site/src/components/VisualizationTools/ColorExchange";
 
-# Geheime Farbe [^1]
+# Geheime Farbe
 
 Alice und Bob arbeiten an einem neuen Kunstwerk, auf das die Öffentlichkeit gespannt wartet. Die beiden möchten dafür **eine** ganz besondere Farbe verwenden. Diese Farbe soll aber unbedingt bis zur Vernissage **geheim bleiben**. Alice und Bob wohnen weit auseinander und können sich nicht treffen, um die geheime Farbe gemeinsam herzustellen, sie können sich lediglich Farbkübel per Post zusenden.
 
@@ -45,4 +46,4 @@ Im obigen Modell musste getrickst werden: In der digitalen Welt werden Farben du
 ![digitales (links) und reales (rechts) Farbmodell](images/color-models.png)
 :::
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=242355)
+

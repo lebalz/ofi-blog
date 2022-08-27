@@ -1,19 +1,19 @@
 ---
 sidebar_custom_props:
   id: e26efcbb-61e9-424e-89cf-a31466e2cbca
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?b=code&p=597080
 ---
 
 # 1. Huffman-Codierung
-
-
-# 1. Huffman-Codierung [^1]
 
 [@youtube](https://www.youtube-nocookie.com/embed/JsTptu56GM8)
 
 David Huffman hat 1952 ein Verfahren entwickelt, mit welchem Zeichen platzsparender codiert werden können. Seine Idee ist, dass Zeichen, welche häufig im Text vorkommen, einen kürzeren Code erhalten, als Zeichen, welche selten im Text vorkommen.
 
 :::info Alltagsbezug
-Die Huffman-Codierung und ähnliche Verfahren werden für das Komprimieren von Dateiformaten wie **DOCX**, **JPG** oder **MP3** eingesetzt. [^2]
+Die Huffman-Codierung und ähnliche Verfahren werden für das Komprimieren von Dateiformaten wie **DOCX**, **JPG** oder **MP3** eingesetzt. [^1]
 :::
 
 ## Codebaum
@@ -222,5 +222,5 @@ Die Huffman Codierung bewirkt erst bei längeren Texten eine noch grössere Spei
 <Answer type="text" webKey="168db824-a49b-42b2-a586-112547749e02" />
 :::
 
-[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=597080)
-[^2]: Quelle: [Wikipedia: Huffman coding](https://en.wikipedia.org/wiki/Huffman_coding#Applications)
+
+[^1]: Quelle: [Wikipedia: Huffman coding](https://en.wikipedia.org/wiki/Huffman_coding#Applications)

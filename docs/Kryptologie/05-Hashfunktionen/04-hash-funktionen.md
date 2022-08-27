@@ -1,13 +1,14 @@
 ---
 sidebar_custom_props:
   id: 79c8cca9-e452-4e59-9445-e5c06cb23b90
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=103784
 ---
-
-# Hash Funktionen
 
 import HashSHA2 from '@site/src/components/VisualizationTools/Crypto/HashSHA2'
 
-# Hashfunktionen [^1]
+# Hashfunktionen
 
 :::info
 «Eine Hashfunktion ist eine Abbildung, die eine grosse Eingabemenge auf eine kleinere Zielmenge abbildet.»
@@ -54,4 +55,4 @@ Die letzten beiden Beispiele zeigen, dass bereits kleinste Änderungen zu komple
 :::
 
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=103784)
+

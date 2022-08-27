@@ -3,9 +3,12 @@ sidebar_label: Schichten und Adressen
 sidebar_position: 7
 sidebar_custom_props:
   id: 7e399ee9-65df-45de-8b75-414e4cc87879
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=network&p=783655
 ---
 
-# Schichten und Adressen [^1]
+# Schichten und Adressen
 
 <Answer type="state" webKey="94beaff4-7ed8-4cb7-ae9f-13d11e0727bb">
 Gelesen?
@@ -37,4 +40,4 @@ Analog muss auch ein Computer wissen, an welches Programm er eine eingehende Anf
 
 Das einzige, was diese Angestellten dem Kunden anbieten können, ist die **Dienstleistung**, auf welche sich dieses Geschäft spezialisiert hat. Dass der Ablauf für einen Dienstleistungsbezug in jedem Geschäft anders abläuft, ist klar – schliesslich muss sich im Coiffeurgeschäft auf einen Stuhl setzen und bekommt einen Mantel und den Hals gebunden, während man in der Bäckerei die gewünschten Brote bestellt. Dies entspricht den Protokollen auf der [**Anwendungsschicht (DNS, HTTP, ...)**](./4-Anwendungsschicht.md).
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=network&p=783655)
+

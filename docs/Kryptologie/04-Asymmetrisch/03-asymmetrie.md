@@ -1,13 +1,14 @@
 ---
 sidebar_custom_props:
   id: c0387f92-5a73-4431-b9ea-348fec74334b
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=792141
 ---
-
-# Asymmetrie
 
 import PrimfactorizationTiming from "@site/src/components/VisualizationTools/Crypto/PrimfactorizationTiming";
 
-# Asymmetrie [^1]
+# Asymmetrie
 
 Wir haben in den beiden vorherigen Kapiteln gesehen, dass es Vorgänge gibt, die in die eine Richtung einfach durchzuführen sind, in die entgegengesetzte Richtung allerdings sehr aufwändig oder gar unmöglich:
 
@@ -49,4 +50,4 @@ Ein Beispiel dafür ist das Multiplizieren zweier (Prim-)Zahlen. Jeder Computer 
 <PrimfactorizationTiming />
 
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=792141)
+

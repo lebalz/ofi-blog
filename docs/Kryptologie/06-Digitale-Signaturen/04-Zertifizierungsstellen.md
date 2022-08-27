@@ -1,12 +1,12 @@
 ---
 sidebar_custom_props:
   id: 2697eeca-a55f-4e22-8af6-6437297cc1cd
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=848484
 ---
 
 # Zertifizierungsstellen
-
-
-# Zertifizierungsstellen [^1]
 
 ## Übertragung öffentlicher Schlüssel
 Öffentliche Schlüssel enthalten keine geheime Information, können also problemlos über einen offenen Kanal übertragen werden. Oder?
@@ -51,4 +51,4 @@ Da im Internet nicht offensichtlich ist, mit wem man kommuniziert, könnte sich 
 
 Das Aufbauen einer HTTPS Verbindung verwendet übrigens auch die Integritätsprüfung. Durch eine signierte Nachricht wird die IP Adresse des Servers überprüft. Aufgrund der Signatur kann die Nachricht nicht von Mallory stammen. Anschliessend wird gemäss dem Farbmischprinzip ein gemeinsamer Sitzungsschlüssel für die Verschlüsselung der Verbindung erzeugt. So ist es für Mallory unmöglich, sich zwischen Trent und Bob zu stellen - sofern Bob die richtige IP-Adresse zu Trent besitzt.
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=848484)
+

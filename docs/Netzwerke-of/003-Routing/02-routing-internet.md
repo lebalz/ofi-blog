@@ -1,13 +1,15 @@
 ---
-sidebar_label: Routing im Internet
 sidebar_custom_props:
   id: eb6efc06-c76e-4907-8e49-ddfe8de30177
+  source:
+    name: informatik.mygymer.ch
+    ref: https://informatik.mygymer.ch/g23c/008.rechnernetze-kommunikation/05.routing.html
 ---
 
 import Finding from "@site/src/components/Finding";
 import SearchBox from '@site/src/components/SearchBox';
 
-# Routing im Internet [^1]
+# Routing im Internet
 
 Wie Pakete eine Postadresse haben, brauchen auch Datenpakete eine Adresse, damit sie korrekt zugestellt werden können. Diese Adressen nennt man **IP-Adressen**, wobei IP für *Internet Protocol* steht.
 
@@ -259,4 +261,4 @@ https://www.submarinecablemap.com/
 
 :::
 
-[^1]: Quelle: [informatik.mygymer.ch](https://informatik.mygymer.ch/g23c/008.rechnernetze-kommunikation/05.routing.html)
+

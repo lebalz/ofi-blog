@@ -1,13 +1,12 @@
 ---
-label: 6. Dateiformate erkennen
 sidebar_custom_props:
   id: 00ddb460-744a-4894-b4ae-da205bd3cf21
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?b=code&p=206603
 ---
 
 # 6. Dateiformate erkennen
-
-
-# 6. Dateiformate erkennen [^1]
 
 Eine Datei ist eine Ansammlung binärer Daten, also eine Aneinanderreihung von Bits. Die binäre Darstellung der Datei, in welcher dieser Text gespeichert ist, beginnt so:
 
@@ -87,4 +86,4 @@ Bei den folgenden Dateien ging die Dateiendung verloren. Finden Sie mit https://
 
 :::
 
-[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=206603)
+

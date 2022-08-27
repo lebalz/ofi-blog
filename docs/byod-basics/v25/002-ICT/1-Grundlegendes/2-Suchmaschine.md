@@ -1,11 +1,11 @@
 ---
 sidebar_custom_props:
   id: e73d1e2d-6a64-4573-bf4e-b97b4a483b9d
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?page=ict/1-basics/2-search-engine/
 ---
-
-# Suchmaschinen
-
-# Suchmaschinen [^1]
+# Suchmaschinen 
 
 Suchmaschinen werden verwendet, um im World Wide Web nach Informationen zu suchen. Die bekannteste Suchmaschine ist Google mit einem Marktanteil von über 90%.
 
@@ -36,4 +36,4 @@ Suchergebnisse werden von einem automatischen Lernsystem (künstliche Intelligen
 Zusätzlich erfassbare Informationen wie Person, Ort, Gerät oder der verwendete Browser geben der Suchmaschine Hinweise darauf, welche Informationen relevanter sind.
 :::
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?page=ict/1-basics/2-search-engine/)
+

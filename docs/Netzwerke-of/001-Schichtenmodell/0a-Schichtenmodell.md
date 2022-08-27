@@ -1,13 +1,13 @@
 ---
-sidebar_label: Schichtenmodell
 sidebar_position: 1
 sidebar_custom_props:
   id: 6bc1b846-030d-4b39-a47c-109a404e6e81
+  source:
+    name: mygymer.ch
+    ref: https://informatik.mygymer.ch/g23c/008.rechnernetze-kommunikation/01.schichtenmodell.html#beispiel-%C2%ABpaketversand%C2%BB
 ---
 
-
-
-# Schichtenmodell [^1]
+# Schichtenmodell
 
 Viele komplexe Vorgänge und Konstruktionen können mit Hilfe eines sogenannten Schichtenmodells in einfachere Einzelteile aufgespalten werden.
 
@@ -117,4 +117,4 @@ Suchen Sie in anderen Bereichen des Alltags Schichtenmodelle und finden Sie dort
 Verschiedene Naturwissenschaften bauen aufeinander auf und bilden so eine Art Schichtenmodell, um die ungeheure Komplexität der Natur in den Griff zu bekommen. Somit kann man sich z.B. auf sehr verschiedenen Abstraktionsebenen mit dem Organismus «Schwan» auseinandersetzen (Körperbau? Verhalten? DNA?) und kann die jeweils anderen Ebenen grösstenteils ausblenden.
 
 
-[^1]: Quelle: [mygymer.ch](https://informatik.mygymer.ch/g23c/008.rechnernetze-kommunikation/01.schichtenmodell.html#beispiel-%C2%ABpaketversand%C2%BB)
+

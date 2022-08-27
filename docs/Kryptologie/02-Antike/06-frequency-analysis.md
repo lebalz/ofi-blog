@@ -1,14 +1,16 @@
 ---
 sidebar_custom_props:
   id: 0b4e3ced-74a8-4416-93ed-3934c34c320c
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=151207
 ---
 
-# Häufigkeitsanalyse
 import FrequencyAnalysis from "@site/src/components/VisualizationTools/Crypto/FrequencyTextAnalysis";
 
-# Häufigkeitsanalyse [^1]
+# Häufigkeitsanalyse
 
-## Buchstabenhäufigkeit in der deutschen Sprache [^2]
+## Buchstabenhäufigkeit in der deutschen Sprache [^1]
 
 Nicht alle Buchstaben kommen in der deutschen Sprache gleich häufig vor. Nachfolgend findest du eine Auflistung der 10. häufigsten Buchstaben der deutschen Sprache:
 
@@ -21,7 +23,7 @@ Nicht alle Buchstaben kommen in der deutschen Sprache gleich häufig vor. Nachfo
 
 </div>
 
-## al-Kindi [^3]
+## al-Kindi [^2]
 
 :::flex --justify=space-between
 Im neunten Jahrhundert hat der arabische Gelehrte Abū Ya'qūb ibn Ishāq al-Kindī (oder kurz al-Kindi) durch eine Analyse des Korans entdeckt, dass die einzelnen Zeichen der arabischen Schrift in bestimmten Häufigkeiten auftreten. In seiner Abhandlung über die Entzifferung kryptographischer Botschaften schrieb er Folgendes:
@@ -40,6 +42,6 @@ Durch die Häufigkeitsanalyse werden Geheimtexte, die durch eine monoalphabetisc
 
 <Answer type="text" webKey="1c1320de-991f-4b0f-9a4c-3a9c71073b66" />
 
-[^1]: Quelle [rothe.io](https://rothe.io/?b=crypto&p=151207)
-[^2]: Quelle [Wikipedia](https://de.wikipedia.org/wiki/Buchstabenh%C3%A4ufigkeit)
-[^3]: Quelle [Qikipedia](https://de.wikipedia.org/wiki/Al-Kind%C4%AB)
+
+[^1]: Quelle [Wikipedia](https://de.wikipedia.org/wiki/Buchstabenh%C3%A4ufigkeit)
+[^2]: Quelle [Qikipedia](https://de.wikipedia.org/wiki/Al-Kind%C4%AB)

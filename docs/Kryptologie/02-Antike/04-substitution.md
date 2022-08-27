@@ -1,13 +1,16 @@
 ---
 sidebar_custom_props:
   id: 5acac9b9-dd0f-4475-b4a3-f0d14ebcfe62
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=481987
 ---
 
 # Substitution
 
 import Substitution from "@site/src/components/VisualizationTools/Crypto/Substitution";
 
-# Monoalphabetische Substitution [^1]
+# Monoalphabetische Substitution
 
 Allgemein wird ein Verschlüsselungsverfahren, bei welchem jedes Zeichen durch ein festgelegtes anderes Zeichen ersetzt wird, eine **monoalphabetische Substitution** genannt.
 
@@ -33,4 +36,4 @@ Bei dieser Substitution hängt die Anzahl möglicher Verschlüsselungen von der 
 <Substitution/>
 
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=481987)
+

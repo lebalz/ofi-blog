@@ -1,10 +1,12 @@
 ---
-sidebar_label: Authentifizierung
 sidebar_custom_props:
   id: a1dc8bc7-653e-4e55-9197-c9cdb7fd2234
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?page=ict/2-security/2-authentication/
 ---
 
-# Authentifizierung [^1]
+# Authentifizierung
 
 **Authentifizierung** (engl. authentication) ist das Überprüfen einer Berechtigung. Die zu überprüfende Person **authentisiert** sich dabei.
 
@@ -77,4 +79,4 @@ Viele biometrische Merkmale sind jedoch öffentlich zugänglich und einfach fäl
 
 
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?page=ict/2-security/2-authentication/)
+

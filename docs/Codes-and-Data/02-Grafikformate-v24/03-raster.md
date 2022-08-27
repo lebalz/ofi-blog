@@ -1,12 +1,12 @@
 ---
-label: 3. Rastergrafik
 sidebar_custom_props:
   id: eff27b62-3577-43d1-a41d-56876eee40c7
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?b=code&p=943166
 ---
 
 # 3. Rastergrafik
-
-# 3. Rastergrafik [^1]
 
 ## Theoretische Speichergrösse
 
@@ -100,4 +100,4 @@ Tipp: verwenden Sie für jeden Farbkanal genau 3 Ziffern, damit die Zeilen nicht
 ```
 :::
 
-[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=943166)
+

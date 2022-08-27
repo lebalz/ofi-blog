@@ -3,8 +3,12 @@ sidebar_label: 1. Physikalische Schicht
 sidebar_position: 6
 sidebar_custom_props:
   id: 834d25dd-f87c-4513-93b3-8cc56345380c
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=network&p=783655
 ---
-#  Schicht 1: Physikalische Schicht (Netzzugangsschicht) [^1]
+
+#  Schicht 1: Physikalische Schicht (Netzzugangsschicht)
 
 <Answer type="state" webKey="9285e8bd-8411-45b6-890c-93aad1bd8b9c">
 Gelesen?
@@ -29,4 +33,4 @@ Wieso braucht es zwei Adressen, logische Adressen (Vermittlungsschicht) und phys
 
 [@youtube](https://www.youtube-nocookie.com/embed/ZhEf7e4kopM)
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=network&p=783655)
+

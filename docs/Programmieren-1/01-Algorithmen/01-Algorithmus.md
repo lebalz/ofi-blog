@@ -2,9 +2,12 @@
 sidebar_label: Algorithmus
 sidebar_custom_props:
   id: c649390e-7880-46a5-a611-f938c1f6a100
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?page=prog1/1-algo/1-algorithm/
 ---
 
-# Algorithmus [^1]
+# Algorithmus
 
 ## Definition
 
@@ -48,13 +51,13 @@ Die Endlichkeit ist eine weitere wichtige Eingenschaft von Algorithmen. Sie bede
 
 Abu Dschaʿfar Muhammad ibn Musa al-Chwārizmī war ein Mathematiker und Universalgelehrter. Er stammte zwar aus dem iranischen Choresmien, verbrachte jedoch den größten Teil seines Lebens in Bagdad und war dort im «Haus der Weisheit», einer Art Akademie, tätig.
 
-Al-Chwarizmi gilt als einer der bedeutendsten Mathematiker, da er sich mit Algebra als elementarer Untersuchungsform beschäftigte.[^2]
+Al-Chwarizmi gilt als einer der bedeutendsten Mathematiker, da er sich mit Algebra als elementarer Untersuchungsform beschäftigte.[^1]
 
-In der lateinischen Übersetzung eines Werkes von Al-Chwarizmi wurde sein Name als «algorismus» geschrieben. Davon leitet sich der heutige Begriff «Algorithmus» ab.[^3]
+In der lateinischen Übersetzung eines Werkes von Al-Chwarizmi wurde sein Name als «algorismus» geschrieben. Davon leitet sich der heutige Begriff «Algorithmus» ab.[^2]
 
 ![Abbildung von Al-Chwarizmi auf einer sowjetischen Briefmarke](images/al-chwarizmi.png)
 
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?page=prog1/1-algo/1-algorithm/)
-[^2]: Quelle: [Wikipedia: al-Chwarizmi](https://de.wikipedia.org/wiki/Al-Chwarizmi)
-[^3]: Quelle: [Wiktionary: Algorithmus](https://de.wiktionary.org/wiki/Algorithmus)
+
+[^1]: Quelle: [Wikipedia: al-Chwarizmi](https://de.wikipedia.org/wiki/Al-Chwarizmi)
+[^2]: Quelle: [Wiktionary: Algorithmus](https://de.wiktionary.org/wiki/Algorithmus)

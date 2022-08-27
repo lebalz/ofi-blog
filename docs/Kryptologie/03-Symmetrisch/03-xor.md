@@ -1,18 +1,19 @@
 ---
 sidebar_custom_props:
   id: 38b6e2ac-d4e7-42bd-b2b0-f757577f5a82
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=353789
 ---
 
+
 # XOR-Verschlüsselung
-
-
-# XOR-Verschlüsselung [^1]
 
 Da wir nun mit Bits arbeiten und nicht mehr mit Buchstaben, müssen wir nach anderen Möglichkeiten zur Verschlüsselung suchen. Alphabetverschiebungen wie bei Caesar und Substitutionen sind nicht mehr geeignete Mittel, wenn nur die Zahlen `0` und `1` zur Verfügung stehen.
 
 Nebst den bekannten Operationen,  *Addition, SUbtraktion, Multiplikation und Division*, kann ein Computer auch noch weitere Operationen auf zwei Binärzahlen anwenden. Eine solche Operation ist das **XOR** (*Exclusive OR*):
 
-> Exclusive or or exclusive disjunction is a logical operation that is 1 if and only if its arguments differ (one is 1, the other is 0).[^2]
+> Exclusive or or exclusive disjunction is a logical operation that is 1 if and only if its arguments differ (one is 1, the other is 0).[^1]
 
 XOR kann auch zur Verschlüsselung verwendet werden. Dabei wird jeweils 1 Bit des Klartextes mit einem Bit des Schlüssels verrechnet. Das Ergebnis ist 1 Bit des Geheimtextes.
 
@@ -110,5 +111,5 @@ Wichtige Punkte:
 
 <Answer type="text" webKey="b978535b-b455-4a60-aa44-8a32aac4a899" placeholder="Notizen..."  />
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=353789)
-[^2]: Quelle: [Germundsson, Roger; Weisstein, Eric](http://mathworld.wolfram.com/XOR.html)
+
+[^1]: Quelle: [Germundsson, Roger; Weisstein, Eric](http://mathworld.wolfram.com/XOR.html)

@@ -3,9 +3,12 @@ sidebar_label: 4. Anwendungsschicht
 sidebar_position: 2
 sidebar_custom_props:
   id: 2108d2f9-f98f-459e-ae5b-1f5114a5b5a3
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=network&p=80064
 ---
 
-# Schicht 4: Anwendungsschicht [^1]
+# Schicht 4: Anwendungsschicht
 
 <Answer type="state" webKey="149a5e79-6b32-4361-844b-648d47eaa517">
 Gelesen?
@@ -37,4 +40,4 @@ Sie sehen, dass zum Senden und Empfangen von E-Mails zwei verschiedene Protokoll
 
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/kBXQZMmiA4s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=network&p=80064)
+

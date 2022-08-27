@@ -1,13 +1,13 @@
 ---
-label: 4. Übung
 sidebar_custom_props:
   id: 30043ba8-dd09-4c10-aeee-d4c119daadfe
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?b=code&p=922802
 ---
 
 # 4. Übung
-
-
-# Rastergrafik praktisch [^1]
+# Rastergrafik praktisch
 
 :::aufgabe 1. JPEG-Format
 
@@ -61,4 +61,4 @@ Am wichtigsten sind die Felder «Breite» und «Höhe», welche die Dimension de
 4. Laden Sie die geänderte Datei auf den Computer und öffnen Sie es.
 :::
 
-[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=922802)
+

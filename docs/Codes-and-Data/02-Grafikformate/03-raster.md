@@ -2,11 +2,12 @@
 label: 3. Rastergrafik
 sidebar_custom_props:
   id: 9efde026-832e-452f-a051-bdc395e04df3
+  source:
+    name: S. Rothe, T. Jampen, R. Meyer
+    ref: https://informatik.mygymer.ch/base/?b=code&p=943166
 ---
 
 # 3. Rastergrafik
-
-# 3. Rastergrafik [^1]
 
 ## Theoretische Speichergrösse
 
@@ -85,4 +86,4 @@ Die folgende Tabelle zeigt die Dateigrössen des gleichen Bildes (640×360) mit 
 
 </div>
 
-[^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=943166)
+
