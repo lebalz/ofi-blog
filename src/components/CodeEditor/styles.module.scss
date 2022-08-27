@@ -177,16 +177,16 @@
     .playButton {
         background-color: var(--ifm-color-success);
         color: white;
-        z-index: 999;
+        z-index: 199;
     }
 
     .controls {
-        z-index: 999;
+        z-index: 199;
         grid-area: controls;
     }
 
     .headerButton {
-        z-index: 999;
+        z-index: 199;
         border: none;
         border-radius: 6px;
         padding: 6px 12px;
@@ -200,7 +200,7 @@
 
     .containerSlim {
         .headerButton {
-            z-index: 999;
+            z-index: 199;
             height: 100%;
             border-radius: 0px;
             padding: 2px 6px;
