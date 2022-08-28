@@ -13,7 +13,7 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a1.png)
 
-<Answer  type="array"  webKey="49f55f64-13b9-4f15-b138-1335c09281b5" label="Lösung F1"  size={4} select={['', '↑', '↰', '↱']}/>
+<Answer  type="array"  webKey="49f55f64-13b9-4f15-b138-1335c09281b5" label="F1"  size={4} select={['', '↑', '↰', '↱']}/>
 
 :::
 
@@ -24,7 +24,7 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a2.png)
 
-<Answer  type="array"  webKey="2b9029cf-9593-4ab8-a49a-eec034c27b0c" label="Lösung F1"  size={3} select={['', '↑', '↰', '↱', 'F1']}/>
+<Answer  type="array"  webKey="2b9029cf-9593-4ab8-a49a-eec034c27b0c" label="F1"  size={3} select={['', '↑', '↰', '↱', 'F1']}/>
 
 :::
 
@@ -35,7 +35,7 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a3.png)
 
-<Answer  type="array"  webKey="f8f87665-1d2b-4559-b3ba-fbd604061d2a" label="Lösung F1"  size={7} select={['', '↑', '↰', '↱', 'F1']}/>
+<Answer  type="array"  webKey="f8f87665-1d2b-4559-b3ba-fbd604061d2a" label="F1"  size={7} select={['', '↑', '↰', '↱', 'F1']}/>
 
 :::
 
@@ -46,7 +46,7 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a4.png)
 
-<Answer  type="array"  webKey="d3b5b747-6a4d-4658-a05f-0026e20ce326" label="Lösung F1"  size={5} select={['', '↑', '↰', '↱', 'F1']}/>
+<Answer  type="array"  webKey="d3b5b747-6a4d-4658-a05f-0026e20ce326" label="F1"  size={5} select={['', '↑', '↰', '↱', 'F1']}/>
 
 :::
 
@@ -56,7 +56,7 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a5.png)
 
-<Answer  type="array"  webKey="13b53721-50de-4630-abe7-7f1cd5f4ea8e" label="Lösung F1"  size={4} select={['', '↑', '↰', '↱', 'F1', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', '↑--red', '↰--red', '↱--red', 'F1--red', '↑--green', '↰--green', '↱--green', 'F1--green']}/>
+<Answer  type="array"  webKey="13b53721-50de-4630-abe7-7f1cd5f4ea8e" label="F1"  size={4} select={['', '↑', '↰', '↱', 'F1', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', '↑--red', '↰--red', '↱--red', 'F1--red', '↑--green', '↰--green', '↱--green', 'F1--green']}/>
 
 :::
 
@@ -78,7 +78,7 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a7.png)
 
-<Answer  type="array"  webKey="1f50b198-7ef4-48b6-bbdc-68452baa7952" label="Lösung F1"  size={4} select={['', '↑', '↰', '↱', 'F1', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', '↑--red', '↰--red', '↱--red', 'F1--red', '↑--green', '↰--green', '↱--green', 'F1--green']}/>
+<Answer  type="array"  webKey="1f50b198-7ef4-48b6-bbdc-68452baa7952" label="F1"  size={4} select={['', '↑', '↰', '↱', 'F1', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', '↑--red', '↰--red', '↱--red', 'F1--red', '↑--green', '↰--green', '↱--green', 'F1--green']}/>
 
 :::
 
@@ -88,7 +88,7 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a8.png)
 
-<Answer  type="array"  webKey="59c65a0b-5ae1-4287-b25f-567b598a67a4" label="Lösung F1"  size={6} select={['', '↑', '↰', '↱', 'F1', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', '↑--red', '↰--red', '↱--red', 'F1--red', '↑--green', '↰--green', '↱--green', 'F1--green']}/>
+<Answer  type="array"  webKey="59c65a0b-5ae1-4287-b25f-567b598a67a4" label="F1"  size={6} select={['', '↑', '↰', '↱', 'F1', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', '↑--red', '↰--red', '↱--red', 'F1--red', '↑--green', '↰--green', '↱--green', 'F1--green']}/>
 
 :::
 
@@ -98,7 +98,7 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a9.png)
 
-<Answer  type="array"  webKey="a290e5cd-caae-4dc5-acfb-e435f072645c" label="Lösung F1"  size={4} select={['', '↑', '↰', '↱', 'F1', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', '↑--red', '↰--red', '↱--red', 'F1--red', '↑--green', '↰--green', '↱--green', 'F1--green']}/>
+<Answer  type="array"  webKey="a290e5cd-caae-4dc5-acfb-e435f072645c" label="F1"  size={4} select={['', '↑', '↰', '↱', 'F1', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', '↑--red', '↰--red', '↱--red', 'F1--red', '↑--green', '↰--green', '↱--green', 'F1--green']}/>
 
 :::
 
@@ -108,7 +108,7 @@ sidebar_custom_props:
 
 ![](images/RoboZZle_a10.png)
 
-<Answer  type="array"  webKey="2d443973-fd5e-4432-90a3-45dd0c6932fd" label="Lösung F1"  size={5} select={['', '↑', '↰', '↱', 'F1', 'F2', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', 'F2--blue', '↑--red', '↰--red', '↱--red', 'F1--red', 'F2--red', '↑--green', '↰--green', '↱--green', 'F1--green', 'F2--green']}/>
-<Answer  type="array"  webKey="14b2fdbd-cb85-4175-9016-bf43e252fcf0" label="Lösung F2"  size={3} select={['', '↑', '↰', '↱', 'F1', 'F2', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', 'F2--blue', '↑--red', '↰--red', '↱--red', 'F1--red', 'F2--red', '↑--green', '↰--green', '↱--green', 'F1--green', 'F2--green']}/>
+<Answer  type="array"  webKey="2d443973-fd5e-4432-90a3-45dd0c6932fd" label="F1"  size={5} select={['', '↑', '↰', '↱', 'F1', 'F2', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', 'F2--blue', '↑--red', '↰--red', '↱--red', 'F1--red', 'F2--red', '↑--green', '↰--green', '↱--green', 'F1--green', 'F2--green']}/>
+<Answer  type="array"  webKey="14b2fdbd-cb85-4175-9016-bf43e252fcf0" label="F2"  size={3} select={['', '↑', '↰', '↱', 'F1', 'F2', '↑--blue', '↰--blue', '↱--blue', 'F1--blue', 'F2--blue', '↑--red', '↰--red', '↱--red', 'F1--red', 'F2--red', '↑--green', '↰--green', '↱--green', 'F1--green', 'F2--green']}/>
 
 :::
