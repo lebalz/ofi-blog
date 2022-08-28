@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styles from './Answer.module.scss';
 import { observer } from 'mobx-react-lite';
-import { ArrayProps, Types } from '.';
-import Option from './Option';
+import { ArrayProps } from '.';
 import { useStore } from '../../stores/hooks';
 import { default as ArrayAnswerModel } from '../../models/Answer/Array';
 import Loader from '../shared/Loader';
@@ -48,7 +47,6 @@ const ArrayAnswer = observer((props: ArrayProps) => {
                                     const toggle = e.currentTarget;
                                     const dropdown = toggle.parentElement;
                                     function dismissDropdown() {
-                                      console.log('remove')
                                         toggle.classList.remove('button--active');
                                         dropdown.classList.remove('dropdown--show');
                                         document.removeEventListener('click', dismissDropdown);
