@@ -23,6 +23,7 @@ interface Props {
     versioned: boolean;
     resettable: boolean;
     download: boolean;
+    showLineNumbers: boolean;
     lang: string;
 }
 

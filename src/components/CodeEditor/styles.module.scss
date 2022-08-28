@@ -74,6 +74,11 @@
     .brythonCodeBlock {
         display: flex;
         flex-wrap: wrap;
+        .noGutter {
+            :global .ace_scroller {
+                left: 4px !important;
+            }
+        }
         // :global {
         //     --ifm-scrollbar-track-background-color: #444444;
         //     --ifm-scrollbar-thumb-background-color: #686868;

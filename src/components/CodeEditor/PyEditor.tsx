@@ -19,6 +19,7 @@ interface Props {
   children: React.ReactNode;
   title: string;
   resettable: boolean;
+  showLineNumbers: boolean;
   download: boolean;
   webKey: string;
   lang: string;
@@ -58,7 +59,7 @@ const PyEditor = observer((props: Props) => {
         webKey={props.webKey}
         lang={props.lang}
       />
-      <Editor webKey={props.webKey} lang={props.lang}/>
+      <Editor webKey={props.webKey} lang={props.lang} showLineNumbers={props.showLineNumbers} />
       {props.lang === 'python' &&
         <div className={clsx(styles.result)}>
           <Result webKey={props.webKey}/>

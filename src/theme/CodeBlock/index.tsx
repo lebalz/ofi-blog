@@ -60,7 +60,7 @@ const withLiveEditor = (Component) => {
         return <Component {...props} />
       }
 
-      const code = props.children.replace(/\s*\n$/, '');
+      const code: string = props.children.replace(/\s*\n$/, '');
       const codeId = getCodeId(props.title, code);
       const [webKey] = React.useState(props.id || uuidv4());
       return <PyAceEditor
@@ -73,6 +73,7 @@ const withLiveEditor = (Component) => {
           resettable={!props.persist}
           download={!props.versioned && !props.noDownload}
           slim={!!props.slim}
+          showLineNumbers={!(!!props.slim && !/\n/.test(code))}
           versioned={!!props.versioned}
           noCompare={!!props.noCompare}
           title={sanitizedTitle(props.title) || lang}
