@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[5235],{77550:e=>{e.exports=JSON.parse('{"title":"v24","slug":"/category/v24-1","permalink":"/category/v24-1","navigation":{"previous":{"title":"Video Editieren","permalink":"/Video-Editor/video-editor"},"next":{"title":"Basics","permalink":"/byod-basics/v24/overview"}}}')}}]);
