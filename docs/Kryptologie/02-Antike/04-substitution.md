@@ -1,12 +1,11 @@
 ---
+sidebar_label: Substitution
 sidebar_custom_props:
   id: 5acac9b9-dd0f-4475-b4a3-f0d14ebcfe62
   source:
     name: rothe.io
     ref: https://rothe.io/?b=crypto&p=481987
 ---
-
-# Substitution
 
 import Substitution from "@site/src/components/VisualizationTools/Crypto/Substitution";
 

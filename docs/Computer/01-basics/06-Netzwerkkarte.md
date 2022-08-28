@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 6. Netzwerkkarte
 
-
-# 6. Netzwerkkarte
-
 Ein Computer ohne Möglichkeiten zur Kommunikation ist nicht mehr vorstellbar. Damit ein Computer sich in ein LAN einbinden kann, benötigt er eine Netzwerkkarte – sei es eine mit Kabelanschluss oder eine drahtlose für die Teilnahme in einem WLAN.
 
 

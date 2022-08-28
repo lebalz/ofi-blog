@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 5. Grafikkarte
 
-
-# 5. Grafikkarte
-
 Die Grafikkarte ist neben dem Prozessor die zweite wichtige Komponente, welche im Computer für die **Verarbeitung** von Daten zuständig ist. Grafikkarten haben folgende Aufgaben:
 
 - Erzeugen einer Pixelgrafik aus einer anderen Darstellungsform,

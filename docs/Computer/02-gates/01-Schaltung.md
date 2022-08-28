@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 1. Schaltung
 
-
-# 1. Schaltung
-
 Im folgenden betrachten wir digitale **Schaltungen**. Eine digitale Schaltung hat mindestens einen Eingang sowie einen oder mehrere Ausgänge. Da die Schaltung digital ist, sind bei jedem Eingang und Ausgang immer nur zwei Werte möglich: Null oder Eins.
 
 ![](images/01-circuit.svg)

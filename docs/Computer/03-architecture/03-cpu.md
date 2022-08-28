@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 63e61b21-bbd6-43d2-bbe9-8c684e0d9161
 ---
 
-# 3. Prozessor
-
 
 # 3. Prozessor
 ---

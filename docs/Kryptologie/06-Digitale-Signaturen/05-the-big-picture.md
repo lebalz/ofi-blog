@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # Zusammenfassung
 
-# Zusammenfassung
-
 ## Das grosse Ganze
 
 Verschlüsselte, signierte Nachrichten: Verknüpfung aller Verfahren.

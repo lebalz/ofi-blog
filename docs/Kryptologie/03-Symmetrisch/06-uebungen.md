@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 1a04affb-3d17-4f2f-ad01-8423c3bb8732
 ---
 
-# Übungen
-
 import {UPPER_NOSPACE} from '@site/src/components/Answer';
 import {TextEditor} from "@site/src/components/VisualizationTools/Pentacode";
 

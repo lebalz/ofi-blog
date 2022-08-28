@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # Kerckhoffs' Prinzip
 
-
-# Kerckhoffs' Prinzip
-
 In der Kryptologie ist der wichtigste Punkt stets die Sicherheit. Dabei ist es wichtig, Sicherheit von Schein-Sicherheit zu unterscheiden.
 
 ## Das Prinzip von Kerckhoffs

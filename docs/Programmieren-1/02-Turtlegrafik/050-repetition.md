@@ -4,8 +4,6 @@ sidebar_custom_props:
   id: b4d081fd-943b-42de-a587-a91321b06fa3
 ---
 
-# Repetition
-
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
 # 10. Repetitionsfragen

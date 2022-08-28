@@ -2,6 +2,8 @@
 sidebar_label: "Listen 1D"
 sidebar_custom_props:
   id: ad4d9802-8e3b-4706-bf2f-b6cac09a6cbd
+  source:
+    name: sdg
 ---
 import Hint from '@site/src/components/Solution/Hint'
 

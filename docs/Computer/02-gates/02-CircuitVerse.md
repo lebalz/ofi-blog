@@ -3,9 +3,6 @@ sidebar_custom_props:
   id: 9fb56ea9-eeff-4fd6-bf00-a9dac54afad5
 ---
 
-# 2. Circuit Verse
-
-
 # 2. CircuitVerse
 
 Wir arbeiten in diesem Kapitel zu den Logikgattern mit der Online-Plattform [CircuitVerse](https://circuitverse.org/). Dort können Schaltungen einfach geplant werden. Über diverse Eingabeelemente kann gesteuert werden, ob an den Eingängen eine 1️⃣ oder eine 0️⃣ anliegt. Mit verschiedenen Ausgabeelementen kann die gezeichnete Schaltung überprüft werden.

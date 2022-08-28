@@ -36,7 +36,7 @@ Im neunten Jahrhundert hat der arabische Gelehrte Abū Ya'qūb ibn Ishāq al-Kin
 ## Entschlüsselung durch Häufigkeitsanalyse
 Durch die Häufigkeitsanalyse werden Geheimtexte, die durch eine monoalphabetische Substitution verschlüsselt worden sind, grundsätzlich entzifferbar. Das heisst, sie können ohne Kenntnis des Schlüssels decodiert werden, indem eine Häufigkeitsanalyse vorgenommen wird. Für die Entzifferung einer Caesar-Chiffre genügt es, den häufigsten Buchstaben zu suchen und anschliessend denjenigen Schlüssel zu wählen, der E auf diesen häufigsten Buchstaben abbildet.
 
-# Häufigkeitsanalyse durchführen
+## Häufigkeitsanalyse durchführen
 
 <FrequencyAnalysis />
 

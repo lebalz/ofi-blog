@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 2a91ef4a-c9bc-4685-af0f-2fc0ddbf8669
 ---
 
-# WIFI Sniffing
-
 import Finding from "@site/src/components/Finding";
 
 # WIFI Sniffing

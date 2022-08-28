@@ -1,11 +1,12 @@
 ---
 sidebar_custom_props:
   id: b45ab1fa-8e0c-400c-bdaa-a1d4d1acd5eb
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=python-ref&p=968398
 ---
 
 # Häufige Fehler
-
-# Häufige Fehler [^1]
 
 
 Hier werden die zehn häufigsten Fehler in Python zusammengefasst.
@@ -75,6 +76,4 @@ Beispiele:
         print('🥳🥳🥳') # /   wiederholt
     print('--- Ende ---') 
     ```
-    
 
-[^1] Quelle: [rothe.io](https://rothe.io/?b=python-ref&p=968398)

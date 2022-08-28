@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # Dateiformat
 
-# Dateiformat
-
 Jeder Computer hat ein Dateisystem, welches Dateien organisiert und auffindbar macht. Die Anleitung, wie eine Datei gefunden werden kann, heisst Dateipfad. Eine Datei besitzt einen Namen und ein Dateiformat. Die Dateiendung beschreibt das Dateiformat und gibt Auskunft über die Art von Daten, welche in einer Datei enthalten sind. So weiss Ihr Betriebssystem bspw. mit welchem Programm eine Datei geöffnet werden soll. Ein Word-Dokument hat die Dateiendung `.docx`.
 
 ```

@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 4. Speicher
 
-
-# 4. Speicher
-
 Datenspeicher speichern Daten üblicherweise in binärer Form. Ein Datenspeicher besteht aus einem Speichermedium, auf welchem die Bits physikalisch repräsentiert werden.
 
 ## Kenngrössen

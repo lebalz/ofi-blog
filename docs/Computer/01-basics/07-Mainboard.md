@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 7. Hauptplatine
 
-
-# 7. Hauptplatine
-
 Der Grundbestandteil eines jeden Computers ist seine Hauptplatine (engl. *mainbaord* oder auch *motherboard* genannt). Die Elektronik auf der Hauptplatine verbindet Prozessor, RAM, etliche weitere verbaute Chips und sämtliche Peripherie, die über die zahlreichen Anschlüssen mit dem Computer verbunden werden kann.
 
 ![ASRock Mainboard](images/07-mainboard.jpg)

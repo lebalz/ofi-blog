@@ -48,7 +48,7 @@ counter = counter + 1     # counter = 4
 # --> wiederholung abbrechen
 ```
 
-# Was ist die Ausgabe des folgenden Programms?
+## Was ist die Ausgabe des folgenden Programms?
 
 ```py live_py id=f78c086e-30d9-4805-b3b8-fb4269ddd712
 from turtle import *

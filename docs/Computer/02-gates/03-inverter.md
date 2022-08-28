@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 3. Inverter
 
-
-# 3. Inverter
-
 Ein Inverter ist eine Schaltung, bei welcher der Ausgang Y den Wert 1 (hohe Spannung) hat, wenn der Eingang den Wert 0 (tiefe Spannung) hat und umgekehrt.
 
 <div className="slim-table">

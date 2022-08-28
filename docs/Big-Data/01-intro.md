@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 # Gesellschaft
 
-# Big Data
+## Big Data
 
 Mobiltelefone, Uhren, Sensoren, Kameras und Webseiten sammeln andauernd Informationen über uns. Algorithmen suchen mit Hilfe von Künstlicher Intelligenz in diesen riesigen Datensammlungen nach Mustern und teilen uns in Kategorien ein. Dies wird als «Big Data» bezeichnet.
 Hannah Fry zeigt in ihrem Buch [«Hello World»](https://www.chbeck.de/buehnen/hannah-fry-hello-world/) für verschiedene Bereiche anhand von Beispielen auf, was heute mit «Big Data» gemacht wird und welche Auswirkungen das auf unser Leben hat. Es stellt sich die Frage, wann «Big Data» wünschenswert und hilfreich ist und wann unangenehm oder sogar gefährlich.

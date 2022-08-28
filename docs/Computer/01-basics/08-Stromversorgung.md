@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 8. Stromversorgung
 
-
-# 8. Stromversorgung
-
 Die Stromversorgung eines Computers erfolgt über Gleichstrom (DC), das heisst, dass der Wechselstrom unseres Stromnetzes zuerst in Gleichstrom umgewandelt werden muss. Diese Funktion übernimmt das Netzteil.
 
 Das Netzteil eines Desktop-Computers ist stets eingebaut. Bei einem Notebook hingegen übernimmt ein externes Netzteil die Stromtransformation, da im Innern des Notebooks nicht genügend Platz dafür vorhanden ist.

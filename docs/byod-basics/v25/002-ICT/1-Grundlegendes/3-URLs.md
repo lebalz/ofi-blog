@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # Links
 
-# Links
-
 Ein **Link oder URL** (engl. uniform resource locator) ist eine globale, weltweit eindeutige  Adresse für eine Datei. Die URL definiert, wie mit dem anderen Computer kommuniziert wird, wo dieser Computer zu finden ist, und welche Datei auf dem Computer gemeint ist. Die URL setzt sich aus vier Teilen zusammen:
 
 ```

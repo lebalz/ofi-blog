@@ -2,6 +2,8 @@
 sidebar_label: Spielfeld Programmieren
 sidebar_custom_props:
   id: 81a2ca02-d6a4-42c0-8b24-833cabe500d6
+  source:
+    name: sdg
 ---
 
 # Jetzt gehts los!

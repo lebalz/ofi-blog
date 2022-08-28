@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 6. XOR-Gatter
 
-
-# 6. XOR-Gatter
-
 Ein XOR-Gatter (engl. *exclusive or*) hat der Ausgang Y dann den Wert 1️⃣, wenn Eingang A **oder** Eingang B **aber** nicht beide den Wert 1️⃣ haben.
 
 <div className="slim-table">

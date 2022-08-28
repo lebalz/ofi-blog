@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # Lernziele
 
-# Lernziele
-
 :::note Verschlüsselungsverfahren
 - Sie verstehen das Prinzip symmetrischer Verschlüsselungsverfahren und verwenden das Wissen in Beispielen mit antiken Verfahren an.
 - Sie knacken antike symmetrische Verfahren (Häufigkeitsanalysen, Brute Force, ...).

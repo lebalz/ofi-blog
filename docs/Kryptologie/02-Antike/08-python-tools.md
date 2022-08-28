@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # ⭐️ Antike Verschlüsselung mit Python
 
-# ⭐️ Antike Verschlüsselung mit Python
-
 ## Skytale
 
 

@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 01beb2d3-ccba-4eeb-bd1b-e0ca943a9b01
 ---
 
-# 3. Fehlerkorrektur
-
 import Bin2Text from '@site/src/components/VisualizationTools/Bin2Text';
 
 # 3. Fehlerkorrektur

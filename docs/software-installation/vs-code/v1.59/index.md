@@ -7,9 +7,6 @@ sidebar_custom_props:
 
 import OsTabs from '@site/src/components/OsTabs'
 
-
-# VS Code
-
 > Visual Studio Code (kurz VS Code) ist ein kostenloser und Quelloffener Editor von Microsoft. VS Code ist plattformübergreifend für die Betriebssysteme Windows, macOS und Linux verfügbar. [^1]
 
 

@@ -4,9 +4,6 @@ sidebar_custom_props:
 ---
 
 # 3. Prozessor
-
-
-# 3. Prozessor
 ---
 
 Der Prozessor ist für die **Verarbeitung** von Daten im Computer zuständig. Ausserdem überwacht und steuert er den Ablauf von Programmen.

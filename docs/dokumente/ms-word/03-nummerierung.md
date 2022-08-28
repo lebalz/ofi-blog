@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # Nummerierung und Bilder
 
-# Nummerierung und Bilder
-
 In diesem Abschnitt lernen Sie, wie In Word
 - Seiten
 - Überschriften

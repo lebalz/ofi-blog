@@ -1,9 +1,9 @@
 ---
+sidebar_label: Podcast
 sidebar_custom_props:
   id: 65e7a7a2-2aee-44cd-854f-63d81861499b
 ---
 
-# Podcast
 import OsTabs from '@site/src/components/OsTabs';
 
 # Erstellen eines Podcast

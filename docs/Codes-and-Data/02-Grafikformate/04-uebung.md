@@ -1,4 +1,5 @@
 ---
+sidebar_label: 4. Übung
 sidebar_custom_props:
   id: 30043ba8-dd09-4c10-aeee-d4c119daadfe
   source:
@@ -6,7 +7,6 @@ sidebar_custom_props:
     ref: https://informatik.mygymer.ch/base/?b=code&p=922802
 ---
 
-# 4. Übung
 # Rastergrafik praktisch
 
 :::aufgabe 1. JPEG-Format

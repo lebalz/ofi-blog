@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # 3. Freie Open Source Software
 
-# 3. Freie Open Source Software
-
 :::cards --columns=2
 ![Europalette](images/03-palette.jpg)
 ***

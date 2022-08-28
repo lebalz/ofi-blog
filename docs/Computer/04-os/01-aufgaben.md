@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 1. Aufgaben eines Betriebssystems
 
-
-# 1. Aufgaben eines Betriebssystems
-
 ## Was ist ein Betriebssystem?
 
 Ein **Betriebssystem** (engl. *operating system*, kurz *OS*) ist eine Sammlung von Softwarekomponenten, die das Nutzen von Anwenderprogrammen erst möglich macht.

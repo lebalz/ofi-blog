@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 827d30dc-6c33-465e-b49d-4b0b4e506939
 ---
 
-# Powerpoint
-
 import Hint from '@site/src/components/Solution/Hint'
 
 # Powerpoint

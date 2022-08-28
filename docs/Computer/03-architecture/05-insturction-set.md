@@ -5,10 +5,6 @@ sidebar_custom_props:
 
 # 5. Befehlssatz
 
-
-
-# 5. Befehlssatz
-
 Der Befehlssatz ist die komplette Sammlung von Befehlen, welche ein Prozessor versteht und ausführen kann. Im folgenden werden einige typische Befehle betrachtet.
 
 ## Wert laden

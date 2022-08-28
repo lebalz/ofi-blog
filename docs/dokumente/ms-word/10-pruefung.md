@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # Prüfung
 
-# Prüfung
-
 **Dauer**: 45 Minuten
 
 **Benotung**: Die Note zählt $0.5$

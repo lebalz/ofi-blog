@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 2. Betriebssysteme
 
-
-# 2. Betriebssysteme
-
 ## Bekannte Betriebssysteme
 Die Liste sämtlicher Betriebssysteme ist zu lange und zu unüberschaubar, um sie hier alle einzeln aufzuführen. Wir beschränken uns auf einige wichtige Betriebssysteme, die wir im Alltag häufig antreffen.
 

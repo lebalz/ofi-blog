@@ -1,11 +1,11 @@
 ---
 sidebar_custom_props:
   id: a61ade2b-ff78-4b2a-ae2c-1092ed95e15a
+  source:
+    name: sgd
 ---
 
 # Benutzerverwaltung
-
-# Benutzerverwaltung [^1]
 
 Wenn ein Computer von mehr als einer Person benutzt werden kann, so ist es wichtig, dass die Daten der einzelnen Benutzerinnen\* geschützt sind und die Benutzerinnen einander nicht stören können. 
 
@@ -20,5 +20,3 @@ Wer über ein Administratorkonto auf einem Rechner verfügt, beherrscht diesen C
 Normale Benutzerkonten erlauben das Benutzen des Computers für die üblichen Arbeiten (Dokumente erstellen, bearbeiten, im Internet surfen, etc.). Man sollte aus Sicherheitsgründen auch auf einem nur persönlich genutzten Computer immer ein normales Benutzerkonto einrichten, mit welchem man arbeitet. 
 
 \* Es sind explizit auch Benutzer gemeint.
-
-[^1]: Quelle: A. Scheidegger

@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 9. Ebenen
 
-
-# 9. Ebenen
-
 Wie die Netzwerke kann auch der Computer selber auf verschiedenen **Ebenen** betrachtet werden.
 
 ![Hardware-Ebenen](images/09-layers.svg)

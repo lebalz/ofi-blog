@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: d149fbea-9849-4877-9be9-4f07ea8d2272
 ---
 
-# 1. Von-Neumann-Architektur
-
 # 1 Von-Neumann-Architektur
 
 Die **Rechnerarchitektur** beschreibt die interne Organisation eines Computers. Es gibt zwei verbreitete Architekturen. Beide sind gegen Ende des zweiten Weltkriegs entstanden, als die ersten elektronischen Computer entwickelt worden sind:

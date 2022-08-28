@@ -1,9 +1,8 @@
 ---
+sidebar_label: 6. Übungen
 sidebar_custom_props:
   id: 4ee7534f-157f-4dca-be32-220a84c0a21d
 ---
-
-# 6. Übungen
 
 import BinDecoder from '@site/src/components/VisualizationTools/BinDecoder'
 

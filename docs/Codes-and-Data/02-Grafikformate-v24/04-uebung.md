@@ -4,8 +4,6 @@ sidebar_custom_props:
   id: bb1ec326-d699-4eb2-b275-27ce24172ca7
 ---
 
-# 4. Übung
-
 import OsTabs from '@site/src/components/OsTabs'
 
 

@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: e8d74888-0272-40dc-ba7c-1e3f7891f90b
 ---
 
-# Docusuaurus
-
 # Docusaurus
 - [Docusaurus](https://docusaurus.io/)
 

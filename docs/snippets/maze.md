@@ -5,8 +5,7 @@ sidebar_custom_props:
 
 # Labyrinth
 
-
-# Ausgangslage für die Programmierung eines prefekten Labyrinths
+## Ausgangslage für die Programmierung eines prefekten Labyrinths
 
 ```py live_py id=6d768094-8526-4e7d-831b-3ae04f73e017
 from random import choice

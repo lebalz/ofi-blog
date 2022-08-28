@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 4. Von-Neumann-Zyklus
 
-
-# 4. Von-Neumann-Zyklus
-
 Der Prozessor führt immer wieder den gleichen zyklischen Ablauf aus. Dieser Ablauf wird auch **Von-Neumann-Zyklus** genannt und besteht aus folgenden Schritten:
 
 ![](images/04-cycle.svg)

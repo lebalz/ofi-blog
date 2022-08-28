@@ -143,7 +143,7 @@ Unter [https://to-do.office.com/](https://to-do.office.com/).
 - Mit Zeitbeschränkung
 - Mit Benachrichtigung
 
-# Touch-Gesten
+## Touch-Gesten
 
 Weitere Gesten [hier](https://support.apple.com/de-ch/HT204895)
 

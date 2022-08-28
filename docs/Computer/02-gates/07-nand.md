@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 7. NAND-Gatter
 
-
-# 7. NAND-Gatter
-
 Ein NAND-Gatter (engl. *not and*) hat der Ausgang Y dann den Wert 0️⃣, wenn Eingange A **und** Eingang B den Wert 1️⃣ haben.
 
 <div className="slim-table">

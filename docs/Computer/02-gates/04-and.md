@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # 4. AND-Gatter
 
-
-# 4. AND-Gatter
-
 Ein AND-Gatter ist eine digitale Schaltung, welche zwei Eingänge und einen Ausgang hat. Der Ausgang Y hat nur dann den Wert 1️⃣, wenn Eingange A **und** Eingang B den Wert 1️⃣ haben.
 
 ## Wahrheitstabelle

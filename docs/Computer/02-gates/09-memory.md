@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # 9. ⭐️ Speicher
 
-# 9. ⭐️ Speicher
-
 Die bisherigen Schaltungen für den Einbruchsalarm haben einen grossen Nachteil: sobald der Bewegungsmelder keine Bewegung mehr entdeckt, wird der Alarm abgestellt.
 
 Ein guter Einbruchsalarm sollte aber nicht mehr abschalten. Die Schaltung sollte die Information, dass eine Bewegung entdeckt wurde, speichern können.

@@ -2,11 +2,14 @@
 sidebar_label: Turtle Befehle
 sidebar_custom_props:
   id: ed2978d9-3d4b-426d-b3fd-fe7d5a7cab9b
+  source:
+    name: Python.org
+    ref: https://docs.python.org/3/library/turtle.html
 ---
 
 import RGB from "@site/src/components/VisualizationTools/ColorEncoding/RGB";
 
-# Turtle Befehle [^1][^2]
+# Turtle Befehle
 
 ## Bewegungen
 
@@ -248,6 +251,3 @@ Legt die Geschwindigkeit `v` der Turtle fest.
 
 (Schnellstmögliche Geschwindigkeit kann mit `speed(0)` festgelegt werden.)
 :::
-
-[^1]: Quelle: [Python.org](https://docs.python.org/3/library/turtle.html)
-[^2]: Quelle: [rothe.io](https://rothe.io/?b=prog1&p=102461)

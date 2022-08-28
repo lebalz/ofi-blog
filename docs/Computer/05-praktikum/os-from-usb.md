@@ -6,8 +6,6 @@ sidebar_custom_props:
 
 # Vom USB-Stick starten
 
-# Vom USB-Stick starten
-
 Damit ein Betriebssystem von einem USB-Stick geladen werden kann, muss
 - die Startreihenfolge (*Boot Order*) so eingestellt werden, dass der Computer zuerst die USB-Eingänge nach Startfähigem Speicher überprüft
 - der USB-Stick muss startfähig (*bootfähig*) sein.

@@ -1,12 +1,11 @@
 ---
 sidebar_custom_props:
   id: 4f87f30c-b269-4c98-b092-fc0145d69a68
+  source:
+    name: sdg
 ---
 
-# Domain Name System
-
-
-# Domain-Name-System [^1]
+# Domain-Name-System
 
 :::info Ziele
 - Was ist ein Domain-Name?
@@ -41,7 +40,7 @@ Diese Namen werden als **Domain-Names** bezeichnet und das Verzeichnis, wo sie d
 
 ## Funktionsweise
 
-Es gibt auf der Welt bald **2 Milliarden**[^2] Webseiten, verteilt auf ca. 200 Millionen Server. Jeder Server beherbergt also durchschnittlich 10 Webseiten. Für jeden dieser Server braucht es eine öffentliche IP-Adresse, damit der Server im Internet erreichbar ist. Wenn man die IP-Adresse des Servers kennt, könnte man theoretisch versuchen im Browser statt des Domain-Namens einer Web-Site direkt die IP-Adresse des Servers einzugeben, also statt www.instgram.com die IP-Adresse 157.240.17.174.
+Es gibt auf der Welt bald **2 Milliarden**[^1] Webseiten, verteilt auf ca. 200 Millionen Server. Jeder Server beherbergt also durchschnittlich 10 Webseiten. Für jeden dieser Server braucht es eine öffentliche IP-Adresse, damit der Server im Internet erreichbar ist. Wenn man die IP-Adresse des Servers kennt, könnte man theoretisch versuchen im Browser statt des Domain-Namens einer Web-Site direkt die IP-Adresse des Servers einzugeben, also statt www.instgram.com die IP-Adresse 157.240.17.174.
 
 Wie schon in der Einleitung erwähnt, wird das niemand tun, weil man sich diese IP-Adresse nicht merken kann und sie mit der Zeit auch ändern könnte (z.B. wenn die Web-Site auf einen anderen Server gezügelt wird). Ganz abgesehen davon, dass es auch nicht ausreichen würde, nur die IP-Adresse anzugeben, weil ja eben mehrere Web-Sites an einer bestimmten Adresse «zuhause» sein können.
 
@@ -201,5 +200,4 @@ Ausschnitt: Start bis 2:51 Minuten.
 Sie haben nun das Domain-Name-System kennengelernt. Es ist eines der wichtigsten Teile des Internet. Sie haben gesehen, wie man zu einem Domain-Name die zugehörige IP-Adresse erhält. Sie haben auch eine Idee von den Konsequenzen erhalten, wenn das Domain-Name-System nicht so funktioniert, wie erwartet, beispielsweise wegen einer Attacke durch Hacker (*DNS-Hijacking*). Solche Attacken können in unserer vernetzten Welt einen enormen wirtschaftlichen Schaden verursachen.
 
 
-[^1]: Quelle: Arbeitsblatt A. Scheidegger
-[^2]: Quelle: [internetlivestats](https://www.internetlivestats.com/total-number-of-websites/)
+[^1]: Quelle: [internetlivestats](https://www.internetlivestats.com/total-number-of-websites/)

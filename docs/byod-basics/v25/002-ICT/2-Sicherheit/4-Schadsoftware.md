@@ -5,9 +5,6 @@ sidebar_custom_props:
 
 # Schadsoftware
 
-
-# Schadsoftware
-
 ![Ransomware Wanna Cry](./images/wanna_cry.jpg)
 
 Schadsoftware oder Schadprogramm (auch **Malware**) sind Computerprogramme, welche entwickelt wurden, um aus Sicht der Betroffenen unerwünschte und schädliche Funktionen auszuführen.
