@@ -15,6 +15,7 @@
     &:hover {
         --ifm-badge-background-color: var(--ifm-color-primary);
         color: var(--ifm-color-secondary);
+        border-width: 0px;
     }
 }
 
