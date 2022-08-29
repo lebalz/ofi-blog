@@ -9,9 +9,9 @@ Jeder Computer hat ein Dateisystem, welches Dateien organisiert und auffindbar m
 
 ```
  C:\Users\reto\OneDrive - EDUBERN\Informatik\01-Word\dokument.docx
-└┬┘ └─┬──┘     └────────┬────────┘                   └─┬────┘ └─┬─┘
+└┬┘ └─┬───────┘└────────┬────────┘                   └─┬────┘ └─┬─┘
  |   Ordner         OneDrive                           |    Dateiformat
-Laufwerk                                             Name
+Laufwerk                                           Dateiname
 ```
 
 Wenn Sie in Word ein Dokument abspeichern, gibt es im wesentlichen zwei Möglichkeiten, die zum selben Ziel führen:
