@@ -12,7 +12,6 @@ import { Handle, SliderTooltip } from 'rc-slider';
 import { reaction } from 'mobx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSync } from '@fortawesome/free-solid-svg-icons';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface Props {
     webKey: string;
@@ -91,7 +90,7 @@ const CodeHistory = observer((props: Props) => {
                         className={clsx(styles.faButton)}
                         color={'var(--ifm-color-primary)'}
                         spin={pyScript.versionsLoaded === 'loading'}
-                        icon={faSync as IconProp}
+                        icon={faSync}
                         onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();

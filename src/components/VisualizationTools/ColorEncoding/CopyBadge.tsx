@@ -3,7 +3,7 @@ import * as React from 'react';
 import styles from './styles.module.scss';
 import { faCircleNotch, faClipboard, faClipboardCheck, faTimesCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 
 
 interface Props {
@@ -53,7 +53,7 @@ const CopyBadge = (props: Props) => {
         >
             {props.label || props.value}
             <span className={clsx(styles.copyIcon)}>
-                <FontAwesomeIcon icon={CopyIcon[copyState] as IconProp} color={CopyColor[copyState]}/>
+                <FontAwesomeIcon icon={CopyIcon[copyState]} color={CopyColor[copyState]}/>
             </span>
         </span>
     );

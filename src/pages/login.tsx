@@ -11,7 +11,7 @@ import UserTable from './admin/UserTable';
 import { data } from '../api/user';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -58,7 +58,7 @@ const Login = observer(() => {
                                 }}
                                 title="Download"
                             >
-                                Alle Persönliche Daten herunterladen <FontAwesomeIcon icon={faDownload as IconProp} />
+                                Alle Persönliche Daten herunterladen <FontAwesomeIcon icon={faDownload} />
                             </button>
                             <div style={{height: '3em'}}></div>
 

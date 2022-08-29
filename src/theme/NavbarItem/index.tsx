@@ -18,7 +18,7 @@ import styles from './index.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft, faArrowAltCircleRight, faSync, faTshirt, faBicycle } from '@fortawesome/free-solid-svg-icons';
 import { runInAction } from 'mobx';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 
 const currentVersion = (versions: typeof NavbarItem[]): typeof NavbarItem | undefined => {
     return versions.find((v) => v.path.length > 1 && window.location.pathname.startsWith(v.path));
@@ -42,7 +42,7 @@ const withLoginNavbar = (Component) => {
                         className={clsx('badge', styles.badgeButton, 'badge--secondary', 'badge--sm')}
                         onClick={() => adminStore.toggleAdminElements()}
                     >
-                        <FontAwesomeIcon icon={(adminStore.showAdminElements ? faTshirt : faBicycle) as IconProp} />
+                        <FontAwesomeIcon icon={(adminStore.showAdminElements ? faTshirt : faBicycle)} />
                     </button>
                     {adminStore.showAdminElements && (
                         <>
@@ -58,7 +58,7 @@ const withLoginNavbar = (Component) => {
                                     });
                                 }}
                             >
-                                <FontAwesomeIcon icon={faSync as IconProp} />
+                                <FontAwesomeIcon icon={faSync} />
                             </button>
                             <button
                                 className={clsx('badge', 'badge--secondary', 'badge--sm', styles.badgeButton)}
@@ -72,7 +72,7 @@ const withLoginNavbar = (Component) => {
                                     }
                                 }}
                             >
-                                <FontAwesomeIcon icon={faArrowAltCircleLeft as IconProp} />
+                                <FontAwesomeIcon icon={faArrowAltCircleLeft} />
                             </button>
                             <div className={clsx(styles.navBadge, 'dropdown', 'dropdown--hoverable')}>
                                 <button
@@ -114,7 +114,7 @@ const withLoginNavbar = (Component) => {
                                     }
                                 }}
                             >
-                                <FontAwesomeIcon icon={faArrowAltCircleRight as IconProp} />
+                                <FontAwesomeIcon icon={faArrowAltCircleRight} />
                             </button>
                         </>
                     )}

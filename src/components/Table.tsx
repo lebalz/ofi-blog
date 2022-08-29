@@ -4,7 +4,6 @@ import { faUmbrellaBeach as holiday, faGraduationCap as test, faCalendarDay as e
 import styles from './Table.module.scss';
 import clsx from 'clsx';
 import { WEEK_DAYS } from '../helpers/time';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export enum Type {
   Holiday = 'holiday',
@@ -84,7 +83,7 @@ export class Row extends React.Component<RowProps> {
     if (!this.props.type) {
       return;
     }
-    return <FontAwesomeIcon icon={ICON_MAPPING[this.props.type] as IconProp} />
+    return <FontAwesomeIcon icon={ICON_MAPPING[this.props.type]} />
   }
   render() {
     const { type, cells } = this.props

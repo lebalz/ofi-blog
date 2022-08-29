@@ -6,7 +6,7 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft, faArrowAltCircleRight, faDownload } from '@fortawesome/free-solid-svg-icons';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 
 interface Props {
     file: string;
@@ -146,7 +146,7 @@ const PdfViewer = (props: Props) => {
                             className={clsx(styles.download, 'button', 'button--secondary', 'button--sm')}
                             download={props.name}
                         >
-                            <FontAwesomeIcon icon={faDownload as IconProp} />
+                            <FontAwesomeIcon icon={faDownload} />
                         </a>
                     )}
                 </Document>
@@ -159,7 +159,7 @@ const PdfViewer = (props: Props) => {
                                 className={clsx('button', 'button--secondary', 'button--sm')}
                                 onClick={previousPage}
                             >
-                                <FontAwesomeIcon icon={faArrowAltCircleLeft as IconProp} />
+                                <FontAwesomeIcon icon={faArrowAltCircleLeft} />
                             </button>
                             <button className={clsx('button', 'button--secondary', 'button--sm')} disabled>
                                 {pageNumber || (numPages ? 1 : '--')} / {numPages || '--'}
@@ -168,7 +168,7 @@ const PdfViewer = (props: Props) => {
                                 className={clsx('button', 'button--secondary', 'button--sm')}
                                 onClick={nextPage}
                             >
-                                <FontAwesomeIcon icon={faArrowAltCircleRight as IconProp} />
+                                <FontAwesomeIcon icon={faArrowAltCircleRight} />
                             </button>
                         </div>
                     )}

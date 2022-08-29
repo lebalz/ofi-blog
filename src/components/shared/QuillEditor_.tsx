@@ -17,7 +17,7 @@ import { FORMATS, getToolbar, TOOLBAR, ToolbarOptions } from './quillConfig';
 import SaveService from '@site/src/models/SaveService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faSync } from '@fortawesome/free-solid-svg-icons';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 import { reaction } from 'mobx';
 
 export interface iTextData {
@@ -277,11 +277,11 @@ const QuillEditor = observer((props: Props) => {
                 {processingImage && <Loader caption="Bild Einfügen..." overlay />}
                 <span style={{ minWidth: '1em' }} className={styles.saveIndicator}>
                     {model.saveService.state === 'save' && (
-                        <FontAwesomeIcon icon={faSync as IconProp} style={{ color: '#3578e5' }} spin />
+                        <FontAwesomeIcon icon={faSync} style={{ color: '#3578e5' }} spin />
                     )}
                     {showSavedNotification && (
                         <FontAwesomeIcon
-                            icon={faCheckCircle as IconProp}
+                            icon={faCheckCircle}
                             style={{ color: 'var(--ifm-color-success)' }}
                         />
                     )}

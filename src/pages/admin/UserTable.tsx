@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 import { runInAction } from 'mobx';
 import { faArrowDown, faArrowUp, faTimesCircle, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 
 
 export type SortCol = 'id' | 'email' | 'created_at';
@@ -31,7 +31,7 @@ const SortArrow = observer((props: SortProps) => {
             }}
         >
             {userStore.sortColumn === props.column ? (
-                <FontAwesomeIcon icon={(userStore.sortOrder === 'asc' ? faArrowDown : faArrowUp) as IconProp} />
+                <FontAwesomeIcon icon={(userStore.sortOrder === 'asc' ? faArrowDown : faArrowUp)} />
             ) : (
                 <i className={clsx('mdi', 'mdi-arrow-up-down')}></i>
             )}
@@ -48,7 +48,7 @@ const GroupBadge = observer((props: GroupBadgeInterface) => {
     return (
         <span className={clsx(styles.group, 'badge', 'badge--primary')}>
             {props.name}
-            <FontAwesomeIcon icon={faTimesCircle as IconProp} onClick={props.onRemove} />
+            <FontAwesomeIcon icon={faTimesCircle} onClick={props.onRemove} />
         </span>
     );
 });
@@ -217,7 +217,7 @@ const UserTable = observer(() => {
                                             'button--sm'
                                         )}
                                     >
-                                        <FontAwesomeIcon icon={faPlus as IconProp} />
+                                        <FontAwesomeIcon icon={faPlus} />
                                     </button>
                                     <ul className="dropdown__menu">
                                         {Array.from(new Set([undefined, ...userStore.groups, ...policyStore.groups])).map((group, idx) => {
