@@ -29,16 +29,6 @@ export default class SolutionPolicy {
         makeObservable(this);
     }
 
-    @computed
-    get isConfigOpen() {
-        return this.store.openPolicyConfigWebKey === this.webKey;
-    }
-
-    @action
-    showConfig(open: boolean) {
-        this.store.setOpenPolicyConfigWebKey(open ? this.webKey : '');
-    }
-
     @action
     setLocked(locked: boolean) {
         this.locked = locked;

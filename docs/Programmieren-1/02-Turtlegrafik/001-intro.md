@@ -125,7 +125,6 @@ dot()
     <span style={{ backgroundColor: "rgb(255, 194, 102)" }}>dot</span>()
   </p>
 </div>
-
 </Solution>
 :::
 

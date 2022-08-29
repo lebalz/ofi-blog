@@ -60,13 +60,13 @@ const Config = observer((props: ConfigProps) => {
         <div className={clsx(styles.configContainer)}>
             <div className={clsx(styles.showControl)}>
                 <FontAwesomeIcon
-                    icon={policy.isConfigOpen ? faTimesCircle : faEllipsisH}
+                    icon={store.isConfigOpen ? faTimesCircle : faEllipsisH}
                     onClick={() => {
-                        policy.showConfig(!policy.isConfigOpen);
+                        store.showConfig(!store.isConfigOpen);
                     }}
                 />
             </div>
-            {policy.isConfigOpen && (
+            {store.isConfigOpen && (
                 <div className={clsx(styles.config)}>
                     <div className={clsx(styles.permissions)}>
                         {Array.from(policy.klasses).map((g, idx) => {

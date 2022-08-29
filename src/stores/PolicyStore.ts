@@ -34,8 +34,7 @@ export class PolicyStore {
     policies = observable<SolutionPolicy>([]);
 
     @observable initialized: boolean = false;
-    @observable
-    openPolicyConfigWebKey = '';
+    @observable isConfigOpen: boolean = false;
 
     constructor(root: RootStore) {
         this.root = root;
@@ -49,8 +48,8 @@ export class PolicyStore {
     }
 
     @action
-    setOpenPolicyConfigWebKey(webKey: string) {
-        this.openPolicyConfigWebKey = webKey;
+    showConfig(show: boolean) {
+        this.isConfigOpen = show;
     }
 
     @computed
