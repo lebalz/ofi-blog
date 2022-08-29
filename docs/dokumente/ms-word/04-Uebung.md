@@ -14,7 +14,9 @@ Kopieren Sie den untenstehenden Text inkl. der Bilder und formatieren Sie das Do
 <div style={{maxHeight: '600px', overflow: 'auto'}}>
 
 ![](images/word-week3-p1.png)
+
 ![](images/word-week3-p2.png)
+
 ![](images/word-week3-p3.png)
 
 </div>

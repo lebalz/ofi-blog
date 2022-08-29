@@ -76,15 +76,25 @@ Laden Sie das Word-Dokument [ex02-machine-learning.docx](files/ex02-machine-lear
 <div style={{maxHeight: '450px', overflow: 'auto'}}>
 
 ![](images/word-nummerierung-01.png)
+
 ![](images/word-nummerierung-02.png)
+
 ![](images/word-nummerierung-03.png)
+
 ![](images/word-nummerierung-04.png)
+
 ![](images/word-nummerierung-05.png)
+
 ![](images/word-nummerierung-06.png)
+
 ![](images/word-nummerierung-07.png)
+
 ![](images/word-nummerierung-08.png)
+
 ![](images/word-nummerierung-09.png)
+
 ![](images/word-nummerierung-10.png)
+
 ![](images/word-nummerierung-11.png)
 
 </div>

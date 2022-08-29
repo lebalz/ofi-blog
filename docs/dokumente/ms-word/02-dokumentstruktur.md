@@ -43,13 +43,11 @@ Unter **Layout** lassen sich viele *Abschnitt-Einstellungen* vornehmen und auch 
 
 Jeder Abschnitt kann unabhängig vom Vorhergehenden/Nachfolgenden konfiguriert werden. Im Beispiel oben werden also zwei Fortlaufende Umbrüche (`Umbrüche>(Abschnittumbrüche)>Fortlaufend`) eingefügt, damit kein Seitenwechsel passiert.
 
-<div className="no-table-header top">
-
-| -                                     |                                           |
-| :------------------------------------ | :---------------------------------------- |
-| ![](images/word-seite-einrichten.png) | ![](images/word-seite-einrichten-pro.png) |
-
-</div>
+:::flex
+![](images/word-seite-einrichten.png) 
+***
+![](images/word-seite-einrichten-pro.png)
+:::
 
 #### Silbentrennung
 
@@ -68,13 +66,11 @@ Es gibt vordefinierte Formatvorlagen, die einem Absatz zugewiesen werden können
 
 Die Formatvorlagen können auch nach den eigenen Wünschen **angepasst** werden:
 
-<div className="no-table-header top">
-
-|                                             |                                         |
-| :------------------------------------------ | :-------------------------------------- |
-| ![](images/word-formatvorlage-edit-pre.png) | ![](images/word-formatvorlage-edit.png) |
-
-</div>
+:::flex
+![](images/word-formatvorlage-edit-pre.png)
+***
+![](images/word-formatvorlage-edit.png)
+:::
 
 :::tip
 Erstellen Sie keine neuen Formatvorlagen für Überschriften sonder passen Sie die vorhandenen Vorlagen an. So funktioniert die Nummerierung und das automatische Inhaltsverzeichnis ohne weitere Konfiguration.
@@ -84,14 +80,20 @@ Erstellen Sie keine neuen Formatvorlagen für Überschriften sonder passen Sie d
 
 ![--width=550px](images/word-tabstopps.png)
 
-- Tabstopps `┗` `┻` `┛`
-  - der Cursor springt beim Drücken der Tabulator-Taste `⭾` bis zu diesem Tabstopp.
-  - Die Ausrichtung bestimmt, wie der Tabulator-Text ausgerichtet wird.
-  - Die Ausrichtung kann durch Doppelklicken auf den Tabstopp geändert werden.
-- Linker Einzug `⧋`
-  - Der gesamte Absatz wird eingerückt.
-- Erstzeileneinzug `▽`
-  - Die erste Zeile eines Absatzes kann eigens kontrolliert werden.
+Tabstopps
+: [[┗]] [[┻]] [[┛]]
+: der Cursor :mdi-cursor-text: springt beim Drücken der Tabulator-Taste [[:mdi-keyboard-tab:]] bis zu diesem Tabstopp.
+: Die Ausrichtung bestimmt, wie der Tabulator-Text ausgerichtet wird:
+: [[┗]] :mdi-arrow-right-thin: :mdi-format-align-left:  
+: [[┻]] :mdi-arrow-right-thin: :mdi-format-align-center:  
+: [[┛]] :mdi-arrow-right-thin: :mdi-format-align-right:
+: Die Ausrichtung kann durch Doppelklicken auf den Tabstopp geändert werden.
+Linker Einzug
+: [[⧋]]
+: Der gesamte Absatz wird eingerückt.
+Erstzeileneinzug
+: [[▽]]
+: Die erste Zeile eines Absatzes kann eigens kontrolliert werden.
 
 :::tip
 Unter **Ansicht > Anzeige** kann das Lineal eingeblendet werden.
@@ -103,9 +105,11 @@ Unter **Ansicht > Anzeige** kann das Lineal eingeblendet werden.
 - Zeilenabstand (der Zeilenabstand innerhalb eines Absatzes)
 - Absatzabstand (der Abstand zum vorherigen/nächsten Absatz)
 
-| `Start`                     | `Layout`                     |
-| :-------------------------- | :--------------------------- |
-| ![](images/word-absatz.png) | ![](images/word-absatz2.png) |
+:::flex --align-items=flex-end
+![Menüband __Start__](images/word-absatz.png)
+***
+![Menüband __Layout__](images/word-absatz2.png)
+:::
 
 
 :::tip
