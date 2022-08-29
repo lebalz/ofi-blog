@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[2584],{94075:e=>{e.exports=JSON.parse('{"title":"ICT","slug":"/category/ict","permalink":"/25h/category/ict","navigation":{"previous":{"title":"Basics","permalink":"/25h/BYOD-Basics/overview"},"next":{"title":"Grundlegendes","permalink":"/25h/category/grundlegendes"}}}')}}]);

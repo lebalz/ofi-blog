@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[7472],{29103:e=>{e.exports=JSON.parse('{"title":"BYOD Basics","slug":"/category/byod-basics","permalink":"/25h/category/byod-basics","navigation":{"previous":{"title":"25h","permalink":"/25h/home"},"next":{"title":"Basics","permalink":"/25h/BYOD-Basics/overview"}}}')}}]);
