@@ -1,9 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
-// @ts-ignore
 import Tabs from '@theme/Tabs';
-// @ts-ignore
 import TabItem from '@theme/TabItem';
 
 interface Props {
@@ -30,7 +28,7 @@ const GTabs = (props: Props) => {
                         {props.getLabel(idx)}
                     </span>
                 );
-                return { value: getValue(idx), label };
+                return { value: getValue(idx), label: label as any as string };
             })}
         >
             {props.children.map((item, idx) => (

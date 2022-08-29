@@ -6,12 +6,10 @@
  */
 
 import React from 'react';
-// @ts-ignore
 import CodeBlock from '@theme-init/CodeBlock';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { sanitizedTitle, sanitizeId } from '../../utils/sanitizers';
 import hashCode from '../../utils/hash_code';
-// @ts-ignore
 import PyAceEditor from '@site/src/components/CodeEditor';
 import { v4 as uuidv4 } from 'uuid';
 

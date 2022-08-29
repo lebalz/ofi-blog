@@ -6,7 +6,6 @@
  */
 
 import React from 'react';
-// @ts-ignore
 import NavbarItem from '@theme-original/NavbarItem';
 import { useStore } from '../../stores/hooks';
 import Link from '@docusaurus/Link';

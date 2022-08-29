@@ -1,9 +1,10 @@
 import React from 'react';
 import Content from '@theme-original/DocItem/Content';
-// @ts-ignore
 import type ContentType from '@theme/DocItem/Content';
 import type { WrapperProps } from '@docusaurus/types';
-import { useComments, useStore } from '@site/src/stores/hooks';
+import { useComments } from '@site/src/stores/hooks';
+
+// @ts-ignore
 import useFrontMatter from '@theme/useFrontMatter';
 import { observer } from 'mobx-react-lite';
 import styles from './styles.module.scss';

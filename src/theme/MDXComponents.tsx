@@ -9,9 +9,7 @@ import Solution from '../components/Solution';
 import Comment from '../components/Comment';
 import GTabs from '../components/GTabs';
 
-// @ts-ignore
 import Tabs from '@theme/Tabs';
-// @ts-ignore
 import TabItem from '@theme/TabItem';
 
 export default {

@@ -1,5 +1,4 @@
 import React from 'react';
-// @ts-ignore
 import Tabs from '@theme/Tabs';
 
 type OsType = 'win10' | 'win11' | 'win' | 'mac';
