@@ -138,6 +138,21 @@
       "from": "docs/Programmieren-1/01-Algorithmen/",
       "to": "versioned_docs/version-26e/03-Programmieren-1/01-Algorithmen",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/images/",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/images",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/001-intro.md",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/001-intro.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/002-screen.md",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/002-screen.md",
+      "ignore": []
     }
   ],
   "26P": [
@@ -159,6 +174,21 @@
     {
       "from": "docs/Programmieren-1/01-Algorithmen/",
       "to": "versioned_docs/version-26P/03-Programmieren-1/01-Algorithmen",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/images/",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/images",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/001-intro.md",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/001-intro.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/002-screen.md",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/002-screen.md",
       "ignore": []
     }
   ],

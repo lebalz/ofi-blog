@@ -47,12 +47,12 @@ Alle Befehle in Python sind nach demselben Schema aufgebaut:
 
 ```
        forward(90)
-       \...../  \
+       \_____/  \
          /    Parameter (Bedeutung hier: 90 Schritte vorwärts)
 Befehlsname
 
        penup()
-       \.../ \
+       \___/ \
          /   kein Parameter
 Befehlsname
 ```
