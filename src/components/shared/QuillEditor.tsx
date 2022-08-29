@@ -1,18 +1,7 @@
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
-import { ToolbarOptions } from './quillConfig';
-import type {default as QuillType, iTextData} from './QuillEditor_';
-interface Props {
-    model: iTextData;
-    readonly?: boolean;
-    monospace?: boolean;
-    default?: string;
-    toolbar?: ToolbarOptions;
-    toolbarAdd?: ToolbarOptions;
-    placeholder?: string;
-    theme?: 'snow' | 'bubble';
-}
+import type {default as QuillType, Props} from './QuillEditor_';
 
 const QuillEditor = observer((props: Props) => {
     const [quill, setQuill] = React.useState<{default: typeof QuillType}>();

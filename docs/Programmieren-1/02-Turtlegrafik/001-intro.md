@@ -64,15 +64,75 @@ Befehlsname
 :::aufgabe Aufgabe 1
 <Answer type="state" webKey="240bbc14-fba9-4863-a522-efca0b1aa99e" />
 
-Markieren Sie auf dem Zusatzblatt die Elemente eines Algorithmus mit unterschiedlichen Farben:
-- Aufruf eines Unterprogramms (bzw. eines Befehls)
-- Parameter
+Markieren Sie im untenstehenden Programm folgende Strukturmerkmale eines Algorithmus mit den vorgegebenen Farben:
+Unterprogramme
+: Aufrufe eines Unterprogramms mit <span className="badge badge--warning">orange</span>
+Parameter
+: Verwendete Parameter mit <span className="badge badge--success">grün</span>
+
+<Answer type="text" webKey="4f612600-e1b1-4aa3-a3ca-30eded2c7652" theme="bubble" toolbar={{background: true}} style={{background: 'white', color: 'black'}}>
+
+goto(20, 40)
+
+write('Hello!')
+
+forward(50)
+
+left(135)
+
+forward(50)
+
+home()
+
+dot()
+
+
+</Answer>
+
+<Solution webKey="57e04e8c-cc85-4bb3-aae1-cb68fcf758ed">
+<div
+  className="ql-editor"
+  style={{fontSize: '13px', margin: '2em', padding: '1em', borderRadius: '4px', border: '1px solid black', background: 'white'}}
+>
+  <p>
+    <span style={{ backgroundColor: "rgb(255, 194, 102)" }}>goto</span>(
+    <span style={{ backgroundColor: "rgb(102, 185, 102)" }}>20</span>,{" "}
+    <span style={{ backgroundColor: "rgb(102, 185, 102)" }}>40</span>)
+  </p>
+  <p>
+    <span style={{ backgroundColor: "rgb(255, 194, 102)" }}>write</span>(
+    <span style={{ backgroundColor: "rgb(102, 185, 102)" }}>'Hello!'</span>){" "}
+    <em style={{ color: "rgb(136, 136, 136)" }}>
+      # inklusive der Anführungszeichen!
+    </em>
+  </p>
+  <p>
+    <span style={{ backgroundColor: "rgb(255, 194, 102)" }}>forward</span>(
+    <span style={{ backgroundColor: "rgb(102, 185, 102)" }}>50</span>)
+  </p>
+  <p>
+    <span style={{ backgroundColor: "rgb(255, 194, 102)" }}>left</span>(
+    <span style={{ backgroundColor: "rgb(102, 185, 102)" }}>135</span>)
+  </p>
+  <p>
+    <span style={{ backgroundColor: "rgb(255, 194, 102)" }}>forward</span>(
+    <span style={{ backgroundColor: "rgb(102, 185, 102)" }}>50</span>)
+  </p>
+  <p>
+    <span style={{ backgroundColor: "rgb(255, 194, 102)" }}>home</span>()
+  </p>
+  <p>
+    <span style={{ backgroundColor: "rgb(255, 194, 102)" }}>dot</span>()
+  </p>
+</div>
+
+</Solution>
 :::
 
 :::aufgabe Aufgabe 2
 <Answer type="state" webKey="80263b54-c75e-41d1-8ddd-3f8d39ccb056" />
 
-Ändern Sie die Parameter im Programm "QUADRAT.PY" so ab, dass:
+Ändern Sie die Parameter im Programm __QUADRAT.PY__ so ab, dass:
 
 - das Quadrat doppelt so gross gezeichnet wird
 - das Quadrat um 45° nach links gedreht gezeichnet wird
@@ -90,7 +150,7 @@ left(90)
 forward(80)
 ```
 
-**Zusatz**
+#### ⭐️ Zusatz:
 
 Die Form der Turtle kann mit dem Befehl `shape` verändert werden. Ändern Sie auf Zeile `3` die Turtleform auf eine Schildkröte durch **Aufrufen des Befehls** `shape` mit dem **Parameter** `'turtle'`.
 
@@ -151,29 +211,29 @@ forward(30)
 
 <div className="small-table no-table-header">
 
-|             |                                                                                 |
-| :---------- | :------------------------------------------------------------------------------ |
-| `yellow`    | <div style={{width: '8em', height: '1em', backgroundColor: 'yellow'}}></div>    |
-| `gold`      | <div style={{width: '8em', height: '1em', backgroundColor: 'gold'}}></div>      |
-| `orange`    | <div style={{width: '8em', height: '1em', backgroundColor: 'orange'}}></div>    |
-| `red`       | <div style={{width: '8em', height: '1em', backgroundColor: 'red'}}></div>       |
-| `maroon`    | <div style={{width: '8em', height: '1em', backgroundColor: 'maroon'}}></div>    |
-| `violet`    | <div style={{width: '8em', height: '1em', backgroundColor: 'violet'}}></div>    |
-| `magenta`   | <div style={{width: '8em', height: '1em', backgroundColor: 'magenta'}}></div>   |
-| `purple`    | <div style={{width: '8em', height: '1em', backgroundColor: 'purple'}}></div>    |
-| `navy`      | <div style={{width: '8em', height: '1em', backgroundColor: 'navy'}}></div>      |
-| `blue`      | <div style={{width: '8em', height: '1em', backgroundColor: 'blue'}}></div>      |
-| `skyblue`   | <div style={{width: '8em', height: '1em', backgroundColor: 'skyblue'}}></div>   |
-| `cyan`      | <div style={{width: '8em', height: '1em', backgroundColor: 'cyan'}}></div>      |
-| `turquoise` | <div style={{width: '8em', height: '1em', backgroundColor: 'turquoise'}}></div> |
-| `lawngreen` | <div style={{width: '8em', height: '1em', backgroundColor: 'lawngreen'}}></div> |
-| `green`     | <div style={{width: '8em', height: '1em', backgroundColor: 'green'}}></div>     |
-| `darkgreen` | <div style={{width: '8em', height: '1em', backgroundColor: 'darkgreen'}}></div> |
-| `chocolate` | <div style={{width: '8em', height: '1em', backgroundColor: 'chocolate'}}></div> |
-| `brown`     | <div style={{width: '8em', height: '1em', backgroundColor: 'brown'}}></div>     |
-| `black`     | <div style={{width: '8em', height: '1em', backgroundColor: 'black'}}></div>     |
-| `gray`      | <div style={{width: '8em', height: '1em', backgroundColor: 'gray'}}></div>      |
-| `white`     | <div style={{width: '8em', height: '1em', backgroundColor: 'white'}}></div>     |
+|             |                                                                            |
+| :---------- | :------------------------------------------------------------------------- |
+| `yellow`    | <div style={{width: '8em', height: '1em', background: 'yellow'}}></div>    |
+| `gold`      | <div style={{width: '8em', height: '1em', background: 'gold'}}></div>      |
+| `orange`    | <div style={{width: '8em', height: '1em', background: 'orange'}}></div>    |
+| `red`       | <div style={{width: '8em', height: '1em', background: 'red'}}></div>       |
+| `maroon`    | <div style={{width: '8em', height: '1em', background: 'maroon'}}></div>    |
+| `violet`    | <div style={{width: '8em', height: '1em', background: 'violet'}}></div>    |
+| `magenta`   | <div style={{width: '8em', height: '1em', background: 'magenta'}}></div>   |
+| `purple`    | <div style={{width: '8em', height: '1em', background: 'purple'}}></div>    |
+| `navy`      | <div style={{width: '8em', height: '1em', background: 'navy'}}></div>      |
+| `blue`      | <div style={{width: '8em', height: '1em', background: 'blue'}}></div>      |
+| `skyblue`   | <div style={{width: '8em', height: '1em', background: 'skyblue'}}></div>   |
+| `cyan`      | <div style={{width: '8em', height: '1em', background: 'cyan'}}></div>      |
+| `turquoise` | <div style={{width: '8em', height: '1em', background: 'turquoise'}}></div> |
+| `lawngreen` | <div style={{width: '8em', height: '1em', background: 'lawngreen'}}></div> |
+| `green`     | <div style={{width: '8em', height: '1em', background: 'green'}}></div>     |
+| `darkgreen` | <div style={{width: '8em', height: '1em', background: 'darkgreen'}}></div> |
+| `chocolate` | <div style={{width: '8em', height: '1em', background: 'chocolate'}}></div> |
+| `brown`     | <div style={{width: '8em', height: '1em', background: 'brown'}}></div>     |
+| `black`     | <div style={{width: '8em', height: '1em', background: 'black'}}></div>     |
+| `gray`      | <div style={{width: '8em', height: '1em', background: 'gray'}}></div>      |
+| `white`     | <div style={{width: '8em', height: '1em', background: 'white'}}></div>     |
 
 </div>
 </details>
@@ -220,7 +280,7 @@ from turtle import *
 
 ```
 
-**Zusatz**
+#### ⭐️ Zusatz:
 Machen Sie bei jedem Richtungswechsel einen Punkt:
 
 ![](images/zickzack_py_dots.svg)
@@ -285,12 +345,12 @@ hideturtle()    # verstecke die Turtle
 ```
 
 
-:::aufgabe Aufgabe 4
+:::aufgabe Aufgabe 4: Programm untersuchen
 <Answer type="state" webKey="77e09573-8d92-443e-892d-c182c405a812" />
 
-Versuchen Sie nachzuvollziehen, welche Zeile was macht.
-
-Fügen Sie immer wenn ein Unterprogramm zum ersten Mal verwendet wird, einen **Kommentar** hinzu, was dieses Unterprogramm macht und, falls vorhanden, welchen Einfluss die Parameter haben.
+1. Versuchen Sie nachzuvollziehen, welche Zeile was macht.
+2. Fügen Sie auf den ersten Zeilen den **Autor** und das **Datum** hinzu.
+3. Fügen Sie immer dann, wenn ein Unterprogramm zum ersten Mal verwendet wird, einen **Kommentar** hinzu, welcher beschreibt, was dieses Unterprogramm macht und, falls vorhanden, welchen Einfluss die Parameter haben.
 
 ```py live_py title=Stift-und-Punkte id=764c988c-2a3d-409c-9e03-4dee147d12ba
 from turtle import *
@@ -319,11 +379,11 @@ forward(80)
 :::aufgabe Aufgabe 5: Würfel
 <Answer type="state" webKey="41c270a6-4046-415e-8eee-96c84b7b700c" />
 
-Ändern Sie dann das Programm so, dass die gewürfelte Zahl `5` gezeichnet wird:
+Ändern Sie das Programm so ab, dass die gewürfelte Zahl `5` gezeichnet wird:
 
 ![Würfel 5](./images/wuerfel-5.svg)
 
-Verstecken Sie auch die Turtle am Ende.
+Verstecken Sie auch die Turtle am Ende!
 
 ```py live_py title=Würfel__5.py id=035454e4-9b17-4d93-bd4e-5b1466c2abc6
 from turtle import *
@@ -390,7 +450,15 @@ Das "Haus vom Nikolaus" ist ein Zeichenspiel für Kinder. Ziel ist es, das besag
 from turtle import *
 ```
 
-**Zusatz**:
+<Hint title="Hinweis: Diagonale">
+
+Die Länge der Diagonale können Sie mithilfe von Pythagoras und einem Taschenrechner berechnen.
+
+Oder Sie verwenden den Trick, dass die Diagonale im Quadrat gerade $\sqrt 2$ mal länger ist als eine Seitenlänge - bei einer Seitenlänge von $100$ wären das also ca. $141$.
+
+</Hint>
+
+#### ⭐️ Zusatz:
 
 Verwenden Sie für die Zeichnung Ihre Lieblingsfarbe und eine grössere Stiftdicke.
 

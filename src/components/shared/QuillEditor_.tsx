@@ -29,8 +29,9 @@ export interface iTextData {
     saveService: SaveService;
 }
 
-interface Props {
+export interface Props {
     model: iTextData;
+    style?: React.CSSProperties;
     readonly?: boolean;
     monospace?: boolean;
     default?: string;
@@ -271,7 +272,7 @@ const QuillEditor = observer((props: Props) => {
                     props.monospace && styles.monospace,
                     showQuillToolbar ? undefined : styles.disableToolbar
                 )}
-                style={{ display: initialLoad ? undefined : 'none' }}
+                style={{ display: initialLoad ? undefined : 'none', ...(props.style || {}) }}
             >
                 <div ref={quillRef} />
                 {processingImage && <Loader caption="Bild Einfügen..." overlay />}

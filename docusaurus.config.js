@@ -136,7 +136,6 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: (params) => {
-            console.log('V', params.version)
             if (params.version === 'current') {
               return `https://github.com/lebalz/ofi-blog/edit/main/${params.versionDocsDirPath}/${params.docPath}`
             }

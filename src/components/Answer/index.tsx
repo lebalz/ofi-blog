@@ -13,8 +13,6 @@ import { ToolbarOptions } from '../shared/quillConfig';
 import Loader from '../shared/Loader';
 import StateAnswer from './StateAnswer';
 import clsx from 'clsx';
-import { default as StateAnswerModel } from '../../models/Answer/State';
-import useFrontMatter from '@theme/useFrontMatter';
 
 export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();
 
@@ -24,6 +22,7 @@ export interface Base {
     webKey: string;
     label?: string;
     children?: string;
+    style?: React.CSSProperties;
 }
 
 export interface TextProps extends Base {
@@ -101,13 +100,6 @@ const AnswerComponent = (props: { type: Types }) => {
     }
 };
 
-const mdiIcon = {
-    checked: 'mdi-checkbox-marked-outline',
-    unset: 'mdi-checkbox-blank-outline',
-    question: 'mdi-account-question-outline',
-};
-
-const baseUrl = '/';
 const Answer = observer((props: Props) => {
     const store = useStore('documentStore');
     const msalStore = useStore('msalStore');
@@ -122,7 +114,6 @@ const Answer = observer((props: Props) => {
     if (!model) {
         return <Loader />;
     }
-    const Component = AnswerComponent(props);
     return (
         <div data--web-key={props.webKey} className={clsx('answer', props.type)}>
             <LoginAlert />
