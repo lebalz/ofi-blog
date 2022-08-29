@@ -1,6 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const CONFIG_FILE = './material_config.json'
+
+/** @type {{
+ * [key: string]: {
+ *  from: string, 
+ *  to: string, 
+ *  ignore: string[],
+ *  open?: boolean
+ * }[]}} */
 const configs = require(CONFIG_FILE);
 var argv = require('minimist')(process.argv.slice(2));
 
@@ -38,6 +46,14 @@ klassen.forEach((klass) => {
                 fs.rmSync(src.to, { recursive: true, force: true });
             } else {
                 fs.unlinkSync(src.to);
+                const categoryPath = path.join(path.dirname(src.to), '_category_.json');
+                if (src.open) {
+                    console.log(categoryPath, fs.existsSync(categoryPath))
+                }
+                if (src.open && fs.existsSync(categoryPath)) {
+                    console.log('REMOVE CAT', categoryPath)
+                    fs.unlinkSync(categoryPath);
+                }
             }
             while (fs.readdirSync(parent).length === 0) {
                 fs.rmSync(parent, { recursive: true, force: true });

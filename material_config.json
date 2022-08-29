@@ -11,7 +11,6 @@
       "from": "docs/byod-basics/v25/",
       "to": "versioned_docs/version-25h/02-BYOD-Basics",
       "ignore": [
-        "_category_.json"
       ]
     },
     {
@@ -53,14 +52,12 @@
       "from": "docs/Codes-and-Data/02-Grafikformate/",
       "to": "versioned_docs/version-25h/05-Codierung/02-Grafikformate",
       "ignore": [
-        "_category_.json"
       ]
     },
     {
       "from": "docs/Codes-and-Data/03-Compression/",
       "to": "versioned_docs/version-25h/05-Codierung/03-Compression",
       "ignore": [
-        "_category_.json"
       ]
     },
     {
@@ -72,7 +69,6 @@
       "from": "docs/Codes-and-Data/04-Anwendungen/",
       "to": "versioned_docs/version-25h/05-Codierung/04-Anwendungen",
       "ignore": [
-        "_category_.json"
       ]
     },
     {
@@ -94,7 +90,6 @@
       "from": "docs/Big-Data/",
       "to": "versioned_docs/version-25h/06-Big-Data",
       "ignore": [
-        "_category_.json"
       ]
     },
     {
@@ -147,7 +142,8 @@
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/001-intro.md",
       "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/001-intro.md",
-      "ignore": []
+      "ignore": [],
+      "open": true
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/002-screen.md",
@@ -184,7 +180,8 @@
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/001-intro.md",
       "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/001-intro.md",
-      "ignore": []
+      "ignore": [],
+      "open": true
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/002-screen.md",

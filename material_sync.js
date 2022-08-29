@@ -1,6 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const Rsync = require('rsync');
+/** @type {{
+ * [key: string]: {
+ *  from: string, 
+ *  to: string, 
+ *  ignore: string[],
+ *  open?: boolean
+ * }[]}} */
 const CONFIG = require('./material_config.json')
 
 const DOC_PATH = 'docs/'
@@ -78,6 +85,24 @@ Object.keys(CONFIG).forEach((klass) => {
         } else {
             fs.copyFileSync(srcPath, toPath);
             gitignore.push(toPath.replace(classDir, ''))
+        }
+        if (src.open) {
+            const categoryPath = path.join(isDir ? toPath : parent, '_category_.json');
+            gitignore.push(categoryPath.replace(classDir, ''));
+            let category = {
+                collapsible: true,
+                collapsed: false
+            };
+            if (fs.existsSync(categoryPath)) {
+                category = JSON.parse(fs.readFileSync(categoryPath));
+                category.collapsed = false;
+                category.collapsible = true;
+            }
+            fs.writeFileSync(
+                categoryPath, 
+                JSON.stringify(category, undefined, 2)
+            );
+           
         }
         fs.writeFileSync(`${classDir}.gitignore`, gitignore.join("\n"))
 

@@ -1,5 +1,4 @@
 02-BYOD-Basics/*
-!02-BYOD-Basics/_category_.json
 03-Texte/*
 04-Programmieren-1/01-Algorithmen/*
 04-Programmieren-1/02-Turtlegrafik/*
@@ -8,17 +7,13 @@
 04-Programmieren-1/00-Lernziele.md
 04-Programmieren-1/04-Test/*
 05-Codierung/02-Grafikformate/*
-!05-Codierung/02-Grafikformate/_category_.json
 05-Codierung/03-Compression/*
-!05-Codierung/03-Compression/_category_.json
 Math/Taschenrechner/*
 05-Codierung/04-Anwendungen/*
-!05-Codierung/04-Anwendungen/_category_.json
 05-Codierung/00-Lernziele.md
 Math/BlackBox/*
 05-Codierung/04-Anwendungen/3d-druck/*
 06-Big-Data/*
-!06-Big-Data/_category_.json
 07-Netzwerke/01-Schichtenmodell/*
 07-Netzwerke/00-Lernziele.md
 07-Netzwerke/02-Routing/*

@@ -1,6 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const CONFIG_FILE = './material_config.json'
+/** @type {{
+ * [key: string]: {
+ *  from: string, 
+ *  to: string, 
+ *  ignore: string[],
+ *  open?: boolean
+ * }[]}} */
 const configs = require(CONFIG_FILE);
 var argv = require('minimist')(process.argv.slice(2));
 
