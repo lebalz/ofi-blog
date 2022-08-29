@@ -4,24 +4,8 @@ import containerStyles from '../../styles/container.module.scss';
 import styles from './styles.module.scss';
 import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
-import { Handle, SliderTooltip } from 'rc-slider';
 import Css from './Css';
 import Bin from './Bin';
-
-const handle = (props) => {
-    const { value, dragging, index, ...restProps } = props;
-    return (
-        <SliderTooltip
-            prefixCls="rc-slider-tooltip"
-            overlay={`${value}`}
-            visible={dragging}
-            placement="top"
-            key={index}
-        >
-            <Handle value={value} {...restProps} />
-        </SliderTooltip>
-    );
-};
 
 const toBin = (num: number) => {
     return (num >>> 0).toString(2).padStart(8, '0');
@@ -46,8 +30,7 @@ const RGB = () => {
                     </span>
                     <Slider
                         value={r}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setR(c);
                         }}
                         min={0}
@@ -64,8 +47,7 @@ const RGB = () => {
                     </span>
                     <Slider
                         value={g}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setG(c);
                         }}
                         min={0}
@@ -82,8 +64,7 @@ const RGB = () => {
                     </span>
                     <Slider
                         value={b}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setB(c);
                         }}
                         min={0}

@@ -6,9 +6,8 @@ import { useStore } from '../../stores/hooks';
 import Script from '../../models/Script';
 import DiffViewer from 'react-diff-viewer';
 import { Prism } from 'prism-react-renderer';
-import Slider from 'rc-slider/lib/Slider';
+import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import { Handle, SliderTooltip } from 'rc-slider';
 import { reaction } from 'mobx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSync } from '@fortawesome/free-solid-svg-icons';
@@ -27,21 +26,6 @@ const highlightSyntax = (str: string) => {
                 __html: Prism.highlight(str, Prism.languages.python, 'python'),
             }}
         />
-    );
-};
-
-const handle = (props) => {
-    const { value, dragging, index, ...restProps } = props;
-    return (
-        <SliderTooltip
-            prefixCls="rc-slider-tooltip"
-            overlay={`V${value}`}
-            visible={dragging}
-            placement="top"
-            key={index}
-        >
-            <Handle value={value} {...restProps} />
-        </SliderTooltip>
     );
 };
 
@@ -105,17 +89,20 @@ const CodeHistory = observer((props: Props) => {
                         e.stopPropagation();
                     }}
                 >
+
                     <div className={clsx(styles.versionControl)}>
                         <Slider
                             value={version}
-                            handle={handle}
-                            onChange={(c) => {
+                            onChange={(c: number) => {
                                 setVersion(c);
                             }}
                             min={1}
                             max={pyScript.versions.length - 1}
                             dots={pyScript.versions.length < 50}
                         />
+                        <span className="badge badge--primary">
+                            V{version}
+                        </span>
                     </div>
                     <div className={clsx(styles.diffViewer)}>
                         {pyScript.versions.length > 1 && (

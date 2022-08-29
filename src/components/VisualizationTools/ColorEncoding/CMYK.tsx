@@ -2,25 +2,9 @@ import clsx from 'clsx';
 import * as React from 'react';
 import containerStyles from '../../styles/container.module.scss';
 import styles from './styles.module.scss';
-import Slider from 'rc-slider/lib/Slider';
+import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import { Handle, SliderTooltip } from 'rc-slider';
 import Css from './Css';
-
-const handle = (props) => {
-    const { value, dragging, index, ...restProps } = props;
-    return (
-        <SliderTooltip
-            prefixCls="rc-slider-tooltip"
-            overlay={`${value}`}
-            visible={dragging}
-            placement="top"
-            key={index}
-        >
-            <Handle value={value} {...restProps} />
-        </SliderTooltip>
-    );
-};
 
 const CMYK = () => {
     const [c, setC] = React.useState(90);
@@ -48,8 +32,7 @@ const CMYK = () => {
                     <span className={clsx(styles.label)}>Cyan</span>
                     <Slider
                         value={c}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setC(c);
                         }}
                         min={0}
@@ -62,8 +45,7 @@ const CMYK = () => {
                     <span className={clsx(styles.label)}>Magenta</span>
                     <Slider
                         value={m}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setM(c);
                         }}
                         min={0}
@@ -78,8 +60,7 @@ const CMYK = () => {
                     </span>
                     <Slider
                         value={y}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setY(c);
                         }}
                         min={0}
@@ -92,8 +73,7 @@ const CMYK = () => {
                     <span className={clsx(styles.label)}>Key</span>
                     <Slider
                         value={k}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setK(c);
                         }}
                         min={0}

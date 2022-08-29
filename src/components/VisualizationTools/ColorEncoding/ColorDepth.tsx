@@ -1,24 +1,8 @@
 import clsx from 'clsx';
-import { Handle, SliderTooltip } from 'rc-slider';
-import Slider from 'rc-slider/lib/Slider';
+import Slider from 'rc-slider';
 import * as React from 'react';
 import containerStyles from '../../styles/container.module.scss';
 import styles from './styles.module.scss';
-
-const handle = (props) => {
-    const { value, dragging, index, ...restProps } = props;
-    return (
-        <SliderTooltip
-            prefixCls="rc-slider-tooltip"
-            overlay={`${value}`}
-            visible={dragging}
-            placement="top"
-            key={index}
-        >
-            <Handle value={value} {...restProps} />
-        </SliderTooltip>
-    );
-};
 
 interface TileProps {
     r: number;
@@ -70,8 +54,7 @@ const ColorDepth = () => {
                     <span className={clsx(styles.label)}>Farbabstufungen</span>
                     <Slider
                         value={depth}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setDepth(c);
                         }}
                         min={1}

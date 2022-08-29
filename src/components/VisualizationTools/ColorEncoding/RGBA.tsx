@@ -2,27 +2,10 @@ import clsx from 'clsx';
 import * as React from 'react';
 import containerStyles from '../../styles/container.module.scss';
 import styles from './styles.module.scss';
-import Slider from 'rc-slider/lib/Slider';
+import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import { Handle, SliderTooltip } from 'rc-slider';
-import Hex from './Hex';
 import Css from './Css';
 import Bin from './Bin';
-
-const handle = (props) => {
-    const { value, dragging, index, ...restProps } = props;
-    return (
-        <SliderTooltip
-            prefixCls="rc-slider-tooltip"
-            overlay={`${value}`}
-            visible={dragging}
-            placement="top"
-            key={index}
-        >
-            <Handle value={value} {...restProps} />
-        </SliderTooltip>
-    );
-};
 
 const RGBA = () => {
     const [r, setR] = React.useState(255);
@@ -48,8 +31,7 @@ const RGBA = () => {
                     </span>
                     <Slider
                         value={r}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setR(c);
                         }}
                         min={0}
@@ -66,8 +48,7 @@ const RGBA = () => {
                     </span>
                     <Slider
                         value={g}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setG(c);
                         }}
                         min={0}
@@ -84,8 +65,7 @@ const RGBA = () => {
                     </span>
                     <Slider
                         value={b}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setB(c);
                         }}
                         min={0}
@@ -102,8 +82,7 @@ const RGBA = () => {
                     </span>
                     <Slider
                         value={a}
-                        handle={handle}
-                        onChange={(c) => {
+                        onChange={(c: number) => {
                             setA(c);
                         }}
                         step={0.01}
