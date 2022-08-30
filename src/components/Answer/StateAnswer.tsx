@@ -15,7 +15,6 @@ export const mdiIcon = {
     unset: 'mdi-checkbox-blank-outline',
     question: 'mdi-account-question-outline',
 };
-const baseUrl = '/';
 
 
 export const mdiBgColor = {

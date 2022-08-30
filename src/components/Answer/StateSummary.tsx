@@ -18,10 +18,13 @@ export const StateSummary = observer((props: Props) => {
     const adminStore = useStore('adminStore');
     const { frontMatter } = useDoc();
     const { sidebar_custom_props } = frontMatter;
-    const [klasse] = React.useState(window.location.pathname.replace(baseUrl, '').split('/')[0]);
+    const [klasse, setKlasse] = React.useState<string>();
+    React.useEffect(() => {
+        setKlasse(window.location.pathname.replace(baseUrl, '').split('/')[0]);
+    }, []);
     return (
         <>
-            {adminStore.isAdmin && adminStore.showTaskStates && (
+            {adminStore.isAdmin && adminStore.showTaskStates && klasse && (
                 <div className={clsx(styles.admin)}>
                     {adminStore
                         .findByWebKey<StateDoc>(klasse, sidebar_custom_props.id, props.webKey)
@@ -53,10 +56,13 @@ export const PageStateSummary = observer(() => {
     const adminStore = useStore('adminStore');
     const { frontMatter } = useDoc();
     const { sidebar_custom_props } = frontMatter;
-    const [klasse] = React.useState(window.location.pathname.replace(baseUrl, '').split('/')[0]);
+    const [klasse, setKlasse] = React.useState<string>();
+    React.useEffect(() => {
+        setKlasse(window.location.pathname.replace(baseUrl, '').split('/')[0]);
+    }, []);
     return (
         <>
-            {adminStore.isAdmin && adminStore.showTaskStateSummary && (
+            {adminStore.isAdmin && adminStore.showTaskStateSummary && klasse &&  (
                 <div className={clsx(styles.admin, styles.summary)}>
                     {Object.entries(
                         _.groupBy(
