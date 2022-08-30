@@ -91,6 +91,12 @@ export class DocumentStore {
     }
 
     @computed
+    get myDocuments() {
+        const myId = this.root.userStore.current.id;
+        return this.documents.filter((doc) => doc.userId === myId || doc.userId < 0);
+    }
+
+    @computed
     get viewedDocuments() {
         const view = this.root.userStore.currentView;
         if (!view) {

@@ -103,7 +103,7 @@ export default class BatchLoadService {
         return this.rootStore.msalStore
             .withToken()
             .then((ok) => {
-                return getAllDocumentsByClass(klass, keys, this.cancelToken);
+                return getAllDocumentsByClass<any>(klass, keys, this.cancelToken);
             })
             .then(
                 action(({ data }) => {

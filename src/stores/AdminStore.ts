@@ -3,8 +3,9 @@ import { computedFn } from 'mobx-utils';
 import { Document as DocumentProps } from '../api/document';
 import { RootStore } from './stores';
 import BatchLoadService from '../models/BatchLoadService';
-import { DocType } from '../models/iModel';
+import { DocType, Model } from '../models/iModel';
 import User from '../models/User';
+import StateAnswer, { StateDoc } from '../models/Answer/State';
 
 export const VIEW_ELEMENTS = [
     'task_state',
@@ -154,6 +155,15 @@ export class AdminStore {
         if (!this.documents.has(klasse)) {
             this.documents.set(klasse, observable.map(undefined, { deep: false }));
         }
-        this.documents.get(klasse).set(pageKey, docs);
+        const ordered = docs.sort((a, b) => ((this.findMyDocument<StateAnswer>(a.web_key)?.windowPositionY || -1) - (this.findMyDocument<StateAnswer>(b.web_key)?.windowPositionY || -1)));
+        this.documents.get(klasse).set(pageKey, ordered);
     }
+
+
+    findMyDocument = computedFn(
+        function <T extends Model = Model>(this: AdminStore, webKey: string): T {
+            return this.root.documentStore.myDocuments.find((q) => q.webKey === webKey) as T;
+        },
+        { keepAlive: true }
+    );
 }

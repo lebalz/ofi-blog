@@ -8,8 +8,9 @@ import Loader from '../shared/Loader';
 import clsx from 'clsx';
 // @ts-ignore
 import useFrontMatter from '@theme/useFrontMatter';
+import { PageStateSummary, StateSummary } from './StateSummary';
 
-const mdiIcon = {
+export const mdiIcon = {
     checked: 'mdi-checkbox-marked-outline',
     unset: 'mdi-checkbox-blank-outline',
     question: 'mdi-account-question-outline',
@@ -17,23 +18,25 @@ const mdiIcon = {
 const baseUrl = '/';
 
 
-const mdiBgColor = {
+export const mdiBgColor = {
     checked: '--ifm-color-success',
     unset: '--ifm-color-secondary',
     question: '--ifm-color-warning',
 };
-const mdiColor = {
+export const mdiColor = {
     checked: 'white',
     unset: 'black',
     question: 'white',
 };
 const StateAnswer = observer((props: StateProps) => {
-    const { sidebar_custom_props } = useFrontMatter();
-    const adminStore = useStore('adminStore');
-    const [klasse] = React.useState(window.location.pathname.replace(baseUrl, '').split('/')[0]);
     const store = useStore('documentStore');
     const doc = store.find<StateAnswerModel>(props.webKey);
-
+    const ref = React.useRef<HTMLDivElement>(null);
+    React.useEffect(() => {
+        if (ref.current && doc) {
+            doc.setWindowPositionY(ref.current.getBoundingClientRect().top);
+        }
+    }, [doc, ref])
 
     const onChange = () => {
         switch (doc.value) {
@@ -55,6 +58,7 @@ const StateAnswer = observer((props: StateProps) => {
     return (
         <>
             <div
+                ref={ref}
                 className={clsx(
                     styles.state,
                     'state-component',
@@ -69,25 +73,7 @@ const StateAnswer = observer((props: StateProps) => {
                 </div>
                 <div>{props.children}</div>
             </div>
-            {adminStore.isAdmin && adminStore.showTaskStates && (
-                <div className={clsx(styles.admin)}>
-                    {adminStore
-                        .findByWebKey<StateDoc>(klasse, sidebar_custom_props.id, props.webKey)
-                        .map((doc, idx) => (
-                            <div className={clsx(styles.box)} key={idx}>
-                                <div className={clsx(styles.state)} style={{backgroundColor: `var(${mdiBgColor[doc.data.value]})`}}>
-                                    <i className={clsx('mdi', mdiIcon[doc.data.value])} style={{color: `${mdiColor[doc.data.value]}`}} />
-                                </div>
-
-                                <div className={clsx(styles.nameWrapper)}>
-                                    <div className={clsx(styles.name)}>
-                                        {adminStore.getUser(doc.user_id)?.name || 'Name'}
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                </div>
-            )}
+            <StateSummary webKey={props.webKey} />
         </>
     );
 });

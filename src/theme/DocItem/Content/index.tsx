@@ -8,6 +8,7 @@ import { useComments } from '@site/src/stores/hooks';
 import useFrontMatter from '@theme/useFrontMatter';
 import { observer } from 'mobx-react-lite';
 import styles from './styles.module.scss';
+import { PageStateSummary } from '@site/src/components/Answer/StateSummary';
 
 type Props = WrapperProps<typeof ContentType>;
 
@@ -17,6 +18,7 @@ const ContentWrapper = observer((props: Props): JSX.Element => {
 
     return (
         <div className={styles.content}>
+            <PageStateSummary />
             <Content {...props} />
         </div>
     );

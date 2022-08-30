@@ -49,6 +49,9 @@ export default class StateAnswer implements StateModel, ApiModel {
     @observable
     value: StateType;
 
+    @observable
+    windowPositionY: number = -1;
+
     constructor(doc: Document<StateDoc>, readonly: boolean = false) {
         this.store = rootStore.documentStore;
         this.readonly = readonly;
@@ -62,6 +65,11 @@ export default class StateAnswer implements StateModel, ApiModel {
         makeObservable(this);
         /** order depends, initialize AFTER making this observable! */
         this.saveService = new SaveService(this, save, 250);
+    }
+
+    @action
+    setWindowPositionY(posY: number) {
+        this.windowPositionY = posY;
     }
 
     @computed

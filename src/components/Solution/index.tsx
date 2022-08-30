@@ -190,7 +190,6 @@ const Solution = observer((props: Props) => {
     if (!model) {
         return <Loader />;
     }
-    console.log(props.open || adminStore.showPolicyOptions)
     return (
         <div data--web-key={props.webKey} className={clsx(styles.wrapper, 'solution-wrapper')}>
             {model.show || userStore.current?.admin ? (

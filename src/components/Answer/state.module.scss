@@ -31,13 +31,15 @@
     overflow-x: auto;
     max-width: 100%;
     gap: 0.5em;
+    &.summary {
+        height: 160px;
+    }
     .box {
         width: 1rem;
         .state {
             font-size: 1rem;
             border-radius: 4px;
         }
-
         .nameWrapper {
             transform-origin: 0 0;
             transform: rotate(-90deg) translateY(-25%) translateX(-70px);
@@ -47,6 +49,17 @@
                 text-overflow: clip;
                 overflow: hidden;
                 white-space: nowrap;
+            }
+        }
+        &.overviewBox {
+            display: flex;
+            gap: 0.1em;
+            flex-direction: column;
+            .state {
+                margin-bottom: 0;
+            }
+            .nameWrapper {
+                transform: rotate(90deg) translateY(-85%) translateX(5px);
             }
         }
     }
