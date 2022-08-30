@@ -11,13 +11,13 @@ import Video from '@site/src/components/Video';
 <OsTabs>
 <TabItem value="win11">
 
-Deteiexplorer
+Dateiexplorer
 
 ![--width=150px](/img/byod-basics/win11/explorer.png)
 </TabItem>
 <TabItem value="win10">
 
-Deteiexplorer
+Dateiexplorer
 
 ![](/img/byod-basics/win-explorer.png)
 </TabItem>
