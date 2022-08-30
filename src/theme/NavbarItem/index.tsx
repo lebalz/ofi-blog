@@ -15,9 +15,14 @@ import { observer } from 'mobx-react-lite';
 import clsx from 'clsx';
 import styles from './index.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleLeft, faArrowAltCircleRight, faSync, faTshirt, faBicycle } from '@fortawesome/free-solid-svg-icons';
+import {
+    faArrowAltCircleLeft,
+    faArrowAltCircleRight,
+    faSync,
+    faChevronDown,
+} from '@fortawesome/free-solid-svg-icons';
 import { runInAction } from 'mobx';
-
+import { VIEW_ELEMENTS } from '@site/src/stores/AdminStore';
 
 const currentVersion = (versions: typeof NavbarItem[]): typeof NavbarItem | undefined => {
     return versions.find((v) => v.path.length > 1 && window.location.pathname.startsWith(v.path));
@@ -36,14 +41,38 @@ const withLoginNavbar = (Component) => {
         const version = currentVersion(versions);
         if (userStore.current.admin) {
             return (
-                <div className={clsx('button-group')} style={{marginRight: '1em'}}>
-                    <button
-                        className={clsx('badge', styles.badgeButton, 'badge--secondary', 'badge--sm')}
-                        onClick={() => adminStore.toggleAdminElements()}
-                    >
-                        <FontAwesomeIcon icon={(adminStore.showAdminElements ? faTshirt : faBicycle)} />
-                    </button>
-                    {adminStore.showAdminElements && (
+                <div className={clsx('button-group')} style={{ marginRight: '1em' }}>
+                    <div className={clsx(styles.adminOptions, 'dropdown', 'dropdown--hoverable')}>
+                        <span
+                            className={clsx(styles.badgeButton)}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faChevronDown} />
+                        </span>
+                        <div className={clsx(styles.dropdown, 'dropdown__menu')}>
+                            {VIEW_ELEMENTS.map((toggle, idx) => {
+                                const active = adminStore.showAdminElement(toggle);
+                                return (
+                                    <span
+                                        key={idx}
+                                        onClick={() => adminStore.toggleAdminElements(toggle)}
+                                        className={clsx(
+                                            'dropdown__link',
+                                            styles.showElement,
+                                            active && styles.active
+                                        )}
+                                    >
+                                        <i className={clsx(styles.icon, 'mdi', active ? 'mdi-checkbox-outline' : 'mdi-checkbox-blank-outline')}></i>
+                                        {toggle}
+                                    </span>
+                                );
+                            })}
+                        </div>
+                    </div>
+                    {adminStore.showViewSwitcher && (
                         <>
                             <button
                                 className={clsx('badge', 'badge--secondary', 'badge--sm', styles.badgeButton)}
@@ -80,7 +109,12 @@ const withLoginNavbar = (Component) => {
                                         styles.nameBadge,
                                         userStore.isMyView ? 'badge--primary' : 'badge--warning'
                                     )}
-                                    style={{ textOverflow: 'ellipsis', width: '100px', whiteSpace: 'nowrap', overflow: 'hidden' }}
+                                    style={{
+                                        textOverflow: 'ellipsis',
+                                        width: '100px',
+                                        whiteSpace: 'nowrap',
+                                        overflow: 'hidden',
+                                    }}
                                 >
                                     {userStore.currentView.name}
                                 </button>
@@ -121,7 +155,10 @@ const withLoginNavbar = (Component) => {
             );
         }
         return (
-            <Link to={`/${props.to}`} className={clsx('badge', 'badge--primary', 'margin--xs', styles.nameBadge)}>
+            <Link
+                to={`/${props.to}`}
+                className={clsx('badge', 'badge--primary', 'margin--xs', styles.nameBadge)}
+            >
                 <span>{userStore.current.name}</span>
             </Link>
         );

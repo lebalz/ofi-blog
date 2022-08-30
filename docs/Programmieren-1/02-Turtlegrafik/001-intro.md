@@ -456,6 +456,7 @@ Die Länge der Diagonale können Sie mithilfe von Pythagoras und einem Taschenre
 Oder Sie verwenden den Trick, dass die Diagonale im Quadrat gerade $\sqrt 2$ mal länger ist als eine Seitenlänge - bei einer Seitenlänge von $100$ wären das also ca. $141$.
 
 </Hint>
+<br />
 
 #### ⭐️ Zusatz:
 
@@ -491,7 +492,7 @@ hideturtle()
 :::
 
 
-:::aufgabe Aufgabe 8: Treppe
+:::aufgabe Aufgabe 7: Treppe
 <Answer type="state" webKey="a9da2219-390c-4d3c-8af0-46b92cba6892" />
 
 Zeichnen Sie eine Treppe mit fünf Stufen, die eine Breite von `29` Pixeln und eine Höhe von `17` Pixeln haben.

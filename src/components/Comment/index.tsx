@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
+// @ts-ignore
 import useFrontMatter from '@theme/useFrontMatter';
 import { useStore } from '@site/src/stores/hooks';
 import { LocatorType } from '@site/src/api/comment';

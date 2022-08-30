@@ -6,6 +6,16 @@ import BatchLoadService from '../models/BatchLoadService';
 import { DocType } from '../models/iModel';
 import User from '../models/User';
 
+export const VIEW_ELEMENTS = [
+    'task_state',
+    'task_state_summary',
+    'policy_opts',
+    'show_solutions',
+    'view_switcher',
+] as const;
+
+export type ViewElement = typeof VIEW_ELEMENTS[number];
+
 export class AdminStore {
     private readonly root: RootStore;
     @observable.ref
@@ -16,7 +26,19 @@ export class AdminStore {
     });
 
     @observable
-    showAdminElements = true;
+    showTaskStates = false;
+
+    @observable
+    showTaskStateSummary = false;
+
+    @observable
+    showViewSwitcher = true;
+
+    @observable
+    showPolicyOptions = false;
+
+    @observable
+    showSolutions = false;
 
     @observable initialized: boolean = false;
     constructor(root: RootStore) {
@@ -26,8 +48,39 @@ export class AdminStore {
     }
 
     @action
-    toggleAdminElements() {
-        this.showAdminElements = !this.showAdminElements;
+    toggleAdminElements(element: ViewElement) {
+        switch (element) {
+            case 'task_state':
+                this.showTaskStates = !this.showTaskStates;
+                break;
+            case 'task_state_summary':
+                this.showTaskStateSummary = !this.showTaskStateSummary;
+                break;
+            case 'view_switcher':
+                this.showViewSwitcher = !this.showViewSwitcher;
+                break;
+            case 'policy_opts':
+                this.showPolicyOptions = !this.showPolicyOptions;
+                break;
+            case 'show_solutions':
+                this.showSolutions = !this.showSolutions;
+                break;
+        }
+    }
+
+    showAdminElement(element: ViewElement) {
+        switch (element) {
+            case 'task_state':
+                return this.showTaskStates;
+            case 'task_state_summary':
+                return this.showTaskStateSummary;
+            case 'view_switcher':
+                return this.showViewSwitcher;
+            case 'policy_opts':
+                return this.showPolicyOptions;
+            case 'show_solutions':
+                return this.showSolutions;
+        }
     }
 
     @computed

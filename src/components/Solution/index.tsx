@@ -50,6 +50,7 @@ const Config = observer((props: ConfigProps) => {
     const [group, setGroup] = React.useState('');
     const [user, setUser] = React.useState('');
     const store = useStore('policyStore');
+    const adminStore = useStore('adminStore');
     const userStore = useStore('userStore');
     const policy = store.findPolicy(props.webKey);
 
@@ -60,13 +61,13 @@ const Config = observer((props: ConfigProps) => {
         <div className={clsx(styles.configContainer)}>
             <div className={clsx(styles.showControl)}>
                 <FontAwesomeIcon
-                    icon={store.isConfigOpen ? faTimesCircle : faEllipsisH}
+                    icon={adminStore.showAdminElement('policy_opts') ? faTimesCircle : faEllipsisH}
                     onClick={() => {
-                        store.showConfig(!store.isConfigOpen);
+                        adminStore.toggleAdminElements('policy_opts')
                     }}
                 />
             </div>
-            {store.isConfigOpen && (
+            {adminStore.showAdminElement('policy_opts') && (
                 <div className={clsx(styles.config)}>
                     <div className={clsx(styles.permissions)}>
                         {Array.from(policy.klasses).map((g, idx) => {
@@ -177,6 +178,7 @@ const Config = observer((props: ConfigProps) => {
 const Solution = observer((props: Props) => {
     const store = useStore('policyStore');
     const userStore = useStore('userStore');
+    const adminStore = useStore('adminStore');
     const inBrowser = useIsBrowser();
     useSolution(props.webKey);
 
@@ -188,6 +190,7 @@ const Solution = observer((props: Props) => {
     if (!model) {
         return <Loader />;
     }
+    console.log(props.open || adminStore.showPolicyOptions)
     return (
         <div data--web-key={props.webKey} className={clsx(styles.wrapper, 'solution-wrapper')}>
             {model.show || userStore.current?.admin ? (
@@ -199,7 +202,8 @@ const Solution = observer((props: Props) => {
                         </summary>
                     }
                     className={clsx('alert alert--success', styles.solution)}
-                    open={props.open}
+                    open={props.open || adminStore.showSolutions}
+                    key={`poly-${props.open || adminStore.showSolutions}`}
                 >
                     {userStore.current?.admin && <Config webKey={model.webKey} />}
                     {props.children}

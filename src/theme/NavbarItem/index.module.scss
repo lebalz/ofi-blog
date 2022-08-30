@@ -7,6 +7,26 @@
         --ifm-badge-background-color: var(--ifm-contrast-background-value);
     }
 }
+.adminOptions {
+    margin-right: 1em;
+    .dropdown {
+        right: -10px;
+        left: unset;
+        .showElement {
+            user-select: none;
+            cursor: pointer;
+            padding: 3px;
+            .icon {
+                margin-right: 0.4em;
+            }
+            &.active {
+                .icon {
+                    color: var(--ifm-color-success);
+                }
+            }
+        }
+    }
+}
 
 .badgeButton {
     cursor: pointer;

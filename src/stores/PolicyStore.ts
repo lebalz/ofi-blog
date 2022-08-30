@@ -34,7 +34,6 @@ export class PolicyStore {
     policies = observable<SolutionPolicy>([]);
 
     @observable initialized: boolean = false;
-    @observable isConfigOpen: boolean = false;
 
     constructor(root: RootStore) {
         this.root = root;
@@ -45,11 +44,6 @@ export class PolicyStore {
             }
         );
         makeObservable(this);
-    }
-
-    @action
-    showConfig(show: boolean) {
-        this.isConfigOpen = show;
     }
 
     @computed

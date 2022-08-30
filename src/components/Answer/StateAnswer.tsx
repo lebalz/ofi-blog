@@ -6,6 +6,7 @@ import { useStore } from '../../stores/hooks';
 import { default as StateAnswerModel, StateDoc } from '../../models/Answer/State';
 import Loader from '../shared/Loader';
 import clsx from 'clsx';
+// @ts-ignore
 import useFrontMatter from '@theme/useFrontMatter';
 
 const mdiIcon = {
@@ -68,7 +69,7 @@ const StateAnswer = observer((props: StateProps) => {
                 </div>
                 <div>{props.children}</div>
             </div>
-            {adminStore.isAdmin && adminStore.showAdminElements && (
+            {adminStore.isAdmin && adminStore.showTaskStates && (
                 <div className={clsx(styles.admin)}>
                     {adminStore
                         .findByWebKey<StateDoc>(klasse, sidebar_custom_props.id, props.webKey)
