@@ -89,6 +89,9 @@ export const PageStateSummary = observer(() => {
                                                 onClick={() => {
                                                     setTimeout(() => {
                                                         adminStore.setView(doc.user_id);
+                                                        if (!adminStore.showTaskStates) {
+                                                            adminStore.toggleAdminElements('task_state');
+                                                        }
                                                     }, 0);
                                                 }}
                                             />
