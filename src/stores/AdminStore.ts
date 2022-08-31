@@ -9,7 +9,7 @@ import StateAnswer, { StateDoc } from '../models/Answer/State';
 
 export const VIEW_ELEMENTS = [
     'task_state',
-    'task_state_summary',
+    'page_state_summary',
     'policy_opts',
     'show_solutions',
     'view_switcher',
@@ -54,7 +54,7 @@ export class AdminStore {
             case 'task_state':
                 this.showTaskStates = !this.showTaskStates;
                 break;
-            case 'task_state_summary':
+            case 'page_state_summary':
                 this.showTaskStateSummary = !this.showTaskStateSummary;
                 break;
             case 'view_switcher':
@@ -73,7 +73,7 @@ export class AdminStore {
         switch (element) {
             case 'task_state':
                 return this.showTaskStates;
-            case 'task_state_summary':
+            case 'page_state_summary':
                 return this.showTaskStateSummary;
             case 'view_switcher':
                 return this.showViewSwitcher;
@@ -157,6 +157,11 @@ export class AdminStore {
         }
         const ordered = docs.sort((a, b) => ((this.findMyDocument<StateAnswer>(a.web_key)?.windowPositionY || -1) - (this.findMyDocument<StateAnswer>(b.web_key)?.windowPositionY || -1)));
         this.documents.get(klasse).set(pageKey, ordered);
+    }
+
+    @action
+    setView(userId: number) {
+        this.root.userStore.setView(this.root.userStore.findById(userId));
     }
 
 

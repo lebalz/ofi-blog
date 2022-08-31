@@ -33,6 +33,9 @@ export const StateSummary = observer((props: Props) => {
                                 <div
                                     className={clsx(styles.state)}
                                     style={{ backgroundColor: `var(${mdiBgColor[doc.data.value]})` }}
+                                    onClick={() => {
+                                        adminStore.setView(doc.user_id);
+                                    }}
                                 >
                                     <i
                                         className={clsx('mdi', mdiIcon[doc.data.value])}
@@ -60,39 +63,43 @@ export const PageStateSummary = observer(() => {
     React.useEffect(() => {
         setKlasse(window.location.pathname.replace(baseUrl, '').split('/')[0]);
     }, []);
+    const docs = _.groupBy(
+        adminStore.filteredBy<StateDoc>(klasse, sidebar_custom_props.id, 'state'),
+        (doc) => adminStore.getUser(doc.user_id)?.name || 'Name'
+    );
     return (
         <>
-            {adminStore.isAdmin && adminStore.showTaskStateSummary && klasse &&  (
+            {adminStore.isAdmin && adminStore.showTaskStateSummary && klasse && (
                 <div className={clsx(styles.admin, styles.summary)}>
-                    {Object.entries(
-                        _.groupBy(
-                            adminStore.filteredBy<StateDoc>(klasse, sidebar_custom_props.id, 'state'),
-                            (doc) => doc.user_id
-                        )
-                    ).map(([userId, docs], idx) => (
-                        <div className={clsx(styles.box, styles.overviewBox)} key={idx}>
-                            {docs.map((doc, id) => {
-                                return (
-                                    <div
-                                        key={id}
-                                        title={doc.web_key}
-                                        className={clsx(styles.state)}
-                                        style={{ backgroundColor: `var(${mdiBgColor[doc.data.value]})` }}
-                                    >
-                                        <i
-                                            className={clsx('mdi', mdiIcon[doc.data.value])}
-                                            style={{ color: `${mdiColor[doc.data.value]}` }}
-                                        />
-                                    </div>
-                                );
-                            })}
-                            <div className={clsx(styles.nameWrapper)}>
-                                <div className={clsx(styles.name)}>
-                                    {adminStore.getUser(Number.parseInt(userId, 10))?.name || 'Name'}
+                    {Object.keys(docs)
+                        .sort()
+                        .map((name, idx) => (
+                            <div className={clsx(styles.box, styles.overviewBox)} key={idx}>
+                                {docs[name].map((doc, id) => {
+                                    return (
+                                        <div
+                                            key={id}
+                                            className={clsx(styles.state)}
+                                            style={{ backgroundColor: `var(${mdiBgColor[doc.data.value]})` }}
+                                        >
+                                            <a
+                                                className={clsx('mdi', mdiIcon[doc.data.value])}
+                                                style={{ color: `${mdiColor[doc.data.value]}` }}
+                                                href={`#state-${doc.web_key}`}
+                                                onClick={() => {
+                                                    setTimeout(() => {
+                                                        adminStore.setView(doc.user_id);
+                                                    }, 0);
+                                                }}
+                                            />
+                                        </div>
+                                    );
+                                })}
+                                <div className={clsx(styles.nameWrapper)}>
+                                    <div className={clsx(styles.name)}>{name}</div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                 </div>
             )}
         </>

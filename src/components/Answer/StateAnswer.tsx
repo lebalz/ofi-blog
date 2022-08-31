@@ -63,6 +63,7 @@ const StateAnswer = observer((props: StateProps) => {
                     'state-component',
                     (props.noHeader || props.children) && 'no-header'
                 )}
+                id={`state-${doc.webKey}`}
             >
                 <div
                     className={clsx('button', `button--${doc.viewClass}`, styles.checkbox)}
