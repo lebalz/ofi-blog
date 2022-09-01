@@ -4,6 +4,8 @@ import { DocType, ModelTypes } from '../models/iModel';
 // @ts-ignore
 import { useDoc } from '@docusaurus/theme-common/internal';
 import { rootStore, storesContext } from './stores';
+// @ts-ignore
+import useFrontMatter from '@theme/useFrontMatter';
 
 export const useStores = () => React.useContext(storesContext);
 
@@ -19,14 +21,8 @@ export const useDocument = (
     versioned?: boolean
 ) => {
     const [initialized, setInitialized] = React.useState(false);
-    let pageKey: string | undefined = undefined;
-    try {
-        const { frontMatter } = useDoc();
-        const { sidebar_custom_props } = frontMatter;
-        pageKey = sidebar_custom_props?.id;
-    } catch (e) {
-        console.log(e)
-    }
+    const { sidebar_custom_props } = useFrontMatter();
+    const pageKey = sidebar_custom_props?.id;
     /** initial load */
     React.useEffect(() => {
         rootStore.documentStore
