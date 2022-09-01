@@ -19,9 +19,14 @@ export const useDocument = (
     versioned?: boolean
 ) => {
     const [initialized, setInitialized] = React.useState(false);
-    const { frontMatter } = useDoc();
-    const { sidebar_custom_props } = frontMatter;
-    const pageKey = sidebar_custom_props?.id;
+    let pageKey: string | undefined = undefined;
+    try {
+        const { frontMatter } = useDoc();
+        const { sidebar_custom_props } = frontMatter;
+        pageKey = sidebar_custom_props?.id;
+    } catch (e) {
+        console.log(e)
+    }
     /** initial load */
     React.useEffect(() => {
         rootStore.documentStore
