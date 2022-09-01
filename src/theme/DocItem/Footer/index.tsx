@@ -21,6 +21,7 @@ export default function FooterWrapper(props: Props): JSX.Element {
                             <a
                                 href={sidebar_custom_props.source.ref || '#'}
                                 className={clsx(styles.copyright, 'badge', 'badge--primary')}
+                                target="_blank"
                             >
                                 {sidebar_custom_props.source.name}
                                 {sidebar_custom_props.source.ref && (

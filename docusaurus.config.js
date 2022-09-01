@@ -87,10 +87,6 @@ module.exports = {
             {
               label: 'Jupyterhub',
               to: 'https://jupyter.gbsl.website',
-            },
-            {
-              label: 'Learningview',
-              to: 'https://learningview.org/loginWithMicrosoft.php',
             }
           ],
         },

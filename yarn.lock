@@ -2339,6 +2339,11 @@
   resolved "https://registry.yarnpkg.com/@radial-color-picker/rotator/-/rotator-3.0.2.tgz#44289355f9dcf28f58af1a6964d28ef55b3ff518"
   integrity sha512-JiSVkN/hSMKqIcQz8KaeLvbzA0UrZkKQL2Q8s4MUxehjLcciTSctG75V8trHk0tPkTfglZjLlmg+S5+xO3GBLQ==
 
+"@saucelabs/theme-github-codeblock@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@saucelabs/theme-github-codeblock/-/theme-github-codeblock-0.1.1.tgz#d2caa3fbf56c38ae2fe974871f1188226bb57d92"
+  integrity sha512-iHzODYjcUAYI4eJzLrNCw/Iq9SWxCKB/cMgEKHjRmNMb2NKch1dsI2ZSCg8lNedIPmOaRfqHT29hLyMoc/5Wpg==
+
 "@sideway/address@^4.1.3":
   version "4.1.4"
   resolved "https://registry.yarnpkg.com/@sideway/address/-/address-4.1.4.tgz#03dccebc6ea47fdc226f7d3d1ad512955d4783f0"

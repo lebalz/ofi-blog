@@ -4,29 +4,31 @@ sidebar_custom_props:
   id: ad4d9802-8e3b-4706-bf2f-b6cac09a6cbd
   source:
     name: sdg
+    ref: https://gitlab.gbsl.website/gymbefin23/material/-/snippets/11
 ---
 import Hint from '@site/src/components/Solution/Hint'
 
 # Listen
 
-Zum Speichern von **mehreren Werten** unter einem **einzigen Namen** verwendet man in Python Listen. Man kann sich __Listen__ als Tabellen mit einer Spalte vorstellen. Die Zellen in der Tabelle werden als **Elemente** bezeichnet und sind durchnummeriert. So kann man einzelne in der Liste gespeichert Werte unterscheiden. Die Nummer eines Elements wird als dessen **Index** bezeichnet. [^1]
+Zum Speichern von **mehreren Werten** unter einem **einzigen Namen** verwendet man in Python Listen. Man kann sich __Listen__ als Tabellen mit einer Spalte vorstellen. Die Zellen in der Tabelle werden als **Elemente** bezeichnet und sind durchnummeriert. So kann man einzelne in der Liste gespeichert Werte unterscheiden. Die Nummer eines Elements wird als dessen **Index** bezeichnet.
 
-:::important Wichtig:
-- Das erste Element in der Liste trägte den Index 0.
+:::important Wichtig
+- Das erste Element in der Liste trägt den Index 0.
 - Der Index des letzten Elementes ist die Länge der Liste minus 1.
 :::
 
 Das folgende Bild illustriert dies für eine Liste mit 4 Noten. Die **Länge** der Liste ist **4**, das letzte Element trägt den **Index 3**.
 
-<div className="slim-table center">
-
-| Index | Wert  |
-| ----: | :---- |
-|   `0` | `4.5` |
-|   `1` | `5`   |
-|   `2` | `3.5` |
-|   `3` | `5.5` |
-</div>
+Index
+: 　**Wert**
+`0`
+: :mdi-arrow-right-thin: `4.5`
+`1`
+: :mdi-arrow-right-thin: `5`
+`2`
+: :mdi-arrow-right-thin: `3.5`
+`3`
+: :mdi-arrow-right-thin: `5.5`
 
 In Python kann man diese Liste wie folgt erzeugen:
 
@@ -36,6 +38,39 @@ print('Die vierte Note war eine', noten[3])
 ```
 
 Im Beispiel wird die vierte Note mit dem Index `3` ausgegeben.
+
+## Aufgaben
+:::aufgabe Primzahlen
+<Answer type="state" webKey="00361219-0652-4870-9a42-c3cf8250b9a4" />
+
+Dateiname
+: __EF-Informatik/exercises/primzahlen.py__
+
+Schreiben Sie ein Programm welches eine Liste mit allen Primzahlen zwischen 1 und 100 erstellt und diese Liste am Schluss auf der Konsole ausgibt.
+
+
+```.py reference
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/assets/listen-1d.py
+```
+
+
+Programmieren Sie anschliessend einen geeigneten Algorithmus zur Lösung des Problems.
+
+<Hint>
+
+Um den Rest bei einer Division zu berechnen, kann der Modulo-Operator verwendet werden.
+
+:::def
+### Modulo `%`
+Um den ganzzahligen Rest bei der Division von zwei ganzen Zahlen zu bestimmen, wird der Modulo-Operator verwendet.
+Biespiel: Was ist der ganzzahlige Rest von $7 / 5$?
+```py live_py slim
+print(7 % 5)
+```
+:::
+</Hint>
+:::
+
 
 ## Eindimensionale Listen
 
@@ -194,36 +229,3 @@ noten =['gut', 'erfüllt', 'mangelhaft', 'erfüllt']
 print(noten)
 ```
 :::
-
-## Aufgaben
-:::aufgabe Primzahlen
-
-Schreiben Sie ein Programm welches eine Liste mit allen Primzahlen zwischen 1 und 100 erstellt und diese Liste am Schluss auf der Konsole ausgibt.
-
-Klonen Sie dazu zuerst Ihr EF-Projekt auf Ihren Laptop. Erstellen Sie innerhalb des Projekts einen Ordner mit dem Namen __Übungen__ und darin eine neue Datei mit dem Namen __Primzahlen.py__.
-
-Programmieren Sie anschliessend einen geeigneten Algorithmus zur Lösung des Problems.
-
-<Hint>
-
-Um den Rest bei einer Division zu berechnen, kann der Modulo-Operator verwendet werden.
-
-:::def
-### Modulo `%`
-Um den ganzzahligen Rest bei der Division von zwei ganzen Zahlen zu bestimmen, wird der Modulo-Operator verwendet.
-Biespiel: Was ist der ganzzahlige Rest von $7 / 5$? --> 2
-```py live_py slim
-print(7 % 5)
-```
-:::
-</Hint>
-
-Wenn Ihr Programm fertig ist und tut, was es soll:
-- __Stagen__ Sie die Änderungen
-- schreiben eine Commit-Nachricht und erstellen einen __commit__ 
-- __Pushen__ Sie die Änderungen auf GitHub.
-
-Die oben beschriebenen Schritte werden Ihnen im angehängten Screencast gezeigt.
-:::
-
-[^1]: Quelle [sdg](https://gitlab.gbsl.website/gymbefin23/material/-/snippets/11)

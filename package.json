@@ -39,6 +39,7 @@
     "@lebalz/remark-admonitions": "^1.2.5",
     "@mdi/font": "^6.9.96",
     "@radial-color-picker/react-color-picker": "^3.0.0",
+    "@saucelabs/theme-github-codeblock": "^0.1.1",
     "@svgr/webpack": "^5.5.0",
     "ace-builds": "^1.4.13",
     "animejs": "^3.2.1",
