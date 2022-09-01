@@ -10,8 +10,7 @@
     {
       "from": "docs/byod-basics/v25/",
       "to": "versioned_docs/version-25h/02-BYOD-Basics",
-      "ignore": [
-      ]
+      "ignore": []
     },
     {
       "from": "docs/dokumente/ms-word/",
@@ -51,14 +50,12 @@
     {
       "from": "docs/Codes-and-Data/02-Grafikformate/",
       "to": "versioned_docs/version-25h/05-Codierung/02-Grafikformate",
-      "ignore": [
-      ]
+      "ignore": []
     },
     {
       "from": "docs/Codes-and-Data/03-Compression/",
       "to": "versioned_docs/version-25h/05-Codierung/03-Compression",
-      "ignore": [
-      ]
+      "ignore": []
     },
     {
       "from": "docs/Math/Taschenrechner/",
@@ -68,8 +65,7 @@
     {
       "from": "docs/Codes-and-Data/04-Anwendungen/",
       "to": "versioned_docs/version-25h/05-Codierung/04-Anwendungen",
-      "ignore": [
-      ]
+      "ignore": []
     },
     {
       "from": "docs/Codes-and-Data/00-Lernziele.md",
@@ -89,8 +85,7 @@
     {
       "from": "docs/Big-Data/",
       "to": "versioned_docs/version-25h/06-Big-Data",
-      "ignore": [
-      ]
+      "ignore": []
     },
     {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
@@ -239,6 +234,12 @@
       "from": "docs/EF-Python/03-Python/00-turtle-repe.md",
       "to": "versioned_docs/version-24ef/01-Programmieren/03-Turtle-Repetition/index.md",
       "ignore": []
+    },
+    {
+      "from": "docs/EF-Python/03-Python/01-Listen-1D.md",
+      "to": "versioned_docs/version-24ef/01-Programmieren/04-Python/01-Listen-1D.md",
+      "ignore": [],
+      "open": true
     }
   ]
 }
