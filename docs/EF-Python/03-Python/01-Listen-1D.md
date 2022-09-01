@@ -40,6 +40,31 @@ print('Die vierte Note war eine', noten[3])
 Im Beispiel wird die vierte Note mit dem Index `3` ausgegeben.
 
 ## Aufgaben
+
+:::aufgabe listen-1d.py
+<Answer type="state" webKey="ec010329-3a79-4bd3-8e8d-35be2c5d246e" />
+
+Dateiname
+: __EF-Informatik/exercises/listen-1d.py__
+
+
+1. Erstellen Sie das folgende Programm in Ihrem Repository  
+   :::details `listen-1d.py`
+    ```py reference title="listen-1d.py"
+    https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/assets/listen-1d.py
+    ```
+   :::
+2. Führen Sie das Programm Zeile für Zeile aus und untersuchen Sie die verschiedenen Listen-Optionen.
+3. Welche Fehlermeldung erscheint beim *Szenario 6*?
+   <Answer type="text" webKey="e8a516a5-1c07-4a4b-8092-7ec3a103923e" />
+
+4. commit & push...
+:::
+
+:::aufgabe 
+
+:::
+
 :::aufgabe Primzahlen
 <Answer type="state" webKey="00361219-0652-4870-9a42-c3cf8250b9a4" />
 
@@ -47,12 +72,6 @@ Dateiname
 : __EF-Informatik/exercises/primzahlen.py__
 
 Schreiben Sie ein Programm welches eine Liste mit allen Primzahlen zwischen 1 und 100 erstellt und diese Liste am Schluss auf der Konsole ausgibt.
-
-
-```.py reference
-https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/assets/listen-1d.py
-```
-
 
 Programmieren Sie anschliessend einen geeigneten Algorithmus zur Lösung des Problems.
 

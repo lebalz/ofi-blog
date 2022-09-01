@@ -213,6 +213,7 @@ module.exports = {
   ],
   plugins: [
     'docusaurus-plugin-sass',
+    '@saucelabs/theme-github-codeblock',
     './src/plugins/brython-source.js',
     // function (context, options) {
     //   return  {
