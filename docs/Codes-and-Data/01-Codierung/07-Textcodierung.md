@@ -9,7 +9,6 @@ sidebar_custom_props:
 import OsTabs from '@site/src/components/OsTabs'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindows } from "@fortawesome/free-brands-svg-icons"
-import Hint from '@site/src/components/Solution/Hint'
 import DecBinHexTransformer from "@site/src/components/VisualizationTools/DecBinHexTransformer";
 
 # 7. Textcodierung

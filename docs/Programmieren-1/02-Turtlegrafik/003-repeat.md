@@ -5,7 +5,6 @@ sidebar_custom_props:
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Finding from "@site/src/components/Finding";
-import Hint from "@site/src/components/Solution/Hint";
 
 # 3. Wiederholung 🔁
 

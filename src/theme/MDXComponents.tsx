@@ -8,7 +8,7 @@ import Answer from '../components/Answer';
 import Solution from '../components/Solution';
 import Comment from '../components/Comment';
 import GTabs from '../components/GTabs';
-
+import Hint from '../components/Solution/Hint'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -22,6 +22,7 @@ export default {
   Answer: Answer,
   Solution: Solution,
   Tabs: Tabs,
+  Hint: Hint,
   GTabs: GTabs,
   TabItem: TabItem
 };

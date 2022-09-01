@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 8f179342-b762-4504-af99-3f32b6125f01
 ---
 
-import Hint from "@site/src/components/Solution/Hint";
-
 # 8. Addierer
 
 ## Binäre Addition

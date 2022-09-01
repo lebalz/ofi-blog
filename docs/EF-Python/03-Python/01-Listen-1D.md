@@ -6,7 +6,6 @@ sidebar_custom_props:
     name: sdg
     ref: https://gitlab.gbsl.website/gymbefin23/material/-/snippets/11
 ---
-import Hint from '@site/src/components/Solution/Hint'
 
 # Listen
 
@@ -41,7 +40,7 @@ Im Beispiel wird die vierte Note mit dem Index `3` ausgegeben.
 
 ## Aufgaben
 
-:::aufgabe listen-1d.py
+:::aufgabe 1. listen-1d.py
 <Answer type="state" webKey="ec010329-3a79-4bd3-8e8d-35be2c5d246e" />
 
 Dateiname
@@ -49,7 +48,7 @@ Dateiname
 
 
 1. Erstellen Sie das folgende Programm in Ihrem Repository  
-   :::details `listen-1d.py`
+   :::details Programm
     ```py reference title="listen-1d.py"
     https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/assets/listen-1d.py
     ```
@@ -61,11 +60,69 @@ Dateiname
 4. commit & push...
 :::
 
-:::aufgabe 
+
+:::aufgabe 2. Was steht geschrieben?
+<Answer type="state" webKey="84fa5115-9483-4c76-8aca-7112371d5b3e" />
+
+Dateiname
+: __EF-Informatik/exercises/listen-word-riddle.py__
+
+Gegeben ist ein `ALPHABET` und eine Nachricht `MESSAGE`. In der Nachricht sind die Indices der zugehörigen Buchstaben gespeichert. Schreiben Sie ein Programm, welches die Nachricht decodiert und in Buchstabenform darstellt.
+
+```py
+ALPHABET = [' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+MESSAGE = [12, 9, 19, 20, 0, 18, 9, 4, 4, 12, 5]
+```
+
+<Hint>
+
+```mermaid
+sequenceDiagram
+    MESSAGE-->>MESSAGE: [0] = 12
+    MESSAGE->>ALPHABET: index 12?
+    ALPHABET-->>ALPHABET: [12] => L
+    MESSAGE-->>MESSAGE: [1] = 9
+    MESSAGE->>ALPHABET: index 9?
+    ALPHABET-->>ALPHABET: [9] => ...
+```
+</Hint>
+:::
+
+:::aufgabe 3. Meine Nummer 1
+<Answer type="state" webKey="56fcba0a-c357-462b-b4e6-8f7d76fbe932" />
+
+Dateiname
+: __EF-Informatik/exercises/listen-word-riddle2.py__
+
+Nun wurde eine weitere Zuordnungsstufe Stufe hinzugefügt 😮. In der `MESSAGE` steht, an welcher Stelle im `MAPPING` der Index steht, an welchem der gesuchte Buchstabe zu finden ist. Finden Sie die Nachricht?
+
+```py
+ALPHABET = [' ', '_', '.', ':', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+MAPPING = [54, 58, 53, 4, 8, 60, 45, 60, 12, 41, 13, 47, 60, 4, 44, 56, 62, 4, 58, 47, 41, 60, 55, 3, 9, 45, 60, 10, 19, 2, 54, 62, 48, 54, 56, 18, 41, 53, 44, 4, 58, 43, 1, 50, 54, 13, 2, 2, 49, 6, 1, 59, 14, 58, 16, 4]
+MESSAGE = [32, 5, 7, 15, 51, 23, 3, 13, 48, 2, 11, 29, 14, 6, 16, 1, 9, 0, 12, 46, 41, 22, 37, 17, 38, 25, 31, 18, 20, 30, 21, 39, 40, 36, 33, 26, 55, 53, 42, 49, 8, 52, 10, 27, 4, 24, 50, 44, 54, 28, 45, 35, 47, 43, 34, 19]
+```
+
+<Hint>
+
+
+```mermaid
+sequenceDiagram
+    MESSAGE-->>MESSAGE: [0] = 32
+    MESSAGE->>MAPPING: index 32?
+    MAPPING-->>MAPPING: [32] => 48
+    MAPPING->>ALPHABET: index 48?
+    ALPHABET-->>ALPHABET: [48] => h
+    MESSAGE-->>MESSAGE: [1] = 5
+    MESSAGE->>MAPPING: index 5?
+    MAPPING-->>MAPPING: [5] => 60
+    MAPPING->>ALPHABET: index 60?
+    ALPHABET-->>ALPHABET: [60] => ...
+```
+</Hint>
 
 :::
 
-:::aufgabe Primzahlen
+:::aufgabe 4. Primzahlen
 <Answer type="state" webKey="00361219-0652-4870-9a42-c3cf8250b9a4" />
 
 Dateiname
@@ -73,7 +130,7 @@ Dateiname
 
 Schreiben Sie ein Programm welches eine Liste mit allen Primzahlen zwischen 1 und 100 erstellt und diese Liste am Schluss auf der Konsole ausgibt.
 
-Programmieren Sie anschliessend einen geeigneten Algorithmus zur Lösung des Problems.
+**Bevor Sie Programmieren**: Diskutieren Sie Ihr Vorgehen mit einer Kolleg:in und besprechen Sie gemeinsam eine algorithmische Lösung für das Problem. Halten Sie stichwortartig fest, was Sie besprochen haben.
 
 <Hint>
 
@@ -91,10 +148,13 @@ print(7 % 5)
 :::
 
 
+---
+
+<span style={{height: '7em', display: 'block'}}></span>
+
 ## Eindimensionale Listen
 
-Hier sehen Sie, wie man mit Listen in Python arbeitet.
-
+Hier nochmals in der Übersicht die Funktionsweise von Listen in Python.
 
 :::def
 ### Liste erzeugen `[]`

@@ -6,7 +6,6 @@ sidebar_custom_props:
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 import Ratespiel from '@site/src/components/Ratespiel'
-import Hint from '@site/src/components/Solution/Hint'
 
 # 8. Bedingte Ausführung ⑂
 

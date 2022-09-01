@@ -3,8 +3,6 @@ sidebar_custom_props:
   id: 975c2237-7335-428d-96db-2e7f507c1d31
 ---
 
-import Hint from '@site/src/components/Solution/Hint'
-
 # 4. Fehler
 
 Sie haben bereits festgestellt, dass Python sehr pingelig ist was Tippfehler und die präzise Verwendung von Klammern, Anführungszeichen, Doppelpunkten und Leerzeichen angeht. Jede Sprache hat seine eigenen Regeln, wie Wörter und Sätze strukturiert sein müssen. Diese Regeln sind allgemein bekannt als die **Syntax** einer Sprache. Bei Programmiersprachen wird mit der Syntax festgelegt, welche Wörter, in welcher Reihenfolge und in welchem Kontext erlaubt sind.
