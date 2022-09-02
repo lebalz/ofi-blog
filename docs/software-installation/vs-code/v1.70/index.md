@@ -24,3 +24,13 @@ sidebar_custom_props:
 ![](images/vsc-6.png)
 
 </GTabs>
+
+:::details Empfohlene Erweiterungen und Einstellungen
+#### Erweiterungen
+- python
+- Intelli Code
+- git-graph
+
+#### Einstellungen
+- `debug.inlineValues` auf 'on'
+:::
