@@ -104,10 +104,9 @@ MESSAGE = [32, 5, 7, 15, 51, 23, 3, 13, 48, 2, 11, 29, 14, 6, 16, 1, 9, 0, 12, 4
 
 <Hint>
 
-
 ```mermaid
 sequenceDiagram
-    MESSAGE-->>MESSAGE: [0] = 32
+    MESSAGE-->>+MESSAGE: [0] = 32
     MESSAGE->>MAPPING: index 32?
     MAPPING-->>MAPPING: [32] => 48
     MAPPING->>ALPHABET: index 48?
