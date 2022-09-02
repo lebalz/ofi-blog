@@ -31,14 +31,15 @@ Jede Zelle widerspiegelt dabei den aktuellen, aufsummierten Zahlenwert.
 :::aufgabe
 <Answer type="state" webKey="1f8639f0-8bb6-42b1-9f44-849e8ce14775" />
 
+Dateiname
+: __EF-Informatik/docs/numtrip/datenstruktur.md__
+
 1. Überlegen Sie sich zu zweit oder zu dritt, wie Sie die oben beschriebenen Informationen zum Spielfeld in einer geeigneten Datenstruktur in einem Python-Programm darstellen können.  
 Stellen Sie sich dazu folgenden Fragen:
-   - Welcher Datentyp wird in einer Zelle gespeichert (Text oder Zahl)?
+   - Welcher Datentyp wird in einer Zelle gespeichert?
    - Braucht es eine Liste? Welche Dimension hat diese?
    - Brauchen wir mehrere Listen?
-2. Fertigen Sie auf Papier eine kleine Illustration Ihrer Datenstruktur an und schreiben Sie einen kurzen Dokumentationsbeitrag (bspw. unter `docs/numtrip/datenstruktur.md`) zu Ihren Überlegungen (jede Person für sich). (Fotografieren Sie Ihre Skizze und binden diese in Ihr Markdown ein).
-3. Commiten und Pushen Sie die Dokumente.
-4. Kopieren Sie den Link zur entsprechenden Github-Dokumentationsseite in die Antwort zu dieser Aufgabe.
+2. Fertigen Sie auf Papier eine kleine Illustration Ihrer Datenstruktur an und schreiben Sie einen kurzen Dokumentationsbeitrag zu Ihren Überlegungen (jede Person für sich). (Fotografieren Sie Ihre Skizze und binden diese in Ihr Markdown ein).
+3. Commit & Push
 
-<Answer type="text" webKey="f9e9ab95-2035-4d72-a047-4b0f30d58163" />
 :::

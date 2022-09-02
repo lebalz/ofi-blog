@@ -12,8 +12,10 @@
         font-weight: bold;
         text-align:right;
         min-height: 1px;
+        overflow-x: auto;
     }
     dd {
+        overflow-x: auto;
         width:60%;
         padding-left:1em;
         margin-left: 0px;
