@@ -221,13 +221,8 @@
       ]
     },
     {
-      "from": "docs/EF-Python/04-NumTrip/index.md",
-      "to": "versioned_docs/version-24ef/01-Programmieren/10-NumTrip/index.md",
-      "ignore": []
-    },
-    {
-      "from": "docs/EF-Python/04-NumTrip/images/",
-      "to": "versioned_docs/version-24ef/01-Programmieren/10-NumTrip/images",
+      "from": "docs/EF-Python/04-NumTrip/",
+      "to": "versioned_docs/version-24ef/01-Programmieren/10-NumTrip",
       "ignore": []
     },
     {
