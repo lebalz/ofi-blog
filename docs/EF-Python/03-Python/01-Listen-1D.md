@@ -6,6 +6,7 @@ sidebar_custom_props:
     name: sdg
     ref: https://gitlab.gbsl.website/gymbefin23/material/-/snippets/11
 ---
+import Strukto from '@site/src/components/struktogramm/Strukto';
 
 # Listen
 
@@ -169,6 +170,42 @@ print(7 % 5)
 ```
 :::
 </Hint>
+<Solution webKey="d7521e75-f8c2-4b23-aa83-263b8b8d5d0c">
+
+
+<Strukto program={[
+    {type: 'step', code: <span><span className="var">primes</span> = leere Liste</span>},
+    {
+        type: 'repeat',
+        code: <span>Für alle <span className="var">zahl</span>en zwischen <u>2</u> und <u>100</u>:</span>,
+        block: [
+            {type: 'step', code: <span><span className="var">is_prime</span> = wahr</span>},
+            {
+                type: 'repeat',
+                code: <span>Für alle <span className="var">test_zahl</span>en zwischen <u>2</u> und <u><span className="var">zahl</span> - 1</u>:</span>,
+                block: [
+                    {
+                        type: 'if',
+                        code: <span>Ist der ganzzahlige Rest bei der Division von <span className="var">zahl</span> durch <span className="var">test_zahl</span> gleich 0?</span>,
+                        block: [
+                            {type: 'step', code: <span>Setze <span className="var">is_prime</span> auf falsch.</span>}
+                        ]
+                    }
+                ]
+            },
+            { 
+                type: 'if', 
+                code: <span>Wenn <span className="var">is_prime</span> ist wahr:</span>,
+                block: [
+                    {type: 'step', code: <span>Füge <span className="var">zahl</span> der Liste <span className="var">primes</span> hinzu.</span>}
+                ]
+            }            
+        ]
+    },
+    {type: 'step', code: <span>Gebe die Liste <span className="var">primes</span> aus.</span>}
+]} />
+
+</Solution>
 :::
 
 
