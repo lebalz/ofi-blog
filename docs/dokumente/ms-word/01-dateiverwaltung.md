@@ -44,6 +44,7 @@ Beachten Sie, dass fürs Kopieren eines Links die Link-Einstellungen auf **Jeder
 :::
 
 :::aufgabe Gemeinsames Arbeiten an einem Dokument
+<Answer type="state" webKey="0f992d0a-e20e-4a32-901b-cf4da6500e2f" />
 
 Gemeinsame Bearbeitung der Menüs fürs Klassenlager.
 
