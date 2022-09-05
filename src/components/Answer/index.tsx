@@ -13,6 +13,7 @@ import { ToolbarOptions } from '../shared/quillConfig';
 import Loader from '../shared/Loader';
 import StateAnswer from './StateAnswer';
 import clsx from 'clsx';
+import { StateType } from '@site/src/models/Answer/State';
 
 export const UPPER_NOSPACE = (val: string | undefined) => val.replace(/\s+/g, '').toUpperCase();
 
@@ -42,7 +43,7 @@ export interface ArrayProps extends Base {
 
 export interface StateProps extends Base {
     type: 'state';
-    noQuestion?: boolean;
+    states: StateType[];
     noHeader?: boolean;
 }
 
@@ -121,7 +122,7 @@ const Answer = observer((props: Props) => {
             {props.type === 'text' && <TextAnswer {...props} />}
             {props.type === 'string' && <StringAnswer {...props} />}
             {props.type === 'array' && <ArrayAnswer {...props} />}
-            {props.type === 'state' && <StateAnswer {...props} />}
+            {props.type === 'state' && <StateAnswer {...{states: ['unset', 'checked', 'question'], ...props}} />}
         </div>
     );
 });

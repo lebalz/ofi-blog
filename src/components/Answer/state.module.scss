@@ -2,10 +2,15 @@
     display: flex;
     align-items: baseline;
     gap: 8px;
+    cursor: pointer;
 
     .checkbox {
         font-size: 1.2rem;
-        padding: 0px 5px;
+        border-radius: var(--ifm-global-radius);
+        padding: 0px 6px;
+        &:hover {
+            filter: brightness(0.85);
+        }
     }
 
     margin-bottom: var(--ifm-paragraph-margin-bottom);
@@ -17,7 +22,7 @@
     .state-component:not(.no-header) {
         position: absolute;
         top: 10px;
-        left: 10px;
+        left: 8px;
         margin-bottom: 0;
     }
 }

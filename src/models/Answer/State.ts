@@ -6,7 +6,7 @@ import { DocumentStore } from '../../stores/DocumentStore';
 import { rootStore } from '../../stores/stores';
 import SaveService, { ApiModel } from '../SaveService';
 
-export type StateType = 'checked' | 'question' | 'unset';
+export type StateType = 'checked' | 'question' | 'unset' | 'star' | 'star-half' | 'star-empty';
 
 export interface StateDoc {
     value: StateType;
@@ -96,18 +96,6 @@ export default class StateAnswer implements StateModel, ApiModel {
     @action
     setValue(value: StateType) {
         this.value = value;
-    }
-
-    @computed
-    get viewClass() {
-        switch (this.value) {
-            case 'checked':
-                return 'success';
-            case 'unset':
-                return 'secondary';
-            case 'question':
-                return 'warning';
-        }
     }
 
     @action
