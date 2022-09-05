@@ -13,11 +13,6 @@
       "ignore": []
     },
     {
-      "from": "docs/dokumente/ms-word/",
-      "to": "versioned_docs/version-25h/03-Texte",
-      "ignore": []
-    },
-    {
       "from": "docs/Programmieren-1/01-Algorithmen/",
       "to": "versioned_docs/version-25h/04-Programmieren-1/01-Algorithmen",
       "ignore": []
