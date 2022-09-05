@@ -1,9 +1,10 @@
 ---
+sidebar_position: 0
 sidebar_custom_props:
   id: 821b8715-d4f9-4e10-b74a-48ba871ce53a
 ---
 
-# Prüfung
+# Lernziele
 
 Dauer
 : 45 Minuten
