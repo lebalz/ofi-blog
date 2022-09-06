@@ -37,10 +37,11 @@
     max-width: 100%;
     gap: 0.5em;
     &.summary {
-        height: 160px;
+        height: max-content;
     }
     .box {
         width: 1rem;
+        margin-bottom: 4.2em;
         .state {
             font-size: 1rem;
             border-radius: 4px;
