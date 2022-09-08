@@ -8,6 +8,8 @@ sidebar_custom_props:
 
 # Jetzt gehts los!
 
+![NumTrip --width=200px](images/numtrip-inplay.png)
+
 :::aufgabe `numtrip.py`
 <Answer type="state" webKey="b160c683-c0de-405c-a847-cb3f3ab1aaf2" />
 
@@ -27,5 +29,6 @@ Wenn alles zu Ihrer Zufriedenheit funktioniert, machen Sie einen Commit, pushen 
 :::danger Noch keine Spieler:inneninteraktion
 Es ist in diesem Schritt noch keine Interaktion mit Spielenden oder ein Spielfluss zu programmieren - nur das Anzeigen des Spielfelds...
 :::
+
 
 :::

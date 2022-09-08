@@ -41,5 +41,4 @@ Stellen Sie sich dazu folgenden Fragen:
    - Brauchen wir mehrere Listen?
 2. Fertigen Sie auf Papier eine kleine Illustration Ihrer Datenstruktur an und schreiben Sie einen kurzen Dokumentationsbeitrag zu Ihren Überlegungen (jede Person für sich). (Fotografieren Sie Ihre Skizze und binden diese in Ihr Markdown ein).
 3. Commit & Push
-
 :::

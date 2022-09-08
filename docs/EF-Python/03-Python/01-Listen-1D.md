@@ -170,9 +170,7 @@ print(7 % 5)
 ```
 :::
 </Hint>
-<Solution webKey="d7521e75-f8c2-4b23-aa83-263b8b8d5d0c">
-
-
+<Solution webKey="d7521e75-f8c2-4b23-aa83-263b8b8d5d0c" title="Lösung: Struktogramm">
 <Strukto program={[
     {type: 'step', code: <span><span className="var">primes</span> = leere Liste</span>},
     {
@@ -204,7 +202,22 @@ print(7 % 5)
     },
     {type: 'step', code: <span>Gebe die Liste <span className="var">primes</span> aus.</span>}
 ]} />
+</Solution>
+<Solution webKey="5b398abd-06b7-4fc7-8e2c-bff3f6af292a" title="Lösung">
 
+```py live_py slim
+primes = []
+MAX_ZAHL = 100
+
+for zahl in range(2, MAX_ZAHL + 1):
+    is_prime = True
+    for to_test in range(2, zahl):
+        if zahl % to_test == 0:
+            is_prime = False
+    if is_prime:
+        primes.append(zahl)
+print(f'{len(primes)} Primzahlen von 1 bis {MAX_ZAHL}', primes)
+```
 </Solution>
 :::
 

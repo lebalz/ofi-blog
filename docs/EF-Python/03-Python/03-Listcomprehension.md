@@ -2,12 +2,13 @@
 sidebar_label: "List Comprehension"
 sidebar_custom_props:
   id: de38c04c-c7b6-4565-8778-dffc4686b4c2
+  ref: https://gitlab.gbsl.website/gymbefin23/material/-/snippets/11
 ---
 
 
 # List Comprehension
 
-Hier sehen Sie, wie man auf einfache Art und Weise eine Liste erzeugen und gleich mit bestimmten Werten füllen kann, man sagt __intialisieren__. Der Teil zwischen den `[]` wird als Listen-Abstraktion (englisch **list comprehension**) bezeichnet. [^1]
+Hier sehen Sie, wie man auf einfache Art und Weise eine Liste erzeugen und gleich mit bestimmten Werten füllen kann, man sagt __intialisieren__. Der Teil zwischen den `[]` wird als Listen-Abstraktion (englisch **list comprehension**) bezeichnet.
 
 :::def
 ### Liste mit `1` initialisieren
@@ -59,4 +60,3 @@ print(matrix)
 ```
 :::
 
-[^1]: Quelle [sdg](https://gitlab.gbsl.website/gymbefin23/material/-/snippets/11)
