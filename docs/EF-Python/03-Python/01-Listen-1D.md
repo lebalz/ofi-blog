@@ -219,6 +219,13 @@ for zahl in range(2, MAX_ZAHL + 1):
 print(f'{len(primes)} Primzahlen von 1 bis {MAX_ZAHL}', primes)
 ```
 </Solution>
+
+<Solution webKey="6e42d81b-f179-41c4-9f0c-9e80dbb54034" title="Optimierungen">
+
+```py reference title="primes.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/assets/primes.py
+```
+</Solution>
 :::
 
 
