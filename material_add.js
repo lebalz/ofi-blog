@@ -55,20 +55,22 @@ if (argv.ignore) {
 }
 klassen.forEach((klass) => {
     if (!Object.keys(configs).includes(klass)) {
-        console.log('Klasse not found, skipping: ', klass)
+        console.log(`⚠️ 
+        Klasse not found, skipping: ${klass}
+        `)
         return;
     }
     configs[klass] = configs[klass].filter((srcPath) => {
         switch (typeof srcPath) {
             case 'string':
                 if (srcPath === src) {
-                    console.log('Modify old source: ', srcPath)
+                    console.log('ℹ️  Modify old source: ', srcPath)
                     return false;
                 }
                 break;
             case 'object':
                 if (srcPath.from === src) {
-                    console.log('Modify old source: ', srcPath)
+                    console.log('ℹ️  Modify old source: ', srcPath)
                     return false;
                 }
                 break;

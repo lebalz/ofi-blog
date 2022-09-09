@@ -80,7 +80,13 @@ Object.keys(CONFIG).forEach((klass) => {
             }
             rsync.exclude(['.sync.*', '*.nosync.*'])
             rsync.execute((err, code, cmd) => {
-                console.log('finished', err, code, cmd)
+                if (!err) {
+                    console.log('✅', cmd)
+                } else {
+                    console.log('❌')
+                    console.log('   ', cmd)
+                    console.log('')
+                }
             })
         } else {
             fs.copyFileSync(srcPath, toPath);
