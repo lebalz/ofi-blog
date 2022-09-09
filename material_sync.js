@@ -85,6 +85,8 @@ Object.keys(CONFIG).forEach((klass) => {
                 } else {
                     console.log('❌')
                     console.log('   ', cmd)
+                    console.log('   ', err)
+                    console.log('   ', code)
                     console.log('')
                 }
             })
