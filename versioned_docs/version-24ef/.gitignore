@@ -7,6 +7,5 @@
 !01-Programmieren/03-Turtle-Repetition/800-python-scripts.md,051-art.md,050-repetition.md,index.md
 01-Programmieren/10-NumTrip/*
 01-Programmieren/03-Turtle-Repetition/index.md
-01-Programmieren/04-Python/01-Listen-1D.md
-01-Programmieren/04-Python/_category_.json
-01-Programmieren/04-Python/02-Listen-2D.md
+01-Programmieren/04-Python/*
+!01-Programmieren/04-Python/03-Listcomprehension.md
