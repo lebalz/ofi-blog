@@ -246,6 +246,11 @@
       "to": "versioned_docs/version-24ef/01-Programmieren/04-Python/01-Listen-1D.md",
       "ignore": [],
       "open": true
+    },
+    {
+      "from": "docs/EF-Python/03-Python/02-Listen-2D.md",
+      "to": "versioned_docs/version-24ef/01-Programmieren/04-Python/02-Listen-2D.md",
+      "ignore": []
     }
   ]
 }
