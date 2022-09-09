@@ -36,12 +36,12 @@ Bei zwei Dimensionen kann man auf diese Weise in Python Matrizen, bzw. Tabellen 
 ### 3 x 3 Matrix
 Eine Matrix ist eine Liste von Listen
 ```py live_py slim
-matrix_3x3 = [
+matrix = [
     [1, 2, 3], 
     [4, 5, 6], 
     [7, 8, 9]
 ]
-print(matrix_3x3)
+print(matrix)
 ```
 :::
 
@@ -51,21 +51,21 @@ Auf einzelne Element in der Matrix zugreifen
 
 ```py live_py slim
 # kann auch auf einer Zeile geschrieben werden:
-matrix_3x3 = [
+matrix = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
 
 # 1. Zeile ändern - zugewiesener Wert muss eine Liste sein
-matrix_3x3[0] = [11, 12, 13]
+matrix[0] = [11, 12, 13]
 # 3. Wert in 2. Zeile verändern
-matrix_3x3[1][2] = 0
+matrix[1][2] = 0
 # Werte ausgeben
-print('Matrix:', matrix_3x3)
-print('Erste Zeile:', matrix_3x3[0])
-print('Zeile 2, Spalte 3:', matrix_3x3[1][2])
-print('Zeile 3, Spalte 1:', matrix_3x3[2][0])
+print('Matrix:', matrix)
+print('Erste Zeile:', matrix[0])
+print('Zeile 2, Spalte 3:', matrix[1][2])
+print('Zeile 3, Spalte 1:', matrix[2][0])
 ```
 :::
 
@@ -74,9 +74,9 @@ print('Zeile 3, Spalte 1:', matrix_3x3[2][0])
 
 Schleife über einzelne Zeilen :mdi-arrow-right: Zeilen sind wieder Listen
 ```py live_py slim
-matrix_3x3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-for zeile in matrix_3x3:
+for zeile in matrix:
     print(zeile)
 ```
 :::
@@ -140,18 +140,18 @@ pprint([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
 Dazu wird eine **verschachtelte Schleife** über Zeilen und Spalten verwendet.
 ```py live_py slim
-matrix_3x3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-for zeile in matrix_3x3:
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for zeile in matrix:
     for zahl in zeile:
         print(zahl)
 ```
 
 Oder man greift über die Zeilen- (`i`) und Spaltenindices (`j`) auf die Elemente zu:
 ```py live_py slim
-matrix_3x3 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 for i in range(3):
     for j in range(3):
-        print(f'[i: {i}, j: {j}] =', matrix_3x3[i][j])
+        print(f'[i: {i}, j: {j}] =', matrix[i][j])
 ```
 :::
 
@@ -195,7 +195,7 @@ for i in range(len(matrix)):
 
 #### `create_from.py`
 
-Ändern Sie den untenstehenden Code so ab, dass die Variabe `matrix` am eine 2D-Liste mit der gegebenen Anzahl Zeilen- und Spalten sowie den Zellenwerten `zahl` enthält. Schreiben Sie das Programm so, dass es auch bei geänderten `ZEILEN`. `SPALTEN` und `ZAHL`en Werten funktioniert.
+Ändern Sie den untenstehenden Code so ab, dass die Variabe `matrix` eine Matrix mit der gegebenen Anzahl Zeilen- und Spalten sowie überall den Zellenwerten `ZAHL` enthält. Schreiben Sie das Programm so, dass es auch bei geänderten `ZEILEN`. `SPALTEN` und `ZAHL`en Werten funktioniert.
 
 ```py live_py id=01a6ec22-0819-4b61-9b8d-7a1a62224ef8 title=create_from.py
 ZEILEN = 3
