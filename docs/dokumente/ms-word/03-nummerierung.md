@@ -31,7 +31,7 @@ Die erste Seite, auch wenn "Erste Seite Anders" ausgewählt ist, zählt bei der 
 
 Um Überschriften automatisiert nummerieren zu lassen, müssen die Überschriften als solche gekennzeichnet werden. Dies wird über die Zuweisung einer **Formatvorlage** erreicht ([Formatvorlagen](02-dokumentstruktur.md#absatz))
 
-Die Formatvorlage für eine Überschrift kann geändert und über `Format > Nummerierung` eine Nummerierung hinzugefügt werden. 
+Die Formatvorlage für eine Überschrift kann geändert und über __Format > Nummerierung__ eine Nummerierung hinzugefügt werden. 
 
 ![--width=450](images/word-formatvorlage-nummerierung.png)
 
@@ -44,7 +44,7 @@ Die Formatvorlage für eine Überschrift kann geändert und über `Format > Numm
 </div>
 
 Soll eine verschachtelte Nummerierung eingefügt werden, muss
-- zuerst der *Überschrift 1" eine eifache Nummerierung (wie oben) hinzugefügt werden
+- zuerst der *Überschrift 1* eine einfache Nummerierung (wie oben) hinzugefügt werden
 - der Cursor im Überschriften-Text fokussiert werden
 - Über die "Liste mit mehreren Ebenen" die verschachtelte Nummerierung eingefügt werden
 
