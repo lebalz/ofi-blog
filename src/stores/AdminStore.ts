@@ -41,6 +41,9 @@ export class AdminStore {
     @observable
     showSolutions = false;
 
+    @observable
+    viewGroupFilter?: string = undefined;
+
     @observable initialized: boolean = false;
     constructor(root: RootStore) {
         this.root = root;
@@ -162,6 +165,16 @@ export class AdminStore {
     @action
     setView(userId: number) {
         this.root.userStore.setView(this.root.userStore.findById(userId));
+    }
+
+    @action
+    setViewGroupFilter(group: string) {
+        this.viewGroupFilter = group;
+    }
+
+    @action
+    clearViewGroupFilter() {
+        this.viewGroupFilter = undefined;
     }
 
 

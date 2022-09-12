@@ -1,0 +1,28 @@
+.version {
+    display: flex;
+    &.admin {
+        .badge {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right-color: #b3b3b3;
+            border-right-width: 1px;
+        }
+        .options {
+            // background: red;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+            z-index: var(--ifm-z-index-dropdown);
+            .clearFilter {
+                &:hover {
+                    color: var(--ifm-color-danger);
+                }
+                padding-left: 4px;
+                margin-right: -4px;
+            }
+        }
+    }
+}

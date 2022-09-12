@@ -238,4 +238,30 @@ export class UserStore {
         },
         { keepAlive: true }
     );
+
+    byClassAndGroup = computedFn(
+        function (this: UserStore, klasse?: string, group?: string): User[] {
+            if (!klasse && !group) {
+                return this.users;
+            }
+            if (!group) {
+                return this.byClass(klasse);
+            }
+            if (!klasse) {
+                return this.users.filter((user) => user.groups.includes(group));
+            }
+            return this.byClass(klasse).filter((user) => user.groups.includes(group));
+        },
+        { keepAlive: true }
+    );
+
+
+    groupsByClass = computedFn(
+        function (this: UserStore, klasse?: string): string[] {
+            const grps = this.byClass(klasse).reduce((p, u) => [...p, ...u.groups], []);
+            const uniq = new Set(grps);
+            return Array.from(uniq);
+        },
+        { keepAlive: true }
+    );
 }

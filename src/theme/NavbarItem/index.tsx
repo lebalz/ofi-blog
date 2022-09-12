@@ -91,7 +91,7 @@ const withLoginNavbar = (Component) => {
                             <button
                                 className={clsx('badge', 'badge--secondary', 'badge--sm', styles.badgeButton)}
                                 onClick={() => {
-                                    const students = userStore.byClass(version?.name);
+                                    const students = userStore.byClassAndGroup(version?.name, adminStore.viewGroupFilter);
                                     const currentIdx = students.indexOf(userStore.currentView);
                                     if (currentIdx > 0) {
                                         userStore.setView(students[currentIdx - 1]);
@@ -119,7 +119,7 @@ const withLoginNavbar = (Component) => {
                                     {userStore.currentView.name}
                                 </button>
                                 <ul className="dropdown__menu">
-                                    {userStore.byClass(version?.name).map((user, idx) => (
+                                    {userStore.byClassAndGroup(version?.name, adminStore.viewGroupFilter).map((user, idx) => (
                                         <li key={idx} onClick={() => userStore.setView(user)}>
                                             <div
                                                 className={clsx(
@@ -138,7 +138,7 @@ const withLoginNavbar = (Component) => {
                             <button
                                 className={clsx('badge', 'badge--secondary', 'badge--sm', styles.badgeButton)}
                                 onClick={() => {
-                                    const students = userStore.byClass(version?.name);
+                                    const students = userStore.byClassAndGroup(version?.name, adminStore.viewGroupFilter);
                                     const currentIdx = students.indexOf(userStore.currentView);
                                     if (currentIdx < students.length - 1) {
                                         userStore.setView(students[currentIdx + 1]);
