@@ -144,7 +144,7 @@ hideturtle()
 :::aufgabe 1. Python → Struktogramm
 <Answer type="state" webKey="dfbdeec2-0728-4431-9a21-0bb26b2b526b" />
 
-Zeichnen Sie für folgendes Programm ein Struktogramm (auf ein Blatt Papier).
+Zeichnen Sie für folgendes Programm ein Struktogramm auf ein Blatt Papier. Fotografieren Sie es im Anschluss und halten Sie es im untenstehenden Textfeld fest.
 
 ```py live_py slim
 from turtle import *
@@ -157,6 +157,9 @@ for i in range(5):
     left(72)
     backward(20) 
 ```
+
+<Answer type="text" webKey="aa18fc7f-6e93-45ab-ae37-632a1b2813a4" />
+
 <Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
 
 **Zu Beachten**:
@@ -182,7 +185,7 @@ for i in range(5):
 :::aufgabe 2. Python → Struktogramm
 <Answer type="state" webKey="2bdc6e12-b4c4-4cc3-a876-6f0638d15ea8" />
 
-Zeichnen Sie auch für folgendes Programm ein Struktogramm.
+Zeichnen Sie auch für folgendes Programm ein Struktogramm und halten Sie dieses fest.
 
 ```py live_py slim
 from turtle import *
@@ -194,6 +197,8 @@ for i in range(5):
         left(90)
     forward(100) 
 ```
+<Answer type="text" webKey="f04dd751-ffcc-4e61-b0ad-35a14aa75296" />
+
 <Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
 
 **Zu Beachten**:
@@ -225,7 +230,7 @@ for i in range(5):
 :::aufgabe 3. Treppe vol. 2
 <Answer type="state" webKey="1f478252-8656-47d2-9905-8dfa9f621af6" />
 
-Zeichnen Sie eine Treppe 20 Stufen. Die Treppe soll bei den Koordinaten `(-200, -200)` starten. Wählen Sie die Stufen-Breiten so, dass der verfügbare Platz möglichst gut ausgenutzt wird.
+Zeichnen Sie eine Treppe mit 20 Stufen. Die Treppe soll bei den Koordinaten `(-200, -200)` starten. Wählen Sie die Stufen-Breiten so, dass der verfügbare Platz möglichst gut ausgenutzt wird.
 
 ![](images/treppe2_py.svg)
 
@@ -234,7 +239,10 @@ from turtle import *
 
 ```
 
-> Trick: Verwenden Sie den Befehl [`goto(x, y)`](100-turtle-commands.md#gotox-y) um die Turtle bei `-200, -200` zu positionieren.
+<Hint>
+
+Verwenden Sie den Befehl [`goto(x, y)`](100-turtle-commands.md#gotox-y) um die Turtle bei `-200, -200` zu positionieren.
+</Hint>
 
 <Solution webKey="81d5ca4e-0b04-434a-a8c0-b84a1452da76">
 
@@ -257,7 +265,10 @@ for i in range(20):
 :::aufgabe 4. Schneestern
 <Answer type="state" webKey="739d205c-59af-4d11-ad53-7c32f0f39dee" />
 
-Zeichnen Sie einen Stern. Verwenden Sie dabei den Befehl `backward()`.
+Zeichnen Sie einen Stern und gehen Sie wie folgt vor:
+1. Untersuchen Sie den Stern und identifizieren Sie die wiederholten Sequenzen.
+2. Programmieren Sie eine einzelne Sequenz. Die Knacknuss ist, dass am Ende der Sequenz die Turtle so ausgerichtet ist, dass man mit der Wiederholung beginnen könnte
+3. Programmieren Sie die Wiederholung
 
 ![](images/schneestern_py.svg)
 
@@ -283,7 +294,7 @@ for i in range(6):
 <Answer type="state" webKey="32d650c6-4422-41c8-bb3b-c40a6e42c8b4" />
 
 1. Zeichnen Sie einen Weihnachtsstern mit den Drehwinkeln `140°` und `80°`.
-2. Füllen Sie den Stern mit Ihrer Lieblingsfarbe. Schauen Sie sich dazu den Abschnitt "Füllen" unter [Turtle Befehle](./100-turtle-commands.md#füllen) an.
+2. Füllen Sie den Stern mit Ihrer Lieblingsfarbe. Schauen Sie sich dazu den Abschnitt "Füllen" unter [👉 Turtle Befehle](./100-turtle-commands.md#füllen) an.
 
 ![](images/weihnachtsstern_py.svg)
 
@@ -353,7 +364,7 @@ from turtle import *
 ```
 <Hint>
 
-- Die Turtle muss nach 18 Drehungen wieder nach rechts schauen - pro Drehung also `xxx` Grad
+- Die Turtle muss nach 18 Drehungen wieder nach rechts schauen (hat sich also insgesamt um 360° gedreht) - pro Drehung also `xxx` Grad
 - Python kann auch rechnen 😋 - lassen Sie die Drehung von Python berechnen. Beispiel: `left(360 / 4)` ist dasselbe wie `left(90)`
 
 </Hint>

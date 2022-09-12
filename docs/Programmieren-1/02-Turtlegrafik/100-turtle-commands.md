@@ -149,8 +149,15 @@ Legt die Stiftdicke `size` fest. Standard: `pensize(1)`
 :::
 
 :::def
-### `dot(radius)`
-Zeichnet einen Punkt an der aktuellen Position mit dem angegebenen `radius`.
+### `dot()` `dot(diameter)`
+Zeichnet einen Punkt an der aktuellen Position mit dem angegebenen Durchmesser `diameter`. Wenn kein Durchmesser angegeben wird, verwendet es standardmässig das doppelte der aktuellen Stiftdicke (`pensize`), aber mindestens einen Durchmesser von `5`.
+```py live_py slim
+from turtle import *
+
+dot()
+forward(20)
+dot(20)
+```
 :::
 
 :::def
