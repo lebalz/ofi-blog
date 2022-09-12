@@ -4,16 +4,16 @@
         .badge {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
-            border-right-color: #b3b3b3;
-            border-right-width: 1px;
         }
         .options {
             // background: red;
+            border-left-color: var(--ifm-color-secondary-dark);
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
             cursor: pointer;
             &:hover {
-                opacity: 0.8;
+                background-color: var(--ifm-color-secondary-dark);
+                border-color: var(--ifm-color-secondary-dark);
             }
             z-index: var(--ifm-z-index-dropdown);
             .clearFilter {
@@ -22,6 +22,18 @@
                 }
                 padding-left: 4px;
                 margin-right: -4px;
+            }
+            .menu {
+                max-width: min-content;
+                .item {
+                    cursor: pointer;
+                    user-select: none;
+                    --ifm-badge-background-color: var(--ifm-contrast-background-value);
+                    &:hover {
+                        --ifm-badge-background-color: var(--ifm-color-primary);
+                        border-width: 0px;
+                    }
+                }
             }
         }
     }

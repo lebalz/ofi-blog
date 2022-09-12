@@ -22,14 +22,19 @@ export const StateSummary = observer((props: Props) => {
     React.useEffect(() => {
         setKlasse(window.location.pathname.replace(baseUrl, '').split('/')[0]);
     }, []);
+    const {viewGroupFilter} = adminStore;
     return (
         <>
             {adminStore.isAdmin && adminStore.showTaskStates && klasse && (
                 <div className={clsx(styles.admin)}>
                     {adminStore
                         .findByWebKey<StateDoc>(klasse, sidebar_custom_props.id, props.webKey)
-                        .map((doc, idx) => (
-                            <div className={clsx(styles.box)} key={idx}>
+                        .map((doc, idx) => {
+                            const user = adminStore.getUser(doc.user_id);
+                            if (!user || viewGroupFilter && !user.groups.includes(viewGroupFilter)) {
+                                return null;
+                            }
+                            return (<div className={clsx(styles.box)} key={idx}>
                                 <div
                                     className={clsx(styles.state)}
                                     style={{ backgroundColor: `var(${mdiBgColor[doc.data.value]})` }}
@@ -44,11 +49,11 @@ export const StateSummary = observer((props: Props) => {
                                 </div>
                                 <div className={clsx(styles.nameWrapper)}>
                                     <div className={clsx(styles.name)}>
-                                        {adminStore.getUser(doc.user_id)?.name || 'Name'}
+                                        {user.name || 'Name'}
                                     </div>
                                 </div>
                             </div>
-                        ))}
+                        )})}
                 </div>
             )}
         </>
@@ -60,11 +65,19 @@ export const PageStateSummary = observer(() => {
     const { frontMatter } = useDoc();
     const { sidebar_custom_props } = frontMatter;
     const [klasse, setKlasse] = React.useState<string>();
+    const {viewGroupFilter} = adminStore;
     React.useEffect(() => {
         setKlasse(window.location.pathname.replace(baseUrl, '').split('/')[0]);
     }, []);
+    let rawDocs = adminStore.filteredBy<StateDoc>(klasse, sidebar_custom_props.id, 'state');
+    if (viewGroupFilter) {
+        rawDocs = rawDocs.filter((doc) => {
+            const user = adminStore.getUser(doc.user_id);
+            return user?.groups.includes(viewGroupFilter);
+        })
+    }
     const docs = _.groupBy(
-        adminStore.filteredBy<StateDoc>(klasse, sidebar_custom_props.id, 'state'),
+        rawDocs,
         (doc) => adminStore.getUser(doc.user_id)?.name || 'Name'
     );
     return (

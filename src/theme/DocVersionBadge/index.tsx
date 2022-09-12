@@ -20,7 +20,7 @@ const DocVersionBadge = observer(({ className }: Props): JSX.Element | null => {
                     className={clsx(
                         className,
                         ThemeClassNames.docs.docVersionBadge,
-                        'badge badge--secondary',
+                        'badge', 'badge--secondary',
                         styles.badge
                     )}
                 >
@@ -42,18 +42,18 @@ const DocVersionBadge = observer(({ className }: Props): JSX.Element | null => {
                             ) : (
                                 <i className={clsx('mdi', 'mdi-chevron-right')}></i>
                             )}
-                            <ul className="dropdown__menu">
+                            <ul className={clsx('dropdown__menu', styles.menu)}>
                                 {groups.map((grp, idx) => {
                                     return (
-                                        <span
-                                            className={clsx('badge', 'badge--primary')}
+                                        <div
+                                            className={clsx('badge', 'badge--secondary','dropdown__link','badge--sm', styles.item)}
                                             key={idx}
                                             onClick={() => {
                                                 adminStore.setViewGroupFilter(grp);
                                             }}
                                         >
                                             {grp}
-                                        </span>
+                                        </div>
                                     );
                                 })}
                             </ul>
