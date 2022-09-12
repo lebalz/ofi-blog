@@ -99,6 +99,12 @@ Laden Sie das Word-Dokument [ex02-machine-learning.docx](files/ex02-machine-lear
 
 </div>
 
-
-
 :::
+
+### Übung Schritt für Schritt im Video
+
+#### Alles ausser die Bilder
+[@ms-stream](https://web.microsoftstream.com/embed/video/38d38100-d4c7-4185-aeb0-842a63243b68?autoplay=false&showinfo=false)
+
+#### Bilder, Bildverzeichnisse, Querverweise
+[@ms-stream](https://web.microsoftstream.com/embed/video/51e26586-26bb-4273-afc0-c4b4ba0da6e8?autoplay=false&showinfo=false)

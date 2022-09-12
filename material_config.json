@@ -144,7 +144,6 @@
       "from": "docs/dokumente/ms-word/",
       "to": "versioned_docs/version-26e/05-Texte",
       "ignore": [
-        "03-nummerierung.md",
         "04-Uebung.md"
       ]
     },
@@ -200,7 +199,6 @@
       "from": "docs/dokumente/ms-word/",
       "to": "versioned_docs/version-26P/05-Texte",
       "ignore": [
-        "03-nummerierung.md",
         "04-Uebung.md"
       ]
     },

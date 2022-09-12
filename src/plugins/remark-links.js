@@ -138,6 +138,24 @@ const plugin = (options) => {
           }
           promises.push(processVideo())
         }
+        if (/@ms-stream/.test(text)) {
+          const options = parseOptions(text, true);
+          const processVideo = async () => {
+            prepareWrapperNode(node);
+            linkNode.type = 'jsx';
+            const url = linkNode.url;
+            linkNode.value = `<iframe
+              width="${options.width || '100%'}"
+              height="${options.height || '315px'}"
+              src="${url}"
+              style={{border: 'none'}}
+              allowFullScreen></iframe>`;
+            if (linkNode.url) {
+              delete linkNode.url;
+            }
+          }
+          promises.push(processVideo())
+        }
         if (/@circuitverse/.test(text)) {
           const options = parseOptions(text, true);
           const processCV = async () => {
