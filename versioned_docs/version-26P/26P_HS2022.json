@@ -34,11 +34,11 @@
         "cells": ["18.10.2022","ICT","Office: Layout und Gliederung"]
     },
     {
-        "cells": ["25.10.2022","ICT","Kurztest Office"],
-        "type": "test"
+        "cells": ["25.10.2022","ICT","Office: Layout und Gliederung"]
     },
     {
-        "cells": ["01.11.2022","Daten","Office: Tabellenkalkulation"]
+        "cells": ["01.11.2022","ICT","Kurztest Office"],
+        "type": "test"
     },
     {
         "cells": ["08.11.2022","Daten","Office: Tabellenkalkulation"]
@@ -51,7 +51,7 @@
         "type": "event"
     },
     {
-        "cells": ["22.11.2022","Daten","Datenbanken"]
+        "cells": ["22.11.2022","Daten","Office: Tabellenkalkulation"]
     },
     {
         "cells": ["29.11.2022","Daten","Datenbanken"]
