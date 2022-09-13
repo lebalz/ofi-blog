@@ -101,6 +101,11 @@
       "from": "docs/Netzwerke-of/010-Begriffe/",
       "to": "versioned_docs/version-25h/07-Netzwerke/010-Begriffe",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/004-DNS/",
+      "to": "versioned_docs/version-25h/07-Netzwerke/03-DNS",
+      "ignore": []
     }
   ],
   "26e": [
