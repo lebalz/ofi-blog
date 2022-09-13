@@ -71,7 +71,7 @@ Note:
 
 # Strukturen
 
-- Sequenz 👣  <!-- .element: class="fragment" data-fragment-index="1" -->
+- Sequenz <span style="background: white">👣</span>  <!-- .element: class="fragment" data-fragment-index="1" -->
 - Wiederholung 🔁  <!-- .element: class="fragment" data-fragment-index="2" -->
 - Bedingte Ausführung ⑂  <!-- .element: class="fragment" data-fragment-index="3" -->
 - Unterprogramm: 🏷 Beschriftung einer Sequenz  <!-- .element: class="fragment" data-fragment-index="4" -->

@@ -1,26 +1,26 @@
 # Python
 
-![](images/python.jpg)
+![](images/python.jpg)<!-- .element: class="full" -->
 
 
 
 ## Zu zweit...
 
-- zeichnen Sie auf ein Papier einen zusammenhängenden Pfad (max. 10 Segmente)
+- zeichnen Sie auf ein Papier einen zusammenhängenden Pfad (max. 20 Segmente)
 - tauschen Sie die Zeichnungen
-- Versuchen Sie, die Zeichnung mit einer Turtle zu reproduzieren
+- Versuchen Sie, die Zeichnung mit einer Turtle zu reproduzieren (5') (im Playground)
 
-![](images/zeichnen.jpg)
+![](images/zeichnen.jpg)<!-- .element: class="full" -->
 
 
 
 ## Algorithmus
 
-- Sequenz 👣
-- **Wiederholung** 🔁
-- Bedingte Ausführung ⑂
-- Unterprogramm: 🏷 Beschriftung einer Sequenz
-- Parameter ⊕ ⊖
+- <span>Sequenz <span style="background: white">👣</span></span><!-- .element: class="fragment" data-fragment-index="1" -->
+- <span>**Wiederholung** 🔁</span><!-- .element: class="fragment" data-fragment-index="2" -->
+- Bedingte Ausführung ⑂<!-- .element: class="fragment" data-fragment-index="3" -->
+- Unterprogramm: 🏷 Beschriftung einer Sequenz<!-- .element: class="fragment" data-fragment-index="4" -->
+- Parameter ⊕ ⊖<!-- .element: class="fragment" data-fragment-index="5" -->
 
 
 ## Struktogramme
@@ -30,9 +30,11 @@ Struktogramme sind eine Möglichkeit, Programme und Algorithmen grafisch darzust
 
 ## Sequenz
 
-- Ein Schritt = ein rechteckiger Kasten
-- Befehle in Alltagssprache
-- Parameter werden unterstrichen
+> Mehrere Schritte werden zu einer Sequenz zusammengefasst <!-- .element: class="fragment" data-fragment-index="1" -->
+
+- Ein Schritt = ein rechteckiger Kasten<!-- .element: class="fragment" data-fragment-index="2" -->
+- Befehle in Alltagssprache<!-- .element: class="fragment" data-fragment-index="3" -->
+- Parameter werden unterstrichen<!-- .element: class="fragment" data-fragment-index="4" -->
 
 
 ## Beispiel
