@@ -9,7 +9,7 @@
 
 Besteht aus **Schritten** und besitzt eine **Struktur** mit
 
-- Sequenzen 👣
+- Sequenzen <span style="background: white">👣</span>
 - Wiederholungen 🔁
 - Bedingte Ausführungen ⑂
 - Unterprogrammen: 🏷 Beschriftung einer Sequenz
