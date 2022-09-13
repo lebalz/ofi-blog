@@ -1,4 +1,5 @@
 ---
+sidebar_label: DNS
 sidebar_custom_props:
   id: 4f87f30c-b269-4c98-b092-fc0145d69a68
   source:
