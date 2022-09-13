@@ -122,7 +122,7 @@ table {
 }
 
 .float-right {
-    &>p>img {
+    figure {
         float: right;
         max-width: 300px;
     }

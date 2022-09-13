@@ -7,7 +7,7 @@ sidebar_custom_props:
 
 # Domain-Name-System
 
-:::info Ziele
+:::finding Ziele
 - Was ist ein Domain-Name?
 - Sie können zu einem gegebenen Domain-Namen die zugehörige IP-Adresse ermitteln.
 -	Sie können herausfinden, wem ein Domain-Name gehört und ob ein bestimmter Domain-Name noch frei ist.
@@ -30,7 +30,7 @@ Auch für das Internet gibt es solche Verzeichnisse. Wenn man den Namen einer be
 Solche Namen sind zum Beispiel
 -	www.instagram.com
 -	www.gbsl.ch
--	ofi.gbsl.website
+-	[ofi.gbsl.website](https://ofi.gbsl.website)
 
 Diese Namen werden als **Domain-Names** bezeichnet und das Verzeichnis, wo sie drinstehen, heisst **Domain-Name-System**, kurz **DNS**.
 
@@ -42,7 +42,28 @@ Diese Namen werden als **Domain-Names** bezeichnet und das Verzeichnis, wo sie d
 
 Es gibt auf der Welt bald **2 Milliarden**[^1] Webseiten, verteilt auf ca. 200 Millionen Server. Jeder Server beherbergt also durchschnittlich 10 Webseiten. Für jeden dieser Server braucht es eine öffentliche IP-Adresse, damit der Server im Internet erreichbar ist. Wenn man die IP-Adresse des Servers kennt, könnte man theoretisch versuchen im Browser statt des Domain-Namens einer Web-Site direkt die IP-Adresse des Servers einzugeben, also statt www.instgram.com die IP-Adresse 157.240.17.174.
 
-Wie schon in der Einleitung erwähnt, wird das niemand tun, weil man sich diese IP-Adresse nicht merken kann und sie mit der Zeit auch ändern könnte (z.B. wenn die Web-Site auf einen anderen Server gezügelt wird). Ganz abgesehen davon, dass es auch nicht ausreichen würde, nur die IP-Adresse anzugeben, weil ja eben mehrere Web-Sites an einer bestimmten Adresse «zuhause» sein können.
+:::finding IP-Adressen direkt eingeben
+Obiges Beispiel, die IP-Adresse von Instagram direkt in den Browser einzutippen, funktioniert in der Praxis mit modernen Webseiten, die `https` als Protokoll verwenden, nicht. Bei `https` wird von Ihrem Browser mittels Zertifikat sichergestellt, dass die Adresse auf den korrekten Domain Namen lautet. Dadurch wird verhindert, dass Sie auf eine falsche Seite umgeleitet werden, und dann unwissentlich bspw. eine Geldtransaktion vornehmen. Das führt aber dazu, dass das Zertifikat bei IP-Adressen nicht gültig ist.
+
+Eine zu Demonstrationszwecken veröffentlichte Seite ohne https ist [login.gbsl.website](http://login.gbsl.website). Diese ist auch direkt über den entsprechenden Server [188.34.157.212](http://188.34.157.212) zu finden.
+:::
+
+Wie schon in der Einleitung erwähnt, wird das niemand tun, weil man sich diese IP-Adresse nicht merken kann und sie mit der Zeit auch ändern könnte (z.B. wenn die Web-Site auf einen anderen Server gezügelt wird). Ganz abgesehen davon, dass es auch nicht ausreichen würde, nur die IP-Adresse anzugeben, weil ja eben mehrere Web-Sites an einer bestimmten Adresse «zuhause» sein können - der Port müsste ebenfalls bekannt sein.
+
+:::finding Ports
+Ein Port spezifiziert, welche Applikation auf einem Server die Anfrage behandeln soll.
+
+Auf dem Server [188.34.157.212](http://188.34.157.212) sind mehrere Web-Sites, und mit dem richtigen Port kann ausgewählt werden, welche man möchte:
+
+Port 80 \*
+: [188.34.157.212:80](http://188.34.157.212:80) :mdi-arrow-right: [login.gbsl.website](http://login.gbsl.website)
+Port 8080
+: [188.34.157.212:8080](http://188.34.157.212:8080) :mdi-arrow-right: [hacksql.gbsl.website](https://hacksql.gbsl.website)
+
+Nun wird deutlich, dass es schwierig würde, sich auch noch alle Ports zu merken...
+
+\* *Port 80 ist der Standard-Port für Web-Sites mit dem http Protokoll und kann deshalb auch weggelassen werden*
+:::
 
 Die Frage ist nun aber: Wie kann man 2 Milliarden Domain-Namen in einem Verzeichnis verwalten? Würde man dies in Form eines Buches versuchen, so ergäbe das ein Buch mit ca. **4 Millionen Seiten** (500 Adresseinträge pro Seite). Hinzu kommt, dass diese Adressen laufend angepasst werden müssten. Neue Adressen kommen hinzu, andere ändern oder verschwinden. Ganz zu schweigen von der schieren Unmöglichkeit, in einem solchen Buch eine gesuchte Adresse zu finden.
 
@@ -66,11 +87,13 @@ Wird einer der übergeordneten DNS-Server nach dieser IP-Adresse gefragt, so ver
 Man kann diese Situation mit jemandem vergleichen, der sich in einer fremden Stadt über mehrere Stationen zu seinem Hotel durchfragt.
 
 :::aufgabe Selbsttest
+<Answer type="state" webKey="2d0b2be9-72f8-415f-b032-d5113a50117b" />
 
 Füllen Sie das folgende [Forms-Quizz](https://forms.office.com/Pages/ResponsePage.aspx?id=Y4MGSWGDB0aVSWK2tVeUqmHAwu9d_oRHn4uu_hm4VSJUQUNaRktCVkZSOVFXVVgyM0RSOVhaWUJCTi4u) aus.
 :::
 
 :::aufgabe DNS-Hierarchie
+<Answer type="state" webKey="7f4bdc53-0f3b-41b3-b83b-5643627cc82e" />
 
 Zeichnen Sie eine Hierarchie (Baum), in welcher folgende Domain-Namen vorkommen (so wie auf der Abbildung im Arbeitsblatt):
 
@@ -81,39 +104,62 @@ Zeichnen Sie eine Hierarchie (Baum), in welcher folgende Domain-Namen vorkommen 
 - outlook.office.com
 - www.office.com
 
-Halten Sie Ihre Lösung auf einem Blatt Papier fest.
+Halten Sie Ihre Lösung auf einem Blatt Papier fest und fügen Sie ein Foto davon unten ein:
+
+<Answer type="text" webKey="335d35eb-bcd5-4159-b3e3-b09892f2f5f7" />
 :::
 
 ## Wer verwaltet Domain-Namen?
-Die hierarchische Gliederung des Domain-Name-Systems erlaubt es, die Verwaltung zu **dezentralisieren**. So gibt es für jede Top-Level-Domain eine Organisation, welche die Namen der darunter angesiedelten Subdomains verwaltet. Für die TLD der Schweiz (ch) und Liechtenstein (li) ist das die Stiftung [SWITCH](https://www.switch.ch/) zuständig.
+Die hierarchische Gliederung des Domain-Name-Systems erlaubt es, die Verwaltung zu **dezentralisieren**. So gibt es für jede Top-Level-Domain eine Organisation, welche die Namen der darunter angesiedelten Subdomains verwaltet. Für die TLD der Schweiz (ch) und Liechtenstein (li) ist die Stiftung [SWITCH](https://www.switch.ch/) zuständig.
 
-:::info
+:::finding info
 Die SWITCH betreibt unter dem Link https://www.nic.ch/de/ einen Dienst zur Überprüfung, ob eine bestimmte Subdomain noch verfügbar ist. Das Registrieren einer Subdomain delegiert die SWITCH an sogenannte **Registrare**, also an Unternehmen die Domain-Namen anbieten und verkaufen. Bekannte (und günstige) Registrare sind:
 - [Swizzonic.ch](https://swizzonic.ch/)
 - [Gandi.net](https://www.gandi.net/)
 - [hostech](https://www.hosttech.ch/domains)
+
+Jährlich muss für eine .ch Domain zwischen 5 und 20 Franken gerechnet werden.
 :::
 
 Es gibt Web-Sites, über welche man herausfinden kann, von wem ein bestimmter Domain-Name registriert wurde (Registrar) und wem dieser Name gehört (Registrant). Drei davon sind:
 - https://www.hostpoint.ch/domains/whois.html	(TLDs ch, li, …)
-- https://www.whois.com/whois/ (TLDs com, org, edu, …)
+- https://www.whois.com/whois/ (TLDs com, org, edu, website, …)
 - http://whois.nic.swiss/ (TLD swiss)
 
+:::aufgabe GBSL
+<Answer type="state" webKey="95a98f14-95a0-4b84-b5fa-a874641a4a57" />
+
+Welcher Registrar hat die Domain
+- gbsl.website
+- gbsl.ch
+
+vergeben?
+
+<Answer type="text" webKey="ead13df8-c04d-42db-afe7-15f533b68d4e" />
+:::
+
 ## IP Adressen herausfinden
-Wenn Sie im Browser auf Ihrem Computer den Link https://www.instagram.com eingeben, so muss Ihr Computer herausfinden, welche IP-Adresse zum Domain-Name www.instagram.com in diesem Link gehört, damit er den Instagram-Server schliesslich kontaktieren kann.
+Wenn Sie im Browser auf Ihrem Computer den Link https://www.instagram.com eingeben, so muss Ihr Computer herausfinden, welche IP-Adresse zum Domain-Name www.instagram.com gehört, damit er den Instagram-Server schliesslich kontaktieren kann.
 
 Den zuständigen DNS-Server kann Ihr Computer, aber nur über dessen eigene IP-Adresse erreichen. Wenn Ihr Computer das zum ersten Mal macht, so kennt er diese Adresse noch nicht. Deshalb wendet er sich an einen der **13 DNS-Server** auf der obersten Ebene, den sogenannten **Root-Servern**, deren IP-Adressen jedem Computer bekannt sind. Diese leiten Ihren Computer dann an die tiefer gelegenen DNS-Server weiter, bis schliesslich der richtige DNS-Server gefunden ist. Das passiert automatisch, ohne, dass Sie davon etwas merken.
 
 Man kann solche Anfragen aber auch von Hand machen. Dazu können Sie die Seite https://tools.keycdn.com/dig verwenden.
 
 :::aufgabe Aufgabe 1
+<Answer type="state" webKey="0ad4bde0-94a3-4822-8c97-bd14774433a5" />
 
 Wie findet man die IP-Adresse, welche zu einem Domain-Name gehört? (Googeln Sie nach einer Website, welche einen Dienst anbietet, der dies tut.)
 
 <Answer  type="text"  webKey="67acbe64-ea7b-46ea-b07a-c09376f21381"/>
 
 
-<details><summary>⭐️ The Hacky Way - Übers Terminal</summary>
+Finden Sie die IP-Adresse von [login.gbsl.website](http://login.gbsl.website) heraus. Stimmt sie mit obiger IP-Adresse überein? Und bei [hacksql.gbsl.website](https://hacksql.gbsl.website)? Überlegen Sie sich, woher diese Unterschiede kommen könnten.
+
+Suchen Sie auch nach weiteren IP-Adressen, bspw. von www.instagram.com.
+
+<Answer type="text" webKey="f4bc7d69-fc50-4ca2-8186-8c74f8061e22" />
+
+:::details :mdi-account-cowboy-hat: The Hacky Way :mdi-arrow-right: Übers Terminal :mdi-console:
 
 Sie können auch in der Windows-Eingabeaufforderung oder auf dem Mac-Terminal einen Domain-Name zu einer IP-Adresse auflösen. Dazu brauchen Sie den Befehl `nslookup`.
 
@@ -122,19 +168,13 @@ Beispiel:
 nslookup de.wikipedia.org
 ```
 Probieren Sie es aus, wenn Sie Lust auf mehr Hacker-Feeling haben.
-</details>
 :::
-
-:::aufgabe Instagram
-
-Finden Sie heraus, welches die IP-Adresse von www.instagram.com ist.
-
-<Answer  type="text"  webKey="2f8ace83-ca0f-4d64-b584-836f960b9bae" label="IP-Adresse"/>
-
 :::
 
 
 :::aufgabe Aufgabe 2
+<Answer type="state" webKey="ebf745e1-a325-44cb-bb9e-49569f9316ea" />
+
 Untenstehende Abbildung zeigt eine verdächtige aussehende E-Mail. Sie enthält einen Button, unter welchem angeblich Details eines Fotos angeschaut werden können.
 
 ![](images/fishy-mail.png)
@@ -144,21 +184,25 @@ Der Button ist mit einem Link verbunden, welcher vom E-Mail-Programm am unteren 
 
 Im obigen E-Mail ist das `satellite-equipment.ru`, ein Domain-Namen aus Russland.
 
-Finden Sie mit https://tools.keycdn.com/dig und einer der Webseiten im Abschnitt «Wer verwaltet Domain-Namen?» heraus,
-- welche IP-Adresse hinter diesem Domain-Namen steht,
+Finden Sie heraus,
+- welche IP-Adresse hinter diesem Domain-Namen steht
 - wem diese Domain gehört und 
-- in welchem Land der Besitzer zuhause ist.
+- in welchem Land die Besitzer:in zuhause ist?
 
 <Answer  type="text"  webKey="fcd6a2b8-7112-4021-8f97-29bb6d9c3e4b" default="<p>IP-Adresse: </p><p>Eigentümer: </p><p>Land: </p>" />
 
-:::
+<Hint>
 
+Verwenden Sie 👉 https://tools.keycdn.com/dig und 👉 https://www.whois.com/whois/
+</Hint>
+:::
 
 :::danger
 Warnung: Auch hier gilt wieder: Nie auf solche Buttons klicken, denn in diesem Fall ist das Risiko hoch, dass Ihr Computer mit einem Virus infiziert wird. 
 :::
 
 :::aufgabe Aufgabe 3
+<Answer type="state" webKey="dc4203ff-182c-44d1-8b1c-0b503e300f29" />
 
 Diese Aufgabe hat nicht direkt mit dem Domain-Name-System zu tun. Da hinter der E-Mail aus Aufgabe 2 aber mit Sicherheit jemand mit böswilliger Absicht steckt, können wir noch überprüfen, ob  der Link bereits **als gefährlich registriert** ist.
 
@@ -173,6 +217,8 @@ Solche Überprüfungen bietet z.B. die Seite 	https://sitecheck.sucuri.net/ an.
 
 
 :::aufgabe Aufgabe 4
+<Answer type="state" webKey="5a3152ce-03e6-46d6-9dd4-c741027b2b9f" />
+
 Sie möchten Ihr eigenes Unternehmen gründen, oder Sie möchten eine Kampagne für ein Ihnen wichtiges Anliegen führen. In beiden Fällen hilft einen Auftritt im Web, um möglichst erfolgreich zu sein. Eine grosse Rolle spielt dabei, ob Sie einen einprägsamen und packenden Domain-Name finden. Dieser muss selbstverständlich noch verfügbar sein.
 
 Überlegen Sie sich einen solchen Domain-Name und überprüfen Sie mit den oben beschriebenen Whois-Diensten, ob dieser Name noch frei ist.
@@ -182,6 +228,8 @@ Sie möchten Ihr eigenes Unternehmen gründen, oder Sie möchten eine Kampagne f
 :::
 
 :::aufgabe Aufgabe 5
+<Answer type="state" webKey="9da9e98c-ffcf-4ea5-bdcb-1b582dda8c4f" />
+
 Ein Gedankenspiel: Die Berner Kantonalbank (BEKB) bietet ihren Kunden Internet-Banking an. Diese ist erreichbar über die Web-Site der BEKB, www.bekb.ch.
 
 Angenommen einem Angreifer gelingt es, Ihrem Computer eine beliebige, aber falsche IP-Adresse für den Domain-Name www.bekb.ch unterzuschieben, welche Möglichkeiten ergeben sich dem Angreifer dadurch?
@@ -190,7 +238,7 @@ Angenommen einem Angreifer gelingt es, Ihrem Computer eine beliebige, aber falsc
 :::
 
 
-## Rückblick
+## Hack-Angriff DNS-Hijacking
 
 Ausschnitt: Start bis 2:51 Minuten.
 
