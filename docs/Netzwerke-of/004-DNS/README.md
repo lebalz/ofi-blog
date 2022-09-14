@@ -153,13 +153,6 @@ Wie findet man die IP-Adresse, welche zu einem Domain-Name gehört? (Googeln Sie
 
 <Answer  type="text"  webKey="67acbe64-ea7b-46ea-b07a-c09376f21381"/>
 
-
-Finden Sie die IP-Adresse von [login.gbsl.website](http://login.gbsl.website) heraus. Stimmt sie mit obiger IP-Adresse überein? Und bei [hacksql.gbsl.website](https://hacksql.gbsl.website)? Überlegen Sie sich, woher diese Unterschiede kommen könnten.
-
-Suchen Sie auch nach weiteren IP-Adressen, bspw. von www.instagram.com.
-
-<Answer type="text" webKey="f4bc7d69-fc50-4ca2-8186-8c74f8061e22" />
-
 :::details :mdi-account-cowboy-hat: The Hacky Way :mdi-arrow-right: Übers Terminal :mdi-console:
 
 Sie können auch in der Windows-Eingabeaufforderung oder auf dem Mac-Terminal einen Domain-Name zu einer IP-Adresse auflösen. Dazu brauchen Sie den Befehl `nslookup`.
@@ -170,6 +163,14 @@ nslookup de.wikipedia.org
 ```
 Probieren Sie es aus, wenn Sie Lust auf mehr Hacker-Feeling haben.
 :::
+
+
+Finden Sie die IP-Adresse von [login.gbsl.website](http://login.gbsl.website) heraus. Stimmt sie mit obiger IP-Adresse überein? Und bei [hacksql.gbsl.website](https://hacksql.gbsl.website)? Überlegen Sie sich, woher diese Unterschiede kommen könnten.
+
+Suchen Sie auch nach weiteren IP-Adressen, bspw. von www.instagram.com.
+
+<Answer type="text" webKey="f4bc7d69-fc50-4ca2-8186-8c74f8061e22" />
+
 :::
 
 
