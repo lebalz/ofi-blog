@@ -6,6 +6,7 @@ import { observer } from "mobx-react-lite";
 import { msalConfig } from "../authConfig";
 import { PublicClientApplication } from "@azure/msal-browser";
 import useIsBrowser from "@docusaurus/useIsBrowser";
+import Head from "@docusaurus/Head";
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
@@ -58,6 +59,13 @@ function Root({ children }) {
   }
   return (
     <div>
+      <Head>
+        <meta property="og:description" content="Informatik Website Gymnasium Biel-Seeland" />
+        <meta
+          property="og:image"
+          content="https://ofi.gbsl.website/img/logo.png"
+        />
+      </Head>
       <StoresProvider value={rootStore}>
         <Msal>
           {children}
