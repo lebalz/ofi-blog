@@ -60,10 +60,10 @@ function Root({ children }) {
   return (
     <div>
       <Head>
-        <meta property="og:description" content="Informatik Website Gymnasium Biel-Seeland" />
+        <meta property="og:description" content="Informatik Gymnasium Biel-Seeland" />
         <meta
           property="og:image"
-          content="https://ofi.gbsl.website/img/logo.png"
+          content="https://ofi.gbsl.website/img/og-preview.png"
         />
       </Head>
       <StoresProvider value={rootStore}>
