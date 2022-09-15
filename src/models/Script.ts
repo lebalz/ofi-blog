@@ -71,6 +71,9 @@ export default class Script implements CodeModel, ApiModel {
     @observable
     executedScriptSource: string;
 
+    @observable
+    precode: string = '';
+
     rawScript: string;
 
     @observable

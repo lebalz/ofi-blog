@@ -41,6 +41,10 @@ print(gerade_zahlen)
 ### `5x10`-Matrix
 `5x10`-Matrix von lauter `0` (5 Zeilen, 10 Spalten)
 ```py live_py slim
+_print = print
+def print(mat):
+    _print('['); [_print(f'  {z},') for z in mat]; _print(']')
+### PRE
 zeros_5x10 = [
     [0 for j in range(10)] for i in range(5)
 ]
@@ -53,8 +57,12 @@ print(zeros_5x10)
 Elemente haben aufsteigende Werte, beginnend bei `0`.
 Der
 ```py live_py slim
+_print = print
+def print(mat):
+    _print('['); [_print(f'  {z},') for z in mat]; _print(']')
+### PRE
 matrix = [
-    [i*10 + j for j in range(10)] for i in range(5)
+    [i * 10 + j for j in range(10)] for i in range(5)
 ]
 print(matrix)
 ```

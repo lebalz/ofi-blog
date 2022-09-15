@@ -71,7 +71,14 @@ export default function CodeBlockWrapper(props: Props): JSX.Element {
             return <CodeBlock {...props} />;
         }
 
-        const code: string = (props.children as string).replace(/\s*\n$/, '');
+        const rawcode: string = (props.children as string).replace(/\s*\n$/, '');
+        const match = rawcode.match(/\n###\s*PRE.*?\n/);
+        let precode = '';
+        let code = rawcode;
+        if (match) {
+            precode = rawcode.slice(0, match.index || 0);
+            code = rawcode.slice((match.index || 0) + match[0].length);
+        }
         const codeId = getCodeId(props.title, code);
         const [webKey] = React.useState(props.id || uuidv4());
         return (
@@ -85,6 +92,7 @@ export default function CodeBlockWrapper(props: Props): JSX.Element {
                 resettable={!props.persist}
                 download={!props.versioned && !props.noDownload}
                 slim={!!props.slim}
+                precode={precode}
                 showLineNumbers={!(!!props.slim && !/\n/.test(code))}
                 versioned={!!props.versioned}
                 noCompare={!!props.noCompare}

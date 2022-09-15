@@ -10,6 +10,7 @@ import LoginAlert from './LoginAlert';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import Loader from '../shared/Loader';
 import CodeHistory from './CodeHistory';
+import { runInAction } from 'mobx';
 
 interface Props {
     webKey: string;
@@ -25,6 +26,7 @@ interface Props {
     download: boolean;
     showLineNumbers: boolean;
     lang: string;
+    precode: string;
 }
 
 // export const ScriptContext = React.createContext<Script>(undefined);
@@ -47,6 +49,13 @@ const PyAceEditor = observer((props: Props) => {
     );
     const model = store.find<Script>(props.webKey);
     const inBrowser = useIsBrowser();
+    React.useEffect(() => {
+        if (model && model.precode !== props.precode) {
+            runInAction(() => {
+                model.precode = props.precode;
+            })
+        }
+    }, [model]);
     if (!inBrowser) {
         return <div>SSR</div>;
     }

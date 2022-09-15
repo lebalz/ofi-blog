@@ -106,10 +106,10 @@ turtle.done()
 '''
 
 
-def run(code, node_id):
+def run(code, node_id, line_shift):
     global has_turtle_import, log_line_number_shift
     has_turtle_import = len(TURTLE_IMPORTS.findall(code)) > 0
-    log_line_number_shift = 7 if has_turtle_import else 0
+    log_line_number_shift = (7 if has_turtle_import else 0) + line_shift
     py_script = TURTLE_TEMPLATE.format(node_id=node_id, py_script=code) if has_turtle_import else code
 
     sys.stdout = EventOutput(node_id, 'stdout')

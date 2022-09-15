@@ -24,6 +24,7 @@ interface Props {
   webKey: string;
   lang: string;
   noCompare: boolean;
+  precode: string;
 }
 
 const PyEditor = observer((props: Props) => {

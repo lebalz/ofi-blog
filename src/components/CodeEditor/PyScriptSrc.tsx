@@ -12,15 +12,17 @@ interface Props {
 const PyScriptSrc = observer((props: Props) => {
     const store = useStore('documentStore');
     const pyScript = store.find<Script>(props.webKey);
+    const code = `${pyScript.precode}\n${pyScript.code}`;
+    const lineShift = pyScript.precode.split(/\n/).length+1;
     return (
         <script
             id={DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)}
             type="text/py_disabled"
             className="brython-script"
         >
-            {`${run_template}\nrun("""${sanitizePyScript(pyScript.code || '')}""", '${
+            {`${run_template}\nrun("""${sanitizePyScript(code || '')}""", '${
                 pyScript.codeId
-            }')`}
+            }', ${lineShift})`}
         </script>
     );
 });
