@@ -160,6 +160,11 @@ table {
         }
     }
 }
+.border {
+    td, th {
+        border: var(--ifm-table-border-width) solid var(--ifm-table-border-color);
+    }
+}
 
 
 .color-badge {
@@ -190,6 +195,10 @@ div.small-m {
     img {
         max-width: 300px;
     }
+}
+
+.mermaid {
+    text-align: center;
 }
 
 .no-header,
