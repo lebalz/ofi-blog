@@ -268,7 +268,7 @@
       "from": "docs/EF-Python/03-Python/",
       "to": "versioned_docs/version-24ef/01-Programmieren/04-Python",
       "ignore": [
-        "03-Listcomprehension.md"
+        "10-referenzen"
       ]
     }
   ]

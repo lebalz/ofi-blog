@@ -154,9 +154,10 @@
     .brythonOut {
         flex-grow: 1;
         flex-basis: 80ch;
-
         >pre {
             margin-bottom: 0px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
         }
     }
 

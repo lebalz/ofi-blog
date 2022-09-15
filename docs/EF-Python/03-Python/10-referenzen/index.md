@@ -153,7 +153,7 @@ Laden Sie zur Illustration das folgenden **Snippet** auf Ihren Computer und füh
 ---------------------------------
 
 ## Hintergrund
-Das neue Model für Variablen hat folgenden Hintergrund:
+Das neue Modell für Variablen hat folgenden Hintergrund:
 
 Alle Daten, mit welchen ein Programm arbeitet, müssen im **RAM** (Random Access Memory) des Computers gespeichert werden. Dies ist derjenige Speicher des Computer, der sehr schnell arbeitet, aber beim Ausschalten des Computers alle gespeicherten Daten verliert.
 
