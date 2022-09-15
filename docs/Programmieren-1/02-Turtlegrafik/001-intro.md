@@ -222,6 +222,7 @@ forward(30)
 | `blue`      | <div style={{width: '8em', height: '1em', background: 'blue'}}></div>      |
 | `skyblue`   | <div style={{width: '8em', height: '1em', background: 'skyblue'}}></div>   |
 | `cyan`      | <div style={{width: '8em', height: '1em', background: 'cyan'}}></div>      |
+| `teal`      | <div style={{width: '8em', height: '1em', background: 'teal'}}></div>      |
 | `turquoise` | <div style={{width: '8em', height: '1em', background: 'turquoise'}}></div> |
 | `lawngreen` | <div style={{width: '8em', height: '1em', background: 'lawngreen'}}></div> |
 | `green`     | <div style={{width: '8em', height: '1em', background: 'green'}}></div>     |
