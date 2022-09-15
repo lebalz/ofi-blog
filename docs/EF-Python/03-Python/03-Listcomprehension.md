@@ -48,7 +48,7 @@ print(gerade_zahlen)
 Erzeugen Sie eine Liste mit den
 - ersten zehn Quadratzahlen
 - ersten zehn Zweierpotenzen
-- die Zweierpotenzen von $2^100$ bis $2^110$
+- die Zweierpotenzen von $2^{100}$ bis $2^{110}$
 
 ```py live_py id=7912ca3e-b457-43fb-8cec-879e07a9b702
 squares = []
