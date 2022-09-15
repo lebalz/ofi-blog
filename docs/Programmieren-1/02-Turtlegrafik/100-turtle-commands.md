@@ -103,6 +103,7 @@ pencolor('red')
 | `blue`      | <div style={{width: '8em', height: '1em', backgroundColor: 'blue'}}></div>      |
 | `skyblue`   | <div style={{width: '8em', height: '1em', backgroundColor: 'skyblue'}}></div>   |
 | `cyan`      | <div style={{width: '8em', height: '1em', backgroundColor: 'cyan'}}></div>      |
+| `teal`      | <div style={{width: '8em', height: '1em', backgroundColor: 'teal'}}></div>      |
 | `turquoise` | <div style={{width: '8em', height: '1em', backgroundColor: 'turquoise'}}></div> |
 | `lawngreen` | <div style={{width: '8em', height: '1em', backgroundColor: 'lawngreen'}}></div> |
 | `green`     | <div style={{width: '8em', height: '1em', backgroundColor: 'green'}}></div>     |
