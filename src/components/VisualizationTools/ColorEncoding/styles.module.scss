@@ -129,7 +129,7 @@
       white-space: nowrap;
       font-size: 12px;
       background-color: var(--ifm-background-color);
-      z-index: 9999;
+      z-index: calc(var(--ifm-z-index-fixed) - 1);
     }
     &:hover {
       .tooltip {

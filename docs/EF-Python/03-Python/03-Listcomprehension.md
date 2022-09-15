@@ -43,7 +43,11 @@ print(gerade_zahlen)
 ```py live_py slim
 _print = print
 def print(mat):
-    _print('['); [_print(f'  {z},') for z in mat]; _print(']')
+    if type(mat).__name__ != 'list' or len(mat) < 1 or type(mat[0]).__name__ != 'list':
+        return _print(mat)
+    max_val = max([max(z) for z in mat])
+    pad_sz = len(str(max_val))
+    _print('['); [_print(f'  [{", ".join(list(map(lambda v: str(v).rjust(pad_sz, " "), z)))}],') for z in mat]; _print(']')
 ### PRE
 zeros_5x10 = [
     [0 for j in range(10)] for i in range(5)
@@ -59,7 +63,11 @@ Der
 ```py live_py slim
 _print = print
 def print(mat):
-    _print('['); [_print(f'  {z},') for z in mat]; _print(']')
+    if type(mat).__name__ != 'list' or len(mat) < 1 or type(mat[0]).__name__ != 'list':
+        return _print(mat)
+    max_val = max([max(z) for z in mat])
+    pad_sz = len(str(max_val))
+    _print('['); [_print(f'  [{", ".join(list(map(lambda v: str(v).rjust(pad_sz, " "), z)))}],') for z in mat]; _print(']')
 ### PRE
 matrix = [
     [i * 10 + j for j in range(10)] for i in range(5)

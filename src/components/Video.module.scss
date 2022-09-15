@@ -14,7 +14,7 @@
         position: absolute;
         top: 0px;
         right: 0px;
-        z-index: 199;
+        z-index: calc(var(--ifm-z-index-fixed) - 2);
     }
 }
 

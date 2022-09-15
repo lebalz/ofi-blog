@@ -107,7 +107,7 @@
         left: 0;
         cursor: move;
         width: min-content;
-        z-index: 999;
+        z-index: calc(var(--ifm-z-index-fixed) + 1);
         border: 2px solid;
         border-color: var(--ifm-color-primary);
         border-radius: 8px;
@@ -182,16 +182,16 @@
     .playButton {
         background-color: var(--ifm-color-success);
         color: white;
-        z-index: 199;
+        z-index: calc(var(--ifm-z-index-fixed) - 2);
     }
 
     .controls {
-        z-index: 199;
+        z-index: calc(var(--ifm-z-index-fixed) - 2);
         grid-area: controls;
     }
 
     .headerButton {
-        z-index: 199;
+        z-index: calc(var(--ifm-z-index-fixed) - 2);
         border: none;
         border-radius: 6px;
         padding: 6px 12px;
@@ -205,7 +205,7 @@
 
     .containerSlim {
         .headerButton {
-            z-index: 199;
+            z-index: calc(var(--ifm-z-index-fixed) - 2);
             height: 100%;
             border-radius: 0px;
             padding: 2px 6px;

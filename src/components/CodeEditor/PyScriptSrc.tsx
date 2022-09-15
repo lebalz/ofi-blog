@@ -13,7 +13,7 @@ const PyScriptSrc = observer((props: Props) => {
     const store = useStore('documentStore');
     const pyScript = store.find<Script>(props.webKey);
     const code = `${pyScript.precode}\n${pyScript.code}`;
-    const lineShift = pyScript.precode.split(/\n/).length+1;
+    const lineShift = pyScript.precode.split(/\n/).length;
     return (
         <script
             id={DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)}

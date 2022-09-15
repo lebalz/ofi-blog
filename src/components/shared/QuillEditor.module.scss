@@ -36,7 +36,7 @@
         }
         :global .ql-container.ql-bubble {
             :global .ql-tooltip {
-                z-index: 220;
+                z-index: calc(var(--ifm-z-index-fixed) - 1);
             }
         }
 

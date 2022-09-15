@@ -50,7 +50,7 @@
                 top: 0px;
                 right: 0px;
                 transform: translateY(70%);
-                z-index: 198;
+                z-index: calc(var(--ifm-z-index-fixed) - 3);
             }
         }
 
