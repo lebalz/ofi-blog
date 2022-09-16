@@ -137,6 +137,9 @@ async function createConfig() {
               if (params.version === 'current') {
                 return `https://github.com/lebalz/ofi-blog/edit/main/${params.versionDocsDirPath}/${params.docPath}`
               }
+              if (params.version === '24ef') {
+                return 'https://github.com/lebalz/ofi-blog/tree/main/docs'
+              }
             },
             path: 'docs',
             includeCurrentVersion: true,
