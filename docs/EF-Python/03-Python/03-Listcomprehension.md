@@ -7,7 +7,59 @@ sidebar_custom_props:
 
 # Listen Erzeugen
 
+:::aufgabe
+<Answer type="state" webKey="a4fb080a-8feb-443d-bf2d-5d7ddc92f685" />
+Oft wünscht man Listen, welche schon mit bestimmten Werten abgefüllt sind, man sagt initialisiert sind.
+
+Unten sehen Sie ein paar hilfreiche Beispiele. Führen Sie diese aus und bearbeiten Sie die Aufgabe.
+
+Markieren Sie anschliessend diese Aufgabe als erledigt.
+:::
+
 Hier sehen Sie, wie man auf einfache Art und Weise eine Liste erzeugen und gleich mit bestimmten Werten füllen kann, man sagt __intialisieren__. Der Teil zwischen den `[]` wird als Listen-Abstraktion (englisch **list comprehension**) bezeichnet.
+
+### Listen mit `range` erzeugen
+
+:::def
+
+Mit dem von Schleifen bekannten `range` Befehl können auch Listen erzeugt werden.
+
+`range(max_zahl)`
+: erzeugt einen Bereich von `0` bis (ohne mit!) `max_zahl`
+: z.B. `range(5)` => `0, 1, 2, 3, 4`
+`range(start, m)`
+: erzeugt einen Bereich von `start` bis (ohne mit!) `m`
+: z.B. `range(3, 7)` => `3, 4, 5, 6`
+`range(s, m, schritt)`
+: erzeugt einen Bereich von `s` bis (ohne mit!) `m` mit der gegebenen Schrittweite `schritt`
+: z.B. `range(3, 13, 4)` => `3, 7, 11`
+
+Um aus einem Bereich (sog. `Iterator`) eine Liste zu erzeugen, muss der Bereich mit dem Befehl `list()` in eine Liste umgewandelt werden:
+
+```py live_py slim
+one2ten = list(range(1, 11))
+print('1 bis 10:', one2ten)
+
+odd_numbers = list(range(1, 20, 2))
+print('Ungerade Zahlen:', odd_numbers)
+
+ten2zero = list(range(10, -1, -1))
+print('Von Zehn rückwärts:', ten2zero)
+```
+:::
+
+### Listen mit *List Comprehension* erzeugen
+
+:::def
+
+```py live_py slim
+# Wert 1 in Liste setzen
+#     \    ...für alle Zahlen im Bereich 0 bis 10
+#      \       /
+ones = [1 for i in range(10)]
+print(ones)
+```
+:::
 
 :::def
 ### Liste mit `1` initialisieren
@@ -45,19 +97,22 @@ print(gerade_zahlen)
 :::aufgabe
 <Answer type="state" webKey="306506df-f70e-4325-a3fd-30430288c666" />
 
-Erzeugen Sie eine Liste mit den
+Initialisieren Sie mit *List Comprehension* eine Liste mit den
 - ersten zehn Quadratzahlen
 - ersten zehn Zweierpotenzen
 - die Zweierpotenzen von $2^{100}$ bis $2^{110}$
+- die natürlichen Zahlen rückwärts von 20 bis und mit 10
 
-```py live_py id=7912ca3e-b457-43fb-8cec-879e07a9b702
-squares = []
+```py live_py id=ab9518d2-b113-41da-9d1f-cd48f475c1fc
+squares = [] # initialisierung anpassen!
 power2 = []
 power2_100 = []
+twenty2ten = []
 
 print(squares)
 print(power2)
 print(power2_100)
+print(twenty2ten)
 ```
 <Solution webKey="b54e6cc1-6863-4bcc-86a7-bfeb328b2a7b">
 
@@ -65,10 +120,12 @@ print(power2_100)
 squares = [x*x for x in range(10)]
 power2 = [2**x for x in range(10)]
 power2_100 = [2**(x+100) for x in range(10)]
+twenty2ten = [20 - x for x in range(11)]
 
 print(squares)
 print(power2)
 print(power2_100)
+print(twenty2ten)
 ```
 </Solution>
 :::

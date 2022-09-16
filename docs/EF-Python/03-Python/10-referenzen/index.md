@@ -6,8 +6,33 @@ sidebar_custom_props:
     name: sdg
     ref: https://gitlab.gbsl.website/gymbefin23/material/-/snippets/12
 ---
-
 # Referenzen
+
+:::aufgabe
+
+<Answer type="state" webKey="53f51b74-c15b-4025-8839-0f31b2d1bf72" />
+
+Dateiname
+: __EF-Informatik/exercises/referenzen.py__
+
+Jetzt, wo wir Listen in Python kennen, müssen wir unsere bisherige Vorstellung von Variablen überdenken und anpassen.
+
+Lesen Sie die untenstehende Einführung zum Thema Referenzen durch und führen Sie im Anschluss das Programm angehängte Programm __referenzen.py__ im Debuuger von VS Code aus.
+
+Führen Sie dann das Snippet refernzen.py im Debugger Ihres Visual Studio Code aus (falls Sie es noch nicht geklont haben, müssen Sie das zuerst tun).
+
+Achten Sie auf die in der Konsole (unten) angezeigten Objekt-Ids und Datentypen. Daran können Sie erkennen, um welches Objekt es sich jeweils handelt und welchen Datentyp es hat.
+
+Auf der linken Seite sehen Sie die aktuellen Objektwerte in den Variablen a und b. Achten Sie besonders, was dort passiert, wenn die Zeile 30 ausgeführt wird.
+
+:::details __EF-Informatik/exercises/referenzen.py__
+```py reference title="referenzen.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/10-referenzen/referenzen.py
+```
+:::
+
+Zum Schluss den Selbsttest ganz am Ende der Seite durchführen...
+:::
 
 ## Bisheriges Modell für Variablen
 Bisher haben wir uns **Variablen** als *Karteikärtchen* vorgestellt, auf welchen sich der Computer einen bestimmten **Wert** (eine Zahl, ein Text, etc.) merkt. Das Kärtchen trägt einen Namen. Unter diesem Namen kann die Information zu einem späteren Zeitpunkt wieder hervorgeholt werden. Die **Zuweisung** 
@@ -192,3 +217,13 @@ Objekte können wiederum Referenzen auf andere Objekte enthalten. So werden beis
 Das sieht dann so aus:
 
 ![Eine Liste im Speicher](images/ListeSpeicher.png)
+
+
+## Selbsttest
+
+<Answer type="state" webKey="bba044cc-03b6-4b0a-a989-3f550727576e">
+
+Selbsttest bestanden?
+</Answer>
+
+<iframe src="https://learningapps.org/watch?v=pg5k2c8pj22" style={{border:'0px',width:'100%',height:'500px'}} allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
