@@ -51,17 +51,6 @@ print('Von Zehn rückwärts:', ten2zero)
 ### Listen mit *List Comprehension* erzeugen
 
 :::def
-
-```py live_py slim
-# Wert 1 in Liste setzen
-#     \    ...für alle Zahlen im Bereich 0 bis 10
-#      \       /
-ones = [1 for i in range(10)]
-print(ones)
-```
-:::
-
-:::def
 ### Liste mit `1` initialisieren
 Liste mit 10 Elementen. Alle enthalten den Wert 1.
 ```py live_py slim
