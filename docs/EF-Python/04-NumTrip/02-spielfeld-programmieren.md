@@ -32,3 +32,7 @@ Es ist in diesem Schritt noch keine Interaktion mit Spielenden oder ein Spielflu
 
 
 :::
+
+### ⭐️ Spielfeld Farben
+
+Konsolen-Ausgaben können auch koloriert werden - dazu verwendet man am besten eine Bibliothek, welche das Einfärben weitgehend übernimmt. Bspw. 👉 https://pypi.org/project/colorama/
