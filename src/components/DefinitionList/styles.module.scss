@@ -13,12 +13,20 @@
         text-align:right;
         min-height: 1px;
         overflow-x: auto;
+        overflow-y: hidden;
+        &:last-of-type {
+            padding-bottom: 0.2em;
+        }
     }
     dd {
         overflow-x: auto;
         width:60%;
         padding-left:1em;
         margin-left: 0px;
+        overflow-y: hidden;
+        &:last-of-type {
+            padding-bottom: 0.2em;
+        }
     }
     dd + dd {
         width: 100%;
