@@ -147,6 +147,31 @@ src={useBaseUrl('/img/byod-basics/win/edit_picture1.mp4')}
 </TabItem>
 </OsTabs>
 
+### Text zu Bildern hinzufügen
+
+
+<OsTabs>
+<TabItem value="win11">
+
+<Video 
+  title="Text hinzufügen" 
+  src={useBaseUrl('/img/byod-basics/win11/image-text.mp4')} 
+/>
+</TabItem>
+<TabItem value="win10">
+
+<Video 
+  title="Text hinzufügen" 
+  src={useBaseUrl('/img/byod-basics/win11/image-text.mp4')} 
+/>
+</TabItem>
+<TabItem value="mac">
+
+tbd...
+
+</TabItem>
+</OsTabs>
+
 ## Video zuschneiden
 
 <OsTabs>
