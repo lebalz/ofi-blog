@@ -6,6 +6,8 @@ sidebar_custom_props:
 
 ![--width=200px](images/logo.svg)
 
+Excel-Funktionen in einer anderen Sprache: 👉 https://de.excel-translator.de/translator/
+
 Kostenlose Installation für Schüler:innen mit dem Schulaccount:
 
 👉 https://office.com

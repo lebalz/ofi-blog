@@ -3,6 +3,8 @@ sidebar_custom_props:
   id: d012d316-1ead-4254-ac2b-e505501cb7e8
 ---
 
+# Zufallszahlen
+
 :::info Ziel
 - Zufallszahlen in einem Bereich erstellen
 - Werte in einem Koordinatensystem darstellen
@@ -10,7 +12,7 @@ sidebar_custom_props:
 :::
 
 
-[@ms-stream](https://web.microsoftstream.com/embed/video/59bb3b41-4fd2-4e20-b61b-7045ad266e8b?autoplay=false&showinfo=false)
+[@ms-stream](https://web.microsoftstream.com/video/59bb3b41-4fd2-4e20-b61b-7045ad266e8b)
 <br />
 
 :::aufgabe

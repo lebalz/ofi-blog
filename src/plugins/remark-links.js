@@ -143,7 +143,11 @@ const plugin = (options) => {
           const processVideo = async () => {
             prepareWrapperNode(node);
             linkNode.type = 'jsx';
-            const url = linkNode.url;
+            let url = linkNode.url;
+            if (/web\.microsoftstream\.com\/video\//.test(url)) {
+              url = url.replace(/web\.microsoftstream\.com\/video\//, 'web.microsoftstream.com/embed/video/');
+              url = `${url}?autoplay=false&amp;showinfo=true`
+            }
             linkNode.value = `<iframe
               width="${options.width || '100%'}"
               height="${options.height || '315px'}"
