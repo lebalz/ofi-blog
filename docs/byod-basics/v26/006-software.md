@@ -410,7 +410,7 @@ Entwickelt sich durch die Antwort der Lehrperson einen Chat-Charakter (daher die
 
 ### OneDrive
 
-
+![Synchronisierungsoptionen für OneDrive Dateien](images/onedrive-files.png)
 
 <OsTabs>
 <TabItem value="win11">
