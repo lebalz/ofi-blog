@@ -9,6 +9,11 @@
         margin-bottom: 0;
     }
 }
+:global .no-comments .commentable {
+    .comment-icon {
+        display: none;
+    }
+}
 
 
 .commentIcon {

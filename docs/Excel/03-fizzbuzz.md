@@ -34,7 +34,7 @@ kennen.
 Dateiname
 : __03-fizzbuzz.xlsx__ 
 Vorlage
-: 👉 [03-fizzbuzz.xlsx](assets/03_fizzbuzz.xlsx)
+: 👉 [03-fizzbuzz.xlsx](assets/03-fizzbuzz.xlsx)
 
 <Answer type="state" webKey="2ebb004d-fc00-4e7c-bdd4-7849da01c496" />
 

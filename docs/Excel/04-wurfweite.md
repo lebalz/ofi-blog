@@ -4,7 +4,6 @@ sidebar_custom_props:
 ---
 
 # Wurfweite
-Laden Sie die angehängte Excel-Tabelle herunter. Darin soll die die Wurfweite\* berechnet, wenn Sie die Abwurfgeschwindigkeit und den Abwurfwinkel bekannt sind.
 
 :::info Lernziele
 Sie brauchen dazu die Funktionen:
@@ -12,10 +11,26 @@ Sie brauchen dazu die Funktionen:
 - `COS`
 - `SUMME`
 
-Die nötigen Informationen zur Berechnung finden Sie in folgendem PDF:
+Sie lernen, Formeln in Excel abzutippen und dabei Verweise zu verwenden.
+:::
 
-👉 [04-wurfweite.pdf](assets/04-wurfweite.pdf)
+![](images/werfen.gif)
 
+
+
+:::aufgabe
+<Answer type="state" webKey="f384b7ce-edc6-48d0-8e09-f91bc7bf2543" />
+
+Dateiname
+: __04-wurfweite.xlsx__
+Material
+: 👉 [04-wurfweite.pdf](assets/04-wurfweite.pdf)
+
+Erstellen Sie die Wurfweitenberechnung\* und bestimmen Sie (mit Ihrer Körpergrösse), wie weit Sie mit welcher Geschwindigkeit werfen können.
+
+Die nötigen Informationen zur Berechnung finden Sie im oben verlinkten PDF.
+
+:::
 
 
 \*die hier berechnete Wurfweite beachtet den Luftwiederstand nicht!
