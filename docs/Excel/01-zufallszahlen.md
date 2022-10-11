@@ -12,8 +12,7 @@ sidebar_custom_props:
 :::
 
 
-[@ms-stream](https://web.microsoftstream.com/video/59bb3b41-4fd2-4e20-b61b-7045ad266e8b)
-<br />
+[@video](images/01-intro.mp4)
 
 :::aufgabe
 <Answer type="state" webKey="b79cf614-f437-4423-b5f6-ce130530d936" />

@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # Excel
 
-![--width=200px](images/logo.svg)
+![--width=200px --background=transparent](images/logo.svg)
 
 Excel-Funktionen in einer anderen Sprache: 👉 https://de.excel-translator.de/translator/
 

@@ -18,7 +18,7 @@ Dateiname
 
 Erzeugen Sie für die Funktion $f(x)=3x^2-2x+4$ eine Wertetabelle im Bereich $[-20; 20]$ und erzeugen Sie den Funktionsgraphen
 
-[@ms-stream](https://web.microsoftstream.com/video/2ade40ec-de5a-4531-845a-b051d6940373)
+[@video](images/02a-quadratische-funktion.mp4)
 
 :::
 
@@ -33,6 +33,6 @@ $$
 
 dargestellt werden kann.
 
-[@ms-stream](https://web.microsoftstream.com/video/160d467f-0324-4788-a5ba-36ba45537d48)
+[@video](images/02b-allgemeine-quadratische-funktion.mp4)
 
 :::
