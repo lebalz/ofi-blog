@@ -6,6 +6,7 @@ import { useStore } from '../../stores/hooks';
 import { default as ArrayAnswerModel } from '../../models/Answer/Array';
 import Loader from '../shared/Loader';
 import clsx from 'clsx';
+import DropdownSelect from './DropdownSelect';
 
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 
@@ -36,60 +37,33 @@ const ArrayAnswer = observer((props: ArrayProps) => {
         <div className={styles.answer}>
             {props.label && <label>{props.label}</label>}
             <div className={styles.arrayAnswer}>
-            {doc.data.value.map((c, i) => {
-                if (props.select) {
-                    return (
-                        <div className={clsx('dropdown')} key={i}>
-                            <div
-                                className={clsx(styles.option, !c && styles.empty, getClassName(c))}
-                                data-toggle="dropdown"
-                                onClick={(e) => {
-                                    const toggle = e.currentTarget;
-                                    const dropdown = toggle.parentElement;
-                                    function dismissDropdown() {
-                                        toggle.classList.remove('button--active');
-                                        dropdown.classList.remove('dropdown--show');
-                                        document.removeEventListener('click', dismissDropdown);
-                                    }
-                                    if (!dropdown.classList.contains('dropdown--show')) {
-                                      toggle.classList.add('button--active');
-                                      dropdown.classList.add('dropdown--show');
-                                      setTimeout(() => {
-                                          document.addEventListener('click', dismissDropdown);
-                                      }, 0);
-                                    }
-                                }}
-                            >
-                                {c.replace(OPTIONS_REGEX, '')}
-                            </div>
-                            <div className={clsx(styles.dropdownMenu, 'dropdown__menu')}>
-                                {props.select.map((sval, idx) => {
-                                  const klass = getClassName(sval);
-                                  const label = sval.replace(OPTIONS_REGEX, '');
-                                    return (
-                                        <div
-                                          key={idx} 
-                                          onClick={() => onChange(sval, i)}
-                                          className={clsx(styles.option, klass, !label && styles.empty, sval === c && styles.active)}
-                                        >
-                                            <span>{label}</span>
-                                        </div>
-                                    );
+                {doc.data.value.map((c, i) => {
+                    if (props.select) {
+                        return (
+                            <DropdownSelect
+                                value={c}
+                                onChange={(value) => onChange(value, i)}
+                                items={props.select.map((sval, idx) => {
+                                    const label = sval.replace(OPTIONS_REGEX, '');
+                                    return {
+                                        value: sval,
+                                        label: label || sval,
+                                        className: getClassName(sval)
+                                    };
                                 })}
-                            </div>
-                        </div>
+                            />
+                        );
+                    }
+                    return (
+                        <input
+                            key={i}
+                            type="text"
+                            onChange={(e) => onChange(e.target.value, i)}
+                            value={c}
+                            disabled={!doc.loaded || doc.readonly}
+                        />
                     );
-                }
-                return (
-                    <input
-                        key={i}
-                        type="text"
-                        onChange={(e) => onChange(e.target.value, i)}
-                        value={c}
-                        disabled={!doc.loaded || doc.readonly}
-                    />
-                );
-            })}
+                })}
             </div>
         </div>
     );

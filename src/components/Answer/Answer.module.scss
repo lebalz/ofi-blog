@@ -18,81 +18,6 @@ html[data-theme='dark'] {
         display: flex;
         flex-wrap: wrap;
 
-        .option {
-            padding: 4px;
-            min-width: 3em;
-            min-height: 24px;
-            background: white;
-            margin: 2px;
-            border-radius: 8px;
-            line-height: 1.1;
-            color: black;
-            text-align: center;
-            cursor: pointer;
-
-            &:hover {
-                box-shadow: var(--ifm-global-shadow-md);
-                border: 1px solid var(--ifm-color-primary);
-                padding: 3px;
-            }
-
-            &.active {
-                border: 1px solid var(--ifm-color-success);
-                padding: 3px;
-            }
-
-            &.empty {
-                background: var(--ifm-color-secondary);
-            }
-
-            &.blue {
-                background: rgb(61, 61, 243);
-            }
-
-            &.red {
-                background: rgb(241, 79, 79);
-            }
-
-            &.green {
-                background: rgb(69, 235, 69);
-            }
-
-            &.black {
-                background: rgb(53, 39, 39);
-                color: white;
-            }
-
-            option {
-                background: white;
-
-                &.blue {
-                    background: rgb(61, 61, 243);
-                }
-
-                &.red {
-                    background: rgb(241, 79, 79);
-                }
-
-                &.green {
-                    background: rgb(69, 235, 69);
-                }
-
-                &.black {
-                    background: rgb(53, 39, 39);
-                    color: white;
-                }
-            }
-        }
-
-        .dropdownMenu {
-            display: flex;
-            flex-wrap: wrap;
-
-            .option {
-                flex-shrink: 1;
-            }
-        }
-
         input {
             padding: 4px;
             width: 100%;
@@ -102,34 +27,98 @@ html[data-theme='dark'] {
         label {
             padding-right: 1em;
         }
+    }
+    
+    .checkButton {
+        line-height: 1.6em;
+        margin-top: 0.1em;
+        cursor: pointer;
+        border: 1px solid;
+        margin: 2px;
+        margin-left: 0;
+        border-bottom-right-radius: var(--ifm-global-radius);
+        border-top-right-radius: var(--ifm-global-radius);
 
-        .checkButton {
-            line-height: 1.6em;
-            margin-top: 0.1em;
-            cursor: pointer;
-
-            &.correct {
-                color: var(--ifm-color-success);
-            }
-
-            &.wrong {
-                color: var(--ifm-color-danger);
-            }
-
-            &.unchecked {
-                color: var(--ifm-color-primary);
-            }
+        &.correct {
+            color: var(--ifm-color-success);
         }
 
-        textarea {
-            width: 100%;
-            font-family: var(--ifm-font-family-base);
-            font-size: var(--ifm-font-size-base);
-            padding: 8px;
+        &.wrong {
+            color: var(--ifm-color-danger);
+        }
 
-            &.edited {
-                border: 2px solid var(--ifm-color-success);
+        &.unchecked {
+            color: var(--ifm-color-primary);
+        }
+        &:hover {
+            filter: brightness(0.85);
+        }
+    }
+    &.string {
+        gap: 0;
+        .solution.dropdown {
+            .current {
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+                margin-right: 0;
             }
+        }
+    }
+}
+
+.dropdown {
+    .option {
+        padding: 4px;
+        min-width: 3em;
+        min-height: 24px;
+        background: white;
+        margin: 2px;
+        margin-right: 0;
+        line-height: 1.1;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        border-radius: var(--ifm-global-radius);
+
+        &:hover {
+            box-shadow: var(--ifm-global-shadow-md);
+            border: 1px solid var(--ifm-color-primary);
+            padding: 3px;
+        }
+
+        &.active {
+            border: 1px solid var(--ifm-color-success);
+            padding: 3px;
+        }
+
+        &.empty {
+            background: var(--ifm-color-secondary);
+        }
+
+        &.blue {
+            background: rgb(61, 61, 243);
+        }
+
+        &.red {
+            background: rgb(241, 79, 79);
+        }
+
+        &.green {
+            background: rgb(69, 235, 69);
+        }
+
+        &.black {
+            background: rgb(53, 39, 39);
+            color: white;
+        }
+    }
+        
+    .dropdownMenu {
+        display: flex;
+        flex-wrap: wrap;
+
+        .option {
+            flex-shrink: 1;
         }
     }
 }

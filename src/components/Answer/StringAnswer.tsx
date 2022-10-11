@@ -3,18 +3,12 @@ import styles from "./Answer.module.scss";
 import clsx from "clsx";
 import { observer } from "mobx-react-lite";
 import { StringProps } from ".";
-import Option from "./Option";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheckCircle,
-  faTimesCircle,
-  faQuestionCircle,
-} from "@fortawesome/free-solid-svg-icons";
 import { reaction } from "mobx";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import { useStore } from "../../stores/hooks";
-import {default as StringModel} from "../../models/Answer/String";
+import { default as StringModel } from "../../models/Answer/String";
 import Loader from "../shared/Loader";
+import DropdownSelect from "./DropdownSelect";
 
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 
@@ -31,12 +25,12 @@ const getClassName = (value: string) => {
 
 const CheckIcon = (state) => {
   if (state === "correct") {
-    return faCheckCircle;
+    return 'mdi-check-circle';
   }
   if (state === "wrong") {
-    return faTimesCircle;
+    return 'mdi-close-circle';
   }
-  return faQuestionCircle;
+  return 'mdi-help-circle-outline';
 };
 
 const StringAnswer = observer((props: StringProps) => {
@@ -86,37 +80,38 @@ const StringAnswer = observer((props: StringProps) => {
   if (!doc.loaded) {
     return <Loader />;
   }
+  const hasSolution = props.solution || props.checker;
   return (
-    <div className={styles.answer}>
-      {props.label && <label style={{width: props.labelWidth}}>{props.label}</label>}
+    <div className={clsx(styles.answer, styles.string)}>
+      {props.label && <label style={{ width: props.labelWidth }}>{props.label}</label>}
       {props.children && <label>{props.children}</label>}
       {props.select ? (
-        <select
-          onChange={(e) => onChange(e.target.value)}
-          style={{width: props.width}}
+        <DropdownSelect
+          onChange={onChange}
+          items={props.select.map((v, idx) => ({
+            value: v,
+            label: getDataAttr(v),
+            className: getClassName(v)
+          }))}
           value={doc.value}
-          className={getClassName(doc.value)}
+          className={clsx(getClassName(doc.value), hasSolution && styles.solution)}
           disabled={!doc.loaded}
-        >
-          {props.select.map((v, idx) => (
-            <Option value={v} key={idx} />
-          ))}
-        </select>
+        />
       ) : (
         <input
           type="text"
-          style={{width: props.width}}
+          style={{ width: props.width }}
           onChange={(e) => onChange(e.target.value)}
           value={doc.value}
-          disabled={!doc.loaded || doc.readonly || props.disabled}
+          disabled={!doc.loaded || doc.readonly || props.disabled}
         />
       )}
-      {(props.solution || props.checker) && (
+      {(hasSolution) && (
         <button
           onClick={() => checkAnswer(doc.value)}
           className={clsx(styles[correctState], styles.checkButton)}
         >
-          <FontAwesomeIcon icon={CheckIcon(correctState)} />
+          <i className={clsx('mdi', CheckIcon(correctState))} />
         </button>
       )}
     </div>
