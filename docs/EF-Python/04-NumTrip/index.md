@@ -12,4 +12,4 @@ sidebar_custom_props:
 - ⭐️ Erweiterung des konsolenbasierten NumTrip-Games mit Pygame
 :::
 
-[@video --width=450px --muted](images/numtrip.mp4)
+[@video --width=450px --autoplay --muted --loop](images/numtrip.mp4)

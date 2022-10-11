@@ -73,23 +73,26 @@ const plugin = (options) => {
             const pathUrl = posixPath(videoPath);
             const src = `require("${inlineMarkdownLinkFileLoader}${escapePath(pathUrl)}").default`
             const options = parseOptions(text, true);
-            const {muted, autoplay} = options;
+            const {muted, autoplay, loop} = options;
             if (muted) {
               delete options.muted;
             }
             if (autoplay) {
               delete options.autoplay;
             }
+            if (loop) {
+              delete options.loop;
+            }
             prepareWrapperNode(node);
 
             linkNode.type = 'jsx';
-            linkNode.value = `<video
-              autoPlay={${!!autoplay}} 
-              muted={${!!muted}}
+            linkNode.value = `<video 
+              ${muted ? 'muted' : ''}
+              ${autoplay ? 'autoPlay playsInline' : ''}
+              ${loop ? 'loop' : ''}
+              style={${JSON.stringify({maxWidth: '100%', ...options})}}
               controls
-              style={${JSON.stringify(options)}}
-              src={${src}}
-            ></video>`;
+            ><source src={${src}}/></video>`;
             if (linkNode.url) {
               delete linkNode.url;
             }
