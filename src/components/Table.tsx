@@ -1,7 +1,4 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUmbrellaBeach as holiday, faGraduationCap as test, faCalendarDay as event, faInfo as info, IconDefinition } from "@fortawesome/free-solid-svg-icons"
-import styles from './Table.module.scss';
+import React from 'react';import styles from './Table.module.scss';
 import clsx from 'clsx';
 import { WEEK_DAYS } from '../helpers/time';
 
@@ -12,11 +9,11 @@ export enum Type {
   Info = 'info'
 }
 
-const ICON_MAPPING: { [key in Type]: IconDefinition } = {
-  [Type.Holiday]: holiday,
-  [Type.Event]: event,
-  [Type.Test]: test,
-  [Type.Info]: info,
+const ICON_MAPPING: { [key in Type]: string } = {
+  [Type.Holiday]: 'mdi-beach',
+  [Type.Event]: 'mdi-calendar',
+  [Type.Test]: 'mdi-school',
+  [Type.Info]: 'mdi-information',
 }
 
 interface CellProps {
@@ -82,7 +79,7 @@ export class Row extends React.Component<RowProps> {
     if (!this.props.type) {
       return;
     }
-    return <FontAwesomeIcon icon={ICON_MAPPING[this.props.type]} />
+    return <i className={clsx(ICON_MAPPING[this.props.type], 'mdi')} />
   }
   render() {
     const { type, cells } = this.props;
