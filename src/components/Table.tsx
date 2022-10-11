@@ -31,8 +31,8 @@ const toDateString = (date: Date) => {
   const day = date.getDay()
   // return `${WEEK_DAYS[day]}. ${String(d.getDate()).padStart(2,'0')}.${String(d.getMonth() + 1).padStart(2,'0')}.`;
   return (
-    <span style={{fontFamily: 'monospace'}}>
-    {WEEK_DAYS[day]}. {String(date.getDate()).padStart(2,'0')}.{String(date.getMonth() + 1).padStart(2,'0')}.
+    <span style={{ fontFamily: 'monospace' }}>
+      {WEEK_DAYS[day]}. {String(date.getDate()).padStart(2, '0')}.{String(date.getMonth() + 1).padStart(2, '0')}.
     </span>)
 }
 export class Cell extends React.Component<CellProps> {
@@ -53,6 +53,7 @@ export interface iRow {
   cells: (string | JSX.Element)[];
   type?: Type;
   className?: string;
+  color?: string;
 }
 
 interface RowProps extends iRow {
@@ -77,8 +78,6 @@ const weekNumber = (date: Date) => {
 
 
 export class Row extends React.Component<RowProps> {
-
-
   icon(): JSX.Element {
     if (!this.props.type) {
       return;
@@ -86,8 +85,8 @@ export class Row extends React.Component<RowProps> {
     return <FontAwesomeIcon icon={ICON_MAPPING[this.props.type]} />
   }
   render() {
-    const { type, cells } = this.props
-    const props: any = {className: []}
+    const { type, cells } = this.props;
+    const props: any = { className: [] }
     if (this.props.className) {
       props.className.push(this.props.className);
     }
@@ -103,13 +102,11 @@ export class Row extends React.Component<RowProps> {
         if (date && weekNumber(new Date()) === weekNumber(date)) {
           props.className.push(`${props.className} ${styles.currentWeek}`)
         }
-
       }
     }
 
-
     return (
-      <tr {...props} className={clsx(...props.className)}>
+      <tr {...props} className={clsx(...props.className)} style={{background: this.props.color}}>
         {
           cells.map((cell, idx) => {
             const cellProps: CellProps = { value: cell }

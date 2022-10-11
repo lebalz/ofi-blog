@@ -61,6 +61,7 @@ table.ofi-table {
   &.selectable > tbody > tr:hover {
     --table-background-color: var(--ifm-hover-overlay);
     cursor: pointer;
+    filter: brightness(0.85);
     &.holiday {
       --table-background-color: #7793c0;
     }
