@@ -5,11 +5,13 @@ sidebar_custom_props:
 
 # ⭐️ DNS Attacken
 
-<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/czKHFxaO56c?start=1&end=3:00" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+[@video](images/What-is-DNS-Hijacking.mp4)
 
 :::aufgabe Cache Poisioning
 
-Was ist das Prinzip der DNS Cache Poisioning Attacke?
+- Was ist DNS-Hijacking und wie funktioniert es? Beschreiben Sie auch die drei verschiedenen Varianten.
+- Bemerkt eine Benutzer:in etwas vom Angriff? 
+- Wie kann man dagegen schützen?
 
 <Answer  type="text"  webKey="307634c6-4014-425d-832d-eca3269ad79f"/>
 
@@ -17,7 +19,7 @@ Was ist das Prinzip der DNS Cache Poisioning Attacke?
 
 ## ⭐️ ARP and DNS Spoofing
 
-<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/SHkdWNo7SC8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+[@youtube](https://www.youtube-nocookie.com/embed/SHkdWNo7SC8)
 
 :::aufgabe ARP und DNS Spoofing
 

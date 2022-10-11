@@ -106,6 +106,11 @@
       "from": "docs/Netzwerke-of/004-DNS/",
       "to": "versioned_docs/version-25h/07-Netzwerke/03-DNS",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-of/005-Sicherheit/",
+      "to": "versioned_docs/version-25h/07-Netzwerke/04-Sicherheit",
+      "ignore": []
     }
   ],
   "26e": [
@@ -267,8 +272,7 @@
     {
       "from": "docs/EF-Python/03-Python/",
       "to": "versioned_docs/version-24ef/01-Programmieren/04-Python",
-      "ignore": [
-      ]
+      "ignore": []
     }
   ]
 }
