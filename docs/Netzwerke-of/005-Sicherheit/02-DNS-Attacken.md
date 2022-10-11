@@ -5,7 +5,10 @@ sidebar_custom_props:
 
 # ⭐️ DNS Attacken
 
+
 [@video](images/What-is-DNS-Hijacking.mp4)
+
+[^1]
 
 :::aufgabe Cache Poisioning
 
@@ -28,3 +31,6 @@ Wie verläuft eine ARP/DNS-Spoofing Attacke?
 <Answer  type="text"  webKey="832e9fad-b764-42dc-a9c7-b6ea964a8cd0"/>
 
 :::
+
+
+[^1]: Quelle 👉 https://youtu.be/lggWxsHYK2o
