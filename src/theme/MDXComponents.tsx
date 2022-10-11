@@ -11,6 +11,7 @@ import GTabs from '../components/GTabs';
 import Hint from '../components/Solution/Hint'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import ExcelBox from '../components/ExcelBox';
 
 export default {
   // Re-use the default mapping
@@ -24,5 +25,6 @@ export default {
   Tabs: Tabs,
   Hint: Hint,
   GTabs: GTabs,
-  TabItem: TabItem
+  TabItem: TabItem,
+  ExcelBox: ExcelBox,
 };

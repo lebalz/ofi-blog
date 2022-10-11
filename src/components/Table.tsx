@@ -10,7 +10,7 @@ export enum Type {
 }
 
 const ICON_MAPPING: { [key in Type]: string } = {
-  [Type.Holiday]: 'mdi-beach',
+  [Type.Holiday]: 'mdi-island',
   [Type.Event]: 'mdi-calendar',
   [Type.Test]: 'mdi-school',
   [Type.Info]: 'mdi-information',
