@@ -41,7 +41,8 @@
         "type": "test"
     },
     {
-        "cells": ["08.11.2022","Daten","Office: Tabellenkalkulation"]
+        "cells": ["08.11.2022","Informatik Biber","Wettbewerb"],
+        "type": "event"
     },
     {
         "cells": ["15.11.2022","Daten","Office: Tabellenkalkulation"]
@@ -54,7 +55,7 @@
         "cells": ["22.11.2022","Daten", "Office: Tabellenkalkulation"]
     },
     {
-        "cells": ["29.11.2022","Daten", "Datenbanken"]
+        "cells": ["29.11.2022","Daten", "Office: Tabellenkalkulation"]
     },
     {
         "cells": ["06.12.2022","Kantonaler Fachschaftstag",""],
