@@ -1,5 +1,14 @@
 .videoComponent {
     margin: 4px 0px;
+    video {
+        margin-bottom: 0;
+    }
+    &:hover {
+        .wrapButton {
+            --ifm-button-background-color: transparent;
+            color: var(--ifm-font-color-base);
+        }
+    }
 }
 
 .headerClosed {

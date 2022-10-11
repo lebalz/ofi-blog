@@ -84,7 +84,7 @@ export default class Video extends React.Component<Props> {
           </div>
         ) : (
           <button
-            className="button button--block button--outline button--secondary"
+            className={clsx("button button--block button--outline button--secondary", styles.wrapButton)}
             onClick={this.onClick}
             style={{
               display: "flex",

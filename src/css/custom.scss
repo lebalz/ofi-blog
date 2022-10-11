@@ -556,3 +556,7 @@ svg[id^="mermaid-svg-"] {
     max-width: 100%;
     padding-right: 1em;
 }
+
+video {
+    margin-bottom: var(--ifm-paragraph-margin-bottom);
+}
