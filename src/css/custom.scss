@@ -486,6 +486,12 @@ strong.underline {
     -webkit-border-radius: .2em;
     border-radius: .2em;
     white-space: nowrap;
+    display: inline-block;
+    line-height: initial;
+    transform: translateY(25%);
+    overflow-x: auto;
+    max-width: 100%;
+    margin-top: -18%;
 }
 
 
