@@ -1,5 +1,7 @@
 # OFI Blog
 
+[![Build Status](https://drone.gbsl.website/api/badges/lebalz/ofi-blog/status.svg)](https://drone.gbsl.website/lebalz/ofi-blog)
+
 [OFI Blog](https://lebalz.github.io/ofi-blog)
 
 ## Styling
