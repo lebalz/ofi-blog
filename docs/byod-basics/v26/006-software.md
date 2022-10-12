@@ -167,7 +167,10 @@ src={useBaseUrl('/img/byod-basics/win/edit_picture1.mp4')}
 </TabItem>
 <TabItem value="mac">
 
-tbd...
+<Video
+  title="Text hinzufügen" 
+  src={useBaseUrl('/img/byod-basics/osx/image-text.mp4')} 
+/>
 
 </TabItem>
 </OsTabs>
