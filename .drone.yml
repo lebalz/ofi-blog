@@ -53,6 +53,12 @@ steps:
     mount:
       - ./node_modules
 
+- name: notify
+  image: plugins/webhook
+  settings:
+    urls:
+      from_secret: NODE_RED_WEBHOOK
+
 volumes:
   - name: cache
     host: 
