@@ -66,6 +66,7 @@ Ein grosser Vorteil von zugewiesenen FOrmatvorlagen ist das Erzeugen von Verzeic
 ## Übung
 
 :::aufgabe
+<Answer type="state" webKey="213ec6ee-34bf-4726-b0b9-c0bb3bcc2ddc" />
 
 Laden Sie das Word-Dokument [ex02-machine-learning.docx](files/ex02-machine-learning.docx) herunter.
 
