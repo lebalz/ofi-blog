@@ -58,7 +58,10 @@ steps:
   settings:
     urls:
       from_secret: NODE_RED_WEBHOOK
-
+  when:
+    status:
+    - success
+    - failure
 volumes:
   - name: cache
     host: 
