@@ -90,8 +90,6 @@ Die Formatvorlagen können auch nach den eigenen Wünschen **angepasst** werden:
 Erstellen Sie keine neuen Formatvorlagen für Überschriften sonder passen Sie die vorhandenen Vorlagen an. So funktioniert die Nummerierung und das automatische Inhaltsverzeichnis ohne weitere Konfiguration.
 :::
 
-
-
 <Answer type="state" webKey="67fa5497-5f5e-40f6-8b30-e64679d17797" states={['star', 'star-half', 'star-empty']}>
 
 Formatvorlagen verstanden?
