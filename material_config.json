@@ -155,7 +155,8 @@
       "to": "versioned_docs/version-26e/05-Texte",
       "ignore": [
         "04-Uebung.md"
-      ]
+      ],
+      "open": true
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/003-repeat.md",
@@ -210,7 +211,8 @@
       "to": "versioned_docs/version-26P/05-Texte",
       "ignore": [
         "04-Uebung.md"
-      ]
+      ],
+      "open": true
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/003-repeat.md",
