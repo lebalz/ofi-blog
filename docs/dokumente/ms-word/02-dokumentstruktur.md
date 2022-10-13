@@ -184,4 +184,4 @@ Laden Sie das Word-Dokument [ex01-what-is-programming.docx](files/ex01-what-is-p
 
 ### Übung Schritt für Schritt im Video
 
-[@ms-stream](https://web.microsoftstream.com/video/68e9d664-83b8-4942-a558-b6cf1eb49d32)
+[@video](images/text-exercise-1.mp4)

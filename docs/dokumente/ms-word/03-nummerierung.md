@@ -106,12 +106,12 @@ Laden Sie das Word-Dokument [ex02-machine-learning.docx](files/ex02-machine-lear
 
 #### Alles ausser die Bilder
 
-[@ms-stream](https://web.microsoftstream.com/video/51e26586-26bb-4273-afc0-c4b4ba0da6e8)
+[@video](images/text-exercise-2-a.mp4)
 
 <br />
 ---
 
 #### Bilder, Bildverzeichnisse, Querverweise
 
-[@ms-stream](https://web.microsoftstream.com/video/38d38100-d4c7-4185-aeb0-842a63243b68)
+[@video](images/text-exercise-2-b.mp4)
 ---
