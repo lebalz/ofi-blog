@@ -494,6 +494,12 @@ strong.underline {
     margin-top: -18%;
 }
 
+figcaption {
+    strong.underline {
+        transform: none;
+    }
+}
+
 
 .mdi {
     &.green {
