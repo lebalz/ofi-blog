@@ -5,6 +5,13 @@ sidebar_custom_props:
 
 # Übung
 
+Oft kommt es vor, dass mehrere Texte unterschiedlicher Quellen in ein Word-Dokument kopiert werden. Dabei ist es nervend, wenn auch spezielle Formatierungen oder sonderzeichen kopiert werden. Um nur den Inhalt einzufügen, kann in Word über __Einfügen > Nur den Text einfügen__ nur der pure Text und ohne Formatierungen übernommen werden. Natürlich werden dann Bilder nicht eingefügt.
+
+![](images/paste-text.png)
+
+Alternativ kann auch alles eingefügt werden und im Anschluss können bei ausgewähltem Text jegliche Formatierungen gelöscht werden.
+
+![](images/delete-fromats.png)
 
 :::aufgabe
 

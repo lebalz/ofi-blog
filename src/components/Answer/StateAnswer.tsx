@@ -58,7 +58,8 @@ const StateAnswer = observer((props: StateProps) => {
                 className={clsx(
                     styles.state,
                     'state-component',
-                    (props.noHeader || props.children) && 'no-header'
+                    (props.noHeader || props.children) && 'no-header',
+                    'no-comments'
                 )}
                 id={`state-${doc.webKey}`}
             >
