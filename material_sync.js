@@ -95,7 +95,13 @@ Object.keys(CONFIG).forEach((klass) => {
             gitignore.push(toPath.replace(classDir, ''))
         }
         if (src.open) {
-            const categoryPath = path.join(isDir ? toPath : parent, '_category_.json');
+            const folder = isDir ? toPath : parent;
+            try {
+                fs.mkdirSync(folder, {recursive: true})
+            } catch (e) {
+                console.log(e);
+            }
+            const categoryPath = path.join(folder, '_category_.json');
             gitignore.push(categoryPath.replace(classDir, ''));
             let category = {
                 collapsible: true,
