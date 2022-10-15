@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import styles from './login.module.scss';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { default as indexStyles } from './index.module.css';
+import { default as indexStyles } from './index.module.scss';
 import { useStore } from '../stores/hooks';
 import Link from '@docusaurus/Link';
 import { observer } from 'mobx-react-lite';

@@ -1,0 +1,11 @@
+.noImages {
+    img {
+        display: none;
+    }
+    figcaption {
+        display: none;
+    }
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}

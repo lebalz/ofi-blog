@@ -23,3 +23,24 @@
   align-items: center;
   justify-content: center;
 }
+
+.news {
+  margin-bottom: 2em;
+  .row {
+    gap: calc(2 * var(--ifm-spacing-horizontal));
+    @media screen and (max-width: 996px) {
+      justify-content: center;
+    }
+    
+    .col {
+      padding: 0;
+      max-width: 400px;
+      &:first-of-type {    
+        margin-left: var(--ifm-spacing-horizontal);
+      }
+      &:last-of-type {    
+        margin-right: var(--ifm-spacing-horizontal);
+      }
+    }
+  }
+}

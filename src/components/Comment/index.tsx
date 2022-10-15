@@ -9,6 +9,7 @@ import { default as CommentModel } from '@site/src/models/Comment';
 import { observer } from 'mobx-react-lite';
 import QuillEditor from '../shared/QuillEditor';
 import { action } from 'mobx';
+import { CommentContext } from '@site/src/theme/Root';
 
 interface Props {
     nr: number;
@@ -51,13 +52,13 @@ const setColor = (model: CommentModel | undefined, color: 'red' | 'orange' | 'gr
     });
 };
 
-const Comment = observer((props: Props) => {
+const CommentContent = observer((props: Props) => {
     const store = useStore('commentStore');
     const { sidebar_custom_props } = useFrontMatter();
 
     const ref = React.useRef<HTMLDivElement>(null);
     const [promptDelete, setPromptDelete] = React.useState(false);
-    const models = store.find(sidebar_custom_props.id, props.type, props.nr);
+    const models = store.find(sidebar_custom_props?.id, props.type, props.nr);
     const hasModels = models.length > 0;
 
     React.useEffect(() => {
@@ -70,7 +71,7 @@ const Comment = observer((props: Props) => {
     }, [ref]);
 
     React.useEffect(() => {
-        store.notifyPresence(sidebar_custom_props.id, props.type, props.nr);
+        store.notifyPresence(sidebar_custom_props?.id, props.type, props.nr);
     }, [store]);
 
     return (
@@ -211,6 +212,18 @@ const Comment = observer((props: Props) => {
                 </div>
             )}
         </>
+    );
+});
+
+const Comment = observer((props: Props) => {
+    const hasComment = React.useContext(CommentContext);
+    if (!hasComment) {
+        return null;
+    }
+    return (
+        <div className="comment-wrapper">
+            <CommentContent {...props}/>
+        </div>
     );
 });
 

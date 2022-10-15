@@ -10,6 +10,9 @@ import Head from "@docusaurus/Head";
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
+export const CommentContext = React.createContext(true);
+export const CommentProvider = CommentContext.Provider;
+
 const selectAccount = () => {
   /**
    * See here for more information on account retrieval:
@@ -68,7 +71,9 @@ function Root({ children }) {
       </Head>
       <StoresProvider value={rootStore}>
         <Msal>
-          {children}
+          <CommentProvider value={true}>            
+            {children}
+          </CommentProvider>
         </Msal>
       </StoresProvider>
     </div>

@@ -2,9 +2,13 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 import HomepageCourses from '../components/HomepageCourses';
 import ImageGallery from 'react-image-gallery';
+import { Content } from "@theme/BlogPostPage";
+import BlogPostItem from "@theme/BlogPostItem";
+// @ts-ignore
+import { BlogPostProvider } from "@docusaurus/theme-common/internal";
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -17,8 +21,11 @@ function HomepageHeader() {
         </header>
     );
 }
+interface Props {
+    readonly recentPosts: readonly { readonly content: Content }[];
+}
 
-export default function Home() {
+export default function Home({ recentPosts }: Props) {
     const images = [
         {
             original: './img/index/artificial-intelligence.jpg',
@@ -57,26 +64,23 @@ export default function Home() {
                     />
                 </div>
                 <HomepageCourses />
-                <div className="card" style={{ maxWidth: 'var(--ifm-container-width)', marginRight: 'auto', marginLeft: 'auto', marginBottom: '2em', background: '#d7ff00', color: 'black' }}>
-                    <div className="card__header">
-                        <h3>🚀 Wettbewerb: Informatik-Olympiade 15.9-30.11.2022 🚀</h3>
-                    </div>
-                    <div className="card__body">
-                        <p>
-                            Programmierwettbewerb für Jugendliche. Die Erste Runde findet vom <b>16.9-30.11.2022</b> online statt.
-                        </p>
-                        <div className="card__image">
-                            <a href="https://soi.ch" target="_blank">
-                                <img
-                                    src={require('./images/soi-2022.png').default}
-                                    alt="SOI"
-                                    title="Informatik-Olympiade"
-                                />
-                            </a>
+                <div className={clsx(styles.news)}>
+                    <div className={clsx("container")}>
+                        <h3>Neuigkeiten, Tipps und Tricks</h3>
+                        <div className={clsx(styles.row, "row")}>
+                            {recentPosts?.map(({ content: BlogPostContent }, idx) => (
+                                <div className={clsx(styles.col, "col col--4")} key={idx}>
+                                    <BlogPostProvider
+                                        key={BlogPostContent.metadata.permalink}
+                                        content={BlogPostContent}
+                                    >
+                                        <BlogPostItem>
+                                            <BlogPostContent />
+                                        </BlogPostItem>
+                                    </BlogPostProvider>
+                                </div>
+                            ))}
                         </div>
-                    </div>
-                    <div className="card__footer">
-                        <a className="button button--secondary button--block" href='https://soi.ch'>Mehr Informationen auf soi.ch</a>
                     </div>
                 </div>
             </main>

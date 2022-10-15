@@ -570,3 +570,9 @@ svg[id^="mermaid-svg-"] {
 video {
     margin-bottom: var(--ifm-paragraph-margin-bottom);
 }
+
+article[itemprop="blogPost"] {
+    h1 {
+        font-size: 2rem;
+    }
+}
