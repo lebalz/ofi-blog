@@ -35,12 +35,12 @@
     .col {
       padding: 0;
       max-width: 400px;
-      &:first-of-type {    
-        margin-left: var(--ifm-spacing-horizontal);
-      }
-      &:last-of-type {    
-        margin-right: var(--ifm-spacing-horizontal);
-      }
+      //&:first-of-type {    
+      //  margin-left: var(--ifm-spacing-horizontal);
+      //}
+      //&:last-of-type {    
+      //  margin-right: var(--ifm-spacing-horizontal);
+      //}
     }
   }
 }
