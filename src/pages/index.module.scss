@@ -27,13 +27,13 @@
 .news {
   margin-bottom: 2em;
   .row {
-    gap: calc(2 * var(--ifm-spacing-horizontal));
+    // gap: calc(2 * var(--ifm-spacing-horizontal));
     @media screen and (max-width: 996px) {
       justify-content: center;
     }
     
     .col {
-      padding: 0;
+      padding-bottom: var(--ifm-spacing-horizontal);
       max-width: 400px;
       //&:first-of-type {    
       //  margin-left: var(--ifm-spacing-horizontal);

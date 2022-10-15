@@ -64,7 +64,7 @@ export default function Home({ recentPosts }: Props) {
                     />
                 </div>
                 <HomepageCourses />
-                <div className={clsx(styles.news)}>
+                <div className={clsx(styles.news, 'no-comments')}>
                     <div className={clsx("container")}>
                         <h3>Neuigkeiten, Tipps und Tricks</h3>
                         <div className={clsx(styles.row, "row")}>
