@@ -5,3 +5,4 @@ sidebar_custom_props:
 # Some useful Links
 
 - [👉 Namespaces and Scopes in Python](https://realpython.com/python-namespaces-scope/)
+- [Pyenv Ubuntu](https://brain2life.hashnode.dev/how-to-install-pyenv-python-version-manager-on-ubuntu-2004)
