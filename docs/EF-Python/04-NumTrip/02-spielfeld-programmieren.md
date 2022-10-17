@@ -30,6 +30,42 @@ Wenn alles zu Ihrer Zufriedenheit funktioniert, machen Sie einen Commit, pushen 
 Es ist in diesem Schritt noch keine Interaktion mit Spielenden oder ein Spielfluss zu programmieren - nur das Anzeigen des Spielfelds...
 :::
 
+:::aufgabe Auftrag auf Freitag, 21.10.2022
+<Answer type="state" webKey="0696dee1-6f7e-40a6-b891-298abbf1dc63" />
+
+Am Freitag werden wir mit dem Spielfeld weiterarbeiten. Damit alle eine gute Ausgangslage haben, gibt es den folgenden Kurz-Auftrag:
+
+1. (Für alle): Das Spielfeld soll wie im Beispiel unten mit einer verschachtelten Liste beschrieben werden. Die Zahlen können Sie selber wählen.
+2. (Wer das eigene Spielfeld noch nicht fertig hat): Den untenstehenden Code übernehmen und Zeile für Zeile analysieren und kommentieren. Insbesondere sollte Ihnen wieder klar werden, was folgende Syntax bezweckt:
+     - Was macht `f'|{zelle}'` ?
+     - was macht das `end=''`?
+3. :mdi-git: Commiten und Pushen
+
+
+```py
+board = [
+    [2, 4, 1, 8, 8 ],
+    [4, 2, 8, 2, 1],
+    [4, 4, 8, 4, 2],
+    [2, 8, 1, 4, 1],
+    [2, 4, 4, 4, 4]
+]
+
+for zeile in board:
+    for zelle in zeile:
+        print(' -', end='')
+    print(' ')
+    for zelle in zeile:
+        print(f'|{zelle}', end='')
+    print('|')
+
+for zelle in board[0]:
+    print(' -', end='')
+print(' ')
+```
+
+:::
+
 
 :::
 
