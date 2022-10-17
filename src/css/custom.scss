@@ -576,3 +576,7 @@ article[itemprop="blogPost"] {
         font-size: 2rem;
     }
 }
+
+.no-line-nr .prism-code.language-py .token-line::before {
+    display: none;
+}

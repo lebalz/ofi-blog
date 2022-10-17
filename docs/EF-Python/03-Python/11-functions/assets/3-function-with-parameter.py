@@ -10,7 +10,7 @@ def count_down(zahl):
         time.sleep(1)
     print("BOOOMMMMM")
 
-# Hauptprogramm liest Zahl von Benutzer ein und ruft Funktion count_down auf.
+# Hauptprogramm liest Zahl von einer Benutzer:in ein und ruft Funktion count_down auf.
 eingabe = input("Gib eine Zahl ein: ")
 zahl = int(eingabe)
 count_down(zahl)
