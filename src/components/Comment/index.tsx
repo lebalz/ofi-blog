@@ -217,7 +217,6 @@ const CommentContent = observer((props: Props) => {
 
 const Comment = observer((props: Props) => {
     const canComment = React.useContext(CommentContext);
-    console.log('c', canComment)
     if (!canComment) {
         return null;
     }
