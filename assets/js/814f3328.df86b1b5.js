@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[52535],{45641:e=>{e.exports=JSON.parse('{"title":"News","items":[{"title":"Browser Scrollbalken","permalink":"/news/2022/10/14/Browser-Scrollbars"},{"title":"Wettbewerb: Informatik-Olympiade \ud83d\ude80","permalink":"/news/2022/08/25/Informatik-Olympiade"}]}')}}]);
