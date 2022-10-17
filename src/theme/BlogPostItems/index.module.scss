@@ -1,0 +1,10 @@
+.blogList {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    > * {
+        flex-basis: 200px;
+        flex-grow: 1;
+    }
+}

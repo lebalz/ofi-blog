@@ -10,6 +10,7 @@ import BlogPostItemFooter from '@theme/BlogPostItem/Footer';
 import type { Props } from '@theme/BlogPostItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
+import { CommentProvider } from '../Root';
 
 // apply a bottom margin in list view
 function useContainerClassName() {
@@ -42,7 +43,9 @@ export default function BlogPostItem({
         <div className="card__body">
           <h4>{metadata.title}</h4>
           <small className={styles.noImages}>
-            {children}
+            <CommentProvider value={false}>
+              {children}
+            </CommentProvider>
           </small>
         </div>
         <div className="card__footer">

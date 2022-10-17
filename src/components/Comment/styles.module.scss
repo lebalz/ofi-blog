@@ -13,6 +13,9 @@
     .comment-icon {
         display: none;
     }
+    >div[nr] {
+        display: none;
+    }
 }
 :global .blog-list-page .commentable {
     .comment-wrapper {
