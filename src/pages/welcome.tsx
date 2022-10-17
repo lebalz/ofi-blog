@@ -66,7 +66,7 @@ export default function Home({ recentPosts }: Props) {
                 <HomepageCourses />
                 <div className={clsx(styles.news, 'no-comments')}>
                     <div className={clsx("container")}>
-                        <h3>Neuigkeiten, Tipps und Tricks</h3>
+                        <h3 id="new-tipps-tricks">Neuigkeiten, Tipps und Tricks</h3>
                         <div className={clsx(styles.row, "row")}>
                             {recentPosts?.map(({ content: BlogPostContent }, idx) => (
                                 <div className={clsx(styles.col, "col col--4")} key={idx}>
