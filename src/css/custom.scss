@@ -580,3 +580,15 @@ article[itemprop="blogPost"] {
 .no-line-nr .prism-code.language-py .token-line::before {
     display: none;
 }
+
+.wiggly {
+    -webkit-text-decoration: underline wavy 1px;
+    -moz-text-decoration: underline wavy 1px;
+    text-decoration: underline wavy 1px;
+    &.red {
+        text-decoration-color: red;
+    }
+    &.blue {
+        text-decoration-color: blue;
+    }
+}
