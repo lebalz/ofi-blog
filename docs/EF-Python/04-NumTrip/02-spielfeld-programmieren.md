@@ -44,7 +44,7 @@ Am Freitag werden wir mit dem Spielfeld weiterarbeiten. Damit alle eine gute Aus
 
 ```py
 board = [
-    [2, 4, 1, 8, 8 ],
+    [2, 4, 1, 8, 8],
     [4, 2, 8, 2, 1],
     [4, 4, 8, 4, 2],
     [2, 8, 1, 4, 1],
