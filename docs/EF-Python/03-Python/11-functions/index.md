@@ -1,6 +1,9 @@
 ---
 sidebar_custom_props:
   id: de0fda33-050b-4e7e-8391-540eb8860e03
+  source:
+    name: sdg
+    ref: https://gitlab.gbsl.website/gymbefin23/material/-/snippets/13
 ---
 
 # Funktionen

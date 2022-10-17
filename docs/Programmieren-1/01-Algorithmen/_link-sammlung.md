@@ -8,4 +8,5 @@ https://idea-instructions.com/
 https://myce.wiki/news/old-loophole-makes-it-easy-to-hack-and-reset-the-windows-10-user-password-78066/
 
 ## gitlab sdg
-https://gitlab.com/gymbefin23/material/-/wikis/Techniken-im-Software-Engineering
+- https://gitlab.gbsl.website/gymbefin23
+- https://gitlab.com/gymbefin23/material/-/wikis/Techniken-im-Software-Engineering
