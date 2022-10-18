@@ -9,6 +9,8 @@ sidebar_custom_props:
 - Etwas Geduld...
 - Capturing Filter, damit Package-Loss reduziert werden kann
 
+![Monitor Mode Wireshark](images/wireshark-monitor-mode.gif)
+
 ## WIFI-Karte muss auf denselben Channel wie der Router eingestellt sein
 - bspw. WIFI auf Channel 7 setzen
 - `export PATH="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources:$PATH"` zum Pfad hinzufügen, so dass der Befehl `airport` verfügbar wird.
