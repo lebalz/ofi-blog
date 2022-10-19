@@ -71,9 +71,12 @@ https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functio
 <Answer type="state" webKey="032b1b16-de7c-44e0-a4be-3318120dae00" />
 
 Dateinamen
-: __EF-Informatik/snippets/1-sequence.py__
-: __EF-Informatik/snippets/2-function.py__
-: __EF-Informatik/snippets/3-function-with-parameter.py__
-: __EF-Informatik/snippets/4-function-with-return.py__
+: __EF-Informatik/exercises/fkt/1-sequence.py__
+: __EF-Informatik/exercises/fkt/2-function.py__
+: __EF-Informatik/exercises/fkt/3-function-with-parameter.py__
+: __EF-Informatik/exercises/fkt/4-function-with-return.py__
 
+Laden Sie obige Code-Beispiele in Ihr Repository herunter, und **debuggen** Sie die Beispiele Schritt für Schritt.
+
+Markieren Sie die Aufgabe als erledigt.
 :::
