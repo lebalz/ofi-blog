@@ -28,16 +28,16 @@ Doch was sind Funktionen eigentlich?
 
 :::cards
 *** --max-width=47% --min-width=300px
-```py reference title="1-ohne-funktion.py"
-https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/1-ohne-funktion.py
+```py reference title="1-sequence.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/1-sequence.py
 ```
 *** --max-width=47% --min-width=300px
-```py reference title="2-funktion.py"
-https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/2-funktion.py
+```py reference title="2-function.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/2-function.py
 ```
 :::
 
-Die Beispiele `1-ohne-funktion.py` und `2-funktion.py` zeigen zweimal dasselbe Programm, einmal ohne Funktion, einmal mit Funktion. Im zweiten Beispiel sieht man, wie die Funktion `count_down()` definiert wird (Zeile 3 bis 14). In Zeile 3 steht der Name der Funktion, während die Zeilen 4 bis 14 die Anweisungen enthalten, welche zur Funktion gehören.
+Die Beispiele `1-sequence.py` und `2-function.py` zeigen zweimal dasselbe Programm, einmal ohne Funktion, einmal mit Funktion. Im zweiten Beispiel sieht man, wie die Funktion `count_down()` definiert wird (Zeile 3 bis 14). In Zeile 3 steht der Name der Funktion, während die Zeilen 4 bis 14 die Anweisungen enthalten, welche zur Funktion gehören.
 
 Zeile 17 zeigt, wie die Funktion `count_down()` aufgerufen wird.
 
@@ -61,8 +61,19 @@ https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functio
 # Funktionen mit Rückgabewert
 Viele Funktionen erzeugen bei ihrer Ausführung ein Resultat, welches dann ausserhalb der Funktion weiterverwendet werden kann. Dazu gibt es die Möglichkeit mit `return ...` einen Wert als Resultat zurückzugeben. Die Funktion wird dann verlassen und der Wert steht an der Stelle des Aufrufs zur Verfügung und kann dort zum Beispiel einer weiteren Variablen zugewiesen werden.
 
-Im foglenden Beispiel `4-function-with-result.py` ist dieses Prinzip bei der Funktion `lies_zahl()` zu sehen, welche als Resultat eine die eingegebene Zahl zurückgibt.
+Im foglenden Beispiel `4-function-with-return.py` ist dieses Prinzip bei der Funktion `lies_zahl()` zu sehen, welche als Resultat die eingegebene Zahl zurückgibt.
 
-```py reference title="4-function-with-result.py"
-https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/4-function-with-result.py
+```py reference title="4-function-with-return.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/4-function-with-return.py
 ```
+
+:::aufgabe Debuggen
+<Answer type="state" webKey="032b1b16-de7c-44e0-a4be-3318120dae00" />
+
+Dateinamen
+: __EF-Informatik/snippets/1-sequence.py__
+: __EF-Informatik/snippets/2-function.py__
+: __EF-Informatik/snippets/3-function-with-parameter.py__
+: __EF-Informatik/snippets/4-function-with-return.py__
+
+:::

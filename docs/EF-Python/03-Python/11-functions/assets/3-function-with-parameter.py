@@ -1,11 +1,11 @@
 import time # für Funktion sleep()
 
-def count_down(zahl):
+def count_down(zeit_s):
     '''
     Funktion count_down mit Parameter.
-    Der count down läuft so lange, wie lange im Parameter Zahl angegeben wird.
+    Der count down läuft so lange, wie lange im Parameter "zeit_s" angegeben wird.
     '''
-    for i in range(zahl, 0, -1):
+    for i in range(zeit_s, 0, -1):
         print(i)
         time.sleep(1)
     print("BOOOMMMMM")
