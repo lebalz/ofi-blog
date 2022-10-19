@@ -27,6 +27,7 @@ Hilfsmittel
 - Sie kennen die Angriffsmethode *WLAN-Sniffing* und können deren Funktionsweise beschreiben
 - Sie wissen, wie Sie sich vor WLAN-Sniffing schützen können
 - Sie wissen Bescheid über die praktischen Übungen im Unterricht (bspw. `ping` und `tracert`) und können Vorgehen und Ergebnisse wiedergeben
+- Sie können anhand eines Beispiels erklären, wie NAT (Network Address Translation) funktioniert und dadurch private und öffentliche Netzwerke verbunden werden
 - Sie können die Funktionsweise des TTL-Headers bei Nachrichten im Internet beschreiben und deren Notwendigkeit begründen
 :::
 
