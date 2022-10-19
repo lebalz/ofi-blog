@@ -67,7 +67,7 @@ Im foglenden Beispiel `4-function-with-return.py` ist dieses Prinzip bei der Fun
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/4-function-with-return.py
 ```
 
-:::aufgabe Debuggen
+:::aufgabe 1. Debuggen
 <Answer type="state" webKey="032b1b16-de7c-44e0-a4be-3318120dae00" />
 
 Dateinamen
@@ -79,4 +79,35 @@ Dateinamen
 Laden Sie obige Code-Beispiele in Ihr Repository herunter, und **debuggen** Sie die Beispiele Schritt für Schritt.
 
 Markieren Sie die Aufgabe als erledigt.
+:::
+
+
+:::aufgabe 2. Sternchen-Rechteck
+
+<Answer type="state" webKey="5ab1b7f2-04d6-42bc-a5bc-da615117c83f" />
+
+Dateiname
+:  __EF-Informatik/exercises/fkt/sternchen.py__
+
+```
+******
+*    *
+*    *
+*    *
+*    *
+******
+```
+
+Gesucht ist ein Programm, welches obige Figur auf der Konsole ausgibt.
+
+- Schreiben Sie **zwei Funktionen** für die Ausgabe der beiden unterschiedlichen Zeilen. Verwenden Sie diese Funktionen dann im Hauptprogramm um die Figur als ganzes auszugeben.
+- **Parametrisieren** Sie in einem zweiten Schritt die Funktionen so, dass die Breite der Figur (in Anzahl Zeichen) beim Aufruf der Funktionen angegeben werden kann.
+- Machen Sie in einem dritten Schritt aus dem Hauptprogramm auch eine Funktion, bei welcher über je einen Parameter die die Breite der Figur (in Anzahl Zeichen) und Höhe der Figur (in Anzahl Zeilen) angegeben werden kann.
+- Schreiben Sie ein neues Hauptprogramm, welches diese letzte Funktion mit einigen Werten für die Breite und Höhe der Figur aufruft.
+
+Was passiert, wenn man Ihre Funktionen mit negativen Werten aufruft? Wie könnte man das Lösen?
+
+<Answer type="text" webKey="2d03dc75-1c56-435d-aa5d-972ec40719cb" />
+
+Comitten und pushen Sie Ihre Lösung und markieren Sie diese Aufgabe als erledigt.
 :::
