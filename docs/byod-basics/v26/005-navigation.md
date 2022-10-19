@@ -191,7 +191,7 @@ import Video from '@site/src/components/Video'
 
 Lösen Sie das Quizz und markieren Sie die Aufgabe anschliessend als erledigt.
 
-<iframe src="https://learningapps.org/watch?app=26314721" style={{border:'0px',width:'100%',height:'500px'}} allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+<iframe src="https://learningapps.org/watch?app=26314721" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 :::
 
 ### Pfeiltasten
@@ -419,7 +419,7 @@ Können Sie die obigen Sonderzeichen selber erzeugen?
 
 Werden Sie Millionär? 🤑💰🤑💰🤑💰
 
-<iframe src="https://learningapps.org/watch?app=2815114" style={{border:'0px',width:'100%',height:'500px'}} allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+<iframe src="https://learningapps.org/watch?app=2815114" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 :::
 
 :::aufgabe 🌟 Arcade Game (englisch)

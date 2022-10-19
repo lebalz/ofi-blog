@@ -226,4 +226,4 @@ Das sieht dann so aus:
 Selbsttest bestanden?
 </Answer>
 
-<iframe src="https://learningapps.org/watch?v=pg5k2c8pj22" style={{border:'0px',width:'100%',height:'500px'}} allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+<iframe src="https://learningapps.org/watch?v=pg5k2c8pj22" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>

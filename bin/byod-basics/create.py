@@ -28,7 +28,7 @@ def html_video(name: str, system: str, title: str = 'Video Tutorial') -> str:
 
 <button class="accordion">{title}</button>
 <figure class="video_container panel">
-  <video controls="true" width="100%" allowfullscreen="true">
+  <video controls="true" width="100%" allowFullScreen="true">
     <source src="{system}/{name}" type="video/mp4">
   </video>
 </figure>
