@@ -29,7 +29,7 @@ Während es in der Analyse darum geht zu verstehen, was eigentlich das Problem i
 
 Hier geht es darum zu entscheiden, aus welchen Teilen die spätere Software bestehen wird, wie die zu verarbeitenden Informationen codiert werden sollen und welche Datenstrukturen für die Speicherung nötig sind.
 
-> Im Entwurf geht es darum eine Lösung für das Problem zu skizzieren. Dabei entsteht oft ein **Modell**, welches die einzelnen Bestandteile der künftigen Software zeigt. Zur Darstellung von diesem Model werden Diagramme verwendet (eine Art Baupläne für Software).
+> Im Entwurf geht es darum eine Lösung für das Problem zu skizzieren. Dabei entsteht oft ein **Modell**, welches die einzelnen Bestandteile der künftigen Software zeigt. Zur Darstellung von diesem Modell werden Diagramme verwendet (eine Art Baupläne für Software).
 
 ### Implementation
 Die Implementation befasst sich mit der Umsetzung der im Entwurf skizierten Lösung in Programmcode.
