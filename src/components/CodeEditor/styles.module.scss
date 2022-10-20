@@ -79,6 +79,9 @@
                 left: 4px !important;
             }
         }
+        :global .ace_scrollbar.ace_scrollbar-h {
+            overflow-x: hidden !important;
+        }
         // :global {
         //     --ifm-scrollbar-track-background-color: #444444;
         //     --ifm-scrollbar-thumb-background-color: #686868;
