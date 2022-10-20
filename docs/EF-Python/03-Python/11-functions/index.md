@@ -7,6 +7,63 @@ sidebar_custom_props:
 ---
 
 # Funktionen
+
+## Kurz zusammengefasst
+
+### Funktionsaufruf
+```py live_py slim
+def dreieck():
+    print('*')
+    print('* *')
+    print('* * *')
+
+dreieck()
+```
+
+### ... mit Parameter
+
+```py live_py slim
+def dreieck(size):
+    for i in range(size + 1):
+        print('* ' * i)
+
+dreieck(3)
+dreieck(5)
+```
+
+### ... mit zwei Parameter
+
+```py live_py slim
+def dreieck(size, zeichen):
+    for i in range(size + 1):
+        print(zeichen * i)
+
+dreieck(3, '* ')
+dreieck(5, '👍')
+```
+
+### ... mit Standardwert
+
+```py live_py slim
+def dreieck(size, zeichen = '* '):
+    for i in range(size + 1):
+        print(zeichen * i)
+
+dreieck(3)
+dreieck(5, '👍')
+```
+
+### Rückgabewerte
+```py live_py slim
+def pythagoras(a, b):
+    radikand = a**2 + b**2
+    sqrt = radikand ** 0.5
+    return sqrt
+
+c = pythagoras(3, 4)
+print(c)
+```
+
 ## Einleitung
 Sie haben in Ihren Programmen schon lange **Funktionen** gebraucht, vielleicht ohne es zu merken. Zum Beispiel wenn Sie `print(...)` geschrieben haben. Aber auch `math.sqrt(...)` (Wurzel ziehen) und `math.ceil(...)` (Abrunden), welche Sie im Primzahlen-Programm gebraucht haben, sind Funktionen. Allerdings stammen diese zwei aus einem **Modul**, welches Sie mit `import math` zuerst in Ihr Programm importieren mussten.
 
