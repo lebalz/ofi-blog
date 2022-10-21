@@ -65,6 +65,7 @@ print(' ')
 ```
 
 :::
+:::
 
 
 ## Refactoring: Funktionen verwenden
@@ -92,6 +93,7 @@ print(' ')
 
 Wenn alles zu Ihrer Zufriedenheit funktioniert, machen Sie ein commit und push und markieren Sie die Aufgabe als erledigt.
 :::
+
 
 ### ⭐️ Spielfeld Farben
 
