@@ -14,5 +14,5 @@ Notieren Sie sich dabei stichwortartig die wichtigen Dinge inkl. Codeausschnitte
 
 Sie können dabei selber entscheiden, ob Sie auf deutsch oder englisch schreiben.
 
---> Vergessen Sie nicht, die Änderungen zu Commiten und zu Pushen. 
+:mdi-arrow-right-thin: Vergessen Sie nicht, die Änderungen zu Commiten und zu Pushen. 
 :::
