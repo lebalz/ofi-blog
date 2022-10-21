@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Informatik Blog</title>
-        <link>https://lebalz.github.io/news</link>
+        <link>https://ofi.gbsl.website/news</link>
         <description>Informatik Blog</description>
         <lastBuildDate>Fri, 14 Oct 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,7 +10,7 @@
         <language>de</language>
         <item>
             <title><![CDATA[Browser Scrollbalken]]></title>
-            <link>https://lebalz.github.io/news/2022/10/14/Browser-Scrollbars</link>
+            <link>https://ofi.gbsl.website/news/2022/10/14/Browser-Scrollbars</link>
             <guid>/2022/10/14/Browser-Scrollbars</guid>
             <pubDate>Fri, 14 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Unter Chrome, Edge und Firefox gibt es eine versteckte Einstellungsseite, in welcher jegliche Einstellungen des Browsers konfiguriert werden kann.]]></description>
@@ -23,7 +23,7 @@
         </item>
         <item>
             <title><![CDATA[Wettbewerb: Informatik-Olympiade 🚀]]></title>
-            <link>https://lebalz.github.io/news/2022/08/25/Informatik-Olympiade</link>
+            <link>https://ofi.gbsl.website/news/2022/08/25/Informatik-Olympiade</link>
             <guid>/2022/08/25/Informatik-Olympiade</guid>
             <pubDate>Thu, 25 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Programmierwettbewerb für Jugendliche. Die Erste Runde findet vom 16.9-30.11.2022 online statt.]]></description>
