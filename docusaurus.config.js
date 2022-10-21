@@ -25,7 +25,7 @@ async function createConfig() {
   return {
     title: 'Informatik',    
     tagline: 'Gymnasium Biel Seeland',
-    url: 'https://lebalz.github.io',
+    url: 'https://ofi.gbsl.website',
     baseUrl: BASE_URL,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
