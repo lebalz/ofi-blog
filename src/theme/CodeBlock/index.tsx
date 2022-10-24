@@ -26,6 +26,7 @@ interface Props extends WrapperProps<typeof CodeBlockType> {
     noDownload?: boolean;
     versioned?: boolean;
     noCompare?: boolean;
+    maxLines?: string;
 }
 
 function pageId() {
@@ -84,6 +85,7 @@ export default function CodeBlockWrapper(props: Props): JSX.Element {
         return (
             <PyAceEditor
                 {...props}
+                maxLines={props.maxLines && Number.parseInt(props.maxLines, 10)}
                 webKey={webKey}
                 code={code}
                 codeId={codeId}

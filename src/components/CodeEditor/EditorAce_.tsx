@@ -20,6 +20,7 @@ export interface Props {
     webKey: string;
     lang: string;
     showLineNumbers: boolean;
+    maxLines?: number;
 }
 
 const Editor = observer((props: Props) => {
@@ -63,7 +64,6 @@ const Editor = observer((props: Props) => {
         },
         [pyScript]
     );
-
     return (
         <div className={clsx(styles.brythonCodeBlock, styles.editor)}>
             <AceEditor
@@ -82,7 +82,7 @@ const Editor = observer((props: Props) => {
                 }}
                 focus={false}
                 navigateToFileEnd={false}
-                maxLines={25}
+                maxLines={props.maxLines || 25}
                 ref={editorRef}
                 mode={props.lang}
                 theme="dracula"

@@ -105,20 +105,137 @@ dreieck()
 ]} />
 :::
 
-:::info Vorteile
-Voilà - und es hat im gleichen Zug auch noch den Vorteil, dass eine Änderung (bspw. die Grösse des Dreiecks) nur an einem einzigen Ort vorgenommen werden muss.
+
+:::aufgabe Aufgabe 1
+<Answer type="state" webKey="4d9d75a8-8539-4541-aec8-5306c671b1d9" />
+
+Im folgenden ist zweimal derselbe Algorithmus programmiert - links ohne Unterprogramme, rechts mit Unterprogramme.
+
+Ändern Sie beide Programme so ab, dass die Dreiecke doppelt so gross gezeichnet werden!
+
+:::cards --basis=200px
+*** --code
+```py live_py title=sequentiell.py id=d60d5547-82d4-4a44-8413-c161b5627bc2 maxLines=55
+from turtle import *
+
+fillcolor('yellow')
+begin_fill()
+for i in range(3):
+    forward(50)
+    left(120)
+end_fill()
+
+left(60)
+
+fillcolor('orange')
+begin_fill()
+for i in range(3):
+    forward(50)
+    left(120)
+end_fill()
+
+left(60)
+
+fillcolor('red')
+begin_fill()
+for i in range(3):
+    forward(50)
+    left(120)
+end_fill()
+
+left(60)
+
+fillcolor('purple')
+begin_fill()
+for i in range(3):
+    forward(50)
+    left(120)
+end_fill()
+
+
+left(60)
+
+fillcolor('blue')
+begin_fill()
+for i in range(3):
+    forward(50)
+    left(120)
+end_fill()
+
+
+left(60)
+
+fillcolor('green')
+begin_fill()
+for i in range(3):
+    forward(50)
+    left(120)
+end_fill()
+```
+*** --code
+```py live_py title=functions.py id=d42798ab-26d4-4eeb-bdcd-88c12952b5c4  maxLines=32
+from turtle import *
+
+def dreieck():
+    begin_fill()
+    for i in range(3):
+        forward(50)
+        left(120)
+    end_fill()
+
+fillcolor('yellow')
+dreieck()
+left(60)
+
+fillcolor('orange')
+dreieck()
+left(60)
+
+fillcolor('red')
+dreieck()
+left(60)
+
+fillcolor('purple')
+dreieck()
+left(60)
+
+fillcolor('blue')
+dreieck()
+left(60)
+
+fillcolor('green')
+dreieck()
+left(60)
+```
+:::
+
+Wie viele Zeilen mussten Sie im linken bzw. im rechten Programm ändern? Welche Vorteile sehen Sie bei der Verwendung von Unterprogrammen?
+<Answer type="text" webKey="4cb362d4-2a3e-4144-93e4-038c17a8d880" />
+
+<Solution webKey="66fd6dae-e03e-4751-b0f7-f2fb56ca7773">
+
+**Vorteile** von Unterprogrammen
+Verständlichkeit
+: Sequenzen können beschriftet werden. Durch gut gewählte Namen kann das Programm verständlicher strukturiert werden.
+
+Codequalität
+: Änderungen und Korrekturen müssen nur an einem Ort gemacht werden. Vergessene Änderungen sind dadurch weniger wahrscheinlich - die Codequalität steigt!
+
+</Solution>
 :::
 
 ## Eigene Befehle definieren
 
+Bei Python werden Befehle auch **Funktionen** genannt.
+
 :::def
 ### `def name():`
-Mit `def name():` wird ein neues Unterprogramm (ein neuer Befehl) definiert. Als Name sollte immer etwas gewählt werden, das die Tätigkeit dieser Sequenz widerspiegelt. Alle Anweisungen, die zum neuen Befehl gehören, müssen eingerückt sein.
+Mit `def name():` wird ein neues Unterprogramm (ein neuer Befehl) definiert. Als Name sollte immer etwas gewählt werden, das die **Tätigkeit** dieser Sequenz widerspiegelt. Alle Anweisungen, die zum neuen Befehl gehören, müssen eingerückt sein!
 
 **Beispiel:**
 
-```py
-def zick_zack():
+```py live_py slim
+def zick_zack():  # <-- Doppelpunkt nicht vergessen!
     left(45)
     forward(50)
     right(90)
@@ -126,14 +243,28 @@ def zick_zack():
     left(45)
 ```
 
-:::caution
-Die Definition alleine führt das Programm noch nicht aus. Dazu muss der Befehl erst noch **aufgerufen** werden.
+:::caution Befehlsaufruf
+Die Definition alleine führt das Programm noch nicht aus. Dazu muss der Befehl erst noch **aufgerufen** werden:
+
+
+
+```py live_py slim
+from turtle import *
+def zick_zack():  # <-- Doppelpunkt nicht vergessen!
+    left(45)
+    forward(50)
+    right(90)
+    forward(50)
+    left(45)
+### PRE
+zick_zack()
+```
 :::
 :::
 
 ---
 
-:::aufgabe Struktogramm → Python
+:::aufgabe Aufgabe 2: Struktogramm → Python
 <Answer type="state" webKey="202aff44-4ffd-4368-b74c-ab6682d0c805" />
 
 1. Erzeugen Sie ein Programm gemäss folgendem Struktogramm:
@@ -163,11 +294,14 @@ from turtle import *
 :::
 
 2. Ändern Sie obiges Programm so, dass der Winkel einer Stufe neu `110°` beträgt.
-3. Zeichnen Sie eine Treppe mit 30 Stufen. Denken Sie dabei auch an das letzte Kapitel. 
+
+   ![](images/05-stairs.svg)
+
+3. Zeichnen Sie eine Treppe mit 30 Stufen. Denken Sie dabei auch an das letzte Kapitel (Stichwort: Wiederholungen!)
 
 <Solution webKey="d32f5ea1-be5c-4928-87d6-f9d4e5bc5480">
 
-**Bemerke**: Die Definition des Unterprogramms `stufe` führt den Code noch nicht aus, erst auf Zeile 10 wird das Unterprogramm **aufgerufen** uns ausgeführt.
+**Bemerke**: Die Definition des Unterprogramms `stufe` führt den Code noch nicht aus, erst auf Zeile 10 wird das Unterprogramm **aufgerufen** und ausgeführt.
 
 ```py live_py slim
 from turtle import *
@@ -187,7 +321,7 @@ stufe()
 
 :::
 
-:::aufgabe Aufgabe 1 – Sechsecke
+:::aufgabe Aufgabe 3 – Sechsecke
 <Answer type="state" webKey="b1940f0b-2d69-4d40-84fc-676bddc1b45a" />
 
 :::cards --min-width=200px
@@ -231,8 +365,10 @@ for i in range(10):
 
 :::
 
-:::aufgabe Aufgabe 2 – Häuser
+:::aufgabe Aufgabe 4 – Häuser
 <Answer type="state" webKey="1bc32c1a-0345-494d-85b3-883ea40151cd" />
+
+Für diese Aufgabe können Sie als Ausgangslage Ihr Programm aus Kapitel 1, Aufgabe 6 "Haus von Nikolaus" verwenden.
 
 :::cards --min-width=200px
 *** --code --flex-grow=2
@@ -241,9 +377,11 @@ from turtle import *
 
 ```
 *** --flex-grow=1 --max-height=500px --overflow-y=auto
-1. Definieren Sie einen Befehl `haus()`, der ein Haus des Nikolaus zeichnet:
+1. Definieren Sie einen Befehl `haus()`, der ein Haus des Nikolaus zeichnet:  
+    **Achten** Sie darauf, dass die Turtle am Ende eines Häuschens jeweils unten rechts ist und nach rechts schaut.
 
 ![](images/haus_nikolaus.svg)
+
 
 
 2. Zeichnen Sie nun 4 Häuser nacheinander in unterschiedlichen Farben.
@@ -287,7 +425,7 @@ haus()
 
 :::
 
-:::aufgabe Aufgabe 3 – Blume
+:::aufgabe Aufgabe 5 – Blume
 <Answer type="state" webKey="5f71b333-fd7d-446e-998b-d65c69bec060" />
 
 Sie werden in dieser Aufgabe unter der Verwendung mehrerer Unterprogramme eine komplexe Aufgabe schrittweise lösen.

@@ -25,6 +25,7 @@ interface Props {
   lang: string;
   noCompare: boolean;
   precode: string;
+  maxLines?: number;
 }
 
 const PyEditor = observer((props: Props) => {
@@ -60,7 +61,7 @@ const PyEditor = observer((props: Props) => {
         webKey={props.webKey}
         lang={props.lang}
       />
-      <Editor webKey={props.webKey} lang={props.lang} showLineNumbers={props.showLineNumbers} />
+      <Editor webKey={props.webKey} lang={props.lang} showLineNumbers={props.showLineNumbers} maxLines={props.maxLines} />
       {props.lang === 'python' &&
         <div className={clsx(styles.result)}>
           <Result webKey={props.webKey}/>

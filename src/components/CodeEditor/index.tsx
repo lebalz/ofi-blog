@@ -27,6 +27,7 @@ interface Props {
     showLineNumbers: boolean;
     lang: string;
     precode: string;
+    maxLines?: number;
 }
 
 // export const ScriptContext = React.createContext<Script>(undefined);
