@@ -14,6 +14,7 @@ Alternativ kann auch alles eingefügt werden und im Anschluss können bei ausgew
 ![](images/delete-fromats.png)
 
 :::aufgabe
+<Answer type="state" webKey="27e06f6a-bb6c-43d7-b9dc-38b5ff61b620" />
 
 Erstellen Sie ein Word-Dokument auf OneDrive mit dem Namen `03-onlinesucht.docx`.
 Kopieren Sie den untenstehenden Text inkl. der Bilder und formatieren Sie das Dokument gemäss der Vorlage. Sind Angaben nicht näher spezifiziert, wählen Sie selber eine Formatierung, die der Vorlage möglichst nahe kommt.
