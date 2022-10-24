@@ -99,7 +99,7 @@ const SCHEDULE_GYM1_PRAKTIKUM = [
     ["Programmieren 1", "Algorithmen & RoboZZle"],
     ["Programmieren 1", "Algorithmen & Einstieg Turtlegrafik"],
     ["Programmieren 1", "Wiederholte Ausführung"],
-    ["Programmieren 1", "Unterprogramme"],
+    ["Programmieren 1", "Unterprogramme und Fehler"],
     ["Programmieren 1", "Parameter"],
     ["Programmieren 1", "Variablen, Eingabe & Ausgabe"],
     ["Programmieren 1", "Variablen, Eingabe & Ausgabe"],
