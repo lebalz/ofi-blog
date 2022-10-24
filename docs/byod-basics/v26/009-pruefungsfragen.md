@@ -114,7 +114,7 @@ Die Schriftfarbe & Grösse kann frei gewählt werden, sie muss aber lesbar sein.
 ## Szenario 6
 - Einen neuen virtuellen Desktop erstellen
 - Auf neuem virtuellen Desktop einen Internet-Browser öffnen
-- Auf dem anderen virtuellen Desktop Powerpoint starten
+- Auf dem anderen virtuellen Desktop PowerPoint starten
 
 ## Szenario 7
 - `sonnenuntergang.docx` öffnen
@@ -137,11 +137,11 @@ Die Schriftfarbe & Grösse kann frei gewählt werden, sie muss aber lesbar sein.
 
 ## Szenario 11
 - Das Programm `create_mesh.py` öffnen
-- Ein Bildschrim-Video erstellen in welchem die Ausführung des Programms gezeigt wird.
-- Bildschrimaufnahme im Ordner "material_byod" abspeichern/dorthin verschieben.
+- Ein Bildschirm-Video erstellen in welchem die Ausführung des Programms gezeigt wird.
+- Bildschirmaufnahme im Ordner "material_byod" abspeichern/dorthin verschieben.
 
 ## Szenario 12
-- Die kompirmierte Datei "material_byod.zip" vom Downloads-Ordner in den Ordner "material_byod" unter OneDrive verschieben.
+- Die komprimierte Datei "material_byod.zip" vom Downloads-Ordner in den Ordner "material_byod" unter OneDrive verschieben.
 
 ## Szenario 13
 - Den Ordner "programme" komprimieren
@@ -154,30 +154,30 @@ Die Schriftfarbe & Grösse kann frei gewählt werden, sie muss aber lesbar sein.
 - Das Word-Dokument speichern
 
 ## Szenario 15
-- Das Programm `hello_world.py` öffnen 
+- Das Programm `hello_world.py` öffnen (auf der Webseite)
 - (ab jetzt nur noch mit der Tastatur ohne Maus!)
 - den ganzen Text auswählen und löschen
 - abspeichern
 - Änderung rückgängig machen und wieder speichern
 
 ## Szenario 16
-- Das Programm `hello_world.py` öffnen
+- Das Programm `hello_world.py` öffnen (auf der Webseite)
 - (ab jetzt nur noch mit der Tastatur ohne Maus!)
 - Den Text "It's a beautiful Day." auswählen, ausschneiden und vor "Hello World" einfügen. (Resultat: `print("It's a beautiful Day. Hello World!")`)
 - abspeichern
 
 ## Szenario 17
-- Das Programm `create_mesh.py` öffnen
+- Das Programm `create_mesh.py` öffnen (auf der Webseite)
 - Nach der Zahl `3` suchen. Wie oft kommt es im Programm vor?
 
 ## Szenario 18
-- Das Programm `klammern.py` öffnen
+- Das Programm `klammern.py` öffnen (auf der Webseite)
 - im Python-Programm folgenden Code eintippen:
 - `print("Klammern: (), [], {}")`
 - Das Programm ausführen
 
 ## Szenario 19
-- Das Programm `klammern.py` öffnen
+- Das Programm `klammern.py` öffnen (auf der Webseite)
 - im Python-Programm folgenden Code eintippen:
 - `print("Sonderzeichen: #, &, <, >")`
 - Programm ausführen
@@ -196,14 +196,14 @@ Die Schriftfarbe & Grösse kann frei gewählt werden, sie muss aber lesbar sein.
 
 ## Szenario 24
 - Auf Forms eine neue Umfrage mit dem Titel "Testumfrage" erstellen
-- Start Datum auf den 6.12.2021 setzen
+- Start Datum auf den 6.12.2022 setzen
 - Eine Antwort pro Person zulassen
 - Link zum Ausfüllen kopieren und per Teams an Herrn Hofer schicken.
 
 ## Szenario 25
 - Auf Google nach "Kalender" suchen
 - Mit Touch-Gesten durch die Ergebnisse scrollen
-- einen Link anklicken, die URL kopiereneinen neuen Tab öffnen und auf bitly.com gehen
+- einen Link anklicken, die URL kopieren, einen neuen Tab öffnen und auf bitly.com gehen
 - den kopierten Link kürzen
 
 ## Szenario 26
