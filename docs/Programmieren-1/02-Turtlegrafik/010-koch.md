@@ -3,7 +3,7 @@ sidebar_custom_props:
   id: c7de479a-a1cd-4a29-a6cd-4b31ea899283
 ---
 
-# 10. ⭐ Rekursion
+# ⭐ Rekursion
 
 Ein Unterprogramm kann sich selber aufrufen. Das ergibt im Normalfall eine unendliche Wiederholung, so dass das Programm abstürzt. Wird das Unterprogramm jedoch jedesmal mit einem veränderten Parameter aufgerufen, so kann eine **Abbruchbedingung** erstellt werden, welche angibt, ob das Unterprogramm erneut aufgerufen werden soll oder nicht.
 
