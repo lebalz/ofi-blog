@@ -109,7 +109,7 @@ dreieck()
 :::aufgabe Aufgabe 1
 <Answer type="state" webKey="4d9d75a8-8539-4541-aec8-5306c671b1d9" />
 
-Im folgenden ist zweimal derselbe Algorithmus programmiert - links ohne Unterprogramme, rechts mit Unterprogramme.
+Im folgenden ist zweimal derselbe Algorithmus programmiert - links ohne Unterprogramme, rechts mit Unterprogrammen.
 
 Ändern Sie beide Programme so ab, dass die Dreiecke doppelt so gross gezeichnet werden!
 
