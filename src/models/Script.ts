@@ -236,7 +236,7 @@ export default class Script implements CodeModel, ApiModel {
 
     @computed
     get hasTurtleImport(): boolean {
-        return TURTLE_IMPORTS_TESTER.test(this.data.code);
+        return TURTLE_IMPORTS_TESTER.test(`${this.precode}\n${this.data.code}`);
     }
 
     @computed
