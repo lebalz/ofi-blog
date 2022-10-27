@@ -40,6 +40,7 @@ sidebar_custom_props:
 - Bitwarden
 - Lolcat?
 - Beep Sound
+- Befehl wiederholen unter MS Office: [[ctrl]] + [[y]]
 
 ## Unterlagen
 
