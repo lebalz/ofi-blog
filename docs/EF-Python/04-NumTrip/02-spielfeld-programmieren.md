@@ -72,6 +72,7 @@ print(' ')
 :::aufgabe
 
 <Answer type="state" webKey="fe39745d-896d-4802-968f-f2d8dc8a7e40" />
+
 - Packen Sie zunächst die Anweisungen, welche das Spielfeld auf der Konsole anzeigen aus obiger Aufgabe in eine Funktion.
 - Ergänzen Sie sodann diese Funktion mit den nötigen Anweisungen so, dass am Anfang jeder Zeile die Zeilennummer steht.
 - Schreiben Sie schliesslich eine weitere Funktion, welche die Spaltennummern ausgibt und rufen Sie die beiden Funktionen im Hauptprogramm auf. Die Ausgabe auf der Konsole könnte dann wie folgt aussehen:

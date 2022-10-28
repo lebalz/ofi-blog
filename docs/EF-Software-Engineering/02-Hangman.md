@@ -151,6 +151,21 @@ def is_valid(inp):
 </Solution>
 :::
 
+:::aufgabe Erneut Spielen
+<Answer type="state" webKey="d30992cb-4781-4f87-ba31-4030b4293095" />
+
+Sobald man verloren hat, soll man gefragt werden, ob man erneut spielen möchte.
+
+Weiterspielen
+: 1) Neues Wort setzen (siehe Kapitel Zufällige Wörter generieren)
+: 2) Spielstände zurücksetzen
+: 3) Wieder spielen
+
+Programm beenden
+: mit dem Befehl `exit()` das ganze Programm sofort beenden
+
+:::
+
 ## ⭐ Zufällige Wörter generieren
 
 Um zufällige, deutsche Wörter zu generieren, kann man die Bibliothek [zufallsworte](https://github.com/MaximilianFreitag/Zufallswort) installieren, indem im Python-Terminal von VS Code folgender Befehl eingegeben wird:

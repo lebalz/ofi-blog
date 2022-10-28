@@ -34,3 +34,14 @@ Hier geht es nun konkret um die Frage, wie man ein Programm (grosses Problem) in
 Meist wählt man eine Kombination von beiden Ansätzen. Am Anfang schaut man sich bestimmte Teilprobleme bottom-up an und gewinnt dabei erste Erfahrungen und Kenntnisse über einzelne Aspekte des grossen Problems. Dann geht man zu top-down über und entwirft eine möglichst optimale Aufteilung des grossen Problems.
 
 Manchmal merkt man aber auch erst beim Programmieren einer Funktion, dass diese nochmals in Teilfunktionen aufgeteilt werden sollte, z.B. wenn gewisse Programmteile mehrfach vorkommen, oder eine Funktion zu kompliziert wird.
+
+:::aufgabe Software Engineering
+<Answer type="state" webKey="a01ad3ca-4ff8-4380-8643-71c09930a1dd" />
+
+Überprüfen Sie Ihr Verständnis durch das Lösen der folgenden Aufgabe. Markieren Sie die Aufgabe anschliessend als erledigt.
+
+<iframe src="https://learningapps.org/watch?v=ph40mm0vn21" style={{border:'0px',width:'100%',height:'550px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+<Answer type="text" webKey="7eeee228-10b9-40bf-a334-f8ed16c4187c" placeholder="✍️ Notizen"/>
+
+:::
