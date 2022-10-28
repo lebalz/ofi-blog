@@ -29,5 +29,14 @@
     {
         "cells": ["14.10.2022","Herbstferien",""],
         "type": "holiday"
+    },
+    {
+        "cells": ["21.10.2022","Programmieren","Funktionen & Software Engineering"]
+    },
+    {
+        "cells": ["28.10.2022","Programmieren","Funktionen, Übungen"]
+    },
+    {
+        "cells": ["04.11.2022","Programmieren","Funktionen, Scopes, Shadowing"]
     }
 ]
