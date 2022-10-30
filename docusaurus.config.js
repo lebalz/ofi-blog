@@ -21,7 +21,6 @@ const EnsurePageId = require('./bin/ensure-page-id');
 
 /** @return {import('@docusaurus/types').DocusaurusConfig} */
 async function createConfig() {
-  const mdxMermaid = await import('mdx-mermaid');
   return {
     title: 'Informatik',    
     tagline: 'Gymnasium Biel Seeland',
@@ -38,7 +37,13 @@ async function createConfig() {
       defaultLocale: 'de',
       locales: ['de'],
     },
+    markdown: {
+      mermaid: true,
+    },  
     themeConfig: {
+      mermaid: {
+        theme: {light: 'default', dark: 'dark'},
+      },
       docs: {
         sidebar: {
           hideable: true
@@ -176,7 +181,6 @@ async function createConfig() {
               [remarkUnderline, { marker: '__', classNames: ['underline'], tagType: 'strong' }]
             ],
             remarkPlugins: [
-              mdxMermaid.default,
               math,
               remarkDeflist,
               remarkMdi,
@@ -243,7 +247,6 @@ async function createConfig() {
             ],
             
           remarkPlugins: [
-            mdxMermaid.default,
             math,
             remarkDeflist,
             remarkMdi,
@@ -476,7 +479,8 @@ async function createConfig() {
     ],
     themes: [
       '@docusaurus/theme-live-codeblock',
-      'docusaurus-theme-frontmatter'
+      'docusaurus-theme-frontmatter',
+      '@docusaurus/theme-mermaid'
     ],
   }
 }
