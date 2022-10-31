@@ -21,9 +21,9 @@ Fahrerlose Autos sollten in Deutschland eigentlich heute schon am Strassnverkehr
 Immerhin ist der notwendige Rechtsrahmen inzwischen gesteckt. Im Mai 2021 haben Bundestag und Bundesrat einem Gesetz zugestimmt, nach dem vollständig autonome Fahrzeuge in Deutschland grundsäzlich am öffentlichen Strassenverkehr teilnehmen können. Die konkreten Ausführungsbestimmungen folgen nach und nach.
 
 Vollständig autonomes Fahren wird Realität werden. Die Frage ist nur, wann und wo zuerst? Eine aktuelle Standortbestimmung mit Beispielen von Projekten in Deutschland und den USA.
- Der gesetzliche Rahmen für vollautomatisierte Fahrzeuge steht, die Ausführungsbestimmungen folgen nach und nach
- Wie die Hersteller die Autos fürs Selberfahren fit machen
- Autonome Autos werden sich laut Prognos-Studie erst ab 2040 durchsetzen
+Der gesetzliche Rahmen für vollautomatisierte Fahrzeuge steht, die Ausführungsbestimmungen folgen nach und nach
+Wie die Hersteller die Autos fürs Selberfahren fit machen
+Autonome Autos werden sich laut Prognos-Studie erst ab 2040 durchsetzen
 Welche Vorteile bieten selbst fahrende Autos?
 Überzeugt scheinen die Deutschen trotz aller Fortschritte nicht unbedingt zu sein vom autonom fahrenden Auto. Laut Umfragen zweifeln 45 Prozent der Autofahrer an der Verlässlichkeit der Fahrzeugtechnologie oder haben Angst vor Hackern. Digitale Euphorie sieht anders aus.
 Doch machen dann das neue Gesetz und die Entwicklung autonom fahrender Autos überhaupt noch Sinn? Auf alle Fälle. Denn die Potenziale dieser Technologie sind enorm – für die Gesellschaft, die Sicherheit und für den Wirtschaftsstandort Europa.
