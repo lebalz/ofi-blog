@@ -111,6 +111,19 @@
       "from": "docs/Netzwerke-of/005-Sicherheit/",
       "to": "versioned_docs/version-25h/07-Netzwerke/04-Sicherheit",
       "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/",
+      "to": "versioned_docs/version-25h/08-Kryptologie",
+      "ignore": [
+        "03-Symmetrisch",
+        "04-Asymmetrisch",
+        "05-Hashfunktionen",
+        "06-Digitale-Signaturen",
+        "07-Alltag",
+        "01-Lernziele-reduced.md"
+      ],
+      "open": true
     }
   ],
   "26e": [
@@ -299,7 +312,9 @@
     {
       "from": "docs/EF-Python/03-Python/",
       "to": "versioned_docs/version-24ef/01-Programmieren/04-Python",
-      "ignore": ["12-scopes.md"]
+      "ignore": [
+        "12-scopes.md"
+      ]
     },
     {
       "from": "docs/EF-Software-Engineering/",

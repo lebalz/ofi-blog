@@ -15,10 +15,14 @@ Allgemein wird ein Verschlüsselungsverfahren, bei welchem jedes Zeichen durch e
 
 Das Verfahren wird «monoalphabetisch» genannt, weil zum Verschlüsseln eines Textes nur **ein Alphabet** zum Einsatz kommt. Im Gegensatz dazu werden bei «polyalphabetischen» Verfahren für die Verschlüsselung eines einzigen Textes mehrere verschiedene Alphabete verwendet (siehe z.B. Vigenère).
 
+<div className="overflow-x">
+
 | Monoalphabetische Substitution |                                                                                                         |
 | :----------------------------- | :------------------------------------------------------------------------------------------------------ |
 | Klartextalphabet               | `A` `B` `C` `D` `E` `F` `G` `H` `I` `J` `K` `L` `M` `N` `O` `P` `Q` `R` `S` `T` `U` `V` `W` `X` `Y` `Z` |
 | Geheimtextalphabet             | `M` `B` `T` `C` `H` `J` `F` `S` `A` `E` `Y` `O` `R` `D` `N` `Z` `W` `I` `U` `P` `G` `X` `Q` `K` `L` `V` |
+
+</div>
 
 Es ist ersichtlich, dass eine Entschlüsselung nun viel aufwändiger ist, da keine Alphabet-Verschiebung mehr stattfindet, sondern eine wilde Vertauschung (= Substitution) der Buchstaben.
 

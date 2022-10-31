@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="400px" height="150px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M264,23.88C264,19.465 260.415,15.88 256,15.88L144,15.88C139.585,15.88 136,19.465 136,23.88L136,39.88C136,44.296 139.585,47.88 144,47.88L256,47.88C260.415,47.88 264,44.296 264,39.88L264,23.88Z" style="fill:rgb(144,202,249);stroke:black;stroke-width:1px;"/>
+    <text x="169.792px" y="34.913px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Kryptologie</text>
+    <path d="M145.809,110.12C145.809,105.704 142.224,102.12 137.809,102.12L25.809,102.12C21.393,102.12 17.809,105.704 17.809,110.12L17.809,126.12C17.809,130.535 21.393,134.12 25.809,134.12L137.809,134.12C142.224,134.12 145.809,130.535 145.809,126.12L145.809,110.12Z" style="fill:rgb(165,214,167);stroke:black;stroke-width:1px;"/>
+    <text x="44.262px" y="121.152px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Kryptographie</text>
+    <path d="M382.191,110.12C382.191,105.704 378.607,102.12 374.191,102.12L262.191,102.12C257.776,102.12 254.191,105.704 254.191,110.12L254.191,126.12C254.191,130.535 257.776,134.12 262.191,134.12L374.191,134.12C378.607,134.12 382.191,130.535 382.191,126.12L382.191,110.12Z" style="fill:rgb(239,154,154);stroke:black;stroke-width:1px;"/>
+    <text x="279.98px" y="121.152px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">Kryptoanalyse</text>
+    <path d="M200,47.88L81.809,102.12" style="fill:none;stroke:black;stroke-width:1.5px;"/>
+    <path d="M200,47.88L318.191,102.12" style="fill:none;stroke:black;stroke-width:1.5px;"/>
+</svg>

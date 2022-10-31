@@ -95,8 +95,8 @@ const FrequencyAnalysis = () => {
                             : 'Nur vorkommende Buchstaben'}
                     </label>
                 </div>
-                <div style={{ maxWidth: '100%', overflow: 'auto' }}>
-                    <div style={{ width: 'max(100%, 500px)' }}>
+                <div style={{ maxWidth: '100%', overflowX: 'auto', overflowY: 'hidden' }}>
+                    <div style={{ width: 'max(98%, 500px)' }}>
                         <CopyImageToClipboard options={{backgroundColor: 'white'}}>
                             <ResponsiveContainer width="100%" height={400}>
                                 <BarChart

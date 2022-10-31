@@ -592,3 +592,10 @@ article[itemprop="blogPost"] {
         text-decoration-color: blue;
     }
 }
+
+.overflow-x {
+    overflow-x: auto;
+    > * {
+        width: max-content;
+    }
+}
