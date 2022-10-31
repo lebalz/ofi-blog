@@ -148,9 +148,8 @@ const name = account.username;
         className={clsx('button--primary', 'button', styles.download)}
         onClick={() => generateFromUrl(name)}
        >
-        
-        <i className='mdi mdi-download' style={{marginRight: '1em', marginLeft: '-1em'}}/>
         Vorlage Herunterladen: probe.docx
+        <i className='mdi mdi-download' style={{marginLeft: '1em', marginRight: '-1em'}}/>
       </button>
   )
 });
