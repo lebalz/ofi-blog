@@ -170,8 +170,11 @@ Comitten und pushen Sie Ihre Lösung und markieren Sie diese Aufgabe als erledig
 
 <Solution webKey="c215f042-1869-489d-9ecb-8f0843470632">
 
+Lösung `sternchen.py`
+
 ```py reference title="sternchen.py"
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/sternchen-lsg.py
 ```
+
 </Solution>
 :::
