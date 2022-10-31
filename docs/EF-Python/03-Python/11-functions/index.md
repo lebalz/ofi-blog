@@ -167,4 +167,11 @@ Was passiert, wenn man Ihre Funktionen mit negativen Werten aufruft? Wie könnte
 <Answer type="text" webKey="2d03dc75-1c56-435d-aa5d-972ec40719cb" />
 
 Comitten und pushen Sie Ihre Lösung und markieren Sie diese Aufgabe als erledigt.
+
+<Solution webKey="c215f042-1869-489d-9ecb-8f0843470632">
+
+```py reference title="sternchen.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/sternchen-lsg.py
+```
+</Solution>
 :::
