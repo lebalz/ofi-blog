@@ -40,8 +40,17 @@ Durch die Häufigkeitsanalyse werden Geheimtexte, die durch eine monoalphabetisc
 
 <FrequencyAnalysis />
 
-<Answer type="text" webKey="1c1320de-991f-4b0f-9a4c-3a9c71073b66" />
+:::aufgabe
+Entschlüsseln Sie mithilfe der Häufigkeitsanalyse folgende geheime Nachricht:
 
+```
+CJQHLGDGYAW AKL VAW DWZJW VWK NWJTGJYWFWF. VAW CJQHLGDGYAW MEXSKKL VAW XGDYWFVWF ROWA LWADYWTAWLW: CJQHLGYJSHZAW MFV CJQHLGSFSDQKW. CJQHLGYJSHZAW TWRWAUZFWL VAW CMFKL VWK NWJKUZDMWKKWDFK, OSWZJWFV KAUZ VAW CJQHLGSFSDQKW VSEAL TWKUZSWXLAYL, SMK NWJKUZDMWKKWDLWF TGLKUZSXLWF AFXGJESLAGFWF RM YWOAFFWF, KHJAUZ, KAW RM CFSUCWF.
+```
+
+Halten Sie Ihr Vorgehen genau fest.
+
+<Answer type="text" webKey="1c1320de-991f-4b0f-9a4c-3a9c71073b66" />
+:::
 
 [^1]: Quelle [Wikipedia](https://de.wikipedia.org/wiki/Buchstabenh%C3%A4ufigkeit)
 [^2]: Quelle [Qikipedia](https://de.wikipedia.org/wiki/Al-Kind%C4%AB)
