@@ -8,6 +8,7 @@ import { UserStore } from "./UserStore";
 import { TimedTopicStore } from "./TimedTopicStore";
 import { CommentStore } from './CommentStore';
 import { AdminStore } from './AdminStore';
+import { ViewStore } from './ViewStore';
 
 export class RootStore {
   stores = observable([]);
@@ -21,6 +22,7 @@ export class RootStore {
   timedTopicStore: TimedTopicStore;
   policyStore: PolicyStore;
   adminStore: AdminStore;
+  viewStore: ViewStore;
   constructor() {
     makeObservable(this);
     this.msalStore = new MSALStore(this);
@@ -30,6 +32,7 @@ export class RootStore {
     this.timedTopicStore = new TimedTopicStore(this);
     this.policyStore = new PolicyStore(this);
     this.adminStore = new AdminStore(this);
+    this.viewStore = new ViewStore(this);
     runInAction(() => {
       this.initialized = true;
     })

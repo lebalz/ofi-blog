@@ -1,4 +1,7 @@
+import { useStore } from '@site/src/stores/hooks';
 import clsx from 'clsx';
+import { action, observable } from 'mobx';
+import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 import styles from './styles.module.scss';
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -7,11 +10,30 @@ const sanitizer = (text: string) => {
     return text.toUpperCase().replace(/\s+/g, ' ');
 };
 
-const Caesar = () => {
+const Caesar = observer(() => {
     const [text, setText] = React.useState('');
     const [key, setKey] = React.useState('D');
     const [cipherText, setCipherText] = React.useState('');
     const [source, setSource] = React.useState<'text' | 'cipher'>('text');
+    const viewStore = useStore('viewStore');
+
+    React.useEffect(() => {
+        setText(viewStore.caesar?.text || '');
+        setCipherText(viewStore.caesar?.cipher || '');
+        setKey(viewStore.caesar?.key || 'D');
+        setSource(viewStore.caesar?.source || 'text');
+    }, [])
+
+    React.useEffect(() => {
+        return action(() => {
+            viewStore.caesar = {
+                text: text,
+                cipher: cipherText,
+                key: key,
+                source: source
+            }
+        })
+    }, [key, text, cipherText, source])
 
     React.useEffect(() => {
         if (source !== 'text' || text.length === 0) {
@@ -46,18 +68,22 @@ const Caesar = () => {
             <div className="container">
                 <p className="hero__subtitle">Caesar-Chiffre</p>
                 <h4>Klartext</h4>
-                <textarea
-                    className={clsx(styles.input)}
-                    value={text}
-                    onChange={(e) => {
-                        const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
-                        setSource('text');
-                        setText(sanitizer(e.target.value));
-                        setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
-                    }}
-                    rows={5}
-                    placeholder="Klartext"
-                ></textarea>
+                <div className={styles.inputContainer}>
+                    <textarea
+                        className={clsx(styles.input)}
+                        value={text}
+                        onChange={(e) => {
+                            const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                            setSource('text');
+                            setText(sanitizer(e.target.value));
+                            setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
+                        }}
+                        onClick={() => setSource('text')}
+                        rows={5}
+                        placeholder="Klartext"
+                    ></textarea>
+                    {source === 'text' && <div className={styles.active}></div>}
+                </div>
                 <h4>
                     Schlüssel: <span className="badge badge--primary">{key}</span>
                 </h4>
@@ -77,21 +103,26 @@ const Caesar = () => {
                     </ul>
                 </div>
                 <h4>Geheimtext</h4>
-                <textarea
-                    className={clsx(styles.input)}
-                    value={cipherText}
-                    onChange={(e) => {
-                        const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
-                        setSource('cipher');
-                        setCipherText(sanitizer(e.target.value));
-                        setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
-                    }}
-                    rows={5}
-                    placeholder="Caesar Verschlüsselter Geheimtext"
-                ></textarea>
+                <div className={styles.inputContainer}>
+
+                    <textarea
+                        className={clsx(styles.input)}
+                        value={cipherText}
+                        onChange={(e) => {
+                            const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                            setSource('cipher');
+                            setCipherText(sanitizer(e.target.value));
+                            setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
+                        }}
+                        onClick={() => setSource('cipher')}
+                        rows={5}
+                        placeholder="Caesar Verschlüsselter Geheimtext"
+                    ></textarea>
+                    {source === 'cipher' && <div className={styles.active}></div>}
+                </div>
             </div>
         </div>
     );
-};
+});
 
 export default Caesar;

@@ -39,6 +39,9 @@ html[data-theme='dark'] {
         overflow-x: auto;
         .pills {
             width: max-content;
+            li {
+                margin-top: 0px;
+            }
         }
     }
     .stringInputContainer {

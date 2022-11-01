@@ -4,15 +4,38 @@ import styles from './styles.module.scss';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 import ReactSwitch from 'react-switch';
 import CopyImageToClipboard from '../../shared/CopyImageToClipboard';
+import { useStore } from '@site/src/stores/hooks';
+import { action } from 'mobx';
+import { observer } from 'mobx-react-lite';
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const SWITCH_SIZE = { width: 35, height: 18 };
-const FrequencyAnalysis = () => {
+const FrequencyAnalysis = observer(() => {
     const [text, setText] = React.useState('Hallo');
     const [sortAlphabetic, setSortAlphabetic] = React.useState(true);
     const [onlyLetters, setOnlyLetters] = React.useState(false);
     const [indicateUnusedChars, setIndicateUnusedChars] = React.useState(true);
     const [data, setData] = React.useState([]);
+    const viewStore = useStore('viewStore');
+
+    
+    React.useEffect(() => {
+        setText(viewStore.textFrequency?.text || 'Hallo');
+        setSortAlphabetic(viewStore.textFrequency?.sortAlphabetic || true);
+        setOnlyLetters(viewStore.textFrequency?.onlyLetters || false);
+        setIndicateUnusedChars(viewStore.textFrequency?.indicateUnusedChars || true);
+    }, [])
+
+    React.useEffect(() => {
+        return action(() => {
+            viewStore.textFrequency = {
+                text: text,
+                sortAlphabetic: sortAlphabetic,
+                onlyLetters: onlyLetters,
+                indicateUnusedChars: indicateUnusedChars                
+            }
+        })
+    }, [text, sortAlphabetic, onlyLetters, indicateUnusedChars])
 
     React.useEffect(() => {
         const freq = {};
@@ -125,6 +148,6 @@ const FrequencyAnalysis = () => {
             </div>
         </div>
     );
-};
+});
 
 export default FrequencyAnalysis;

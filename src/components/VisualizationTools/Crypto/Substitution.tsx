@@ -1,5 +1,8 @@
+import { useStore } from '@site/src/stores/hooks';
 import clsx from 'clsx';
 import { differenceWith, isEqual, shuffle, uniq } from 'lodash';
+import { action } from 'mobx';
+import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 import styles from './styles.module.scss';
 const ALPHABET = [
@@ -39,13 +42,33 @@ const sanitizeKey = (key: string) => {
     return key.toUpperCase().replace(/[^A-Z ]/g, '')
 };
 
-const Substitution = () => {
+const Substitution = observer(() => {
     const [text, setText] = React.useState('');
     const [key, setKey] = React.useState(ALPHABET.join(''));
     const [missingChars, setMissingChars] = React.useState(ALPHABET);
     const [duplicatedChars, setDuplicatedChars] = React.useState(ALPHABET);
     const [cipherText, setCipherText] = React.useState('');
     const [source, setSource] = React.useState<'text' | 'cipher'>('text');
+
+    const viewStore = useStore('viewStore');
+    
+    React.useEffect(() => {
+        setText(viewStore.substitution?.text || '');
+        setCipherText(viewStore.substitution?.cipher || '');
+        setKey(viewStore.substitution?.key || ALPHABET.join(''));
+        setSource(viewStore.substitution?.source || 'text');
+    }, [])
+
+    React.useEffect(() => {
+        return action(() => {
+            viewStore.substitution = {
+                text: text,
+                cipher: cipherText,
+                key: key,
+                source: source
+            }
+        })
+    }, [key, text, cipherText, source])
 
     React.useEffect(() => {
         setMissingChars(differenceWith(ALPHABET, key.split(''), isEqual));
@@ -96,18 +119,23 @@ const Substitution = () => {
             <div className="container">
                 <p className="hero__subtitle">Substitutions-Chiffre</p>
                 <h4>Klartext</h4>
-                <textarea
-                    className={clsx(styles.input)}
-                    value={text}
-                    onChange={(e) => {
-                        const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
-                        setSource('text');
-                        setText(sanitizer(e.target.value));
-                        setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
-                    }}
-                    rows={5}
-                    placeholder="Klartext"
-                ></textarea>
+                <div className={styles.inputContainer}>
+
+                    <textarea
+                        className={clsx(styles.input)}
+                        value={text}
+                        onChange={(e) => {
+                            const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                            setSource('text');
+                            setText(sanitizer(e.target.value));
+                            setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
+                        }}
+                        onClick={() => setSource('text')}
+                        rows={5}
+                        placeholder="Klartext"
+                    ></textarea>
+                    {source === 'text' && <div className={styles.active}></div>}
+                </div>
                 <div className={styles.stringInputContainer}>
                     <h4>
                         <label htmlFor="subs-key">Schlüssel</label>
@@ -118,6 +146,7 @@ const Substitution = () => {
                             type="text"
                             placeholder="Ein vollständiges Aplhabet"
                             value={key}
+                            autoComplete='off'
                             className={clsx(key.length !== ALPHABET.length && styles.invalid)}
                             onChange={(e) => {
                                 const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
@@ -162,21 +191,26 @@ const Substitution = () => {
                     )}
                 </div>
                 <h4>Geheimtext</h4>
-                <textarea
-                    className={clsx(styles.input)}
-                    value={cipherText}
-                    onChange={(e) => {
-                        const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
-                        setSource('cipher');
-                        setCipherText(sanitizer(e.target.value));
-                        setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
-                    }}
-                    rows={5}
-                    placeholder="Caesar Verschlüsselter Geheimtext"
-                ></textarea>
+                <div className={styles.inputContainer}>
+
+                    <textarea
+                        className={clsx(styles.input)}
+                        value={cipherText}
+                        onChange={(e) => {
+                            const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                            setSource('cipher');
+                            setCipherText(sanitizer(e.target.value));
+                            setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
+                        }}
+                        onClick={() => setSource('cipher')}
+                        rows={5}
+                        placeholder="Monoalphabetisch verschlüsselter Geheimtext"
+                    ></textarea>
+                    {source === 'cipher' && <div className={styles.active}></div>}
+                </div>
             </div>
         </div>
     );
-};
+});
 
 export default Substitution;
