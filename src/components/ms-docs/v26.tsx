@@ -69,9 +69,10 @@ const generateFromUrl = async (name: string)  => {
     '/img/word-basics/v26/Bild4.jpg'
   ).then((r) => r.blob());
   const hash = name.split('@')[0].split('').map(c => c.charCodeAt(0)).reduce((v, s) => v + s, 0);
-  const hash100 = Math.floor(hash / 100) % 16;
-  const hash10 = Math.floor((hash - hash100 * 100) / 10) % 16;
-  const hash1 = hash - hash100 * 100 - hash10 * 10;
+  const hash100raw = Math.floor(hash / 100);
+  const hash100 = hash100raw % 16;
+  const hash10 = Math.floor((hash - hash100raw * 100) / 10) % 16;
+  const hash1 = hash - hash100raw * 100 - hash10 * 10;
   const color = `F${hash100.toString(16)}F${hash10.toString(16)}F${hash1.toString(16)}`.toUpperCase();
 
   const doc = new Document({
