@@ -23,7 +23,7 @@ const QUADRAT = [
     'S',
     'T',
     'U',
-    'E',
+    'W',
     'X',
     'Y',
     'Z',
