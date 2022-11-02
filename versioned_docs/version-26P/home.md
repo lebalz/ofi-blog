@@ -16,7 +16,7 @@ import byodTests from "./26P_byod_daten.json"
 :::success Word Probe
 <Solution webKey="5ba6b51b-db2a-461c-a3d1-ac934806624f" open title="Link zur Probe">
 
-[👉 Hier gehts zur Prüfung](/text-templates/01-p26)
+[👉 Hier gehts zur Prüfung](/text-templates/01-p26-n)
 
 </Solution>
 :::
