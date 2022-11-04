@@ -282,7 +282,9 @@
     {
       "from": "docs/EF-Python/02-Infrastruktur/",
       "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur",
-      "ignore": []
+      "ignore": [
+        "04-git-messages.md"
+      ]
     },
     {
       "from": "docs/software-installation/python/v3.10.6/",
