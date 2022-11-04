@@ -314,7 +314,9 @@
     {
       "from": "docs/EF-Python/04-NumTrip/",
       "to": "versioned_docs/version-24ef/01-Programmieren/10-NumTrip",
-      "ignore": []
+      "ignore": [
+        "04-random-board.md"
+      ]
     },
     {
       "from": "docs/EF-Python/03-Python/00-turtle-repe.md",
@@ -324,7 +326,9 @@
     {
       "from": "docs/EF-Python/03-Python/",
       "to": "versioned_docs/version-24ef/01-Programmieren/04-Python",
-      "ignore": []
+      "ignore": [
+        "15-random.md"
+      ]
     },
     {
       "from": "docs/EF-Software-Engineering/",
