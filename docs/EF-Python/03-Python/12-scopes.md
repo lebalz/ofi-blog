@@ -14,7 +14,9 @@ def reset():
     print(word)
 
 def play():
+    print(word)
     reset()
+    print(word)
 play()
 ```
 
