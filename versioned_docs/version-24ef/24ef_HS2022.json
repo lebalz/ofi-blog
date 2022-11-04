@@ -34,9 +34,56 @@
         "cells": ["21.10.2022","Programmieren","Funktionen & Software Engineering"]
     },
     {
-        "cells": ["28.10.2022","Programmieren","Funktionen, Übungen"]
+        "cells": ["28.10.2022","Programmieren", "Funktionen, Übungen"]
     },
     {
-        "cells": ["04.11.2022","Programmieren","Funktionen, Scopes, Shadowing"]
+        "cells": ["04.11.2022","Programmieren", "Funktionen, Scopes, Shadowing"]
+    },
+    {
+        "cells": ["11.11.2022","Programmieren", "Informatik Biber, Eigene Website"]
+    },
+    {
+        "cells": ["18.11.2022","Programmieren",""]
+    },
+    {
+        "cells": ["25.11.2022","Programmieren",""]
+    },
+    {
+        "cells": ["02.12.2022","Programmieren",""]
+    },
+    {
+        "cells": ["09.12.2022","Programmieren",""]
+    },
+    {
+        "cells": ["16.12.2022","Programmieren","Test Programmieren"],
+        "type": "test"
+    },
+    {
+        "cells": ["23.12.2022","Programmieren",""]
+    },
+    {
+        "cells": ["28.12.2022","Winterferien",""],
+        "type": "holiday",
+        "icon": "mdi-weather-snowy-heavy"
+    },
+    {
+        "cells": ["05.01.2023","Winterferien",""],
+        "type": "holiday",
+        "icon": "mdi-weather-snowy-heavy"
+    },
+    {
+        "cells": ["13.01.2023","Programmieren",""]
+    },
+    {
+        "cells": ["20.01.2023","Programmieren","Abgabe NumTrip und Lernjournal"],
+        "type": "test"
+    },
+    {
+        "cells": ["25.01.2023","Notenschluss",""],
+        "type": "event"
+    },
+    {
+        "cells": ["03.02.2023","Semesterende",""],
+        "type": "event"
     }
 ]

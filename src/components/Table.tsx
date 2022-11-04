@@ -51,6 +51,7 @@ export interface iRow {
   type?: Type;
   className?: string;
   color?: string;
+  icon?: string;
 }
 
 interface RowProps extends iRow {
@@ -76,10 +77,11 @@ const weekNumber = (date: Date) => {
 
 export class Row extends React.Component<RowProps> {
   icon(): JSX.Element {
-    if (!this.props.type) {
-      return;
+    if (this.props.icon) {
+        return <i className={clsx(this.props.icon, 'mdi')} />
+    } else if (this.props.type) {
+      return <i className={clsx(ICON_MAPPING[this.props.type], 'mdi')} />
     }
-    return <i className={clsx(ICON_MAPPING[this.props.type], 'mdi')} />
   }
   render() {
     const { type, cells } = this.props;
