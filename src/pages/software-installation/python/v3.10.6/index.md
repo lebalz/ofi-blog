@@ -6,8 +6,6 @@ sidebar_custom_props:
 
 # Python 3.10.6 :mdi-language-python--blue:
 
-<Answer type="state" webKey="f1710126-f75a-43fb-ac01-0d4312faddf1">Installiert?</Answer>
-
 👉 https://www.python.org/
 
 1. Den Python-Installer für Ihre Platform herunterladen (Version 3.10.6)

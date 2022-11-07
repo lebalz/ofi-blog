@@ -5,8 +5,6 @@ sidebar_custom_props:
 
 # VS Code 1.70
 
-<Answer type="state" webKey="c0411d09-a05e-4a9d-b736-694dd9b1a402">Installiert?</Answer>
-
 👉 https://code.visualstudio.com/
 
 <GTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[3]}>

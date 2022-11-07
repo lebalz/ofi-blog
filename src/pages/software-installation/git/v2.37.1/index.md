@@ -7,8 +7,6 @@ import OsTabs from '@site/src/components/OsTabs';
 
 # Git 2.37.1
 
-<Answer type="state" webKey="d24faf11-ba87-4e17-8e12-2fe834b60268">Installiert?</Answer>
-
 👉 https://git-scm.com/downloads
 
 
@@ -60,7 +58,7 @@ import OsTabs from '@site/src/components/OsTabs';
     ```bash
     brew --version
     ```
-    3. Wenn keine Version angezeigt (bzw. sowas wie `zsh command not found`), installieren Sie [👉 homebrew](https://brew.sh/)
+    1. Wenn keine Version angezeigt (bzw. sowas wie `zsh command not found`), installieren Sie [👉 homebrew](https://brew.sh/)
 2.  Geben Sie ins Terminal 
 
     ```bash
