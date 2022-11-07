@@ -3,7 +3,7 @@ sidebar_custom_props:
   id: 4ac09d00-bd4c-4920-bc98-21343e21549b
 ---
 
-# 1. Einführung Python
+# 1. Einführung Python 👣
 
 Programmieren heisst, einer Maschine Befehle zu erteilen und sie damit zu steuern. Die erste solche Maschine, die Sie steuern, ist eine kleine Schildkröte (bzw. ein kleines Dreieck) auf dem Bildschirm: Die Turtle. Was kann diese Turtle und was musst du wissen, um sie zu steuern?
 

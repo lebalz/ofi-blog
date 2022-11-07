@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
-# 6. Parameter
+# 6. Parameter ⊕⊖
 
 Ein weiteres Strukturelement eines Algorithmus sind __Parameter__. Die Verwendung von Parametern haben wir bereits in Aktion gesehen -  im Struktogramm sind alle Parameter <u>unterstrichen</u>, in Python werden alle Parameter als Liste, abgetrennt mit Kommas, in den <u>runden Klammern</u> geschrieben.
 
