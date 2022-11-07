@@ -195,6 +195,11 @@
       "from": "docs/Programmieren-1/02-Turtlegrafik/006-functions-params.md",
       "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/006-functions-params.md",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/05-PyGame/",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/05-PyGame",
+      "ignore": []
     }
   ],
   "26P": [
@@ -270,6 +275,11 @@
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/006-functions-params.md",
       "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/006-functions-params.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/05-PyGame/",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/05-PyGame",
       "ignore": []
     }
   ],
