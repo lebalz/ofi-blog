@@ -287,17 +287,17 @@
       ]
     },
     {
-      "from": "docs/software-installation/python/v3.10.6/",
+      "from": "src/pages/software-installation/python/v3.10.6/",
       "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/04-Python",
       "ignore": []
     },
     {
-      "from": "docs/software-installation/git/v2.37.1/",
+      "from": "src/pages/software-installation/git/v2.37.1/",
       "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/03-Git-install",
       "ignore": []
     },
     {
-      "from": "docs/software-installation/vs-code/v1.70/",
+      "from": "src/pages/software-installation/vs-code/v1.70/",
       "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/05-vscode",
       "ignore": []
     },
