@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[57329],{94112:e=>{e.exports=JSON.parse('{"title":"v24","slug":"/category/v24","permalink":"/category/v24","navigation":{"previous":{"title":"PyGame Tutorials","permalink":"/Programmieren-1/PyGame/tutorials"},"next":{"title":"Aufgaben","permalink":"/category/aufgaben"}}}')}}]);
