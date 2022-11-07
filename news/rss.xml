@@ -4,10 +4,18 @@
         <title>Informatik Blog</title>
         <link>https://ofi.gbsl.website/news</link>
         <description>Informatik Blog</description>
-        <lastBuildDate>Mon, 24 Oct 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Nov 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>de</language>
+        <item>
+            <title><![CDATA[Neue Zeile ohne Nachricht abzuschicken]]></title>
+            <link>https://ofi.gbsl.website/news/2022/11/07/MS-Teams-Newline</link>
+            <guid>/2022/11/07/MS-Teams-Newline</guid>
+            <pubDate>Mon, 07 Nov 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Kurz eine Nachricht schreiben - Anrede, Text, Grussformel... Doch [[]] schickt die Anrede ab, anstatt eine neue Zeile einzufügen 😖 ...]]></description>
+            <content:encoded><![CDATA[<div class="commentable"><h4 class="anchor anchorWithStickyNavbar_LWe7" id="--"><i class="mdi-microsoft-teams mdi blue"></i> <i class="mdi-whatsapp mdi green"></i> <i class="mdi-instagram mdi red"></i><a class="hash-link" href="#--" title="Direkter Link zur Überschrift">​</a></h4><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon heading"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><p>Kurz eine Nachricht schreiben - Anrede, Text, Grussformel... Doch <kbd><i class="mdi-keyboard-return mdi"></i></kbd> schickt die Anrede ab, anstatt eine neue Zeile einzufügen 😖 ...</p><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon paragraph"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><figure class="figure_mAmF figure"><img loading="lazy" alt="Nachricht geschickt statt neue Zeile" src="/assets/images/ms-teams-preview-8ee8e79ad9e7e229db095c5e1a3db709.jpg" width="1072" height="600" class="img_ev3q"><figcaption><span style="flex-grow:1"></span>Nachricht geschickt statt neue Zeile<span style="flex-grow:1"></span></figcaption></figure><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon figure"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><p>Egal ob in Word, MS-Teams, Whatsapp oder Instagram: Soll eine neue Zeile erzeugt werden, welche noch zum vorigen Abschnitt oder zur selben Nachricht gehört, so kann dies mit <kbd><i class="mdi-apple-keyboard-shift mdi"></i></kbd> + <kbd><i class="mdi-keyboard-return mdi"></i></kbd> erreicht werden.</p><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon paragraph"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><figure class="figure_mAmF figure"><img loading="lazy" src="/assets/images/ms-teams-newline-d338387e50c46f5924875fb53a8fcdca.gif" width="960" height="449" class="img_ev3q"></figure><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon figure"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Fenstermanagement unter Mac]]></title>
             <link>https://ofi.gbsl.website/news/2022/10/24/OSX-Window-Manager</link>
