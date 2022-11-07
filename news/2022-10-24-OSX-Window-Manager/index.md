@@ -3,8 +3,6 @@ image: ./images/rectangle.gif
 sidebar_custom_props:
   id: f874325d-e6c3-4aec-9d95-bfc6741474c7
 ---
-import Head from "@docusaurus/Head";
-
 
 
 # Fenstermanagement unter Mac
