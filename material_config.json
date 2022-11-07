@@ -200,6 +200,21 @@
       "from": "docs/Programmieren-1/05-PyGame/",
       "to": "versioned_docs/version-26e/03-Programmieren-1/05-PyGame",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/007-variablen.md",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/007-variablen.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/008-verzweigung.md",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/008-verzweigung.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/009-while.md",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/009-while.md",
+      "ignore": []
     }
   ],
   "26P": [
@@ -280,6 +295,21 @@
     {
       "from": "docs/Programmieren-1/05-PyGame/",
       "to": "versioned_docs/version-26P/03-Programmieren-1/05-PyGame",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/007-variablen.md",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/007-variablen.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/008-verzweigung.md",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/008-verzweigung.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/009-while.md",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/009-while.md",
       "ignore": []
     }
   ],
