@@ -45,3 +45,15 @@ sidebar_custom_props:
 ## Unterlagen
 
 [scg](https://erzbe-my.sharepoint.com/personal/andres_scheidegger_gbsl_ch/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fandres%5Fscheidegger%5Fgbsl%5Fch%2FDocuments%2FIN)
+
+## Software
+
+- Python
+  - [v3.9](/software-installation/python/v3.9)
+  - [v3.10.6](/software-installation/python/v3.10.6)
+  - [v3.11.0](/software-installation/python/v3.11.0)
+- VS Code
+  - [v1.59](/software-installation/vs-code/v1.59)
+  - [v1.70](/software-installation/vs-code/v1.70)
+- Git
+  - [v2.37.1](/software-installation/git/v2.37.1)
