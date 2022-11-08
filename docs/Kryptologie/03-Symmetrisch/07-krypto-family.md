@@ -30,6 +30,4 @@ Bei sämtlichen bisher betrachteten Verfahren handelte es sich um symmetrische V
 
 ![](images/symm-encryption.svg)
 
-<Answer type="text" webKey="e8752baa-a4cb-4376-9917-badd6ca1fd1b" placeholder="Notizen..." />
-
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=932192)

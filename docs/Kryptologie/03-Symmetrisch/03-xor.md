@@ -109,7 +109,5 @@ Wichtige Punkte:
 
 :::
 
-<Answer type="text" webKey="b978535b-b455-4a60-aa44-8a32aac4a899" placeholder="Notizen..."  />
-
 
 [^1]: Quelle: [Germundsson, Roger; Weisstein, Eric](http://mathworld.wolfram.com/XOR.html)

@@ -1,4 +1,7 @@
+import { useStore } from '@site/src/stores/hooks';
 import clsx from 'clsx';
+import { action } from 'mobx';
+import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 import CopyImageToClipboard from '../../shared/CopyImageToClipboard';
 import styles from './Pentacode.module.scss';
@@ -117,10 +120,23 @@ const toText = (penta: string): string[] => {
     return pentaChunks(penta).map((seq) => PENTA_TABLE[seq] || seq);
 };
 
-const TextEditor = () => {
+const TextEditor = observer(() => {
     const [text, setText] = React.useState('');
     const [penta, setPenta] = React.useState('');
     const [source, setSource] = React.useState<'text' | 'penta'>('text');
+    const viewStore = useStore('viewStore');
+
+    React.useEffect(() => {
+        setText(viewStore.penta?.text || '');
+    }, [])
+
+    React.useEffect(() => {
+        return action(() => {
+            viewStore.penta = {
+                text: text
+            }
+        })
+    }, [text])
 
     React.useEffect(() => {
         // prevent trigger-circle, when source was updated from penta
@@ -149,7 +165,11 @@ const TextEditor = () => {
                         placeholder="Klartext eingeben"
                         className={clsx(styles.input)}
                         value={text}
-                        onChange={(e) => setText(e.target.value.toUpperCase())}
+                        onChange={(e) => {
+                            const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                            setText(e.target.value.toUpperCase());
+                            setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
+                        }}
                         rows={5}
                     ></textarea>
                     {source === 'text' && <div className={styles.active}></div>}
@@ -169,9 +189,9 @@ const TextEditor = () => {
             </div>
         </div>
     );
-};
+});
 
-const PixelEditor = () => {
+const PixelEditor = observer(() => {
     const [penta, setPenta] = React.useState('00000 00000 00000 00000 00000');
     const [pentaCells, setPentaCells] = React.useState([
         [0, 0, 0, 0, 0],
@@ -180,7 +200,20 @@ const PixelEditor = () => {
         [0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0],
     ]);
-    const [source, setSource] = React.useState('');
+    const [source, setSource] = React.useState<'cell' | 'editor' | ''>('editor');
+    const viewStore = useStore('viewStore');
+
+    React.useEffect(() => {
+        setPenta(viewStore.pentaPixel.penta || '00000 00000 00000 00000 00000');
+    }, [])
+
+    React.useEffect(() => {
+        return action(() => {
+            viewStore.pentaPixel = {
+                penta: penta
+            }
+        })
+    }, [penta])
 
     React.useEffect(() => {
         // prevent trigger-circle, when source was updated from cell
@@ -213,8 +246,8 @@ const PixelEditor = () => {
                         <CopyImageToClipboard
                             options={{
                                 backgroundColor: 'white',
-                                canvasWidth: 5 * 10,
-                                canvasHeight: pentaCells.length * 10,
+                                canvasWidth: 5 * 30,
+                                canvasHeight: pentaCells.length * 30,
                             }}
                         >
                             <>
@@ -253,7 +286,7 @@ const PixelEditor = () => {
                                 className="button button--outline button--secondary button--sm"
                                 onClick={() => setPentaCells([...pentaCells.slice(0, -1)])}
                             >
-                                －
+                                -
                             </button>
                         </div>
                     </div>
@@ -262,13 +295,17 @@ const PixelEditor = () => {
                         placeholder="Binären Pentacode eingeben"
                         className={clsx(styles.input)}
                         value={penta}
-                        onChange={(e) => setPenta(e.target.value.replace(/[^01\s]/g, ''))}
+                        onChange={(e) => {
+                            const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
+                            setPenta(e.target.value.replace(/[^01\s]/g, ''));
+                            setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
+                        }}
                         rows={pentaCells.length}
                     ></textarea>
                 </div>
             </div>
         </div>
     );
-};
+});
 
-export { PixelEditor, TextEditor };
+export { PixelEditor, TextEditor, toPenta, toText };

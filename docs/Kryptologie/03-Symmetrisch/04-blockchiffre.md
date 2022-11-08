@@ -84,7 +84,3 @@ Verschlüsseln Sie den folgenden Text mit der XOR-Blockchiffre:
 
 
 :::
-
-<Answer type="text" webKey="bcdeeca1-2a54-4cf3-9187-849376053664" placeholder="Notizen..." />
-
-

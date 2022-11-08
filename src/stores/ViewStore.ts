@@ -28,6 +28,16 @@ export class ViewStore {
         key: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
         source: 'text'
     }
+    
+    @observable.ref
+    penta: {text: string } = {
+        text: ''
+    }
+    
+    @observable.ref
+    pentaPixel: {penta: string } = {
+        penta: '00000 00000 00000 00000 00000'
+    }
 
     constructor(root: RootStore) {
         this.root = root;

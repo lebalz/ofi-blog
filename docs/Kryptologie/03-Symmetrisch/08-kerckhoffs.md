@@ -52,8 +52,6 @@ Der renommierte Kryptologe Bruce Schneier erklärt das Prinzip von Kerckhoffs' m
 ![Bruce Schneier --no-margins --width=10em](images/bruce_schneier.jpg)
 :::
 
-<Answer type="text" webKey="8db592e4-1a5c-44eb-8974-cccda9dd2af1" placeholder="Notizen..." />
-
 
 [^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=188012)
 [^2]: Quelle: [Applied Cryptography](https://www.schneier.com/books/applied-cryptography-2preface/), Bruce Schneier, Vorwort

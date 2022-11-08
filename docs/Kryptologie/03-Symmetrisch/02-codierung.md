@@ -5,9 +5,8 @@ sidebar_custom_props:
 
 import {TextEditor, PixelEditor} from "@site/src/components/VisualizationTools/Pentacode";
 
-# Codierung
+# Pentacode
 
-## Pentacode
 Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und Tom Jampen](https://rothe.io/?b=crypto&p=1349) für den Unterricht entwickelt, um erstens ein kurzes Alphabet ohne unnötige Zeichen zu verwenden und zweitens einen möglichst kurzen Binärcode zu erhalten.
 
 ## Albhabet
@@ -63,5 +62,3 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 ## Schwarzweiss-Bild
 
 <PixelEditor />
-
-<Answer type="text" webKey="7bd8c2e9-3ae4-4601-814f-2d2128040cdd" />
