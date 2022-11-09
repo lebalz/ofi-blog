@@ -116,7 +116,10 @@
       "from": "docs/Kryptologie/",
       "to": "versioned_docs/version-25h/08-Kryptologie",
       "ignore": [
-        "03-Symmetrisch",
+        "03-Symmetrisch/05-block-chaining.md",
+        "03-Symmetrisch/06-uebungen.md",
+        "03-Symmetrisch/07-krypto-family.md",
+        "03-Symmetrisch/08-kerckhoffs.md",
         "04-Asymmetrisch",
         "05-Hashfunktionen",
         "06-Digitale-Signaturen",
