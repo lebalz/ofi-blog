@@ -11,8 +11,12 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 
 ## Albhabet
 
+Mit 5 Bits (*[Penta bedeutet 5]*) können $2^5 = 32$ Zeichen codiert werden. Neben dem Leerschlag hat es Platz für die Sonderzeichen __?__, __.__, __,__, __-__ und __@__.
+
+:::details Penta-Tabelle
+
 :::flex --columns=2 --gap=2em
-*** --class=slim-table
+*** --class=slim-table,no-comments
 | Buchstabe    | Zahl |   Binär |
 | :----------- | ---: | ------: |
 | *Leerschlag* |    0 | `00000` |
@@ -31,7 +35,7 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 | `M`          |   13 | `01101` |
 | `N`          |   14 | `01110` |
 | `O`          |   15 | `01111` |
-*** --class=slim-table
+*** --class=slim-table,no-comments
 
 | Buchstabe | Zahl |   Binär |
 | :-------- | ---: | ------: |
@@ -52,9 +56,7 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 | `?`       |   30 | `11110` |
 | `@`       |   31 | `11111` |
 :::
-
-<Answer type="text" webKey="fc6f5120-4883-4ac2-b7c4-528919c0ff87" placeholder="Notizen..." />
-
+:::
 ## Editor
 
 <TextEditor />

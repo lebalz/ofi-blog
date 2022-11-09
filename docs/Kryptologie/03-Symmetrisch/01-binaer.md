@@ -19,9 +19,11 @@ Das Verfahren wird etwas umständlicher, da jeweils in die binäre Computersprac
 :::info Unterschied «Codierung» und «Verschlüsselung»
 Es ist wichtig, dass die Begriffe **Codierung** und **Verschlüsselung** unterschieden werden:
 
-- Eine **Codierung** ist eine Umwandlung in eine andere Darstellungsform (z.B. Text → Zahlen, Bild → Text, Zahlen → binäre Zahlen, ...). Eine Codierung hat das **Ziel**, eine Information in ein bestimmtes **Datenformat umzuwandeln**, sie bietet keine Sicherheit.
+Codierung
+: Eine **Codierung** ist eine Umwandlung in eine andere Darstellungsform (z.B. Text → Zahlen, Bild → Text, Zahlen → binäre Zahlen, ...). Eine Codierung hat das **Ziel**, eine Information in ein bestimmtes **Datenformat umzuwandeln**, sie bietet **keine Sicherheit**.
 
-- Eine **Verschlüsselung** oder *Chiffre* hat das Ziel zu **verhindern**, dass Aussenstehende an eine bestimmte **Information gelangen**, indem Daten mithilfe eines Schlüssels so verändert werden, dass ohne Kenntnis des Schlüssels nicht mehr auf die ursprüngliche Form geschlossen werden kann.
+Verschlüsselung
+: Eine **Verschlüsselung** oder *Chiffre* hat das Ziel zu **verhindern**, dass Aussenstehende an eine bestimmte **Information gelangen**, indem Daten mithilfe eines Schlüssels so verändert werden, dass ohne Kenntnis des Schlüssels nicht mehr auf die ursprüngliche Form geschlossen werden kann.
 :::
 
 ## Ein grosser Vorteil
@@ -35,7 +37,7 @@ Die vorgängige Codierung bedeutet zwar beim Erarbeiten einen Mehraufwand, biete
 Dies war in der Antike nicht nötig, heute ist es allerdings unumgänglich.
 
 ## Codierung
-Wie im Kapitel «Codes und Daten» besprochen, gibt es dazu eine Vielzahl von Codierungen. Beispielsweise könnte dazu die ASCII-Codierung verwendet werden.
+Wie im Kapitel «Codes und Daten» besprochen, gibt es dazu eine Vielzahl von Codierungen. Beispielsweise könnte dazu die ASCII-Codierung oder die UTF-8 Codierung verwendet werden.
 
 Für die folgenden Beispiele verwenden wir den etwas kürzeren Pentacode.
 

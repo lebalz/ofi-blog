@@ -6,6 +6,8 @@ sidebar_custom_props:
     ref: https://rothe.io/?b=crypto&p=894637
 ---
 
+import {TextEditor} from "@site/src/components/VisualizationTools/Pentacode";
+
 # Blockchiffre
 
 Im vorherigen Beispiel war der Schlüssel gleich lang wie der Klartext. Da dies in der Realität schwierig zu bewerkstelligen ist, wurden **Blockchiffren** erfunden. Sie heissen so, weil der Text nicht mehr als ganzes, sondern in **Blöcken** verschlüsselt wird.
@@ -62,6 +64,7 @@ Im folgenden Beispiel wird der oben bereits erwähnte Klartext mit dem Schlüsse
 
 
 :::aufgabe Aufgabe XOR-Blockchiffre
+<Answer type="state" webKey="71021726-0ecd-4e23-a12c-f56d8102460d" />
 
 Verschlüsseln Sie den folgenden Text mit der XOR-Blockchiffre:
 
@@ -69,12 +72,15 @@ Verschlüsseln Sie den folgenden Text mit der XOR-Blockchiffre:
 
 **Schlüssel**: `BETA`
 
-1. Codieren Sie zuerst den Text mit Pentacode (verwenden Sie das [interaktiven Tool](02-codierung.md#pentacode)).
-2. Codierenn Sie anschliessend den Schlüssel mit Pentacode.
+1. Codieren Sie zuerst den Text mit Pentacode
+
+  <TextEditor />
+
+2. Codieren Sie anschliessend den Schlüssel mit Pentacode.
 3. Verschlüsseln Sie den binär dargestellten Text anschliessend mit dem binär dargestellten Schlüssel mittels XOR-Blockchiffre.
 4. Decodieren Sie diesen wiederum mit Pentacode und überprüfen Sie die Lösung.
 
-### Vorgehenseweise
+Halten Sie Ihren Lösungsweg unten fest:
 
 <Answer type="text" webKey="3bce79ec-5813-4d29-a7c5-3fec156bd472" monospace />
 
