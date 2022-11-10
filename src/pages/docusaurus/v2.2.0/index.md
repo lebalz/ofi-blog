@@ -5,7 +5,7 @@ sidebar_custom_props:
 import SearchBox from '@site/src/components/SearchBox';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 
-# Docusaurus 2.2.0
+# Docusaurus v2.2.0
 
 ![](images/docusaurus_keytar.svg)
 

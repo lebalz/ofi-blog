@@ -57,3 +57,5 @@ sidebar_custom_props:
   - [v1.70](/software-installation/vs-code/v1.70)
 - Git
   - [v2.37.1](/software-installation/git/v2.37.1)
+- Docusaurus
+  - [v2.2.0](/docusaurus/v2.2.0)
