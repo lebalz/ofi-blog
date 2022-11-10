@@ -459,9 +459,6 @@ html[data-theme='dark'] {
         --aa-primary-color-rgb: 103, 125, 195;
         --aa-muted-color-rgb: 65, 78, 120;
     }
-}
-
-html[data-theme='dark'] {
     figure>img {
         background: white;
     }
@@ -474,7 +471,6 @@ kbd {
     border-radius: 0.5em;
     box-shadow: inset 1px -2px 0 var(--ifm-color-emphasis-400);
 }
-
 
 strong.underline {
     color: #3348b5;
@@ -497,6 +493,12 @@ strong.underline {
 figcaption {
     strong.underline {
         transform: none;
+    }
+}
+
+html[data-theme='dark'] {    
+    strong.underline {
+        color: #8395ef;
     }
 }
 
