@@ -125,6 +125,8 @@ png to ico
 Um die Website lokal auszuprobieren, muss zuerst [NodeJS](https://nodejs.org/) installiert und konfiguriert werden. Anschliessend kann die Seite lokal gestartet und unter der Lokalen Netzwerkadresse beim Port 3000 ([localhost:3000](http://localhost:3000)) gefunden werden.
 
 :::aufgabe Anleitung für die Installation
+<Answer type="state" webKey="9f0a578f-72a6-43e5-af47-1b9afb8cbde1" />
+
 1. NodeJS LTS mit den Standard-Optionen installieren (vermutlich x64) 👉 https://nodejs.org/en/download/
 2. In VS-Code unter __Terminal>New Terminal__ ein neues Terminal öffnen und überprüfen, ob Node installiert wurde (sollte die aktuelle Version ausgeben):
 
