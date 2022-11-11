@@ -26,5 +26,11 @@ Hilfestellung für die Titelzeile:
 Commit-Nachrichten sollen entweder auf **Englisch** oder **Deutsch**, aber immer gleich für ein Repository. 
 
 
+:::details Präsentation
+
+<iframe src="/slides/git-commit-messages.html" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" />
+
+:::
+
 [^1]: Quelle: 👉 https://www.theserverside.com/video/Follow-these-git-commit-message-guidelines
 [^2]: Quelle: 👉 https://initialcommit.com/blog/Git-Commit-Message-Imperative-Mood
