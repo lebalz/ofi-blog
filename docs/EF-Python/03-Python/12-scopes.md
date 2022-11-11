@@ -36,3 +36,6 @@ Quizz-Aufgaben unter 👉 https://www.codequizzes.com/python/beginner-II/variabl
 
 <Answer type="text" webKey="2add6536-2434-42e1-97f1-6d14692f3e9c" placeholder="✍️ Notizen..."/>
 :::
+
+
+Quizziz (im Unterricht gespielt am 4.11.2022) 👉 https://quizizz.com/admin/quiz/6364e3f4a495f3001e2cc3f2/scope-of-variables-in-python
