@@ -1,8 +1,6 @@
 import { reaction } from 'mobx';
 import React from 'react';
 import { DocType, ModelTypes } from '../models/iModel';
-// @ts-ignore
-import { useDoc } from '@docusaurus/theme-common/internal';
 import { rootStore, storesContext } from './stores';
 // @ts-ignore
 import useFrontMatter from '@theme/useFrontMatter';

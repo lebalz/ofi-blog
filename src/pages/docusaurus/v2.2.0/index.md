@@ -40,6 +40,9 @@ EF-Informatik # Github Repository Ordner
 In Ihrem Github-Repository brauchen Sie die Ordner __blog__ und __docs__, jeweils mit mindestens einem Eintrag.
 
 :::aufgabe Anleitung
+
+<Answer type="state" webKey="a1d16f50-2452-465b-b546-93c9eb0d89fd" />
+
 Material
 : Vorkonfigurierte Dateien für Docusaurus v2.2.0 [👉 Herunterladen](assets/docusaurus.zip)
 
