@@ -10,7 +10,11 @@ const Rsync = require('rsync');
  * }[]}} */
 const CONFIG = require('./material_config.json')
 
-const DOC_PATH = 'docs/'
+const DOC_PATHS = ['docs/', 'src/pages/', 'news/'];
+
+const docBasePath = (src) => {
+    return DOC_PATHS.find((p) => src.startsWith(p)) || DOC_PATHS[0];
+}
 
 /**
  * 
@@ -18,10 +22,8 @@ const DOC_PATH = 'docs/'
  * @returns 
  */
 const relative2Doc = (path) => {
-    if (path.startsWith(DOC_PATH)) {
-        return path.slice(DOC_PATH.length)
-    }
-    return path;
+    const base = docBasePath(path);
+    return base ? path.slice(base.length) : path;
 }
 
 const ensureTrailingSlash = (path) => {

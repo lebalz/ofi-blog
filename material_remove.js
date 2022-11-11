@@ -25,7 +25,12 @@ yarn run remove docs/byod-basics/v24/ --from="24a,24b"
 const toRemove = argv._;
 var klassen = argv.from ? argv.from.split(',') : Object.keys(configs);
 
-const DOC_PATH = 'docs/'
+const DOC_PATHS = ['docs/', 'src/pages/', 'news/'];
+
+
+const docBasePath = (src) => {
+    return DOC_PATHS.find((p) => src.startsWith(p)) || DOC_PATHS[0];
+}
 
 /**
  * 
@@ -33,10 +38,8 @@ const DOC_PATH = 'docs/'
  * @returns 
  */
 const relative2Doc = (path) => {
-    if (path.startsWith(DOC_PATH)) {
-        return path.slice(DOC_PATH.length)
-    }
-    return path;
+    const base = docBasePath(path);
+    return base ? path.slice(base.length) : path;
 }
 
 const ensureTrailingSlash = (path) => {
@@ -48,16 +51,17 @@ const ensureTrailingSlash = (path) => {
     }
     return `${path}/`
 }
-
 klassen.forEach((klass) => {
     const config = configs[klass];
     const keepedFiles = [];
     config.forEach((src) => {
-        const from = `${DOC_PATH}${relative2Doc(typeof src === 'string' ? src : src.from)}`;
+        const fromRel = relative2Doc(typeof src === 'string' ? src : src.from);
+        const from = `${docBasePath(typeof src === 'string' ? src : src.from)}${fromRel}`;
         const to = (typeof src === 'object' && src.to) ? src.to : `versioned_docs/version-${klass}/${relative2Doc(src)}` ;
         var keep = true;
         toRemove.forEach((rmSrc) => {
-            var toRmSrc = `${DOC_PATH}${relative2Doc(rmSrc)}` 
+            var toRmSrc = `${docBasePath(rmSrc)}${relative2Doc(rmSrc)}` 
+            console.log(src, fromRel, docBasePath(rmSrc), from, toRmSrc)
             if (fs.lstatSync(toRmSrc).isDirectory()) {
                 toRmSrc = ensureTrailingSlash(toRmSrc);
             }

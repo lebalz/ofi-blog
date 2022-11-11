@@ -19,7 +19,11 @@ yarn run add docs/byod-basics/v24/ --to="24a,24b" --as="My-Material" --ignore="_
     exit(0)
 }
 
-const DOC_PATH = 'docs/'
+const DOC_PATHS = ['docs/', 'src/pages/', 'news/'];
+
+const docBasePath = (src) => {
+    return DOC_PATHS.find((p) => src.startsWith(p)) || DOC_PATHS[0];
+}
 
 /**
  * 
@@ -27,16 +31,17 @@ const DOC_PATH = 'docs/'
  * @returns 
  */
 const relative2Doc = (path) => {
-    if (path.startsWith(DOC_PATH)) {
-        return path.slice(DOC_PATH.length)
-    }
-    return path;
+    const base = docBasePath(path);
+    return base ? path.slice(base.length) : path;
 }
 
+/** @type string */
 var src = argv._[0]
 
-if (!src.startsWith(DOC_PATH) && !src.startsWith('/')) {
-    src = `${DOC_PATH}${src}`
+const pathStart = DOC_PATHS.find((p) => src.startsWith(p));
+
+if (!pathStart && !src.startsWith('/')) {
+    src = `${DOC_PATHS[0]}${src}`
 }
 const isDir = fs.lstatSync(src).isDirectory();
 if (isDir && !src.endsWith('/')) {

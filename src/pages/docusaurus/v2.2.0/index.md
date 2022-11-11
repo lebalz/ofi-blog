@@ -1,4 +1,5 @@
 ---
+sidebar_label: Docusaurus
 sidebar_custom_props:
   id: e653a077-4d2c-4323-9ea6-6594d7609ae1
 ---
