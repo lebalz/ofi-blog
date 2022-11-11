@@ -15,12 +15,12 @@ Eine Commit-Nachricht ist in zwei Teile gegliedert:
 ![Aufbau einer Commit-Nachricht](images/git-message.png)
 
 Hilfestellung für die Titelzeile:
-- «If applied, this commit will update getting started documentation»
+- *If applied, this commit will*... **«update getting started documentation»**
 - Imperativ verwenden (ohne abschliessende Satzzeichen):
   - «Putz dein Zimmer»
   - «Schliess die Türe»
   - `Entferne überflüssige Funktion 'run'`
-  - `Überarbeite code und füge kommentare hinzu`
+  - `Überarbeite code und füge Kommentare hinzu`
   - `Fix typo in the function name 'play'`
 
 Commit-Nachrichten sollen entweder auf **Englisch** oder **Deutsch**, aber immer gleich für ein Repository. 

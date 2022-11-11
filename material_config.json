@@ -326,7 +326,6 @@
       "from": "docs/EF-Python/02-Infrastruktur/",
       "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur",
       "ignore": [
-        "04-git-messages.md"
       ]
     },
     {
