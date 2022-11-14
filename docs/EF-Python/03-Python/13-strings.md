@@ -215,7 +215,7 @@ Der 3. Buchstabe ist das `P` in der Liste und kann mit `joke[2]` abgefragt werde
 ## Methoden von Strings
 
 Im folgenden werden diverse Methoden im Umgang mit Strings vorgestellt. Wichtig dabei zu beachten ist die Terminologie. Betrachten Sie das folgende Beispiel:
-```py
+```py live_py slim
 index_von_welt = 'hallo, welt'.find('welt')
 ```
 
@@ -389,16 +389,20 @@ coffee, kaffe, kafi
 
 Manchmal hilft es, Strings in Listen umzuwandeln und manchmal möchten wir eine Liste von Buchstaben oder Strings in einen String zu vereinen. 
 
-`join(liste)` benötigt als Parameter eine Liste von Strings. Diese werden dann zu einem ganzen String aneinandergehängt. Das Bindeglied bildet der String, auf dem die Methode aufgerufen wurde.
-```py
-liste = ['claudio', 'brasser']
-name = ' '.join(liste)
-print('ganzer name: ', name)
+:::def
+### `.join(liste)`
 
-datum = ['05', '11', '2021']
+benötigt als Parameter eine Liste von Strings. Diese werden dann zu einem ganzen String aneinandergehängt. Das Bindeglied bildet der String, auf dem die Methode aufgerufen wurde.
+```py
+tage = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
+woche = ' '.join(tage)
+print('Wochentage: ', tage)
+
+datum = ['18', '11', '2022']
 datum = '-'.join(datum)
 print('Heute ist der ', datum)
 ```
+:::
 
 
 `split(zeichen)` ist die umgekehrte Aktion von `join()`. Die Methode nimmt als Parameter einen String (`zeichen`). Der String auf dem die Methode aufgerufen wurde, wird dann bei jedem vorkommen des Parameters auseinandergebrochen. Die Teil-Strings werden schliesslich in einer Liste zurückgegeben.
