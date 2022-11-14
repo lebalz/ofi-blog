@@ -95,13 +95,13 @@ print(klein)
 ## Text ersetzen
 
 :::def
-### `replace()`
-Mit replace(alt, neu) können Text-Teile in einem Text ersetzt werden.
+### `.replace(alt, neu)`
+Mit `replace(alt, neu)` werden **alle** `alt`en Textstücke durch die `neu`en ersetzt. Der Text wird dabei nicht direkt verändert, sondern nur der Rückgabewert (=das Resultat) ist verändert.
 
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
 
-# Alle . durch !!! ersetzen
+# Alle "." durch "!!!" ersetzen
 text = text.replace('.', '!!!')
 
 print(text)
@@ -110,7 +110,7 @@ print(text)
 :::
 
 :::warning Gross- & Kleinschreibung
-Python nimmts genau beim ersetzen - die Gross- & Kleinschreibung spielt eine Rolle!
+Python nimmts genau beim ersetzen - die Gross- & Kleinschreibung spielt eine Rolle, nicht jedoch der Ort des `alt`en Wortes!
 
 Im folgenden Beispiel wird etwa nur das kleingeschriebene `ich` ersetzt, jedoch auch wenn es inmitten eines Textes auftritt. Das grossgeschrieben `Ich` zu Beginn des Satzes wird ignoriert...
 
@@ -183,9 +183,6 @@ Wie lautet der Satz `hallo, es ist winter` auf Grünfisch? (Von Hand, ohne Progr
     from cowsay import beavis
     beavis('Hanafallonofo Pythonofon')
     ```
-4. Zusatz ⭐️: Passen Sie Ihr Programm so an, dass auch die Zusatzregel bei Grüfnisch umgesetzt wird. Wie könnte dies gelingen?
-    > Ausnahme beim Ersetzen: Bei Diphthongen/Zwielauten wird nur der erste verlängert (z. B. „au“ ⇒ „anafau“).
-    > Beispiel: "Bauen" hat den Diphtong `au` und wird also grüfnisch "Banafauenefen" ausgesprochen.
 
 
 ```py live_py id=00070a97-3898-46a6-88df-79c2cd28ad17 title=gruefnisch.py
@@ -213,6 +210,11 @@ Anstelle von `cow()` können auch andere Figuren verwendet werden. Diese muss da
 - `tux`
 
 </Hint>
+
+Zusatz ⭐️: Passen Sie Ihr Programm so an, dass auch die Zusatzregel bei Grüfnisch umgesetzt wird. Wie könnte dies gelingen?
+> Ausnahme beim Ersetzen: Bei Diphthongen/Zwielauten wird nur der erste verlängert (z. B. „au“ ⇒ „anafau“).
+> Beispiel: "Bauen" hat den Diphtong `au` und wird also grüfnisch "Banafauenefen" ausgesprochen.
+
 <Solution webKey='e2368d96-664c-4c52-86aa-496a5e936cdd'>
 
 ```py live_py slim
