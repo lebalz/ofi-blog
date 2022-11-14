@@ -45,31 +45,31 @@
         "type": "event"
     },
     {
-        "cells": ["15.11.2022","Daten","Office: Tabellenkalkulation"]
+        "cells": ["15.11.2022","Programmieren",""]
     },
     {
         "cells": ["17.11.2022","Notenschluss Zwischenzeugnis",""],
         "type": "event"
     },
     {
-        "cells": ["22.11.2022","Daten","Office: Tabellenkalkulation"]
+        "cells": ["22.11.2022","Programmieren",""]
     },
     {
-        "cells": ["29.11.2022","Daten","Office: Tabellenkalkulation"]
+        "cells": ["29.11.2022","Programmieren",""]
     },
     {
         "cells": ["06.12.2022","Kantonaler Fachschaftstag",""],
         "type": "holiday"
     },
     {
-        "cells": ["13.12.2022","Daten","Datenbanken"]
+        "cells": ["13.12.2022","Programmieren",""]
     },
     {
         "cells": ["13.12.2022","Praktikum: A & B","Probe (schriftlich & praktisch)"],
         "type": "test"
     },
     {
-        "cells": ["20.12.2022","Daten","Datenbanken"]
+        "cells": ["20.12.2022","Programmieren",""]
     },
     {
         "cells": ["27.12.2022","Winterferien",""],
@@ -80,11 +80,10 @@
         "type": "holiday"
     },
     {
-        "cells": ["11.01.2023","Daten","Wiederholung"]
+        "cells": ["11.01.2023","Codes und Daten","Einstieg"]
     },
     {
-        "cells": ["18.01.2023","Daten","Kurztest Daten"],
-        "type": "test"
+        "cells": ["18.01.2023","Codes und Daten","Zeichencodierung"]
     },
     {
         "cells": ["25.01.2023","Codes und Daten","Zeichencodierung"]

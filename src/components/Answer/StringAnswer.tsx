@@ -82,7 +82,7 @@ const StringAnswer = observer((props: StringProps) => {
   }
   const hasSolution = props.solution || props.checker;
   return (
-    <div className={clsx(styles.answer, styles.string)}>
+    <div className={clsx(styles.answer, styles.string, 'notranslate')}>
       {props.label && <label style={{ width: props.labelWidth }}>{props.label}</label>}
       {props.children && <label>{props.children}</label>}
       {props.select ? (
@@ -101,6 +101,7 @@ const StringAnswer = observer((props: StringProps) => {
         <input
           type="text"
           style={{ width: props.width }}
+          spellCheck={false}
           onChange={(e) => onChange(e.target.value)}
           value={doc.value}
           disabled={!doc.loaded || doc.readonly || props.disabled}
