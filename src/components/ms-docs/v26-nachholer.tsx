@@ -5,8 +5,10 @@ import { observer } from 'mobx-react-lite';
 import { Document, ImageRun, Packer, Paragraph } from 'docx';
 import { saveAs } from 'file-saver';
 import styles from "./styles.module.scss";
-
-const ProbeV26 = observer(() => {
+interface Props {
+  personalize?: boolean
+}
+const ProbeV26 = observer((props: Props) => {
   const msalStore = useStore('msalStore');
   const { account } = msalStore;
 
@@ -81,7 +83,7 @@ const generateFromUrl = async (name: string)  => {
     title: `Word Prüfung GBSL Autonomes Fahren`,
     keywords: `ofi, msword, test, ${name}`,
     background: {
-      color: color,
+      color: props.personalize ? color : undefined,
     },
     sections: [
       {
