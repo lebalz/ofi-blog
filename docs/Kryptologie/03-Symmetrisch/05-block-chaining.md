@@ -1,15 +1,16 @@
 ---
 sidebar_custom_props:
   id: 106dd131-0dd1-454d-a369-1e44e466737a
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=685616
 ---
-
-# Verkettung von Blöcken
 
 import Finding from "@site/src/components/Finding";
 import XORBlockCipher from "@site/src/components/VisualizationTools/Crypto/XORBlockCipher";
 
 
-# Verkettung von Blöcken[^1]
+# Verkettung von Blöcken
 
 Im letzten Kapitel wurde der Geheimtext zur Ver- bzw. Entschlüsselung in Blöcke aufgeteilt, die exakt so lang sind wie der Schlüssel. Die Blöcke werden anschliessend einzeln durch die XOR-Funktion mit dem Schlüssel ver- bzw. entschlüsselt.
 
@@ -18,53 +19,53 @@ Prinzipiell kann anstelle der XOR-Funktion jede beliebige mathematische Funktion
 :::
 
 ## Der Betriebsmodus «Electronic Code Book» (ECB)
+
 Falls jeder Block mit dem immer gleichen Schlüssel verschlüsselt wird, spricht man vom «Electronic Code Book» (**ECB**) Betriebsmodus. Schematisch dargestellt sieht dieser wie folgt aus:
 
-![Verschlüsselung im ECB-Modus](images/ECB_encryption.svg)
+![](images/ECB_encryption.svg)
 
-In der Abbildung wird deutlich, dass ECB kein eigenes Verschlüsselungsverfahren, sondern nur ein **Modus** ist. Er definiert, wie die einzelnen Blöcke verwendet werden. Die konkrete Verschlüsselungsfunktion ist in dieser Darstellung nicht genauer angegeben – wir verwenden der Einfachheit halber hier die XOR-Funktion.
+In der Abbildung wird deutlich, dass ECB kein eigenes Verschlüsselungsverfahren ist, sondern nur ein **Modus** ist. Er definiert, wie die einzelnen Blöcke verwendet werden. Die konkrete Verschlüsselungsfunktion ist in dieser Darstellung nicht genauer angegeben – wir verwenden der Einfachheit halber hier die XOR-Funktion.
 
 Die Entschlüsselung funktioniert analog: Der Geheimtext wird wiederum in Blöcke aufgeteilt, welche separat mit dem Schlüssel entschlüsselt werden. Die dabei entstandenen Klartext-Blöcke ergeben aneinander gereiht den gesamten Klartext.
 
-![Entschlüsselung im ECB-Modus](images/ECB_decryption.svg)
+![](images/ECB_decryption.svg)
 
 ### Tool
 
 <XORBlockCipher />
 
-
 :::aufgabe Aufgabe ECB-Modus
 1. Verschlüsseln Sie den Text `EINE SEHR KLEINE SENSATION` mit dem Schlüssel `ZUSE`.  
-<Answer type="string" webKey="52638af8-d4af-4f19-ab55-8de24a8bac94" solution="@-. ZFVMHUXI@-. ZFVKITGLU," sanitizer={(val) => val.trim().toUpperCase()} />
 
-2. Schauen Sie sich den Klartext und den Geheimtext genau an.
-3. Überlegen Sie sich, welche Schwächen der ECB-Modus hat.
+  <Answer type="string" webKey="52638af8-d4af-4f19-ab55-8de24a8bac94" solution="@-. ZFVMHUXI@-. ZFVKITGLU," sanitizer={(val) => val.trim().toUpperCase()} width="400px"/>
+
+2. Schauen Sie sich den Klartext und den Geheimtext genau an. Gibt es Schwachstellen im ECB-Modus? Was ist verdächtig?
 
 <Answer type="text" webKey="11762cec-7a10-48f4-ab40-648addaca855" />
 
-<details><summary>Hinweis</summary>
-Überlegen Sie sich, was passiert, wenn zwei Blöcke identisch sind (z.B. weil eine bestimmte Passage des Textes erneut vorkommt). Wie ist die Auswirkung auf den Geheimtext?
-</details>
+<Hint>
+Überlegen Sie sich, was passiert, wenn zwei Blöcke identisch sind (z.B. weil eine bestimmte Passage des Textes erneut vorkommt). Welche Auswirkung hat dies auf den Geheimtext?
+</Hint>
 :::
 
 
 ## Der Betriebsmodus «Cipher Block Chaining» (CBC)
+
 Im CBC-Modus werden die Blöcke nicht mehr getrennt voneinander verarbeitet. Wie in der folgenden Abbildung ersichtlich ist, dient jeder Geheimtext-Block (ausser der letzte) im nachfolgenden Schritt zusätzlich als Input. So werden gleiche Klartext-Blöcke trotz identischem Schlüssel zu unterschiedlichen Geheimtextblöcken verschlüsselt.
 
-Das Plus-Zeichen ich Kreis steht hier ebenfalls für die XOR-Operation. Diese ist gegeben, während die Verschlüsselung im grossen Rechteck mit der Bezeichnung block cipher encryption aus aktuell als sicher geltenden Verfahren frei gewählt werden kann. Es wird also in unseren Beispielen sowohl für die Verrechnung des Klartextblocks mit dem vorherigen Geheimtextblock wie auch für eigentliche Verschlüsselung die XOR-Operation verwendet.
+Das Plus-Zeichen ich Kreis steht hier ebenfalls für die XOR-Operation. Diese ist gegeben, während die Verschlüsselung im grossen Rechteck mit der Bezeichnung *block cipher encryption* frei gewählt werden kann (also bspw. auch ein aktuell sicheres Verfahren). Es wird also in unseren Beispielen sowohl für die Verrechnung des Klartextblocks mit dem vorherigen Geheimtextblock wie auch für eigentliche Verschlüsselung die XOR-Operation verwendet.
 
 Da bei der Verarbeitung des ersten Blocks noch kein Geheimtext-Block zur Verfügung steht, wird ein sogenannter «Initialisierungsvektor» (**IV**) verwendet.
 
-
-![Verschlüsselung im CBC-Modus](images/CBC_encryption.svg)
+![](images/CBC_encryption.svg)
 
 Ändert man 1 Bit im IV, führt dies zu Änderungen im gesamten Geheimtext. Ändert man 1 Bit im Klartext, so ändern sich auch sämtliche darauffolgenden Blöcke im Geheimtext.
 
 Ein Nachteil des CBC-Modus ist allerdings, dass die **Verschlüsselung** der verschiedenen Blöcke nicht gleichzeitig (also parallel) berechnet werden können, da das Resultat des vorherigen Blocks für die Verschlüsselung des aktuellen Blocks benötigt wird. D.h. ein bestimmter Klartext-Block kann erst verschlüsselt werden, wenn sämtliche vorherigen Blöcke bereits verschlüsselt sind.
 
-Bei der **Entschlüsselung** sieht es anders aus. Da sofort sämtliche Geheimtextblöcke vorliegen, kann die Entschlüsselung problemlos parallelisiert werden, wie du in der folgenden Abbildung nachvollziehen kannst:
+Bei der **Entschlüsselung** sieht es anders aus. Da sofort sämtliche Geheimtextblöcke vorliegen, kann die Entschlüsselung problemlos parallelisiert werden, wie Sie in der folgenden Abbildung nachvollziehen können:
 
-![Entschlüsselung im CBC-Modus](images/CBC_decryption.svg)
+![](images/CBC_decryption.svg)
 
 :::info Bemerkenswert
 Auf den ersten Blick erstaunlich ist die Tatsache, dass die Entschlüsselung mit falschem IV nur dazu führt, dass der erste Klartext-Block unleserlich ist, während die restlichen Blöcke korrekt entschlüsselt werden.
@@ -72,11 +73,13 @@ Auf den ersten Blick erstaunlich ist die Tatsache, dass die Entschlüsselung mit
 
 :::aufgabe Aufgabe CBC-Modus
 1. Verschlüsseln Sie nochmals denselben Text, diesmal allerdings im CBC-Modus:  
-**Klartext**: `EINE SEHR KLEINE SENSATION`  
-**Schlüssel**: `ZUSE`
+Klartext
+: `EINE SEHR KLEINE SENSATION`  
+Schlüssel
+: `ZUSE`
 
 2. Achten Sie wiederum auf die Blöcke, die im Klartext übereinstimmen. Was passiert jetzt?
-3. Wähle verschiedene Initialisierungsvektoren. Wie unterscheiden sich die Resultate?
+3. Wählen Sie verschiedene Initialisierungsvektoren. Wie unterscheiden sich die Resultate?
 
 <Answer type="text" webKey="d98093d9-0718-4b04-9ac3-f2ea9617153b" monospace />
 
@@ -93,7 +96,7 @@ Setzen Sie sich in Dreiergruppen zusammen und diskutieren Sie folgende Fragen:
 
 1. Welche Faktoren beeinflussen die Sicherheit unserer XOR-Blockchiffre?
 2. Stellen Sie zu jedem Faktor eine Aussage auf, die aufzeigt, wie eine möglichst hohe Sicherheit erreicht werden kann.
-3. Wie sicher ist die Verwendung von XOR (im Kasten «block cipher encryption/decryption» in den Abbildungen oben) als Blockchiffren-Verfahren?
+3. Wie sicher ist die Verwendung von XOR («block cipher encryption/decryption») im Vergleich zu Blockchiffren-Verfahren (ECB)?
 
 <Answer type="text" webKey="941b53f7-db87-43d1-99e9-a91012309cf1" />
 
@@ -107,4 +110,3 @@ In der Realität ist es besonders wichtig, dass die Verschlüsselungsfunktion s�
 Aus diesem Grund arbeiten aktuelle Verschlüsselungsfunktionen von Blockchiffren in **mehreren Runden**.
 :::
 
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=685616)

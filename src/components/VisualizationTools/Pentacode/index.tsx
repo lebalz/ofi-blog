@@ -308,4 +308,4 @@ const PixelEditor = observer(() => {
     );
 });
 
-export { PixelEditor, TextEditor, toPenta, toText };
+export { PixelEditor, TextEditor, toPenta, toText, pentaChunks };

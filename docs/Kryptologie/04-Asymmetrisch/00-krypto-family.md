@@ -1,6 +1,9 @@
 ---
 sidebar_custom_props:
   id: 7586ac8e-8474-4b49-b584-fced9505ddf1
+  source:
+    name: rothe.io
+    ref: https://rothe.io/?b=crypto&p=932192
 ---
 
 # Krypto-Familie
@@ -24,10 +27,3 @@ Mallory ist ein bösartiger, aktiver Angreifer (engl. **mal**icious).
 ![Trent](images/info-family/trent.svg)
 Wird eine vertrauenswürdige dritte Stelle verwendet, wird Trent (engl. für **tr**usted **ent**ity) eingesetzt.
 :::
-
-## Symmetrische Verschlüsselung
-Bei sämtlichen bisher betrachteten Verfahren handelte es sich um symmetrische Verfahren, d.h. zum Verschlüsseln und Entschlüsseln wird derselbe Schlüssel verwendet:
-
-![](images/symm-encryption.svg)
-
-[^1]: Quelle: [rothe.io](https://rothe.io/?b=crypto&p=932192)

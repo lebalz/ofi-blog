@@ -18,9 +18,8 @@ Verschlüsseln Sie den Text `BUCHSTABENSPIELE` mit dem Schlüssel `AKRONYM`
 
 <Answer type="text" webKey="a30ab42b-0e2a-4452-a7a4-f34c96e8a4cd" monospace />
 
-(*Lösung als Text (nicht als Binäre Zahlenfolgt) angeben*)
 
-<Answer type="string" webKey="b680e137-905a-4bc5-a05a-fe65bc1684ee" solution="C?QG.MLCN--?PHMN" sanitizer={UPPER_NOSPACE}/>
+<Answer label="Text (nicht binär)" type="string" webKey="b680e137-905a-4bc5-a05a-fe65bc1684ee" solution="C?QG.MLCN--?PHMN" sanitizer={UPPER_NOSPACE}/>
 
 :::
 
@@ -29,9 +28,7 @@ Entschlüsseln Sie den Text `XWVJZWEKK,XWVJIK` mit dem Schlüssel `VVXKZ`
 
 <Answer type="text" webKey="f0c2bc43-cc15-4f58-8466-19f2f3374d2e" monospace />
 
-(*Lösung als Text (nicht als Binäre Zahlenfolgt) angeben*)
-
-<Answer type="string" webKey="f877bdef-a2e9-4b82-a6cc-1b61109970c7" solution="NANA ASS ANANAS." sanitizer={UPPER_NOSPACE}/>
+<Answer label="Text (nicht binär)" type="string" webKey="f877bdef-a2e9-4b82-a6cc-1b61109970c7" solution="NANA ASS ANANAS." sanitizer={UPPER_NOSPACE}/>
 :::
 
 ## CBC Modus
@@ -48,6 +45,8 @@ Entschlüsseln Sie den Text `XWVJZWEKK,XWVJIK` mit dem Schlüssel `VVXKZ`
 Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 
 <Answer type="text" webKey="aeaf6634-df2d-427f-9daa-970ff225f105" monospace />
+
+<br />
 
 (Antworten als Penta-Binärcode)
 :::cards --rows=3 --min-width=250px --font-family=monospace
@@ -83,8 +82,7 @@ Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 <Answer label="c" width="12em" labelWidth="3em" type="string"  webKey="a44a611e-6cff-41ea-9277-4b0859ea6249" solution="10011 01100" sanitizer={UPPER_NOSPACE}/>
 :::
 
-Verschlüsselter Text (Buchstaben-Form)
-<Answer type="string" webKey="dabff993-1dc5-43c8-bfca-f944c8dc3f96" solution="XJXGSL" sanitizer={UPPER_NOSPACE}/>
+<Answer label="Text (nicht binär)" type="string" webKey="dabff993-1dc5-43c8-bfca-f944c8dc3f96" solution="XJXGSL" sanitizer={UPPER_NOSPACE}/>
 :::
 
 
@@ -95,6 +93,8 @@ Verschlüsselter Text (Buchstaben-Form)
 Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 
 <Answer type="text" webKey="1d46518d-94df-4d09-8d12-ae6f28df2b67" monospace />
+
+<br />
 
 (Antworten als Penta-Binärcode)
 :::cards --rows=4 --min-width=250px --font-family=monospace
@@ -141,6 +141,5 @@ Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 <Answer label="p" width="12em" labelWidth="3em" type="string"  webKey="d0fbef85-346d-4d70-bb60-972205240d36" solution="00101" sanitizer={UPPER_NOSPACE}/>
 :::
 
-Entschlüsselter Text (Buchstaben-Form)
-<Answer type="string" webKey="4ce989c5-27ad-4146-bdf6-adb7b5908b55" solution="DOLCE" sanitizer={(val) => UPPER_NOSPACE(val)?.length === 7 ? UPPER_NOSPACE(val).slice(2) : UPPER_NOSPACE(val)}/>
+<Answer label="Text (nicht binär)"  type="string" webKey="4ce989c5-27ad-4146-bdf6-adb7b5908b55" solution="DOLCE" sanitizer={(val) => UPPER_NOSPACE(val)?.length === 7 ? UPPER_NOSPACE(val).slice(2) : UPPER_NOSPACE(val)}/>
 :::
