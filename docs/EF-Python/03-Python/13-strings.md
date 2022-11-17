@@ -169,14 +169,14 @@ print(vorname[0:3]) # Buchstaben von 0 bis (ohne mit!) 3 Buchstaben
 ```py live_py slim
 vorname = 'Reto'
 print(vorname[1:5]) # entweder explizit "Länge + 1" angeben
-print(vorname[1:]) # oder das Ende Weglassen...
+print(vorname[1:])  # oder das Ende nicht angeben = bis zum Schluss
 ```
 
 #### Jeder zweite Buchstabe
 Oder nur jeden zweiten Buchstaben
 
 ```py live_py slim
-namen = 'Reto und Maria'
+namen = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 print(namen[0::2]) # Bemerke: der Endwert wird nicht angegeben = bis zum Schluss fortfahren...
 ```
 
@@ -184,7 +184,10 @@ oder **rückwärts** :mdi-emoticon-cool-outline:
 
 ```py live_py slim
 vorname = 'Reto'
-print(vorname[-1::-1]) # Start beim letzten Buchstaben, bis zum ersten
+# Start beim letzten Buchstaben (-1)
+# Bis zum Ende der Textkette (Weglassen)
+# Schritt zum nächsten Buchstaben: -1
+print(vorname[-1::-1]) 
 ```
 :::
 
@@ -216,7 +219,7 @@ print(name)
 :::aufgabe 2.
 <Answer type="state" webKey="218186b9-2c66-47af-98ad-08c54276934d" />
 
-Why are humans known to be extremely afraid of computers?
+> **Why are humans known to be extremely afraid of computers?**
 
 Die Antwort finden Sie, indem Sie, startend beim 3. Buchstaben, jeden 13 Buchstaben ausgeben. Versuchen Sie, die korrekte Zugriffs-Methode zu verwenden.
 
@@ -239,8 +242,7 @@ Im folgenden werden diverse Methoden im Umgang mit Strings vorgestellt. Wichtig 
 index_von_welt = 'hallo, welt'.find('welt')
 ```
 
-Hier wird die **Methode** `.find()` *auf den String* `'hallo, welt'` aufgerufen, wobei der Kontext durch den String selbst gegeben ist. Dies ist der **Unterschied** von Methoden zu Funktionen: Funktionen kennen keinen Kontext, alles muss mit Parametern übergeben werden (bspw. bei `len()` muss der String übergeben werden: `len('Hallo, Welt')`). Die Methode `.find()` ist hier eine vom String zur Verfügung gestellte "Funktion", die sich selber kennt und auf sich aufgerufen wird.
-
+Hier wird die **Methode** `.find()` *auf den String* `'hallo, welt'` aufgerufen, wobei der Kontext durch den String selbst gegeben ist. Dies ist der **Unterschied** von Methoden zu Funktionen: Funktionen kennen keinen Kontext, alles muss mit Parametern übergeben werden (bspw. bei `len()` muss der String übergeben werden: `len('Hallo, Welt')`). Die Methode `.find()` ist hier eine vom Objekt *String* zur Verfügung gestellte "Funktion", die den eigenen Wert kennt und auf sich aufgerufen wird.
 
 
 ## Inhalt Untersuchen
@@ -321,7 +323,7 @@ else:
 
 ## Inhalt verändern
 
-Wie vorhin festgestellt, sind STrings **immutable**, können daher nicht verändert werden. Um dennoch möglichst einfach Operationen auf Texten auszuführen, wie etwa alles gross- oder kleinzuschreiben, gibt es Methoden, welche einen veränderten String zurückgeben, sich selber aber nicht verändern.
+Wie vorhin festgestellt, sind Strings **immutable**, können daher nicht verändert werden. Um dennoch möglichst einfach Operationen auf Texten auszuführen, wie etwa alles gross- oder kleinzuschreiben, gibt es Methoden, welche einen veränderten String zurückgeben, sich selber aber nicht verändern.
 
 :::def
 ### `.upper()`
@@ -383,6 +385,7 @@ Ersetzt **alle** `wort`e im String mit dem Parameter `ersetzen`.
 ```py live_py slim
 text = '''I'm at home at four or five'''
 text = text.replace('at', '@')
+text = text.replace('home', '🏚️')
 text = text.replace('zero', '0').replace('one', '1').replace('two', '2').replace('three', '3').replace('four', '4')
 text = text.replace('five', '5').replace('six', '6').replace('seven', '7').replace('eight', '8').replace('nine', '9')
 print(text)
@@ -399,6 +402,8 @@ coffee, kaffe, kafi
 ...
 : ...
 
+Erweitern Sie anschliessend Ihr Programm so, dass eine Benutzer:in einen Satz eingeben kann, und der Emoji-Satz angezeigt wird.
+
 ```py live_py id=4f615b2f-cc4b-4a5b-add8-6625f15419ac title=emoji.py
 
 ```
@@ -413,7 +418,7 @@ Manchmal hilft es, Strings in Listen umzuwandeln und manchmal möchten wir eine 
 ### `.join(liste)`
 
 benötigt als Parameter eine Liste von Strings. Diese werden dann zu einem ganzen String aneinandergehängt. Das Bindeglied bildet der String, auf dem die Methode aufgerufen wurde.
-```py
+```py live_py slim
 tage = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
 woche = ' '.join(tage)
 print('Wochentage: ', tage)
@@ -424,14 +429,65 @@ print('Heute ist der ', datum)
 ```
 :::
 
+:::def
+### `.split(zeichen)`
 
-`split(zeichen)` ist die umgekehrte Aktion von `join()`. Die Methode nimmt als Parameter einen String (`zeichen`). Der String auf dem die Methode aufgerufen wurde, wird dann bei jedem vorkommen des Parameters auseinandergebrochen. Die Teil-Strings werden schliesslich in einer Liste zurückgegeben.
-```py
+`.split()` ist die umgekehrte Aktion von `.join()`. Die Methode nimmt als Parameter ein `zeichen` [typ String] und trennt anschliessend den String überall, wo das `zeichen` vorkommt. Dabei werden die `zeichen` selbst entfernt.
+
+```py live_py slim
 datum = '05:12:2021'
 datum_als_liste = datum.split(':')
 print(datum_als_liste)
 monat = datum_als_liste[1]
 print('Monat: ', monat)
+
+# Kurzschreibweise
 print('Tag: ', datum.split(':')[0])
 ```
+:::
 
+:::aufgabe Zeilenweise
+
+```py live_py title=reverse.py id=674423d1-6338-4347-b7b2-7c92b8f0d794
+text = '''\
+*-----
+-*----
+--*---
+---*--
+----*-
+-----*\
+'''
+print(text)
+```
+1. Was bezwecken die beiden `\` auf Zeile 1 und 7?
+2. Erzeugen Sie ein in obigem Programm folgende Ausgabe, ohne dabei `text` zu verändern.
+    ```
+    *----------*
+    -*--------*-
+    --*------*--
+    ---*----*---
+    ----*--*----
+    -----**-----
+    ```
+
+<Hint>
+
+Eine neue Zeile wird mit dem Newline-Zeichen `\n` (inkl. Backslash!) erzeugt.
+</Hint>
+
+<Solution>
+
+```py live_py slim
+text = '''\
+*-----
+-*----
+--*---
+---*--
+----*-
+-----*\
+'''
+for line in text.split('\n'):
+    print(line + line[-1::-1])
+```
+</Solution>
+:::
