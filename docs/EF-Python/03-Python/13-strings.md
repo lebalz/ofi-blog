@@ -319,7 +319,7 @@ else:
 
 :::def
 ### `.find(wort)`
-Findet ein `wort` im String und gibt den Startindex des erstmaligen Auftretens zurück. Bei `'Hallo'.find('l')` wäre dies also der Startindex `2`, da bei `'Hallo'[2]` erstmalig ein das `l` vorkommt.
+Findet ein `wort` im String und gibt den Startindex des erstmaligen Auftretens zurück. Bei `'Hallo'.find('l')` wäre dies also der Startindex `2`, da bei `'Hallo'[2]` erstmalig ein `l` vorkommt.
 
 Wird das `wort` nicht gefunden, so gibt die Method `-1` zurück.
 
