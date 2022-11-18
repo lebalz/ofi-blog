@@ -365,7 +365,7 @@
       "from": "docs/EF-Python/04-NumTrip/",
       "to": "versioned_docs/version-24ef/01-Programmieren/10-NumTrip",
       "ignore": [
-        "04-random-board.md"
+        "10-random-board.md"
       ]
     },
     {
