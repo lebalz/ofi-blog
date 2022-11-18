@@ -201,6 +201,18 @@ for buchstabe in name:
     print(buchstabe, end='⭐')
 ```
 
+### Überprüfen, ob ein Textteil in einem String vorkommt
+
+Mit `in` kann überprüft werden, ob ein String in einem anderen vorkommt.
+
+```py live_py slim
+passwort = '$uperman#1'
+if '$' in passwort:
+    print('Enthält $')
+else:
+    print('Kein Geld')
+```
+
 ### Kurzaufgaben
 :::aufgabe 1.
 <Answer type="state" webKey="c0ca7471-ffb2-4082-8d71-914cdc2fa942" />
