@@ -374,7 +374,7 @@ vorname = vorname.strip()
 print('Vorname:', vorname)
 ```
 
-**Optional** können mit einem Parameter auch die Zeichen angegeben werden, welche am Start und Ende entfernt werden sollen. Auch die im Standardzeichen müssen angegeben werden (Leerzeichen, neue Zeile `\n`, Tabulator `\t`)
+**Optional** können mit einem Parameter auch die Zeichen angegeben werden, welche am Start und Ende entfernt werden sollen. Auch die Zeichen der Standardoption (wenn also keine Optionen angegeben werden), müssen spezifiziert werden (Leerzeichen, neue Zeile `\n`, Tabulator `\t`)
 
 ```py live_py slim
 vorname = '''!!!
@@ -432,8 +432,9 @@ Manchmal hilft es, Strings in Listen umzuwandeln und manchmal möchten wir eine 
 benötigt als Parameter eine Liste von Strings. Diese werden dann zu einem ganzen String aneinandergehängt. Das Bindeglied bildet der String, auf dem die Methode aufgerufen wurde.
 ```py live_py slim
 tage = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
-woche = ' '.join(tage)
 print('Wochentage: ', tage)
+woche = ' '.join(tage)
+print('Wochentage: ', woche)
 
 datum = ['18', '11', '2022']
 datum = '-'.join(datum)
