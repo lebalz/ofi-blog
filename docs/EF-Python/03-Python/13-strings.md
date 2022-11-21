@@ -405,6 +405,8 @@ print(text)
 :::
 
 :::aufgabe 3. Emoji-Sprache
+<Answer type="state" webKey="f0c0b431-73c9-42de-bb89-71a691af676d" />
+
 Erstellen Sie eine Emoji-Sprache und ersetzen Sie typische Wörter in das entsprechende Emoji. Beispiel:
 
 love, liebe, liäbä
@@ -459,7 +461,8 @@ print('Tag: ', datum.split(':')[0])
 ```
 :::
 
-:::aufgabe Zeilenweise
+:::aufgabe 4. Zeilenweise
+<Answer type="state" webKey="49b4ed69-263f-4a83-b38f-d4705162952c" />
 
 ```py live_py title=reverse.py id=674423d1-6338-4347-b7b2-7c92b8f0d794
 text = '''\
