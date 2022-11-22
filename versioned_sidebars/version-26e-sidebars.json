@@ -17,17 +17,17 @@
             {
               "type": "link",
               "label": "HK01 Algorithmen",
-              "href": "/p/Programmieren/Algorithmen/01-algorithmen.html"
+              "href": "pathname:///p/Programmieren/Algorithmen/01-algorithmen.html"
             },
             {
               "type": "link",
               "label": "HK03 Wiederholung 🔁",
-              "href": "/p/Programmieren/Schleifen/presentation.html"
+              "href": "pathname:///p/Programmieren/Schleifen/presentation.html"
             },
             {
               "type": "link",
               "label": "HK07 Variablen",
-              "href": "/p/Programmieren/07-Variablen/presentation.html"
+              "href": "pathname:///p/Programmieren/07-Variablen/presentation.html"
             }
           ]
         }
