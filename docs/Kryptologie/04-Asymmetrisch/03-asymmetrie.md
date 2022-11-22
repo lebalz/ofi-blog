@@ -10,7 +10,7 @@ import PrimfactorizationTiming from "@site/src/components/VisualizationTools/Cry
 
 # Asymmetrie
 
-Wir haben in den beiden vorherigen Kapiteln gesehen, dass es Vorgänge gibt, die in die eine Richtung einfach durchzuführen sind, in die entgegengesetzte Richtung allerdings sehr aufwändig oder gar unmöglich:
+Wir haben in den beiden vorherigen Abschnitten gesehen, dass es Vorgänge gibt, die in die eine Richtung einfach durchzuführen sind, in die entgegengesetzte Richtung allerdings sehr aufwändig oder gar unmöglich:
 
 | einfacher Vorgang               | aufwändiger/schwieriger Vorgang    |
 | :------------------------------ | :--------------------------------- |
@@ -31,14 +31,19 @@ Auch in der Mathematik gibt es Operationen, die einfach und schnell auszuführen
 Ein Beispiel dafür ist das Multiplizieren zweier (Prim-)Zahlen. Jeder Computer kann pro Sekunde mehrere Milliarden Multiplikationen ausführen. Ein Produkt zweier Primzahlen in die beiden Faktoren zu zerlegen, ist jedoch ungleich aufwändiger – insbesondere wenn die Zahlen mehrere hundert Stellen lang sind.
 
 :::aufgabe Multiplizieren vs. Faktorisieren
+<Answer type="state" webKey="e9065f77-e507-475e-bd4c-d6104da9180f" />
 
 1. Berechnen Sie $41 \cdot 83$ auf Papier. Überlegen Sie sich dabei, wie Sie vorgehen.
 2. Schaffen Sie es, die Zahl $3397$ in ihre zwei Primfaktoren zu zerlegen? Und $1117$? Wie könnte man dabei vorgehen?
+
+<Answer type="text" webKey="e6e532b0-a0e6-4932-a4d3-2d6e161aed47" />
 
 :::
 
 
 :::aufgabe Aufwand für den Computer
+<Answer type="state" webKey="f77269d9-0b36-4221-b7e3-fbb11eccf2f7" />
+
 1. Wie schnell kann der Computer multiplizieren und faktorisieren? Überprüfen Sie mit dem folgenden Tool, wie schnell Ihr Computer beim Multiplizieren und Faktorisieren ist. Nehmen Sie für Primzahlen mit `6`, `7` und `8` Stellen einige (>3) Messungen vor.
 2. Halten Sie die Messergebnisse fest (kopieren Sie den Plot und fügen diesen in der Antwort ein...)
 3. Was bedeutet es für eine kryptographische Anwendungen, wenn die beiden Primzahlen statt `8` Stellen mehrere mehrere hundert Stellen lang sind?

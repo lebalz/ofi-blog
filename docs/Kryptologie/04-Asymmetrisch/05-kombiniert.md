@@ -54,6 +54,8 @@ Asymmetrische Verfahren sind also nicht besser als symmetrische! Sie erfüllen e
 :::
 
 :::aufgabe Kombinierte Entschlüsselung
+<Answer type="state" webKey="f3793094-edc0-4445-878e-0d721242d701" />
+
 Stellen Sie dar, wie die Umkehrung – also die Entschlüsselung – funktioniert, wenn symmetrische und asymmetrische Verfahren kombiniert verwendet werden.
 
 <Answer type="text" webKey="4a33b602-eb5f-427d-ba5e-725756b5f112" />

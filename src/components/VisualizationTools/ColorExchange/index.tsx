@@ -138,8 +138,11 @@ const ColorExchange = (props: Props) => {
                     >
                         Öffentlich
                     </span>{' '}
-                    Eve 🕶
+                    
                 </div>
+            </div>
+            <div className={clsx(styles.EVE)} style={{height: '200px'}}>
+                Eve 🕶
             </div>
             <div className={clsx(styles.B)}>
                 <ColorPicker

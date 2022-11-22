@@ -21,5 +21,5 @@ Math/BlackBox/*
 07-Netzwerke/03-DNS/*
 07-Netzwerke/04-Sicherheit/*
 08-Kryptologie/*
-!08-Kryptologie/04-Asymmetrisch,05-Hashfunktionen,06-Digitale-Signaturen,07-Alltag,01-Lernziele-reduced.md
+!08-Kryptologie/05-Hashfunktionen,06-Digitale-Signaturen,07-Alltag,01-Lernziele-reduced.md
 08-Kryptologie/_category_.json

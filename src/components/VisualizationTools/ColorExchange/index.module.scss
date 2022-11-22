@@ -5,9 +5,10 @@
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        'A A PUB PUB B B'
-        '. MIXA MIXA MIXB MIXB .'
-        'PRIVA PRIVA . . PRIVB PRIVB';
+        'A      A     .    .    B      B   . .'
+        '.      .    PUB  PUB   .      E   E E'
+        '.     MIXA  MIXA MIXB MIXB    E   E E'
+        'PRIVA PRIVA   .   .   PRIVB PRIVB . .';
 }
 
 .A {
@@ -19,6 +20,11 @@
 
 .PUB {
     grid-area: PUB;
+}
+
+.EVE {
+    grid-area: E;
+    align-self: flex-end;
     background-image: url(./eve.svg);
     background-size: contain;
     background-repeat: no-repeat;

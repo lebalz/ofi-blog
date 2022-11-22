@@ -19,13 +19,15 @@ Vielleicht hilft es, wenn wir uns in Erinnerung rufen, dass im Handel mehrere Sc
 ![Schlüsselaustausch](images/key-exchange-2.svg)
 
 :::aufgabe Schlüsselaustausch
-- Finden Sie eine Möglichkeit, den Inhalt der Truhe sicher zu übertragen?
+<Answer type="state" webKey="991ccdea-6925-4830-92cc-1cade6c5feac" />
+
+Finden Sie eine Möglichkeit, den Inhalt der Truhe sicher zu übertragen?
 
 Versetzen Sie sich dabei in die Rollen der anderen Krypto-Charaktere!
 
 <Answer type="text" webKey="fea4de63-dc0a-4000-8432-c6d676b8443a" />
 
-<details><summary>Hinweis: Variante 1</summary>
+:::details Hinweis: Variante 1
 
 #### Variante 1: Eigene Schlösser Verteilen
 
@@ -43,9 +45,10 @@ Dass es sich um Alices Schloss handelt, kann Bob glauben, da die Absenderin die 
 
 **Problem**: Wie weiss Alice, dass es sich um Bobs Schloss handelt? Jemand unterwegs könnte das Schloss austauschen.
 </Solution>
-</details>
 
-<details><summary>Hinweis: Variante 2</summary>
+:::
+
+:::details Hinweis: Variante 2
 
 #### Variante 2: Eigene Schlösser Verteilen
 
@@ -57,15 +60,15 @@ Wie können die Unterlagen sicher zugestellt werden? Wo liegen allenfalls Proble
 
 <Solution webKey="c4a8c0b0-60ce-4a3d-9b12-1145bdf8d9f7">
 
-Bob könnte Alice das eigene Schloss senden, mit dem Alice anschliessend die Truhe verschliesst.
+Bob könnte Alice das eigene, offene Schloss senden, mit dem Alice anschliessend die Truhe verschliesst.
 
 **Problem**: Wie weiss Alice, dass es sich um Bobs Schloss handelt? Jemand unterwegs könnte das Schloss austauschen.
 
 </Solution>
 
-</details>
+:::
 
-<details><summary>Hinweis: Variante 3</summary>
+:::details Hinweis: Variante 3
 
 #### Variante 3: Schlösser beim vertrauenswürdigen Trent beziehen
 
@@ -79,12 +82,10 @@ Wie können die Unterlagen sicher zugestellt werden? Wo liegen allenfalls Proble
 
 #### Variante 3:
 
-Hier handelt es sich eigentlich um die erste, einfache Variante mit nur einer Sendung. Allerdings erhält Alice das Schloss nicht von Bob, sondern von einer vertrauenswürdigen Dritten Stelle (Trent). Trent hat eine ganze Sammlung von Schlössern – natürlich nicht nur von Bob, sondern von ganz vielen Leuten. So können alle, die Trent vertrauen, dort Schlösser abholen.
+Hier handelt es sich eigentlich um die zweite, einfache Variante mit nur einer Sendung. Allerdings erhält Alice das Schloss nicht von Bob, sondern von einer vertrauenswürdigen Dritten Stelle (Trent). Trent hat eine ganze Sammlung von Schlössern – natürlich nicht nur von Bob, sondern von ganz vielen Leuten. So können alle, die Trent vertrauen, dort Schlösser abholen.
 
 </Solution>
 
-</details>
-
 :::
 
-
+:::

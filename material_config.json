@@ -119,7 +119,6 @@
       "from": "docs/Kryptologie/",
       "to": "versioned_docs/version-25h/08-Kryptologie",
       "ignore": [
-        "04-Asymmetrisch",
         "05-Hashfunktionen",
         "06-Digitale-Signaturen",
         "07-Alltag",
