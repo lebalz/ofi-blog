@@ -169,3 +169,10 @@ Um die Lesbarkeit und Wartbarkeit des Programms zu verbessern, können Gewisse R
 ![](images/io-joke-2.jpg)
 
 :::
+
+:::aufgabe
+<Answer type="state" webKey="6f414fd4-1b91-4221-95ad-514d854b0c73" />
+
+Überprüfen Sie im NumTrip Spiel die Benutzereingaben, so dass auch bei fehlerhaften Eingaben das Programm nicht abstürzt.
+
+:::
