@@ -166,6 +166,6 @@ Um die Lesbarkeit und Wartbarkeit des Programms zu verbessern, können Gewisse R
 
 ***
 
-![](images/io-joke-2.webp)
+![](images/io-joke-2.jpg)
 
 :::
