@@ -59,3 +59,26 @@ Die Gefahr bei diesem Schritt lauert im inneren Bedürfnis, in diesem ersten Sch
 4. Code nochmals kurz durchgehen - machen Variablen- und Funktionsnamen Sinn? Könnten gewisse Dinge einfacher verständlich ($$\neq$$ weniger Code) geschrieben werden? Braucht es allenfalls irgendwo noch eine weitere Funktion?... __Commit & Push__
 5. Kurzer Blog-Eintrag in Form eines Lernjournals - was haben Sie gemacht (evtl. mit Screenshot), wie spielen die Funktionen zusammen? 
 :::
+
+
+:::aufgabe
+<Answer type="state" webKey="6f414fd4-1b91-4221-95ad-514d854b0c73" />
+
+Überprüfen Sie im NumTrip Spiel die Benutzereingaben, so dass auch bei fehlerhaften Eingaben das Programm nicht abstürzt.
+
+:::
+
+
+:::info Grundgerüst des Spiels, vol. 2
+
+Wichtig vor der Verwendung:
+- Überlegen Sie sich, wie die untenstehende Version mit Ihrem Top-Down Entwurf zusammenpasst.
+- Die Überprüfung der Eingaben muss unbedingt noch selber implementiert werden.
+- Es sind aktuell keine Kommentare vorhanden - beschreiben Sie mit Kommentaren jede übernommene Funktion, was sie macht.
+
+
+```py reference title="stage2.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/04-NumTrip/snippets/stage2.py
+```
+
+:::
