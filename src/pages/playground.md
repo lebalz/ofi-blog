@@ -31,5 +31,30 @@ print('Hello Playground')
 
 ```
 
+
+```py live_py noCompare persist title=python__playground__6.py id=ef8e64d5-c895-4ca0-8085-87a0b2c84a98
+
+```
+
+
+```py live_py noCompare persist title=python__playground__7.py id=268b6247-3d89-4ab2-aad0-6d306009c8ba
+
+```
+
+
+```py live_py noCompare persist title=python__playground__8.py id=8c1d9a40-cafd-4753-804e-29601a254e2a
+
+```
+
+
+```py live_py noCompare persist title=python__playground__9.py id=e34d8b0e-27c8-412c-957c-db6d948963db
+
+```
+
+
+```py live_py noCompare persist title=python__playground__10.py id=147e6e5b-a656-4fcb-8a78-50671e9dc2d7
+
+```
+
 </GTabs>
 
