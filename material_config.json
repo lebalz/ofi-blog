@@ -226,6 +226,11 @@
       "from": "docs/Programmieren-1/03-Python/04-random-walk.md",
       "to": "versioned_docs/version-26e/03-Programmieren-1/04-random-walk.md",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/03-Python/images/",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/images",
+      "ignore": []
     }
   ],
   "26P": [
@@ -331,6 +336,11 @@
     {
       "from": "docs/Programmieren-1/03-Python/04-random-walk.md",
       "to": "versioned_docs/version-26P/03-Programmieren-1/04-random-walk.md",
+      "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/03-Python/images/",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/images",
       "ignore": []
     }
   ],
