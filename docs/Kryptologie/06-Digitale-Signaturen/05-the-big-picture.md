@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 Verschlüsselte, signierte Nachrichten: Verknüpfung aller Verfahren.
 
-![](images/the_big_picture.svg)
+![](images/the_big_picture.png)
 
 :::note Bemerke
 - Charlie berechnet den Hashwert der Nachricht.

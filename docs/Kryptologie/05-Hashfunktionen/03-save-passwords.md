@@ -42,6 +42,8 @@ Die **Iterierte Quersumme** ist die Quersumme, die entsteht, wenn man solange im
 Die **Alternierende Quersumme** entsteht durch abwechslungweises Addieren und Subtrahieren der einzelnen Ziffern (für 1234 lautet diese 1 - 2 + 3 - 4 = -2).
 
 :::aufgabe Tabelle vervollständigen
+<Answer type="state" webKey="41644630-ee2c-4e5e-aa02-2855366cb7de" />
+
 Vervollständigen Sie die oben stehende Tabelle. Anstelle der in den Passwörtern enthaltenen Buchstaben können Sie die unten stehenden Zahlen einsetzen.
 
 <div className="slim-table no-table-header">
@@ -88,6 +90,8 @@ Nachfolgend eine weitere Liste mit Vorschlägen für Prüfsummen.
 </div>
 
 :::aufgabe Aufgabe Funktionen erkennen
+<Answer type="state" webKey="eba38e83-d4d1-457f-ae2f-ea6b7d956633" />
+
 Erkennen Sie, wie die Prüfsummen in den hintersten drei Spalten berechnet werden?
 
 <Answer type="text" webKey="ead7f2f2-e792-48c8-a6cc-994757348e75" />
@@ -96,14 +100,3 @@ Erkennen Sie, wie die Prüfsummen in den hintersten drei Spalten berechnet werde
 :::finding Wunsch: **Unumkehrbarkeit**
 Aus der Prüfsumme soll nicht auf das Passwort geschlossen werden können.
 :::
-
-:::aufgabe ⭐️ Zusatzaufgabe Sicheres Einloggen
-Wie funktioniert der Anmeldevorgang an den Computern der Schule, wenn Benutzername und Passwort von einem Server überprüft werden muss? Was wird in welcher Form übertragen?
-
-<Answer type="text" webKey="d2dcaf7f-9480-495f-9142-1f606e424069" />
-
-:::
-
-<Answer type="text" webKey="b146e1f3-ef8c-4ed7-ade2-428829f619fa" placeholder="Notizen..."/>
-
-

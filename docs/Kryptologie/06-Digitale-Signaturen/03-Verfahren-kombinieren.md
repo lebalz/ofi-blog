@@ -17,15 +17,16 @@ Aus diesem Grund müssen wir – ähnlich wie bei der asymmetrischen Verschlüss
 ## Hashwerte
 **Hashwerte** derselben Hashfunktion haben stets **dieselbe Länge**. Sie sind im Vergleich zum eingegebenen Text sehr kurz (wie der Fingerabdruck eines Menschen sehr klein ist im Vergleich zu all dem, was den Menschen mit diesem Fingerabdruck ausmacht).
 
-> Anstelle des gesamten Textes signieren wir nur den Hashwert, das beseitigt die beiden obengenannten Nachteile.
+> Anstelle des gesamten Textes signieren wir nur den Hashwert, was die beiden obengenannten Nachteile beseitigt.
 
 ## Digitale Signaturen richtig verwenden
-Wir versuchen, mehrere Verfahren zu kombinieren und deren Vorteile zu nutzen. Einerseits berechnen wir den Hashwert eines Dokuments, andererseits «verschlüsseln» wir nur diesen Hashwert asymmetrisch. Somit reduziert sich der Einsatz von asymmetrischer Verschlüsselung wiederum auf ganz kurze Werte. Zudem bleibt das Dokument intakt und stets lesbar.
+Wir versuchen, mehrere Verfahren zu kombinieren um deren Vorteile zu nutzen. Einerseits berechnen wir den Hashwert eines Dokuments, andererseits «verschlüsseln» wir nur diesen Hashwert asymmetrisch. Somit reduziert sich der Einsatz von asymmetrischer Verschlüsselung wiederum auf ganz kurze Werte. **Zudem bleibt das Dokument intakt und stets lesbar**.
 
 
 ![Digitale Signatur: Hashwert und asymmetrische Verschlüsselung](images/hash-asymm-signature-binary.svg)
 
 :::aufgabe Digitale Signaturen überprüfen
+<Answer type="state" webKey="cd131599-9400-4ba6-9ef2-688b4b1ea20a" />
 
 Überlegen Sie sich, wie man eine solche digital signierte Nachricht überprüfen kann. Zeichnen Sie die benötigten Schritte auf.
 

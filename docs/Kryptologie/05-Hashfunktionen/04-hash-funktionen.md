@@ -10,7 +10,7 @@ import HashSHA2 from '@site/src/components/VisualizationTools/Crypto/HashSHA2'
 
 # Hashfunktionen
 
-:::info
+:::info Hashfunktion
 «Eine Hashfunktion ist eine Abbildung, die eine grosse Eingabemenge auf eine kleinere Zielmenge abbildet.»
 :::
 
@@ -41,6 +41,7 @@ Es gibt verschiedene aktuelle Hashfunktionen. Nachfolgend ein Tool, welches SHA-
 <HashSHA2 />
 
 :::aufgabe
+<Answer type="state" webKey="3107459a-1598-4eec-b45d-4c2c539d721f" />
 
 1. Halten Sie den SHA-2 Hash ihres Namens und ihrer E-Mail Adresse fest.
 2. Wie viele Buchstaben ändern sich, wenn Sie einen einzigen Tippfehler machen? 
@@ -51,7 +52,7 @@ Es gibt verschiedene aktuelle Hashfunktionen. Nachfolgend ein Tool, welches SHA-
 
 
 :::finding
-Die letzten beiden Beispiele zeigen, dass bereits kleinste Änderungen zu komplett anderen Hashwerten führen. Kryptographische Hashfunktion sind so konstruiert, dass bei einer Änderung an einem Bit ca. 50% der Hashwert-Bits ändern.
+Die letzten beiden Beispiele zeigen, dass bereits kleinste Änderungen zu komplett anderen Hashwerten führen. Kryptographische Hashfunktion sind so konstruiert, dass bei einer Änderung an einem Bit min. 50% der Hashwert-Bits ändern.
 :::
 
 

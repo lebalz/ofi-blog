@@ -14,6 +14,8 @@ sidebar_custom_props:
 ![Angriff auf den öffentlichen Schlüssel](images/public-key-attack-1.svg)
 
 :::aufgabe Aufgabe Angriff auf den öffentlichen Schlüssel
+<Answer type="state" webKey="e4584855-e4f8-4c1c-b478-0b98b5e0bc78" />
+
 Alice schickt ihren öffentlichen Schlüssel (also ihr Vorhängeschloss) per Post an Bob. Überlege dir, was der bösartige Mallory anstellen könnte, um Alice und Bob zu überlisten.
 
 <Answer type="text" webKey="5b4c5a94-b1fc-4dd6-9c99-65c907b258d4" />
@@ -32,6 +34,8 @@ Wie können wir uns vor Man-in-the-Middle-Attacken schützen? Kann uns Trent hel
 ![Die Rolle von Trent](images/certificates-task.svg)
 
 :::aufgabe Aufgabe Zertifizierungsstellen
+<Answer type="state" webKey="7b69b108-866c-4f90-ab96-280d63db47f9" />
+
 Wie könnte Trent dafür sorgen, dass die öffentlichen Schlüssel besser überprüfbar sind?
 
 <Answer type="text" webKey="a2ef63f4-8f01-4e78-8135-1eb43e4a09ed" />
@@ -49,6 +53,6 @@ Trent ist bekannt und akzeptiert als Zertifizierungsstelle, alle kennen seinen �
 
 Da im Internet nicht offensichtlich ist, mit wem man kommuniziert, könnte sich Mallory als Alice ausgeben. Trent wird nur benötigt, um eine Absicherung zu erhalten, dass Alice's öffentlicher Schlüssel auch wirklich ihr gehört. Bei der Übermittlung des öffentlichen Schlüssels wird HTTPS verwendet, so dass sich Mallory nicht dazwischenschleichen kann. Auch Alice und Bob könnten HTTPS verwenden, doch dann weiss Bob immer noch nicht, ob er nicht fälschlicherweise eine Verbindung mit Mallory statt Alice aufgebaut hat...
 
-Das Aufbauen einer HTTPS Verbindung verwendet übrigens auch die Integritätsprüfung. Durch eine signierte Nachricht wird die IP Adresse des Servers überprüft. Aufgrund der Signatur kann die Nachricht nicht von Mallory stammen. Anschliessend wird gemäss dem Farbmischprinzip ein gemeinsamer Sitzungsschlüssel für die Verschlüsselung der Verbindung erzeugt. So ist es für Mallory unmöglich, sich zwischen Trent und Bob zu stellen - sofern Bob die richtige IP-Adresse zu Trent besitzt.
+Das Aufbauen einer HTTPS Verbindung verwendet übrigens auch die Integritätsprüfung. Durch eine signierte Nachricht wird die IP Adresse des Servers überprüft. Aufgrund der Signatur kann die Nachricht nicht von Mallory stammen, da er keinen Zugriff auf den Verbindungsserver hat und das fälschen der IP-Adresse wegen der Signatur nicht möglich ist. Anschliessend wird gemäss dem Farbmischprinzip ein gemeinsamer Sitzungsschlüssel für die Verschlüsselung der Verbindung erzeugt. So ist es für Mallory unmöglich, sich zwischen Trent und Bob zu stellen - sofern Bob die richtige IP-Adresse zu Trent besitzt.
 
 

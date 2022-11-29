@@ -7,10 +7,11 @@ import PasswordChecker from '@site/src/components/PasswordChecker'
 
 # Sichere Passwörter
 
+<Answer type="state" webKey="0196ebad-17e3-4d9a-96f6-8a7650e378f4">Gelesen?</Answer>
+
 ![--width=500px](images/xkcd_password_strength.png)
 
 <PasswordChecker />
-
 
 ## Tipps für gute Passwörter
 
@@ -47,4 +48,3 @@ Für gängige Passwort-Manager gibt es auch Browser-Plugins, welche das Ausfüll
 - [KeePass](https://keepass.info/) - auch Open Source
 - [LastPass](https://www.lastpass.com/)
 
-<Answer type="text" webKey="9568cbe5-e9dc-4471-9e5e-03ebf92aa10a" placeholder="Notizen..." />

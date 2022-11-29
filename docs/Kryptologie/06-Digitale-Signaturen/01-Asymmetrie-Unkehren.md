@@ -8,70 +8,27 @@ sidebar_custom_props:
 
 
 # Asymmetrie umkehren
-Wir erinnern uns an das Prinzip der reinen [asymmetrische Verschlüsselung](../04-Asymmetrisch/03-asymmetrie.md):
 
-![](../04-Asymmetrisch/images/asymm-encryption.svg)
+:::flex --min-width=250px
+![Asymmetrische Verschlüsselungs Box](images/asymm-box.png)
+***
+![Privater Schlüssel (rechts drehend)](images/driver-private.png)
+***
+![Öffentlicher Schlüssel (links drehend)](images/driver-public.png)
+:::
 
-## Gedankenexperiment
-Was würde geschehen, wenn wir den Vorgang ändern?
+:::aufgabe aus dem Unterricht...
+<Answer type="state" webKey="41e7d6d6-2425-40f4-9976-f486ec9eb2cf" />
 
-Bei der asymmetrischen Verschlüsselung gibt es zwei Schlüssel, den öffentlichen und den privaten. Normalerweise verwendet Alice zur Verschlüsselung den öffentlichen Schlüssel von Bob. Bob wieder entschlüsselt den übermittelten Geheimtext mit seinem privaten Schlüssel.
+Halten Sie kurz fest, wie die Boxen und ihre Schlüssel funktionieren.
 
-> Was geschieht, wenn Alice den Klartext mit **ihrem eigenen privaten** Schlüssel «verschlüsselt»?
-
-Dies lässt sich mit Schloss und Schlüssel leider nicht mehr sinnvoll und verständlich darstellen. Wir stellen uns die asymmetrische Ver-/Entschlüsselung einfach als rein mathematische Angelegenheit vor:
-
-Der Verschlüsselungsfunktion ($E$) wird normalerweise der Klartext ($p$) und der öffentliche Schlüssel ($e$) übergeben, dabei entsteht der Geheimtext ($c$):
-
-$$
-c = E(p, e)
-$$
-
-Die Entschlüsselungsfunktion ($D$) berechnet aus dem Geheimtext ($c$) und dem privaten Schlüssel ($d$) wieder den Klartext ($p$):
-
-$$
-p = D(c, d)
-$$
-
-:::aufgabe Aufgabe Gedankenexperiment
-a. Was erhalten wir, wenn wir der Verschlüsselungsfunktion anstelle des öffentlichen Schlüssels von Bob **den privaten Schlüssel d von Alice** übergeben?
-$$
-? = E(p, d)
-$$
-
-b. Wie lässt sich dieses «Produkt» wieder in einen Klartext verwandeln?
-
-$$
-p = ?(?, ?)
-$$
-
-<Answer type="text" webKey="a9f45069-3876-48ad-90db-6a2d9c1aa2ad">
-
-a.)
-
-b.)
-
-</Answer>
-
-<Solution webKey="7ff60a15-ccaa-4ab4-98f5-a908c6b89c6e">
-
-a. Es entsteht ebenso ein «spezieller Geheimtext», also etwas, das nicht direkt verstanden werden kann, wir bezeichnen dieses Produkt mit dem Buchstaben $s$.
-
-$$
-s = E(p, d)
-$$
-
-b. Da dieser spezielle «spezielle Geheimtext» $s$ mit dem privaten Schlüssel von Alice «verschlüsselt» wurde, kann er nur mit dem zugehörigen öffentlichen Schlüssel $e$ von Alice wieder in Klartext umgewandelt werden.
-
-$$
-p = D(s, e)
-$$
-
-</Solution>
+<Answer type="text" webKey="ec68df8d-dc5d-467d-bc36-39cc0daf0357" />
 
 :::
 
 :::aufgabe Aufgabe Bedeutung des Gedankenexperimentes
+<Answer type="state" webKey="971ad389-7172-49a2-b8b8-1e47d83a40d4" />
+
 a. Was bedeutet es, wenn jemand einen Text mit seinem eigenen privaten Schlüssel «verschlüsselt», so dass der Geheimtext nur mit dem zugehörigen öffentlichen Schlüssel «entschlüsselt» werden kann?
 
 b. Was sagt die Tatsache, dass man einen solchen Geheimtext mit einem fremden (nicht dem eigenen) öffentlichen Schlüssel entschlüsseln kann, aus?
@@ -104,6 +61,8 @@ Wenn Bob die Nachricht mit dem öffentlichen Schlüssel von Alice entschlüsseln
 :::
 
 :::aufgabe Aufgabe mehrere Leute
+<Answer type="state" webKey="9a23f76b-2500-459d-8ffc-dc4da5d06a6a" />
+
 Überlegen Sie sich, wie ein signiertes Dokument von mehr als zwei Personen angeschaut und überprüft wird. Welche Schlüssel werden verwendet?
 
 <Answer type="text" webKey="6e6c19e8-7a15-41cc-83b4-ca2987de22d1" />
