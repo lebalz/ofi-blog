@@ -39,12 +39,12 @@ Die Grundidee ist folgende:
 
 Das grosse Problem "ganze Fläche mit beliebigen Grenzen einfärben" wird zunächst reduziert auf das kleinstmögliche Problem, einen "einzelnen Pixel einfärben". Dafür programmieren wir eine Funktion.
 
-Diese Funktion wird nun aber wie folgt ergänzt:
+Diese Funktion wird nun wie folgt ergänzt:
 Im Anschluss an das Einfärben des einen Pixels ruft sich die Funktion für die Nachbarpixel selber wieder auf, so dass auch diese eingefärbt werden. Das geht immer so weiter, bis alle Pixel eingefärbt sind.
 
-Diese sich selber Aufrufen wird als Rekursion bezeichnet.
+Diese sich selber Aufrufen wird als **Rekursion** bezeichnet.
 
-Ganz wichtig dabei ist, zu verstehen, dass der erste Aufruf der Funktion erst dann beendet ist, wenn alle weiteren Aufrufe von sich selber beendet sind. Es entsteht bei der Rekursion also so etwas, wie eine Kette von hängigen Funktionsaufrufen, welche sich erst dann auflöst, wenn am Ende die Funktion sich nicht weiter selber aufruft.
+Ganz wichtig dabei ist, zu verstehen, dass der erste Aufruf der Funktion erst dann beendet ist, wenn alle weiteren Aufrufe von sich selber beendet sind. Es entsteht bei der Rekursion also so etwas wie eine Kette von hängigen Funktionsaufrufen, welche sich erst dann auflöst, wenn am Ende die Funktion sich nicht weiter selber aufruft.
 
 Es braucht in der Funktion also eine Entscheidung, ob weitere Aufrufe der Funktion nötig sind. Beim Einfärben der Pixel, ist dies der Fall, wenn wir auf einen Pixel stossen, der die Farbe des Randes trägt und somit nicht eingefärbt werden muss.
 
@@ -57,5 +57,5 @@ Der hier skizziert Algorithmus heisst Floodfill-Algorithmus. Eine schöne Beschr
 
 Studieren Sie den Abschnitt "Rekursive Implementierung" im Artikel und entscheiden Sie, welche der beiden Varianten für das NumTrip Spiel benötigt wird. Passen Sie dann die vorgeschlagene Python-Implementierung auf Ihre Situation im NumTrip-Spiel an.
 
-**Wichtig**: Vorerst "löschen" wir nur den Zelleninhalt aller Zellen, die denselben Zahlenwert enthalten wie die ausgewählte Zelle und natürlich über gleichwertige Zellen verbunden sind.
+**Wichtig**: Vorerst "löschen" wir nur den Zelleninhalt aller Zellen Nachbarszellen (und deren Nachbarszellen), die denselben Zahlenwert enthalten wie die ausgewählte Zelle.
 :::
