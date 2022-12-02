@@ -10,6 +10,15 @@ import {SortTimeTableByDate} from '@site/src/helpers/time';
 import hs2022 from "./26P_HS2022.json"
 import hk2022 from "./26P-HK_HS2022.json"
 import byodTests from "./26P_byod_daten.json"
+import Snowfall from 'react-snowfall';
+
+<Snowfall
+  style={{
+      position: 'fixed',
+      width: '100vw',
+      height: '100vh',
+  }}
+/>
 
 # 26P Informatik
 

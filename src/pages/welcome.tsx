@@ -9,6 +9,7 @@ import { Content } from "@theme/BlogPostPage";
 import BlogPostItem from "@theme/BlogPostItem";
 // @ts-ignore
 import { BlogPostProvider } from "@docusaurus/theme-common/internal";
+import Snowfall from 'react-snowfall';
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -84,6 +85,12 @@ export default function Home({ recentPosts }: Props) {
                     </div>
                 </div>
             </main>
+            <Snowfall
+                style={{
+                    position: 'fixed',
+                    width: '100vw',
+                    height: '100vh',
+                }} />
         </Layout>
     );
 }
