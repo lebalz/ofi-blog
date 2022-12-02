@@ -46,6 +46,8 @@ sidebar_custom_props:
 
 [scg](https://erzbe-my.sharepoint.com/personal/andres_scheidegger_gbsl_ch/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fandres%5Fscheidegger%5Fgbsl%5Fch%2FDocuments%2FIN)
 
+[A. Helmy](https://sites.google.com/view/praktikuminformatik/agenda-4-gym-ef)
+
 ## Software
 
 - Python
