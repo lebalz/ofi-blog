@@ -80,7 +80,7 @@ Im vorherigen Schritt wurden alle gleichzahligen Nachbarszellen (und deren Nachb
 
 </GTabs>
 
-3. Alle Zellen werden erneut durchgegangen. Ist eine Zelle leer, so wird eine zufällige ganze Zahl oder 1 als Zellenwert festgelegt. Es kommen also die Zahlen `[1, 2, 4]`, evtl. auch noch die `8` in Frage. Lesen Sie unter [👉 Zufällige Zahlen](/Programmieren/Python/random) nach, welche Möglichkeiten zum Erzeugen von zufälligen Zahlen es unter Python gibt.
+3. Alle Zellen werden erneut durchgegangen. Ist eine Zelle leer, so wird eine zufällige ganze Zahl oder 1 als Zellenwert festgelegt. Es kommen also die Zahlen `[1, 2, 4]`, evtl. auch noch die `8` in Frage. Lesen Sie unter [👉 Zufällige Zahlen](/24ef/Programmieren/Python/random) nach, welche Möglichkeiten zum Erzeugen von zufälligen Zahlen es unter Python gibt.
 
 :::aufgabe Aufgabe
 <Answer type="state" webKey="7c436f14-0f29-4795-af02-4e2002e590f4" />
