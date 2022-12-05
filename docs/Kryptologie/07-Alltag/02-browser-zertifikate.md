@@ -9,14 +9,14 @@ sidebar_custom_props:
 # Browserzertifikate
 Während früher sämtliche Informationen im Internet unverschlüsselt übertragen worden sind, werden die meisten Verbindungen heutzutage mit kryptographischen Mitteln geschützt.
 
-Insbesondere nutzen momentan (*März 2021*) gemäss W3Techs[^1] über 70% aller Webseiten **HTTPS**. HTTPS ist eine Erweiterung des HyperText Transfer Protocols, der Buchstabe «S» steht für Secure.
+Insbesondere nutzen momentan (*Dezember 2022*) gemäss W3Techs[^1] über 80% aller Webseiten **HTTPS**. HTTPS ist eine Erweiterung des HyperText Transfer Protocols, der Buchstabe «S» steht für Secure.
 
 Damit wird der Datenverkehr in **beiden Richtungen** verschlüsselt:
 - alle Daten, die vom Webserver zum Browser übertragen werden (also der Inhalt der Seite wie z.B. Text, Bilder, Videos, heruntergeladene Dateien, ...)
 - alle Daten, die vom Browser zu Webserver übertragen werden (also ausgefüllte Formulare wie z.B. Benutzernamen und Passwörter, aber auch alle Texte, die wir eingeben sowie sämtliche hochgeladenen Dateien, ...)
 
 ## Symmetrische und asymmetrische Verschlüsselung
-Die **Daten werden symmetrisch** verschlüsselt, der **Sitzungsschlüssel asymmetrisch**.
+Die **Daten werden symmetrisch** mit einem Sitzungsschlüssel (mit begrenzter Gültigkeitsdauer) verschlüsselt, wobei der **Sitzungsschlüssel** der **asymmetrisch** verschlüsselt übertragen wird.
 
 Da die Browser nicht jeden einzelnen öffentlichen Schlüssel der Webseiten (dies sind gemäss internet live stats hunderte Millionen[^2]) kennen können, vertrauen sie ausgewählten **Zertifizierungsstellen**. Der öffentliche Schlüssel einer Webseite wird von einer Zertifizierungsstelle digital signiert. Das so entstandene Zertifikat wird beim Verbindungsaufbau übertragen und kann vom Browser überprüft werden.
 
@@ -28,6 +28,8 @@ Beim Klicken auf das Schloss können «Weitere Informationen» zur Verbindung an
 ![Informationen zur Webseite](images/certs-ofi.gbsl.website.png)
 
 :::aufgabe Webseitenzertifikat
+<Answer type="state" webKey="fb447cfb-52f6-4930-b357-7d0144f8a39b" />
+
 Was finden Sie alles über die Zertifikate der Webseite des Gymnasiums Biel-Seeland heraus?
 
 <Answer type="text" webKey="e39bd1c8-631e-4b4c-b2de-5569e50937d5" />
@@ -35,6 +37,7 @@ Was finden Sie alles über die Zertifikate der Webseite des Gymnasiums Biel-Seel
 :::
 
 :::aufgabe Kryptographische Details
+<Answer type="state" webKey="87d7d729-f7ce-4ffa-86d8-d7bc0fc6274e" />
 Im Screenshot oben sehen Sie die technische Angabe `TLS_AES_128_GCM_SHA256, 128-Bit Schlüssel, TLS 1.3`. Finden Sie heraus, was die einzelnen Teile aussagen?
 
 <Answer type="text" webKey="ab1dae9c-54af-48bf-a390-fdccd9bd6471" />
@@ -42,12 +45,16 @@ Im Screenshot oben sehen Sie die technische Angabe `TLS_AES_128_GCM_SHA256, 128-
 :::
 
 :::aufgabe Zertifizierungsstellen
+<Answer type="state" webKey="6945e341-8a48-4eaf-bc21-204e3de3456e" />
+
 Finden Sie die im Browser gespeicherten «vertrauenswürdigen Zertifizierungsstellen»?
 
 <Answer type="text" webKey="caf647b0-ba95-4cf3-8824-150558348c45" />
 :::
 
 :::aufgabe Zertifikatswarnungen
+<Answer type="state" webKey="0bf9ab88-9c27-44b3-bc6b-3fea559bea1f" />
+
 Besuchen Sie die Webseite [BadSSL](https://badssl.com/) und testen Sie mit verschiedenen Browsern verschiedene Konfigurationen. So lernen Sie die mögliche Zertifikatswarnungen kennen.
 
 <Answer type="text" webKey="893cdb6f-75bd-4bfd-8009-0f84ea0360af" />
