@@ -229,6 +229,11 @@
       "from": "docs/Programmieren-1/03-Python/images/",
       "to": "versioned_docs/version-26e/03-Programmieren-1/images",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/050-repetition/",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/10-repetition",
+      "ignore": []
     }
   ],
   "26P": [
@@ -340,6 +345,11 @@
       "from": "docs/Programmieren-1/03-Python/images/",
       "to": "versioned_docs/version-26P/03-Programmieren-1/images",
       "ignore": []
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/050-repetition/",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/10-repetition",
+      "ignore": []
     }
   ],
   "24ef": [
@@ -374,7 +384,7 @@
       "ignore": [
         "800-python-scripts.md",
         "051-art.md",
-        "050-repetition.md",
+        "050-repetition",
         "index.md"
       ]
     },
@@ -393,8 +403,7 @@
     {
       "from": "docs/EF-Python/03-Python/",
       "to": "versioned_docs/version-24ef/01-Programmieren/04-Python",
-      "ignore": [
-      ]
+      "ignore": []
     },
     {
       "from": "docs/EF-Software-Engineering/",

@@ -12,7 +12,23 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 1. Was ist ein Algorithmus?
 2. Welche 5. Strukturelemente enthält ein Algorithmus?
 3. Erstellen Sie einen Algorithmus für das Zusammenfalten eines T-Shirts.
+
 <Answer type="text" webKey="fc3fa312-7e89-421d-96eb-a799f502d1e1" />
+<Solution webKey="2ad42926-ef27-4cec-a3ee-733ad08d02cd">
+
+1. Ein Algorithmus besteht aus einer **Folge von Schritten**, deren korrekte Abarbeitung die gestellte **Aufgabe löst**. Die Aufgabe muss vom Algorithmus in einer **endlichen** Anzahl von Schritten gelöst werden.
+2. Sequenz, Wiederholung, Bedingte Ausführung, Unterprogramm, Parameter
+3. T-Shirt zusammenlegen:
+   1. Falls Innenseite aussen ist: T-Shirt drehen, so dass Aussenseite aussen ist.
+   2. T-Shirt mit der Vorderseite nach Unten auf einen Tisch legen
+   3. Rechte Seite zu 1/3 einfalten
+   4. Linke Seite zu 1/3 einfalten
+   5. T-Shirt halbieren
+
+    ![Und gemäss Anleitung fortfahren](images/T-Shirt.webp)
+   
+
+</Solution>
 
 ## Code Lesen
 
@@ -203,29 +219,41 @@ print('🌲 ' * 24)
 
 Schreiben Sie einen Befehl `dreieck`, der ein Dreieck in Textform ausgibt. Die Grösse des Dreiecks soll als Parameter übergeben werden können.
 
+Beispiele:
+:::cards
+```py
+dreieck(1)
+```
+ergibt
+```
+*
+```
+***
+```py
+dreieck(2)
+```
+ergibt
+```
+*
+* *
+```
+***
+```py
+dreieck(3)
+```
+ergibt
+```
+*
+* *
+* * *
+```
+:::
+
+
 ```py live_py title=dreieck.py versioned id=7fa89fa8-b8ae-4939-94de-df8e00ae57d4
 
 ```
 
-Prüfen Sie ihr Programm mit folgendem Code:
-```py
-dreieck(1)
-dreieck(3)
-dreieck(5)
-```
-
-sollte die folgende Ausgabe erzeugen:
-```
-*
-* 
-* *
-* * *
-* 
-* *
-* * *
-* * * *
-* * * * *
-```
 
 <Solution webKey="9dd6cc59-3264-4243-b654-d1ddcda0912d">
 
