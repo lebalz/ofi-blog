@@ -119,7 +119,6 @@
       "from": "docs/Kryptologie/",
       "to": "versioned_docs/version-25h/08-Kryptologie",
       "ignore": [
-        "07-Alltag",
         "01-Lernziele-reduced.md"
       ],
       "open": true
