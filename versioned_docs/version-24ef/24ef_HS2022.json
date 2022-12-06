@@ -43,23 +43,23 @@
         "cells": ["11.11.2022","Programmieren", "Informatik Biber, Eigene Website"]
     },
     {
-        "cells": ["18.11.2022","Programmieren",""]
+        "cells": ["18.11.2022","Programmieren","Strings, NumTrip"]
     },
     {
-        "cells": ["25.11.2022","Programmieren",""]
+        "cells": ["25.11.2022","Programmieren","Try-Except, Input Validation"]
     },
     {
-        "cells": ["02.12.2022","Programmieren",""]
+        "cells": ["02.12.2022","Programmieren","NumTrip"]
     },
     {
-        "cells": ["09.12.2022","Programmieren",""]
+        "cells": ["09.12.2022","Programmieren","Prüfungsbesprechung, NumTrip"]
     },
     {
         "cells": ["16.12.2022","Programmieren","Test Programmieren"],
         "type": "test"
     },
     {
-        "cells": ["23.12.2022","Programmieren",""]
+        "cells": ["23.12.2022","Programmieren","NumTrip"]
     },
     {
         "cells": ["28.12.2022","Winterferien",""],
@@ -72,7 +72,7 @@
         "icon": "mdi-weather-snowy-heavy"
     },
     {
-        "cells": ["13.01.2023","Programmieren",""]
+        "cells": ["13.01.2023","Programmieren","NumTrip"]
     },
     {
         "cells": ["20.01.2023","Programmieren","Abgabe NumTrip und Lernjournal"],
@@ -84,6 +84,10 @@
     },
     {
         "cells": ["03.02.2023","Semesterende",""],
+        "type": "event"
+    },
+    {
+        "cells": ["24.02.2023","IoT Praktikum: Ganztags","Löten, Programmieren, Node-Red"],
         "type": "event"
     }
 ]

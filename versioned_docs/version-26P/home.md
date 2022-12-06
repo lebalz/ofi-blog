@@ -9,7 +9,6 @@ import Table from "@site/src/components/Table";
 import {SortTimeTableByDate} from '@site/src/helpers/time';
 import hs2022 from "./26P_HS2022.json"
 import hk2022 from "./26P-HK_HS2022.json"
-import byodTests from "./26P_byod_daten.json"
 import Snowfall from 'react-snowfall';
 
 <Snowfall
@@ -28,19 +27,6 @@ import Snowfall from 'react-snowfall';
 [👉 Hier gehts zur Prüfung](/text-templates/01-p26)
 
 </Solution>
-:::
-
-:::info BYOD-Test Prüfungsdaten
-Bereiten Sie sich auf das angegebene Datum für die BYOD-Prüfung vor.
-:::details Prüfungsliste
-<Table
-  header={["Name", "Halbklasse", "Datum"]}
-  compact
-  selectable
-  rows={byodTests}
-  order={SortTimeTableByDate(2)}
-/>
-:::
 :::
 
 

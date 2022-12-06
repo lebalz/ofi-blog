@@ -55,12 +55,12 @@
         "cells": ["08.12.2022","B","Programmieren 1","Variablen, Eingabe & Ausgabe"]
     },
     {
-        "cells": ["15.12.2022","A & B. 14:00-15:30","Programmieren","Probe (schriftlich & praktisch)"],
-        "type": "test"
+        "cells": ["15.12.2022","A&B Frei","",""],
+        "type": "holiday"
     },
     {
-        "cells": ["22.12.2022","A&B Frei","",""],
-        "type": "holiday"
+        "cells": ["22.12.2022","⚠️ A & B. 14:00-15:30","Programmieren","Probe (schriftlich & praktisch)"],
+        "type": "test"
     },
     {
         "cells": ["29.12.2022","Winterferien","",""],
