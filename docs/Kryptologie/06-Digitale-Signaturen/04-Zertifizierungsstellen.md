@@ -16,7 +16,7 @@ sidebar_custom_props:
 :::aufgabe Aufgabe Angriff auf den öffentlichen Schlüssel
 <Answer type="state" webKey="e4584855-e4f8-4c1c-b478-0b98b5e0bc78" />
 
-Alice schickt ihren öffentlichen Schlüssel (also ihr Vorhängeschloss) per Post an Bob. Überlege dir, was der bösartige Mallory anstellen könnte, um Alice und Bob zu überlisten.
+Alice schickt ihren öffentlichen Schlüssel (also ihr Vorhängeschloss) per Post an Bob. Überlegen Sie sich, was der bösartige Mallory anstellen könnte, um Alice und Bob zu überlisten.
 
 <Answer type="text" webKey="5b4c5a94-b1fc-4dd6-9c99-65c907b258d4" />
 <Solution webKey="c6892ee0-018c-498f-9bbd-185f0e3038d2">
