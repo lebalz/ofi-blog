@@ -28,6 +28,11 @@
               "type": "link",
               "label": "HK07 Variablen",
               "href": "pathname:///p/Programmieren/07-Variablen/presentation.html"
+            },
+            {
+              "type": "link",
+              "label": "HK08 Verzweigungen ⑂",
+              "href": "pathname:///p/Programmieren/08-Conditions/presentation.html"
             }
           ]
         }
