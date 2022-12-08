@@ -402,7 +402,10 @@
     {
       "from": "docs/EF-Python/03-Python/",
       "to": "versioned_docs/version-24ef/01-Programmieren/04-Python",
-      "ignore": []
+      "ignore": [
+        "20-lernziele.md",
+        "21-uebungsprobe.md"
+      ]
     },
     {
       "from": "docs/EF-Software-Engineering/",
