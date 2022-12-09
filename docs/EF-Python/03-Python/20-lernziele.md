@@ -5,7 +5,7 @@ sidebar_custom_props:
 # Lernziele
 
 Dauer
-: ca. 90 Minuten
+: zwei Teile, ca. 90 Minuten
 Form
 : schriftlicher & praktischer Teil
 
@@ -25,10 +25,15 @@ Praktischer Teil
 - Funktionen
 - Python Scopes: Lokale und Globale Variablen
 - Strings
-- Umgang mit Fehlern, Try-Catch
+- Umgang mit Fehlern, Try-Catch, Eingabe
+- Besprochene Beispiele / Code Snippets
 :::
 
 :::success Lernziele
-Sie können diese Python-Konzepte in kleinen Programmen (vergleichbar mit Snippets) einsetzen
-Sie können mit VSC umgehen
+- Sie können diese Python-Konzepte in kleinen Programmen (vergleichbar mit Code-Snippets) einsetzen
+- Sie können Python Programme lesen, interpretieren und abändern
+- Sie können unbekannte Befehle in gegebenen Programm-Ausschnitten im Internet recherchieren und anwenden
+- Sie können mit VS Code umgehen, Projekte/Ordner öffnen und mit dem Python-Debugger umgehen
+- Sie können Fehlermeldungen interpretieren, die Fehler-Ursache identifizieren und allenfalls beheben
+- Sie schreiben selber Funktionen mit Parametern, Rückgabewerten, globalen und lokalen Variablen
 :::

@@ -184,3 +184,53 @@ square(5, 2)
     b. Bauen Sie den Code so um, dass statt der globalen Variablen Funktionsparameter und Rückgabewerte verwendet werden, ohne dabei die Funktionalität des Programms zu verändern.
 
 
+
+<Solution webKey="7b727a90-474e-4c58-9db2-595ab0a79ac6">
+
+```py live_py slim
+from browser import alert
+_print = print
+def print(*vals):
+    alert(', '.join([str(item) for item in vals]))
+### PRE
+
+from random import randint
+
+def to_int(value):
+    try:
+        return int(value)
+    except:
+        return -1
+
+
+def is_valid(value):
+    if value < 0 or value > 100:
+        return False
+    return True
+    
+
+def abfrage(runde):
+    valid = False
+    while not valid:
+        antwort_raw = input(f'{runde}. Versuch: Gib eine ganze Zahl zwischen 0 und 100 ein: ')
+        zahl = to_int(antwort_raw)
+        valid = is_valid(zahl)
+    return zahl
+
+def play():
+    gesucht = randint(0, 100)
+    runde = 1
+    geraten = -1
+    while geraten != gesucht:
+        geraten = abfrage(runde)
+        runde = runde + 1
+        if geraten > gesucht:
+            print('Die eingegebene Zahl ist zu gross')
+        elif geraten < gesucht:
+            print('Die eingegebene Zahl ist zu klein')
+    print(f'Bravo, du hast in {runde} Runden die gesuchte Zahl {gesucht} gefunden.')
+
+play()
+```
+
+</Solution>
