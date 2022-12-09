@@ -26,3 +26,5 @@ bin/brython-libs/*
 .uuids
 
 bin/*/feedbacks
+
+.history
