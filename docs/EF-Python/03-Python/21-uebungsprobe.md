@@ -6,6 +6,17 @@ sidebar_custom_props:
 
 1. [Schriftlich] Ein Programm soll Quadrate erzeugen, wobei die Breite und die Höhe variabel konfigurierbar sein soll. Erstellen Sie einen Top-Down Entwurf des Problems.
 
+<Solution webKey="7b727a90-474e-4c58-9db2-595ab0a79ac6">
+
+
+```mermaid
+graph TD
+    A[Quadrat] --> B[Zeichne durchgehende Zeile]
+    A --> C[Zeichne Rand-Zeilen]
+```
+
+</Solution>
+
 
 Verschiedene Konfigurationen der Ausgabe.
 
@@ -33,7 +44,7 @@ __5 x 3__
 :::
 
 
-2. [Schriftlich] Geben Sie jeweils die Ausgabe an:
+1. [Schriftlich] Geben Sie jeweils die Ausgabe an:
 
 a.)
 ```py
