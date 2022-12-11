@@ -13,7 +13,7 @@ sidebar_custom_props:
 - Sie wissen, dass moderne symmetrische Verfahren mit Bitfolgen anstelle von Buchstaben arbeiten und mathematisch viel komplexer sind.
 - Sie erkennen das Problem des Schlüsselaustauschs bei symmetrischen Verfahren.
 - Sie kennen **Man-in-the-Middle-Angriffe** und verstehen, dass auch öffentliche Schlüssel auf ihre Echtheit überprüft werden müssen.
-- Sie begreifen **asymmetrische** Verfahren mit ihren Schlüsselpaaren als Hilfsmittel für einen sicheren Austausch (z.B. Vorhängeschloss/Schlüssel-Analogie).
+- Sie begreifen **asymmetrische** Verfahren mit ihren Schlüsselpaaren als Hilfsmittel für einen sicheren Austausch (z.B. Vorhängeschloss/Schlüssel-Analogie oder Box mit einem Verschluss zum schliessen und einem zum öffnen).
 - Sie verstehen, dass **Zertifikate** zur Bestätigung der Echtheit von öffentlichen Schlüsseln durch eine vertrauenswürdige Stelle mit Hilfe einer digitalen Signatur (z.B. bei HTTPS) verwendet werden.
 :::
 
