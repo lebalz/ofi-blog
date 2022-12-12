@@ -21,12 +21,6 @@ import Snowfall from 'react-snowfall';
 
 # 26P Informatik
 
-:::success Probe Programmieren 1
-
-[👉 Zur Prüfung](/26P/Programmieren-1/Probe/ProbeP)
-
-:::
-
 :::success Word Probe
 <Solution webKey="5ba6b51b-db2a-461c-a3d1-ac934806624f" open title="Link zur Probe">
 
