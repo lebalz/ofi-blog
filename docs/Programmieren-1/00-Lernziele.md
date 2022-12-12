@@ -9,6 +9,10 @@ sidebar_custom_props:
 Die Prüfung besteht aus zwei Teilen:
 - schriftlicher Teil auf Papier - keine Hilfsmittel erlaubt.
 - praktischer Teil auf dem Laptop - open book, jegliche Hilfsmittel inkl. Google sind erlaubt, **wobei die direkte Kommunikation mit anderen Personen oder der Austausch von Informationen untereinander nicht erlaubt ist**.
+- Relevant für die Prüfung sind die Kapitel
+  - Algorithmen: Theorie + Beispiele inkl. RoboZZle
+  - Turtlegrafik Abschnitte 1 bis und mit 7, inkl. Übungen
+  - Grüfnisch
 
 :::info Lernziele Algorithmen
 - Sie können erklären, was ein Algorithmus ist.
@@ -28,10 +32,12 @@ Die Prüfung besteht aus zwei Teilen:
 - Wie wissen, dass ein Python-Programm grundsätzlich sequentiell (d.h. zeilenweise) ausgeführt wird.
 - Sie können Befehle aus anderen Bibliotheken importieren (`import`).
 - Sie verwenden `for`-Schleifen, um Befehlssequenzen zu wiederholen.
-- Sie können eigene Unterprogramme / Befehle definieren (`def`).
-- Sie können Unterprogramme mit einem oder mehreren **Parametern** definieren und aufrufen.
+- Sie können eigene **Unterprogramme** / Befehle definieren (`def`).
+- Sie können **Unterprogramme** mit einem oder mehreren **Parametern** definieren und aufrufen.
 - Sie wissen, was Kommentare (#) sind und können Programme kommentieren.
 - Sie wissen was eine Variable ist und können diese verwenden.
+- Sie können Struktogramme lesen und verstehen
+- Sie können **Struktogramme** in ein Programm übersetzen, bzw. ein Programm in ein Struktogramm überführen
 :::
 
 :::info Lernziele Turtlegrafik

@@ -16,6 +16,7 @@
 .env.production.local
 .data*.json
 *.tmp.py
+*.tmp.*
 
 npm-debug.log*
 yarn-debug.log*
