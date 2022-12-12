@@ -26,7 +26,7 @@ Das Programm zeichnet eine Sonne mit 11 Strahlen.
 2. Setzen Sie die Stiftdicke auf `7` und die Stiftfarbe auf rot.
 3. Füllen Sie die Sonne mit Ihrer Lieblingsfarbe (aber nicht mit Rot) aus.
 
-```py live_py title=aufgabe1.py id=f9d50886-1735-46d9-a02c-d6fee5f9f5ad versioned
+```py live_py title=aufgabe1.py id=f9d50886-1735-46d9-a02c-d6fee5f9f5ad versioned readonly
 from turtle import *
 
 speed(0)
@@ -90,7 +90,7 @@ for i in range(11):
 ]} />
 :::
 
-```py live_py title=aufgabe2.py versioned id=f62c8ac0-bb7f-4603-917d-d3728e5f06de
+```py live_py title=aufgabe2.py versioned id=f62c8ac0-bb7f-4603-917d-d3728e5f06de readonly
 from turtle import * 
 ```
 
@@ -103,7 +103,7 @@ Finden und korrigieren Sie alle Fehler, so dass die folgende Ausgabe entsteht. E
 
 ![Dänische Flagge](images/daenemark.svg)
 
-```py live_py title=aufgabe3.py id=353cb240-4db1-482b-ad29-b59266226a03 versioned
+```py live_py title=aufgabe3.py id=353cb240-4db1-482b-ad29-b59266226a03 versioned readonly
 from turtle import *
 
 def rechteck(breite, höhe):
@@ -146,7 +146,7 @@ Die Höhe eines Zick-Zacks beträgt `20` Einheiten, die lange Seite ist `40` Ein
 
 ![](images/increasing.svg)
 
-```py live_py title=aufgabe4.py versioned id=d19a5323-efdf-4f41-8b17-2bdfbb469813
+```py live_py title=aufgabe4.py versioned id=d19a5323-efdf-4f41-8b17-2bdfbb469813 readonly
 from turtle import *
 ```
 
@@ -161,7 +161,7 @@ Auf https://de.acervolima.com/zeichnen-sie-herz-mit-turtle-graphics-in-python/ f
 - Schreiben Sie Ihren eigenen Namen in das Herz
 - Machen Sie den Rand einen Stift der Breite `10` 
 
-```py live_py title=zusatzaufgabe.py id=f2b7f7be-182e-43c1-bd83-d04dce67d018 versioned
+```py live_py title=zusatzaufgabe.py id=f2b7f7be-182e-43c1-bd83-d04dce67d018 versioned readonly
 
 ```
 
