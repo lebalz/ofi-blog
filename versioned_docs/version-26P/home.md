@@ -9,15 +9,9 @@ import Table from "@site/src/components/Table";
 import {SortTimeTableByDate} from '@site/src/helpers/time';
 import hs2022 from "./26P_HS2022.json"
 import hk2022 from "./26P-HK_HS2022.json"
-import Snowfall from 'react-snowfall';
+import Winter from "@site/src/components/Theme/Winter";
 
-<Snowfall
-  style={{
-      position: 'fixed',
-      width: '100vw',
-      height: '100vh',
-  }}
-/>
+<Winter />
 
 # 26P Informatik
 
