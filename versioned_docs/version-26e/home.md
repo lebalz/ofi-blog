@@ -12,6 +12,7 @@ import hk2022 from "./26e-HK_HS2022.json"
 import Winter from "@site/src/components/Theme/Winter";
 
 <Winter />
+
 # 26e Informatik
 
 :::success Word Probe
