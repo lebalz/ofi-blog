@@ -1,7 +1,7 @@
 
 const DOM_ELEMENT_IDS = {
     component: (codeId) => `py_${codeId}`,
-    turtleResult: (codeId) => `${codeId}_turtle_result`,
+    graphicsResult: (codeId) => `${codeId}_graphics`,
     outputDiv: (codeId) => `${codeId}_brython_result`,
     aceEditor: (codeId) => `${codeId}_editor`,
     turtleSvgContainer: (codeId) => `${codeId}_svg`,

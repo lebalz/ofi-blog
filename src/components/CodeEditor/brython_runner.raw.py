@@ -98,7 +98,7 @@ TURTLE_TEMPLATE = '''from browser import document
 import turtle
 turtle.restart()
 turtle.set_defaults(
-  turtle_canvas_wrapper = document['{node_id}_turtle_result'],
+  turtle_canvas_wrapper = document['{node_id}_graphics'],
   turtle_canvas_id = '{node_id}_svg'
 )
 {py_script}

@@ -207,7 +207,7 @@ export default class Script implements CodeModel, ApiModel {
         document.querySelectorAll('.brython-script[type="text/python"]').forEach((src) => {
             src.setAttribute('type', 'text/py_disabled');
         });
-        document.querySelectorAll('.brython-turtle-result').forEach((resContainer) => {
+        document.querySelectorAll('.brython-graphics-result').forEach((resContainer) => {
             resContainer.childNodes.forEach((svg) => {
                 resContainer.removeChild(svg);
             });
