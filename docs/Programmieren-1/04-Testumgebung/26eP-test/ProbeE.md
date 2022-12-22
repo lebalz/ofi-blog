@@ -55,63 +55,43 @@ for i in range(13):
 Übersetzen Sie das untenstehende Struktogramm in Python Code
 
 :::cards --max-width=400px
+
 <Strukto program={[
     {type: 'step', code: <span><u>90</u>° links</span>},
-    {type: 'step', code: <span><u>120</u> Schritte vorwärts</span>},
+    {type: 'step', code: <span><u>150</u> Schritte vorwärts</span>},
     {
         type: 'def', 
-        code: <span>part</span>,
+        code: <span>linie</span>,
         block: [
-            {type: 'step', code: <span><u>40</u> Schritte vorwärts</span>},
-            {type: 'step', code: <span><u>35</u>° rechts</span>},
-            {type: 'step', code: <span><u>20</u> Schritte vorwärts</span>},
-            {type: 'step', code: <span><u>35</u>° links</span>},
+            {type: 'step', code: <span><u>50</u> Schritte vorwärts</span>},
+            {type: 'step', code: <span><u>30</u>° rechts</span>},
+            {type: 'step', code: <span><u>50</u> Schritte vorwärts</span>},
+            {type: 'step', code: <span><u>30</u>° links</span>},
         ]
     },
     {
         type: 'def', 
-        code: <span>flower</span>,
+        code: <span>dreieck</span>,
         block: [
-            {type: 'step', code: <span><u>25</u>° links</span>},
             {
                 type: 'repeat', 
-                code: <span><u>5</u> mal wiederholen</span>,
+                code: <span><u>3</u> mal wiederholen</span>,
                 block: [
-                    {type: 'step', code: <span><u>60</u> Schritte rückwärts</span>},
-                    {type: 'call', code: <span><i>part</i> zeichnen</span>},
-                    {type: 'step', code: <span><u>60</u> Schritte vorwärts</span>},
-                    {type: 'step', code: <span><u>154</u>° rechts</span>}
+                    {type: 'call', code: 'linie zeichnen'},
+                    {type: 'step', code: <span><u>120</u>° links</span>}
                 ]
             }
         ]
     },
-    {type: 'call', code: 'flower zeichnen'}
+    {type: 'call', code: 'dreieck zeichnen'},
+    {type: 'step', code: <span><u>120</u>° rechts</span>},
+    {type: 'call', code: 'dreieck zeichnen'},
+    {type: 'step', code: <span><u>120</u>° rechts</span>},
+    {type: 'call', code: 'dreieck zeichnen'}
 ]} />
 :::
 
-```py live_py title=aufgabe2.py versioned id=08e4d758-759b-436a-bd20-c60bcf432682
-from turtle import * 
-from turtle import *
-
-speed(0)
-left(90)
-fd(130)
-
-def part():
-    fd(40)
-    rt(35)
-    fd(20)
-    lt(35)
-
-def flower():
-    left(25)
-    for i in range(7):
-        back(60)
-        part()
-        fd(60)
-        rt(154)
-
-flower()
+```py live_py title=aufgabe2.py versioned id=dcb14a5c-d510-40cf-ba1f-78a46e884742
 ```
 
 ---
