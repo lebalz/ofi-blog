@@ -92,6 +92,7 @@ for i in range(13):
 :::
 
 ```py live_py title=aufgabe2.py versioned id=dcb14a5c-d510-40cf-ba1f-78a46e884742
+from turtle import *
 ```
 
 ---
@@ -101,7 +102,7 @@ for i in range(13):
 
 Finden und korrigieren Sie alle Fehler, so dass die folgende Ausgabe entsteht. Es gibt sowohl Syntaxfehler wie auch Logikfehler.
 
-![Dänische Flagge](images/sweden.svg)
+![Schwedische Flagge](images/sweden.svg)
 
 ```py live_py title=aufgabe3.py id=94c8484d-c060-4c28-b489-9874f06cf0d8 versioned
 from turtle import *
