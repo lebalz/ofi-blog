@@ -42,9 +42,9 @@ def strahl():
     bogen(4, -10)
     right(190)
 
-for i in range(11):
+for i in range(13):
     strahl()
-    right(360 / 11)
+    right(360 / 13)
 ```
 
 ---
