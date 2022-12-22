@@ -238,13 +238,6 @@
       "from": "docs/Programmieren-1/02-Turtlegrafik/052-xmas.md",
       "to": "versioned_docs/version-26e/03-Programmieren-1/05-weihnachten.md",
       "ignore": []
-    },
-    {
-      "from": "docs/Programmieren-1/04-Testumgebung/26eP-test/",
-      "to": "versioned_docs/version-26e/03-Programmieren-1/Probe",
-      "ignore": [
-        "ProbeP.md"
-      ]
     }
   ],
   "26P": [
@@ -361,13 +354,6 @@
       "from": "docs/Programmieren-1/02-Turtlegrafik/050-repetition/",
       "to": "versioned_docs/version-26P/03-Programmieren-1/10-repetition",
       "ignore": []
-    },
-    {
-      "from": "docs/Programmieren-1/04-Testumgebung/26eP-test/",
-      "to": "versioned_docs/version-26P/03-Programmieren-1/Probe",
-      "ignore": [
-        "ProbeE.md"
-      ]
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/052-xmas.md",

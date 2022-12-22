@@ -16,7 +16,7 @@ Verbotene Hilfsmittel
 : ⚠️ Chats / Kommunikation jeglicher Art
 
 
-<Solution webKey="7141cc1f-9721-42ee-a8f9-36dc5f6f6713" title="Testfragen" open>
+<Solution webKey="564ace99-3064-40cc-952b-da620f021cd2" title="Testfragen" open>
 
 ## Aufgabe 1
 *(3 Punkte)*

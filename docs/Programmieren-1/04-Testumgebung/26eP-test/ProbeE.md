@@ -26,7 +26,7 @@ Das Programm zeichnet eine Sonne mit 13 Strahlen.
 2. Setzen Sie die Stiftdicke auf `5` und die Stiftfarbe auf **Rot**.
 3. Füllen Sie die Sonne mit Ihrer Lieblingsfarbe (aber nicht mit Rot) aus.
 
-```py live_py title=aufgabe1.py id=bc26c5ea-c372-41ed-93bb-66b5059cb5c6 versioned
+```py live_py title=aufgabe1.py id=bc26c5ea-c372-41ed-93bb-66b5059cb5c6 versioned readonly
 from turtle import *
 
 speed(0)
@@ -91,7 +91,7 @@ for i in range(13):
 ]} />
 :::
 
-```py live_py title=aufgabe2.py versioned id=dcb14a5c-d510-40cf-ba1f-78a46e884742
+```py live_py title=aufgabe2.py versioned id=dcb14a5c-d510-40cf-ba1f-78a46e884742 readonly
 from turtle import *
 ```
 
@@ -104,7 +104,7 @@ Finden und korrigieren Sie alle Fehler, so dass die folgende Ausgabe entsteht. E
 
 ![Schwedische Flagge](images/sweden.svg)
 
-```py live_py title=aufgabe3.py id=94c8484d-c060-4c28-b489-9874f06cf0d8 versioned
+```py live_py title=aufgabe3.py id=94c8484d-c060-4c28-b489-9874f06cf0d8 versioned readonly
 from turtle import *
 
 def ractangle(width, height):
@@ -147,7 +147,7 @@ Die Diagonale einer Figur beträgt `100` Einheiten, die kurze Seite ist `50` Ein
 
 ![--width=800px](images/increasing-figs.svg)
 
-```py live_py title=aufgabe4.py versioned id=42125786-9de4-422b-b376-42c08fda7ed1
+```py live_py title=aufgabe4.py versioned id=42125786-9de4-422b-b376-42c08fda7ed1 readonly
 from turtle import *
 ```
 
@@ -162,7 +162,7 @@ Auf https://de.acervolima.com/zeichnen-sie-herz-mit-turtle-graphics-in-python/ f
 - Schreiben Sie Ihren eigenen Namen in das Herz
 - Machen Sie den Rand einen Stift der Breite `10` 
 
-```py live_py title=zusatzaufgabe.py id=69f6f8dd-b21e-45df-bde9-6d0acd9baa65 versioned
+```py live_py title=zusatzaufgabe.py id=69f6f8dd-b21e-45df-bde9-6d0acd9baa65 versioned readonly
 
 ```
 
