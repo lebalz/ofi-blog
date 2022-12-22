@@ -4,6 +4,7 @@ import { sanitizePyScript } from '../../utils/sanitizers';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/hooks';
 import Script from '../../models/Script';
+import GridModule from './Modules/Grid';
 const run_template = require('./brython_runner.raw.py');
 
 interface Props {
@@ -15,15 +16,22 @@ const PyScriptSrc = observer((props: Props) => {
     const code = `${pyScript.precode}\n${pyScript.code}`;
     const lineShift = pyScript.precode.split(/\n/).length;
     return (
-        <script
-            id={DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)}
-            type="text/py_disabled"
-            className="brython-script"
-        >
-            {`${run_template}\nrun("""${sanitizePyScript(code || '')}""", '${
-                pyScript.codeId
-            }', ${lineShift})`}
-        </script>
+        <React.Fragment>
+            <script
+                id={DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)}
+                type="text/py_disabled"
+                className="brython-script"
+            >
+                {`${run_template}\nrun("""${sanitizePyScript(code || '')}""", '${
+                    pyScript.codeId
+                }', ${lineShift})`}
+            </script>
+            {
+                pyScript.hasCanvasOutput && (
+                    <GridModule />
+                )
+            }
+        </React.Fragment>
     );
 });
 

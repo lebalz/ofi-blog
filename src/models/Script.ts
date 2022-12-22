@@ -5,7 +5,7 @@ import { CodeModel } from './iModel';
 import { DocumentStore } from '../stores/DocumentStore';
 import { rootStore } from '../stores/stores';
 import SaveService, { ApiModel } from './SaveService';
-import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER } from '../components/CodeEditor/constants';
+import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER, GRAPHICS_OUTPUT_TESTER, CANVAS_OUTPUT_TESTER } from '../components/CodeEditor/constants';
 
 export interface PyDoc {
     code: string;
@@ -194,13 +194,8 @@ export default class Script implements CodeModel, ApiModel {
     }
 
     @action
-    setTurtleModalOpen(open: boolean) {
-        this.turtleModalOpen = open;
-    }
-
-    @action
     execScript(document: globalThis.Document) {
-        if (this.hasTurtleImport) {
+        if (this.hasGraphicsOutput) {
             this.store.setOpendTurtleModal(this.webKey);
         }
         // make sure brython always processes only one script per page
@@ -208,9 +203,17 @@ export default class Script implements CodeModel, ApiModel {
             src.setAttribute('type', 'text/py_disabled');
         });
         document.querySelectorAll('.brython-graphics-result').forEach((resContainer) => {
-            resContainer.childNodes.forEach((svg) => {
-                resContainer.removeChild(svg);
-            });
+            resContainer.replaceChildren();
+            if (this.hasCanvasOutput) {
+                const canv = document.createElement('canvas');
+                canv.setAttribute('width', '500');
+                canv.setAttribute('height', '500');
+                canv.style.width = '500px';
+                canv.style.height = '500px';
+                canv.style.display = 'block';
+                canv.id = DOM_ELEMENT_IDS.canvasContainer(this.codeId);
+                resContainer.appendChild(canv);
+            }
         });
         const active = document.getElementById(DOM_ELEMENT_IDS.scriptSource(this.codeId));
         active.setAttribute('type', 'text/python');
@@ -235,8 +238,21 @@ export default class Script implements CodeModel, ApiModel {
     }
 
     @computed
-    get hasTurtleImport(): boolean {
-        return TURTLE_IMPORTS_TESTER.test(`${this.precode}\n${this.data.code}`);
+    get hasGraphicsOutput(): boolean {
+        const code = `${this.precode}\n${this.data.code}`;
+        return CANVAS_OUTPUT_TESTER.test(code) || GRAPHICS_OUTPUT_TESTER.test(code) || TURTLE_IMPORTS_TESTER.test(code);
+    }
+
+    @computed
+    get hasTurtleOutput(): boolean {
+        const code = `${this.precode}\n${this.data.code}`;
+        return this.hasGraphicsOutput && TURTLE_IMPORTS_TESTER.test(code);
+    }
+
+    @computed
+    get hasCanvasOutput(): boolean {
+        const code = `${this.precode}\n${this.data.code}`;
+        return this.hasGraphicsOutput && CANVAS_OUTPUT_TESTER.test(code);
     }
 
     @computed

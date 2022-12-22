@@ -5,7 +5,7 @@ import Editor from "./EditorAce";
 import {
   DOM_ELEMENT_IDS,
 } from "./constants";
-import TurtleResult from "./TurtleResult";
+import TurtleResult from "./GraphicsResult/Turtle";
 import Result from "./Result";
 import Header from "./Header";
 import { observer } from "mobx-react-lite";
@@ -13,6 +13,8 @@ import { useStore } from "../../stores/hooks";
 import { reaction } from "mobx";
 import Script from "../../models/Script";
 import { umamiReport } from "@site/src/helpers/umami";
+import GraphicsResult from "./GraphicsResult";
+import CanvasResult from "./GraphicsResult/Canvas";
 
 interface Props {
   slim: boolean;
@@ -65,8 +67,18 @@ const PyEditor = observer((props: Props) => {
       {props.lang === 'python' &&
         <div className={clsx(styles.result)}>
           <Result webKey={props.webKey}/>
-          {store.opendTurtleModalWebKey === pyScript.webKey && (
-            <TurtleResult webKey={props.webKey}/>
+          {store.opendGraphicsModalWebKey === pyScript.webKey && (
+            <React.Fragment>
+              {pyScript.hasTurtleOutput && (
+                <TurtleResult webKey={props.webKey}/>
+              )}
+              {pyScript.hasCanvasOutput && (
+                <CanvasResult webKey={props.webKey}/>
+              )}
+              {!pyScript.hasCanvasOutput && !pyScript.hasTurtleOutput && (
+                <GraphicsResult webKey={props.webKey}/>
+              )}
+            </React.Fragment>
           )}
           <div id={DOM_ELEMENT_IDS.outputDiv(pyScript.codeId)}></div>
         </div>

@@ -76,7 +76,7 @@ export class DocumentStore {
     timer = 0;
 
     @observable
-    opendTurtleModalWebKey: string | undefined = undefined;
+    opendGraphicsModalWebKey: string | undefined = undefined;
 
     @observable initialized: boolean = false;
     constructor(root: RootStore) {
@@ -121,7 +121,7 @@ export class DocumentStore {
 
     @action
     setOpendTurtleModal(webKey: string | undefined) {
-        this.opendTurtleModalWebKey = webKey;
+        this.opendGraphicsModalWebKey = webKey;
     }
 
     filterBy = computedFn(
