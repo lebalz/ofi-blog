@@ -147,7 +147,7 @@ Die Diagonale einer Figur beträgt `100` Einheiten, die kurze Seite ist `50` Ein
 
 ![--width=800px](images/increasing-figs.svg)
 
-```py live_py title=aufgabe4.py versioned id=42125786-9de4-422b-b376-42c08fda7ed1 readonly
+```py live_py title=aufgabe4.py versioned id=42125786-9de4-422b-b376-42c08fda7ed1
 from turtle import *
 ```
 
