@@ -15,14 +15,6 @@ import Winter from "@site/src/components/Theme/Winter";
 
 # 26e Informatik
 
-
-:::success Probe Programmieren 1
-
-[👉 Zur Prüfung](/26e/Programmieren-1/Probe/ProbeE)
-
-:::
-
-
 :::success Word Probe
 <Solution webKey="5ba6b51b-db2a-461c-a3d1-ac934806624f" open title="Link zur Probe">
 
