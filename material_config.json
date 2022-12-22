@@ -398,6 +398,7 @@
       "ignore": [
         "800-python-scripts.md",
         "051-art.md",
+        "052-xmas.md",
         "050-repetition",
         "index.md"
       ]
