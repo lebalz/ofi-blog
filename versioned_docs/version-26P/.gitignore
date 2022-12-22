@@ -22,6 +22,7 @@
 03-Programmieren-1/images/*
 03-Programmieren-1/10-repetition/*
 03-Programmieren-1/Probe/*
+!03-Programmieren-1/Probe/ProbeE.md
 03-Programmieren-1/05-weihnachten.md
 03-Programmieren-1/02-Turtlegrafik/_category_.json
 05-Texte/_category_.json
