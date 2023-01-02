@@ -66,7 +66,6 @@ const PyEditor = observer((props: Props) => {
       <Editor webKey={props.webKey} lang={props.lang} showLineNumbers={props.showLineNumbers} maxLines={props.maxLines} />
       {props.lang === 'python' &&
         <div className={clsx(styles.result)}>
-          <Result webKey={props.webKey}/>
           {store.opendGraphicsModalWebKey === pyScript.webKey && (
             <React.Fragment>
               {pyScript.hasTurtleOutput && (
@@ -78,6 +77,7 @@ const PyEditor = observer((props: Props) => {
               {!pyScript.hasCanvasOutput && !pyScript.hasTurtleOutput && (
                 <GraphicsResult webKey={props.webKey}/>
               )}
+              <Result webKey={props.webKey}/>
             </React.Fragment>
           )}
           <div id={DOM_ELEMENT_IDS.outputDiv(pyScript.codeId)}></div>
