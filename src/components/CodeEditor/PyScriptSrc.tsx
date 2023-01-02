@@ -6,6 +6,7 @@ import { useStore } from '../../stores/hooks';
 import Script from '../../models/Script';
 import GridModule from './Modules/Grid';
 import ConfigModule from './Modules/Config';
+import GameModule from './Modules/Game';
 const run_template = require('./brython_runner.raw.py');
 
 interface Props {
@@ -19,6 +20,7 @@ const PyScriptSrc = observer((props: Props) => {
     return (
         <React.Fragment>
             <ConfigModule />
+            <GameModule />
             {
                 pyScript.hasCanvasOutput && (
                     <GridModule />

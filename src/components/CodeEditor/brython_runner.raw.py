@@ -65,11 +65,11 @@ def syntax_error(args):
 def format_exc():
     trace = Trace()
     exc_info = sys.exc_info()
-    exc_class = exc_info[0].__name__
+    exc_class = exc_info[0].__name__  # type: ignore
     exc_msg = str(exc_info[1])
     tb = exc_info[2]
     if exc_info[0] is SyntaxError:
-        return syntax_error(exc_info[1].args)
+        return syntax_error(exc_info[1].args)  # type: ignore
     trace.write("Traceback (most recent call last):\n")
     while tb is not None:
         frame = tb.tb_frame
@@ -114,6 +114,7 @@ def run(code, node_id, line_shift):
     global has_turtle_import, log_line_number_shift
     has_turtle_import = not not TURTLE_IMPORTS.search(code)
     log_line_number_shift = (7 if has_turtle_import else 0) + line_shift
+    Config.PYTHON_SOURCE = f'{node_id}_src'
     if CANVAS_OUTPUT.search(code) or GRID_IMPORTS.search(code):
         Config.CANVAS_ID = f'{node_id}_canvas'
     if GRAPHICS_OUTPUT.search(code):

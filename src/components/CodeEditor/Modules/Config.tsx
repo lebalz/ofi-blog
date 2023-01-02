@@ -1,26 +1,10 @@
-const configSrc = require('./config.raw.py');
+const src = require('./config.raw.py');
+import Module from './Module';
 import * as React from 'react';
 
 
-const ConfigModule = () => {
-    const [show, setShow] = React.useState(false);
-
-    React.useEffect(() => {
-        if (!document.getElementById('config')) {
-            setShow(true);
-        }
-    }, [])
-    if (!show) {
-        return null;
-    }
-    return (
-        <script
-            id="config"
-            type="text/python"
-        >
-            {configSrc}
-        </script>
-    )
+const GameloopModule = () => {
+    return (<Module name='config' scriptSource={src} />);
 }
 
-export default ConfigModule;
+export default GameloopModule;

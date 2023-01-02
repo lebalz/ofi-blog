@@ -1,27 +1,10 @@
-const gridSrc = require('./grid.raw.py');
-
+const src = require('./grid.raw.py');
+import Module from './Module';
 import * as React from 'react';
 
 
 const GridModule = () => {
-    const [show, setShow] = React.useState(false);
-
-    React.useEffect(() => {
-        if (!document.getElementById('grid')) {
-            setShow(true);
-        }
-    }, [])
-    if (!show) {
-        return null;
-    }
-    return (
-        <script
-            id="grid"
-            type="text/python"
-        >
-            {gridSrc}
-        </script>
-    )
+    return (<Module name='grid' scriptSource={src} />);
 }
 
 export default GridModule;

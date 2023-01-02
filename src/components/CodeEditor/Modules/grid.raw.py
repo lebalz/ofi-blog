@@ -18,9 +18,9 @@ class Rectangle():
         self._color = color
         
     def get(self, offset_x: int, offset_y: int):
-        y = (self.row + offset_y) % len(self.grid)
-        x = (self.col + offset_x) % len(self.grid[y])
-        return self.grid[y][x]
+        y = (self.row + offset_y) % len(self.grid) # type: ignore
+        x = (self.col + offset_x) % len(self.grid[y]) # type: ignore
+        return self.grid[y][x] # type: ignore
 
     @property
     def color(self):
@@ -32,9 +32,9 @@ class Rectangle():
         self.draw()
 
     def draw(self):
-        self.ctx.lineWidth = 0
-        self.ctx.fillStyle = self.color
-        self.ctx.fillRect(self.col * self.scale, self.row * self.scale, self.scale, self.scale)
+        self.ctx.lineWidth = 0 # type: ignore
+        self.ctx.fillStyle = self.color # type: ignore
+        self.ctx.fillRect(self.col * self.scale, self.row * self.scale, self.scale, self.scale) # type: ignore
 
     def copy(self, grid):
         return Rectangle(grid, self.col, self.row, self.scale, self.color)
@@ -85,7 +85,7 @@ class RectLine():
             rect.draw()
     
     def copy(self, grid):
-        return RectLine(grid, self.line[0].row, len(self.line), self.scale, [l.copy() for l in self.line])
+        return RectLine(grid, self.line[0].row, len(self.line), self.scale, [l.copy() for l in self.line]) # type: ignore
 
 class Grid():
     lines = []

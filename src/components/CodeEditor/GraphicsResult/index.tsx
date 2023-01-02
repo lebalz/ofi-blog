@@ -32,7 +32,10 @@ const GraphicsResult = observer((props: Props) => {
                         type="button"
                         style={{ zIndex: 1000 }}
                         className={styles.slimStrippedButton}
-                        onClick={() => documentStore.setOpendTurtleModal(undefined)}>
+                        onClick={() => {
+                            documentStore.setOpendTurtleModal(undefined);
+                            pyScript.stopScript(document);
+                        }}>
                         <span aria-hidden="true"><FontAwesomeIcon icon={faTimes} /></span>
                     </button>
                 </div>
