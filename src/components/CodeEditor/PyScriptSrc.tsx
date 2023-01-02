@@ -5,6 +5,7 @@ import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/hooks';
 import Script from '../../models/Script';
 import GridModule from './Modules/Grid';
+import ConfigModule from './Modules/Config';
 const run_template = require('./brython_runner.raw.py');
 
 interface Props {
@@ -17,6 +18,12 @@ const PyScriptSrc = observer((props: Props) => {
     const lineShift = pyScript.precode.split(/\n/).length;
     return (
         <React.Fragment>
+            <ConfigModule />
+            {
+                pyScript.hasCanvasOutput && (
+                    <GridModule />
+                )
+            }
             <script
                 id={DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)}
                 type="text/py_disabled"
@@ -26,11 +33,6 @@ const PyScriptSrc = observer((props: Props) => {
                     pyScript.codeId
                 }', ${lineShift})`}
             </script>
-            {
-                pyScript.hasCanvasOutput && (
-                    <GridModule />
-                )
-            }
         </React.Fragment>
     );
 });

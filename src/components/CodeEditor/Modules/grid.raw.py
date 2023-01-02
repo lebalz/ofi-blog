@@ -1,6 +1,6 @@
 from browser import document, html # type: ignore
 from browser import timer, window # type: ignore
-CANVAS_OUTPUT = True
+from config import Config # type: ignore
 
 class Rectangle():
     col: int
@@ -13,7 +13,7 @@ class Rectangle():
         self.row = row
         self.scale = scale
         self.grid = grid
-        canvas = document[Grid.CANVAS_ID]
+        canvas = document[Config.CANVAS_ID]
         self.ctx = canvas.getContext('2d')
         self._color = color
         
@@ -96,27 +96,16 @@ class Grid():
     def __init__(self, rows, cols, scale: int = 10):
         self.lines = [RectLine(self, row, cols, scale) for row in range(rows)]
         self.max = rows
-        Grid.set_canvas_id()
-        print(Grid.CANVAS_ID)
-    
-    @staticmethod
-    def set_canvas_id():
-        canv = document.select('canvas[id$="canvas"]')
-        if len(canv) == 1:
-            Grid.CANVAS_ID = canv[0].id
-        else:
-            Grid.CANVAS_ID = ''
-
     
     @staticmethod
     def setup(width: int, height: int):
-        canvas = document[Grid.CANVAS_ID]
+        canvas = document[Config.CANVAS_ID]
         parent = canvas.parent
         parent.replaceChildren()
     
         canv = document.createElement('canvas')
         canv.style.display = 'block'
-        canv.id = Grid.CANVAS_ID;
+        canv.id = Config.CANVAS_ID;
         canv.attrs['height'] = height
         canv.attrs['width'] = width
         canv.style.width = f'{width}px'
