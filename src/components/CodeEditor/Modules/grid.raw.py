@@ -100,6 +100,8 @@ class Grid():
     WIDTH = 500
     HEIGHT = 500
     scale = 10
+    record_gif = False
+    frames = {}
 
     def __init__(self, rows: int, cols: int, scale: int = -1):
         if scale < 0:
@@ -112,9 +114,11 @@ class Grid():
         self.max = rows
     
     @staticmethod
-    def setup(width: int, height: int):
+    def setup(width: int, height: int, record_gif: bool = False):
         Grid.HEIGHT = height
         Grid.WIDTH = width
+        Grid.record_gif = record_gif
+        Grid.frames = {}
         canvas = document[Config.CANVAS_ID]
         parent = canvas.parent
         parent.replaceChildren()
@@ -180,6 +184,15 @@ class Grid():
     def draw(self):
         for line in self.lines:
             line.draw()
+
+    @staticmethod
+    def gif_add():
+        if Grid.record_gif:
+            canvas = document[Config.CANVAS_ID]
+            frameName = 'frame_' + str(len(Grid.frames)).rjust(3, '0')
+            Grid.frames[frameName] = canvas.toDataURL('image/png');
+
+
 
     def fill(self, color: str = ''):
         for line in self.lines:
