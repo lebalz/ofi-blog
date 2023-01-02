@@ -77,9 +77,9 @@ const PyEditor = observer((props: Props) => {
               {!pyScript.hasCanvasOutput && !pyScript.hasTurtleOutput && (
                 <GraphicsResult webKey={props.webKey}/>
               )}
-              <Result webKey={props.webKey}/>
             </React.Fragment>
           )}
+          <Result webKey={props.webKey}/>
           <div id={DOM_ELEMENT_IDS.outputDiv(pyScript.codeId)}></div>
         </div>
       }
