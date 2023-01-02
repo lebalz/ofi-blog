@@ -79,7 +79,7 @@ def gameloop(func):
             result = func()
 
         if not Game.sleep_requested and not Game.stop_request:
-            Game.anim_id = timer.request_animation_frame(animation_frame)
+            animation_frame()
         return result
     wrap()
     return Game

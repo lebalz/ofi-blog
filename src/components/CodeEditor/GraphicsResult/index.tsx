@@ -20,7 +20,7 @@ const GraphicsResult = observer((props: Props) => {
     return (
         <Draggable
             onStop={checkForButtonClick}
-            positionOffset={{ x: 0, y: '-50%' }}
+            positionOffset={{ x: '45vw', y: '-25vh' }}
         >
             <div className={styles.brythonGraphicsResult}>
                 <div className={styles.brythonGraphicsResultHead}>

@@ -8,7 +8,7 @@ class Rectangle():
     ctx = None
     grid = None
     scale: int = 10
-    def __init__(self, grid, col: int, row: int, scale: int = 10, color: str = 'black'):
+    def __init__(self, grid, col: int, row: int, scale: int = 10, color: str = 'rgba(0,0,0,0)'):
         self.col = col
         self.row = row
         self.scale = scale
@@ -28,6 +28,11 @@ class Rectangle():
 
     @color.setter
     def color(self, color: str):
+        if color == '':
+            color = 'rgba(0,0,0,0)'
+
+        if self._color == color:
+            return
         self._color = color
         self.draw()
 
@@ -92,13 +97,19 @@ class Grid():
     n = 0
     max = 0
     CANVAS_ID = ''
+    WIDTH = 500
+    HEIGHT = 500
 
-    def __init__(self, rows, cols, scale: int = 10):
+    def __init__(self, rows: int, cols: int, scale: int = -1):
+        if scale < 0:
+            scale = min(Grid.WIDTH // cols, Grid.HEIGHT // rows)
         self.lines = [RectLine(self, row, cols, scale) for row in range(rows)]
         self.max = rows
     
     @staticmethod
     def setup(width: int, height: int):
+        Grid.HEIGHT = height
+        Grid.WIDTH = width
         canvas = document[Config.CANVAS_ID]
         parent = canvas.parent
         parent.replaceChildren()
@@ -120,9 +131,20 @@ class Grid():
     def grid(self):
         return [l.line for l in self.lines]
 
+    @property
+    def size(self):
+        if self.max < 1:
+            return (0, 0)
+        return (len(self.lines), len(self.lines[0]))
+
     def draw(self):
         for line in self.lines:
             line.draw()
+
+    def fill(self, color: str = 'white'):
+        for line in self.lines:
+            for cell in line:
+                cell.color = color
 
     def copy(self):
         cp = Grid(0, 0)
