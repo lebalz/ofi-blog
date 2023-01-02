@@ -7,11 +7,9 @@ class Rectangle():
     row: int
     ctx = None
     grid = None
-    scale: int = 10
-    def __init__(self, grid, col: int, row: int, scale: int = 10, color: str = 'rgba(0,0,0,0)'):
+    def __init__(self, grid, col: int, row: int, color: str = 'rgba(0,0,0,0)'):
         self.col = col
         self.row = row
-        self.scale = scale
         self.grid = grid
         canvas = document[Config.CANVAS_ID]
         self.ctx = canvas.getContext('2d')
@@ -37,29 +35,31 @@ class Rectangle():
         self.draw()
 
     def draw(self):
+        scale = self.grid.scale # type: ignore
+        x = self.col * scale
+        y = self.row * scale
+        self.ctx.clearRect(x, y, scale, scale) # type: ignore
         self.ctx.lineWidth = 0 # type: ignore
         self.ctx.fillStyle = self.color # type: ignore
-        self.ctx.fillRect(self.col * self.scale, self.row * self.scale, self.scale, self.scale) # type: ignore
+        self.ctx.fillRect(x, y, scale, scale) # type: ignore
 
     def copy(self, grid):
-        return Rectangle(grid, self.col, self.row, self.scale, self.color)
+        return Rectangle(grid, self.col, self.row, self.color)
 
     def __repr__(self):
         return f'{self.color[:5].ljust(5, " ")}'
 
 class RectLine():
-    line = []
-    scale: int = 10
+    line: list = []
     n = 0
     max = 0
-    def __init__(self, grid, row, cols, scale: int = 10, line = []):
-        self.scale = scale
-        self.max = cols
+    def __init__(self, grid, row, cols: int | list):
         self.grid = grid
-        if len(line) > 0:
-            self.line = line
+        if type(cols) == list:
+            self.line = cols # type: ignore
         else:
-            self.line = [Rectangle(grid, col, row, scale) for col in range(cols)]
+            self.line = [Rectangle(grid, col, row) for col in range(cols)] # type: ignore
+        self.max = len(self.line) # type: ignore
     
     def __getitem__(self, key):
         return self.line[key]
@@ -90,7 +90,7 @@ class RectLine():
             rect.draw()
     
     def copy(self, grid):
-        return RectLine(grid, self.line[0].row, len(self.line), self.scale, [l.copy() for l in self.line]) # type: ignore
+        return RectLine(grid, self.line[0].row, len(self.line), [l.copy() for l in self.line]) # type: ignore
 
 class Grid():
     lines = []
@@ -99,11 +99,16 @@ class Grid():
     CANVAS_ID = ''
     WIDTH = 500
     HEIGHT = 500
+    scale = 10
 
     def __init__(self, rows: int, cols: int, scale: int = -1):
         if scale < 0:
-            scale = min(Grid.WIDTH // cols, Grid.HEIGHT // rows)
-        self.lines = [RectLine(self, row, cols, scale) for row in range(rows)]
+            if rows > 0 and cols > 0:
+                scale = min(Grid.WIDTH // cols, Grid.HEIGHT // rows)
+            else:
+                scale = 10
+        self.scale = scale
+        self.lines = [RectLine(self, row, cols) for row in range(rows)]
         self.max = rows
     
     @staticmethod
@@ -123,6 +128,34 @@ class Grid():
         canv.style.height = f'{height}px'
         parent.appendChild(canv)
 
+    @staticmethod
+    def from_bin_text(bin_text: str, colors={'s': 'black', '1': 'black', 'x': 'black', 'bg': ''}):
+        lines = bin_text.lower().splitlines()
+        if 'bg' not in colors:
+            colors['bg'] = ''
+        while len(lines) > 0 and len(lines[0]) == 0:
+            lines.pop(0)
+        size_y = len(lines)
+        if size_y < 1:
+            raise Exception('Grid must have at least one non empty line')
+        size_x = max(map(lambda x: len(x), lines))
+
+        scale = min(Grid.WIDTH // size_x, Grid.HEIGHT // size_y)
+        grid = Grid(0, 0, scale)
+        raw_grid = []
+        for line in lines:
+            raw_line = []
+            for x in range(size_x):
+                if x < len(line):
+                    raw_line.append(Rectangle(grid, x, len(raw_grid), colors.get(line[x], colors['bg'])))
+                else:
+                    raw_line.append(Rectangle(grid, x, len(raw_grid), colors['bg']))
+            raw_grid.append(RectLine(grid, len(raw_grid), raw_line))
+        grid.set_lines(raw_grid)
+        grid.draw()
+        return grid
+        
+
     def set_lines(self, lines):
         self.lines = lines
         self.max = len(lines)
@@ -137,11 +170,18 @@ class Grid():
             return (0, 0)
         return (len(self.lines), len(self.lines[0]))
 
+    @staticmethod
+    def clear_canvas():
+        canvas = document[Config.CANVAS_ID]
+        ctx = canvas.getContext('2d')
+        ctx.clearRect(0, 0, Grid.WIDTH, Grid.HEIGHT) # type: ignore
+
+
     def draw(self):
         for line in self.lines:
             line.draw()
 
-    def fill(self, color: str = 'white'):
+    def fill(self, color: str = ''):
         for line in self.lines:
             for cell in line:
                 cell.color = color

@@ -20,7 +20,7 @@ const sanitizeId = (id: string) => {
  * @param {String} script 
  */
 const sanitizePyScript = (script: string) => {
-    return script.replace(/"{3}/g, "'''").replace(/\\n/g, '\\\\n')
+    return script.replace(/"{3}/g, "'''").replace(/\\n/g, '\\\\n').replace(/\\r/g, '\\\\r')
 }
 
 export {sanitizeId, sanitizedTitle, sanitizePyScript}

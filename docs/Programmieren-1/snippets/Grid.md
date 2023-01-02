@@ -55,7 +55,6 @@ from game import gameloop, sleep, stop
 
 Grid.setup(500, 500)
 grid = Grid(10, 10)
-grid.fill('white')
 
 x = 0
 y = 0
@@ -63,7 +62,7 @@ direction = [1, 0]
 @gameloop
 def run(dt):
     global x, y, direction
-    grid[x][y] = 'white'
+    grid[x][y] = ''
     if direction[0] > 0 and x == grid.size[0] - 1:
         direction = [0, 1]
     elif direction[0] < 0 and x == 0:
