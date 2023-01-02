@@ -9,9 +9,6 @@ import Table from "@site/src/components/Table";
 import {SortTimeTableByDate} from '@site/src/helpers/time';
 import hs2022 from "./26e_HS2022.json"
 import hk2022 from "./26e-HK_HS2022.json"
-import Winter from "@site/src/components/Theme/Winter";
-
-<Winter />
 
 # 26e Informatik
 

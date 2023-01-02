@@ -9,7 +9,6 @@ import { Content } from "@theme/BlogPostPage";
 import BlogPostItem from "@theme/BlogPostItem";
 // @ts-ignore
 import { BlogPostProvider } from "@docusaurus/theme-common/internal";
-import Winter from "@site/src/components/Theme/Winter";
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -85,7 +84,6 @@ export default function Home({ recentPosts }: Props) {
                     </div>
                 </div>
             </main>
-            <Winter />
         </Layout>
     );
 }

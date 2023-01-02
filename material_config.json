@@ -356,11 +356,6 @@
       "ignore": []
     },
     {
-      "from": "docs/Programmieren-1/04-Testumgebung/26eP-test/",
-      "to": "versioned_docs/version-26P/03-Programmieren-1/Probe",
-      "ignore": []
-    },
-    {
       "from": "docs/Programmieren-1/02-Turtlegrafik/052-xmas.md",
       "to": "versioned_docs/version-26P/03-Programmieren-1/05-weihnachten.md",
       "ignore": []
@@ -398,6 +393,7 @@
       "ignore": [
         "800-python-scripts.md",
         "051-art.md",
+        "052-xmas.md",
         "050-repetition",
         "index.md"
       ]
