@@ -7,12 +7,17 @@ class Rectangle():
     row: int
     ctx = None
     grid = None
-    def __init__(self, grid, col: int, row: int, color: str = 'rgba(0,0,0,0)'):
+    init_draw = False
+    def __init__(self, grid, col: int, row: int, color: str = ''):
         self.col = col
         self.row = row
         self.grid = grid
-        canvas = document[Config.CANVAS_ID]
-        self.ctx = canvas.getContext('2d')
+        self.init_draw = False
+        try:
+            canvas = document[Config.CANVAS_ID]
+            self.ctx = canvas.getContext('2d')
+        except:
+            pass
         self._color = color
         
     def get(self, offset_x: int, offset_y: int):
@@ -29,36 +34,41 @@ class Rectangle():
         if color == '':
             color = 'rgba(0,0,0,0)'
 
-        if self._color == color:
+        if self._color == color and self.init_draw:
             return
         self._color = color
+        self.init_draw = True
         self.draw()
 
     def draw(self):
         scale = self.grid.scale # type: ignore
         x = self.col * scale
         y = self.row * scale
-        self.ctx.clearRect(x, y, scale, scale) # type: ignore
-        self.ctx.lineWidth = 0 # type: ignore
-        self.ctx.fillStyle = self.color # type: ignore
-        self.ctx.fillRect(x, y, scale, scale) # type: ignore
+        try:
+            self.ctx.clearRect(x, y, scale, scale) # type: ignore
+            self.ctx.lineWidth = 0 # type: ignore
+            self.ctx.fillStyle = self.color # type: ignore
+            self.ctx.fillRect(x, y, scale, scale) # type: ignore
+        except:
+            pass
 
     def copy(self, grid):
         return Rectangle(grid, self.col, self.row, self.color)
 
     def __repr__(self):
-        return f'{self.color[:5].ljust(5, " ")}'
+        color = self.color
+        return f'{color[:5].ljust(5, " ")}'
 
 class RectLine():
     line: list = []
     n = 0
     max = 0
-    def __init__(self, grid, row, cols: int | list):
+    def __init__(self, grid, row, cols: int | list, color: str = ''):
         self.grid = grid
         if type(cols) == list:
             self.line = cols # type: ignore
         else:
-            self.line = [Rectangle(grid, col, row) for col in range(cols)] # type: ignore
+            self.line = [Rectangle(grid, col, row, color) for col in range(cols)] # type: ignore
         self.max = len(self.line) # type: ignore
     
     def __getitem__(self, key):
@@ -103,14 +113,14 @@ class Grid():
     record_gif = False
     frames = {}
 
-    def __init__(self, rows: int, cols: int, scale: int = -1):
+    def __init__(self, rows: int, cols: int, color: str = '', scale: int = -1):
         if scale < 0:
             if rows > 0 and cols > 0:
                 scale = min(Grid.WIDTH // cols, Grid.HEIGHT // rows)
             else:
                 scale = 10
         self.scale = scale
-        self.lines = [RectLine(self, row, cols) for row in range(rows)]
+        self.lines = [RectLine(self, row, cols, color) for row in range(rows)]
         self.max = rows
     
     @staticmethod
@@ -145,7 +155,7 @@ class Grid():
         size_x = max(map(lambda x: len(x), lines))
 
         scale = min(Grid.WIDTH // size_x, Grid.HEIGHT // size_y)
-        grid = Grid(0, 0, scale)
+        grid = Grid(0, 0, colors['bg'], scale)
         raw_grid = []
         for line in lines:
             raw_line = []
@@ -169,16 +179,31 @@ class Grid():
         return [l.line for l in self.lines]
 
     @property
+    def color_grid(self):
+        return [[c.color for c in l.line] for l in self.lines]
+
+    @property
     def size(self):
+        return (self.dim_y, self.dim_x)
+
+    @property
+    def dim_x(self):
         if self.max < 1:
-            return (0, 0)
-        return (len(self.lines), len(self.lines[0]))
+            return 0
+        return len(self[0])
+
+    @property
+    def dim_y(self):
+        return len(self.lines)
 
     @staticmethod
     def clear_canvas():
-        canvas = document[Config.CANVAS_ID]
-        ctx = canvas.getContext('2d')
-        ctx.clearRect(0, 0, Grid.WIDTH, Grid.HEIGHT) # type: ignore
+        try:
+            canvas = document[Config.CANVAS_ID]
+            ctx = canvas.getContext('2d')
+            ctx.clearRect(0, 0, Grid.WIDTH, Grid.HEIGHT) # type: ignore
+        except:
+            pass
 
 
     def draw(self):

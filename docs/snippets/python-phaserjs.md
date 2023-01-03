@@ -69,6 +69,10 @@ game = Game()
 
 ## Starter Game: WIP
 
+will not work at the moment, since phser is not shipped:
+
+'https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js'
+
 ```py live_py id=79a92e22-6e57-434b-afcb-69f68818a073
 from browser import window, document, html
 import javascript

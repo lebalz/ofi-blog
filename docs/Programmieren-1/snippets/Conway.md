@@ -27,34 +27,35 @@ grid[5][12] = 'black'
 
 def neighbours(grid, x, y):
     nb = []
+    dim_x = len(grid[0])
+    dim_y = len(grid)
     for i in range(-1, 2):
         for j in range(-1, 2):
             if not (i == 0 and j == 0):
-                ny = (y + i) % grid.size[0]
-                nx = (x + j) % grid.size[1]
+                ny = (y + i) % dim_y
+                nx = (x + j) % dim_x
                 nb.append(grid[ny][nx])
     return nb
 
 def live_neighbours(grid, x, y):
     s = 0
     for cell in neighbours(grid, x, y):
-        if cell.color == 'black':
+        if cell == 'black':
             s += 1
     return s
 
 @gameloop
-def evolution():
-    global grid
-    next_grid = Grid(SIZE[0], SIZE[1])
-    Grid.clear_canvas()
-    for x in range(grid.size[0]):
+def evolution(dt):
+    current = grid.color_grid
+    for x in range(grid.size[1]):
         for y in range(grid.size[0]):
-            alive = live_neighbours(grid, x, y)
-            if grid[y][x].color == 'black' and 2 <= alive <= 3:
-                next_grid[y][x].color = 'black'
-            elif grid[y][x].color != 'black' and alive == 3:
-                next_grid[y][x].color = 'black'
-    grid = next_grid
+            alive = live_neighbours(current, x, y)
+            if current[y][x] == 'black' and 2 <= alive <= 3:
+                grid[y][x].color = 'black'
+            elif current[y][x] != 'black' and alive == 3:
+                grid[y][x].color = 'black'
+            else:
+                grid[y][x].color = ''
     sleep(50)
 
 evolution()
@@ -117,34 +118,35 @@ grid = Grid.from_bin_text('''
 
 def neighbours(grid, x, y):
     nb = []
+    dim_x = len(grid[0])
+    dim_y = len(grid)
     for i in range(-1, 2):
         for j in range(-1, 2):
             if not (i == 0 and j == 0):
-                ny = (y + i) % grid.size[0]
-                nx = (x + j) % grid.size[1]
+                ny = (y + i) % dim_y
+                nx = (x + j) % dim_x
                 nb.append(grid[ny][nx])
     return nb
 
 def live_neighbours(grid, x, y):
     s = 0
     for cell in neighbours(grid, x, y):
-        if cell.color == 'black':
+        if cell == 'black':
             s += 1
     return s
 
 @gameloop
-def evolution():
-    global grid
-    Grid.clear_canvas()
-    next_grid = Grid(grid.size[0], grid.size[1])
+def evolution(dt):
+    current = grid.color_grid
     for x in range(grid.size[1]):
         for y in range(grid.size[0]):
-            alive = live_neighbours(grid, x, y)
-            if grid[y][x].color == 'black' and 2 <= alive <= 3:
-                next_grid[y][x].color = 'black'
-            elif grid[y][x].color != 'black' and alive == 3:
-                next_grid[y][x].color = 'black'
-    grid = next_grid
+            alive = live_neighbours(current, x, y)
+            if current[y][x] == 'black' and 2 <= alive <= 3:
+                grid[y][x].color = 'black'
+            elif current[y][x] != 'black' and alive == 3:
+                grid[y][x].color = 'black'
+            else:
+                grid[y][x].color = ''
     sleep(50)
 
 evolution()
@@ -171,36 +173,38 @@ grid = Grid.from_bin_text('''
                              xxx       
 ''')
 
+
 def neighbours(grid, x, y):
     nb = []
+    dim_x = len(grid[0])
+    dim_y = len(grid)
     for i in range(-1, 2):
         for j in range(-1, 2):
             if not (i == 0 and j == 0):
-                ny = (y + i) % grid.size[0]
-                nx = (x + j) % grid.size[1]
+                ny = (y + i) % dim_y
+                nx = (x + j) % dim_x
                 nb.append(grid[ny][nx])
     return nb
 
 def live_neighbours(grid, x, y):
     s = 0
     for cell in neighbours(grid, x, y):
-        if cell.color == 'black':
+        if cell == 'black':
             s += 1
     return s
 
 @gameloop
-def evolution():
-    global grid
-    Grid.clear_canvas()
-    next_grid = Grid(grid.size[0], grid.size[1])
+def evolution(dt):
+    current = grid.color_grid
     for x in range(grid.size[1]):
         for y in range(grid.size[0]):
-            alive = live_neighbours(grid, x, y)
-            if grid[y][x].color == 'black' and 2 <= alive <= 3:
-                next_grid[y][x].color = 'black'
-            elif grid[y][x].color != 'black' and alive == 3:
-                next_grid[y][x].color = 'black'
-    grid = next_grid
+            alive = live_neighbours(current, x, y)
+            if current[y][x] == 'black' and 2 <= alive <= 3:
+                grid[y][x].color = 'black'
+            elif current[y][x] != 'black' and alive == 3:
+                grid[y][x].color = 'black'
+            else:
+                grid[y][x].color = ''
     sleep(50)
 
 evolution()
@@ -238,36 +242,38 @@ xxx xx
        
 ''')
 
+
 def neighbours(grid, x, y):
     nb = []
+    dim_x = len(grid[0])
+    dim_y = len(grid)
     for i in range(-1, 2):
         for j in range(-1, 2):
             if not (i == 0 and j == 0):
-                ny = (y + i) % grid.size[0]
-                nx = (x + j) % grid.size[1]
+                ny = (y + i) % dim_y
+                nx = (x + j) % dim_x
                 nb.append(grid[ny][nx])
     return nb
 
 def live_neighbours(grid, x, y):
     s = 0
     for cell in neighbours(grid, x, y):
-        if cell.color == 'black':
+        if cell == 'black':
             s += 1
     return s
 
 @gameloop
-def evolution():
-    global grid
-    Grid.clear_canvas()
-    next_grid = Grid(grid.size[0], grid.size[1])
+def evolution(dt):
+    current = grid.color_grid
     for x in range(grid.size[1]):
         for y in range(grid.size[0]):
-            alive = live_neighbours(grid, x, y)
-            if grid[y][x].color == 'black' and 2 <= alive <= 3:
-                next_grid[y][x].color = 'black'
-            elif grid[y][x].color != 'black' and alive == 3:
-                next_grid[y][x].color = 'black'
-    grid = next_grid
+            alive = live_neighbours(current, x, y)
+            if current[y][x] == 'black' and 2 <= alive <= 3:
+                grid[y][x].color = 'black'
+            elif current[y][x] != 'black' and alive == 3:
+                grid[y][x].color = 'black'
+            else:
+                grid[y][x].color = ''
     sleep(50)
 
 evolution()

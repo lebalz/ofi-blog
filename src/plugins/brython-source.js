@@ -5,8 +5,7 @@ module.exports = function (context, options) {
             const remoteHeadTags = content ? content.remoteHeadTags : [];
             const brython_pips = [];
             ([
-                'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js',
-                'https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js'
+                'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js'
             ]).forEach(pip => {
                 brython_pips.push(
                     {

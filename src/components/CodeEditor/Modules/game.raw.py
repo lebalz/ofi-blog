@@ -1,6 +1,7 @@
 
 from browser import timer, document # type: ignore
 from config import Config           # type: ignore
+
 import time
 class Game():
     stop_request = False
@@ -59,7 +60,7 @@ def gameloop(func):
     '''
     Game.reset()
     t0 = time.now() # type: ignore
-    Game.init_time = document[Config.PYTHON_SOURCE].attrs['data--start-time']
+    Game.init_time = document[Config.PYTHON_SOURCE].attrs.get('data--start-time')
         
     def animation_frame():
         Game.anim_id = timer.request_animation_frame(wrap)
@@ -80,6 +81,5 @@ def gameloop(func):
 
         if not Game.sleep_requested and not Game.stop_request:
             animation_frame()
-        return result
-    wrap()
-    return Game
+        return Game
+    return wrap
