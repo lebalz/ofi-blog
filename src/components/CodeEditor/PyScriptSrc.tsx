@@ -7,6 +7,7 @@ import Script from '../../models/Script';
 import GridModule from './Modules/Grid';
 import ConfigModule from './Modules/Config';
 import GameModule from './Modules/Game';
+import Turtle3dModule from './Modules/Turtle3d';
 const run_template = require('./brython_runner.raw.py');
 
 interface Props {
@@ -21,6 +22,11 @@ const PyScriptSrc = observer((props: Props) => {
         <React.Fragment>
             <ConfigModule />
             <GameModule />
+            {
+                /(^from turtle3d import)|(^import turtle3d)/m.test(code) && (
+                    <Turtle3dModule />
+                )
+            }
             {
                 pyScript.hasCanvasOutput && (
                     <GridModule />

@@ -162,6 +162,10 @@
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
+        :global .theme-code-block-highlighted-line {
+            color: var(--ifm-color-danger-darker) !important;
+            background: transparent;
+        }
     }
 
     .containerSlim>.brythonCodeBlockHeader {

@@ -3,6 +3,7 @@ import * as React from 'react';
 import Script from '../../models/Script';
 import { useStore } from '../../stores/hooks';
 import styles from './styles.module.scss';
+import CodeBlock from '@theme/CodeBlock';
 
 interface Props {
     webKey: string;
@@ -15,25 +16,21 @@ const Result = observer((props: Props) => {
     if (pyScript.logMessages.length === 0 || /^\s*$/.test(pyScript.logMessages.map((msg) => msg.output).join(''))) {
         return null;
     }
+    const errors = []
+    let lineNr = 1;
+    const code = pyScript.logMessages.map((msg) => {
+        const msgLen = (msg.output || '').split('\n').length - 1;
+        if (msg.type === 'stderr') {
+            errors.push(`${lineNr}-${lineNr + msgLen}`);
+        }
+        lineNr += msgLen;
+        return msg.output;
+    });
     return (
         <div className={styles.brythonOut}>
-            {pyScript.logMessages.length > 0 && (
-                <pre style={{ overflowX: 'auto' }}>
-                    {pyScript.logMessages.map((msg, idx) => {
-                        return (
-                            <code
-                                key={idx}
-                                style={{
-                                    color:
-                                        msg.type === 'stderr' ? 'var(--ifm-color-danger-darker)' : undefined,
-                                }}
-                            >
-                                {msg.output}
-                            </code>
-                        );
-                    })}
-                </pre>
-            )}
+            <CodeBlock metastring={`{${errors.join(',')}}`}>
+                {code.join('')}
+            </CodeBlock>
         </div>
     );
 });
