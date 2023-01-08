@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DOM_ELEMENT_IDS } from './constants';
+import { DOM_ELEMENT_IDS, TURTLE3D_IMPORTS_TESTER } from './constants';
 import { sanitizePyScript } from '../../utils/sanitizers';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/hooks';
@@ -23,7 +23,7 @@ const PyScriptSrc = observer((props: Props) => {
             <ConfigModule />
             <GameModule />
             {
-                /(^from turtle3d import)|(^import turtle3d)/m.test(code) && (
+                TURTLE3D_IMPORTS_TESTER.test(code) && (
                     <Turtle3dModule />
                 )
             }

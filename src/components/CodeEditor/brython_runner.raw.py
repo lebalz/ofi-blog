@@ -94,7 +94,7 @@ def print_exc(file=None):
     file.write(trace)
     return trace
 
-TURTLE_IMPORTS = re.compile(r'(^from turtle import)|(^import turtle)', re.M)
+TURTLE_IMPORTS = re.compile(r'(^from turtle import)|(^import turtle)|(^from turtle3d import)|(^import turtle3d)', re.M)
 GRID_IMPORTS = re.compile(r'(^from grid import)|(^import grid)', re.M)
 GRAPHICS_OUTPUT = re.compile(r'^(SETUP_)?GRAPHICS_OUTPUT\s*=\s*(True|1)', re.M)
 CANVAS_OUTPUT = re.compile(r'^(SETUP_)?CANVAS_OUTPUT\s*=\s*(True|1)', re.M)

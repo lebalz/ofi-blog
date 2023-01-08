@@ -46,16 +46,16 @@ def live_neighbours(grid, x, y):
 
 @gameloop
 def evolution(dt):
-    current = grid.color_grid
+    current = grid.tolist()
     for x in range(grid.size[1]):
         for y in range(grid.size[0]):
             alive = live_neighbours(current, x, y)
             if current[y][x] == 'black' and 2 <= alive <= 3:
-                grid[y][x].color = 'black'
+                grid[y][x] = 'black'
             elif current[y][x] != 'black' and alive == 3:
-                grid[y][x].color = 'black'
+                grid[y][x] = 'black'
             else:
-                grid[y][x].color = ''
+                grid[y][x] = ''
     sleep(50)
 
 evolution()
@@ -137,16 +137,16 @@ def live_neighbours(grid, x, y):
 
 @gameloop
 def evolution(dt):
-    current = grid.color_grid
+    current = grid.tolist()
     for x in range(grid.size[1]):
         for y in range(grid.size[0]):
             alive = live_neighbours(current, x, y)
             if current[y][x] == 'black' and 2 <= alive <= 3:
-                grid[y][x].color = 'black'
+                grid[y][x] = 'black'
             elif current[y][x] != 'black' and alive == 3:
-                grid[y][x].color = 'black'
+                grid[y][x] = 'black'
             else:
-                grid[y][x].color = ''
+                grid[y][x] = ''
     sleep(50)
 
 evolution()
@@ -195,16 +195,16 @@ def live_neighbours(grid, x, y):
 
 @gameloop
 def evolution(dt):
-    current = grid.color_grid
+    current = grid.tolist()
     for x in range(grid.size[1]):
         for y in range(grid.size[0]):
             alive = live_neighbours(current, x, y)
             if current[y][x] == 'black' and 2 <= alive <= 3:
-                grid[y][x].color = 'black'
+                grid[y][x] = 'black'
             elif current[y][x] != 'black' and alive == 3:
-                grid[y][x].color = 'black'
+                grid[y][x] = 'black'
             else:
-                grid[y][x].color = ''
+                grid[y][x] = ''
     sleep(50)
 
 evolution()
@@ -264,16 +264,16 @@ def live_neighbours(grid, x, y):
 
 @gameloop
 def evolution(dt):
-    current = grid.color_grid
+    current = grid.tolist()
     for x in range(grid.size[1]):
         for y in range(grid.size[0]):
             alive = live_neighbours(current, x, y)
             if current[y][x] == 'black' and 2 <= alive <= 3:
-                grid[y][x].color = 'black'
+                grid[y][x] = 'black'
             elif current[y][x] != 'black' and alive == 3:
-                grid[y][x].color = 'black'
+                grid[y][x] = 'black'
             else:
-                grid[y][x].color = ''
+                grid[y][x] = ''
     sleep(50)
 
 evolution()

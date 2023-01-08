@@ -56,8 +56,7 @@ class Rectangle():
         return Rectangle(grid, self.col, self.row, self.color)
 
     def __repr__(self):
-        color = self.color
-        return f'{color[:5].ljust(5, " ")}'
+        return self.color
 
 class RectLine():
     line: list = []
@@ -78,7 +77,7 @@ class RectLine():
         self.line[key].color = value
 
     def __repr__(self):
-        return ', '.join([f'{r}' for r in self.line])
+        return ', '.join([f'{r.color}' for r in self.line])
 
     def __iter__(self):
         self.n = 0
@@ -100,7 +99,7 @@ class RectLine():
             rect.draw()
     
     def copy(self, grid):
-        return RectLine(grid, self.line[0].row, len(self.line), [l.copy() for l in self.line]) # type: ignore
+        return RectLine(grid, self.line[0].row, [l.copy(grid) for l in self.line]) # type: ignore
 
 class Grid():
     lines = []
@@ -174,13 +173,17 @@ class Grid():
         self.lines = lines
         self.max = len(lines)
 
-    @property
-    def grid(self):
-        return [l.line for l in self.lines]
+        
+    def tolist(self):
+        return [[c.color for c in l.line] for l in self.lines]
 
     @property
     def color_grid(self):
-        return [[c.color for c in l.line] for l in self.lines]
+        return self.tolist()
+
+    @property
+    def grid(self):
+        return self.tolist()
 
     @property
     def size(self):
@@ -229,6 +232,7 @@ class Grid():
         lines = [l.copy(cp) for l in self.lines]
         cp.set_lines(lines)
         return cp
+
 
     def __getitem__(self, key):
         return self.lines[key]

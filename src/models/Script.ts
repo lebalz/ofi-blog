@@ -5,7 +5,7 @@ import { CodeModel } from './iModel';
 import { DocumentStore } from '../stores/DocumentStore';
 import { rootStore } from '../stores/stores';
 import SaveService, { ApiModel } from './SaveService';
-import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER, GRAPHICS_OUTPUT_TESTER, CANVAS_OUTPUT_TESTER, GRID_IMPORTS_TESTER } from '../components/CodeEditor/constants';
+import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER, GRAPHICS_OUTPUT_TESTER, CANVAS_OUTPUT_TESTER, GRID_IMPORTS_TESTER, TURTLE3D_IMPORTS_TESTER } from '../components/CodeEditor/constants';
 
 export interface PyDoc {
     code: string;
@@ -250,13 +250,13 @@ export default class Script implements CodeModel, ApiModel {
     @computed
     get hasGraphicsOutput(): boolean {
         const code = `${this.precode}\n${this.data.code}`;
-        return CANVAS_OUTPUT_TESTER.test(code) || GRAPHICS_OUTPUT_TESTER.test(code) || TURTLE_IMPORTS_TESTER.test(code) || GRID_IMPORTS_TESTER.test(code);
+        return CANVAS_OUTPUT_TESTER.test(code) || GRAPHICS_OUTPUT_TESTER.test(code) || TURTLE_IMPORTS_TESTER.test(code) || GRID_IMPORTS_TESTER.test(code) || TURTLE3D_IMPORTS_TESTER.test(code);
     }
 
     @computed
     get hasTurtleOutput(): boolean {
         const code = `${this.precode}\n${this.data.code}`;
-        return this.hasGraphicsOutput && TURTLE_IMPORTS_TESTER.test(code);
+        return this.hasGraphicsOutput && (TURTLE_IMPORTS_TESTER.test(code) || TURTLE3D_IMPORTS_TESTER.test(code));
     }
 
     @computed
