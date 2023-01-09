@@ -13,6 +13,7 @@ interface ProcessedPart {
     char: string;
     bin: string;
     ord: number;
+    bytes: string;
 }
 
 const octaChunks = (octaText: string): string[] => {
@@ -130,7 +131,7 @@ const BinDecoder = () => {
 
     React.useEffect(() => {
         if (itemsRef.current && pathSvg.current) {
-            const svgP = pathSvg.current.querySelector<SVGPathElement>('svg>path');
+            const svgP = pathSvg.current.querySelector<SVGPathElement>('svg>path:last-of-type');
             const animPath = anime.path(svgP);
             setProcessedIdx(-1);
             const animations = itemsRef.current.map((r, idx) => {
@@ -183,10 +184,23 @@ const BinDecoder = () => {
             pauseAnimations(anims);
             const bin = newStack.join('');
             const ord = parseInt(bin, 2);
+            let bytes = bin.padStart(bin.length + 6 - bin.length % 6, '0')
+            if (bin.length > 7) {
+                const chunks = bytes.split(/(.{6})/).filter(o => o)
+                bytes = chunks.reduce((prev, curr, idx) => {
+                    if (idx === 0) {
+                        return `${'1'.repeat(chunks.length)}0${curr.substring(chunks.length - 2)}`
+                    }
+                    return `${prev} 10${curr}`;
+                }, '')
+            } else {
+                bytes = `0${bin.padStart(7, '0')}`
+            }
             const char: ProcessedPart = {
                 bin: bin,
                 ord: ord,
                 char: String.fromCodePoint(ord),
+                bytes: mode === 'utf8' ? bytes : ''
             };
 
             setOut([...out, char]);
@@ -212,7 +226,7 @@ const BinDecoder = () => {
     }, [processedIdx, mode]);
 
     return (
-        <div className={clsx('hero', 'shadow--lw', containerStyle.container)}>
+        <div className={clsx('hero', 'shadow--lw', containerStyle.container, styles.container)}>
             <div className="container">
                 <p className="hero__subtitle">Bin Decoder</p>
                 <h4>Modus</h4>
@@ -321,6 +335,9 @@ const BinDecoder = () => {
                                                 <th>Chr</th>
                                                 <th>Dec</th>
                                                 <th>Bin</th>
+                                                {mode === 'utf8' && (
+                                                    <th>Bytes</th>
+                                                )}
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -333,6 +350,9 @@ const BinDecoder = () => {
                                                             <td>{chr.char}</td>
                                                             <td>{chr.ord}</td>
                                                             <td>{chr.bin}</td>
+                                                            {mode === 'utf8' && (
+                                                                <th>{chr.bytes}</th>
+                                                            )}
                                                         </tr>
                                                     );
                                                 })}

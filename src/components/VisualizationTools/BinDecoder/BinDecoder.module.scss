@@ -1,13 +1,16 @@
 html[data-theme='dark'] {
-    .bit {
-        &.on {
-            color: black;
+    .container {
+        .bit {
+            &.on {
+                color: black;
+            }
         }
-    }
-    .charHistory {
-        table {
-            background: var(--ifm-code-background);
+        .charHistory {
+            table {
+                background: var(--ifm-code-background);
+            }
         }
+        --ifm-heading-color: black;
     }
 }
 .cable {
@@ -31,8 +34,9 @@ html[data-theme='dark'] {
     position: absolute;
     width: 20px;
     height: 20px;
+    z-index: 10;
     .bit {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
 }
 .svgContainer {
@@ -62,8 +66,9 @@ html[data-theme='dark'] {
             font-style: italic;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
-            border-bottom: 3px solid var(--ifm-color-primary);
+            border-bottom: 3px solid var(--ifm-color-warning);
             padding-bottom: 0;
+            opacity: 0.5;
         }
     }
 }
@@ -79,10 +84,11 @@ html[data-theme='dark'] {
 
 .charHistory {
     overflow: auto;
-    max-height: 5em;
+    max-height: 15em;
     margin-top: 0.5em;
     table {
         font-size: x-small;
+        color: black;
         th {
             // font-weight: var(--ifm-font-weight-normal);
             padding: 2px;
