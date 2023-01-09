@@ -82,7 +82,7 @@ const StringAnswer = observer((props: StringProps) => {
   }
   const hasSolution = props.solution || props.checker;
   return (
-    <div className={clsx(styles.answer, styles.string, 'notranslate')}>
+    <div className={clsx(styles.answer, styles.string, 'notranslate', 'no-comments')}>
       {props.label && <label style={{ width: props.labelWidth }}>{props.label}</label>}
       {props.children && <label>{props.children}</label>}
       {props.select ? (
