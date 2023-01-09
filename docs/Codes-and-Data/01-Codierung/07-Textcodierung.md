@@ -16,8 +16,9 @@ import DecBinHexTransformer from "@site/src/components/VisualizationTools/DecBin
 In dieser praktischen Übung speichern Sie auf Ihrem Computer eine Textdatei und überprüfst anschliessend, ob die in der Datei gespeicherten Bits tatsächlich der Unicode/UTF-8-Codierung des Texts entsprechen.
 
 :::aufgabe 1. Texteditor öffnen
+<Answer type="state" webKey="528f373f-d9d7-4fe4-a211-c27726f18dd3" />
 
-Die Editor ist eine App, in welcher man Textdateien erstellen und bearbeiten kann. Das kann man auch mit Word, dies ist jedoch umständlicher. Word-Dateien sind keine reinen Textdateien, sie enthalten auch andere Daten wie Formatierungen und Bilder.
+Der Editor ist eine App, in welcher man Textdateien erstellen und bearbeiten kann. Das kann man auch mit Word, dies ist jedoch umständlicher. Word-Dateien sind keine reinen Textdateien, sie enthalten auch andere Daten wie Formatierungen und Bilder.
 
 <OsTabs>
 <TabItem value="win">
@@ -39,6 +40,7 @@ Um in macOS Textdateien erstellen und bearbeiten zu können, installieren Sie du
 :::
 
 :::aufgabe 2. Text eingeben
+<Answer type="state" webKey="6682dc2c-b472-4fad-98f4-eb8bbe6f42ab" />
 
 Geben Sie einen kurzen Text ein. Dieser sollte nicht nur ASCII-Zeichen enthalten, sondern auch ein Umlaut wie «ä» und Emojis. 
 
@@ -74,6 +76,7 @@ Alternativ findet man unter [Emojipedia](https://emojipedia.org) viele weitere E
 :::
 
 :::aufgabe 3. Textdatei speichern
+<Answer type="state" webKey="b685dfdc-27eb-444a-a59f-019b315aa4af" />
 
 Speichern Sie die Textdatei unter dem Namen **Unicode-Test.txt** indem Sie
 
@@ -81,7 +84,7 @@ Speichern Sie die Textdatei unter dem Namen **Unicode-Test.txt** indem Sie
 <OsTabs>
 <TabItem value="win">
 
-- die Tastenkombination [Ctrl]+[S] drücken oder
+- die Tastenkombination [[Ctrl]]+[[s]] drücken oder
 - den Menüpunkt `Datei > Speichern` auswählen.
 
 ![](images/07-notepad-save.png)
@@ -89,7 +92,7 @@ Speichern Sie die Textdatei unter dem Namen **Unicode-Test.txt** indem Sie
 </TabItem>
 <TabItem value="mac">
 
-- die Tastenkombination [Command]+[S] drücken oder
+- die Tastenkombination [[Command]]+[[s]] drücken oder
 - den Menüpunkt `Datei > Sichern …` auswählen.
 
 ![](images/07-coteditor-save.png)
@@ -100,6 +103,7 @@ Speichern Sie die Textdatei unter dem Namen **Unicode-Test.txt** indem Sie
 :::
 
 :::aufgabe 4. Datei als Bytes betrachten
+<Answer type="state" webKey="42f48306-1123-4161-a256-1eacc6ab8430" />
 
 Mit dem Online-Tool _HexEd.it_ können Sie eine beliebige Datei Byte für Byte betrachten:
 
@@ -111,13 +115,7 @@ Klicken Sie auf **Datei öffnen** und wählen Sie die vorhin gespeicherte Textda
 54 73 63 68 C3 BC 73 73 20 F0 9F 98 80 21
 ```
 
-Die Bytes werden wie in der Informatik üblich als *Hexadezimalzahlen* angegeben. Natürlich kann man die Bytes auch binär darstellen:
-
-```
-01010100 01110011 01100011 01101000 11000011 10111100
-01110011 01110011 00100000 11110000 10011111 10011000
-10000000 00100001
-```
+Die Bytes werden wie in der Informatik üblich als *Hexadezimalzahlen* angegeben. Wenn man über die einzelnen Bytes navigiert (mit den Pfeiltasten), sieht man auf der linken Seite die entsprechende Binärcodierung. Alternativ finden Sie hier auch einen Umrechner zwischen Binär, Dezimal und Hexadezimalzahlen.
 
 <DecBinHexTransformer />
 
@@ -157,6 +155,7 @@ Im vorliegenden Beispiel sieht das so aus:
 :::
 
 :::aufgabe ⭐️ Zusatzaufgabe - Andere Dateien
+<Answer type="state" webKey="132b7d4d-6605-45d6-a212-079d3487ec8a" />
 
 Betrachten Sie andere Dateien in _HexEd.it_ und achten Sie auf folgendes:
 

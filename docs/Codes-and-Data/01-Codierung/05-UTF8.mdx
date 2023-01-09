@@ -3,15 +3,14 @@ sidebar_custom_props:
   id: b8b4c517-996a-48a6-a6ca-0d87e3a014a1
 ---
 
-# 5. UTF-8
-
 import BinDecoder from '@site/src/components/VisualizationTools/BinDecoder'
 
-### 5. UTF-8
+# 5. UTF-8
 
 Werden Unicode-Zeichen ins binäre übersetzt wird klar, dass diese Zahlen nicht mehr nur mit einem Byte dargestellt werden können. Beispielsweise ist dem Affen-Emoji 🐒 die Zahl $128018_{10}$ zugewiesen, was der Binärzahl $00000001\:11110100\:00010010_{2}$ entspricht, also `3` Bytes Speicherplatz benötigt.
 
-**UTF-8** ist ein Code, der Unicode-Zeichen in Bitmuster übersetzt. Ein Unicode-Zeichen wird mit ein bis vier Bytes (daher 8-32 bit) dargestellt. Die folgende Tabelle zeigt, wie die Codierung funktioniert:
+UTF-8
+: ist ein Code, der Unicode-Zeichen in Bitmuster übersetzt. Ein Unicode-Zeichen wird mit ein bis vier Bytes (daher 8-32 bit) dargestellt. Die folgende Tabelle zeigt, wie die Codierung funktioniert:
 
 | Unicode-Bereich |                             Bitmuster | Anzahl Bit | Byte 1: Anzahl Kontroll-Bits |
 | --------------: | ------------------------------------: | ---------: | ---------------------------: |
