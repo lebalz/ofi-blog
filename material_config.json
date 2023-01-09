@@ -153,8 +153,7 @@
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/001-intro.md",
       "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/001-intro.md",
-      "ignore": [],
-      "open": true
+      "ignore": []
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/002-screen.md",
@@ -166,8 +165,7 @@
       "to": "versioned_docs/version-26e/05-Texte",
       "ignore": [
         "04-Uebung.md"
-      ],
-      "open": true
+      ]
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/003-repeat.md",
@@ -238,6 +236,18 @@
       "from": "docs/Programmieren-1/02-Turtlegrafik/052-xmas.md",
       "to": "versioned_docs/version-26e/03-Programmieren-1/05-weihnachten.md",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/00-Lernziele.md",
+      "to": "versioned_docs/version-26e/06-Codierung/00-Lernziele.md",
+      "ignore": [],
+      "open": true
+    },
+    {
+      "from": "docs/Codes-and-Data/01-Codierung/",
+      "to": "versioned_docs/version-26e/06-Codierung/01-Codierung",
+      "ignore": [],
+      "open": true
     }
   ],
   "26P": [
@@ -269,8 +279,7 @@
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/001-intro.md",
       "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/001-intro.md",
-      "ignore": [],
-      "open": true
+      "ignore": []
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/002-screen.md",
@@ -282,8 +291,7 @@
       "to": "versioned_docs/version-26P/05-Texte",
       "ignore": [
         "04-Uebung.md"
-      ],
-      "open": true
+      ]
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/003-repeat.md",
@@ -359,6 +367,18 @@
       "from": "docs/Programmieren-1/02-Turtlegrafik/052-xmas.md",
       "to": "versioned_docs/version-26P/03-Programmieren-1/05-weihnachten.md",
       "ignore": []
+    },
+    {
+      "from": "docs/Codes-and-Data/00-Lernziele.md",
+      "to": "versioned_docs/version-26P/06-Codierung/00-Lernziele.md",
+      "ignore": [],
+      "open": true
+    },
+    {
+      "from": "docs/Codes-and-Data/01-Codierung/",
+      "to": "versioned_docs/version-26P/06-Codierung/01-Codierung",
+      "ignore": [],
+      "open": true
     }
   ],
   "24ef": [
