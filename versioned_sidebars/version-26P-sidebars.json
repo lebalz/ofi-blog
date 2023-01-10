@@ -35,6 +35,18 @@
               "href": "pathname:///p/Programmieren/08-Conditions/presentation.html"
             }
           ]
+        },
+        {
+          "type": "category",
+          "label": "Codes & Daten",
+          "collapsible": true,
+          "items": [
+            {
+              "type": "link",
+              "label": "Einstieg",
+              "href": "pathname:///p/Codierung/ofi/presentation.html"
+            }
+          ]
         }
       ]
     }
