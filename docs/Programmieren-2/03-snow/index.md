@@ -72,6 +72,7 @@ def draw():
 Dies zeichnet einen rot gefüllten Kreis mit Radius 10 bei den Koordinaten (100, 200).
 
 :::aufgabe Aufgabe 1 – Schneeflocke zeichnen
+<Answer type="state" webKey="f393b9d4-488c-46ab-a583-bc030fca9a47" />
 
 :::cards
 ![[👉 Winterlandschaft 1](./images/winter_1.jpg)](./images/winter_1.jpg)
@@ -111,6 +112,7 @@ pgzrun.go()
 :::
 
 :::aufgabe Aufgabe 2 – Schneeflocke bewegen
+<Answer type="state" webKey="44bff46e-f883-4520-8729-20f8fa7f3d2c" />
 
 Damit wir die Schneeflocke bewegen können, muss die Position in einer Variablen gespeichert werden, damit sie in der `update()`-Funktion verändert werden kann.
 
@@ -145,7 +147,7 @@ Nun wollen wir mehrere Schneeflocken zeichnen. Dazu müssen wir brauchen wir Zuf
 
 <Hint>
 
-1. Normalerweise schreibt man Konstanten (also Variablen, deren Wert sich nicht ändert) in Grossbuchstaben.
+1. Normalerweise schreibt man Konstanten (also Variablen, deren Werte sich nicht ändern) in Grossbuchstaben.
 2. Der sinnvolle Bereich für die x-Koordinate liegt zwischen `0` und der Breite des Fensters. Benutzen Sie die Variable und nicht die Zahl direkt.
 3. Ersetzen Sie `schnee_x[0]` durch `schnee_x[i]`, wobei `i` Ihre Schleifenvariable ist.
 4. Es gibt 2 Dinge zu korrigieren.
@@ -163,7 +165,9 @@ Nun wollen wir mehrere Schneeflocken zeichnen. Dazu müssen wir brauchen wir Zuf
 :::
 
 :::aufgabe ⭐ Zusatzaufgabe – Schneeflocken verschönern
-Hier einige Ideen, wie du die Schneefall-Animation noch verbessern könntest:
+<Answer type="state" webKey="d1f3abc0-ffa1-487f-816e-9dafcdf602f7" />
+
+Hier einige Ideen, wie Sie die Schneefall-Animation noch verbessern könnten:
 
 - Nicht alle Schneeflocken sollen gleich gross sein.
 - Die grösseren Flocken sollen schneller fallen (dies erzeugt einen leichten 3D-Effekt).
