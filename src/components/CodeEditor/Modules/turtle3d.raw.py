@@ -93,16 +93,19 @@ G1 Z.2 F720
 G1 E.8 F2100
 M204 S800
 ;TYPE:Skirt/Brim
+
+G1 F2000
 '''
 
 _td_extended_defs.append('GRBL_PRUSA_END')
-Turtle.GRBL_PRUSA_END = '''
+Turtle.GRBL_PRUSA_PRE_END = '''
 ;TYPE:Custom
 ; Filament-specific end gcode
-G1 Z3 F720 ; Move print head up
+G1 Z{z} F720 ; Move print head up
 G1 X0 Y210 F7200 ; park
-G1 Z51 F720 ; Move print head further up
-
+G1 Z{z_park} F720 ; Move print head further up
+'''
+Turtle.GRBL_PRUSA_END = '''\
 G1 E2 F5000
 M73 P99 R0
 M73 Q99 S0
@@ -423,7 +426,7 @@ Turtle.gcodes = []
 Turtle.layer_change_code = []
 Turtle.history = [(0, 0)]
 
-def _wipe(self, x, y, to_x, to_y):
+def _wipe(self, x, y, to_x, to_y, e = -1):
     if len(self.gcodes) == 0:
         return
     dist = sqrt((to_x - x) ** 2 + (to_y - y) ** 2)
@@ -466,7 +469,7 @@ def _wipe(self, x, y, to_x, to_y):
     self.gcodes.append(';TYPE:Perimeter')
     self.gcodes.append(':WIDTH:0.419999')
     self.gcodes.append('M204 S800')
-    self.gcodes.append('G1 F1200')
+    self.gcodes.append('G1 F2400')
 
 _td_extended_defs.append('_wipe')
 Turtle._wipe = _wipe
@@ -486,9 +489,17 @@ def _grbl_goto(self, x, y):
     self.history.append((x, y))
     dist = sqrt((x - last_x) ** 2 + (y - last_y) ** 2)
     if self._drawing:
-        if len(self.layer_change_code) > 0:
-            self._wipe(x, y, x, y)        
-        self.gcodes.append(f'G1 X{x + self.PRUSA_OFFSET[0]:.3f} Y{y + self.PRUSA_OFFSET[1]:.3f} E{(dist * self.LAYER_HEIGHT / 620):.5f}')
+        if dist > 10:
+            e_val = (dist * self.LAYER_HEIGHT / 7)
+        elif dist > 5:
+            e_val = (dist * self.LAYER_HEIGHT / 10)
+        elif dist > 1:
+            e_val = (dist * self.LAYER_HEIGHT / 15)
+        else:
+            e_val = (dist * self.LAYER_HEIGHT / 30)
+        self.gcodes.append(f'G1 X{x + self.PRUSA_OFFSET[0]:.3f} Y{y + self.PRUSA_OFFSET[1]:.3f} E{e_val:.5f}')
+        # if len(self.layer_change_code) > 0:
+        #     self._wipe(x, y, x, y)        
     else:
         # self.gcodes.append(f'G1 X{x:.3f} Y{y:.3f} F10800')
         self._wipe(last_x, last_y, x, y)
@@ -517,6 +528,7 @@ def _elevation(self, elevation = None):
     post.append(';AFTER_LAYER_CHANGE')
     post.append(f';{self._elevation:.2f}')
     self.layer_change_code.append({'pre': pre, 'post': post})
+    self._wipe(self._x, self._y, self._x, self._y)
 
 
 
@@ -529,7 +541,7 @@ _td_extended_defs.append('level_up')
 Turtle.level_up = _level_up
 
 def _gcode(self):
-    return '\n'.join([self.GRBL_PRUSA_START, *self.gcodes, self.GRBL_PRUSA_END]).replace('G1 Z0.', 'G1 Z.').replace(' E0.', ' E.')
+    return '\n'.join([self.GRBL_PRUSA_START, *self.gcodes, self.GRBL_PRUSA_PRE_END.format(z=self._elevation + 2, z_park=self._elevation + 30), self.GRBL_PRUSA_END]).replace('G1 Z0.', 'G1 Z.').replace(' E0.', ' E.')
 
 _td_extended_defs.append('gcode')
 Turtle.gcode = _gcode
