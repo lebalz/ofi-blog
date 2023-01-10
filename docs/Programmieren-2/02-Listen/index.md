@@ -27,7 +27,7 @@ Index
 `3`
 : :mdi-arrow-right-thin: `5.5`
 
-In Python kann man diese Liste mit eckigen Klammern `[``]` wie folgt erzeugen:
+In Python kann man diese Liste mit eckigen Klammern `[` `]` wie folgt erzeugen:
 
 ```py live_py slim
 noten = [4.5, 5, 3.5, 5.5]
@@ -35,6 +35,8 @@ print('Die vierte Note war eine', noten[3])
 ```
 
 Im Beispiel wird die vierte Note mit dem Index `3` ausgegeben.
+
+## Python Listen: Befehle
 
 :::def
 ### Liste erzeugen
@@ -93,17 +95,17 @@ for index in range(0, len(noten)):
 
 ## Listen Untersuchen
 :::def
-### Länge einer Liste: `len(liste)`
+### Länge einer Liste: `len(<liste>)`
 
 ```py live_py slim
 noten = [4.5, 5, 3.5, 5.5]
 
-print(len(note))
+print(len(noten))
 ```
 :::
 
 :::def
-### Maximum: `max(liste)`
+### Maximum: `max(<liste>)`
 Gibt das maximale Element einer numerischen Liste zurück
 
 ```py live_py slim
@@ -113,7 +115,7 @@ print('Beste Noten', max(noten))
 :::
 
 :::def
-### Minimum: `min(liste)`
+### Minimum: `min(<liste>)`
 Gibt das minimale Element einer numerischen Liste zurück
 
 ```py live_py slim
@@ -123,7 +125,7 @@ print('Schlechteste Noten', min(noten))
 :::
 
 :::def
-### Wert in einer Liste?: `wert in liste`
+### Wert in einer Liste? `<wert> in <liste>`
 Überprüft, ob sich ein Wert in einer Liste befindet
 
 ```py live_py slim
@@ -136,7 +138,7 @@ else:
 :::
 
 :::def
-### Anzahl Elemente mit einem Wert?: `liste.count(wert)`
+### Anzahl Elemente mit einem Wert? `<liste>.count(<wert>)`
 Zählt, wie oft sich ein Wert in einer Liste befindet. 
 
 ```py live_py slim
@@ -151,7 +153,7 @@ for i in [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]:
 
 
 :::def
-### Erstes Element: `liste[0]`
+### Erstes Element: `<liste>[0]`
 
 ```py live_py slim
 noten = [4.5, 5, 3.5, 5.5]
@@ -164,7 +166,7 @@ Bemerken Sie: es wird zuerst überprüft, ob die Liste überhaupt ein Element en
 
 
 :::def
-### Letztes Element `liste[-1]`
+### Letztes Element `<liste>[-1]`
 
 ```py live_py slim
 noten = [4.5, 5, 3.5, 5.5]
@@ -191,7 +193,7 @@ noten[4] = 6
 ## Elemente Verändern
 
 :::def
-### Zuordnung: `liste[index] = wert`
+### Zuordnung: `<liste>[index] = <wert>`
 
 Ein Element in der Liste kann durch eine Zuordnung verändert werden. Im untenstehenden Beispiel werden alle ungenügenden Noten auf eine `5` gesetzt.
 ```py live_py slim
@@ -206,7 +208,7 @@ print(noten)
 ## Elemente Hinzufügen/Entfernen
 
 :::def
-### hinzufügen: `liste.append(wert)`
+### hinzufügen: `<liste>.append(<wert>)`
 
 `append` fügt ein neues Element am **Ende** der Liste hinzu.
 
@@ -216,7 +218,7 @@ print('Ursprünglich', noten)
 noten.append(6)
 print('Neu', noten)
 ```
-:::details An beliebiger Stelle einfügen: `insert(index, wert)`
+:::details An beliebiger Stelle einfügen: `<liste>.insert(<index>, <wert>)`
 
 ```py live_py slim
 noten = [4.5, 5, 3.5, 5.5]
@@ -228,7 +230,7 @@ print('Neu', noten)
 :::
 
 :::def
-### entfernen: `liste.pop(index)`
+### entfernen: `<liste>.pop(<index>)`
 Entfernt das Element an der Stelle `index` und gibt dieses zurück:
 
 ```py live_py slim
@@ -240,7 +242,7 @@ print('Noten', noten)
 :::
 
 :::def
-### Aufsteigend sortieren `liste.sort()`
+### Aufsteigend sortieren `<liste>.sort()`
 ```py live_py slim
 noten = [3.5, 6, 5, 4, 4.5, 5]
 

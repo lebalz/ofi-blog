@@ -120,7 +120,12 @@
       "to": "versioned_docs/version-25h/08-Kryptologie",
       "ignore": [
         "01-Lernziele-reduced.md"
-      ],
+      ]
+    },
+    {
+      "from": "docs/Programmieren-2/",
+      "to": "versioned_docs/version-25h/09-Programmieren-2",
+      "ignore": [],
       "open": true
     }
   ],

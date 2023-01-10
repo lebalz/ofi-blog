@@ -15,18 +15,22 @@ import CodeBlock from '@theme/CodeBlock';
 
 ![Schneeflocken](./images/schneeflocken.png)
 
-## Repetition Pygame Zero
+## Vorbereitung
 
-Wir wollen wieder etwas zeichnen mit Pygame Zero. Hier das Grundgerüst für eine Pygame Zero-Programm:
+[👉 Mu Editor](https://codewith.mu/en/download) herunterladen, installieren und starten.
+
+## Pygame Zero
+
+Wir wollen wieder etwas zeichnen mit Pygame Zero. Hier das Grundgerüst für ein Pygame Zero-Programm:
 
 ```python
 import pgzrun
 
-TITLE = "Fenstertitel"
+TITLE = 'Fenstertitel'
 WIDTH = 800
 HEIGHT = 600
 
-hintergrund = Actor("hintergrundbild")
+hintergrund = Actor('hintergrundbild')
 
 
 def draw():
@@ -41,7 +45,7 @@ def update(zeitdifferenz):
 pgzrun.go()
 ```
 
-::: info Zur Erinnerung
+:::info Zur Erinnerung
 Bilder, die im Programm verwendet werden, müssen in einem Unterverzeichnis `images` gespeichert sein. Anstelle von `hintergrund` wird der Dateiname ohne Endung angegeben. Der Mu-Editor öffnet dieses Verzeichnis automatisch, wenn man auf `Images` :mdi-brush--blue: klickt.
 :::
 
@@ -52,7 +56,7 @@ In der `draw()`-Funktion können nicht nur `Actor` gezeichnet werden, es gibt au
 ```py
 screen.draw.filled_circle(position, radius, farbe)
 
-screen.draw.filled_circle((x, y), r, (r, g, b))
+screen.draw.filled_circle([x, y], r, [r, g, b])
 ```
 
 Dieser Aufruf zeichnet einen ausgefüllten Kreis mit Mittelpunkt `[x, y]` und Radius `r` in der Farbe `[r, g, b]` (die Werte `r`, `g` und `b` müssen zwischen `0` und `255` liegen). Wichtig ist, dass die zusätzlichen Klammern bei der Position und der Farbe geschrieben werden, da die Funktion nur 3 Werte erwartet: die **Position**, den **Radius** und die **Farbe**.
@@ -85,11 +89,11 @@ Dies zeichnet einen rot gefüllten Kreis mit Radius 10 bei den Koordinaten (100,
 ```python
 import pgzrun
 
-TITLE = "Schneeflocken"
+TITLE = 'Schneeflocken'
 WIDTH = 1350
 HEIGHT = 900
 
-hintergrund = Actor("winter_1")
+hintergrund = Actor('winter_1')
 
 
 def draw():
@@ -125,7 +129,7 @@ Vorerst begnügen wir uns allerdings mit der einen Schneeflocke, die wir bereits
 
 </Hint>
 <Solution webKey="16298579-72f3-457f-988f-bbc8b304e4a6">
-<CodeBlock language="python">
+<CodeBlock language='python'>
 {lsg1}
 </CodeBlock>
 </Solution>
