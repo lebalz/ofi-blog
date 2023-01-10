@@ -28,6 +28,7 @@ Die Informationsübertragung kann nur funktionieren, wenn Sender und Empfänger 
 > Ein Code ist eine Vorschrift, welche Daten von einer Darstellung in eine andere umwandelt.
 > Dabei darf keine Information verloren gehen, eine Rückumwandlung muss möglich sein.
 
+
 <div class="full" style="background: white">
 
 ![](images/code-1.svg)
@@ -53,6 +54,11 @@ Wie lassen sich Zahlen über ein Stromkabel verschicken?
 
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 - Jede Stelle wird mit einer Zehnerpotenz multipliziert
+
+
+# Zehnersystem
+
+![](images/dez_example.png)
 
 
 # Binärsystem
