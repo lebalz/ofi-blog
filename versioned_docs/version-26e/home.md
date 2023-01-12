@@ -12,10 +12,10 @@ import hk2022 from "./26e-HK_HS2022.json"
 
 # 26e Informatik
 
-:::success Word Probe
-<Solution webKey="5ba6b51b-db2a-461c-a3d1-ac934806624f" open title="Link zur Nachprobe">
+:::success Probe Programmieren
+<Solution webKey="3c28ab10-654a-4754-bd28-d44adcf91a39" open title="Probe Programmieren 1">
 
-[👉 Hier gehts zur Nachprüfung](/text-templates/01-p26v2)
+[👉 Hier gehts zur Probe](/26e/Programmieren-1/Probe/ProbeE-Nachholer)
 
 </Solution>
 :::
