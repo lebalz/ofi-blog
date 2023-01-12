@@ -253,6 +253,11 @@
       "to": "versioned_docs/version-26e/06-Codierung/01-Codierung",
       "ignore": [],
       "open": true
+    },
+    {
+      "from": "docs/Programmieren-1/02-Turtlegrafik/010-koch.md",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/11-rekursion.md",
+      "ignore": []
     }
   ],
   "26P": [
