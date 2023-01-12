@@ -26,7 +26,7 @@ Das Programm zeichnet eine Sonne mit 13 Strahlen.
 2. Setzen Sie die Stiftdicke auf `5` und die Stiftfarbe auf **Rot**.
 3. Füllen Sie die Sonne mit Ihrer Lieblingsfarbe (aber nicht mit Rot) aus.
 
-```py live_py title=aufgabe1.py id=bc26c5ea-c372-41ed-93bb-66b5059cb5c6 versioned 
+```py live_py title=aufgabe1.py id=b443e55d-2bb0-4cc3-a892-3e473fd63e9e versioned 
 from turtle import *
 
 speed(0)
@@ -89,7 +89,7 @@ for i in range(13):
 ]} />
 :::
 
-```py live_py title=aufgabe2.py versioned id=dcb14a5c-d510-40cf-ba1f-78a46e884742 
+```py live_py title=aufgabe2.py versioned id=28e93632-1425-422a-84f1-ea1a3b3511b4
 from turtle import *
 ```
 
@@ -102,7 +102,7 @@ Finden und korrigieren Sie alle Fehler, so dass die folgende Ausgabe entsteht. E
 
 ![Dänische Flagge](images/daenemark.svg)
 
-```py live_py title=aufgabe3.py id=353cb240-4db1-482b-ad29-b59266226a03 versioned 
+```py live_py title=aufgabe3.py id=5e3d640e-42e2-4433-ab72-8bdff2421565 versioned 
 from turtle import *
 
 def rechteck(breite, höhe):
@@ -133,19 +133,20 @@ hide_turtle()
 
 - a) Schreiben Sie ein Programm, welches folgende Zeichnung erzeugt. *(2 Punkte)*
 
-![Figuren](images/figuren.svg)
+![Zick Zack](images/zickzack.svg)
 
-Die Diagonale einer Figur beträgt `100` Einheiten, die kurze Seite ist `50` Einheiten lang und der Innenwinkel der Figur beträgt `50°`. Eine Figur ist symmetrisch mit vertikaler Spiegelachse.
+Die Höhe eines Zick-Zacks beträgt `20` Einheiten, die lange Seite ist `40` Einheiten lang und der Innenwinkel beim Zick-Zack beträgt `60°`.
 
-![Eine Figur --width=200px](images/ghost-dimensions.png)
+![Ein Zickzack --width=200px](images/zick.png)
 
 - b) Verwenden Sie Wiederholungen (min. an einem Ort) (*1 Punkt*)
-- c) Schreiben Sie für das Zeichnen einer einzelnen Figur einen (selber definierten) Befehl `figur` (*1 Punkt*).
-- d) Verwenden Sie einen Parameter `size`, so dass die Grösse der Figur verändert werden kann. Erzeugen Sie so folgende Figuren mit den Grössen `20`, `30`, `40`, `50` und `60` ohne dabei Punkt (b) zu entfernen. (*1 Punkt*)
+- c) Schreiben Sie für das Zeichnen einer einzelnen Zacke einen (selber definierten) Befehl `zickzack` (*1 Punkt*).
+- d) Verwenden Sie einen Parameter `size`, so dass die Höhe des Zickzacks verändert werden kann. Erzeugen Sie so folgende Figur mit den Höhen `20`, `30`, `40` und `50`, ohne dabei Punkt (b) zu entfernen. (*1 Punkt*)
 
-![--width=800px](images/increasing-figs.svg)
+![](images/increasing.svg)
 
-```py live_py title=aufgabe4.py versioned id=42125786-9de4-422b-b376-42c08fda7ed1 
+
+```py live_py title=aufgabe4.py versioned id=82ccb407-9975-4d06-a970-958f587143f0
 from turtle import *
 ```
 
