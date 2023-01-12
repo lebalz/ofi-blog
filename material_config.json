@@ -256,7 +256,7 @@
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/010-koch.md",
-      "to": "versioned_docs/version-26e/03-Programmieren-1/11-rekursion.md",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/10-rekursion.md",
       "ignore": []
     }
   ],
