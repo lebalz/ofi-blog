@@ -562,6 +562,20 @@ html[data-theme='dark'] {
             }
         }
     }
+    // nav {
+    //     display: none;
+    // }
+    // article {
+    //     &>div:last-of-type { /* licence info*/
+    //         display: none;
+    //     }
+    //     &>div:first-of-type { /* material badge*/
+    //         display: none;
+    //     }
+    //     h1 {
+    //         display: none;
+    //     }
+    // }
 }
 
 svg[id^="mermaid-svg-"] {
