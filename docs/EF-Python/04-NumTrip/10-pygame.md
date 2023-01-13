@@ -2,7 +2,7 @@
 sidebar_custom_props:
   id: ce8f3d98-10cf-4d95-b64a-2634787964d4
 ---
-# Py Game
+# ⭐ Py Game
 Sie haben das NumTrip-Spiel in der Konsolenversion erfolgreich fertiggstellt.
 
 Der nächste Schritt ist, dazu ein grafische Benutzeroberfläche zu bauen. Dazu gibt es viele Möglichkeiten. Eine ist PyGame.
