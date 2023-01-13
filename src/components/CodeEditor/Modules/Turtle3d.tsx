@@ -1,4 +1,4 @@
-const src = require('./turtle3d.raw.py');
+const src = require('./turtle3d-v2.raw.py');
 import Module from './Module';
 import * as React from 'react';
 
