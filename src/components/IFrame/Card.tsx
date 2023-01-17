@@ -8,7 +8,7 @@ interface Props {
 const Card = (props: Props) => {
     return (
         <div className={clsx(styles.card, 'card')}>
-            <iframe src={`props.url} className={clsx('card__image')} />
+            <iframe src={props.url} className={clsx('card__image')} />
             <div className="card__footer">
                 <a target="_blank" href={props.url} className={clsx('button', 'button--primary', 'button--block')}>👉 {props.url}</a>
             </div>
