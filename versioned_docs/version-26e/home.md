@@ -12,15 +12,6 @@ import hk2022 from "./26e-HK_HS2022.json"
 
 # 26e Informatik
 
-:::success Probe Programmieren
-<Solution webKey="3c28ab10-654a-4754-bd28-d44adcf91a39" open title="Probe Programmieren 1">
-
-[👉 Hier gehts zur Probe](/26e/Programmieren-1/Probe/ProbeE-Nachholer)
-
-</Solution>
-:::
-
-
 <Tabs
     defaultValue="theorie"
     values={[

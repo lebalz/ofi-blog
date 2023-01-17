@@ -13,15 +13,6 @@ import hk2022 from "./26P-HK_HS2022.json"
 
 # 26P Informatik
 
-:::success Word Probe
-<Solution webKey="5ba6b51b-db2a-461c-a3d1-ac934806624f" open title="Link zur Nachprobe">
-
-[👉 Hier gehts zur Nachprüfung](/text-templates/01-p26v2)
-
-</Solution>
-:::
-
-
 <Tabs
     defaultValue="theorie"
     values={[
