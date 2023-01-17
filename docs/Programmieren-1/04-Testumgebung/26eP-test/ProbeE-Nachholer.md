@@ -26,7 +26,7 @@ Das Programm zeichnet eine Sonne mit 13 Strahlen.
 2. Setzen Sie die Stiftdicke auf `5` und die Stiftfarbe auf **Rot**.
 3. Füllen Sie die Sonne mit Ihrer Lieblingsfarbe (aber nicht mit Rot) aus.
 
-```py live_py title=aufgabe1.py id=b443e55d-2bb0-4cc3-a892-3e473fd63e9e versioned 
+```py live_py title=aufgabe1.py id=b443e55d-2bb0-4cc3-a892-3e473fd63e9e versioned readonly
 from turtle import *
 
 speed(0)
@@ -89,7 +89,7 @@ for i in range(13):
 ]} />
 :::
 
-```py live_py title=aufgabe2.py versioned id=28e93632-1425-422a-84f1-ea1a3b3511b4
+```py live_py title=aufgabe2.py versioned id=28e93632-1425-422a-84f1-ea1a3b3511b4 readonly
 from turtle import *
 ```
 
@@ -102,7 +102,7 @@ Finden und korrigieren Sie alle Fehler, so dass die folgende Ausgabe entsteht. E
 
 ![Dänische Flagge](images/daenemark.svg)
 
-```py live_py title=aufgabe3.py id=5e3d640e-42e2-4433-ab72-8bdff2421565 versioned 
+```py live_py title=aufgabe3.py id=5e3d640e-42e2-4433-ab72-8bdff2421565 versioned readonly
 from turtle import *
 
 def rechteck(breite, höhe):
@@ -146,7 +146,7 @@ Die Höhe eines Zick-Zacks beträgt `20` Einheiten, die lange Seite ist `40` Ein
 ![](images/increasing.svg)
 
 
-```py live_py title=aufgabe4.py versioned id=82ccb407-9975-4d06-a970-958f587143f0
+```py live_py title=aufgabe4.py versioned id=82ccb407-9975-4d06-a970-958f587143f0 readonly
 from turtle import *
 ```
 
