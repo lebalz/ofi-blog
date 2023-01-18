@@ -157,9 +157,40 @@ Nun wollen wir mehrere Schneeflocken zeichnen. Dazu müssen wir brauchen wir Zuf
 </Hint>
 
 <Solution webKey="8ae90f18-56e3-45fb-b2cb-5e0b35801dc4">
-<CodeBlock language="py">
-{lsg2}
-</CodeBlock>
+
+```py
+import pgzrun
+from random import randint
+
+TITLE = 'Schneeflocken'
+WIDTH = 1350
+HEIGHT = 900
+
+hintergrund = Actor('winter_1')
+
+ANZAHL = 1000
+schnee_x = []
+schnee_y = []
+
+for i in range(0, ANZAHL):
+    schnee_x.append(randint(0, WIDTH))
+    schnee_y.append(randint(0, HEIGHT))
+
+
+def draw():
+    hintergrund.draw()
+
+    for i in range(0, ANZAHL):
+        screen.draw.filled_circle([schnee_x[i], schnee_y[i]], 5, [255, 255, 255])
+
+
+def update(dt):
+    for i in range(0, ANZAHL):
+        schnee_y[i] = schnee_y[i] + 1
+
+pgzrun.go()
+```
+
 </Solution>
 
 :::
@@ -175,7 +206,7 @@ Hier einige Ideen, wie Sie die Schneefall-Animation noch verbessern könnten:
 - Die Schneeflocken vom Winde verweht werden
 
 
-<Solution webKey="8ae90f18-56e3-45fb-b2cb-5e0b35801dc4">
+<Solution webKey="b4a672d7-e151-466c-bde7-a0d00e8c4aa6">
 <CodeBlock language="py">
 {lsg3}
 </CodeBlock>

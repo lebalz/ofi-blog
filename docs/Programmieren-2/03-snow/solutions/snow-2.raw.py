@@ -1,5 +1,5 @@
 import pgzrun
-from random import randrange
+from random import randint
 
 TITLE = 'Schneeflocken'
 WIDTH = 1350
@@ -12,8 +12,8 @@ schnee_x = []
 schnee_y = []
 
 for i in range(0, ANZAHL):
-    schnee_x.append(randrange(0, WIDTH))
-    schnee_y.append(randrange(0, HEIGHT))
+    schnee_x.append(randint(0, WIDTH))
+    schnee_y.append(randint(0, HEIGHT))
 
 
 def draw():
@@ -26,8 +26,5 @@ def draw():
 def update(dt):
     for i in range(0, ANZAHL):
         schnee_y[i] = schnee_y[i] + 1
-
-        if schnee_y[i] > HEIGHT:
-            schnee_y[i] = 0
 
 pgzrun.go()
