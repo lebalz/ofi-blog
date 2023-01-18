@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: 22c5b33c-7293-4552-808b-cbecb6a1d67b
+---
 # Notizen
 
 - Mehr Zeit einrechnen für Wiedereinstieg: ca. 2 Lektionen. Fokus auf Funktionen und Wiederholungen mit Laufvariable.
