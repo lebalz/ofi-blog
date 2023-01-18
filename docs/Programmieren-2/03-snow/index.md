@@ -23,7 +23,7 @@ import CodeBlock from '@theme/CodeBlock';
 
 Wir wollen wieder etwas zeichnen mit Pygame Zero. Hier das Grundgerüst für ein Pygame Zero-Programm:
 
-```python
+```py
 import pgzrun
 
 TITLE = 'Fenstertitel'
@@ -87,7 +87,7 @@ Dies zeichnet einen rot gefüllten Kreis mit Radius 10 bei den Koordinaten (100,
 
 <Solution webKey="8ae90f18-56e3-45fb-b2cb-5e0b35801dc4">
 
-```python
+```py
 import pgzrun
 
 TITLE = 'Schneeflocken'
