@@ -25,7 +25,7 @@ const EFShowcase = () => {
           'https://Gerhard-69.github.io/EF-Informatik',
           'https://mcdelarosa.github.io/EF-Informatik',
           'https://marioschoch.github.io/EF-Info',
-          'https://gaeschpu.github.io/Ef-Info',
+          'https://gaeschpu.github.io/Ef-Info/docs/about-me',
           'https://Malouu3.github.io/EF-Informatik'
         ]} full />
 
