@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require("path");
 const { exit } = require('process');
 const { exec } = require('child_process');
-const ROOT = '/Users/balz/Documents/git_code/bh0fer/ef-repos';
+const ROOT = '/home/balz/git_code/bh0fer/ef-repos';
 /** @type {{email: string, name: string, repo: string, url: string}[]} */
-const REPO_LIST = require('../no-docs/ef-2024-repos.json');
+const REPO_LIST = require('../secure/docs/EF-Python/ef-2024-repos.json');
 /** @type {{clone?: boolean, sync?: boolean, create_review_branch?: boolean}} */
 var argv = require('minimist')(process.argv.slice(2));
 

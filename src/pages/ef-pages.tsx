@@ -21,7 +21,6 @@ const EFShowcase = () => {
           'https://arraky.github.io/EF-Info',
           'https://No0ne155.github.io/ef_info',
           'https://luiscarlosgarzacisneros.github.io/EFInformatik',
-          'https://zlataromanchuk.github.io/EF-Informatik',
           'https://Gerhard-69.github.io/EF-Informatik',
           'https://mcdelarosa.github.io/EF-Informatik',
           'https://marioschoch.github.io/EF-Info',
