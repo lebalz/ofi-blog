@@ -127,6 +127,11 @@
       "to": "versioned_docs/version-25h/09-Programmieren-2",
       "ignore": [],
       "open": true
+    },
+    {
+      "from": "docs/pgzero/",
+      "to": "versioned_docs/version-25h/09-Programmieren-2/00-PyGameZero-Referenz",
+      "ignore": []
     }
   ],
   "26e": [
