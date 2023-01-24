@@ -13,7 +13,6 @@
 03-Programmieren-1/02-Turtlegrafik/005-functions.md
 03-Programmieren-1/02-Turtlegrafik/010-rekursion.md
 03-Programmieren-1/02-Turtlegrafik/006-functions-params.md
-03-Programmieren-1/05-PyGame/*
 03-Programmieren-1/02-Turtlegrafik/007-variablen.md
 03-Programmieren-1/02-Turtlegrafik/008-verzweigung.md
 03-Programmieren-1/02-Turtlegrafik/009-while.md
@@ -26,5 +25,6 @@
 06-Codierung/01-Codierung/*
 03-Programmieren-1/00-Probe/*
 !03-Programmieren-1/00-Probe/ProbeE.md,ProbeE-Nachholer.md
+03-Programmieren-1/05-PyGameZero/*
 06-Codierung/_category_.json
 06-Codierung/01-Codierung/_category_.json

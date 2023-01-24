@@ -198,11 +198,6 @@
       "ignore": []
     },
     {
-      "from": "docs/Programmieren-1/05-PyGame/",
-      "to": "versioned_docs/version-26e/03-Programmieren-1/05-PyGame",
-      "ignore": []
-    },
-    {
       "from": "docs/Programmieren-1/02-Turtlegrafik/007-variablen.md",
       "to": "versioned_docs/version-26e/03-Programmieren-1/02-Turtlegrafik/007-variablen.md",
       "ignore": []
@@ -265,6 +260,11 @@
       "ignore": [
         "ProbeP.md"
       ]
+    },
+    {
+      "from": "docs/pgzero/",
+      "to": "versioned_docs/version-26e/03-Programmieren-1/05-PyGameZero",
+      "ignore": []
     }
   ],
   "26P": [
@@ -341,11 +341,6 @@
       "ignore": []
     },
     {
-      "from": "docs/Programmieren-1/05-PyGame/",
-      "to": "versioned_docs/version-26P/03-Programmieren-1/05-PyGame",
-      "ignore": []
-    },
-    {
       "from": "docs/Programmieren-1/02-Turtlegrafik/007-variablen.md",
       "to": "versioned_docs/version-26P/03-Programmieren-1/02-Turtlegrafik/007-variablen.md",
       "ignore": []
@@ -404,6 +399,11 @@
         "ProbeE.md",
         "ProbeE-Nachholer.md"
       ]
+    },
+    {
+      "from": "docs/pgzero/",
+      "to": "versioned_docs/version-26P/03-Programmieren-1/05-PyGameZero",
+      "ignore": []
     }
   ],
   "24ef": [
