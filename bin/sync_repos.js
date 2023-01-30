@@ -26,6 +26,9 @@ REPO_LIST.forEach((repo) => {
     if (argv.clone) {
         return exec(`git clone ${repo.url} ${abs_path}`, report)
     }
+    if (argv.checkout) {
+        exec(`cd ${abs_path} && git checkout main`, report)
+    }
     if (argv.sync) {
         exec(`cd ${abs_path} && git reset --hard HEAD && git pull`, report)
     }

@@ -87,7 +87,7 @@ html[data-theme='dark'] {
     max-height: 15em;
     margin-top: 0.5em;
     table {
-        font-size: x-small;
+        font-size: small;
         color: black;
         th {
             // font-weight: var(--ifm-font-weight-normal);
@@ -97,5 +97,9 @@ html[data-theme='dark'] {
         td {
             padding: 2px;
         }
+    }
+
+    .ctrlBits {
+        color: var(--ifm-color-danger);
     }
 }

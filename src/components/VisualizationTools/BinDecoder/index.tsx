@@ -13,8 +13,12 @@ interface ProcessedPart {
     char: string;
     bin: string;
     ord: number;
-    bytes: string;
+    bytes: JSX.Element;
 }
+
+const reversed = (str: string): string => {
+    return str.split('').reverse().join('');
+};
 
 const octaChunks = (octaText: string): string[] => {
     const chunks: string[] = [];
@@ -184,23 +188,39 @@ const BinDecoder = () => {
             pauseAnimations(anims);
             const bin = newStack.join('');
             const ord = parseInt(bin, 2);
-            let bytes = bin.padStart(bin.length + 6 - bin.length % 6, '0')
+            let bytes = <span>bin</span>
             if (bin.length > 7) {
-                const chunks = bytes.split(/(.{6})/).filter(o => o)
-                bytes = chunks.reduce((prev, curr, idx) => {
+                const chunks = reversed(bin).split(/(.{6})/).filter(o => o).map(chnk => reversed(chnk)).reverse();
+                let parts = chunks.length;
+                if (chunks[0].length > 7 - parts) { /** first byte starts with ones counting the chunks and a single zero. */
+                    parts += 1;
+                    chunks.unshift('000000'); // insert a zero byte for the start...
+                }
+
+                // bytes = chunks.reduce((prev, curr, idx) => {
+                //     if (idx === 0) {
+                //         const start = `${'1'.repeat(parts)}0`
+                //         return `${start}${curr.substring(0, 8 - start.length)}`
+                //     }
+                //     return `${prev} 10${curr}`;
+                // }, '')
+                const layoutChunks = chunks.map((chnk, idx) => {
                     if (idx === 0) {
-                        return `${'1'.repeat(chunks.length)}0${curr.substring(chunks.length - 2)}`
+                        const start = `${'1'.repeat(parts)}0`
+                        return <span key={idx}><span className={styles.ctrlBits}>{start}</span>{chnk.substring(0, 8 - start.length)}{' '}</span>;
                     }
-                    return `${prev} 10${curr}`;
-                }, '')
+                    return <span key={idx}><span className={styles.ctrlBits}>10</span>{chnk}{' '}</span>;
+                });
+                bytes = <span>{layoutChunks}</span>
+
             } else {
-                bytes = `0${bin.padStart(7, '0')}`
+                bytes = <span>{`0${bin.padStart(7, '0')}`}</span>
             }
             const char: ProcessedPart = {
                 bin: bin,
                 ord: ord,
                 char: String.fromCodePoint(ord),
-                bytes: mode === 'utf8' ? bytes : ''
+                bytes: mode === 'utf8' ? bytes : <span></span>
             };
 
             setOut([...out, char]);
@@ -349,9 +369,9 @@ const BinDecoder = () => {
                                                         <tr key={idx}>
                                                             <td>{chr.char}</td>
                                                             <td>{chr.ord}</td>
-                                                            <td>{chr.bin}</td>
+                                                            <td>{reversed(chr.bin).split(/(.{6})/).filter(o => o).map(chnk => reversed(chnk)).reverse().join(' ')}</td>
                                                             {mode === 'utf8' && (
-                                                                <th>{chr.bytes}</th>
+                                                                <td>{chr.bytes}</td>
                                                             )}
                                                         </tr>
                                                     );

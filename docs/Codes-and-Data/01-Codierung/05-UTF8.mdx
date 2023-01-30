@@ -9,6 +9,16 @@ import BinDecoder from '@site/src/components/VisualizationTools/BinDecoder'
 
 Werden Unicode-Zeichen ins binäre übersetzt wird klar, dass diese Zahlen nicht mehr nur mit einem Byte dargestellt werden können. Beispielsweise ist dem Affen-Emoji 🐒 die Zahl $128018_{10}$ zugewiesen, was der Binärzahl $00000001\:11110100\:00010010_{2}$ entspricht, also `3` Bytes Speicherplatz benötigt.
 
+
+:::info
+1 Byte
+: entspricht $8$ Bit
+1 Megabit
+: entspricht $1'000'000$ Bit
+1 Megabyte
+: entspricht $1'000'000$ Bytes oder $8'000'000$ Bit
+:::
+
 UTF-8
 : ist ein Code, der Unicode-Zeichen in Bitmuster übersetzt. Ein Unicode-Zeichen wird mit ein bis vier Bytes (daher 8-32 bit) dargestellt. Die folgende Tabelle zeigt, wie die Codierung funktioniert:
 
@@ -30,7 +40,7 @@ Für die anderen Zeichen wird mehr als ein Byte verwendet. Dabei beginnt jedes B
 | Schwarze Sonne mit Strahlen ☀ |   9728 |          `11100010 10011000 10000000` |
 |                        Affe 🐒 | 128018 | `11110000 10011111 10010000 10010010` |
 
-Der Vorteil dieser Codierung ist, dass am Beginn eines Bytes erkannt wird, ob es sich um den Anfang die Fortsetzung eines Zeichens handelt.
+Der Vorteil dieser Codierung ist, dass anhand der ersten Bits eines Bytes erkannt wird, ob es sich um den Anfang oder die Fortsetzung eines Zeichens handelt.
 
 | Beginn |                                     Bedeutung |
 | -----: | --------------------------------------------: |
@@ -40,7 +50,7 @@ Der Vorteil dieser Codierung ist, dass am Beginn eines Bytes erkannt wird, ob es
 |  1110… |          Beginn eines Zeichens mit drei Bytes |
 | 11110… |          Beginn eines Zeichens mit vier Bytes |
 
-Dies wird deutlich, wenn man dies als Binärbaum darstellt:
+Dies wird noch deutlicher, wenn man dies als Binärbaum darstellt:
 
 ![UTF-8 Präfix](images/utf-8-prefix.svg)
 
@@ -49,7 +59,12 @@ Dies wird deutlich, wenn man dies als Binärbaum darstellt:
 <BinDecoder />
 
 :::aufgabe
-Codieren Sie Ihre zwei lieblings Emojis als UTF-8 Binär-Kette. Verwenden Sie dazu die Hilfe von Python.
+<Answer type="state" webKey="4a80bf12-cb19-47fa-8533-213c679f6e3d" />
+
+Codieren Sie Ihre zwei lieblings Emojis als UTF-8 Binär-Kette. Verwenden Sie für das Herausfinden der binären Codierung die Hilfe von Python.
+
+```py live_py id=f84c7235-1f24-420b-89cc-5675a2edca30
+```
 
 <Answer type="text" webKey="91f5e478-a09b-495f-93a4-d7169ae34fdc" />
 :::
