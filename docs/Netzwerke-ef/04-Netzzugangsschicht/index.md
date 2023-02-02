@@ -1,6 +1,9 @@
 ---
 sidebar_custom_props:
   id: 5618a33f-cbb5-408f-b661-eef77df00390
+  source:
+    name: sdg
+    ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Die-Netzzugangsschicht,-Frames-und-ARP
 ---
 
 # Netzwerkzugangsschicht

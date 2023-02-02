@@ -1,6 +1,9 @@
 ---
 sidebar_custom_props:
   id: 766cde00-b4eb-4f05-8267-268f79769c3b
+  source:
+    name: sdg
+    ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/IP-Adressen
 ---
 
 # IP-Adressen
@@ -25,10 +28,6 @@ Nertwerkteil
 Hostteil
 : **Hinterer** Teil der IP-Adresse.
 : Er ist für jedes Gerät (auf englisch **Host** genannt) unterschiedlich. Es dürfen keine zwei Geräte im selben Netz den selben Hostteil in ihrer IP-Adresse aufweisen.
-
-| Netzwerkteil | Hostteil |
-|--------------|----------|
-|s||
 
 ## Netzmaske
 Man sieht einer IP-Adresse nicht auf den ersten Blick an, wie weit der **Netzwerkteil** reicht und wo der **Hostteil** beginnt. Um das herauszufinden muss man die IP-Adresse zuerst in Ihrer **binären** Form (also 32 Bit) aufschreiben. Ausserdem braucht man eine weitere Information, die **Netzmaske**, auch **Subnetzmaske** genannt.
@@ -57,17 +56,17 @@ Schreibt man nun eine Netzmaske in ihrer binären Form auf und direkt darunter e
 
 Beispiel:
 
-```
+```powershell
 Netzmaske:  255.255.254.0
 IP-Adresse: 13.162.25.4
 
 Binär:
-Netzmaske:    1111'1111.1111'1111.1111'1110.0000'0000
-IP-Adresse:   0000'1101.1010'0010.0001'1001.0000'0100
-              vvvv vvvv vvvv vvvv vvvv vvv
-Netzwerkteil: 0000'1101.1010'0010.0001'100
-                                          v vvvv vvvv
-Hostteil:                                 1.0000'0100
+Netzmaske:    1111 1111.1111 1111.1111 1110.0000 0000
+IP-Adresse:   0000 1101.1010 0010.0001 1001.0000 0100
+#             vvvv vvvv vvvv vvvv vvvv vvv
+Netzwerkteil: 0000 1101.1010 0010.0001 100
+#                                         v vvvv vvvv
+Hostteil:                                 1.0000 0100
 ```
 
 Ergänzt man den Netzwerkteil mit lauter **0** zu einer vollen 32 Bit langen IP-Adresse, so erhält man die **Netzwerkadresse**.

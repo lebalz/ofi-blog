@@ -1,6 +1,9 @@
 ---
 sidebar_custom_props:
   id: 4c51ef27-7b77-4931-9618-1d90ccdbf6c2
+  source:
+    name: sdg
+    ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Protokollstapel
 ---
 
 # Schichtenmodell

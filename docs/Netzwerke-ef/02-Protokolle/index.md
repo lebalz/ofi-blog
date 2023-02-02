@@ -1,6 +1,9 @@
 ---
 sidebar_custom_props:
   id: 345d37cf-5668-4484-8b1d-7c26264a809d
+  source:
+    name: sdg
+    ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Protokolle
 ---
 
 # Protokolle

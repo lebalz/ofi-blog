@@ -129,7 +129,7 @@ async function createConfig() {
       prism: {
         theme: require('prism-react-renderer/themes/vsLight'),
         darkTheme: require('prism-react-renderer/themes/vsDark'),
-        additionalLanguages: ['powershell', 'java', 'asm6502', 'ruby', 'csharp']
+        additionalLanguages: ['bash', 'powershell', 'java', 'asm6502', 'ruby', 'csharp']
       },
     },
     presets: [

@@ -1,6 +1,9 @@
 ---
 sidebar_custom_props:
   id: 73cbf920-9726-4f01-8d8d-8486fcbf28eb
+  source:
+    name: sdg
+    ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Vom-LAN-zum-Internet
 ---
 
 # Vom LAN zum Internet

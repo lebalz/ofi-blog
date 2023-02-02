@@ -1,6 +1,9 @@
 ---
 sidebar_custom_props:
   id: c1bfbbd0-99ed-45a1-a206-d21ff39c8ad8
+  source:
+    name: sdg
+    ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Routing
 ---
 
 # Routing
@@ -57,11 +60,21 @@ Für das Ziel einer Route hat man **mehrere** Möglichkeiten:
 Um beim Routenziel zu wissen, ob es sich um eine Netzwerk- oder Host-Adresse handelt, muss man auch die **Netzmaske** kennen. Im ersten Fall ist das eine herkömmliche Netzmaske mit einer Reihe 0 am Ende. Im zweiten Fall ist das die Netzmaske `255.255.255.255` (also lauter 1 und keine 0).
 
 ### Beispiele
-Routing-Tabelle eines Raspberry-Pi (Linux):
+Routing-Tabelle eines Raspberry-Pi (Linux :mdi-penguin:):
 
-![RoutingtableRaspy](images/RoutingtableRaspy.png)
+```bash
+# sudo apt install net-tools
+route -n
+```
+
+![Routingtabelle Raspberry PI :mdi-penguin:](images/RoutingtableRaspy.png)
 
 Routing-Tabelle eines Windows-Notebooks:
 
-![RoutingtableWindows](images/RoutingtableWindows.png)
+```powershell
+# Powershell
+route PRINT
+```
+
+![Routingtabelle Windows :mdi-powershell: --width=500px](images/RoutingtableWindows.png)
 
