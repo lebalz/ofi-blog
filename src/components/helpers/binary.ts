@@ -22,15 +22,15 @@ const fromBin = (bin: string, slice?: number) => {
     }
 };
 
-const octaChunks = (octaText: string): string[] => {
+const textChunks = (text: string, size: number, padChr: string = '0'): string[] => {
     const chunks: string[] = [];
-    let sanitized = octaText.replace(/\s+/g, '');
-    if (sanitized.length % 8 !== 0) {
-        sanitized = sanitized.padStart(sanitized.length + (sanitized.length % 8), '0');
+    let sanitized = text.replace(/\s+/g, '');
+    if (sanitized.length % size !== 0) {
+        sanitized = sanitized.padStart(sanitized.length + (size - sanitized.length % size), '0');
     }
     while (sanitized.length > 0) {
-        chunks.push(sanitized.slice(0, 8));
-        sanitized = sanitized.slice(8);
+        chunks.push(sanitized.slice(0, size));
+        sanitized = sanitized.slice(size);
     }
     return chunks;
 };
@@ -73,4 +73,4 @@ const fromUTF8 = (bin: string) => {
 };
 
 
-export {fromUTF8, fromBin, chunk};
+export {fromUTF8, fromBin, chunk, textChunks};

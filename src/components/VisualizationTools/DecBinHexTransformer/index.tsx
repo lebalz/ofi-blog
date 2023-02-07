@@ -99,7 +99,7 @@ const DecBinHexTransformer = () => {
                     <input
                         id="hex"
                         type="text"
-                        placeholder="Dezimal"
+                        placeholder="Hex"
                         value={hex?.toUpperCase()}
                         onChange={(e) => {
                             setSource('hex');

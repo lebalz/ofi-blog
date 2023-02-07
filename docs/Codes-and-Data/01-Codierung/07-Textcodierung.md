@@ -7,9 +7,9 @@ sidebar_custom_props:
 ---
 
 import OsTabs from '@site/src/components/OsTabs'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWindows } from "@fortawesome/free-brands-svg-icons"
 import DecBinHexTransformer from "@site/src/components/VisualizationTools/DecBinHexTransformer";
+import Hex2Bin from "@site/src/components/VisualizationTools/Hex2Bin";
+import HexSystem from '@site/docs/Codes-and-Data/01-Codierung/_def-hexa.md';
 
 # 7. Textcodierung
 
@@ -25,14 +25,21 @@ Der Editor ist eine App, in welcher man Textdateien erstellen und bearbeiten kan
 
 Starten Sie die _Editor_-App, indem Sie im Startmenü nach «editor» suchen:
 
-![](images/07-editor-app.png)
+![](images/07-editor-win11.png)
+
+</TabItem>
+<TabItem value="win10">
+
+Starten Sie die _Editor_-App, indem Sie im Startmenü nach «editor» suchen:
+
+![](images/07-editor-win10.png)
 
 </TabItem>
 <TabItem value="mac">
 
-Um in macOS Textdateien erstellen und bearbeiten zu können, installieren Sie du am besten die App _CotEditor_ aus dem App Store:
+Um in macOS Textdateien erstellen und bearbeiten zu können, installieren Sie am besten die App _CotEditor_ aus dem App Store:
 
-- [CotEditor im AppStore](https://apps.apple.com/us/app/coteditor/id1024640650)
+- [👉 CotEditor im AppStore](https://apps.apple.com/de/app/coteditor/id1024640650)
 
 </TabItem>
 </OsTabs>
@@ -48,17 +55,17 @@ Geben Sie einen kurzen Text ein. Dieser sollte nicht nur ASCII-Zeichen enthalten
 <OsTabs>
 <TabItem value="win">
 
-Emojis können unter Windows mit dem Tastenkürzel <FontAwesomeIcon icon={faWindows} />+`.` eingefügt werden.
+Emojis können unter Windows mit dem Tastenkürzel [[:mdi-microsoft-windows:]] + [[.]] eingefügt werden.
 
 </TabItem>
 <TabItem value="mac">
 
-Emojis können unter Mac OS X mit dem Tastenkürzel `Ctrl + Cmd + Leertaste` eingefügt werden.
+Emojis können unter Mac OS X mit dem Tastenkürzel [[Ctrl]] + [[Cmd :mdi-apple-keyboard-command:]] +[[Leertaste :mdi-keyboard-space:]] eingefügt werden.
 
 </TabItem>
 </OsTabs>
 
-Alternativ findet man unter [Emojipedia](https://emojipedia.org) viele weitere Emojis.
+Alternativ findet man unter [👉 Emojipedia](https://emojipedia.org) viele weitere Emojis.
 
 
 <OsTabs>
@@ -78,7 +85,7 @@ Alternativ findet man unter [Emojipedia](https://emojipedia.org) viele weitere E
 :::aufgabe 3. Textdatei speichern
 <Answer type="state" webKey="b685dfdc-27eb-444a-a59f-019b315aa4af" />
 
-Speichern Sie die Textdatei unter dem Namen **Unicode-Test.txt** indem Sie
+Speichern Sie die Textdatei unter dem Namen __Unicode-Test.txt__ indem Sie
 
 
 <OsTabs>
@@ -92,7 +99,7 @@ Speichern Sie die Textdatei unter dem Namen **Unicode-Test.txt** indem Sie
 </TabItem>
 <TabItem value="mac">
 
-- die Tastenkombination [[Command]]+[[s]] drücken oder
+- die Tastenkombination [[Cmd]]+[[s]] drücken oder
 - den Menüpunkt `Datei > Sichern …` auswählen.
 
 ![](images/07-coteditor-save.png)
@@ -107,7 +114,7 @@ Speichern Sie die Textdatei unter dem Namen **Unicode-Test.txt** indem Sie
 
 Mit dem Online-Tool _HexEd.it_ können Sie eine beliebige Datei Byte für Byte betrachten:
 
-- [HexEd.it](https://hexed.it)
+[👉 HexEd.it](https://hexed.it)
 
 Klicken Sie auf **Datei öffnen** und wählen Sie die vorhin gespeicherte Textdatei aus. Nun sehen Sie die einzelnen Bytes, welche die Datei enthält, beispielsweise:
 
@@ -115,19 +122,25 @@ Klicken Sie auf **Datei öffnen** und wählen Sie die vorhin gespeicherte Textda
 54 73 63 68 C3 BC 73 73 20 F0 9F 98 80 21
 ```
 
-Die Bytes werden wie in der Informatik üblich als *Hexadezimalzahlen* angegeben. Wenn man über die einzelnen Bytes navigiert (mit den Pfeiltasten), sieht man auf der linken Seite die entsprechende Binärcodierung. Alternativ finden Sie hier auch einen Umrechner zwischen Binär, Dezimal und Hexadezimalzahlen.
+Die Bytes werden wie in der Informatik üblich als *Hexadezimalzahlen* angegeben. Wenn man über die einzelnen Bytes navigiert (mit den Pfeiltasten), sieht man auf der linken Seite die entsprechende Binärcodierung. Alternativ finden Sie hier auch einen Umrechner zwischen Binär-, Dezimal- und Hexadezimalzahlen.
 
+
+:::details ⭐️ Hexadezimal Zahlen
+<HexSystem />
 <DecBinHexTransformer />
+:::
+
+<Hex2Bin />
 
 In der binären Darstellung sehen Sie sofort die Zeichen, welche mehrere Bytes benötigen. Sie beginnen mit einer 1. So ist `11000011 10111100` die Codierung des Buchstabens «ü».
 
 Nun können Sie mit folgenden Hilfsmitteln überprüfen, ob die Bytes tatsächlich der Unicode/UTF-8-Codierung Ihres Textes entsprechen:
 
-- [ASCII-Tabelle](./03-Zeichencodierung.mdx#) für Bytes, die mit einer `0` starten
-- [Unicode-Tabelle](https://unicode-table.com/de/) für zusammengesetzte Zeichen mit mehreren Bytes
+- [👉 ASCII-Tabelle](./03-Zeichencodierung.mdx#) für Bytes, die mit einer `0` starten
+- [👉 Unicode-Tabelle](https://unicode-table.com/de/) für zusammengesetzte Zeichen mit mehreren Bytes
 
 - Halten Sie die Hexadezimalzeichen Ihres Textes fest.
-- Wo ist das erste Emoji? Überprüfen Sie, ob Sie den Dezimalwert des Emojis entziffern und auf https://unicode-table.com/de/ finden
+- Wo ist das erste Emoji? Überprüfen Sie, ob Sie den Dezimalwert des Emojis entziffern und auf 👉 https://unicode-table.com/de/ finden
 
 <Answer type="text" webKey="a12363b7-4403-481e-8226-97f28624465f" />
 
