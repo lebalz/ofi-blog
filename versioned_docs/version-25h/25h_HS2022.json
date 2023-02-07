@@ -93,5 +93,13 @@
     {
         "cells": ["03.02.2023","Semesterende",""],
         "type": "event"
+    },
+    {
+        "cells": ["08.02.2023","Programmieren 2","Game fertigstellen und spielen"]
+    },
+    {
+        "cells": ["15.02.2023","Sportwoche",""],
+        "type": "holiday",
+        "icon": "mdi-ski"
     }
 ]
