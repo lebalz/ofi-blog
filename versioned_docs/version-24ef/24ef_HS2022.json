@@ -87,6 +87,17 @@
         "type": "event"
     },
     {
+        "cells": ["03.02.2023","NumTrip","Code Review, Pull Requests auf Github"]
+    },
+    {
+        "cells": ["10.02.2023","Netzwerke","Einstieg, Client, Server, Protokolle"]
+    },
+    {
+        "cells": ["17.02.2023","Sportwoche",""],
+        "type": "holiday",
+        "icon": "mdi-ski"
+    },
+    {
         "cells": ["24.02.2023","IoT Praktikum: Ganztags","Löten, Programmieren, Node-Red"],
         "type": "event"
     }
