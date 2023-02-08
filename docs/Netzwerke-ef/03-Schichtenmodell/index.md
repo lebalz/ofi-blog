@@ -6,6 +6,9 @@ sidebar_custom_props:
     ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Protokollstapel
 ---
 
+
+import Stack from '@site/src/components/VisualizationTools/TCP_IP_Stack'
+
 # Schichtenmodell
 
 Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netzwerke eine ganze Reihe von **Aufgaben** erfülllen:
@@ -24,6 +27,9 @@ Wie immer, wenn etwas kompliziert wird, kommt die altbewährte Strategie **Teile
 
 ## Das TCP-IP-Schichtenmodell
 Das TCP-IP-Schichtenmodell umfasst vier Schichten:
+
+<Stack />
+
 ![TCP-IP-Stack](images/TCP-IP-Stack.png)
 Die Aufgaben der einzelnen Schichten sind:
 

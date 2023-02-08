@@ -77,12 +77,12 @@ Man kann sich das wie ein Brief vorstellen:
 
 In manchen Nachrichten können Payload und Trailer auch fehlen. Das hängt ganz vom Protokoll ab.
 
-Inerhalb des Headers und des Trailers bilden mehrere aufeinander folgende Bytes sogenannte **Informationselemente**. Zum Beispiel besteht eine IP-Adresse aus vier aufeinander folgende Bytes.
+Inerhalb des Headers und des Trailers bilden mehrere aufeinander folgende Bytes sogenannte **Informationselemente**. Zum Beispiel besteht eine IP-Adresse aus vier aufeinander folgenden Bytes.
 
 ## Nachrichtenabfolge
 Um die Regeln für die Nachrichtenabfolge zu definieren wird oft eine **Zustandsmachine**, auch **endlicher Automat** genannt, verwendet. Dies ist ein **Modell** für das **Verhalten** der kommunizierenden Parteien.
 
-Eine Partei befindet sich immer in einem bestimmten **Zustand**. In diesem ist sie bereit nur ganz bestimmte Nachrichten zu empfangen. Alle anderen Nachrichten ignoriert sie. Wenn eine gültige Nachricht empfangen wird, so wechselt die Partei in einen anderen Zustand und kann gleichzeitig eine Nachricht zurücksenden. Ein solcher Zustandswechsel wird als **Transition** bezeichnet. Am Anfang befindet sich die Partei in einem **Startzustand**.
+Eine Partei befindet sich immer in einem bestimmten **Zustand**. In diesem ist sie bereit nur ganz bestimmte Nachrichten zu empfangen. Alle anderen Nachrichten ignoriert sie. Wenn eine gültige Nachricht empfangen wird, so wechselt die Partei in einen anderen Zustand und kann gleichzeitig eine Nachricht zurücksenden. Ein solcher Zustandswechsel wird als **Transition** bezeichnet. Am Anfang befindet sich die Partei in einem **Startzustand** :mdi-circle:.
 
 Man kann solche Zustandsmaschinen durch **Zustandsdiagramme** darstellen.
 
@@ -90,6 +90,7 @@ Beispiel für die Kommunikation zwischen Menschen, Zustandsdiagramm für Partei 
 
 ```mermaid
 stateDiagram-v2
+
 s1: Begrüssung eröffnet
 s2: Begrüssung bestätigt
 s3: Begrüssung abgebrochen
@@ -104,9 +105,16 @@ s1 --> s4: "Verp... dich!" gehört / sage "Schlechten Tag heute?"
 s4 --> ... 
 ```
 
-Erklärung: 
-- Der schwarze Punkt ist der **Startzustand**
-- Der weisse Punkt ist der **Endzustand**. In diesem ist keine weitere Kommunikation möglich. Die Zustandsmaschine müsste dazu neu gestartet werden.
-- Die Kästchen entsprechen den **Zwischenzuständen**
-- Die Pfeile sind die möglichen **Transitionen**, wobei jeweils steht, durch welche empfangene Nachricht die Transition ausgelöst wird und, nach dem /, welche Nachricht allenfalls als Antwort gesendet wird.
-- Das Diagramm ist nicht vollständig. Die mit ... markierten Zwischenzustände sollen dies andeuten.
+Startzustand
+: Der schwarze Punkt :mdi-circle:
+Endzustand
+: Der weisse Punkt :mdi-record-circle-outline:.
+: In diesem ist keine weitere Kommunikation möglich. Die Zustandsmaschine müsste dazu neu gestartet werden.
+Zwischenzustände
+: Die Kästchen entsprechen
+Transitionen
+: Die Pfeile sind die möglichen **Transitionen**, wobei jeweils steht, durch welche empfangene Nachricht die Transition ausgelöst wird und, nach dem /, welche Nachricht allenfalls als Antwort gesendet wird.
+
+:::caution Vollständigkeit
+Das Diagramm ist nicht vollständig. Die mit __...__ markierten Zwischenzustände sollen dies andeuten.
+:::
