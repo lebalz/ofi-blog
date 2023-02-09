@@ -45,7 +45,7 @@ Das folgende Beispiel stellt die französische Flagge dar:
 - `height="200"` legt die Höhe des Bildes auf 200 Pixel fest.
 - `<rect ...>` zeichnet ein Rechteck an den angegebenen Koordinaten mit der angegebenen Breite, Höhe und Farbe.
 
-:::aufgabe Deutsche Flagge
+::::aufgabe Deutsche Flagge
 
 Erstellen Sie eine SVG-Datei, welche die Deutsche Flagge darstellt. Die Flagge ist 500 Pixel breit, jeder Streifen ist 100 Pixel hoch. Das Rot ist rein (d.h. 255 Rot, 0 Grün und 0 Blau). Das Gelb hat einen Rotanteil von 255 und einen Grünanteil von 204.
 
@@ -72,7 +72,7 @@ Halten Sie den verwendeten Code separat im untenstehenden Textfeld fest.
     <rect x="200" y="0" width="100" height="200" fill="rgb(239, 69, 49)" />
 </svg>
 ```
-:::
+::::
 
 ## Grundformen
 

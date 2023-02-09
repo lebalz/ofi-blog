@@ -44,7 +44,7 @@ for i in range(4)
 ***empty
 :::
 
-:::aufgabe Fehler finden
+:::::aufgabe Fehler finden
 <Answer type="state" webKey="02a77086-17d0-4045-90dd-b47286b7110d" />
 
 Untersuchen Sie obenstehende Programmschnipsel. Was sagen Ihnen die Fehlermeldungen?
@@ -91,7 +91,7 @@ Die Fehlermeldung gibt den Hinweis, was falsch ist.
 
 </Solution>
 
-:::
+:::::
 
 ## Namens Fehler (`NameError`)
 

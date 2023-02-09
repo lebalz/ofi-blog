@@ -91,7 +91,7 @@ alert('Hello!')
 
 ## Zufallszahlen erraten
 
-:::aufgabe Ratespiel
+::::aufgabe Ratespiel
 <Answer type="state" webKey="9bdbe552-f197-41dd-8709-b7f034597405" />
 
 Probieren Sie das Ratespiel aus:
@@ -192,4 +192,4 @@ if zahl != geraten:
 ```
 
 </Solution>
-:::
+::::

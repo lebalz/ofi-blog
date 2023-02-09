@@ -18,7 +18,7 @@ Vielleicht hilft es, wenn wir uns in Erinnerung rufen, dass im Handel mehrere Sc
 
 ![Schlüsselaustausch](images/key-exchange-2.svg)
 
-:::aufgabe Schlüsselaustausch
+::::aufgabe Schlüsselaustausch
 <Answer type="state" webKey="991ccdea-6925-4830-92cc-1cade6c5feac" />
 
 Finden Sie eine Möglichkeit, den Inhalt der Truhe sicher zu übertragen?
@@ -88,4 +88,4 @@ Hier handelt es sich eigentlich um die zweite, einfache Variante mit nur einer S
 
 :::
 
-:::
+::::

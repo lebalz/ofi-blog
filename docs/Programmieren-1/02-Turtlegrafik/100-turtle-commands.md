@@ -148,7 +148,7 @@ if isdown():
 forward(100)
 ```
 :::
-:::def
+:::::def
 ### `pencolor(color)`
 Legt die Stiftfarbe fest. Der Parameter `color` enthält Text, die Farbe muss also mit Anführungszeichen umgeben sein.
 
@@ -218,7 +218,7 @@ Das offizielle Turtle-Modul verwendet zur Anzeige von Grafiken nicht einen Brows
 Mehr dazu hier 👉 https://docs.python.org/3/library/turtle.html#turtle.color
 :::
 :::
-:::
+:::::
 
 :::def
 ### `pensize(size)`

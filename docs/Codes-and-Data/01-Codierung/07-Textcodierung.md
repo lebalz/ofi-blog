@@ -109,7 +109,7 @@ Speichern Sie die Textdatei unter dem Namen __Unicode-Test.txt__ indem Sie
 
 :::
 
-:::aufgabe 4. Datei als Bytes betrachten
+::::aufgabe 4. Datei als Bytes betrachten
 <Answer type="state" webKey="42f48306-1123-4161-a256-1eacc6ab8430" />
 
 Mit dem Online-Tool _HexEd.it_ können Sie eine beliebige Datei Byte für Byte betrachten:
@@ -165,7 +165,7 @@ Im vorliegenden Beispiel sieht das so aus:
 
 </div>
 </Hint>
-:::
+::::
 
 :::aufgabe ⭐️ Zusatzaufgabe - Andere Dateien
 <Answer type="state" webKey="132b7d4d-6605-45d6-a212-079d3487ec8a" />

@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 Viele Webseiten nutzen z.B. den Dienst "Google Analytics". Öffnen wir solch eine Webseite wird auch Google Analytics gestartet und schon legt Google ein Cookie bei uns ab (ein sogenanntes Drittanbieter-Cookie). Cookies sind kleine Datenpakete, welche eine Webseite auf dem lokalen Computer (genau genommen im Browser) speichert. Öffnen wir danach eine andere Webseite die Google Analytics nutzt (das nutzen die meisten Webseiten) so kann Google die eigenen Cookies lesen und weiss welche Seiten wir in welcher Reihenfolge wie lange angesehen haben. Generell nutzen online-Werbeagenturen Information von ihren Drittanbieter-Cookies um nutzerspezifische Werbung schalten zu können. Die Browser-Ererweiterung "Thunderbeam-Lightbeam" für den Chrome-Browser macht die Spuren sichtbar, welche wir mit Cookies im Internet hinterlassen. 
 
-:::aufgabe Cookies
+::::aufgabe Cookies
 Installieren 
 
 1. Installieren Sie Sie sich die Chrome- bzw. Edge-Erweiterung [Thunderbeam-Lightbeam](https://chrome.google.com/webstore/detail/thunderbeam-lightbeam-for/hjkajeglckopdkbggdiajobpilgccgnj)
@@ -25,7 +25,7 @@ Installieren
 Welche Cookies gibt es auf der ofi.gbsl-Website?
 :::
 
-:::
+::::
 
 
 ## Cookies Löschen

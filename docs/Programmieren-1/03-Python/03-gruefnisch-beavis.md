@@ -109,7 +109,7 @@ print(text)
 
 :::
 
-:::warning Gross- & Kleinschreibung
+::::warning Gross- & Kleinschreibung
 Python nimmts genau beim ersetzen - die Gross- & Kleinschreibung spielt eine Rolle, nicht jedoch der Ort des `alt`en Wortes!
 
 Im folgenden Beispiel wird etwa nur das kleingeschriebene `ich` ersetzt, jedoch auch wenn es inmitten eines Textes auftritt. Das grossgeschrieben `Ich` zu Beginn des Satzes wird ignoriert...
@@ -141,7 +141,7 @@ text = text.replace('ich', 'XXX') # Alle 'ich' durch XXX ersetzen
 print(text)
 ```
 :::
-:::
+::::
 
 
 ### Vervielfachen

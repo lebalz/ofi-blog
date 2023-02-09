@@ -103,7 +103,7 @@ for i in range(4):
 ```
 :::
 
-:::aufgabe Struktogramm → Python
+::::aufgabe Struktogramm → Python
 <Answer type="state" webKey="868ad50b-1772-45f5-852b-9cd4b8650267" />
 
 Übersetzen Sie das Struktogramm in ein Python Programm. Was entsteht?
@@ -139,7 +139,7 @@ for i in range(9):
 hideturtle()
 ```
 </Solution>
-:::
+::::
 
 :::aufgabe 1. Python → Struktogramm
 <Answer type="state" webKey="dfbdeec2-0728-4431-9a21-0bb26b2b526b" />

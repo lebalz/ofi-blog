@@ -20,7 +20,7 @@ Ihre Stichworte sollen mindestens so detailliert sein, dass Sie während der Auf
 
 **Aber Achtung**: Denken Sie daran, dass abgelesene Text oft eintönig klingen und wenn Sie einen Text erstellen, welcher kopierte Bausteine aus einer anderen Quelle enthält, müssen Sie diese für den Hörer erkennbar und korrekt zitieren.
 ### Audiodateien Zusammenschneiden
-:::success Audacity
+::::success Audacity
 Um einen Podcast zu erstellen, können Sie im einfachsten Fall Ihre Stimme mit dem Handy aufnehmen und fertig.
 
 Sie können aber auch Ihren Text mit Musik oder Geräuschen untermalen. Dabei können Sie eigene Aufnahmen oder Material aus dem Internet verwenden. Bei letzterem müssen Sie allerdings darauf achten, dass Sie keine Urheberrechte verletzten.
@@ -65,4 +65,4 @@ Laden Sie ffmpeg [hier https://lame.buanzo.org/ffmpeg64audacity.php](https://lam
 </TabItem>
 </OsTabs>
 :::
-:::
+::::

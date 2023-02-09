@@ -15,7 +15,7 @@ __Parameter ⊕ ⊖__: Das Ergebnis eines Algorithmus kann variiert werden durch
 **Beispiel**: Bei einem Online-Rezept kann der Parameter *Anzahl Personen*  mit den Knöpfen `⊕` und `⊖` variiert werden - die Mengenangaben werden dann aktualisiert. 
 :::
 
-:::aufgabe
+::::aufgabe
 <Answer type="state" webKey="a603eafc-7d9d-4745-b3cd-4613440c1317" />
 
 Markieren Sie im folgenden Programm (links) wie folgt:
@@ -56,7 +56,7 @@ for i in range(5):
 
 ![7 Parameter, 6 Befehlsnamen --width=200px](images/06-aufgabe1-lsg.png)
 </Solution>
-:::
+::::
 
 
 Wie können Unterprogramme geschrieben werden, die Parameter akzeptieren?
@@ -144,7 +144,7 @@ Ein häufiger Fehler sind vergessene Kommas zwischen zwei Parameternamen. Dann e
 :::
 
 
-:::aufgabe Parameternamen
+::::aufgabe Parameternamen
 <Answer type="state" webKey="a3f42726-24e0-4a66-8a08-5bc74976c567" />
 
 :::cards --min-width=200px
@@ -200,7 +200,7 @@ sechseck(10, 'red')
 ```
 </Solution>
 
-:::
+::::
 
 ## Wiederholungen
 

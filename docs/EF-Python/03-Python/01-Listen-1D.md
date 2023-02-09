@@ -89,7 +89,7 @@ sequenceDiagram
 </Hint>
 :::
 
-:::aufgabe 3. Meine Nummer 1
+::::aufgabe 3. Meine Nummer 1
 <Answer type="state" webKey="56fcba0a-c357-462b-b4e6-8f7d76fbe932" />
 
 Dateiname
@@ -145,9 +145,9 @@ for i in range(3):
 ```
 :::
 </Hint>
-:::
+::::
 
-:::aufgabe 4. Primzahlen
+::::aufgabe 4. Primzahlen
 <Answer type="state" webKey="00361219-0652-4870-9a42-c3cf8250b9a4" />
 
 Dateiname
@@ -226,7 +226,7 @@ print(f'{len(primes)} Primzahlen von 1 bis {MAX_ZAHL}', primes)
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/assets/primes.py
 ```
 </Solution>
-:::
+::::
 
 
 ---

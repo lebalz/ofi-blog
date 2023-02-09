@@ -207,7 +207,7 @@ print(noten)
 
 ## Elemente Hinzufügen/Entfernen
 
-:::def
+::::def
 ### hinzufügen: `<liste>.append(<wert>)`
 
 `append` fügt ein neues Element am **Ende** der Liste hinzu.
@@ -227,7 +227,7 @@ noten.insert(1, 6) # Bei Index 1 (2. Stelle) wird eine 6 eingefügt
 print('Neu', noten)
 ```
 :::
-:::
+::::
 
 :::def
 ### entfernen: `<liste>.pop(<index>)`

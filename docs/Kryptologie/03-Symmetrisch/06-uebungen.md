@@ -38,7 +38,7 @@ Entschlüsseln Sie den Text `XWVJZWEKK,XWVJIK` mit dem Schlüssel `VVXKZ`
 - `c1` ist ein Zwischenresultat, damit wird weitergearbeitet...
 :::
 
-:::aufgabe 3. CBC-Modus: Verschlüsseln
+::::aufgabe 3. CBC-Modus: Verschlüsseln
 
 ![CBC: Verschlüsseln](images/CBC_encryption.svg)
 
@@ -83,10 +83,10 @@ Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 :::
 
 <Answer label="Text (nicht binär)" type="string" webKey="dabff993-1dc5-43c8-bfca-f944c8dc3f96" solution="XJXGSL" sanitizer={UPPER_NOSPACE}/>
-:::
+::::
 
 
-:::aufgabe 4. CBC-Modus: Entschlüsseln
+::::aufgabe 4. CBC-Modus: Entschlüsseln
 
 ![CBC Entschlüsseln](images/CBC_decryption.svg)
 
@@ -142,4 +142,4 @@ Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 :::
 
 <Answer label="Text (nicht binär)"  type="string" webKey="4ce989c5-27ad-4146-bdf6-adb7b5908b55" solution="DOLCE" sanitizer={(val) => UPPER_NOSPACE(val)?.length === 7 ? UPPER_NOSPACE(val).slice(2) : UPPER_NOSPACE(val)}/>
-:::
+::::

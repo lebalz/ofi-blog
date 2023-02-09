@@ -53,7 +53,7 @@ Klonen Sie das Repository auf Ihren Laptop.
 [@video](./images/gh-clone-hd.mp4)
 :::
 
-:::aufgabe Repository Struktur
+::::aufgabe Repository Struktur
 
 Unser Repository `EF-Informatik` sollte in etwa die folgende Struktur haben:
 
@@ -78,4 +78,4 @@ git_code/
 :::info Leere Ordner
 Leere Ordner werden von Git ignoriert, weshalb leere Ordner nicht als Änderung angezeigt werden.
 :::
-:::
+::::

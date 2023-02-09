@@ -106,7 +106,7 @@ dreieck()
 :::
 
 
-:::aufgabe Aufgabe 1
+::::aufgabe Aufgabe 1
 <Answer type="state" webKey="4d9d75a8-8539-4541-aec8-5306c671b1d9" />
 
 Im folgenden ist zweimal derselbe Algorithmus programmiert - links ohne Unterprogramme, rechts mit Unterprogrammen.
@@ -222,13 +222,13 @@ Codequalität
 : Änderungen und Korrekturen müssen nur an einem Ort gemacht werden. Vergessene Änderungen sind dadurch weniger wahrscheinlich - die Codequalität steigt!
 
 </Solution>
-:::
+::::
 
 ## Eigene Befehle definieren
 
 Bei Python werden Befehle auch **Funktionen** genannt.
 
-:::def
+::::def
 ### `def name():`
 Mit `def name():` wird ein neues Unterprogramm (ein neuer Befehl) definiert. Als Name sollte immer etwas gewählt werden, das die **Tätigkeit** dieser Sequenz widerspiegelt. Alle Anweisungen, die zum neuen Befehl gehören, müssen eingerückt sein!
 
@@ -260,11 +260,11 @@ def zick_zack():  # <-- Doppelpunkt nicht vergessen!
 zick_zack()
 ```
 :::
-:::
+::::
 
 ---
 
-:::aufgabe Aufgabe 2: Struktogramm → Python
+::::aufgabe Aufgabe 2: Struktogramm → Python
 <Answer type="state" webKey="202aff44-4ffd-4368-b74c-ab6682d0c805" />
 
 1. Erzeugen Sie ein Programm gemäss folgendem Struktogramm:
@@ -319,9 +319,9 @@ stufe()
 ```
 </Solution>
 
-:::
+::::
 
-:::aufgabe Aufgabe 3 – Sechsecke
+::::aufgabe Aufgabe 3 – Sechsecke
 <Answer type="state" webKey="b1940f0b-2d69-4d40-84fc-676bddc1b45a" />
 
 :::cards --min-width=200px
@@ -363,9 +363,9 @@ for i in range(10):
 ```
 </Solution>
 
-:::
+::::
 
-:::aufgabe Aufgabe 4 – Häuser
+::::aufgabe Aufgabe 4 – Häuser
 <Answer type="state" webKey="1bc32c1a-0345-494d-85b3-883ea40151cd" />
 
 Für diese Aufgabe können Sie als Ausgangslage Ihr Programm aus Kapitel 1, Aufgabe 6 "Haus von Nikolaus" verwenden.
@@ -423,9 +423,9 @@ haus()
 ```
 </Solution>
 
-:::
+::::
 
-:::aufgabe Aufgabe 5 – Blume
+::::aufgabe Aufgabe 5 – Blume
 <Answer type="state" webKey="5f71b333-fd7d-446e-998b-d65c69bec060" />
 
 Sie werden in dieser Aufgabe unter der Verwendung mehrerer Unterprogramme eine komplexe Aufgabe schrittweise lösen.
@@ -491,7 +491,7 @@ for i in range(10):
 ```
 </Solution>
 
-:::
+::::
 
 
 
