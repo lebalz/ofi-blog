@@ -146,6 +146,6 @@ Nach einer kurzen Recherche: Die Strichcodes auf Verpackungen sind sog. **EAN-13
 400781730180
 
 </Answer>
-
+:::
 
 [^1]: Inspirationsquelle: [lehrerfortbildung-bw.de](https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb1/1_i1_duc/2_kopiervorlagen/2_xo/)
