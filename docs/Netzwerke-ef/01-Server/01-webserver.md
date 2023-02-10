@@ -55,7 +55,7 @@ sequenceDiagram
 
 ## Webserver mit Python
 
-Python stellt eine Library zur Verfügung, mit welcher man ein einfaches Webserver-Programm erstellen kann. Ein solches ist in folgendem Snippet enthalten. Dieses Programm empfängt Requests für HTML-Dateien und sendet den Inhalt dieser Dateien zurück. Im Moment ist die Seite `hello.htm` die einzige Seite, welche vom Webserver zurückgeschickt werden kann.
+Python stellt eine Library zur Verfügung, mit welcher man ein einfaches Webserver-Programm erstellen kann. Ein solches ist in folgendem Snippet enthalten. Dieses Programm empfängt Requests für HTML-Dateien und sendet den Inhalt dieser Dateien zurück. Im Moment ist die Seite `hello.html` die einzige Seite, welche vom Webserver zurückgeschickt werden kann.
 
 Da auf einem Server gleichzeitig verschiedene **Dienste** angeboten werden können (z.B. könnte auch noch ein E-Mail-Server laufen), muss man für jeden Dienst eine **Port-Adresse** festlegen, unter welcher der Dienst auf ankommende Anfragen horcht. Für unseren einfachen Webserver wird im Snippet der Port mit der Nummer `8000` festgelegt.
 
@@ -81,7 +81,7 @@ getätigt.</p>
 </BrowserWindow>
 
 - Die IP-Adresse des Servers könnte zum Beispiel `10.0.123.4` sein.
-- Der Pfad entspricht der Ordnerreihenfolge, ausgehend vom Workspace in VSC, in dem die Datei `hello.htm` gespeichert ist, z.B. `2258084`.
+- Der Pfad entspricht der Ordnerreihenfolge, ausgehend vom Workspace in VSC, in dem die Datei `hello.html` gespeichert ist, z.B. `2258084`.
 
 
 :::aufgabe Python Webserver
