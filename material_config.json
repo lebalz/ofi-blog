@@ -474,6 +474,18 @@
       "from": "src/pages/docusaurus/v2.2.0/",
       "to": "versioned_docs/version-24ef/01-Programmieren/02-Infrastruktur/20-Docusaurus",
       "ignore": []
+    },
+    {
+      "from": "docs/Netzwerke-ef/",
+      "to": "versioned_docs/version-24ef/02-Netzwerke",
+      "ignore": [
+        "03-LAN",
+        "04-Schichtenmodell",
+        "05-Netzzugangsschicht",
+        "06-IP-Adressen",
+        "07-Routing"
+      ],
+      "open": true
     }
   ]
 }
