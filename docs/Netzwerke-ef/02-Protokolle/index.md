@@ -6,7 +6,7 @@ sidebar_custom_props:
     ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Protokolle
 ---
 
-# Protokolle
+# 2. Protokolle
 
 ## Grundlagen
 
