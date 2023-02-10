@@ -151,6 +151,10 @@ async function createConfig() {
             lastVersion: 'current',
             showLastUpdateTime: true,
             routeBasePath: '/',
+            admonitions: {
+              tag: ':::',
+              keywords: ['note', 'tip', 'info', 'caution', 'danger', 'aufgabe', 'def', 'warning', 'finding'],
+            },
             versions: {
               current: {
                 label: 'Material',
