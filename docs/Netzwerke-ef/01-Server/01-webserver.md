@@ -105,7 +105,7 @@ Ordner
 
 3. Wenn Sie erfolgreich waren, machen Sie einen Screenshot von Ihrem Browser, in welchem man die URL und die Seite sieht und laden Sie diesen als Antwort hoch (die URL soll erkennbar sein).
 
-<Answer type="text" webKey="d24cea7c-6310-4d0b-bab7-ab4206c1b55f" />
+    <Answer type="text" webKey="d24cea7c-6310-4d0b-bab7-ab4206c1b55f" />
 
 4. Nun ist dies wohl eine recht umständliche URL. Jenachdem aus welchem Ordner heraus das Python-Skript gestartet wurde, ändert sich die URL. Um diese möglichst kurz zu halten, kann man das Skript direkt im Ordner `docs/Netzwerke/webserver` ausführen. Dazu müssen Sie in VSC links in der Ordnerübersicht auf den Ordner __webserver__ rechtsklicken und dort `Open in Integrated Terminal` auswählen. Nun öffnet sich ein Terminalfenster, welches sich im Ordner `docs/Netzwerke/webserver` befindet. In diesem Fenster können Sie nun das Python-Skript mit dem Befehl `python3 simple-server.py` starten. Die URL wird nun wie folgt aussehen: `http://localhost:8000/hello.html`.
 
