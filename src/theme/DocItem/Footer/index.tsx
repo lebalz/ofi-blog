@@ -15,16 +15,16 @@ export default function FooterWrapper(props: Props): JSX.Element {
     return (
         <div className={styles.footer}>
             <div className={styles.sources}>
-                {sidebar_custom_props.source && (
+                {sidebar_custom_props?.source && (
                     <>
-                        {sidebar_custom_props.source.name && (
+                        {sidebar_custom_props.source?.name && (
                             <a
-                                href={sidebar_custom_props.source.ref || '#'}
+                                href={sidebar_custom_props.source?.ref || '#'}
                                 className={clsx(styles.copyright, 'badge', 'badge--primary')}
                                 target="_blank"
                             >
-                                {sidebar_custom_props.source.name}
-                                {sidebar_custom_props.source.ref && (
+                                {sidebar_custom_props.source?.name}
+                                {sidebar_custom_props.source?.ref && (
                                     <i className="mdi mdi-open-in-new" style={{ marginLeft: '0.3em' }}></i>
                                 )}
                             </a>
