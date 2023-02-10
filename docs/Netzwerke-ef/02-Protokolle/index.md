@@ -8,6 +8,8 @@ sidebar_custom_props:
 
 # 2. Protokolle
 
+<Answer type="state" webKey="f85a0abb-6385-4267-b36f-906450b4ba76">Gelesen?</Answer>
+
 ## Grundlagen
 
 Ein **Protokoll** definiert, wie zwei Einheiten miteinander kommunizieren. Nur wenn beide Einheiten sich an das vereinbarte Protokoll halten, kann ein sinnvoller Informationsaustausch stattfinden. Dies gilt unabhängig davon, ob es sich bei den beteiligten Einheiten um einzelne Menschen, ganze Staaten, oder Maschinen handelt. An Stelle von Einheiten spricht man oft auch von den **Parteien**, welche miteinander kommunizieren.

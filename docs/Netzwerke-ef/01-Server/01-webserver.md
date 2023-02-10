@@ -60,7 +60,9 @@ Python stellt eine Library zur Verfügung, mit welcher man ein einfaches Webserv
 Da auf einem Server gleichzeitig verschiedene **Dienste** angeboten werden können (z.B. könnte auch noch ein E-Mail-Server laufen), muss man für jeden Dienst eine **Port-Adresse** festlegen, unter welcher der Dienst auf ankommende Anfragen horcht. Für unseren einfachen Webserver wird im Snippet der Port mit der Nummer `8000` festgelegt.
 
 IP-Adresse
-:  Die IP-Adresse ist eine eindeutige Adresse, welche jedem Computer (somit auch jedem Server) im Internet zugewiesen wird.
+: Die IP-Adresse ist eine eindeutige Adresse, welche jedem Computer (somit auch jedem Server) im Internet zugewiesen wird.
+Localhost
+: Lokale IP-Adresse, welche auf dem eigenen Computer verweist. Sie ist immer `127.0.0.1`.
 Port
 : Ein Port ist eine Nummer, welche den Dienst auf einem Computer identifiziert. Dadurch kann ein Computer mehrere Dienste gleichzeitig anbieten.
 URL / URI
