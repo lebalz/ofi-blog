@@ -30,6 +30,12 @@
   margin-bottom: 0;
 }
 
+.admonitionContent > :last-child p, 
+.admonitionContent > :last-child div:global(.comment-wrapper)>:global(.comments) {
+  margin-bottom: 0;
+}
+
+
 .admonition.def {
   --ifm-alert-border-color: rgb(30, 255, 0);
   --ifm-alert-background-color: rgba(0, 0, 0, 0.226);
