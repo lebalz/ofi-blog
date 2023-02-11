@@ -10,7 +10,7 @@ sidebar_custom_props:
 
 ![NumTrip --width=200px](images/numtrip-inplay.png)
 
-:::aufgabe `numtrip.py`
+::::aufgabe `numtrip.py`
 <Answer type="state" webKey="b160c683-c0de-405c-a847-cb3f3ab1aaf2" />
 
 Dateiname
@@ -65,7 +65,7 @@ print(' ')
 ```
 
 :::
-:::
+::::
 
 
 ## Refactoring: Funktionen verwenden

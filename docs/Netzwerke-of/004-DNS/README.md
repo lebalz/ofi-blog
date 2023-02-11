@@ -146,7 +146,7 @@ Den zuständigen DNS-Server kann Ihr Computer, aber nur über dessen eigene IP-A
 
 Man kann solche Anfragen aber auch von Hand machen. Dazu können Sie die Seite https://tools.keycdn.com/dig verwenden.
 
-:::aufgabe Aufgabe 1
+::::aufgabe Aufgabe 1
 <Answer type="state" webKey="0ad4bde0-94a3-4822-8c97-bd14774433a5" />
 
 Wie findet man die IP-Adresse, welche zu einem Domain-Name gehört? (Googeln Sie nach einer Website, welche einen Dienst anbietet, der dies tut.)
@@ -171,7 +171,7 @@ Suchen Sie auch nach weiteren IP-Adressen, bspw. von www.instagram.com.
 
 <Answer type="text" webKey="f4bc7d69-fc50-4ca2-8186-8c74f8061e22" />
 
-:::
+::::
 
 
 :::aufgabe Aufgabe 2

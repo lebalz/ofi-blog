@@ -6,6 +6,12 @@ sidebar_custom_props:
 
 # Obligatorisches Fach Informatik
 
+:::warn Blaa
+
+Hello
+
+:::
+
 ## Tools
 
 [Mdi Icons](/mdi)

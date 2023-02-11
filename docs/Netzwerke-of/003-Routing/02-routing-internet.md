@@ -30,7 +30,7 @@ Es gibt also insgesamt $2^{32} = 4'294'967'296$ verschiedene IP-Adressen. Auf de
 
 Jedes Gerät das mit dem Internet verbunden ist, braucht eine IP-Adresse.
 
-:::aufgabe IP-Adresse finden
+::::aufgabe IP-Adresse finden
 <Answer type="state" webKey="03beb5fd-88d7-4ab8-ac33-c01d6d1fc88a" />
 
 Finden und notieren Sie die IP-Adresse
@@ -65,7 +65,7 @@ IP-Adresse finden Windows 11
 
 oder etwas Ähnliches, das auf Ihr Gerät resp. Ihr  Betriebssystem abgestimmt ist.
 :::
-:::
+::::
 
 :::aufgabe 🏠 IP-Adresse finden
 <Answer type="state" webKey="a570b6cd-7d9c-4089-9c4d-ce64b7190c9e" />

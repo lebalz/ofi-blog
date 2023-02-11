@@ -103,7 +103,7 @@
                 }
             }
 
-            :global .dropdown__menu {
+            :global(.dropdown__menu) {
                 min-width: 2px;
                 display: flex;
                 right: 0;

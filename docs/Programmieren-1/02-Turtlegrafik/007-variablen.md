@@ -187,7 +187,7 @@ print(f'Ich bin {grösse} cm gross')
 ```
 :::
 
-:::aufgabe Aufgabe 1 - BMI
+::::aufgabe Aufgabe 1 - BMI
 <Answer type="state" webKey="cc20a8bd-6fd0-4d5a-bd18-970cf0d54d53" />
 
 Übersetzen Sie das folgende Struktogramm in Python Code:
@@ -229,7 +229,7 @@ bmi = gewicht / (grösse * grösse) # Klammern sind entscheidend!
 print(f'BMI: {bmi}')
 ```
 </Solution>
-:::
+::::
 
 :::aufgabe Aufgabe 2 – `n-Eck`
 <Answer type="state" webKey="f84f8da0-180b-4089-8545-584ec4414230" />

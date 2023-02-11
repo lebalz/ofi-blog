@@ -26,7 +26,7 @@ Heute wird in Computern normalerweise sogenanntes DDR-SDRAM[^1] eingesetzt. Es z
 
 ![DDR SDRAM](images/04-ddr-sdram.jpg)
 
-:::aufgabe RAM in meinem Smartphone/Laptop
+::::aufgabe RAM in meinem Smartphone/Laptop
 
 Wie viel Arbeitsspeicher besitzt Ihr Smartphone, ihr Laptop?
 
@@ -36,7 +36,7 @@ Wie viel Arbeitsspeicher besitzt Ihr Smartphone, ihr Laptop?
 :::info Hinweis
 Dies kann in den Systemeinstellungen oder im (unter Windows) im Taskmanager nachgeschaut werden. 
 :::
-:::
+::::
 
 ## Festplatten
 

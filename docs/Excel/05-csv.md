@@ -18,7 +18,7 @@ lässt sich dies ändern.
 👉 [support.microsoft.com: Text zu Spalten](https://support.microsoft.com/de-de/office/aufteilen-von-text-in-verschiedene-spalten-mit-dem-textkonvertierungs-assistenten-30b14928-5550-41f5-97ca-7a3e9c363ed7)
 :::
 
-:::aufgabe
+::::aufgabe
 <Answer type="state" webKey="e04ae26f-487c-425b-a9f5-cc2e3724fdb7" />
 
 Dateiname
@@ -50,4 +50,4 @@ und setzen Sie das Zoom-Level auf **10%**.
 
 ![](images/excel-smile.png)
 </Solution>
-:::
+::::

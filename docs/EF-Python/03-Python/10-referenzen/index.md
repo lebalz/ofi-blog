@@ -8,7 +8,7 @@ sidebar_custom_props:
 ---
 # Referenzen
 
-:::aufgabe
+::::aufgabe
 
 <Answer type="state" webKey="53f51b74-c15b-4025-8839-0f31b2d1bf72" />
 
@@ -32,7 +32,7 @@ https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/10-referen
 :::
 
 Zum Schluss den Selbsttest ganz am Ende der Seite durchführen...
-:::
+::::
 
 ## Bisheriges Modell für Variablen
 Bisher haben wir uns **Variablen** als *Karteikärtchen* vorgestellt, auf welchen sich der Computer einen bestimmten **Wert** (eine Zahl, ein Text, etc.) merkt. Das Kärtchen trägt einen Namen. Unter diesem Namen kann die Information zu einem späteren Zeitpunkt wieder hervorgeholt werden. Die **Zuweisung** 

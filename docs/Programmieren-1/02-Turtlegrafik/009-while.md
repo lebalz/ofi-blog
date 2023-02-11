@@ -86,7 +86,7 @@ while i < 4:
     i = i + 1
 ```
 
-:::aufgabe `for` zu `while`
+::::aufgabe `for` zu `while`
 <Answer type="state" webKey="5c7d2980-3842-4b79-b1af-69ddad459b21" />
 
 Schreiben Sie das untenstehende Programm so um, dass nur noch `while` Schleifen verwendet werden.
@@ -127,9 +127,9 @@ while i < 5:
 
 </Solution>
 
-:::
+::::
 
-:::aufgabe `while` zu `for`
+::::aufgabe `while` zu `for`
 <Answer type="state" webKey="2c3ce7d3-264f-4607-b789-20e8ab1985d8" />
 
 Schreiben Sie das untenstehende Programm so um, dass nur noch `for` Schleifen verwendet werden.
@@ -191,7 +191,7 @@ for zeile in range(5):
         quadrat()
 ```
 </Solution>
-:::
+::::
 
 ## Anwendung
 

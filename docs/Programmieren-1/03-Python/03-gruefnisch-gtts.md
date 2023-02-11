@@ -68,7 +68,7 @@ print(klein)
 
 ### Text ersetzen
 
-:::def `.replace(alt, neu)`
+::::def `.replace(alt, neu)`
 Mit `replace(alt, neu)` können Text-Teile in einem Text (`string`) ersetzt werden.
 
 
@@ -112,7 +112,7 @@ text = text.replace('ich', 'XXX') # Alle 'ich' durch XXX ersetzen
 print(text)
 ```
 :::
-:::
+::::
 
 
 ### Vervielfachen

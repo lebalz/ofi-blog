@@ -23,7 +23,7 @@ print(f'Hallo {name}, du bist heute {2022 - jahrgang} Jahre alt')
 ```
 :::
 
-:::def
+:::::def
 ### `'''`, `"""`, `f'''`, `f"""` Mehrzeiliger Text
 
 Möchte man Text über mehrere Zeilen schreiben, kann entweder das Zeichen für eine neue Zeile (`\n`) verwendet werden, oder ein mehrzeiligen String mit `'''`  oder `"""` starten. Ebenso können mehrzeilige formatierte Blöcke aussehen. 
@@ -40,7 +40,7 @@ Reto'''
     print('----------')
 ```
 
-:::info Mehrzeilige Kommentare
+::::info Mehrzeilige Kommentare
 Manchmal wünscht man sich einen Kommentar über mehrere Zeilen zu schreiben, ohne immer ein `#` am Beginn der Zeile zu schreiben. In anderen Sprachen gibt es spezielle "Start-" und "End-Kommentar" Zeichen, so dass auch mehrere Zeilen auskommentiert werden können. (Bspw. um eine ganze Funktion auszukommentieren...). In Python gibt es dies nicht. Es kann aber aus dem kommentierten Code Text gemacht werden, so dass dieser nicht ausgeführt (aber auch nirgends in eine Variable gespeichert) wird.
 
 :::cards
@@ -58,8 +58,8 @@ print('Wurzel 2 = ', sqrt(2))
 ***
 **Beispiel**: Ursprünglich wurde die Funktion `sqrt` selber implementiert. Nun brauchen Sie diese vermutlich nicht mehr, das diese aus der Bibliothek `math` importiert wird. Vorerst wollen Sie die eigene Funktion aber noch nicht löschten :mdi-arrow-right: vorerst **kommentieren** Sie diese.
 :::
-:::
-:::
+::::
+:::::
 
 
 ## Veränderbarkeit (Mutability)
@@ -83,7 +83,7 @@ In Python gibt es unterschiedliche Sammel-Datentypen, daher Daten, die unterschi
 
 Dabei macht Python einen grundlegenden Unterschied zwischen Veränderbaren- (*Mutable*) und Nicht-Veränderbaren (*Immutable*) Datentypen. Bei veränderbaren Datentypen können nach der Erzeugung und Zuweisung Änderungen an den zugrundeliegenden Speicherstellen vorgenommen werden.
 
-:::info Listen vs. Tupel
+::::info Listen vs. Tupel
 :::flex --min-width=200px
 Bei **Listen** können nach dem Erzeugen einzelne Listenwerte verändert, oder gar neue Werte hinzugefügt oder entfernt werden.
 ***
@@ -107,7 +107,7 @@ a.pop(0)      # FEHLER!
 a[0] = 5      # FEHLER!
 ```
 :::
-:::
+::::
 
 Eine Übersicht über die gängigen Datentypen in Python zeigt deren Veränderbarkeit **nach** der Initialisierung. 
 

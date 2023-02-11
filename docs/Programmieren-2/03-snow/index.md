@@ -71,7 +71,7 @@ def draw():
 
 Dies zeichnet einen rot gefüllten Kreis mit Radius 10 bei den Koordinaten (100, 200).
 
-:::aufgabe Aufgabe 1 – Schneeflocke zeichnen
+::::aufgabe Aufgabe 1 – Schneeflocke zeichnen
 <Answer type="state" webKey="f393b9d4-488c-46ab-a583-bc030fca9a47" />
 
 :::cards
@@ -109,7 +109,7 @@ def update(zeitdifferenz):
 pgzrun.go()
 ```
 </Solution>
-:::
+::::
 
 :::aufgabe Aufgabe 2 – Schneeflocke bewegen
 <Answer type="state" webKey="44bff46e-f883-4520-8729-20f8fa7f3d2c" />

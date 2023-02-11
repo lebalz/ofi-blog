@@ -192,7 +192,7 @@ const CommentContent = observer((props: Props) => {
             </div>
             {models[0]?.open && (
                 <div
-                    className={styles.comments}
+                    className={clsx(styles.comments, 'comments')}
                     style={{ ['--comment-color']: models[0]?.cssColor } as React.CSSProperties}
                 >
                     {models.map((m, idx) => {
