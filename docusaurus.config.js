@@ -17,6 +17,11 @@ const remarkComments = require('./src/plugins/remark-comments');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const EnsurePageId = require('./bin/ensure-page-id');
 
+const admonitionConfig = {
+  tag: ':::',
+  keywords: ['note', 'tip', 'info', 'caution', 'danger', 'important', 'success', 'secondary', 'aufgabe', 'def', 'warning', 'warn', 'finding'],
+};
+
 
 /** @return {import('@docusaurus/types').DocusaurusConfig} */
 async function createConfig() {
@@ -151,10 +156,7 @@ async function createConfig() {
             lastVersion: 'current',
             showLastUpdateTime: true,
             routeBasePath: '/',
-            admonitions: {
-              tag: ':::',
-              keywords: ['note', 'tip', 'info', 'caution', 'danger', 'aufgabe', 'def', 'warning', 'warn', 'finding'],
-            },
+            admonitions: admonitionConfig,
             versions: {
               current: {
                 label: 'Material',
@@ -193,6 +195,7 @@ async function createConfig() {
             rehypePlugins: [katex],
           },
           pages: {
+            admonitions: admonitionConfig,
             beforeDefaultRemarkPlugins: [
               remarkKbd,
               remarkLinks,
@@ -236,13 +239,13 @@ async function createConfig() {
           // Please change this to your repo.
           editUrl:
             'https://github.com/lebalz/ofi-blog/edit/main/',
-            beforeDefaultRemarkPlugins: [
-              remarkKbd,
-              remarkLinks,
-              remarkImg2Fig,
-              [remarkUnderline, { marker: '__', classNames: ['underline'], tagType: 'strong' }]
-            ],
-            
+          admonitions: admonitionConfig,
+          beforeDefaultRemarkPlugins: [
+            remarkKbd,
+            remarkLinks,
+            remarkImg2Fig,
+            [remarkUnderline, { marker: '__', classNames: ['underline'], tagType: 'strong' }]
+          ],
           remarkPlugins: [
             math,
             remarkDeflist,
