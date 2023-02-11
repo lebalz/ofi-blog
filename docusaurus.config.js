@@ -153,7 +153,7 @@ async function createConfig() {
             routeBasePath: '/',
             admonitions: {
               tag: ':::',
-              keywords: ['note', 'tip', 'info', 'caution', 'danger', 'aufgabe', 'def', 'warning', 'finding'],
+              keywords: ['note', 'tip', 'info', 'caution', 'danger', 'aufgabe', 'def', 'warning', 'warn', 'finding'],
             },
             versions: {
               current: {
