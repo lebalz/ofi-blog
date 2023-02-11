@@ -22,7 +22,7 @@ const admonitionConfig = {
   keywords: ['note', 'tip', 'info', 'caution', 'danger', 'important', 'success', 'secondary', 'aufgabe', 'def', 'warning', 'warn', 'finding'],
 };
 
-
+const GIT_COMMIT_SHA = process.env.DRONE_COMMIT_SHA || Math.random().toString(36).substring(7);
 /** @return {import('@docusaurus/types').DocusaurusConfig} */
 async function createConfig() {
   return {
@@ -37,6 +37,9 @@ async function createConfig() {
     projectName: 'ofi-blog', // Usually your repo name.
     deploymentBranch: 'gh-pages',
     trailingSlash: false,
+    customFields: { 
+      GIT_COMMIT_SHA: GIT_COMMIT_SHA,
+    },
     i18n: {
       defaultLocale: 'de',
       locales: ['de'],
@@ -128,7 +131,7 @@ async function createConfig() {
             ],
           }
         ],
-        copyright: `<a class="footer__link-item" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de"><img src="${BASE_URL}img/by-nc-sa.eu.svg" alt="CC-BY-NC-SA"> Text und Bilder von Balthasar Hofer, Ausnahmen sind gekennzeichnet.</a>`,
+        copyright: `<a class="footer__link-item" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de"><img src="${BASE_URL}img/by-nc-sa.eu.svg" alt="CC-BY-NC-SA"> Text und Bilder von Balthasar Hofer, Ausnahmen sind gekennzeichnet. </a><br /><a class="badge badge--primary" href="https://github.com/lebalz/ofi-blog/commit/${GIT_COMMIT_SHA}"><i class="mdi mdi-source-commit mdi-rotate-90" /> ${GIT_COMMIT_SHA.substring(0, 7)}</a>`,
       },
       prism: {
         theme: require('prism-react-renderer/themes/vsLight'),
