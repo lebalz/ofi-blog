@@ -11,7 +11,7 @@ Node-RED bietet dabei ein übersichtliches, grafisches Benutzerinterface, mit we
 ![--width=500px](images/node-red-intro.gif)
 
 Node
-: Ein Kästchen Kästchen
+: Ein Kästchen mit einer Funktion
 Verbindung
 : Verbindet zwei Nodes miteinander
 Flow

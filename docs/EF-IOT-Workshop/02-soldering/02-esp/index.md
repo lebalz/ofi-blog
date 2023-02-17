@@ -21,7 +21,3 @@ sidebar_custom_props:
 ![](images/esp-step08.jpg)
 
 ![](images/esp-step09.jpg)
-
-![](images/esp-step10.jpg)
-
-![](images/esp-step11.jpg)
