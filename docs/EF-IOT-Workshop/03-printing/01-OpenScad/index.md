@@ -100,7 +100,7 @@ translate([BOX_X + 10, 0, 0])
 Das Modell [sensor-box.scad](sensor-box.scad) enthält das Grundgerüst für unsere Sensorbox. Untersuchen Sie das Modell und fügen Sie einen Schriftzug bspw. mit Ihrem Namen hinzu.
 
 :::details
-```scad reference
+```scad
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/03-printing/01-OpenScad/assets/sensor-box.scad
 ```
 :::
