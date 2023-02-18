@@ -96,17 +96,17 @@ translate([BOX_X + 10, 0, 0])
 
 ## Sensor-Box
 
-:::aufgabe Sensor-Box
+::::aufgabe Sensor-Box
 Das Modell __sensor-box.scad__ enthält das Grundgerüst für unsere Sensorbox. Untersuchen Sie das Modell und fügen Sie einen Schriftzug bspw. mit Ihrem Namen hinzu.
 
-:::details
+:::details __sensor-box.scad__
 ```scad reference
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/03-printing/01-OpenScad/assets/sensor-box.scad
 ```
 :::
 
-:::
-
 :::danger Achtung überhängende Teile
 Achten Sie darauf, dass Sie keine (zusätzlichen) überhängenden Teile hinzufügen.
 :::
+
+::::
