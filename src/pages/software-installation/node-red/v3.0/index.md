@@ -1,5 +1,5 @@
 ---
-image: images/preview.png
+image: ./images/node-red-elephantsql.png
 sidebar_custom_props:
   id: 17985a5c-152e-4d27-ae98-1da79fa518ef
 ---
