@@ -1,11 +1,4 @@
-/**
-* Sensor Box für Wemos D1 mini ESP8266, OLED 0.66", ENS160 + AHT21 Sensor
-* IOT Tag GBSL, 24.02.2023
-* EF Informatik, 24er
-*/
-
-// PARAMETER
-
+// MODIFY BELOW VARIABLES TO CUSTOMIZE
 /*
 
  WIDTH
@@ -107,8 +100,16 @@ WEMOS_UPPER_HEIGHT = OLED_AND_PINS_THICKNESS + WEMOS_THICKNESS;
 WEMOS_DISPLAY_OFFSET_TOP = WEMOS_OLED_OFFSET_TOP + DISPLAY_OFFSET_TOP;
 CAP_PADDING = BOX_BAR_WIDTH + 2;
 
+module txt() {
+    linear_extrude(WALL_THICKNESS)
+        text("CO");
+    translate([20, -2, 0])
+        linear_extrude(WALL_THICKNESS)
+            scale([0.5, 0.5, 1])
+                text("2");
+}
 
-// HELPER MODULES
+
 
 /**
  _
@@ -139,6 +140,7 @@ module wemos_bar_right() {
             wemos_bar_left();
 }
 
+
 module usb_hole() {
     r = USB_CABLE_HEIGHT / 2;
     translate([-0.01, 0, -(USB_CABLE_HEIGHT - WEMOS_USB_THICKNESS) / 2 - 0.01])
@@ -151,6 +153,7 @@ module usb_hole() {
             }
 }
 
+
 module display_hole() {
     center_x = DISPLAY_HEIGHT / 2;
     center_y = DISPLAY_WIDTH / 2;
@@ -160,18 +163,16 @@ module display_hole() {
                 cylinder(h=WALL_THICKNESS,r1=1/sqrt(2), r2=1.5/sqrt(2),$fn=4);
 }
 
+
 module sensor_hole(size) {
     r = size / 2; 
     translate([r, 0, r])
         rotate([-90, 0, 0])
             rotate([0,0,45])
-                cylinder(h=WALL_THICKNESS+0.02, r1=2*size, r2=size / sqrt(2), $fn=4);
+                cylinder(h=WALL_THICKNESS+0.02, r1=sqrt(2)*size, r2=size / sqrt(2), $fn=4);
 
 }
 
-/*
-SENSOR BOX
-*/
 module box() {
     union() {
         difference() {
@@ -194,7 +195,14 @@ module box() {
                 union() {
                     cube([DISPLAY_HEIGHT, DISPLAY_WIDTH, WALL_THICKNESS + 0.02]);
                     display_hole();
-                }            
+                }
+
+            // TEXT
+            translate([WEMOS_DISPLAY_OFFSET_TOP + DISPLAY_HEIGHT + 13, 15, BOX_Z_OUTER - 1.25 * WALL_THICKNESS])
+                rotate([0,0,90])
+                    scale([0.8, 0.8, 1])
+                        txt();
+            
         }
         // WIFI-SIDE
         translate([0, 0, BOX_Z - WEMOS_UPPER_HEIGHT])
@@ -205,10 +213,6 @@ module box() {
             wemos_bar_right();
     }
 }
-
-/*
-DECKEL mit CO2-Sensor
-*/
 module cap() {
     difference() {
         union() {
@@ -268,10 +272,6 @@ module cap() {
 }
 
 
-/**
-* Erstelle Modell
-* Tipp: Auskommentieren, und einzelne Module anzeigen, wenn Dinge editiert werden müssen.
-*/
 
 // BOX
 translate([BOX_X_OUTER + 10, 0, 0]) // translate where you want it
