@@ -14,7 +14,7 @@
 */
 
 WEMOS_WIDTH = 25;
-WEMOS_HEIGHT = 35.5;
+WEMOS_HEIGHT = 35.25;
 WEMOS_THICKNESS = 1;
 WEMOS_WIFI_THICKNESS = 1;
 WEMOS_USB_THICKNESS = 2.5;
@@ -44,7 +44,7 @@ OLED_AND_PINS_THICKNESS = 15;
 OLED_THICKNESS = 1.3;
 DISPLAY_WIDTH = 16;
 DISPLAY_HEIGHT = 12;
-DISPLAY_OFFSET_LR = 5;
+DISPLAY_OFFSET_LR = 6;
 DISPLAY_OFFSET_TOP = 1; // offset display to end of it's platine
 
 
@@ -60,14 +60,14 @@ SDA -> D2
 */
 CO2_WIDTH = 25;
 CO2_HEIGHT = 20;
-CO2_THICKNESS = 1.55;
-CO2_OFFSET_LEFT_ENS160 = 7;
+CO2_THICKNESS = 1.7;
+CO2_OFFSET_LEFT_ENS160 = 7.5;
 CO2_OFFSET_BOTTOM_ENS160 = 13.5;
 CO2_ENS160_SIZE = 3;
 CO2_COMP_HEIGHT = 1.2;
 CO2_COMP_OFFSET_RIGHT = 3;
 
-CO2_OFFSET_LEFT_AHT21= 16.5;
+CO2_OFFSET_LEFT_AHT21= 16.75;
 CO2_OFFSET_BOTTOM_AHT21 = 11.5;
 CO2_AHT21_SIZE = 3.5;
 
@@ -118,8 +118,8 @@ module txt() {
 Stütze um den WEMOS draufzulegen
 */
 module wemos_bar_left() {
-    // verbindet die äussere Hülle von Objekten
     translate([0,0,-BOX_BAR_HEIGHT])
+        // hull() verbindet die äussere Hülle von Objekten
         hull() {
             translate([0, 0, BOX_BAR_HEIGHT - 1])
                 cube([BOX_BAR_WIDTH, BOX_Y, 1]);
@@ -134,7 +134,6 @@ module wemos_bar_left() {
 Stütze um den WEMOS draufzulegen
 */
 module wemos_bar_right() {
-    // verbindet die äussere Hülle von Objekten
     translate([0,BOX_Y,0])
         rotate([0,0,180])
             wemos_bar_left();
@@ -185,7 +184,7 @@ module box() {
                 cube([BOX_X,BOX_Y+0.1,BOX_Z]);
 
             // USB Hole
-            usb_y = BOX_Y - WEMOS_USB_CENTER_TO_RIGHT - WEMOS_USB_WIDTH / 2;
+            usb_y = BOX_Y - WEMOS_USB_CENTER_TO_RIGHT;
             usb_z = BOX_Z - WEMOS_UPPER_HEIGHT - WEMOS_USB_THICKNESS;
             translate([BOX_X, usb_y, usb_z])
                 usb_hole();
@@ -272,7 +271,7 @@ module cap() {
 }
 
 
-
+/*
 // BOX
 translate([BOX_X_OUTER + 10, 0, 0]) // translate where you want it
     rotate([270, 0, 0]) // 2: rotate
@@ -285,9 +284,9 @@ translate([0, BOX_Z_OUTER, 0]) // 3. translate where you want it
         translate([WALL_THICKNESS,WALL_THICKNESS,WALL_THICKNESS]) // 1. bring to origin
             cap();
 
-
+*/
 //display_hole();
-//cap();
+cap();
 //box();
 //wemos_bar_right();
 //usb_hole();
