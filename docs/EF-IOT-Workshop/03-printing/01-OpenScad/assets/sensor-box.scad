@@ -271,7 +271,7 @@ module cap() {
 }
 
 
-/*
+
 // BOX
 translate([BOX_X_OUTER + 10, 0, 0]) // translate where you want it
     rotate([270, 0, 0]) // 2: rotate
@@ -284,9 +284,9 @@ translate([0, BOX_Z_OUTER, 0]) // 3. translate where you want it
         translate([WALL_THICKNESS,WALL_THICKNESS,WALL_THICKNESS]) // 1. bring to origin
             cap();
 
-*/
+
 //display_hole();
-cap();
+//cap();
 //box();
 //wemos_bar_right();
 //usb_hole();
