@@ -7,12 +7,23 @@ sidebar_custom_props:
 
 import Table from "@site/src/components/Table";
 import {SortTimeTableByDate} from '@site/src/helpers/time';
+import fs2023 from "./26P_FS2023.json"
 import hs2022 from "./26P_HS2022.json"
 import hk2022 from "./26P-HK_HS2022.json"
 
 
 # 26P Informatik
 
+
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={fs2023}
+  order={SortTimeTableByDate()}
+/>
+
+:::details 1. Semester
 <Tabs
     defaultValue="theorie"
     values={[
@@ -40,3 +51,4 @@ import hk2022 from "./26P-HK_HS2022.json"
 />
 </TabItem>
 </Tabs>
+:::
