@@ -125,8 +125,7 @@
     {
       "from": "docs/Programmieren-2/",
       "to": "versioned_docs/version-25h/09-Programmieren-2",
-      "ignore": [],
-      "open": true
+      "ignore": []
     },
     {
       "from": "docs/pgzero/",
@@ -141,7 +140,8 @@
         "03-architecture",
         "04-os",
         "05-praktikum"
-      ]
+      ],
+      "open": true
     }
   ],
   "26e": [
