@@ -26,21 +26,21 @@ Heute wird in Computern normalerweise sogenanntes DDR-SDRAM[^1] eingesetzt. Es z
 
 ![DDR SDRAM](images/04-ddr-sdram.jpg)
 
-::::aufgabe RAM in meinem Smartphone/Laptop
+:::aufgabe RAM in meinem Smartphone/Laptop
+<Answer type="state" webKey="720a2b04-1642-4acf-ab29-e920416e3e2e" />
 
-Wie viel Arbeitsspeicher besitzt Ihr Smartphone, ihr Laptop?
+Wie viel Arbeitsspeicher besitzt Ihr Laptop / Ihr Smartphone?
 
 <Answer type="text" webKey="98675ca4-1e32-4d92-99fc-2fef6b5faefc" />
 
-
-:::info Hinweis
+<Hint>
 Dies kann in den Systemeinstellungen oder im (unter Windows) im Taskmanager nachgeschaut werden. 
+</Hint>
 :::
-::::
 
 ## Festplatten
 
-Der Festplatten- oder **Massenspeicher** erfüllt ganz andere Anforderungen als der Arbeitsspeicher. Wichtig ist hier, dass Daten in grossen Mengen permanent gespeichert können, ohne dass eine durchgehende Stromzufuhr nötig ist. Dass die Datenübertragungsrate deutlich langsamer als beim Arbeitsspeicher ist, spielt deshalb eine untergeordnete Rolle. Er wird – im Gegensatz zum Arbeitsspeicher – nicht direkt auf das Mainboard gesteckt, sondern mittels Strom- und Datenkabel angeschlossen.
+Der Festplatten- oder **Massenspeicher** erfüllt ganz andere Anforderungen als der Arbeitsspeicher. Wichtig ist hier, dass Daten in grossen Mengen **permanent** gespeichert können, ohne dass eine durchgehende Stromzufuhr nötig ist. Dass die Datenübertragungsrate deutlich langsamer als beim Arbeitsspeicher ist, spielt deshalb eine untergeordnete Rolle. Er wird – im Gegensatz zum Arbeitsspeicher – nicht direkt auf das Mainboard gesteckt, sondern mittels Strom- und Datenkabel angeschlossen.
 
 Heute gibt des den Festplattenspeicher in zwei Ausführungen:
 - herkömmliche Harddisks oder HDD (engl. *hard disk drive*)
@@ -49,7 +49,7 @@ Heute gibt des den Festplattenspeicher in zwei Ausführungen:
 
 ### Harddisk (HDD)
 
-Der Aufbau einer **herkömmlichen Harddisk** gleicht einem Plattenspieler. Im Innern der Harddisk drehen sich mehrere Platten, auf denen durch **Magnetisierung** einzelner Bereiche Daten gespeichert werden. Auf dem nachfolgenden Bild (rechts) sieht man den Arm zum Auslesen resp. Schreiben der Daten (er befindet sich momentan in der Parkposition neben den Scheiben). Dieser Speicher wird heute noch eingesetzt, um grosse Datenmengen günstig zu speichern. Er ist relativ langsam und anfällig auf Transportschäden, da es sich um einen mechanischen Speicher mit beweglichen Teilen handelt. Die Drehgeschwindigkeit der Platten ist beschränkt, sie bestimmt Lese-/Schreibgeschwindigkeit. Zudem muss vor dem effektiven Zugriff stets noch gewartet werden, bis sich der Arm an der richtigen Position befindet.
+Der Aufbau einer **herkömmlichen Harddisk** gleicht einem Plattenspieler. Im Innern der Harddisk drehen sich mehrere Platten, auf denen durch **Magnetisierung** einzelner Bereiche Daten gespeichert werden. Auf dem nachfolgenden Bild (rechts) sieht man den Arm zum Auslesen resp. Schreiben der Daten (er befindet sich momentan in der Parkposition neben den Scheiben). Dieser Speicher wird heute noch eingesetzt, um grosse Datenmengen **günstig zu speichern**. Er ist relativ langsam und anfällig auf Transportschäden, da es sich um einen mechanischen Speicher mit beweglichen Teilen handelt. Die Drehgeschwindigkeit der Platten ist beschränkt, sie bestimmt Lese-/Schreibgeschwindigkeit. Zudem muss vor dem effektiven Zugriff stets noch gewartet werden, bis sich der Arm an der richtigen Position befindet.
 
 :::cards --columns=2
 ![Harddisk](images/04-harddisk.jpg)
@@ -73,10 +73,22 @@ Der Aufbau einer **SSD** gleicht in keiner Weise demjenigen einer HDD. Wie der N
 
 
 :::aufgabe HDD/SSD in meinem Smartphone/Laptop
+<Answer type="state" webKey="251e05ac-8100-4675-ba30-d546fec37c0b" />
 
 - Wie viel Speicherplatz besitzt Ihr Smartphone, ihr Laptop?
 - Wie viel davon ist noch frei?
-- Speicher erweitern: Besitzt Ihr Laptop/Smartphone einen Kartenslot für SD/microSD Karten?
+- __Laptop__ Wie viel Speicherplatz wird von
+  - Word, Excel, PowerPoint, ...
+  - Teams,
+  - Adobe Produkten
+
+  verwendet?
+- __Smartphone__ Wie viel Speicherplatz wird von Ihrem 
+  - Musikplayer (Spotify, Apple Music, ...) 
+  - Whatsapp
+  - Instagram, Snapchat oder Tiktok
+  
+  belegt?
 
 <Answer type="text" webKey="27d447fa-82af-4969-9564-edc896e5bdde" />
 
@@ -103,6 +115,8 @@ Das führt dazu, dass schneller Speicher in viel kleineren Mengen und nur wo unb
 ![Speicherhierarchie](images/04-storage-hierarchy.svg)
 
 :::aufgabe Speicher
+<Answer type="state" webKey="7bb0eeac-6b50-4950-ac44-f19ead4ad5a5" />
+
 1. Wieso enthält ein Computer so viele verschiedene Speicherarten?
 2. Überlegen Sie sich, welche Daten auf den einzelnen Ebenen der oben abgebildeten Speicherhierarchie gespeichert werden.
 3. Wieso kann eine Datei auf einer Festplatte viel schneller gelöscht als gespeichert werden?
@@ -111,12 +125,19 @@ Das führt dazu, dass schneller Speicher in viel kleineren Mengen und nur wo unb
 :::
 
 :::aufgabe Speicherkosten und Datendurchsatz
-Führen Sie auf [Digitec](https://digitec.ch) eine Recherche zu den Speicherpreisen und dem Datendurchsatz durch. Bestimmen Sie jeweils
+<Answer type="state" webKey="5308d378-a30d-4eb7-b98a-c08111cfd500" />
+
+Führen Sie auf [👉 Digitec](https://digitec.ch) eine Recherche zu den Speicherpreisen und dem Datendurchsatz (wie schnell können Daten geschrieben/gelesen werden) durch. Bestimmen Sie jeweils
 - den **Preis pro GB** (selber berechnen) und
 - den **Datendurchsatz** fürs *Schreiben* und *Lesen*.
 für ein Modell im mittleren Preissegment.
 
-SSD, Mobile SSD, HDD, Externe HDD, USB-Stick, SD/microSD Karte 
+- SSD, 
+- Mobile SSD, 
+- HDD, 
+- Externe HDD, 
+- USB-Stick, 
+- SD/microSD Karte
 
 <Answer type="text" webKey="1e665ad1-531f-4d31-a9b5-a3a4c4dc80ff" />
 :::

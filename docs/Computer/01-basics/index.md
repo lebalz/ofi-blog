@@ -10,5 +10,7 @@ sidebar_custom_props:
 >
 > – [Wikipedia][1]
 
+![Komponenten eines COmputer](images/00-computer.jpg)
+
 
 [1]: https://de.wikipedia.org/wiki/Computer

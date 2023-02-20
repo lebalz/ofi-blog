@@ -39,6 +39,7 @@ Netzwerkkarten zur Verbindung mit einem drahtlosen Netzwerk (WLAN) gibt es in et
 :::
 
 :::aufgabe Netzwerkkarte
+<Answer type="state" webKey="a5301bd3-8c1e-4456-8ba9-21f420d58249" />
 
 Sie wollen für die Ferien einige Filme von Netflix offline verfügbar machen und müssen insgesamt `10 GB` Daten herunterladen. Ihr WLAN kann in ihr Zimmer maximal `150 Mbps` übertragen. Wie viel Zeit gewinnen Sie, wenn Sie aufstehen um das Gerät per Ethernet an Ihren Glasfaser-Router mit `1 Gbps` anschliessen?\*
 

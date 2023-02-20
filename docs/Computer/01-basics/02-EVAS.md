@@ -34,13 +34,15 @@ Typische Ein- und Ausgabegeräte für Computer sind:
 :::
 
 :::aufgabe Aufgabe
+<Answer type="state" webKey="46975da2-0cd3-4aa1-96f1-8e29628a2127" />
+
 Welche Möglichkeiten für die Ein- und Ausgabe von Daten hat Ihr Smartphone? Versuchen Sie, möglichst alle aufzuschreiben. Bilden Sie dabei folgende Kategorien:
 
-- nur Eingabegerät
-- Ein- und Ausgabegerät
-- nur Ausgabegerät
+- **nur** Eingabegerät
+- **Ein**- und **Aus**gabegerät
+- **nur** Ausgabegerät
 
-Hilfreiche App: [PhyPhox](https://phyphox.org/)
+Hilfreiche App: [👉 PhyPhox](https://phyphox.org/)
 
 <Answer type="text" webKey="ddb7899f-aa03-4095-aa29-b5f053d46b14" />
 :::

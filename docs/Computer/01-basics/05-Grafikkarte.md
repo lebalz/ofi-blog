@@ -16,19 +16,33 @@ Die Grafikkarte ist neben dem Prozessor die zweite wichtige Komponente, welche i
 
 Für Grafikkarten gibt es drei wichtige Kenngrössen:
 
-- Die maximale **Auflösung**, also die Anzahl der Bildpunkte (z.B. 7680×4320).
-- Die **Taktfrequenz** gibt an, wie schnell der Prozessor Berechnungen durchführen kann. Sie wird in der Einheit **Hertz** angegeben, was «pro Sekunde» bedeutet. Die Grafikakrte hat also auch einen eigenen leistungsfähigen Prozessor.
+- Die maximale **Auflösung**, also die Anzahl der Bildpunkte (z.B. __7680×4320__).
+- Die **Taktfrequenz** gibt an, wie schnell der Grafikkarten-Prozessor Berechnungen durchführen kann. Sie wird in der Einheit **Hertz** angegeben, was «pro Sekunde» bedeutet. Die Grafikkarte hat also auch einen eigenen leistungsfähigen Prozessor.
 - Die **Speicherkapazität** ist die Datenmenge, welcher der Speicher maximal aufnehmen kann. Sie wird in Byte angegeben. Die Grafikkarte besitzt also auch einen eigenen Arbeitsspeicher.
 
+Im Gegensatz zu den CPU Prozessoren, welche in der Regel wenige (< 32) Kerne aufweisen, ist eine Grafikkarte hochgradig auf parallelisierte Berechnungen ausgelegt und besitzt entsprechend viele Kerne.
+
+:::aufgabe Sequentiell vs. Parallel
+<Answer type="state" webKey="6b6cdbde-323a-43a5-b869-ce39c570af88" />
+
+Schauen Sie sich das folgenden Video an und versuchen Sie zu verstehen, was die Unterschiede zwischen sequentieller und paralleler Verarbeitung sind. Halten Sie Ihre Erkenntnisse fest.
+
+[@youtube](https://www.youtube-nocookie.com/embed/ZrJeYFxpUyQ?start=159)
+
+<Answer type="text" webKey="b60306a9-b13d-445d-a422-51ea087717bc" />
+
+:::
 
 :::cards --columns=2
 ![Hercules-Grafikkarte](images/05-hercules.png)
+
 #### Hercules Graphics Card
 Hochauflösende monochrome Grafikkarte (720×348 Pixel, 1 Bit Farbe) mit 64 KB Video-RAM aus dem Jahr **1982**.
 
 ***
 ![NVIDIA RTX 3080 Ti Trinity-Grafikkarte](images/05-nvidia-rtx-3080-trinity.jpg)
 #### NVIDIA RTX 3080 Ti Trinity
+
 Aktuelle Grafikkarte aus dem Jahr **2022** mit einer maximalen Auflösung von `7680×4320` Pixel pro Bildschirm, `12` GB Video-RAM und Unterstützung von Echtzeit-Raytracing.
 :::
 

@@ -34,6 +34,8 @@ Notebooks verwenden stromsparendere Prozessoren, daher reicht dort ein kleinerer
 :::
 
 :::aufgabe Stromversorgung
+<Answer type="state" webKey="2ab0c869-d189-48bb-9e3f-1f438870a37e" />
+
 1. Recherchieren Sie im Internet und finden Sie heraus, wie viel Leistung (Watt) folgende Geräte typischerweise im Betrieb beziehen:
    - Staubsauger
    - Desktop-PC-Netzteil
