@@ -87,14 +87,14 @@ const ensureTrailingSlash = (path) => {
                     rsync.execute((err, code, cmd) => {
                         if (!err) {
                             console.log('✅', cmd)
-                            resolve()
+                            resolve(true)
                         } else {
                             console.log('❌')
                             console.log('   ', cmd)
                             console.log('   ', err)
                             console.log('   ', code)
                             console.log('')
-                            resolve();
+                            resolve(false);
                         }
                     });
                 })
@@ -103,7 +103,7 @@ const ensureTrailingSlash = (path) => {
                 fs.copyFileSync(srcPath, toPath);
                 gitignore.push(toPath.replace(classDir, ''))
             }
-            await Promise.all(promises);
+            const res = await Promise.all(promises);
             if (src.open) {
                 const folder = isDir ? toPath : parent;
                 try {
@@ -130,7 +130,20 @@ const ensureTrailingSlash = (path) => {
 
             }
             fs.writeFileSync(`${classDir}.gitignore`, gitignore.join("\n"))
+            if (res.some((r) => !r)) {
+                // cleanup and restart...
+                material
+                const {exec} = require('child_process');
+                exec('npm run cleanup', (err, stdout, stderr) => {
+                    if (err) {
+                        console.log(err);
+                        return;
+                    } else {
+                        exec('npm run sync');
+                    }
+                });
 
+            }
         })
     })
 })();
