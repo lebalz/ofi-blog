@@ -1,6 +1,6 @@
 [
     {
-        "cells": ["10.02.2022","Codes und Daten","UTF-8, Dateien, Hexadezimal"]
+        "cells": ["10.02.2023","Codes und Daten","UTF-8, Dateien, Hexadezimal"]
     },
     {
         "cells": ["17.02.2023","Sportwoche",""],
@@ -8,76 +8,76 @@
         "icon": "mdi-ski"
     },
     {
-        "cells": ["24.02.2022","Codes und Daten","Auftrag: Kompression"]
+        "cells": ["24.02.2023","Codes und Daten","Auftrag: Kompression"]
     },
     {
-        "cells": ["03.03.2022","Codes und Daten","Grafikformate"]
+        "cells": ["03.03.2023","Codes und Daten","Grafikformate"]
     },
     {
-        "cells": ["10.03.2022","Codes und Daten","Anwendungen"]
+        "cells": ["10.03.2023","Codes und Daten","Anwendungen"]
     },
     {
-        "cells": ["17.03.2022","Codes und Daten","Wiederholung"]
+        "cells": ["17.03.2023","Codes und Daten","Wiederholung"]
     },
     {
-        "cells": ["24.03.2022","Codes und Daten","Test"],
+        "cells": ["24.03.2023","Codes und Daten","Test"],
         "type": "test"
     },
     {
-        "cells": ["31.03.2022","Codes und Daten","QR Codes"]
+        "cells": ["31.03.2023","Codes und Daten","QR Codes"]
     },
     {
-        "cells": ["07.04.2022","Sonderwoche","Skilager"],
+        "cells": ["07.04.2023","Sonderwoche","Skilager"],
         "type": "holiday",
         "icon": "mdi-ski"
     },
     {
-        "cells": ["14.04.2022","Frühlingsferien",""],
+        "cells": ["14.04.2023","Frühlingsferien",""],
         "type": "holiday"
     },
     {
-        "cells": ["21.04.2022","Frühlingsferien",""],
+        "cells": ["21.04.2023","Frühlingsferien",""],
         "type": "holiday"
     },
     {
-        "cells": ["28.04.2022","Big Data",""]
+        "cells": ["28.04.2023","Big Data",""]
     },
     {
-        "cells": ["05.05.2022","Big Data",""]
+        "cells": ["05.05.2023","Big Data",""]
     },
     {
-        "cells": ["12.05.2022","Big Data",""]
+        "cells": ["12.05.2023","Big Data",""]
     },
     {
-        "cells": ["19.05.2022","Auffahrt",""],
+        "cells": ["19.05.2023","Auffahrt",""],
         "type": "holiday"
     },
     {
-        "cells": ["26.05.2022","Big Data",""]
+        "cells": ["26.05.2023","Big Data",""]
     },
     {
-        "cells": ["02.06.2022","Big Data","Vorträge"],
+        "cells": ["02.06.2023","Big Data","Vorträge"],
         "type": "test"
     },
     {
-        "cells": ["09.06.2022","Big Data","Vorträge"],
+        "cells": ["09.06.2023","Big Data","Vorträge"],
         "type": "test"
     },
     {
-        "cells": ["16.06.2022","Sportwoche",""],
+        "cells": ["16.06.2023","Sportwoche",""],
         "type": "holiday"
     },
     {
-        "cells": ["23.06.2022","Tabellenkalkulation",""]
+        "cells": ["23.06.2023","Tabellenkalkulation",""]
     },
     {
-        "cells": ["29.06.2022","Notenschluss",""],
+        "cells": ["29.06.2023","Notenschluss",""],
         "type": "event"
     },
     {
-        "cells": ["30.06.2022","Tabellenkalkulation",""]
+        "cells": ["30.06.2023","Tabellenkalkulation",""]
     },
     {
-        "cells": ["08.07.2022","🚧",""]
+        "cells": ["08.07.2023","🚧",""]
     }
 ]
