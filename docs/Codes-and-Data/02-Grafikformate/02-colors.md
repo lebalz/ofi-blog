@@ -52,6 +52,7 @@ Für das **RGBA-Farbmodell** wird das RBG-Farbmodell um einen Kanal erweitert. D
 <RGBA />
 
 :::aufgabe Farben ausprobieren
+<Answer type="state" webKey="6ae62761-be3e-4ec7-9060-8cab7495fd1e" />
 
 Füllen Sie die drei Kreise mit unterschiedlichen Farben - Sie können direkt den `hex` Wert einsetzen, z.b. `color('#3ed92161')`.
 
@@ -89,7 +90,7 @@ Dieses Farbmodell kommt beim Drucken zum Einsatz.
 
 <CMYK />
 
-<details><summary> ⭐️ Umrechnung CMYK – RGB </summary>
+:::details ⭐️ Umrechnung CMYK – RGB
 
 Für die Umrechnung einer `CMYK`-Farbangabe nach `RGB` wird folgender Formelsatz verwendet:
 
@@ -128,8 +129,7 @@ def cmyk2rgb(c, m, y, k):
 
 print('rgb: ', cmyk2rgb(80, 60, 40, 20))
 ```
-
-</details>
+:::
 
 ## Farbtiefe
 
