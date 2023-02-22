@@ -223,7 +223,7 @@
       "ignore": []
     },
     {
-      "from": "docs/Codes-and-Data/01-Codierung/",
+      "from": "docs/Codes-and-Data/",
       "to": "versioned_docs/version-26e/06-Codierung",
       "ignore": [
         "02-Grafikformate-v24",
@@ -366,7 +366,7 @@
       "ignore": []
     },
     {
-      "from": "docs/Codes-and-Data/01-Codierung/",
+      "from": "docs/Codes-and-Data/",
       "to": "versioned_docs/version-26P/06-Codierung",
       "ignore": [
         "02-Grafikformate-v24",
