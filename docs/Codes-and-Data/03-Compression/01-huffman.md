@@ -94,6 +94,7 @@ Nun kann eine Codierungstabelle erstellt werden, indem der Code für jedes Zeich
 
 
 :::aufgabe 1. Decodieren
+<Answer type="state" webKey="57465cba-7229-4cd6-aa7c-20a51e4e0d86" />
 
 ![](images/01-huffman/huffman-anna.svg)
 
@@ -106,7 +107,8 @@ Decodieren Sie diese Bitfolge mit dem obenstehenden Codebaum. Das Symbol `⎵` s
 
 :::
 
-:::aufgabe 2. Huffman-Codierung 1
+::::aufgabe 2. Huffman-Codierung 1
+<Answer type="state" webKey="5b1accfd-f859-4927-9ec7-08ca0e2f37d7" />
 
 1. Erstellen Sie zum Wort «MISSISSIPPI» eine Häufigkeitstabelle.
 2. Erstellen Sie einen Huffman-Baum
@@ -148,7 +150,7 @@ Also braucht es: $11\cdot2=22$ Zeichen.
 **Einsparung**: Es braucht 1 Bit weniger.
 
 
-<details><summary>Alternativ: MPSI</summary>
+:::details Alternativ: MPSI
 
 | Zeichen        | M    | P    | S    | I    |
 | :------------- | :--- | :--- | :--- | :--- |
@@ -158,13 +160,14 @@ Also braucht es: $11\cdot2=22$ Zeichen.
 
 Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
 
-</details>
+:::details
 
 </Solution>
 
-:::
+::::
 
 :::aufgabe 3. Huffman-Codierung 2
+<Answer type="state" webKey="7a4569c8-5d35-4dfe-b727-570425d72496" />
 
 1. Erstellen Sie zum Wort «EXTERNER EFFEKT» eine Häufigkeitstabelle.
 2. Erstellen Sie einen Huffman-Baum

@@ -370,7 +370,6 @@
       "to": "versioned_docs/version-26P/06-Codierung",
       "ignore": [
         "02-Grafikformate-v24",
-        "03-Compression",
         "03-Compression-v24",
         "04-Anwendungen",
         "05-QR-Codes"
