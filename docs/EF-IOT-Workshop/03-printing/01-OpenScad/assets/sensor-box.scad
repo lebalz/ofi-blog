@@ -14,12 +14,12 @@
 */
 
 WEMOS_WIDTH = 25;
-WEMOS_HEIGHT = 35.25;
+WEMOS_HEIGHT = 35;
 WEMOS_THICKNESS = 1;
 WEMOS_WIFI_THICKNESS = 1;
 WEMOS_USB_THICKNESS = 2.5;
 WEMOS_USB_WIDTH = 8;
-WEMOS_USB_CENTER_TO_RIGHT = 13.7;
+WEMOS_USB_CENTER_TO_RIGHT = 14;
 
 USB_CABLE_HEIGHT = 8;
 USB_CABLE_WIDTH = 11;
@@ -37,14 +37,14 @@ _______       ⌄
 
 */
 
-WEMOS_OLED_OFFSET_TOP = 6; /* offset to wifi antenna when mounted*/
+WEMOS_OLED_OFFSET_TOP = 7; /* offset to wifi antenna when mounted*/
 OLED_WIDTH = 26;
 OLED_HEIGHT = 28;
 OLED_AND_PINS_THICKNESS = 15;
 OLED_THICKNESS = 1.3;
 DISPLAY_WIDTH = 16;
-DISPLAY_HEIGHT = 12;
-DISPLAY_OFFSET_LR = 6;
+DISPLAY_HEIGHT = 11.5;
+DISPLAY_OFFSET_LR = 6.5;
 DISPLAY_OFFSET_TOP = 1; // offset display to end of it's platine
 
 
@@ -61,13 +61,13 @@ SDA -> D2
 CO2_WIDTH = 25;
 CO2_HEIGHT = 20;
 CO2_THICKNESS = 1.7;
-CO2_OFFSET_LEFT_ENS160 = 7.5;
+CO2_OFFSET_LEFT_ENS160 = 7.15;
 CO2_OFFSET_BOTTOM_ENS160 = 13.5;
-CO2_ENS160_SIZE = 3;
+CO2_ENS160_SIZE = 3.2;
 CO2_COMP_HEIGHT = 1.2;
 CO2_COMP_OFFSET_RIGHT = 3;
 
-CO2_OFFSET_LEFT_AHT21= 16.75;
+CO2_OFFSET_LEFT_AHT21= 16.5;
 CO2_OFFSET_BOTTOM_AHT21 = 11.5;
 CO2_AHT21_SIZE = 3.5;
 
@@ -92,23 +92,15 @@ BOX_Z_OUTER = BOX_Z + 2 * WALL_THICKNESS;
 
 // Stützen um Wemos draufzulegen
 BOX_BAR_HEIGHT = 3;
-BOX_BAR_WIDTH = 2;
+BOX_BAR_WIDTH = 3;
 
+// SENS
+SENSOR_SUPPORT_BAR_WIDTH = 2.4;
 
 // INTERN PARAMS
 WEMOS_UPPER_HEIGHT = OLED_AND_PINS_THICKNESS + WEMOS_THICKNESS;
 WEMOS_DISPLAY_OFFSET_TOP = WEMOS_OLED_OFFSET_TOP + DISPLAY_OFFSET_TOP;
 CAP_PADDING = BOX_BAR_WIDTH + 2;
-
-module txt() {
-    linear_extrude(WALL_THICKNESS)
-        text("CO");
-    translate([20, -2, 0])
-        linear_extrude(WALL_THICKNESS)
-            scale([0.5, 0.5, 1])
-                text("2");
-}
-
 
 
 /**
@@ -118,8 +110,8 @@ module txt() {
 Stütze um den WEMOS draufzulegen
 */
 module wemos_bar_left() {
+    // verbindet die äussere Hülle von Objekten
     translate([0,0,-BOX_BAR_HEIGHT])
-        // hull() verbindet die äussere Hülle von Objekten
         hull() {
             translate([0, 0, BOX_BAR_HEIGHT - 1])
                 cube([BOX_BAR_WIDTH, BOX_Y, 1]);
@@ -134,6 +126,7 @@ module wemos_bar_left() {
 Stütze um den WEMOS draufzulegen
 */
 module wemos_bar_right() {
+    // verbindet die äussere Hülle von Objekten
     translate([0,BOX_Y,0])
         rotate([0,0,180])
             wemos_bar_left();
@@ -195,12 +188,11 @@ module box() {
                     cube([DISPLAY_HEIGHT, DISPLAY_WIDTH, WALL_THICKNESS + 0.02]);
                     display_hole();
                 }
-
-            // TEXT
-            translate([WEMOS_DISPLAY_OFFSET_TOP + DISPLAY_HEIGHT + 13, 15, BOX_Z_OUTER - 1.25 * WALL_THICKNESS])
-                rotate([0,0,90])
-                    scale([0.8, 0.8, 1])
-                        txt();
+            
+            // CAP REMOVAL HOLE
+            translate([BOX_X / 2, WALL_THICKNESS / 2 - 2.6, -WALL_THICKNESS*1.1])
+                rotate([0, 0, 45])
+                    cylinder(h=WALL_THICKNESS+0.02, r1=8 / sqrt(2), r2= 4 / sqrt(2), center=true, $fn=4);
             
         }
         // WIFI-SIDE
@@ -213,36 +205,30 @@ module box() {
     }
 }
 module cap() {
+    offset = 0.05;
     difference() {
         union() {
             // BASE
             translate([-WALL_THICKNESS, -WALL_THICKNESS, -WALL_THICKNESS])
-                scale([BOX_X_OUTER, WALL_THICKNESS, BOX_Z_OUTER])
-                    cube(1);
+                cube([BOX_X_OUTER, WALL_THICKNESS, BOX_Z_OUTER]);
             // INSET
-            translate([0, 0, 0])
-                scale([BOX_X, WALL_THICKNESS, BOX_Z])
-                    cube(1);
+            translate([-offset, 0, -offset])
+                cube([BOX_X + 2 * offset, WALL_THICKNESS, BOX_Z + 2 * offset]);
             // HOLDER LEFT
             translate([CAP_PADDING - WALL_THICKNESS, WALL_THICKNESS, WALL_THICKNESS])
-                scale([WALL_THICKNESS, CO2_THICKNESS + WALL_THICKNESS, CO2_HEIGHT])
-                    cube(1);
+                cube([WALL_THICKNESS, CO2_THICKNESS + WALL_THICKNESS, CO2_HEIGHT]);
             
             // HOLDER RIGHT
             translate([CAP_PADDING + CO2_WIDTH, WALL_THICKNESS, WALL_THICKNESS])
-                scale([WALL_THICKNESS, CO2_THICKNESS + WALL_THICKNESS, CO2_HEIGHT])
-                    cube(1);
+                cube([WALL_THICKNESS, CO2_THICKNESS + WALL_THICKNESS, CO2_HEIGHT]);
 
             // HOLDER BOTTOM
             translate([CAP_PADDING-WALL_THICKNESS, WALL_THICKNESS, 0])
-                scale([CO2_WIDTH+2*WALL_THICKNESS, CO2_THICKNESS + WALL_THICKNESS, WALL_THICKNESS])
-                    cube(1);
+                cube([CO2_WIDTH+2*WALL_THICKNESS, CO2_THICKNESS + WALL_THICKNESS, WALL_THICKNESS]);
             
             // HOLDER TOP
             translate([CAP_PADDING-WALL_THICKNESS, CO2_THICKNESS + WALL_THICKNESS, 0])
-                scale([CO2_WIDTH+2*WALL_THICKNESS, WALL_THICKNESS, CO2_HEIGHT + WALL_THICKNESS])
-                    cube(1);
-                   
+                cube([CO2_WIDTH+2*WALL_THICKNESS, WALL_THICKNESS, CO2_HEIGHT + WALL_THICKNESS]);
         }
         // AHT21
         aht_x = CAP_PADDING + CO2_OFFSET_LEFT_AHT21;
@@ -265,8 +251,8 @@ module cap() {
             cube([CO2_WIDTH - CO2_COMP_OFFSET_RIGHT, CO2_COMP_HEIGHT + 0.1, BOX_Z]);
 
         // REMOVE PART OF CO2 HOLDER TOP
-        translate([CAP_PADDING + WALL_THICKNESS, WALL_THICKNESS, WALL_THICKNESS])
-            cube([CO2_WIDTH-2*WALL_THICKNESS, 3*WALL_THICKNESS, CO2_HEIGHT]);
+        translate([CAP_PADDING + (SENSOR_SUPPORT_BAR_WIDTH / 2) *WALL_THICKNESS, WALL_THICKNESS, WALL_THICKNESS])
+            cube([CO2_WIDTH-SENSOR_SUPPORT_BAR_WIDTH*WALL_THICKNESS, 3*WALL_THICKNESS, CO2_HEIGHT]);
     }
 }
 
