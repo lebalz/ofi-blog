@@ -132,7 +132,6 @@ module wemos_bar_right() {
             wemos_bar_left();
 }
 
-
 module usb_hole() {
     r = USB_CABLE_HEIGHT / 2;
     translate([-0.01, 0, -(USB_CABLE_HEIGHT - WEMOS_USB_THICKNESS) / 2 - 0.01])
@@ -145,7 +144,6 @@ module usb_hole() {
             }
 }
 
-
 module display_hole() {
     center_x = DISPLAY_HEIGHT / 2;
     center_y = DISPLAY_WIDTH / 2;
@@ -154,7 +152,6 @@ module display_hole() {
             rotate([0,0,45])
                 cylinder(h=WALL_THICKNESS,r1=1/sqrt(2), r2=1.5/sqrt(2),$fn=4);
 }
-
 
 module sensor_hole(size) {
     r = size / 2; 
@@ -204,6 +201,7 @@ module box() {
             wemos_bar_right();
     }
 }
+
 module cap() {
     offset = 0.05;
     difference() {
@@ -256,8 +254,6 @@ module cap() {
     }
 }
 
-
-
 // BOX
 translate([BOX_X_OUTER + 10, 0, 0]) // translate where you want it
     rotate([270, 0, 0]) // 2: rotate
@@ -269,7 +265,6 @@ translate([0, BOX_Z_OUTER, 0]) // 3. translate where you want it
     rotate([90, 0, 0]) // 2. rotate
         translate([WALL_THICKNESS,WALL_THICKNESS,WALL_THICKNESS]) // 1. bring to origin
             cap();
-
 
 //display_hole();
 //cap();
