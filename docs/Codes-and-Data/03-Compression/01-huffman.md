@@ -160,7 +160,7 @@ Also braucht es: $11\cdot2=22$ Zeichen.
 
 Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
 
-:::details
+:::
 
 </Solution>
 
