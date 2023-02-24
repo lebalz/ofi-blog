@@ -40,6 +40,10 @@ Proxy-Adresse: http://node-red-XY7Z.onrender.com.proxy.gbsl.website/api/joke
 
  
 :::aufgabe Mit dem Netzwerk verbinden
+
+Material
+: [👉 Netzwerk-Projekt](assets/network-assets.zip)
+
 Laden Sie das Beispiel-Projekt herunter und untersuchen Sie dieses genauer.
 
 Passen Sie dieses so an, dass die Daten an Ihren eigenen Node-RED Server geschickt werden. ()

@@ -5,6 +5,10 @@ sidebar_custom_props:
 # 1. Display
 
 :::aufgabe OLED-Display
+
+Material
+: [👉 Display-Projekt](assets/display-assets.zip)
+
 Laden Sie das Beispiel-Projekt herunter und untersuchen Sie dieses genauer.
 
 Studieren Sie zudem die Dokumentation der Display-Bibliothek: [👉 SSD1306](https://docs.micropython.org/en/latest/esp8266/tutorial/ssd1306.html)

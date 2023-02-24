@@ -24,6 +24,9 @@ Suchen Sie Informationen zum Sensor ENS160 und halten Sie diese für sich im EF-
 :::
 
 :::aufgabe Sensoren ansteuern
+
+Material
+: [👉 Sensor-Projekt](assets/sensor-assets.zip)
 Laden Sie das Beispiel-Projekt herunter und untersuchen Sie dieses genauer.
 
 Die Messwerte werden aktuell zwar ausgelesen, aber noch nicht angezeigt.
