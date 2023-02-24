@@ -465,6 +465,11 @@
         "07-Routing"
       ],
       "open": true
+    },
+    {
+      "from": "docs/EF-IOT-Workshop/",
+      "to": "versioned_docs/version-24ef/10-IoT-Workshop",
+      "ignore": []
     }
   ]
 }
