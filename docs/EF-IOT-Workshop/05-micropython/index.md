@@ -28,7 +28,7 @@ Arbeiten Sie sich durch das Tutorial durch. Erstellen Sie für jedes Programm, w
 [👉 MicroPython in VS Code](https://www.donskytech.com/micropython-using-vscode-pymakr-on-esp32-esp8266/)
 
 :::details Troubleshooting Dateien hochladen
-Damit der DAtei-Upload funktioniert, muss über eine Konfiguration festgelegt werden, wie der ESP8266 angeschlossen ist.
+Damit der Datei-Upload funktioniert, muss über eine Konfiguration festgelegt werden, wie der ESP8266 angeschlossen ist.
 
 Suchen Suchen :mdi-magnify: Sie dazu in den Einstellungen :mdi-cog-outline: nach 
 
