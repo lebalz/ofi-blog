@@ -79,10 +79,10 @@ Man kann sich das wie ein Brief vorstellen:
 
 In manchen Nachrichten können Payload und Trailer auch fehlen. Das hängt ganz vom Protokoll ab.
 
-Inerhalb des Headers und des Trailers bilden mehrere aufeinander folgende Bytes sogenannte **Informationselemente**. Zum Beispiel besteht eine IP-Adresse aus vier aufeinander folgenden Bytes.
+Innerhalb des Headers und des Trailers bilden mehrere aufeinander folgende Bytes sogenannte **Informationselemente**. Zum Beispiel besteht eine IP-Adresse aus vier aufeinander folgenden Bytes.
 
 ## Nachrichtenabfolge
-Um die Regeln für die Nachrichtenabfolge zu definieren wird oft eine **Zustandsmachine**, auch **endlicher Automat** genannt, verwendet. Dies ist ein **Modell** für das **Verhalten** der kommunizierenden Parteien.
+Um die Regeln für die Nachrichtenabfolge zu definieren wird oft eine **Zustandsmaschine**, auch **endlicher Automat** genannt, verwendet. Dies ist ein **Modell** für das **Verhalten** der kommunizierenden Parteien.
 
 Eine Partei befindet sich immer in einem bestimmten **Zustand**. In diesem ist sie bereit nur ganz bestimmte Nachrichten zu empfangen. Alle anderen Nachrichten ignoriert sie. Wenn eine gültige Nachricht empfangen wird, so wechselt die Partei in einen anderen Zustand und kann gleichzeitig eine Nachricht zurücksenden. Ein solcher Zustandswechsel wird als **Transition** bezeichnet. Am Anfang befindet sich die Partei in einem **Startzustand** :mdi-circle:.
 
