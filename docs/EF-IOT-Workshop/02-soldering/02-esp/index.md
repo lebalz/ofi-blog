@@ -28,6 +28,8 @@ __D1__
 : :mdi-circle--blue: SCL Pin für die $I^2C$ Schnittstelle
 __D2__
 : :mdi-circle--green: SDA Pin für die $I^2C$ Schnittstelle
+__D5__
+: Analoger Pin, bspw. für LED's
 :::
 :::cards
 ![Schritt 3](images/esp-step03.jpg)
@@ -53,7 +55,7 @@ Löten der angegebenen Lötstellen:
   - Vorne: ~0.3 cm abisolieren
   - Hinten: ~1 cm abisolieren
 
-:::cards
+:::cards --min-width=300px
 ![Schritt 5](images/esp-step05.jpg)
 ***
 ![Schritt 6](images/esp-step06.jpg)

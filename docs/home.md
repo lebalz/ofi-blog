@@ -67,3 +67,11 @@ Hello
   - [v2.37.1](/software-installation/git/v2.37.1)
 - Docusaurus
   - [v2.2.0](/docusaurus/v2.2.0)
+
+
+
+
+### API, REST API
+- 👉 https://blog.hubspot.com/website/what-is-rest-api
+- 👉 https://www.youtube.com/watch?v=xpeQz7Hsfz0
+

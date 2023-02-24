@@ -6,13 +6,19 @@ sidebar_custom_props:
     ref: http://www.microdev.it/wp/en/2018/06/25/micropython-micropython-compiling-for-esp8266/
 ---
 
-# Building Micro Python
+# ⭐ Building Micro Python
 
-This article shows how to generate the MicroPython firmware for the ESP8266 board.
+:::info IoT Workshop
+Dieser Schritt wurde bereits gemacht und muss nicht wiederholt werden. Sollte Ihr ESP8266 einmal aus unerklärlichen Gründen nicht mehr funktionieren, so könnte das neue Aufspielen (flashen) der Firmware allenfalls helfen.
+:::
+
+This article describes how to generate and flash the MicroPython firmware for the ESP8266 board. The steps are similar for other boards, but the firmware must be generated for the specific board.
+
+This manual is based on the [👉 Compiling MicroPython for esp8266](http://www.microdev.it/wp/en/2018/06/25/micropython-micropython-compiling-for-esp8266/) article.
 
 The operating system used for this task is Ubuntu 22 on WSL.
 
-create the Micropython folder and inside this folder the esp8266 folder
+Create the Micropython folder and inside this folder the esp8266 folder
 
 ```bash
 mkdir Micropython
@@ -103,6 +109,23 @@ make
 
 ## Add modules
 Now you can place all the modules you want to add to the firmware in the __Micropython\esp8266\micropython\ports\esp8266__ folder.
+
+:::details AHT21 Sensor Module
+```python reference title="aht.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/05-micropython/modules/aht.py
+```
+:::
+
+:::details ENS160 Sensor Module
+```python reference title="ENS.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/05-micropython/modules/ens.py
+```
+:::
+:::details PiicoDev_Unified Module
+```python reference title="PiicoDev_Unified.py"
+https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/05-micropython/modules/PiicoDev_Unified.py
+```
+:::
 
 then recompile the firmware from the folder __Micropython\esp8266\micropython\ports\esp8266__ with the command
 
