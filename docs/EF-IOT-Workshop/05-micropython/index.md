@@ -30,7 +30,7 @@ Arbeiten Sie sich durch das Tutorial durch. Erstellen Sie für jedes Programm, w
 :::details Troubleshooting Dateien hochladen
 Damit der Datei-Upload funktioniert, muss über eine Konfiguration festgelegt werden, wie der ESP8266 angeschlossen ist.
 
-Suchen Suchen :mdi-magnify: Sie dazu in den Einstellungen :mdi-cog-outline: nach 
+Suchen :mdi-magnify: Sie dazu in den Einstellungen :mdi-cog-outline: nach 
 
 ```
 pymakr.devices.configs
