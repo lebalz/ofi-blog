@@ -3,7 +3,7 @@ sidebar_custom_props:
   id: 3468a2fd-2ce7-4d22-8620-4baae570349c
 ---
 
-# 9. ⭐️ Speicher
+# 9. Speicher
 
 Die bisherigen Schaltungen für den Einbruchsalarm haben einen grossen Nachteil: sobald der Bewegungsmelder keine Bewegung mehr entdeckt, wird der Alarm abgestellt.
 
@@ -33,6 +33,8 @@ Natürlich will man die Alarmanlage auch wieder Abschalten können. Dazu kann in
 [@circuitverse](https://circuitverse.org/simulator/embed/rothe-feedback-with-reset)
 
 :::aufgabe
+<Answer type="state" webKey="f374d232-665c-438f-bd12-63cd745fa18f" />
+
 1. Da manchmal Wasser in deinen Keller eindringt, möchtest du wissen, ob es seit der letzten Kontrolle besonders stark geregnet hat. Ein Feuchtigkeitssensor alleine reicht nicht. Baue in **CircuitVerse** eine entsprechend beschriftete Schaltung mit einer Rückkopplung, die speichert, wenn der Niederschlag zu stark war.
 2. Baue einen Druckknopf ein, mit dem du die Anzeige wieder zurücksetzen kannst.
 

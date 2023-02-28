@@ -31,6 +31,8 @@ Die obenstehende Schaltung kann beispielsweise mit folgender Tabelle beschrieben
 </div>
 
 :::aufgabe Aufgabe 1
+<Answer type="state" webKey="b6de8ed2-91e1-4f6e-bcc2-877150829a12" />
+
 Wie könnte eine Schaltung mit dieser Wahrheitstabelle wohl aussehen?
 
 <Answer type="text" webKey="35235050-2d40-4cfb-9e3d-cc2c371ab482" />
@@ -40,33 +42,46 @@ Wie könnte eine Schaltung mit dieser Wahrheitstabelle wohl aussehen?
 
 ## Eingabe
 
-Um einfache Schaltungen erstellen zu können, benötigen wir ein paar einfachen Ein- und Ausgabemöglichkeiten.  Wir haben folgende Eingabemöglichkeiten für unsere Schaltungen:
+Um einfache Schaltungen erstellen zu können, benötigen wir ein paar einfachen Ein- und Ausgabemöglichkeiten.  Wir haben folgende **Eingabemöglichkeiten** für unsere Schaltungen:
 
-<div className="slim-table no-header">
+:::cards --min-width=200px
+![](images/01-sensor-button.svg)
+Druckknopf, liefert Eingabe 1️⃣, wenn er gedrückt wird.
+***
+![](images/01-sensor-switch.svg)
+Schalter, kann ein- oder ausgeschaltet werden.
+***
+![](images/01-sensor-temperature.svg)
+Temperatursensor, liefert als Eingabe 1️⃣, wenn es warm ist.
+***
+![](images/01-sensor-light.svg)
+Lichtsensor, liefert als Eingabe 1️⃣, wenn es hell ist.
+***
+![](images/01-sensor-humidity.svg)
+Feuchtigkeitssensor, liefert als Eingabe 1️⃣, wenn es feucht ist.
+***
+![](images/01-sensor-movement.svg)
+Bewegungssensor, liefert als Eingabe 1️⃣, wenn Bewegung entdeckt wird.
+***
+![](images/01-sensor-microphone.svg)
+Mikrofon, liefert als Eingabe 1️⃣, wenn ein Geräusch entdeckt wird.
+:::
 
-|                                       |                                                                      |
-| ------------------------------------: | :------------------------------------------------------------------- |
-|      ![](images/01-sensor-button.svg) | Druckknopf, liefert Eingabe 1️⃣, wenn er gedrückt wird.                |
-|      ![](images/01-sensor-switch.svg) | Schalter, kann ein- oder ausgeschaltet werden.                       |
-| ![](images/01-sensor-temperature.svg) | Temperatursensor, liefert als Eingabe 1️⃣, wenn es warm ist.           |
-|       ![](images/01-sensor-light.svg) | Lichtsensor, liefert als Eingabe 1️⃣, wenn es hell ist.                |
-|    ![](images/01-sensor-humidity.svg) | Feuchtigkeitssensor, liefert als Eingabe 1️⃣, wenn es feucht ist.      |
-|    ![](images/01-sensor-movement.svg) | Bewegungssensor, liefert als Eingabe 1️⃣, wenn Bewegung entdeckt wird. |
-|  ![](images/01-sensor-microphone.svg) | Mikrofon, liefert als Eingabe 1️⃣, wenn ein Geräusch entdeckt wird.    |
+Für die **Ausgabe** stehen folgende Geräte zu Verfügung:
 
-</div>
-
-Für die Ausgabe stehen folgende Geräte zu Verfügung:
-
-<div className="slim-table no-header">
-
-|                                  |                                  |
-| -------------------------------: | :------------------------------- |
-|   ![](images/01-actor-light.svg) | Licht, brennt bei Ausgabe 1️⃣      |
-|   ![](images/01-actor-sound.svg) | Lautsprecher, tönt bei Ausgabe 1️⃣ |
-| ![](images/01-actor-heating.svg) | Heizung, heizt bei Ausgabe 1️⃣     |
-|   ![](images/01-actor-motor.svg) | Motor, läuft bei Ausgabe 1️⃣       |
-</div>
+:::cards --min-width=200px
+![](images/01-actor-light.svg)
+Licht, brennt bei Ausgabe 1️⃣
+***
+![](images/01-actor-sound.svg)
+Lautsprecher, tönt bei Ausgabe 1️⃣
+***
+![](images/01-actor-heating.svg)
+Heizung, heizt bei Ausgabe 1️⃣
+***
+![](images/01-actor-motor.svg)
+Motor, läuft bei Ausgabe 1️⃣
+:::
 
 ## Direkte Verbindung
 

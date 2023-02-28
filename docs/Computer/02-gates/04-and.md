@@ -42,19 +42,21 @@ Natürlich können auch mehrere Gatter zu einer Schaltung kombiniert werden. Im 
 ![](images/04-heating-2.svg)
 
 :::aufgabe Aufgaben
-Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können **Inverter** und **AND-Gatter** verwenden. Gehen Sie für jedes Szenario so vor:
+<Answer type="state" webKey="2838e16e-c02f-4a15-a8d0-f08f14b0f8a2" />
+
+Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können __Inverter__ und __AND-Gatter__ verwenden. Gehen Sie für jedes Szenario so vor:
 
 - Erstellen Sie eine Wahrheitstabelle für das Szenario.
 - Entwerfen Sie die Schaltung in CircuitVerse inklusive Beschriftung.
 - Überprüfen Sie, ob die Schaltung mit der Wahrheitstabelle übereinstimmt.
 
-Lesen Sie die Symbole für die Eingaben/Ausgaben [hier](./01-Schaltung.md#eingabe) nach.
+Lesen Sie die Symbole für die Eingaben/Ausgaben [👉 hier](./01-Schaltung.md#eingabe) nach.
 
 1. **Heizung:** Eine Heizung soll nur tagsüber eingeschaltet werden, wenn es kalt ist.
 
     ![](images/04-ex-heating.svg)
 
-<Answer type="text" webKey="aeb19fdb-cce6-4bfd-99b9-a7fa5004501e" />
+    <Answer type="text" webKey="aeb19fdb-cce6-4bfd-99b9-a7fa5004501e" />
 
 <Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
 
@@ -66,7 +68,7 @@ Lesen Sie die Symbole für die Eingaben/Ausgaben [hier](./01-Schaltung.md#eingab
 
     ![](images/04-ex-automatic-door.svg)
 
-<Answer type="text" webKey="fd529132-f8aa-491d-a67c-461913169d75" />
+    <Answer type="text" webKey="fd529132-f8aa-491d-a67c-461913169d75" />
 
 <Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
 
@@ -74,11 +76,11 @@ Lesen Sie die Symbole für die Eingaben/Ausgaben [hier](./01-Schaltung.md#eingab
 
 </Solution>
 
-3. **Dachfenster:** Ein Dachfenster soll durch einen Motor automatisch geschlossen werden, sobald es regenet. Wenn das Fenster zu ist, drückt es einen Knopf, der bewirkt, dass der Motor ausschaltet wird.
+3. **Dachfenster:** Ein Dachfenster soll durch einen Motor automatisch geschlossen werden, sobald es regnet. Wenn das Fenster zu ist, drückt es einen Knopf, der bewirkt, dass der Motor ausschaltet wird.
 
     ![](images/04-ex-roof-window.svg)
 
-<Answer type="text" webKey="47bfba00-65fe-466a-a859-036d8b572cad" />
+    <Answer type="text" webKey="47bfba00-65fe-466a-a859-036d8b572cad" />
 
 <Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
 
@@ -90,6 +92,7 @@ Lesen Sie die Symbole für die Eingaben/Ausgaben [hier](./01-Schaltung.md#eingab
 
 
 :::aufgabe
+<Answer type="state" webKey="0d9e1b87-f1ae-4a07-b100-24508d56e94e" />
 
 Analysieren Sie die folgende Schaltung, indem Sie eine Wahrheitstabelle erstellen. Was macht die Schaltung eigentlich?
 
@@ -100,6 +103,8 @@ Analysieren Sie die folgende Schaltung, indem Sie eine Wahrheitstabelle erstelle
 
 
 :::aufgabe
+<Answer type="state" webKey="c1b9c6db-e6e8-42af-ad86-67a672f57524" />
+
 #### ⭐️ Zusatzaufgabe
 
 Wie viele unterschiedliche digitale Schaltungen mit zwei Eingängen und einem Ausgang sind möglich?

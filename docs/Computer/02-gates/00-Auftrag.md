@@ -13,8 +13,7 @@ Sie fertigen in Kleingruppen von 3 bis max. 4 Personen ein kurzes, 3 bis 4 minü
   - Volladdierer
   - 4-bit Addierer
 - Demonstration der 4-bit Addition
-
-Zeigen Sie für die relevanten Bausteine auch die Wahrheitstabellen.
+- Für relevante Bausteine sind auch die Wahrheitstabellen zu zeigen
 
 ## Video
 
@@ -41,16 +40,9 @@ Zeigen Sie für die relevanten Bausteine auch die Wahrheitstabellen.
    - Schneiden, evtl. vertonen der Aufnahmen
 4. Abgabe, gemeinsames Anschauen der Ergebnisse
 
-
 ## Abgabe
 
-[@upload Video Hochladen](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EpXVr0g1RvdJhgKHCwFPBRsBQXv4dccZOA8K8YAhrH0KpA)
-
-- CircuitVerse Projekt
-
-Link zum CircuitVerse Projekt des 4-bit Addierers hier einfügen. **Achtung**: Das Projekt muss öffentlich zugängig sein.
-
-<Answer type="text" webKey="9a26f836-e970-46b6-a7c4-bc568443ff43" />
+🚧 Folgt...
 
 ## Beurteilungskriterien
 

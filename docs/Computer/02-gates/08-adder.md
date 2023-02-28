@@ -10,6 +10,8 @@ sidebar_custom_props:
 [@youtube](https://www.youtube-nocookie.com/embed/x7ka0QwKciA)
 
 :::aufgabe Binäre Addition
+<Answer type="state" webKey="627b8aae-b77f-4e6e-8951-00c0b397f3b9" />
+
 Führen Sie eine schriftliche Addition für die folgenden binären Zahlen durch:
 
 - $1001_2 + 110_2$
@@ -50,6 +52,8 @@ Der Wert der Einerstelle kann durch ein XOR-Gatter berechnet werden, der Wert de
 [@circuitverse](https://circuitverse.org/simulator/embed/rothe-half-adder-vertical)
 
 :::aufgabe Aufgabe Halbaddierer
+<Answer type="state" webKey="c75944fb-cc94-4a78-8d91-dbeead45e9dd" />
+
 1. Erstellen Sie ein neues Projekt in CircuitVerse und nennen Sie es "Addierer".
 2. Bauen Sie den Halbaddierer in CircuitVerse nach und probieren Sie aus, ob die Addition von zwei Bits (inklusive Übertrag) korrekt funktioniert.
 3. Benennen Sie die Eingänge mit «A» und «B», sowie die Ausgänge korrekt mit «S» (für «Summe») und «Ü» (für «Übertrag»).
@@ -73,6 +77,8 @@ Dies kann mit der folgenden Schaltung realisiert werden. Sie besteht aus zwei Ha
 [@circuitverse](https://circuitverse.org/simulator/embed/rothe-full-adder-vertical)
 
 :::aufgabe Aufgabe Volladdierer
+<Answer type="state" webKey="9a0423f2-4aea-4361-99c5-c4b1009dee9d" />
+
 Bauen Sie basierend auf Ihrer Halbaddierer-Schaltung einen Volladdierer:
 
 1. Erstellen Sie dazu zuerst die Wahrheitstabelle für den Volladdierer. Der Volladdierer hat drei Eingänge:
@@ -113,6 +119,7 @@ Bauen Sie basierend auf Ihrer Halbaddierer-Schaltung einen Volladdierer:
 Wir haben mit dem Volladdierer einen Baustein, der zwei 1-Bit-Zahlen addieren kann – inklusive korrekte Behandlung des Übertrags. Nun wollen wir aus mehreren solchen Bausteinen einen kompletten Addierer bauen, der mehrere Stellen gleichzeitig addieren kann.
 
 :::aufgabe
+<Answer type="state" webKey="a23144ba-e117-4c89-890f-680aebf0c533" />
 
 #### Aufgabe 4-Bit-Addierer
 

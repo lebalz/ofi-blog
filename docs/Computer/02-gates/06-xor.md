@@ -41,6 +41,7 @@ Bei einer Dating-Show sollen die potenziellen Paare gleichzeitig aber unabhängi
 ![](images/06-dating-show.svg)
 
 :::aufgabe
+<Answer type="state" webKey="e4f4b7dc-4798-431b-8937-433534489d0b" />
 
 Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können **OR-Gatter** oder **XOR-Gatter** sowie **Inverter** verwenden. Gehen Sie für jedes Szenario so vor:
 
@@ -52,8 +53,9 @@ Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können **OR-G
 
     ![](images/06-ex-anna-bert.svg)
 
-<Answer type="text" webKey="5a90fb23-ee8e-4b25-93ca-796a5155371c" />
-<Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
+    <Answer type="text" webKey="5a90fb23-ee8e-4b25-93ca-796a5155371c" />
+
+<Solution webKey="cd1f61e3-5a8e-4d54-8f64-1316d6f0268f">
 
 ![](images/06-ex-anna-bert-solution.svg)
 </Solution>
@@ -62,8 +64,9 @@ Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können **OR-G
 
     ![](images/06-ex-dating-show-1.svg)
 
-<Answer type="text" webKey="5938ec48-8dc1-46c6-932d-befaeddca3f8" />
-<Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
+    <Answer type="text" webKey="5938ec48-8dc1-46c6-932d-befaeddca3f8" />
+
+<Solution webKey="cd1f61e3-5a8e-4d54-8f64-1316d6f0268f">
 
 ![](images/06-ex-dating-show-1-solution.svg)
 </Solution>
@@ -72,8 +75,9 @@ Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können **OR-G
 
     ![](images/06-ex-dating-show-2.svg)
 
-<Answer type="text" webKey="4fb183c7-6522-4c58-982f-1b7338d45509" />
-<Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
+    <Answer type="text" webKey="4fb183c7-6522-4c58-982f-1b7338d45509" />
+
+<Solution webKey="cd1f61e3-5a8e-4d54-8f64-1316d6f0268f">
 
 ![](images/06-ex-dating-show-2-solution.svg)
 </Solution>
@@ -82,21 +86,58 @@ Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können **OR-G
 
     ![](images/06-ex-swimming-pool.svg)
 
-<Answer type="text" webKey="91489788-473e-49ca-bfde-fe34fa2f2b16" />
-<Solution webKey="918932d5-3574-4329-8d54-9097d12d62dd">
+    <Answer type="text" webKey="91489788-473e-49ca-bfde-fe34fa2f2b16" />
+
+<Solution webKey="cd1f61e3-5a8e-4d54-8f64-1316d6f0268f">
 
 ![](images/06-ex-swimming-pool-solution.svg)
 </Solution>
 :::
 
 :::aufgabe
+<Answer type="state" webKey="3e27b438-ce03-4951-b85d-ba66a481c77b" />
+
 Analysieren Sie die folgende Schaltungen, indem Sie eine Wahrheitstabelle erstellen. Kann man die Schaltung vereinfachen? Wie?
 
 1. ![](images/06-cv-XOR-AND.png)
 
-<Answer type="text" webKey="075b07dc-2eb9-40a8-9a7c-338ba443b424" />
+    <Answer type="text" webKey="075b07dc-2eb9-40a8-9a7c-338ba443b424" />
+
+<Solution webKey="cd1f61e3-5a8e-4d54-8f64-1316d6f0268f">
+
+Wahrheitstabelle:
+
+```
+A    B  |  X
+--------|----
+0    0  |  0
+1    0  |  0
+0    1  |  1
+1    1  |  0
+```
+
+![](images/06-cv-XOR-AND-solution.png)
+
+</Solution>
 
 2. ![](images/06-cv-4-XOR.png)
 
-<Answer type="text" webKey="e12a6ab6-8bff-4084-859e-1e2a3db7c87d" />
+    <Answer type="text" webKey="e12a6ab6-8bff-4084-859e-1e2a3db7c87d" />
+
+<Solution webKey="cd1f61e3-5a8e-4d54-8f64-1316d6f0268f">
+
+Wahrheitstabelle:
+
+```
+A    B  |  X
+--------|----
+0    0  |  0
+1    0  |  1
+0    1  |  1
+1    1  |  0
+```
+
+:mdi-arrow-right: ein einzelnes `XOR`-Gatter reicht aus...
+
+</Solution>
 :::
