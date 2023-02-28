@@ -106,7 +106,6 @@
       "from": "docs/Computer/",
       "to": "versioned_docs/version-25h/10-Computer",
       "ignore": [
-        "02-gates",
         "03-architecture",
         "04-os",
         "05-praktikum"
