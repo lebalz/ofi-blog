@@ -1,5 +1,6 @@
 ---
 image: ./images/ms-teams-newline.gif
+tags: [ms-teams, office, windows, osx, mac]
 sidebar_custom_props:
   id: 534eccc5-8506-4b7d-a3de-d19b266ae181
 ---

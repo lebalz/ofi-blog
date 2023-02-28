@@ -1,5 +1,6 @@
 ---
 image: ./images/scrollbars.png
+tags: [windows, os, browser]
 sidebar_custom_props:
   id: f874325d-e6c3-4aec-9d95-bfc6741474c7
 ---

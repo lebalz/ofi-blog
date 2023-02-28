@@ -1,5 +1,6 @@
 ---
 image: ./images/soi-2022.png
+tags: [wettbewerb, programmieren, competition]
 sidebar_custom_props:
   id: 49350edf-4e14-4afb-8bab-e92a8ed08d7b
   background: "#d7ff00"

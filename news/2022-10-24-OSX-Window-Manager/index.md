@@ -1,5 +1,6 @@
 ---
 image: ./images/rectangle.gif
+tags: [mac, osx, os]
 sidebar_custom_props:
   id: f874325d-e6c3-4aec-9d95-bfc6741474c7
 ---
@@ -7,7 +8,7 @@ sidebar_custom_props:
 
 # Fenstermanagement unter Mac
 
-Unter Mac gibt es standardmässig keine Möglichkeit, Fenster auf dem Bildschirm optimal zu positionieren, ohne dabei in den Vollbildschirm Modus zu wechseln. 
+Unter :mdi-apple--black: Mac gibt es standardmässig keine Möglichkeit, Fenster auf dem Bildschirm optimal zu positionieren, ohne dabei in den Vollbildschirm Modus zu wechseln. 
 
 ![Fenstermanagement mit [@Rectangle](https://rectangleapp.com/)](images/rectangle.gif)
 
