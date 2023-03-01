@@ -5,15 +5,17 @@ sidebar_custom_props:
 
 # Video-Auftrag
 
-Sie fertigen in Kleingruppen von 3 bis max. 4 Personen ein kurzes, 3 bis 4 minütiges Video an, welches die Funktionsweise der 4-bit Addition erklärt. Erklären Sie dabei
+Sie fertigen in Kleingruppen von 3 bis max. 4 Personen ein kurzes, 3 bis 4 minütiges Video an, welches die Funktionsweise der 4-bit Addition\* erklärt. Erklären Sie dabei
 - wie Zahlen binär dargestellt werden
 - wie zwei binäre Zahlen addiert werden
 - wie die binäre Addition mit logischen Gattern umgesetzt werden kann
   - Halbaddierer
   - Volladdierer
   - 4-bit Addierer
-- Demonstration der 4-bit Addition
+- Demonstration der 4-bit Addition (bspw. CircuitVers
 - Für relevante Bausteine sind auch die Wahrheitstabellen zu zeigen
+
+\* Mit Rücksprache sind auch andere Konzepte wie FlipFlops möglich.
 
 ## Video
 
@@ -25,8 +27,7 @@ Sie fertigen in Kleingruppen von 3 bis max. 4 Personen ein kurzes, 3 bis 4 minü
 - ...
 
 ## Ablauf
-1. Doppellektion - individuell
-   - Erarbeiten der Grundlagen (Kapitel 2)
+1. Doppellektion: Erarbeiten der Grundlagen (Kapitel 2)
    - Bearbeiten der Übungen
    - Arbeiten mit CircuitVerse
    - In der Gruppe die Aufgaben zum [Kapitel 8: Addierer](./08-adder.md#aufgabe-4-bit-addierer) bearbeiten
