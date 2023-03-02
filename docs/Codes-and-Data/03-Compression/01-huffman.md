@@ -114,7 +114,7 @@ Decodieren Sie diese Bitfolge mit dem obenstehenden Codebaum. Das Symbol `⎵` s
 2. Erstellen Sie einen Huffman-Baum
 3. Codieren Sie das Wort.
 4. Angenommen, der Text würde mit UTF-8 codiert. Wie viele Bits können eingespart werden? 
-5. Angenommen die 4 Buchstaben würden ohne Huffman-Baum Codiert. Wie viele Bits wären dann nötig? Wie viele Bits werden im Vergleich dazu eingespart?
+5. Angenommen die 4 Buchstaben würden ohne Huffman-Baum mit einer eigenen, minimalen Codierung codiert (daher so wenige Bits pro Buchstaben wie irgend möglich). Wie viele Bits wären dann nötig? Wie viele Bits werden im Vergleich dazu eingespart?
 
 <Answer type="text" webKey="04c0acd5-329d-4ef9-a114-7e46294d5cb6" />
 <Solution webKey="990f599b-58ac-4c72-a2a4-d08482a0ca1c">
