@@ -14,4 +14,5 @@
 02-Netzwerke/*
 !02-Netzwerke/03-LAN,04-Schichtenmodell,05-Netzzugangsschicht,06-IP-Adressen,07-Routing
 10-IoT-Workshop/*
+!10-IoT-Workshop/04-protokolle
 02-Netzwerke/_category_.json

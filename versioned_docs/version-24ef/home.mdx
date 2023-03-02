@@ -8,20 +8,20 @@ sidebar_custom_props:
 import Table from "@site/src/components/Table";
 import {SortTimeTableByDate} from '@site/src/helpers/time';
 import hs2022 from "./24ef_HS2022.json"
+import fs2023 from "./24ef_FS2023.json"
 import Grid from '@site/src/components/IFrame/Grid';
 
 # EF Informatik
 
 ::::info Aufträge
 
+:::details Vergangene...
+
 #### am 10.02.2022
 - Einstieg Thema Netzwerke
 - Python Webserver erstellen und starten
 - HTML: Mini-Webseite
 - Protokolle
-
-:::details Vergangene...
-
 
 #### am 3.02.2022
 - NumTrip: Gegenseitige Reviews, Codeanalysen, Verbesserungs- und Erweiterungsvorschläge
@@ -128,6 +128,16 @@ Beispiel-Repository von [@bh0fer](https://github.com/bh0fer): 👉 https://githu
 ::::
 
 
+
+<GTabs getLabel={(idx) => ['Aktuell', 'HS22'][idx]} >
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={fs2023}
+  order={SortTimeTableByDate()}
+/>
+
 <Table
   header={["Datum", "Thema", "Inhalt"]}
   compact
@@ -135,6 +145,7 @@ Beispiel-Repository von [@bh0fer](https://github.com/bh0fer): 👉 https://githu
   rows={hs2022}
   order={SortTimeTableByDate()}
 />
+</GTabs>
 
 <br />
 

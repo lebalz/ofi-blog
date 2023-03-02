@@ -467,7 +467,9 @@
     {
       "from": "docs/EF-IOT-Workshop/",
       "to": "versioned_docs/version-24ef/10-IoT-Workshop",
-      "ignore": []
+      "ignore": [
+        "04-protokolle"
+      ]
     }
   ]
 }

@@ -1,0 +1,82 @@
+[
+    {
+        "cells": ["10.02.2023","Netzwerke","Einstieg, Client, Server, Protokolle"]
+    },
+    {
+        "cells": ["17.02.2023","Sportwoche",""],
+        "type": "holiday",
+        "icon": "mdi-ski"
+    },
+    {
+        "cells": ["24.02.2023","IoT Tag","3D-Drucken, Löten, Node RED, microPython"],
+        "type": "event"
+    },
+    {
+        "cells": ["03.03.2023","Netzwerke","HTTP Protokoll, API's, Postman"]
+    },
+    {
+        "cells": ["10.03.2023","Netzwerke",""]
+    },
+    {
+        "cells": ["17.03.2023","Netzwerke",""]
+    },
+    {
+        "cells": ["24.03.2023","Netzwerke",""]
+    },
+    {
+        "cells": ["31.03.2023","Netzwerke",""]
+    },
+    {
+        "cells": ["07.04.2023","Sonderwoche","MINT-Woche"],
+        "type": "holiday",
+        "icon": "mdi-atom"
+    },
+    {
+        "cells": ["14.04.2023","Frühlingsferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["21.04.2023","Frühlingsferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["28.04.2023","",""]
+    },
+    {
+        "cells": ["05.05.2023","",""]
+    },
+    {
+        "cells": ["12.05.2023","",""]
+    },
+    {
+        "cells": ["19.05.2023","Auffahrt",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["26.05.2023","",""]
+    },
+    {
+        "cells": ["02.06.2023","",""],
+        "type": "test"
+    },
+    {
+        "cells": ["09.06.2023","Ausfall","Mündliche Maturprüfungen"],
+        "type": "holiday"
+    },
+    {
+        "cells": ["16.06.2023","",""]
+    },
+    {
+        "cells": ["23.06.2023","",""]
+    },
+    {
+        "cells": ["29.06.2023","",""],
+        "type": "event"
+    },
+    {
+        "cells": ["30.06.2023","",""]
+    },
+    {
+        "cells": ["08.07.2023","",""]
+    }
+]
