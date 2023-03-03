@@ -67,7 +67,7 @@ Hier sieht man nun die einzelnen Netzwerkanfragen, die der Browser beim Laden de
 ## API abfragen
 
 :::aufgabe Jokes
-<Answer type="state" webKey="e9606896-3d52-413c-b0ed-d8437d6d960e" /
+<Answer type="state" webKey="e9606896-3d52-413c-b0ed-d8437d6d960e" />
 
 Studieren Sie die Dokumentation der API auf 👉 https://icanhazdadjoke.com/api?ref=apilist.fun.
 
