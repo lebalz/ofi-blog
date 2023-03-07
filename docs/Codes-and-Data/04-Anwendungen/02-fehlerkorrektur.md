@@ -5,13 +5,14 @@ sidebar_custom_props:
 
 import Bin2Text from '@site/src/components/VisualizationTools/Bin2Text';
 
-# 3. Fehlerkorrektur
+# 2. Fehlerkorrektur
 
 ![--width=250](images/fehlerkorrektur/xo-game.png)
 
 Im Unterricht haben Sie gesehen, wie die umgedrehte Karte sofort entdeckt wurde - *Zauberei!?!?*
 
 :::aufgabe Aufgaben
+<Answer type="state" webKey="db764a01-2401-47e7-85b2-734efcb4649a" />
 
 1. Beschreiben Sie, nach welchem Prinzip Herr Hofer das `5x5`-Muster zu einem `6x6`-Muster ergänzt hat.
 
@@ -52,6 +53,7 @@ Zu übertragender Code mit Paritätsbit (7+1 Bit lang): `1001101`
 Das Paritätsbit ist hier 1.
 
 :::aufgabe Paritätsbit
+<Answer type="state" webKey="1d70d112-58e2-4812-a3a8-e8e96a7d0ed7" />
 
 Schreiben Sie mit Paritätsbit:
 
@@ -118,6 +120,8 @@ Nach einer kurzen Recherche: Die Strichcodes auf Verpackungen sind sog. **EAN-13
 :::
 
 :::aufgabe Aufgabe
+<Answer type="state" webKey="587a129a-34cf-4a1a-8496-7f62bc6b2df7" />
+
 1. Was könnte passieren, wenn ein Strichcode verdreckt oder beschädigt ist?
 
     <Answer type="text" webKey="a54b9818-5715-4442-a836-9a639ea4e649" />

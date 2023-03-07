@@ -30,6 +30,7 @@ sidebar_custom_props:
 </div>
 
 :::aufgabe Morse-Code
+<Answer type="state" webKey="2e030af6-fe51-46cc-add6-ff1ea09ca034" />
 
 Schreiben Sie ein Wort mit 6 Buchstaben in Morse-Code.
 - Entziffern Sie die codierten Worte Ihrer Pultnachbar:innen.
@@ -62,6 +63,7 @@ Das Decodieren von Morse-Code ist bedeutend einfacher, wenn die Tabelle als bin�
 :::
 
 :::aufgabe Verwendung
+<Answer type="state" webKey="16a1d23a-cfd2-4472-a17d-cc2172892c46" />
 
 Recherchieren Sie im Internet,
 - über welche Medien Morsezeichen übertragen werden können (bspw. als elektrischer Puls über eine Leitung)
@@ -70,7 +72,9 @@ Recherchieren Sie im Internet,
 <Answer type="text" webKey="ae2462eb-94cf-48bb-9c8e-9f5c31a0c8da" />
 :::
 
-:::aufgabe Akkustischer Morsecode
+:::aufgabe ⭐ Akkustischer Morsecode
+<Answer type="state" webKey="6d42df6f-93e9-4d17-95d0-f97d908d2cac" />
+
 Gehen Sie in Vierergruppen zu einem Treppengeländer, jeweils zwei Personen an einem Ende des Geländers.
 
 Können Sie sich ausschliesslich über akkustische Morsezeichen verständigen? Verschicken- und empfangen Sie jeweils ein Wort mit mindestens 6 Buchstaben.
