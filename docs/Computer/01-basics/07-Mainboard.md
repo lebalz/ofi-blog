@@ -23,6 +23,8 @@ Im nachfolgenden Schema sieht man gut, dass über die Northbridge diejenigen Com
 In modernen Systemen wird die Northbridge oft auch direkt im Prozessor integriert, zudem enthält die Southbridge meist einen Netzwerk- und Grafikkontroller, so dass die grundlegende Ausgabe- und Netzwerkfunktionalität bereits gegeben ist. 
 
 :::aufgabe Aufgabe Hauptplatine
+<Answer type="state" webKey="28223368-b07c-451a-8a82-aa3ae206935e" />
+
 1. Betrachten Sie das ASRock Mainboard. Wo werden die folgenden Komponenten eingesteckt?
    - Prozessor
    - RAM

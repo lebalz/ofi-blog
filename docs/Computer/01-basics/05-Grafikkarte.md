@@ -89,6 +89,8 @@ Heutige Laptops haben oft keine separaten Ausgänge für Bildschirme - dank USB-
 :::
 
 :::aufgabe Aufgabe Grafikkarte: Rendering
+<Answer type="state" webKey="ff40f1f1-5667-4978-a848-e4da4532b658" />
+
 Recherchieren Sie den Begriff "Rendering".
 
 <Answer type="text" webKey="30ee181c-fe31-4362-8274-68fd87478824" />

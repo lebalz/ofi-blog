@@ -13,7 +13,8 @@ Das Netzteil eines Desktop-Computers ist stets eingebaut. Bei einem Notebook hin
 
 Für das Netzteil gibt es die folgende wichtige Kenngrösse:
 
-- Die **Leistung** gibt an, wie viel Energie das Netzteil in einer bestimmten Zeit den Komponenten maximal zur Verfügung stellen kann. Die Leistung wird gemessen in **Watt**.
+Leistung
+: Die **Leistung** gibt an, wie viel Energie das Netzteil in einer bestimmten Zeit den Komponenten maximal zur Verfügung stellen kann. Die Leistung wird gemessen in **Watt**.
 
 :::cards --columns=2
 ![ATX-Netzteil](images/08-atx.jpg)
@@ -43,7 +44,7 @@ Notebooks verwenden stromsparendere Prozessoren, daher reicht dort ein kleinerer
    - Smartphone-Ladegerät
    - LED-Lampe
 
-<Answer type="text" webKey="3a105b6b-5da9-455a-a654-ef1d86be9d0d" />
+   <Answer type="text" webKey="3a105b6b-5da9-455a-a654-ef1d86be9d0d" />
 
 2. Wie beurteilen Sie folgende Aussagen? Ist das erwähnte Gerät neu oder alt?
    - Ein Notebook verbraucht zum Bearbeiten eines Textdokuments oder Surfen im Internet ca. 7W.
@@ -51,6 +52,6 @@ Notebooks verwenden stromsparendere Prozessoren, daher reicht dort ein kleinerer
    - Eine Stereoanlage verbraucht im Standbyzustand knapp 15W.
    - Ein Beamer hat einen Standbystromverbrauch von ca. 0.5W.
 
-<Answer type="text" webKey="99af8549-e30f-4fbf-b52a-084c320e5c53" />
+   <Answer type="text" webKey="99af8549-e30f-4fbf-b52a-084c320e5c53" />
 
 :::

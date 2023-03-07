@@ -14,6 +14,15 @@ Für die Netzwerkkarte gibt es folgende wichtige Kenngrösse:
 
 - Die maximale **Übertragungsrate** gibt an, wie viele Daten pro Sekunde (im Idealfall) übertragen werden können. Sie wird in der Einheit **Mbps** oder **Gbps** angegeben, was «Mega- resp. Gigabit pro Sekunde» bedeutet. Gemessen wird hier also nicht in Byte sondern in Bit, was etwas ungewöhnlich ist.
 
+8 bit
+: 1 Byte
+1 Mbit/s
+: 1 Megabit/s = 1 Million Bit/s
+: = 125'000 Byte/s
+: = 125 KByte/s (Kilobytes / s)
+: = 0.125 MByte/s (Megabytes / s)
+
+
 
 ## Netzwerkkarte
 
@@ -41,7 +50,7 @@ Netzwerkkarten zur Verbindung mit einem drahtlosen Netzwerk (WLAN) gibt es in et
 :::aufgabe Netzwerkkarte
 <Answer type="state" webKey="a5301bd3-8c1e-4456-8ba9-21f420d58249" />
 
-Sie wollen für die Ferien einige Filme von Netflix offline verfügbar machen und müssen insgesamt `10 GB` Daten herunterladen. Ihr WLAN kann in ihr Zimmer maximal `150 Mbps` übertragen. Wie viel Zeit gewinnen Sie, wenn Sie aufstehen um das Gerät per Ethernet an Ihren Glasfaser-Router mit `1 Gbps` anschliessen?\*
+Sie wollen für die Ferien einige Filme von Netflix offline verfügbar machen und müssen insgesamt `10 GB` (also "Giga Bytes") Daten herunterladen. Ihr WLAN kann in ihr Zimmer maximal `150 Mbps` übertragen. Wie viel Zeit gewinnen Sie, wenn Sie aufstehen um das Gerät per Ethernet an Ihren Glasfaser-Router mit `1 Gbps` anschliessen?\*
 
 Berechnen Sie:
 - die Download Dauer per WLAN
