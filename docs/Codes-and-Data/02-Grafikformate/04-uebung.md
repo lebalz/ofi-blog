@@ -16,11 +16,11 @@ Das folgende Foto hat im Original eine Auflösung von `6016×4016` Pixel mit ein
 
 1. Berechnen Sie die theoretische Speichergrösse in Megabyte.
 2. Laden Sie das Originalbild unter dem folgenden Link herunter:
-   - [Originalbild](assets/iceland.jpg)
+   - [👉 Originalbild](assets/iceland.jpg)
 3. Finden Sie heraus, wie gross der tatsächliche Speicherplatz des Bildes in Megabyte ist. Notieren Sie diese Zahl.
 4. Öffnen Sie das Bild in der Foto-App.
-5. Ändern Sie die Grösse des Bildes auf 20%.
-6. Exportieren Sie das Bild mehrmals nacheinander als JPEG-Datei mit den Qualitäten 100%, 75%, 50% und 0%. Vergleichen Sie die Bilder und die Dateigrössen. Was stellen Sie fest?
+5. Ändern Sie die Qualität des Bildes auf 20 %.
+6. Exportieren Sie das Bild mehrmals nacheinander als JPEG-Datei mit den Qualitäten 100%, 75%, 50% und 10%. Vergleichen Sie die Bilder und die Dateigrössen. Was stellen Sie fest?
 
 ![Island](images/04-uebung/iceland.jpg)
 
@@ -28,7 +28,12 @@ Das folgende Foto hat im Original eine Auflösung von `6016×4016` Pixel mit ein
 
 <Solution>
 
-Auflösung: Lesen Sie folgenden Artikel zum JPEG-Format auf digitec.ch: 👉 https://www.digitec.ch/de/page/warum-jpeg-kompression-nicht-des-teufels-ist-6567
+1. Farbtiefe von 3 Bytes (8 bit pro Farbkanal / 256 Abstufungen pro Farbkanal) `6016 * 4016 * 3 Byte = 72'480'768 Bytes = 72'481 KB = 72.5 MB`
+3. `7.01 MB`
+5. neu: ~`1 MB` gross
+6. Durch das Verändern des Bildes aus Schritt (5) ändern sich zwar die Bildgrössen, **nicht** jedoch deren Qualität! Ein einmal schlechtes Bild wird also durch das neuerliche hochsetzen der Qualität nur ineffizienter gespeichert (braucht also mehr Platz), jedoch wird die Qualität nicht mehr besser.
+
+Zusätzliche Infos: Lesen Sie folgenden Artikel zum JPEG-Format auf digitec.ch: 👉 https://www.digitec.ch/de/page/warum-jpeg-kompression-nicht-des-teufels-ist-6567
 
 Ergänzen Sie Ihre Antwort.
 
