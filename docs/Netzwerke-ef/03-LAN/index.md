@@ -6,7 +6,7 @@ sidebar_custom_props:
     ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Vom-LAN-zum-Internet
 ---
 
-# Vom LAN zum Internet
+# 3. Vom LAN zum Internet
 Verbindet man zwei oder mehrere Computer über ein geeignetes **Medium**, so entsteht ein Computernetzwerk. In den Anfängen war dieses Medium immer ein Kabel, heute können das auch Funkwellen sein.
 Je nach geografischer Ausdehnung des Netzwerkes spricht man von einem **Local Area Network (LAN)** oder einem **Wide Area Network (WAN)**. Es gibt auch weitere Abstufungen, welche hier aber nicht näher betrachtet werden.
 

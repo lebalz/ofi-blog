@@ -44,7 +44,6 @@ export default function Figure(props: Props): JSX.Element {
       if (img && opts) {
         IMG_STYLE_PROPS.forEach((key) => {
           if (key in opts) {
-            console.log(key, opts[key], img.style);
             img.style[key] = opts[key];
           }
         })

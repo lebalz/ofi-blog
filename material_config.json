@@ -454,8 +454,6 @@
       "from": "docs/Netzwerke-ef/",
       "to": "versioned_docs/version-24ef/02-Netzwerke",
       "ignore": [
-        "02-Protokolle/02-aufgabe.md",
-        "03-LAN",
         "04-Schichtenmodell",
         "05-Netzzugangsschicht",
         "06-IP-Adressen",

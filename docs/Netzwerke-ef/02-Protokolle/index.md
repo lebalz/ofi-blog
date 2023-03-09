@@ -92,19 +92,24 @@ Beispiel für die Kommunikation zwischen Menschen, Zustandsdiagramm für Partei 
 
 ```mermaid
 stateDiagram-v2
+  classDef badBadEvent fill:var(--ifm-color-danger),color:white,font-weight:bold,stroke-width:2px,stroke:var(--ifm-color-danger-darkest)
+  classDef successEvent fill:var(--ifm-color-success),color:white,font-weight:bold,stroke-width:2px,stroke:var(--ifm-color-success-darkest)
 
-s1: Begrüssung eröffnet
-s2: Begrüssung bestätigt
-s3: Begrüssung abgebrochen
-s4: Verteidigung
-s5: ...
-[*] --> s1: B gesehen / sage "Guten Tag"
-s1 --> s2: "Guten Tag" gehört
-s2 --> s5: ...
-s1 --> s3: "Hä?" gehört
-s3 --> [*]
-s1 --> s4: "Verp... dich!" gehört / sage "Schlechten Tag heute?"
-s4 --> ... 
+  s1: Begrüssung eröffnet
+  s2: Begrüssung bestätigt
+  s3: Begrüssung abgebrochen
+  s4: Verteidigung
+  s5: ...
+  [*] --> s1: B gesehen / sage "Guten Tag"
+  s1 --> s2: "Guten Tag" gehört
+  s2 --> s5: ...
+  s1 --> s3: "Hä?" gehört
+  s3 --> [*]
+  s1 --> s4: "Verp... dich!" gehört / sage "Schlechten Tag heute?"
+  s4 --> ... 
+
+  class s2 successEvent
+  class s4 badBadEvent
 ```
 
 Startzustand
