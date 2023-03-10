@@ -84,3 +84,70 @@ Studieren Sie die Dokumentation der API auf 👉 https://icanhazdadjoke.com/api?
   <Answer type="text" webKey="019dc887-fddd-4320-96cf-55b5f4da98e2" />
 
 :::
+
+
+## API erstellen
+
+:::aufgabe Node-Red
+
+<Answer type="state" webKey="c0ccd705-a413-4eb7-a44a-406d1db8c020" />
+
+Erstellen Sie eine Node-RED Api, um eingegebenen Text in die Emoji-Sprache zu übersetzen:
+
+- Erstelle Sie einen neuen Flow
+  
+  ![](images/nred-api-01.png)
+
+- Erzeugen Sie einen neuen API-Endpunkt für HTTP-GET, bspw. `/api/to-emoji-lang`. Wichtig: Der Endpunkt muss mit einem Slash `/` beginnen - der Hostname muss nicht angegeben werden.
+  ![](images/nred-api-02.png)
+
+- Schicken Sie nun mit Postman einen GET Request an die API. Sie sehen nun, in welchem Format die Daten bei der API ankommen. Überlegen Sie sich, in welchem Format Sie die Anfrage erwarten und halten Sie dies für sich fest. (Im Beispiel: `text` enthält der zu übersetzenden Text.)
+
+  ![](images/nred-api-03.png)
+
+- Nun müssen wir den empfangenen text noch prozessieren und wieder zurückschicken. Dazu bearbeitet man den Funktions-Node. Achtung: hier wird in JavaScript programmiert, nicht in Python ;)
+
+  ```js
+  let emoji = msg.payload.text;
+
+  emoji = emoji.replace(/hello/, '👋');
+
+  msg.payload = {
+      msg: emoji
+  };
+
+  return msg;
+  ```
+- Das Resultat bei der erneuten Anfrage mit Postman:
+
+  ![](images/nred-api-04.png)
+
+- Erweitern Sie Ihr API-Endpunkt so, dass noch mehr Emojis unterstützt werden. (z.B. `hello` -> `👋`, `world` -> `🌍`, `!` -> `❗️`, etc.)
+
+
+
+:::
+
+
+:::aufgabe ⭐ Telegram Anbindung der Emoji-Sprache
+<Answer type="state" webKey="fd93a452-48dd-4ddc-9dd2-111a8d445c31" />
+
+Natürlich kann der Endpunkt der Emoji-Sprache nun auch für Telegram-Nachrichten verwendet werden. Das praktische: Sie können auch die API von einer Kolleg:in verwenden und müssen die Sprache nicht zwingend selber implementieren. Probieren Sie es aus...
+:::
+
+:::aufgabe ⭐ Barcodes erstellen
+
+<Answer type="state" webKey="13dac5de-8bf0-4a8e-b7af-e6a83ce25f63" />
+
+Es lassen sich auch komplexe Datenstrukturen über eine API erzeugen und zurückschicken. Erstellen Sie eine API, welche einen Barcode erstellt.
+
+Versuchen Sie dabei selber herauszufinden, wie der __Barcode__ Node verwendet werden muss (👉 Referenz: https://flows.nodered.org/node/node-red-contrib-image-tools)
+
+![](images/nred-api-05.png)
+:::
+
+:::aufgabe Blog-Eintrag
+<Answer type="state" webKey="631b73c7-a4fc-415d-ad08-18dc966b0a9f" />
+
+Erstellen Sie einen neuen Blog-Beitrag (min. 300 Wörter) mit Anleitungen, Erklärungen und Erfahrungen zum Erstellen einer API mit Node-RED.
+:::
