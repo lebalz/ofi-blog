@@ -26,7 +26,7 @@ Das folgende Foto hat im Original eine Auflösung von `6016×4016` Pixel mit ein
 
 <Answer type="text" webKey="2e1c4773-da2e-42da-b506-f158fa968916" />
 
-<Solution>
+<Solution webKey="adf65f6c-0892-4249-8786-1719c06d9275">
 
 1. Farbtiefe von 3 Bytes (8 bit pro Farbkanal / 256 Abstufungen pro Farbkanal) `6016 * 4016 * 3 Byte = 72'480'768 Bytes = 72'481 KB = 72.5 MB`
 3. `7.01 MB`
