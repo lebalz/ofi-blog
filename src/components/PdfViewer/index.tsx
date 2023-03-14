@@ -6,6 +6,7 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft, faArrowAltCircleRight, faDownload } from '@fortawesome/free-solid-svg-icons';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
 
 
 interface Props {
