@@ -111,6 +111,11 @@
         "05-praktikum"
       ],
       "open": true
+    },
+    {
+      "from": "docs/Video-Editor/",
+      "to": "versioned_docs/version-25h/10-Computer/10-Video-Editor",
+      "ignore": []
     }
   ],
   "26e": [

@@ -50,8 +50,11 @@ Sie fertigen in Kleingruppen von 3 bis max. 4 Personen ein kurzes, 3 bis 4 minü
 - Themen komplett abgedeckt
 - Einhalten der Zeit (3-4 Minuten)
 - Fachlich korrekt
-- Jede Person der Gruppe erzählt/erklärt etwas
+- Jede Person der Gruppe erzählt/erklärt etwas (!Automatisch generiertes Audio-Material ist nicht erlaubt.)
 - Kreativität
 - Projekt auf CircuitVerse funktioniert
+- Der gesprochene Text ist gut verständlich
+- Video-Schnitt (Übergänge, Audio-Übergänge, ansprechend,...)
+- Die Video-Qualität ist gut (min. 720p)
 
 Die Note zählt **0.5**

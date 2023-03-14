@@ -9,6 +9,7 @@ interface Props {
     getLabel: (idx: number) => string;
     highlighted?: number[];
     hilightIcon?: string;
+    groupId?: string;
 }
 
 const getValue = (idx: number) => {
@@ -20,6 +21,7 @@ const GTabs = (props: Props) => {
     return (
         <Tabs
             defaultValue={getValue(0)}
+            groupId={props.groupId}
             values={props.children.map((_, idx) => {
                 const isHighlight = (props.highlighted || []).includes(idx);
                 const label = (
