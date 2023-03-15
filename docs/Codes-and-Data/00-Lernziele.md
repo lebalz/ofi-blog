@@ -43,7 +43,6 @@ sidebar_custom_props:
 
 :::note Anwendungen
 - Sie kennen verschiedene Anwendungen von Codes im Alltag
-- Sie erkennen die grundlegenden Elemente eines QR-Codes
 - Sie wissen, wie der Morsecode aufgebaut ist. (Es wird nicht erwartet, dass Sie die Codierungstabelle auswendig kennen)
 - Sie wissen, wie eine Fehlererkennung erzeugt werden kann (Paritätsbit)
 - Sie wissen, was wie ein EAN-13 Code aufgebaut ist und wie die Prüfsumme berechnet wird.
