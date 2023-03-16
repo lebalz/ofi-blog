@@ -13,6 +13,9 @@ sidebar_custom_props:
 - Zeit: 60 Minuten
 :::
 
+Nicht Prüfungsrelevante Kapitel:
+- Anwendungen: 3. QR-Code
+
 :::note Codes, Daten und Informationen
 - Sie kennen die Begriffe "Code", "Codieren" und "Decodieren", können diese Begriffe in eigenen Worten definieren und identifizieren Codes in ihrem Alltag.
 - Sie verstehen, dass es zwischen Daten und Informationen Unterschiede gibt, die Sie selber aufzeigen können.

@@ -142,4 +142,4 @@ Dazu braucht man einen Router, der in der Lage ist die netzwerkinternen privaten
 
 Man kann sich das so vorstellen, dass IP-Pakete, welche das private Netzwerk verlassen mit einer neuen öffentlichen IP-Adresse versehen und durch das Internet geleitet werden. Umgekehrt erhalten Pakete aus dem Internet für den Weitertransport im privaten Netzwerk eine private IP-Adresse.
 
-Diese **Übersetzung** von IP-Adressen wird **Network Addresss Translation** genannt und ist in allen Routern für Heimnetzwerke eingebaut.
+Diese **Übersetzung** von IP-Adressen wird **Network Address Translation** genannt und ist in allen Routern für Heimnetzwerke eingebaut.
