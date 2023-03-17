@@ -151,3 +151,30 @@ Versuchen Sie dabei selber herauszufinden, wie der __Barcode__ Node verwendet we
 
 Erstellen Sie einen neuen Blog-Beitrag (min. 300 Wörter) mit Anleitungen, Erklärungen und Erfahrungen zum Erstellen einer API mit Node-RED.
 :::
+
+
+### Login & Cookies
+
+:::aufgabe Login Seite
+
+<Answer type="state" webKey="39323467-afef-4670-b6b5-1e99d2d8c39e" />
+
+Dateiname
+: __EF-Info/docs/Netzwerke/login-cookies.md__
+
+
+1. Importieren Sie folgenden Flow in Node-RED: __:mdi-menu: > Import > Einfügen (Neuen Flow)__
+   
+  :::details Flow
+
+  ```json
+  [{"id":"ed73c51f6c96ba27","type":"tab","label":"Website","disabled":false,"info":"","env":[]},{"id":"ec50be804c1e6675","type":"http in","z":"ed73c51f6c96ba27","name":"[GET] /home","url":"/home","method":"get","upload":false,"swaggerDoc":"","x":190,"y":280,"wires":[["1b5bb80c993555b9"]]},{"id":"cb111f9c5919c2df","type":"http response","z":"ed73c51f6c96ba27","name":"send","statusCode":"","headers":{},"x":890,"y":300,"wires":[]},{"id":"8e8e47cc5fcb98c5","type":"template","z":"ed73c51f6c96ba27","name":"welcome.html","field":"payload","fieldType":"msg","format":"html","syntax":"mustache","template":"<!DOCTYPE html>\n<html>\n\n<body>\n\n    <h2>Welcome {{payload.cookies.name}}</h2>\n\n    <form action=\"/api/logout\" method=\"post\">\n        <input type=\"submit\" value=\"Logout\">\n    </form>\n</body>\n\n</html>","output":"str","x":680,"y":260,"wires":[["cb111f9c5919c2df"]]},{"id":"ef63f010f75fddab","type":"http in","z":"ed73c51f6c96ba27","name":"","url":"/api/login","method":"post","upload":false,"swaggerDoc":"","x":200,"y":400,"wires":[["b0da1762ade85366"]]},{"id":"c3a17bf91ecd5844","type":"http response","z":"ed73c51f6c96ba27","name":"redirect","statusCode":"302","headers":{"location":"/home"},"x":700,"y":400,"wires":[]},{"id":"b0da1762ade85366","type":"function","z":"ed73c51f6c96ba27","name":"check login & set cookie","func":"msg.cookies = {\n    auth: true,\n    name: msg.payload.name\n}\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":450,"y":400,"wires":[["c3a17bf91ecd5844"]]},{"id":"1b5bb80c993555b9","type":"function","z":"ed73c51f6c96ba27","name":"file server","func":"if (msg.req.cookies['auth']) {\n    return [msg, undefined]\n} else {\n    return [undefined, msg]\n}\n","outputs":2,"noerr":0,"initialize":"","finalize":"","libs":[],"x":340,"y":280,"wires":[["27605817169cf262"],["78560b7d3955e003"]]},{"id":"78560b7d3955e003","type":"template","z":"ed73c51f6c96ba27","name":"login.html","field":"payload","fieldType":"msg","format":"html","syntax":"mustache","template":"<!DOCTYPE html>\n<html>\n\n<body>\n\n    <h2>Login</h2>\n\n    <form action=\"/api/login\" method=\"post\">\n        <label for=\"user\">Benutzername:</label><br>\n        <input type=\"text\" id=\"user\" name=\"name\" value=\"Johnny\"><br>\n        <label for=\"pw\">Password:</label><br>\n        <input type=\"password\" id=\"pw\" name=\"password\" value=\"SecurePW\"><br><br>\n        <input type=\"submit\" value=\"Login\">\n    </form>\n</body>\n\n</html>","output":"str","x":500,"y":300,"wires":[["cb111f9c5919c2df"]]},{"id":"67469255844ecdb2","type":"http in","z":"ed73c51f6c96ba27","name":"","url":"/api/logout","method":"post","upload":false,"swaggerDoc":"","x":200,"y":500,"wires":[["ec4982c40dbdb73b"]]},{"id":"ec4982c40dbdb73b","type":"function","z":"ed73c51f6c96ba27","name":"clear cookie","func":"msg.cookies = {auth: null, name: null}\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":410,"y":500,"wires":[["e835b96b55617025"]]},{"id":"e835b96b55617025","type":"http response","z":"ed73c51f6c96ba27","name":"redirect","statusCode":"302","headers":{"location":"/home"},"x":700,"y":500,"wires":[]},{"id":"27605817169cf262","type":"change","z":"ed73c51f6c96ba27","name":"load cookies","rules":[{"t":"set","p":"payload.cookies","pt":"msg","to":"msg.req.cookies","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":510,"y":260,"wires":[["8e8e47cc5fcb98c5"]]}]
+  ```
+  :::
+
+2. Navigieren Sie zum `/home` Pfad und überprüfen Sie, ob Sie sich einloggen können.
+3. Halten Sie kurz und knapp in Ihrem Repository fest:
+   1. Was ist ein Cookie?
+   2. Weshalb ist ein Cookie praktisch? Wie funktioniert ein Login damit?
+   3. Unser Beispiel benutzt eine einfache Benutzerdatenbank. Was darf **NIE** so gemacht werden, wie wirs gemacht haben? Welche Ansätze gibts zur Verbesserung?
+:::

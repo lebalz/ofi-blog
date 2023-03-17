@@ -9,13 +9,20 @@ sidebar_custom_props:
 
 import Stack from '@site/src/components/VisualizationTools/TCP_IP_Stack'
 
-# Schichtenmodell
+# 4. Schichtenmodell
 
 Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netzwerke eine ganze Reihe von **Aufgaben** erfülllen:
 
 1. Es braucht ein **Übertragungsmedium**. Dies können Kupferkabel, Glasfasern, oder Funkwellen sein.
-
 2. Die einzelnen Bits einer Nachricht müssen in **Signale** umgewandelt werden, welche über das gewählte Medium, übertagen werden können. Bei einem Kupferkabel können dies z.B. verschiedenen Spannungsniveaus sein, welche dann eine 1 oder eine 0 bedeuten.
+
+   :::details Bitcodierungen
+   ![](images/bit-darstellung-1.png)
+
+   ### Modulationsverfahren
+   ![](images/bit-darstellung-2.png)
+   :::
+
 3. Da bei der Übertragung von Signalen über ein Medium immer Fehler auftreten können, welche dazu führen, dass ein Empfänger statt der gesendeten 1 eine 0 empfängt (oder umgekehrt), muss eine **Fehlererkennung und -korrektur** vorgesehen werden. Das kann man z.B. tun, indem man mit jeder Nachricht Zusatzinformationen, wie Prüfsummen, oder Paritätsbits, sendet, mit welcher der Empfänger dann überprüfen kann, ob die empfangene Nachricht korrekt ist.
 4. Wenn an einem Medium mehrere Sende- und Empfangsstationen angeschlossen sind (z.B. in einem WLAN), braucht es eine Möglichkeit, die Nachrichten an eine bestimmte Station zu senden. Dazu werden **Adressen** verwendet.
 5. Werden schliesslich verschiedene **lokale Netzwerke** (kabelbasiert LANs und funkbasierte WLANs) zu einem grossen Netzwerk, wie dem **Internet** zusammengeschlossen, so müssen Nachrichten durch dieses übergeordnete Netzwerk **vermittelt** (man sagt geroutet) werden. Dazu braucht es eine von den darunterligenden Netzwerken unabhängige **Adressierungsart** für die Nachrichten.
@@ -80,3 +87,15 @@ Jetzt ist alles vorbereitet, um die Nachricht effektiv über die Leitung oder di
 
 Der beschriebene Vorgang wird als **Kapselung** oder Verpackung bezeichnet. Analog dazu muss auf der Empfängerseite dieser Vorgang umgekert werden, um aus den empfangenen Bits wieder die ursprpünglichen Daten auszupacken.
 ![Encapsulation](images/Encapsulation.png)
+
+
+:::aufgabe Selbsttest
+<Answer type="state" webKey="980ec8c0-0119-4391-8be0-091b7b635f21" />
+
+<iframe src="https://learningapps.org/watch?v=p4semfyac22" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+Halten Sie allenfalls einen Screenshot der Lösung unten fest.
+
+<Answer type="text" webKey="9721b1e6-12a4-4cad-9d81-86812532d2fc" />
+
+:::

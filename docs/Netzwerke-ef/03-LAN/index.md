@@ -7,6 +7,13 @@ sidebar_custom_props:
 ---
 
 # 3. Vom LAN zum Internet
+
+<Answer type="state" webKey="d0cab9bb-94b3-405d-b040-9ac896d40c85">
+
+Gelesen?
+
+</Answer>
+
 Verbindet man zwei oder mehrere Computer über ein geeignetes **Medium**, so entsteht ein Computernetzwerk. In den Anfängen war dieses Medium immer ein Kabel, heute können das auch Funkwellen sein.
 Je nach geografischer Ausdehnung des Netzwerkes spricht man von einem **Local Area Network (LAN)** oder einem **Wide Area Network (WAN)**. Es gibt auch weitere Abstufungen, welche hier aber nicht näher betrachtet werden.
 
@@ -43,3 +50,15 @@ Router sind Geräte und sehen praktisch gleich aus, wie Switches. Oft kommen auc
 Typischer WLAN-Switch-Router für das Heimnetz:
 
 ![fritzbox-7490-big](images/fritzbox-7490-big.jpg)
+
+
+:::aufgabe Hausaufgabe
+<Answer type="state" webKey="d731045f-df2b-452b-a2a0-7f81fab9fc2e" />
+
+Dateiname
+: __EF-Info/docs/Netzwerke/home-network.md__
+
+Suchen Sie bei sich zu Hause den WLAN-Switch-Router und machen Sie eine Foto davon. Erstellen Sie anschliessend eine Skizze der Netzwerksituation, in der Art, wie oben abgebildet.
+
+Erstellen Sie schliesslich in Ihrem Repository eine neue Seite mit einer kurzen Beschreibung Ihres Heimnetzes und integrieren Sie die Foto, sowie die Skizze.
+:::
