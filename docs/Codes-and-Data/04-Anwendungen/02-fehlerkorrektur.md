@@ -46,9 +46,9 @@ Man spricht hierbei von einer geraden Parität. Das angehängte Bit wird Paritä
 
 ### Beispiel
 
-Binär codierte Information (7 Bit lang): `100110`
+Binär codierte Information (7 Bit lang): `1000110`
 
-Zu übertragender Code mit Paritätsbit (7+1 Bit lang): `1001101`
+Zu übertragender Code mit Paritätsbit (7+1 Bit lang): `10001101`
 
 Das Paritätsbit ist hier 1.
 
