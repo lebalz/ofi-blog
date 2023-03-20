@@ -34,13 +34,19 @@ bin/disable byod_basics 24i
 
 ## Installation
 
-```console
+To build [canvas]() you need libcairo and some other build tools:
+
+```bash
+sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+```
+
+```bash
 yarn install
 ```
 
 ## Local Development
 
-```console
+```bash
 yarn start
 ```
 
@@ -48,7 +54,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 ## Build
 
-```console
+```bash
 yarn build
 ```
 
