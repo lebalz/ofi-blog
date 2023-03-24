@@ -12,7 +12,7 @@
 01-Programmieren/05-Software-Engineering/*
 01-Programmieren/02-Infrastruktur/20-Docusaurus/*
 02-Netzwerke/*
-!02-Netzwerke/05-Netzzugangsschicht,06-IP-Adressen,07-Routing
+!02-Netzwerke/06-IP-Adressen,07-Routing
 10-IoT-Workshop/*
 !10-IoT-Workshop/04-protokolle
 02-Netzwerke/_category_.json

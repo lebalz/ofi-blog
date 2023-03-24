@@ -6,7 +6,7 @@ sidebar_custom_props:
     ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Routing
 ---
 
-# Routing
+# 7. Routing
 Eine der wichtigsten Aufgaben der Internetschicht ist, das **Vermitteln** von Paketen duch die verbundenen Netzwerke hindurch und zwar vom **Augangsort** bis zum **Ziel**.
 Jedes Gerät, egal ob Computer oder Router, muss dies tun, wenn es ein Paket senden will. Man spricht vom **Routing**.
 

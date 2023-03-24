@@ -1,5 +1,6 @@
 const fs = require('fs');
 const matter = require('gray-matter');
+const path = require('path');
 const uuid = require('uuid');
 
 /**
@@ -7,7 +8,7 @@ const uuid = require('uuid');
  * @param {string} file 
  */
 function ensurePageId(file) {
-    if (!file.endsWith('.md') || file.startsWith('_')) {
+    if (!(file.endsWith('.md') || !file.endsWith('.mdx')) || path.basename(file).startsWith('_')) {
         return;
     }
     const fm = matter.read(file);
