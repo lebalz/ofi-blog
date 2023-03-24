@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+  id: ea80ca2b-9eb8-4886-8899-83100c954160
+---
 Anstatt Zahlen im Dezimalsystem oder Binärsystem zu schreiben, kann auch das Hexadezimalsystem mit `16` eindeutigen Zeichen verwendet werden. Dabei werden die zehn Zahlenziffern mit den ersten 6 Buchstaben des Alphabets ergänzt:
 
 <div className="slim-table no-header">
@@ -17,9 +21,9 @@ $$\
 \begin{aligned}
 
 A3D_{16} &= A \cdot 16^2 + 3 \cdot 16^1 + D \cdot 16^0 \\
-    &= 11 \cdot 256 + 3 \cdot 16 + 13 \cdot 1 \\
-    &= 2816 + 48 + 13 \\
-    &= 2877_{10}
+    &= 10 \cdot 256 + 3 \cdot 16 + 13 \cdot 1 \\
+    &= 2560 + 48 + 13 \\
+    &= 2621_{10}
 
 \end{aligned}$$
 
