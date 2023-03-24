@@ -6,7 +6,7 @@ sidebar_custom_props:
     ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/IP-Adressen
 ---
 
-# 6. IP-Adressen
+# 4. IP-Adressen
 
 ## Adressaufbau
 IP-Adressen der Version 4 bestehen aus vier Zahlen, welche jeweils ein **Byte** gross sind. D.h. eine IP-Adresse umfasst 32 Bit. Die vier Zahlen werden in dezimaler Schreibweise, durch Punkte getrennt, geschrieben.

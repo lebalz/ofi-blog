@@ -6,7 +6,7 @@ sidebar_custom_props:
     ref: https://gitlab.gbsl.website/gymbefin23/material/-/wikis/Netzwerke/Die-Netzzugangsschicht,-Frames-und-ARP
 ---
 
-# 5. Netzwerkzugangsschicht
+# 6. Netzwerkzugangsschicht
 
 
 <Answer type="state" webKey="65810b52-2edd-42ba-85ab-051af7dd1e41" label="Barbeitet?" />

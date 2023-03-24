@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 import Stack from '@site/src/components/VisualizationTools/TCP_IP_Stack'
 
-# 4. Schichtenmodell
+# 5. Schichtenmodell
 
 
 <Answer type="state" webKey="8ced2205-1254-4c67-bc97-fb75cb8c27b9" label="Bearbeitet?" />
@@ -24,12 +24,13 @@ Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netz
 
    ![](images/packtrav-nics-and-switches-layer-2.png)
 
-   :::details Bitcodierungen
-   ![](images/bit-darstellung-1.png)
+:::details Bitcodierungen
 
-   ### Modulationsverfahren
-   ![](images/bit-darstellung-2.png)
-   :::
+![](images/bit-darstellung-1.png)
+
+### Modulationsverfahren
+![](images/bit-darstellung-2.png)
+:::
 
 - Da bei der Übertragung von Signalen über ein Medium immer Fehler auftreten können, welche dazu führen, dass ein Empfänger statt der gesendeten 1 eine 0 empfängt (oder umgekehrt), muss eine **Fehlererkennung und -korrektur** vorgesehen werden. Das kann man z.B. tun, indem man mit jeder Nachricht Zusatzinformationen, wie Prüfsummen, oder Paritätsbits, sendet, mit welcher der Empfänger dann überprüfen kann, ob die empfangene Nachricht korrekt ist.
 - Wenn an einem Medium mehrere Sende- und Empfangsstationen angeschlossen sind (z.B. in einem WLAN), braucht es eine Möglichkeit, die Nachrichten an eine bestimmte Station zu senden. Dazu werden **Adressen** verwendet.   
@@ -40,14 +41,13 @@ Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netz
 - In einem Netzwerk von Netzwerken, wie dem Internet können auch ganze Nachrichten **verloren** gehen oder fehlgeleitet werden. Damit trotzdem eine sichere **Kommunikationsverbindung** zwischen zwei **Endpunkten** gewährleistet werden kann, müssen Nachrichten innerhalb einer Verbindung **durchnnummeriert** werden. Im Verlustfall kann dann eine **Wiederholung** einer Nachricht angefordert werden.
 - Nachrichten müssen an den Endpunkten **unterschiedlichen Diensten** zugewiesen werden können. Dazu braucht es wieder eine Unterscheidungsmöglichkeit in Form einer **dritten Addressierungsebene**.
 
+:::flex
+![--width=450px](images/packtrav-layer-4.png)
+***
+Zu jedem gegebenen Zeitpunkt könnte auf dem Computer eines Benutzers ein Internetbrowser geöffnet sein, während Musik gestreamt wird und eine Messenger- oder Chat-App ausgeführt wird. Jede dieser Anwendungen sendet und empfängt Daten aus dem Internet, und all diese Daten kommen in Form von Einsen und Nullen auf derselben Netzwerkschnittstelle des Computers an.
 
-   :::flex
-   ![--width=450px](images/packtrav-layer-4.png)
-   ***
-   Zu jedem gegebenen Zeitpunkt könnte auf dem Computer eines Benutzers ein Internetbrowser geöffnet sein, während Musik gestreamt wird und eine Messenger- oder Chat-App ausgeführt wird. Jede dieser Anwendungen sendet und empfängt Daten aus dem Internet, und all diese Daten kommen in Form von Einsen und Nullen auf derselben Netzwerkschnittstelle des Computers an.
-
-   "Etwas" muss entscheiden, welche Datenpakete wohin gelangen - die Aufgabe des **Ports**.
-   :::
+"Etwas" muss entscheiden, welche Datenpakete wohin gelangen - die Aufgabe des **Ports**.
+:::
 
 - Schliesslich müssen die Nachrichten von den beteiligten **Anwendungen** an den Endpunkten **verstanden** und interpretiert werden können. Dazu braucht es anwendungsspezifische Protokolle, wie HTTP.
 
