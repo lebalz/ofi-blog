@@ -1,7 +1,8 @@
 ---
 sidebar_custom_props:
-  id: 89357d23-4433-400e-9c0f-1927b5aa2499
+  id: 4e32c257-8415-416e-a357-6d5d0e65b0be
 ---
+
 
 import GTabs from '@site/src/components/GTabs'
 
@@ -10,7 +11,6 @@ import GTabs from '@site/src/components/GTabs'
 <GTabs getLabel={(idx) => `Ü${idx + 1}.py`}>
 
 ```py live_py noCompare persist title=am__uebung__1.py id=763ce1ad-b04a-451c-8d22-e0c487558eab
-print('Hello Playground')
 
 ```
 
