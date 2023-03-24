@@ -8,6 +8,36 @@ sidebar_custom_props:
 
 # 5. Netzwerkzugangsschicht
 
+
+<Answer type="state" webKey="65810b52-2edd-42ba-85ab-051af7dd1e41" label="Barbeitet?" />
+
+---
+
+<Answer type="state" webKey="103f3876-8c6e-4427-8331-d680c8ba2a5d" label="Gesehen?" />
+
+[@youtube](https://www.youtube-nocookie.com/embed/gYN2qN11-wE)
+
+---
+<Answer type="state" webKey="817cfd63-1257-491a-9aa6-bd4f4424d8fe" label="Gesehen?" />
+
+[@youtube](https://www.youtube-nocookie.com/embed/JI9Zm2tbUoE)
+
+---
+<Answer type="state" webKey="2a1fd649-537e-45ad-9bd3-95d595ef21a8" label="Gesehen?" />
+
+[@youtube](https://www.youtube-nocookie.com/embed/AhOU2eOpmX0)
+
+---
+<Answer type="state" webKey="9faf9dc5-f531-402f-834d-ad24906757d7" label="Gesehen?" />
+
+Ohne den Teil **VLAN**.
+
+[@youtube](https://www.youtube-nocookie.com/embed/G7GyWjJtjNs)
+
+---
+
+
+
 Innerhalb eines **LAN** tauschen die angeschlossenen Geräte Nachrichten in Form von **Frames** aus. Handelt es sich um ein kabelgebundenes LAN, wird auch von einem **Ethernet-Frame** gesprochen. Ethernet ist der Name der am häufigsten verwendeten Netzwerktechnologie über Kabel. Das folgende Bild zeigt den Aufbau eines Ethernet-Frames:
 
 ![ethernet_MAC_frame](images/ethernet_MAC_frame.jpg)

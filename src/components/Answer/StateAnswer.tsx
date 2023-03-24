@@ -73,7 +73,7 @@ const StateAnswer = observer((props: StateProps) => {
                         style={{ color: `${mdiColor[doc.data.value]}` }}
                     />
                 </div>
-                <div>{props.children}</div>
+                <div>{props.children || props.label}</div>
             </div>
             <StateSummary webKey={props.webKey} />
         </>

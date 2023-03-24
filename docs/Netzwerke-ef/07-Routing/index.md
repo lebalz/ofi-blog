@@ -7,6 +7,29 @@ sidebar_custom_props:
 ---
 
 # 7. Routing
+
+---
+
+<Answer type="state" webKey="8fcef783-5f7d-44aa-903f-ea4e74d5a385" label="Gesehen?" />
+
+[@youtube](https://www.youtube-nocookie.com/embed/AzXys5kxpAM)
+
+---
+
+<Answer type="state" webKey="b6955d87-a06c-4db4-856b-961edf82d1d8" label="Gesehen?" />
+
+[@youtube](https://www.youtube-nocookie.com/embed/Ep-x_6kggKA)
+
+---
+
+
+<Answer type="state" webKey="4d499f34-45bb-4613-8f02-2260af713cf2" label="Gesehen?" />
+
+[@youtube](https://www.youtube-nocookie.com/embed/zmxLg4jV0ts)
+
+---
+
+
 Eine der wichtigsten Aufgaben der Internetschicht ist, das **Vermitteln** von Paketen duch die verbundenen Netzwerke hindurch und zwar vom **Augangsort** bis zum **Ziel**.
 Jedes Gerät, egal ob Computer oder Router, muss dies tun, wenn es ein Paket senden will. Man spricht vom **Routing**.
 

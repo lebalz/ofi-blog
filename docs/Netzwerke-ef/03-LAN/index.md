@@ -8,11 +8,19 @@ sidebar_custom_props:
 
 # 3. Vom LAN zum Internet
 
-<Answer type="state" webKey="d0cab9bb-94b3-405d-b040-9ac896d40c85">
+<Answer type="state" webKey="d0cab9bb-94b3-405d-b040-9ac896d40c85" label="Bearbeitet?" />
 
-Gelesen?
+---
+<Answer type="state" webKey="6fc19caa-45b4-4d3f-a7d0-7bcb468f4a0e" label="Gesehen?" />
 
-</Answer>
+[@youtube](https://www.youtube-nocookie.com/embed/bj-Yfakjllc)
+
+---
+<Answer type="state" webKey="3366c27c-767b-4c37-b236-4b0dddc89109" label="Gesehen?" />
+
+[@youtube](https://www.youtube-nocookie.com/embed/H7-NR3Q3BeI)
+
+---
 
 Verbindet man zwei oder mehrere Computer über ein geeignetes **Medium**, so entsteht ein Computernetzwerk. In den Anfängen war dieses Medium immer ein Kabel, heute können das auch Funkwellen sein.
 Je nach geografischer Ausdehnung des Netzwerkes spricht man von einem **Local Area Network (LAN)** oder einem **Wide Area Network (WAN)**. Es gibt auch weitere Abstufungen, welche hier aber nicht näher betrachtet werden.
@@ -31,16 +39,17 @@ In der **Bus-Topologie** sind alle Computer über **ein und dasselbe** Kabel ver
 
 Bus-Topologien mit Kabel sind heute veraltet. Es gibt aber ein allgegenwärtiges Pendant: **Wireless-LANs (WLAN)**. Hier werden **Funkwellen** als Medium verwendet. Zwar gibt es verschiedene **Funkkanäle** (Frequenzen), aber in einem Kanal kann zu einem bestimmten Zeitpunkt immer nur ein Sender auf Sendung sein. Andererseits können alle Stationen die gesendeten Nachrichten empfangen, auch wenn diese gar nicht an sie gerichtet sind.
 
-### Stern
+### Stern - Switch
 In **kabelgebundnen** Netzwerken sind heute meist **Sterntopologien** zu finden. Dabei ist jeder Computer über ein eigenes Kabel mit einem zentralen Gerät, dem **Switch**, verbunden. Nachrichten von einem Computer werden vom Switch empfangen und auf Grund einer **Adresse** an den Zielcomputer weitergeleitet. Das hat den Vorteil, dass nur die beteiligten Computer und der Switch die Nachricht lesen können. Alle anderen Computer sehen die Nachricht nicht. Allerdings muss der Switch je nach Anzahl der angeschlossenen Computer sehr schnell sein, damit es zu keinen Rückstaus kommt.
 
+:::cards
 ![Star](images/Star.png)
 
-Ein Switch für den Anschluss von 24 Computern:
-
+***
 ![Switch](images/Switch.jpg)
-
-## Das Internet, ein Verbund von LANs
+Ein Switch für den Anschluss von 24 Computern:
+:::
+## Das Internet, ein Verbund von LANs - Router
 Ein **isoliertes LAN** reicht aus, wenn die angeschlossenen Computer nur untereinander Nachrichten austauschen. Sobald aber Nachrichten zwischen zwei Computern in verschiedenen LANs fliessen sollen, braucht es ein **Bindeglied** zwischen den einzelnen LANs. Diese Bindeglieder sind die **Router**. Sie verbinden zwei oder mehrere LANs miteinander und **vermitteln** Nachrichten zwischen den angeschlossenen Netzwerken. Eine Nachricht muss, wenn nötig, über **mehrere** Router weitergereicht werden, bis Sie im richtigen Ziel-LAN und dort beim Zielcomputer abgeliefert wedrden kann. So entsteht schliesslich ein weltweiter Verbund von Netzwerken, das **Internet**.
 
 ![Internet](images/Internet.png)

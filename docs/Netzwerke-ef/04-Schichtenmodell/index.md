@@ -11,10 +11,18 @@ import Stack from '@site/src/components/VisualizationTools/TCP_IP_Stack'
 
 # 4. Schichtenmodell
 
+
+<Answer type="state" webKey="8ced2205-1254-4c67-bc97-fb75cb8c27b9" label="Bearbeitet?" />
+
 Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netzwerke eine ganze Reihe von **Aufgaben** erfülllen:
 
-1. Es braucht ein **Übertragungsmedium**. Dies können Kupferkabel, Glasfasern, oder Funkwellen sein.
-2. Die einzelnen Bits einer Nachricht müssen in **Signale** umgewandelt werden, welche über das gewählte Medium, übertagen werden können. Bei einem Kupferkabel können dies z.B. verschiedenen Spannungsniveaus sein, welche dann eine 1 oder eine 0 bedeuten.
+- Es braucht ein **Übertragungsmedium**. Dies können Kupferkabel, Glasfasern, oder Funkwellen sein.
+
+   ![](images/packtrav-physical-wires-layer-1.png)
+
+- Die einzelnen Bits einer Nachricht müssen in **Signale** umgewandelt werden, welche über das gewählte Medium, übertagen werden können. Bei einem Kupferkabel können dies z.B. verschiedenen Spannungsniveaus sein, welche dann eine 1 oder eine 0 bedeuten.
+
+   ![](images/packtrav-nics-and-switches-layer-2.png)
 
    :::details Bitcodierungen
    ![](images/bit-darstellung-1.png)
@@ -23,21 +31,51 @@ Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netz
    ![](images/bit-darstellung-2.png)
    :::
 
-3. Da bei der Übertragung von Signalen über ein Medium immer Fehler auftreten können, welche dazu führen, dass ein Empfänger statt der gesendeten 1 eine 0 empfängt (oder umgekehrt), muss eine **Fehlererkennung und -korrektur** vorgesehen werden. Das kann man z.B. tun, indem man mit jeder Nachricht Zusatzinformationen, wie Prüfsummen, oder Paritätsbits, sendet, mit welcher der Empfänger dann überprüfen kann, ob die empfangene Nachricht korrekt ist.
-4. Wenn an einem Medium mehrere Sende- und Empfangsstationen angeschlossen sind (z.B. in einem WLAN), braucht es eine Möglichkeit, die Nachrichten an eine bestimmte Station zu senden. Dazu werden **Adressen** verwendet.
-5. Werden schliesslich verschiedene **lokale Netzwerke** (kabelbasiert LANs und funkbasierte WLANs) zu einem grossen Netzwerk, wie dem **Internet** zusammengeschlossen, so müssen Nachrichten durch dieses übergeordnete Netzwerk **vermittelt** (man sagt geroutet) werden. Dazu braucht es eine von den darunterligenden Netzwerken unabhängige **Adressierungsart** für die Nachrichten.
-6. In einem Netzwerk von Netzwerken, wie dem Internet können auch ganze Nachrichten **verloren** gehen oder fehlgeleitet werden. Damit trotzdem eine sichere **Kommunikationsverbindung** zwischen zwei **Endpunkten** gewährleistet werden kann, müssen Nachrichten innerhalb einer Verbindung **durchnnummeriert** werden. Im Verlustfall kann dann eine **Wiederholung** einer Nachricht angefordert werden.
-7. Nachrichten müssen an den Endpunkten **unterschiedlichen Diensten** zugewiesen werden können. Dazu braucht es wieder eine Unterscheidungsmöglichkeit in Form einer **dritten Addressierungsebene**.
-8. Schliesslich müssen die Nachrichten von den beteiligten **Anwendungen** an den Endpunkten **verstanden** und interpretiert werden können. Dazu braucht es anwendungsspezifische Protokolle, wie HTTP.
+- Da bei der Übertragung von Signalen über ein Medium immer Fehler auftreten können, welche dazu führen, dass ein Empfänger statt der gesendeten 1 eine 0 empfängt (oder umgekehrt), muss eine **Fehlererkennung und -korrektur** vorgesehen werden. Das kann man z.B. tun, indem man mit jeder Nachricht Zusatzinformationen, wie Prüfsummen, oder Paritätsbits, sendet, mit welcher der Empfänger dann überprüfen kann, ob die empfangene Nachricht korrekt ist.
+- Wenn an einem Medium mehrere Sende- und Empfangsstationen angeschlossen sind (z.B. in einem WLAN), braucht es eine Möglichkeit, die Nachrichten an eine bestimmte Station zu senden. Dazu werden **Adressen** verwendet.   
+- Werden schliesslich verschiedene **lokale Netzwerke** (kabelbasiert LANs und funkbasierte WLANs) zu einem grossen Netzwerk, wie dem **Internet** zusammengeschlossen, so müssen Nachrichten durch dieses übergeordnete Netzwerk **vermittelt** (man sagt geroutet) werden. Dazu braucht es eine von den darunterligenden Netzwerken unabhängige **Adressierungsart** für die Nachrichten.
+
+   ![--width=250px](images/packtrav-router-layer3.png)
+
+- In einem Netzwerk von Netzwerken, wie dem Internet können auch ganze Nachrichten **verloren** gehen oder fehlgeleitet werden. Damit trotzdem eine sichere **Kommunikationsverbindung** zwischen zwei **Endpunkten** gewährleistet werden kann, müssen Nachrichten innerhalb einer Verbindung **durchnnummeriert** werden. Im Verlustfall kann dann eine **Wiederholung** einer Nachricht angefordert werden.
+- Nachrichten müssen an den Endpunkten **unterschiedlichen Diensten** zugewiesen werden können. Dazu braucht es wieder eine Unterscheidungsmöglichkeit in Form einer **dritten Addressierungsebene**.
+
+
+   :::flex
+   ![--width=450px](images/packtrav-layer-4.png)
+   ***
+   Zu jedem gegebenen Zeitpunkt könnte auf dem Computer eines Benutzers ein Internetbrowser geöffnet sein, während Musik gestreamt wird und eine Messenger- oder Chat-App ausgeführt wird. Jede dieser Anwendungen sendet und empfängt Daten aus dem Internet, und all diese Daten kommen in Form von Einsen und Nullen auf derselben Netzwerkschnittstelle des Computers an.
+
+   "Etwas" muss entscheiden, welche Datenpakete wohin gelangen - die Aufgabe des **Ports**.
+   :::
+
+- Schliesslich müssen die Nachrichten von den beteiligten **Anwendungen** an den Endpunkten **verstanden** und interpretiert werden können. Dazu braucht es anwendungsspezifische Protokolle, wie HTTP.
 
 Wie immer, wenn etwas kompliziert wird, kommt die altbewährte Strategie **Teile und herrsche** zur Anwendung. Im Falle der Kommunikation bedeutet dies, dass die obigen Aufgaben auf verschiedene **Schichten** aufgeteilt werden. Jede Schicht enthält eigene **Protokolle**, welche für die Erledigung der Aufgaben zuständig sind. So entsteht ein **Stapel von Protokollen**, oder ein **Schichtenmodell**.
+
+---
+
+<Answer type="state" webKey="5b528186-8fd5-463f-8b84-39f892ef134e" label="Gesehen?" />
+
+[@youtube](https://www.youtube-nocookie.com/embed/LkolbURrtTs)
+
+---
+
+
+<Answer type="state" webKey="3f5977b8-ef82-49e2-85fc-affd14467f5c" label="Gesehen?" />
+
+[@youtube](https://www.youtube-nocookie.com/embed/0aGqGKrRE0g)
+
+---
 
 ## Das TCP-IP-Schichtenmodell
 Das TCP-IP-Schichtenmodell umfasst vier Schichten:
 
+
 <Stack />
 
 ![TCP-IP-Stack](images/TCP-IP-Stack.png)
+
 Die Aufgaben der einzelnen Schichten sind:
 
 1. **Netzzugangsschicht**  
