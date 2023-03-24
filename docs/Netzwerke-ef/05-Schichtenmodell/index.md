@@ -57,6 +57,8 @@ Wie immer, wenn etwas kompliziert wird, kommt die altbewährte Strategie **Teile
 
 <Answer type="state" webKey="5b528186-8fd5-463f-8b84-39f892ef134e" label="Gesehen?" />
 
+Hier wird das OSI-Modell vorgestellt - für uns wird schliesslich das TCP/IP-Modell mit "nur" 4 Schichten (Schichten 5-7 werden zusammengefasst) relevant sein. Mehr dazu weiter Unten...
+
 [@youtube](https://www.youtube-nocookie.com/embed/LkolbURrtTs)
 
 ---

@@ -18,6 +18,8 @@ sidebar_custom_props:
 ---
 <Answer type="state" webKey="3366c27c-767b-4c37-b236-4b0dddc89109" label="Gesehen?" />
 
+Wichtige Geräte: Switches und Router. (Hubs und Bridges als Nice-To-Know betrachten...)
+
 [@youtube](https://www.youtube-nocookie.com/embed/H7-NR3Q3BeI)
 
 ---
