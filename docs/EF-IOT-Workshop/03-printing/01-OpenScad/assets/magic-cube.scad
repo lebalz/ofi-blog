@@ -98,13 +98,15 @@ module magic_cube() {
         T();
 
     BigL();
+    translate([6, 5, 0])
+        BigL();
 
-    translate([5, 3, 0])
+    translate([5, 2.5, 0])
         L();
 
     translate([2, 0, 0])
         tri();
-    translate([2, 3, 0])
+    translate([2, 2.5, 0])
         tri();
     translate([5, 0, 0])
         snake();

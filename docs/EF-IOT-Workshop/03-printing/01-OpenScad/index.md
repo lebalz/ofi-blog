@@ -35,7 +35,7 @@ translate([2, 2, 0])
 Dateiname
 : __EF-Info/docs/IOT-Day/knobelwuerfel.md__
 
-Erstellen Sie in ein 3D Modell mit den 7 Elementen eines Knobel-Würfels. Die Elemente sollen sich nicht berühren und sollen sich auch nicht gegenseitig überlappen. Eine Würfelseite soll dabei nicht grösser als `8` Einheiten sein.
+Erstellen Sie ein 3D Modell mit den 7 Elementen eines Knobel-Würfels. Die Elemente sollen sich nicht berühren und sollen sich auch nicht gegenseitig überlappen. Eine Würfelseite soll dabei nicht grösser als `8` Einheiten sein.
 
 ![](images/knobel-wuerfel.jpg)
 
