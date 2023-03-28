@@ -4,10 +4,22 @@
         <title>Informatik Blog</title>
         <link>https://ofi.gbsl.website/news</link>
         <description>Informatik Blog</description>
-        <lastBuildDate>Tue, 28 Feb 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Mar 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>de</language>
+        <item>
+            <title><![CDATA[Bing Button entfernen]]></title>
+            <link>https://ofi.gbsl.website/news/2023/03/28/Bing-Button</link>
+            <guid>https://ofi.gbsl.website/news/2023/03/28/Bing-Button</guid>
+            <pubDate>Tue, 28 Mar 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Der prominente Bing-Knopf in Edge loswerden? So gehts...]]></description>
+            <content:encoded><![CDATA[<div class="commentable"><h4 class="anchor anchorWithStickyNavbar_LWe7" id="-"><i class="mdi-microsoft-edge mdi cyan"></i> <i class="mdi-microsoft mdi blue"></i><a href="#-" class="hash-link" aria-label="Direkter Link zur -" title="Direkter Link zur -">​</a></h4><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon heading"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><p>Der prominente Bing-Knopf in Edge loswerden? So gehts...</p><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon paragraph"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><p>In den Einstellungen <i class="mdi-cog mdi"></i> von Edge <i class="mdi-microsoft-edge mdi"></i> unter <strong class="underline">Randleiste &gt; Entdecken</strong> die Einstellung <strong class="underline">Entdecken anzeigen</strong> abschalten.</p><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon paragraph"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><figure class="figure_mAmF figure"><img loading="lazy" src="/assets/images/edge-settings-5c292b8ad2d8ae4a8baf87d68a1a6372.png" width="1778" height="595" class="img_ev3q"></figure><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon figure"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><figure class="figure_mAmF figure"><img loading="lazy" src="/assets/images/edge-settings-2-c46001a9808a848c721d302e95a86ab4.png" width="1302" height="495" class="img_ev3q"></figure><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon figure"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><h3 class="anchor anchorWithStickyNavbar_LWe7" id="direkter-link-zu-den-einstellungen">Direkter Link zu den Einstellungen<a href="#direkter-link-zu-den-einstellungen" class="hash-link" aria-label="Direkter Link zur Direkter Link zu den Einstellungen" title="Direkter Link zur Direkter Link zu den Einstellungen">​</a></h3><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon heading"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="commentable"><p>Die URL <code>edge://settings/sidebar</code> per Copy-Paste in die Adresszeile einfügen.</p><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon paragraph"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div><div class="browserWindow_yPfJ"><div class="browserWindowHeader_wZIS"><div class="buttons_zwH1"><span class="dot_ZAty" style="background:#f25f58"></span><span class="dot_ZAty" style="background:#fbbe3c"></span><span class="dot_ZAty" style="background:#58cb42"></span></div><div class="browserWindowAddressBar_wTY6 text--truncate"><i class="mdi mdi-microsoft-edge cyan browserType_z_w8"></i><a href="edge://settings/sidebar" target="_blank">edge://settings/sidebar</a></div><div class="browserWindowMenuIcon_pPcI"><div><span class="bar_zMS1"></span><span class="bar_zMS1"></span><span class="bar_zMS1"></span></div></div></div><div class="browserWindowBody_fsGG"><div class="commentable"><p><strong class="underline">Entdecken &gt; Entdecken anzeigen <i class="mdi-toggle-switch-off-outline mdi"></i></strong></p><div class="comment-wrapper"><div class="notranslate commentIcon_BLFl comment-icon paragraph"><div class="controls_YZcg"><i class="mdi mdi-comment-text-outline"></i></div></div></div></div></div></div>]]></content:encoded>
+            <category>windows</category>
+            <category>edge</category>
+            <category>browser</category>
+            <category>bing</category>
+        </item>
         <item>
             <title><![CDATA[PC Manager 🚀]]></title>
             <link>https://ofi.gbsl.website/news/2023/02/28/PC-Manager</link>
@@ -59,6 +71,9 @@
             <category>windows</category>
             <category>os</category>
             <category>browser</category>
+            <category>edge</category>
+            <category>chrome</category>
+            <category>firefox</category>
         </item>
         <item>
             <title><![CDATA[Wettbewerb: Informatik-Olympiade 🚀]]></title>
