@@ -408,18 +408,11 @@ strong.underline {
     color: #3348b5;
     font-weight: normal;
     border: 1px solid var(--ifm-color-gray-600);
-    padding: 0.15em 0.4em 0.15em 0.3em;
-    border-radius: 2px;
+    padding: 1px 0.4em 1px 0.3em;
     -moz-border-radius: .2em;
     -webkit-border-radius: .2em;
-    border-radius: .2em;
-    white-space: nowrap;
-    display: inline-block;
+    border-radius: 0.2em;
     line-height: initial;
-    transform: translateY(25%);
-    overflow-x: auto;
-    max-width: 100%;
-    margin-top: -18%;
 }
 
 figcaption {

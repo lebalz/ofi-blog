@@ -1,48 +1,41 @@
-
-// Horizontal Definition Lists
-.dl {
-    display: flex;
-    flex-wrap: wrap;
-    width:100%;
-    > * {
-        padding: 1px;
-        padding-top: 0.5em;
-    }
+dl.dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 0.4rem;
+    grid-auto-flow: row;
+    margin-bottom: 1rem;
     dt {
-        width:30%;
+        grid-column: 1;
         font-weight: bold;
         text-align:right;
         min-height: 1px;
         overflow-x: auto;
         overflow-y: hidden;
-        &:last-of-type {
-            padding-bottom: 0.2em;
-        }
+        display: flex;
+        justify-content: end;
+        align-items: start;
     }
     dd {
+        grid-column: 2;
         overflow-x: auto;
-        width:60%;
-        padding-left:1em;
         margin-left: 0px;
         overflow-y: hidden;
-        &:last-of-type {
-            padding-bottom: 0.2em;
-        }
+        display: inline-block;
     }
     dd + dd {
-        width: 100%;
-        padding-left: calc(30% + 1em);
-        padding-top:4px;
+        margin-top: -0.4em;
     }
-    dt + dt {
-        padding-right: 60%;
-    }
-    dt + dt + dd {
-        margin-top: -1.625em; /* own height including padding */
-        padding-left: calc(30% + 1em);
-    }
-    
-    dd p, dd ul, dd ol {
-        line-height: inherit;
+}
+
+@media screen and (max-width: 620px) {
+    dl.dl {    
+        grid-template-columns: 1fr;
+        dt {
+            justify-content: left;
+        }
+        dd {
+            grid-column: 1;
+        }
     }
 }
