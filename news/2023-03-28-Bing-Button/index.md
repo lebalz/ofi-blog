@@ -8,9 +8,12 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 
 # Bing Button entfernen
 
-#### :mdi-microsoft-edge--cyan: :mdi-microsoft--blue:
+#### :mdi-microsoft-edge--cyan: :mdi-microsoft--blue: :mdi-microsoft-bing--blue:
+
+![--width=220px](images/remove-bing-button.png)
 
 Der prominente Bing-Knopf in Edge loswerden? So gehts...
+
 
 <!-- truncate -->
 
