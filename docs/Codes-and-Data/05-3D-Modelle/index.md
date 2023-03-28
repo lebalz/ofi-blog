@@ -2,7 +2,7 @@
 sidebar_custom_props:
   id: 5015adf7-cae6-4b00-a26f-945520d79975
 ---
-# 3D Drucken 
+# 3D Modelle 
 
 Mit einem 3D-Drucker lassen sich dreidimensionale Objekte erzeugen. Dabei arbeiten alle gängigen Druckverfahren schichtweise - das Objekt wird aus mehreren Schichten zusammengesetzt, wobei eine einzelne Schicht zweidimensional auf die darunterliegende Schicht aufgetragen wird.
 
