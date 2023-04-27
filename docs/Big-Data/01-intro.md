@@ -35,6 +35,34 @@ Im Buch gibt es sechs Kapitel zu Spezialthemen. Sie wählen eines dieser Themen 
 
 Jedes Thema kann von maximal vier Schüler:innen gewählt werden. Jede Gruppe bestimmt eine Gruppenchef:in.
 
+#### ⭐ ChatGPT
+
+Eine aktuelles Spezial-Thema ist ChatGPT. Der Vortrag soll folgende Fragen im Detail beantworten:
+
+- Was ist ChatGPT?
+- Wie funktioniert ChatGPT?
+- Was sind die Grenzen von ChatGPT?
+- Turing-Test - was ist das und kann ChatGPT den Test bewältigen?
+- Eigene Meinung: Wie soll ChatGPT in der Schule eingesetzt werden?
+
+:::details Material & Vorgehen
+### Vorgehen
+- Artikel lesen
+- ChatGPT ausprobieren
+- diskutieren
+
+### Material
+- [👉 Interaktive Sprachmodell nach GPT-3: ChatGPT steht allen Interessierten offen](https://www.heise.de/news/Interaktives-Sprachmodell-nach-GPT-3-ChatGPT-steht-allen-Interessierten-offen-7364694.html)
+- [👉 Kommentar: ChatGPT – keine Intelligenz, keine Panik!](https://www.heise.de/meinung/Kommentar-zu-ChatGPT-Keine-Intelligenz-keine-Panik-7392906.html)
+- [👉 Wie man KI-generierte Texte erkennen kann](https://www.heise.de/hintergrund/Wie-man-KI-generierte-Texte-erkennen-kann-7434812.html)
+- [👉 Interview mit KI-Forscherin Warum der Chat-Bot Mist erzahlt](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/EbLVT1S-ttpIt0frqG95QgkBMPGiyGAO0TKjS74zzVtcqA?e=qOUEbI)
+- [👉 An A.I. Pioneer on What We Should Really Fear](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/EWVq7NbTYh1OkZ3kAtgWlsIBasSy4NQdfn3CrNbWBHGJzw?e=Ol01Ql)
+
+### Ausprobieren
+- [👉 chat.openai.com](https://chat.openai.com/auth/login)
+- [👉 open-assistant.io](https://open-assistant.io/de)
+:::
+
 ### 2. Lesen
 Alle lesen zwei bis drei Kapitel - die Einleitung und die zum Thema passenden Kapitel gem. untenstehender Tabelle.
 
@@ -42,12 +70,13 @@ Alle lesen zwei bis drei Kapitel - die Einleitung und die zum Thema passenden Ka
 
 | Thema         | Kapitel                  | Gruppe                      |
 | :------------ | :----------------------- | :-------------------------- |
-| Daten         | Einleitung, Daten        | Jael, Noemi, Rownok, Matteo |
-| Justiz        | Einleitung, Justiz       | Uma, Alessia, Kyra, Annic   |
-| Medizin       | Einleitung, Medizin      | Mia, Berenike, Eline        |
-| Autos         | Einleitung, Autos        | Maëlle N., Maëlle A., Luana |
-| Kriminalität  | Einleitung, Kriminalität | Cedric, Julien, Emil        |
-| Macht / Kunst | Einleitung, Macht, Kunst | Cindy, Léonie, Jana, Riana  |
+| Daten         | Einleitung, Daten        | ... |
+| Justiz        | Einleitung, Justiz       | ... |
+| Medizin       | Einleitung, Medizin      | ... |
+| Autos         | Einleitung, Autos        | ... |
+| Kriminalität  | Einleitung, Kriminalität | ... |
+| Macht / Kunst | Einleitung, Macht, Kunst | ... |
+| ChatGPT | Angegebenes Material | ... |
 </div>
 
 **Machen Sie sich Notizen, damit Sie sich später schnell wieder im Buch zurecht finden**. Selbstverständlich dürfen Sie auch weitere Kapitel oder gar das ganze Buch lesen.
