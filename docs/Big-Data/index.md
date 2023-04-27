@@ -13,7 +13,9 @@ Hannah Fry zeigt in ihrem Buch [«Hello World»](https://www.chbeck.de/buehnen/h
 
 ![--width=300px](images/book-cover_hannah-fry_hello-world.jpeg)
 
-[@download --download Herunterladen \*](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ef6zr_CP9kdNlGNj5ABP_DUBMkbxk7ptsspnIhkqVhNgtg?e=xIIKE2)
+[@download --download Herunterladen (Deutsch) \*](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ef6zr_CP9kdNlGNj5ABP_DUBMkbxk7ptsspnIhkqVhNgtg?e=xIIKE2)
+
+[@download --download Herunterladen (Englisch)](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ERn8JlEzHeZGrIey2zUv9xABWwCwsOH27OfxzdSpzldj3Q?e=d03G1L)
 
 In der nächsten Zeit setzen Sie sich anhand des Buchs von Hannah Fry gruppenweise mit diesem Thema auseinander und halten einen Vortrag dazu.
 
