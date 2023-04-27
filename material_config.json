@@ -51,11 +51,6 @@
       "ignore": []
     },
     {
-      "from": "docs/Big-Data/",
-      "to": "versioned_docs/version-25h/06-Big-Data",
-      "ignore": []
-    },
-    {
       "from": "docs/Netzwerke-of/001-Schichtenmodell/",
       "to": "versioned_docs/version-25h/07-Netzwerke/01-Schichtenmodell",
       "ignore": []
