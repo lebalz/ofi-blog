@@ -6,9 +6,7 @@ sidebar_custom_props:
     ref: https://www.craft.do/s/kxit0Au4rvfBMM/x/0DA58E70-8E74-4CA6-ABCE-DE3B7634BA2C
 ---
 
-# Gesellschaft
-
-## Big Data
+# Big Data
 
 Mobiltelefone, Uhren, Sensoren, Kameras und Webseiten sammeln andauernd Informationen über uns. Algorithmen suchen mit Hilfe von Künstlicher Intelligenz in diesen riesigen Datensammlungen nach Mustern und teilen uns in Kategorien ein. Dies wird als «Big Data» bezeichnet.
 Hannah Fry zeigt in ihrem Buch [«Hello World»](https://www.chbeck.de/buehnen/hannah-fry-hello-world/) für verschiedene Bereiche anhand von Beispielen auf, was heute mit «Big Data» gemacht wird und welche Auswirkungen das auf unser Leben hat. Es stellt sich die Frage, wann «Big Data» wünschenswert und hilfreich ist und wann unangenehm oder sogar gefährlich.
@@ -128,10 +126,15 @@ Informieren Sie sich bei zusätzlichen Quellen über Ihr Thema:
 - https://www.srf.ch/news/panorama/automatische-gesichtserkennung-heute-im-stadion-morgen-ueberall
 
 
-#### 6. Kunst
+#### 6. Macht und Kunst
 
 - https://srf.ch/play/tv/redirect/detail/4b6a8647-b179-4dd8-89ec-3445e01dcda5
 - https://mixed.de/neue-bild-ki-zeigt-das-potenzial-riesiger-ki-modelle/
+- https://abcnews.go.com/US/real-worry-ai-making-harder-spot-fake-images/story?id=98188795
+
+#### 7. ChatGPT
+
+- https://www.theverge.com/2023/4/19/23689879/ai-drake-song-google-youtube-fair-use
 
 </details>
 

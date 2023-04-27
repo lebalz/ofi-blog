@@ -248,6 +248,14 @@
       "from": "docs/pgzero/",
       "to": "versioned_docs/version-26e/03-Programmieren-1/05-PyGameZero",
       "ignore": []
+    },
+    {
+      "from": "docs/Big-Data/",
+      "to": "versioned_docs/version-26e/07-Big-Data",
+      "ignore": [
+        "02-powerpoint.md",
+        "03-cookies.md"
+      ]
     }
   ],
   "26P": [
@@ -387,6 +395,14 @@
       "from": "docs/pgzero/",
       "to": "versioned_docs/version-26P/03-Programmieren-1/05-PyGameZero",
       "ignore": []
+    },
+    {
+      "from": "docs/Big-Data/",
+      "to": "versioned_docs/version-26P/07-Big-Data",
+      "ignore": [
+        "02-powerpoint.md",
+        "03-cookies.md"
+      ]
     }
   ],
   "24ef": [
