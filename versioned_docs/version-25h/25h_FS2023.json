@@ -35,13 +35,14 @@
         "type": "holiday"
     },
     {
-        "cells": ["26.04.2023","Computer","Rechnerarchitektur"]
+        "cells": ["26.04.2023","Wechsel mit Math","Kompensation"],
+        "type": "holiday"
     },
     {
         "cells": ["03.05.2023","Computer","Rechnerarchitektur"]
     },
     {
-        "cells": ["10.05.2023","Computer","🚧🚧🚧"]
+        "cells": ["10.05.2023","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
     },
     {
         "cells": ["17.05.2023","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
@@ -63,10 +64,7 @@
         "type": "event"
     },
     {
-        "cells": ["21.06.2023","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
-    },
-    {
-        "cells": ["21.06.2023","Abgabe Projekt","um 22:00 Uhr"],
+        "cells": ["21.06.2023","Abschluss Projekt und ABGABE","🚀🚦🧨🪚⚙️🌡🤖"],
         "type": "test"
     },
     {
