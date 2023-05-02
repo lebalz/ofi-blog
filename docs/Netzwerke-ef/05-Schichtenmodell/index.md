@@ -96,14 +96,14 @@ Die Aufgaben der einzelnen Schichten sind:
    - Bilden von **Paketen**.
    - Definieren eins von den darunterliegenden Netzwerken unabhängigen **Adressierungsschemas** (**IP-Adressen**).
    - Finden eines **Wegs** für Nachrichten von A nach B durch die darunterliegenden Netzwerke.
-   - **Weiterleiten** von Paketen entsprechend dem korrekten Weg von A nach B. Weiterleiten beudetet hier das Übergeben des Pakets an die darunterliegende Netzwerkzugangsschicht.
+   - **Weiterleiten** von Paketen entsprechend dem korrekten Weg von A nach B. Weiterleiten bedeutet hier das Übergeben des Pakets an die darunterliegende Netzwerkzugangsschicht.
    - Typische Geräte auf dieser Schicht sind **Router**.
 
 3. **Transportschicht**  
    Sie ermöglicht den **End-zu-End-Transport** von Nachrichten zwischen zwei Endpunkten. Als Endpunkte sind hier **Anwendungen**, wie Browser und Webserver-Programm gemeint. Die Transportschicht erlaubt auch den Aufbau von **logische Verbindungen** zwischen solchen Endpunkten, innerhalb von welchen dann eine **sichere** Übertragung von Nachrichten stattfindet. Dazu gehört:
    - Bilden von **Segmenten**. So heissen die Nachrichten, welche über eine **logische Verbindung** übetragen werden.
    - Definieren eines **Adressierungsschemas**, um logische Verbindungen auseinanderhalten zu können (**Ports**).
-   - Bei grossen Nachrichtem die **Aufteilung** in kleinere Teile, welche dann in ein Paket der Internetschicht passen. Dieser Vorgang heisst **Segmetierung**. Daher der Name Segment.
+   - Bei grossen Nachrichten die **Aufteilung** in kleinere Teile, welche dann in ein Paket der Internetschicht passen. Dieser Vorgang heisst **Segmetierung**. Daher der Name Segment.
    - Beim Empfang der Segmente die Überwachung, dass alle Segmente **lückenlos** empfangen und in der richtigen Reihenfolge wieder **zusammengesetzt** werden.
    - Auf dieser Schicht gibt es keine typischen Geräte ausser den Computer selber.
 
