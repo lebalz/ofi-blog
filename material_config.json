@@ -227,8 +227,7 @@
         "02-Grafikformate-v24",
         "03-Compression-v24",
         "05-QR-Codes"
-      ],
-      "open": true
+      ]
     },
     {
       "from": "docs/Programmieren-1/02-Turtlegrafik/010-koch.md",
@@ -253,7 +252,8 @@
       "ignore": [
         "02-powerpoint.md",
         "03-cookies.md"
-      ]
+      ],
+      "open": true
     }
   ],
   "26P": [
@@ -378,8 +378,7 @@
         "03-Compression-v24",
         "05-QR-Codes",
         "05-3D-Modelle"
-      ],
-      "open": true
+      ]
     },
     {
       "from": "docs/Programmieren-1/04-Testumgebung/26eP-test/",
@@ -400,7 +399,8 @@
       "ignore": [
         "02-powerpoint.md",
         "03-cookies.md"
-      ]
+      ],
+      "open": true
     }
   ],
   "24ef": [
