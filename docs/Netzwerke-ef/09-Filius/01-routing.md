@@ -6,7 +6,7 @@ sidebar_custom_props:
 
 In lokalen Netzwerken (LANs) die mit Switches verbunden sind, können die verbundenen Rechner nur untereinander Nachrichten austauschen. Sobald es aber darum geht, Nachrichten über die Netzwerkgrenzen hinweg zu transportieren, braucht es eine Verbindung zwischen den Netzwerken: der Router. 
 
-:::aufgabe Routing
+:::aufgabe 1. Routing
 <Answer type="state" webKey="b491cb01-6973-4ab7-88f6-84b7a58ffc46" />
 
 Material
@@ -24,7 +24,7 @@ Erfassen Sie Ihre Antwort als Text und speichern Sie das Filius-Projekt, damit S
 :::
 
 
-:::aufgabe Standardgateway
+:::aufgabe 2. Standardgateway
 <Answer type="state" webKey="c94c4dff-6b2f-434b-9393-9f08667ee8df" />
 
 In der obigen Aufgabe werden Sie festgestellt haben, dass der Versuch mit `ping` über die Netzwerkgrenze hinweg gescheitert ist.
@@ -44,7 +44,7 @@ Speichern Sie ihr Filius-Projekt und markieren Sie die Aufgabe als erledigt.
 
 ### Selbsttest
 
-:::aufgabe
+:::aufgabe 3.
 Füllen Sie die Lücken im Bild aus, indem Sie aus den beiden angehängten Filius-Traces die MAC- und IP-Addressen der Geräte A, B und des Routers herauslesen.
 
 Vergleichen Sie anschliessend Ihre Lösung mit der Musterlösung.
@@ -79,10 +79,10 @@ Zwei Netzwerke über einen Router verbinden ist schon mal was. Das Internet best
 
 ![](images/01-drei-router.png)
 
-:::aufgabe
+:::aufgabe 4.
 <Answer type="state" webKey="c441286f-5882-4b49-86d7-e9d0c85c3a52" />
 
-- Öffnen Sie Ihr Filius-Projekt aus der letzten Filius-Aufgabe und speichern Sie es unter einem neuen Namen.
+- Öffnen Sie Ihr Filius-Projekt aus Aufgabe 2 und speichern Sie es unter einem neuen Namen.
 - Benennen Sie den vorhandenen Vermittlungsrechner in Router 1 um und fügen Sie die Router 2 und 3, so wie oben dargestellt ein.
 - Konfigurieren Sie die IP-Adressen der Routerschnittstellen wie folgt:
     - Router 1 und Router 3: Alle Schnittstellen erhalten die jeweils tiefste im betreffenden Netzwerk verfügbare Adresse.
@@ -91,6 +91,9 @@ Zwei Netzwerke über einen Router verbinden ist schon mal was. Das Internet best
 
 <Answer type="state" webKey="5e78b7fe-12f6-4052-9f26-6f95d23e8359" />
 
+
+:mdi-arrow-right: Nächste Aufgabe
+
 <Solution webKey="6c3d7bbd-8fba-4853-9daf-b739a0314d8d">
 
 Das ping kommt nur bis zum **Router 1**. Dieser weiss nicht wohin er ein Paket mit der Adresse `10.0.0.100` weiterleiten soll, da er in seiner Routingtabelle weder das Netzwerk `10.0.0.0`, noch eine Default-Route eingetragen hat.
@@ -98,10 +101,10 @@ Das ping kommt nur bis zum **Router 1**. Dieser weiss nicht wohin er ein Paket m
 
 :::
 
-:::aufgabe Default Route
+:::aufgabe 5. Default Route
 <Answer type="state" webKey="31614442-2427-4614-8216-a73e07082052" />
 
-In der letzten Aufgabe haben Sie festgestellt, dass ein ping von `192.168.0.10` zu `10.0.0.100` nicht über den Router 1 hinauskommt.
+In Aufgabe 4 haben Sie festgestellt, dass ein ping von `192.168.0.10` zu `10.0.0.100` nicht über den Router 1 hinauskommt.
 
 Dies ist so, weil der Router 1 nicht weiss, wohin er das Paket senden soll, da er weder eine Route zum Netzwerk `10.0.0.0`, noch eine Default-Route zur Verfügung hat.
 
@@ -116,7 +119,7 @@ Wie weit kommt Ihr ping jetzt?
 :mdi-arrow-right: Nächste Aufgabe
 :::
 
-:::aufgabe
+:::aufgabe 6.
 <Answer type="state" webKey="035cc3ff-aa0f-412e-ae09-4aa9ca3da67e" />
 
 Im letzten Schritt haben Sie festgestellt, dass das ping jetzt bis Router 2 kommt, aber dort ist wieder Schluss.
@@ -129,9 +132,11 @@ Erfassen Sie die nötigen Werte für Netzmaske, Gateway und Schnittstelle als Te
 
 Wie weit kommt Ihr ping jetzt?
 <Answer type="text" webKey="2e50853d-7c43-40e2-b684-bed7d04c30e3" />
+
+:mdi-arrow-right: Nächste Aufgabe
 :::
 
-:::aufgabe
+:::aufgabe 7.
 <Answer type="state" webKey="2d1021d4-272e-4dce-a023-58cb256456ca" />
 
 Der ping kommt jetzt bis zum Notebook mit der Adresse `10.0.0.100`. Aber auf dem Rückweg bleibt es beim Router 3 stecken.
