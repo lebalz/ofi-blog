@@ -43,10 +43,10 @@
         "cells": ["28.04.2023","Netzwerke","Frame + IP/ARP Besprechen und Video erstellen"]
     },
     {
-        "cells": ["05.05.2023","Netzwerke","TCP, 3-Way Handshake"]
+        "cells": ["05.05.2023","Netzwerke","Netzwerksimulation mit Filius"]
     },
     {
-        "cells": ["12.05.2023","Netzwerke","HTTP/FTP/SMTP"]
+        "cells": ["12.05.2023","Netzwerke","TCP, 3-Way Handshake"]
     },
     {
         "cells": ["19.05.2023","Auffahrt",""],
@@ -64,7 +64,7 @@
         "type": "holiday"
     },
     {
-        "cells": ["16.06.2023","",""]
+        "cells": ["16.06.2023","Netzwerke","HTTP/FTP/SMTP"]
     },
     {
         "cells": ["23.06.2023","",""]

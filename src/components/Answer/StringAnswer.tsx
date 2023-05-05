@@ -104,6 +104,7 @@ const StringAnswer = observer((props: StringProps) => {
           spellCheck={false}
           onChange={(e) => onChange(e.target.value)}
           value={doc.value}
+          placeholder={props.placeholder}
           disabled={!doc.loaded || doc.readonly || props.disabled}
         />
       )}
