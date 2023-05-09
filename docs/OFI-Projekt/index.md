@@ -158,14 +158,19 @@ Sie setzen sich mit dem Thema Blockchain und Bitcoins auseinander.
 
 ![](https://www.leparisien.fr/resizer/pgNoLN8LeaWEP6mjBtM5JTPYJhE=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/J5WMRGQC4NEZXAPJERTHG7MXBA.jpg)
 
-### Simulation
-Mit Simulationen lässt sich die Wirklichkeit modellhaft abbilden und darin können Theorien überprüft und getestet werden.
+### Modellieren
 
-#### Insightmaker
-Sie arbeiten sich in ein Simulationsprogramm, bspw. ins kostenlose [Insightmaker](https://insightmaker.com), ein und modellieren damit ein Phänomen wie etwa eine Räuber-Beute-Beziehung, eine Monte-Carlos Simulation oder das Game of Life.
+#### Einarbeitung in Blender
 
-Die beiden Seiten https://oinf.ch/kurs/simulationen und https://craft.dos/bwNrfufaSrdE3V geben einen guten Überblick und Hilfestellungen für das Vorgehen und entsprechende Simulationen.(https://insightmaker.com/images/diagram_slide.png)
+[👉 Blender](https://www.blender.org/)
 
+[@youtube](https://www.youtube-nocookie.com/embed/LJ9dvcpsatg)
+
+#### 3D Modelle & 3D-Druck
+
+Einarbeitung in ein 3D-Druck Programm: [👉 10 CAD Programme](https://all3dp.com/de/2/3d-drucker-cad-program-kostenlos/)
+
+An der Schule kann mit einem Prusa MK3+ mit MMU2 (Mehrfarbendruck) gedruckt werden.
 ### Netzwerk
 
 Netzwerksimulation mit Filius - wie funktioniert das Internet im Detail? Was ist eine MAC-Adresse, was sind ARP-Tabellen und wie ist ein hierarchisches Netzwerk aufgebaut?
@@ -191,6 +196,8 @@ Einarbeitung in Node-RED - automatisch Telegram-Nachrichten verschicken - z.B. m
 - Kritische Sicht auf den Chat-Bot
 - Hintergründe
 - Was ermöglicht mir ChatGPT? Kann ich damit etwas programmieren? Eine Webseite machen? Kunst erstellen? ...
+
+[👉 Aktueller TED Talk](https://www.ted.com/talks/imran_chaudhri_the_disappearing_computer_and_a_world_where_you_can_take_ai_everywhere): Wenn Mensch und AI verschmelzen.
 
 #### Artificial Intelligence, Machine Learning, Deep Learning - was bedeuten diese Begriffe?
 
