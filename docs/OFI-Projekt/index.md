@@ -158,25 +158,13 @@ Sie setzen sich mit dem Thema Blockchain und Bitcoins auseinander.
 
 ![](https://www.leparisien.fr/resizer/pgNoLN8LeaWEP6mjBtM5JTPYJhE=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/J5WMRGQC4NEZXAPJERTHG7MXBA.jpg)
 
-### Big Data / Data Mining
-
-#### Was ist Big Data und wie beeinflusst es unser Leben?
-Sie lesen zum Beispiel das Buch von Hannah Fry[^1] und beleuchten den kritisch den Einfluss der permanenten Datensammlung auf unsere Gesellschaft.
-
-![--width=300px](images/book-cover_hannah-fry_hello-world.jpeg)
-
-[@download --download Herunterladen](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ef6zr_CP9kdNlGNj5ABP_DUBMkbxk7ptsspnIhkqVhNgtg?e=xIIKE2)
-
-
 ### Simulation
 Mit Simulationen lässt sich die Wirklichkeit modellhaft abbilden und darin können Theorien überprüft und getestet werden.
 
 #### Insightmaker
 Sie arbeiten sich in ein Simulationsprogramm, bspw. ins kostenlose [Insightmaker](https://insightmaker.com), ein und modellieren damit ein Phänomen wie etwa eine Räuber-Beute-Beziehung, eine Monte-Carlos Simulation oder das Game of Life.
 
-Die beiden Seiten https://oinf.ch/kurs/simulationen und https://craft.dos/bwNrfufaSrdE3V geben einen guten Überblick und Hilfestellungen für das Vorgehen und entsprechende Simulationen.
-
-![](https://insightmaker.com/images/diagram_slide.png)
+Die beiden Seiten https://oinf.ch/kurs/simulationen und https://craft.dos/bwNrfufaSrdE3V geben einen guten Überblick und Hilfestellungen für das Vorgehen und entsprechende Simulationen.(https://insightmaker.com/images/diagram_slide.png)
 
 ### Netzwerk
 
