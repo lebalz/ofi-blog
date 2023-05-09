@@ -109,6 +109,13 @@
       "from": "docs/Video-Editor/",
       "to": "versioned_docs/version-25h/10-Computer/10-Video-Editor",
       "ignore": []
+    },
+    {
+      "from": "docs/OFI-Projekt/",
+      "to": "versioned_docs/version-25h/11-Projekt",
+      "ignore": [
+        "02-podcast.md"
+      ]
     }
   ],
   "26e": [
