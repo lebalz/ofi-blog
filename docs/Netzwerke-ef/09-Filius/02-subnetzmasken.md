@@ -16,7 +16,7 @@ Als Netzwerk-Admin wollen Sie intern 11 Subnetze definieren, wobei Sie einen zug
 <Answer type="string" webKey="5a72e855-ac8a-4c66-8192-f30db8bf9df8" solution="11111111 11111111 11111111 11110000" checker={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="11111111 11111111 11111111 00000000" width="20em"/>
 ***
 #### Dezimale Notation
-<Answer type="string" webKey="5a72e855-ac8a-4c66-8192-f30db8bf9df8" solution="255.255.240/28" checker={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="255.255.255.0/24" />
+<Answer type="string" webKey="42d5e43d-7efe-49e8-a1c0-429145670f03" solution="255.255.240/28" checker={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="255.255.255.0/24" />
 :::
 
 2. Wie viele Geräte können maximal pro Subnetz angeschlossen werden?
