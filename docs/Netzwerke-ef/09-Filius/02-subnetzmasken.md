@@ -13,10 +13,10 @@ Als Netzwerk-Admin wollen Sie intern 11 Subnetze definieren, wobei Sie einen zug
 
 :::cards --flex-basis=300px
 #### Binäre Notation
-<Answer type="string" webKey="5a72e855-ac8a-4c66-8192-f30db8bf9df8" solution="11111111 11111111 11111111 11110000" checker={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="11111111 11111111 11111111 00000000" width="20em"/>
+<Answer type="string" webKey="5a72e855-ac8a-4c66-8192-f30db8bf9df8" solution="11111111 11111111 11111111 11110000" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="11111111 11111111 11111111 00000000" width="20em"/>
 ***
 #### Dezimale Notation
-<Answer type="string" webKey="42d5e43d-7efe-49e8-a1c0-429145670f03" solution="255.255.240/28" checker={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="255.255.255.0/24" />
+<Answer type="string" webKey="42d5e43d-7efe-49e8-a1c0-429145670f03" solution="255.255.240/28" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="255.255.255.0/24" />
 :::
 
 2. Wie viele Geräte können maximal pro Subnetz angeschlossen werden?
@@ -46,12 +46,12 @@ definieren, wobei Sie einen zugewiesenen IP-Adressbereich von `192.168.0.0/ 24` 
 :::cards --flex-basis=300px
 #### Binäre Notation
 
-<Answer type="string" webKey="af3f3479-e03e-4cbf-80c7-0692c2a6fac5" solution="11111111 11111111 11111111 11100000" checker={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="11111111 11111111 11111111 00000000" width="20em"/>
+<Answer type="string" webKey="af3f3479-e03e-4cbf-80c7-0692c2a6fac5" solution="11111111 11111111 11111111 11100000" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="11111111 11111111 11111111 00000000" width="20em"/>
 ***
 
 #### Dezimale Notation
 
-<Answer type="string" webKey="7e94c98b-c945-4dce-9c3a-4a3517a79635" solution="255.255.224/27" checker={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="255.255.255.0/24" />
+<Answer type="string" webKey="7e94c98b-c945-4dce-9c3a-4a3517a79635" solution="255.255.224/27" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="255.255.255.0/24" />
 :::
 
 2. Wie viele Subnetze sind maximal möglich?
