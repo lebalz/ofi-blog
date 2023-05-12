@@ -12,6 +12,7 @@
 01-Programmieren/05-Software-Engineering/*
 01-Programmieren/02-Infrastruktur/20-Docusaurus/*
 02-Netzwerke/*
+!02-Netzwerke/10-TCP
 10-IoT-Workshop/*
 !10-IoT-Workshop/04-protokolle
 02-Netzwerke/_category_.json
