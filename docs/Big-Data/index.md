@@ -151,7 +151,7 @@ In der Gruppe besprechen Sie die folgenden Punkte:
 5. Wie wird der Vortrag in der Gruppe aufgeteilt?
 6. Wie sollen die Folien gestaltet werden?
 
-Halten Sie schriftlich in einem Protokoll fest, was Sie diskutiert haben. Das Protokoll geben Sie als PDF-Datei per E-Mail am Ende der Doppellektion ab. Es fliesst in die Bewertung mit ein.
+Halten Sie **schriftlich in einem Protokoll** fest, was Sie zu den obigen 6 Punkten diskutiert haben. Ein gängiges Protokoll enthält 3/4-2 Seiten. Das Protokoll geben Sie als PDF-Datei **per E-Mail** am Ende der Doppellektion ab. Es fliesst in die Bewertung mit ein.
 
 ### 5. Vortrag vorbereiten
 Sie erstellen in der Gruppe Folien für Ihre Präsentation. Dabei beachten Sie die Hinweise für gute Präsentationen.
