@@ -7,7 +7,7 @@ sidebar_custom_props:
 ::::aufgabe 1: Adressierbare Geräte
 <Answer type="state" webKey="6b555899-4208-4bd5-ab2f-6351a4267e99" />
 
-Als Netzwerk-Admin wollen Sie intern 11 Subnetze definieren.
+Als Netzwerk-Admin wollen Sie intern 11 Subnetze definieren, wobei Sie einen zugewiesenen IP-Adressbereich von `192.168.0.0/ 24` haben.
 
 1. Wie lautet die Subnetzmaske?
 
@@ -37,7 +37,7 @@ Als Netzwerk-Admin wollen Sie intern 11 Subnetze definieren.
 <Answer type="state" webKey="be2aecbf-1c0a-4617-a4df-a75f9b83647e" />
 
 Als Netzwerk-Admin wollen Sie möglichst viele Subnetze mit jeweils **15 Geräten** 
-definieren.
+definieren, wobei Sie einen zugewiesenen IP-Adressbereich von `192.168.0.0/ 24` haben
 
 1. Was für eine Subnetzmaske verwenden Sie?
 
@@ -76,7 +76,7 @@ definieren.
 Material
 : Download [👉 SubnetzeNWAusgangslage.fls](assets/02-SubnetzeNWAusgangslage.fls)
 
-Gesucht sind ist die Netzwerkkonfiguration für folgende Architektur:
+Gesucht sind die Netzwerkkonfiguration für folgende Architektur, wobei Sie einen zugewiesenen IP-Adressbereich von `192.168.0.0/ 24` haben.
 
 ![](images/02-subnetze.png)
 
