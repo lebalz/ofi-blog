@@ -4,6 +4,13 @@ sidebar_custom_props:
 ---
 # 10. TCP Protokoll
 
+:::aufgabe
+<Answer type="state" webKey="351dfc5b-3f4b-4392-a521-249dae0338b7" />
+
+Bearbeiten Sie die Einstiegsaufgabe unter [👉 Inf-Schule.de](https://www.inf-schule.de/rechnernetze/filius/clientserver/erkundung_clientserver). Halten Sie wichtige Erkenntnisse unten fest und lesen Sie im Anschluss die untenstehenden Hintergründe zum TCP Protokoll nach. 
+
+<Answer type="text" webKey="460720ac-cde2-41ed-b53c-e592e30d1426" />
+:::
 
 Das *Transmission Control Protocol* (__TCP__) ist ein Protokoll für eine gesicherte Verbindung zwischen zwei Systemen. Die Sicherung besteht in der Bestätigung für empfangene Datenpakete. Erhält der Sender innerhalb einer bestimmten Zeitspanne keine Bestätigung, wird von einem Fehler ausgegangen und das entsprechende Paket erneut versandt. Daneben **garantiert** TCP die Erhaltung der Sequenzreihenfolge zwi-schen den einzelnen Datenpaketen einer Datenübertragung. [^1]
 
@@ -47,6 +54,7 @@ sequenceDiagram
 ```
 
 Zum Aufbau einer Verbindung sendet ein Host (Host A :mdi-account-tie-woman--blue:) einem anderen Host (Host B :mdi-account-tie--green:), mit dem er eine Verbindung aufbauen will, ein Segment, in dem das __SYN-Flag__ gesetzt ist. Mit diesem Segment teilt Host A :mdi-account-tie-woman--blue: Host B :mdi-account-tie--green: mit, dass der Aufbau einer Verbindung gewünscht wird. Die __Sequenznummer__ des von Host A :mdi-account-tie-woman--blue: gesendeten Segments gibt Host B :mdi-account-tie--green: ausserdem an, welche Sequenznummer Host A :mdi-account-tie-woman--blue: zur Datenübertragung verwendet. Sequenznummern sind notwendig, um sicherzustellen, dass die Daten vom Sender in der **richtigen Reihenfolge** beim Empfänger ankommen. Der empfangende Host B :mdi-account-tie--green: kann die Verbindung nun annehmen oder ablehnen. Nimmt er die Verbindung an, wird ein Bestätigungssegment gesendet. In diesem Segment sind das __SYN-Bit__ und das __ACK-Bit__ gesetzt. Im Feld für die Quittungsnummer bestätigt Host B :mdi-account-tie--green: die Sequenznummer von Host A :mdi-account-tie-woman--blue:, dadurch, dass die um Eins erhöhte Sequenznummer von Host A :mdi-account-tie-woman--blue: gesendet wird. Die Sequenznummer des Bestätigungssegments von Host B :mdi-account-tie--green: an Host A :mdi-account-tie-woman--blue: informiert Host A :mdi-account-tie-woman--blue: darüber, mit welcher Sequenznummer beginnend Host B :mdi-account-tie--green: die Daten empfängt. Schlussendlich bestätigt Host A :mdi-account-tie-woman--blue: den Empfang des Bestätigungssegments von Host B :mdi-account-tie--green: mit einem Segment, in dem das __ACK-Flag__ gesetzt ist und die um Eins erhöhte Sequenznummer von Host B :mdi-account-tie--green: im Quittungsnummernfeld eingetragen ist. Mit diesem Segment können auch gleichzeitig die ersten Daten an Host B :mdi-account-tie--green: übertragen werden. Nach dem Austausch dieser Informationen hat Host A :mdi-account-tie-woman--blue: die Bestätigung, dass Host B :mdi-account-tie--green: bereit ist Daten zu empfangen. Die Datenübertragung kann nun stattfinden. Eine TCP-Verbindung besteht immer aus genau zwei Endpunkten (Punkt-zu-Punkt-Verbindung).
+
 
 
 [^1]: Quelle: [TU Berlin](http://www.cfd.tu-berlin.de/Lehre/EDV2/tcpip/kap_2_4.html)

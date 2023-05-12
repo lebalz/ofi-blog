@@ -477,9 +477,7 @@
     {
       "from": "docs/Netzwerke-ef/",
       "to": "versioned_docs/version-24ef/02-Netzwerke",
-      "ignore": [
-        "10-TCP"
-      ],
+      "ignore": [],
       "open": true
     },
     {
