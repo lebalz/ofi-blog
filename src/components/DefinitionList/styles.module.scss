@@ -13,8 +13,8 @@ dl.dl {
         overflow-x: auto;
         overflow-y: hidden;
         display: flex;
-        justify-content: end;
-        align-items: start;
+        justify-content: flex-end;
+        align-items: flex-start;
     }
     dd {
         grid-column: 2;
