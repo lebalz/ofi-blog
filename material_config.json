@@ -102,8 +102,7 @@
       "to": "versioned_docs/version-25h/10-Computer",
       "ignore": [
         "05-praktikum"
-      ],
-      "open": true
+      ]
     },
     {
       "from": "docs/Video-Editor/",
@@ -115,7 +114,8 @@
       "to": "versioned_docs/version-25h/11-Projekt",
       "ignore": [
         "02-podcast.md"
-      ]
+      ],
+      "open": true
     }
   ],
   "26e": [
@@ -257,7 +257,6 @@
       "from": "docs/Big-Data/",
       "to": "versioned_docs/version-26e/07-Big-Data",
       "ignore": [
-        "02-powerpoint.md",
         "03-cookies.md"
       ],
       "open": true
@@ -404,7 +403,6 @@
       "from": "docs/Big-Data/",
       "to": "versioned_docs/version-26P/07-Big-Data",
       "ignore": [
-        "02-powerpoint.md",
         "03-cookies.md"
       ],
       "open": true

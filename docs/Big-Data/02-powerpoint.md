@@ -6,7 +6,10 @@ sidebar_custom_props:
 # Powerpoint
 
 :::aufgabe Präsentieren
-**Zeit**: **15 Minuten**
+<Answer type="state" webKey="4b512119-1cf9-4132-9765-9291786b20f0" />
+
+Zeit 
+: 20 Minuten
 
 Lesen Sie die folgenden Kapitel auf ict.mygymer.ch:
 
@@ -16,7 +19,7 @@ Lesen Sie die folgenden Kapitel auf ict.mygymer.ch:
 | :---------------------------------------------------------------- | :------ |
 | https://ict.mygymer.ch/praesentation/praesentieren                | ⭐️⭐️⭐️     |
 | https://ict.mygymer.ch/praesentation/allgemein/bilder             | ⭐️⭐️⭐️     |
-| https://ict.mygymer.ch/praesentation/powerpoint/animation         | ⭐️       |
+| https://ict.mygymer.ch/praesentation/powerpoint/animation         | ⭐️⭐️      |
 | https://ict.mygymer.ch/praesentation/powerpoint/videos            | ⭐️       |
 | https://ict.mygymer.ch/praesentation/powerpoint/master            | ⭐️⭐️⭐️     |
 | https://ict.mygymer.ch/praesentation/powerpoint/referentenansicht | ⭐️       |
@@ -30,6 +33,8 @@ Halten Sie einige Take-Home Messages fest:
 :::
 
 :::aufgabe
+<Answer type="state" webKey="99404fa3-59b3-4e3c-bf71-f9ce686b60a3" />
+
 Erstellen Sie eine Powerpoint Präsentation, welche folgende Kriterien erfüllt:
 - Im **Folienmaster**
   - wird ein Logo in der Kopfzeile eingefügt
@@ -41,7 +46,7 @@ Erstellen Sie eine Powerpoint Präsentation, welche folgende Kriterien erfüllt:
 - Die zweite Folie
   - zeigt eine animierte Auflistung mit min. 5 Einträgen (bei jedem Klick wird ein Bullet-Point hinzugefügt)
   - hat zusätzliche Notizen für die Referent:in.
-- Die dritte Folie
+- ⭐ Die dritte Folie (optional)
   - zeigt die folgende, selber nachgebaute Animation:
 
     ![--width=100%](images/02-ppt-animation.gif)
@@ -58,6 +63,6 @@ Achten Sie zudem darauf, bei den Effektoptionen die Haken bei **Sanft Starten** 
 
 Laden Sie die fertige Präsentation hier hoch:
 
-[@upload Upload](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/El8QzXZCEYdBv-DFYqtC6pYB4AltsnxLcxHdLY7w4maX4g)
+[@upload Upload](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EtZY3FqEE_BGvkazF5ku1MUBgBGqe8pxum4wOhz1EA4KcA)
 
 :::
