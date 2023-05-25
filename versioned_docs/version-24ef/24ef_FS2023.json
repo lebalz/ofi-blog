@@ -53,24 +53,24 @@
         "type": "holiday"
     },
     {
-        "cells": ["26.05.2023","Netzwerke","Wiederholung"]
+        "cells": ["26.05.2023","Netzwerke","TCP, 3-Way Handshake, UDP, Firewall"]
     },
     {
-        "cells": ["02.06.2023","Netzwerke","Prüfung"],
-        "type": "test"
+        "cells": ["02.06.2023","Netzwerke","Wiederholung"]
     },
     {
         "cells": ["09.06.2023","Ausfall","Mündliche Maturprüfungen"],
         "type": "holiday"
     },
     {
-        "cells": ["16.06.2023","Netzwerke","HTTP/FTP/SMTP"]
+        "cells": ["16.06.2023","Netzwerke","Prüfung Netzwerke"],
+        "type": "test"
     },
     {
-        "cells": ["23.06.2023","",""]
+        "cells": ["23.06.2023","IoT Projekt",""]
     },
     {
-        "cells": ["29.06.2023","",""],
+        "cells": ["29.06.2023","Notenschluss",""],
         "type": "event"
     },
     {
