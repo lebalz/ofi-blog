@@ -4,3 +4,6 @@ sidebar_custom_props:
 ---
 
 https://skillsforall.com/resources/lab-downloads
+
+
+TCP vs UDP: 👉 https://www.freecodecamp.org/news/tcp-vs-udp/

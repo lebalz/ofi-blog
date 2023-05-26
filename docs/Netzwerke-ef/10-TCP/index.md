@@ -2,7 +2,9 @@
 sidebar_custom_props:
   id: 5c6af9f9-244f-4106-8262-4839645fec95
 ---
-# 10. TCP Protokoll
+# 10. TCP/UDP Protokoll
+
+## TCP - Transmission Control Protocol
 
 :::aufgabe
 <Answer type="state" webKey="351dfc5b-3f4b-4392-a521-249dae0338b7" />
@@ -55,6 +57,72 @@ sequenceDiagram
 
 Zum Aufbau einer Verbindung sendet ein Host (Host A :mdi-account-tie-woman--blue:) einem anderen Host (Host B :mdi-account-tie--green:), mit dem er eine Verbindung aufbauen will, ein Segment, in dem das __SYN-Flag__ gesetzt ist. Mit diesem Segment teilt Host A :mdi-account-tie-woman--blue: Host B :mdi-account-tie--green: mit, dass der Aufbau einer Verbindung gewünscht wird. Die __Sequenznummer__ des von Host A :mdi-account-tie-woman--blue: gesendeten Segments gibt Host B :mdi-account-tie--green: ausserdem an, welche Sequenznummer Host A :mdi-account-tie-woman--blue: zur Datenübertragung verwendet. Sequenznummern sind notwendig, um sicherzustellen, dass die Daten vom Sender in der **richtigen Reihenfolge** beim Empfänger ankommen. Der empfangende Host B :mdi-account-tie--green: kann die Verbindung nun annehmen oder ablehnen. Nimmt er die Verbindung an, wird ein Bestätigungssegment gesendet. In diesem Segment sind das __SYN-Bit__ und das __ACK-Bit__ gesetzt. Im Feld für die Quittungsnummer bestätigt Host B :mdi-account-tie--green: die Sequenznummer von Host A :mdi-account-tie-woman--blue:, dadurch, dass die um Eins erhöhte Sequenznummer von Host A :mdi-account-tie-woman--blue: gesendet wird. Die Sequenznummer des Bestätigungssegments von Host B :mdi-account-tie--green: an Host A :mdi-account-tie-woman--blue: informiert Host A :mdi-account-tie-woman--blue: darüber, mit welcher Sequenznummer beginnend Host B :mdi-account-tie--green: die Daten empfängt. Schlussendlich bestätigt Host A :mdi-account-tie-woman--blue: den Empfang des Bestätigungssegments von Host B :mdi-account-tie--green: mit einem Segment, in dem das __ACK-Flag__ gesetzt ist und die um Eins erhöhte Sequenznummer von Host B :mdi-account-tie--green: im Quittungsnummernfeld eingetragen ist. Mit diesem Segment können auch gleichzeitig die ersten Daten an Host B :mdi-account-tie--green: übertragen werden. Nach dem Austausch dieser Informationen hat Host A :mdi-account-tie-woman--blue: die Bestätigung, dass Host B :mdi-account-tie--green: bereit ist Daten zu empfangen. Die Datenübertragung kann nun stattfinden. Eine TCP-Verbindung besteht immer aus genau zwei Endpunkten (Punkt-zu-Punkt-Verbindung).
 
+### Kontrollinformationen - Header
+
+![](images/data-package-tcp.svg)
+
+Damit das Protokoll richtig arbeiten kann, braucht es Informationen, die in den TCP-Header geschrieben werden. Der TCP-Header ist wie folgt aufgebaut:
+
+![](images/TCP-headers.jpg)
+
+## UDP - User Datagram Protocol
+
+**UDP** ist ein verbindungsloses, nicht-zuverlässiges und ungesichertes wie auch ungeschütztes Übertragungsprotokoll. Das bedeutet, es gibt keine Garantie, dass ein einmal gesendetes Paket auch ankommt, dass Pakete in der gleichen Reihenfolge ankommen, in der sie gesendet wurden, oder dass ein Paket nur einmal beim Empfänger eintrifft\*. Wenn Pakete verloren gehen werden diese nicht neu gesendet (z.B. ist das gestreamte Video schon weiter). Dafür hat es wesentlich weniger Overhead.
+
+\* *dies passiert eigentlich nur wenn zwei oder mehr Switches so konfiguriert sind, dass ein Loop zwischen ihnen entsteht.*
+
+Auch bei UDP braucht es einen Header, dieser enthält aber im Wesentlichen nur die Port's des Absenders und des Empfängers, die Länge des Pakets und eine Prüfsumme. Die Prüfsumme wird verwendet, um zu erkennen, ob das Paket korrekt übertragen wurde. Die Prüfsumme wird vom Sender berechnet und vom Empfänger überprüft. Wenn die Prüfsumme nicht stimmt, wird das Paket verworfen. Die Prüfsumme ist aber nicht so sicher wie bei TCP, da sie nur 16 Bit lang ist. Es kann also sein, dass ein Paket mit falschem Inhalt trotzdem akzeptiert wird.
+
+### Kontrollinformationen - Header
+
+
+![MTU: Maximum Transmission Unit - grösser kann das IP Paket nicht sein](images/data-package-udp.svg)
+
+Es gibt hier keine "Schlechter" oder "Besser" - es kommt auf den Anwendungseinsatz an! Kommt es primär auf die Übertragungsgeschwindigkeit bei tiefer Latenz (bspw. beim Gaming oder beim Streamen von hochfrequenten Sensordaten) an, so ist UDP die bessere Wahl. Soll die Übertragung zuverlässig sein, so ist TCP die bessere Wahl.
+
+![](images/UDP-headers.jpg)
+
+## TCP vs. UDP
+
+![](images/tcp-vs-udp-diagram.png)
+
+oder in einem Meme:
+
+![TCP vs. UDP](images/tcp-vs-udp-meme.png)
+:::cards
+### TCP
+```
+“Hey, i möcht Wasser trinke.”
+
+“Okay, du wetsch Wasser trinke.”
+
+“Ja, i möcht e chli Wasser trinke.”
+
+“Okay, bisch parat zum Wasser trinke?”
+
+“Ja, i bi parat zum Wasser trinke.”
+
+“Okay, i gibeder iz de grad chli Wasser.”
+
+“Okay, Super, i bi ready zum Wasser becho.”
+
+“Okay, hie hesch Wasser. Hesches becho?”
+
+“Ja, i ha z Wasser becho.”
+
+“Okay, du hesch z Wasser becho. Tschüss”
+```
+
+***
+
+### UDP
+```
+“Hey, i möcht Wasser trinke.”
+
+“Hie hesch Wasser 💦”
+```
+
+:::
 
 
 [^1]: Quelle: [TU Berlin](http://www.cfd.tu-berlin.de/Lehre/EDV2/tcpip/kap_2_4.html)
