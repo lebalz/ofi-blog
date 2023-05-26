@@ -92,6 +92,8 @@ Die grössten Sicherheitsprobleme liegen meist auf der Anwendungsebene bzw. werd
 
 Im Unterricht haben wir mit zwei Servern (einer in Deutschland, einer in Finnland) nachgestellt, wie die Schützende Wirkung von NAT (oder auch von Firewalls) umgangen werden können. Beschreiben Sie in eigenen Worten, was gemacht wurde, um eine UDP-Verbindung mit einem Server hinter einem NAT aufzubauen.
 
+Erstellen Sie dabei eine Situationsübersicht (entweder per Hand oder mit [👉 Excalidraw](https://excalidraw.com/))
+
 
 <Answer type="text" webKey="9eaf1ceb-bb52-4400-8ca7-913dd9c37766" />
 :::

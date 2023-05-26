@@ -59,6 +59,9 @@ Zum Aufbau einer Verbindung sendet ein Host (Host A :mdi-account-tie-woman--blue
 
 ### Kontrollinformationen - Header
 
+MTU
+: Maximum Transmission Unit - grösser kann das IP Paket nicht sein
+
 ![](images/data-package-tcp.svg)
 
 Damit das Protokoll richtig arbeiten kann, braucht es Informationen, die in den TCP-Header geschrieben werden. Der TCP-Header ist wie folgt aufgebaut:
@@ -76,7 +79,7 @@ Auch bei UDP braucht es einen Header, dieser enthält aber im Wesentlichen nur d
 ### Kontrollinformationen - Header
 
 
-![MTU: Maximum Transmission Unit - grösser kann das IP Paket nicht sein](images/data-package-udp.svg)
+![](images/data-package-udp.svg)
 
 Es gibt hier keine "Schlechter" oder "Besser" - es kommt auf den Anwendungseinsatz an! Kommt es primär auf die Übertragungsgeschwindigkeit bei tiefer Latenz (bspw. beim Gaming oder beim Streamen von hochfrequenten Sensordaten) an, so ist UDP die bessere Wahl. Soll die Übertragung zuverlässig sein, so ist TCP die bessere Wahl.
 
