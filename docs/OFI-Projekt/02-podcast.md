@@ -8,11 +8,9 @@ import OsTabs from '@site/src/components/OsTabs';
 
 # Erstellen eines Podcast
 
-https://podcast-agentur-hamburg.de/aufbau-einer-podcast-episode/
-
 Nach der Recherche sollten Sie soweit sein, dass Sie ein Script für Ihren Podcast erstellen können. Dabei geht es in einem ersten Schritt darum, eine **Gliederung** in einzelne Abschnitte festzulegen. Es sollte sich ein **logischer** und für die Hörerinnen und Hörer packender, nachvollziehbarer **Ablauf** ergeben.
 
-Im Artikel ["Der Aufbau einer Podcast-Episode"](https://podcast-agentur-hamburg.de/aufbau-einer-podcast-episode/) lesen Sie wie ein professioneller Podcast gegliedert werden kann.
+Im Artikel [👉 "Der Aufbau einer Podcast-Episode"](https://podcast-agentur-hamburg.de/aufbau-einer-podcast-episode/) lesen Sie wie ein professioneller Podcast gegliedert werden kann.
 
 Lesen Sie den Artikel und erstellen Sie anschliessend in einem Word-Dokument Ihre eigene Gliederung. Schreiben Sie bei jedem Abschnitt stichwortartig auf, was Sie dort behandeln werden. Teilen Sie das Dokument in Ihrem Team.
 
@@ -30,9 +28,9 @@ Für das Zusammenmischen von verschiedenem Tonmaterial eignet sich die Software 
 Unter den folgenden Links finden Sie Information zu Audacity und möglichen Quellen von freier Musik.
 
 :::danger ACHTUNG: Virenverseuchte Versionen im Umlauf
-Wenn man in Google nach Audacity sucht, wird man auf die Seite [audacity.de] gelockt. Diese Seite bietet eine **VIRENVERSEUCHTE** Version von Audicity an.
+Wenn man in Google nach Audacity sucht, wird man auf die Seite **[audacity.de]** gelockt. Diese Seite bietet eine **VIRENVERSEUCHTE** Version von Audicity an.
 
-!! NICHT HERUNTERLADEN !!
+:mdi-alert--orange: **NICHT HERUNTERLADEN** :mdi-alert--orange:
 
 Laden Sie Audacity nur mit dem nachfolgenden Link herunter.
 :::
