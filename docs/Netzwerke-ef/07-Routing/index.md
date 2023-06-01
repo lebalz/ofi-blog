@@ -65,7 +65,8 @@ flowchart TD
 Um diese Schritte durchzuführen, braucht jedes Gerät Informationen, welche in der **Routingtabelle** des Gerätes zu finden sind.
 
 ## Routingtabellen
-Alle Routingtabellen sind im Grunde genommen gleich aufgebaut:\
+Alle Routingtabellen sind im Grunde genommen gleich aufgebaut:
+
 Jede Zeile darin entspricht einer **Route** über welche ein Paket weitergeleitet werden kann. Eine Zeile muss dehalb folgende Informationen enthalten:
 
 - **Routenziel**, welches über diese Route erreicht werden kann

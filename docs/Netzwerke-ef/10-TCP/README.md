@@ -51,7 +51,7 @@ sequenceDiagram
     autonumber
     Host A-->>Host B: (FLAGS=SYN), (SEQ=x)
     Host B-->>Host A: (FLAGS=SYN,ACK), (SEQ=y), (ACK=x+1)
-    Host A-->>Host B: (FLAGS=SYN,ACK), (SEQ=x+1), (ACK=y+1)
+    Host A-->>Host B: (FLAGS=ACK), (SEQ=x+1), (ACK=y+1)
 
 ```
 

@@ -3,6 +3,14 @@ sidebar_custom_props:
   id: 4ddf5e10-b449-4918-9880-8303f2be10fe
 ---
 # 11. NAT
+
+
+:::details Präsentation
+
+<iframe src="/slides/tcp-nat-ef.html" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" />
+
+:::
+
 ## Network Address Translation
 NAT (Network Address Translation) ist ein Verfahren, dass in IP-Routern eingesetzt wird, die lokale Netzwerke mit dem Internet verbinden. Weil Internet-Zugänge in der Regel nur über eine einzige öffentliche und damit routbare IPv4-Adresse verfügen, müssen sich alle anderen Hosts im lokalen Netzwerk mit privaten IPv4-Adressen begnügen. Private IP-Adressen dürfen zwar mehrfach verwendet werden, aber besitzen in öffentlichen Netzen keine Gültigkeit. Hosts mit einer privaten IPv4-Adresse können somit nicht mit Hosts ausserhalb des lokalen Netzwerks kommunizieren.
 
