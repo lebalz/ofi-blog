@@ -473,10 +473,7 @@
     {
       "from": "docs/Netzwerke-ef/",
       "to": "versioned_docs/version-24ef/02-Netzwerke",
-      "ignore": [
-        "12-DNS",
-        "13-DHCP"
-      ],
+      "ignore": [],
       "open": true
     },
     {

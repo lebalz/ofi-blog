@@ -139,3 +139,37 @@ NS-Record
 Seit einigen Jahren wurde bekannt, dass DNS-Daten für Werbezwecke verwendet wurden. Diese Metadaten (Daten über Daten) geben ja an, auf welche Webseiten ein Benutzer zugreift. Zudem ist die Sicherheit von DNS gering: die erste Antwort auf eine Anfrage gilt. Ein Angreifer kann deshalb, wenn er nahe dem Opfer ist, diesem falsche IP-Adressen übergeben und es auf eine falsche Site lenken (Man in the Middle).
 
 Aus diesen Gründen gibt es drei neue Konzepte, die diese Probleme lösen sollen. DNS over HTTPS (DOH) und DNS over TLS (DOT) sowie DNSSEC sollen sicherstellen, dass die Daten vertraulich und kryptografisch gesichert ausgetauscht werden. Sie werden in aktuellen Browsern schon eingesetzt. Allerdings weiss der Anbieter der DNS-Dienste immer noch, auf welche Sites der User gegangen ist – potentiell sind das wieder nutzbare Daten.
+
+## Ablauf DNS-Abfrage
+
+Sie haben nun die Struktur des DNS kennengelernt und gesehen, dass es zur Verwaltung in Zonen aufgeteilt wird. Jede Zone steht unter der Aufsicht eines autoritativen Name-Servers. Doch wie funktioniert das nun, wenn Ihr Notebook einen Domain-Name zu einer IP-Adresse auflösen muss? Das werden Sie in dieser Aufgabe herausfinden.
+
+:::aufgabe 
+<Answer type="state" webKey="575005e2-40fb-47c6-9c51-52b6cdfb5024" />
+
+1. Gehen Sie auf die Seite 👉 https://tools.keycdn.com/dig Geben Sie den Domain-Name www.gbsl.ch ein, klicken Sie __:mdi-checkbox-marked: Trace__ an und lassen Sie den Namen auflösen.
+
+#### Erklärungen
+Was passiert hier genau?
+
+Die Webseite stellt einen Resover zur Verfügung, über welchen Abfragen des DNS getätigt werden können. Dabei kann der Auflösungsprozess im Detail verfolgt werden.
+
+Der Resolver frägt zunächst einen wohlbekannten, aber nicht autoritativen Webserver im Internet an. Zum Beispiel denjenigen von Google, der unter der IP-Adressse `8.8.8.8` erreichbar ist oder Cloudflare, der unter `1.1.1.1` zu finden ist.
+
+Dieser kennt den angefragten Domain-Name nicht und **leitet den Resolver an die Root-Server weiter**.
+
+Der Resolver wählt nun einen der Root-Server aus und wiederholt die Abfrage bei diesem.
+
+Der ausgewählte Root-Server kann zwar den angefragten Domain-Name auch nicht auflösen, aber er kann sagen, welches die autoritativen Name-Server für die Top-Level-Domain sind. Hier wird die Delgation sichtbar.
+
+Der Resolver wendet sich nun an einen der TLD-Name-Server und das Spiel wiederholt sich, bis der autoritative Name-Server für die unterste Subdomain im Domain-Name gefunden ist. Dieser kann nun den Domain-Name auflösen und die gesuchte IP-Adresse zurückgeben.
+
+2. Zeichnen Sie ein Sequenzdiagramm, welches die Nachrichten vom Resolver zu den verschiedenen Name-Server, sowie deren Antworten zeigt. Beachten Sie, dass die Webseite aus Teil 1 der Aufgabe, jeweils **nur die Antworten** von den einzelnen Name-Server zeigt. Die Abfrage selber sieht man nicht. Sie können diese durch einen Pfeil mit der Beschriftung `DNS-Request([abgefragter Domain-Name])` darstellen.
+   
+   Die Antwortpfeile können Sie dann mit `DNS-Response(…)` beschriften, wobei Sie die Punkte durch einen der erhaltenen DNS-Resource-Records ersetzen (idealerweise derjenige DNS-Resource-Record, der dann in der nächsten Abfrage verwendet wird).
+
+Laden Sie Ihr Sequenzdiagramm als Antwort zu dieser Aufgabe hoch.
+
+<Answer type="text" webKey="379817e8-eb18-4d08-a019-623fbfd63363" />
+
+:::
