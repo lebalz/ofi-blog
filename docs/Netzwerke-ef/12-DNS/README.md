@@ -108,7 +108,7 @@ Im Prinzip würde ein einziger Root-Server ausreichen. Da dieser aber sehr viele
 ### Autoritativer Server und Resolver
 Ein Nameserver, welcher für die Verwaltung einer Zone zuständig ist, wird __autoritativer Nameserver__ genannt. Daneben gibt es auch Nameserver, welche ihre Informationen von autoritativen Nameservern beziehen und bei sich zwischenspeichern (Caching). Das erhöht die Verfügbarkeit des DNS und senkt die Antwortzeiten bei einer Abfrage. Solche Nameserver werden oft als __Resolver__ bezeichnet.
 
-Der bei Ihrem Notebook als DNS-Server eingetragene Server ist ein solcher Resover. Der eingetragene DNS-Server wird von Ihrem Netzwerk automatisch konfiguriert, kann aber auch angepasst werden. (Achtung: Im Schulnetzwerk funktionieren selber eingtragene DNS-Server nicht, da diese von der Firewall geblockt werden.)
+Der bei Ihrem Notebook als DNS-Server eingetragene Server ist ein solcher Resolver. Der eingetragene DNS-Server wird von Ihrem Netzwerk automatisch konfiguriert, kann aber auch angepasst werden. (Achtung: Im Schulnetzwerk funktionieren selber eingtragene DNS-Server nicht, da diese von der Firewall geblockt werden.)
 
 ### Resource-Records
 Die DNS-Informationen werden als lesbarer Text in sogenannten __Zonendateinen__ konfiguriert. Ein Nameserver kann dann in dieser Zonendatei nachschauen, welche IP-Adresse zu einem bestimmten Domain-Namen gehört.
