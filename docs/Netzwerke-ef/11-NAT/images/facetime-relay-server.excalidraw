@@ -917,8 +917,8 @@
     },
     {
       "type": "text",
-      "version": 975,
-      "versionNonce": 1434624481,
+      "version": 976,
+      "versionNonce": 1329822169,
       "isDeleted": false,
       "id": "hfLhmkBV37A1vEEhSO7gj",
       "fillStyle": "solid",
@@ -939,7 +939,7 @@
       ],
       "roundness": null,
       "boundElements": [],
-      "updated": 1685704499737,
+      "updated": 1685705156646,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1045,8 +1045,8 @@
     },
     {
       "type": "text",
-      "version": 924,
-      "versionNonce": 1142184239,
+      "version": 925,
+      "versionNonce": 1412197431,
       "isDeleted": false,
       "id": "8Ba64AZljbwl723Y5WgWF",
       "fillStyle": "solid",
@@ -1067,7 +1067,7 @@
       ],
       "roundness": null,
       "boundElements": [],
-      "updated": 1685704507813,
+      "updated": 1685705156647,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1201,8 +1201,8 @@
     },
     {
       "type": "text",
-      "version": 1301,
-      "versionNonce": 1179035631,
+      "version": 1331,
+      "versionNonce": 947472631,
       "isDeleted": false,
       "id": "O-_wnVdqcpsvlU0wWk7Tz",
       "fillStyle": "hachure",
@@ -1211,11 +1211,11 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 644.5,
-      "y": 211.22975332978,
+      "x": 613.8333740234375,
+      "y": 212.22975332978,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
-      "width": 61.69993591308594,
+      "width": 122.39988708496094,
       "height": 25,
       "seed": 81738841,
       "groupIds": [
@@ -1223,16 +1223,16 @@
       ],
       "roundness": null,
       "boundElements": [],
-      "updated": 1685704495071,
+      "updated": 1685705169967,
       "link": null,
       "locked": false,
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "Server",
+      "text": "Relay-Server",
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Server",
+      "originalText": "Relay-Server",
       "lineHeight": 1.25,
       "baseline": 17
     },
@@ -1507,92 +1507,6 @@
         [
           -482.1929017447717,
           -2.995144271632512
-        ]
-      ]
-    },
-    {
-      "type": "arrow",
-      "version": 120,
-      "versionNonce": 2128771526,
-      "isDeleted": false,
-      "id": "TJLZiOOZU3URi7l8geXIN",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "x": 555.6666259765625,
-      "y": 383.72120833680316,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "width": 282.0001220703125,
-      "height": 1.666595458984375,
-      "seed": 270049350,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "boundElements": [],
-      "updated": 1685105075573,
-      "link": null,
-      "locked": false,
-      "startBinding": null,
-      "endBinding": null,
-      "lastCommittedPoint": null,
-      "startArrowhead": null,
-      "endArrowhead": "arrow",
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          282.0001220703125,
-          -1.666595458984375
-        ]
-      ]
-    },
-    {
-      "type": "arrow",
-      "version": 166,
-      "versionNonce": 195667162,
-      "isDeleted": false,
-      "id": "QjZ5h8rN58oTazBAfTHEW",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "x": 853.6666870117188,
-      "y": 394.0546433953969,
-      "strokeColor": "#000000",
-      "backgroundColor": "transparent",
-      "width": 316.66668701171875,
-      "height": 1.666656494140625,
-      "seed": 1414362502,
-      "groupIds": [],
-      "roundness": {
-        "type": 2
-      },
-      "boundElements": [],
-      "updated": 1685105078765,
-      "link": null,
-      "locked": false,
-      "startBinding": null,
-      "endBinding": null,
-      "lastCommittedPoint": null,
-      "startArrowhead": null,
-      "endArrowhead": "arrow",
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          -316.66668701171875,
-          1.666656494140625
         ]
       ]
     },

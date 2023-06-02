@@ -94,7 +94,7 @@ NAT ist deshalb **durchaus ein Sicherheitsmerkmal** für lokale Netzwerke. NAT e
 Die grössten Sicherheitsprobleme liegen meist auf der Anwendungsebene bzw. werden durch unsachgemässe Handhabung der Anwender ausgelöst, was man mit NAT nicht verhindern kann - mit einer „Stateful Inspection“ Firewall schon.
 
 
-:::aufgabe Aufbohren der NAT-Regeln / Firewall
+::::aufgabe Aufbohren der NAT-Regeln / Firewall
 
 <Answer type="state" webKey="149f79b9-7336-4220-8a10-93c661d98cb9" />
 
@@ -104,4 +104,33 @@ Erstellen Sie dabei eine Situationsübersicht (entweder per Hand oder mit [👉 
 
 
 <Answer type="text" webKey="9eaf1ceb-bb52-4400-8ca7-913dd9c37766" />
+
+<Solution webKey="cbbea909-5c59-4524-9dd2-ac2f8d385ee8" open>
+
+Ausgangslage: Maria und Reto sind in einem privaten Netzwerk und haben über eine Firewall (oder eine Firewall) Zugang zu einer öffentlichen IP-Adresse. Maria möchte mit Reto kommunizieren.
+
+![](images/network-situation.svg)
+
+Damit Maria einen Facetime-Anruf an Reto starten kann, gibt es zwei Möglichkeiten:
+Relay-Server
+: Maria und Reto sind mit einem __Relay-Server__ verbunden, welcher die Datenpakete jeweils weiterleitet. Wenn Maria nun Reto anrufen möchte, leitet der __Relay-Server__ die Pakete an Reto weiter - es klingelt. Dies funktioniert, da die Firewall von Reto standardmässig Verbindungen von innen nach aussen zulässt. Die Firewall von Maria ist nicht vorhanden, somit kann sie auch Verbindungen von aussen nach innen aufbauen. Die Voraussetzung hier also, dass Beide mit einem Relay-Server verbunden sind. 
+: **Nachteil**: Die Verbindung ist langsam, da die Datenpakete über den Relay-Server laufen müssen.
+: ![--width=90% --margin=0](images/facetime-relay-server.svg)
+Hole-Punching
+: Der Verbindungsaufbau läuft wie oben, doch das eigentliche Telefonat soll nicht über den Relay-Server laufen; Die Datenpakete sollen den **direkten** Weg zwischen Maria und Reto nehmen. Wegen der Firewall kann aber keine direkte Verbindung von Maria zu Reto (oder umgekehrt) aufgebaut werden, da eingehende Verbindungen abgelehnt werden.
+: ![--width=90% --margin=0](images/facetime-direct.svg)
+
+### Hole-Punching
+
+:::cards --basis=450px
+![Maria erhält vom Relay-Server die IP von Retos NAT/Firewall](images/facetime-direct-lsg-00.png)
+***
+![Maria öffnet ihre Firewall mit einem `ping` - es kommt keine Antwort zurück, da bei Reto kein UDP Dienst auf dem Port `53` verfügbar ist (dies ist immer so - Port 53 ist für DNS reserviert!).](images/facetime-direct-lsg-01.png)
+***
+![Maria Teilt Reto über den Relay Server mit, welche IP sie hat, und welcher Port offen ist](images/facetime-direct-lsg-02.png)
+***
+![Reto stellt eine Verbindung zu Maria her](images/facetime-direct-lsg-03.png)
 :::
+
+</Solution>
+::::
