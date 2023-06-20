@@ -44,7 +44,7 @@ Zählt, wie viele Werte im Bereich `A1:A12` zwischen 10 und 20 liegen. Bemerke, 
 - Mit einem Textfeld (__Einfügen > Formen > Textfeld__) ein Textfeld für die Anzahl Datensätze (**n**) hinzufügen.
 - Rechtsklick auf eine weisse Fläche des Diagramms __:mdi-cursor-default-click: > Als Bild speichern...__
 
-:::finding
+:::finding Erkenntnis
 - Die Stichprobengrösse **n** muss angegeben werden (=Anzahl der Datenpunkte)
 - Die Prozentwerte der einzelnen Kreissegmente müssen bei Diagrammen mit weniger als 10 Segmenten beschriftet werden.
 - Entweder in einer Legende oder direkt im Segment muss die Kategorie ersichtlich sein.
@@ -70,6 +70,8 @@ Das Säulendiagramm eignet sich besonders, um wenige Ausprägungen (bis ca. 15) 
 Das Balkendiagramm ist dem Säulendiagramm sehr ähnlich. Es entspricht einem Säulendiagramm mit vertauschten Achsen. So werden aus den vertikalen Säulen horizontale Balken und es wächst bei zunehmender Stichprobengrösse in die Länge und nicht in die Breite. Besonders gut sind Balkendiagramme für die Darstellung von Rangfolgen geeignet.
 
 :::aufgabe Geeignetes Diagramm
+<Answer type="state" webKey="16304ea3-5b50-433e-9acd-bf17e29fd52e" />
+
 Bestimmen Sie das geeignete Diagramm für die gegebene Ausgangslage.
 
 1. Sie möchten die Ausgaben Ihres letzten Monatslohnes graphisch so darstellen, dass man sieht, wie gross die prozentualen Anteile der verschiedenen Ausgabeposten waren.

@@ -6,8 +6,8 @@ sidebar_custom_props:
 
 ![--width=200px --background=transparent](images/logo.svg)
 
-Excel-Funktionen in einer anderen Sprache: 👉 https://de.excel-translator.de/translator/
+Excel-Funktionen in einer anderen **Sprache**: 👉 https://de.excel-translator.de/translator/
 
 Kostenlose Installation für Schüler:innen mit dem Schulaccount:
 
-👉 https://office.com
+👉 :mdi-microsoft-excel--green: https://office.com

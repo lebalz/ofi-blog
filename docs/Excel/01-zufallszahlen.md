@@ -18,7 +18,7 @@ sidebar_custom_props:
 <Answer type="state" webKey="b79cf614-f437-4423-b5f6-ce130530d936" />
 
 Dateiname
-: __01_intro.xlsx__
+: __Informatik/Excel/01_intro.xlsx__
 
 
 Zufallszahlen im Bereich `[-100; 100]` erzeugen und in einem Koordinatensystem darstellen

@@ -26,7 +26,7 @@ In berechneten Zellen können auch Funktionen verwendet werden, bspw. um den Dur
 <Answer type="state" webKey="cec278c2-1b76-4dec-ac65-e89514a3016f" />
 
 Dateiname
-: __00-intro.xlsx__
+: __Informatik/Excel/00-intro.xlsx__
 Vorlage
 : 👉 [00-intro.xlsx](assets/00-intro.xlsx)
 

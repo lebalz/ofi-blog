@@ -32,7 +32,7 @@ kennen.
 :::aufgabe
 
 Dateiname
-: __03-fizzbuzz.xlsx__ 
+: __Informatik/Excel/03-fizzbuzz.xlsx__ 
 Vorlage
 : 👉 [03-fizzbuzz.xlsx](assets/03-fizzbuzz.xlsx)
 
