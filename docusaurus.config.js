@@ -1,5 +1,5 @@
 const BASE_URL = '/';
-
+require('dotenv').config()
 const fs = require('fs');
 const path = require("path");
 const math = require('remark-math');
@@ -23,12 +23,35 @@ const admonitionConfig = {
 };
 
 const GIT_COMMIT_SHA = process.env.DRONE_COMMIT_SHA || Math.random().toString(36).substring(7);
+
+
+/** @type { (string
+  | {
+      src: string;
+      [key: string]: string | boolean | undefined;
+    }
+)[]} */
+const scripts = []
+
+if (process.env.REACT_APP_UMAMI_SRC && process.env.REACT_APP_UMAMI_ID) {
+  scripts.push(
+    {
+      src: process.env.REACT_APP_UMAMI_SRC,
+      ['data-website-id']: process.env.REACT_APP_UMAMI_ID,
+      ['data-domains']: (process.env.REACT_APP_DOMAIN || 'http://localhost:3000').split('/').filter(w => !!w)[1],
+      async: true,
+      defer: true
+    }
+  )
+}
+  
+
 /** @return {import('@docusaurus/types').DocusaurusConfig} */
 async function createConfig() {
   return {
     title: 'Informatik',    
     tagline: 'Gymnasium Biel Seeland',
-    url: 'https://ofi.gbsl.website',
+    url: process.env.REACT_APP_DOMAIN || 'http://localhost:3000',
     baseUrl: BASE_URL,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -138,6 +161,16 @@ async function createConfig() {
         darkTheme: require('prism-react-renderer/themes/vsDark'),
         additionalLanguages: ['bash', 'powershell', 'java', 'asm6502', 'ruby', 'csharp']
       },
+      algolia: {
+        appId: process.env.REACT_APP_ALGOLIA_APP_ID || "no-id",
+        apiKey: process.env.REACT_APP_ALGOLIA_SEARCH_KEY || "no-key",
+        indexName: process.env.REACT_APP_ALGOLIA_INDEX_NAME || "no-index",
+        // Optional: see doc section below
+        contextualSearch: true,
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+      }
     },
     presets: [
       [
@@ -410,35 +443,7 @@ async function createConfig() {
             };
           },
         };
-      },
-      [
-        require.resolve("@cmfcmf/docusaurus-search-local"),
-        {
-          // Whether to also index the titles of the parent categories in the sidebar of a doc page.
-          // 0 disables this feature.
-          // 1 indexes the direct parent category in the sidebar of a doc page
-          // 2 indexes up to two nested parent categories of a doc page
-          // 3...
-          //
-          // Do _not_ use Infinity, the value must be a JSON-serializable integer.
-          indexDocSidebarParentCategories: 1,
-  
-  
-          // whether to index blog pages
-          indexBlog: false,
-  
-          // whether to index static pages
-          // /404.html is never indexed
-          indexPages: false,
-          // language of your documentation, see next section
-          language: "de",
-          // setting this to "none" will prevent the default CSS to be included. The default CSS
-          // comes from autocomplete-theme-classic, which you can read more about here:
-          // https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/
-          style: undefined,
-  
-        }
-      ]
+      }
     ],
     stylesheets: [
       {
@@ -450,13 +455,7 @@ async function createConfig() {
     ],
     scripts: [
       // Object format.
-      {
-        src: 'https://umami.gbsl.website/tell-me.js',
-        ['data-website-id']: '8fc2386c-353f-487d-b58b-1e5c1f4301d7',
-        ['data-domains']: 'ofi.gbsl.website',
-        async: true,
-        defer: true
-      },
+      ...scripts,
     ],
     themes: [
       '@docusaurus/theme-live-codeblock',
