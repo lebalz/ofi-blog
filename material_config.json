@@ -257,6 +257,12 @@
       "ignore": [
         "03-cookies.md"
       ],
+      "open": false
+    },
+    {
+      "from": "docs/Excel/",
+      "to": "versioned_docs/version-26e/08-Excel",
+      "ignore": [],
       "open": true
     }
   ],
@@ -402,7 +408,12 @@
       "to": "versioned_docs/version-26P/07-Big-Data",
       "ignore": [
         "03-cookies.md"
-      ],
+      ]
+    },
+    {
+      "from": "docs/Excel/",
+      "to": "versioned_docs/version-26P/08-Excel",
+      "ignore": [],
       "open": true
     }
   ],
