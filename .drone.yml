@@ -43,6 +43,12 @@ steps:
       from_secret: "REACT_APP_UMAMI_ID"
     REACT_APP_DOMAIN:
       from_secret: "REACT_APP_DOMAIN"
+    ALGOLIA_APP_ID:
+      from_secret: "ALGOLIA_APP_ID"
+    ALGOLIA_API_KEY:
+      from_secret: "ALGOLIA_API_KEY"
+    ALGOLIA_INDEX_NAME:
+      from_secret: "ALGOLIA_INDEX_NAME"
   when:
     event:
       include:
