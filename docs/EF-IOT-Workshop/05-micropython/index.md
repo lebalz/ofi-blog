@@ -27,6 +27,13 @@ Arbeiten Sie sich durch das Tutorial durch. Erstellen Sie für jedes Programm, w
 
 [👉 MicroPython in VS Code](https://www.donskytech.com/micropython-using-vscode-pymakr-on-esp32-esp8266/)
 
+:::details Troubleshooting Keine Verbingung zum esp8266 möglich (Windows)
+Möglicherweise ist der installierte USB-Serial Treiber nicht kompatibel. VErsuchen Sie den folgenden Treiber:
+
+👉 https://sparks.gogo.co.nz/ch340.html
+
+:::
+
 :::details Troubleshooting Dateien hochladen
 Damit der Datei-Upload funktioniert, muss über eine Konfiguration festgelegt werden, wie der ESP8266 angeschlossen ist.
 
