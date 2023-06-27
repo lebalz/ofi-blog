@@ -65,7 +65,7 @@ cd /tmp/tmpbin
 wget https://files.pythonhosted.org/packages/1e/7d/ae3f0a63f41e4d2f6cb66a5b57197850f919f59e558159a4dd3a818f5082/pyserial-3.5.tar.gz
 tar -xzf pyserial-3.5.tar.gz
 cd pyserial-3.5
-python setup.py install
+sudo /usr/bin/python2.7 setup.py install
 ```
 
 Proceed to the build of the cross compiler with the following commands
