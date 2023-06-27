@@ -146,10 +146,16 @@ Proceed to flash the firmware...
 
 Sadly, WSL 2 does not support yet USB devices by default. Becaus of that we use PowerShell to flash the firmware.
 
-Open the Folder __\Micropython\esp8266\micropython\ports\esp8266__ in PowerShell
+Open the Folder containing __\Micropython\esp8266\micropython\ports\esp8266__ in PowerShell (or only the firmware you downloaded above). Make sure you have python and esptools installed:
 
 ```bash
-esptool.py --port COMXX erase_flash
+pip install esptool
+```
+
+When you encounter problems with flashing or connecting to esp8266, try using this usb serial firmware: https://sparks.gogo.co.nz/ch340.html
+
+```bash
+esptool --port COMXX erase_flash
 ```
 
 where  COMXX is repalced with the actual serial port to which we connect the ESP8266 board.
@@ -157,12 +163,12 @@ where  COMXX is repalced with the actual serial port to which we connect the ESP
 In my case, the command looked like this
 
 ```powershell
-esptool.py --port COM3 erase_flash
+esptool --port COM3 erase_flash
 ```
 
 And then upload the firmware with the command
 ```powershell
-esptool.py --port COM3 --baud 460800 write_flash --flash_size=detect 0 .\build-GENERIC\firmware-combined.bin
+esptool --port COM3 --baud 460800 write_flash --flash_size=detect 0 .\build-GENERIC\firmware-combined.bin
 ```
 
 :::
