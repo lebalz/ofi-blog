@@ -29,7 +29,8 @@ Um die Daten vom ENS160 auszulesen, müssen wir zuerst die I2C-Schnittstelle akt
 
 ```python
 from ens import ENS160 # import the device driver
-import machine # diese Bibliothek wird für die I2C-Schnittstelle benötigt - sie existiert nur auf der NodeMCU
+import machine # diese Bibliothek wird für die I2C-Schnittstelle benötigt 
+# - sie existiert nur auf der NodeMCU
 
 i2c = machine.I2C(scl=machine.Pin(5), sda=machine.Pin(4), freq=100000)
 ens160 = ENS160(i2c, temperature=22, humidity=35)
