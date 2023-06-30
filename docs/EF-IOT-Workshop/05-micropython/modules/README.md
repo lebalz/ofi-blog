@@ -138,7 +138,7 @@ make
 
 The firmware is generated under __ports/esp8266/build-GENERIC__ folder with the name __firmware-combined.bin__.
 
-[👉 Download firmware-combined.bin](./firmware-combined.bin)
+[👉 Download firmware-combined.bin](../assets/firmware-combined.bin)
 
 Proceed to flash the firmware...
 

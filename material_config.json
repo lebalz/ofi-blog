@@ -484,8 +484,7 @@
     {
       "from": "docs/Netzwerke-ef/",
       "to": "versioned_docs/version-24ef/02-Netzwerke",
-      "ignore": [],
-      "open": true
+      "ignore": []
     },
     {
       "from": "docs/EF-IOT-Workshop/",
