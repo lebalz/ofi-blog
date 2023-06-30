@@ -23,6 +23,43 @@ Suchen Sie Informationen zum Sensor ENS160 und halten Sie diese für sich im EF-
 - ...
 :::
 
+## ENS160
+
+Um die Daten vom ENS160 auszulesen, müssen wir zuerst die I2C-Schnittstelle aktivieren. Dies geschieht mit dem folgenden Code:
+
+```python
+from ens import ENS160 # import the device driver
+import machine # diese Bibliothek wird für die I2C-Schnittstelle benötigt - sie existiert nur auf der NodeMCU
+
+i2c = machine.I2C(scl=machine.Pin(5), sda=machine.Pin(4), freq=100000)
+ens160 = ENS160(i2c, temperature=22, humidity=35)
+ens160.aqi
+ens160.tvoc
+ens160.eco2
+aht21.humidity
+aht21.temperature
+```
+
+### Permanentes Abfragen der Sensoren
+
+Ein permanentes Abfragen der Sensorwerte könnte also wie folgt aufgebaut werden:
+
+```python title="main.py"
+import machine
+import time
+from ens import ENS160
+i2c = machine.I2C(scl=machine.Pin(5), sda=machine.Pin(4), freq=100000)
+ens160 = ENS160(i2c, temperature=22, humidity=35)
+
+while True:
+    # Read from the sensor
+    aqi = ens160.aqi
+    tvoc = ens160.tvoc
+    eco2 = ens160.eco2
+    print(aqi, tvoc, eco2)
+    time.sleep(1)
+```
+
 :::aufgabe Sensoren ansteuern
 
 Material
