@@ -36,8 +36,6 @@ ens160 = ENS160(i2c, temperature=22, humidity=35)
 ens160.aqi
 ens160.tvoc
 ens160.eco2
-aht21.humidity
-aht21.temperature
 ```
 
 ### Permanentes Abfragen der Sensoren
