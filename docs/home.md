@@ -13,7 +13,8 @@ sidebar_custom_props:
 ## Links:
 
 - [👉 SVG Pfad Tool](https://yqnn.github.io/svg-path-editor/)
-- 
+
+
 ### Codes und Daten
 - [Codes und Daten: https://lehrerfortbildung-bw.de](https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb1/1_i1_duc/)
 ### Big Data
