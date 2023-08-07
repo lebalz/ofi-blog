@@ -198,12 +198,6 @@ async function createConfig() {
                 label: 'Material',
                 banner: 'none'
               },
-              '25h': {
-                banner: 'none'
-              },
-              '24w': {
-                banner: 'none'
-              },
               '26e': {
                 banner: 'none'
               },

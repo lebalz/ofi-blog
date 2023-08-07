@@ -15,20 +15,14 @@ interface Course {
 
 const CourseList: Course[] = [
   {
-    title: 'Gym 1',
+    title: 'Gym 2',
     classes: [
       '26e',
       '26P'
     ]
   },
   {
-    title: 'Gym 2',
-    classes: [
-      '25h',
-    ]
-  },
-  {
-    title: 'Gym 3',
+    title: 'Gym 4',
     classes: [
       {
         uri: '24ef/home',
@@ -41,14 +35,16 @@ const CourseList: Course[] = [
     classes: [
       {
         uri: 'https://ofi.24.gbsl.website',
-        label: '24er'
-      }
-    ]
-  },
-  {
-    title: 'WMS',
-    classes: [
-      '24w'
+        label: '24'
+      },
+      {
+        uri: 'https://ofi.25.gbsl.website',
+        label: '25'
+      },
+      {
+        uri: 'https://ofi.25.gbsl.website',
+        label: 'WMS 24'
+      },
     ]
   }
 ];
