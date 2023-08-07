@@ -10,15 +10,7 @@ import fs2022 from "./25h_FS2022.json"
 import hs2022 from "./25h_HS2022.json"
 import fs2023 from "./25h_FS2023.json"
 
-# 25h
-
-<Table
-  header={["Datum", "Thema", "Inhalt"]}
-  compact
-  selectable
-  rows={fs2023}
-  order={SortTimeTableByDate()}
-/>
+# 25h Informatik
 
 :::details 1. Semester
 
@@ -123,6 +115,16 @@ import fs2023 from "./25h_FS2023.json"
   compact
   selectable
   rows={hs2022}
+  order={SortTimeTableByDate()}
+/>
+:::
+
+:::details 4. Semester
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={fs2023}
   order={SortTimeTableByDate()}
 />
 :::

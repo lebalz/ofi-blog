@@ -8,7 +8,7 @@ import { LogLevel } from "@azure/msal-browser";
 export const DOMAIN =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "https://ofi.gbsl.website";
+    : "https://ofi.25.gbsl.website";
 export const API =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3001"

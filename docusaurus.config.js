@@ -33,18 +33,15 @@ const GIT_COMMIT_SHA = process.env.DRONE_COMMIT_SHA || Math.random().toString(36
 )[]} */
 const scripts = []
 
-if (process.env.REACT_APP_UMAMI_SRC && process.env.REACT_APP_UMAMI_ID) {
-  scripts.push(
-    {
-      src: process.env.REACT_APP_UMAMI_SRC,
-      ['data-website-id']: process.env.REACT_APP_UMAMI_ID,
-      ['data-domains']: (process.env.REACT_APP_DOMAIN || 'http://localhost:3000').split('/').filter(w => !!w)[1],
-      async: true,
-      defer: true
-    }
-  )
-}
-  
+scripts.push(
+  {
+    src: 'https://umami.gbsl.website/tell-me.js',
+    ['data-website-id']: 'affec1b3-73d8-4a8a-b489-43df5db4061b',
+    ['data-domains']: 'ofi.25.gbsl.website',
+    async: true,
+    defer: true
+  }
+)  
 
 /** @return {import('@docusaurus/types').DocusaurusConfig} */
 async function createConfig() {
@@ -53,7 +50,7 @@ async function createConfig() {
     tagline: 'Gymnasium Biel Seeland',
     url: process.env.REACT_APP_DOMAIN || 'http://localhost:3000',
     baseUrl: BASE_URL,
-    onBrokenLinks: 'throw',
+    onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
     organizationName: 'lebalz', // Usually your GitHub org/user name.
@@ -91,7 +88,6 @@ async function createConfig() {
             position: 'left',
             label: 'Playground'
           },
-          {to: 'news', label: 'News', position: 'left'},
           {
             to: 'login',
             position: 'right',
@@ -203,15 +199,6 @@ async function createConfig() {
               },
               '24w': {
                 banner: 'none'
-              },
-              '26e': {
-                banner: 'none'
-              },
-              '26P': {
-                banner: 'none'
-              },
-              '24ef': {
-                banner: 'none'
               }
             },
             beforeDefaultRemarkPlugins: [
@@ -262,37 +249,6 @@ async function createConfig() {
       'docusaurus-plugin-sass',
       '@saucelabs/theme-github-codeblock',
       './src/plugins/brython-source.js',
-      [
-        './src/plugins/blog-plugin.js',
-        {
-          blogTitle: 'News',
-          routeBasePath: 'news',
-          path: 'news',
-          showReadingTime: true,
-          blogSidebarCount: 'ALL',
-          postsPerPage: 15,
-          blogSidebarTitle: 'News',
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/lebalz/ofi-blog/edit/main/',
-          admonitions: admonitionConfig,
-          beforeDefaultRemarkPlugins: [
-            remarkKbd,
-            remarkLinks,
-            remarkImg2Fig,
-            [remarkUnderline, { marker: '__', classNames: ['underline'], tagType: 'strong' }]
-          ],
-          remarkPlugins: [
-            math,
-            remarkDeflist,
-            remarkMdi,
-            [remarkDetails, { marker: ':::', tags: ['details'], classNameMap: { details: undefined } }],
-            remarkFlex,
-            remarkComments
-          ],
-          rehypePlugins: [katex]
-        },
-      ],
       // function (context, options) {
       //   return  {
       //     name: 'polyfills-for-react-live',

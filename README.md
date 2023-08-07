@@ -1,8 +1,27 @@
-# OFI Blog
+# OFI Blog v25
 
-[![Build Status](https://drone.gbsl.website/api/badges/lebalz/ofi-blog/status.svg)](https://drone.gbsl.website/lebalz/ofi-blog)
+# Abschlussjahrgang 2025
 
-[OFI Blog](https://lebalz.github.io/ofi-blog)
+This branch is deployed in [OFI Blog v25](https://lebalz.github.io/ofi-blog-v25).
+- rename the welcome page to index.tsx (the custom blog plugin is normally used to display the index page - here we do not show news...)
+- update the doc-config
+- build it with `yarn run build`
+- navigate to the build directory `cd build`
+- initialize and push a git repo. make sure to add revealjs too (by deleting the .git folder of the submodule in the build directory...)
+
+```bash
+mv src/pages/welcome.tsx src/pages/index.tsx
+yarn run build
+cd build
+rm -rf p/reveal.js/.git
+
+git init .
+git add .
+git commit -am "version Abschlussjahrgang 2025"
+git remote add origin git@github.com:lebalz/ofi-blog-v25.git
+git branch -M main
+git push -u -f origin main
+```
 
 ## Styling
 

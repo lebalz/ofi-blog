@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # ✍️ Python Material für die BYOD Prüfung
 
-<a href="https://ofi.gbsl.website/files/material_byod.zip">⬇ Download BYOD Material</a>
+<a href="https://ofi.25.gbsl.website/files/material_byod.zip">⬇ Download BYOD Material</a>
 
 Alle Python-Bezogenen Aufgabe sollen direkt auf dieser Seite gemacht werden.
 

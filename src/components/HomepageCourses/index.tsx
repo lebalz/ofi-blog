@@ -15,34 +15,9 @@ interface Course {
 
 const CourseList: Course[] = [
   {
-    title: 'Gym 1',
-    classes: [
-      '26e',
-      '26P'
-    ]
-  },
-  {
-    title: 'Gym 2',
+    title: 'Abschlussjahrgang 2025',
     classes: [
       '25h',
-    ]
-  },
-  {
-    title: 'Gym 3',
-    classes: [
-      {
-        uri: '24ef/home',
-        label: 'EF'
-      },
-    ]
-  },
-  {
-    title: 'Ehemalige',
-    classes: [
-      {
-        uri: 'https://ofi.24.gbsl.website',
-        label: '24er'
-      }
     ]
   },
   {

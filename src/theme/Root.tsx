@@ -66,7 +66,7 @@ function Root({ children }) {
         <meta property="og:description" content="Informatik Gymnasium Biel-Seeland" />
         <meta
           property="og:image"
-          content="https://ofi.gbsl.website/img/og-preview.png"
+          content="https://ofi.25.gbsl.website/img/og-preview.png"
         />
       </Head>
       <StoresProvider value={rootStore}>

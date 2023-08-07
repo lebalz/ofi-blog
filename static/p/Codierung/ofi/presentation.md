@@ -107,7 +107,7 @@ Wie lassen sich Zahlen über ein Stromkabel verschicken?
 
 Übung: Zahlensysteme
 
-https://ofi.gbsl.website
+https://ofi.25.gbsl.website
 
 
 
