@@ -14,15 +14,6 @@ import hk2022 from "./26P-HK_HS2022.json"
 
 # 26P Informatik
 
-
-<Table
-  header={["Datum", "Thema", "Inhalt"]}
-  compact
-  selectable
-  rows={fs2023}
-  order={SortTimeTableByDate()}
-/>
-
 :::details 1. Semester
 <Tabs
     defaultValue="theorie"
@@ -51,4 +42,14 @@ import hk2022 from "./26P-HK_HS2022.json"
 />
 </TabItem>
 </Tabs>
+:::
+
+:::details 2. Semester
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={fs2023}
+  order={SortTimeTableByDate()}
+/>
 :::
