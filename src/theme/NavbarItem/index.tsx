@@ -32,7 +32,7 @@ const withLoginNavbar = (Component) => {
         const msalStore = useStore('msalStore');
         const userStore = useStore('userStore');
         const { globalData } = useDocusaurusContext();
-        if (!ExecutionEnvironment.canUseDOM || props.to !== 'login') {
+        if (props.to !== 'login') {
             return <Component {...props} />;
         }
         if (OFFLINE_MODE) {
@@ -40,7 +40,7 @@ const withLoginNavbar = (Component) => {
                 <FilePicker /> <LoadedOfflineFile />
             </div>)
         }
-        if (!userStore.current) {
+        if (!ExecutionEnvironment.canUseDOM || !userStore.current) {
             return <Component {...props} />;
         }
         const versions = (globalData['docusaurus-plugin-content-docs']['default'] as { versions: string[] })

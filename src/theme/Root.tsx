@@ -11,13 +11,11 @@ import siteConfig from '@generated/docusaurus.config';
 const { OFFLINE_MODE } = siteConfig.customFields as { OFFLINE_MODE?: boolean };
 
 let msalInstance: PublicClientApplication;
-let selectAccount = () => {};
-let handleResponse = (response) => {};
 let Msal = ({ children }) => <>{children}</>;
 
 if (!OFFLINE_MODE) {
   msalInstance = new PublicClientApplication(msalConfig);
-  selectAccount = () => {
+  const selectAccount = () => {
     /**
      * See here for more information on account retrieval:
      * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
@@ -33,7 +31,7 @@ if (!OFFLINE_MODE) {
       rootStore.msalStore.setAccount(currentAccounts[0]);
     }
   };
-  let handleResponse = (response) => {
+  const handleResponse = (response) => {
     /**
      * To see the full list of response object properties, visit:
      * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/request-response-object.md#response
