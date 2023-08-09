@@ -38,12 +38,12 @@ const CourseList: Course[] = [
         label: '24'
       },
       {
-        uri: 'https://ofi.25.gbsl.website',
-        label: '25'
+        uri: 'https://ofi.25.gbsl.website/25h/home',
+        label: '25h'
       },
       {
-        uri: 'https://ofi.25.gbsl.website',
-        label: 'WMS 24'
+        uri: 'https://ofi.25.gbsl.website/24w/home',
+        label: '24w'
       },
     ]
   }
