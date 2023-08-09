@@ -23,6 +23,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { runInAction } from 'mobx';
 import { VIEW_ELEMENTS } from '@site/src/stores/AdminStore';
+import siteConfig from '@generated/docusaurus.config';
+const { OFFLINE_MODE } = siteConfig.customFields as { OFFLINE_MODE?: boolean };
+import { FilePicker, LoadedOfflineFile } from '@site/src/pages/login';
 
 const currentVersion = (versions: typeof NavbarItem[]): typeof NavbarItem | undefined => {
     return versions.find((v) => v.path.length > 1 && window.location.pathname.startsWith(v.path));
@@ -34,7 +37,15 @@ const withLoginNavbar = (Component) => {
         const userStore = useStore('userStore');
         const adminStore = useStore('adminStore');
         const { globalData } = useDocusaurusContext();
-        if (!ExecutionEnvironment.canUseDOM || props.to !== 'login' || !userStore.current) {
+        if (!ExecutionEnvironment.canUseDOM || props.to !== 'login') {
+            return <Component {...props} />;
+        }
+        if (OFFLINE_MODE) {
+            return (<div style={{display: 'flex', flexWrap: 'wrap', maxWidth: '70vw'}}>
+                <FilePicker /> <LoadedOfflineFile />
+            </div>)
+        }
+        if (!userStore.current) {
             return <Component {...props} />;
         }
         const versions = (globalData['docusaurus-plugin-content-docs']['default'] as { versions: string[] })

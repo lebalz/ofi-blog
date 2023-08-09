@@ -23,7 +23,7 @@ const admonitionConfig = {
 };
 
 const GIT_COMMIT_SHA = process.env.DRONE_COMMIT_SHA || Math.random().toString(36).substring(7);
-
+const OFFLINE_MODE = process.env.OFFLINE_MODE || false;
 
 /** @type { (string
   | {
@@ -57,8 +57,9 @@ async function createConfig() {
     projectName: 'ofi-blog', // Usually your repo name.
     deploymentBranch: 'gh-pages',
     trailingSlash: false,
-    customFields: { 
+    customFields: {
       GIT_COMMIT_SHA: GIT_COMMIT_SHA,
+      OFFLINE_MODE: OFFLINE_MODE
     },
     i18n: {
       defaultLocale: 'de',
@@ -157,7 +158,7 @@ async function createConfig() {
         darkTheme: require('prism-react-renderer/themes/vsDark'),
         additionalLanguages: ['bash', 'powershell', 'java', 'asm6502', 'ruby', 'csharp']
       },
-      algolia: {
+      algolia: OFFLINE_MODE ? undefined : {
         appId: process.env.ALGOLIA_APP_ID || "no-id",
         apiKey: process.env.ALGOLIA_API_KEY || "no-key",
         indexName: process.env.ALGOLIA_INDEX_NAME || "no-index",
