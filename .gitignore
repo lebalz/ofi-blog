@@ -25,3 +25,9 @@ bin/brython-libs/*
 .uuids
 
 bin/*/feedbacks
+
+*.tmp.*
+.env
+.history/*
+**__pycache__*
+bin/brython-libs/*
