@@ -70,11 +70,9 @@ function Root({ children }) {
         />
       </Head>
       <StoresProvider value={rootStore}>
-        <Msal>
-          <CommentProvider value={true}>            
-            {children}
-          </CommentProvider>
-        </Msal>
+        <CommentProvider value={true}>            
+          {children}
+        </CommentProvider>
       </StoresProvider>
     </div>
   );
