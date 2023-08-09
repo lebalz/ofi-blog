@@ -1,9 +1,20 @@
 const fs = require('fs');
 const path = require('path');
 const Rsync = require('rsync');
+/** @type {{
+ * [key: string]: {
+ *  from: string, 
+ *  to: string, 
+ *  ignore: string[],
+ *  open?: boolean
+ * }[]}} */
 const CONFIG = require('./material_config.json')
 
-const DOC_PATH = 'docs/'
+const DOC_PATHS = ['docs/', 'src/pages/', 'news/'];
+
+const docBasePath = (src) => {
+    return DOC_PATHS.find((p) => src.startsWith(p)) || DOC_PATHS[0];
+}
 
 /**
  * 
@@ -11,10 +22,8 @@ const DOC_PATH = 'docs/'
  * @returns 
  */
 const relative2Doc = (path) => {
-    if (path.startsWith(DOC_PATH)) {
-        return path.slice(DOC_PATH.length)
-    }
-    return path;
+    const base = docBasePath(path);
+    return base ? path.slice(base.length) : path;
 }
 
 const ensureTrailingSlash = (path) => {
@@ -31,6 +40,8 @@ if (process.env.WITHOUT_DOCS) {
     fs.renameSync('docs', '_docs')
     fs.mkdirSync('docs')
     fs.cpSync('_docs/home.md', 'docs/home.md')
+    fs.cpSync('_docs/Codes-and-Data/01-Codierung/_latin1-sample.mdx', 'docs/Codes-and-Data/01-Codierung/_latin1-sample.mdx')
+    fs.cpSync('_docs/Codes-and-Data/01-Codierung/_latin1-table.mdx', 'docs/Codes-and-Data/01-Codierung/_latin1-table.mdx')
 }
 (async () => {
     Object.keys(CONFIG).forEach(async (klass) => {
@@ -69,27 +80,68 @@ if (process.env.WITHOUT_DOCS) {
                 fs.mkdirSync(parent, { recursive: true })
             }
 
-        if (isDir) {
-            const sanitizedClassDir = ensureTrailingSlash(toPath.replace(classDir, ''));
-            gitignore.push(`${sanitizedClassDir}*`)
-            const rsync = new Rsync()
-                .source(srcPath)
-                .destination(toPath)
-                .archive()
-                .delete();
-            if (ignore.length > 0) {
-                rsync.exclude(ignore)
-                gitignore.push(`!${sanitizedClassDir}${ignore}`)
+            if (isDir) {
+                const sanitizedClassDir = ensureTrailingSlash(toPath.replace(classDir, ''));
+                gitignore.push(`${sanitizedClassDir}*`)
+                const rsync = new Rsync()
+                    .source(srcPath)
+                    .destination(toPath)
+                    .archive()
+                    .delete();
+                if (ignore.length > 0) {
+                    rsync.exclude(ignore)
+                    gitignore.push(`!${sanitizedClassDir}${ignore}`)
+                }
+                rsync.exclude(['.sync.*', '*.nosync.*'])
+                let success = false;
+                while (!success) {
+                    rs = new Promise((resolve, reject) => {
+                        rsync.execute((err, code, cmd) => {
+                            if (!err) {
+                                console.log('✅', cmd)
+                                resolve(true)
+                            } else {
+                                console.log('❌', srcPath)
+                                console.log('   ', cmd)
+                                console.log('   ', err)
+                                console.log('   ', code)
+                                console.log('')
+                                resolve(false);
+                            }
+                        });
+                    })
+                    success = await rs;
+                }
+            } else {
+                fs.copyFileSync(srcPath, toPath);
+                gitignore.push(toPath.replace(classDir, ''))
             }
-            rsync.exclude(['.sync.*', '*.nosync.*'])
-            rsync.execute((err, code, cmd) => {
-                console.log('finished', err, code, cmd)
-            })
-        } else {
-            fs.copyFileSync(srcPath, toPath);
-            gitignore.push(toPath.replace(classDir, ''))
-        }
-        fs.writeFileSync(`${classDir}.gitignore`, gitignore.join("\n"))
+            if (src.open) {
+                const folder = isDir ? toPath : parent;
+                try {
+                    fs.mkdirSync(folder, { recursive: true })
+                } catch (e) {
+                    console.log(e);
+                }
+                const categoryPath = path.join(folder, '_category_.json');
+                console.log('---------- CAT', categoryPath)
+                gitignore.push(categoryPath.replace(classDir, ''));
+                let category = {
+                    collapsible: true,
+                    collapsed: false
+                };
+                if (fs.existsSync(categoryPath)) {
+                    category = JSON.parse(fs.readFileSync(categoryPath));
+                    category.collapsed = false;
+                    category.collapsible = true;
+                }
+                fs.writeFileSync(
+                    categoryPath,
+                    JSON.stringify(category, undefined, 2)
+                );
 
+            }
+            fs.writeFileSync(`${classDir}.gitignore`, gitignore.join("\n"))
+        })
     })
-})
+})();

@@ -10,7 +10,8 @@ This branch is deployed in [OFI Blog v24](https://lebalz.github.io/ofi-blog-v24)
 - initialize and push a git repo. make sure to add revealjs too (by deleting the .git folder of the submodule in the build directory...)
 
 ```bash
-yarn run build
+WITHOUT_DOCS=1 yarn run build # build without docs
+cp README.md build/README.md  # copy README.md to build directory
 cd build
 rm -rf p/reveal.js/.git
 
