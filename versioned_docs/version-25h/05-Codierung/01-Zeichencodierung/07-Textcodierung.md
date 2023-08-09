@@ -9,7 +9,7 @@ sidebar_custom_props:
 import OsTabs from '@site/src/components/OsTabs'
 import DecBinHexTransformer from "@site/src/components/VisualizationTools/DecBinHexTransformer";
 import Hex2Bin from "@site/src/components/VisualizationTools/Hex2Bin";
-import HexSystem from '@site/docs/Codes-and-Data/01-Codierung/_def-hexa.md';
+import HexSystem from '@site/versioned_docs/version-25h/05-Codierung/01-Zeichencodierung/_def-hexa.md';
 
 # 7. Textcodierung
 
