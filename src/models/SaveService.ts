@@ -32,9 +32,11 @@ export default class SaveService {
     @observable.ref
     model: ApiModel;
     endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>;
-    constructor(model: ApiModel, endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>, tDebounce: number = 1000) {
+    readonly: boolean;
+    constructor(model: ApiModel, endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>, tDebounce: number = 1000, readonly: boolean = false) {
         this.tDebounce = tDebounce;
         this.rootStore = rootStore;
+        this.readonly = readonly;
         this.endpoint = endpoint;
         this.model = model;
         makeObservable(this);
@@ -47,6 +49,9 @@ export default class SaveService {
         reaction(
             () => this.model.data,
             (props) => {
+                if (this.readonly) {
+                    return;
+                }
                 this.save();
             }
         );
@@ -65,6 +70,9 @@ export default class SaveService {
 
     @action
     saveNow() {
+        if (this.readonly) {
+            return Promise.resolve();
+        }
         this.save();
         return this.save.flush();
     }

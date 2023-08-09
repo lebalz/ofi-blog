@@ -25,6 +25,7 @@ const currentVersion = (versions: typeof NavbarItem[]): typeof NavbarItem | unde
 
 const withLoginNavbar = (Component) => {
     const WrappedComponent = observer((props: typeof NavbarItem) => {
+        const msalStore = useStore('msalStore');
         const userStore = useStore('userStore');
         const { globalData } = useDocusaurusContext();
         if (!ExecutionEnvironment.canUseDOM || props.to !== 'login' || !userStore.current) {
@@ -33,7 +34,7 @@ const withLoginNavbar = (Component) => {
         const versions = (globalData['docusaurus-plugin-content-docs']['default'] as { versions: string[] })
             .versions;
         const version = currentVersion(versions);
-        if (userStore.current.admin) {
+        if (userStore.current.admin && !msalStore.offlineMode) {
             return (
                 <div className={clsx('button-group')}>
                     <button
@@ -92,26 +93,16 @@ const withLoginNavbar = (Component) => {
                             ))}
                         </ul>
                     </div>
-                    <button
-                        className={clsx('badge', 'badge--secondary', 'badge--sm', styles.badgeButton)}
-                        onClick={() => {
-                            const students = userStore.byClass(version?.name);
-                            const currentIdx = students.indexOf(userStore.currentView);
-                            if (currentIdx < students.length - 1) {
-                                userStore.setView(students[currentIdx + 1]);
-                            } else {
-                                userStore.setView(students[0]);
-                            }
-                        }}
-                    >
-                        <FontAwesomeIcon icon={faArrowAltCircleRight} />
-                    </button>
+                    
                 </div>
             );
         }
         return (
-            <Link to={`/${props.to}`} className={clsx('badge', 'badge--primary', 'margin--xs', styles.nameBadge)}>
-                <span>{userStore.current.name}</span>
+            <Link
+                to={`/${props.to}`}
+                className={clsx('badge', msalStore.offlineMode ? 'badge--secondary' : 'badge--primary', 'margin--xs', styles.nameBadge)}
+            >
+                <span>{msalStore.offlineMode ? `Offline: ${userStore.current?.name}` : userStore.current?.name}</span>
             </Link>
         );
     });

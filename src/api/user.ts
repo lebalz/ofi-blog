@@ -17,3 +17,7 @@ export interface User extends UserProps {
 export function user(): AxiosPromise<User> {
   return api.get('user');
 }
+
+export function data(): AxiosPromise<{user: User, documents: any[], timed_topics: any[]}> {
+  return api.get('user/data');
+}

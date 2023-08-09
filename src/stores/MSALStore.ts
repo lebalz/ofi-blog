@@ -10,6 +10,7 @@ import { API, loginRequest } from '../authConfig';
 import { RootStore } from './stores';
 import api, { isLive } from '../api/base';
 import { umamiReport } from '../helpers/umami';
+import { User } from '../api/user';
 
 export class MSALStore {
     private readonly root: RootStore;
@@ -20,13 +21,16 @@ export class MSALStore {
     _msalInstance?: PublicClientApplication;
 
     @observable
+    offlineMode = false;
+
+    @observable
     isApiOffline: boolean = false;
 
     @observable.ref
     offlineSince?: Date = undefined;
 
     @observable
-    ignoreOfflineState = false;
+    offlineStateConfirmed = false;
     cancelToken: CancelTokenSource = axios.CancelToken.source();
 
     constructor(root: RootStore) {
@@ -36,7 +40,7 @@ export class MSALStore {
         reaction(
             () => this.offlineTimer,
             (offlineTime) => {
-                if (!offlineTime || this.ignoreOfflineState) {
+                if (!offlineTime || this.offlineStateConfirmed) {
                     return;
                 }
                 this.cancelToken.cancel();
@@ -46,21 +50,23 @@ export class MSALStore {
                         if (res.status === 200) {
                             runInAction(() => {
                                 this.setApiOfflineState(false);
+                                this.offlineStateConfirmed = false;
                             });
                         }
                     })
                     .catch((err) => {
                         return;
                     });
-                if (offlineTime > 20000 && window) {
+                if (offlineTime > 20000 && window && !this.offlineStateConfirmed) {
                     const reload = window.confirm(
                         'Die Seite ist seit mehr als 20s offline. Ihre Arbeit kann nicht gespeichert werden. Seite neu laden?'
                     );
-                    runInAction(() => {
-                        this.ignoreOfflineState = true;
-                    });
                     if (reload) {
                         window.location.reload();
+                    } else {
+                        runInAction(() => {
+                            this.offlineStateConfirmed = true;
+                        });
                     }
                 }
             }
@@ -69,6 +75,10 @@ export class MSALStore {
 
     @action
     setApiOfflineState(offline: boolean) {
+        if (this.offlineMode) {
+            this.offlineSince = undefined;
+            return;
+        }
         if (this.isApiOffline !== offline) {
             this.isApiOffline = offline;
             if (offline) {
@@ -87,7 +97,7 @@ export class MSALStore {
         if (!this.offlineSince) {
             return;
         }
-        const tspan = this.root.documentStore.timer - this.offlineSince.getTime();
+        const tspan = this.root.time_ms - this.offlineSince.getTime();
         return tspan < 0 ? 0 : tspan;
     }
 
@@ -106,6 +116,7 @@ export class MSALStore {
 
     @action
     setAccount(account?: AccountInfo) {
+        this.offlineMode = false;
         this.account = account;
     }
 
@@ -155,6 +166,9 @@ export class MSALStore {
     }
 
     withToken(): Promise<boolean | void> {
+        if (this.offlineMode) {
+            return Promise.resolve(true);
+        }
         return this.getTokenRedirect().then((res) => {
             if (res) {
                 (api.defaults.headers as any).Authorization = `Bearer ${res.accessToken}`;
@@ -163,5 +177,25 @@ export class MSALStore {
             console.warn('No Login Token Found');
             return false;
         });
+    }
+
+    
+    @action
+    loadOfflineData(data: User) {
+        this.offlineMode = true;
+        this.isApiOffline = false;
+        this.offlineSince = undefined;
+        this.offlineStateConfirmed = false;
+        this.account = {
+            homeAccountId: '',
+            environment: '',
+            tenantId: '',
+            username: data.email,
+            localAccountId: '',
+            name: data.email,
+            idTokenClaims: {},
+            idToken: '',
+            nativeAccountId: '',
+        }
     }
 }
