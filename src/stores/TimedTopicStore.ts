@@ -25,20 +25,16 @@ export class TimedTopicStore {
     @observable
     sortOrder: 'asc' | 'desc' = 'desc';
 
-    @observable
-    timer = 0;
-
     @observable initialized: boolean = false;
 
     constructor(root: RootStore) {
         this.root = root;
         makeObservable(this);
-        setInterval(
-            action(() => {
-                this.timer = Date.now();
-            }),
-            1000
-        );
+    }
+
+    @computed
+    get time() {
+        return this.root.time_ms;
     }
 
     @action
@@ -248,5 +244,9 @@ export class TimedTopicStore {
                     return undefined;
                 }
             });
+    }
+    @action
+    loadOfflineData(data: TimedTopicProps[]) {
+        this.timedTopics.replace(data.map((d) => new TimedTopic(d)).filter(d => !!d));
     }
 }

@@ -124,7 +124,7 @@ export default class TimeSpan {
     @computed
     get rawDuration(): number {
         if (this.isRunning) {
-            const tspan = this.store.timer - this.start.getTime();
+            const tspan = this.store.time - this.start.getTime();
             return tspan < 0 ? 0 : tspan;
         }
         return this.end.getTime() - this.start.getTime();

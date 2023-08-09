@@ -30,6 +30,7 @@ const currentVersion = (versions: typeof NavbarItem[]): typeof NavbarItem | unde
 
 const withLoginNavbar = (Component) => {
     const WrappedComponent = observer((props: typeof NavbarItem) => {
+        const msalStore = useStore('msalStore');
         const userStore = useStore('userStore');
         const adminStore = useStore('adminStore');
         const { globalData } = useDocusaurusContext();
@@ -39,7 +40,7 @@ const withLoginNavbar = (Component) => {
         const versions = (globalData['docusaurus-plugin-content-docs']['default'] as { versions: string[] })
             .versions;
         const version = currentVersion(versions);
-        if (userStore.current.admin) {
+        if (userStore.current.admin && !msalStore.offlineMode) {
             return (
                 <div className={clsx('button-group')} style={{ marginRight: '1em' }}>
                     <div className={clsx(styles.adminOptions, 'dropdown', 'dropdown--hoverable')}>
@@ -119,20 +120,22 @@ const withLoginNavbar = (Component) => {
                                     {userStore.currentView.name}
                                 </button>
                                 <ul className="dropdown__menu">
-                                    {userStore.byClassAndGroup(version?.name, adminStore.viewGroupFilter).map((user, idx) => (
-                                        <li key={idx} onClick={() => userStore.setView(user)}>
-                                            <div
-                                                className={clsx(
-                                                    styles.userBadge,
-                                                    'badge',
-                                                    'badge--secondary',
-                                                    'dropdown__link'
-                                                )}
-                                            >
-                                                {user.name}
-                                            </div>
-                                        </li>
-                                    ))}
+                                    {userStore.byClassAndGroup(version?.name, adminStore.viewGroupFilter).map((user, idx) => {
+                                        return (
+                                            <li key={idx} onClick={() => userStore.setView(user)}>
+                                                <div
+                                                    className={clsx(
+                                                        styles.userBadge,
+                                                        'badge',
+                                                        'badge--secondary',
+                                                        'dropdown__link'
+                                                    )}
+                                                >
+                                                    {user.name}
+                                                </div>
+                                            </li>
+                                        )
+                                    })}
                                 </ul>
                             </div>
                             <button
@@ -157,9 +160,9 @@ const withLoginNavbar = (Component) => {
         return (
             <Link
                 to={`/${props.to}`}
-                className={clsx('badge', 'badge--primary', 'margin--xs', styles.nameBadge)}
+                className={clsx('badge', msalStore.offlineMode ? 'badge--secondary' : 'badge--primary', 'margin--xs', styles.nameBadge)}
             >
-                <span>{userStore.current.name}</span>
+                <span>{msalStore.offlineMode ? `Offline: ${userStore.current?.name}` : userStore.current?.name}</span>
             </Link>
         );
     });

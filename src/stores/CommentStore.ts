@@ -24,6 +24,11 @@ export class CommentStore {
         makeObservable(this);
     }
 
+    @computed
+    get offlineMode(): boolean {
+        return this.root.msalStore.offlineMode;
+    }
+
 
     @computed
     get viewedComments() {
@@ -93,6 +98,9 @@ export class CommentStore {
 
     @action
     loadComments(pageKey: string, forceReload: boolean = false) {
+        if (this.root.msalStore.offlineMode) {
+            return Promise.resolve([] as CommentProps[]);
+        }
         if (this.isLoaded(pageKey) && !forceReload) {
             return Promise.reject('Already Loaded');
         }
@@ -214,5 +222,9 @@ export class CommentStore {
                 }
             });
 
+    }
+    @action
+    loadOfflineData(data: CommentProps[]) {
+        this.comments.replace(data.map((d) => new Comment(d, true))).filter(d => !!d);
     }
 }
