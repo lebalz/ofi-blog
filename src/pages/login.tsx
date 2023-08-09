@@ -94,7 +94,7 @@ ${current?.firstName} ${current?.lastName}, ${current?.klasse ?? ''}&cc=${accoun
                             </Link>
                         </>
                     )}
-                    {SHOW_OFFLINE_MODE && (
+                    {(SHOW_OFFLINE_MODE || current?.admin) && (
                         <div style={{marginTop: '1em', marginBottom: '1em'}}>
                             <h4>{offlineMode ? ( 
                                 <span>Offline Modus: "{rootStore.loadedFileName}" <FontAwesomeIcon icon={faCheckCircle} color='green' /></span> 
