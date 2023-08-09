@@ -20,7 +20,7 @@ git add .
 git commit -am "version Abschlussjahrgang 2024"
 git remote add origin git@github.com:lebalz/ofi-blog-v24.git
 git branch -M main
-git push -u origin main
+git push -u -f origin main
 ```
 
 ## Styling
