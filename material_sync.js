@@ -26,38 +26,47 @@ const ensureTrailingSlash = (path) => {
     }
     return `${path}/`
 }
-
-Object.keys(CONFIG).forEach((klass) => {
-    const config = CONFIG[klass];
-    const gitignore = [];
-    const classDir = `versioned_docs/version-${klass}/`;
-    config.forEach((src) => {
-        var srcPath = undefined
-        var toPath = undefined
-        var ignore = [];
-        switch (typeof src) {
-            case 'string':
-                srcPath = src;
-                toPath = `${classDir}${relative2Doc(src)}`;
-                break;
-            case 'object':
-                srcPath = src.from;
-                if (src.to) {
-                    toPath = src.to
-                } else {
-                    toPath = `${classDir}${relative2Doc(src)}`
-                }
-                ignore = src.ignore;
-                break;
-        }
-        const isDir = fs.lstatSync(srcPath).isDirectory()
-        if (isDir) {
-            srcPath = ensureTrailingSlash(srcPath);
-        }
-        const parent = path.dirname(toPath);
-        if (!fs.existsSync(parent)) {
-            fs.mkdirSync(parent, {recursive: true})
-        }
+if (process.env.WITHOUT_DOCS) {
+    console.log('RENAMING docs/ to _docs/')
+    fs.renameSync('docs', '_docs')
+    fs.mkdirSync('docs')
+}
+(async () => {
+    Object.keys(CONFIG).forEach(async (klass) => {
+        const config = CONFIG[klass];
+        const gitignore = [];
+        const classDir = `versioned_docs/version-${klass}/`;
+        const promises = []
+        config.forEach(async (src) => {
+            var srcPath = undefined
+            var toPath = undefined
+            var ignore = [];
+            switch (typeof src) {
+                case 'string':
+                    srcPath = src;
+                    toPath = `${classDir}${relative2Doc(src)}`;
+                    break;
+                case 'object':
+                    srcPath = src.from;
+                    if (src.to) {
+                        toPath = src.to
+                    } else {
+                        toPath = `${classDir}${relative2Doc(src)}`
+                    }
+                    ignore = src.ignore;
+                    break;
+            }
+            if (process.env.WITHOUT_DOCS && srcPath.startsWith('docs/')) {
+                srcPath = `_${srcPath}`
+            }
+            const isDir = fs.lstatSync(srcPath).isDirectory()
+            if (isDir) {
+                srcPath = ensureTrailingSlash(srcPath);
+            }
+            const parent = path.dirname(toPath);
+            if (!fs.existsSync(parent)) {
+                fs.mkdirSync(parent, { recursive: true })
+            }
 
         if (isDir) {
             const sanitizedClassDir = ensureTrailingSlash(toPath.replace(classDir, ''));

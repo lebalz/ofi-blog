@@ -14,8 +14,8 @@ import { faCheckCircle, faDownload, faUpload } from '@fortawesome/free-solid-svg
 import { Document } from '../api/document';
 import { TimedTopic } from '../api/timed_topic';
 import { action } from 'mobx';
-
-const SHOW_OFFLINE_MODE = false;
+import siteConfig from '@generated/docusaurus.config';
+const { OFFLINE_MODE } = siteConfig.customFields as { OFFLINE_MODE?: boolean };
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -29,11 +29,51 @@ function HomepageHeader() {
     );
 }
 
+export const FilePicker = observer(() => {
+    const rootStore = useRootStore();
+    return (
+        <input
+            className={clsx(
+                'button',
+                'button--secondary'
+            )}
+            style={{padding: '1px'}}
+            type="file"
+            accept='.json'
+            onChange={(e) => {
+                let fileReader = new FileReader();
+                fileReader.onload = action((fe) => {
+                    const data = JSON.parse(fileReader.result as string) as { documents: Document<any>[], comments: Comment[], timed_topics: TimedTopic[], user: User };
+                    rootStore.loadOfflineData(e.target.files[0].name, data);
+                });
+                fileReader.onerror = () => {
+                    window.alert('Fehler beim Lesen der Datei');
+                }
+                try {
+                    fileReader.readAsText(e.target.files[0]);
+                } catch (e) {
+                    /** nothing to do here */
+                }
+            }}
+            title="Upload"
+        />
+    )
+});
+
+export const LoadedOfflineFile = observer(() => {
+    const rootStore = useRootStore();
+    if (!rootStore.loadedFileName) {
+        return null;
+    }
+    return (
+        <span className='badge badge--warning'>{rootStore.loadedFileName} <FontAwesomeIcon icon={faCheckCircle} color='green' /></span> 
+    )
+});
+
 
 const Login = observer(() => {
     const msalStore = useStore('msalStore');
     const userStore = useStore('userStore');
-    const rootStore = useRootStore();
     const { account, loggedIn, offlineMode } = msalStore;
     const { current } = userStore;
     return (
@@ -93,35 +133,16 @@ ${current?.firstName} ${current?.lastName}, ${current?.klasse ?? ''}&cc=${accoun
                             </Link>
                         </>
                     )}
-                    {(SHOW_OFFLINE_MODE || current?.admin) && (
+                    {(OFFLINE_MODE || current?.admin) && (
                         <div style={{marginTop: '1em', marginBottom: '1em'}}>
                             <h4>{offlineMode ? ( 
-                                <span>Offline Modus: "{rootStore.loadedFileName}" <FontAwesomeIcon icon={faCheckCircle} color='green' /></span> 
+                                <span>Offline Modus: <LoadedOfflineFile /></span> 
                                 ) : (
                                     <span>Offline-Daten verwenden <FontAwesomeIcon icon={faUpload} /></span>
                                 )}
                             </h4>
                             <div>
-                                <input
-                                    className={clsx(
-                                        'button',
-                                        'button--secondary'
-                                    )}
-                                    type="file"
-                                    accept='.json'
-                                    onChange={(e) => {
-                                        let fileReader = new FileReader();
-                                        fileReader.onload = action((fe) => {
-                                            const data = JSON.parse(fileReader.result as string) as { documents: Document<any>[], comments: Comment[], timed_topics: TimedTopic[], user: User };
-                                            rootStore.loadOfflineData(e.target.files[0].name, data);
-                                        });
-                                        fileReader.readAsText(e.target.files[0]);
-                                        fileReader.onerror = () => {
-                                            window.alert('Fehler beim Lesen der Datei');
-                                        }
-                                    }}
-                                    title="Upload"
-                                />
+                                <FilePicker />
                             </div>
                             
                         </div>

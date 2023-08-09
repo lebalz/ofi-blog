@@ -10,7 +10,6 @@ import { Document } from '../api/document';
 import { TimedExerciseData } from '../api/timed_exercise';
 import { User } from '../api/user';
 import { TimedTopic } from '../api/timed_topic';
-
 export class RootStore {
   stores = observable([]);
   @observable

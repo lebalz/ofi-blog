@@ -15,6 +15,7 @@ const admonitions = require('@lebalz/remark-admonitions');
 const remarkLinks = require('./src/plugins/remark-links');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const OFFLINE_MODE = process.env.OFFLINE_MODE || false;
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -29,6 +30,9 @@ module.exports = {
   projectName: 'ofi-blog', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
+  customFields: {
+    OFFLINE_MODE: OFFLINE_MODE
+  },
   i18n: {
     defaultLocale: 'de',
     locales: ['de'],
