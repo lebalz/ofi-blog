@@ -15,7 +15,7 @@ const admonitions = require('@lebalz/remark-admonitions');
 const remarkLinks = require('./src/plugins/remark-links');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const OFFLINE_MODE = process.env.OFFLINE_MODE || false;
+const OFFLINE_MODE = process.env.OFFLINE_MODE || true;
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
