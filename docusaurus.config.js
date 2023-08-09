@@ -23,7 +23,7 @@ const admonitionConfig = {
 };
 
 const GIT_COMMIT_SHA = process.env.DRONE_COMMIT_SHA || Math.random().toString(36).substring(7);
-const OFFLINE_MODE = process.env.OFFLINE_MODE || false;
+const OFFLINE_MODE = true;
 
 /** @type { (string
   | {

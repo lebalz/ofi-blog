@@ -11,7 +11,7 @@ This branch is deployed in [OFI Blog v25](https://lebalz.github.io/ofi-blog-v25)
 
 ```bash
 mv src/pages/welcome.tsx src/pages/index.tsx
-yarn run build
+WITHOUT_DOCS=1 yarn run build # build without docs
 cd build
 rm -rf p/reveal.js/.git
 

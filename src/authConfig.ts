@@ -9,14 +9,8 @@ export const DOMAIN =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
     : "https://ofi.25.gbsl.website";
-export const API =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:3001"
-    : "https://api.gbsl.website";
-const CLIENT_ID =
-  process.env.NODE_ENV === "development"
-    ? "0e3069ab-9826-4738-810b-231456d4bc6a"
-    : "7a1d70dc-500e-41d8-93cd-cdfd56cc50ff";
+export const API = '/';
+const CLIENT_ID = '';
 
 /**
  * Configuration object to be passed to MSAL instance on creation.

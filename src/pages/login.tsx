@@ -129,9 +129,11 @@ ${current?.firstName} ${current?.lastName}, ${current?.klasse ?? ''}&cc=${accoun
                         </>
                     ) : (
                         <>
-                            <Link to="/" onClick={() => msalStore.login()} className="button button--warning" style={{color: 'black'}}>
-                                Login mit GBSL Account
-                            </Link>
+                            {!OFFLINE_MODE && (
+                                <Link to="/" onClick={() => msalStore.login()} className="button button--warning" style={{color: 'black'}}>
+                                    Login mit GBSL Account
+                                </Link>
+                            )}
                         </>
                     )}
                     {(OFFLINE_MODE || current?.admin) && (
