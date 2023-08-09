@@ -7,6 +7,7 @@
     "start": "docusaurus start",
     "prebuild": "node material_sync.js",
     "build": "docusaurus build",
+    "postbuild": "node material_restore.js",
     "build:dev": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "create_refs": "node create_refs.js",

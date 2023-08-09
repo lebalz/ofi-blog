@@ -35,7 +35,11 @@ const ensureTrailingSlash = (path) => {
     }
     return `${path}/`
 }
-
+if (process.env.WITHOUT_DOCS) {
+    console.log('RENAMING docs/ to _docs/')
+    fs.renameSync('docs', '_docs')
+    fs.mkdirSync('docs')
+}
 (async () => {
     Object.keys(CONFIG).forEach(async (klass) => {
         const config = CONFIG[klass];
@@ -60,6 +64,9 @@ const ensureTrailingSlash = (path) => {
                     }
                     ignore = src.ignore;
                     break;
+            }
+            if (process.env.WITHOUT_DOCS && srcPath.startsWith('docs/')) {
+                srcPath = `_${srcPath}`
             }
             const isDir = fs.lstatSync(srcPath).isDirectory()
             if (isDir) {
