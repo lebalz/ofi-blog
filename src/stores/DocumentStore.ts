@@ -26,6 +26,8 @@ const CreateModel = (
             return new Text(data);
         case 'state':
             return new StateAnswer(data);
+        default:
+            console.warn('Unknown Document Type', data.type, data);
     }
 };
 
@@ -62,9 +64,9 @@ const CreateDummyModel = <T extends IModel = IModel>(
         case 'text':
             model = new Text({ ...dummy, versions: [], data: TypedDoc('text', data) });
             break;
-
         case 'state':
             model = new StateAnswer({ ...dummy, versions: [], data: TypedDoc('state', data) });
+            break;
     }
     return model as T;
 };
@@ -73,21 +75,12 @@ export class DocumentStore {
     documents = observable<Model>([]);
 
     @observable
-    timer = 0;
-
-    @observable
     opendGraphicsModalWebKey: string | undefined = undefined;
 
     @observable initialized: boolean = false;
     constructor(root: RootStore) {
         this.root = root;
         makeObservable(this);
-        setInterval(
-            action(() => {
-                this.timer = Date.now();
-            }),
-            1000
-        );
     }
 
     @computed
@@ -165,7 +158,7 @@ export class DocumentStore {
             !persist
         );
         this.documents.push(model);
-        if (!persist || !this.root.msalStore.loggedIn) {
+        if (!persist || !this.root.msalStore.loggedIn || this.root.msalStore.offlineMode) {
             model.loaded = true;
             return Promise.resolve(model);
         }
@@ -284,5 +277,20 @@ export class DocumentStore {
                     return;
                 }
             });
+    }
+
+    
+    @action
+    loadOfflineData(data: DocumentProps<IModel>[]) {
+        this.documents.replace(data.map((d) => {
+            const model = CreateModel(d, {
+                readonly: true,
+                raw: d.type === 'code' ? TypedDoc('code', {code: ''}).code : undefined
+            });
+            if (model) {
+                model.loaded = true;
+            }
+            return model;
+        }).filter(d => !!d));
     }
 }

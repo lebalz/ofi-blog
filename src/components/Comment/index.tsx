@@ -90,10 +90,14 @@ const CommentContent = observer((props: Props) => {
                     if (hasModels) {
                         models.forEach((m) => m.toggleOpen());
                     } else {
-                        if (store.isLoggedIn) {
+                        if (store.isLoggedIn && !store.offlineMode) {
                             store.openComment(sidebar_custom_props.id, props.type, props.nr);
                         } else {
-                            window.alert('Melden Sie sich an, um Kommentare zu erfassen');
+                            if (store.offlineMode) {
+                                window.alert('Im Offline-Modus können keine Änderungen vorgenommen werden.');
+                            } else {
+                                window.alert('Melden Sie sich an, um Kommentare zu erfassen');
+                            }
                         }
                     }
                 }}
@@ -205,7 +209,7 @@ const CommentContent = observer((props: Props) => {
                                     e.stopPropagation();
                                 }}
                             >
-                                <QuillEditor model={m} theme={'bubble'} placeholder="💬 ..." />
+                                <QuillEditor model={m} theme={'bubble'} placeholder="💬 ..." readonly={m.readonly} />
                             </div>
                         );
                     })}

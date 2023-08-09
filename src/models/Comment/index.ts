@@ -63,10 +63,11 @@ export default class Comment implements ApiModel, iTextData {
 
     initializedAt: number;
 
+    readonly: boolean;
 
     versionsCT: CancelTokenSource;
 
-    constructor(comment: CommentProps) {
+    constructor(comment: CommentProps, readonly: boolean = false) {
         this.store = rootStore.commentStore;
         this.comment = comment.data.comment;
         this.open = comment.data.open;
@@ -79,15 +80,16 @@ export default class Comment implements ApiModel, iTextData {
         this.createdAt = new Date(comment.created_at);
         this.updatedAt = new Date(comment.updated_at);
         this.pristine = comment.data;
+        this.readonly = readonly;
         this.initializedAt = Date.now();
         makeObservable(this);
         /** order depends, initialize AFTER making this observable! */
-        this.saveService = new SaveService(this, save);
+        this.saveService = new SaveService(this, save, 1000, readonly);
     }
 
     @computed
     get displayNr(): number {
-        const max = this.store.commentableNodes.get(this.pageKey).get(this.type);
+        const max = this.store.commentableNodes.get(this.pageKey)?.get(this.type);
         return this.nr < max ? this.nr : max;
     }
 
@@ -174,6 +176,6 @@ export default class Comment implements ApiModel, iTextData {
 
     @action
     cleanup() {
-        this.saveService.cleanup();
+        this.saveService?.cleanup();
     }
 }

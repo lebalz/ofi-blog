@@ -33,14 +33,19 @@ export default class SaveService {
     disposer: IReactionDisposer;
     offlineDisposer: IReactionDisposer;
     endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>;
-    constructor(model: ApiModel, endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>, tDebounce: number = 1000) {
+    readonly: boolean;
+    constructor(model: ApiModel, endpoint: (model: ApiModel, CancelTokenSource) => Promise<any>, tDebounce: number = 1000, readonly: boolean = false) {
         this.tDebounce = tDebounce;
         this.save = debounce(action(this._save), this.tDebounce, { leading: false, trailing: true, maxWait: 5000 });
-
+        
+        this.readonly = readonly;
         this.rootStore = rootStore;
         this.endpoint = endpoint;
         this.model = model;
         makeObservable(this);
+        if (this.readonly) {
+            return;
+        }
         this.disposer = reaction(
             () => this.model.data,
             (props) => {
@@ -76,6 +81,9 @@ export default class SaveService {
 
     @action
     saveNow() {
+        if (this.readonly) {
+            return Promise.resolve();
+        }
         this.save();
         return this.save.flush();
     }

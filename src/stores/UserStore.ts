@@ -1,6 +1,6 @@
 import { action, computed, makeObservable, observable, reaction } from 'mobx';
 import { computedFn } from 'mobx-utils';
-import { user as fetchUser } from '../api/user';
+import { user as fetchUser, User as UserProps } from '../api/user';
 import { setUserProps, users as fetchUsers } from '../api/admin';
 import User from '../models/User';
 import { RootStore } from './stores';
@@ -37,6 +37,9 @@ export class UserStore {
         reaction(
             () => this.root.msalStore.account,
             (account) => {
+                if (this.root.msalStore.offlineMode) {
+                    return;
+                }
                 this.reload();
             }
         );
@@ -264,4 +267,10 @@ export class UserStore {
         },
         { keepAlive: true }
     );
+
+    @action
+    loadOfflineData(data: UserProps) {
+        this.users.replace([new User({...data, admin: false})]);
+        this.setView();
+    }
 }

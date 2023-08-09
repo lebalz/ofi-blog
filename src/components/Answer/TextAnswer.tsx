@@ -16,7 +16,7 @@ const TextAnswer = observer((props: TextProps) => {
     return (
         <div className='notranslate'>
             {props.label && <h6>{props.label}</h6>}
-            <QuillEditor model={doc} {...props} />
+            <QuillEditor model={doc} {...props} readonly={doc.readonly} />
         </div>
     );
 });

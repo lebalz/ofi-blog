@@ -40,6 +40,11 @@ export class PolicyStore {
         reaction(
             () => this.root.userStore.current,
             (account) => {
+                if (this.root.msalStore.offlineMode) {
+                    this.policies.replace([]);
+                    this.authorizations.replace([]);
+                    return;
+                }
                 this.reload();
             }
         );

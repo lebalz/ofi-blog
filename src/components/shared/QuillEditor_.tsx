@@ -138,8 +138,9 @@ const QuillEditor = observer((props: Props) => {
         if (quill) {
             quill.clipboard.dangerouslyPasteHTML((model.text as string) || '');
             quill.blur();
+            
             if (props.readonly) {
-                quill.disable();
+                quill.disable();                
             }
             quill.getModule('toolbar').addHandler('image', selectLocalImage);
             quill.root.addEventListener('drop', dropHandler);
