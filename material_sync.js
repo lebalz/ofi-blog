@@ -30,6 +30,7 @@ if (process.env.WITHOUT_DOCS) {
     console.log('RENAMING docs/ to _docs/')
     fs.renameSync('docs', '_docs')
     fs.mkdirSync('docs')
+    fs.cpSync('_docs/home.md', 'docs/home.md')
 }
 (async () => {
     Object.keys(CONFIG).forEach(async (klass) => {
