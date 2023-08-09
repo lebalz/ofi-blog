@@ -6,6 +6,9 @@ import { observer } from "mobx-react-lite";
 import { msalConfig } from "../authConfig";
 import { PublicClientApplication } from "@azure/msal-browser";
 import useIsBrowser from "@docusaurus/useIsBrowser";
+import Head from "@docusaurus/Head";
+import siteConfig from '@generated/docusaurus.config';
+const { OFFLINE_MODE } = siteConfig.customFields as { OFFLINE_MODE?: boolean };
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
@@ -47,6 +50,9 @@ msalInstance
   });
 
 const Msal = observer(({ children }) => {
+  if (OFFLINE_MODE) {
+    return <>{children}</>;
+  }
   return <MsalProvider instance={msalInstance}>{children}</MsalProvider>;
 });
 
