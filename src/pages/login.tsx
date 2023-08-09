@@ -16,6 +16,7 @@ import { TimedTopic } from '../api/timed_topic';
 import { Comment } from '../api/comment';
 import { action } from 'mobx';
 
+const SHOW_OFFLINE_MODE = false;
 
 function HomepageHeader() {
     const { siteConfig } = useDocusaurusContext();
@@ -93,37 +94,39 @@ ${current?.firstName} ${current?.lastName}, ${current?.klasse ?? ''}&cc=${accoun
                             </Link>
                         </>
                     )}
-                    <div style={{marginTop: '1em', marginBottom: '1em'}}>
-                        <h4>{offlineMode ? ( 
-                            <span>Offline Modus: "{rootStore.loadedFileName}" <FontAwesomeIcon icon={faCheckCircle} color='green' /></span> 
-                            ) : (
-                                <span>Offline-Daten verwenden <FontAwesomeIcon icon={faUpload} /></span>
-                            )}
-                        </h4>
-                        <div>
-                            <input
-                                className={clsx(
-                                    'button',
-                                    'button--secondary'
+                    {SHOW_OFFLINE_MODE && (
+                        <div style={{marginTop: '1em', marginBottom: '1em'}}>
+                            <h4>{offlineMode ? ( 
+                                <span>Offline Modus: "{rootStore.loadedFileName}" <FontAwesomeIcon icon={faCheckCircle} color='green' /></span> 
+                                ) : (
+                                    <span>Offline-Daten verwenden <FontAwesomeIcon icon={faUpload} /></span>
                                 )}
-                                type="file"
-                                accept='.json'
-                                onChange={(e) => {
-                                    let fileReader = new FileReader();
-                                    fileReader.onload = action((fe) => {
-                                        const data = JSON.parse(fileReader.result as string) as { documents: Document<any>[], comments: Comment[], timed_topics: TimedTopic[], user: User };
-                                        rootStore.loadOfflineData(e.target.files[0].name, data);
-                                    });
-                                    fileReader.readAsText(e.target.files[0]);
-                                    fileReader.onerror = () => {
-                                        window.alert('Fehler beim Lesen der Datei');
-                                    }
-                                }}
-                                title="Upload"
-                            />
+                            </h4>
+                            <div>
+                                <input
+                                    className={clsx(
+                                        'button',
+                                        'button--secondary'
+                                    )}
+                                    type="file"
+                                    accept='.json'
+                                    onChange={(e) => {
+                                        let fileReader = new FileReader();
+                                        fileReader.onload = action((fe) => {
+                                            const data = JSON.parse(fileReader.result as string) as { documents: Document<any>[], comments: Comment[], timed_topics: TimedTopic[], user: User };
+                                            rootStore.loadOfflineData(e.target.files[0].name, data);
+                                        });
+                                        fileReader.readAsText(e.target.files[0]);
+                                        fileReader.onerror = () => {
+                                            window.alert('Fehler beim Lesen der Datei');
+                                        }
+                                    }}
+                                    title="Upload"
+                                />
+                            </div>
+                            
                         </div>
-                        
-                    </div>
+                    )}
                     <UserTable />
                 </div>
             </main>
