@@ -10,51 +10,53 @@ import Head from "@docusaurus/Head";
 import siteConfig from '@generated/docusaurus.config';
 const { OFFLINE_MODE } = siteConfig.customFields as { OFFLINE_MODE?: boolean };
 
-const msalInstance = new PublicClientApplication(msalConfig);
+let msalInstance: PublicClientApplication;
+let selectAccount = () => {};
+let handleResponse = (response) => {};
+let Msal = ({ children }) => <>{children}</>;
 
-const selectAccount = () => {
-  /**
-   * See here for more information on account retrieval:
-   * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
-   */
+if (!OFFLINE_MODE) {
+  msalInstance = new PublicClientApplication(msalConfig);
+  selectAccount = () => {
+    /**
+     * See here for more information on account retrieval:
+     * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
+     */
 
-  const currentAccounts = msalInstance.getAllAccounts();
-  if (!currentAccounts || currentAccounts.length < 1) {
-    return;
-  } else if (currentAccounts.length > 1) {
-    console.warn("Multiple accounts detected.");
-    rootStore.msalStore.setAccount(currentAccounts[0]);
-  } else if (currentAccounts.length === 1) {
-    rootStore.msalStore.setAccount(currentAccounts[0]);
-  }
-};
+    const currentAccounts = msalInstance.getAllAccounts();
+    if (!currentAccounts || currentAccounts.length < 1) {
+      return;
+    } else if (currentAccounts.length > 1) {
+      console.warn("Multiple accounts detected.");
+      rootStore.msalStore.setAccount(currentAccounts[0]);
+    } else if (currentAccounts.length === 1) {
+      rootStore.msalStore.setAccount(currentAccounts[0]);
+    }
+  };
+  let handleResponse = (response) => {
+    /**
+     * To see the full list of response object properties, visit:
+     * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/request-response-object.md#response
+     */
+    rootStore.msalStore.setMsalInstance(msalInstance);
+    if (response !== null) {
+      rootStore.msalStore.setAccount(response.account);
+    } else {
+      selectAccount();
+    }
+  };
 
-const handleResponse = (response) => {
-  /**
-   * To see the full list of response object properties, visit:
-   * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/request-response-object.md#response
-   */
-  rootStore.msalStore.setMsalInstance(msalInstance);
-  if (response !== null) {
-    rootStore.msalStore.setAccount(response.account);
-  } else {
-    selectAccount();
-  }
-};
+  msalInstance
+    .handleRedirectPromise()
+    .then(handleResponse)
+    .catch((error) => {
+      console.error(error);
+    });
+    Msal = observer(({ children }) => {
+      return <MsalProvider instance={msalInstance}>{children}</MsalProvider>;
+    });
+}
 
-msalInstance
-  .handleRedirectPromise()
-  .then(handleResponse)
-  .catch((error) => {
-    console.error(error);
-  });
-
-const Msal = observer(({ children }) => {
-  if (OFFLINE_MODE) {
-    return <>{children}</>;
-  }
-  return <MsalProvider instance={msalInstance}>{children}</MsalProvider>;
-});
 
 // Default implementation, that you can customize
 function Root({ children }) {
