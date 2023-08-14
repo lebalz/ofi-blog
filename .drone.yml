@@ -63,7 +63,9 @@ steps:
 - name: docs
   image: node:18
   commands:
+  - apt-get update && apt-get install rsync -y build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
   - mkdir -p $HOME/.ssh
+  - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
   - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
   - chmod 0600 $HOME/.ssh/id_rsa
   - yarn install --frozen-lockfile
