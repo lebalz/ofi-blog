@@ -19,6 +19,8 @@ steps:
     restore: true
     mount:
       - ./node_modules
+  depends_on:
+  - submodules
 
 - name: website
   image: node:18
@@ -37,12 +39,12 @@ steps:
     NODE_OPTIONS: "--max_old_space_size=12288"
     GITHUB_PRIVATE_KEY:
       from_secret: "git_deploy_private_key"
-    REACT_APP_UMAMI_SRC:
-      from_secret: "REACT_APP_UMAMI_SRC"
-    REACT_APP_UMAMI_ID:
-      from_secret: "REACT_APP_UMAMI_ID"
-    REACT_APP_DOMAIN:
-      from_secret: "REACT_APP_DOMAIN"
+    UMAMI_SRC:
+      from_secret: "UMAMI_SRC"
+    UMAMI_ID:
+      from_secret: "UMAMI_ID"
+    DOMAIN:
+      from_secret: "DOMAIN"
     ALGOLIA_APP_ID:
       from_secret: "ALGOLIA_APP_ID"
     ALGOLIA_API_KEY:
@@ -54,6 +56,41 @@ steps:
       include:
       - push
       - pull_request
+  depends_on:
+  - restore-cache
+
+- name: all-docs
+  image: node:18
+  commands:
+  - apt-get update && apt-get install rsync -y build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+  - mkdir -p $HOME/.ssh
+  - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
+  - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
+  - chmod 0600 $HOME/.ssh/id_rsa
+  - yarn install --frozen-lockfile
+  - npm run sync
+  - npm run deploy
+  environment:
+    USE_SSH: true
+    GIT_USER: $DRONE_COMMIT_AUTHOR
+    NODE_OPTIONS: "--max_old_space_size=12288"
+    GITHUB_PRIVATE_KEY:
+      from_secret: "git_deploy_private_key_docs"
+    UMAMI_SRC:
+      from_secret: "UMAMI_SRC"
+    UMAMI_ID:
+      from_secret: "UMAMI_ID"
+    DOMAIN:
+      from_secret: "DOCS_DOMAIN"
+    GH_DEPLOY_BRANCH: "main"
+    GH_PROJECT: "ofi-blog-docs"
+  when:
+    event:
+      include:
+      - push
+      - pull_request
+  depends_on:
+  - restore-cache
 
 - name: rebuild-cache
   image: drillster/drone-volume-cache
@@ -64,6 +101,8 @@ steps:
     rebuild: true
     mount:
       - ./node_modules
+  depends_on:
+  - website
 
 - name: notify
   image: plugins/webhook
@@ -74,6 +113,9 @@ steps:
     status:
     - success
     - failure
+  depends_on:
+    - website
+
 volumes:
   - name: cache
     host: 

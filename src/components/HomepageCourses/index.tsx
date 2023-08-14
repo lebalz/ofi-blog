@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './styles.module.scss';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import siteConfig from '@generated/docusaurus.config';
+const { DOCS_ONLY } = siteConfig.customFields as { DOCS_ONLY?: boolean };
 
 interface Klass {
   label: string;
@@ -83,6 +85,9 @@ export default function HomepageCourses() {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
+          {DOCS_ONLY && (
+            <CourseComponent course={{title: 'All Docs', classes: [{label: 'Docs', uri: '/home'}]}} />
+          )}
           {CourseList.map((course, idx) => (
             <CourseComponent key={idx} course={course} />
           ))}

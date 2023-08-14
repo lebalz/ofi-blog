@@ -97,6 +97,8 @@ if (process.env.DOCS_ONLY) {
         fs.writeFileSync(`news/${new Date().toISOString().slice(0, 10)}-news.md`, `# News Placeholder\n`)
     }
 }
+fs.writeFileSync('static/CNAME', (process.env.DOMAIN || 'ofi.gbsl.website').replace(/https?:\/\//g, ''), { encoding: 'utf-8', flag: 'w' }); /** overwrite */
+
 (async () => {
     Object.keys(CONFIG).forEach(async (klass) => {
         const config = CONFIG[klass];
