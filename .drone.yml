@@ -35,6 +35,7 @@ steps:
   - npm run deploy
   environment:
     USE_SSH: true
+    WITHOUT_DOCS: "true"
     GIT_USER: $DRONE_COMMIT_AUTHOR
     NODE_OPTIONS: "--max_old_space_size=12288"
     GITHUB_PRIVATE_KEY:
@@ -82,6 +83,7 @@ steps:
       from_secret: "UMAMI_ID"
     DOMAIN:
       from_secret: "DOCS_DOMAIN"
+    DOCS_ONLY: "true"
     GH_DEPLOY_BRANCH: "main"
     GH_PROJECT: "ofi-blog-docs"
   when:
