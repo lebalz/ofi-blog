@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[4627],{90360:s=>{s.exports=JSON.parse('{"label":"windows","permalink":"/news/tags/windows","allTagsPath":"/news/tags","count":4}')}}]);
