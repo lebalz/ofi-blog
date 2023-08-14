@@ -16,14 +16,18 @@ interface Course {
 }
 
 const CourseList: Course[] = [
-  {
+  
+];
+
+if (!DOCS_ONLY) {
+  CourseList.push({
     title: 'Gym 2',
     classes: [
       '26e',
       '26P'
     ]
-  },
-  {
+  });
+  CourseList.push({
     title: 'Gym 4',
     classes: [
       {
@@ -31,8 +35,10 @@ const CourseList: Course[] = [
         label: 'EF'
       },
     ]
-  },
-  {
+  });  
+}
+
+CourseList.push({
     title: 'Ehemalige',
     classes: [
       {
@@ -48,8 +54,7 @@ const CourseList: Course[] = [
         label: '24w'
       },
     ]
-  }
-];
+  });
 
 // const CourseComponent = (course: Course) => {
 const CourseComponent = ({ course }: {course: Course}) => {
