@@ -73,6 +73,36 @@ if (process.env.WITHOUT_DOCS) {
         fs.cpSync(file, file.replace('/_docs/', '/docs/'))
     });
 }
+/* No Versioning, no News Page */
+if (process.env.DOCS_ONLY) {
+    if (fs.existsSync('versioned_docs')) {
+        console.log('RENAMING versioned_docs/ to _versioned_docs/')
+        fs.renameSync('versioned_docs', '_versioned_docs')
+        fs.mkdirSync('versioned_docs')
+    }
+    if (fs.existsSync('versioned_sidebars')) {
+        console.log('RENAMING versioned_sidebars/ to _versioned_sidebars/')
+        fs.renameSync('versioned_sidebars', '_versioned_sidebars')
+        fs.mkdirSync('versioned_sidebars')
+    }
+    if (fs.existsSync('versions.json')) {
+        console.log('RENAMING versions.json to _versions.json')
+        fs.renameSync('versions.json', '_versions.json')
+        fs.writeFileSync('versions.json', '[\n  "current"\n]')
+    }
+    if (fs.existsSync('news')) {
+        console.log('RENAMING news/ to _news/')
+        fs.renameSync('news', '_news')
+        fs.mkdirSync('news')
+    }
+    if (fs.existsSync('docusaurus.config.js')) {
+        console.log('RENAMING docusaurus.config.js to _docusaurus.config.js')
+        fs.renameSync('docusaurus.config.js', '_docusaurus.config.js')
+        const config = fs.readFileSync('_docusaurus.config.js', { encoding: 'utf-8' });
+        const newConfig = config.replace(/^\W*versions:\W*{(?<versionconfig>\W*\n\r?(.+?:.*{(.|\n\r?)*?},?\n?)+).*}/gm, "versions: {\n  current: {\n    label: 'Material',\n    banner: 'none'\n  }\n}")
+        fs.writeFileSync('docusaurus.config.js', newConfig);
+    }
+}
 (async () => {
     Object.keys(CONFIG).forEach(async (klass) => {
         const config = CONFIG[klass];

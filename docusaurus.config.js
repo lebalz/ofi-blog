@@ -155,7 +155,20 @@ async function createConfig() {
             ],
           }
         ],
-        copyright: `<a class="footer__link-item" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de"><img src="${BASE_URL}img/by-nc-sa.eu.svg" alt="CC-BY-NC-SA"> Text und Bilder von Balthasar Hofer, Ausnahmen sind gekennzeichnet. </a><br /><a class="badge badge--primary" href="https://github.com/lebalz/ofi-blog/commit/${GIT_COMMIT_SHA}"><i class="mdi mdi-source-commit mdi-rotate-90"></i> ${GIT_COMMIT_SHA.substring(0, 7)}</a>`,
+        copyright: `<a 
+                      class="footer__link-item"
+                      href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de"
+                    >
+                      <img src="${BASE_URL}img/by-nc-sa.eu.svg" alt="CC-BY-NC-SA"> 
+                      Text und Bilder von Balthasar Hofer, Ausnahmen sind gekennzeichnet. 
+                    </a>
+                    <br />
+                    <a 
+                      class="badge badge--primary"
+                      href="https://github.com/lebalz/ofi-blog/commit/${GIT_COMMIT_SHA}"
+                    >
+                      <i class="mdi mdi-source-commit mdi-rotate-90"></i> ${GIT_COMMIT_SHA.substring(0, 7)}
+                    </a>`
       },
       prism: {
         theme: require('prism-react-renderer/themes/vsLight'),

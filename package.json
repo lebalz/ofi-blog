@@ -15,6 +15,7 @@
     "postadd": "node material_sync.js",
     "sync": "node material_sync.js",
     "remove": "node material_remove.js",
+    "precleanup": "node material_restore.js",
     "cleanup": "node material_cleanup.js",
     "postremove": "node material_sync.js",
     "deploy": "docusaurus deploy",
