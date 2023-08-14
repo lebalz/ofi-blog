@@ -24,6 +24,21 @@ const admonitionConfig = {
 
 const GIT_COMMIT_SHA = process.env.DRONE_COMMIT_SHA || Math.random().toString(36).substring(7);
 const OFFLINE_MODE = process.env.OFFLINE_MODE || false;
+const VERSIONS = {
+    current: {
+      label: 'Material',
+      banner: 'none'
+    }
+};
+
+if (!process.env.DOCS_ONLY) {
+  ['26e', '26P', '24ef'].forEach(version => {
+    VERSIONS[version] = {
+      label: version,
+      banner: 'none'
+    }
+  });
+}
 
 /** @type { (string
   | {
@@ -207,21 +222,7 @@ async function createConfig() {
             showLastUpdateTime: true,
             routeBasePath: '/',
             admonitions: admonitionConfig,
-            versions: {
-              current: {
-                label: 'Material',
-                banner: 'none'
-              },
-              '26e': {
-                banner: 'none'
-              },
-              '26P': {
-                banner: 'none'
-              },
-              '24ef': {
-                banner: 'none'
-              }
-            },
+            versions: VERSIONS,
             beforeDefaultRemarkPlugins: [
               remarkKbd,
               remarkLinks,

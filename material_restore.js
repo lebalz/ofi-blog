@@ -28,13 +28,6 @@ if (fs.existsSync('_versioned_sidebars') && fs.lstatSync('_versioned_sidebars').
     }
     fs.renameSync('_versioned_sidebars', 'versioned_sidebars')
 }
-if (fs.existsSync('_docusaurus.config.js')) {
-    console.log('RESTORE _docusaurus.config.js to docusaurus.config.js')
-    if (fs.existsSync('docusaurus.config.js')) {
-        fs.rmSync('docusaurus.config.js', { recursive: true })
-    }
-    fs.renameSync('_docusaurus.config.js', 'docusaurus.config.js')
-}
 if (fs.existsSync('_versions.json')) {
     console.log('RESTORE _versions.json to versions.json')
     if (fs.existsSync('versions.json')) {

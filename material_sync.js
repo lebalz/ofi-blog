@@ -94,13 +94,7 @@ if (process.env.DOCS_ONLY) {
         console.log('RENAMING news/ to _news/')
         fs.renameSync('news', '_news')
         fs.mkdirSync('news')
-    }
-    if (fs.existsSync('docusaurus.config.js')) {
-        console.log('RENAMING docusaurus.config.js to _docusaurus.config.js')
-        fs.renameSync('docusaurus.config.js', '_docusaurus.config.js')
-        const config = fs.readFileSync('_docusaurus.config.js', { encoding: 'utf-8' });
-        const newConfig = config.replace(/^\W*versions:\W*{(?<versionconfig>\W*\n\r?(.+?:.*{(.|\n\r?)*?},?\n?)+).*}/gm, "versions: {\n  current: {\n    label: 'Material',\n    banner: 'none'\n  }\n}")
-        fs.writeFileSync('docusaurus.config.js', newConfig);
+        fs.writeFileSync(`news/${new Date().toISOString().slice(0, 10)}-news.md`, `# News Placeholder\n`)
     }
 }
 (async () => {
