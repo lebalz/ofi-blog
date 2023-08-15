@@ -1,10 +1,9 @@
 ---
 kind: pipeline
 type: docker
-name: default
+name: school
 
 steps:
-
 - name: submodules
   image: alpine/git
   commands:
@@ -19,10 +18,8 @@ steps:
     restore: true
     mount:
       - ./node_modules
-  depends_on:
-  - submodules
 
-- name: school
+- name: website
   image: node:18
   commands:
   - apt-get update && apt-get install rsync -y build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
@@ -57,10 +54,58 @@ steps:
       include:
       - push
       - pull_request
-  depends_on:
-  - restore-cache
 
-- name: docs
+- name: rebuild-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
+
+- name: notify
+  image: plugins/webhook
+  settings:
+    urls:
+      from_secret: NODE_RED_WEBHOOK
+  when:
+    status:
+    - success
+    - failure
+
+volumes:
+  - name: cache
+    host: 
+      path: /var/lib/dokku/data/storage/hfr-drone-runner/cache
+
+trigger:
+  branch:
+  - main
+
+---
+kind: pipeline
+type: docker
+name: all-docs
+
+steps:
+
+- name: submodules
+  image: alpine/git
+  commands:
+  - git submodule update --init --recursive
+- name: restore-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
+
+- name: website
   image: node:18
   commands:
   - apt-get update && apt-get install rsync -y build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
@@ -69,7 +114,6 @@ steps:
   - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
   - chmod 0600 $HOME/.ssh/id_rsa
   - yarn install --frozen-lockfile
-  - npm run cleanup
   - npm run sync
   - npm run deploy
   environment:
@@ -92,32 +136,6 @@ steps:
       include:
       - push
       - pull_request
-  depends_on:
-  - school
-
-- name: rebuild-cache
-  image: drillster/drone-volume-cache
-  volumes:
-  - name: cache
-    path: /cache
-  settings:
-    rebuild: true
-    mount:
-      - ./node_modules
-  depends_on:
-  - school
-
-- name: notify
-  image: plugins/webhook
-  settings:
-    urls:
-      from_secret: NODE_RED_WEBHOOK
-  when:
-    status:
-    - success
-    - failure
-  depends_on:
-    - school
 
 volumes:
   - name: cache
