@@ -37,6 +37,8 @@ steps:
     NODE_OPTIONS: "--max_old_space_size=12288"
     GITHUB_PRIVATE_KEY:
       from_secret: "git_deploy_private_key"
+    AZURE_CLIENT_ID:
+      from_secret: "AZURE_CLIENT_ID"
     UMAMI_SRC:
       from_secret: "UMAMI_SRC"
     UMAMI_ID:
@@ -124,6 +126,8 @@ steps:
       from_secret: "git_deploy_private_key_docs"
     UMAMI_SRC:
       from_secret: "UMAMI_SRC"
+    AZURE_CLIENT_ID:
+      from_secret: "AZURE_CLIENT_ID"
     UMAMI_ID:
       from_secret: "UMAMI_ID"
     DOMAIN:
