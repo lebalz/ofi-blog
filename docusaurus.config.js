@@ -78,6 +78,8 @@ async function createConfig() {
     customFields: {
       GIT_COMMIT_SHA: GIT_COMMIT_SHA,
       DOCS_ONLY: process.env.DOCS_ONLY || false,
+      AZURE_CLIENT_ID: process.env.AZURE_CLIENT_ID || 'no-id',
+      DOMAIN: process.env.DOMAIN || 'http://localhost:3000',
       OFFLINE_MODE: OFFLINE_MODE
     },
     i18n: {

@@ -3,27 +3,22 @@
  * Licensed under the MIT License.
  */
 
-import { LogLevel } from "@azure/msal-browser";
+import { Configuration, LogLevel } from "@azure/msal-browser";
+import siteConfig from '@generated/docusaurus.config';
+const { AZURE_CLIENT_ID, DOMAIN } = siteConfig.customFields as { AZURE_CLIENT_ID?: string, DOMAIN?: string };
 
-export const DOMAIN =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:3000"
-    : "https://ofi.gbsl.website";
 export const API =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3001"
     : "https://api.gbsl.website";
-const CLIENT_ID =
-  process.env.NODE_ENV === "development"
-    ? "0e3069ab-9826-4738-810b-231456d4bc6a"
-    : "7a1d70dc-500e-41d8-93cd-cdfd56cc50ff";
+const CLIENT_ID = AZURE_CLIENT_ID || 'no-id';
 
 /**
  * Configuration object to be passed to MSAL instance on creation.
  * For a full list of MSAL.js configuration parameters, visit:
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md
  */
-export const msalConfig = {
+export const msalConfig: Configuration = {
   auth: {
     clientId: CLIENT_ID,
     authority:
