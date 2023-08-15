@@ -1,104 +1,105 @@
 [
     {
-        "cells": ["19.08.2022","Programmieren","Infrastruktur, Installation, Git, Markdown, Python Grundlagen"]
+        "cells": ["25.08.2023","Datenbanken","Relationale DB's, Einführund SQL"]
     },
     {
-        "cells": ["26.08.2022","Programmieren","Python Repetition"]
+        "cells": ["01.09.2023","Datenbanken","Relationale DB's, Datenmodellierung, ER-Diagramme, SQL Abfragen"]
     },
     {
-        "cells": ["02.09.2022","Programmieren","Datenstrukturen - Listen"]
-    },
-    {
-        "cells": ["09.09.2022","Programmieren","Listen, 2D-Listen, Referenzen, Spielfeld"]
-    },
-    {
-        "cells": ["16.09.2022","Programmieren","Arbeiten am NumTrip Game"]
-    },
-    {
-        "cells": ["23.09.2022","Sonderwoche",""],
+        "cells": ["08.09.2023","Kompensation RobOlympics: Auftrag Normalisierung, SQL Abfragen",""],
         "type": "holiday"
     },
     {
-        "cells": ["30.09.2022","Herbstferien",""],
-        "type": "holiday"
+        "cells": ["15.09.2023","Datenbanken","Relationale DB's, Tabellen erstellen, SQL CREATE, INSERT, UPDATE, DELETE"]
     },
     {
-        "cells": ["07.10.2022","Herbstferien",""],
-        "type": "holiday"
+        "cells": ["22.09.2023","Datenbanken","Relationale DB's, Tabellen erstellen, SQL CRUD"]
     },
     {
-        "cells": ["14.10.2022","Herbstferien",""],
-        "type": "holiday"
-    },
-    {
-        "cells": ["21.10.2022","Programmieren","Funktionen & Software Engineering"]
-    },
-    {
-        "cells": ["28.10.2022","Programmieren", "Funktionen, Übungen"]
-    },
-    {
-        "cells": ["04.11.2022","Programmieren", "Funktionen, Scopes, Shadowing"]
-    },
-    {
-        "cells": ["11.11.2022","Programmieren", "Informatik Biber, Eigene Website"]
-    },
-    {
-        "cells": ["18.11.2022","Programmieren","Strings, NumTrip"]
-    },
-    {
-        "cells": ["25.11.2022","Programmieren","Try-Except, Input Validation"]
-    },
-    {
-        "cells": ["02.12.2022","Programmieren","NumTrip"]
-    },
-    {
-        "cells": ["09.12.2022","Programmieren","Prüfungsbesprechung, NumTrip"]
-    },
-    {
-        "cells": ["16.12.2022","Programmieren","Test Programmieren"],
+        "cells": ["29.09.2023","Datenbanken","Test"],
         "type": "test"
     },
     {
-        "cells": ["23.12.2022","Programmieren","NumTrip"]
+        "cells": ["06.10.2023","Sonderwoche",""],
+        "type": "holiday"
     },
     {
-        "cells": ["28.12.2022","Winterferien",""],
-        "type": "holiday",
-        "icon": "mdi-weather-snowy-heavy"
+        "cells": ["13.10.2023","Herbstferien",""],
+        "type": "holiday"
     },
     {
-        "cells": ["05.01.2023","Winterferien",""],
-        "type": "holiday",
-        "icon": "mdi-weather-snowy-heavy"
+        "cells": ["20.10.2023","Herbstferien",""],
+        "type": "holiday"
     },
     {
-        "cells": ["13.01.2023","Programmieren","NumTrip"]
+        "cells": ["27.10.2023","Robotik","Einstieg, Zustandsmaschinen, EV3"]
     },
     {
-        "cells": ["20.01.2023","Programmieren","Abgabe NumTrip und Lernjournal"],
+        "cells": ["03.11.2023","Rob-Olympics: Vorbereitungs-Weekend 3-4.11",""],
+        "type": "event"
+    },
+    {
+        "cells": ["04.11.2023","Rob-Olympics: Vorbereitungs-Weekend 3-4.11",""],
+        "type": "event"
+    },
+    {
+        "cells": ["10.11.2023","Robotik","Vorbereitungen RobOlympics"]
+    },
+    {
+        "cells": ["18.11.2023","Rob-Olympics: Rapperswil 18.11.2023",""],
+        "type": "event"
+    },
+    {
+        "cells": ["24.11.2023","Robotik","Zustandsmaschinen, Zustandsdiagramme"]
+    },
+    {
+        "cells": ["01.12.2023","Robotik","Zustandsmaschinen, Zustandsdiagramme"]
+    },
+    {
+        "cells": ["08.12.2023","Robotik","Test"],
         "type": "test"
     },
     {
-        "cells": ["25.01.2023","Notenschluss",""],
+        "cells": ["15.12.2023","Algorithmik","Effizienz"]
+    },
+    {
+        "cells": ["22.12.2023","Algorithmik","O(n) Notation, Sortieren"]
+    },
+    {
+        "cells": ["29.12.2023","Winterferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["05.01.2024","Winterferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["12.01.2024","Algorithmik","Suchen, Sortieren"]
+    },
+    {
+        "cells": ["19.01.2024","Algorithmik","N+1 Problem"]
+    },
+    {
+        "cells": ["26.01.2024","Algorithmik","Wiederholung"]
+    },
+    {
+        "cells": ["25.01.2024","Notenchluss",""],
         "type": "event"
     },
     {
-        "cells": ["03.02.2023","Semesterende",""],
+        "cells": ["02.02.2024","Algorithmik","Test"],
+        "type": "test"
+    },
+    {
+        "cells": ["04.02.2024","Semesterende",""],
         "type": "event"
     },
     {
-        "cells": ["03.02.2023","NumTrip","Code Review, Pull Requests auf Github"]
-    },
-    {
-        "cells": ["10.02.2023","Netzwerke","Einstieg, Client, Server, Protokolle"]
-    },
-    {
-        "cells": ["17.02.2023","Sportwoche",""],
-        "type": "holiday",
-        "icon": "mdi-ski"
-    },
-    {
-        "cells": ["24.02.2023","IoT Praktikum: Ganztags","Löten, Programmieren, Node-Red"],
+        "cells": ["05.02.2024","Start Semester 2",""],
         "type": "event"
+    },
+    {
+        "cells": ["16.02.2024","Sportwoche",""],
+        "type": "holiday"
     }
 ]

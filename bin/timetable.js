@@ -27,11 +27,10 @@ const EVENTS = {
 
 }
 const CLASS_EVENTS = {
-    ['25h']: {
-
-    },
     ['24ef']: {
-        [4]: {desc: 'Notenchluss', type: 'event', date: '24.01.2023'},
+        [36]: {desc: 'Kompensation RobOlympics: Auftrag Normalisierung, SQL Abfragen', type: 'holiday', date: '08.09.2023'},
+        [44]: {desc: 'Rob-Olympics: Vorbereitungs-Weekend 3-4.11', type: 'event', date: '03.11.2023'},
+        [46]: {desc: 'Rob-Olympics: Rapperswil 18.11.2023', type: 'event', date: '18.11.2023'},
     },
     ['26P']: {
         [45]: {desc: 'SET', type: 'holiday', date: '8.11.2023'},
@@ -56,6 +55,7 @@ const CLASS_EVENTS = {
 SCHOOL_EVENTS = {
     // [9]: {desc: 'Videoabgabe', type: 'test', date: '06.03.2022'},
     // [46]: { desc: 'Notenschluss Zwischenzeugnis', type: 'event', date: '17.11.2022' },
+    [44]: {desc: 'Rob-Olympics: Vorbereitungs-Weekend 3-4.11', type: 'event', date: '04.11.2023'},
     [4]: { desc: 'Notenchluss', type: 'event', date: '25.01.2024' },
     [5]: { desc: 'Semesterende', type: 'event', date: '04.02.2024' },
     [6]: { desc: 'Start Semester 2', type: 'event', date: '05.02.2024' },
@@ -95,6 +95,25 @@ const SCHEDULE_EF_HS1 = [
     ["Programmieren", "Strings, Eingabe, Game-Loop"],
     ["Programmieren", "Funktionen, Referenzen"],
     ["Programmieren", "Arbeiten am NumTrip Game"],
+]
+
+const SCHEDULE_EF_HS2 = [
+    ["Datenbanken", "Relationale DB's, Einführund SQL"],
+    ["Datenbanken", "Relationale DB's, Datenmodellierung, ER-Diagramme, SQL Abfragen"],
+    ["Datenbanken", "Relationale DB's, Tabellen erstellen, SQL CREATE, INSERT, UPDATE, DELETE"],
+    ["Datenbanken", "Relationale DB's, Tabellen erstellen, SQL CRUD"],
+    ["Datenbanken", "Test"],
+    ["Robotik", "Einstieg, Zustandsmaschinen, EV3"],
+    ["Robotik", "Vorbereitungen RobOlympics"],
+    ["Robotik", "Zustandsmaschinen, Zustandsdiagramme"],
+    ["Robotik", "Zustandsmaschinen, Zustandsdiagramme"],
+    ["Robotik", "Test"],
+    ["Algorithmik", "Effizienz"],
+    ["Algorithmik", "O(n) Notation, Sortieren"],
+    ["Algorithmik", "Suchen, Sortieren"],
+    ["Algorithmik", "N+1 Problem"],
+    ["Algorithmik", "Wiederholung"],
+    ["Algorithmik", "Test"],
 ]
 
 const SCHEDULE_GYM1_PRAKTIKUM = [
@@ -199,15 +218,15 @@ const SCHEDULE_GYM2_FS = [
     ["🚧",""]
 ]
 
-const SCHEDULE = SCHEDULE_GYM2_HS_DB;
+const SCHEDULE = SCHEDULE_EF_HS2;
 // const SCHEDULE = prepareHK(SCHEDULE_GYM1_PRAKTIKUM, ['B', 'A']);
 
-['26P'].forEach((klasse) =>{
+['24ef'].forEach((klasse) =>{
     const cells = [];
     let subjectNr = 0
     const klass = klasse.split('-')[0];
     const colSize = SCHEDULE[0].length + 1;
-    Array(34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19).forEach((weekNr) => {
+    Array(34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7).forEach((weekNr) => {
         const date = moment().year(YEAR + (weekNr < 30 ? 1 : 0)).week(weekNr).day(DAYS[CLASS_DAY[klasse]]).format('DD.MM.YYYY');
         if (EVENTS[date]) {
             cells.push({ cells: [date, EVENTS[date].desc, ''], type: EVENTS[date].type });
@@ -216,7 +235,7 @@ const SCHEDULE = SCHEDULE_GYM2_HS_DB;
         } else if (CLASS_EVENTS[klass][date]) {
             cells.push({ cells: [date, CLASS_EVENTS[klass][date].desc, ''], type: CLASS_EVENTS[klass][date].type });
         } else if (CLASS_EVENTS[klass][weekNr]) {
-            cells.push({ cells: [date, CLASS_EVENTS[klass][weekNr].desc, ''], type: CLASS_EVENTS[klass][weekNr].type });
+            cells.push({ cells: [CLASS_EVENTS[klass][weekNr].date, CLASS_EVENTS[klass][weekNr].desc, ''], type: CLASS_EVENTS[klass][weekNr].type });
         } else if (SCHEDULE[subjectNr]) {
             cells.push({ cells: [date, ...SCHEDULE[subjectNr]], type: SCHEDULE[subjectNr][1].toLowerCase().includes('test') ? 'test' : undefined});
             subjectNr += 1;
