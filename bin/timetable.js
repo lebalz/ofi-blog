@@ -15,26 +15,30 @@ const DAYS = {
 // 30.6.2022 Notenschluss
 const EVENTS = {
     // ['10.02.2022']: { desc: 'Filmanlass GYM2 / SchiLw', type: 'holiday' },
-    // [7]: {desc: 'Sportwoche', type: 'holiday'},
-    [38]: {desc: 'Sonderwoche', type: 'holiday'},
-    [39]: {desc: 'Herbstferien', type: 'holiday'},
-    [40]: {desc: 'Herbstferien', type: 'holiday'},
+    [40]: {desc: 'Sonderwoche', type: 'holiday'},
     [41]: {desc: 'Herbstferien', type: 'holiday'},
+    [42]: {desc: 'Herbstferien', type: 'holiday'},
     [52]: {desc: 'Winterferien', type: 'holiday'},
-    [0]: {desc: 'Winterferien', type: 'holiday'}
+    [1]: {desc: 'Winterferien', type: 'holiday'},
+    [7]: {desc: 'Sportwoche', type: 'holiday'},
+    [17]: {desc: 'Sonderwoche', type: 'holiday'},
+    [18]: {desc: 'Frühlingsferien', type: 'holiday'},
+    [19]: {desc: 'Frühlingsferien', type: 'holiday'},
+
 }
 const CLASS_EVENTS = {
     ['25h']: {
 
     },
     ['24ef']: {
-
+        [4]: {desc: 'Notenchluss', type: 'event', date: '24.01.2023'},
     },
     ['26P']: {
-        [49]: {desc: 'Kantonaler Fachschaftstag', type: 'holiday', date: '06.12.2022'},
+        [45]: {desc: 'SET', type: 'holiday', date: '8.11.2023'},
+        [49]: {desc: 'Kantonaler Fachschaftstag', type: 'holiday', date: '05.12.2023'},
     },
     ['26e']: {
-        // [49]: {desc: 'Kantonaler Fachschaftstag', type: 'holiday', daxte: '06.12.2022'},
+        [49]: {desc: 'Kantonaler Fachschaftstag', type: 'holiday', date: '05.12.2023'},
     },
     // ['24L']: {
     //     [23]: { desc: 'Pfingsten', type: 'holiday'}
@@ -52,19 +56,17 @@ const CLASS_EVENTS = {
 SCHOOL_EVENTS = {
     // [9]: {desc: 'Videoabgabe', type: 'test', date: '06.03.2022'},
     // [46]: { desc: 'Notenschluss Zwischenzeugnis', type: 'event', date: '17.11.2022' },
-    [4]: { desc: 'Notenschluss', type: 'event', date: '25.01.2023' },
-    [5]: { desc: 'Semesterende', type: 'event', date: '03.02.2023' },
+    [4]: { desc: 'Notenchluss', type: 'event', date: '25.01.2024' },
+    [5]: { desc: 'Semesterende', type: 'event', date: '04.02.2024' },
+    [6]: { desc: 'Start Semester 2', type: 'event', date: '05.02.2024' },
 }
 
 const CLASS_DAY = {
     ['24ef']: 'fr',
-    ['25h']: 'mi',
-    ['26P']: 'di',
-    ['26P-HK']: 'di',
+    ['26P']: 'mi',
     ['26e']: 'di',
-    ['26e-HK']: 'do',
 }
-const YEAR = 2022
+const YEAR = 2023
 const SEMESTER = 'HS'
 
 const SCHEDULE_GYM1_HS = [
@@ -106,6 +108,37 @@ const SCHEDULE_GYM1_PRAKTIKUM = [
     ["Programmieren 1", "Verzweigungen"],
     ["Programmieren 1", "Mini Projekt"],
     ["Programmieren 1", "Mini Projekt"],
+]
+
+const SCHEDULE_GYM2_HS_DB = [
+    ["Daten und Datenbanken", "Excel"],
+    ["Daten und Datenbanken", "Excel"],
+    ["Daten und Datenbanken", "Excel und SQL"],
+    ["Daten und Datenbanken", "SQL"],
+    ["Daten und Datenbanken", "SQL"],
+    ["Daten und Datenbanken", "SQL"],
+    ["Daten und Datenbanken", "Wiederholung"],
+    ["Daten und Datenbanken", "Test"],
+    ["Netzwerke", "Protokolle, Schichtenmodell"],
+    ["Netzwerke", "Routing, IP-Adresse"],
+    ["Netzwerke", "TCP/IP"],
+    ["Netzwerke", "Routing, DNS"],
+    ["Netzwerke", "Routing, DNS"],
+    ["Netzwerke", "Wiederholung"],
+    ["Netzwerke", "Test"],
+    ["Kryptologie", "Antike Verschlüsselung"],
+    ["Kryptologie", "Symmetrische Verschlüsselung"],
+    ["Kryptologie", "Hashfunktion"],
+    ["Kryptologie", "Asymmetrische Verschlüsselung"],
+    ["Kryptologie", "Digitale Signaturen"],
+    ["Kryptologie", "Kryptologie im Alltag"],
+    ["Kryptologie", "Test"],
+    ["Programmieren 2", "Datenstrukturen und Listen"],
+    ["Programmieren 2", "Algorithmen und Sortieren"],
+    ["Programmieren 2", "Robotik"],
+    ["Programmieren 2", "Robotik"],
+    ["Programmieren 2", "Robotik"],
+    ["Programmieren 2", "Test Abgabe Robotik-Projekt"],
 ]
 
 /**
@@ -166,17 +199,16 @@ const SCHEDULE_GYM2_FS = [
     ["🚧",""]
 ]
 
-const SCHEDULE = SCHEDULE_EF_HS1;
+const SCHEDULE = SCHEDULE_GYM2_HS_DB;
 // const SCHEDULE = prepareHK(SCHEDULE_GYM1_PRAKTIKUM, ['B', 'A']);
 
-Array('24ef').forEach((klasse) =>{
+['26P'].forEach((klasse) =>{
     const cells = [];
     let subjectNr = 0
     const klass = klasse.split('-')[0];
     const colSize = SCHEDULE[0].length + 1;
-    console.log(colSize)
-    Array(33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 0, 1, 2, 3, 4, 5).forEach((weekNr) => {
-        const date = moment().day(DAYS[CLASS_DAY[klasse]]).year(YEAR + (weekNr < 30 ? 1 : 0)).week(weekNr + 1).format('DD.MM.YYYY');
+    Array(34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19).forEach((weekNr) => {
+        const date = moment().year(YEAR + (weekNr < 30 ? 1 : 0)).week(weekNr).day(DAYS[CLASS_DAY[klasse]]).format('DD.MM.YYYY');
         if (EVENTS[date]) {
             cells.push({ cells: [date, EVENTS[date].desc, ''], type: EVENTS[date].type });
         } else if (EVENTS[weekNr]) {
@@ -210,7 +242,8 @@ Array('24ef').forEach((klasse) =>{
         .replace(/\]"/g, ']')
         .replace(/\\"/g, '"')
         .replace(/""/g, '""');
-    
+    console.log(`Writing ${klasse}_${SEMESTER}${YEAR}.json`)
+    console.log(prettyJson)
     fs.writeFileSync(`versioned_docs/version-${klass}/${klasse}_${SEMESTER}${YEAR}.json`, prettyJson, 'utf-8');
     // fs.writeFileSync(`./bin/${klasse}_${SEMESTER}${YEAR}.json`, prettyJson, 'utf8');
 })

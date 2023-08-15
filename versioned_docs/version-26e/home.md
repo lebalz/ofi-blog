@@ -10,8 +10,17 @@ import {SortTimeTableByDate} from '@site/src/helpers/time';
 import hs2022 from "./26e_HS2022.json"
 import fs2023 from "./26e_FS2023.json"
 import hk2022 from "./26e-HK_HS2022.json"
+import hs2023 from "./26e_HS2023.json"
 
 # 26e Informatik
+
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={hs2023}
+  order={SortTimeTableByDate()}
+/>
 
 :::details 1. Semester
 

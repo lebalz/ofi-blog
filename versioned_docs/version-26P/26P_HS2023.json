@@ -1,0 +1,142 @@
+[
+    {
+        "cells": ["23.08.2023","Daten und Datenbanken","Excel"]
+    },
+    {
+        "cells": ["30.08.2023","Daten und Datenbanken","Excel"]
+    },
+    {
+        "cells": ["06.09.2023","Daten und Datenbanken","Excel und SQL"]
+    },
+    {
+        "cells": ["13.09.2023","Daten und Datenbanken","SQL"]
+    },
+    {
+        "cells": ["20.09.2023","Daten und Datenbanken","SQL"]
+    },
+    {
+        "cells": ["27.09.2023","Daten und Datenbanken","SQL"]
+    },
+    {
+        "cells": ["04.10.2023","Sonderwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["11.10.2023","Herbstferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["18.10.2023","Herbstferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["25.10.2023","Daten und Datenbanken","Wiederholung"]
+    },
+    {
+        "cells": ["01.11.2023","Daten und Datenbanken","Test"],
+        "type": "test"
+    },
+    {
+        "cells": ["08.11.2023","SET",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["15.11.2023","Netzwerke","Protokolle, Schichtenmodell"]
+    },
+    {
+        "cells": ["22.11.2023","Netzwerke","Routing, IP-Adresse"]
+    },
+    {
+        "cells": ["29.11.2023","Netzwerke","TCP/IP"]
+    },
+    {
+        "cells": ["06.12.2023","Kantonaler Fachschaftstag",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["13.12.2023","Netzwerke","Routing, DNS"]
+    },
+    {
+        "cells": ["20.12.2023","Netzwerke","Routing, DNS"]
+    },
+    {
+        "cells": ["27.12.2023","Winterferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["03.01.2024","Winterferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["10.01.2024","Netzwerke","Wiederholung"]
+    },
+    {
+        "cells": ["17.01.2024","Netzwerke","Test"],
+        "type": "test"
+    },
+    {
+        "cells": ["24.01.2024","Kryptologie","Antike Verschlüsselung"]
+    },
+    {
+        "cells": ["25.01.2024","Notenchluss",""],
+        "type": "event"
+    },
+    {
+        "cells": ["31.01.2024","Kryptologie","Symmetrische Verschlüsselung"]
+    },
+    {
+        "cells": ["04.02.2024","Semesterende",""],
+        "type": "event"
+    },
+    {
+        "cells": ["07.02.2024","Kryptologie","Hashfunktion"]
+    },
+    {
+        "cells": ["05.02.2024","Start Semester 2",""],
+        "type": "event"
+    },
+    {
+        "cells": ["14.02.2024","Sportwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["21.02.2024","Kryptologie","Asymmetrische Verschlüsselung"]
+    },
+    {
+        "cells": ["28.02.2024","Kryptologie","Digitale Signaturen"]
+    },
+    {
+        "cells": ["06.03.2024","Kryptologie","Kryptologie im Alltag"]
+    },
+    {
+        "cells": ["13.03.2024","Kryptologie","Test"],
+        "type": "test"
+    },
+    {
+        "cells": ["20.03.2024","Programmieren 2","Datenstrukturen und Listen"]
+    },
+    {
+        "cells": ["27.03.2024","Programmieren 2","Algorithmen und Sortieren"]
+    },
+    {
+        "cells": ["03.04.2024","Programmieren 2","Robotik"]
+    },
+    {
+        "cells": ["10.04.2024","Programmieren 2","Robotik"]
+    },
+    {
+        "cells": ["17.04.2024","Programmieren 2","Robotik"]
+    },
+    {
+        "cells": ["24.04.2024","Sonderwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["01.05.2024","Frühlingsferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["08.05.2024","Frühlingsferien",""],
+        "type": "holiday"
+    }
+]
