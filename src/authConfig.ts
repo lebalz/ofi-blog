@@ -11,7 +11,6 @@ export const API =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3001"
     : "https://api.gbsl.website";
-const CLIENT_ID = AZURE_CLIENT_ID || 'no-id';
 
 /**
  * Configuration object to be passed to MSAL instance on creation.
@@ -20,7 +19,7 @@ const CLIENT_ID = AZURE_CLIENT_ID || 'no-id';
  */
 export const msalConfig: Configuration = {
   auth: {
-    clientId: CLIENT_ID,
+    clientId: AZURE_CLIENT_ID,
     authority:
       "https://login.microsoftonline.com/49068363-8361-4607-9549-62b6b55794aa",
     redirectUri: DOMAIN,
