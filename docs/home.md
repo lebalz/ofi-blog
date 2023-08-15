@@ -39,6 +39,7 @@ sidebar_custom_props:
 [02-Routing](/p/Netzwerke/Routing/presentation.html)
 
 ## News Ideen
+
 - ✅ Fenstermanagement unter OSX: https://rectangleapp.com/
 - ✅ Neue Zeile in Teams, ohne die Nachricht abzuschicken
 - Bitwarden
@@ -47,6 +48,7 @@ sidebar_custom_props:
 - Befehl wiederholen unter MS Office: [[ctrl]] + [[y]]
 
 ## Software
+
 - https://excalidraw.com/
 
 ## Unterlagen
