@@ -129,7 +129,6 @@ steps:
     DOMAIN:
       from_secret: "DOCS_DOMAIN"
     DOCS_ONLY: "true"
-    GH_DEPLOY_BRANCH: "main"
     GH_PROJECT: "ofi-blog-docs"
   when:
     event:

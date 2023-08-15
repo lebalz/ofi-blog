@@ -73,7 +73,7 @@ async function createConfig() {
     favicon: 'img/favicon.ico',
     organizationName: 'lebalz', // Usually your GitHub org/user name.
     projectName: process.env.GH_PROJECT || 'ofi-blog', // Usually your repo name.
-    deploymentBranch: process.env.GH_DEPLOY_BRANCH || 'gh-pages',
+    deploymentBranch: 'gh-pages',
     trailingSlash: false,
     customFields: {
       GIT_COMMIT_SHA: GIT_COMMIT_SHA,
