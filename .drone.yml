@@ -134,6 +134,9 @@ steps:
       from_secret: "DOCS_DOMAIN"
     DOCS_ONLY: "true"
     GH_PROJECT: "ofi-blog-docs"
+    ALGOLIA_APP_ID: "KAXH1Q07BI"
+    ALGOLIA_API_KEY: "dce94e1097cc40d352060a9fe4b31154"
+    ALGOLIA_INDEX_NAME: "ofi-gbsl1"
   when:
     event:
       include:
