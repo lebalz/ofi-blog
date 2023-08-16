@@ -89,3 +89,25 @@ split -l $NR humans_movies.sql human_movs_
 ```
 :::
 
+## Index
+
+```sql
+create index movie_type_idx on movies(type);
+create index primary_title_idx on movies(primary_title);
+create index original_title_idx on movies(original_title);
+create index is_adult_idx on movies(is_adult);
+create index start_year_idx on movies(start_year);
+create index end_year_idx on movies(end_year);
+create index runtime_minutes_idx on movies(runtime_minutes);
+
+create index name_idx on humans(name);
+create index birth_year_idx on humans(birth_year);
+create index death_year_idx on humans(death_year);
+
+create index human_id_idx on humans_movies(human_id);
+create index movie_id_idx on humans_movies(movie_id);
+
+create index average_rating_idx on ratings(averageRating);
+create index num_votes_idx on ratings(numVotes);
+create index movie_id_idx on ratings(movie_id);
+```
