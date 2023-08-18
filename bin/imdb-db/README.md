@@ -92,22 +92,32 @@ split -l $NR humans_movies.sql human_movs_
 ## Index
 
 ```sql
-create index movie_type_idx on movies(type);
-create index primary_title_idx on movies(primary_title);
-create index original_title_idx on movies(original_title);
-create index is_adult_idx on movies(is_adult);
-create index start_year_idx on movies(start_year);
-create index end_year_idx on movies(end_year);
-create index runtime_minutes_idx on movies(runtime_minutes);
+-- for text search gin + trigram indexes (reduces search time from ~3s to ~50ms)
+CREATE INDEX ON movies USING gin (primary_title gin_trgm_ops);
+CREATE INDEX ON movies USING gin (original_title gin_trgm_ops);
+CREATE INDEX ON humans USING gin (name gin_trgm_ops);
 
-create index name_idx on humans(name);
-create index birth_year_idx on humans(birth_year);
-create index death_year_idx on humans(death_year);
+-- for eq-comparison a normal btree index is faster
+CREATE INDEX ON movies(primary_title);
+CREATE INDEX ON movies(original_title);
+CREATE INDEX ON humans(name);
 
-create index human_id_idx on humans_movies(human_id);
-create index movie_id_idx on humans_movies(movie_id);
+CREATE INDEX ON movies(type);
+CREATE INDEX ON movies(primary_title);
+CREATE INDEX ON movies(original_title);
+CREATE INDEX ON movies(is_adult);
+CREATE INDEX ON movies(start_year);
+CREATE INDEX ON movies(end_year);
+CREATE INDEX ON movies(runtime_minutes);
 
-create index average_rating_idx on ratings(averageRating);
-create index num_votes_idx on ratings(numVotes);
-create index movie_id_idx on ratings(movie_id);
+CREATE INDEX ON humans(name);
+CREATE INDEX ON humans(birth_year);
+CREATE INDEX ON humans(death_year);
+
+CREATE INDEX ON humans_movies(human_id);
+CREATE INDEX ON humans_movies(movie_id);
+
+CREATE INDEX ON ratings(averageRating);
+CREATE INDEX ON ratings(numVotes);
+CREATE INDEX ON ratings(movie_id);
 ```
