@@ -24,8 +24,8 @@ module.exports = function (context, options) {
                         tagName: 'script',
                         attributes: {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython.js",
-                            src: "https://cdn.jsdelivr.net/npm/brython@3.11.0/brython.min.js",
-                            crossorigin: "anonymous",
+                            // crossorigin: "anonymous",
+                            src: "https://cdn.jsdelivr.net/npm/brython@3.11.3/brython.min.js",
                             referrerpolicy: "no-referrer"
                         },
                     },
@@ -33,8 +33,8 @@ module.exports = function (context, options) {
                         tagName: 'script',
                         attributes: {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js",
-                            src: "https://cdn.jsdelivr.net/npm/brython@3.11.0/brython_stdlib.js",
-                            crossorigin: "anonymous",
+                            // crossorigin: "anonymous",
+                            src: "https://cdn.jsdelivr.net/npm/brython@3.11.3/brython_stdlib.js",
                             referrerpolicy: "no-referrer"
                         },
                     },

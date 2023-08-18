@@ -9,7 +9,6 @@ import React, { type ReactNode } from 'react';
 import clsx from 'clsx';
 
 import styles from './styles.module.scss';
-import { filterProps } from 'recharts/types/util/types';
 
 type Browser = 'edge' | 'chrome' | 'firefox' | 'safari'
 interface Props {
