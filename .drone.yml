@@ -18,6 +18,7 @@ steps:
     restore: true
     mount:
       - ./node_modules
+  cache_key: [ DRONE_REPO_OWNER, DRONE_REPO_NAME, "school"]
 
 - name: website
   image: node:18
@@ -66,6 +67,7 @@ steps:
     rebuild: true
     mount:
       - ./node_modules
+  cache_key: [ DRONE_REPO_OWNER, DRONE_REPO_NAME, "school"]
 
 - name: notify
   image: plugins/webhook
@@ -106,6 +108,7 @@ steps:
     restore: true
     mount:
       - ./node_modules
+  cache_key: [ DRONE_REPO_OWNER, DRONE_REPO_NAME, "all-docs"]
 
 - name: website
   image: node:18
@@ -142,6 +145,17 @@ steps:
       include:
       - push
       - pull_request
+
+- name: rebuild-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
+  cache_key: [ DRONE_REPO_OWNER, DRONE_REPO_NAME, "all-docs"]
 
 volumes:
   - name: cache
