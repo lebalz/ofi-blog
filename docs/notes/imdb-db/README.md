@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+  id: f1015eb7-2a8c-41b3-9e04-b18ea7e095be
+---
+
 # Setup IMDB Database
 
 1. Download the [IMDB Dataset](https://datasets.imdbws.com/).
