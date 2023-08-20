@@ -138,7 +138,6 @@ table {
 .slim-table,
 .small-table {
     overflow-x: auto;
-
     table {
         th,
         td {
@@ -147,6 +146,17 @@ table {
     }
 }
 
+.compact,
+.compact-table {
+    table {
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+        th {
+            padding-right: 1em;
+        }
+    }
+}
 .center {
     table {
         margin-left: auto;
