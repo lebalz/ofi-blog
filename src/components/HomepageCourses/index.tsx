@@ -90,7 +90,7 @@ export default function HomepageCourses() {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {DOCS_ONLY && (
+          {(DOCS_ONLY || process.env.NODE_ENV === 'development') && (
             <CourseComponent course={{title: 'All Docs', classes: [{label: 'Docs', uri: '/home'}]}} />
           )}
           {CourseList.map((course, idx) => (
