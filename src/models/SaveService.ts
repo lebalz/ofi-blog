@@ -97,9 +97,6 @@ export default class SaveService {
         return this.rootStore.msalStore
             .withToken()
             .then((ok) => {
-                if (ok && this.model.umami) {
-                    umamiReport(this.model.umami.event, `${this.model.umami.message}`);
-                }
                 return this.endpoint(this.model, this.cancelToken);
             })
             .then(

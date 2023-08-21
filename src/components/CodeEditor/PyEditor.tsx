@@ -37,9 +37,6 @@ const PyEditor = observer((props: Props) => {
       (counter) => {
         if (props.lang === 'python' && counter > 0) {
           pyScript.clearLogMessages();
-          if (window && (window as any).umami) {
-            (window as any).umami.trackEvent(`${pyScript.isDummy ? 'py' : pyScript.webKey}`, `exec-script-${pyScript.isDummy ? 'temp' : 'persisted'}`);
-          }
           (window as any).brython(1, {
             ids: [DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)],
           });
