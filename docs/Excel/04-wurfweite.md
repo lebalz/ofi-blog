@@ -7,6 +7,7 @@ sidebar_custom_props:
 
 :::info Lernziele
 Sie brauchen dazu die Funktionen:
+- `PI()`
 - `SIN`
 - `COS`
 - `SUMME`

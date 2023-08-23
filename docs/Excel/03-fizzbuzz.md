@@ -12,7 +12,7 @@ sidebar_custom_props:
 
 :mdi-arrow-right: Erkennen Sie das Schema dahinter?
 
-<Solution>
+<Solution webKey="b65ca220-bd14-4c60-a20f-c61ae9a7b42f" show>
 
 Ist die Zahl durch $3$ teilbar, wird "Fizz" ausgegeben, ist sie durch $5$ teilbar, wird "Buzz" ausgegeben; oder eben FizzBuzz wenn die Zahl sowohl durch $3$ wie auch durch $5$ teilbar ist...
 </Solution>
