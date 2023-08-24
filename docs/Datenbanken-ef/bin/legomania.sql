@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS haustiere;
-DROP TABLE IF EXISTS legodude_freunde;
+DROP TABLE IF EXISTS legodudes_freunde;
 DROP TABLE IF EXISTS legodudes;
 
 
@@ -9,19 +9,18 @@ CREATE TABLE legodudes (
     beschreibung TEXT,
     land TEXT,
     essen TEXT,
-    geburtstag DATE,
+    alter INT,
+    lieblingszahl INT,
     bild TEXT,
     mehr TEXT
 );
 
--- Tabelle legodude_freunde
-CREATE TABLE legodude_freunde (
+CREATE TABLE legodudes_freunde (
     id SERIAL PRIMARY KEY,
     legodude_id INT REFERENCES legodudes(id),
     freund_id INT REFERENCES legodudes(id)
 );
 
--- Tabelle haustiere
 CREATE TABLE haustiere (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
@@ -38,7 +37,8 @@ INSERT INTO legodudes (
     beschreibung,
     land,
     essen,
-    geburtstag,
+    alter,
+    lieblingszahl,
     bild,
     mehr
 ) VALUES (
@@ -47,7 +47,8 @@ INSERT INTO legodudes (
     'Sie löscht nicht, sondern bringt die anderen dazu.',
     'Schweden',
     'Heisse Schokolade',
-    '1995-05-03',
+    32,
+    7,
     'https://ofi.gbsl.website/img/lego/lego_2.jpg',
     'Litty Feuerwehr hat eine sehr laute Stimme. Diese nutzt sie, um ihren Kolleginnen und Kollegen der städtischen Feuerwehr Anweisungen zukommen zu lassen.'
 ),(
@@ -56,7 +57,8 @@ INSERT INTO legodudes (
     'Er hat gerne Dinos und trägt abegahrene Mode.',
     'Österreich',
     'Spaghetti',
-    '1972-06-08',
+    23,
+    42,
     'https://ofi.gbsl.website/img/lego/lego_1.jpg',
     'Namentlich Johnson Sicc führt ein kleines Detailhandelsgeschäft in den Alpen. In den Bergen sucht er nach Steinen, welche Dinos ähneln.'
 ),(
@@ -65,7 +67,8 @@ INSERT INTO legodudes (
     'Seine Ideologie hat ihn zum Wahnsinn getrieben.',
     'USA',
     'Lasagne',
-    '1971-06-28',
+    69,
+    420,
     'https://ofi.gbsl.website/img/lego/lego_3.jpg',
     'Früher wollte er unbedingt Leute zum Mars schicken. Als seine Firma aber bankrott ging und er der einzige Mitarbeiter war, musste er es selbst tun. Das hat er auch geschafft. Das einzige positive an der Mission war aber sein Überleben.'
 ), (
@@ -74,7 +77,8 @@ INSERT INTO legodudes (
     'Er lebt für sein Rugby-Team und wird früher oder später auch dafür sterben.',
     'Irland',
     'Ovo-Sport',
-    '1990-01-14',
+    19,
+    13,
     'https://ofi.gbsl.website/img/lego/lego_4.jpg',
     'Mit seinem Vater besuchte Larry mit 5 Jahren erstmals ein Spiel vom lokalen Rugby-Club "Green Deamons" und war sofort Feuer und Flamme. Er trat dem Club bei und spielt seither bei jedem Spiel mit. Wegen seiner Physis rennt er immer sehr schnell und wird deswegen gern als Stürmer eingesetzt.'
 ), (
@@ -83,7 +87,8 @@ INSERT INTO legodudes (
     'Er ergänzt seinen Squad mit gezielten Animationen und Gamedesign.',
     'USA',
     'G-Fuel',
-    '1990-01-14',
+    24,
+    69,
     'https://ofi.gbsl.website/img/lego/lego_5.jpg',
     'Mit seinen hochwertigen Indie-Games, die er in seinem Kinderzimmer gemacht hat, hat er die Aufmerksamkeit von A$AP Mob auf sich gezogen. Diese Gruppe ist ein Games-Verleger. Er ist ein lebender Beweis dafür, dass sich "kein Leben haben" auszahlt. Denn er hat jetzt hella Chicks.'
 ),(
@@ -92,7 +97,8 @@ INSERT INTO legodudes (
     'Sie setzt sich für eine Häuptlinginnen ein.',
     'USA',
     'Bison-Trockenfleisch',
-    '1852-09-22',
+    18,
+    1,
     'https://ofi.gbsl.website/img/lego/lego_6.jpg',
     'Mit 3 Jahren hat sie ihre Leidenschaft für die Jagd entdeckt. Seither ist sie mit ihrem spezifischen Handgeschick im Bogenschiessen nicht mehr von der jährlichen Bison-Jagd wegzudenken.'
 ),(
@@ -101,14 +107,15 @@ INSERT INTO legodudes (
     'Man weiss nicht so genau, wer er ist. Das macht ihn auch so speziell.',
     'Schweiz',
     'Milch',
-    '1970-01-01',
+    37,
+    99,
     'https://ofi.gbsl.website/img/lego/lego_7.jpg',
     'Ein typischer Schweizer. Hat halt einen selbstmähenden Rasenmäher im Garten seines Einfamilien-Neubaus. Er kommt eigentlich nur aus dem Haus, wenn die Nachbarkids zu laut Peter Reber hören.'
 );
 
 
 -- LegodudeFreunde Beziehungen einfügen
-INSERT INTO legodude_freunde (legodude_id, freund_id)
+INSERT INTO legodudes_freunde (legodude_id, freund_id)
 VALUES
     (2, 6),
     (1, 4),
@@ -120,13 +127,14 @@ VALUES
     (7, 4),
     (7, 5),
     (7, 6);
--- Haustiere einfügen
-INSERT INTO Haustiere (id, name, tierart, lieblingsfutter, bild, legodude_id)
+
+
+INSERT INTO haustiere (id, name, tierart, lieblingsfutter, bild, legodude_id)
 VALUES
     (1, 'Fluffy', 'Hund', 'Knochen', 'https://ofi.gbsl.website/img/lego/pet_1.webp', 6),
-    (2, 'Whiskers', 'Katze', 'Fisch', 'https://ofi.gbsl.website/img/lego/pet_2.webp', 2),
+    (2, 'Whiskers', 'Katze', 'Fisch', 'https://ofi.gbsl.website/img/lego/pet_2.webp', 4),
     (3, 'Spike', 'Igel', 'Äpfel', 'https://ofi.gbsl.website/img/lego/pet_3.jpg', 4),
     (4, 'Buddy', 'Papagei', 'Körner', 'https://ofi.gbsl.website/img/lego/pet_4.jpg', 6),
-    (5, 'Finn', 'Hamster', 'Samen', 'https://ofi.gbsl.website/img/lego/pet_5.webp', 5),
+    (5, 'Finn', 'Hamster', 'Körner', 'https://ofi.gbsl.website/img/lego/pet_5.webp', 5),
     (6, 'Max', 'Hund', 'Leckerli', 'https://ofi.gbsl.website/img/lego/pet_6.webp', 1),
-    (7, 'Dundun', 'Dino', 'Babaganusch', 'https://ofi.gbsl.website/img/lego/pet_7.jpg', 1);
+    (7, 'Dundun', 'Dino', 'Babaganusch', 'https://ofi.gbsl.website/img/lego/pet_7.jpg', 2);
