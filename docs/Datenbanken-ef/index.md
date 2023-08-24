@@ -13,3 +13,9 @@ Wir die Wett-Resultate in drei unterschiedlich strukturierten Excel-Tabellen ges
 
 <Answer type="text" webKey="6737881f-025a-4df3-878d-35436708518e" />
 
+## Material
+
+Buch
+: [👉 Datenbanken](https://erzbe.sharepoint.com/:b:/s/24EFInformatik/EWseDuaUYBtOu0I9XIjEzCkBHvd1eNeknJg9kCY8FAe2xQ?e=4yEofE)
+Datenbank
+: [👉 DB-SQL.CH](https://db-sql.ch)
