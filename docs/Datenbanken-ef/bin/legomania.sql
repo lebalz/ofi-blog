@@ -1,0 +1,132 @@
+DROP TABLE IF EXISTS haustiere;
+DROP TABLE IF EXISTS legodude_freunde;
+DROP TABLE IF EXISTS legodudes;
+
+
+CREATE TABLE legodudes (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    beschreibung TEXT,
+    land TEXT,
+    essen TEXT,
+    geburtstag DATE,
+    bild TEXT,
+    mehr TEXT
+);
+
+-- Tabelle legodude_freunde
+CREATE TABLE legodude_freunde (
+    id SERIAL PRIMARY KEY,
+    legodude_id INT REFERENCES legodudes(id),
+    freund_id INT REFERENCES legodudes(id)
+);
+
+-- Tabelle haustiere
+CREATE TABLE haustiere (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    tierart TEXT,
+    lieblingsfutter TEXT,
+    bild TEXT,
+    legodude_id INT REFERENCES legodudes(id)
+);
+
+
+INSERT INTO legodudes (
+    id,
+    name,
+    beschreibung,
+    land,
+    essen,
+    geburtstag,
+    bild,
+    mehr
+) VALUES (
+    1,
+    'Litty Feuerwehr',
+    'Sie löscht nicht, sondern bringt die anderen dazu.',
+    'Schweden',
+    'Heisse Schokolade',
+    '1995-05-03',
+    'https://ofi.gbsl.website/img/lego/lego_2.jpg',
+    'Litty Feuerwehr hat eine sehr laute Stimme. Diese nutzt sie, um ihren Kolleginnen und Kollegen der städtischen Feuerwehr Anweisungen zukommen zu lassen.'
+),(
+    2,
+    'Crazy Lego Dude',
+    'Er hat gerne Dinos und trägt abegahrene Mode.',
+    'Österreich',
+    'Spaghetti',
+    '1972-06-08',
+    'https://ofi.gbsl.website/img/lego/lego_1.jpg',
+    'Namentlich Johnson Sicc führt ein kleines Detailhandelsgeschäft in den Alpen. In den Bergen sucht er nach Steinen, welche Dinos ähneln.'
+),(
+    3,
+    'Elon Marsk',
+    'Seine Ideologie hat ihn zum Wahnsinn getrieben.',
+    'USA',
+    'Lasagne',
+    '1971-06-28',
+    'https://ofi.gbsl.website/img/lego/lego_3.jpg',
+    'Früher wollte er unbedingt Leute zum Mars schicken. Als seine Firma aber bankrott ging und er der einzige Mitarbeiter war, musste er es selbst tun. Das hat er auch geschafft. Das einzige positive an der Mission war aber sein Überleben.'
+), (
+    4,
+    'Larry der Stürmer',
+    'Er lebt für sein Rugby-Team und wird früher oder später auch dafür sterben.',
+    'Irland',
+    'Ovo-Sport',
+    '1990-01-14',
+    'https://ofi.gbsl.website/img/lego/lego_4.jpg',
+    'Mit seinem Vater besuchte Larry mit 5 Jahren erstmals ein Spiel vom lokalen Rugby-Club "Green Deamons" und war sofort Feuer und Flamme. Er trat dem Club bei und spielt seither bei jedem Spiel mit. Wegen seiner Physis rennt er immer sehr schnell und wird deswegen gern als Stürmer eingesetzt.'
+), (
+    5,
+    'A$AP Geerky',
+    'Er ergänzt seinen Squad mit gezielten Animationen und Gamedesign.',
+    'USA',
+    'G-Fuel',
+    '1990-01-14',
+    'https://ofi.gbsl.website/img/lego/lego_5.jpg',
+    'Mit seinen hochwertigen Indie-Games, die er in seinem Kinderzimmer gemacht hat, hat er die Aufmerksamkeit von A$AP Mob auf sich gezogen. Diese Gruppe ist ein Games-Verleger. Er ist ein lebender Beweis dafür, dass sich "kein Leben haben" auszahlt. Denn er hat jetzt hella Chicks.'
+),(
+    6,
+    'Wigwam Tipi',
+    'Sie setzt sich für eine Häuptlinginnen ein.',
+    'USA',
+    'Bison-Trockenfleisch',
+    '1852-09-22',
+    'https://ofi.gbsl.website/img/lego/lego_6.jpg',
+    'Mit 3 Jahren hat sie ihre Leidenschaft für die Jagd entdeckt. Seither ist sie mit ihrem spezifischen Handgeschick im Bogenschiessen nicht mehr von der jährlichen Bison-Jagd wegzudenken.'
+),(
+    7,
+    'Botot',
+    'Man weiss nicht so genau, wer er ist. Das macht ihn auch so speziell.',
+    'Schweiz',
+    'Milch',
+    '1970-01-01',
+    'https://ofi.gbsl.website/img/lego/lego_7.jpg',
+    'Ein typischer Schweizer. Hat halt einen selbstmähenden Rasenmäher im Garten seines Einfamilien-Neubaus. Er kommt eigentlich nur aus dem Haus, wenn die Nachbarkids zu laut Peter Reber hören.'
+);
+
+
+-- LegodudeFreunde Beziehungen einfügen
+INSERT INTO legodude_freunde (legodude_id, freund_id)
+VALUES
+    (2, 6),
+    (1, 4),
+    (3, 3),
+    (2, 5),
+    (5, 6),
+    (7, 1),
+    (7, 2),
+    (7, 4),
+    (7, 5),
+    (7, 6);
+-- Haustiere einfügen
+INSERT INTO Haustiere (id, name, tierart, lieblingsfutter, bild, legodude_id)
+VALUES
+    (1, 'Fluffy', 'Hund', 'Knochen', 'https://ofi.gbsl.website/img/lego/pet_1.webp', 6),
+    (2, 'Whiskers', 'Katze', 'Fisch', 'https://ofi.gbsl.website/img/lego/pet_2.webp', 2),
+    (3, 'Spike', 'Igel', 'Äpfel', 'https://ofi.gbsl.website/img/lego/pet_3.jpg', 4),
+    (4, 'Buddy', 'Papagei', 'Körner', 'https://ofi.gbsl.website/img/lego/pet_4.jpg', 6),
+    (5, 'Finn', 'Hamster', 'Samen', 'https://ofi.gbsl.website/img/lego/pet_5.webp', 5),
+    (6, 'Max', 'Hund', 'Leckerli', 'https://ofi.gbsl.website/img/lego/pet_6.webp', 1),
+    (7, 'Dundun', 'Dino', 'Babaganusch', 'https://ofi.gbsl.website/img/lego/pet_7.jpg', 1);
