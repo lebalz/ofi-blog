@@ -375,6 +375,14 @@
       "ignore": [
         "04-protokolle"
       ]
+    },
+    {
+      "from": "docs/Datenbanken-ef/",
+      "to": "versioned_docs/version-24ef/03-Datenbanken",
+      "ignore": [
+        "bin",
+        "imdb-db"
+      ]
     }
   ]
 }
