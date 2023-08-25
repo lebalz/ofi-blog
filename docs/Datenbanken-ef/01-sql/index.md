@@ -197,7 +197,7 @@ SELECT * FROM haustiere
 ```
 ```sql
 SELECT * FROM haustiere
-    WHERE (NOT lieblingsfutter='Körner' AND tierart='Hund') OR tierart='Hamster';
+    WHERE NOT lieblingsfutter='Körner' AND (tierart='Hund' OR tierart='Hamster');
 ```
 
 <Answer type="text" webKey="7a4c2b2c-3a43-42e4-bc96-8b0a15655362" />
