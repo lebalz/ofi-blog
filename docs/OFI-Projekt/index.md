@@ -29,7 +29,7 @@ Im Partnerpraktikum suchen Sie sich in **Zweiergruppen** selbständig ein Thema 
 
 Suchen Sie sich ein Thema, in welches Sie sich innerhalb von 5 Doppellektionen einarbeiten können. Ihr Projekt darf auch einen praktischen Teil beinhalten (muss aber nicht).
 
-Das Endprodukt ihres Projekts ist ein **Podcast** oder wenn Visualisierungen zwingend sind ein **Videobeitrag** von 4-7 Minuten. Zudem wird eine schriftliche Reflexion zum Arbeitsprozess und dem Projekt verfasst, der in die Beurteilung einfliesst.
+Das Endprodukt ihres Projekts ist ein **Podcast** oder wenn Visualisierungen zwingend sind ein **Videobeitrag** von 4-7 Minuten. Zudem wird eine schriftliche Reflexion zum Arbeitsprozess und dem Projekt verfasst, die in die Beurteilung einfliesst.
 
 ## Beurteilung
 
