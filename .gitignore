@@ -36,6 +36,8 @@ _news/
 _versioned_docs/
 _versioned_sidebars/
 
+*:Zone.Identifier
+
 secure/
 # Want to not track changes of a file, but keep in in git?
 # - First change the file you do not want to be tracked and use the following command:
