@@ -381,7 +381,8 @@
       "to": "versioned_docs/version-24ef/03-Datenbanken",
       "ignore": [
         "bin",
-        "imdb-db"
+        "imdb-db",
+        "01-sql/03-joins.md"
       ]
     }
   ]
