@@ -247,7 +247,7 @@ Datenbank
    
    <Answer type="text" webKey="04516e20-52e8-4b50-8f92-f52b7e54f3fd" monospace />
 
-2. Erzeugen Sie eine Tabelle, in welcher nur die Aarentemperatur kurz vor dem Bielersee angezeigt wird. Ordnen Sie die Ausfabe nach dem Erstelldatum des Datensatzes.
+2. Erzeugen Sie eine Tabelle, in welcher nur die Aarentemperatur kurz vor dem Bielersee angezeigt wird. Ordnen Sie die Ausgabe nach dem Erstelldatum des Datensatzes.
 
    <Answer type="text" webKey="efc77872-8c93-40bb-86ab-62ded075040e" monospace />
 
