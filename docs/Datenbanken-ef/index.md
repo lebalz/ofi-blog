@@ -31,7 +31,7 @@ Skript
 ![](er-diagramme/dozenten-vorlesungen.png)
 </Solution>
 
-### 2. Schüler:innen und Aaufgaben
+### 2. Schüler:innen und Aufgaben
 
 <Solution webKey="ca1207f4-41b2-4a69-94d7-2641b2ea653b">
 
