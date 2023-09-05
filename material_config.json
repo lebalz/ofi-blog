@@ -383,7 +383,8 @@
         "bin",
         "imdb-db",
         "01-sql/03-joins.md"
-      ]
+      ],
+      "open": true
     }
   ]
 }
