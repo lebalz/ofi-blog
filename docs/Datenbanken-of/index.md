@@ -15,13 +15,8 @@ Wir die Wett-Resultate in drei unterschiedlich strukturierten Excel-Tabellen ges
 
 ## Material
 
-Buch
-: [👉 Datenbanken](https://erzbe.sharepoint.com/:b:/s/24EFInformatik/EWseDuaUYBtOu0I9XIjEzCkBHvd1eNeknJg9kCY8FAe2xQ?e=4yEofE)
 Datenbank
 : [👉 DB-SQL.CH](https://db-sql.ch)
-Skript
-: [👉 Datenbanken](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/EVnFr8xMQJBDr4SGmPvLYEgBL6IgKngdCXsNOv7RiLpsYQ?e=gVDCWz)
-
 
 ## Lösungen
 
