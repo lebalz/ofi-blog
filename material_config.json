@@ -147,6 +147,12 @@
       "to": "versioned_docs/version-26e/08-Excel",
       "ignore": [],
       "open": true
+    },
+    {
+      "from": "docs/Datenbanken-of/",
+      "to": "versioned_docs/version-26e/09-Datenbanken",
+      "ignore": [],
+      "open": true
     }
   ],
   "26P": [
@@ -296,6 +302,12 @@
     {
       "from": "docs/Excel/",
       "to": "versioned_docs/version-26P/08-Excel",
+      "ignore": [],
+      "open": true
+    },
+    {
+      "from": "docs/Datenbanken-of/",
+      "to": "versioned_docs/version-26P/09-Datenbanken",
       "ignore": [],
       "open": true
     }
