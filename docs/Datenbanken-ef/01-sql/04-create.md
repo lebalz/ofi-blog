@@ -158,7 +158,7 @@ Erstellen Sie Ihre Personen-Tabelle erneut (zuerst Löschen...)
 - stellen Sie sicher, dass benötigte Felder gesetzt werden müssen
 - Fügen Sie für mindestens ein Attribut einen Standardwert
 - Fügen Sie ein `erstellt_am` (oder `created_at`) Feld hinzu, welches automatisch mit dem aktuellen Zeitstempel gefüllt wird.
-- Fügen Sie einigen Datensätze ein - passen Sie am besten das Query von oben an.
+- Fügen Sie einige Datensätze ein - passen Sie am besten das Query von oben an.
 
 <Answer type="text" webKey="8c0bda3b-ba1a-45b2-8fa4-24fab7b5c8b5" />
 
