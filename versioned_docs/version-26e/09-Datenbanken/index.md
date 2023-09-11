@@ -7,11 +7,9 @@ image: ./images/simpsons-excel-is-no-db.png
 
 ![--width=250px](images/simpsons-excel-is-no-db.png)
 
-## Einstieg: Wetten um Smarties
+## Einstieg
 
-Wir haben die Wett-Resultate in drei unterschiedlich strukturierten Excel-Tabellen gespeichert. Was sind die Vor- und Nachteile der einzelnen Varianten? Washalb reicht Excel nicht aus, um Daten zu speichern?
-
-<Answer type="text" webKey="6737881f-025a-4df3-878d-35436708518e" />
+Mit S. Gerber: [👉 Datenbank, Datensatz, Datenfeld](https://craft.silasberger.ch/1HLGNdECrxcd3n)
 
 ## Material
 
