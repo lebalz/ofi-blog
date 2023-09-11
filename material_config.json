@@ -151,7 +151,7 @@
     {
       "from": "docs/Datenbanken-of/",
       "to": "versioned_docs/version-26e/09-Datenbanken",
-      "ignore": ["index.md"]
+      "ignore": ["index.md", "01-sql/04-create.md"]
     }
   ],
   "26P": [
@@ -306,7 +306,7 @@
     {
       "from": "docs/Datenbanken-of/",
       "to": "versioned_docs/version-26P/09-Datenbanken",
-      "ignore": [],
+      "ignore": ["01-sql/04-create.md"],
       "open": true
     }
   ],
