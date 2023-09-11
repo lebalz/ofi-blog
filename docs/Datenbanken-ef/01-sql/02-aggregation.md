@@ -67,7 +67,7 @@ Gibt den minimalen Wert einer Spalte zurück.
 
 ```sql
 SELECT MIN(lieblingszahl) FROM legodudes;
-/*  avg 
+/*  min 
    -----
      1  */
 ```
