@@ -12,7 +12,6 @@ Erstellen Sie unter https://db-sql.ch mit Ihrer Schul-E-Mail-Adresse einen Accou
 Sobald Sie dies erledigt haben, können Sie auf die für Sie freigegebenen Datenbankverbindungen zugreifen.
 :::
 
-
 ### SQL
 
 Eine SQL-Abfrage ist vom Aufbau her immer gleich:
