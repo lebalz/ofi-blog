@@ -71,7 +71,7 @@ Either
 - Disable CLoudflare "DNS Proxy" temporarly
 - Deploy
 - Let Github generate SSL certificates for you
-- Check "Enforce https:"
+- Check "Enforce https"
 - Re-Enable DNS Proxy on Cloudflare again.
 
 ## Start Postgres on osx
