@@ -390,7 +390,7 @@ SELECT 'Hallo ' || name FROM persons;
 ```
 :::
 
-::::details ⭐ `Substring` und `Replace`
+:::details ⭐ `Substring` und `Replace`
 
 :::def
 ### `SUBSTRING(text, start, [length])`
@@ -417,7 +417,7 @@ SELECT REPLACE(name, ' ', '_') FROM persons;
 ```
 :::
 
-::::
+:::
 
 Weitere Operatoren und Funktionen
 - `UPPER(text)` schreibt alle Buchstaben gross
