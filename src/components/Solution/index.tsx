@@ -201,12 +201,14 @@ const Solution = observer((props: Props) => {
                             {!model.show && <span className="badge badge--secondary">Hidden</span>}
                         </summary>
                     }
-                    className={clsx('alert alert--success', styles.solution,  props.className)}
+                    className={clsx('alert alert--success', styles.solution)}
                     open={props.open || adminStore.showSolutions}
                     key={`poly-${props.open || adminStore.showSolutions}`}
                 >
                     {userStore.current?.admin && <Config webKey={model.webKey} />}
-                    {props.children}
+                    <div className={clsx(props.className)}>
+                        {props.children}
+                    </div>
                 </Details>
             ) : (
                 <div className={clsx('alert', styles.disabled)}>
