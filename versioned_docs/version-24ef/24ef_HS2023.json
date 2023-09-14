@@ -10,14 +10,14 @@
         "type": "holiday"
     },
     {
-        "cells": ["15.09.2023","Datenbanken","Relationale DB's, Tabellen erstellen, SQL CREATE, INSERT, UPDATE, DELETE"]
+        "cells": ["15.09.2023","Datenbanken","Relationale DB's, Tabellen erstellen, SQL CREATE"]
     },
     {
-        "cells": ["22.09.2023","Datenbanken","Relationale DB's, Tabellen erstellen, SQL CRUD"]
+        "cells": ["22.09.2023","Datenbanken","Relationale DB's, Tabellen erstellen, SQL Joins, INSERT, UPDATE, DELETE"]
     },
     {
-        "cells": ["29.09.2023","Datenbanken","Test"],
-        "type": "test"
+        "cells": ["29.09.2023","Datenbanken","SQL Injection"],
+        "icon": "mdi-robber"
     },
     {
         "cells": ["06.10.2023","Sonderwoche",""],
@@ -32,7 +32,11 @@
         "type": "holiday"
     },
     {
-        "cells": ["27.10.2023","Robotik","Einstieg, Zustandsmaschinen, EV3"]
+        "cells": ["27.10.2023","Datenbanken / Robotik","Wiederholung Datenbanken, (Einstieg, Zustandsmaschinen, EV3)"]
+    },
+    {
+        "cells": ["03.11.2023","Datenbanken","Test, 07:30-08:30"],
+        "type": "test"
     },
     {
         "cells": ["03.11.2023","Rob-Olympics: Vorbereitungs-Weekend 3-4.11",""],
