@@ -152,8 +152,14 @@ table {
         width: auto;
         margin-right: auto;
         margin-left: auto;
+        font-size: 85%;
         th {
             padding-right: 1em;
+        }
+    }
+    &.left {
+        table {
+            margin-left: 0;
         }
     }
 }

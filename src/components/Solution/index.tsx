@@ -13,6 +13,7 @@ interface Props {
     webKey: string;
     title?: string;
     open?: boolean;
+    className?: string;
     children?: React.ReactNode;
 }
 
@@ -200,7 +201,7 @@ const Solution = observer((props: Props) => {
                             {!model.show && <span className="badge badge--secondary">Hidden</span>}
                         </summary>
                     }
-                    className={clsx('alert alert--success', styles.solution)}
+                    className={clsx('alert alert--success', styles.solution,  props.className)}
                     open={props.open || adminStore.showSolutions}
                     key={`poly-${props.open || adminStore.showSolutions}`}
                 >
