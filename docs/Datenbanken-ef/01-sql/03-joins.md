@@ -179,7 +179,7 @@ ORDER BY a.name
 
 </GTabs>
 
-:::aufgabe Legodudes Freunde
+::::aufgabe Legodudes Freunde
 <Answer type="state" webKey="0408cad3-a23a-42d0-861a-c4ed127eab7a" />
 
 Datenbank
@@ -222,4 +222,4 @@ ORDER BY a.name, b.name
 Was ist mit "Larry" und "Wigwam" passiert? Warum werden diese nicht angezeigt? Vermutung?
 
 <Answer type="text" webKey="95f370c5-8cbb-408a-996f-dbd7e98a4f25" />
-:::
+::::
