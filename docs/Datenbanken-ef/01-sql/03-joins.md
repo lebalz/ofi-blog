@@ -4,12 +4,6 @@ sidebar_custom_props:
 ---
 # Mehrtabellenabfragen (Joins)
 
-Bei welchen Filmen spielt `Balthasar Glättli` mit? 
-
-
-
-# Mehrtabellenabfragen
-
 Datenbanken können nicht nur zum effizienten aufbewahren von Daten verwendet werden, sondern auch um die gespeicherten Tabellen miteinander zu verknüpfen. Die Verknüpfung basiert auf dem **kartesischen Produkt**, daher "Jede Zeile einer Tabelle wird mit jeder Zeile der anderen Tabelle verknüpft".
 
 
@@ -223,3 +217,48 @@ Was ist mit "Larry" und "Wigwam" passiert? Warum werden diese nicht angezeigt? V
 
 <Answer type="text" webKey="95f370c5-8cbb-408a-996f-dbd7e98a4f25" />
 ::::
+
+:::aufgabe IMDb
+<Answer type="state" webKey="72bc2c78-c0a2-4648-9c32-4a868bf86279" />
+
+Bei welchen Filmen wirkt
+- [Balthasar Glättli](https://de.wikipedia.org/wiki/Balthasar_Gl%C3%A4ttli) mit?
+- Ihre Lieblingsschauspieler:in mit?
+
+Geben Sie die Personen zusammen mit den Filmen aus, in welchen sie mitwirken.
+
+<Solution webKey="adf6fe79-7d87-4b5c-874d-edfbfb172add">
+
+```sql
+SELECT *
+FROM humans
+    JOIN humans_movies ON humans.id = humans_movies.human_id
+    JOIN movies ON humans_movies.movie_id = movies.id
+WHERE
+    humans.name='Balthasar Glättli';
+```
+</Solution>
+
+:::
+
+
+:::aufgabe Lieblingsfilme
+<Answer type="state" webKey="9de46f19-da36-4c0a-a2ae-3c7c037b1544" />
+
+Wer wirkt alles bei Ihrem Lieblingsfilm (alternativ: vom Film mit der ID `tt0478087`) mit?
+Geben Sie den Film zusammen mit allen Personen aus, die beim Film mitgewirkt haben.
+
+
+<Solution webKey="adf6fe79-7d87-4b5c-874d-edfbfb172add">
+
+```sql
+SELECT 'https://www.imdb.com/title/' || movies.id || '/' as film, 'https://www.imdb.com/name/' || humans.id || '/' as human, *
+FROM movies
+    JOIN humans_movies ON movies.id = humans_movies.movie_id
+    JOIN humans ON humans_movies.human_id = humans.id
+WHERE
+    movies.id='tt0478087'
+```
+</Solution>
+
+:::
