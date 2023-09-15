@@ -126,6 +126,15 @@ Schema:
 Überführen Sie die Tabelle «Onlineshop» unten schrittweise in die dritte Normalform, d. h. 
 zunächst in die 1 NF, dann in die 2NF. Erläutern Sie bei jedem Schritt. welche Bedingungen für die einzelnen Normalformen verletzt werden. 
 
+<div className="slim compact">
+
+| Benutzername | Adresse            | Warenkorb ID | Datum    | ArtikelNr                   | Bezeichnung                  | Menge           | Preis                      |
+|:-------------|:-------------------|:-------------|:---------|:----------------------------|:-----------------------------|:----------------|:---------------------------|
+| pink18       | Rotweg 2, Köln     | 456          | 06.02.19 | 10078<br />22900            | Rock<br />Top                | 1<br />2        | 19.95<br />14.95           |
+| blue28       | Lichtstr. 44, Bonn | 776          | 22.03.19 | 10088<br />10098<br />10099 | Uhr<br />Armband<br />Socken | 1<br />1<br />5 | 89.90<br />12.95<br />4.45 |
+
+</div>
+
 <Answer type="text" webKey="40421b01-867d-4da2-b283-6a7d18032d05" />
 
 <Solution webKey="1e125672-bd7e-40a9-9a9a-8c6a1c5eecf0" className="slim compact left">
