@@ -8,10 +8,6 @@ sidebar_custom_props:
 ERD
 : Entity-Relationship-Diagramm
 
-Theorie
-: [👉 Buch S. 252-258](https://erzbe.sharepoint.com/:b:/s/24EFInformatik/EWseDuaUYBtOu0I9XIjEzCkBHvd1eNeknJg9kCY8FAe2xQ?e=4yEofE)
-
-
 
 ## Lösungen
 
