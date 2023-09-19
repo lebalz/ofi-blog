@@ -102,3 +102,46 @@ __AHV Nummern__
 
 
 </Solution>
+:::
+
+:::aufgabe 6. Schülerprojekte
+<Answer type="state" webKey="e09f6820-e870-45f4-8913-b008b341d7bc" />
+
+1. Bestimmen Sie die Kardinalität.
+2. Überführen Sie das ERD in ein relationales Schema (=Tabellenform).
+3. Fügen Sie der Tabelle zwei Schüler:innen hinzu, welche an einem gemeinsamen und jeweils an einem eigenen Projekt arbeiten.
+
+
+![](images/06-schueler-projekte.png)
+
+<Solution webKey="199dfa13-dee1-4057-ab4e-2006e710fe17" className="slim compact left">
+
+![](images/06-schueler-projekte-lsg.png)
+
+__Schüler:innen__
+
+| id | Name     | Vorname |
+|:---|:---------|:--------|
+| 1  | Meier    | Alfred  |
+| 2  | Mosimann | Maria   |
+
+__schüler_projekte__
+
+| schüler_id | projekt_id |
+|:-----------|:-----------|
+| 1          | 1          |
+| 1          | 2          |
+| 2          | 1          |
+| 2          | 3          |
+
+__Projekte__
+
+| id | Fach       | Zeitraum              | Thema             |
+|:---|:-----------|:----------------------|:------------------|
+| 1  | Informatik | September 2023        | Datenbanken       |
+| 2  | Deutsch    | August-September 2023 | Lektüre           |
+| 3  | Physik     | September 2023        | Praktikumsbericht |
+
+
+</Solution>
+:::
