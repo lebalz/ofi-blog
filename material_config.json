@@ -151,7 +151,7 @@
     {
       "from": "docs/Datenbanken-of/",
       "to": "versioned_docs/version-26e/09-Datenbanken",
-      "ignore": ["index.md", "01-sql/04-create.md"],
+      "ignore": ["index.md", "01-sql/04-create.md", "_category_.json"],
       "open": true
     }
   ],
@@ -307,7 +307,7 @@
     {
       "from": "docs/Datenbanken-of/",
       "to": "versioned_docs/version-26P/09-Datenbanken",
-      "ignore": ["01-sql/04-create.md"],
+      "ignore": ["01-sql/04-create.md", "_category_.json"],
       "open": true
     }
   ],
@@ -392,7 +392,8 @@
       "to": "versioned_docs/version-24ef/03-Datenbanken",
       "ignore": [
         "bin",
-        "imdb-db"
+        "imdb-db",
+        "_category_.json"
       ],
       "open": true
     }

@@ -4,7 +4,10 @@
 01-Programmieren/02-Infrastruktur/03-Git-install/*
 01-Programmieren/02-Infrastruktur/05-vscode/*
 01-Programmieren/03-Turtle-Repetition/*
-!01-Programmieren/03-Turtle-Repetition/800-python-scripts.md,051-art.md,052-xmas.md,050-repetition,index.md
+!01-Programmieren/03-Turtle-Repetition/800-python-scripts.md
+!01-Programmieren/03-Turtle-Repetition/051-art.md
+!01-Programmieren/03-Turtle-Repetition/052-xmas.md
+!01-Programmieren/03-Turtle-Repetition/050-repetition/
 01-Programmieren/10-NumTrip/*
 !01-Programmieren/10-NumTrip/10-random-board.md
 01-Programmieren/03-Turtle-Repetition/index.md
@@ -13,7 +16,9 @@
 01-Programmieren/02-Infrastruktur/20-Docusaurus/*
 02-Netzwerke/*
 10-IoT-Workshop/*
-!10-IoT-Workshop/04-protokolle
+!10-IoT-Workshop/04-protokolle/
 03-Datenbanken/*
-!03-Datenbanken/bin,imdb-db
+!03-Datenbanken/bin/
+!03-Datenbanken/imdb-db/
+!03-Datenbanken/_category_.json
 03-Datenbanken/_category_.json

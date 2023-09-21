@@ -54,6 +54,15 @@ const relative2Doc = (path) => {
     return base ? path.slice(base.length) : path;
 }
 
+const ensureStartingSlash = (path) => {
+    if (typeof path !== 'string') {
+        return path;
+    }
+    if (path.startsWith('/')) {
+        return path;
+    }
+    return `/${path}`
+}
 const ensureTrailingSlash = (path) => {
     if (typeof path !== 'string') {
         return path;
@@ -108,7 +117,7 @@ fs.writeFileSync('static/CNAME', (process.env.DOMAIN || 'ofi.gbsl.website').repl
         config.forEach(async (src) => {
             var srcPath = undefined
             var toPath = undefined
-            var ignore = [];
+            const ignore = [];
             switch (typeof src) {
                 case 'string':
                     srcPath = src;
@@ -121,7 +130,7 @@ fs.writeFileSync('static/CNAME', (process.env.DOMAIN || 'ofi.gbsl.website').repl
                     } else {
                         toPath = `${classDir}${relative2Doc(src)}`
                     }
-                    ignore = src.ignore;
+                    ignore.push(...(src.ignore || []));
                     break;
             }
             if (process.env.WITHOUT_DOCS && srcPath.startsWith('docs/')) {
@@ -144,9 +153,21 @@ fs.writeFileSync('static/CNAME', (process.env.DOMAIN || 'ofi.gbsl.website').repl
                     .destination(toPath)
                     .archive()
                     .delete();
-                if (ignore.length > 0) {
-                    rsync.exclude(ignore)
-                    gitignore.push(`!${sanitizedClassDir}${ignore}`)
+                    if (ignore.length > 0) {
+                    rsync.exclude(ignore.map((i) => ensureStartingSlash(i)));
+                    ignore.forEach((ifile) => {
+                        const opath = `${srcPath}${ifile}`;
+                        const ipath = `${sanitizedClassDir}${ifile}`;
+                        if (!fs.existsSync(opath)) {
+                            console.warn(`⚠️ [ignore] ${klass}->${srcPath}: ignored "${ifile}" does not exist`);
+                            return
+                        }
+                        if (fs.lstatSync(opath).isDirectory()) {
+                            gitignore.push(`!${ensureTrailingSlash(ipath)}`)
+                        } else {
+                            gitignore.push(`!${ipath}`)
+                        }
+                    })
                 }
                 rsync.exclude(['.sync.*', '*.nosync.*'])
                 let success = false;
