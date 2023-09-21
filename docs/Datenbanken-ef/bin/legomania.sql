@@ -17,8 +17,8 @@ CREATE TABLE legodudes (
 
 CREATE TABLE legodudes_freunde (
     id SERIAL PRIMARY KEY,
-    legodude_id INT REFERENCES legodudes(id),
-    freund_id INT REFERENCES legodudes(id)
+    legodude_id INT REFERENCES legodudes(id) ON DELETE SET NULL,
+    freund_id INT REFERENCES legodudes(id) ON DELETE SET NULL
 );
 
 CREATE TABLE haustiere (

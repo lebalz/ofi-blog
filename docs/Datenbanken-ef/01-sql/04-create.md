@@ -166,3 +166,49 @@ Was passiert nun, wenn Sie die Restriktionen verletzen? Probieren Sie es aus und
 
 <Answer type="text" webKey="7bf34055-06f2-4bf0-8b2d-54e6e1795539" />
 :::
+
+
+## Verknüpfte Tabellen
+
+Beim Erstellen von Tabellen können nebst Primärschlüsseln auch Fremdschlüssel definiert werden. Damit wird sichergestellt, dass die Daten in den verknüpften Tabellen immer konsistent sind. Dies ist mitunter einer der wichtigsten Gründe, eine relationale Datenbank zu verwenden.
+
+```sql
+CREATE TABLE personen (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    alter INT,
+    beschreibung TEXT DEFAULT 'Keine Beschreibung vorhanden',
+    erstellt_am TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE adressen (
+    id SERIAL PRIMARY KEY,
+    strasse TEXT NOT NULL,
+    hausnummer TEXT NOT NULL,
+    plz TEXT NOT NULL,
+    ort TEXT NOT NULL,
+    person_id INT REFERENCES personen(id)
+);
+```
+
+:::def
+### `REFERENCES <tabelle>(<spalte>)`
+
+Mit dem Befehl `REFERENCES` wird ein Fremdschlüssel definiert. In diesem Beispiel wird sichergestellt, dass die `person_id` in der Tabelle `adressen` immer auf einen gültigen Datensatz in der Tabelle `personen` verweist.
+
+Es kann auch im Nachhinein ein Fremdschlüssel hinzugefügt werden:
+
+```sql
+ALTER TABLE adressen
+    ADD FOREIGN KEY (person_id) REFERENCES personen(id);
+--                      ^ Spalte fkey         ^ Tabelle(Spalte pkey)
+```
+
+#### Entfernen von Constraints
+
+```sql
+ALTER TABLE adressen
+    DROP CONSTRAINT fkey_adresse_personen_id;
+```
+
+:::
