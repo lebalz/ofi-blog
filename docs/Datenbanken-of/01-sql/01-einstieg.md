@@ -176,7 +176,7 @@ SELECT * FROM haustiere
 ```
 :::warning Beachte
 - Das `NOT` bezieht sich jeweils nur auf den direkt folgenden Ausdruck.
-- Tabellen-Namen müssen für jeden Vergleich angegeben werden.
+- Spalten-Namen müssen bei jeden Vergleich erneut angegeben werden.
 :::
 :::
 
