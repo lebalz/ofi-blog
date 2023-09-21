@@ -17,7 +17,7 @@ interface Props {
 }
 
 const getReferenceContainer = (el: HTMLElement) => {
-    if (el.getAttribute('role') === 'tabpanel' || el.classList.contains('markdown') || !el.parentElement) {
+    if (el.getAttribute('role') === 'tabpanel' || el.classList.contains('markdown') || !el.parentElement) {
         return el;
     }
     return getReferenceContainer(el.parentElement);

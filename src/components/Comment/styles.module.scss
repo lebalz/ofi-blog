@@ -137,3 +137,12 @@
         }
     }
 }
+
+div:global(.slim),
+div:global(.slim-table),
+div:global(.small-table) {
+    .commentIcon {
+        /* TODO: refactor comments to not overflow... */
+        right: 0px !important;
+    }
+}
