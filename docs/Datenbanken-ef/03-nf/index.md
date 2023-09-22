@@ -29,9 +29,10 @@ Theorie
 <Solution webKey="f6d4d4a9-5a82-452f-b66c-b3a5afabae0c" open>
 
 Lösungen Präsentation
-: [👉 01-ict-intro](/p/Datenbanken/NF/01-normalformen.html)
+: [👉 01-ict-intro](https://ofi.gbsl.website/p/Datenbanken/NF/01-normalformen.html)
 
 </Solution>
+
 
 ::::aufgabe Zweite Normalform 
 <Answer type="state" webKey="494746b2-aa20-4114-86bb-cff0419a9876" />
