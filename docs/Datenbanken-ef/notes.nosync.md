@@ -53,3 +53,15 @@ dokku postgres:enter flights-db
 cd /home/flights
 psql -f demo-small.sql -U postgres
 ```
+
+## Export Database (plain text)
+
+```bash
+pg_dump --host=<host> --port=5432 --username=postgres --password --dbname=<db-name> > dump.sql
+```
+
+## Import Database (plain text)
+
+```bash
+psql --host=<host> --port=5432 --username=postgres --password --dbname=<db-name> < dump.sql
+```
