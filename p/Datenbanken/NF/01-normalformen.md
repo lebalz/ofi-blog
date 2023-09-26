@@ -70,19 +70,18 @@ Schema:
 
 __Kunden__
 
-| <u>Kunden Nr</u> | Vorname | Name    | Tel         | AusleihNr |
-|:-----------------|:--------|:--------|:------------|:----------|
-| 001              | Maria   | Schmidt | 01234-56789 | 1         |
-| 002              | Thomas  | Müller  | 09876-54321 | 2         |
-| 001              | Maria   | Schmidt | 01234-56789 | 3         |
+| <u>Kunden Nr</u> | Vorname | Name    | Tel         |
+|:-----------------|:--------|:--------|:------------|
+| 001              | Maria   | Schmidt | 01234-56789 |
+| 002              | Thomas  | Müller  | 09876-54321 |
 
 __Ausleihen__
 
-| <u>Nr</u> | Ausleihdatum | km-Stand | Kennzeichen | Hersteller | Baujahr |
-|:----------|:-------------|:---------|:------------|:-----------|:--------|
-| 1         | 2023-09-14   | 25000    | AB-12345    | Volkswagen | 2018    |
-| 2         | 2023-09-15   | 32000    | CD-67890    | BMW        | 2019    |
-| 3         | 2023-09-16   | 32100    | CD-67890    | BMW        | 2019    |
+| <u>Nr</u> | Ausleihdatum | km-Stand | Kennzeichen | Hersteller | Baujahr | Kunden Nr |
+|:----------|:-------------|:---------|:------------|:-----------|:--------|:----------|
+| 1         | 2023-09-14   | 25000    | AB-12345    | Volkswagen | 2018    | 001       |
+| 2         | 2023-09-15   | 32000    | CD-67890    | BMW        | 2019    | 002       |
+| 3         | 2023-09-16   | 32100    | CD-67890    | BMW        | 2019    | 001       |
 
 
 
@@ -198,7 +197,9 @@ zunächst in die 1 NF, 2NF und dann in die 3NF. Erläutern Sie bei jedem Schritt
 Note:
 Der Benutzername ist abhängig von der WarenkorbId, da ein Warenkorb nur einer Benutzer:in zugeordnet werden kann. Umgekehrt ist die WarenkorbId aber nicht vom Benutzername abhängig (abzulesen), da eine Benutzer:in mehrere Warenkörbe haben kann. Dies sieht man leicht, wenn man einen weiteren Einkauf für `pink18` hinzufügt - die WarenkorbId ändert sich, der Benutzername nicht.
 
+
 ### NF 2
+
 <div style="display: flex; flex-wrap: wrap; gap: 1.5em;">
 
 <div>
@@ -248,6 +249,7 @@ __Artikel__
 
 </div>
 </div>
+
 
 
 ### NF 3
