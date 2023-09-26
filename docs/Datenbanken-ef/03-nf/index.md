@@ -78,19 +78,18 @@ Schema:
 
 __Kunden__
 
-| <u>Kunden Nr</u> | Vorname | Name    | Tel         | AusleihNr |
-|:-----------------|:--------|:--------|:------------|:----------|
-| 001              | Maria   | Schmidt | 01234-56789 | 1         |
-| 002              | Thomas  | Müller  | 09876-54321 | 2         |
-| 001              | Maria   | Schmidt | 01234-56789 | 3         |
+| <u>Kunden Nr</u> | Vorname | Name    | Tel         |
+|:-----------------|:--------|:--------|:------------|
+| 001              | Maria   | Schmidt | 01234-56789 |
+| 002              | Thomas  | Müller  | 09876-54321 |
 
 __Ausleihen__
 
-| <u>Nr</u> | Ausleihdatum | km-Stand | Kennzeichen | Hersteller | Baujahr |
-|:----------|:-------------|:---------|:------------|:-----------|:--------|
-| 1         | 2023-09-14   | 25000    | AB-12345    | Volkswagen | 2018    |
-| 2         | 2023-09-15   | 32000    | CD-67890    | BMW        | 2019    |
-| 3         | 2023-09-16   | 32100    | CD-67890    | BMW        | 2019    |
+| <u>Nr</u> | Ausleihdatum | km-Stand | Kennzeichen | Hersteller | Baujahr | Kunden Nr |
+|:----------|:-------------|:---------|:------------|:-----------|:--------|:----------|
+| 1         | 2023-09-14   | 25000    | AB-12345    | Volkswagen | 2018    | 001       |
+| 2         | 2023-09-15   | 32000    | CD-67890    | BMW        | 2019    | 002       |
+| 3         | 2023-09-16   | 32100    | CD-67890    | BMW        | 2019    | 001       |
 
 :::warning (Kennzeichen) → Hersteller, Baujahr
 Das Kennzeichen ist nicht eindeutig einem Fahrzeug zugeordnet. Es kann mehrere Fahrzeuge mit dem gleichen Kennzeichen geben (Wechselnummero) oder eine Nummer kann neu vergeben werden (z. B. nach einem Umzug).
