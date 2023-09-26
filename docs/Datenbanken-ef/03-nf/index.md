@@ -25,13 +25,8 @@ NF 3
 
 Theorie
 : [👉 Buch S. 258-261](https://erzbe.sharepoint.com/:b:/s/24EFInformatik/EWseDuaUYBtOu0I9XIjEzCkBHvd1eNeknJg9kCY8FAe2xQ?e=4yEofE)
-
-<Solution webKey="f6d4d4a9-5a82-452f-b66c-b3a5afabae0c" open>
-
 Lösungen Präsentation
-: [👉 01-ict-intro](https://ofi.gbsl.website/p/Datenbanken/NF/01-normalformen.html)
-
-</Solution>
+: [👉 Lösungs Slides](pathname:///p/Datenbanken/NF/01-normalformen.html)
 
 
 ::::aufgabe Zweite Normalform 
