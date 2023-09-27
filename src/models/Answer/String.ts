@@ -47,6 +47,9 @@ export default class StringAnswer implements StringModel, ApiModel {
     loaded: boolean = false;
 
     @observable
+    state: 'unchecked' | 'correct' | 'wrong' = 'unchecked';
+
+    @observable
     value: string;
 
     constructor(doc: Document<StringDoc>, readonly: boolean = false) {
@@ -62,6 +65,11 @@ export default class StringAnswer implements StringModel, ApiModel {
         makeObservable(this);
         /** order depends, initialize AFTER making this observable! */
         this.saveService = new SaveService(this, save);
+    }
+
+    @action
+    setState(state: 'unchecked' | 'correct' | 'wrong') {
+        this.state = state;
     }
 
     @computed

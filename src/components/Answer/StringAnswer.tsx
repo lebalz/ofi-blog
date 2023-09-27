@@ -35,7 +35,8 @@ const CheckIcon = (state) => {
 
 const StringAnswer = observer((props: StringProps) => {
   const inBrowser = useIsBrowser();
-  const [correctState, setCorrectState] = React.useState("unchecked");
+  const [correctState, setCorrectState] = React.useState<'correct' | 'unchecked' | 'wrong'>("unchecked");
+  
   const store = useStore('documentStore');
   const doc = store.find<StringModel>(props.webKey);
 
@@ -65,7 +66,13 @@ const StringAnswer = observer((props: StringProps) => {
         }
       }
     )
-  }, [doc])
+  }, [doc]);
+  
+  React.useEffect(() => {
+    if (doc.loaded) {
+      doc.setState(correctState);
+    }
+  }, [doc, correctState]);
 
   React.useEffect(() => {
     if (doc.loaded) {
@@ -102,7 +109,9 @@ const StringAnswer = observer((props: StringProps) => {
           type="text"
           style={{ width: props.width }}
           spellCheck={false}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => {
+            onChange(e.target.value);            
+          }}
           value={doc.value}
           placeholder={props.placeholder}
           disabled={!doc.loaded || doc.readonly || props.disabled}
@@ -110,7 +119,9 @@ const StringAnswer = observer((props: StringProps) => {
       )}
       {(hasSolution) && (
         <button
-          onClick={() => checkAnswer(doc.value)}
+          onClick={(e) => {
+            checkAnswer(doc.value)
+          }}
           className={clsx(styles[correctState], styles.checkButton)}
         >
           <i className={clsx('mdi', CheckIcon(correctState))} />

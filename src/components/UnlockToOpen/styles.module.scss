@@ -1,0 +1,10 @@
+.label {
+  position: relative;
+  .icon {
+    position: absolute;
+    top: -0.6em;
+    right: -0.6em;
+    font-size: 80%;
+    color: var(--ifm-color-warning);
+  }
+}
