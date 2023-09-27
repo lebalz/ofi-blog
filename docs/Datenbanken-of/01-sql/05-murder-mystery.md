@@ -21,6 +21,8 @@ Finden Sie den Mörder!
 
 Congrats, you found the murderer! 🥳 But wait, there's more... If you think you're up for a challenge, try querying the interview transcript of the murderer to find the real villain behind this crime. If you feel especially confident in your SQL skills, try to complete this final step with no more than 2 queries.
 
+![Aufbau der Datenbank](images/schema.png)
+
 
 <Answer type="text" webKey="00c67707-b1c9-43d3-a475-3f2cb8e64f35" monospace />
 
