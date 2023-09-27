@@ -50,7 +50,7 @@ Note:
 
 ### 3. Klinik
 
-![](images/03-klinik.png)
+![](images/03-klinik-lsg.png)
 
 
 
