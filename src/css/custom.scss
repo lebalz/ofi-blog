@@ -157,9 +157,16 @@ table {
             padding-right: 1em;
         }
     }
+    .left,
     &.left {
         table {
             margin-left: 0;
+        }
+    }
+    
+    .center {
+        table {
+            margin-left: auto;
         }
     }
 }

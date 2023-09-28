@@ -21,6 +21,7 @@ const GTabs = (props: Props) => {
     return (
         <Tabs
             defaultValue={getValue(0)}
+            className={clsx(styles.tabs)}
             groupId={props.groupId}
             values={props.children.map((_, idx) => {
                 const isHighlight = (props.highlighted || []).includes(idx);
