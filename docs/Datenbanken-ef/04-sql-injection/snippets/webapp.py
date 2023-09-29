@@ -2,7 +2,7 @@ from flask import Flask, request, url_for
 import psycopg2
 
 app = Flask(__name__)
-pg = psycopg2.connect(host='host', database='xkcd', user='ef_2024', password='ef_gbsl_2024', port=32601)
+pg = psycopg2.connect(host='...', database='xkcd', user='ef_2024', password='ef_gbsl_2024', port=32601)
 
 COMIC = {
     'id': 0,
@@ -54,9 +54,42 @@ def hello():
         </div>
         <p>{commics[COMIC["transcript"]]}</p>
 
-        <form action="/search" method="GET">
+        <form action="/suche" method="GET">
             <input type="text" name="search">
             <input type="submit" value="Suchen">
         </form>
+    ''')
+    return html
+
+
+@app.route('/suche', methods=['GET'])
+def suche():
+    search = request.args.get('search')
+    sql = f"SELECT * FROM comics WHERE title ILIKE '%{search}%' ORDER BY id DESC LIMIT 4"
+    comics = query(sql)
+
+    comics_html = []
+    for comic in comics:
+        comics_html.append(f'''
+            <div class="comic">
+                <h2>{comic[COMIC["title"]]}</h2>
+                <img src="{comic[COMIC["image"]]}">
+                <div>
+                    <a href="{comic[COMIC["url"]]}">👉 Link</a>
+                </div>    
+            </div>
+        ''')
+    raw_html = '\n'.join(comics_html)
+
+    html = document(f'''
+        <h1>XKCD</h1>
+        <pre><code>{sql}</code></pre>
+        <form action="/suche" method="GET">
+            <input type="text" name="search">
+            <input type="submit" value="Suchen">
+        </form>
+        <div class="comics">
+            {raw_html}
+        </div>
     ''')
     return html
