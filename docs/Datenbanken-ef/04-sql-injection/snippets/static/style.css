@@ -1,0 +1,20 @@
+.comics {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.comic {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 1em;
+}
+
+.comic img {
+    max-width: 350px;
+    height: auto;
+}
