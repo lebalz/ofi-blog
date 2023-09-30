@@ -45,12 +45,9 @@ steps:
       from_secret: "UMAMI_ID"
     DOMAIN:
       from_secret: "DOMAIN"
-    ALGOLIA_APP_ID:
-      from_secret: "ALGOLIA_APP_ID"
-    ALGOLIA_API_KEY:
-      from_secret: "ALGOLIA_API_KEY"
-    ALGOLIA_INDEX_NAME:
-      from_secret: "ALGOLIA_INDEX_NAME"
+    ALGOLIA_APP_ID: "SSVVMYCF9L"
+    ALGOLIA_API_KEY: "e3828c3c1214fc60a2bb0464678afa77"
+    ALGOLIA_INDEX_NAME: "ofi-gbsl"
   when:
     event:
       include:
@@ -135,8 +132,8 @@ steps:
     DOCS_ONLY: "true"
     GH_PROJECT: "ofi-blog-docs"
     ALGOLIA_APP_ID: "KAXH1Q07BI"
-    ALGOLIA_API_KEY: "5af5f6fe9002c537227d1f4a43c30bda"
-    ALGOLIA_INDEX_NAME: "docs-ofi1"
+    ALGOLIA_API_KEY: "dce94e1097cc40d352060a9fe4b31154"
+    ALGOLIA_INDEX_NAME: "ofi-gbsl1"
   when:
     event:
       include:
@@ -151,3 +148,8 @@ volumes:
 trigger:
   branch:
   - main
+  event:
+    exclude:
+    - pull_request
+  repo:
+  - lebalz/ofi-blog
