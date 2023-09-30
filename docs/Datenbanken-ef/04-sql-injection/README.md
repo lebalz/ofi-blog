@@ -88,7 +88,7 @@ sql = f"SELECT name FROM train_stations WHERE location ILIKE '{location}%';"
 Eingabe: `EF`
 
 ```sql
-SELECT * FROM rain_stations
+SELECT * FROM train_stations
 WHERE location ILIKE 'EF%';
 ```
 ***
@@ -96,7 +96,7 @@ WHERE location ILIKE 'EF%';
 Eingabe: `'KRUMS;--`
 
 ```sql
-SELECT * FROM rain_stations
+SELECT * FROM train_stations
 WHERE location ILIKE '%' KRUMS;--';
 ```
 ***
@@ -104,7 +104,7 @@ WHERE location ILIKE '%' KRUMS;--';
 Eingabe: `ber' ORDER BY location DESC;--`
 
 ```sql
-SELECT * FROM rain_stations
+SELECT * FROM train_stations
 WHERE location ILIKE 'ber' 
 ORDER BY location DESC;--;
 ```
