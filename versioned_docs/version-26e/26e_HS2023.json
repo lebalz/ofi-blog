@@ -42,7 +42,11 @@
         "type": "test"
     },
     {
-        "cells": ["07.11.2023","Netzwerke","Protokolle, Schichtenmodell"]
+        "cells": ["07.11.2023","Informatik Biber","Wettbewerb"],
+        "type": "event"
+    },
+    {
+        "cells": ["08.11.2023","Netzwerke","Protokolle, Schichtenmodell"]
     },
     {
         "cells": ["14.11.2023","Netzwerke","Routing, IP-Adresse"]

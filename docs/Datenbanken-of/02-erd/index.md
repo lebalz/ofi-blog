@@ -8,12 +8,14 @@ sidebar_custom_props:
 ERD
 : Entity-Relationship-Diagramm
 
+:::info Slides
 <Solution webKey="3b69caa5-6e11-4def-8e07-3dcc64d730ea">
 
 Lösungen Präsentation
 : [👉 Lösungs Slides](pathname:///p/Datenbanken/ERD/slides.html)
 
 </Solution>
+:::
 
 ## Lösungen
 

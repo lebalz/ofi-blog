@@ -41,6 +41,10 @@
         "type": "holiday"
     },
     {
+        "cells": ["15.11.2023","Informatik Biber","Wettbewerb"],
+        "type": "event"
+    },
+    {
         "cells": ["15.11.2023","Netzwerke","Protokolle, Schichtenmodell"]
     },
     {

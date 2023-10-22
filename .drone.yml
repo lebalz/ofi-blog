@@ -132,7 +132,7 @@ steps:
     DOCS_ONLY: "true"
     GH_PROJECT: "ofi-blog-docs"
     ALGOLIA_APP_ID: "KAXH1Q07BI"
-    ALGOLIA_API_KEY: "dce94e1097cc40d352060a9fe4b31154"
+    ALGOLIA_API_KEY: "5af5f6fe9002c537227d1f4a43c30bda"
     ALGOLIA_INDEX_NAME: "ofi-gbsl1"
   when:
     event:
