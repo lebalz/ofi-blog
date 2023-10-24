@@ -8,6 +8,8 @@ sidebar_custom_props:
 
 Dauer
 : ca. 90 Minuten
+Benotung
+: Die note zählt ganz
 Teile
 : __Theorie__ (ca. 30 Minuten), ohne Hilfsmittel, auf Papier
 : __Excel__ (ca. 30 Minuten), Openbook, Laptop, Excel, Webseite. 
