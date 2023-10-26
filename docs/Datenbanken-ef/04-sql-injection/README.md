@@ -276,7 +276,7 @@ Normalerweise sind einem Angreifer die Details über die Datenbank, welche hier 
 ```
 #### Aufgabe 4
 ```sql
-'; DROP DATABASE inject_demodb; --
+'; DROP DATABASE hfr_hacksql; --
 ```
 #### Aufgabe 5
 ```sql

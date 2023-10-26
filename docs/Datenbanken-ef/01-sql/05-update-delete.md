@@ -117,10 +117,27 @@ Datenbank
 1. Aktualisieren Sie in Ihrer Datenbank eine Textspalte (bspw. `name`), so dass der ganze Text grossgeschrieben ist. (Referenz: [👉 postgresql.org](https://www.postgresql.org/docs/16/functions-string.html#id-1.5.8.10.5.2.2.22.1.1.1:~:text=upper%20(%20text,tom%27)%20%E2%86%92%20TOM))
 
 <Answer type="text" webKey="6ed81378-7aa0-494b-8ca8-b27b4caf9936" monospace />
+<Solution webKey="ae32d9fe-a8bd-49bc-90c0-d3931ec0702b">
+
+```sql
+UPDATE persons SET name=UPPER(name) WHERE id=1;
+```
+
+</Solution>
 
 2. Löschen Sie einen Datensatz aus Ihrer Tabelle.
 
 <Answer type="text" webKey="d099ba55-f2c7-456b-a003-b6e86602622b" monospace/>
+<Solution webKey="ae32d9fe-a8bd-49bc-90c0-d3931ec0702b">
+
+```sql
+DELETE FROM persons WHERE name='Hans Mosimann';
+-- oder
+DELETE FROM persons WHERE id=2;
+```
+
+</Solution>
+
 :::
 
 ::::aufgabe Datensätze aus verbundenen Tabellen löschen
@@ -282,16 +299,28 @@ VALUES
 
     <Answer type="text" webKey="40f575c8-9460-49b6-ae93-60955e3d08bc" monospace/>
 
-2. Beim erzeugen des Constraints kann auch angegeben werden, was beim Löschen passieren soll. So können bspw. die Haustiere mitgelöscht werden, wenn der Legodude gelöscht wird. Erstellen Sie ein neues Constraint, welches dies erzwingt, und probieren Sie es erneut aus.
+2. Beim erzeugen des Constraints kann auch angegeben werden, was beim Löschen passieren soll. So können bspw. die Haustiere mitgelöscht werden, wenn der Legodude gelöscht wird. Erstellen Sie einen neuen Constraint, welcher dies erzwingt, und probieren Sie es erneut aus.
 
     ```sql
     -- aktuelles Constraint löschen
-    ALTER TABLE 
+    ALTER TABLE haustiere
         DROP CONSTRAINT constraint_name;
     -- neuen Constraint erstellen - beachten Sie das "ON DELETE CASCADE"
     ALTER TABLE haustiere 
         ADD FOREIGN KEY (legodude_id) REFERENCES legodudes(id) ON DELETE CASCADE;
     ```
+
+    Der Name des Constraints kann beim Fremdschlüssel nachgeschaut werden (oder auch aus der Fehlermeldung von Aufgabe 1 entnommen werden):
+
+    ![--width=350px](images/show-constraint-name.png)
+
+    Überprüfen Sie, ob alles geklappt hat
+    - indem Sie das Datenbankschema neu laden und überprüfen, ob nach wie vor ein einziger Constraint existiert
+
+        ![--width=300px](images/refresh-db-infos.png)
+    - erneut versuchen, den Legodude mit ID 2 zu löschen.
+
+    Was ist mit Dundun, dem Haustier von Legodude#2 passiert? Findet man es noch in der Tabelle?
 
     <Answer type="text" webKey="1b96e897-007b-4d90-9a99-979b442dba08" monospace />
 
@@ -300,7 +329,7 @@ VALUES
 
     ```sql
     -- aktuelles Constraint löschen
-    ALTER TABLE 
+    ALTER TABLE haustiere
         DROP CONSTRAINT constraint_name;
     -- neuen Constraint erstellen - beachten Sie das "ON DELETE CASCADE"
     ALTER TABLE haustiere 
@@ -308,4 +337,45 @@ VALUES
     ```
 
     <Answer type="text" webKey="78709736-930e-45f9-ae94-9ef845300637" monospace/>
+
+<Solution webKey="e48cbfbf-e41f-476b-88fb-e67d9462a1a0">
+
+#### Aufgabe 1
+```sql
+/* Funktioniert, da kein Haustier mit dem Legodude#3 verknüpft ist */
+DELETE FROM legodudes WHERE id=3;
+/* Erzeugt einen Fehler, da Legodude#2 Haustiere hat. */
+DELETE FROM legodudes WHERE id=2;
+```
+
+:::danger ERROR: update or delete on table "legodudes" violates foreign key constraint "haustiere_legodude_id_fkey" on table "haustiere" DETAIL: Key (id)=(2) is still referenced from table "haustiere".
+:::
+
+#### Aufgabe 2
+
+```sql
+-- aktuelles Constraint löschen
+ALTER TABLE haustiere
+    DROP CONSTRAINT haustiere_legodude_id_fkey;
+
+-- neuen Constraint erstellen - beachten Sie das "ON DELETE CASCADE"
+ALTER TABLE haustiere 
+    ADD FOREIGN KEY (legodude_id) REFERENCES legodudes(id) ON DELETE CASCADE;
+```
+
+#### Aufgabe 3
+
+```sql
+-- aktuelles Constraint löschen
+ALTER TABLE haustiere
+    DROP CONSTRAINT haustiere_legodude_id_fkey;
+
+-- neuen Constraint erstellen - beachten Sie das "ON DELETE CASCADE"
+ALTER TABLE haustiere 
+    ADD FOREIGN KEY (legodude_id) REFERENCES legodudes(id) ON DELETE SET NULL;
+```
+
+Achtung, Dundun ist nun obdachlos... 
+
+</Solution>
 ::::
