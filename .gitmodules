@@ -1,3 +1,6 @@
 [submodule "static/p/reveal.js"]
 	path = static/p/reveal.js
 	url = https://github.com/hakimel/reveal.js
+[submodule "secure"]
+	path = secure
+	url = git@github.com:lebalz/ofi-blog-secure.git
