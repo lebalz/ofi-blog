@@ -72,6 +72,10 @@ const ensureTrailingSlash = (path) => {
     }
     return `${path}/`
 }
+/**
+ * page for the class
+ * includes the sync-pages from the secure folder
+ */
 if (process.env.WITHOUT_DOCS) {
     console.log('RENAMING docs/ to _docs/')
     fs.renameSync('docs', '_docs')
@@ -81,6 +85,11 @@ if (process.env.WITHOUT_DOCS) {
     findMdTemplate(path.join(__dirname, '_docs')).forEach((file) => {
         fs.cpSync(file, file.replace('/_docs/', '/docs/'))
     });
+    /** copy secure pages */
+    const securePages = path.join(__dirname, 'secure/sync/pages');
+    if (fs.existsSync(securePages)) {
+        fs.cpSync(securePages, 'src/pages/secure');
+    }
 }
 /* No Versioning, no News Page */
 if (process.env.DOCS_ONLY) {

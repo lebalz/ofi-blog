@@ -267,6 +267,15 @@ async function createConfig() {
             ]
           },
         },
+        '@docusaurus/preset-classic',
+        {
+          sitemap: {
+            changefreq: 'daily',
+            priority: 0.5,
+            ignorePatterns: ['/secure/**'],
+            filename: 'sitemap.xml',
+          },
+        },
       ],
     ],
     plugins: [
