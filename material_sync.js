@@ -76,8 +76,9 @@ const ensureTrailingSlash = (path) => {
 /**
  * 
  * @param {Rsync} rsync 
+ * @param {string} srcPath
  */
-const ensureSync = async (rsync) => {
+const ensureSync = async (rsync, srcPath) => {
     let success = false;
     while (!success) {
         rs = new Promise((resolve, reject) => {
@@ -114,17 +115,26 @@ const main = async () => {
         findMdTemplate(path.join(__dirname, '_docs')).forEach((file) => {
             fs.cpSync(file, file.replace('/_docs/', '/docs/'))
         });
+        /** copy secure pages */
+        const securePages = path.join(__dirname, 'secure/sync/pages');
+        if (fs.existsSync(securePages)) {
+            const rsync = new Rsync()
+                            .source(securePages)
+                            .destination('src/pages/secure')
+                            .archive()
+                            .delete();
+            await ensureSync(rsync, securePages);
+        }        
     }
-    /** copy secure pages */
-    const securePages = path.join(__dirname, 'secure/sync/pages');
-    if (fs.existsSync(securePages)) {
-    
+    /** secure static */
+    const secureStatic = path.join(__dirname, 'secure/sync/static');
+    if (fs.existsSync(secureStatic)) {
         const rsync = new Rsync()
-                        .source(securePages)
-                        .destination('src/pages/secure')
+                        .source(secureStatic)
+                        .destination('static/secure')
                         .archive()
                         .delete();
-        await ensureSync(rsync);
+        await ensureSync(rsync, secureStatic);
     }
     /* No Versioning, no News Page */
     if (process.env.DOCS_ONLY) {
@@ -213,7 +223,7 @@ const main = async () => {
                     })
                 }
                 rsync.exclude(['.sync.*', '*.nosync.*']);        
-                await ensureSync(rsync);
+                await ensureSync(rsync, srcPath);
             } else {
                 fs.copyFileSync(srcPath, toPath);
                 gitignore.push(toPath.replace(classDir, ''))

@@ -266,9 +266,6 @@ async function createConfig() {
               require.resolve('./node_modules/react-image-gallery/styles/css/image-gallery.css')
             ]
           },
-        },
-        '@docusaurus/preset-classic',
-        {
           sitemap: {
             changefreq: 'daily',
             priority: 0.5,

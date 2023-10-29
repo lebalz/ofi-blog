@@ -33,6 +33,7 @@ bin/*/feedbacks
 .env
 
 src/pages/secure
+static/secure
 _news/
 _versioned_docs/
 _versioned_sidebars/

@@ -26,6 +26,7 @@ yarn run cleanup
 var klassen = Object.keys(configs);
 
 fs.rmSync('src/pages/secure', { recursive: true, force: true });
+fs.rmSync('static/secure', { recursive: true, force: true });
 
 klassen.forEach((klass) => {
     const config = configs[klass];
