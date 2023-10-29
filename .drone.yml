@@ -8,6 +8,7 @@ steps:
   image: alpine/git
   commands:
   - mkdir -p $HOME/.ssh
+  - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
   - echo "$GIT_OFI_BLOG_SECURE_KEY" > "$HOME/.ssh/id_rsa"
   - chmod 0600 $HOME/.ssh/id_rsa
   - git submodule update --init --recursive
