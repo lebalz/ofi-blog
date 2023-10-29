@@ -7,7 +7,13 @@ steps:
 - name: submodules
   image: alpine/git
   commands:
+  - mkdir -p $HOME/.ssh
+  - echo "$GIT_OFI_BLOG_SECURE_KEY" > "$HOME/.ssh/id_rsa"
+  - chmod 0600 $HOME/.ssh/id_rsa
   - git submodule update --init --recursive
+  environment:
+    GIT_OFI_BLOG_SECURE_KEY:
+      from_secret: "GIT_OFI_BLOG_SECURE_KEY"
 
 - name: restore-cache
   image: drillster/drone-volume-cache
