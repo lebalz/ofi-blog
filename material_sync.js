@@ -72,52 +72,86 @@ const ensureTrailingSlash = (path) => {
     }
     return `${path}/`
 }
+
 /**
- * page for the class
- * includes the sync-pages from the secure folder
+ * 
+ * @param {Rsync} rsync 
  */
-if (process.env.WITHOUT_DOCS) {
-    console.log('RENAMING docs/ to _docs/')
-    fs.renameSync('docs', '_docs')
-    fs.mkdirSync('docs')
-    fs.cpSync('_docs/home.md', 'docs/home.md')
-    /** copy all markdown-templates - otherwise some pages might fail */
-    findMdTemplate(path.join(__dirname, '_docs')).forEach((file) => {
-        fs.cpSync(file, file.replace('/_docs/', '/docs/'))
-    });
+const ensureSync = async (rsync) => {
+    let success = false;
+    while (!success) {
+        rs = new Promise((resolve, reject) => {
+            rsync.execute((err, code, cmd) => {
+                if (!err) {
+                    console.log('✅', cmd)
+                    resolve(true)
+                } else {
+                    console.log('❌', srcPath)
+                    console.log('   ', cmd)
+                    console.log('   ', err)
+                    console.log('   ', code)
+                    console.log('')
+                    resolve(false);
+                }
+            });
+        })
+        success = await rs;
+    }
+    return success;
+}
+
+const main = async () => {
+    /**
+     * page for the class
+     * includes the sync-pages from the secure folder
+     */
+    if (process.env.WITHOUT_DOCS) {
+        console.log('RENAMING docs/ to _docs/')
+        fs.renameSync('docs', '_docs')
+        fs.mkdirSync('docs')
+        fs.cpSync('_docs/home.md', 'docs/home.md')
+        /** copy all markdown-templates - otherwise some pages might fail */
+        findMdTemplate(path.join(__dirname, '_docs')).forEach((file) => {
+            fs.cpSync(file, file.replace('/_docs/', '/docs/'))
+        });
+    }
     /** copy secure pages */
     const securePages = path.join(__dirname, 'secure/sync/pages');
     if (fs.existsSync(securePages)) {
-        fs.cpSync(securePages, 'src/pages/secure');
+    
+        const rsync = new Rsync()
+                        .source(securePages)
+                        .destination('src/pages/secure')
+                        .archive()
+                        .delete();
+        await ensureSync(rsync);
     }
-}
-/* No Versioning, no News Page */
-if (process.env.DOCS_ONLY) {
-    if (fs.existsSync('versioned_docs')) {
-        console.log('RENAMING versioned_docs/ to _versioned_docs/')
-        fs.renameSync('versioned_docs', '_versioned_docs')
-        fs.mkdirSync('versioned_docs')
+    /* No Versioning, no News Page */
+    if (process.env.DOCS_ONLY) {
+        if (fs.existsSync('versioned_docs')) {
+            console.log('RENAMING versioned_docs/ to _versioned_docs/')
+            fs.renameSync('versioned_docs', '_versioned_docs')
+            fs.mkdirSync('versioned_docs')
+        }
+        if (fs.existsSync('versioned_sidebars')) {
+            console.log('RENAMING versioned_sidebars/ to _versioned_sidebars/')
+            fs.renameSync('versioned_sidebars', '_versioned_sidebars')
+            fs.mkdirSync('versioned_sidebars')
+        }
+        if (fs.existsSync('versions.json')) {
+            console.log('RENAMING versions.json to _versions.json')
+            fs.renameSync('versions.json', '_versions.json')
+            fs.writeFileSync('versions.json', '[\n  "current"\n]')
+        }
+        if (fs.existsSync('news')) {
+            console.log('RENAMING news/ to _news/')
+            fs.renameSync('news', '_news')
+            fs.mkdirSync('news')
+            fs.writeFileSync(`news/${new Date().toISOString().slice(0, 10)}-news.md`, `# News Placeholder\n`)
+        }
     }
-    if (fs.existsSync('versioned_sidebars')) {
-        console.log('RENAMING versioned_sidebars/ to _versioned_sidebars/')
-        fs.renameSync('versioned_sidebars', '_versioned_sidebars')
-        fs.mkdirSync('versioned_sidebars')
-    }
-    if (fs.existsSync('versions.json')) {
-        console.log('RENAMING versions.json to _versions.json')
-        fs.renameSync('versions.json', '_versions.json')
-        fs.writeFileSync('versions.json', '[\n  "current"\n]')
-    }
-    if (fs.existsSync('news')) {
-        console.log('RENAMING news/ to _news/')
-        fs.renameSync('news', '_news')
-        fs.mkdirSync('news')
-        fs.writeFileSync(`news/${new Date().toISOString().slice(0, 10)}-news.md`, `# News Placeholder\n`)
-    }
-}
-fs.writeFileSync('static/CNAME', (process.env.DOMAIN || 'ofi.gbsl.website').replace(/https?:\/\//g, ''), { encoding: 'utf-8', flag: 'w' }); /** overwrite */
-
-(async () => {
+    fs.writeFileSync('static/CNAME', (process.env.DOMAIN || 'ofi.gbsl.website').replace(/https?:\/\//g, ''), { encoding: 'utf-8', flag: 'w' }); /** overwrite */
+    
     Object.keys(CONFIG).forEach(async (klass) => {
         const config = CONFIG[klass];
         const gitignore = [];
@@ -178,26 +212,8 @@ fs.writeFileSync('static/CNAME', (process.env.DOMAIN || 'ofi.gbsl.website').repl
                         }
                     })
                 }
-                rsync.exclude(['.sync.*', '*.nosync.*'])
-                let success = false;
-                while (!success) {
-                    rs = new Promise((resolve, reject) => {
-                        rsync.execute((err, code, cmd) => {
-                            if (!err) {
-                                console.log('✅', cmd)
-                                resolve(true)
-                            } else {
-                                console.log('❌', srcPath)
-                                console.log('   ', cmd)
-                                console.log('   ', err)
-                                console.log('   ', code)
-                                console.log('')
-                                resolve(false);
-                            }
-                        });
-                    })
-                    success = await rs;
-                }
+                rsync.exclude(['.sync.*', '*.nosync.*']);        
+                await ensureSync(rsync);
             } else {
                 fs.copyFileSync(srcPath, toPath);
                 gitignore.push(toPath.replace(classDir, ''))
@@ -229,5 +245,10 @@ fs.writeFileSync('static/CNAME', (process.env.DOMAIN || 'ofi.gbsl.website').repl
             }
             fs.writeFileSync(`${classDir}.gitignore`, gitignore.join("\n"))
         })
-    })
-})();
+    });
+};
+
+main().catch((e) => {
+    console.error(e);
+    process.exit(1);
+});

@@ -25,6 +25,8 @@ yarn run cleanup
 
 var klassen = Object.keys(configs);
 
+fs.rmSync('src/pages/secure', { recursive: true, force: true });
+
 klassen.forEach((klass) => {
     const config = configs[klass];
     const tmp_dir = `versioned_docs/version-${klass}/.tmp`;

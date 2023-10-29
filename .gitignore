@@ -32,6 +32,7 @@ bin/*/feedbacks
 .history
 .env
 
+src/pages/secure
 _news/
 _versioned_docs/
 _versioned_sidebars/
