@@ -115,8 +115,10 @@ const main = async () => {
         findMdTemplate(path.join(__dirname, '_docs')).forEach((file) => {
             fs.cpSync(file, file.replace('/_docs/', '/docs/'))
         });
+    }
+    if (process.env.WITHOUT_DOCS || process.env.NODE_ENV !== 'production') {
         /** copy secure pages */
-        const securePages = path.join(__dirname, 'secure/sync/pages');
+        const securePages = path.join(__dirname, 'secure/sync/pages/');
         if (fs.existsSync(securePages)) {
             const rsync = new Rsync()
                             .source(securePages)
@@ -124,17 +126,17 @@ const main = async () => {
                             .archive()
                             .delete();
             await ensureSync(rsync, securePages);
-        }        
-    }
-    /** secure static */
-    const secureStatic = path.join(__dirname, 'secure/sync/static');
-    if (fs.existsSync(secureStatic)) {
-        const rsync = new Rsync()
-                        .source(secureStatic)
-                        .destination('static/secure')
-                        .archive()
-                        .delete();
-        await ensureSync(rsync, secureStatic);
+        }
+        /** secure static */
+        const secureStatic = path.join(__dirname, 'secure/sync/static');
+        if (fs.existsSync(secureStatic)) {
+            const rsync = new Rsync()
+                            .source(secureStatic)
+                            .destination('static/secure')
+                            .archive()
+                            .delete();
+            await ensureSync(rsync, secureStatic);
+        }
     }
     /* No Versioning, no News Page */
     if (process.env.DOCS_ONLY) {

@@ -6,6 +6,7 @@ import SourceRef from '../components/Figure/SourceRef';
 import DefinitionList from '../components/DefinitionList';
 import Answer from '../components/Answer';
 import Solution from '../components/Solution';
+import OnlyFor from '../components/OnlyFor';
 import Comment from '../components/Comment';
 import GTabs from '../components/GTabs';
 import Hint from '../components/Solution/Hint'
@@ -22,6 +23,7 @@ export default {
   dl: DefinitionList,
   Answer: Answer,
   Solution: Solution,
+  OnlyFor: OnlyFor,
   Tabs: Tabs,
   Hint: Hint,
   GTabs: GTabs,

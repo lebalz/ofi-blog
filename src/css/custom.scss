@@ -17,6 +17,14 @@
     --ifm-color-primary-light: #262e46;
     --ifm-color-primary-lighter: #28304a;
     --ifm-color-primary-lightest: #2e3753;
+    --ifm-color-blue-dark: #306cce;
+    --ifm-color-blue-darker: #2d66c3;
+    --ifm-color-blue-darkest: #2554a0;
+    --ifm-color-blue-light: #538ce9;
+    --ifm-color-blue-lighter: #72a1ed;
+    --ifm-color-blue-lightest: #9abcf2;
+    --ifm-color-blue-contrast-background: #ebf2fc;
+
     --ifm-code-font-size: 85%;
     --ifm-background-color: white;
     --ifm-card-background-color: #f7f7f7;
@@ -40,6 +48,7 @@ html[data-theme='dark'] {
     --ifm-color-primary-lightest: #6c7caf;
     --ifm-card-background-color: #242526;
     --ifm-color-snow: white;
+    --ifm-color-blue-contrast-background: #102445;
 
     .index-page {
         background: #232a40;
@@ -562,4 +571,11 @@ article[itemprop="blogPost"] {
     > * {
         width: max-content;
     }
+}
+
+.alert.alert--blue {
+    --ifm-alert-background-color: var(--ifm-color-blue-contrast-background);
+    --ifm-alert-background-color-highlight: rgba(53,120,229,.15);
+    --ifm-alert-foreground-color: var(--ifm-color-blue-contrast-foreground);
+    --ifm-alert-border-color: var(--ifm-color-blue-dark);
 }
