@@ -14,6 +14,7 @@
     "add": "node material_add.js",
     "postadd": "node material_sync.js",
     "sync": "node material_sync.js",
+    "sync:secure": "node material_sync_secure.js",
     "remove": "node material_remove.js",
     "precleanup": "node material_restore.js",
     "cleanup": "node material_cleanup.js",
