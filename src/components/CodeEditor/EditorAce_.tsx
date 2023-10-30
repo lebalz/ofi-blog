@@ -9,6 +9,7 @@ import Script from '../../models/Script';
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/ext-searchbox';
 import 'ace-builds/src-noconflict/mode-python';
+import 'ace-builds/src-noconflict/mode-sql';
 import 'ace-builds/src-noconflict/mode-svg';
 import 'ace-builds/src-noconflict/theme-dracula';
 import 'ace-builds/src-noconflict/ext-language_tools';
