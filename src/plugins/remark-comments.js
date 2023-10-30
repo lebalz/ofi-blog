@@ -10,10 +10,12 @@ const plugin = (options) => {
       deflist: 0,
       detailsWrapper: 0
     }
+    const relPath = (file.history[0] || '').replace(file.cwd || '', '');
+    const skip = relPath.startsWith('/src/pages/');
     visit(
       root,
-      Object.keys(commentCounter),
-      function visitor(node, idx, parent) {
+      skip ? [] : Object.keys(commentCounter),
+      function visitor(node, idx, parent) {    
         if (!node.children) {
           node.children = [];
         }
