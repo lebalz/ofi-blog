@@ -65,14 +65,14 @@ Im Schul-WLAN sind höhere Ports gesperrt, weshalb keine Verbindung zur Datenban
 
 :::details webapp.py
 
-```py reference title=webapp.py
+```py reference title="webapp.py"
 https://github.com/lebalz/ofi-blog/blob/main/docs/Datenbanken-ef/04-sql-injection/snippets/webapp.py
 ```
 
 :::
 
 
-:::details static/style.css
+:::details title="static/style.css"
 
 ```css reference title=static/style.css
 https://github.com/lebalz/ofi-blog/blob/main/docs/Datenbanken-ef/04-sql-injection/snippets/static/style.css
