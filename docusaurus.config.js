@@ -191,7 +191,7 @@ async function createConfig() {
       prism: {
         theme: require('prism-react-renderer/themes/vsLight'),
         darkTheme: require('prism-react-renderer/themes/vsDark'),
-        additionalLanguages: ['bash', 'powershell', 'java', 'asm6502', 'ruby', 'csharp']
+        additionalLanguages: ['bash', 'powershell', 'css', 'java', 'asm6502', 'ruby', 'csharp']
       },
       algolia: OFFLINE_MODE ? undefined : {
         appId: process.env.ALGOLIA_APP_ID || "no-id",

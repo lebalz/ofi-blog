@@ -45,7 +45,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mdi/font": "^6.9.96",
     "@radial-color-picker/react-color-picker": "^3.0.0",
-    "@saucelabs/theme-github-codeblock": "^0.1.1",
+    "@saucelabs/theme-github-codeblock": "^0.2.3",
     "@svgr/webpack": "^5.5.0",
     "ace-builds": "^1.4.13",
     "animejs": "^3.2.1",

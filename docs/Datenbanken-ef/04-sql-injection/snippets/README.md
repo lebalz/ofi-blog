@@ -72,9 +72,9 @@ https://github.com/lebalz/ofi-blog/blob/main/docs/Datenbanken-ef/04-sql-injectio
 :::
 
 
-:::details title="static/style.css"
+:::details static/style.css
 
-```css reference title=static/style.css
+```css reference title="static/style.css"
 https://github.com/lebalz/ofi-blog/blob/main/docs/Datenbanken-ef/04-sql-injection/snippets/static/style.css
 ```
 
