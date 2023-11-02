@@ -39,6 +39,10 @@ klassen.forEach((klass) => {
         }
         src.ignore.forEach((keep) => {
             if (fs.existsSync(`${src.to}/${keep}`)) {
+                const bkpLocation = `${tmp_dir}/${src.to}/${keep}`;
+                if (!fs.existsSync(path.dirname(bkpLocation))) {
+                    fs.mkdirSync(path.dirname(bkpLocation), {recursive: true});
+                }
                 fs.copyFileSync(`${src.to}/${keep}`, `${tmp_dir}/${src.to}/${keep}`)
             }
             copyBack.push(`${src.to}/${keep}`);
