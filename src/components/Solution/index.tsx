@@ -15,6 +15,7 @@ interface Props {
     open?: boolean;
     className?: string;
     children?: React.ReactNode;
+    noWrap?: boolean;
 }
 
 const Icon = () => {
@@ -192,7 +193,7 @@ const Solution = observer((props: Props) => {
         return <Loader />;
     }
     return (
-        <div data--web-key={props.webKey} className={clsx(styles.wrapper, 'solution-wrapper')}>
+        <div data--web-key={props.webKey} className={clsx(styles.wrapper, !props.noWrap && styles.alignInAlert, !props.noWrap && 'solution-wrapper')}>
             {model.show || userStore.current?.admin ? (
                 <Details
                     summary={
