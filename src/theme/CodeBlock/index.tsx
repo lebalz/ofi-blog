@@ -25,6 +25,7 @@ interface Props extends WrapperProps<typeof CodeBlockType> {
     persist?: boolean;
     noDownload?: boolean;
     versioned?: boolean;
+    noHistory?: boolean;
     noCompare?: boolean;
     maxLines?: string;
 }
@@ -97,6 +98,7 @@ export default function CodeBlockWrapper(props: Props): JSX.Element {
                 precode={precode}
                 showLineNumbers={!(!!props.slim && !/\n/.test(code))}
                 versioned={!!props.versioned}
+                noHistory={!!props.noHistory}
                 noCompare={!!props.noCompare}
                 title={sanitizedTitle(props.title) || lang}
             />

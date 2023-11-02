@@ -28,6 +28,7 @@ interface Props {
     lang: string;
     precode: string;
     maxLines?: number;
+    noHistory: boolean;
 }
 
 // export const ScriptContext = React.createContext<Script>(undefined);
@@ -75,7 +76,9 @@ const PyAceEditor = observer((props: Props) => {
             >
                 {props.lang === 'python' && <BrythonCommunicator webKey={props.webKey} />}
                 <PyEditor {...props} />
-                <CodeHistory webKey={props.webKey} />
+                {!props.noHistory && (
+                    <CodeHistory webKey={props.webKey} />
+                )}
             </div>
         </div>
     );
