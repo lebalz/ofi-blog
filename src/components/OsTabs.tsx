@@ -1,7 +1,7 @@
 import React from 'react';
 import Tabs from '@theme/Tabs';
 
-type OsType = 'win10' | 'win11' | 'win' | 'mac';
+type OsType = 'win10' | 'win11' | 'win' | 'mac' | 'osx';
 interface Props {
   os?: (OsType)[];
   children: React.ReactElement[];
@@ -9,6 +9,7 @@ interface Props {
 
 const OS_MAP: {[key in OsType]: string} = {
   mac: 'macOS',
+  osx: 'macOS',
   win: 'Windows',
   win10: 'Windows 10',
   win11: 'Windows 11',
