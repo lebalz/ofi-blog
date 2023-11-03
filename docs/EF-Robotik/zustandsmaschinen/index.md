@@ -37,15 +37,15 @@ Wenn man die Ereignisse und die Zustände einer Zustandsmaschine kennt so kann m
 
 Unvollständiges Beispiel für einen Lift (Zustände horizontal, Ereignise vertikal):
 
-|      | Stockwerk 2, Türe offen| Stockwerk 2, Türe zu | fahren aufwärts | fahren abwärts | ... |
-| ---  | ---                    | ---                  | ---             | ---            | --- |
-| **Türe auf gedrückt** | | Türe öffnen --> Stockwerk 2, Türe offen | | | |
-| **Türe zu gedrückt** | Türe schliessen --> Stockwerk 2, Türe zu | | | | |
-| **Stockwerk 1 gedrückt** | | Motor abwärts ein --> fahren abwärts | | | |
-| **Stockwerk 3 gedrückt** | | Motor aufwärts ein --> fahren aufwärts | | | |
-| **Stockwerk 1 erreicht** | | | | Motor aus, Türe öffnen --> Stockwerk 1, Türe auf | |
-| **Stockwerk 3 erreicht** | | | Motor aus, Türe öffnen --> Stockwerk 3, Türe auf | | |
-| **...** | | | | | |
+|       -                | Stockwerk 2, Türe offen                  | Stockwerk 2, Türe zu                    | fahren aufwärts                                  | fahren abwärts                                   | ... |
+|:-------------------------|:-----------------------------------------|:----------------------------------------|:-------------------------------------------------|:-------------------------------------------------|:----|
+| **Türe auf gedrückt**    |                                          | Türe öffnen --> Stockwerk 2, Türe offen |                                                  |                                                  |     |
+| **Türe zu gedrückt**     | Türe schliessen --> Stockwerk 2, Türe zu |                                         |                                                  |                                                  |     |
+| **Stockwerk 1 gedrückt** |                                          | Motor abwärts ein --> fahren abwärts    |                                                  |                                                  |     |
+| **Stockwerk 3 gedrückt** |                                          | Motor aufwärts ein --> fahren aufwärts  |                                                  |                                                  |     |
+| **Stockwerk 1 erreicht** |                                          |                                         |                                                  | Motor aus, Türe öffnen --> Stockwerk 1, Türe auf |     |
+| **Stockwerk 3 erreicht** |                                          |                                         | Motor aus, Türe öffnen --> Stockwerk 3, Türe auf |                                                  |     |
+| **...**                  |                                          |                                         |                                                  |                                                  |     |
 
 Dieses Beispiel zeigt, dass in bestimmten Zuständen gewisse Ereignisse ignoriert werden. Die entsprechenden Zellen sind dann leer. Es könte auch vorkommen, dass die Zustandsmaschine bei einem bestimmten Ereignis zwar eine Aktion durchführt, den Zustand aber nicht wechselt. Die Zelle wäre dann nicht leer, aber der Folgezustand wäre derselbe.
 
