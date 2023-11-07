@@ -158,6 +158,18 @@
         "images/simpsons-excel-is-no-db.png"
       ],
       "open": true
+    },
+    {
+      "from": "docs/Netzwerke-of/",
+      "to": "versioned_docs/version-26e/10-Netzwerke",
+      "ignore": [
+        "002-Codierung",
+        "003-Routing",
+        "004-DNS",
+        "005-Sicherheit",
+        "010-Begriffe",
+        "090-Pruefung.md"
+      ]
     }
   ],
   "26P": [

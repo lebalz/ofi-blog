@@ -11,8 +11,6 @@ sidebar_custom_props:
 
 Viele komplexe Vorgänge und Konstruktionen können mit Hilfe eines sogenannten Schichtenmodells in einfachere Einzelteile aufgespalten werden.
 
-Wir wollen die Vorteile des Schichtenmodell an Hand eines Beispiels versuchen zu verstehen:
-
 ## Beispiel "Schule"
 
 Die Schule Madretsch feiert 100-jähriges Jubiläum und braucht für ihr Fest zusätzliche Schulpulte. Wir möchten helfen und einige Pulte schicken.
@@ -43,8 +41,8 @@ Den Schüler:innen ist egal, wie die Pulte in die Schule kommen. Sie freuen sich
 ![](./img/3-school-example.svg)
 
 
-Da die Pulte zu sperrig sind, werden diese vom GBSL-Hausdienst zerlegt und in einzelne Pakete verpackt.
-Wenn die Pakete ankommen, kann der Madretsch-Hausdienst die Pakete auspacken und die Pulte wieder zusammensetzen.  
+Da die Pulte zu sperrig sind, werden diese vom GBSL-Hausdienst **zerlegt** und in einzelne Pakete verpackt.
+Wenn die Pakete ankommen, kann der Madretsch-Hausdienst die Pakete **auspacken** und die Pulte wieder **zusammensetzen**.  
 
   </TabItem>
   <TabItem value="step-3">
@@ -53,8 +51,8 @@ Wenn die Pakete ankommen, kann der Madretsch-Hausdienst die Pakete auspacken und
 
 Der Hausdienst trägt diese Pakete aber nicht selber zur Schule Madretsch.
 Nein, die Pakete werden an die Post übergeben.
-Diese ist für den Transport zuständig.
-Die Pakete machen auch einen Zwischenstopp im Verteilzentrum Härkingen.
+Diese ist für die **Organisation des Transports** zuständig.
+Die Pakete machen auch einen Zwischenstopp im **Verteilzentrum** Härkingen.
 
   </TabItem>
   <TabItem value="step-4">
@@ -62,9 +60,9 @@ Die Pakete machen auch einen Zwischenstopp im Verteilzentrum Härkingen.
 ![](./img/1-school-example.svg)
 
 
-Die Post verwendet nun für den eigentlichen Transport verschiedene Fahrzeuge.
+Die Post verwendet für den eigentlichen Transport verschiedene **Fahrzeuge und Berufschauffeur:innen**.
 Im Verteilzentrum wird der Inhalt entladen und gemäss Adresse weitergeleitet.
-  
+
   </TabItem>
 </Tabs>
 
@@ -88,7 +86,7 @@ Was könnte noch Übertragen werden, wobei die unteren Schichten verwendet werde
 Die Schichten können ausgetauscht werden, solange sie ihre Aufgabe erfüllen und die Schnittstelle zwischen der darüber- und der darunterliegenden Schicht erfüllt wird.
 
 - Die Post kann auch mit dem Flugzeug oder dem Zug transportiert werden. 
-- Statt der Post kann man einen privaten Transportservice engagieren.
+- Statt der Post kann man einen privaten Transportservice wie Planzer oder DHL engagieren.
 - Statt des Hauswartes können auch Schüler:innen die Pulte auseinanderschrauben und wieder zusammensetzen.
 
 :::aufgabe Schichten austauschen
