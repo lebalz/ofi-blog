@@ -30,7 +30,7 @@ Durch das Verkehrsnetz der Verkehrsbetriebe Biel wird der öffentliche Verkehr i
 
 ![](images/vb-verkehrsnetz.png)
 
-Sie möchten mit dem ÖV vom Gymnasium (Ländtestrasse 12, Biel/Bienne) zum Sportplatz Mettmoos fahren.
+Sie möchten mit dem ÖV vom Gymnasium :mdi-circle--red: (Ländtestrasse 12, Biel/Bienne) zum Sportplatz Mettmoos :mdi-star--green: fahren.
 
 :::aufgabe Mit dem Netzplan
 
@@ -46,7 +46,7 @@ Welchen Transportoptionen schlägt Ihnen [👉 Google Maps](https://www.google.c
 - Welche Optionen werden vorgeschlagen?
 - Welches ist gemäss Google die beste Route?
 - Ändert sich die Route, wenn sie möglichst kurze Fusswege enthalten soll? (Einstellbar unter _Routenoptionen_)
-- Ändert sich der Reisevorschlag, wenn Sie spät in der Nacht eine Verbindung suchen?
+- Ändert sich der Reisevorschlag, wenn Sie spät in der Nacht (12:15 Uhr) eine Verbindung suchen?
 
 <Answer  type="text"  webKey="482bf3ac-ff0d-44ca-9700-5274cf9fecd4"/>
 
@@ -59,12 +59,12 @@ Welchen Transportoptionen schlägt Ihnen [👉 Google Maps](https://www.google.c
 
 </Finding>
 
-## Gefundene Analogien
+## Analogien
 
 <div className="no-table-header">
 
 |              <!-- --> | <!-- -->                                                            |
-| --------------------: | :------------------------------------------------------------------ |
+|----------------------:|:--------------------------------------------------------------------|
 |              **WLAN** | zu Fuss bis zur nächsten Haltestelle                                |
 |   **Sichtbare WLANs** | Haltestellen, die zu Fuss erreichbar sind: Bahnhof & Badhausstrasse |
 | **Rechnernetz (LAN)** | mit Bus (für weiter entfernte Ziele: Tram, Zug, ...)                |
@@ -88,7 +88,7 @@ Ein Datenpaket im ÖV vom Gymer zum Sportplatz Mettmoos müsste
 :::aufgabe Routing-Tabelle
 <Answer type="state" webKey="8c827967-6f40-46be-85e1-36476b786edf" />
 
-Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für Datenpakete gemäss obigem Punkt 1. für die folgenden Haltestellen:
+Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für Datenpakete gemäss __Punkt 1__ aus obiger Anleitung für die folgenden Haltestellen:
 
 - Seehofweg
 - Bahnhof Biel
@@ -101,7 +101,7 @@ Beispiel-Anleitung:
 <div className="slim center">
 
 | Ort :mdi-pin: | Ziel :mdi-target: | :mdi-axis-y-arrow: Aktion             |
-| :------------ | :---------------- | :------------------------------------ |
+|:--------------|:------------------|:--------------------------------------|
 | Seehofweg     | Mettmoos          | :mdi-arrow-right-thin: Bus Nr. 9      |
 | Seehofweg     | Gymer             | :mdi-arrow-right-thin: Zu Fuss weiter |
 </div>
@@ -116,7 +116,7 @@ Halten Sie Ihre Anleitung auf Papier fest und fügen Sie ein Foto unten ein.
 :::aufgabe Andere Ziele
 <Answer type="state" webKey="984b58cf-3230-4f06-93da-ea49161782ab" />
 
-Die Anleitungen müssten natürlich auch Anweisungen haben für andere Ziele.
+Die Anleitungen müssten natürlich auch Anweisungen für andere Ziele haben.
 
 - Wie würden die Umsteigungsanweisungen für die 5 obenstehenden Haltestellen für das Ziel "Bern" lauten?
 - Wie für das Ziel "Zürich"?
@@ -133,9 +133,23 @@ Es können Anweisungen "delegiert" werden: Es muss nur der *Bahnhof Biel* wissen
 
 </Finding>
 
+
+:::aufgabe Routing im Internet
+<Answer type="state" webKey="cc80e025-9f37-451e-a9da-5e31920499bf" />
+
+Halten Sie fest, wie die Umleitung bei Paketen im Internet funktioniert - Sie haben im Unterricht bereits die Demonstration mit den verschachtelten Paketen gesehen.
+Gehen Sie dabei auf folgende Punkte ein:
+- Wozu braucht es mehrere Adressen?
+- Welche Informationen muss ein Router haben, um ein Paket weiterzuleiten?
+- Wie erhält ein neu verbundenes Gerät seine Adresse?
+- Erinnern Sie sich ans Schichtenmodell: Auf welcher Schicht findet das Routing statt?
+
+<Answer type="text" webKey="ec843295-019b-4076-8dda-3850c998a3db" />
+:::
+
 ## Ausfall Schienennetz
 
-> Wegen Umbauarbeiten fällt die Linie Nr. 9 ab "Brühlplatz" aus. Welche Möglichkeiten haben Sie, wenn Sie beim *Seehofweg* eingestiegen sind, um doch an den Sportplatz zu gelangen?
+> Wegen Umbauarbeiten fällt die Linie Nr. 9 ab "Brühlplatz" aus. Welche Möglichkeiten haben Sie, wenn Sie beim *Seehofweg* eingestiegen sind, um doch noch an den Sportplatz zu gelangen?
 
 
 <Finding>
@@ -150,7 +164,7 @@ Es gibt verschiedene Wege zum Ziel - auch nicht optimale Wege, die normalerweise
 <Answer type="state" webKey="374b1bf7-cb9a-422e-b373-8376598a45b8" />
 
 4 Parallelklassen – also ca. 100 Personen haben beim Sportplatz Mettmoos abgemacht.
-Wie kommen sie am schnellsten dahin, wenn wir damit rechnen, dass wegen Corona und dem Feierabendverkehr maximal 25 Personen pro Bus Platz finden?
+Wie kommen sie am schnellsten dahin, wenn wir damit rechnen, dass wegen der Belegung des Feierabendverkehrs maximal 25 Personen pro Bus Platz finden?
 
 <Answer type="text" webKey="a94b88da-f8ab-4cb5-9bdd-dd8f27eede43" />
 :::
@@ -158,7 +172,7 @@ Wie kommen sie am schnellsten dahin, wenn wir damit rechnen, dass wegen Corona u
 
 <Finding>
 
-Bei Engpässen können verschiedene Wege gleichzeitig benutzt werden. (Load-Balancing)
+Bei Engpässen können verschiedene Wege gleichzeitig benutzt werden. (In der Netzwerk-Sprache nennt sich dies "Load-Balancing")
 
 </Finding>
 
