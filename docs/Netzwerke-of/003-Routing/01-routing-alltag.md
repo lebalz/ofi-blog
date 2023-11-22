@@ -160,7 +160,7 @@ Es gibt verschiedene Wege zum Ziel - auch nicht optimale Wege, die normalerweise
 
 ## Grosse Gruppe
 
-:::aufgabe Grose Gruppen
+:::aufgabe Grosse Gruppen
 <Answer type="state" webKey="374b1bf7-cb9a-422e-b373-8376598a45b8" />
 
 4 Parallelklassen – also ca. 100 Personen haben beim Sportplatz Mettmoos abgemacht.
