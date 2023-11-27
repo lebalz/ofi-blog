@@ -12,7 +12,7 @@ Syntax
 : :mdi-flash-triangle--red: Fehler werden bereits vor dem Programmstart erkannt
 Semantik
 : Inhaltliche Bedeutung des Codes
-: :mdi-information--blue: Die Bedeutung ergibt sich durch die Verwendung der gegebenen Syntax
+: :mdi[information]{.blue} Die Bedeutung ergibt sich durch die Verwendung der gegebenen Syntax
 : :mdi-flash-triangle--red: Fehler werden erst zur Laufzeit erkannt
 
 Mittlerweilen gibt es eine schier unüberschaubar grosse Anzahl an Programmiersprachen ([Liste aller Programmiersprachen](https://en.wikipedia.org/wiki/List_of_programming_languages_by_type)). Im EF werden wir zu Beginn mit Python 3 programmieren, bevor wir dann auch Einblicke in andere Programmiersprachen und Domänenspezifische Sprachen (SQL) erhalten werden.
@@ -281,4 +281,4 @@ Da kein eigentlicher Compile-Schritt notwendig ist, muss bei Skriptsprachen auch
 Insgesamt ist das Arbeiten mit Skriptsprachen mit weniger Konfigurationsaufwand, weniger Standardcode (Boilerplate Code) verbunden und daher effizienter. Der Nachteil ist, dass die Programme deutlich langsamer (ca. 10x langsamer) ausgeführt werden.
 
 
-[^1]: Jupyter Notebook: [⬇️ Visualize-AST.ipynb](./code/Visualize-AST.ipynb), [:mdi-github: Github](https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/01-Programmiersprachen/code/Visualize-AST.ipynb)
+[^1]: Jupyter Notebook: [⬇️ Visualize-AST.ipynb](./code/Visualize-AST.ipynb), [:mdi[github] Github](https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/01-Programmiersprachen/code/Visualize-AST.ipynb)

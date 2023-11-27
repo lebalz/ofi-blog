@@ -46,7 +46,7 @@ pgzrun.go()
 ```
 
 :::info[Zur Erinnerung]
-Bilder, die im Programm verwendet werden, müssen in einem Unterverzeichnis `images` gespeichert sein. Anstelle von `hintergrund` wird der Dateiname ohne Endung angegeben. Der Mu-Editor öffnet dieses Verzeichnis automatisch, wenn man auf `Images` :mdi-brush--blue: klickt.
+Bilder, die im Programm verwendet werden, müssen in einem Unterverzeichnis `images` gespeichert sein. Anstelle von `hintergrund` wird der Dateiname ohne Endung angegeben. Der Mu-Editor öffnet dieses Verzeichnis automatisch, wenn man auf `Images` :mdi[brush]{.blue} klickt.
 :::
 
 ## Zeichnen mit Pygame Zero

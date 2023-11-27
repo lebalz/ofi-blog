@@ -23,11 +23,11 @@ import TypedText from '@site/src/components/VisualizationTools/TypedText'
     ]}/>
 
 
-Zeit :mdi-clock--blue:
+Zeit :mdi[clock]{.blue}
 : 5 Minuten Vorbereitung, 5 Minuten Prüfung
 Szenarien :mdi-file-document-multiple--blue:
 : 10 Szenarien aus den [Prüfungsfragen](./009-pruefungsfragen.md)
-Note :mdi-certificate--blue:
+Note :mdi[certificate]{.blue}
 : Halb zählende Note
 
 Seit dem Sommer 2020 bringen alle Schüler:innen ihre eigenen Laptops mit in den Unterricht (*BYOD - Bring Your Own Device*). Den grössten Nutzen bringt das persönliche Gerät, wenn es im Unterricht **effizient als Mittel zum Zweck** eingesetzt werden kann. Dies erfordert die Beherrschung der Grundlegenden Funktionen des Geräts - *Dokumente erstellen, speichern, teilen, wiederfinden, ...* - sowie das Wissen, wie gewisse Abläufe effizient gestaltet werden können.

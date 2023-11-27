@@ -30,7 +30,7 @@ Unter den folgenden Links finden Sie Information zu Audacity und möglichen Quel
 :::danger[ACHTUNG: Virenverseuchte Versionen im Umlauf]
 Wenn man in Google nach Audacity sucht, wird man auf die Seite **[audacity.de]** gelockt. Diese Seite bietet eine **VIRENVERSEUCHTE** Version von Audicity an.
 
-:mdi-alert--orange: **NICHT HERUNTERLADEN** :mdi-alert--orange:
+:mdi[alert]{.orange} **NICHT HERUNTERLADEN** :mdi[alert]{.orange}
 
 Laden Sie Audacity nur mit dem nachfolgenden Link herunter.
 :::

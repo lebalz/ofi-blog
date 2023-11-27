@@ -37,7 +37,7 @@ Natürlich muss Word wissen, in welcher Sprache ein Text verfasst wird. Word ver
 <Answer type="state" webKey="619f5c1b-786f-451a-9b78-554403f298c6" />
 
 Datei
-: [:mdi-download: Texte mit Fehlern.docx](files/ex04-Texte-mit-Felern.docx)
+: [:mdi[download] Texte mit Fehlern.docx](files/ex04-Texte-mit-Felern.docx)
 
 Ändern Sie für die verschiedenen Abschnitte und Wörter die richtige Sprache und korrigieren Sie mithilfe der Rechtschreibkorrektur alle Fehler im Dokument.
 

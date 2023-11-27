@@ -7,7 +7,7 @@ sidebar_custom_props:
 
 # Neue Zeile ohne Nachricht abzuschicken
 
-#### :mdi-microsoft-teams--blue: :mdi-whatsapp--green: :mdi-instagram--red:
+#### :mdi-microsoft-teams--blue: :mdi[whatsapp]{.green} :mdi[instagram]{.red}
 
 Kurz eine Nachricht schreiben - Anrede, Text, Grussformel... Doch [[:mdi-keyboard-return:]] schickt die Anrede ab, anstatt eine neue Zeile einzufügen 😖 ...
 

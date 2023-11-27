@@ -39,7 +39,7 @@ Am Freitag werden wir mit dem Spielfeld weiterarbeiten. Damit alle eine gute Aus
 2. (Wer das eigene Spielfeld noch nicht fertig hat): Den untenstehenden Code übernehmen und Zeile für Zeile analysieren und kommentieren. Insbesondere sollte Ihnen wieder klar werden, was folgende Syntax bezweckt:
      - Was macht `f'|{zelle}'` ?
      - was macht das `end=''`?
-3. :mdi-git: Commiten und Pushen
+3. :mdi[git] Commiten und Pushen
 
 
 ```py

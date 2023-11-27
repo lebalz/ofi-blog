@@ -26,7 +26,7 @@ Materialien bereitstellen.
 ![--width=500px](images/bug-step01.jpg)
 :::
 :::cards
-### Schritt 2: 220 :mdi-omega: Widerstände löten
+### Schritt 2: 220 :mdi[omega] Widerstände löten
 - Die beiden **gleichaussehenden** Widerstände Zurechtbiegen
 - Die Richtung der Widerstände spielt keine Rolle!
 - Das Käferchen mit den Widerständen nach Unten auf das Petafix drücken - nun sollte alles fixiert sein
@@ -50,7 +50,7 @@ Materialien bereitstellen.
 :::
 
 :::cards
-### Schritt 4: 4.7k :mdi-ohm: Widerstand, Transistor und Fotowiderstand löten
+### Schritt 4: 4.7k :mdi[ohm] Widerstand, Transistor und Fotowiderstand löten
 
 :::cards
 ![](images/Transistors.jpg)

@@ -13,9 +13,9 @@ Benotung
 Teile
 : __Theorie__ (ca. 30 Minuten), ohne Hilfsmittel, auf Papier
 : __Excel__ (ca. 30 Minuten), Openbook, Laptop, Excel, Webseite. 
-: :mdi-alert--yellow: keine Chats/Kommunikation mit anderen Personen
+: :mdi[alert]{.yellow} keine Chats/Kommunikation mit anderen Personen
 : __SQL__ (ca. 30 Minuten), Openbook, Laptop, db-sql.ch, Webseite. 
-: :mdi-alert--yellow: keine Chats/Kommunikation mit anderen Personen
+: :mdi[alert]{.yellow} keine Chats/Kommunikation mit anderen Personen
 
 :::info[Theoretischer Teil]
 

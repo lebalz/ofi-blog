@@ -21,7 +21,7 @@ Wir verwenden kostenlose Dienste, um Node-RED zu installieren. Diese Dienste bie
 ## 1. Datenbank auf ElephantSQL.com erstellen
 
 1. Erstellen Sie sich einen kostenlosen Account bei [ElephantSQL.com](https://www.elephantsql.com/)
-2. Über __:mdi-plus: Create New Instance__ eine neue Datenbank erstellen:
+2. Über __:mdi[plus] Create New Instance__ eine neue Datenbank erstellen:
 
 Step :mdi-numeric-1-box--orange: Plan
 : Name: __node-red__

@@ -436,7 +436,7 @@ Freiwillig: Spielen Sie das Tastenkürzel-Game
 - Link auf einer Webseite in einem neuen Tab öffnen
 - ...
 
-[[Cmd]] + :mdi-mouse: *Click*
+[[Cmd]] + :mdi[mouse] *Click*
 
 ## Touch-Gesten
 
@@ -591,17 +591,17 @@ Mit folgenden Gesten kann zwischen diesen Desktops hin- und hergewechselt werden
 <OsTabs>
 <TabItem value="win11">
 
-Weitere Gesten [:mdi-link: hier](https://support.microsoft.com/de-de/windows/touchpad-gesten-f%C3%BCr-windows-10-a9d28305-4818-a5df-4e2b-e5590f850741)
+Weitere Gesten [:mdi[link] hier](https://support.microsoft.com/de-de/windows/touchpad-gesten-f%C3%BCr-windows-10-a9d28305-4818-a5df-4e2b-e5590f850741)
 
 </TabItem>
 <TabItem value="win10">
 
-Weitere Gesten [:mdi-link: hier](https://support.microsoft.com/de-de/windows/touchgesten-f%C3%BCr-windows-a9d28305-4818-a5df-4e2b-e5590f850741#WindowsVersion=Windows_10)
+Weitere Gesten [:mdi[link] hier](https://support.microsoft.com/de-de/windows/touchgesten-f%C3%BCr-windows-a9d28305-4818-a5df-4e2b-e5590f850741#WindowsVersion=Windows_10)
 
 </TabItem>
 <TabItem value="mac">
 
-Weitere Gesten [:mdi-link: hier](https://support.apple.com/de-ch/HT204895)
+Weitere Gesten [:mdi[link] hier](https://support.apple.com/de-ch/HT204895)
 
 </TabItem>
 </OsTabs>

@@ -30,7 +30,7 @@ Durch das Verkehrsnetz der Verkehrsbetriebe Biel wird der öffentliche Verkehr i
 
 ![](images/vb-verkehrsnetz.png)
 
-Sie möchten mit dem ÖV vom Gymnasium :mdi-circle--red: (Ländtestrasse 12, Biel/Bienne) zum Sportplatz Mettmoos :mdi-star--green: fahren.
+Sie möchten mit dem ÖV vom Gymnasium :mdi[circle]{.red} (Ländtestrasse 12, Biel/Bienne) zum Sportplatz Mettmoos :mdi[star]{.green} fahren.
 
 :::aufgabe[Mit dem Netzplan]
 
@@ -100,7 +100,7 @@ Beispiel-Anleitung:
 
 <div className="slim center">
 
-| Ort :mdi-pin: | Ziel :mdi-target: | :mdi-axis-y-arrow: Aktion             |
+| Ort :mdi[pin] | Ziel :mdi[target] | :mdi-axis-y-arrow: Aktion             |
 |:--------------|:------------------|:--------------------------------------|
 | Seehofweg     | Mettmoos          | :mdi-arrow-right-thin: Bus Nr. 9      |
 | Seehofweg     | Gymer             | :mdi-arrow-right-thin: Zu Fuss weiter |

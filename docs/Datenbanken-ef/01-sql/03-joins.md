@@ -28,7 +28,7 @@ $$
 ***
 <div style={{display: 'flex', justifyContent: 'center'}}>
 
-:mdi-close--xl:
+:mdi[close]{.xl}
 </div>
 ***
 $$

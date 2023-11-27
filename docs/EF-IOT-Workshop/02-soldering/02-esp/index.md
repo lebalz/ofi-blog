@@ -21,13 +21,13 @@ __RST__
 __3V3__
 : Strom Output mit 3.3 V
 __5V__
-: :mdi-circle--red: 5V Strom Output
+: :mdi[circle]{.red} 5V Strom Output
 __G__
-: :mdi-circle--black: Ground (Erdung)
+: :mdi[circle]{.black} Ground (Erdung)
 __D1__
-: :mdi-circle--blue: SCL Pin für die $I^2C$ Schnittstelle
+: :mdi[circle]{.blue} SCL Pin für die $I^2C$ Schnittstelle
 __D2__
-: :mdi-circle--green: SDA Pin für die $I^2C$ Schnittstelle
+: :mdi[circle]{.green} SDA Pin für die $I^2C$ Schnittstelle
 __D5__
 : Analoger Pin, bspw. für LED's
 :::
@@ -63,38 +63,38 @@ Löten der angegebenen Lötstellen:
 :::
 :::cards
 ![Schritt 7](images/esp-step07.jpg)
-Rot :mdi-circle--red:
+Rot :mdi[circle]{.red}
 : Auf __VIN__
-Schwarz :mdi-circle--black:
+Schwarz :mdi[circle]{.black}
 : Auf __GND__
-Blau :mdi-circle--blue:
+Blau :mdi[circle]{.blue}
 : Auf __SCL__
-Grün :mdi-circle--green:
+Grün :mdi[circle]{.green}
 : Auf __SDA__
 
 :::
 :::cards
 ![Schritt 8](images/esp-step08.jpg)
-Rot :mdi-circle--red:
+Rot :mdi[circle]{.red}
 : Auf __VIN__
-Schwarz :mdi-circle--black:
+Schwarz :mdi[circle]{.black}
 : Auf __GND__
-Blau :mdi-circle--blue:
+Blau :mdi[circle]{.blue}
 : Auf __SCL__
-Grün :mdi-circle--green:
+Grün :mdi[circle]{.green}
 : Auf __SDA__
 :::
 :::cards
 ![Schritt 9](images/esp-step09.jpg)
 Zusammenstecken:
 __5V__
-: :mdi-circle--red: 5V Strom Output
+: :mdi[circle]{.red} 5V Strom Output
 __G__
-: :mdi-circle--black: Ground (Erdung)
+: :mdi[circle]{.black} Ground (Erdung)
 __D1__
-: :mdi-circle--blue: SCL Pin für die $I^2C$ Schnittstelle
+: :mdi[circle]{.blue} SCL Pin für die $I^2C$ Schnittstelle
 __D2__
-: :mdi-circle--green: SDA Pin für die $I^2C$ Schnittstelle
+: :mdi[circle]{.green} SDA Pin für die $I^2C$ Schnittstelle
 :::
 
 

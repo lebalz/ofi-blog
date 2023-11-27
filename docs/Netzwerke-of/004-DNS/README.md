@@ -153,7 +153,7 @@ Wie findet man die IP-Adresse, welche zu einem Domain-Name gehört? (Googeln Sie
 
 <Answer  type="text"  webKey="67acbe64-ea7b-46ea-b07a-c09376f21381"/>
 
-:::details[:mdi-account-cowboy-hat: The Hacky Way :mdi-arrow-right: Übers Terminal :mdi-console:]
+:::details[:mdi-account-cowboy-hat: The Hacky Way :mdi-arrow-right: Übers Terminal :mdi[console]]
 
 Sie können auch in der Windows-Eingabeaufforderung oder auf dem Mac-Terminal einen Domain-Name zu einer IP-Adresse auflösen. Dazu brauchen Sie den Befehl `nslookup`.
 

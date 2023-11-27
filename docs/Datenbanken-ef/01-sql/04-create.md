@@ -36,7 +36,7 @@ Der Einfachheit halber haben Sie auf der Kursdatenbank __EDU-DBs EF__ alle Recht
 Datenbank
 : 👉 https://db-sql.ch/connections/d68ea3c2-eb9f-4454-aa19-9c00764757b5
 
-Erstellen Sie eine eigene Datenbank mit nach folgendem Schema `ef_name`, wobei Sie natürlich Ihren eigenen Namen verwenden. Wenn der Befehl erfolgreich ausgeführt wurde, sollte Ihre Datenbank nach dem Aktualisieren der Verbindungen :mdi-sync--l: angezeigt werden.
+Erstellen Sie eine eigene Datenbank mit nach folgendem Schema `ef_name`, wobei Sie natürlich Ihren eigenen Namen verwenden. Wenn der Befehl erfolgreich ausgeführt wurde, sollte Ihre Datenbank nach dem Aktualisieren der Verbindungen :mdi[sync]{.l} angezeigt werden.
 
 <Answer type="text" webKey="b1b0b2a9-5b0a-4b0a-9b0a-5b0a4b0a9b0a" monospace />
 :::
@@ -79,7 +79,7 @@ VALUES
 
 
 Datenbank
-: :mdi-alert--orange: mit der eigenen Datenbank verbinden!
+: :mdi[alert]{.orange} mit der eigenen Datenbank verbinden!
 : 👉 https://db-sql.ch/connections/d68ea3c2-eb9f-4454-aa19-9c00764757b5
 
 Erstellen Sie eine Personen-Tabelle mit einigen selbst gewählten Attributen und fügen Sie einige Datensätze ein. Halten Sie das Query unten fest.
@@ -150,7 +150,7 @@ VALUES
 <Answer type="state" webKey="805b507b-93bc-40bd-a78d-9ce3fc531cad" />
 
 Datenbank
-: :mdi-alert--orange: mit der eigenen Datenbank verbinden!
+: :mdi[alert]{.orange} mit der eigenen Datenbank verbinden!
 : 👉 https://db-sql.ch/connections/d68ea3c2-eb9f-4454-aa19-9c00764757b5
 
 Erstellen Sie Ihre Personen-Tabelle erneut (zuerst Löschen...) 

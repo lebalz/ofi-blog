@@ -84,7 +84,7 @@ Innerhalb des Headers und des Trailers bilden mehrere aufeinander folgende Bytes
 ## Nachrichtenabfolge
 Um die Regeln für die Nachrichtenabfolge zu definieren wird oft eine **Zustandsmaschine**, auch **endlicher Automat** genannt, verwendet. Dies ist ein **Modell** für das **Verhalten** der kommunizierenden Parteien.
 
-Eine Partei befindet sich immer in einem bestimmten **Zustand**. In diesem ist sie bereit nur ganz bestimmte Nachrichten zu empfangen. Alle anderen Nachrichten ignoriert sie. Wenn eine gültige Nachricht empfangen wird, so wechselt die Partei in einen anderen Zustand und kann gleichzeitig eine Nachricht zurücksenden. Ein solcher Zustandswechsel wird als **Transition** bezeichnet. Am Anfang befindet sich die Partei in einem **Startzustand** :mdi-circle:.
+Eine Partei befindet sich immer in einem bestimmten **Zustand**. In diesem ist sie bereit nur ganz bestimmte Nachrichten zu empfangen. Alle anderen Nachrichten ignoriert sie. Wenn eine gültige Nachricht empfangen wird, so wechselt die Partei in einen anderen Zustand und kann gleichzeitig eine Nachricht zurücksenden. Ein solcher Zustandswechsel wird als **Transition** bezeichnet. Am Anfang befindet sich die Partei in einem **Startzustand** :mdi[circle].
 
 Man kann solche Zustandsmaschinen durch **Zustandsdiagramme** darstellen.
 
@@ -113,7 +113,7 @@ stateDiagram-v2
 ```
 
 Startzustand
-: Der schwarze Punkt :mdi-circle:
+: Der schwarze Punkt :mdi[circle]
 Endzustand
 : Der weisse Punkt :mdi-record-circle-outline:.
 : In diesem ist keine weitere Kommunikation möglich. Die Zustandsmaschine müsste dazu neu gestartet werden.

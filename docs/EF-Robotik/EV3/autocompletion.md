@@ -30,7 +30,7 @@ Mit einem Trick kann man dennoch die Autovervollständigung hinzufügen.
     </OsTabs>
 
 
-2. In den Einstellungen von VS Code __:mdi-cog: Settings > :mdi-magnify:__ suchen Sie nach `python.languageServer` und wählen dort `PyLance` oder `Default` aus.
+2. In den Einstellungen von VS Code __:mdi[cog] Settings > :mdi[magnify]__ suchen Sie nach `python.languageServer` und wählen dort `PyLance` oder `Default` aus.
    
    ![--width=450px](images/ev3-lsp.png)
 

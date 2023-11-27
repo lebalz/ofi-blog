@@ -37,7 +37,7 @@ Möglicherweise ist der installierte USB-Serial Treiber nicht kompatibel. VErsuc
 :::details[Troubleshooting Dateien hochladen]
 Damit der Datei-Upload funktioniert, muss über eine Konfiguration festgelegt werden, wie der ESP8266 angeschlossen ist.
 
-Suchen :mdi-magnify: Sie dazu in den Einstellungen :mdi-cog-outline: nach 
+Suchen :mdi[magnify] Sie dazu in den Einstellungen :mdi-cog-outline: nach 
 
 ```
 pymakr.devices.configs
@@ -74,7 +74,7 @@ Die Hardware-ID (im obigen Beispiel `5&1487bdb9&0&6`) muss dabei für jeden USB-
 :::details[Troubleshooting Keine Ausgabe]
 Kann passieren, wenn die Ausgaben herausgefiltert werden. In diesem Fall muss das Benachrichtigungsverhalten in den Einstellungen :mdi-cog-outline: auf `debug` festgelegt werden.
 
-Suchen :mdi-magnify: Sie nach
+Suchen :mdi[magnify] Sie nach
 
 ```
 pymakr.logLevel

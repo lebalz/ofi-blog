@@ -13,7 +13,7 @@ Benotung
 Teile
 : __Theorie__ (ca. 40 Minuten), ohne Hilfsmittel, auf Papier
 : __SQL__ (ca. 20 Minuten), Openbook, Laptop, db-sql.ch, Webseite.
-: :mdi-alert--yellow: keine Chats/Kommunikation mit anderen Personen
+: :mdi[alert]{.yellow} keine Chats/Kommunikation mit anderen Personen
 
 :::info[Theoretischer Teil]
 

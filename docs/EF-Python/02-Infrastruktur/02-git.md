@@ -7,7 +7,7 @@ sidebar_label: Git Grundlagen
 import DiffViewer from '@site/src/components/DiffViewer';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 
-# Git Grundlagen :mdi-git--orange:
+# Git Grundlagen :mdi[git]{.orange}
 
 👉 https://git-scm.com/
 
