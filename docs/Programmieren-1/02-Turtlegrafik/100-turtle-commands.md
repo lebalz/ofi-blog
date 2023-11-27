@@ -161,7 +161,7 @@ pencolor('red')
 forward(100)
 ```
 
-:::details Farbpalette <span className="color-badge red">red</span> <span className="color-badge green">green</span> <span className="color-badge blue">blue</span>
+:::details[Farbpalette <span className="color-badge red">red</span> <span className="color-badge green">green</span> <span className="color-badge blue">blue</span>]
 
 <div className="small-table no-table-header">
 
@@ -193,7 +193,7 @@ forward(100)
 </div>
 :::
 
-:::details __RGB-Farben__
+:::details[__RGB-Farben__]
 <RGB />
 
 ```py live_py slim
@@ -212,7 +212,7 @@ pencolor(f'rgb({r}, {g}, {b}')
 
 forward(100)
 ```
-:::danger Unterschiede zum offiziellen Turtle-Modul
+:::danger[Unterschiede zum offiziellen Turtle-Modul]
 Das offizielle Turtle-Modul verwendet zur Anzeige von Grafiken nicht einen Browser, sonder [Tkinter](https://docs.python.org/3/library/tkinter.html). Dort können ebenfalls RGB-Farben verwendet werden, sie werden aber mit einer anderen Syntax übergeben:
 
 Mehr dazu hier 👉 https://docs.python.org/3/library/turtle.html#turtle.color

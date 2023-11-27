@@ -6,7 +6,7 @@ sidebar_custom_props:
 
 # Projekt: Partnerpraktikum
 
-:::info TL;DR
+:::info[TL;DR]
 Gruppengrösse
 : 2, Partnerarbeit
 Termin 1: Projektantrag
@@ -81,7 +81,7 @@ Die selbstkritische Reflexion sollte im Minimum **500** Wörter lang sein.
 
 ---
 
-:::info Verfügbare Hardware an der Schule
+:::info[Verfügbare Hardware an der Schule]
 Die Schule bietet begrenzte Hardware-Stückzahlen, um sich z.B. im Rahmen eines Hardware-Projekts mit den Möglichkeiten der folgenden Geräte\* auseinanderzusetzen.
 - Micro:Bit Platine
 - Maqueen Roboter (Gesteuert über Micro:Bit)
@@ -101,7 +101,7 @@ Informieren Sie sich über Themen, die Sie spannend finden. Tauschen Sie sich an
 
 Füllen Sie den Projektantrag aus und laden Sie den Antrag bis am 12.05.2023, 23:59 Uhr: [👉 OneDrive Finale Abgabe](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EjXGrYtw7KBMu_QCLkSHThQBi5F3qRojjfo2tjPXIvUVVg)
 
-:::success Arbeitstagebuch Woche 1
+:::success[Arbeitstagebuch Woche 1]
 <Answer type="text" webKey="333ae706-c77e-465f-9273-bef1881c0f7a" />
 :::
 
@@ -109,7 +109,7 @@ Füllen Sie den Projektantrag aus und laden Sie den Antrag bis am 12.05.2023, 23
 
 Projektantrag gemäss Rückmeldung anpassen und mit der Umsetzung starten.
 
-:::success Arbeitstagebuch Woche 2
+:::success[Arbeitstagebuch Woche 2]
 <Answer type="text" webKey="ea52e8bd-853a-4485-9bf5-47975c622d95" />
 :::
 
@@ -117,21 +117,21 @@ Projektantrag gemäss Rückmeldung anpassen und mit der Umsetzung starten.
 ### 3. Woche
 Selbständiges Arbeiten an den Projekten. Holen Sie sich bei Fragen oder Unklarheiten frühzeitig Hilfe bei Herrn Hofer.
 
-:::success Arbeitstagebuch Woche 3
+:::success[Arbeitstagebuch Woche 3]
 <Answer type="text" webKey="0955d986-daef-4df3-aa2b-c9f47dcde123" />
 :::
 
 ### 4. Woche
 Selbständiges Arbeiten an den Projekten. Holen Sie sich bei Fragen oder Unklarheiten frühzeitig Hilfe bei Herrn Hofer.
 
-:::success Arbeitstagebuch Woche 4
+:::success[Arbeitstagebuch Woche 4]
 <Answer type="text" webKey="0881427c-f098-4059-8727-813cebef5315" />
 :::
 
 ### 5. Woche
 Selbständiges Arbeiten an den Projekten. Holen Sie sich bei Fragen oder Unklarheiten frühzeitig Hilfe bei Herrn Hofer.
 
-:::success Arbeitstagebuch Woche 5
+:::success[Arbeitstagebuch Woche 5]
 <Answer type="text" webKey="f86c4f09-cd01-465d-95bf-96d9f04f66a7" />
 :::
 
@@ -139,7 +139,7 @@ Selbständiges Arbeiten an den Projekten. Holen Sie sich bei Fragen oder Unklarh
 ### 6. Letzte Woche
 Vorbereitung und Aufnehmen der Podcasts
 
-:::success Arbeitstagebuch Woche 6
+:::success[Arbeitstagebuch Woche 6]
 <Answer type="text" webKey="52a1172b-ae18-464d-8772-0a4d419b9bf8" />
 :::
 
@@ -218,7 +218,7 @@ Sie lesen sich ins Buch von Tommaso Teofili, [Deep Learning for Search_2019](htt
 
 
 ## Abgabe
-:::success Abgabe
+:::success[Abgabe]
 
 Es wird ein **.zip-Ordner** mit dem Namen `name_vorname.zip` (bzw. für Gruppen `name1-vorname1 name2-vorname2.zip`) per obigem OneDrive-Link abgegeben.
 

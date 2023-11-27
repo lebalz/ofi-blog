@@ -13,7 +13,7 @@ sidebar_custom_props:
 
 ![Angriff auf den öffentlichen Schlüssel](images/public-key-attack-1.svg)
 
-:::aufgabe Aufgabe Angriff auf den öffentlichen Schlüssel
+:::aufgabe[Aufgabe Angriff auf den öffentlichen Schlüssel]
 <Answer type="state" webKey="e4584855-e4f8-4c1c-b478-0b98b5e0bc78" />
 
 Alice schickt ihren öffentlichen Schlüssel (also ihr öffentlicher Verschliessmechanismus) per Post an Bob. Überlegen Sie sich, was der bösartige Mallory anstellen könnte, um Alice und Bob zu überlisten.
@@ -33,7 +33,7 @@ Wie können wir uns vor Man-in-the-Middle-Attacken schützen? Kann uns Trent hel
 
 ![Die Rolle von Trent](images/certificates-task.svg)
 
-:::aufgabe Aufgabe Zertifizierungsstellen
+:::aufgabe[Aufgabe Zertifizierungsstellen]
 <Answer type="state" webKey="7b69b108-866c-4f90-ab96-280d63db47f9" />
 
 Wie könnte Trent dafür sorgen, dass die öffentlichen Schlüssel besser überprüfbar sind?

@@ -135,7 +135,7 @@ Material
 
 1. [Praktisch]: Schreiben Sie das entsprechende Programm namens __square.py__ zu dem in (1) erzeugten Top-Down Entwurfs.
 
-:::danger Keine Benutzerinteraktion
+:::danger[Keine Benutzerinteraktion]
 Eine Benutzerinteraktion mit Validierung der Eingaben ist nicht gefragt.
 :::
 

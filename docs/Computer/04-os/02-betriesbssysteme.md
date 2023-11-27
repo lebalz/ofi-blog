@@ -10,7 +10,7 @@ Die Liste sämtlicher Betriebssysteme ist zu lange und zu unüberschaubar, um si
 
 Hier die wichtigsten Betriebssysteme für Desktopcomputer oder Notebooks:
 
-:::cards --columns=3
+:::cards[--columns=3]
 ### Microsoft Windows
 Microsoft Windows gibt es seit 1985 in fast 30 verschiedenen Versionen (z.B. Windows 3.1, Windows 95, Windows 2000, Windows XP). Windows läuft momentan auf drei verschiedenen Prozessor-Architekturen: x86, amd64 und ARM.
 
@@ -30,7 +30,7 @@ macOS ist ein Betriebssystem, das seit 1982 von Apple für Desktop- und Notebook
 
 Nachfolgend wichtige mobile Betriebssysteme, d.h. Betriebssysteme, die auf mobilen Geräten (wie z.B. Smartphones und Tablets) zum Einsatz kommen.
 
-:::cards --columns=3
+:::cards[--columns=3]
 ### Windows Mobile
 Microsoft Windows Mobile oder Windows Phone waren zwei Betriebssysteme für Smartphones und Tablets. Für Windows 10 Mobile gibt es seit Januar 2020 keine Updates mehr, für Windows Phone ist der Support bereits Mitte 2017 abgelaufen.
 
@@ -53,7 +53,7 @@ Android ist ein freies Betriebssystem auf Basis des Linux-Kernels. Entwickelt wi
 
 Neben den offensichtlichen Geräten wie Desktopcomputer oder Smarthones resp. Tablets setzen aber viele weitere Geräte ein Betriebssystem ein.
 
-:::aufgabe Aufgabe Betriebssysteme in meiner Umgebung
+:::aufgabe[Aufgabe Betriebssysteme in meiner Umgebung]
 
 1. Überlegen Sie sich, welche Geräte bei Ihnen zu Hause ein Betriebssystem brauchen/haben.
 2. Wieso gibt es überhaupt verschiedene Betriebssysteme?

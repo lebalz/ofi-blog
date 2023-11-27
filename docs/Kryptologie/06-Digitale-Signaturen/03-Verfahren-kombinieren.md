@@ -25,7 +25,7 @@ Wir versuchen, mehrere Verfahren zu kombinieren um deren Vorteile zu nutzen. Ein
 
 ![Digitale Signatur: Hashwert und asymmetrische Verschlüsselung](images/hash-asymm-signature-binary.svg)
 
-:::aufgabe Digitale Signaturen überprüfen
+:::aufgabe[Digitale Signaturen überprüfen]
 <Answer type="state" webKey="cd131599-9400-4ba6-9ef2-688b4b1ea20a" />
 
 Überlegen Sie sich, wie man eine solche digital signierte Nachricht überprüfen kann. Zeichnen Sie die benötigten Schritte auf.

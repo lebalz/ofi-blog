@@ -23,7 +23,7 @@ sidebar_custom_props:
 
 </GTabs>
 
-:::details Empfohlene Erweiterungen und Einstellungen
+:::details[Empfohlene Erweiterungen und Einstellungen]
 #### Erweiterungen
 - python
 - Intelli Code

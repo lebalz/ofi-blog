@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Wurfweite
 
-:::info Lernziele
+:::info[Lernziele]
 Sie brauchen dazu die Funktionen:
 - `PI()`
 - `SIN`
@@ -43,7 +43,7 @@ Abwurfhöhe/Körpergrösse
 Weite
 : <span style={{background: 'var(--ifm-color-success)', color: 'white'}}> :mdi-arrow-right-thin: 52.169 m</span>
 
-:::caution Hinweis
+:::caution[Hinweis]
 Beachten Sie bei der Eingabe der Formeln, dass Sie Klammern in der richtigen Reihenfolge setzen: Zuerst die Multiplikationen und Divisionen, dann die Additionen und Subtraktionen.
 :::
 

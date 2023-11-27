@@ -25,7 +25,7 @@ wiederhole bis Spielende erreicht:
 
 :::
 
-:::aufgabe ⭐ Zusatz: Score
+:::aufgabe[⭐ Zusatz: Score]
 <Answer type="state" webKey="1c1e526c-45bb-47c1-b9b6-2b5418785203" />
 
 Fügen Sie einen Score hinzu, der angibt, wie viele Züge man gebraucht hat, um das Endziel (*1024*) zu erreichen.

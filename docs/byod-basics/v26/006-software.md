@@ -221,7 +221,7 @@ Vergewissern Sie sich, dass Sie folgende Aufgaben ohne weiteres im Browser ihrer
 - Neuer Tab öffnen ([[Ctrl]] + [[T]])
 - URL kürzen um sie einfacher zu teilen, bspw. mit [https://bitly.com/](https://bitly.com/)
 
-:::details Privates Fenster öffnen (*Inkognito Mode*)
+:::details[Privates Fenster öffnen (*Inkognito Mode*)]
 hier werden alle persönlichen Daten nach dem Schliessen des Fensters wieder gelöscht. So werden Sie bspw. auch von allen angemeldeten Websites automatisch abgemeldet und auch "Automatische Logins" werden verworfen. Auf fremden Laptops empfielt sich also der private Modus.
 :::
 
@@ -233,7 +233,7 @@ Sie richten ihr Mail-Konto auf einem Mailprogramm (bspw. im Programm "Mail") ein
 - Eine neue Mail schreiben und verschicken
 - Einen neuen Kalender-Eintrag erstellen (bspw. über die Kalender-App)
 
-:::details Eine Mail-Signatur hinzufügen/ändern
+:::details[Eine Mail-Signatur hinzufügen/ändern]
 
 Als Signatur wird ein Textabschnitt bezeichnet, der häufig am Ende von E-Mails, Usenet-Postings oder Beiträgen in Internetforen steht und Angaben zum Absender enthält.
 
@@ -261,7 +261,7 @@ E-Mail: reto@holzer.ch
 
 ![--size=150px](/img/byod-basics/win/mail_app.png)
 
-:::details Mail Einrichten
+:::details[Mail Einrichten]
 
 In der Mail-App einen neuen Exchange Mailaccount hinzufügen:
 
@@ -280,7 +280,7 @@ In der Mail-App einen neuen Exchange Mailaccount hinzufügen:
 
 ![--size=150px](/img/byod-basics/win/mail_app.png)
 
-:::details Mail Einrichten
+:::details[Mail Einrichten]
 
 In der Mail-App einen neuen Exchange Mailaccount hinzufügen:
 
@@ -328,7 +328,7 @@ An der Schule wird die Office 365 Suite verwendet.
 
 ### To Do
 
-:::details Was kann Microsoft To Do?
+:::details[Was kann Microsoft To Do?]
 
 Mit Microsoft To Do können Sie Folgendes erledigen [^3]:
 - Behalten Sie mit **Mein Tag**, Ihrem personalisierten Tagesplaner mit Aufgabenvorschlägen, stets Ihre Prioritäten im Blick
@@ -342,7 +342,7 @@ Mit Microsoft To Do können Sie Folgendes erledigen [^3]:
 - Synchronisieren Sie Ihre Aufgaben zwischen Outlook und To Do
 :::
 
-:::details Installationsanleitungen
+:::details[Installationsanleitungen]
 
 Onlineversion: [https://to-do.office.com/](https://to-do.office.com/).
 
@@ -359,7 +359,7 @@ Sie können:
 
 ### Forms
 
-:::details Was kann Microsoft Forms?
+:::details[Was kann Microsoft Forms?]
 
 Microsoft Forms ermöglicht das schnelle und einfache Erstellen von benutzerdefinierte Quizfragen, Umfragen und Fragebögen. Nach der Übermittlung der Ergebnisse können Sie die integrierte Analysefunktion zum Auswerten der Antworten verwenden. Formulardaten können für eine tiefer greifende Analyse oder die Benotung ganz einfach nach Excel exportiert werden.
 
@@ -429,7 +429,7 @@ Nachrichten an Lehrpersonen werden mit **Sorgfalt** geschrieben. Es gehört eine
 >
 > Mark Muster, 24z
 
-:::warning Teams ≠ WhatsApp
+:::warning[Teams ≠ WhatsApp]
 Auch wenn Sie nur eine kurze Frage haben, gehört die Anrede und Schlussformel dazu (es ist **kein WhatsApp-Chat unter Freunden**!).
 
 Entwickelt sich durch die Antwort der Lehrperson einen Chat-Charakter (daher die Lehrperson schreibt innerhalb kurzer Zeit zurück und Sie haben eine Rückfrage zum selben Thema), darf die Anrede und die Schlussformel anschliessend für diese Unterhaltung weggelassen werden.

@@ -12,7 +12,7 @@ Betrachten wir den vermeintlich zufälligen Weg einer Ameise, die jeweils nach e
 
 ![](images/ameise.svg)
 
-:::aufgabe Ameise.py
+:::aufgabe[Ameise.py]
 <Answer type="state" webKey="15ab7fbf-1cb8-4614-a1c3-4508dd131d6a" />
 
 Simulieren Sie den zufälligen Weg einer Ameise, die **20** mal die Richtung wechselt.

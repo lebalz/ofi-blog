@@ -40,7 +40,7 @@ EF-Informatik # Github Repository Ordner
 
 In Ihrem Github-Repository brauchen Sie die Ordner __blog__ und __docs__, jeweils mit mindestens einem Eintrag.
 
-:::aufgabe Anleitung
+:::aufgabe[Anleitung]
 
 <Answer type="state" webKey="a1d16f50-2452-465b-b546-93c9eb0d89fd" />
 
@@ -52,7 +52,7 @@ Material
 
   ![Struktur im Repository --width=300px](images/dir-structure.png)
 
-  :::danger Wichtig
+  :::danger[Wichtig]
   Die Datei __docs/about-me.md__ und den Ordner __blog__ braucht es zwingend, sonst versucht Docusaurus etwas zu suchen, was nicht existiert (:mdi-arrow-right: Docusaurus Traurig :mdi-arrow-right: Sie traurig :mdi-emoticon-cry:)
   :::
 
@@ -65,7 +65,7 @@ Material
 
   ![](images/gh-pages.png)
 
-  :::caution Private Repositories
+  :::caution[Private Repositories]
   Bei kostenlosen Accounts können nur öffentliche Repositories als Website zugängig gemacht werden. Unter __Settings > General > Danger Zone (zuunterst auf der Seite)__ kann die Sichtbarkeit geändert werden (*Change repository visibility*).
   :::
 
@@ -125,7 +125,7 @@ png to ico
 
 Um die Website lokal auszuprobieren, muss zuerst [NodeJS](https://nodejs.org/) installiert und konfiguriert werden. Anschliessend kann die Seite lokal gestartet und unter der Lokalen Netzwerkadresse beim Port 3000 ([localhost:3000](http://localhost:3000)) gefunden werden.
 
-:::aufgabe Anleitung für die Installation
+:::aufgabe[Anleitung für die Installation]
 <Answer type="state" webKey="9f0a578f-72a6-43e5-af47-1b9afb8cbde1" />
 
 1. NodeJS LTS mit den Standard-Optionen installieren (vermutlich x64) 👉 https://nodejs.org/en/download/

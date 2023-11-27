@@ -18,7 +18,7 @@ Vielleicht hilft es, wenn wir uns in Erinnerung rufen, dass im Handel mehrere Sc
 
 ![Schlüsselaustausch](images/key-exchange-2.svg)
 
-::::aufgabe Schlüsselaustausch
+::::aufgabe[Schlüsselaustausch]
 <Answer type="state" webKey="991ccdea-6925-4830-92cc-1cade6c5feac" />
 
 Finden Sie eine Möglichkeit, den Inhalt der Truhe sicher zu übertragen?
@@ -27,7 +27,7 @@ Versetzen Sie sich dabei in die Rollen der anderen Krypto-Charaktere!
 
 <Answer type="text" webKey="fea4de63-dc0a-4000-8432-c6d676b8443a" />
 
-:::details Hinweis: Variante 1
+:::details[Hinweis: Variante 1]
 
 #### Variante 1: Eigene Schlösser Verteilen
 
@@ -48,7 +48,7 @@ Dass es sich um Alices Schloss handelt, kann Bob glauben, da die Absenderin die 
 
 :::
 
-:::details Hinweis: Variante 2
+:::details[Hinweis: Variante 2]
 
 #### Variante 2: Eigene Schlösser Verteilen
 
@@ -68,7 +68,7 @@ Bob könnte Alice das eigene, offene Schloss senden, mit dem Alice anschliessend
 
 :::
 
-:::details Hinweis: Variante 3
+:::details[Hinweis: Variante 3]
 
 #### Variante 3: Schlösser beim vertrauenswürdigen Trent beziehen
 

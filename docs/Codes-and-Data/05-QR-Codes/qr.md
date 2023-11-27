@@ -9,7 +9,7 @@ import OsTabs from '@site/src/components/OsTabs'
 
 Mit einem 3D-Drucker lassen sich dreidimensionale Objekte erzeugen. Dabei arbeiten alle gängigen Druckverfahren schichtweise - das Objekt wird aus mehreren Schichten zusammengesetzt, wobei eine einzelne Schicht zweidimensional auf die darunterliegende Schicht aufgetragen wird.
 
-:::cards --columns=2 --text-align=center --width=200px
+:::cards[--columns=2 --text-align=center --width=200px]
 *** --text-align=center
 ![--width=100%](images/prusa-timelapse-01.gif)
 *** --text-align=center
@@ -100,7 +100,7 @@ Den richtigen Drucker auswählen und die Option des Mehrfarbendrucks auswählen.
 
 
 
-:::danger Offene Kanten
+:::danger[Offene Kanten]
 Leider gibt es unterschiedliche Konventionen für die Erzeugung von 3D-Objektmodellen. Obwohl unser erzeugter QR-Code auf den ersten Blick gut aussieht, wurden bei der Erzeugung nicht alle Kanten miteinander verbunden, so dass einige Flächen im Modell nicht abgeschlossen sind. Dies kann automatisch behoben werden:
 
 
@@ -213,7 +213,7 @@ Alles exportieren.
 **Wichtig!!**: die Option `Include Eveything in the design` muss ausgewählt sein.
 
 
-:::danger QR-Code prüfen
+:::danger[QR-Code prüfen]
 Überprüfen Sie mit einem QR-Codescanner, ob der QR-Code funktioniert. Evtl. müssen Sie Farben mit einem hohen Kontrast wählen.
 :::
 
@@ -233,7 +233,7 @@ Schliesslich kann das Modell "geslicet" werden und als **G-Code** für den Druck
 
 ---
 
-:::aufgabe .3mf Dateien zusammenfügen
+:::aufgabe[.3mf Dateien zusammenfügen]
 
 Damit mehrere Modelle in einem Umgang gedruckt werden können, müssen die entsprechenden Modelle zusammengefügt werden. Dazu muss das Projekt im `.3mf`-Format gespeichert werden.
 

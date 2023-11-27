@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Python Repetition
 
-:::aufgabe Auftrag: Blogbeitrag "Wiedereinstieg in Python"
+:::aufgabe[Auftrag: Blogbeitrag "Wiedereinstieg in Python"]
 <Answer type="state" webKey="9e2d4cb3-cbf3-4d29-8fd0-8cd9d38c6b60" />
 
 Dateiname

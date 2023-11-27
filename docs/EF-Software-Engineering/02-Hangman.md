@@ -12,7 +12,7 @@ sidebar_custom_props:
 
 ### Funktionen
 
-:::cards --basis=360px --align-items=flex-end
+:::cards[--basis=360px --align-items=flex-end]
 *** --code
 ```py
 def show():
@@ -52,7 +52,7 @@ def play():
 :::
 
 ### Funktionskörper
-:::cards --basis=360px --align-items=flex-end
+:::cards[--basis=360px --align-items=flex-end]
 *** --code
 ```py
 for buchstabe in gesucht:
@@ -96,7 +96,7 @@ gefunden = []
 falsch_geraten = []
 ```
 
-:::aufgabe Hangman
+:::aufgabe[Hangman]
 <Answer type="state" webKey="d4a9b21d-e021-4b0c-8a49-29f4b0343037" />
 
 Dateiname
@@ -151,7 +151,7 @@ def is_valid(inp):
 </Solution>
 :::
 
-:::aufgabe Erneut Spielen
+:::aufgabe[Erneut Spielen]
 <Answer type="state" webKey="d30992cb-4781-4f87-ba31-4030b4293095" />
 
 Sobald man verloren hat, soll man gefragt werden, ob man erneut spielen möchte.

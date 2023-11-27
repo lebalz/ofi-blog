@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Einstieg SQL
 
-:::info db-sql.ch
+:::info[db-sql.ch]
 
 Erstellen Sie unter https://db-sql.ch mit Ihrer Schul-E-Mail-Adresse einen Account. Sie erhalten anschliessend eine E-Mail mit einem Link, um Ihr Konto zu aktivieren.
 
@@ -108,7 +108,7 @@ SELECT *
 
 </GTabs>
 
-:::aufgabe 1. Haustiere
+:::aufgabe[1. Haustiere]
 <Answer type="state" webKey="6e010a67-1961-45cd-9ead-94e910f5a439" />
 
 Datenbank
@@ -128,7 +128,7 @@ SELECT tierart, name, bild
 </Solution>
 :::
 
-:::aufgabe 2. Nur Hunde
+:::aufgabe[2. Nur Hunde]
 <Answer type="state" webKey="b6a32f4e-3465-4a88-9f53-73769be2e5cc" />
 
 Datenbank
@@ -153,7 +153,7 @@ SELECT *
 
 Mit den logischen Operatoren `AND`, `OR` und `NOT` können mehrere Bedingungen miteinander verknüpft werden.
 
-:::cards --min-width=500px
+:::cards[--min-width=500px]
 Zwei Bedingungen, beide müssen erfüllt sein
 
 ```sql
@@ -174,13 +174,13 @@ SELECT * FROM haustiere
     WHERE 
         NOT lieblingsfutter='Körner' AND (tierart='Hund' OR tierart='Katze');
 ```
-:::warning Beachte
+:::warning[Beachte]
 - Das `NOT` bezieht sich jeweils nur auf den direkt folgenden Ausdruck.
 - Spalten-Namen müssen bei jeden Vergleich erneut angegeben werden.
 :::
 :::
 
-:::aufgabe 3. Klammerung
+:::aufgabe[3. Klammerung]
 <Answer type="state" webKey="db511385-8b83-4e9f-bfcf-92c427ef15a5" />
 
 Datenbank
@@ -216,7 +216,7 @@ Beispiel: Es sollen alle Tierarten ausgegeben werden, die in der Tabelle `hausti
 SELECT DISTINCT tierart FROM haustiere;
 ```
 
-:::aufgabe 4. Distinct
+:::aufgabe[4. Distinct]
 <Answer type="state" webKey="7614f3bd-be23-4e3b-9daf-7356cfdcdbbc" />
 
 Datenbank
@@ -235,7 +235,7 @@ SELECT DISTINCT land FROM legodudes ORDER BY land ASC;
 
 :::
 
-:::aufgabe 5. Aarentemperatur
+:::aufgabe[5. Aarentemperatur]
 <Answer type="state" webKey="87187a2b-d4ca-4796-a0d2-2b3196da9b31" />
 
 Datenbank
@@ -294,7 +294,7 @@ SELECT * FROM persons WHERE name LIKE 'Georg%';
 SELECT * FROM persons WHERE name LIKE '%Z%';
 ```
 
-::::danger Gross- und Kleinschreibung
+::::danger[Gross- und Kleinschreibung]
 Der `LIKE` Befehl beachtet die Gross- und Kleinschreibung! Damit man nicht (wie in Python) zuerst den zu durchsuchenden Text in kleine Buchstaben transformieren muss, gibt es das __insensitive Like__: `ILIKE`. Damit wird die Gross- und Kleinschreibung ignoriert.
 
 ```sql
@@ -302,7 +302,7 @@ SELECT * FROM persons WHERE name ILIKE '%z%';
 ```
 gibt alle Personen mit einem grossen- oder kleinen `z` im Namen zurück.
 
-:::details Ohne `ILIKE`
+:::details[Ohne `ILIKE`]
 Ohne den Befehl `ILIKE` könnte die Abfrage so aussehen:
 
 ```sql
@@ -319,7 +319,7 @@ SELECT * FROM persons WHERE LOWER(name) LIKE '%z%' OR name LIKE '%Z%';
 
 ::::
 
-:::aufgabe 6. Nach Namen Suchen
+:::aufgabe[6. Nach Namen Suchen]
 <Answer type="state" webKey="7d4154a4-55f6-4ea4-8f9f-086a8bf5d9a9" />
 
 Datenbank
@@ -352,7 +352,7 @@ SELECT name as Spitzname, tierart as Tier, lieblingsfutter as Frisst
 FROM haustiere
 ```
 
-:::aufgabe 7. Unterschied finden
+:::aufgabe[7. Unterschied finden]
 <Answer type="state" webKey="8ea69594-d575-4858-bbfb-49eb454cc304" />
 
 
@@ -379,7 +379,7 @@ FROM haustiere;
 ### Texte verändern
 
 
-:::def 
+:::def[]
 ### `CONCAT(text1, text2, ...)` oder `text1 || text 2`
 Mit dem Schlüsselwort `CONCAT` können Texte zusammengefügt werden:
 
@@ -390,7 +390,7 @@ SELECT 'Hallo ' || name FROM persons;
 ```
 :::
 
-:::details ⭐ `Substring` und `Replace`
+:::details[⭐ `Substring` und `Replace`]
 
 :::def
 ### `SUBSTRING(text, start, [length])`
@@ -425,7 +425,7 @@ Weitere Operatoren und Funktionen
 - `MD5(text)` berechnet den MD5-Hash eines Textes
 - ... 👉 https://www.postgresql.org/docs/current/functions-string.html
 
-:::aufgabe 8. IMDB-URLS
+:::aufgabe[8. IMDB-URLS]
 <Answer type="state" webKey="798acf10-38bd-4f4e-9e15-b07d9d18f239" />
 
 Datenbank

@@ -59,7 +59,7 @@ c \text{ XOR } k = (p \text{ XOR } k) \text{ XOR } k = p$$
 
 Dies können Sie mit den Tabellen oben leicht überprüfen.
 
-:::aufgabe Aufgabe XOR-Verschlüsselung
+:::aufgabe[Aufgabe XOR-Verschlüsselung]
 <Answer type="state" webKey="7fdee690-f7a7-4a62-9df7-da7df1001feb" />
 
 Verschlüsseln Sie die Bitfolge mit dem angegebenen Schlüssel
@@ -73,7 +73,7 @@ Verschlüsseln Sie die Bitfolge mit dem angegebenen Schlüssel
 :::
 
 
-:::aufgabe Aufgabe Textverschlüsselung mit XOR
+:::aufgabe[Aufgabe Textverschlüsselung mit XOR]
 <Answer type="state" webKey="e5288ce5-f8f6-4de0-be2b-81eb90e8346d" />
 
 Sie erhalten von einer Kollegin folgende verschlüsselte Nachricht:
@@ -96,7 +96,7 @@ Als Schlüssel haben Sie das Wort `MACHT` abgemacht.
 
 
 
-:::aufgabe Aufgabe Bildverschlüsselung mit XOR
+:::aufgabe[Aufgabe Bildverschlüsselung mit XOR]
 <Answer type="state" webKey="2eedbeb5-6506-4b11-ac66-c74b3945de75" />
 
 1. Zeichnen Sie ein `5x5`-Pixel-Bild

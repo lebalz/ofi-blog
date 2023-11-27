@@ -54,7 +54,7 @@ for i in range(13):
 
 Übersetzen Sie das untenstehende Struktogramm in Python Code
 
-:::cards --max-width=400px
+:::cards[--max-width=400px]
 
 <Strukto program={[
     {type: 'step', code: <span><u>90</u>° links</span>},

@@ -9,7 +9,7 @@ import OsTabs from '@site/src/components/OsTabs'
 
 # Rastergrafik praktisch
 
-:::aufgabe 1. Signal/Telegram/Threema/WhatsApp
+:::aufgabe[1. Signal/Telegram/Threema/WhatsApp]
 1. Machen Sie ein Porträt-Foto (mit der Kamera-App!)
 2. Untersuchen Sie das Foto:
    - Erkennen Sie einzelne Wimpern auf dem Foto?
@@ -21,7 +21,7 @@ import OsTabs from '@site/src/components/OsTabs'
 <Answer type="text" webKey="952e52df-458b-493b-95fd-e4a636af4ae8" />
 :::
 
-:::aufgabe 2. JPEG-Format [^1]
+:::aufgabe[2. JPEG-Format [^1]]
 
 Das folgende Foto hat im Original eine Auflösung von `6016×4016` Pixel mit einer Farbtiefe von 3 Byte.
 
@@ -59,6 +59,6 @@ Mac: `Ablage > Exportieren`, als Dateiformat `JPEG` wählen, die Qualität muss 
 ![Island](images/04-uebung/iceland.jpg)
 
 <Answer type="text" webKey="2e1c4773-da2e-42da-b506-f158fa968916" />
-::: 
+:::[]
 
 [^1]: Quelle: [S. Rothe, T. Jampen, R. Meyer](https://informatik.mygymer.ch/base/?b=code&p=922802)

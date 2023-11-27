@@ -9,7 +9,7 @@ Weitere Beispiele...
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
-:::cards --min-width=250px
+:::cards[--min-width=250px]
 *** --code
 ```py live_py slim
 from turtle import *

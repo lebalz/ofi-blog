@@ -18,7 +18,7 @@ Ihre Stichworte sollen mindestens so detailliert sein, dass Sie während der Auf
 
 **Aber Achtung**: Denken Sie daran, dass abgelesene Text oft eintönig klingen und wenn Sie einen Text erstellen, welcher kopierte Bausteine aus einer anderen Quelle enthält, müssen Sie diese für den Hörer erkennbar und korrekt zitieren.
 ### Audiodateien Zusammenschneiden
-::::success Audacity
+::::success[Audacity]
 Um einen Podcast zu erstellen, können Sie im einfachsten Fall Ihre Stimme mit dem Handy aufnehmen und fertig.
 
 Sie können aber auch Ihren Text mit Musik oder Geräuschen untermalen. Dabei können Sie eigene Aufnahmen oder Material aus dem Internet verwenden. Bei letzterem müssen Sie allerdings darauf achten, dass Sie keine Urheberrechte verletzten.
@@ -27,7 +27,7 @@ Für das Zusammenmischen von verschiedenem Tonmaterial eignet sich die Software 
 
 Unter den folgenden Links finden Sie Information zu Audacity und möglichen Quellen von freier Musik.
 
-:::danger ACHTUNG: Virenverseuchte Versionen im Umlauf
+:::danger[ACHTUNG: Virenverseuchte Versionen im Umlauf]
 Wenn man in Google nach Audacity sucht, wird man auf die Seite **[audacity.de]** gelockt. Diese Seite bietet eine **VIRENVERSEUCHTE** Version von Audicity an.
 
 :mdi-alert--orange: **NICHT HERUNTERLADEN** :mdi-alert--orange:
@@ -43,7 +43,7 @@ Laden Sie Audacity nur mit dem nachfolgenden Link herunter.
 
 ---
 
-:::caution `.M4A`-Dateien
+:::caution[`.M4A`-Dateien]
 
 Das Dateiformat `.M4A` enthält auch Audiodateien, die mit Audacity allerdings nur mit einer zusätzlichen Bibliothek, ffmpeg, eingelesen werden kann.
 

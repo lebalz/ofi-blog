@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Powerpoint
 
-:::aufgabe Präsentieren
+:::aufgabe[Präsentieren]
 <Answer type="state" webKey="4b512119-1cf9-4132-9765-9291786b20f0" />
 
 Zeit 

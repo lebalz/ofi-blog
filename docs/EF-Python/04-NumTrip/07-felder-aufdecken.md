@@ -52,7 +52,7 @@ Fehlt diese Abbruchbedingung, oder ist sie falsch formuliert, läuft die Rekursi
 
 Der hier skizziert Algorithmus heisst Floodfill-Algorithmus. Eine schöne Beschreibung, inkl. Python-Implementierung finden Sie hier: 👉 https://de.wikipedia.org/wiki/Floodfill.
 
-:::aufgabe Aufgabe
+:::aufgabe[Aufgabe]
 <Answer type="state" webKey="a712a5eb-ec5a-4f9c-80f4-0fa444a3dc91" />
 
 Studieren Sie den Abschnitt "Rekursive Implementierung" im Artikel und entscheiden Sie, welche der beiden Varianten für das NumTrip Spiel benötigt wird. Passen Sie dann die vorgeschlagene Python-Implementierung auf Ihre Situation im NumTrip-Spiel an.

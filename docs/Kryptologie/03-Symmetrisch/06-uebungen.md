@@ -13,7 +13,7 @@ Lösen Sie die Übungen von Hand (daher nur mit dem Pentacode-Editor als Hilfsmi
 
 <TextEditor />
 
-:::aufgabe 1. XOR Verschlüsselung
+:::aufgabe[1. XOR Verschlüsselung]
 Verschlüsseln Sie den Text `BUCHSTABENSPIELE` mit dem Schlüssel `AKRONYM`
 
 <Answer type="text" webKey="a30ab42b-0e2a-4452-a7a4-f34c96e8a4cd" monospace />
@@ -23,7 +23,7 @@ Verschlüsseln Sie den Text `BUCHSTABENSPIELE` mit dem Schlüssel `AKRONYM`
 
 :::
 
-:::aufgabe 2. XOR Entschlüsseln
+:::aufgabe[2. XOR Entschlüsseln]
 Entschlüsseln Sie den Text `XWVJZWEKK,XWVJIK` mit dem Schlüssel `VVXKZ`
 
 <Answer type="text" webKey="f0c2bc43-cc15-4f58-8466-19f2f3374d2e" monospace />
@@ -33,12 +33,12 @@ Entschlüsseln Sie den Text `XWVJZWEKK,XWVJIK` mit dem Schlüssel `VVXKZ`
 
 ## CBC Modus
 
-:::info Hinweis CBC-Modus
+:::info[Hinweis CBC-Modus]
 - Jeder Block hat genau so viele Bits wie der Schlüssel. (Hier werden also meist 2 Buchstaben (=`10` bits) pro Antwort in einem Block verwendet.)
 - `c1` ist ein Zwischenresultat, damit wird weitergearbeitet...
 :::
 
-::::aufgabe 3. CBC-Modus: Verschlüsseln
+::::aufgabe[3. CBC-Modus: Verschlüsseln]
 
 ![CBC: Verschlüsseln](images/CBC_encryption.svg)
 
@@ -49,7 +49,7 @@ Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 <br />
 
 (Antworten als Penta-Binärcode)
-:::cards --rows=3 --min-width=250px --font-family=monospace
+:::cards[--rows=3 --min-width=250px --font-family=monospace]
 **Block 1**
 <Answer label="p" width="12em" labelWidth="3em" type="string" webKey="9f33bc0e-1475-49ee-8201-f389920f3da7" solution="10111 01001" sanitizer={UPPER_NOSPACE}/>
 <Answer label="IV" width="12em" labelWidth="3em" type="string" webKey="576d141c-99d1-41dd-9cb6-2536b5eefc61" solution="00001 11010" sanitizer={UPPER_NOSPACE}/>
@@ -86,7 +86,7 @@ Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 ::::
 
 
-::::aufgabe 4. CBC-Modus: Entschlüsseln
+::::aufgabe[4. CBC-Modus: Entschlüsseln]
 
 ![CBC Entschlüsseln](images/CBC_decryption.svg)
 
@@ -97,7 +97,7 @@ Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 <br />
 
 (Antworten als Penta-Binärcode)
-:::cards --rows=4 --min-width=250px --font-family=monospace
+:::cards[--rows=4 --min-width=250px --font-family=monospace]
 **Block 1**
 <Answer label="c" width="12em" labelWidth="3em" type="string" webKey="150519fd-560b-42e6-acec-58407af94ada" solution="01110 01110" sanitizer={UPPER_NOSPACE}/>
 <Answer label="k" width="12em" labelWidth="3em" type="string" webKey="f20e9df7-4811-4856-a487-02e2ed6b883b" solution="00010 00101" sanitizer={UPPER_NOSPACE}/>

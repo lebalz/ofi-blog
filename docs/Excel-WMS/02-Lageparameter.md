@@ -35,7 +35,7 @@ Sind in einem Datensatz eine gerade Anzahl Datensätze vorhanden, so berechnet s
 
 ### Vorteil gegenüber dem Mittelwert
 
-:::aufgabe Median vs. Mittelwert
+:::aufgabe[Median vs. Mittelwert]
 Berechnen Sie für die folgenden Gewichte den Mittelwert und den Median. Welcher Wert beschreibt die Lage des mittleren Gewichts am besten?
 
 ![--width=400px](images/median-vs-mean.png)
@@ -87,7 +87,7 @@ $$
 
 In Excel kann die Standardabweichung mit der Funktion `=STABW.S` berechnet werden. Zum Beispiel  `=STABW.S(A1:A12)` für die Werte der Zellen `A1` bis `A12`.
 
-:::note Weitere Aussagekraft
+:::note[Weitere Aussagekraft]
 Für **normalverteilte** Merkmale (nur für solche!) gilt die Faustregel, dass innerhalb der Entfernung einer Standardabweichung nach oben und unten vom Mittelwert rund $68$ Prozent aller Datenpunkte liegen. Im Umkreis von zwei Standardabweichungen sind es rund $95$ Prozent aller Werte. Bei grösseren Abweichungen spricht man von Ausreissern.
 
 ![Verteilung von normalverteilten Merkmalen](images/normalverteilung.jpg)

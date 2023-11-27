@@ -22,7 +22,7 @@ Für Grafikkarten gibt es drei wichtige Kenngrössen:
 
 Im Gegensatz zu den CPU Prozessoren, welche in der Regel wenige (< 32) Kerne aufweisen, ist eine Grafikkarte hochgradig auf parallelisierte Berechnungen ausgelegt und besitzt entsprechend viele Kerne.
 
-:::aufgabe Sequentiell vs. Parallel
+:::aufgabe[Sequentiell vs. Parallel]
 <Answer type="state" webKey="6b6cdbde-323a-43a5-b869-ce39c570af88" />
 
 Schauen Sie sich das folgenden Video an und versuchen Sie zu verstehen, was die Unterschiede zwischen sequentieller und paralleler Verarbeitung sind. Halten Sie Ihre Erkenntnisse fest.
@@ -33,7 +33,7 @@ Schauen Sie sich das folgenden Video an und versuchen Sie zu verstehen, was die 
 
 :::
 
-:::cards --columns=2
+:::cards[--columns=2]
 ![Hercules-Grafikkarte](images/05-hercules.png)
 
 #### Hercules Graphics Card
@@ -57,7 +57,7 @@ Mit der Zeit konnten neuere Grafikkarten immer mehr Funktionen der Bilderzeugung
 Ausserdem werden heute Grafikkarten auch für aufwändige Berechnungen in anderen Bereichen eingesetzt, z.B. für **neuronale Netze** oder für das Mining von **Kryptowährungen**.
 
 
-:::info ⭐️ Raytracing
+:::info[⭐️ Raytracing]
 
 Was ist Raytracing und was bringt es mir?
 
@@ -68,7 +68,7 @@ Was ist Raytracing und was bringt es mir?
 
 Für die Steuerung des Bildschirms gibt es vier aktuelle Technologien.
 
-:::cards --columns=2
+:::cards[--columns=2]
 ![Display Port (DP)](images/05-dp.png)
 
 ***
@@ -82,13 +82,13 @@ Für die Steuerung des Bildschirms gibt es vier aktuelle Technologien.
 
 :::
 
-:::note USB-C
+:::note[USB-C]
 Heutige Laptops haben oft keine separaten Ausgänge für Bildschirme - dank USB-C. Die verwendete Technologie sowie die Protokolle bleiben aber dieselben, weshalb ohne weiteres Adapter für entsprechende Technologien (DP, DVI, HDMI, VGA) angeschlossen werden können.
 
 ![USB-C Displayadapter --width=300px](images/05-usbc-adapter.jpg)
 :::
 
-:::aufgabe Aufgabe Grafikkarte: Rendering
+:::aufgabe[Aufgabe Grafikkarte: Rendering]
 <Answer type="state" webKey="ff40f1f1-5667-4978-a848-e4da4532b658" />
 
 Recherchieren Sie den Begriff "Rendering".

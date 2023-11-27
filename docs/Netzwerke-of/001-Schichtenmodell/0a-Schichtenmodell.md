@@ -75,7 +75,7 @@ Ohne Probleme liesse sich das obenstehende Beispiel verwenden, um andere Inhalte
 - So funktioniert auch unser Postsystem: Bis auf wenige Ausnahmen transportiert die Post alles.
 - Die Übertragung von E-Mails und die einer Webseite unterscheidet sich nur in der obersten Schicht. Beide bauen auf den 3 identischen unteren Schichten auf
 
-:::aufgabe Aufbau auf bestehendem
+:::aufgabe[Aufbau auf bestehendem]
 
 Was könnte noch Übertragen werden, wobei die unteren Schichten verwendet werden?
 <Answer type="state" webKey="2b285845-e980-448e-9126-5b8dc7be9d20" />
@@ -89,7 +89,7 @@ Die Schichten können ausgetauscht werden, solange sie ihre Aufgabe erfüllen un
 - Statt der Post kann man einen privaten Transportservice wie Planzer oder DHL engagieren.
 - Statt des Hauswartes können auch Schüler:innen die Pulte auseinanderschrauben und wieder zusammensetzen.
 
-:::aufgabe Schichten austauschen
+:::aufgabe[Schichten austauschen]
 Suchen Sie in anderen Bereichen des Alltags Schichtenmodelle und finden Sie dort Austauschbare Schichten.
 
 <Answer type="state" webKey="72e68783-ab68-4e2b-8501-45b7b7eb7dad" />

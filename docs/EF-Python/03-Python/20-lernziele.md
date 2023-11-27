@@ -18,7 +18,7 @@ Praktischer Teil
 : **Hilfsmittel**: Open Book (alles erlaubt: Beispiele, eigener Code, Webseiten,...)
 : **Keine Kommunikation** untereinander (Chat, Teams, ...)
 
-:::info Themen
+:::info[Themen]
 - (Voraussetzung: Python Repetition)
 - Listen 1D, 2D, Listen erzeugen
 - Referenzen
@@ -29,7 +29,7 @@ Praktischer Teil
 - Besprochene Beispiele / Code Snippets
 :::
 
-:::success Lernziele
+:::success[Lernziele]
 - Sie können diese Python-Konzepte in kleinen Programmen (vergleichbar mit Code-Snippets) einsetzen
 - Sie können Python Programme lesen, interpretieren und abändern
 - Sie können unbekannte Befehle in gegebenen Programm-Ausschnitten im Internet recherchieren und anwenden

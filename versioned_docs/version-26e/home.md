@@ -22,7 +22,7 @@ import hs2023 from "./26e_HS2023.json"
   order={SortTimeTableByDate()}
 />
 
-:::details 1. Semester
+:::details[1. Semester]
 
 <Tabs
     defaultValue="theorie"
@@ -55,7 +55,7 @@ import hs2023 from "./26e_HS2023.json"
 
 :::
 
-:::details 2. Semester
+:::details[2. Semester]
 
 <Table
   header={["Datum", "Thema", "Inhalt"]}

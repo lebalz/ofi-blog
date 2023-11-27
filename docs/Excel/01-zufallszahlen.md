@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Zufallszahlen
 
-:::info Ziel
+:::info[Ziel]
 - Zufallszahlen in einem Bereich erstellen
 - Werte in einem Koordinatensystem darstellen
 - Auf Abruf neue Zufallszahlen generieren lassen

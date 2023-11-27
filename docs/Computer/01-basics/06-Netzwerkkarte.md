@@ -28,7 +28,7 @@ Für die Netzwerkkarte gibt es folgende wichtige Kenngrösse:
 
 Heute ist die Netzwerkkarte meist direkt auf dem Mainboard integriert und muss nicht als Steckkarte hinzugefügt werden. Allerdings kann ein Computer (insbesondere Server) so immer noch aufgerüstet und mit mehreren Netzwerkkarten ausgerüstet werden.
 
-:::cards --columns=2
+:::cards[--columns=2]
 ![Netzwerkkarte mit RJ45-Buchse](images/06-nic.jpg)
 ***
 ![Netzwerkkabel mit RJ45-Stecker](images/06-network-cable.jpg)
@@ -39,7 +39,7 @@ Heute ist die Netzwerkkarte meist direkt auf dem Mainboard integriert und muss n
 
 Netzwerkkarten zur Verbindung mit einem drahtlosen Netzwerk (WLAN) gibt es in etlichen Ausführungen. Einerseits kann sie in PCs und Server wie andere Steckkarten eingebaut werden, andererseits gibt es sie in kleineren Ausführungen für Notebooks oder sogar als USB-Stecker im Miniformat.
 
-:::cards --columns=3
+:::cards[--columns=3]
 ![Drahtlose Netzwerkkarte mit Antenne für PCs](images/06-wlan-pc.png)
 ***
 ![Drahtlose Netzwerkkarte für Notebooks](images/06-wlan-notebook.jpg)
@@ -47,7 +47,7 @@ Netzwerkkarten zur Verbindung mit einem drahtlosen Netzwerk (WLAN) gibt es in et
 ![Drahtlose Netzwerkkarte für USB-Anschluss](images/06-wlan-usb.jpg)
 :::
 
-:::aufgabe Netzwerkkarte
+:::aufgabe[Netzwerkkarte]
 <Answer type="state" webKey="a5301bd3-8c1e-4456-8ba9-21f420d58249" />
 
 Sie wollen für die Ferien einige Filme von Netflix offline verfügbar machen und müssen insgesamt `10 GB` (also "Giga Bytes") Daten herunterladen. Ihr WLAN kann in ihr Zimmer maximal `150 Mbps` übertragen. Wie viel Zeit gewinnen Sie, wenn Sie aufstehen um das Gerät per Ethernet an Ihren Glasfaser-Router mit `1 Gbps` anschliessen?\*

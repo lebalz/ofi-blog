@@ -103,7 +103,7 @@ SELECT string_agg(name, ', ' ORDER BY name) FROM legodudes;
 ```
 :::
 
-:::aufgabe 1. Ältester Legodude
+:::aufgabe[1. Ältester Legodude]
 <Answer type="state" webKey="5c502b3e-547a-4aab-929e-bedc944e8a1f" />
 
 Datenbank
@@ -143,12 +143,12 @@ GROUP BY land;
    Schweiz    |     1  */
 ```
 
-:::warning Wichtig
+:::warning[Wichtig]
 Für jede Spalte, die nicht in der `GROUP BY`-Klausel steht, muss eine Aggregatfunktion verwendet werden!
 :::
 ::::
 
-:::aufgabe 2. Namen nach Ländern gruppiert
+:::aufgabe[2. Namen nach Ländern gruppiert]
 <Answer type="state" webKey="fbbb07f6-cd07-4efe-90db-6138295f49ac" />
 
 

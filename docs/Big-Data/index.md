@@ -45,7 +45,7 @@ Eine aktuelles Spezial-Thema ist ChatGPT. Der Vortrag soll folgende Fragen im De
 - Turing-Test - was ist das und kann ChatGPT den Test bewältigen?
 - Eigene Meinung: Wie soll ChatGPT in der Schule eingesetzt werden?
 
-:::details Material & Vorgehen
+:::details[Material & Vorgehen]
 ### Vorgehen
 - Artikel lesen
 - ChatGPT ausprobieren
@@ -156,7 +156,7 @@ Halten Sie **schriftlich in einem Protokoll** fest, was Sie zu den obigen 6 Punk
 ### 5. Vortrag vorbereiten
 Sie erstellen in der Gruppe Folien für Ihre Präsentation. Dabei beachten Sie die Hinweise für gute Präsentationen.
 
-:::warning Abgabe Folien
+:::warning[Abgabe Folien]
 Die Folien geben Sie als PDF per E-Mail bis um 17.00 Uhr am Abend vor der Präsentation ab.
 :::
 
@@ -181,13 +181,13 @@ Gruppenbewertung
 
 ## Lernziele
 
-:::info Informatik und Gesellschaft
+:::info[Informatik und Gesellschaft]
 - Sie setzen sich kritisch mit der Sammlung von personenbezogenen Daten und deren Auswertung durch intelligente Algorithmen auseinander.
 - Sie können abschätzen, wo in unserer Gesellschaft grosse Datenmengen und künstliche Intelligenz eingesetzt werden um Entscheidungen zu treffen.
 - Sie bilden sich eine Meinung zum Einsatz von grossen Datenmengen und künstlicher Intelligenz in verschiedenen Bereichen der Gesellschaft.
 :::
 
-:::info Lernziele Gestaltung von Folien
+:::info[Lernziele Gestaltung von Folien]
 - Sie gestalten Folien mit einem ansprechenden, einheitlichen Layout.
 - Sie setzen gezielt passende Visualisierungen ein (Bilder, Grafiken, Symbole, Diagramme).
 - Sie vermeiden die Verwendung von zu viel Text auf den Folien.

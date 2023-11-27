@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # 1. Leuchtkäfer
 
-:::aufgabe Leuchtkäfer Löten
+:::aufgabe[Leuchtkäfer Löten]
 
 Material
 : Batterie
@@ -31,7 +31,7 @@ Materialien bereitstellen.
 - Die Richtung der Widerstände spielt keine Rolle!
 - Das Käferchen mit den Widerständen nach Unten auf das Petafix drücken - nun sollte alles fixiert sein
 
-:::cards --min-width=300px
+:::cards[--min-width=300px]
 ![--width=500px](images/bug-step02.jpg)
 ***
 ![--width=500px](images/bug-step03.jpg)
@@ -42,7 +42,7 @@ Materialien bereitstellen.
 - Die vier Lötstellen löten
 - Die überständigen Füsschen abschneiden - wenn kein Seitenschneider vorhanden ist, tut's auch ein Nagelknipser 
 
-:::cards --min-width=300px
+:::cards[--min-width=300px]
 ![--width=400px](images/bug-step04.jpg)
 ***
 ![--width=400px](images/bug-step05.jpg)
@@ -74,7 +74,7 @@ Mit dem Fotoresistor wird also der elektrische Widerstand verändert - der Trans
 - Löten
 - Füsschen abschneiden
 
-:::cards --min-width=300px
+:::cards[--min-width=300px]
 ![--width=400px](images/bug-step06.jpg)
 ***
 ![--width=400px](images/bug-step07.jpg)

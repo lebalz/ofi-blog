@@ -12,7 +12,7 @@ Struktogramme sind eine Möglichkeit, Programme und Algorithmen grafisch darzust
 ## Sequenz 👣
 In einem Struktogramm wird jeder Befehl in einen rechteckigen Kasten geschrieben. Befehle müssen nicht in einer Programmiersprache geschrieben werden, *Parameter* werden <u>unterstrichen</u>.
 
-:::flex --min=250px --gap=50px
+:::flex[--min=250px --gap=50px]
 ```py live_py slim
 from turtle import *
 
@@ -33,7 +33,7 @@ forward(50)
 
 Eine Wiederholung wird wie folgt dargestellt.
 
-:::flex --min=250px --gap=50px
+:::flex[--min=250px --gap=50px]
 ```py live_py slim
 from turtle import *
 
@@ -54,7 +54,7 @@ for i in range(4):
 ]} />
 :::
 
-:::tip Bemerke
+:::tip[Bemerke]
 - Beim Struktogramm wird der wiederholte Teil durch die **Einrückung** ersichtlich. Auch in Python werden wiederholte Sequenzen (Zeilen 4-5) visuell mit einem Tabulator eingerückt.
 - Der Doppelpunkt am Zeilenende zeigt an, dass eine eingerückte Sequenz (beim Programmieren spricht man von einem *Codeblock*) folgt.
 :::
@@ -62,7 +62,7 @@ for i in range(4):
 ## Unterprogramm 🏷
 Eine Sequenz kann mit einem Namen versehen werden. Anstatt immer die ganze Sequenz aufzuschreiben, genügt es den Namen aufzuschreiben.
 
-:::flex --min=250px --gap=50px
+:::flex[--min=250px --gap=50px]
 ```py live_py slim
 from turtle import *
 
@@ -98,7 +98,7 @@ zick_zack()
 ]} />
 :::
 
-:::tip Bemerke
+:::tip[Bemerke]
 - Um ein Unterprogramm aufzurufen, wird beim Struktogramm der Kasten mit doppelten Seitenstrichen markiert, bei Python werden runde Klammern am Ende des Namens angegeben.
 - Den Namen für Unterprogramm kann beliebig gewählt werden, sofern er nicht mit einer Zahl beginnt und keine Sonderzeichen enthält. **Leerschläge** und **Bindestriche** sind nicht erlaubt - stattdessen werden Unterstriche `_` verwendet: Statt `zick zack` wird der Name `zick_zack` verwendet. 
 :::
@@ -112,7 +112,7 @@ Parameter werden jeweils <u>unterstrichen</u>, so dass klar ist, welche Werte si
 ### Variablen
 Bei Programmen wird zwischen Parametern und Variablen unterschieden. Genau wie Paramter können diese das Ergebnis eines Algorithmus ändern. Sie werden in einem Struktogramm speziell als markiert, damit klar ist, dass eigentlich der in der Variable gespeicherte Wert gemeint ist.
 
-:::flex --width=250px
+:::flex[--width=250px]
 ```py live_py slim
 grösse = input('Wie gross bist du [cm]?')
 print(f'Ich bin {grösse} cm gross')

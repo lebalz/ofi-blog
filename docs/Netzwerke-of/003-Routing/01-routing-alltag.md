@@ -11,7 +11,7 @@ import Finding from "@site/src/components/Finding";
 
 # Routing im Alltag
 
-:::danger Vorgehensweise
+:::danger[Vorgehensweise]
 
 Lesen Sie sich selbständig durch dieses Kapitel durch, wobei Sie
 
@@ -32,13 +32,13 @@ Durch das Verkehrsnetz der Verkehrsbetriebe Biel wird der öffentliche Verkehr i
 
 Sie möchten mit dem ÖV vom Gymnasium :mdi-circle--red: (Ländtestrasse 12, Biel/Bienne) zum Sportplatz Mettmoos :mdi-star--green: fahren.
 
-:::aufgabe Mit dem Netzplan
+:::aufgabe[Mit dem Netzplan]
 
 Welche Möglichkeiten sehen Sie auf dem Liniennetz?
 <Answer  type="text"  webKey="d6938484-81a6-4240-bbd0-b94ed04bdc72"/>
 :::
 
-:::aufgabe 💻 mit Google Maps
+:::aufgabe[💻 mit Google Maps]
 <Answer type="state" webKey="ddb3960d-b91a-4bf2-9571-97b32e7169f2" />
 
 Welchen Transportoptionen schlägt Ihnen [👉 Google Maps](https://www.google.com/maps/dir/Gymnasium+Biel-Seeland,+L%C3%A4ndtestrasse+12,+2503+Biel/Sports+Ground+Mettmoos,+Parkplatz+Mettmoos,+2504+Biel/@47.1389934,7.2384864,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x478e195743e2cd43:0x7eeeab7e9cc7fa72!2m2!1d7.2359916!2d47.1334096!1m5!1m1!1s0x478e192b26b851e1:0x5e85058550f44003!2m2!1d7.2756948!2d47.1390779!3e3) vor, wenn Sie die Route _Ländtestrasse 12_ → *Sportplatz Mettmoos* suchen?
@@ -85,7 +85,7 @@ Ein Datenpaket im ÖV vom Gymer zum Sportplatz Mettmoos müsste
    - welche Abzweigung es nehmen soll
    - ob es am Ziel angekommen ist.
 
-:::aufgabe Routing-Tabelle
+:::aufgabe[Routing-Tabelle]
 <Answer type="state" webKey="8c827967-6f40-46be-85e1-36476b786edf" />
 
 Erstellen Sie für das Ziel "Sportplatz Mettmoos" Umsteige-Anleitungen für Datenpakete gemäss __Punkt 1__ aus obiger Anleitung für die folgenden Haltestellen:
@@ -113,7 +113,7 @@ Halten Sie Ihre Anleitung auf Papier fest und fügen Sie ein Foto unten ein.
 :::
 
 
-:::aufgabe Andere Ziele
+:::aufgabe[Andere Ziele]
 <Answer type="state" webKey="984b58cf-3230-4f06-93da-ea49161782ab" />
 
 Die Anleitungen müssten natürlich auch Anweisungen für andere Ziele haben.
@@ -134,7 +134,7 @@ Es können Anweisungen "delegiert" werden: Es muss nur der *Bahnhof Biel* wissen
 </Finding>
 
 
-:::aufgabe Routing im Internet
+:::aufgabe[Routing im Internet]
 <Answer type="state" webKey="cc80e025-9f37-451e-a9da-5e31920499bf" />
 
 Halten Sie fest, wie die Umleitung bei Paketen im Internet funktioniert - Sie haben im Unterricht bereits die Demonstration mit den verschachtelten Paketen gesehen.
@@ -160,7 +160,7 @@ Es gibt verschiedene Wege zum Ziel - auch nicht optimale Wege, die normalerweise
 
 ## Grosse Gruppe
 
-:::aufgabe Grosse Gruppen
+:::aufgabe[Grosse Gruppen]
 <Answer type="state" webKey="374b1bf7-cb9a-422e-b373-8376598a45b8" />
 
 4 Parallelklassen – also ca. 100 Personen haben beim Sportplatz Mettmoos abgemacht.

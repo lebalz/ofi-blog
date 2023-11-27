@@ -16,7 +16,7 @@ Das Verfahren wird etwas umständlicher, da jeweils in die binäre Computersprac
 3. ... (Versand, Abspeichern, ...)
 4. Decodierung des binären Geheimtextes (binärer Geheimtext → Geheimtext)
 
-:::info Unterschied «Codierung» und «Verschlüsselung»
+:::info[Unterschied «Codierung» und «Verschlüsselung»]
 Es ist wichtig, dass die Begriffe **Codierung** und **Verschlüsselung** unterschieden werden:
 
 Codierung

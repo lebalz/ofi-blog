@@ -44,7 +44,7 @@ print(sql)
 ```
 Die SQL-Injection Schwachstelle befindet sich in der Art des Zusammensetzens der SQL-Abfrage.
 
-:::aufgabe Autocomplete Legodudes
+:::aufgabe[Autocomplete Legodudes]
 <Answer type="state" webKey="88f41ae0-b766-4dd5-b0e5-f7201f6114e7" />
 
 Datenbank
@@ -83,7 +83,7 @@ Die Hacker:in versucht über ein Eingabefeld (oder direkt als URL-Parameter) SQL
 sql = f"SELECT name FROM train_stations WHERE location ILIKE '{location}%';"
 ```
 
-:::cards --min-width=250px
+:::cards[--min-width=250px]
 #### Normal
 Eingabe: `EF`
 
@@ -110,7 +110,7 @@ ORDER BY location DESC;--;
 ```
 ***
 :::
-:::success Entscheidend
+:::success[Entscheidend]
 Durch das Hochkomma `'` zu Beginn der Eingabe wird der Suchtext im SQL-Befehl abgeschlossen. Somit können im Anschluss eigene SQL Befehle hinzugefügt werden.
 Mit einem Semikolon `;` wird die Abfrage abgeschlossen und der nachfolgenden SQL-Code wird mit `--` auskommentiert. Somit haben wir es in eigenen Händen, dass ein korrektes SQL Query entsteht.
 :::
@@ -119,7 +119,7 @@ Mit einem Semikolon `;` wird die Abfrage abgeschlossen und der nachfolgenden SQL
 Durch absichtliche Falsch-Eingaben kann schnell herausgefunden werden, ob eine Eingabe direkt an die Datenbank weitergegeben wurde und das Eingabefehld somit für eine SQL-Injection anfällig ist.
 
 
-:::aufgabe Übung 1
+:::aufgabe[Übung 1]
 <Answer type="state" webKey="e7b7f9b5-655d-4572-9682-e7b1b893a5bf" />
 
 Webshop
@@ -190,7 +190,7 @@ SELECT * FROM students WHERE email = '' OR 1=1;--'
 
 Obwohl `email = ''` falsch ist, wird die Bedingung `1=1` immer wahr sein. Somit werden alle Datensätze zurückgegeben.
 
-:::aufgabe Übung 2
+:::aufgabe[Übung 2]
 <Answer type="state" webKey="9cdf725a-def3-407f-858c-52e35fdf0493" />
 
 Webshop
@@ -221,7 +221,7 @@ Webshop
 
 Ein weiteres Prinzip ist die Verwendung von mehreren SQL-Befehlen. Gewisse Datenbanksysteme führen mehrere durch Semikolons `;` voneinander getrennte Befehle direkt nacheinander aus. Dies ist dann nützlich, wenn Einträge geändert, gelöscht oder hinzugefügt werden sollen.
 
-:::cards --minWidth=250px --columns=2
+:::cards[--minWidth=250px --columns=2]
 *** --flexBasis=1400px
 #### Template
 ```py live_py slim
@@ -247,7 +247,7 @@ WHERE id=13; --';
 
 Mit dieser Eingabe wird zuerst der von der Applikation vorgegebene Befehl korrekt abgeschlossen und dann die Note des Schülers mit der ID 13 auf eine 6 gesetzt.
 
-:::aufgabe Übung 3
+:::aufgabe[Übung 3]
 <Answer type="state" webKey="4e434f1b-6605-4199-8ce8-a42909acbf98" />
 
 Normalerweise sind einem Angreifer die Details über die Datenbank, welche hier gegeben sind (bspw. die Spaltennamen) nicht bekannt und müssen zuerst herausgefunden werden. Mehr dazu im nächsten Abschnitt.
@@ -294,7 +294,7 @@ Oftmals weiss man nicht im Voraus, wie das Schema der Datenbank aussieht (bspw. 
 
 Sollen Abfragen miteinander kombiniert werden, so müssen die Resultate der beiden `SELECT` Queries also **genau gleich viele Spalten** aufweisen.
 
-:::cards --minWidth=250px --columns=2 --className=slim,compact,left
+:::cards[--minWidth=250px --columns=2 --className=slim,compact,left]
 __legodudes__
 
 | id | name              | land       | essen                |
@@ -337,7 +337,7 @@ __Resultat__
 
 Sollen nun alle Spalten von den __legodudes__ angezeigt werden, muss auch die Abfrage der Tabelle __haustiere__ 4 Spalten zurückgeben:
 
-:::cards --minWidth=250px --columns=2 --className=slim,compact,left
+:::cards[--minWidth=250px --columns=2 --className=slim,compact,left]
 ```sql
 SELECT id, name, land, essen
 FROM legodudes
@@ -362,7 +362,7 @@ __Resultat__
 
 Um herauszufinden, wie viele Spalten eine abgefragte Tabelle hat, kann Schrittweise nach einer Spalte sortiert werden, wobei der Spaltennamen nicht bekannt sein muss, sondern auch `ORDER BY 1` für das sortieren nach der ersten Spalte verwendet werden kann. Sobald eine Fehlermeldung erscheint, ist die Anzahl Spalten bekannt.
 
-:::aufgabe Übung 4
+:::aufgabe[Übung 4]
 <Answer type="state" webKey="15c1f7b0-ee68-42af-94dd-79b17479cafb" />
 
 Wie viele Spalten hat die gefilterte Kaffee-Tabelle? Finden Sie dies heraus, indem Sie folgende Eingabe verwenden und anpassen:
@@ -377,14 +377,14 @@ Wie viele Spalten hat die gefilterte Kaffee-Tabelle? Finden Sie dies heraus, ind
 
 Mit diesen Werkzeugen lassen sich nun auch bspw. alle User inkl. deren Passwörter herausfinden!
 
-:::::aufgabe Übung 5
+:::::aufgabe[Übung 5]
 <Answer type="state" webKey="2884626b-4f6d-4e1c-aa2f-03ce2f0cfee6" />
 
 1.	Geben Sie in Kombination mit dem `UNION` Befehl eine einzelne Zeile `1,2,3,4,5,6,7` aus.
 
     <Answer type="text" webKey="09c4837f-34aa-45e6-9a4f-36a3fc273a70" />
 
-    :::note Tipp
+    :::note[Tipp]
     Ändern Sie Ihre Eingabe so ab, dass keine Kaffee-Resultate angezeigt werden.
     :::
 
@@ -392,7 +392,7 @@ Mit diesen Werkzeugen lassen sich nun auch bspw. alle User inkl. deren Passwört
 
     <Answer type="text" webKey="e336768d-62ed-4f0a-8bad-faeb3d8fdd5e" />
 
-    ::::note Tipp
+    ::::note[Tipp]
     Für __MySQL__ Datenbanken gilt:
     :::cards
     #### Datenbankversion
@@ -420,10 +420,10 @@ Mit diesen Werkzeugen lassen sich nun auch bspw. alle User inkl. deren Passwört
 
     <Answer type="text" webKey="205c866d-5a31-4b41-9beb-0690726cefc4" />
 
-    ::::note Tipp
+    ::::note[Tipp]
     In MySql können die Namen aller Tabellen in der Datenbank 'test_db' mit folgendem Query abgefragt werden, bzw. die Spalten der Tabelle 'test_table':
 
-    :::cards --minWidth=350px
+    :::cards[--minWidth=350px]
     #### Alle Tabellen einer Datenbank
     ```sql
     SELECT table_name

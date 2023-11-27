@@ -14,7 +14,7 @@ Der Router ist der Eintrittspunkt zum WWW. Er besitzt zwei Netzwerkkarten (und s
 
 ![Router Einstellungen: MAC-Adressen sperren](images/mac-address-config.png)
 
-:::aufgabe MAC-Adresse herausfinden
+:::aufgabe[MAC-Adresse herausfinden]
 
 Finden Sie die MAC-Adresse Ihres gerätes. Googeln Sie z.b. nach *Wie finde ich meine MAC adresse?"
 :::

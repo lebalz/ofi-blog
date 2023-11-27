@@ -30,7 +30,7 @@ Die obenstehende Schaltung kann beispielsweise mit folgender Tabelle beschrieben
 
 </div>
 
-:::aufgabe Aufgabe 1
+:::aufgabe[Aufgabe 1]
 <Answer type="state" webKey="b6de8ed2-91e1-4f6e-bcc2-877150829a12" />
 
 Wie könnte eine Schaltung mit dieser Wahrheitstabelle wohl aussehen?
@@ -44,7 +44,7 @@ Wie könnte eine Schaltung mit dieser Wahrheitstabelle wohl aussehen?
 
 Um einfache Schaltungen erstellen zu können, benötigen wir ein paar einfachen Ein- und Ausgabemöglichkeiten.  Wir haben folgende **Eingabemöglichkeiten** für unsere Schaltungen:
 
-:::cards --min-width=200px
+:::cards[--min-width=200px]
 ![](images/01-sensor-button.svg)
 Druckknopf, liefert Eingabe 1️⃣, wenn er gedrückt wird.
 ***
@@ -69,7 +69,7 @@ Mikrofon, liefert als Eingabe 1️⃣, wenn ein Geräusch entdeckt wird.
 
 Für die **Ausgabe** stehen folgende Geräte zu Verfügung:
 
-:::cards --min-width=200px
+:::cards[--min-width=200px]
 ![](images/01-actor-light.svg)
 Licht, brennt bei Ausgabe 1️⃣
 ***

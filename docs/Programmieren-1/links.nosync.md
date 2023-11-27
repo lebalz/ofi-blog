@@ -13,9 +13,9 @@ sidebar_custom_props:
 - 👉 https://www.youtube.com/watch?v=6zaA0HkzT-4
 - 👉 https://www.youtube.com/watch?v=EnPrSYbA8z4
 
-:::details 📚 Preview
+:::details[📚 Preview]
 
-:::cards --cols=2
+:::cards[--cols=2]
 *** --code
 [@youtube](https://www.youtube-nocookie.com/embed/mjhoQonjVDk)
 

@@ -7,7 +7,7 @@ sidebar_custom_props:
 
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/MmqBVWi_Pc0?start=21" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-:::aufgabe Aufgabe 1
+:::aufgabe[Aufgabe 1]
 
 [Puzzle 1](http://www.robozzle.com/beta/index.html?puzzle=12419)
 
@@ -18,7 +18,7 @@ sidebar_custom_props:
 :::
 
 
-:::aufgabe Aufgabe 2
+:::aufgabe[Aufgabe 2]
 
 [Puzzle 2](http://www.robozzle.com/beta/index.html?puzzle=2741)
 
@@ -29,7 +29,7 @@ sidebar_custom_props:
 :::
 
 
-:::aufgabe Aufgabe 3
+:::aufgabe[Aufgabe 3]
 
 [Puzzle 3](http://www.robozzle.com/beta/index.html?puzzle=10858)
 
@@ -40,7 +40,7 @@ sidebar_custom_props:
 :::
 
 
-:::aufgabe Aufgabe 4
+:::aufgabe[Aufgabe 4]
 
 [Puzzle 4](http://www.robozzle.com/beta/index.html?puzzle=12511)
 
@@ -50,7 +50,7 @@ sidebar_custom_props:
 
 :::
 
-:::aufgabe Aufgabe 5
+:::aufgabe[Aufgabe 5]
 
 [Puzzle 5](http://www.robozzle.com/beta/index.html?puzzle=10895)
 
@@ -61,7 +61,7 @@ sidebar_custom_props:
 :::
 
 
-:::aufgabe Aufgabe 6.
+:::aufgabe[Aufgabe 6.]
 
 [Puzzle 6](http://www.robozzle.com/beta/index.html?puzzle=10048)
 
@@ -72,7 +72,7 @@ sidebar_custom_props:
 
 :::
 
-:::aufgabe Aufgabe 7.
+:::aufgabe[Aufgabe 7.]
 
 [Puzzle 7](http://www.robozzle.com/beta/index.html?puzzle=2748)
 
@@ -82,7 +82,7 @@ sidebar_custom_props:
 
 :::
 
-:::aufgabe Aufgabe 8.
+:::aufgabe[Aufgabe 8.]
 
 [Puzzle 8](http://www.robozzle.com/beta/index.html?puzzle=140)
 
@@ -92,7 +92,7 @@ sidebar_custom_props:
 
 :::
 
-:::aufgabe Aufgabe 9.
+:::aufgabe[Aufgabe 9.]
 
 [Puzzle 9](http://www.robozzle.com/beta/index.html?puzzle=1040)
 
@@ -102,7 +102,7 @@ sidebar_custom_props:
 
 :::
 
-:::aufgabe ⭐️ Aufgabe 10.
+:::aufgabe[⭐️ Aufgabe 10.]
 
 [Puzzle 10](http://www.robozzle.com/beta/index.html?puzzle=87)
 

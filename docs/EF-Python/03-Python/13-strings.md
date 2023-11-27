@@ -40,7 +40,7 @@ Reto'''
     print('----------')
 ```
 
-::::info Mehrzeilige Kommentare
+::::info[Mehrzeilige Kommentare]
 Manchmal wünscht man sich einen Kommentar über mehrere Zeilen zu schreiben, ohne immer ein `#` am Beginn der Zeile zu schreiben. In anderen Sprachen gibt es spezielle "Start-" und "End-Kommentar" Zeichen, so dass auch mehrere Zeilen auskommentiert werden können. (Bspw. um eine ganze Funktion auszukommentieren...). In Python gibt es dies nicht. Es kann aber aus dem kommentierten Code Text gemacht werden, so dass dieser nicht ausgeführt (aber auch nirgends in eine Variable gespeichert) wird.
 
 :::cards
@@ -66,7 +66,7 @@ print('Wurzel 2 = ', sqrt(2))
 
 Wie im Kapitel [Referenzen](./10-referenzen/index.md) besprochen, haben wir unsere Vorstellung des Speichermodells in Python soweit aktualisiert, dass der Computer für Variablen eine Etikette erstellt, die auf eine Speicherstelle zeigt, an welcher dann der effektive Wert gespeichert ist.
 
-:::flex --min-width=200px
+:::flex[--min-width=200px]
 Der Python Code...
 ```py
 a = 'das ist mein string'
@@ -83,8 +83,8 @@ In Python gibt es unterschiedliche Sammel-Datentypen, daher Daten, die unterschi
 
 Dabei macht Python einen grundlegenden Unterschied zwischen Veränderbaren- (*Mutable*) und Nicht-Veränderbaren (*Immutable*) Datentypen. Bei veränderbaren Datentypen können nach der Erzeugung und Zuweisung Änderungen an den zugrundeliegenden Speicherstellen vorgenommen werden.
 
-::::info Listen vs. Tupel
-:::flex --min-width=200px
+::::info[Listen vs. Tupel]
+:::flex[--min-width=200px]
 Bei **Listen** können nach dem Erzeugen einzelne Listenwerte verändert, oder gar neue Werte hinzugefügt oder entfernt werden.
 ***
 ```py live_py slim
@@ -96,7 +96,7 @@ print(a)
 ```
 :::
 
-:::flex --min-width=200px
+:::flex[--min-width=200px]
 Im Gegensatz dazu gibt es das **unveränderbare** Äquivalent dazu: **Tupel**. Einmal initialisiert, lassen sich dessen Werte nur noch lesen, jedoch nicht mehr verändern. Tupel werden im Gegensatz zu Listen mit runden Klammern erzeugt (initialisiert).
 ***
 ```py live_py slim
@@ -214,7 +214,7 @@ else:
 ```
 
 ### Kurzaufgaben
-:::aufgabe 1.
+:::aufgabe[1.]
 <Answer type="state" webKey="c0ca7471-ffb2-4082-8d71-914cdc2fa942" />
 
 Erklären Sie, was die Programmierer:in hier erreichen wollten, und weshalb aber ein Fehler entsteht.
@@ -228,7 +228,7 @@ print(name)
 <Answer type="text" webKey="d0f2db5e-be9c-45ff-a056-c9f57975f7bb" />
 :::
 
-:::aufgabe 2.
+:::aufgabe[2.]
 <Answer type="state" webKey="218186b9-2c66-47af-98ad-08c54276934d" />
 
 > **Why are humans known to be extremely afraid of computers?**
@@ -287,7 +287,7 @@ a = 'Hallo! '
 print(a.endswith('!'))
 print(a.endswith(' ')) # auch Leerzeichen sind Zeichen!
 ```
-::: 
+:::[]
 
 :::def
 ### `.isalpha()`
@@ -404,7 +404,7 @@ print(text)
 ```
 :::
 
-:::aufgabe 3. Emoji-Sprache
+:::aufgabe[3. Emoji-Sprache]
 <Answer type="state" webKey="f0c0b431-73c9-42de-bb89-71a691af676d" />
 
 Erstellen Sie eine Emoji-Sprache und ersetzen Sie typische Wörter in das entsprechende Emoji. Beispiel:
@@ -461,7 +461,7 @@ print('Tag: ', datum.split(':')[0])
 ```
 :::
 
-:::aufgabe 4. Zeilenweise
+:::aufgabe[4. Zeilenweise]
 <Answer type="state" webKey="49b4ed69-263f-4a83-b38f-d4705162952c" />
 
 ```py live_py title=reverse.py id=674423d1-6338-4347-b7b2-7c92b8f0d794

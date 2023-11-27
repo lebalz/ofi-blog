@@ -35,7 +35,7 @@ Meist wählt man eine Kombination von beiden Ansätzen. Am Anfang schaut man sic
 
 Manchmal merkt man aber auch erst beim Programmieren einer Funktion, dass diese nochmals in Teilfunktionen aufgeteilt werden sollte, z.B. wenn gewisse Programmteile mehrfach vorkommen, oder eine Funktion zu kompliziert wird.
 
-:::aufgabe Software Engineering
+:::aufgabe[Software Engineering]
 <Answer type="state" webKey="a01ad3ca-4ff8-4380-8643-71c09930a1dd" />
 
 Überprüfen Sie Ihr Verständnis durch das Lösen der folgenden Aufgabe. Markieren Sie die Aufgabe anschliessend als erledigt.

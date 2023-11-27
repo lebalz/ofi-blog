@@ -6,7 +6,7 @@ sidebar_custom_props:
 
 Mit einem 3D-Drucker lassen sich dreidimensionale Objekte erzeugen. Dabei arbeiten alle gängigen Druckverfahren schichtweise - das Objekt wird aus mehreren Schichten zusammengesetzt, wobei eine einzelne Schicht zweidimensional auf die darunterliegende Schicht aufgetragen wird.
 
-:::cards --columns=2 --text-align=center
+:::cards[--columns=2 --text-align=center]
 *** --text-align=center
 ![--width=996px](images/prusa-timelapse-01.gif)
 *** --text-align=center
@@ -24,7 +24,7 @@ Um ein Objekt zu drucken, muss in einem ersten Schritt ein **3D-Modell** erstell
 Modelle Slicen
 : [👉 Prusa Slicer](https://www.prusa3d.com/page/prusaslicer_424/)
 
-:::info OpenSCAD
+:::info[OpenSCAD]
 OpenSCAD gibt einen interessanten Einblick in die Grundlagen der 3D-Modellierung. Für technische Objekte, die präzise vermessen werden können, eignet es sich auch für grössere Projekte. 
 
 Für Objekte wie etwa die obige Filmfigur *Groot* eignet es sich jedoch **nicht** - hier gibt es deutlich anwenderfreundlichere Tools wie etwa

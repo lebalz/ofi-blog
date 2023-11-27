@@ -18,7 +18,7 @@ Word unterschiedet zwei Fehlertypen:
 
 Um einen Fehler zu korrigieren, können mit Rechtsklick die Verbesserungsvorschläge angesehen werden.
 
-:::caution Autokorrektur aktivieren
+:::caution[Autokorrektur aktivieren]
 
 Die Autokorrektur ist für die Rechtschreibefehler standardmässig aktiviert. Bei den Grammatikfehlern ist die Überprüfung aber nicht immer aktiv: Sie sollte unbedingt unter __Datei > Optionen > Dokumentprüfung__ aktiviert werden!
 
@@ -29,11 +29,11 @@ Die Autokorrektur ist für die Rechtschreibefehler standardmässig aktiviert. Be
 
 Natürlich muss Word wissen, in welcher Sprache ein Text verfasst wird. Word versucht für jeden Abschnitt zu erraten, um was für eine Sprache es sich handelt. Dies gelingt aber nicht immer automatisch und gerade "*Deutsch (Schweiz)*" oder "*Deutsch (Deutschland)*" ist für Word schwer zu unterscheiden. Die Sprache kann unten links umgestellt werden - Absatzweise oder auch nur für aktuell markierten Text. Dies ist dann nützlich, wenn Zitate oder Wörter einer anderen Sprache verwendet werden.
 
-:::caution Sprache ändern in Word
+:::caution[Sprache ändern in Word]
 ![Sprache ändern](images/04-therasus.png)
 :::
 
-:::aufgabe Fehler finden
+:::aufgabe[Fehler finden]
 <Answer type="state" webKey="619f5c1b-786f-451a-9b78-554403f298c6" />
 
 Datei

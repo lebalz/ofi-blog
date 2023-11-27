@@ -12,7 +12,7 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 
 Zum Speichern von **mehreren Werten** unter einem **einzigen Namen** verwendet man in Python Listen. Man kann sich __Listen__ als Tabellen mit einer Spalte vorstellen. Die Zellen in der Tabelle werden als **Elemente** bezeichnet und sind durchnummeriert. So kann man einzelne in der Liste gespeichert Werte unterscheiden. Die Nummer eines Elements wird als dessen **Index** bezeichnet.
 
-:::important Wichtig
+:::important[Wichtig]
 - Das erste Element in der Liste trägt den Index 0.
 - Der Index des letzten Elementes ist die Länge der Liste minus 1.
 :::
@@ -41,7 +41,7 @@ Im Beispiel wird die vierte Note mit dem Index `3` ausgegeben.
 
 ## Aufgaben
 
-:::aufgabe 1. listen-1d.py
+:::aufgabe[1. listen-1d.py]
 <Answer type="state" webKey="ec010329-3a79-4bd3-8e8d-35be2c5d246e" />
 
 Dateiname
@@ -49,7 +49,7 @@ Dateiname
 
 
 1. Erstellen Sie das folgende Programm in Ihrem Repository  
-   :::details Programm
+   :::details[Programm]
     ```py reference title="listen-1d.py"
     https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/assets/listen-1d.py
     ```
@@ -62,7 +62,7 @@ Dateiname
 :::
 
 
-:::aufgabe 2. Was steht geschrieben?
+:::aufgabe[2. Was steht geschrieben?]
 <Answer type="state" webKey="84fa5115-9483-4c76-8aca-7112371d5b3e" />
 
 Dateiname
@@ -89,7 +89,7 @@ sequenceDiagram
 </Hint>
 :::
 
-::::aufgabe 3. Meine Nummer 1
+::::aufgabe[3. Meine Nummer 1]
 <Answer type="state" webKey="56fcba0a-c357-462b-b4e6-8f7d76fbe932" />
 
 Dateiname
@@ -125,7 +125,7 @@ sequenceDiagram
 
 Normalerweise fügt die `print`-Funktion am Ende einer Ausgabe immer das Zeichen `\n` an, was von der Konsole als Steuerzeichen für eine neue Zeile interpretiert wird. Das können Sie aber auch ändern, indem Sie explizit vorgeben, welche Zeichen am Ende hinzugefügt werden:
 
-:::flex --basis=380px
+:::flex[--basis=380px]
 ```py live_py slim
 # Mit Lücke zwischen einzelnen prints
 for i in range(3):
@@ -147,7 +147,7 @@ for i in range(3):
 </Hint>
 ::::
 
-::::aufgabe 4. Primzahlen
+::::aufgabe[4. Primzahlen]
 <Answer type="state" webKey="00361219-0652-4870-9a42-c3cf8250b9a4" />
 
 Dateiname

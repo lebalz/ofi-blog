@@ -17,7 +17,7 @@ Für den Prozessor gibt es folgende wichtige Kenngrössen:
 - Die Anzahl **Kerne** gibt an, wie viele Berechnungen ein Prozessor gleichzeitig, also parallel, ausführen kann.
 - Die **Taktfrequenz** gibt an, wie schnell der Prozessor Berechnungen durchführen kann. Sie wird in der Einheit **Hertz** angegeben, was «pro Sekunde» bedeutet. `2.1 GHz` sind "2.1 Gigahertz", also `2'100'000'000 Hz` und somit 2.1 Milliarden Operationen, die pro Sekunde berechnet werden können.
 
-:::cards --columns=3
+:::cards[--columns=3]
 ![AMD Ryzen-Prozessor](images/03-cpu-top.png)
 ***
 ![Pins auf Unterseite](images/03-cpu-bottom.png)
@@ -52,7 +52,7 @@ Moderne Desktop-Prozessoren enthalten normalerweise eine Grafikeinheit, welche d
 
 Bei Prozessoren für Mobiltelefone werden üblicherweise spezialisierte Funktionen für GPS, W-LAN, Mobilfunk und Bluetooth auf dem Chip integriert. Dabei spricht man von einem Ein-Chip-System oder SoC (engl. *system on a chip*).
 
-:::aufgabe Meine CPU
+:::aufgabe[Meine CPU]
 <Answer type="state" webKey="998cfc97-5fac-4a43-9358-b1b1c134521c" />
 
 1. Welche Merkmale weist der Prozessor Ihres Laptops auf (Modell, Taktfrequenz)?

@@ -18,7 +18,7 @@ Ist die Zahl durch $3$ teilbar, wird "Fizz" ausgegeben, ist sie durch $5$ teilba
 </Solution>
 <br />
 
-:::info Lernziele
+:::info[Lernziele]
 Sie lernen die Excel-Funktionen
 - `REST`
 - `WENN`
@@ -44,7 +44,7 @@ Halten Sie in Stichworten fest, was diese Funktionen machen und wie Sie angewand
 <Answer type="text" webKey="6e7e98f1-24c0-4e0b-8869-7b5ed61490c7" />
 :::
 
-:::aufgabe Fortsetzung
+:::aufgabe[Fortsetzung]
 <Answer type="state" webKey="a1464d03-afca-4c32-82d6-d1c3071b3840" />
 
 Das Programm braucht die "Hilfsspalten" B, C, D & E. Können Sie das Programm durch verschachteln von Funktionen so umschreiben, dass **nur drei Spalten** nötig sind?
@@ -56,7 +56,7 @@ Welche Variante ist übersichtlicher, wieso?
 <Answer type="text" webKey="74e5c8a6-734d-4f98-b651-e02c11de9165" />
 :::
 
-:::aufgabe ⭐ Zusatz 1
+:::aufgabe[⭐ Zusatz 1]
 <Answer type="state" webKey="b689ed32-642f-4af6-a6e6-d3c1f6730a68" />
 
 Zusätzlich soll in der letzten Spalte __Bazz__ angezeigt werden, wenn die Zahl durch $7$ teilbar ist:
@@ -68,7 +68,7 @@ Wann tritt zum ersten mal "FizzBuzzBazz" auf?
 <Answer type="string" webKey="8f99ae83-6541-4fb0-8544-7ddc45ac8a75" solution="105"/>
 :::
 
-:::aufgabe ⭐ Zusatz 2
+:::aufgabe[⭐ Zusatz 2]
 <Answer type="state" webKey="b7197f58-35aa-4435-b326-374fae3eb6fa"  />
 
 Definieren Sie 2 (bzw. 3) Zellen, in welchen Sie die Zahlen für die Teilbarkeits-Überprüfung (3, 5, 7) frei festlegen können.

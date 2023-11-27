@@ -14,7 +14,7 @@ Unter Chrome :mdi-google-chrome--blue:, Edge :mdi-microsoft-edge--cyan: und Fire
 
 <!--truncate-->
 
-:::danger Achtung
+:::danger[Achtung]
 Ändern Sie nur Einstellungen deren Auswirkungen Sie kennen!
 :::
 

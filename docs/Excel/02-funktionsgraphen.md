@@ -10,7 +10,7 @@ Aus der Mathematik kennen Sie die verschiedenen Repräsentationsformen von Funkt
 - Funktionsgraph
 
 
-:::aufgabe Schritt a.)
+:::aufgabe[Schritt a.)]
 <Answer type="state" webKey="9021e60e-065e-499f-ac8a-776f7db84024" />
 
 Dateiname
@@ -22,7 +22,7 @@ Erzeugen Sie für die Funktion $f(x)=3x^2-2x+4$ eine Wertetabelle im Bereich $[-
 
 :::
 
-:::aufgabe Schritt b.)
+:::aufgabe[Schritt b.)]
 <Answer type="state" webKey="033bf59a-b02e-41f6-95b7-79f0ea3ef255" />
 
 Stellen Sie die Funktion so um, dass eine beliebige quadratische Funktion

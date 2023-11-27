@@ -11,7 +11,7 @@ Verschlüsselte, signierte Nachrichten: Verknüpfung aller Verfahren.
 
 ![](images/the_big_picture.png)
 
-:::note Bemerke
+:::note[Bemerke]
 - Charlie berechnet den Hashwert der Nachricht.
 - Charlie verwendet seinen  <span className="badge" style={{background: 'teal'}}>privaten Schlüssel</span> um den Hashwert zu signieren.
   - Den signierten Hashwert kann von jeder Empfänger:in mit Charlies **öffentlichem** Schlüssel entschlüsselt werden. Jedoch kann der Hash von niemandem verändert werden, da niemand den privaten Schlüssel von Charlie besitzt.

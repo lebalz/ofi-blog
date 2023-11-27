@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # 3. Netzwerk
 
-:::info Voraussetzung
+:::info[Voraussetzung]
 Sie brauchen einen Node-RED Server, der im Internet erreichbar ist.
 
 Falls Sie diesen noch nicht aufgesetzt haben, können Sie zum Node-Red Teil wechseln und dort einen Server aufsetzen.
@@ -72,7 +72,7 @@ res.close()
 
 
  
-:::aufgabe Mit dem Netzwerk verbinden
+:::aufgabe[Mit dem Netzwerk verbinden]
 
 Material
 : [👉 Netzwerk-Projekt](assets/network-assets.zip)
@@ -80,6 +80,6 @@ Material
 Laden Sie das Beispiel-Projekt herunter und untersuchen Sie dieses genauer.
 
 Passen Sie dieses so an, dass die Daten an Ihren eigenen Node-RED Server geschickt werden. ()
-::: 
+:::[]
 
 [^1]: [Ip-Insider](https://www.ip-insider.de/was-ist-ein-proxy-server-a-665349/)

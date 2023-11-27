@@ -11,7 +11,7 @@ Damit Sie auf die Webseiten Ihrer Kolleginnen und Kollegen zugreifen können mü
 - Das WLAN muss zulassen, dass die mit ihm verbundenen Computer untereinander Nachrichten austauschen können. Das ist im BYOD-WLAN aus Sicherheitsgründen nicht der Fall.
 - Sie müssen die IP-Adresse des Computers kennen, auf welchem der Webserver läuft.
 
-:::aufgabe Aufgaben
+:::aufgabe[Aufgaben]
 <Answer type="state" webKey="cb35ef52-f0cb-4f02-bbc2-06b9a5f2719a" />
 
 - Um die erste Bedingung zu erfüllen, müssen Sie Ihr Notebook mit dem WLAN `EFIN` verbinden.

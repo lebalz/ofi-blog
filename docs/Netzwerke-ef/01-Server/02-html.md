@@ -33,7 +33,7 @@ HTML ist **keine Programmiersprache** - sie definiert lediglich in einem für de
 Eine gute Einführung und Referenz in HTML finden Sie unter 👉 https://www.w3schools.com/html/default.asp.
 
 
-:::info Playground
+:::info[Playground]
 Hier können Sie einzelne Tags ausprobieren (achtung, wird nicht gespeichert):
 
 ```jsx live_jsx

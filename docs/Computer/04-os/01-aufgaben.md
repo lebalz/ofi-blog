@@ -41,7 +41,7 @@ Die Zwickmühle beim Start des Computers besteht darin «wie bringe ich die Prog
 
 ## Betriebssysteme, Puzzle
 
-:::aufgabe Puzzle
+:::aufgabe[Puzzle]
 
 Jede Expertin und jeder Experte ist nach der Expertenrunde bereit, das zugeteilte Thema selbständig in der Unterrichtsrunde einer Gruppe von vier bis fünf Mitschüler:innen während 10 Minuten zu vermitteln.
 

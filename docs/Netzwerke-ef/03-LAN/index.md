@@ -63,7 +63,7 @@ Typischer WLAN-Switch-Router für das Heimnetz:
 ![fritzbox-7490-big](images/fritzbox-7490-big.jpg)
 
 
-:::aufgabe Hausaufgabe
+:::aufgabe[Hausaufgabe]
 <Answer type="state" webKey="d731045f-df2b-452b-a2a0-7f81fab9fc2e" />
 
 Dateiname

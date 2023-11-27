@@ -16,7 +16,7 @@ Für das Netzteil gibt es die folgende wichtige Kenngrösse:
 Leistung
 : Die **Leistung** gibt an, wie viel Energie das Netzteil in einer bestimmten Zeit den Komponenten maximal zur Verfügung stellen kann. Die Leistung wird gemessen in **Watt**.
 
-:::cards --columns=2
+:::cards[--columns=2]
 ![ATX-Netzteil](images/08-atx.jpg)
 ***
 ![Notebook-Netzteil](images/08-power-supply.jpg)
@@ -28,13 +28,13 @@ Die meiste Leistung verpufft als Abwärme, darum brauchen Desktop-PCs (und leist
 
 Notebooks verwenden stromsparendere Prozessoren, daher reicht dort ein kleinerer Lüfter aus, oder sie haben gar nur eine passive Kühlung ohne aktiven Lüfter.
 
-:::cards --columns=2
+:::cards[--columns=2]
 ![Kühlkörper und Ventilator](images/08-heatsink-fan.jpg)
 ***
 ![Notebook-Mainboard mit Prozessorkühler](images/08-notebook-cooling.jpg)
 :::
 
-:::aufgabe Stromversorgung
+:::aufgabe[Stromversorgung]
 <Answer type="state" webKey="2ab0c869-d189-48bb-9e3f-1f438870a37e" />
 
 1. Recherchieren Sie im Internet und finden Sie heraus, wie viel Leistung (Watt) folgende Geräte typischerweise im Betrieb beziehen:

@@ -115,7 +115,7 @@ Die Farbtiefe gibt an, in wie vielen Abstufungen jeder Farbkanal vorliegt. Im in
 
 <ColorDepth />
 
-:::aufgabe 1. Aufgabe: Farbtiefe
+:::aufgabe[1. Aufgabe: Farbtiefe]
 Erkennen Sie das System, wie die Farbtiefe mit der Anzahl möglicher Farben zusammenhängt?
 - Wie viele Farben sind bei einer Farbabstufung von 4, 8, 16, 128 oder 256 Stufen möglich?
 - Wie viel bits sind für die Darstellung eines Farbkanals bei 4, 8, 16, 128 oder 256 Abstufungen nötig?

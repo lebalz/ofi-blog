@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 Viele Webseiten nutzen z.B. den Dienst "Google Analytics". Öffnen wir solch eine Webseite wird auch Google Analytics gestartet und schon legt Google ein Cookie bei uns ab (ein sogenanntes Drittanbieter-Cookie). Cookies sind kleine Datenpakete, welche eine Webseite auf dem lokalen Computer (genau genommen im Browser) speichert. Öffnen wir danach eine andere Webseite die Google Analytics nutzt (das nutzen die meisten Webseiten) so kann Google die eigenen Cookies lesen und weiss welche Seiten wir in welcher Reihenfolge wie lange angesehen haben. Generell nutzen online-Werbeagenturen Information von ihren Drittanbieter-Cookies um nutzerspezifische Werbung schalten zu können. Die Browser-Ererweiterung "Thunderbeam-Lightbeam" für den Chrome-Browser macht die Spuren sichtbar, welche wir mit Cookies im Internet hinterlassen. 
 
-::::aufgabe Cookies
+::::aufgabe[Cookies]
 Installieren 
 
 1. Installieren Sie Sie sich die Chrome- bzw. Edge-Erweiterung [Thunderbeam-Lightbeam](https://chrome.google.com/webstore/detail/thunderbeam-lightbeam-for/hjkajeglckopdkbggdiajobpilgccgnj)
@@ -21,7 +21,7 @@ Installieren
 <Answer type="text" webKey="49ec2cb9-10ee-490e-ab24-39c74c1dc2ea" />
 
 
-:::info OFI-Website
+:::info[OFI-Website]
 Welche Cookies gibt es auf der ofi.gbsl-Website?
 :::
 
@@ -44,7 +44,7 @@ Jetzt erscheint ein Fenster, in welchem Sie die gespeicherten Browserdaten lösc
 - [Safari: Verwalten von Cookies und Website-Daten mit Safari auf dem Mac - Apple Support](https://support.apple.com/de-ch/guide/safari/sfri11471/mac)
 
 
-:::info Variante
+:::info[Variante]
 In den meisten Browsern (alle ausser Safari) können Cookies auch direkt über das kleine Schloss 🔒 in der Adresszeile gelöscht werden:
 
 ![](images/delete_cookies_1.png)
@@ -69,7 +69,7 @@ Werbe-Cookies lassen sich mit Erweiterungen blockieren. Hilfreich: Auch Werbeanz
 
 ## Der Nachfolger von Cookies: Fingerprinting
 
-:::aufgabe Artikel Lesen
+:::aufgabe[Artikel Lesen]
 
 Lesen Sie den verlinkten Artikel
 
@@ -85,7 +85,7 @@ Lesen Sie den verlinkten Artikel
 
 ### Am i Unique?
 
-:::aufgabe Am I Unique
+:::aufgabe[Am I Unique]
 "Am I Unique" ist eine Website, welche Ihren digitalen Browser Fingerabdruck auswertet und bereitstellt. Damit ist es möglich zu sehen, welche Informationen durch das Aufrufen einer Website preisgegeben werden. Testen Sie Ihren Browser - wie gut sind Sie identifizierbar? Wie sieht das Resultat auf Ihrem Smartphone aus? Ändert sich etwas, wenn Sie den Test in einem privaten Fenster durchführen?
 
 - [https://amiunique.org/fp](https://amiunique.org/fp)
@@ -93,7 +93,7 @@ Lesen Sie den verlinkten Artikel
 <Answer type="text" webKey="c627366f-ebdd-4df0-a50a-468fbba30a5f" />
 :::
 
-:::aufgabe EFF Cover your tracks
+:::aufgabe[EFF Cover your tracks]
 Mit "EFF Cover your tracks" können Sie ebenfalls Ihren digitalen Fingerabdruck testen. Zusätzlich gibt Ihnen diese Website aber auch Hinweise dazu, wie gut Sie bspw. gegen Cookie-Tracking abgesichert sind. Wie steht es um Ihre Absicherung?
 
 - [https://coveryourtracks.eff.org/](https://coveryourtracks.eff.org/)

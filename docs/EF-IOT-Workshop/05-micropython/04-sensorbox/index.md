@@ -4,6 +4,6 @@ sidebar_custom_props:
 ---
 # 4. Sensorbox
 
-:::aufgabe Sensorbox
+:::aufgabe[Sensorbox]
 Fügen Sie die Code-Teile so zusammen, dass nun die Sensordaten an den Node-RED Server gesendet werden.
 :::

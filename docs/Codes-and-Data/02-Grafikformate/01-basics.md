@@ -35,7 +35,7 @@ Die Farbtiefe gibt an, in wie vielen Abstufungen jeder Farbkanal vorliegt. Im in
 
 <ColorDepth />
 
-:::aufgabe 1. Aufgabe: Farbtiefe
+:::aufgabe[1. Aufgabe: Farbtiefe]
 <Answer type="state" webKey="8cb234a4-c45e-4527-97c3-54ba86ec14ba" />
 
 Erkennen Sie das System, wie die Farbtiefe mit der Anzahl möglicher Farben zusammenhängt?

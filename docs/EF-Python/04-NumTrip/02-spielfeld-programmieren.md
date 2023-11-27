@@ -10,7 +10,7 @@ sidebar_custom_props:
 
 ![NumTrip --width=200px](images/numtrip-inplay.png)
 
-::::aufgabe `numtrip.py`
+::::aufgabe[`numtrip.py`]
 <Answer type="state" webKey="b160c683-c0de-405c-a847-cb3f3ab1aaf2" />
 
 Dateiname
@@ -26,11 +26,11 @@ Damit man auch etwas sieht, wenn Sie das Programm ausführen, programmieren Sie 
 
 Wenn alles zu Ihrer Zufriedenheit funktioniert, machen Sie einen Commit, pushen die Änderungen und markieren diese Aufgabe als erledigt.
 
-:::danger Noch keine Spieler:inneninteraktion
+:::danger[Noch keine Spieler:inneninteraktion]
 Es ist in diesem Schritt noch keine Interaktion mit Spielenden oder ein Spielfluss zu programmieren - nur das Anzeigen des Spielfelds...
 :::
 
-:::aufgabe Auftrag auf Freitag, 21.10.2022
+:::aufgabe[Auftrag auf Freitag, 21.10.2022]
 <Answer type="state" webKey="0696dee1-6f7e-40a6-b891-298abbf1dc63" />
 
 Am Freitag werden wir mit dem Spielfeld weiterarbeiten. Damit alle eine gute Ausgangslage haben, gibt es den folgenden Kurz-Auftrag:

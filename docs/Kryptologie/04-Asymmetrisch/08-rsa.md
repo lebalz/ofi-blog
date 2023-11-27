@@ -83,7 +83,7 @@ $$
 
 und erhält damit den Klartext $m$.
 
-:::info ⭐️ RSA Schlüssellänge
+:::info[⭐️ RSA Schlüssellänge]
 Die RSA Schlüssel haben standardmässig `1024` oder `2048` bits, wobei Schlüssel mit `1024` bits mittelfristig als knackbar erachtet werden, so dass die Industrie heute oft mindestens `2048` bits voraussetzt.
 :::
 

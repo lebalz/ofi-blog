@@ -84,7 +84,7 @@ getätigt.</p>
 - Der Pfad entspricht der Ordnerreihenfolge, ausgehend vom Workspace in VSC, in dem die Datei `hello.html` gespeichert ist, z.B. `2258084`.
 
 
-:::aufgabe Python Webserver
+:::aufgabe[Python Webserver]
 <Answer type="state" webKey="6a13422c-52ba-410a-a3f6-5bc362731241" />
 
 Ordner
@@ -92,7 +92,7 @@ Ordner
 
 1. Speichern Sie folgende Snippets in Ihrem Repository unter dem Ordner `docs/Netzwerke/webserver` ab.
 
-    :::details Snippets
+    :::details[Snippets]
     ```py reference title="SimpleWebServer.py"
     https://github.com/lebalz/ofi-blog/blob/main/docs/Netzwerke-ef/01-Server/snippets/simple-server.py
     ```

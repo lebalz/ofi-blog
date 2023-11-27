@@ -38,7 +38,7 @@ Ein Wert kann aus dem Hauptspeicher auf ein Ausgabegerät ausgegeben werden.
 ![](images/05-output.svg)
 
 
-:::success Take-Home Message aus CPU-Rollenspiel
+:::success[Take-Home Message aus CPU-Rollenspiel]
 
 <Answer type="text" webKey="c7958ed6-c67d-4154-8051-6d9c1fadd5e2" />
 

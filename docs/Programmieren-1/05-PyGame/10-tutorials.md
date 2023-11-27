@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # PyGame Tutorials
 
-:::info Pygame installieren
+:::info[Pygame installieren]
 Um mit PyGame zu arbeiten, muss in einem ersten Schritt Python auf dem Laptop installiert werden. Im Anschluss kann dann die PyGame Bibliothek installiert werden.
 - [👉 Python 3 installieren](/software-installation/python/v3.11.0)
 - [👉 VS Code installieren](/software-installation/vs-code/v1.70)

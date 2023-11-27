@@ -41,7 +41,7 @@ Natürlich können auch mehrere Gatter zu einer Schaltung kombiniert werden. Im 
 
 ![](images/04-heating-2.svg)
 
-:::aufgabe Aufgaben
+:::aufgabe[Aufgaben]
 <Answer type="state" webKey="2838e16e-c02f-4a15-a8d0-f08f14b0f8a2" />
 
 Entwerfen Sie je eine Schaltung für die folgenden Szenarien. Sie können __Inverter__ und __AND-Gatter__ verwenden. Gehen Sie für jedes Szenario so vor:

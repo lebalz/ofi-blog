@@ -103,7 +103,7 @@ Damit Funktionen noch flexibler eingesetzt werden können, kann man ihnen beim A
 
 Beim **Aufruf** der Funktion gibt man in den `()` die **aktuellen Werte** an, mit denen die Funktion anschliessend arbeiten soll. Man nennt diese Werte beim Aufruf die **Argumente**. Das können Zahlen, Texte, aber auch die Namen von anderen Variablen sein.
 
-:::important **Wichtig**
+:::important[**Wichtig**]
 Parameter können nur innerhalb der Funktion verwendet werden, zu welcher Sie gehören. Ausserhalb der Funktion sind sie unbekannt. Weist man einem Parameter innerhalb einer Funktion einen neuen Wert zu, so geht dieser beim Verlassen der Funktion verloren.
 :::
 
@@ -124,7 +124,7 @@ Im foglenden Beispiel `4-function-with-return.py` ist dieses Prinzip bei der Fun
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/4-function-with-return.py
 ```
 
-:::aufgabe 1. Debuggen
+:::aufgabe[1. Debuggen]
 <Answer type="state" webKey="032b1b16-de7c-44e0-a4be-3318120dae00" />
 
 Dateinamen
@@ -139,7 +139,7 @@ Markieren Sie die Aufgabe als erledigt.
 :::
 
 
-:::aufgabe 2. Sternchen-Rechteck
+:::aufgabe[2. Sternchen-Rechteck]
 
 <Answer type="state" webKey="5ab1b7f2-04d6-42bc-a5bc-da615117c83f" />
 

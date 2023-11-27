@@ -9,7 +9,7 @@ CSV
 : also durch Kommas getrennte Werte.
 : Es ist ein typisches Dateiformat für Tabellendaten und kann auch direkt von Excel geöffnet werden.
 
-:::danger Achtung: Trennzeichen ändern
+:::danger[Achtung: Trennzeichen ändern]
 Wenn das angehängte CSV in Excel geöffnet wird, erscheinen die einzelnen Werte aber nicht als einzelne Zellen, weil das Schweizer-Excel statt Kommas "," Strichpunkte ";" als Trennzeichen erwartet. Unter 
 
 __Daten > Text in Spalten__
@@ -30,7 +30,7 @@ Material
 Laden Sie das Datenfile CSV herunter und öffnen Sie es in Excel. Überführen Sie die Texte in Öffnen Sie über __Daten > Text in Spalten__ die Werte in einzelne Zellen.
 
 Anschliessend, ändern Sie das Aussehen des Datenblatts wie folgt (zuerst müssen alle Zellen ausgewählt werden):
-:::flex --min-width=350px
+:::flex[--min-width=350px]
 - Die Höhe der Zellen auf `10`
 - Die Breite der Zellen auf `2`
 - Die Schriftgrösse auf `5pt`

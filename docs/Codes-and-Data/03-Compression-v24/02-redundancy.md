@@ -25,7 +25,7 @@ Wir führen ein Experiment durch. Aus einem deutschen Text werden etwa 40% der B
 
 Offenbar tragen die häufigen Buchstaben weniger zum Inhalt des Textes bei. Sie haben einen kleineren **Informationsgehalt**.
 
-:::success Take-Home Message
+:::success[Take-Home Message]
 
 <Answer type="text" webKey="18b21da1-1e49-4d1a-a7ea-1c930205abf1" />
 :::
@@ -73,7 +73,7 @@ Daraus ergibt sich
 </div>
 </details>
 
-:::danger Verlustbehaftete Kompression
+:::danger[Verlustbehaftete Kompression]
 Würden bei Textdokumenten Algorithmen eingesetzt, welche Zeichen mit tiefem Informationsgehalt weglassen, so würde man von verlustbehafteter Kompression sprechen, da der Originaltext ggf. nicht wieder hergestellt werden kann. 
 :::
 

@@ -22,7 +22,7 @@ Im nachfolgenden Schema sieht man gut, dass über die Northbridge diejenigen Com
 
 In modernen Systemen wird die Northbridge oft auch direkt im Prozessor integriert, zudem enthält die Southbridge meist einen Netzwerk- und Grafikkontroller, so dass die grundlegende Ausgabe- und Netzwerkfunktionalität bereits gegeben ist. 
 
-:::aufgabe Aufgabe Hauptplatine
+:::aufgabe[Aufgabe Hauptplatine]
 <Answer type="state" webKey="28223368-b07c-451a-8a82-aa3ae206935e" />
 
 1. Betrachten Sie das ASRock Mainboard. Wo werden die folgenden Komponenten eingesteckt?
@@ -44,7 +44,7 @@ Beim Starten des Computers wird als erstes das BIOS (engl. *basic input and outp
 
 Um die BIOS-Konfiguration zu ändern, muss kurz nach dem Start eine bestimmte Taste gedrückt werden. In der Regel wird dies kurz auf dem Bildschirm eingeblendet. Die häufigsten Tasten sind: `F1`, `F2`, `Del` oder `Enter`, bei Mac sind es die Wahltaste (`⌥`) oder `Alt`.
 
-:::info Windows Schnellstart
+:::info[Windows Schnellstart]
 Da heutige Laptops die vorhandene Hardware bereits in Sekundenbruchteilen überprüft hat, oder für einen schnelleren Start bei einem sog. "Fastboot" nicht alle Komponenten neu überprüft, bleibt zu wenig Zeit um die richtige Taste zu drücken. Um dennoch ins BIOS zu kommen, muss der Computer speziell über den "Erweiterten Start" neu gestartet werden. Dann gelangt man automatisch ins BIOS:
 
 https://www.pc-magazin.de/ratgeber/bios-uefi-starten-windows-10-3201227.html
@@ -54,12 +54,12 @@ Je nach Konfiguration muss noch ein Passwort eingegeben werden, bevor die BIOS-E
 
 Es gibt verschiedene BIOS-Hersteller. Die Oberfläche ist sehr schlicht und einfach gestaltet. Man navigiert mit den **Pfeiltasten**, wählt mit `Enter` einen Eintrag aus und beendet ein Menü mit Hilfe von `Esc`. Nachfolgend zwei Beispiele:
 
-:::cards --columns=2
+:::cards[--columns=2]
 ![AMI BIOS](images/07-bios-ami.jpg)
 ***
 ![Award BIOS](images/07-bios-award.png)
 :::
 
-:::success UEFI
+:::success[UEFI]
 Der grafisch aufgepeppte Nachfolger von BIOS ist **UEFI** (*Unified Extensible Firmware Interface*). Es kann im Gegensatz zum BIOS auch per Maus gesteuert werden, erfüllt aber dieselbe Aufgabe wie das oben beschriebene BIOS.
 :::

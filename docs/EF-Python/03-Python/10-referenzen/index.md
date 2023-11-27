@@ -25,7 +25,7 @@ Achten Sie auf die in der Konsole (unten) angezeigten Objekt-Ids und Datentypen.
 
 Auf der linken Seite sehen Sie die aktuellen Objektwerte in den Variablen a und b. Achten Sie besonders, was dort passiert, wenn die Zeile 30 ausgeführt wird.
 
-:::details __EF-Informatik/exercises/referenzen.py__
+:::details[__EF-Informatik/exercises/referenzen.py__]
 ```py reference title="referenzen.py"
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/10-referenzen/referenzen.py
 ```
@@ -207,7 +207,7 @@ Das sieht dann so aus:
 
 ![Speicherreferenzen](images/ReferenzenSpeicher.png)
 
-:::success Merke
+:::success[Merke]
 In Python werden alle Daten als Objekte gespeichert.
 :::
 

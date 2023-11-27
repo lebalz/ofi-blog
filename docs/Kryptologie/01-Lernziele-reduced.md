@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Lernziele
 
-:::note Verschlüsselungsverfahren
+:::note[Verschlüsselungsverfahren]
 - Sie verstehen das Prinzip symmetrischer Verschlüsselungsverfahren und verwenden das Wissen in Beispielen mit antiken Verfahren an.
 - Sie knacken antike symmetrische Verfahren (Häufigkeitsanalysen, Brute Force, ...).
 - Sie wissen, wie der ECB und CBC Modus funktionieren und können diese exemplarisch mit XOR als Verschlüsselungsalgorithums anwenden.
@@ -16,14 +16,14 @@ sidebar_custom_props:
 - Sie begreifen **asymmetrische** Verfahren mit ihren Schlüsselpaaren als Hilfsmittel für einen sicheren Austausch (z.B. Vorhängeschloss/Schlüssel-Analogie).
 :::
 
-:::note Hashfunktionen
+:::note[Hashfunktionen]
 - Sie wissen, dass Passwörter nicht im Klartext gespeichert werden.
 - Sie kennen die Zielsetzung und die Funktionsweise von Hashverfahren (Stichworte *sicheres Speichern von Passwörtern*, *Intregritätsprüfung*)
 - Sie kennen Angriffsmöglichkeiten auf Passworthashes (*Dictionnary*, *Brute Force*).
 - Sie können die Stärke von Passwörtern einschätzen und wissen, dass die Länge die massgebende Grösse für ein sicheres Passwort ist.
 :::
 
-:::note Angriffe
+:::note[Angriffe]
 - Sie sind sich bewusst, dass für erfolgreiche Angriffe auf Systeme häufig ein Fehlverhalten von Personen verantwortlich ist.
 - Sie wissen, dass Personen daher ein beliebtes Angriffsziel sind (z.B. Social Engineering, Phishing).
 - Sie wissen, dass Systeme Schwachstellen aufweisen und somit Angriffsflächen bieten.
@@ -31,6 +31,6 @@ sidebar_custom_props:
 - Sie verstehen, dass das Passwort des E-Mail-Accounts besonders wichtig ist (z.B. wegen der Passwortrücksetzung via E-Mail).
 :::
 
-:::caution Unterrichtsinhalte
+:::caution[Unterrichtsinhalte]
 An der Prüfung können auch Inhalte/Diskussionen/Experimente zu den obigen Themen aufgegriffen werden, welche nur im Unterricht behandelt/diskutiert wurden.
 :::

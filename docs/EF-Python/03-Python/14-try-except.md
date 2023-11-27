@@ -117,7 +117,7 @@ else:
 
 :::
 
-:::aufgabe Obigen Code analysieren?
+:::aufgabe[Obigen Code analysieren?]
 <Answer type="state" webKey="938ae28c-2db0-4a32-945f-5189398216b7" />
 
 Welche Variante ist praktischer für die Programmierer:in?

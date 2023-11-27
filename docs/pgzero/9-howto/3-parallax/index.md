@@ -15,7 +15,7 @@ import CodeBlock from '@theme/CodeBlock';
 
 ## Bilder
 
-::: columns 4
+:::[columns 4]
 ![](./images/hintergrund0.png)
 ***
 ![](./images/hintergrund1.png)

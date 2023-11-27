@@ -6,7 +6,7 @@ sidebar_custom_props:
 
 ![--width=100px](images/MicroPython_new_logo.svg)
 
-:::cards --min-width=300px
+:::cards[--min-width=300px]
 #### MicroPython
 
 > MicroPython ist eine Softwareimplementierung einer Programmiersprache. Sie ist weitgehend kompatibel mit Python 3 und für den Betrieb auf einem Mikrocontroller optimiert.
@@ -22,19 +22,19 @@ sidebar_custom_props:
 
 ## Tutorial
 
-::::aufgabe MicroPython in VS Code installieren
+::::aufgabe[MicroPython in VS Code installieren]
 Arbeiten Sie sich durch das Tutorial durch. Erstellen Sie für jedes Programm, welches Sie auf den ESP8266 laden, ein neues Projekt - daher ein neuer Ordner im EF-Repository, den Sie direkt in VS Code öffnen (__File > Open Folder__)
 
 [👉 MicroPython in VS Code](https://www.donskytech.com/micropython-using-vscode-pymakr-on-esp32-esp8266/)
 
-:::details Troubleshooting Keine Verbingung zum esp8266 möglich (Windows)
+:::details[Troubleshooting Keine Verbingung zum esp8266 möglich (Windows)]
 Möglicherweise ist der installierte USB-Serial Treiber nicht kompatibel. VErsuchen Sie den folgenden Treiber:
 
 👉 https://sparks.gogo.co.nz/ch340.html
 
 :::
 
-:::details Troubleshooting Dateien hochladen
+:::details[Troubleshooting Dateien hochladen]
 Damit der Datei-Upload funktioniert, muss über eine Konfiguration festgelegt werden, wie der ESP8266 angeschlossen ist.
 
 Suchen :mdi-magnify: Sie dazu in den Einstellungen :mdi-cog-outline: nach 
@@ -45,7 +45,7 @@ pymakr.devices.configs
 
 ![--width=300px](images/pymakr-1.png)
 
-:::flex --min-width=300px
+:::flex[--min-width=300px]
 und klicken Sie auf `Edit in settings.json`. Dort wird für eine Schnittstelle (ein konkreter USB-Anschluss am Laptop oder für jeden USB-Dongle) eine eigene Konfiguration angelegt. Wir benötigen für den ESP8266 eine Konfiguration mit folgenden Einstellungen:
 
 ```json
@@ -71,7 +71,7 @@ Die Hardware-ID (im obigen Beispiel `5&1487bdb9&0&6`) muss dabei für jeden USB-
 
 ![](images/pymakr-2.2.png)
 :::
-:::details Troubleshooting Keine Ausgabe
+:::details[Troubleshooting Keine Ausgabe]
 Kann passieren, wenn die Ausgaben herausgefiltert werden. In diesem Fall muss das Benachrichtigungsverhalten in den Einstellungen :mdi-cog-outline: auf `debug` festgelegt werden.
 
 Suchen :mdi-magnify: Sie nach

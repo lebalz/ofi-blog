@@ -16,10 +16,10 @@ $$
 
 definiert.
 
-::::success Umgangssprachlich
+::::success[Umgangssprachlich]
 Umgangssprachlich ist das kartesische Produkt bekannt als **Jedes mit Jedem**
 
-:::cards --cols=3
+:::cards[--cols=3]
 
 $$
 A=\{a,b,c\}
@@ -97,7 +97,7 @@ erzeugt das kartesische Produkt der Tabellen `legodudes` und `haustiere`. Allerd
 
 ![](images/sql-no-alias-cartesian-query.png)
 
-:::danger Gleiche Attributnamen in verschiedenen Tabellen
+:::danger[Gleiche Attributnamen in verschiedenen Tabellen]
 Werden mehrere Tabellen mit denselben Attributnamen verknüpft, so werden die Spalten zusammengefasst und der zuletzt hinzugefügte Wert wird verwendet.
 :::
 
@@ -112,7 +112,7 @@ FROM legodudes, haustiere
 
 ![](images/sql-alias-cartesian-query.png)
 
-:::tip Weniger Schreiben: Tabellennamen abkürzen
+:::tip[Weniger Schreiben: Tabellennamen abkürzen]
 Da bei jeder Spalte der Tabellenname angegeben werden muss, lassen sich die Tabellennamen mit einem Alias abzukürzen:
 
 ```sql
@@ -133,7 +133,7 @@ FROM legodudes a, haustiere b
 WHERE a.id = b.legodude_id
 ```
 
-:::info Geordnete Ausgabe
+:::info[Geordnete Ausgabe]
 Die Tabellennamen müssen bei jeder Attributverwendung angegeben werden (ausnahme: die Spalten haben unterschiedliche Namen). Dies also auch bspw. beim Filtern:
 
 ```sql
@@ -173,7 +173,7 @@ ORDER BY a.name
 
 </GTabs>
 
-::::aufgabe Legodudes Freunde
+::::aufgabe[Legodudes Freunde]
 <Answer type="state" webKey="0408cad3-a23a-42d0-861a-c4ed127eab7a" />
 
 Datenbank
@@ -218,7 +218,7 @@ Was ist mit "Larry" und "Wigwam" passiert? Warum werden diese nicht angezeigt? V
 <Answer type="text" webKey="95f370c5-8cbb-408a-996f-dbd7e98a4f25" />
 ::::
 
-:::aufgabe IMDb
+:::aufgabe[IMDb]
 <Answer type="state" webKey="72bc2c78-c0a2-4648-9c32-4a868bf86279" />
 
 Bei welchen Filmen wirkt
@@ -242,7 +242,7 @@ WHERE
 :::
 
 
-:::aufgabe Lieblingsfilme
+:::aufgabe[Lieblingsfilme]
 <Answer type="state" webKey="9de46f19-da36-4c0a-a2ae-3c7c037b1544" />
 
 Wer wirkt alles bei Ihrem Lieblingsfilm (alternativ: vom Film mit der ID `tt0478087`) mit?

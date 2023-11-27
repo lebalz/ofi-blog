@@ -114,7 +114,7 @@ Das Aufteilen von Videos ist besonders hilfreich, wenn
 Die Geschwindigkeit der Wiedergabe kann verändert werden. Dies ist besonders hilfreich, wenn die Geschwindigkeit der Erklärung zu schnell oder zu langsam ist. 
 
 
-:::danger Maximal 150 %
+:::danger[Maximal 150 %]
 Die Geschwindigkeit sollte für **gesprochenen Text** nicht schneller als 150 % (also Faktor `1.5`) sein! Sonst wird es sehr schwierig, den Inhalt zu verstehen.
 :::
 
@@ -137,7 +137,7 @@ Die Geschwindigkeit sollte für **gesprochenen Text** nicht schneller als 150 % 
 
 Ein Video besitzt normalerweise bereits eine Tonspur. Das Video kann aber auch neu vertont werden, indem neue Tonspuren hinzugefügt werden. Für jede Tonspur kann die Lautstärke individuell eingestellt werden. So lassen sich auch mehrere Tonspuren unterschiedlicher Lautstärke überlagern.
 
-:::caution Hintergrundmusik
+:::caution[Hintergrundmusik]
 Die Tonspur mit gesprochenem Text soll immer klar und verständlich sein. Lieber verzichtet man auf eine durchgehende Hintergrundmusik, als dass dadurch die Klarheit der Stimme leidet.
 :::
 

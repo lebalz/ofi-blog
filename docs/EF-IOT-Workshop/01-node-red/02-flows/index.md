@@ -6,7 +6,7 @@ sidebar_custom_props:
 # Flows
 
 ---
-:::info Node, Connection, Flow
+:::info[Node, Connection, Flow]
 Node
 : Ein Kästchen mit einer Funktion
 Verbindung
@@ -15,7 +15,7 @@ Flow
 : Alle Nodes die (auch indirekt) miteinander verbunden sind
 :::
 
-:::info Nodes
+:::info[Nodes]
 Jede Node kann ein, zwei oder drei Funktionalitäten zur Verfügung stellen:
 
 Input
@@ -41,7 +41,7 @@ Hat alles geklappt, können Sie sich mit den bei der Installation gewählten Log
 ![--width=350px](images/node-red-login-screen.png)
 
 ## Installation Überprüfen
-:::aufgabe Erster Flow erzeugen
+:::aufgabe[Erster Flow erzeugen]
 <Answer type="state" webKey="5e83c82b-90cc-4cdf-819d-ad9bdffd3b99" />
 
 Erstellen Sie Ihren ersten Flow und Überprüfen Sie, das alles genau so funktioniert wie im Video:
@@ -53,7 +53,7 @@ Erstellen Sie Ihren ersten Flow und Überprüfen Sie, das alles genau so funktio
 
 Damit unsere Flows ständig aktiv bleiben, müssen wir sicherstellen, dass Render.com unsere Server nicht inaktiv setzt. Dazu erzeugen wir einen Flow, welcher alle 5 Minuten die Startseite aufruft und somit verhindert, dass Node-RED in den Ruhezustand versetzt wird.
 
-:::aufgabe KeepAlive umsetzen
+:::aufgabe[KeepAlive umsetzen]
 Erzeugen Sie einen eigenen `KeepAlive` Flow und deployen sie diesen:
 
 [@video](images/node-red-keep-running.mp4)

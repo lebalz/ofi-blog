@@ -13,7 +13,7 @@ Das Prinzip der asymmetrischen Verschlüsselung beruht also auf zwei verschieden
 
 Da für den Verschlüsselungsvorgang nicht derselbe Schlüssel verwendet wird wie für den Entschlüsselungsvorgang, spricht man von einem **asymmetrischen Verfahren**.
 
-:::flex --min-width=200px
+:::flex[--min-width=200px]
 ![Asymmetrische Ver- und Entschlüsselung mit verschiedenen Schlüsseln](images/asymmetric-cryptosystem.svg)
 *** --text-align=center
 ![Generierung des Schlüsselpaares für die asymmetrische Verschlüsselung](images/key-pair-generation.svg)
@@ -34,11 +34,11 @@ In der folgenden Abbildung sieht man auf der linken Seite, dass Alice bei der Ve
 ## Entschlüsselung
 In derselben Abbildung ist zu sehen, dass Bob bei der Entschlüsselung seinen privaten Schlüssel verwenden muss. Somit ist sichergestellt, dass nur Bob die Nachricht entschlüsseln kann.
 
-:::warning Achtung
+:::warning[Achtung]
 Um Verwechslungen zu vermeiden, spricht man bei der symmetrischen Verschlüsselung vom geheimen Schlüssel (engl. secret key), während man bei asymmetrischen Verfahren vom privaten Schlüssel spricht und nicht vom geheimen Schlüssel, weil jede involvierte Person ein eigenes Schlüsselpaar und somit einen eigenen privaten Schlüssel besitzt.
 :::
 
-:::aufgabe Asymmetrische Verschlüsselung
+:::aufgabe[Asymmetrische Verschlüsselung]
 <Answer type="state" webKey="fa701245-c7aa-412e-8f0d-25e68714a674" />
 
 1. Überlegen Sie sich, wie die Verschlüsselung funktioniert, wenn ein Dokument an verschiedene Leute versendet wird. Machen Sie sich dazu eine Skizze.

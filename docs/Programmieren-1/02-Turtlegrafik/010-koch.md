@@ -85,7 +85,7 @@ Versuchen Sie, einen rekursiven Pythagoras-Baum zu zeichnen.
 
 ![Ein Pythagorasbaum](images/010-pythagoras-tree.png)
 
-:::aufgabe Pythagorasbaum
+:::aufgabe[Pythagorasbaum]
 <Answer type="state" webKey="cf0b2b26-f5d9-493c-81d1-0d00bfa7dcb7" />
 
 ```py live_py title="pythagoras.py" id="90d2c2c3-004c-433d-9445-8c225b51b5ae"

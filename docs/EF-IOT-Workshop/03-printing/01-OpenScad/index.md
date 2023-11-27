@@ -11,7 +11,7 @@ sidebar_custom_props:
 
 [@video](images/intro.mp4)
 
-:::details __intro.scad__
+:::details[__intro.scad__]
 ```scad
 module baustein() {
     difference() {
@@ -31,7 +31,7 @@ translate([2, 2, 0])
 ```
 :::
 
-:::aufgabe Knobelwürfel
+:::aufgabe[Knobelwürfel]
 Dateiname
 : __EF-Info/docs/IOT-Day/knobelwuerfel.md__
 
@@ -60,7 +60,7 @@ https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/03-printing/01
 
 [@video](images/params-and-text.mp4)
 
-:::details __simple-box.scad__
+:::details[__simple-box.scad__]
 ```scad
 
 BOX_X = 40;
@@ -105,16 +105,16 @@ translate([BOX_X + 10, 0, 0])
 
 ## Sensor-Box
 
-::::aufgabe Sensor-Box
+::::aufgabe[Sensor-Box]
 Das Modell __sensor-box.scad__ enthält das Grundgerüst für unsere Sensorbox. Untersuchen Sie das Modell und fügen Sie einen Schriftzug bspw. mit Ihrem Namen hinzu.
 
-:::details __sensor-box.scad__
+:::details[__sensor-box.scad__]
 ```scad reference
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/03-printing/01-OpenScad/assets/sensor-box.scad
 ```
 :::
 
-:::danger Achtung überhängende Teile
+:::danger[Achtung überhängende Teile]
 Achten Sie darauf, dass Sie keine (zusätzlichen) überhängenden Teile hinzufügen.
 :::
 

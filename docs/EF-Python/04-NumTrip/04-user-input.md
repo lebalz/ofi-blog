@@ -9,7 +9,7 @@ Nun wird's interaktiv 🥳 Eine Gamer:in soll ein Feld auswählen können.
 
 ![--width=500px](images/numtrip-field-select.gif)
 
-:::danger Nur Felder auswählen
+:::danger[Nur Felder auswählen]
 Die Gefahr bei diesem Schritt lauert im inneren Bedürfnis, in diesem ersten Schritt bereits an alles zu Denken und das ganze Spiel zu programmieren!
 
 :mdi-flash-triangle--red: in diesem Schritt **nicht gefragt** :mdi-flash-triangle--red::
@@ -22,7 +22,7 @@ Die Gefahr bei diesem Schritt lauert im inneren Bedürfnis, in diesem ersten Sch
 :::
 
 
-:::aufgabe Spielstart und Eingabe
+:::aufgabe[Spielstart und Eingabe]
 <Answer type="state" webKey="576e4753-05b6-4a83-90da-b44cf8e8eb69" />
 
 1. Nur eine einzelne Eingabe einlesen und das Feld nicht mehr anzeigen... __Commit & Push__
@@ -69,7 +69,7 @@ Die Gefahr bei diesem Schritt lauert im inneren Bedürfnis, in diesem ersten Sch
 :::
 
 
-:::info Grundgerüst des Spiels, vol. 2
+:::info[Grundgerüst des Spiels, vol. 2]
 
 Wichtig vor der Verwendung:
 - Überlegen Sie sich, wie die untenstehende Version mit Ihrem Top-Down Entwurf zusammenpasst.

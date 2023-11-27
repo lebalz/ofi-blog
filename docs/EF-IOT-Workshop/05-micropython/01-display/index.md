@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # 1. Display
 
-:::aufgabe OLED-Display
+:::aufgabe[OLED-Display]
 
 Material
 : [👉 Display-Projekt](assets/display-assets.zip)

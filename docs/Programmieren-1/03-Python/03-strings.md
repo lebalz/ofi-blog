@@ -49,7 +49,7 @@ print(text)
 
 :::
 
-:::warning Gross- & Kleinschreibung
+:::warning[Gross- & Kleinschreibung]
 Python nimmts genau beim ersetzen - die Gross- & Kleinschreibung spielt eine Rolle!
 
 Im folgenden Beispiel wird etwa nur das kleingeschriebene `ich` ersetzt, jedoch auch wenn es inmitten eines Textes auftritt.
@@ -71,7 +71,7 @@ print(text)
 
 `Gymnasium Biel Seeland` heisst auf Grüfnisch `Gymnanafasinifiunufum Binifienefel-Senefeenefelanafand`
 
-:::aufgabe Deutsch → Grüfnisch
+:::aufgabe[Deutsch → Grüfnisch]
 Erstellen Sie ein Programm, welches
 - die Benutzer:in nach einem deutschen Satz fragt
 - diesen Satz zu Grüfnisch umwandelt
@@ -186,7 +186,7 @@ beavis(grüfnisch)
 :::
 
 
-:::aufgabe Grüfnisch → Deutsch
+:::aufgabe[Grüfnisch → Deutsch]
 
 Können Sie auch ein Programm schreiben, welches vom Grüfnisch ins Berndeutsch übersetzt?
 

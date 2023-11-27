@@ -30,7 +30,7 @@ Es gibt also insgesamt $2^{32} = 4'294'967'296$ verschiedene IP-Adressen. Auf de
 
 Jedes Gerät das mit dem Internet verbunden ist, braucht eine IP-Adresse.
 
-::::aufgabe IP-Adresse finden
+::::aufgabe[IP-Adresse finden]
 <Answer type="state" webKey="03beb5fd-88d7-4ab8-ac33-c01d6d1fc88a" />
 
 Finden und notieren Sie die IP-Adresse
@@ -42,7 +42,7 @@ Vergleichen Sie die beiden IP-Adressen. Was stellen Sie fest?
 
 <Answer  type="text"  webKey="f77e88bf-c6c6-401b-aa77-1b4eb3f0fa41" placeholder="IP-Adressen"/>
 
-:::details Wie finde ich die IP-Adresse?
+:::details[Wie finde ich die IP-Adresse?]
 
 
 Sie wissen nicht, wie man die IP-Adresse des eigenen Geräts findet?
@@ -67,7 +67,7 @@ oder etwas Ähnliches, das auf Ihr Gerät resp. Ihr  Betriebssystem abgestimmt i
 :::
 ::::
 
-:::aufgabe 🏠 IP-Adresse finden
+:::aufgabe[🏠 IP-Adresse finden]
 <Answer type="state" webKey="a570b6cd-7d9c-4089-9c4d-ce64b7190c9e" />
 
 Finden und notieren Sie die IP-Adresse
@@ -88,7 +88,7 @@ Beim Ping-Befehl handelt es sich um ein Netzwerkdiagnose-Tool, womit man die Dat
 ping 194.124.132.216
 ```
     
-:::aufgabe Ping ausführen
+:::aufgabe[Ping ausführen]
 <Answer type="state" webKey="1b34609a-3aea-4206-be9d-cd05c3427c01" />
 
 Führen Sie einen Ping mit folgenden IP-Adressen aus:
@@ -133,7 +133,7 @@ Damit ein Router ein IP-Paket weiterleiten kann, braucht er folgende, im Paket e
 ## Routen verfolgen
 Der Befehl `traceroute` (macOS) resp. `tracert` (Windows) kann diese Route nachverfolgt werden. Dabei werden die Zwischenstationen – also dort wo das Paket entpackt und gemäss Ziel-IP-Adresse weitergeleitet wird – angezeigt.
 
-:::aufgabe `traceroute`
+:::aufgabe[`traceroute`]
 <Answer type="state" webKey="f116343c-b7ec-44be-8819-e759f3832794" />
 
 
@@ -248,7 +248,7 @@ Heute laufen zahlreiche «Highspeed-Routen» über den Grund der Meere.
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/0TZwiUwZwIE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
 
-:::aufgabe Unterseekabel
+:::aufgabe[Unterseekabel]
 <Answer type="state" webKey="25937ab7-3aa0-42b3-b026-33620369f92a" />
 
 Wie kommt ein Datenpaket von Biel

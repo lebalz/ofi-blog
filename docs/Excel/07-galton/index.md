@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 Mit Excel lassen sich auch komplexe Simulationen erzeugen - bspw. ein Nagelbrett (sog. [Galton Brett](https://de.wikipedia.org/wiki/Galtonbrett) welches die Binomialverteilung veranschaulicht).
 
-:::aufgabe Galton Brett
+:::aufgabe[Galton Brett]
 <Answer type="state" webKey="cad8019c-8818-461f-8a8e-8d643e0d96c6" />
 
 Versuchen Sie anhand der folgenden Präsentation selber ein Galton-Brett nachzubauen. Um die Animationen in den Folien anzuzeigen, **auf die Folien :mdi-cursor-default-click--blue-medium: klicken**.

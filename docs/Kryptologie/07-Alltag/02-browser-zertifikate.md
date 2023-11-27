@@ -27,7 +27,7 @@ Beim Klicken auf das Schloss können «Weitere Informationen» zur Verbindung an
 
 ![Informationen zur Webseite](images/certs-ofi.gbsl.website.png)
 
-:::aufgabe Webseitenzertifikat
+:::aufgabe[Webseitenzertifikat]
 <Answer type="state" webKey="fb447cfb-52f6-4930-b357-7d0144f8a39b" />
 
 Was finden Sie alles über die Zertifikate der Webseite des Gymnasiums Biel-Seeland heraus?
@@ -36,7 +36,7 @@ Was finden Sie alles über die Zertifikate der Webseite des Gymnasiums Biel-Seel
 
 :::
 
-:::aufgabe Kryptographische Details
+:::aufgabe[Kryptographische Details]
 <Answer type="state" webKey="87d7d729-f7ce-4ffa-86d8-d7bc0fc6274e" />
 Im Screenshot oben sehen Sie die technische Angabe `TLS_AES_128_GCM_SHA256, 128-Bit Schlüssel, TLS 1.3`. Finden Sie heraus, was die einzelnen Teile aussagen?
 
@@ -44,7 +44,7 @@ Im Screenshot oben sehen Sie die technische Angabe `TLS_AES_128_GCM_SHA256, 128-
 
 :::
 
-:::aufgabe Zertifizierungsstellen
+:::aufgabe[Zertifizierungsstellen]
 <Answer type="state" webKey="6945e341-8a48-4eaf-bc21-204e3de3456e" />
 
 Finden Sie die im Browser gespeicherten «vertrauenswürdigen Zertifizierungsstellen»?
@@ -52,7 +52,7 @@ Finden Sie die im Browser gespeicherten «vertrauenswürdigen Zertifizierungsste
 <Answer type="text" webKey="caf647b0-ba95-4cf3-8824-150558348c45" />
 :::
 
-:::aufgabe Zertifikatswarnungen
+:::aufgabe[Zertifikatswarnungen]
 <Answer type="state" webKey="0bf9ab88-9c27-44b3-bc6b-3fea559bea1f" />
 
 Besuchen Sie die Webseite [BadSSL](https://badssl.com/) und testen Sie mit verschiedenen Browsern verschiedene Konfigurationen. So lernen Sie die mögliche Zertifikatswarnungen kennen.
@@ -76,7 +76,7 @@ Wo ist trotzdem Vorsicht geboten?
    - [www.bekb.com.evil.com/login](#) ist keine gültige Webseite von **BEKB**, sondern eine Unterseite (Subdomain) von [evil.com](#).
    - [www.vaIiant.ch](#www.vaIiant.ch) ist nicht dasselbe wie [www.valiant.ch](#www.valiant.ch) – auch wenn es fast identisch aussieht (achten Sie genau auf das «L»). In einer anderen Schriftart sieht man den Fehler besser: `www.vaIiant.ch`  
 
-    :::tip Absicherung mit Passwortmanager
+    :::tip[Absicherung mit Passwortmanager]
     Die Plugins von Passwortmanagern erkennen diese kaum sichtbaren details, so dass bei solchen Seiten kein Vorschlag zum automatischen Ausfüllen angezeigt wird.
     :::
 

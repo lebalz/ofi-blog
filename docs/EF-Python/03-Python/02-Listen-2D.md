@@ -69,7 +69,7 @@ print('Zeile 3, Spalte 1:', matrix[2][0])
 ```
 :::
 
-:::def 
+:::def[]
 ### Schleife über Zeilen
 
 Schleife über einzelne Zeilen :mdi-arrow-right: Zeilen sind wieder Listen
@@ -81,7 +81,7 @@ for zeile in matrix:
 ```
 :::
 
-:::aufgabe `pprint()`
+:::aufgabe[`pprint()`]
 <Answer type="state" webKey="32b77e06-fa29-4ed2-950c-e28b0259eb3c" />
 
 Schreiben Sie eine Funktion `pprint` (Abkürzung für `Pretty Print`), welche eine 2D-Liste übersichtlich ausgibt:
@@ -192,7 +192,7 @@ for i in range(len(matrix)):
 </Solution>
 :::
 
-:::aufgabe 2D-Liste erstellen
+:::aufgabe[2D-Liste erstellen]
 <Answer type="state" webKey="302c5fcd-76d3-4fa7-aef0-c52b9d03422d" />
 
 #### `create_from.py`
@@ -289,7 +289,7 @@ print(matrix)
 
 :::
 
-:::aufgabe Was ist denn hier los?
+:::aufgabe[Was ist denn hier los?]
 <Answer type="state" webKey="c134f37d-8e4b-49e0-964e-355d202560bf" />
 
 Dateiname
@@ -330,7 +330,7 @@ print(matrix)
 
 :::
 
-:::warning Häufige Fehlerquellen
+:::warning[Häufige Fehlerquellen]
 
 Exotisches (und oft Grund für Fehler):
 - Innere Listen sind unterschiedlich lang durch
@@ -379,7 +379,7 @@ png.from_array(simley, 'L').save('small_smiley.png')
 
 Probieren Sie es aus!
 
-:::aufgabe Graustufen-Bilder
+:::aufgabe[Graustufen-Bilder]
 <Answer type="state" webKey="8131c3da-101f-44dd-8a32-3c8ff541186c" />
 
 Dateiname

@@ -9,7 +9,7 @@ Viele Computer Programme basieren auf zufälligen Zahlen. Programmiersprachen k�
 
 Die Python Standard-Bibliothek beinhaltet das `random` Modul mit vielen nützlichen Funktionen.
 
-:::def 
+:::def[]
 ### `random.random()`
 Gibt eine zufällige Zahl `n` zwischen `0.0` und `1.0`, ohne die `1.0` zurück ($0 <= n <1$).
 
@@ -19,7 +19,7 @@ print(random.random())
 ```
 :::
 
-:::def 
+:::def[]
 ### `random.seed()`
 Diese Funktion initialisiert den Zufallszahlengenerator. Damit kann die "Zufälligkeit" kontrolliert werden - wird immer derselbe Initialisierungswert verwendet, so entsteht immer dieselbe "zufällige Sequenz". ENtsprechend wichtig ist es, dass jedesmal ein anderer Initialer Startwert gesetzt. Python verwendet automatisch die aktuelle Systemzeit. Mit `random.seed()` kann der Generator mit einem beliebigen `int`,  `str`, `byte` oder `bytearray` neu initialisiert werden.
 
@@ -30,7 +30,7 @@ print(random.random())
 ```
 :::
 
-:::def 
+:::def[]
 ### `random.randint(a, b)`
 Gibt eine zufällige **ganze** Zahl `n` zwischen `a` und `b` ($a <= n <= b$) zurück.
 
@@ -41,7 +41,7 @@ print(random.random())
 :::
 
 
-:::def 
+:::def[]
 ### `random.choice(seq)`
 Gibt ein zufälliges Element der Sequenz `seq` (bspw. eine Liste) zurück.
 
@@ -52,7 +52,7 @@ print('Als nächstes gehe ich nach:', random.choice(destinations))
 ```
 :::
 
-:::def 
+:::def[]
 ### `random.shuffle(seq)`
 Mischt alle Elemente der eingefügten Sequenz (bspw. eine Liste) - die eingegebene Sequenz wird also verändert!
 

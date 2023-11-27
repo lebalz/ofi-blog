@@ -5,7 +5,7 @@ sidebar_custom_props:
 # 11. NAT
 
 
-:::details Präsentation
+:::details[Präsentation]
 
 <iframe src="/slides/tcp-nat-ef.html" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" />
 
@@ -43,7 +43,7 @@ WAN
 LAN
 : Local Area Network
 
-:::flex --align=center
+:::flex[--align=center]
 1.	Der Client schickt seine Datenpakete mit der IP-Adresse __192.168.0.2__ und dem TCP-Port __10101__ an sein Standard-Gateway, bei dem es sich um einen NAT-Router handelt.
 2.	Der NAT-Router tauscht IP-Adresse (LAN-Adresse) und TCP-Port (LAN-Port) aus und speichert beides mit der getauschten Port-Nummer (WAN-Port) in der NAT-Tabelle.
 3.	Der Router leitet das Datenpaket mit der WAN-Adresse __220.0.0.1__ und der neuen TCP-Port __20202__ ins Internet weiter.
@@ -56,7 +56,7 @@ LAN
 
 
 
-:::details ⭐ D-NAT & Port-Forwarding
+:::details[⭐ D-NAT & Port-Forwarding]
 ### DNAT - Destination Network Address Translation (Port-Forwarding)
 
 ![](images/dnat.png)
@@ -94,7 +94,7 @@ NAT ist deshalb **durchaus ein Sicherheitsmerkmal** für lokale Netzwerke. NAT e
 Die grössten Sicherheitsprobleme liegen meist auf der Anwendungsebene bzw. werden durch unsachgemässe Handhabung der Anwender ausgelöst, was man mit NAT nicht verhindern kann - mit einer „Stateful Inspection“ Firewall schon.
 
 
-::::aufgabe Aufbohren der NAT-Regeln / Firewall
+::::aufgabe[Aufbohren der NAT-Regeln / Firewall]
 
 <Answer type="state" webKey="149f79b9-7336-4220-8a10-93c661d98cb9" />
 
@@ -122,7 +122,7 @@ Hole-Punching
 
 ### Hole-Punching
 
-:::cards --basis=450px
+:::cards[--basis=450px]
 ![Maria erhält vom Relay-Server die IP von Retos NAT/Firewall](images/facetime-direct-lsg-00.png)
 ***
 ![Maria öffnet ihre Firewall mit einem `ping` - es kommt keine Antwort zurück, da bei Reto kein UDP Dienst auf dem Port `53` verfügbar ist (dies ist immer so - Port 53 ist für DNS reserviert!).](images/facetime-direct-lsg-01.png)

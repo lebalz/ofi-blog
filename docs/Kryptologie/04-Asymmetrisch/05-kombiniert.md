@@ -49,11 +49,11 @@ Man spricht daher von einem **Sitzungsschlüssel** (engl. session key) für die 
 ![Symmetrische und asymmetrische Verschlüsselung kombiniert](images/symm-asymm-encryption-binary.svg)
 
 
-:::finding Auch symmetrische Verfahren sind sicher!
+:::finding[Auch symmetrische Verfahren sind sicher!]
 Asymmetrische Verfahren sind also nicht besser als symmetrische! Sie erfüllen einen anderen Zweck und werden gleichzeitig mit symmetrischen Verfahren eingesetzt. Symmetrische Verfahren sind also nicht unsicher, einzig die Erstellung des Schlüssels und der Schlüsselaustausch sind ein Problem.
 :::
 
-:::aufgabe Kombinierte Entschlüsselung
+:::aufgabe[Kombinierte Entschlüsselung]
 <Answer type="state" webKey="f3793094-edc0-4445-878e-0d721242d701" />
 
 Stellen Sie dar, wie die Umkehrung – also die Entschlüsselung – funktioniert, wenn symmetrische und asymmetrische Verfahren kombiniert verwendet werden.

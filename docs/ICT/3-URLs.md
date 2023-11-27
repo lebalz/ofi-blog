@@ -14,7 +14,7 @@ Ein **Link oder URL** (engl. uniform resource locator) ist eine globale, weltwei
 ```
 
 - Das **Protokoll** ist die Übertragungsart der Datei, normalerweise `https://`, was bedeutet, dass die Übertragung verschlüsselt ist.
-  :::danger Achtung!
+  :::danger[Achtung!]
   Wenn das unverschlüsselte Protokoll `http://` verwendet wird, können die übertragenen Informationen von anderen Personen im gleichen Netzwerk mitgelesen werden. Dadurch können Passwörter oder Kreditkarteninformationen leicht abgegriffen werden!
   Gerade bei **Zahlungen** muss unbedingt darauf geachtet werden, dass das `https://` Protokoll verwendet wird.
   :::
@@ -90,7 +90,7 @@ https://www.youtube.com/watch?v=vtfEG0txhOU (15.08.2022)
 
 Websites die einmal online gestellt wurden, sind oft auch Jahre nachdem sie abgeschaltet wurden, noch zugänglich. Ein Tool, welches dies ermöglicht, ist bspw. das Web Archiv [Wayback Machine](https://web.archive.org/). Diese Website lädt regelmässig die über Suchmaschinen verfügbaren Websiten herunter und archiviert diese. So können teilweise auch alte, heute nicht mehr verfügbare Websiten geöffnet werden.
 
-:::danger Achtung
+:::danger[Achtung]
 Da die Websiten archiviert sind, dauert es sehr lange, bis eine Website geladen ist.
 :::
 

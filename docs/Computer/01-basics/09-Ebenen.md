@@ -15,7 +15,7 @@ Auf der Ebene der **Elektronik** werden die Zustände 0 und 1 durch unterschiedl
 
 [@youtube --height=315](https://www.youtube-nocookie.com/embed/5wIRJN3DN_8)
 
-:::aufgabe Transistoren (Wiederholung)
+:::aufgabe[Transistoren (Wiederholung)]
 <Answer type="state" webKey="fefee10f-6ea1-4858-91a3-8406e4571714" />
 
 Sehen Sie sich das obige Video an. Und beschreiben Sie in eigenen Worten:

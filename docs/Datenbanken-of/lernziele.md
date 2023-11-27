@@ -17,7 +17,7 @@ Teile
 : __SQL__ (ca. 30 Minuten), Openbook, Laptop, db-sql.ch, Webseite. 
 : :mdi-alert--yellow: keine Chats/Kommunikation mit anderen Personen
 
-:::info Theoretischer Teil
+:::info[Theoretischer Teil]
 
 Material
 : Skript [👉 Datenbanken](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/EQlb2iq8lSxHtDglu1OmIiQBKPnJSDneaTFQWYXssAgY-w?e=SkBZod)
@@ -36,7 +36,7 @@ Material
 - Sie verstehen (simple) SQL Abfragen und erklären in eigenen Worten, was sie machen/bedeuten.
 :::
 
-::::info Praktischer Teil: Excel
+::::info[Praktischer Teil: Excel]
 
 Kapitel:
 : Grundlagen, Zufallszahlen, Funktionsgraphen, FizzBuzz, Wurfweite, Excel Diagramme
@@ -49,13 +49,13 @@ Kapitel:
 - Sie wenden die Funktionen `WENN`, `REST` und `TEXTKETTE` korrekt an.
 - Sie stellen gegebene Daten mit einem passenden Diagramm (Liniendiagramm, Balkendiagramm, Kreisdiagramm) dar und beschriften das Diagramm korrekt (Titel, Achsenbeschriftung, Legende, Anzahl Datenpunkte $n$).
 
-:::danger Nicht zugelassene Hilfsmittel
+:::danger[Nicht zugelassene Hilfsmittel]
 - Chat/Kommunikation mit anderen Personen
 :::
 ::::
 
 
-::::info Praktischer Teil: SQL (db-sql.ch)
+::::info[Praktischer Teil: SQL (db-sql.ch)]
 
 Kapitel:
 : Einstieg SQL, Murder Mystery
@@ -66,7 +66,7 @@ Kapitel:
 - Sie können die Anzahl Datensätze einer Tabelle mit `COUNT(*)` ermitteln, sowie die Aggregierten Werte `MAX()`, `MIN()`, `SUM()`, `AVG()` bestimmen.
 - Sie suchen nach übereinstimmenden Texten mit `LIKE` / `ILIKE` und wenden dabei auch die Platzhalter `%` an.
 
-:::danger Nicht zugelassene Hilfsmittel
+:::danger[Nicht zugelassene Hilfsmittel]
 - Chat/Kommunikation mit anderen Personen
 :::
 ::::

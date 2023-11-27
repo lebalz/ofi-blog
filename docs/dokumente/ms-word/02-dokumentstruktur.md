@@ -7,7 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Textaufbau in Word
 
-:::caution Vorgehen
+:::caution[Vorgehen]
 
 1. Theorie durchlesen - überlegen Sie sich nach jedem Abschnitt, ob Ihnen die Inhalte bekannt vorkommen und ob Sie sich zutrauen, diese Schritte selber durchzuführen.
 2. Markieren Sie in bei jedem Abschnitt, wie git Sie die Inhalte verstanden haben. So können einzelne Themen im Plenum vorgeführt werden.
@@ -124,7 +124,7 @@ Unter __Ansicht > Anzeige__ kann das Lineal eingeblendet werden.
 - Zeilenabstand (der Zeilenabstand innerhalb eines Absatzes)
 - Absatzabstand (der Abstand zum vorherigen/nächsten Absatz)
 
-:::flex --align-items=flex-end
+:::flex[--align-items=flex-end]
 ![Menüband __Start__](images/word-absatz.png)
 ***
 ![Menüband __Layout__](images/word-absatz2.png)
@@ -147,7 +147,7 @@ Einzelne Wörter und Buchstaben/Zeichen lassen sich individuell formatieren. So 
 
 ![--width=400px](images/word-zeichenformatierung.png)
 
-:::danger Zeichenformat $\neq$ Überschrift
+:::danger[Zeichenformat $\neq$ Überschrift]
 Ertappen Sie sich dabei, Titel oder Untertitel mit der Zeichenformatierung zu machen, sollte bei Ihnen im Kopf eine Warnleuchte angehen 💡 - hier sollen Formatvorlagen verwendet werden, damit Strukturinformationen hinterlegt werden können. Umformatierungen oder auch Inhaltsverzeichnisse sind nur mit diesen Formatvorlagen automatisiert möglich. 
 :::
 

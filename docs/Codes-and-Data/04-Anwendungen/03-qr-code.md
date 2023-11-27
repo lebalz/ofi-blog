@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 ![Was enthält der QR-Code? 🏴‍☠️☠️𝜋](images/qr-code/piraten.svg)
 
-:::aufgabe Auftrag
+:::aufgabe[Auftrag]
 <Answer type="state" webKey="f0b3f963-e7cd-455a-9b9f-9b8d2b5c2ac3" />
 
 Recherchieren Sie in einer 2er bis 3er Gruppe

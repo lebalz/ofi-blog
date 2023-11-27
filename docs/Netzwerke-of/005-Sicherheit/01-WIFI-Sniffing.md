@@ -26,7 +26,7 @@ Wenn in einem Web Browser der Link zur URL http://www.example.net/infotext.html 
 
 Der Name www.example.net wird dabei natürlich zuerst über das DNS-Protokoll in eine IP-Adresse übersetzt. Zur Übertragung wird über _TCP_ eine **HTTP-GET-Anforderung** an den Server gesendet.
 
-:::tip Anfragemethoden
+:::tip[Anfragemethoden]
 
 Es gibt verschiedene HTTP Anfragemethoden, die bekannteste ist die `GET` Anfrage, welche eine Ressource anfordert. Sobald zusätzliche Daten an den Server übertragen werden müssen, z.B. um sich anzumelden, wird eine `POST` Anfrage verschickt, in welcher Formulardaten wie z.B. Benutzername und Passwort enthalten sind.  
 :::
@@ -45,7 +45,7 @@ Passwortgeschützte WIFIs **verschlüsseln** den Inhalt der übertragenen Datenp
 
 </Finding>
 
-:::aufgabe Schutz
+:::aufgabe[Schutz]
 
 Wie können Sie sich vor WIFI Sniffing schützen?
 

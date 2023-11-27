@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # 2. Sensoren
 
-:::aufgabe AHT21
+:::aufgabe[AHT21]
 Suchen Sie Informationen zum Sensor AHT21 und halten Sie diese für sich im EF-Repository fest.
 - Was macht der Sensor?
 - Wie präzise/genau misst er?
@@ -13,7 +13,7 @@ Suchen Sie Informationen zum Sensor AHT21 und halten Sie diese für sich im EF-R
 - ...
 :::
 
-:::aufgabe ENS160
+:::aufgabe[ENS160]
 Suchen Sie Informationen zum Sensor ENS160 und halten Sie diese für sich im EF-Repository fest.
 - Was macht der Sensor?
 - Wie präzise/genau misst er?
@@ -59,7 +59,7 @@ while True:
     time.sleep(1)
 ```
 
-:::aufgabe Sensoren ansteuern
+:::aufgabe[Sensoren ansteuern]
 
 Material
 : [👉 Sensor-Projekt](assets/sensor-assets.zip)

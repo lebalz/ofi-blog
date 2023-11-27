@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Übungen UTF-8
 
-:::aufgabe 1. Wie viele Zeichen?
+:::aufgabe[1. Wie viele Zeichen?]
 
 Wie viele Zeichen sind in folgender bit-Squenz codiert?
 
@@ -17,7 +17,7 @@ Wie viele Zeichen sind in folgender bit-Squenz codiert?
 
 :::
 
-:::aufgabe 2. UTF-8 Decodieren
+:::aufgabe[2. UTF-8 Decodieren]
 
 Folgende bit-Sequenzen sind UTF-8 Codiert. Welche Dezimalzahlen sind codiert?
 
@@ -37,7 +37,7 @@ Folgende bit-Sequenzen sind UTF-8 Codiert. Welche Dezimalzahlen sind codiert?
 :::
 
 
-:::aufgabe 3. UTF-8 Codieren
+:::aufgabe[3. UTF-8 Codieren]
 
 Codieren Sie folgende bit-Sequenz zu UTF-8:
 

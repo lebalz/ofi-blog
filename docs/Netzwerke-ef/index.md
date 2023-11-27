@@ -13,7 +13,7 @@ Form
 Hilfsmittel
 : Keine
 
-:::info Lernziele
+:::info[Lernziele]
 - Funktionsweise Server-Client Modell
 - Funktionsweise und Aufgaben einer API
   - HTTP Methoden `GET`, `POST`, `PUT`, `DELETE`

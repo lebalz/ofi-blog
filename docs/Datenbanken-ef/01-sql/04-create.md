@@ -23,14 +23,14 @@ Die Datenbank kann mit dem Befehl `DROP DATABASE` auch wieder gelöscht werden:
 DROP DATABASE ef_reto;
 ```
 
-:::danger Wichtig
+:::danger[Wichtig]
 Bitte löschen Sie nur Datenbanken, die Sie selber erstellt haben!  
 Der Einfachheit halber haben Sie auf der Kursdatenbank __EDU-DBs EF__ alle Rechte...
 :::
 
 ::::
 
-:::aufgabe 1. Datenbank erstellen
+:::aufgabe[1. Datenbank erstellen]
 <Answer type="state" webKey="6b4f812b-2ccf-4beb-b551-71e774fa9c6c" />
 
 Datenbank
@@ -61,7 +61,7 @@ CREATE TABLE persons (
 
 ### Datensätze einfügen
 
-:::def 
+:::def[]
 ### `INSERT INTO`
 Mit dem Befehl `INSERT INTO` können Datensätze in die Tabelle eingefügt werden.
 
@@ -74,7 +74,7 @@ VALUES
 ```
 :::
 
-:::aufgabe 2. Datensätze einfügen
+:::aufgabe[2. Datensätze einfügen]
 <Answer type="state" webKey="e1fec5d5-ad04-4552-a4bc-476aa1d2147d" />
 
 
@@ -146,7 +146,7 @@ VALUES
 ```
 
 
-:::aufgabe 3. Tabelle mit Constraints
+:::aufgabe[3. Tabelle mit Constraints]
 <Answer type="state" webKey="805b507b-93bc-40bd-a78d-9ce3fc531cad" />
 
 Datenbank

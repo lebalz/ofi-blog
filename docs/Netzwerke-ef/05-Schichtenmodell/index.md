@@ -24,7 +24,7 @@ Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netz
 
    ![](images/packtrav-nics-and-switches-layer-2.png)
 
-:::details Bitcodierungen
+:::details[Bitcodierungen]
 
 ![](images/bit-darstellung-1.png)
 
@@ -129,7 +129,7 @@ Der beschriebene Vorgang wird als **Kapselung** oder Verpackung bezeichnet. Anal
 ![Encapsulation](images/Encapsulation.png)
 
 
-:::aufgabe Selbsttest
+:::aufgabe[Selbsttest]
 <Answer type="state" webKey="980ec8c0-0119-4391-8be0-091b7b635f21" />
 
 <iframe src="https://learningapps.org/watch?v=p4semfyac22" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>

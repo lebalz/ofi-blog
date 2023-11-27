@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 # 8. Sehsterne
 
-:::flex --gap=3em --align-items=center --min-width=150px
+:::flex[--gap=3em --align-items=center --min-width=150px]
 *** --max-width=250px
 ![--width=250px](images/08-sehstern.png)
 *** --min-width=250px
@@ -18,12 +18,12 @@ haben. Alle Wörter setzen sie aus diesen Buchstaben zusammen.
 :::
 
 ## ACINT-Code
-:::flex 
+:::flex[]
 *** --min-width=250px
 Die Sehsterninformatiker haben eine binären Code für ihr
 Alphabet entwickelt, den sie **ACINT-Code** nennen:
 
-:::aufgabe 1. ACINT
+:::aufgabe[1. ACINT]
 <Answer type="state" webKey="d5e5b8d3-c31e-4487-a912-e43722f2ccd4" />
 
 1. Decodieren Sie die folgende Nachricht:
@@ -63,7 +63,7 @@ nacheinander für jeden Buchstaben den entsprechenden Arm heben.
 Eines Tages entdecken die Sehsterne ein weiteres gesunkenes Schiff
 mit fünf neuen Buchstaben: `E`, `H`, `J`, `M`, `R`.
 
-:::aufgabe 2. Gebärdensprache
+:::aufgabe[2. Gebärdensprache]
 <Answer type="state" webKey="5f3e52bf-092f-4ee7-807b-225d805aaec8" />
 
 1. Schlagen Sie den Sehsternen ein System vor, wie sie alle zehn
@@ -112,7 +112,7 @@ Die Sehstern-Informatiker möchten einen neuen binären Code entwickeln, um die 
 Buchstaben darstellen zu können. Der neue Code soll aber kompatibel mit
 dem bisherigen ACINT-Code sein. 
 
-:::aufgabe 3. Erweiterung ACINT-Code
+:::aufgabe[3. Erweiterung ACINT-Code]
 <Answer type="state" webKey="bd1aa5df-3fc4-431d-b32e-ad79bb3c45bf" />
 
 Machen Sie einen Vorschlag für einen
@@ -158,7 +158,7 @@ Eine andere Möglichkeit wäre, wie bei der Brailleschrift ein «Umschaltzeichen
 
 
 ## ⭐️ Gesunkenes Schiff (Bonus)
-:::aufgabe 4. Gesunkenes Schiff
+:::aufgabe[4. Gesunkenes Schiff]
 <Answer type="state" webKey="d01a2cc0-ae0c-4e8d-a968-ddc38f04d9ce" />
 
 Wie lautet der Name des ersten gesunkenen Schiffs?

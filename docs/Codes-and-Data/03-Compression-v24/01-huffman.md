@@ -13,7 +13,7 @@ sidebar_custom_props:
 
 David Huffman hat 1952 ein Verfahren entwickelt, mit welchem Zeichen platzsparender codiert werden können. Seine Idee ist, dass Zeichen, welche häufig im Text vorkommen, einen kürzeren Code erhalten, als Zeichen, welche selten im Text vorkommen.
 
-:::info Alltagsbezug
+:::info[Alltagsbezug]
 Die Huffman-Codierung und ähnliche Verfahren werden für das Komprimieren von Dateiformaten wie **DOCX**, **JPG** oder **MP3** eingesetzt. [^1]
 :::
 
@@ -94,7 +94,7 @@ Nun kann eine Codierungstabelle erstellt werden, indem der Code für jedes Zeich
 ## Übungen
 
 
-:::aufgabe 1. Decodieren
+:::aufgabe[1. Decodieren]
 
 ![](images/01-huffman/huffman-anna.svg)
 
@@ -107,7 +107,7 @@ Decodieren Sie diese Bitfolge mit dem obenstehenden Codebaum. Das Symbol `⎵` s
 
 :::
 
-:::aufgabe 2. Huffman-Codierung 1
+:::aufgabe[2. Huffman-Codierung 1]
 
 1. Erstellen Sie zum Wort «MISSISSIPPI» eine Häufigkeitstabelle.
 2. Erstellen Sie einen Huffman-Baum. (Laden Sie ein Foto davon hier hoch)
@@ -165,7 +165,7 @@ Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
 
 :::
 
-:::aufgabe 3. Huffman-Codierung 2
+:::aufgabe[3. Huffman-Codierung 2]
 
 1. Erstellen Sie zum Wort «EXTERNER EFFEKT» eine Häufigkeitstabelle.
 2. Erstellen Sie einen Huffman-Baum. (Laden Sie ein Bild davon hier hoch).
@@ -222,7 +222,7 @@ Die Huffman Codierung spart damit in diesem Beipsiel `3` bits ein.
 </Solution>
 :::
 
-:::success Take-Home Message
+:::success[Take-Home Message]
 
 <Answer type="text" webKey="168db824-a49b-42b2-a586-112547749e02" />
 :::

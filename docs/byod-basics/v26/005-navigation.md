@@ -186,7 +186,7 @@ import Video from '@site/src/components/Video'
 </TabItem>
 </OsTabs>
 
-:::aufgabe Quizz
+:::aufgabe[Quizz]
 <Answer type="state" webKey="215e7040-8992-4ded-ac14-85acd782a0f9" />
 
 Lösen Sie das Quizz und markieren Sie die Aufgabe anschliessend als erledigt.
@@ -237,7 +237,7 @@ Lösen Sie das Quizz und markieren Sie die Aufgabe anschliessend als erledigt.
 </TabItem>
 </OsTabs>
 
-:::aufgabe Shortcuts Tastatur&Pfeiltasten ausprobieren
+:::aufgabe[Shortcuts Tastatur&Pfeiltasten ausprobieren]
 <Answer type="state" webKey="1d692ff8-21b1-416b-ab51-79573dfece5c" />
 
 Probieren Sie die verschiedenen Shortcuts im untenstehenden Textfeld aus!
@@ -311,7 +311,7 @@ __]__
 </TabItem>
 </OsTabs>
 
-:::aufgabe Klammern schreiben
+:::aufgabe[Klammern schreiben]
 <Answer type="state" webKey="887346bb-a996-4799-98f3-e7ac25fd0a19" />
 
 Versuchen Sie, alle Klammern selber zu tippen!
@@ -405,7 +405,7 @@ __>__
 </OsTabs>
 
 
-:::aufgabe Sonderzeichen
+:::aufgabe[Sonderzeichen]
 <Answer type="state" webKey="eb8771a6-681b-439c-b02e-d926d8c93fc5" />
 
 Können Sie die obigen Sonderzeichen selber erzeugen?
@@ -414,7 +414,7 @@ Können Sie die obigen Sonderzeichen selber erzeugen?
 
 :::
 
-:::aufgabe Quizz
+:::aufgabe[Quizz]
 <Answer type="state" webKey="41b18d27-2066-482b-926d-c4fa4253d96e" />
 
 Werden Sie Millionär? 🤑💰🤑💰🤑💰
@@ -422,7 +422,7 @@ Werden Sie Millionär? 🤑💰🤑💰🤑💰
 <iframe src="https://learningapps.org/watch?app=2815114" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 :::
 
-:::aufgabe 🌟 Arcade Game (englisch)
+:::aufgabe[🌟 Arcade Game (englisch)]
 <Answer type="state" webKey="dd6bddb6-fea8-4d37-902d-3ea1c9529c6e" />
 
 Freiwillig: Spielen Sie das Tastenkürzel-Game

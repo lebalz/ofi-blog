@@ -11,7 +11,7 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 Eine Wiederholung mit einer Frage führt einen Codeblock so lange aus, bis die Frage nicht mehr mit "Ja" beantwortet wird.
 Im folgenden Beispiel wird solange eine Spirale gezeichnet, bis die Distanz der Turtle vom Zentrum mehr als `200px` beträgt.
 
-:::danger Unendliche Schleife
+:::danger[Unendliche Schleife]
 Diese Art von Wiederholung kann dazu führen, dass eine Frage immer mit "Ja" beantwortet wird und das Programm also nie endet.
 
 Oft ist dies nicht gewollt, doch einmal gestartet, ist es dann in der Browser-Version von Python schwierig, das Programm zu stoppen und die ganze Seite reagiert nicht mehr. Um das Programm zu Dies gelingt:
@@ -20,7 +20,7 @@ Oft ist dies nicht gewollt, doch einmal gestartet, ist es dann in der Browser-Ve
 - (den ganzen Browser über den Taskmanager schliessen)
 :::
 
-:::flex --width=250px
+:::flex[--width=250px]
 
 <Strukto program={[
     {type: 'step', code: <span><span className="var">winkel</span> = 20 setzen</span>},
@@ -86,12 +86,12 @@ while i < 4:
     i = i + 1
 ```
 
-::::aufgabe `for` zu `while`
+::::aufgabe[`for` zu `while`]
 <Answer type="state" webKey="5c7d2980-3842-4b79-b1af-69ddad459b21" />
 
 Schreiben Sie das untenstehende Programm so um, dass nur noch `while` Schleifen verwendet werden.
 
-:::flex --columns=2 --min-width=200px
+:::flex[--columns=2 --min-width=200px]
 ```py live_py slim
 from turtle import *
 
@@ -129,12 +129,12 @@ while i < 5:
 
 ::::
 
-::::aufgabe `while` zu `for`
+::::aufgabe[`while` zu `for`]
 <Answer type="state" webKey="2c3ce7d3-264f-4607-b789-20e8ab1985d8" />
 
 Schreiben Sie das untenstehende Programm so um, dass nur noch `for` Schleifen verwendet werden.
 
-:::flex --columns=2 --min-width=200px
+:::flex[--columns=2 --min-width=200px]
 ```py live_py slim
 from turtle import *
 
@@ -197,7 +197,7 @@ for zeile in range(5):
 
 Die `while`-Schleife kommt oft bei Benutzerinteraktionen, Simulationen oder bei sich dynamisch ändernden Daten vor. Sonstige Wiederholungen lassen sich normalerweise einfacher mit einer `for`-Schleife umsetzen.
 
-:::aufgabe Ratespiel
+:::aufgabe[Ratespiel]
 <Answer type="state" webKey="f5a8546d-ad02-47c9-a35a-9f680cffe497" />
 
 Ändern Sie das Ratespiel aus dem Kapitel [Verzweigungen](008-verzweigung.md#ratespiel) so ab, dass die Spieler:in unendlich viele Versuche hat um die Zahl zu finden.

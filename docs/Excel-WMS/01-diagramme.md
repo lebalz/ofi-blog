@@ -66,7 +66,7 @@ Das Balkendiagramm ist dem Säulendiagramm sehr ähnlich. Es entspricht einem S�
 
 <Answer type="text" webKey="6cdbdad0-872b-4590-ad80-fb83182a36d7" placeholder="✍️ Notizen..." />
 
-:::aufgabe Geeignetes Diagramm
+:::aufgabe[Geeignetes Diagramm]
 Bestimmen Sie das geeignete Diagramm für die gegebene Ausgangslage.
 
 1. Sie möchten die Ausgaben Ihres letzten Monatslohnes graphisch so darstellen, dass man sieht, wie gross die prozentualen Anteile der verschiedenen Ausgabeposten waren.

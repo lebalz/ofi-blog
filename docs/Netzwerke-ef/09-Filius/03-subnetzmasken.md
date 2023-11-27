@@ -4,14 +4,14 @@ sidebar_custom_props:
 ---
 # IP-Adressen/Subnetzmasken
 
-::::aufgabe 1: Adressierbare Geräte
+::::aufgabe[1: Adressierbare Geräte]
 <Answer type="state" webKey="6b555899-4208-4bd5-ab2f-6351a4267e99" />
 
 Als Netzwerk-Admin wollen Sie intern 11 Subnetze definieren, wobei Sie einen zugewiesenen IP-Adressbereich von `192.168.0.0/ 24` haben.
 
 1. Wie lautet die Subnetzmaske?
 
-:::cards --flex-basis=300px
+:::cards[--flex-basis=300px]
 #### Binäre Notation
 <Answer type="string" webKey="5a72e855-ac8a-4c66-8192-f30db8bf9df8" solution="11111111 11111111 11111111 11110000" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="11111111 11111111 11111111 00000000" width="20em"/>
 ***
@@ -33,7 +33,7 @@ Als Netzwerk-Admin wollen Sie intern 11 Subnetze definieren, wobei Sie einen zug
 
 ::::
 
-::::aufgabe 2: Mögliche Subnetze
+::::aufgabe[2: Mögliche Subnetze]
 <Answer type="state" webKey="be2aecbf-1c0a-4617-a4df-a75f9b83647e" />
 
 Als Netzwerk-Admin wollen Sie möglichst viele Subnetze mit jeweils **15 Geräten** 
@@ -43,7 +43,7 @@ definieren, wobei Sie einen zugewiesenen IP-Adressbereich von `192.168.0.0/ 24` 
 
 <Answer type="text" webKey="1062ff47-9436-437e-9af3-019041677c34" />
 
-:::cards --flex-basis=300px
+:::cards[--flex-basis=300px]
 #### Binäre Notation
 
 <Answer type="string" webKey="af3f3479-e03e-4cbf-80c7-0692c2a6fac5" solution="11111111 11111111 11111111 11100000" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="11111111 11111111 11111111 00000000" width="20em"/>
@@ -70,7 +70,7 @@ definieren, wobei Sie einen zugewiesenen IP-Adressbereich von `192.168.0.0/ 24` 
 
 ## Filius
 
-:::aufgabe Subnetze
+:::aufgabe[Subnetze]
 <Answer type="state" webKey="f5d2b03e-ebaa-44de-85af-12165a788dd6" />
 
 Material
@@ -88,7 +88,7 @@ Gesucht sind die Netzwerkkonfiguration für folgende Architektur, wobei Sie eine
 Halten Sie Ihre Überlegungen und Zuordnungen unten fest.
 
 <Answer type="text" webKey="7cc5e5c5-8d5c-49c9-a479-fdd7010e0c4c" />
-::: 
+:::[]
 
 
 

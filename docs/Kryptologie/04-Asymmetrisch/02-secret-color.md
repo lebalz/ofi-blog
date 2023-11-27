@@ -15,7 +15,7 @@ Alice und Bob arbeiten an einem neuen Kunstwerk, auf das die Öffentlichkeit ges
 ## Alice und Bob
 Sie haben eine Idee und gehen wie folgt vor:
 
-:::flex --minWidth=300px
+:::flex[--minWidth=300px]
 
 Private Farbe
 : **Schritt 1**: Alice und Bob mischen sich je in einem Farbkübel eine persönliche, geheime Farbe, die sie niemandem mitteilen (private Farbe genannt).
@@ -44,7 +44,7 @@ sequenceDiagram
 Die neugierige Journalistin Eve möchte unbedingt wissen, was Alice und Bob aushecken, um noch vor der Vernissage einen exklusiven Zeitungsbericht zu veröffentlichen. Daher versucht sie, an die gemeinsame private Farbe zu gelangen. Sie überwacht die Post und füllt sich von jeder transportierten Farbe ein wenig in eigene Behälter ab.
 
 ## Ausprobieren
-:::aufgabe Geheime Farbe herausfinden
+:::aufgabe[Geheime Farbe herausfinden]
 <Answer type="state" webKey="732736d7-f3b8-4829-83be-b9b4e1164791" />
 
 Bestimmen Sie je eine Farbe für Alice und Bob und schauen Sie sich die Ergebnisse an.
@@ -54,7 +54,7 @@ Wieso erhalten Alice und Bob schlussendlich dieselbe Farbe?
 <Answer type="text" webKey="11388720-93d0-403f-94f0-64b6f1ae4752" />
 :::
 
-:::aufgabe Wieso kennt Eve die geheime Farbe nicht?
+:::aufgabe[Wieso kennt Eve die geheime Farbe nicht?]
 <Answer type="state" webKey="bdfda551-8129-41c2-bc89-8450d9ecade7" />
 
 Überlegen Sie sich: wieso kann Eve aus den verschickten Farben die geheime Farbe nicht herstellen?
@@ -66,7 +66,7 @@ Wieso erhalten Alice und Bob schlussendlich dieselbe Farbe?
 
 <br/>
 
-:::info ⭐️ Digitale Farben ≠ Echte Farben
+:::info[⭐️ Digitale Farben ≠ Echte Farben]
 Im obigen Modell musste getrickst werden: In der digitalen Welt werden Farben durch die Erzeugung von Lichtwellen unterschiedlicher Wellenlänge erzeugt. Dabei wird bei der Überlagerung aller Frequenzspektren weisses Licht erzeugt. Dies wird auch **additives Farbmodell** genannt. Im **Gegensatz** dazu werden Farben in der realen Welt je nach Oberfläche nur gewisse Wellenlänfen reflektiert und die anderen werden von der Oberfläche "verschluckt". Werden mehrere Farben gemischt, führt dies dazu, dass alle sichtbaren Wellenlängen "verschluckt" werden und daher ein Braun/Schwarz entsteht. Dieses ist das **subtraktive Farbmodell**.
 
 ![digitales (links) und reales (rechts) Farbmodell](images/color-models.png)

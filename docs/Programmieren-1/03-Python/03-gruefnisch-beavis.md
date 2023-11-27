@@ -37,7 +37,7 @@ Gymnasium Biel Seeland
 
 </blockquote>
 
-:::info Ziel: Python spricht Grüfnisch
+:::info[Ziel: Python spricht Grüfnisch]
 Das Ziel ist, einen vorgegebenen Text auf Grüfnisch zu übersetzen.
 :::
 
@@ -109,7 +109,7 @@ print(text)
 
 :::
 
-::::warning Gross- & Kleinschreibung
+::::warning[Gross- & Kleinschreibung]
 Python nimmts genau beim ersetzen - die Gross- & Kleinschreibung spielt eine Rolle, nicht jedoch der Ort des `alt`en Wortes!
 
 Im folgenden Beispiel wird etwa nur das kleingeschriebene `ich` ersetzt, jedoch auch wenn es inmitten eines Textes auftritt. Das grossgeschrieben `Ich` zu Beginn des Satzes wird ignoriert...
@@ -123,7 +123,7 @@ print(text)
 
 Lösungen: (1) auch den Gross- und kleingeschriebenes ersetzen, oder (2) zuerst alles klein schreiben und dann ersetzen.
 
-:::cards 
+:::cards[]
 *** --code
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
@@ -163,7 +163,7 @@ for i in range(5):
 ## Beispiel
 
 
-:::aufgabe Grüfnisch
+:::aufgabe[Grüfnisch]
 <Answer type="state" webKey="317d4b72-0cc3-4a45-9192-320bc3405f9c" />
 
 Wie lautet der Satz `hallo, es ist winter` auf Grünfisch? (Von Hand, ohne Programm übersetzen)
@@ -172,7 +172,7 @@ Wie lautet der Satz `hallo, es ist winter` auf Grünfisch? (Von Hand, ohne Progr
 
 :::
 
-:::aufgabe Deutsch → Grüfnisch
+:::aufgabe[Deutsch → Grüfnisch]
 <Answer type="state" webKey="55083ae2-51cc-4fcd-ad81-b113b9e4daf7" />
 
 1. Erstellen Sie ein Programm, welches einen Satz auf Grüfnisch übersetzt und ausgibt.
@@ -280,7 +280,7 @@ beavis(grüfnisch)
 :::
 
 
-:::aufgabe Grüfnisch → Deutsch
+:::aufgabe[Grüfnisch → Deutsch]
 <Answer type="state" webKey="935ce811-5679-4de1-a8a6-501ec5cf7dfd" />
 
 Können Sie auch ein Programm schreiben, welches vom Grüfnisch ins Berndeutsch übersetzt?

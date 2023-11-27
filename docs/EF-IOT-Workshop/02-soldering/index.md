@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # Löten
 
-:::cards --min-width=300px
+:::cards[--min-width=300px]
 ![--width=120px](images/solder-tip01.jpg)
 - Beide Flächen erhitzen
 - möglichst etwas unterhalb der Spitze

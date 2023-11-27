@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # Weihnachtskarten
 
-:::cards --columns=3
+:::cards[--columns=3]
 [@youtube](https://www.youtube-nocookie.com/embed/EnPrSYbA8z4)
 ***
 [@youtube](https://www.youtube-nocookie.com/embed/6zaA0HkzT-4)
@@ -51,7 +51,7 @@ from turtle import *
 
 ```
 
-:::success SVG Bilder anschauen
+:::success[SVG Bilder anschauen]
 Animierte SVG-Dateien können 
 - im Browser betrachtet werden 
 - mit einem Tool https://html5animationtogif.com/svg-to-gif in ein **GIF** umwandeln

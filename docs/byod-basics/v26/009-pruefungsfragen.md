@@ -107,7 +107,7 @@ Die heruntergeladenen Dateien müssen im Original vorliegen und die Programme au
 ![Bearbeitetes Bild](/img/byod-basics/osx/sonnenuntergang_edited.jpg)
 :::
 
-:::danger Schrift
+:::danger[Schrift]
 Die Schriftfarbe & Grösse kann frei gewählt werden, sie muss aber lesbar sein.
 :::
 

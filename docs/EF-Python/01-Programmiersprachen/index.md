@@ -37,7 +37,7 @@ Zu den Pionierzeiten der Computerentwicklung war die einzige Möglichkeit, ein P
 
 Die Maschinensprache kann direkt von einer CPU ausgeführt werden. 
 
-:::danger Achtung 
+:::danger[Achtung ]
 Maschinencode läuft nicht einfach auf allen Prozessoren - je nach Aufbau/Architektur des Prozessors müssen andere Befehle verwendet werden.
 :::
 
@@ -235,7 +235,7 @@ graph LR
     style B fill:#3578e5,color:white
 ```
 
-:::details Zwischenschritt Bytecode
+:::details[Zwischenschritt Bytecode]
 Einige kompilierte Sprachen verwenden zur Erhöhung der Portabilität eine Zwischensprache, sogenannter Bytecode verwendet. Dieser Bytecode ist quasi die Maschinensprache für eine virtuelle Maschine (**VM** für Virtual Machine). Um den Bytecode auszuführen, muss also lediglich die VM auf einem System installiert werden, und der Bytecode kann ausgeführt werden.
 
 ```mermaid

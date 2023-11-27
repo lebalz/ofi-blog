@@ -42,7 +42,7 @@ Auf beiden Betriebssystemen werden bspw. heruntergeladene Dateien auf bekannte S
 - ein möglicherweise gefährliche Software heruntergeladen wurde
 - updates ausgeführt werden müssen.
 
-:::aufgabe Funktioniert mein Virenschutz?
+:::aufgabe[Funktioniert mein Virenschutz?]
 
 Damit getestet werden kann, ob der Virenschutz auf einem System funktioniert, gibt es eine EICAR-Testdatei (erzeugt vom European Institute for Computer Antivirus Research (EICAR)), die unschädlich ist, aber von jedem gängigen Antivirus-Programm erkannt werden muss. Der Inhalt der Datei sieht wie folgt aus:
 

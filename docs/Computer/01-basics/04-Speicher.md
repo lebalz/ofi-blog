@@ -26,7 +26,7 @@ Heute wird in Computern normalerweise sogenanntes DDR-SDRAM[^1] eingesetzt. Es z
 
 ![DDR SDRAM](images/04-ddr-sdram.jpg)
 
-:::aufgabe RAM in meinem Smartphone/Laptop
+:::aufgabe[RAM in meinem Smartphone/Laptop]
 <Answer type="state" webKey="720a2b04-1642-4acf-ab29-e920416e3e2e" />
 
 Wie viel Arbeitsspeicher besitzt Ihr Laptop / Ihr Smartphone?
@@ -51,7 +51,7 @@ Heute gibt des den Festplattenspeicher in zwei Ausführungen:
 
 Der Aufbau einer **herkömmlichen Harddisk** gleicht einem Plattenspieler. Im Innern der Harddisk drehen sich mehrere Platten, auf denen durch **Magnetisierung** einzelner Bereiche Daten gespeichert werden. Auf dem nachfolgenden Bild (rechts) sieht man den Arm zum Auslesen resp. Schreiben der Daten (er befindet sich momentan in der Parkposition neben den Scheiben). Dieser Speicher wird heute noch eingesetzt, um grosse Datenmengen **günstig zu speichern**. Er ist relativ langsam und anfällig auf Transportschäden, da es sich um einen mechanischen Speicher mit beweglichen Teilen handelt. Die Drehgeschwindigkeit der Platten ist beschränkt, sie bestimmt Lese-/Schreibgeschwindigkeit. Zudem muss vor dem effektiven Zugriff stets noch gewartet werden, bis sich der Arm an der richtigen Position befindet.
 
-:::cards --columns=2
+:::cards[--columns=2]
 ![Harddisk](images/04-harddisk.jpg)
 ***
 ![geöfffnete Harddisk](images/04-harddisk-open.jpg)
@@ -65,14 +65,14 @@ Der Aufbau einer **SSD** gleicht in keiner Weise demjenigen einer HDD. Wie der N
 - SSDs kosten ein Mehrfaches im Vergleich zu herkömmlichen HDDs.
 - Auf dem Markt sind nicht so grosse (in Bezug auf die Speicherkapazität) SSDs erhältlich wie HDDs.
 
-:::cards --columns=2
+:::cards[--columns=2]
 ![SSD](images/04-ssd.jpg)
 ***
 ![geöfffnete SSD](images/04-ssd-open.jpg)
 :::
 
 
-:::aufgabe HDD/SSD in meinem Smartphone/Laptop
+:::aufgabe[HDD/SSD in meinem Smartphone/Laptop]
 <Answer type="state" webKey="251e05ac-8100-4675-ba30-d546fec37c0b" />
 
 - Wie viel Speicherplatz besitzt Ihr Smartphone, ihr Laptop?
@@ -99,7 +99,7 @@ Der Aufbau einer **SSD** gleicht in keiner Weise demjenigen einer HDD. Wie der N
 
 Festplatten werden mit sogenannten SATA-Kabeln angeschlossen. Die Abkürzung SATA steht für *serial at attachment*. Das schmalere Kabel dient zur Datenübertragung, das breitere für die Stromzufuhr.
 
-:::cards --columns=2
+:::cards[--columns=2]
 ![SATA-Kabel ](images/04-sata.jpg)
 ***
 ![SATA-Stromanschluss ](images/04-sata-power.jpg)
@@ -114,7 +114,7 @@ Das führt dazu, dass schneller Speicher in viel kleineren Mengen und nur wo unb
 
 ![Speicherhierarchie](images/04-storage-hierarchy.svg)
 
-:::aufgabe Speicher
+:::aufgabe[Speicher]
 <Answer type="state" webKey="7bb0eeac-6b50-4950-ac44-f19ead4ad5a5" />
 
 1. Wieso enthält ein Computer so viele verschiedene Speicherarten?
@@ -124,7 +124,7 @@ Das führt dazu, dass schneller Speicher in viel kleineren Mengen und nur wo unb
 <Answer type="text" webKey="074b934c-5b70-45c6-8034-4e99e77d850b" />
 :::
 
-:::aufgabe Speicherkosten und Datendurchsatz
+:::aufgabe[Speicherkosten und Datendurchsatz]
 <Answer type="state" webKey="5308d378-a30d-4eb7-b98a-c08111cfd500" />
 
 Führen Sie auf [👉 Digitec](https://digitec.ch) eine Recherche zu den Speicherpreisen und dem Datendurchsatz (wie schnell können Daten geschrieben/gelesen werden) durch. Bestimmen Sie jeweils

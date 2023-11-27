@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 # Krypto-Familie
 
-:::cards --cols=3  --minWidth=10em --gap=2em
+:::cards[--cols=3  --minWidth=10em --gap=2em]
 ![Alice](images/info-family/alice.svg)
 Alice und Bob kommunizieren häufig miteinander – dies natürlich verschlüsselt.
 ***

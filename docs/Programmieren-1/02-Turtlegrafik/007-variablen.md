@@ -15,7 +15,7 @@ Variablen kann man sich wie eine Zügelbox vorstellen, welche mit einem Namen an
 
 Mit der Schreibweise `anzahl = 12` wird eine solche Box erstellt. In Zukunft sagen wir, dass damit die Variable `anzahl` **definiert** und ihr einen **Wert zugewiesen** wird. Um den Inhalt der Box zu erhalten, kann der Name (ohne Anführungszeichen) geschrieben werden. Im Struktogramm werden alle Variablen **umrahmt**.
 
-:::flex --width=250px
+:::flex[--width=250px]
 <Strukto program={[
     {type: 'step', code: <span><span className="var">anzahl</span> = 12</span>},
     {type: 'step', code: <span>Ausgabe: <span className="var">anzahl</span></span>}
@@ -72,7 +72,7 @@ print(f'Anzahl = {anzahl}')
 
 Im obigen Beispiel wird der initiale Wert der Variable `anzahl` (12) mit dem neuen Wert `7` überschrieben.
 
-:::finding Merke: Gültigkeitsbereich
+:::finding[Merke: Gültigkeitsbereich]
 Die Variable wird nicht rückwirkend verändert. Solange eine Variable nicht überschrieben wird, besitzt sie den aktuell zugewiesenen Wert.
 :::
 
@@ -126,7 +126,7 @@ print(anzahl)       # => 16, anzahl=16
 </Solution>
 :::
 
-:::finding Gleichheitszeichen
+:::finding[Gleichheitszeichen]
 Das Gleichheitszeichen hat also in Computerprogrammen nicht dieselbe Bedeutung wie in der Mathematik. Es ist keine Gleichung, sondern eine Variablendefinition oder eine Zuweisung.
 :::
 
@@ -148,13 +148,13 @@ for i in range(anzahl):
     seite = seite + 10
 ```
 
-:::tip Eingabe
+:::tip[Eingabe]
 In Python ist das Resultat einer Eingabe **immer ein Text**. Ein Text kann aber in eine Zahl umgewandelt werden, so dass dann auch damit gerechnet werden kann.
 - Der Befehl `int` wandelt eine Eingabe in eine **ganze Zahl** um.
 - Der Befehl `float` wandelt eine Eingabe in eine **Dezimalzahl** um.
 :::
 
-:::flex --width=450px
+:::flex[--width=450px]
 ```py live_py slim
 # Centimeter zu Meter
 grösse = input('Wie gross bist du [cm]?')
@@ -174,7 +174,7 @@ print(f'Ich bin {grösse * 100} cm gross')
 
 Wird ein Wert über eine Eingabeaufforderung eingelesen, so wird dies im Struktogramm mit einem **Parallelogramm** angezeigt, wobei auch die Variable, welcher das Resultat zugewiesen wird, festgehalten wird:
 
-:::flex --width=250px
+:::flex[--width=250px]
 <Strukto program={[
     {type: 'input', code: <span><span className="var">grösse</span> = Wie gross bist du [cm]?</span>},
     {type: 'step', code: <span>Ausgabe: Ich bin <span className="var">grösse</span> cm gross.</span>}
@@ -187,12 +187,12 @@ print(f'Ich bin {grösse} cm gross')
 ```
 :::
 
-::::aufgabe Aufgabe 1 - BMI
+::::aufgabe[Aufgabe 1 - BMI]
 <Answer type="state" webKey="cc20a8bd-6fd0-4d5a-bd18-970cf0d54d53" />
 
 Übersetzen Sie das folgende Struktogramm in Python Code:
 
-:::flex --width=250px
+:::flex[--width=250px]
 
 <Strukto program={[
     {type: 'input', code: <span><span className="var">grösse</span> = Wie gross bist du [m]?</span>},
@@ -206,7 +206,7 @@ print(f'Ich bin {grösse} cm gross')
 ```
 :::
 
-:::note Hinweis
+:::note[Hinweis]
 Was ist die Bedeutung des folgenden Fehlers?
 ```error
 TypeError: Can't multiply sequence by non-int of type 'str'
@@ -231,7 +231,7 @@ print(f'BMI: {bmi}')
 </Solution>
 ::::
 
-:::aufgabe Aufgabe 2 – `n-Eck`
+:::aufgabe[Aufgabe 2 – `n-Eck`]
 <Answer type="state" webKey="f84f8da0-180b-4089-8545-584ec4414230" />
 
 Nach Eingabe der Anzahl Ecken in einer Eingabebox soll die Turtle ein regelmässiges n-Eck zeichnen. Beispielsweise wird nach der Eingabe `8` ein 8-Eck gezeichnet. Den passenden Drehwinkel soll das Programm berechnen. 
@@ -255,7 +255,7 @@ hideturtle()
 </Solution>
 :::
 
-:::aufgabe Aufgabe 3
+:::aufgabe[Aufgabe 3]
 <Answer type="state" webKey="bf7f6694-f471-455b-8f35-30350e54bd5f" />
 
 Nach der Eingabe eines Winkels in einer Eingabebox zeichnet die Turtle `30` Strecken der Länge `100`, wobei sie nach jeder Strecke um den gegebenen Winkel nach links dreht. Experimentieren Sie mit verschiedenen Winkeln und zeichnen Sie schöne Figuren.

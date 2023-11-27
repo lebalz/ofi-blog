@@ -49,7 +49,7 @@ forward(30)
 ## Wiederholungen: `for`-Schleife
 Mit einer Schleife können Befehle eine bestimmte Anzahl Mal wiederholt werden.
 
-:::flex --min=300px --gap=50px
+:::flex[--min=300px --gap=50px]
 ```py live_py slim
 from turtle import *
 
@@ -86,7 +86,7 @@ Die Grundrechenoperationen werden in Python wie folgt geschrieben:
 </div>
 
 #### Beispiele
-:::flex --min=300px
+:::flex[--min=300px]
 ```py live_py slim
 print('2 + 13 =', 2 + 13) 
 ```

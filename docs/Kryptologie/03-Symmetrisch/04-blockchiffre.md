@@ -12,7 +12,7 @@ import {TextEditor} from "@site/src/components/VisualizationTools/Pentacode";
 
 Im vorherigen Beispiel war der Schlüssel gleich lang wie der Klartext. Da dies in der Realität schwierig zu bewerkstelligen ist, wurden **Blockchiffren** erfunden. Sie heissen so, weil der Text nicht mehr als ganzes, sondern in **Blöcken** verschlüsselt wird.
 
-:::info Aktuelle Verschlüsselungsverfahren
+:::info[Aktuelle Verschlüsselungsverfahren]
 Aktuelle Verschlüsselungsverfahren sind so komplex, dass wir sie unmöglich in dieser kurzen Zeit verstehen können. Daher werden wir viele der nachfolgend erwähnten Verfahren nur anhand von Analogien und nicht auf mathematischer Ebene kennenlernen.
 
 Beim Thema Blockchiffren wollen wir aber ins technische eintauchen und uns anhand einer einfachen Verschlüsselung (XOR) anschauen, wie moderne Verschlüsselung funktioniert.
@@ -29,7 +29,7 @@ Da der Klartext dreimal so lange ist wie der Schlüssel, muss der Text in drei T
 ## Verschlüsselung in Blöcken
 Im folgenden Beispiel wird der oben bereits erwähnte Klartext mit dem Schlüssel bitweise mit XOR verschlüsselt:
 
-:::cards --min-width=445px --class=slim-table,center
+:::cards[--min-width=445px --class=slim-table,center]
 #### Block 1
 | ⠀    | Text    | Pentacode Block 1               | Geheimtext |
 | :--- | :------ | :------------------------------ | :--------- |
@@ -57,7 +57,7 @@ Im folgenden Beispiel wird der oben bereits erwähnte Klartext mit dem Schlüsse
 
 :::
 
-:::aufgabe Aufgabe XOR-Blockchiffre
+:::aufgabe[Aufgabe XOR-Blockchiffre]
 <Answer type="state" webKey="71021726-0ecd-4e23-a12c-f56d8102460d" />
 
 <TextEditor />

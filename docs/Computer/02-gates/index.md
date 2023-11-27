@@ -10,7 +10,7 @@ Die logischen Gatter (*logic gates*) sind die Grundbausteine der digitalen Logik
 
 [@youtube](https://www.youtube-nocookie.com/embed/OwS9aTE2Go4)
 
-:::details Transistoren
+:::details[Transistoren]
 
 [@youtube --height=315](https://www.youtube-nocookie.com/embed/5wIRJN3DN_8)
 

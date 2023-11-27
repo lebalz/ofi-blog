@@ -9,7 +9,7 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 
 Zum Speichern von **mehreren Werten** unter einem **einzigen Namen** verwendet man in Python Listen. Man kann sich __Listen__ als Tabellen mit einer Spalte vorstellen. Die Zellen in der Tabelle werden als **Elemente** bezeichnet und sind durchnummeriert. So kann man einzelne in der Liste gespeichert Werte unterscheiden. Die Nummer eines Elements wird als dessen **Index** bezeichnet.
 
-:::important Wichtig
+:::important[Wichtig]
 - Das erste Element in der Liste trägt den Index 0.
 - Der Index des letzten Elementes ist die Länge der Liste minus 1.
 :::
@@ -218,7 +218,7 @@ print('Ursprünglich', noten)
 noten.append(6)
 print('Neu', noten)
 ```
-:::details An beliebiger Stelle einfügen: `<liste>.insert(<index>, <wert>)`
+:::details[An beliebiger Stelle einfügen: `<liste>.insert(<index>, <wert>)`]
 
 ```py live_py slim
 noten = [4.5, 5, 3.5, 5.5]

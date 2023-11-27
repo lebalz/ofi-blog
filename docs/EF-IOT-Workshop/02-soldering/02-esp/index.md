@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # 2. ESP 8266
 
-:::aufgabe ESP 8266 Löten
+:::aufgabe[ESP 8266 Löten]
 Wenn Sie Sie den Käfer gelötet (und getestet haben), können Sie sich an den ESP 8266 wagen.
 
 Gehen Sie Schritt für Schritt wie auf den Abbildungen gezeigt vor und löten Sie den ESP 8266 zusammen. Überprüfen Sie immer alle Lötstellen, insbesondere, ob sie sich nicht berühren.
@@ -55,7 +55,7 @@ Löten der angegebenen Lötstellen:
   - Vorne: ~0.3 cm abisolieren
   - Hinten: ~1 cm abisolieren
 
-:::cards --min-width=300px
+:::cards[--min-width=300px]
 ![Schritt 5](images/esp-step05.jpg)
 ***
 ![Schritt 6](images/esp-step06.jpg)

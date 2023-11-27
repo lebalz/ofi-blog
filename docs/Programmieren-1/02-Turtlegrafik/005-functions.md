@@ -14,7 +14,7 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 In einer Bildkomposition kommen Figuren wie Dreiecke und Quadrate mehrmals vor. Die Turtle weiss aber nicht, was ein Dreieck oder ein Quadrat ist. Da in der Bildkomposition die Dreiecke und Quadrate nicht systematisch angeordnet sind, ist die Verwendung von Wiederholungen hier nicht naheliegend.
 
 
-:::cards --min-width=250px
+:::cards[--min-width=250px]
 *** --code
 ```py live_py slim
 from turtle import *
@@ -52,7 +52,7 @@ end_fill()
 
 **Es geht einfacher!** Es lassen sich nämlich neue Befehle festlegen, die z.B. ein Dreieck oder ein Quadrat zeichnen. 
 
-:::flex --min-width=200px gap=50px
+:::flex[--min-width=200px gap=50px]
 ```py live_py slim
 from turtle import *
 
@@ -106,14 +106,14 @@ dreieck()
 :::
 
 
-::::aufgabe Aufgabe 1
+::::aufgabe[Aufgabe 1]
 <Answer type="state" webKey="4d9d75a8-8539-4541-aec8-5306c671b1d9" />
 
 Im folgenden ist zweimal derselbe Algorithmus programmiert - links ohne Unterprogramme, rechts mit Unterprogrammen.
 
 Ändern Sie beide Programme so ab, dass die Dreiecke doppelt so gross gezeichnet werden!
 
-:::cards --basis=200px
+:::cards[--basis=200px]
 *** --code
 ```py live_py title=sequentiell.py id=d60d5547-82d4-4a44-8413-c161b5627bc2 maxLines=55
 from turtle import *
@@ -243,7 +243,7 @@ def zick_zack():  # <-- Doppelpunkt nicht vergessen!
     left(45)
 ```
 
-:::caution Befehlsaufruf
+:::caution[Befehlsaufruf]
 Die Definition alleine führt das Programm noch nicht aus. Dazu muss der Befehl erst noch **aufgerufen** werden:
 
 
@@ -264,12 +264,12 @@ zick_zack()
 
 ---
 
-::::aufgabe Aufgabe 2: Struktogramm → Python
+::::aufgabe[Aufgabe 2: Struktogramm → Python]
 <Answer type="state" webKey="202aff44-4ffd-4368-b74c-ab6682d0c805" />
 
 1. Erzeugen Sie ein Programm gemäss folgendem Struktogramm:
 
-:::cards --min-width=200px
+:::cards[--min-width=200px]
 
 <Strukto program={[
     {
@@ -321,10 +321,10 @@ stufe()
 
 ::::
 
-::::aufgabe Aufgabe 3 – Sechsecke
+::::aufgabe[Aufgabe 3 – Sechsecke]
 <Answer type="state" webKey="b1940f0b-2d69-4d40-84fc-676bddc1b45a" />
 
-:::cards --min-width=200px
+:::cards[--min-width=200px]
 *** --code --flex-grow=2
 ```py live_py title=sechseck.py id=6d4c82e3-ecaa-486e-a756-3a1a1a8a70fc
 from turtle import *
@@ -365,12 +365,12 @@ for i in range(10):
 
 ::::
 
-::::aufgabe Aufgabe 4 – Häuser
+::::aufgabe[Aufgabe 4 – Häuser]
 <Answer type="state" webKey="1bc32c1a-0345-494d-85b3-883ea40151cd" />
 
 Für diese Aufgabe können Sie als Ausgangslage Ihr Programm aus Kapitel 1, Aufgabe 6 "Haus von Nikolaus" verwenden.
 
-:::cards --min-width=200px
+:::cards[--min-width=200px]
 *** --code --flex-grow=2
 ```py live_py title=stadt.py id=b5c82672-65db-4725-8ec9-7a80ac835b3d
 from turtle import *
@@ -425,12 +425,12 @@ haus()
 
 ::::
 
-::::aufgabe Aufgabe 5 – Blume
+::::aufgabe[Aufgabe 5 – Blume]
 <Answer type="state" webKey="5f71b333-fd7d-446e-998b-d65c69bec060" />
 
 Sie werden in dieser Aufgabe unter der Verwendung mehrerer Unterprogramme eine komplexe Aufgabe schrittweise lösen.
 
-:::cards --min-width=200px
+:::cards[--min-width=200px]
 *** --code --flex-grow=2
 ```py live_py title=blume.py id=b47c6d09-11ca-4bff-b676-09cb0d7399bf
 from turtle import *

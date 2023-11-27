@@ -10,7 +10,7 @@ sidebar_custom_props:
 
 [^1]
 
-:::aufgabe Cache Poisioning
+:::aufgabe[Cache Poisioning]
 
 - Was ist DNS-Hijacking und wie funktioniert es? Beschreiben Sie auch die drei verschiedenen Varianten.
 - Bemerkt eine Benutzer:in etwas vom Angriff? 
@@ -24,7 +24,7 @@ sidebar_custom_props:
 
 [@youtube](https://www.youtube-nocookie.com/embed/SHkdWNo7SC8)
 
-:::aufgabe ARP und DNS Spoofing
+:::aufgabe[ARP und DNS Spoofing]
 
 Wie verläuft eine ARP/DNS-Spoofing Attacke?
 
