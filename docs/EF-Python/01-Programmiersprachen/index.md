@@ -224,10 +224,10 @@ In Hochsprachen wird zusätzlich unterschieden zwischen __kompilierten__ und __i
 
 Wie bei der Assemblersprache muss ein geschriebenes Programm durch einen Compiler in Maschinensprache übersetzt werden. Dieser Prozess ist bei Hochsprachen um einiges komplexer als bei Assemblersprache, da keine direkte Übersetzung möglich ist. Da das Programm nach der Kompilierung von einem Prozessor ausgeführt wird, braucht es einen vorgegebenen Einstiegspunkt - eine Funktion namens `main`. 
 
-{\*
+{/*
 Notes:
 Keine direkte Übersetzung, da nun weitere Sprachkonzepte wie Wiederholungen, Verzweigungen, Listen, etc. möglich sind.
-*\}
+*/}
 
 ```mermaid
 graph LR
@@ -254,12 +254,12 @@ graph LR
 Für die Programmierung einer Skriptsprache braucht es keine Installation eines zusätzlichen Compilers. Die Programmiersprache, also bspw. Python, interpretiert den Quellcode direkt. Dazu wird der Code gelesen (__Parsen__) und gemäss der Syntax-Vorgaben in einen Syntax-Baum (__AST__, *Abstract Syntax Tree*) übersetzt. 
 
 :::cards
-*** --code --flex-basis=272px --justify-content=center
+::br{flex-basis=272px justify-content=center code=true}
 ```py title="Python Code"
 def sum(zahl1, zahl2):
     return zahl1 + zahl2
 ```
-*** --flex-basis=400px
+::br{flex-basis=400px}
 ![Übersetzer AST](images/ast-sum.svg)
 :::
 

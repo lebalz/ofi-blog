@@ -43,7 +43,7 @@ Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netz
 
 :::flex
 ![--width=450px](images/packtrav-layer-4.png)
-***
+::br
 Zu jedem gegebenen Zeitpunkt könnte auf dem Computer eines Benutzers ein Internetbrowser geöffnet sein, während Musik gestreamt wird und eine Messenger- oder Chat-App ausgeführt wird. Jede dieser Anwendungen sendet und empfängt Daten aus dem Internet, und all diese Daten kommen in Form von Einsen und Nullen auf derselben Netzwerkschnittstelle des Computers an.
 
 "Etwas" muss entscheiden, welche Datenpakete wohin gelangen - die Aufgabe des **Ports**.

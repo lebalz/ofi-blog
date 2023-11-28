@@ -47,7 +47,7 @@ In **kabelgebundnen** Netzwerken sind heute meist **Sterntopologien** zu finden.
 :::cards
 ![Star](images/Star.png)
 
-***
+::br
 ![Switch](images/Switch.jpg)
 Ein Switch für den Anschluss von 24 Computern:
 :::

@@ -76,7 +76,7 @@ Dies zeichnet einen rot gefüllten Kreis mit Radius 10 bei den Koordinaten (100,
 
 :::cards
 ![[👉 Winterlandschaft 1](./images/winter_1.jpg)](./images/winter_1.jpg)
-***
+::br
 ![[👉 Winterlandschaft 2](./images/winter_2.jpg)](./images/winter_2.jpg)
 :::
 

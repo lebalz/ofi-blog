@@ -1,4 +1,6 @@
-module.exports = function (context, options) {
+import { Plugin } from "@docusaurus/types";
+
+const plugin: Plugin = (context, options) => {
     return {
         name: 'brython-source',
         injectHtmlTags({ content }) {
@@ -46,3 +48,5 @@ module.exports = function (context, options) {
     }
 
 }
+
+export default plugin;

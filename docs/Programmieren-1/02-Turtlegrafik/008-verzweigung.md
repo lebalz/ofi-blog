@@ -38,7 +38,7 @@ Die Frage von "Ist x kleiner als 2" (`x < 2`) hängt also davon ab, welcher Wert
         ]
     }
 ]} />
-***
+::br
 
 ```py live_py slim
 alter = int(input('Wie alt bist du?'))

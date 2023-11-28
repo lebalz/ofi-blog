@@ -124,7 +124,7 @@ print(text)
 Lösungen: (1) auch den Gross- und kleingeschriebenes ersetzen, oder (2) zuerst alles klein schreiben und dann ersetzen.
 
 :::cards[]
-*** --code
+::br{code=true}
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
 
@@ -132,7 +132,7 @@ text = text.replace('ich', 'XXX') # Alle 'ich' durch XXX ersetzen
 text = text.replace('Ich', 'XXX') # Alle 'Ich' durch XXX ersetzen
 print(text)
 ```
-*** --code
+::br{code=true}
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
 

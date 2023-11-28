@@ -156,7 +156,7 @@ Dieser kann über `Misc > Splitter` eingefügt werden, wobei nacheinander zwei E
 
 :::cards
 ![1. Inputbox](images/02-hex-display-q1.png)
-***
+::br
 ![2. Inputbox](images/02-hex-display-q2.png)
 :::
 

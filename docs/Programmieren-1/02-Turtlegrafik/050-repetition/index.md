@@ -228,7 +228,7 @@ ergibt
 ```
 *
 ```
-***
+::br
 ```py
 dreieck(2)
 ```
@@ -237,7 +237,7 @@ ergibt
 *
 * *
 ```
-***
+::br
 ```py
 dreieck(3)
 ```

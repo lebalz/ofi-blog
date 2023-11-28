@@ -52,7 +52,7 @@ Beispiel: Ein Produktcode eingeben...
 Beispiel: `1234A0xBC`
 
 :::cards
-*** --code
+::br{code=true}
 
 ```py live_py slim
 def transform_input(raw):
@@ -76,7 +76,7 @@ else:
 
 ```
 
-*** --code
+::br{code=true}
 
 
 ```py live_py slim
@@ -164,7 +164,7 @@ Um die Lesbarkeit und Wartbarkeit des Programms zu verbessern, können Gewisse R
 
 ![](images/io-joke-1.webp)
 
-***
+::br
 
 ![](images/io-joke-2.jpg)
 

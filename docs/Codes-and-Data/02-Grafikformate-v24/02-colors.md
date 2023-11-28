@@ -30,7 +30,7 @@ Dieses Farbmodell kommt überall dort zum Einsatz, wo Licht verwendet wird, um e
 
 :::cards
 ![Additives Farbmodell --width=100%](images/02-colour-rgb.svg)
-***
+::br
 ![Pixel auf einem Bildschirm --width=100%](images/02-pixels.jpg)
 :::
 

@@ -287,7 +287,7 @@ a = 'Hallo! '
 print(a.endswith('!'))
 print(a.endswith(' ')) # auch Leerzeichen sind Zeichen!
 ```
-:::[]
+:::
 
 :::def
 ### `.isalpha()`

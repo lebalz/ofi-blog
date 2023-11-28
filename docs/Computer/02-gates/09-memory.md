@@ -40,7 +40,7 @@ Natürlich will man die Alarmanlage auch wieder Abschalten können. Dazu kann in
 
     ![](images/10-rain-check.svg)
 
-***
+::br
 
 ![](images/10-rain-check-solution.svg)
 

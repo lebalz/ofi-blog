@@ -12,7 +12,7 @@ In der Informatik ist ein *Bus* ein System zur Datenübertragung zwischen mehrer
 
 :::cards
 ![Datenübertragung mit Bus](images/02-bus-1.svg)
-***
+::br
 ![Datenübertragung ohne Bus](images/02-bus-2.svg)
 :::
 

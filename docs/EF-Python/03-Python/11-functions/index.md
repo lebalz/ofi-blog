@@ -84,11 +84,11 @@ Doch was sind Funktionen eigentlich?
 > Eine Funktion ist eine **Sequenz** (Abfolge) von (Python-)Anweisungen, welche unter einem eigenen **Namen**, gefolgt von `()`, zusammengefasst werden. Die Funktion kann als neuer **Befehl** verstanden werden, welche dann an anderen Stellen im Programm **aufgerufen** werden kann, indem man den Namen und `()` hinschreibt.
 
 :::cards
-*** --max-width=47% --min-width=300px
+::br{max-width=47% min-width=300px}
 ```py reference title="1-sequence.py"
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/1-sequence.py
 ```
-*** --max-width=47% --min-width=300px
+::br{max-width=47% min-width=300px}
 ```py reference title="2-function.py"
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/11-functions/assets/2-function.py
 ```
@@ -147,12 +147,12 @@ Dateiname
 :  __EF-Informatik/exercises/fkt/sternchen.py__
 
 ```
-******
+::br
 *    *
 *    *
 *    *
 *    *
-******
+::br
 ```
 
 Gesucht ist ein Programm, welches obige Figur auf der Konsole ausgibt.

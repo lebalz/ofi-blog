@@ -88,7 +88,7 @@ Gesucht sind die Netzwerkkonfiguration für folgende Architektur, wobei Sie eine
 Halten Sie Ihre Überlegungen und Zuordnungen unten fest.
 
 <Answer type="text" webKey="7cc5e5c5-8d5c-49c9-a479-fdd7010e0c4c" />
-:::[]
+:::
 
 
 

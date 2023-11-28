@@ -13,16 +13,16 @@ sidebar_custom_props:
 Es gibt drei verschiedene Wege, wie sich eine Person authentisieren kann:
 
 :::cards
-***
+::br
 ![](images/password.jpg)
 #### Wissen
 Die Person weiss etwas, z.B. ein Passwort oder eine Pin
 
-***
+::br
 ![](images/keys.jpg)
 #### Besitz
 Die Person besitzt etwas, z.B. eine Kreditkarte oder einen Schlüssel.
-***
+::br
 ![](images/eye.jpg)
 #### Merkmal
 Die Person wird über körperliches Merkmal identifiziert, z.B. einen Fingerabdruck oder die Iris.

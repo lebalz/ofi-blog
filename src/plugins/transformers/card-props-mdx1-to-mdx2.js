@@ -1,16 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 const KnownCssProperties = require('known-css-properties').all;
-const fileDirectories = ['docs', 'news', 'versioned_docs'];
+const fileDirectories = ['secure'];
 
 /**
  * @example
  * :::cards[Hello --basis=12] --> :::cards[Hello]{basis=12}
- * :mdi-account--red: --> :mdi[account]{.red}
  */
 // const CARD_REGEX = /:::cards\[(?<label>.*?)\]/;
 // const FLEX_REGEX = /:::flex\[(?<label>.*?)\]/;
-const PROPS_REGEX = /\*\*\*(?<props>.*?)/;
+const PROPS_REGEX = /\*\*\*(?<props>.*)/;
 
 
 // matches options in strings: "--width=200px --height=20%" -> {width: '20px', height='20%'}
@@ -88,9 +87,7 @@ async function transformFlexCards(file) {
             let idx = 0;
             while (match = raw.slice(idx).match(regex)) {
                 const {label} = match.groups;
-                if (label) {
-                    hasChanged = true;
-                }
+                hasChanged = true;
                 const optionsRaw = parseOptions(label);
                 const labelText = cleanedText(label) ? `[${cleanedText(label)}]` : '';
                 const kls1 = optionsRaw.classes;
@@ -110,9 +107,7 @@ async function transformFlexCards(file) {
         });
         while (match = raw.match(PROPS_REGEX)) {
             const {props} = match.groups;
-            if (props) {
-                hasChanged = true;
-            }
+            hasChanged = true;
             const optionsRaw = parseOptions(props);
             const kls1 = optionsRaw.classes;
             const kls2 = optionsRaw.classNames;

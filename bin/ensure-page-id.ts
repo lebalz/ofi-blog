@@ -1,13 +1,9 @@
-const fs = require('fs');
-const matter = require('gray-matter');
-const path = require('path');
-const uuid = require('uuid');
+import fs from 'fs';
+import matter from 'gray-matter';
+import path from 'path';
+import { v4 as uuid } from 'uuid';
 
-/**
- * 
- * @param {string} file 
- */
-function ensurePageId(file) {
+export const ensurePageId = (file: string) => {
     if (!(file.endsWith('.md') || !file.endsWith('.mdx')) || path.basename(file).startsWith('_')) {
         return;
     }
@@ -16,7 +12,7 @@ function ensurePageId(file) {
         ...(fm.data.sidebar_custom_props || {}),
     }
     if (!fm.data.sidebar_custom_props.id) {
-        fm.data.sidebar_custom_props.id = uuid.v4();
+        fm.data.sidebar_custom_props.id = uuid();
         fs.writeFileSync(
             file,
             matter.stringify(fm.content, fm.data),
@@ -26,5 +22,3 @@ function ensurePageId(file) {
     }
     return false;
 }
-
-module.exports = ensurePageId;

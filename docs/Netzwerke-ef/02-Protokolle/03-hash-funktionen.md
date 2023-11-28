@@ -32,7 +32,7 @@ Die Ausgabe der Hashfunktion wird **Hashwert** genannt.
 
 Man kann einen Hashwert mit einem Fingerabdruck vergleichen, weil er gewissermassen eindeutig zu einem Passwort passt wie ein Fingerabdruck zu einem Menschen. So wie mit einem Fingerabdruck nicht auf die Persönlichkeit/Charakter einer Person geschlossen werden kann, lässt sich auch nicht von einem Hashwert auf das Passwort schliessen. 
 
-*** --align-self=end
+::br{align-self=end}
 ![Ein Hashwert ist wie ein Fingerabdruck --width=100px](images/fingerprint.png)
 :::
 ## Aktuelle Beispiele

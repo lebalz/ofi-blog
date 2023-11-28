@@ -80,6 +80,6 @@ Material
 Laden Sie das Beispiel-Projekt herunter und untersuchen Sie dieses genauer.
 
 Passen Sie dieses so an, dass die Daten an Ihren eigenen Node-RED Server geschickt werden. ()
-:::[]
+:::
 
 [^1]: [Ip-Insider](https://www.ip-insider.de/was-ist-ein-proxy-server-a-665349/)

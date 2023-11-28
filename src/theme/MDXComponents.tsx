@@ -20,7 +20,7 @@ export default {
   Comment: Comment,
   Figure: Figure,
   SourceRef: SourceRef,
-  dl: DefinitionList,
+  Dl: DefinitionList,
   Answer: Answer,
   Solution: Solution,
   OnlyFor: OnlyFor,

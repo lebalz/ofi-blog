@@ -21,7 +21,7 @@ XOR kann auch zur Verschlüsselung verwendet werden. Dabei wird jeweils 1 Bit de
 Die Wahrheitstabelle sieht folgendermassen aus:
 
 :::cards
-*** --flex-basis=13em --class=slim-table;normal-header;no-comments
+::br{flex-basis=13em .slim-table .normal-header .no-comments}
 
 ### Verschlüsselung
 
@@ -39,7 +39,7 @@ k
 c
 : *cipher* (Verschlüsselt)
 
-*** --flex-basis=13em --class=slim-table;normal-header;no-comments
+::br{flex-basis=13em .slim-table .normal-header .no-comments}
 
 ### Entschlüsselung
 
