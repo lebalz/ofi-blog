@@ -111,7 +111,7 @@ sum:
 Aufgrund der mühseligen Programmierung und der fehlenden Portabilität von Programmen auf unterschiedliche Systeme ist Assembler nicht für komplexe Projekte zu empfehlen. Für bestimmte zeitkritische Aufgaben (Echtzeit), wo es auf Geschwindigkeit ankommt (bspw. Grafiktreiber) oder nur sehr wenig Platz zur Verfügung steht (embedded systems), wird auch heute noch auf Assembler zurückgegriffen.
 :::
 
-<!--
+{/*
 Weitere Übersetzungen
 👉 https://godbolt.org/
 
@@ -129,7 +129,7 @@ Notes:
 * schwerer, trotzdem noch machbar
 * läuft nur noch auf einer CPU -> vorher entscheiden, welches Ziel
 * spezifischer Compiler für jede CPU
--->
+*/}
 
 ## Hochsprachen
 In Hochsprachen wird eine Abstraktionsschicht für komplexen Funktionen wie
@@ -224,10 +224,10 @@ In Hochsprachen wird zusätzlich unterschieden zwischen __kompilierten__ und __i
 
 Wie bei der Assemblersprache muss ein geschriebenes Programm durch einen Compiler in Maschinensprache übersetzt werden. Dieser Prozess ist bei Hochsprachen um einiges komplexer als bei Assemblersprache, da keine direkte Übersetzung möglich ist. Da das Programm nach der Kompilierung von einem Prozessor ausgeführt wird, braucht es einen vorgegebenen Einstiegspunkt - eine Funktion namens `main`. 
 
-<!-- 
+{\*
 Notes:
 Keine direkte Übersetzung, da nun weitere Sprachkonzepte wie Wiederholungen, Verzweigungen, Listen, etc. möglich sind.
--->
+*\}
 
 ```mermaid
 graph LR

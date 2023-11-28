@@ -142,7 +142,8 @@ for buchstabe in verschlüsselt:
 print(klartext)
 ```
 
-<details><summary>⭐️ Zusatz</summary>
+<details>
+<summary>⭐️ Zusatz</summary>
 
 Sie haben eine geheime Nachricht abgefangen, kennen aber den Schlüssel nicht. Sie wissen aber, dass `ALCZLJ` ein sinnvolles Wort ergeben muss. Schreiben Sie ein Programm, das alle möglichen Schlüssel durchprobiert und jeweils den entschlüsselten Text ausdruckt.
 

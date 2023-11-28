@@ -51,7 +51,7 @@ Zählt, wie oft der Wert "Schwarz" im Bereich `A1:A13` vorkommt
 Aggregieren nach dem Alter
 <ExcelBox>
 
-=ZÄHLENWENNS(D1:D13; ">=14"; D1:D13; "<16")
+=ZÄHLENWENNS(D1:D13; ">=14"; D1:D13; "\<16")
 </ExcelBox>
 
 Zählt, wie viele Schüler:innen 14 oder 15 Jährig sind. (Daher wie viele Werte im Bereich `D1:D13` zwischen 14 und 16 liegen). **Bemerke, dass der Bereich zweimal angegeben werden muss.**

@@ -50,7 +50,7 @@ Materialien bereitstellen.
 :::
 
 :::cards
-### Schritt 4: 4.7k :mdi[ohm] Widerstand, Transistor und Fotowiderstand löten
+### Schritt 4: 4.7k :mdi[omega] Widerstand, Transistor und Fotowiderstand löten
 
 :::cards
 ![](images/Transistors.jpg)

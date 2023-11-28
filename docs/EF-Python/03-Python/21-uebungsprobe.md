@@ -187,14 +187,12 @@ square(5, 2)
 ```
 
 </Solution>
-<br />
 
-5. Code Umschreiben
+1. Code Umschreiben
 
     Das Programm __zahlen_raten.py__  ist in sog. Spaghetti-Code geschrieben - es werden überall globale Variablen gebraucht.
     a. Was macht das Programm?
     b. Bauen Sie den Code so um, dass statt der globalen Variablen Funktionsparameter und Rückgabewerte verwendet werden, ohne dabei die Funktionalität des Programms zu verändern.
-
 
 
 <Solution webKey="7b727a90-474e-4c58-9db2-595ab0a79ac6">
@@ -244,5 +242,4 @@ def play():
 
 play()
 ```
-
 </Solution>

@@ -65,7 +65,8 @@ Dieses Farbmodell kommt beim Drucken zum Einsatz.
 
 <CMYK />
 
-<details><summary> ⭐️ Umrechnung CMYK – RGB </summary>
+<details>
+<summary> ⭐️ Umrechnung CMYK – RGB </summary>
 
 Für die Umrechnung einer `CMYK`-Farbangabe nach `RGB` wird folgender Formelsatz verwendet:
 

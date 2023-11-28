@@ -149,7 +149,8 @@ Also braucht es: $11\cdot2=22$ Zeichen.
 **Einsparung**: Es braucht 1 Bit weniger.
 
 
-<details><summary>Alternativ: MPSI</summary>
+<details>
+<summary>Alternativ: MPSI</summary>
 
 | Zeichen        | M    | P    | S    | I    |
 | :------------- | :--- | :--- | :--- | :--- |
