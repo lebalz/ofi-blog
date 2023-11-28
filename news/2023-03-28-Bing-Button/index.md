@@ -15,7 +15,7 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 Der prominente Bing-Knopf in Edge loswerden? So gehts...
 
 
-<!-- truncate -->
+{/* truncate */}
 
 In den Einstellungen :mdi[cog] von Edge :mdi-microsoft-edge: unter __Randleiste > Entdecken__ die Einstellung __Entdecken anzeigen__ abschalten.
 

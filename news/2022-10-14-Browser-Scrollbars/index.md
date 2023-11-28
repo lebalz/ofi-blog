@@ -12,7 +12,7 @@ Unter Chrome :mdi-google-chrome--blue:, Edge :mdi-microsoft-edge--cyan: und Fire
 
 ![Moderne Scrollbars unter Windows](images/scrollbars.png)
 
-<!--truncate-->
+{/* truncate */}
 
 :::danger[Achtung]
 Ändern Sie nur Einstellungen deren Auswirkungen Sie kennen!

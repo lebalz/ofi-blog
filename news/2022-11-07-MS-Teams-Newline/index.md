@@ -13,7 +13,7 @@ Kurz eine Nachricht schreiben - Anrede, Text, Grussformel... Doch [[:mdi-keyboar
 
 ![Nachricht geschickt statt neue Zeile](images/ms-teams-preview.jpg)
 
-<!--truncate-->
+{/* truncate */}
 
 Egal ob in Word, MS-Teams, Whatsapp oder Instagram: Soll eine neue Zeile erzeugt werden, welche noch zum vorigen Abschnitt oder zur selben Nachricht gehört, so kann dies mit [[:mdi-apple-keyboard-shift:]] + [[:mdi-keyboard-return:]] erreicht werden.
 

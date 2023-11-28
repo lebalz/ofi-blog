@@ -12,7 +12,7 @@ Unter :mdi[apple]{.black} Mac gibt es standardmässig keine Möglichkeit, Fenste
 
 ![Fenstermanagement mit [@Rectangle](https://rectangleapp.com/)](images/rectangle.gif)
 
-<!--truncate-->
+{/* truncate */}
 
 Gerade wenn oft zwischen Programmen gewechselt werden soll, wäre dies aber praktisch.
 
