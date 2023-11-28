@@ -15,8 +15,8 @@ Mit 5 Bits (*[Penta bedeutet 5]*) können $2^5 = 32$ Zeichen codiert werden. Neb
 
 :::details[Penta-Tabelle]
 
-:::flex[--columns=2 --gap=2em]
-*** --class=slim-table,no-comments
+:::flex{columns=2 gap=2em}
+::br --class=slim-table,no-comments
 | Buchstabe    | Zahl |   Binär |
 | :----------- | ---: | ------: |
 | *Leerschlag* |    0 | `00000` |
@@ -35,7 +35,7 @@ Mit 5 Bits (*[Penta bedeutet 5]*) können $2^5 = 32$ Zeichen codiert werden. Neb
 | `M`          |   13 | `01101` |
 | `N`          |   14 | `01110` |
 | `O`          |   15 | `01111` |
-*** --class=slim-table,no-comments
+::br --class=slim-table,no-comments
 
 | Buchstabe | Zahl |   Binär |
 | :-------- | ---: | ------: |

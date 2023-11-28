@@ -9,14 +9,14 @@ import OsTabs from '@site/src/components/OsTabs'
 
 Mit einem 3D-Drucker lassen sich dreidimensionale Objekte erzeugen. Dabei arbeiten alle gängigen Druckverfahren schichtweise - das Objekt wird aus mehreren Schichten zusammengesetzt, wobei eine einzelne Schicht zweidimensional auf die darunterliegende Schicht aufgetragen wird.
 
-:::cards[--columns=2 --text-align=center --width=200px]
-*** --text-align=center
+:::cards{columns=2 text-align=center width=200px}
+::br --text-align=center
 ![--width=100%](images/prusa-timelapse-01.gif)
-*** --text-align=center
+::br --text-align=center
 ![](images/prusa-timelapse-02.gif)
-***
+::br
 ![](images/prusa-timelapse-03.gif)
-***
+::br
 ![](images/prusa-timelapse-04.gif)
 :::
 

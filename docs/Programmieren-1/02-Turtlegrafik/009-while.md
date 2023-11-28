@@ -20,7 +20,7 @@ Oft ist dies nicht gewollt, doch einmal gestartet, ist es dann in der Browser-Ve
 - (den ganzen Browser über den Taskmanager schliessen)
 :::
 
-:::flex[--width=250px]
+:::flex{width=250px}
 
 <Strukto program={[
     {type: 'step', code: <span><span className="var">winkel</span> = 20 setzen</span>},
@@ -34,7 +34,7 @@ Oft ist dies nicht gewollt, doch einmal gestartet, ist es dann in der Browser-Ve
         ]
     }
 ]} />
-***
+::br
 
 ```py live_py slim
 from turtle import *
@@ -91,7 +91,7 @@ while i < 4:
 
 Schreiben Sie das untenstehende Programm so um, dass nur noch `while` Schleifen verwendet werden.
 
-:::flex[--columns=2 --min-width=200px]
+:::flex{columns=2 min-width=200px}
 ```py live_py slim
 from turtle import *
 
@@ -103,7 +103,7 @@ for i in range(5):
     left(72)
     backward(20) 
 ```
-***
+::br
 
 ```py live_py title=to-while.py id=2f288418-a751-4955-91e6-44ef58a2844b
 from turtle import *
@@ -134,7 +134,7 @@ while i < 5:
 
 Schreiben Sie das untenstehende Programm so um, dass nur noch `for` Schleifen verwendet werden.
 
-:::flex[--columns=2 --min-width=200px]
+:::flex{columns=2 min-width=200px}
 ```py live_py slim
 from turtle import *
 
@@ -161,7 +161,7 @@ while zeile < 5:
         spalte = spalte + 1
     zeile = zeile + 1
 ```
-***
+::br
 
 ```py live_py title=to-while.py id=729af77c-0c3b-46f9-b95a-35d86be96cde
 from turtle import *

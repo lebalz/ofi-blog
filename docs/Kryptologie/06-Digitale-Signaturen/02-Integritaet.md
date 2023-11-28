@@ -16,12 +16,12 @@ Wir suchen folglich eine Lösung, die das gleichzeitige Betrachten des Dokuments
 Ist der Klartext stets sichtbar, so müssen wir sicherstellen, dass er nicht manipuliert werden kann. Schliesslich wollen wir nicht, dass ein Vertrag nach dem Signieren noch unentdeckt verändert werden kann.
 
 ## Hashwerte
-:::flex[--min-width=150px]
+:::flex{min-width=150px}
 Hashwerte kennen wir bisher nur zur sicheren Speicherung von Passwörtern. Hashfunktionen können allerdings nicht nur Passwörter in Hashwerte umwandeln, sondern irgendwelche Daten.
 
 Wir haben gesehen, dass Hashwerte eine Art digitale **Fingerabdrücke** sind. Es ist extrem schwierig (resp. in vernünftiger Zeit nicht möglich), zu einem bestehenden Text einen anderen zu finden, der denselben Hashwert erzeugt.
 
-*** --align-self=center
+::br --align-self=center
 ![Hashwerte sind digitale Fingerabdrücke --width=100px](../05-Hashfunktionen/images/fingerprint.png)
 :::
 

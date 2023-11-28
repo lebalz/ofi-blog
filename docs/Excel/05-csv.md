@@ -30,12 +30,12 @@ Material
 Laden Sie das Datenfile CSV herunter und öffnen Sie es in Excel. Überführen Sie die Texte in Öffnen Sie über __Daten > Text in Spalten__ die Werte in einzelne Zellen.
 
 Anschliessend, ändern Sie das Aussehen des Datenblatts wie folgt (zuerst müssen alle Zellen ausgewählt werden):
-:::flex[--min-width=350px]
+:::flex{min-width=350px}
 - Die Höhe der Zellen auf `10`
 - Die Breite der Zellen auf `2`
 - Die Schriftgrösse auf `5pt`
 
-***
+::br
 ![__Start > Zellen:Format__ --width=300px](images/excel-cell-size.png)
 :::
 

@@ -22,7 +22,7 @@ Markieren Sie im folgenden Programm (links) wie folgt:
 - Parameter <u>unterstreichen</u>
 - Befehlsnamen <span style={{background: 'yellow'}}>gelb</span> markieren
 
-:::flex[--min=300px]
+:::flex{min=300px}
 
 <Answer type="text" webKey="3995f76b-464e-40b8-8b48-7dbc53763d18" monospace toolbar={{background:1, underline:1}}>
 
@@ -37,8 +37,8 @@ for i in range(5):<br/>
 
 </Answer>
 
-*** --empty --grow=0.5 --min=50px
-***
+::br --empty --grow=0.5 --min=50px
+::br
 ```py live_py slim
 from turtle import *
 
@@ -147,13 +147,13 @@ Ein häufiger Fehler sind vergessene Kommas zwischen zwei Parameternamen. Dann e
 ::::aufgabe[Parameternamen]
 <Answer type="state" webKey="a3f42726-24e0-4a66-8a08-5bc74976c567" />
 
-:::cards[--min-width=200px]
-*** --code --flex-grow=2
+:::cards{min-width=200px}
+::br --code --flex-grow=2
 ```py live_py title=sechseck.py id=fcd69fed-4ed9-4706-954e-c49cf1c8b764
 from turtle import *
 
 ```
-*** --overflow-y=auto --max-height=550px --flex-grow=1
+::br --overflow-y=auto --max-height=550px --flex-grow=1
 1. Definieren Sie das Unterprogramm `sechseck(size)` welches ein Sechseck mit der Grösse `size` zeichnet. Rufen Sie das Programm mit `sechseck(20)` auf. 
 
     ![](images/06_sechseck_1.svg)
@@ -216,16 +216,16 @@ for i in range(4):
 
 Wozu steht eigentlich das `i` im `for i in range(4)`? Das ist fast wie ein Parameter: `i` enthält die Anzahl bereits ausgeführter Wiederholungen.
 
-:::cards[--min-width=220px]
+:::cards{min-width=220px}
 Während Wiederholung 1: `i=0`, keine Wiederholung abgeschlossen ist.
 ![](images/06-repeat-0.svg)
-***
+::br
 Während Wiederholung 2: `i=1`, eine Wiederholung ist bereits abgeschlossen.
 ![](images/06-repeat-1.svg)
-***
+::br
 Während Wiederholung 3: `i=2`, zwei Wiederholungen sind bereits abgeschlossen.
 ![](images/06-repeat-2.svg)
-***
+::br
 Während Wiederholung 4: `i=3`, drei Wiederholungen sind bereits abgeschlossen.
 ![](images/06-repeat-3.svg)
 :::

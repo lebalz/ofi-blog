@@ -54,9 +54,9 @@ Je nach Konfiguration muss noch ein Passwort eingegeben werden, bevor die BIOS-E
 
 Es gibt verschiedene BIOS-Hersteller. Die Oberfläche ist sehr schlicht und einfach gestaltet. Man navigiert mit den **Pfeiltasten**, wählt mit `Enter` einen Eintrag aus und beendet ein Menü mit Hilfe von `Esc`. Nachfolgend zwei Beispiele:
 
-:::cards[--columns=2]
+:::cards{columns=2}
 ![AMI BIOS](images/07-bios-ami.jpg)
-***
+::br
 ![Award BIOS](images/07-bios-award.png)
 :::
 

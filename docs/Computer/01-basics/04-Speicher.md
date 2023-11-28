@@ -51,9 +51,9 @@ Heute gibt des den Festplattenspeicher in zwei Ausführungen:
 
 Der Aufbau einer **herkömmlichen Harddisk** gleicht einem Plattenspieler. Im Innern der Harddisk drehen sich mehrere Platten, auf denen durch **Magnetisierung** einzelner Bereiche Daten gespeichert werden. Auf dem nachfolgenden Bild (rechts) sieht man den Arm zum Auslesen resp. Schreiben der Daten (er befindet sich momentan in der Parkposition neben den Scheiben). Dieser Speicher wird heute noch eingesetzt, um grosse Datenmengen **günstig zu speichern**. Er ist relativ langsam und anfällig auf Transportschäden, da es sich um einen mechanischen Speicher mit beweglichen Teilen handelt. Die Drehgeschwindigkeit der Platten ist beschränkt, sie bestimmt Lese-/Schreibgeschwindigkeit. Zudem muss vor dem effektiven Zugriff stets noch gewartet werden, bis sich der Arm an der richtigen Position befindet.
 
-:::cards[--columns=2]
+:::cards{columns=2}
 ![Harddisk](images/04-harddisk.jpg)
-***
+::br
 ![geöfffnete Harddisk](images/04-harddisk-open.jpg)
 :::
 
@@ -65,9 +65,9 @@ Der Aufbau einer **SSD** gleicht in keiner Weise demjenigen einer HDD. Wie der N
 - SSDs kosten ein Mehrfaches im Vergleich zu herkömmlichen HDDs.
 - Auf dem Markt sind nicht so grosse (in Bezug auf die Speicherkapazität) SSDs erhältlich wie HDDs.
 
-:::cards[--columns=2]
+:::cards{columns=2}
 ![SSD](images/04-ssd.jpg)
-***
+::br
 ![geöfffnete SSD](images/04-ssd-open.jpg)
 :::
 
@@ -99,9 +99,9 @@ Der Aufbau einer **SSD** gleicht in keiner Weise demjenigen einer HDD. Wie der N
 
 Festplatten werden mit sogenannten SATA-Kabeln angeschlossen. Die Abkürzung SATA steht für *serial at attachment*. Das schmalere Kabel dient zur Datenübertragung, das breitere für die Stromzufuhr.
 
-:::cards[--columns=2]
+:::cards{columns=2}
 ![SATA-Kabel ](images/04-sata.jpg)
-***
+::br
 ![SATA-Stromanschluss ](images/04-sata-power.jpg)
 :::
 

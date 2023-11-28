@@ -44,7 +44,7 @@ Reto'''
 Manchmal wünscht man sich einen Kommentar über mehrere Zeilen zu schreiben, ohne immer ein `#` am Beginn der Zeile zu schreiben. In anderen Sprachen gibt es spezielle "Start-" und "End-Kommentar" Zeichen, so dass auch mehrere Zeilen auskommentiert werden können. (Bspw. um eine ganze Funktion auszukommentieren...). In Python gibt es dies nicht. Es kann aber aus dem kommentierten Code Text gemacht werden, so dass dieser nicht ausgeführt (aber auch nirgends in eine Variable gespeichert) wird.
 
 :::cards
-*** --code
+::br --code
 ```py live_py slim
 from math import sqrt
 
@@ -55,7 +55,7 @@ def sqrt(zahl):
 '''
 print('Wurzel 2 = ', sqrt(2))
 ```
-***
+::br
 **Beispiel**: Ursprünglich wurde die Funktion `sqrt` selber implementiert. Nun brauchen Sie diese vermutlich nicht mehr, das diese aus der Bibliothek `math` importiert wird. Vorerst wollen Sie die eigene Funktion aber noch nicht löschten :mdi-arrow-right: vorerst **kommentieren** Sie diese.
 :::
 ::::
@@ -66,12 +66,12 @@ print('Wurzel 2 = ', sqrt(2))
 
 Wie im Kapitel [Referenzen](./10-referenzen/index.md) besprochen, haben wir unsere Vorstellung des Speichermodells in Python soweit aktualisiert, dass der Computer für Variablen eine Etikette erstellt, die auf eine Speicherstelle zeigt, an welcher dann der effektive Wert gespeichert ist.
 
-:::flex[--min-width=200px]
+:::flex{min-width=200px}
 Der Python Code...
 ```py
 a = 'das ist mein string'
 ```
-***
+::br
 ... kann dargestellt werden als
 ```mermaid
 graph LR
@@ -84,9 +84,9 @@ In Python gibt es unterschiedliche Sammel-Datentypen, daher Daten, die unterschi
 Dabei macht Python einen grundlegenden Unterschied zwischen Veränderbaren- (*Mutable*) und Nicht-Veränderbaren (*Immutable*) Datentypen. Bei veränderbaren Datentypen können nach der Erzeugung und Zuweisung Änderungen an den zugrundeliegenden Speicherstellen vorgenommen werden.
 
 ::::info[Listen vs. Tupel]
-:::flex[--min-width=200px]
+:::flex{min-width=200px}
 Bei **Listen** können nach dem Erzeugen einzelne Listenwerte verändert, oder gar neue Werte hinzugefügt oder entfernt werden.
-***
+::br
 ```py live_py slim
 a = [1, 2, 3] # Liste initialisieren
 a.append(4)   # 4 hinzufügen
@@ -96,9 +96,9 @@ print(a)
 ```
 :::
 
-:::flex[--min-width=200px]
+:::flex{min-width=200px}
 Im Gegensatz dazu gibt es das **unveränderbare** Äquivalent dazu: **Tupel**. Einmal initialisiert, lassen sich dessen Werte nur noch lesen, jedoch nicht mehr verändern. Tupel werden im Gegensatz zu Listen mit runden Klammern erzeugt (initialisiert).
-***
+::br
 ```py live_py slim
 a = (1, 2, 3) # Tupel - eine unveränderbare Liste
 print(a)

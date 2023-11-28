@@ -24,24 +24,24 @@ Die Python Sprache setzt sich aus folgenden Elementen zusammen:
 
 ### Beispiele
 
-:::flex[--min=250px]
+:::flex{min=250px}
 ```py live_py slim
 frm turtle import *
 forward(100)
 ```
-***
+::br
 ```py live_py slim
 from turtle import *
 goto(100 50)
 ```
-***
+::br
 ```py live_py slim
 from turtle import *
 for i in range(4)
     forward(25)
     right(90)
 ```
-***empty
+::brempty
 :::
 
 :::::aufgabe[Fehler finden]
@@ -52,12 +52,12 @@ Untersuchen Sie obenstehende Programmschnipsel. Was sagen Ihnen die Fehlermeldun
 - Auf welcher Zeile steht die Art des Fehlers?
 - Wo finden Sie Hinweise auf den Fehler? Flicken Sie sie...
 
-:::flex[--min=250px]
+:::flex{min=250px}
 ```py live_py title=error1.py id=6cdb7162-bc67-4b3b-8879-93cef97a10a5
 frm turtle import *
 forward(100)
 ```
-***
+::br
 ```py live_py title=error2.py id=d3d13806-be6e-4043-8375-8208989328fc
 from turtle import *
 goto(100 50)
@@ -67,14 +67,14 @@ goto(100 50)
 Was macht der Befehl `goto`? Schauen Sie die Funktionsweise unter [Turtle Befehle#goto(x, y)](100-turtle-commands.md#gotox-y) nach
 :::
 
-***
+::br
 ```py live_py title=error3.py id=8f6d207b-397a-4c54-9812-f49956ccfef8
 from turtle import *
 for i in range(4)
     forward(25)
     right(90)
 ```
-***empty
+::brempty
 :::
 <Solution webKey="d775eeeb-21a2-479c-aba3-24a3173b9fe1">
 
@@ -167,14 +167,14 @@ Python erwartet nach jedem Doppelpunkt `:`, dass ein **eingerückter** Codeblock
 
 ### Beispiel
 
-:::cards[--min-width=250px]
-*** --backgroundColor=var(--ifm-color-danger-lightest)
+:::cards{min-width=250px}
+::br --backgroundColor=var(--ifm-color-danger-lightest)
 **Nicht eingerückt**
 ```py live_py slim
 for i in range(5):
 print('Hallo')
 ```
-*** --backgroundColor=var(--ifm-color-success-lightest)
+::br --backgroundColor=var(--ifm-color-success-lightest)
 **Korrektur**
 ```py live_py slim
 for i in range(5):
@@ -182,15 +182,15 @@ for i in range(5):
 ```
 :::
 
-:::cards[--min-width=250px]
-*** --backgroundColor=var(--ifm-color-danger-lightest)
+:::cards{min-width=250px}
+::br --backgroundColor=var(--ifm-color-danger-lightest)
 **Falsch eingerückt**
 ```py live_py slim
 print('Hallo')
  print('wie')
 print('gehts?')
 ```
-*** --backgroundColor=var(--ifm-color-success-lightest)
+::br --backgroundColor=var(--ifm-color-success-lightest)
 **Korrektur**
 ```py live_py slim
 print('Hallo')

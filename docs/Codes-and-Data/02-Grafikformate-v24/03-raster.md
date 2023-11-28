@@ -34,21 +34,21 @@ Dazu wird ein komplexer mathematischer Algorithmus verwendet, welcher bewirkt, d
 
 Der Algorithmus kann durch die Angabe der **Qualität** in Prozent beeinflusst werden. Die folgenden Bildausschnitte illustrieren, wie die Qualität und die Speichergrösse zusammenhängen:
 
-:::cards[--columns=4]
+:::cards{columns=4}
 ![höchste Qualität (162 kB)](images/03-raster/zeichnung-640-hoechst-detail.png)
-***
+::br
 ![hohe Qualität (42 kB)](images/03-raster/zeichnung-640-hoch-detail.png)
-***
+::br
 ![mittlere Qualität (18 kB)](images/03-raster/zeichnung-640-mittel-detail.png)
-***
+::br
 ![niedrige Qualität (9 kB)](images/03-raster/zeichnung-640-niedrig-detail.png)
 :::
 
 An den Bildern wird sichtbar, dass die JPEG-Kompression besonders entlang von Rändern Störungen («Artefakte») verursacht. Bei Fotos fällt dies weniger auf. Die folgenden zwei Bilder sind beide mit mittlerer JPEG-Qualität gespeichert worden:
 
-:::cards[--columns=2]
+:::cards{columns=2}
 ![JPEG-Grafik 640×360 Pixel in mittlerer Qualität](images/03-raster/foto-640-mittel.jpg)
-***
+::br
 ![JPEG-Grafik 640×360 Pixel in mittlerer Qualität](images/03-raster/zeichnung-640-mittel.jpg)
 :::
 
@@ -60,9 +60,9 @@ Das _Portable Network Graphics_-Format wird für **verlustfreie** Speicherung vo
 
 Das folgende Beispiel zeigt links einen Baum als PNG-Grafik mit Transparenz gespeichert. Rechts ist das gleiche Bild als JPG-Grafik mit hoher Qualität gespeichert.
 
-:::flex[--align-items=center]
+:::flex{align-items=center}
 ![PNG-Grafik (32 kB)](images/03-raster/baum.png)
-***
+::br
 ![JPEG-Grafik (13 kB)](images/03-raster/baum.jpg)
 :::
 

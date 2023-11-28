@@ -12,7 +12,7 @@ Struktogramme sind eine Möglichkeit, Programme und Algorithmen grafisch darzust
 ## Sequenz 👣
 In einem Struktogramm wird jeder Befehl in einen rechteckigen Kasten geschrieben. Befehle müssen nicht in einer Programmiersprache geschrieben werden, *Parameter* werden <u>unterstrichen</u>.
 
-:::flex[--min=250px --gap=50px]
+:::flex{min=250px gap=50px}
 ```py live_py slim
 from turtle import *
 
@@ -20,7 +20,7 @@ forward(100)
 left(90)
 forward(50) 
 ```
-***
+::br
 <Strukto program={[
     {type: 'step', code: <span><u>100</u> Schritte vorwärts</span>},
     {type: 'step', code: <span><u>90</u>° nach links</span>},
@@ -33,7 +33,7 @@ forward(50)
 
 Eine Wiederholung wird wie folgt dargestellt.
 
-:::flex[--min=250px --gap=50px]
+:::flex{min=250px gap=50px}
 ```py live_py slim
 from turtle import *
 
@@ -41,7 +41,7 @@ for i in range(4):
     forward(100)
     left(90)
 ```
-***
+::br
 <Strukto program={[
     {
         type: 'repeat', 
@@ -62,7 +62,7 @@ for i in range(4):
 ## Unterprogramm 🏷
 Eine Sequenz kann mit einem Namen versehen werden. Anstatt immer die ganze Sequenz aufzuschreiben, genügt es den Namen aufzuschreiben.
 
-:::flex[--min=250px --gap=50px]
+:::flex{min=250px gap=50px}
 ```py live_py slim
 from turtle import *
 
@@ -79,7 +79,7 @@ forward(100)
 zick_zack()
 zick_zack()
 ```
-***
+::br
 <Strukto program={[
     {
         type: 'def', 
@@ -112,12 +112,12 @@ Parameter werden jeweils <u>unterstrichen</u>, so dass klar ist, welche Werte si
 ### Variablen
 Bei Programmen wird zwischen Parametern und Variablen unterschieden. Genau wie Paramter können diese das Ergebnis eines Algorithmus ändern. Sie werden in einem Struktogramm speziell als markiert, damit klar ist, dass eigentlich der in der Variable gespeicherte Wert gemeint ist.
 
-:::flex[--width=250px]
+:::flex{width=250px}
 ```py live_py slim
 grösse = input('Wie gross bist du [cm]?')
 print(f'Ich bin {grösse} cm gross')
 ```
-***
+::br
 <Strukto program={[
     {type: 'input', code: <span><span className="var">grösse</span> = Wie gross bist du [cm]?</span>},
     {type: 'step', code: <span>Ausgabe: Ich bin <span className="var">grösse</span> cm gross.</span>}

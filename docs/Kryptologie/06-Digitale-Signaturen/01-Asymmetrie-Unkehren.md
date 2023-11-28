@@ -9,11 +9,11 @@ sidebar_custom_props:
 
 # Asymmetrie umkehren
 
-:::flex[--min-width=250px]
+:::flex{min-width=250px}
 ![Asymmetrische Verschlüsselungs Box](images/asymm-box.png)
-***
+::br
 ![Privater Schlüssel (rechts drehend)](images/driver-private.png)
-***
+::br
 ![Öffentlicher Schlüssel (links drehend)](images/driver-public.png)
 :::
 

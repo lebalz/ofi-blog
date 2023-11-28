@@ -49,7 +49,7 @@ Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 <br />
 
 (Antworten als Penta-Binärcode)
-:::cards[--rows=3 --min-width=250px --font-family=monospace]
+:::cards{rows=3 min-width=250px font-family=monospace}
 **Block 1**
 <Answer label="p" width="12em" labelWidth="3em" type="string" webKey="9f33bc0e-1475-49ee-8201-f389920f3da7" solution="10111 01001" sanitizer={UPPER_NOSPACE}/>
 <Answer label="IV" width="12em" labelWidth="3em" type="string" webKey="576d141c-99d1-41dd-9cb6-2536b5eefc61" solution="00001 11010" sanitizer={UPPER_NOSPACE}/>
@@ -59,7 +59,7 @@ Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 <i>Nach XOR mit Schlüssel</i>
 <Answer label="c" width="12em" labelWidth="3em" type="string"  webKey="029d1f0e-f597-4eb4-bac5-7c9ef6d8e849" solution="11000 01010" sanitizer={UPPER_NOSPACE}/>
 
-***
+::br
 **Block 2**
 
 <Answer label="p" type="string" width="12em" labelWidth="3em"webKey="55c93903-3bdb-4189-8f80-68bb19f4cbd1" solution="01110 10100" sanitizer={UPPER_NOSPACE}/>
@@ -69,7 +69,7 @@ Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 <Answer label="k" width="12em" labelWidth="3em" type="string" webKey="53ff56be-1a4b-4ad0-86fb-a98590d83d50" disabled/>
 <i>Nach XOR mit Schlüssel</i>
 <Answer label="c" width="12em" labelWidth="3em" type="string"  webKey="2bbfd220-5673-488a-a903-528ef7324885" solution="11000 00111" sanitizer={UPPER_NOSPACE}/>
-***
+::br
 
 **Block 3**
 
@@ -97,7 +97,7 @@ Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 <br />
 
 (Antworten als Penta-Binärcode)
-:::cards[--rows=4 --min-width=250px --font-family=monospace]
+:::cards{rows=4 min-width=250px font-family=monospace}
 **Block 1**
 <Answer label="c" width="12em" labelWidth="3em" type="string" webKey="150519fd-560b-42e6-acec-58407af94ada" solution="01110 01110" sanitizer={UPPER_NOSPACE}/>
 <Answer label="k" width="12em" labelWidth="3em" type="string" webKey="f20e9df7-4811-4856-a487-02e2ed6b883b" solution="00010 00101" sanitizer={UPPER_NOSPACE}/>
@@ -107,7 +107,7 @@ Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 <i>Nach XOR mit IV </i>
 <Answer label="p" width="12em" labelWidth="3em" type="string"  webKey="14beb904-594a-43ff-a67c-88b9ce93cb3c" checker={(val) => UPPER_NOSPACE(val)?.length === 10}/>
 
-***
+::br
 **Block 2**
 
 <Answer label="c" type="string" width="12em" labelWidth="3em"webKey="97948788-feeb-4c72-94fe-5e176283218a" solution="01000 00100" sanitizer={UPPER_NOSPACE}/>
@@ -117,7 +117,7 @@ Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 <Answer label="IV" width="12em" labelWidth="3em" type="string" webKey="d9ff2b83-e6de-490b-be42-11d4d4676da7" solution="01110 01110" sanitizer={UPPER_NOSPACE}/>
 <i>Nach XOR mit IV </i>
 <Answer label="p" width="12em" labelWidth="3em" type="string"  webKey="00ac07c4-7f1f-4d9a-a908-7f41f20621b0" solution="00100 01111" sanitizer={UPPER_NOSPACE}/>
-***
+::br
 
 **Block 3**
 
@@ -128,7 +128,7 @@ Entschlüsseln Sie den Text `NNHDFBA` mit dem Schlüssel `BE` und beliebigem IV.
 <Answer label="IV" width="12em" labelWidth="3em" type="string" webKey="e33acd9e-ccbf-4d39-aea2-9ee51b665fb2" solution="01000 00100" sanitizer={UPPER_NOSPACE}/>
 <i>Nach XOR mit IV </i>
 <Answer label="p" width="12em" labelWidth="3em" type="string"  webKey="1bcc452d-3099-4ab4-b24d-b24407a63c41" solution="01100 00011" sanitizer={UPPER_NOSPACE}/>
-***
+::br
 
 **Block 4**
 

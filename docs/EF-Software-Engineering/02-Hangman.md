@@ -12,69 +12,69 @@ sidebar_custom_props:
 
 ### Funktionen
 
-:::cards[--basis=360px --align-items=flex-end]
-*** --code
+:::cards{basis=360px align-items=flex-end}
+::br --code
 ```py
 def show():
     pass
 ```
-*** --code
+::br --code
 ```py
 def is_valid(inp):
     return True
 ```
-*** --code
+::br --code
 ```py
 def eingabe():
     pass
 ```
-*** --code
+::br --code
 ```py
 def auswerten(valid_inp):
     pass
 ```
-*** --code
+::br --code
 ```py
 def gewonnen():
     return False
 ```
-*** --code
+::br --code
 ```py
 def game_over():
     pass
 ```
-*** --code
+::br --code
 ```py
 def play():
     pass
 ```
-***
+::br
 :::
 
 ### Funktionskörper
-:::cards[--basis=360px --align-items=flex-end]
-*** --code
+:::cards{basis=360px align-items=flex-end}
+::br --code
 ```py
 for buchstabe in gesucht:
     if buchstabe not in gefunden:
         return False
 return True
 ```
-*** --code
+::br --code
 ```py
 if valid_inp in gesucht:
     gefunden.append(valid_inp)
 else:
     falsch_geraten.append(valid_inp)
 ```
-*** --code
+::br --code
 ```py
 buchstabe = input('Buchstabe? ')
 while not is_valid(buchstabe):
     buchstabe = input('Buchstabe? ')
 return buchstabe.lower()
 ```
-*** --code
+::br --code
 ```py
 print('Falsche Buchstaben:', falsch_geraten)
 for buchstabe in gesucht:

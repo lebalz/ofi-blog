@@ -55,9 +55,9 @@ Löten der angegebenen Lötstellen:
   - Vorne: ~0.3 cm abisolieren
   - Hinten: ~1 cm abisolieren
 
-:::cards[--min-width=300px]
+:::cards{min-width=300px}
 ![Schritt 5](images/esp-step05.jpg)
-***
+::br
 ![Schritt 6](images/esp-step06.jpg)
 :::
 :::

@@ -83,7 +83,7 @@ Die Hacker:in versucht über ein Eingabefeld (oder direkt als URL-Parameter) SQL
 sql = f"SELECT name FROM train_stations WHERE location ILIKE '{location}%';"
 ```
 
-:::cards[--min-width=250px]
+:::cards{min-width=250px}
 #### Normal
 Eingabe: `EF`
 
@@ -91,7 +91,7 @@ Eingabe: `EF`
 SELECT * FROM train_stations
 WHERE location ILIKE 'EF%';
 ```
-***
+::br
 #### Erzeuge Fehler
 Eingabe: `'KRUMS;--`
 
@@ -99,7 +99,7 @@ Eingabe: `'KRUMS;--`
 SELECT * FROM train_stations
 WHERE location ILIKE '%' KRUMS;--';
 ```
-***
+::br
 #### Sortieren
 Eingabe: `ber' ORDER BY location DESC;--`
 
@@ -108,7 +108,7 @@ SELECT * FROM train_stations
 WHERE location ILIKE 'ber' 
 ORDER BY location DESC;--;
 ```
-***
+::br
 :::
 :::success[Entscheidend]
 Durch das Hochkomma `'` zu Beginn der Eingabe wird der Suchtext im SQL-Befehl abgeschlossen. Somit können im Anschluss eigene SQL Befehle hinzugefügt werden.
@@ -169,19 +169,19 @@ Ein weiterer Trick bei der SQL-Injection ist das Einfügen von **immer wahren Be
 Was passiert, wenn nun als `email` die Eingabe `' OR 1=1;--` verwendet wird?
 
 :::cards
-*** --flexBasis=1400px
+::br --flexBasis=1400px
 #### Template
 ```py live_py slim
 email = "reto@gymnasium.ch"
 sql = f"SELECT * FROM students WHERE email = '{email}'"
 print(sql)
 ```
-***
+::br
 #### Eingabe
 ```sql
 ' OR 1=1;--
 ```
-***
+::br
 #### SQL-Abfrage
 ```sql
 SELECT * FROM students WHERE email = '' OR 1=1;--'
@@ -221,20 +221,20 @@ Webshop
 
 Ein weiteres Prinzip ist die Verwendung von mehreren SQL-Befehlen. Gewisse Datenbanksysteme führen mehrere durch Semikolons `;` voneinander getrennte Befehle direkt nacheinander aus. Dies ist dann nützlich, wenn Einträge geändert, gelöscht oder hinzugefügt werden sollen.
 
-:::cards[--minWidth=250px --columns=2]
-*** --flexBasis=1400px
+:::cards{minWidth=250px columns=2}
+::br --flexBasis=1400px
 #### Template
 ```py live_py slim
 email = "reto@gymnasium.ch"
 sql = f"SELECT * FROM students WHERE email = '{email}'"
 print(sql)
 ```
-***
+::br
 #### Eingabe
 ```sql
 '; UPDATE students SET grade=6 WHERE id=13; --`
 ```
-***
+::br
 #### SQL-Abfrage
 ```sql
 SELECT * FROM students
@@ -294,7 +294,7 @@ Oftmals weiss man nicht im Voraus, wie das Schema der Datenbank aussieht (bspw. 
 
 Sollen Abfragen miteinander kombiniert werden, so müssen die Resultate der beiden `SELECT` Queries also **genau gleich viele Spalten** aufweisen.
 
-:::cards[--minWidth=250px --columns=2 --className=slim,compact,left]
+:::cards{minWidth=250px columns=2 className=slim,compact,left}
 __legodudes__
 
 | id | name              | land       | essen                |
@@ -303,7 +303,7 @@ __legodudes__
 |  2 | Crazy Lego Dude   | Österreich | Spaghetti            |
 |  3 | Elon Marsk        | USA        | Lasagne              |
 
-***
+::br
 
 __haustiere__
 
@@ -313,7 +313,7 @@ __haustiere__
 |  2 | Whiskers | Fisch           |
 |  3 | Spike    | Äpfel           |
 
-*** --flexBasis=1400px
+::br --flexBasis=1400px
 ```sql
 SELECT id, name, essen
 FROM legodudes
@@ -321,7 +321,7 @@ UNION
 SELECT id, name, lieblingsfutter
 FROM haustiere;
 ```
-*** --className=center
+::br --className=center
 
 __Resultat__
 
@@ -337,7 +337,7 @@ __Resultat__
 
 Sollen nun alle Spalten von den __legodudes__ angezeigt werden, muss auch die Abfrage der Tabelle __haustiere__ 4 Spalten zurückgeben:
 
-:::cards[--minWidth=250px --columns=2 --className=slim,compact,left]
+:::cards{minWidth=250px columns=2 className=slim,compact,left}
 ```sql
 SELECT id, name, land, essen
 FROM legodudes
@@ -345,7 +345,7 @@ UNION
 SELECT id, name, NULL, lieblingsfutter
 FROM haustiere;
 ```
-*** --flexBasis=1400px --className=center
+::br --flexBasis=1400px --className=center
 __Resultat__
 
 | id | name            | land       | essen             |
@@ -399,7 +399,7 @@ Mit diesen Werkzeugen lassen sich nun auch bspw. alle User inkl. deren Passwört
     ```sql
     SELECT version();
     ```
-    ***
+    ::br
     #### Datenbankname
 
     <GTabs getLabel={(idx) => ['MySQL', 'PSQL'][idx]} groupId="dbs">
@@ -423,14 +423,14 @@ Mit diesen Werkzeugen lassen sich nun auch bspw. alle User inkl. deren Passwört
     ::::note[Tipp]
     In MySql können die Namen aller Tabellen in der Datenbank 'test_db' mit folgendem Query abgefragt werden, bzw. die Spalten der Tabelle 'test_table':
 
-    :::cards[--minWidth=350px]
+    :::cards{minWidth=350px}
     #### Alle Tabellen einer Datenbank
     ```sql
     SELECT table_name
     FROM information_schema.tables
     WHERE table_schema='database-name';
     ```
-    ***
+    ::br
     #### Spalten der Tabellen einer Datenbank
 
     <GTabs getLabel={(idx) => ['MySQL', 'PSQL'][idx]} groupId="dbs">

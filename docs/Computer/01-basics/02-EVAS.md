@@ -19,17 +19,17 @@ Ein **Ausgabegerät** wandelt Daten wieder in Informationen für die Umwelt um. 
 
 Typische Ein- und Ausgabegeräte für Computer sind:
 
-:::cards[--columns=3]
+:::cards{columns=3}
 ![Tastatur](images/02-keyboard.png)
-***
+::br
 ![Maus](images/02-mouse.png)
-***
+::br
 ![Webcam](images/02-webcam.png)
-***
+::br
 ![Drucker](images/02-printer.png)
-***
+::br
 ![Bildschirm](images/02-monitor.png)
-***
+::br
 ![Lautsprecher](images/02-speakers.png)
 :::
 

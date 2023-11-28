@@ -15,7 +15,7 @@ Alice und Bob arbeiten an einem neuen Kunstwerk, auf das die Öffentlichkeit ges
 ## Alice und Bob
 Sie haben eine Idee und gehen wie folgt vor:
 
-:::flex[--minWidth=300px]
+:::flex{minWidth=300px}
 
 Private Farbe
 : **Schritt 1**: Alice und Bob mischen sich je in einem Farbkübel eine persönliche, geheime Farbe, die sie niemandem mitteilen (private Farbe genannt).
@@ -25,7 +25,7 @@ Zwischenfarbe
 : **Schritt 3**: Im nächsten Schritt mischen sich Alice und Bob je in einem leeren Farbkübel eine neue Farbe: Sie nehmen dazu genau dieselbe Menge der eigenen privaten Farbe und der gemeinsamen Farbe. Diese neue Farbe schicken sie sich wieder gegenseitig zu.
 Zielfarbe
 : **Schritt 4**: Im letzten Schritt erzeugen Sie die Zielfarbe fürs Kunstwerk. Dazu nehmen sie zwei Einheiten der soeben erhaltenen Farbe und eine Einheit der privaten Farbe und erhalten die gemeinsame private Farbe, mit der sie die Teile des neuen Kunstwerks bemalen.
-***
+::br
 ```mermaid
 sequenceDiagram
     actor Alice

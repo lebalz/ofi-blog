@@ -4,13 +4,13 @@ sidebar_custom_props:
 ---
 # Löten
 
-:::cards[--min-width=300px]
+:::cards{min-width=300px}
 ![--width=120px](images/solder-tip01.jpg)
 - Beide Flächen erhitzen
 - möglichst etwas unterhalb der Spitze
 - :mdi-flash-triangle-outline--red: Lötzinn **nicht** direkt an die Spitze halten
 - :mdi-flash-triangle-outline--red: **nicht** mit unsauberer Spitze löten
-***
+::br
 ![](images/solder-tip02.jpg)
 A
 : So wünschen wir es uns

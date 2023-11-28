@@ -154,21 +154,21 @@ SELECT *
 
 Mit den logischen Operatoren `AND`, `OR` und `NOT` können mehrere Bedingungen miteinander verknüpft werden.
 
-:::cards[--min-width=500px]
+:::cards{min-width=500px}
 Zwei Bedingungen, beide müssen erfüllt sein
 
 ```sql
 SELECT * FROM haustiere
     WHERE lieblingsfutter='Körner' AND tierart='Hamster';
 ```
-***
+::br
 Zwei Bedingungen, die Eine oder die Andere muss erfüllt sein
 ```sql
 SELECT * FROM haustiere
     WHERE lieblingsfutter='Körner' 
         OR lieblingsfutter='Fisch';
 ```
-***
+::br
 Kombinierte Bedingung - die Klammerung gibt an, was zusammengehört.
 ```sql
 SELECT * FROM haustiere

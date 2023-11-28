@@ -33,13 +33,13 @@ Schauen Sie sich das folgenden Video an und versuchen Sie zu verstehen, was die 
 
 :::
 
-:::cards[--columns=2]
+:::cards{columns=2}
 ![Hercules-Grafikkarte](images/05-hercules.png)
 
 #### Hercules Graphics Card
 Hochauflösende monochrome Grafikkarte (720×348 Pixel, 1 Bit Farbe) mit 64 KB Video-RAM aus dem Jahr **1982**.
 
-***
+::br
 ![NVIDIA RTX 3080 Ti Trinity-Grafikkarte](images/05-nvidia-rtx-3080-trinity.jpg)
 #### NVIDIA RTX 3080 Ti Trinity
 
@@ -68,16 +68,16 @@ Was ist Raytracing und was bringt es mir?
 
 Für die Steuerung des Bildschirms gibt es vier aktuelle Technologien.
 
-:::cards[--columns=2]
+:::cards{columns=2}
 ![Display Port (DP)](images/05-dp.png)
 
-***
+::br
 ![Digital Visual Interface (DVI)](images/05-dvi.png)
 
-***
+::br
 ![High-Definition Multimedia Interface (HDMI)](images/05-hdmi.png)
 
-***
+::br
 ![Video Graphics Array (VGA)](images/05-vga.png)
 
 :::

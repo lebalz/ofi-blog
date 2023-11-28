@@ -31,9 +31,9 @@ Materialien bereitstellen.
 - Die Richtung der Widerstände spielt keine Rolle!
 - Das Käferchen mit den Widerständen nach Unten auf das Petafix drücken - nun sollte alles fixiert sein
 
-:::cards[--min-width=300px]
+:::cards{min-width=300px}
 ![--width=500px](images/bug-step02.jpg)
-***
+::br
 ![--width=500px](images/bug-step03.jpg)
 :::
 :::
@@ -42,9 +42,9 @@ Materialien bereitstellen.
 - Die vier Lötstellen löten
 - Die überständigen Füsschen abschneiden - wenn kein Seitenschneider vorhanden ist, tut's auch ein Nagelknipser 
 
-:::cards[--min-width=300px]
+:::cards{min-width=300px}
 ![--width=400px](images/bug-step04.jpg)
-***
+::br
 ![--width=400px](images/bug-step05.jpg)
 :::
 :::
@@ -55,7 +55,7 @@ Materialien bereitstellen.
 :::cards
 ![](images/Transistors.jpg)
 
-***
+::br
 > Ein **Transistor** ist ein elektronisches Halbleiter-Bauelement zum Steuern elektrischer Spannungen und Ströme. Er ist der **weitaus wichtigste** „aktive“ Bestandteil elektronischer Schaltungen [...] in Computersystemen. Besondere Bedeutung haben Transistoren – zumeist als Ein/Aus-Schalter – in integrierten Schaltkreisen, was die weit verbreitete Mikroelektronik ermöglicht.
 >
 > Die Bezeichnung „Transistor“ ist ein Kofferwort des englischen transfer resistor, was in der Funktion einem durch eine angelegte elektrische Spannung oder einen elektrischen Strom steuerbaren elektrischen Widerstand entspricht. [^1]
@@ -63,7 +63,7 @@ Materialien bereitstellen.
 
 :::cards
 ![](images/Photoresistor.jpg)
-***
+::br
 > Ein **Fotowiderstand** [...] ist ein lichtempfindlicher elektrischer Widerstand. Je mehr Licht auf den Fotowiderstand fällt, desto kleiner wird sein Widerstand. Im Vergleich zu anderen lichtempfindlichen elektronischen Bauelementen wie Fotodioden reagieren Fotowiderstände sehr langsam. [^2]
 :::
 
@@ -74,9 +74,9 @@ Mit dem Fotoresistor wird also der elektrische Widerstand verändert - der Trans
 - Löten
 - Füsschen abschneiden
 
-:::cards[--min-width=300px]
+:::cards{min-width=300px}
 ![--width=400px](images/bug-step06.jpg)
-***
+::br
 ![--width=400px](images/bug-step07.jpg)
 :::
 :::

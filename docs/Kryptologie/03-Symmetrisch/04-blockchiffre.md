@@ -29,7 +29,7 @@ Da der Klartext dreimal so lange ist wie der Schlüssel, muss der Text in drei T
 ## Verschlüsselung in Blöcken
 Im folgenden Beispiel wird der oben bereits erwähnte Klartext mit dem Schlüssel bitweise mit XOR verschlüsselt:
 
-:::cards[--min-width=445px --class=slim-table,center]
+:::cards{min-width=445px .slim-table,center}
 #### Block 1
 | ⠀    | Text    | Pentacode Block 1               | Geheimtext |
 | :--- | :------ | :------------------------------ | :--------- |
@@ -37,7 +37,7 @@ Im folgenden Beispiel wird der oben bereits erwähnte Klartext mit dem Schlüsse
 | *k*    | `PENTA` | `10000 00101 01110 10100 00001` |            |
 | *c*    |         | `10111 00000 00110 10001 01000` | `W FQH`    |
 
-***
+::br
 #### Block 2
 
 | ⠀    | Text    | Pentacode Block 2               | Geheimtext |
@@ -46,7 +46,7 @@ Im folgenden Beispiel wird der oben bereits erwähnte Klartext mit dem Schlüsse
 | *k*    | `PENTA` | `10000 00101 01110 10100 00001` |            |
 | *c*    |         | `11101 00000 11101 00000 10011` | `. . S`    |
 
-***
+::br
 #### Block 3
 
 | ⠀    | Text    | Pentacode Block 3               | Geheimtext |

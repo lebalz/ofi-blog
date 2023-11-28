@@ -17,14 +17,14 @@ import Grid from '@site/src/components/IFrame/Grid';
   - für das eigene Gerät optimieren (Bildschirmgrösse, Tastaturbelegung, ...)
 :::
 
-:::cards[--cols=3]
-***
+:::cards{cols=3}
+::br
 ![Snake](images/snake.png)
 👉 https://simplegametutorials.github.io/pygamezero/snake/
-***
+::br
 ![Arcanoid](images/arcanoid.gif)
 👉 [https://new.pythonforengineers.com](https://new.pythonforengineers.com/blog/your-first-game-in-python-in-less-than-30-minutes/)
-***
+::br
 ![Flappy Bird](images/flappy.png)
 👉 https://pygamezero-bird.readthedocs.io/en/latest/
 :::

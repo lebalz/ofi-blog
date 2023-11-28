@@ -109,13 +109,13 @@ Wieso wird ein `p` statt der Buchstabe `b` angezeigt? (`b` ist binär `1100010`)
 
 ## EAN-13
 
-:::flex[--columns=2]
+:::flex{columns=2}
 Letzthin beim Vorbereiten im Kaffee nebenan, wollte ich eine Packung Kaffee kaufen - doch das Einscannen des Codes ging nicht, so dass der Strichcode einer anderen Packung eingelesen werden musste...
 
 Doch wie funktioniert das? Weshalb wurde erkannt, dass der Code kaputt war?
 
 Nach einer kurzen Recherche: Die Strichcodes auf Verpackungen sind sog. **EAN-13-Codes** (EAN = European Article Number). Doch wie funktionieren diese?
-***
+::br
 ![EAN 13 --width=250px](images/fehlerkorrektur/ean13-blaser.jpg)
 :::
 

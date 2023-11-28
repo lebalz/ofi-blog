@@ -125,19 +125,19 @@ sequenceDiagram
 
 Normalerweise fügt die `print`-Funktion am Ende einer Ausgabe immer das Zeichen `\n` an, was von der Konsole als Steuerzeichen für eine neue Zeile interpretiert wird. Das können Sie aber auch ändern, indem Sie explizit vorgeben, welche Zeichen am Ende hinzugefügt werden:
 
-:::flex[--basis=380px]
+:::flex{basis=380px}
 ```py live_py slim
 # Mit Lücke zwischen einzelnen prints
 for i in range(3):
     print(f'Lücke {i}', end=' ')
 ```
-***
+::br
 ```py live_py slim
 # Ohne Zeichen zwischen einzelnen prints
 for i in range(3):
     print(f'Ohne {i}', end='')
 ```
-***
+::br
 ```py live_py slim
 # Fancy: mit Rakete und neuer Zeile zwischen einzelnen prints
 for i in range(3):

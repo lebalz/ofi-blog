@@ -7,7 +7,7 @@ sidebar_custom_props:
 
 import Strukto from '@site/src/components/struktogramm/Strukto';
 
-:::flex[--min=250px --gap=50px]
+:::flex{min=250px gap=50px}
 ```py live_py slim
 for i in range(5):
     left(90)
@@ -15,7 +15,7 @@ for i in range(5):
     right(90)
     forward(29) 
 ```
-***
+::br
 <Strukto program={[
     {
         type: 'repeat', 

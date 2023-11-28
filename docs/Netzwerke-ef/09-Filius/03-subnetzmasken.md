@@ -11,10 +11,10 @@ Als Netzwerk-Admin wollen Sie intern 11 Subnetze definieren, wobei Sie einen zug
 
 1. Wie lautet die Subnetzmaske?
 
-:::cards[--flex-basis=300px]
+:::cards{flex-basis=300px}
 #### Binäre Notation
 <Answer type="string" webKey="5a72e855-ac8a-4c66-8192-f30db8bf9df8" solution="11111111 11111111 11111111 11110000" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="11111111 11111111 11111111 00000000" width="20em"/>
-***
+::br
 #### Dezimale Notation
 <Answer type="string" webKey="42d5e43d-7efe-49e8-a1c0-429145670f03" solution="255.255.255.240" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="255.255.255.0" />
 :::
@@ -43,11 +43,11 @@ definieren, wobei Sie einen zugewiesenen IP-Adressbereich von `192.168.0.0/ 24` 
 
 <Answer type="text" webKey="1062ff47-9436-437e-9af3-019041677c34" />
 
-:::cards[--flex-basis=300px]
+:::cards{flex-basis=300px}
 #### Binäre Notation
 
 <Answer type="string" webKey="af3f3479-e03e-4cbf-80c7-0692c2a6fac5" solution="11111111 11111111 11111111 11100000" sanitizer={(val) => val.replaceAll(/[^\d]/g, '')} placeholder="11111111 11111111 11111111 00000000" width="20em"/>
-***
+::br
 
 #### Dezimale Notation
 

@@ -43,14 +43,14 @@ WAN
 LAN
 : Local Area Network
 
-:::flex[--align=center]
+:::flex{align=center}
 1.	Der Client schickt seine Datenpakete mit der IP-Adresse __192.168.0.2__ und dem TCP-Port __10101__ an sein Standard-Gateway, bei dem es sich um einen NAT-Router handelt.
 2.	Der NAT-Router tauscht IP-Adresse (LAN-Adresse) und TCP-Port (LAN-Port) aus und speichert beides mit der getauschten Port-Nummer (WAN-Port) in der NAT-Tabelle.
 3.	Der Router leitet das Datenpaket mit der WAN-Adresse __220.0.0.1__ und der neuen TCP-Port __20202__ ins Internet weiter.
 4.	Der Empfänger (Server) verarbeitet das Datenpaket und schickt seine Antwort zurück.
 5.	Der NAT-Router stellt nun anhand der Port-Nummer __20202__ (WAN-Port) fest, für welche IP-Adresse (LAN-Adresse) das Paket im lokalen Netz gedacht ist.
 6.	Er tauscht die IP-Adresse und die Port-Nummer wieder aus und leitet das Datenpaket ins lokale Netz weiter, wo es der Client entgegennimmt.
-*** --flex-basis=250px
+::br --flex-basis=250px
 ![](./images/snat-ablauf.png)
 :::
 
@@ -122,13 +122,13 @@ Hole-Punching
 
 ### Hole-Punching
 
-:::cards[--basis=450px]
+:::cards{basis=450px}
 ![Maria erhält vom Relay-Server die IP von Retos NAT/Firewall](images/facetime-direct-lsg-00.png)
-***
+::br
 ![Maria öffnet ihre Firewall mit einem `ping` - es kommt keine Antwort zurück, da bei Reto kein UDP Dienst auf dem Port `53` verfügbar ist (dies ist immer so - Port 53 ist für DNS reserviert!).](images/facetime-direct-lsg-01.png)
-***
+::br
 ![Maria Teilt Reto über den Relay Server mit, welche IP sie hat, und welcher Port offen ist](images/facetime-direct-lsg-02.png)
-***
+::br
 ![Reto stellt eine Verbindung zu Maria her](images/facetime-direct-lsg-03.png)
 :::
 

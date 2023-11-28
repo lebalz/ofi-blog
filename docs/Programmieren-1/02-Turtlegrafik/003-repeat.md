@@ -10,8 +10,8 @@ import Finding from "@site/src/components/Finding";
 
 In der [Aufgabe 8](001-intro.md#aufgaben) haben Sie eine Treppe gezeichnet. Ihr Programm sieht vermutlich etwa wie folgt aus:
 
-:::flex[--min=250px --justify=space-between --align=center]
-***
+:::flex{min=250px justify=space-between align=center}
+::br
 ```py live_py slim
 from turtle import *
 
@@ -36,8 +36,8 @@ forward(17)
 right(90)
 forward(29)
 ```
-*** --empty --grow=0.5 --min=50px
-***
+::br --empty --grow=0.5 --min=50px
+::br
 ![](images/stairs.svg)
 :::
 
@@ -63,7 +63,7 @@ forward(29)
 
 Ein Algorithmus kann Sequenzen wiederholt ausführen. In Python wird die zu wiederholende Sequenz **Codeblock** genannt.
 
-:::flex[--min=300px]
+:::flex{min=300px}
 ```py live_py slim
 from turtle import *
 
@@ -73,8 +73,8 @@ for i in range(5):
     right(90)
     forward(29)
 ```
-*** --empty --grow=0.5 --min=50px
-***
+::br --empty --grow=0.5 --min=50px
+::br
 <Strukto program={[
     {
         type: 'repeat', 
@@ -108,13 +108,13 @@ for i in range(4):
 
 Übersetzen Sie das Struktogramm in ein Python Programm. Was entsteht?
 
-:::flex[--min-width=300px --gap=30px]
+:::flex{min-width=300px gap=30px}
 ```py live_py title=wiederholung.py id=3d368326-dde6-414f-b494-ace1bfc2a687
 from turtle import *
 
 
 ```
-***
+::br
 <Strukto program={[
     {
         type: 'repeat', 

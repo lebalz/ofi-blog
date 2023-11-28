@@ -19,23 +19,23 @@ definiert.
 ::::success[Umgangssprachlich]
 Umgangssprachlich ist das kartesische Produkt bekannt als **Jedes mit Jedem**
 
-:::cards[--cols=3]
+:::cards{cols=3}
 
 $$
 A=\{a,b,c\}
 $$
 
-***
+::br
 <div style={{display: 'flex', justifyContent: 'center'}}>
 
 :mdi[close]{.xl}
 </div>
-***
+::br
 $$
 B=\{1,2\}
 $$
 
-***
+::br
 
 $$
 A\times B=\{(a,1),(a,2),(b,1),(b,2),(c,1),(c,2)\}

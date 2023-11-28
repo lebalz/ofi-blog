@@ -17,11 +17,11 @@ Für den Prozessor gibt es folgende wichtige Kenngrössen:
 - Die Anzahl **Kerne** gibt an, wie viele Berechnungen ein Prozessor gleichzeitig, also parallel, ausführen kann.
 - Die **Taktfrequenz** gibt an, wie schnell der Prozessor Berechnungen durchführen kann. Sie wird in der Einheit **Hertz** angegeben, was «pro Sekunde» bedeutet. `2.1 GHz` sind "2.1 Gigahertz", also `2'100'000'000 Hz` und somit 2.1 Milliarden Operationen, die pro Sekunde berechnet werden können.
 
-:::cards[--columns=3]
+:::cards{columns=3}
 ![AMD Ryzen-Prozessor](images/03-cpu-top.png)
-***
+::br
 ![Pins auf Unterseite](images/03-cpu-bottom.png)
-***
+::br
 ![geöffneter Prozessor](images/03-cpu-open.png)
 :::
 

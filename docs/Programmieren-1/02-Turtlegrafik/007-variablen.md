@@ -15,12 +15,12 @@ Variablen kann man sich wie eine Zügelbox vorstellen, welche mit einem Namen an
 
 Mit der Schreibweise `anzahl = 12` wird eine solche Box erstellt. In Zukunft sagen wir, dass damit die Variable `anzahl` **definiert** und ihr einen **Wert zugewiesen** wird. Um den Inhalt der Box zu erhalten, kann der Name (ohne Anführungszeichen) geschrieben werden. Im Struktogramm werden alle Variablen **umrahmt**.
 
-:::flex[--width=250px]
+:::flex{width=250px}
 <Strukto program={[
     {type: 'step', code: <span><span className="var">anzahl</span> = 12</span>},
     {type: 'step', code: <span>Ausgabe: <span className="var">anzahl</span></span>}
 ]} />
-***
+::br
 
 ```py live_py slim
 anzahl = 12
@@ -154,14 +154,14 @@ In Python ist das Resultat einer Eingabe **immer ein Text**. Ein Text kann aber 
 - Der Befehl `float` wandelt eine Eingabe in eine **Dezimalzahl** um.
 :::
 
-:::flex[--width=450px]
+:::flex{width=450px}
 ```py live_py slim
 # Centimeter zu Meter
 grösse = input('Wie gross bist du [cm]?')
 grösse = int(grösse)
 print(f'Ich bin {grösse / 100} m gross')
 ```
-***
+::br
 ```py live_py slim
 # Meter zu Centimeter
 grösse = input('Wie gross bist du [m]?')
@@ -174,12 +174,12 @@ print(f'Ich bin {grösse * 100} cm gross')
 
 Wird ein Wert über eine Eingabeaufforderung eingelesen, so wird dies im Struktogramm mit einem **Parallelogramm** angezeigt, wobei auch die Variable, welcher das Resultat zugewiesen wird, festgehalten wird:
 
-:::flex[--width=250px]
+:::flex{width=250px}
 <Strukto program={[
     {type: 'input', code: <span><span className="var">grösse</span> = Wie gross bist du [cm]?</span>},
     {type: 'step', code: <span>Ausgabe: Ich bin <span className="var">grösse</span> cm gross.</span>}
 ]} />
-***
+::br
 
 ```py live_py slim
 grösse = input('Wie gross bist du [cm]?')
@@ -192,7 +192,7 @@ print(f'Ich bin {grösse} cm gross')
 
 Übersetzen Sie das folgende Struktogramm in Python Code:
 
-:::flex[--width=250px]
+:::flex{width=250px}
 
 <Strukto program={[
     {type: 'input', code: <span><span className="var">grösse</span> = Wie gross bist du [m]?</span>},
@@ -200,7 +200,7 @@ print(f'Ich bin {grösse} cm gross')
     {type: 'step', code: <span><span className="var">bmi</span> = <span className="var">gewicht</span> geteilt durch <span className="var">grösse</span> mal <span className="var">grösse</span> </span>},
     {type: 'step', code: <span>Ausgabe: BMI: <span className="var">bmi</span></span>}
 ]} />
-***
+::br
 
 ```py live_py title=bmi.py id=a2442706-c582-4d76-a347-f91e50f5d3b6
 ```

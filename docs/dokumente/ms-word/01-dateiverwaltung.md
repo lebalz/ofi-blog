@@ -30,9 +30,9 @@ Sofern ein OneDrive Ordner ausgewählt wurde, wird das Dokument automatisch sync
 
 Ein auf OneDrive gespeichertes Word-Dokument kann zur gemeinsamen Bearbeitung (z.B. für eine Gruppenarbeit) freiegegeben werden. Bei der Freigabe müssen Sie entscheiden, ob das Dokument nur betrachtet, oder auch bearbeitet werden darf:
 
-:::flex[--align-items=flex-end]
+:::flex{align-items=flex-end}
 ![Bearbeitungsoptionen beim Teilen --width=300px](images/doc-sharing.png)
-***
+::br
 ![Linkeinstellungen für Ordner --width=300px](images/word-share-doc.png)
 :::
 

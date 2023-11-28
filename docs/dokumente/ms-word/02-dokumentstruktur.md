@@ -52,7 +52,7 @@ Spaltenlayout erzeugen verstanden?
 
 :::flex
 ![Durch Klicken auf den rot eingefärbten Pfeil können zudem weitere Einstellungsmöglichkeiten angezeigt werden.](images/word-seite-einrichten.png) 
-***
+::br
 ![](images/word-seite-einrichten-pro.png)
 :::
 
@@ -82,7 +82,7 @@ Die Formatvorlagen können auch nach den eigenen Wünschen **angepasst** werden:
 
 :::flex
 ![](images/word-formatvorlage-edit-pre.png)
-***
+::br
 ![](images/word-formatvorlage-edit.png)
 :::
 
@@ -124,9 +124,9 @@ Unter __Ansicht > Anzeige__ kann das Lineal eingeblendet werden.
 - Zeilenabstand (der Zeilenabstand innerhalb eines Absatzes)
 - Absatzabstand (der Abstand zum vorherigen/nächsten Absatz)
 
-:::flex[--align-items=flex-end]
+:::flex{align-items=flex-end}
 ![Menüband __Start__](images/word-absatz.png)
-***
+::br
 ![Menüband __Layout__](images/word-absatz2.png)
 :::
 
