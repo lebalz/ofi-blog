@@ -9,9 +9,9 @@ sidebar_custom_props:
 # 8. Sehsterne
 
 :::flex{gap=3em align-items=center min-width=150px}
-::br --max-width=250px
+::br{max-width=250px}
 ![--width=250px](images/08-sehstern.png)
-::br --min-width=250px
+::br{min-width=250px}
 Sehsterne (das sind Seesterne mit Augen) kennen nur die fünf 
 Buchstaben `A` ,`C`, `I`, `N`, `T`, die sie auf einem gesunkenen Schiff entdeckt 
 haben. Alle Wörter setzen sie aus diesen Buchstaben zusammen.
@@ -19,7 +19,7 @@ haben. Alle Wörter setzen sie aus diesen Buchstaben zusammen.
 
 ## ACINT-Code
 :::flex
-::br --min-width=250px
+::br{min-width=250px}
 Die Sehsterninformatiker haben eine binären Code für ihr
 Alphabet entwickelt, den sie **ACINT-Code** nennen:
 
@@ -50,14 +50,14 @@ IN CINCINNATI
 </Solution>
 
 :::
-::br --max-width=250px
+::br{max-width=250px}
 ![--width=180px](images/08-sehstern-codierung.png)
 
 :::
 
 ## Gebärdensprache
 :::flex
-::br --min-width=430px
+::br{min-width=430px}
 Die Sehsterne haben keinen Mund. Sie kommunizieren, indem sie
 nacheinander für jeden Buchstaben den entsprechenden Arm heben.
 Eines Tages entdecken die Sehsterne ein weiteres gesunkenes Schiff
@@ -103,7 +103,7 @@ Wenn die Sehsterne einen binären Code wählen, können sie maximal $2^5 = 32$ v
 </Solution>
 :::
 
-::br --max-width=180px
+::br{max-width=180px}
 ![--width=180px](images/08-sehstern-arme.png)
 :::
 

@@ -36,7 +36,7 @@ forward(17)
 right(90)
 forward(29)
 ```
-::br --empty --grow=0.5 --min=50px
+::br{grow=0.5 min=50px empty=true}
 ::br
 ![](images/stairs.svg)
 :::
@@ -73,7 +73,7 @@ for i in range(5):
     right(90)
     forward(29)
 ```
-::br --empty --grow=0.5 --min=50px
+::br{grow=0.5 min=50px empty=true}
 ::br
 <Strukto program={[
     {

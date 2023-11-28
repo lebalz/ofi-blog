@@ -8,9 +8,9 @@ sidebar_custom_props:
 Mit einem 3D-Drucker lassen sich dreidimensionale Objekte erzeugen. Dabei arbeiten alle gängigen Druckverfahren schichtweise - das Objekt wird aus mehreren Schichten zusammengesetzt, wobei eine einzelne Schicht zweidimensional auf die darunterliegende Schicht aufgetragen wird.
 
 :::cards{columns=2 text-align=center}
-::br --text-align=center
+::br{text-align=center}
 ![--width=996px](images/prusa-timelapse-01.gif)
-::br --text-align=center
+::br{text-align=center}
 ![](images/prusa-timelapse-02.gif)
 ::br
 ![--width=996px](images/prusa-timelapse-03.gif)

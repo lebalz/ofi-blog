@@ -21,7 +21,7 @@ Hashwerte kennen wir bisher nur zur sicheren Speicherung von Passwörtern. Hashf
 
 Wir haben gesehen, dass Hashwerte eine Art digitale **Fingerabdrücke** sind. Es ist extrem schwierig (resp. in vernünftiger Zeit nicht möglich), zu einem bestehenden Text einen anderen zu finden, der denselben Hashwert erzeugt.
 
-::br --align-self=center
+::br{align-self=center}
 ![Hashwerte sind digitale Fingerabdrücke --width=100px](../05-Hashfunktionen/images/fingerprint.png)
 :::
 

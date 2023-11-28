@@ -15,7 +15,7 @@ Eines der wichtigsten Prinzipien in der Kryptologie stammt von August Kerckhoffs
 >
 > Die Sicherheit gründet sich nur auf die Geheimhaltung des Schlüssels.»
 > – Auguste Kerckhoffs (1835 - 1903)
-::br --no-flex
+::br{no-flex=true}
 ![Auguste Kerckhoffs --no-margins --width=10em](images/auguste_kerckhoffs.jpg)
 :::
 
@@ -25,7 +25,7 @@ Claude Shannon hat dasselbe kurz und prägnant ausgedrückt:
 > «The enemy knows the system!»
 > 
 > – Claude Shannon (1916 - 2001)
-::br --no-flex
+::br{no-flex=true}
 
 ![Claude Shannon --no-margins --width=10em](images/claude_shannon.jpg)
 
@@ -47,7 +47,7 @@ Der renommierte Kryptologe Bruce Schneier erklärt das Prinzip von Kerckhoffs' m
 > Wenn du den Brief trotzdem nicht lesen kannst, **dann spricht man von Sicherheit**.»
 >
 > – Bruce Schneier
-::br --no-flex
+::br{no-flex=true}
 
 ![Bruce Schneier --no-margins --width=10em](images/bruce_schneier.jpg)
 :::

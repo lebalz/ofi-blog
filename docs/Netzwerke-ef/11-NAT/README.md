@@ -50,7 +50,7 @@ LAN
 4.	Der Empfänger (Server) verarbeitet das Datenpaket und schickt seine Antwort zurück.
 5.	Der NAT-Router stellt nun anhand der Port-Nummer __20202__ (WAN-Port) fest, für welche IP-Adresse (LAN-Adresse) das Paket im lokalen Netz gedacht ist.
 6.	Er tauscht die IP-Adresse und die Port-Nummer wieder aus und leitet das Datenpaket ins lokale Netz weiter, wo es der Client entgegennimmt.
-::br --flex-basis=250px
+::br{flex-basis=250px}
 ![](./images/snat-ablauf.png)
 :::
 

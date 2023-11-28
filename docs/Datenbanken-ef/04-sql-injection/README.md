@@ -169,7 +169,7 @@ Ein weiterer Trick bei der SQL-Injection ist das Einfügen von **immer wahren Be
 Was passiert, wenn nun als `email` die Eingabe `' OR 1=1;--` verwendet wird?
 
 :::cards
-::br --flexBasis=1400px
+::br{flexBasis=1400px}
 #### Template
 ```py live_py slim
 email = "reto@gymnasium.ch"
@@ -222,7 +222,7 @@ Webshop
 Ein weiteres Prinzip ist die Verwendung von mehreren SQL-Befehlen. Gewisse Datenbanksysteme führen mehrere durch Semikolons `;` voneinander getrennte Befehle direkt nacheinander aus. Dies ist dann nützlich, wenn Einträge geändert, gelöscht oder hinzugefügt werden sollen.
 
 :::cards{minWidth=250px columns=2}
-::br --flexBasis=1400px
+::br{flexBasis=1400px}
 #### Template
 ```py live_py slim
 email = "reto@gymnasium.ch"
@@ -313,7 +313,7 @@ __haustiere__
 |  2 | Whiskers | Fisch           |
 |  3 | Spike    | Äpfel           |
 
-::br --flexBasis=1400px
+::br{flexBasis=1400px}
 ```sql
 SELECT id, name, essen
 FROM legodudes
@@ -321,7 +321,7 @@ UNION
 SELECT id, name, lieblingsfutter
 FROM haustiere;
 ```
-::br --className=center
+::br{className=center}
 
 __Resultat__
 
@@ -345,7 +345,7 @@ UNION
 SELECT id, name, NULL, lieblingsfutter
 FROM haustiere;
 ```
-::br --flexBasis=1400px --className=center
+::br{flexBasis=1400px className=center}
 __Resultat__
 
 | id | name            | land       | essen             |

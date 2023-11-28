@@ -266,9 +266,9 @@ __(__
 : [[Shift]] + [[8]]
 __)__
 : [[Shift]] + [[9]]
-__{__
+__\{__
 : Normalerweise [[Alt Gr]] + [[ä]]
-__}__
+__\}__
 : Normalerweise [[Alt Gr]] + [[$]]
 __[__
 : Normalerweise [[Alt Gr]] + [[ü]]
@@ -282,9 +282,9 @@ __(__
 : [[Shift]] + [[8]]
 __)__
 : [[Shift]] + [[9]]
-__{__
+__\{__
 : Normalerweise [[Alt Gr]] + [[ä]]
-__}__
+__\}__
 : Normalerweise [[Alt Gr]] + [[$]]
 __[__
 : Normalerweise [[Alt Gr]] + [[ü]]
@@ -299,9 +299,9 @@ __(__
 : [[Shift]] + [[8]]
 __)__
 : [[Shift]] + [[9]]
-__{__
+__\{__
 : [[Option :mdi-apple-keyboard-option:]] + [[(]]
-__}__
+__\}__
 : [[Option :mdi-apple-keyboard-option:]] + [[)]]
 __[__
 : [[Option :mdi-apple-keyboard-option:]] + [[5]]
@@ -343,11 +343,11 @@ __&__
 __/__
 : [[Shift]] + [[7]]
 __\__
-: [[ctrl]] + [[alt]] + [[<]] oder [[Alt Gr]] + [[<]]
-__<__
-: [[<]]
+: [[ctrl]] + [[alt]] + [[\<]] oder [[Alt Gr]] + [[\<]]
+__\<__
+: [[\<]]
 __>__
-: [[Shift]] + [[<]]
+: [[Shift]] + [[\<]]
 
 </TabItem>
 <TabItem value="win10">
@@ -369,11 +369,11 @@ __&__
 __/__
 : [[Shift]] + [[7]]
 __\__
-: [[ctrl]] + [[alt]] + [[<]] oder [[Alt Gr]] + [[<]]
-__<__
-: [[<]]
+: [[ctrl]] + [[alt]] + [[\<]] oder [[Alt Gr]] + [[\<]]
+__\<__
+: [[\<]]
 __>__
-: [[Shift]] + [[<]]
+: [[Shift]] + [[\<]]
 
 </TabItem>
 <TabItem value="mac">
@@ -396,10 +396,10 @@ __/__
 : [[shift]] + [[7]]
 __\__
 : [[shift]] + [[option]] + [[7]]
-__<__
-: [[<]]
+__\<__
+: [[\<]]
 __>__
-: [[shift]] + [[>]]
+: [[shift]] + [[\<]]
 
 </TabItem>
 </OsTabs>

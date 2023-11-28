@@ -41,7 +41,8 @@ gewicht = 100
 print(f'{anzahl} Tafeln Schokolade sind {anzahl * gewicht} g schwer')
 ```
 
-<details><summary>Formatierter Text: <code>f'{'{'}anzahl{'}'} Tafeln'</code></summary>
+<details>
+<summary>Formatierter Text: <code>f'{'{'}anzahl{'}'} Tafeln'</code></summary>
 
 ### Formatierter Text
 

@@ -44,7 +44,7 @@ Reto'''
 Manchmal wünscht man sich einen Kommentar über mehrere Zeilen zu schreiben, ohne immer ein `#` am Beginn der Zeile zu schreiben. In anderen Sprachen gibt es spezielle "Start-" und "End-Kommentar" Zeichen, so dass auch mehrere Zeilen auskommentiert werden können. (Bspw. um eine ganze Funktion auszukommentieren...). In Python gibt es dies nicht. Es kann aber aus dem kommentierten Code Text gemacht werden, so dass dieser nicht ausgeführt (aber auch nirgends in eine Variable gespeichert) wird.
 
 :::cards
-::br --code
+::br{code=true}
 ```py live_py slim
 from math import sqrt
 

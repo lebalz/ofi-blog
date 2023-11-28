@@ -63,7 +63,7 @@ Welchen Transportoptionen schlägt Ihnen [👉 Google Maps](https://www.google.c
 
 <div className="no-table-header">
 
-|              <!-- --> | <!-- -->                                                            |
+|              {' '} | {' '}                                                            |
 |----------------------:|:--------------------------------------------------------------------|
 |              **WLAN** | zu Fuss bis zur nächsten Haltestelle                                |
 |   **Sichtbare WLANs** | Haltestellen, die zu Fuss erreichbar sind: Bahnhof & Badhausstrasse |

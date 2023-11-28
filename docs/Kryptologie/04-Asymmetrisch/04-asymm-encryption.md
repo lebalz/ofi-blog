@@ -15,7 +15,7 @@ Da für den Verschlüsselungsvorgang nicht derselbe Schlüssel verwendet wird wi
 
 :::flex{min-width=200px}
 ![Asymmetrische Ver- und Entschlüsselung mit verschiedenen Schlüsseln](images/asymmetric-cryptosystem.svg)
-::br --text-align=center
+::br{text-align=center}
 ![Generierung des Schlüsselpaares für die asymmetrische Verschlüsselung](images/key-pair-generation.svg)
 :::
 

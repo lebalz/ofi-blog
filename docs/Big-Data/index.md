@@ -84,7 +84,7 @@ Alle lesen zwei bis drei Kapitel - die Einleitung und die zum Thema passenden Ka
 ### 3. Zusätzliche Quellen
 Informieren Sie sich bei zusätzlichen Quellen über Ihr Thema:
 
-<details><summary>Zusätzliche Quellen</summary>
+:::details[Zusätzliche Quellen]
 
 #### Allgemein
 - https://www.heise.de/hintergrund/Automatische-Ungerechtigkeit-fuer-einen-ganzen-Jahrgang-britischer-Schueler-4984692.html
@@ -138,7 +138,7 @@ Informieren Sie sich bei zusätzlichen Quellen über Ihr Thema:
 
 - https://www.theverge.com/2023/4/19/23689879/ai-drake-song-google-youtube-fair-use
 
-</details>
+:::
 
 ### 4. Gruppendiskussion
 

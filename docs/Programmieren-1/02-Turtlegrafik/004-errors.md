@@ -41,7 +41,7 @@ for i in range(4)
     forward(25)
     right(90)
 ```
-::brempty
+::br{.empty}
 :::
 
 :::::aufgabe[Fehler finden]
@@ -74,7 +74,7 @@ for i in range(4)
     forward(25)
     right(90)
 ```
-::brempty
+::br{.empty}
 :::
 <Solution webKey="d775eeeb-21a2-479c-aba3-24a3173b9fe1">
 
@@ -168,13 +168,13 @@ Python erwartet nach jedem Doppelpunkt `:`, dass ein **eingerückter** Codeblock
 ### Beispiel
 
 :::cards{min-width=250px}
-::br --backgroundColor=var(--ifm-color-danger-lightest)
+::br{backgroundColor=var(--ifm-color-danger-lightest)}
 **Nicht eingerückt**
 ```py live_py slim
 for i in range(5):
 print('Hallo')
 ```
-::br --backgroundColor=var(--ifm-color-success-lightest)
+::br{backgroundColor=var(--ifm-color-success-lightest)}
 **Korrektur**
 ```py live_py slim
 for i in range(5):
@@ -183,14 +183,14 @@ for i in range(5):
 :::
 
 :::cards{min-width=250px}
-::br --backgroundColor=var(--ifm-color-danger-lightest)
+::br{backgroundColor=var(--ifm-color-danger-lightest)}
 **Falsch eingerückt**
 ```py live_py slim
 print('Hallo')
  print('wie')
 print('gehts?')
 ```
-::br --backgroundColor=var(--ifm-color-success-lightest)
+::br{backgroundColor=var(--ifm-color-success-lightest)}
 **Korrektur**
 ```py live_py slim
 print('Hallo')

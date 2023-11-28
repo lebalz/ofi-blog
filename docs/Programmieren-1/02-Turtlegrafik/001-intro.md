@@ -204,7 +204,8 @@ pencolor('green')
 forward(30)
 ```
 
-<details><summary>Farbpalette <span className="color-badge red">red</span> <span className="color-badge green">green</span> <span className="color-badge blue">blue</span></summary>
+<details>
+<summary>Farbpalette <span className="color-badge red">red</span> <span className="color-badge green">green</span> <span className="color-badge blue">blue</span></summary>
 
 <div className="small-table no-table-header">
 

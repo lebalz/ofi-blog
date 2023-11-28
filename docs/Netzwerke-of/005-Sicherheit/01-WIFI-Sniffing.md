@@ -92,13 +92,14 @@ Sehr praktisch: mit einem Hexadezimalzeichen können alle Zustände beschrieben 
 
 So lassen sich Binärzahlen, aufgeteilt in Bytes (=8 bits) durch zwei Hexadezimal Zahlen beschreiben:
 
-$$\
+$$
 \begin{aligned}
 12_{10} \quad\tilde{=}\quad 0000 \; 1100_{2} \quad & \tilde{=}\quad 0C_{16} \\
 19_{10} \quad\tilde{=}\quad 0001 \; 0011_{2} \quad & \tilde{=}\quad 13_{16} \\
 42_{10} \quad\tilde{=}\quad 0010 \; 1010_{2} \quad & \tilde{=}\quad 2A_{16} \\
 189_{10} \quad\tilde{=}\quad 1011 \; 1101_{2} \quad & \tilde{=}\quad BD_{16}
-\end{aligned}$$
+\end{aligned}
+$$
 
 </details>
 

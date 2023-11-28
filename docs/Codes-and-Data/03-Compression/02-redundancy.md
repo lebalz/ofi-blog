@@ -32,7 +32,7 @@ Offenbar tragen die häufigen Buchstaben weniger zum Inhalt des Textes bei. Sie 
 :::
 
 
-<details><summary>⭐️ Huffman Codierung für die deutsche Sprache</summary>
+:::details[⭐️ Huffman Codierung für die deutsche Sprache]
 
 Die durchschnittliche Buchstabenhäufigkeit in deutschen Texten kann der folgenden Tabelle entnommen werden:
 
@@ -72,7 +72,7 @@ Daraus ergibt sich
 |       M | 01110     |       Ö | 111001110   |
 |       N | 1011      |       Ü | 10101100    |
 </div>
-</details>
+:::
 
 
 

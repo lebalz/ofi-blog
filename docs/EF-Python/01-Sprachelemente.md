@@ -87,7 +87,7 @@ for i in range(4):
     forward(100)
     left(90)
 ```
-::br --alignSelf=end --flex-grow=0.3
+::br{alignSelf=end flex-grow=0.3}
 <Strukto program={[
     {
         type: 'repeat', 
@@ -137,7 +137,7 @@ print('231 ÷ 3 =', 231 / 3)
 ```py live_py slim
 print('2^8 =', 2 ** 8) 
 ```
-::br --empty
+::br{empty=true}
 :::
 
 [^1]: Quelle: [Wikipedia](https://en.wikipedia.org/wiki/Wildcard_character)
