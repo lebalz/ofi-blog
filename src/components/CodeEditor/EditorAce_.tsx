@@ -24,6 +24,10 @@ export interface Props {
     maxLines?: number;
 }
 
+const ALIAS_LANG_MAP_ACE = {
+    mpy: 'python',
+}
+
 const Editor = observer((props: Props) => {
     const store = useStore('documentStore');
     const pyScript = store.find<Script>(props.webKey);
@@ -85,7 +89,7 @@ const Editor = observer((props: Props) => {
                 navigateToFileEnd={false}
                 maxLines={props.maxLines || 25}
                 ref={editorRef}
-                mode={props.lang}
+                mode={ALIAS_LANG_MAP_ACE[props.lang] ?? props.lang}
                 theme="dracula"
                 onChange={(value: string) => {
                     pyScript.setData({ code: value });

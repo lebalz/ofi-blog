@@ -35,17 +35,23 @@ Zustände lassen sich am einfachsten finden, wenn man sich überlegt, auf welche
 ## State-Event-Tabellen
 Wenn man die Ereignisse und die Zustände einer Zustandsmaschine kennt so kann man diese in einer Tabelle eintragen, der sogenannten **State-Event-Tabelle**. In den einzelnen Zellen der Tabelle trägt man ein, was im betreffenden Zustand beim entsprechenden Ereignis passieren muss und welches der nachfolgende Zustand ist.
 
+| <span style={{float: 'right'}}>Momentaner Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __Zustand A__ | __Zustand B__ | __Zustand C__ | … |
+|:----------------------------------------------------------------------------------------------------------|:--------------|:--------------|:--------------|:--|
+| **Ereignis 1**                                                                                            | …             | …             | …             | … |
+| **Ereignis 2**                                                                                            | …             | __Zustand C__ | …             | … |
+| **Ereignis 3**                                                                                            | …             | …             | …             | … |
+
 Unvollständiges Beispiel für einen Lift (Zustände horizontal, Ereignise vertikal):
 
-|       -                | Stockwerk 2, Türe offen                  | Stockwerk 2, Türe zu                    | fahren aufwärts                                  | fahren abwärts                                   | ... |
-|:-------------------------|:-----------------------------------------|:----------------------------------------|:-------------------------------------------------|:-------------------------------------------------|:----|
-| **Türe auf gedrückt**    |                                          | Türe öffnen --> Stockwerk 2, Türe offen |                                                  |                                                  |     |
-| **Türe zu gedrückt**     | Türe schliessen --> Stockwerk 2, Türe zu |                                         |                                                  |                                                  |     |
-| **Stockwerk 1 gedrückt** |                                          | Motor abwärts ein --> fahren abwärts    |                                                  |                                                  |     |
-| **Stockwerk 3 gedrückt** |                                          | Motor aufwärts ein --> fahren aufwärts  |                                                  |                                                  |     |
-| **Stockwerk 1 erreicht** |                                          |                                         |                                                  | Motor aus, Türe öffnen --> Stockwerk 1, Türe auf |     |
-| **Stockwerk 3 erreicht** |                                          |                                         | Motor aus, Türe öffnen --> Stockwerk 3, Türe auf |                                                  |     |
-| **...**                  |                                          |                                         |                                                  |                                                  |     |
+| <span>Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __Stockwerk 2, Türe offen__                                | __Stockwerk 2, Türe zu__                                  | __fahren aufwärts__                                                | __fahren abwärts__                                                 | ... |
+|:----------------------------------------------------------------------|:-----------------------------------------------------------|:----------------------------------------------------------|:-------------------------------------------------------------------|:-------------------------------------------------------------------|:----|
+| **Türe auf gedrückt**    |            | Türe öffnen :mdi-arrow-right: __Stockwerk 2, Türe offen__ |                       |             |     |
+| **Türe zu gedrückt**     | Türe schliessen :mdi-arrow-right: __Stockwerk 2, Türe zu__    |        |                       |             |     |
+| **Stockwerk 1 gedrückt** |            | Motor abwärts ein :mdi-arrow-right: __fahren abwärts__    |                       |             |     |
+| **Stockwerk 3 gedrückt** |            | Motor aufwärts ein :mdi-arrow-right: __fahren aufwärts__  |                       |             |     |
+| **Stockwerk 1 erreicht** |            |              |             | Motor aus, Türe öffnen :mdi-arrow-right: __Stockwerk 1, Türe auf__ |     |
+| **Stockwerk 3 erreicht** |            |              | Motor aus, Türe öffnen :mdi-arrow-right: __Stockwerk 3, Türe auf__ |             |     |
+| **...**                  |            |              |             |                                                                      |     |
 
 Dieses Beispiel zeigt, dass in bestimmten Zuständen gewisse Ereignisse ignoriert werden. Die entsprechenden Zellen sind dann leer. Es könte auch vorkommen, dass die Zustandsmaschine bei einem bestimmten Ereignis zwar eine Aktion durchführt, den Zustand aber nicht wechselt. Die Zelle wäre dann nicht leer, aber der Folgezustand wäre derselbe.
 
