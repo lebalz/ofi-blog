@@ -4,16 +4,12 @@ import sf1 from './images/snowflake_1.png';
 import sf2 from './images/snowflake_2.png';
 import sf_s from './images/snowflake_special.png';
 
-const imgs = [sf1, sf2,  sf1, sf2, sf1, sf2, sf1, sf2, sf1, sf2,  sf1, sf2, sf1, sf2, sf1, sf2, sf_s].map((src) => {
-    const img = new Image();
-    img.src = src;
-    return img;
-});
 
 const Winter = () => {
     const [amount, setAmount] = React.useState(150);
     const [wind, setWind] = React.useState(1);
     const [speed, setSpeed] = React.useState(1);
+    const [images, setImages] = React.useState([]);
     
     React.useEffect(() => {
         let tx = 0;
@@ -52,6 +48,15 @@ const Winter = () => {
         }
     }, [])
 
+    React.useEffect(() => {
+        const imgs = [sf1, sf2,  sf1, sf2, sf1, sf2, sf1, sf2, sf1, sf2,  sf1, sf2, sf1, sf2, sf1, sf2, sf_s].map((src) => {
+            const img = new Image();
+            img.src = src;
+            return img;
+        });
+        setImages(imgs);
+    }, [])
+
     return (
         <div>
             <Snowfall
@@ -64,7 +69,7 @@ const Winter = () => {
                 wind={[0, wind]}
                 speed={[0.1, speed]}
                 radius={[5, 23]}
-                images={imgs}
+                images={images}
             />
 
         </div>
