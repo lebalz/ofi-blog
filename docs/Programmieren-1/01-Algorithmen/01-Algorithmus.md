@@ -38,11 +38,16 @@ Eine wichtige Eigenschaft von Algorithmen ist die **Ausführbarkeit**. Sie bedeu
 Ein Algorithmus definiert, in welcher **Reihenfolge** die einzelnen Schritte nacheinander abgearbeitet werden. Die Beschreibung dieser Reihenfolge ist die **Struktur** des Algorithmus. Während die Einzelschritte je nach Anwendungsgebiet unterschiedlich sind, sind die Strukturen (beim Programmieren spricht man von **Kontrollstrukturen**) von Algorithmen universell.
 
 Folgende Strukturen können unterschieden werden:
-- **Sequenz 👣**: eine Folge von Schritten/Anweisungen, die nacheinander abgearbeitet werden.
-- **Wiederholung 🔁**: Einer oder mehrere Schritte werden eine bestimmte Anzahl mal wiederholt.
-- **Bedingte Ausführung ⑂**: Einer oder mehrere Schritte werden nur ausgeführt, wenn eine bestimmte Bedingung erfüllt ist.
-- **Unterprogramm 🏷**: Eine Sequenz kann mit einem Namen versehen werden. Anstatt immer die ganze Sequenz aufzuschreiben, kann der Name angegeben werden.
-- **Parameter ⊕ ⊖**: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welche bei jeder Ausführung neu festgelegt werden.
+Sequenz 👣
+: eine Folge von Schritten/Anweisungen, die nacheinander abgearbeitet werden.
+Wiederholung 🔁
+: Einer oder mehrere Schritte werden eine bestimmte Anzahl mal wiederholt.
+Bedingte Ausführung ⑂
+: Einer oder mehrere Schritte werden nur ausgeführt, wenn eine bestimmte Bedingung erfüllt ist.
+Unterprogramm 🏷
+: Eine Sequenz kann mit einem Namen versehen werden. Anstatt immer die ganze Sequenz aufzuschreiben, kann der Name angegeben werden.
+Parameter ⊕ ⊖
+: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welche bei jeder Ausführung neu festgelegt werden.
 
 ## Endlichkeit
 Die Endlichkeit ist eine weitere wichtige Eingenschaft von Algorithmen. Sie bedeutet, dass ein Algorithmus immer nach endlich vielen Einzelschritten beendet wird. Ausserdem darf ein Algorithmus nur endlich viel Platz beanspruchen (z.B. Speicherplatz im Computer).

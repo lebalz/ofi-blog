@@ -71,7 +71,7 @@ Beispiele:
     ```py live_py slim
     print('--- Start ---')
     for i in range(2):
-        print('🥳')     # \ 
+        print('🥳')      # \ 
         print('🥳🥳')   #  |- diese 3 Zeilen werden gleich oft
         print('🥳🥳🥳') # /   wiederholt
     print('--- Ende ---') 

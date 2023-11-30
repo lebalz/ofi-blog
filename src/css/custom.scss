@@ -296,6 +296,9 @@ div.flex {
             flex-shrink: unset;
             flex-basis: unset;
         }
+        &.empty {
+            opacity: 0;
+        }
 
         .card__image {
             :first-child {

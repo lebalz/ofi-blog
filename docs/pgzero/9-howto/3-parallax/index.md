@@ -15,7 +15,7 @@ import CodeBlock from '@theme/CodeBlock';
 
 ## Bilder
 
-:::cards[columns 4]
+:::cards{columns=4}
 ![](./images/hintergrund0.png)
 ::br
 ![](./images/hintergrund1.png)
@@ -29,6 +29,7 @@ import CodeBlock from '@theme/CodeBlock';
 ![](./images/hintergrund5.png)
 ::br
 ![](./images/hintergrund6.png)
+::br{.empty}
 :::
 
 Bildquelle: [Craftpix.net, OpenGameArt][1], Lizenz: OGA

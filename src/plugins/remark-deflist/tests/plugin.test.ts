@@ -420,4 +420,23 @@ Some content
         "
       `);
     });    
+
+    it("does not transform inline :", async () => {
+      const input = `# Details element example
+      - a: simple
+      - b: list
+      - c: with
+      - d: colons
+      `;
+      const result = await process(input);
+      expect(result).toMatchInlineSnapshot(`
+        "# Details element example
+
+        * a: simple
+        * b: list
+        * c: with
+        * d: colons
+        "
+      `);
+    });
 });
