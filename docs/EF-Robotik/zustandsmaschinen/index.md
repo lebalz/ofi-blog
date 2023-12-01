@@ -38,7 +38,7 @@ Wenn man die Ereignisse und die Zustände einer Zustandsmaschine kennt so kann m
 | <span style={{float: 'right'}}>Momentaner Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __Zustand A__ | __Zustand B__ | __Zustand C__ | … |
 |:----------------------------------------------------------------------------------------------------------|:--------------|:--------------|:--------------|:--|
 | **Ereignis 1**                                                                                            | …             | …             | …             | … |
-| **Ereignis 2**                                                                                            | …             | __Zustand C__ | …             | … |
+| **Ereignis 2**                                                                                            | …             | Aktion :mdi-arrow-right: __Zustand C__ | …             | … |
 | **Ereignis 3**                                                                                            | …             | …             | …             | … |
 
 Unvollständiges Beispiel für einen Lift (Zustände horizontal, Ereignise vertikal):

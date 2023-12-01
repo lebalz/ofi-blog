@@ -2,7 +2,7 @@
 sidebar_custom_props:
   id: 59815221-768e-4e0e-902b-641afb268e87
 ---
-# 1. Code für Micro:Bit
+# 2. Code für Micro:Bit
 
 Material
 : Micro:Bit
