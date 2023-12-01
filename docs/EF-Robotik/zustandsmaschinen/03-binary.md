@@ -8,7 +8,7 @@ Studieren Sie folgende Event-State Tabelle
 
 | <span style={{float: 'right'}}>Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __ADD:00__    | __ADD:01__    | __ADD:10__    | __ADD:11__    | __SUB:00__            | __SUB:01__            | __SUB:10__            | __SUB:11__            | __RESET__        |
 |:-----------------------------------------------------------------------------------------------|:------------|:------------|:------------|:------------|:--------------------|:--------------------|:--------------------|:--------------------|:-------------------|
-| **:mdi-gesture-tap-button: A** | Zeige 00 __ADD:01__ | Zeige 01 __ADD:10__ | Zeige 10 __ADD:11__ | Zeige 11 __ADD:11__ | Zeige 00 __SUB:11__         | Zeige 01 __SUB:00__         | Zeige 10 __SUB:01__         | Zeige 11 __SUB:10__         |                      |
+| **:mdi-gesture-tap-button: A** | Zeige 01 __ADD:01__ | Zeige 10 __ADD:10__ | Zeige 11 __ADD:11__ | Zeige 00 __ADD:00__ | Zeige 11 __SUB:11__         | Zeige 00 __SUB:00__         | Zeige 01 __SUB:01__         | Zeige 10 __SUB:10__         |                      |
 | **:mdi-gesture-tap-button: B** | __SUB:00__          | __SUB:01__          | __SUB:10__          | __SUB:11__          | Zeige 0 __RESET__           | Zeige 1 __RESET__           | Zeige 2 __RESET__           | Zeige 3 __RESET__           | warte 3s, __ADD:00__   |
 
 
