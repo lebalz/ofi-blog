@@ -60,11 +60,11 @@
         "cells": ["01.12.2023","Robotik","Zustandsmaschinen, Zustandsdiagramme"]
     },
     {
-        "cells": ["08.12.2023","Robotik","Test"],
-        "type": "test"
+        "cells": ["08.12.2023","Robotik","Zustandsmaschinen, Zustandsdiagramme"]
     },
     {
-        "cells": ["15.12.2023","Algorithmik","Effizienz"]
+        "cells": ["15.12.2023","Robotik",""],
+        "type": "test"
     },
     {
         "cells": ["22.12.2023","Algorithmik","O(n) Notation, Sortieren"]
