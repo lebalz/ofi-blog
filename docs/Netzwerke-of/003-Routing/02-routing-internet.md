@@ -81,6 +81,7 @@ bei Ihnen zu Hause!
 
 :::
 
+
 ### Ping
 Beim Ping-Befehl handelt es sich um ein Netzwerkdiagnose-Tool, womit man die Datenübertragung zu einem anderen Gerät überprüfen kann. Dabei sendet man ein Signal an ein entferntes Gerät. Dieses Gerät sollte dann ein Signal zurücksenden.
 
@@ -93,7 +94,7 @@ ping 194.124.132.216
 
 Führen Sie einen Ping mit folgenden IP-Adressen aus:
 
-```sh
+```bash
 194.124.132.216
 8.8.8.8
 185.237.144.226
@@ -213,7 +214,7 @@ Bei der angezeigten Adresse handelt es sich um die IP-Adresse, welche im Interne
 </Solution>
 :::
 
-## ⭐️ MAC-Adresse
+## MAC-Adresse
 
 Die physikalische Adresse, auch Hardware-Adresse eines Computers (oder genauer gesagt die Adresse seiner Netzwerkschnittstelle) – nennt man **MAC-Adresse** (*MAC* steht für `Media Access Control` und hat entsprechen nichts mit Apple zu tun). Sie besteht aus 48 Bit oder 6 Bytes, so dass sie üblicherweise als Hexadezimalzahl (mit $16$ eindeutigen Zeichen) mit `6×2` Stellen angegeben wird, beispielsweise: `48:2C:6A:1E:59:3D`. Jede MAC-Adresse muss **weltweit eindeutig** sein, damit die Zustellung von Paketen, und somit auch die Transportsicherheit, garantiert werden kann. Die MAC-Adresse wird bei der Herstellung der Netzwerkkarte fix vergeben und kann nicht mehr verändert werden.
 
@@ -221,6 +222,13 @@ Die physikalische Adresse, auch Hardware-Adresse eines Computers (oder genauer g
 
 Ihre Persönlichkeit ändern Sie bei einem Umzug nicht, Ihre Wohnadresse aber schon. Gleiches gilt für die MAC-Adresse und IP-Adresse eines Geräts: Die MAC-Adresse bleibt gleich, die im Netzwerk sichtbare IP-Adresse ändert jedoch.
 :::
+
+Die auf Ihrem Laptop gespeicherten MAC-Adressen von anderen Geräten aus dem Netzwerk kann wie folgt herausgefunden werden. Sie zeigt die __MAC-Adresse__ mit zugehöriger __IP-Adresse__:
+
+```bash
+arp -a
+```
+
 
 ### Wozu braucht es die MAC-Adresse?
 

@@ -62,11 +62,13 @@
         "type": "holiday"
     },
     {
-        "cells": ["12.12.2023","Netzwerke","Wiederholung"]
+        "cells": ["06.12.2023","Netzwerke","Routing"]
     },
     {
-        "cells": ["19.12.2023","Netzwerke","Test"],
-        "type": "test"
+        "cells": ["12.12.2023","Netzwerke","DNS"]
+    },
+    {
+        "cells": ["19.12.2023","Netzwerke",""]
     },
     {
         "cells": ["26.12.2023","Winterferien",""],
