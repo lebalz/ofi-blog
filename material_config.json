@@ -430,7 +430,11 @@
     {
       "from": "docs/EF-Robotik/",
       "to": "versioned_docs/version-24ef/04-Robotik",
-      "ignore": [],
+      "ignore": [
+        "asyncio",
+        "EV3/Pendelbus-Blink"
+
+      ],
       "open": true
     }
   ]
