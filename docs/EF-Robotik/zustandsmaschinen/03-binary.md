@@ -6,10 +6,11 @@ sidebar_custom_props:
 
 Studieren Sie folgende Event-State Tabelle
 
-| <span style={{float: 'right'}}>Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __ADD:00__                            | __ADD:01__                            | __ADD:10__                            | __ADD:11__                            | __SUB:00__                            | __SUB:01__                            | __SUB:10__                            | __SUB:11__                            | __RESET__                             |
-|:-----------------------------------------------------------------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|
-| **:mdi-gesture-tap-button: A**                                                                 | Zeige 01 :mdi-arrow-right: __ADD:01__ | Zeige 10 :mdi-arrow-right: __ADD:10__ | Zeige 11 :mdi-arrow-right: __ADD:11__ | Zeige 00 :mdi-arrow-right: __ADD:00__ | Zeige 11 :mdi-arrow-right: __SUB:11__ | Zeige 00 :mdi-arrow-right: __SUB:00__ | Zeige 01 :mdi-arrow-right: __SUB:01__ | Zeige 10 :mdi-arrow-right: __SUB:10__ |                                       |
-| **:mdi-gesture-tap-button: B**                                                                 | __SUB:00__                            | __SUB:01__                            | __SUB:10__                            | __SUB:11__                            | Zeige 0 :mdi-arrow-right: __RESET__   | Zeige 1 :mdi-arrow-right: __RESET__   | Zeige 2 :mdi-arrow-right: __RESET__   | Zeige 3 :mdi-arrow-right: __RESET__   | warte 3s, zeige 00 :mdi-arrow-right: __ADD:00__ |
+| <span style={{float: 'right'}}>Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __ADD:00__                            | __ADD:01__                            | __ADD:10__                            | __ADD:11__                            | __SUB:00__                            | __SUB:01__                            | __SUB:10__                            | __SUB:11__                            | __RESET__                                       |
+|:-----------------------------------------------------------------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:------------------------------------------------|
+| **:mdi-gesture-tap-button: A**                                                                 | Zeige 01 :mdi-arrow-right: __ADD:01__ | Zeige 10 :mdi-arrow-right: __ADD:10__ | Zeige 11 :mdi-arrow-right: __ADD:11__ | Zeige 00 :mdi-arrow-right: __ADD:00__ | Zeige 11 :mdi-arrow-right: __SUB:11__ | Zeige 00 :mdi-arrow-right: __SUB:00__ | Zeige 01 :mdi-arrow-right: __SUB:01__ | Zeige 10 :mdi-arrow-right: __SUB:10__ |                                                 |
+| **:mdi-gesture-tap-button: B**                                                                 | __SUB:00__                            | __SUB:01__                            | __SUB:10__                            | __SUB:11__                            | Zeige 0 :mdi-arrow-right: __RESET__   | Zeige 1 :mdi-arrow-right: __RESET__   | Zeige 2 :mdi-arrow-right: __RESET__   | Zeige 3 :mdi-arrow-right: __RESET__   |                                                 |
+| **Timer**                                                                                      |                                       |                                       |                                       |                                       |                                       |                                       |                                       |                                       | warte 3s, zeige 00 :mdi-arrow-right: __ADD:00__ |
 
 
 :::aufgabe 
@@ -88,8 +89,8 @@ state = 'ADD:00'
 
 while True:
     if state=='ADD:00':
-        display.show(IMAGES['00'])
         if button_a.was_pressed():
+            display.show(IMAGES['01'])
             state = 'ADD:01'
         elif button_b.was_pressed():
             state = 'SUB:00'
