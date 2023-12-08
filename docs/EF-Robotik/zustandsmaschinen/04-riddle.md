@@ -13,13 +13,13 @@ stateDiagram-v2
     SHAKE#3-->B#4: shake/3
     B#4-->A#5: B/4
     A#5-->WIN: A
-    WIN-->END: /Happy smile, play winner sound
+    WIN-->END: sleep 3s /Happy smile, play winner sound
     A#1-->LOST: not A
     A#2-->LOST: not A
     SHAKE#3-->LOST: not shake
     B#4-->LOST: not B
     A#5-->LOST: not A
-    LOST-->END: /Sad smile, play loser sound
+    LOST-->END: sleep 3s /Sad smile, play loser sound
     END-->[*]
 ```
 
@@ -29,6 +29,10 @@ stateDiagram-v2
 Oben ist ein Zustandsdiagramm für ein Spiel. Beschreiben Sie den Ablauf in eigenen Worten.
 
 <Answer type="text" webKey="2a627285-08ed-4a7d-aae5-de72ed174597" />
+<Solution webKey="6bf8ab78-782a-4b23-973a-7815c626e946">
+
+Es ist ein Ratespiel - man muss in der richtigen Reihenfolge die richtigen Eingaben tätigen, damit man gewinnt.
+</Solution>
 :::
 
 :::aufgabe Event-State Tabelle
@@ -37,6 +41,15 @@ Oben ist ein Zustandsdiagramm für ein Spiel. Beschreiben Sie den Ablauf in eige
 Übersetzen Sie das Zustandsiagramm in eine Event-State Tabelle und halten Sie Ihre Lösung unten fest.
 
 <Answer type="text" webKey="07a94c07-3902-444c-9133-497e3ba0f97a" />
+<Solution webKey="6bf8ab78-782a-4b23-973a-7815c626e946">
+
+| <span style={{float: 'right'}}>Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __START__                               | __A#1__                              | __A#2__                                  | __SHAKE#3__                          | __B#4__                               | __A#5__                              | __WIN__                                             | __LOST__                                          | __END__ |
+|:-----------------------------------------------------------------------------------------------|:----------------------------------------|:-------------------------------------|:-----------------------------------------|:-------------------------------------|:--------------------------------------|:-------------------------------------|:----------------------------------------------------|:--------------------------------------------------|:--------|
+| **Button A**                                                                                   |                                         | 1 anzeigen :mdi-arrow-right: __A#2__ | 2 anzeigen :mdi-arrow-right: __SHAKE#3__ | :mdi-arrow-right: __LOST__           | :mdi-arrow-right: __LOST__            | 5 anzeigen :mdi-arrow-right: __WIN__ |                                                     |                                                   |         |
+| **Button B**                                                                                   |                                         | :mdi-arrow-right: __LOST__           | :mdi-arrow-right: __LOST__               | :mdi-arrow-right: __LOST__           | 4 anzeigen  :mdi-arrow-right: __A#5__ | :mdi-arrow-right: __LOST__           |                                                     |                                                   |         |
+| **Shake**                                                                                      |                                         | :mdi-arrow-right: __LOST__           | :mdi-arrow-right: __LOST__               | 3 anzeigen :mdi-arrow-right: __B#4__ | :mdi-arrow-right: __LOST__            | :mdi-arrow-right: __LOST__           |                                                     |                                                   |         |
+| **Timer**                                                                                      | reset display :mdi-arrow-right: __A#1__ |                                      |                                          |                                      |                                       |                                      | 3s warten, SMILE anzeigen :mdi-arrow-right: __END__ | 3s warten, SAD anzeigen :mdi-arrow-right: __END__ |         |
+</Solution>
 :::
 
 :::aufgabe
@@ -53,5 +66,6 @@ Programmieren Sie die Zustandsmaschine auf dem Micro:Bit. Verwenden Sie dazu ein
 ```mpy live_py id=b478b867-6ac9-46cc-a11a-a611db9b0b8f title=riddle.mpy
 
 ```
+<Solution webKey="6bf8ab78-782a-4b23-973a-7815c626e946"></Solution>
 :::
 
