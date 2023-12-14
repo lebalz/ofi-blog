@@ -74,9 +74,6 @@ import sys
 
 state = 'START'
 
-def show_progress(num):
-    for i in range(5):
-        display.set_pixel(num - 1, i, 9)
 display.clear()
 while True:
     btn_a = button_a.was_pressed()
