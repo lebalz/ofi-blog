@@ -164,7 +164,6 @@
       "to": "versioned_docs/version-26e/10-Netzwerke",
       "ignore": [
         "002-Codierung",
-        "004-DNS",
         "005-Sicherheit",
         "090-Pruefung.md"
       ],
@@ -334,7 +333,6 @@
       "to": "versioned_docs/version-26P/10-Netzwerke",
       "ignore": [
         "002-Codierung",
-        "004-DNS",
         "005-Sicherheit",
         "090-Pruefung.md"
       ],
