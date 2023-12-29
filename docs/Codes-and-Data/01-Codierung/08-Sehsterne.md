@@ -18,7 +18,7 @@ haben. Alle Wörter setzen sie aus diesen Buchstaben zusammen.
 :::
 
 ## ACINT-Code
-:::flex
+::::flex
 ::br{min-width=250px}
 Die Sehsterninformatiker haben eine binären Code für ihr
 Alphabet entwickelt, den sie **ACINT-Code** nennen:
@@ -53,10 +53,10 @@ IN CINCINNATI
 ::br{max-width=250px}
 ![--width=180px](images/08-sehstern-codierung.png)
 
-:::
+::::
 
 ## Gebärdensprache
-:::flex
+::::flex
 ::br{min-width=430px}
 Die Sehsterne haben keinen Mund. Sie kommunizieren, indem sie
 nacheinander für jeden Buchstaben den entsprechenden Arm heben.
@@ -105,7 +105,7 @@ Wenn die Sehsterne einen binären Code wählen, können sie maximal $2^5 = 32$ v
 
 ::br{max-width=180px}
 ![--width=180px](images/08-sehstern-arme.png)
-:::
+::::
 
 ## Erweiterter ACINT-Code
 Die Sehstern-Informatiker möchten einen neuen binären Code entwickeln, um die neuen 

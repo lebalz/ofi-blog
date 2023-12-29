@@ -17,13 +17,15 @@ Die Anzahl Pixel wird aus der **Auflösung**, also der Breite $b$ und Höhe $h$ 
 Für die Speichergrösse rechnen wird also wie folgt:
 
 $$
-b\cdot h\cdot f$$
+b\cdot h\cdot f
+$$
 
 :::info[Beispiel]
 Ein Bild mit einer Auflösung von `1920×1080` Pixel und der Farbtiefe `3 Byte` benötigt einen Speicherplatz von:
 
 $$
-1920\cdot 1080\cdot 3 = 6220800 \,\text{B} = 6.2 \,\text{MB}$$
+1920\cdot 1080\cdot 3 = 6220800 \,\text{B} = 6.2 \,\text{MB}
+$$
 :::
 
 ## JPEG-Grafikformat

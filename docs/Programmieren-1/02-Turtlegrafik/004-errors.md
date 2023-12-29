@@ -52,7 +52,7 @@ Untersuchen Sie obenstehende Programmschnipsel. Was sagen Ihnen die Fehlermeldun
 - Auf welcher Zeile steht die Art des Fehlers?
 - Wo finden Sie Hinweise auf den Fehler? Flicken Sie sie...
 
-:::flex{min=250px}
+::::flex{min=250px}
 ```py live_py title=error1.py id=6cdb7162-bc67-4b3b-8879-93cef97a10a5
 frm turtle import *
 forward(100)
@@ -75,7 +75,7 @@ for i in range(4)
     right(90)
 ```
 ::br{.empty}
-:::
+::::
 <Solution webKey="d775eeeb-21a2-479c-aba3-24a3173b9fe1">
 
 Die Fehlermeldung gibt den Hinweis, was falsch ist.

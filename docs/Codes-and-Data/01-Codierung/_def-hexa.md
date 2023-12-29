@@ -13,7 +13,7 @@ Anstatt Zahlen im Dezimalsystem oder Binärsystem zu schreiben, kann auch das He
 Jede Stelle in einer Hexadezimal-Zahl entspricht hier einer 16er Potenz:
 
 
-$$\
+$$
 \begin{aligned}
 
 A3D_{16} &= A \cdot 16^2 + 3 \cdot 16^1 + D \cdot 16^0 \\
@@ -21,7 +21,8 @@ A3D_{16} &= A \cdot 16^2 + 3 \cdot 16^1 + D \cdot 16^0 \\
     &= 2560 + 48 + 13 \\
     &= 2621_{10}
 
-\end{aligned}$$
+\end{aligned}
+$$
 
 #### Anwendungsbereich
 

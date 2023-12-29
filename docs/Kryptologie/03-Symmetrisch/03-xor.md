@@ -54,8 +54,9 @@ c
 
 Analog zu ROT13 gilt auch hier: Die Verschlüsselung ist identisch mit der Entschlüsselung, da Folgendes gilt:
 
-$$\
-c \text{ XOR } k = (p \text{ XOR } k) \text{ XOR } k = p$$
+$$
+c \text{ XOR } k = (p \text{ XOR } k) \text{ XOR } k = p
+$$
 
 Dies können Sie mit den Tabellen oben leicht überprüfen.
 

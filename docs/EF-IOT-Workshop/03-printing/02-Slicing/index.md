@@ -47,7 +47,7 @@ Je nach Farb-Wunsch (schauen Sie bei den 3 Druckern, was es für Farben gibt - b
 
 Enthält das Modell überhängende Konstruktionen, so müssen für diese Stützen generiert werden (diese können später leicht abgelöst werden). Die Option __Stützen nur auf dem Druckbett__ sollte für die meisten Modelle ausreichen.
 
-:::warn[Keine Modelle mit mehreren Farben]
+:::warning[Keine Modelle mit mehreren Farben]
 Aus Zeitgünden und weil es oft komplikationen gibt, verzichten wir heute auf mehrfarbige Drucke. Entscheiden Sie sich also für eine Farbe und drucke Sie damit das ganze Modell.
 :::
 
