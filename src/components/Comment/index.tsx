@@ -10,6 +10,8 @@ import { observer } from 'mobx-react-lite';
 import QuillEditor from '../shared/QuillEditor';
 import { action } from 'mobx';
 import { CommentContext } from '@site/src/theme/Root';
+import { Icon } from '@mdi/react';
+import { mdiCommentTextOutline, mdiTrashCan } from '@mdi/js';
 
 interface Props {
     nr: number;
@@ -113,16 +115,21 @@ const CommentContent = observer((props: Props) => {
                     {models[0]?.showMenu && store.isMyView && (
                         <>
                             <span className={clsx(styles.delete)}>
-                                <i
-                                    className={clsx('mdi', 'mdi-trash-can', styles.icon)}
-                                    style={{ color: 'var(--ifm-color-danger' }}
-                                    data-toggle="dropdown"
+                                <span
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         e.preventDefault();
                                         setPromptDelete(true);
                                     }}
-                                ></i>
+                                    data-toggle="dropdown"
+                                >
+                                    <Icon 
+                                        path={mdiTrashCan}
+                                        className={clsx(styles.icon)}
+                                        size={'1em'}
+                                        color='var(--ifm-color-danger)'
+                                    />
+                                </span>
                                 {promptDelete && (
                                     <div
                                         className={clsx(styles.button, 'button', 'button--danger')}
@@ -188,10 +195,13 @@ const CommentContent = observer((props: Props) => {
                             </div>
                         </>
                     )}
-                    <i
-                        onMouseEnter={() => models[0]?.setShowMenu(true)}
-                        className={clsx('mdi', 'mdi-comment-text-outline', styles.icon)}
-                    ></i>
+                    <span onMouseEnter={() => models[0]?.setShowMenu(true)}>
+                        <Icon 
+                            path={mdiCommentTextOutline}
+                            className={clsx(styles.icon)}
+                            size={'1em'}
+                        />
+                    </span>
                 </div>
             </div>
             {models[0]?.open && (

@@ -25,10 +25,10 @@ const plugin: Plugin = function plugin(
 
     return async (ast, vfile) => {
         visit(ast, (node, idx, parent: Parent) => {
-            if (node.type !== 'containerDirective' || (node as ContainerDirective).name !== 'details') {
+            if (node.type !== 'containerDirective' || (node as unknown as ContainerDirective).name !== 'details') {
                 return;
             }
-            const container = node as ContainerDirective;
+            const container = node as unknown as ContainerDirective;
             const label = container.children.filter((child) => (child.data as { directiveLabel: boolean })?.directiveLabel) as Content[]
             const content = container.children.filter((child) => !(child.data as { directiveLabel: boolean })?.directiveLabel) as Content[]
             const children: Content[] = [...content];

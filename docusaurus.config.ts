@@ -17,6 +17,7 @@ import imagePlugin from './src/plugins/remark-images/plugin';
 import deflistPlugin from './src/plugins/remark-deflist/plugin';
 import strongPlugin from './src/plugins/remark-strong/plugin';
 import detailsPlugin from './src/plugins/remark-details/plugin';
+import commentsPlugin from './src/plugins/remark-comments/plugin';
 
 
 const BASE_URL = '/';
@@ -78,7 +79,8 @@ const REMARK_PLUGINS = {
             }
         ],
         kbdPlugin,
-        remarkMath
+        remarkMath,
+        commentsPlugin
     ],
     rehypePlugins: [
         rehypeKatex

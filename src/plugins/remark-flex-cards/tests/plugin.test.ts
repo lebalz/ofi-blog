@@ -222,6 +222,58 @@ Some content
         "
       `);
     });
+
+    it("handles indents correctly", async () => {
+      
+      const input = alignLeft(`
+          ::::flex
+            Outer flex
+            ::br
+            :::flex
+              inner flex
+              ::br
+              item
+            :::
+            ::br
+            whatever
+          ::::
+      `);
+      const result = await process(input);
+      expect(result).toMatchInlineSnapshot(`
+        "<div className=\\"flex\\">
+          <div className=\\"item\\">
+            <div className=\\"content\\">
+              Outer flex
+            </div>
+          </div>
+
+          <div className=\\"item\\">
+            <div className=\\"content\\">
+              <div className=\\"flex\\">
+                <div className=\\"item\\">
+                  <div className=\\"content\\">
+                    inner flex
+                  </div>
+                </div>
+
+                <div className=\\"item\\">
+                  <div className=\\"content\\">
+                    item
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className=\\"item\\">
+            <div className=\\"content\\">
+              whatever
+            </div>
+          </div>
+        </div>
+        "
+      `);
+    });
 });
 
 
