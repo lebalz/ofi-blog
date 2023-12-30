@@ -19,10 +19,10 @@ Der Browser führt auch Programme aus, welche in der Webseite enthalten sind.
 
 | Logo                         | Name                                                       | Hersteller | Plattformübergreifend                            |
 | :--------------------------- | :--------------------------------------------------------- | :--------- | :----------------------------------------------- |
-| ![](images/logo-firefox.png) | [Firefox](https://www.mozilla.org/de/firefox/new/)         | Mozilla    | :mdi-check-circle--green l:                      |
-| ![](images/logo-chrome.png)  | [Chrome](https://www.google.com/intl/de/chrome/)           | Google     | :mdi-check-circle--green l:                      |
-| ![](images/logo-edge.png)    | [Edge](https://www.microsoft.com/de-de/edge?r=1)           | Microsoft  | :mdi-check-circle--green l:                      |
-| ![](images/logo-safari.png)  | [Safari](https://support.apple.com/de_CH/downloads/safari) | Apple      | :mdi-close-circle--red l: nur für Apple Produkte |
+| ![](images/logo-firefox.png) | [Firefox](https://www.mozilla.org/de/firefox/new/)         | Mozilla    | :mdi[check-circle]{.green .l}                      |
+| ![](images/logo-chrome.png)  | [Chrome](https://www.google.com/intl/de/chrome/)           | Google     | :mdi[check-circle]{.green .l}                      |
+| ![](images/logo-edge.png)    | [Edge](https://www.microsoft.com/de-de/edge?r=1)           | Microsoft  | :mdi[check-circle]{.green .l}                      |
+| ![](images/logo-safari.png)  | [Safari](https://support.apple.com/de_CH/downloads/safari) | Apple      | :mdi[close-circle]{.red .l} nur für Apple Produkte |
 
 
 ## ⭐️ Technologien
