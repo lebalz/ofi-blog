@@ -4,7 +4,7 @@ import remarkDirective from 'remark-directive';
 import { describe, expect, it } from 'vitest';
 
 const process = async (content: string) => {
-    const {default: plugin} = await import('../plugin');
+    const {default: plugin} = await import('../plugin') as any;
     const result = await remark()
         .use(remarkMdx)
         .use(remarkDirective)
@@ -87,6 +87,23 @@ Some content
           # Details element example
 
           Hello <Icon path={mdiNumeric1Box} size={1.5} className=\\"mdi-icon\\" /> world!
+          "
+        `);
+    });
+    it("handels icons in link texts", async () => {
+        const input = `
+        # Details element example
+        Hello [:mdi[robot] robo](https://srf.ch) world!
+        `;
+        const result = await process(input);
+        expect(result).toMatchInlineSnapshot(`
+          "import { mdiRobot } from '@mdi/js';
+
+          import Icon from '@mdi/react';
+
+          # Details element example
+
+          Hello [<Icon path={mdiRobot} size={1.5} className=\\"mdi-icon\\" /> robo](https://srf.ch) world!
           "
         `);
     });

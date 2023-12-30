@@ -63,6 +63,6 @@ Achten Sie zudem darauf, bei den Effektoptionen die Haken bei **Sanft Starten** 
 
 Laden Sie die fertige Präsentation hier hoch:
 
-[@upload Upload](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EtZY3FqEE_BGvkazF5ku1MUBgBGqe8pxum4wOhz1EA4KcA)
+:btn[[:mdi[upload] Upload](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EtZY3FqEE_BGvkazF5ku1MUBgBGqe8pxum4wOhz1EA4KcA)]{.success}
 
 :::

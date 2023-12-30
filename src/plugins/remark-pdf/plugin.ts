@@ -2,7 +2,7 @@ import { visit } from 'unist-util-visit';
 import type { Plugin, Processor, Transformer } from 'unified';
 import type { MdxJsxFlowElement, MdxjsEsm } from 'mdast-util-mdx';
 import type { LeafDirective } from 'mdast-util-directive';
-import { camelCased, captialize, requireDefaultMdastNode, toJsxAttribute, toMdxJsxExpressionAttribute, transformAttributes } from '../helpers';
+import { requireDefaultMdastNode, toJsxAttribute, transformAttributes } from '../helpers';
 import { Parent, Text } from 'mdast';
 import path from 'path';
 

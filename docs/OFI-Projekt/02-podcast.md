@@ -35,9 +35,9 @@ Wenn man in Google nach Audacity sucht, wird man auf die Seite **[audacity.de]**
 Laden Sie Audacity nur mit dem nachfolgenden Link herunter.
 :::
 
-[Download Audacity.org @download](https://www.audacityteam.org/download/)
+:btn[[:mdi[download-box] Download Audacity.org](https://www.audacityteam.org/download/)]{.success}
 
-[Free Music Archive @button](https://freemusicarchive.org/home)
+:btn[[Free Music Archive](https://freemusicarchive.org/home)]
 
 ::youtube[https://www.youtube-nocookie.com/embed/Vn7HYyopGXk]
 

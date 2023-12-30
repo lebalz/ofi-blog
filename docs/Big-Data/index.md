@@ -13,9 +13,9 @@ Hannah Fry zeigt in ihrem Buch [«Hello World»](https://www.chbeck.de/buehnen/h
 
 ![--width=300px](images/book-cover_hannah-fry_hello-world.jpeg)
 
-[@download --download Herunterladen (Deutsch) \*](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ef6zr_CP9kdNlGNj5ABP_DUBMkbxk7ptsspnIhkqVhNgtg?e=xIIKE2)
+:btn[[:mdi[download-box] Herunterladen (Deutsch) \*](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ef6zr_CP9kdNlGNj5ABP_DUBMkbxk7ptsspnIhkqVhNgtg?e=xIIKE2)]{.success}
 
-[@download --download Herunterladen (Englisch)](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ERn8JlEzHeZGrIey2zUv9xABWwCwsOH27OfxzdSpzldj3Q?e=d03G1L)
+:btn[[:mdi[download-box] Herunterladen (Englisch) \*](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ERn8JlEzHeZGrIey2zUv9xABWwCwsOH27OfxzdSpzldj3Q?e=d03G1L)]{.success}
 
 In der nächsten Zeit setzen Sie sich anhand des Buchs von Hannah Fry gruppenweise mit diesem Thema auseinander und halten einen Vortrag dazu.
 
@@ -107,11 +107,11 @@ Informieren Sie sich bei zusätzlichen Quellen über Ihr Thema:
 - https://www.datarevenue.com/de-blog/kuenstliche-intelligenz-in-der-medizin
 - https://www.nzz.ch/wissenschaft/ki-in-der-medizin-hilfe-bei-einfachen-und-repetitiven-aufgaben-ld.1497525
 
-  [NZZ-Artikel @download](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ee6GsaogqrxButD8uvg7H2kBCb98H2AUM0Xsz6ymBN1FbA?e=bi5K4K)
+  :btn[[:mdi[download-box] NZZ-Artikel](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ee6GsaogqrxButD8uvg7H2kBCb98H2AUM0Xsz6ymBN1FbA?e=bi5K4K)]{.success}
 - https://www.srf.ch/news/panorama/schlechter-datenschutz-menstruations-apps-intimste-angaben-landen-bei-facebook
 - https://www.nzz.ch/meinung/ki-in-der-medizin-es-braucht-vor-allem-menschliche-intelligenz-ld.1521205
 
-  [NZZ-Kommentar @download](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ETA2nUUtE_5Koq5b7LgcerMB2U1A8uODTIYklEvvgHPtzA?e=qNhaeV)
+  :btn[[:mdi[download-box] NZZ-Kommentar](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ETA2nUUtE_5Koq5b7LgcerMB2U1A8uODTIYklEvvgHPtzA?e=qNhaeV)]{.success}
 
 #### 4. Autos
 
@@ -123,7 +123,7 @@ Informieren Sie sich bei zusätzlichen Quellen über Ihr Thema:
 - https://geschichtedergegenwart.ch/die-pre-cops-wie-algorithmen-die-polizeiarbeit-veraendern/
 - https://magazin.nzz.ch/wirtschaft/kameras-in-der-migros-datenschuetzer-greifen-ein-ld.1536443  
 
-  [NZZ-Artikel @download](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ESCo9wI4-7JNvnzM_e238LwBAF-Q5qKJDqgL9obULer2BA?e=fOkpHf)
+  :btn[[:mdi[download-box] NZZ-Artikel](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ESCo9wI4-7JNvnzM_e238LwBAF-Q5qKJDqgL9obULer2BA?e=fOkpHf)]{.success}
 - https://youtu.be/sxRkwdDI9Yg
 - https://www.srf.ch/news/panorama/automatische-gesichtserkennung-heute-im-stadion-morgen-ueberall
 

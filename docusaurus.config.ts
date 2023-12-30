@@ -20,6 +20,7 @@ import detailsPlugin from './src/plugins/remark-details/plugin';
 import commentsPlugin from './src/plugins/remark-comments/plugin';
 import pdfPlugin from './src/plugins/remark-pdf/plugin';
 import mediaPlugin from './src/plugins/remark-media/plugin';
+import remarkInlineModifier from './src/plugins/remark-inline-modifier/plugin';
 
 
 const BASE_URL = '/';
@@ -56,6 +57,8 @@ const REMARK_PLUGINS = {
         ],
     ],
     remarkPlugins: [
+        /** commentsPlugin must be the first plugin (will be applied last) */
+        commentsPlugin,
         [detailsPlugin, { tagNames: { details: 'Details' } }],
         [strongPlugin, { className: 'boxed'}],
         [
@@ -82,9 +85,9 @@ const REMARK_PLUGINS = {
         ],
         kbdPlugin,
         remarkMath,
-        commentsPlugin,
         pdfPlugin,
-        mediaPlugin
+        mediaPlugin,
+        remarkInlineModifier
     ],
     rehypePlugins: [
         rehypeKatex

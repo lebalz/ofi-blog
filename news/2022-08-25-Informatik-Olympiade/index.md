@@ -20,4 +20,4 @@ Anmelden unter
 : https://soi.ch
 
 
-[@button 👉 Mehr Informationen auf soi.ch](https://soi.ch)
+:btn[[👉 Mehr Informationen auf soi.ch](https://soi.ch)]

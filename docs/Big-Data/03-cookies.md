@@ -73,7 +73,7 @@ Werbe-Cookies lassen sich mit Erweiterungen blockieren. Hilfreich: Auch Werbeanz
 
 Lesen Sie den verlinkten Artikel
 
-[Artikel @button](https://traffective.com/2020/09/01/browser-fingerprinting/)
+:btn[[Artikel](https://traffective.com/2020/09/01/browser-fingerprinting/)]
 
 - Halten Sie Fragen fest
 - Erklären Sie in eigenen Worten, was Fingerprinting ist

@@ -30,7 +30,7 @@ Das folgende Foto hat im Original eine Auflösung von `6016×4016` Pixel mit ein
 1. Berechnen Sie die theoretische Speichergrösse in Megabyte.
 2. Laden Sie das Originalbild unter dem folgenden Link herunter:
 
-   [Originalbild @download](assets/iceland.jpg)
+   :btn[[:mdi[download-box] Originalbild](assets/iceland.jpg)]{.success}
 
 3. Finden Sie heraus, wie gross der tatsächliche Speicherbedarf des Bildes in Megabyte ist. Notieren Sie diese Zahl.
 4. Öffnen Sie das Bild in einer Foto-App (unter **Mac**: in der Vorschau).
