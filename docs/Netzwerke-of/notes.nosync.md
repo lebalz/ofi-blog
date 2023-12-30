@@ -11,4 +11,4 @@ sidebar_custom_props:
 
 ## 25er
 
-[@pdf --scroll](assets/03_run_rollenspiel_netzwerk.pdf)
+::pdf[./assets/03_run_rollenspiel_netzwerk.pdf]{scroll=true}

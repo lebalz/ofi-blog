@@ -41,7 +41,7 @@ const plugin = (options) => {
           }
           return prev
         }, []).join(' ')
-        if (/@pdf/.test(text)) {
+        if (/@pdf/.test(text)) { /*6*/
           hasPdf = true;
           const processPdf = async () => {
             const fileName = path.basename(linkNode.url);
@@ -67,7 +67,7 @@ const plugin = (options) => {
           }
           promises.push(processPdf())
         }
-        if (/@video/.test(text)) {
+        if (/@video/.test(text)) { /*25*/
           const processVideo = async () => {
             const videoPath = await getFileUrl(linkNode, [staticDir], filePath);
             const pathUrl = posixPath(videoPath);
@@ -99,7 +99,7 @@ const plugin = (options) => {
           }
           promises.push(processVideo())
         }
-        if (/@audio/.test(text)) {
+        if (/@audio/.test(text)) { /*1*/
           const processAudio = async () => {
             const audioPath = await getFileUrl(linkNode, [staticDir], filePath);
             const pathUrl = posixPath(audioPath);
@@ -124,7 +124,7 @@ const plugin = (options) => {
           }
           promises.push(processAudio())
         }
-        if (/@youtube/.test(text)) {
+        if (/@youtube/.test(text)) { /* 49 */
           const options = parseOptions(text, true);
           const processVideo = async () => {
             prepareWrapperNode(node);
@@ -144,7 +144,7 @@ const plugin = (options) => {
           }
           promises.push(processVideo())
         }
-        if (/@ms-stream/.test(text)) {
+        if (/@ms-stream/.test(text)) {  /* 0 */
           const options = parseOptions(text, true);
           const processVideo = async () => {
             prepareWrapperNode(node);
@@ -166,7 +166,7 @@ const plugin = (options) => {
           }
           promises.push(processVideo())
         }
-        if (/@circuitverse/.test(text)) {
+        if (/@circuitverse/.test(text)) { /* 11 */
           const options = parseOptions(text, true);
           const processCV = async () => {
             prepareWrapperNode(node);
@@ -189,7 +189,7 @@ const plugin = (options) => {
           }
           promises.push(processCV())
         }
-        if (/@vimeo/.test(text)) {
+        if (/@vimeo/.test(text)) { /* 0 */
           const options = parseOptions(text, true);
           const processVideo = async () => {
             prepareWrapperNode(node);
@@ -209,15 +209,15 @@ const plugin = (options) => {
           }
           promises.push(processVideo())
         }
-        if (/@upload/.test(text)) {
+        if (/@upload/.test(text)) { /* 1 */
           text = text.replace(/\s*@upload\s*/, '')
           text += ' @button --type=success'
         }
-        if (/@download/.test(text)) {
+        if (/@download/.test(text)) { /* 8 */
           text = text.replace(/\s*@download\s*/, '')
           text += ' @button --type=warning'
         }
-        if (/@button/.test(text)) {
+        if (/@button/.test(text)) { /* 3 */
           const options = parseOptions(text, true);
           const processButton = async () => {
             const btype = options.type || 'primary';

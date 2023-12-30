@@ -28,7 +28,7 @@ Vorlage
 : 👉 [04-wurfweite.xlsx](assets/04-wurfweite.xlsx)
 
 
-[@pdf 04-wurfweite.pdf](assets/04-wurfweite.pdf)
+::pdf[./assets/04-wurfweite.pdf]
 
 
 

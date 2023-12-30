@@ -144,7 +144,7 @@ const plugin: Plugin = function plugin(
 
         visit(root, (node, idx, parent: Parent) => {
             if (node.type === 'mdxjsEsm') {
-                const n = node as MdxjsEsm;
+                const n = node as unknown as MdxjsEsm;
                 if ((/import.*(Icon|{.*default\s+as\s+\w+.*}).*from '@mdi\/react'/).test(n.value || '')) {
                     includesIcon = true;
                 }
@@ -169,7 +169,7 @@ const plugin: Plugin = function plugin(
             }
             // const parent = _parent as Parent;
             hasMdiIcons = true;
-            const directive = node as TextDirective
+            const directive = node as unknown as TextDirective
             const icon = (directive.children[0] as Text).value;
             const mdiIcon = `mdi${captialize(camelCased(icon))}`;
             if (!includedMdiIcons.has(mdiIcon)) {

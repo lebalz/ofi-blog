@@ -23,6 +23,6 @@ B, C, D, E
 
 <div style={{maxWidth: '600px'}}>
 
-[@pdf](assets/SolderComic.pdf)
+::pdf[./assets/SolderComic.pdf]
 
 </div>

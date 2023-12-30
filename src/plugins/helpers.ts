@@ -1,6 +1,6 @@
 import { all as KnownCssProperties } from 'known-css-properties';
 import { MdxJsxAttribute, MdxJsxExpressionAttribute } from 'mdast-util-mdx';
-
+import type {Directive, MemberExpression, ObjectExpression} from 'estree-jsx'
 // matches options in strings: "--width=200px --height=20%" -> {width: '20px', height='20%'}
 const OPTION_REGEX = /(^|\s+)--(?<key>[a-zA-Z\-]+)\s*=\s*(?<value>[\d\S-]+)/
 const BOOLEAN_REGEX = /(^|\s+)--(?<key>[a-zA-Z\-]+)\s*/
@@ -25,10 +25,17 @@ export const captialize = (s: string) => {
     return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
+type ExpressionType = 
+    { type: string, value: any, raw: string } |
+    { type: 'Identifier', name: string } |
+    Directive['expression'] |
+    MemberExpression |
+    ObjectExpression;
+
 export const toMdxJsxExpressionAttribute = (
     key: string,
     value: number | boolean | string | Object,
-    expression: { type: string, value: any, raw: string } | { type: 'Identifier', name: string } | MdxJsxExpressionAttribute['data']
+    expression: ExpressionType
 ): MdxJsxAttribute => {
     return {
         type: 'mdxJsxAttribute',
@@ -42,7 +49,7 @@ export const toMdxJsxExpressionAttribute = (
                     body: [
                         {
                             type: 'ExpressionStatement',
-                            expression: expression as any
+                            expression: expression as unknown as any
                         }
                     ],
                     sourceType: 'module',
@@ -85,7 +92,7 @@ export const toJsxAttribute = (key: string, value: string | number | boolean | O
         );
     }
     if (typeof value === 'object') {
-        const expression: MdxJsxAttribute['data'] = {
+        const expression: ObjectExpression = {
             type: 'ObjectExpression',
             properties: Object.entries(value).map(([k, v]) => ({
                 type: 'Property',

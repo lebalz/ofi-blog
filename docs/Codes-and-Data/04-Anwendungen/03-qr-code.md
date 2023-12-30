@@ -22,7 +22,7 @@ Halten Sie Ihre Erkenntnisse auf einem A3-Plakat fest.
 :::
 
 
-[@pdf](images/qr-code/qr-script.pdf)
+::pdf[./images/qr-code/qr-script.pdf]
 
 PDF-Quelle [^1]
 

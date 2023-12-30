@@ -8,7 +8,7 @@ const fileDirectories = ['docs', 'news', 'versioned_docs'];
  * :mdi-account: --> :mdi[account]
  * :mdi-account--red: --> :mdi[account]{.red}
  */
-const REGEX = /:mdi-(?<content>\b\w+\b)(--(?<clsx>\b\w+\b))?:/;
+const REGEX = /:mdi-(?<content>\w+(-\w+)*)(--(?<clsx>\b\w+\b))?:/;
 
 const getFilesRecursively = (directory) => {
     const files = []

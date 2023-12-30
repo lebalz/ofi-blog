@@ -21,7 +21,7 @@ const plugin: Plugin = function plugin(
              * visit text nodes and nest all nodes between a kbd sequence [[<content>]] in a kbd mdxJsxTextElement.
             */
             if (node.type === 'text') {
-                const textNode = node as Text;
+                const textNode = node as unknown as Text;
                 switch (actionState) {
                     case 'SPLIT_BRACKETS':
                         const bracketIdx = [textNode.value.indexOf('[['), textNode.value.indexOf(']]')].filter(idx => idx > -1);
