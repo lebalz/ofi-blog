@@ -19,6 +19,7 @@ import strongPlugin from './src/plugins/remark-strong/plugin';
 import detailsPlugin from './src/plugins/remark-details/plugin';
 import commentsPlugin from './src/plugins/remark-comments/plugin';
 import pdfPlugin from './src/plugins/remark-pdf/plugin';
+import mediaPlugin from './src/plugins/remark-media/plugin';
 
 
 const BASE_URL = '/';
@@ -82,7 +83,8 @@ const REMARK_PLUGINS = {
         kbdPlugin,
         remarkMath,
         commentsPlugin,
-        pdfPlugin
+        pdfPlugin,
+        mediaPlugin
     ],
     rehypePlugins: [
         rehypeKatex

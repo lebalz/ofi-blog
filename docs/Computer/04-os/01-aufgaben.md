@@ -102,7 +102,7 @@ Verwenden Sie dazu folgende Ressourcen:
 - [Multitasking](https://www.sachsen.schule/~gdb/daten_verarbeiten/BS/Multitasking.html)
 - [Taskmanager - Windows](https://www.ionos.de/digitalguide/server/konfiguration/task-manager-aufrufen/)
 - [Aktivitätsanzeige - Mac](https://support.apple.com/de-de/guide/activity-monitor/actmntr1001/mac)
-- [Metapher: Kooperatives vs. Preemptives Multitasking @audio](assets/aufgaben/record-scheidegger.m4a)
+- Metapher: Kooperatives vs. Preemptives Multitasking [@audio](assets/aufgaben/record-scheidegger.m4a)
 
 Gehen Sie auf folgende Punkte ein:
 

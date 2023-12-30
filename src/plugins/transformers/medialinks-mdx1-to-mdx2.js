@@ -3,12 +3,7 @@ const path = require('path');
 
 const fileDirectories = ['docs', 'news', 'versioned_docs', 'src/pages', 'secure'];
 
-/**
- * @example
- * :mdi-account: --> :mdi[account]
- * :mdi-account--red: --> :mdi[account]{.red}
- */
-const REGEX = /:mdi-(?<content>\w+(-\w+)*)(--(?<clsx>\w+(\s+\w+)*))?:/;
+const REGEX = /\[@(?<name>youtube|audio|video|circuitverse)\]\((?<src>.*?)\)/;
 
 const getFilesRecursively = (directory) => {
     const files = []
@@ -32,7 +27,7 @@ const files = fileDirectories.reduce((acc, dir) => {
  * 
  * @param {string} file 
  */
-async function transformMdiIcons(file) {
+async function transformMediaLinksIcons(file) {
     if (!(file.endsWith('.md') || file.endsWith('.mdx'))) {
         return;
     }
@@ -43,10 +38,9 @@ async function transformMdiIcons(file) {
         let hasChanged = false;
         while (match = raw.match(REGEX)) {
             hasChanged = true;
-            const {content, clsx} = match.groups;
-            const clsxStr = clsx ? clsx.split(/\s+/).filter(c => !!c.trim()).map(c => `.${c}`).join(' ') : clsx;
-            const mdi = clsxStr ? `:mdi[${content}]{${clsxStr}}` : `:mdi[${content}]`;
-            raw = `${raw.slice(0, match.index)}${mdi}${raw.slice(match.index + match[0].length)}`;
+            const {name, src} = match.groups;
+            const tag = `::${name}[${src}]`;
+            raw = `${raw.slice(0, match.index)}${tag}${raw.slice(match.index + match[0].length)}`;
         }
         if (hasChanged) {
             console.log(`Writing ${file}`)
@@ -60,7 +54,7 @@ async function transformMdiIcons(file) {
 
 const main = async () => {
     for (const file of files) {
-        await transformMdiIcons(file);
+        await transformMediaLinksIcons(file);
     }
 };
 
