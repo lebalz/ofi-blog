@@ -63,7 +63,7 @@ Zählt, wie viele Schüler:innen 14 oder 15 Jährig sind. (Daher wie viele Werte
 - Rechtsklick auf eine weisse Fläche des Diagramms __:mdi[cursor-default-click] > Als Bild speichern...__
 
 
-[@video](images/Excel-Kuchendiagramm.mp4)
+::video[./images/Excel-Kuchendiagramm.mp4]
 
 :::finding[Erkenntnis]
 - Die Stichprobengrösse **n** muss **immer** angegeben werden (=Anzahl der Datenpunkte)

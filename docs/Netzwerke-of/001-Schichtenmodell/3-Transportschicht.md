@@ -39,6 +39,6 @@ UDP
 
 <Answer type="state" webKey="b7117a47-5027-4cd7-a975-76110ce38c30">Gesehen?</Answer>
 
-[@youtube](https://www.youtube-nocookie.com/embed/AYdF7b3nMto)
+::youtube[https://www.youtube-nocookie.com/embed/AYdF7b3nMto]
 
 

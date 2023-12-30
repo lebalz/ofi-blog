@@ -27,10 +27,9 @@ Im Gegensatz zu den CPU Prozessoren, welche in der Regel wenige (< 32) Kerne auf
 
 Schauen Sie sich das folgenden Video an und versuchen Sie zu verstehen, was die Unterschiede zwischen sequentieller und paralleler Verarbeitung sind. Halten Sie Ihre Erkenntnisse fest.
 
-[@youtube](https://www.youtube-nocookie.com/embed/ZrJeYFxpUyQ?start=159)
+::youtube[https://www.youtube-nocookie.com/embed/ZrJeYFxpUyQ?start=159]
 
 <Answer type="text" webKey="b60306a9-b13d-445d-a422-51ea087717bc" />
-
 :::
 
 :::cards{columns=2}
@@ -61,7 +60,7 @@ Ausserdem werden heute Grafikkarten auch für aufwändige Berechnungen in andere
 
 Was ist Raytracing und was bringt es mir?
 
-[@youtube](https://www.youtube-nocookie.com/embed/vy8kHdw9gCI?start=66)
+::youtube[https://www.youtube-nocookie.com/embed/vy8kHdw9gCI?start=66]
 :::
 
 ### Steuerung des Bildschirms

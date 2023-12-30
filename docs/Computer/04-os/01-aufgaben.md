@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 Ein **Betriebssystem** (engl. *operating system*, kurz *OS*) ist eine Sammlung von Softwarekomponenten, die das Nutzen von Anwenderprogrammen erst möglich macht.
 
-[@youtube](https://www.youtube-nocookie.com/embed/GjNp0bBrjmU)
+::youtube[https://www.youtube-nocookie.com/embed/GjNp0bBrjmU]
 
 ## Aufgaben eines Betriebssystems
 
@@ -102,7 +102,7 @@ Verwenden Sie dazu folgende Ressourcen:
 - [Multitasking](https://www.sachsen.schule/~gdb/daten_verarbeiten/BS/Multitasking.html)
 - [Taskmanager - Windows](https://www.ionos.de/digitalguide/server/konfiguration/task-manager-aufrufen/)
 - [Aktivitätsanzeige - Mac](https://support.apple.com/de-de/guide/activity-monitor/actmntr1001/mac)
-- Metapher: Kooperatives vs. Preemptives Multitasking [@audio](assets/aufgaben/record-scheidegger.m4a)
+- Metapher: Kooperatives vs. Preemptives Multitasking ::audio[./assets/aufgaben/record-scheidegger.m4a]
 
 Gehen Sie auf folgende Punkte ein:
 

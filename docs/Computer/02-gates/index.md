@@ -8,11 +8,11 @@ sidebar_custom_props:
 
 Die logischen Gatter (*logic gates*) sind die Grundbausteine der digitalen Logik. Sie werden durch die Verknüpfung von Transistoren gebaut.
 
-[@youtube](https://www.youtube-nocookie.com/embed/OwS9aTE2Go4)
+::youtube[https://www.youtube-nocookie.com/embed/OwS9aTE2Go4]
 
 :::details[Transistoren]
 
-[@youtube --height=315](https://www.youtube-nocookie.com/embed/5wIRJN3DN_8)
+::youtube[https://www.youtube-nocookie.com/embed/5wIRJN3DN_8]
 
 <Answer type="text" webKey="77218889-54e7-4ff2-ac32-10a2de6cb927" />
 

@@ -59,14 +59,14 @@ Wie immer, wenn etwas kompliziert wird, kommt die altbewährte Strategie **Teile
 
 Hier wird das OSI-Modell vorgestellt - für uns wird schliesslich das TCP/IP-Modell mit "nur" 4 Schichten (Schichten 5-7 werden zusammengefasst) relevant sein. Mehr dazu weiter Unten...
 
-[@youtube](https://www.youtube-nocookie.com/embed/LkolbURrtTs)
+::youtube[https://www.youtube-nocookie.com/embed/LkolbURrtTs]
 
 ---
 
 
 <Answer type="state" webKey="3f5977b8-ef82-49e2-85fc-affd14467f5c" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/0aGqGKrRE0g)
+::youtube[https://www.youtube-nocookie.com/embed/0aGqGKrRE0g]
 
 ---
 

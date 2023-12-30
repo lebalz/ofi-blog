@@ -106,12 +106,12 @@ Laden Sie das Word-Dokument [ex02-machine-learning.docx](files/ex02-machine-lear
 
 #### Alles ausser die Bilder
 
-[@video](images/text-exercise-2-a.mp4)
+::video[./images/text-exercise-2-a.mp4]
 
 <br />
 ---
 
 #### Bilder, Bildverzeichnisse, Querverweise
 
-[@video](images/text-exercise-2-b.mp4)
+::video[./images/text-exercise-2-b.mp4]
 ---

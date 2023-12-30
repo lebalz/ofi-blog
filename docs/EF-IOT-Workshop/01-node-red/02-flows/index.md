@@ -46,7 +46,7 @@ Hat alles geklappt, können Sie sich mit den bei der Installation gewählten Log
 
 Erstellen Sie Ihren ersten Flow und Überprüfen Sie, das alles genau so funktioniert wie im Video:
 
-[@video](images/flow-1.mp4)
+::video[./images/flow-1.mp4]
 :::
 
 ## Immer Online
@@ -56,5 +56,5 @@ Damit unsere Flows ständig aktiv bleiben, müssen wir sicherstellen, dass Rende
 :::aufgabe[KeepAlive umsetzen]
 Erzeugen Sie einen eigenen `KeepAlive` Flow und deployen sie diesen:
 
-[@video](images/node-red-keep-running.mp4)
+::video[./images/node-red-keep-running.mp4]
 :::

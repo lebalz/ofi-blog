@@ -151,7 +151,7 @@ Mögliche Ideen - Sie dürfen aber auch einen eigenen Projektvorschlag ausarbeit
 ### Algorithmen
 #### Programmieren von zufälligen Labyrinthen
 
-[@youtube](https://www.youtube-nocookie.com/embed/zRuVhq0Kgnw)
+::youtube[https://www.youtube-nocookie.com/embed/zRuVhq0Kgnw]
 
 #### Wie funktionieren Bitcoins?
 Sie setzen sich mit dem Thema Blockchain und Bitcoins auseinander. 
@@ -164,7 +164,7 @@ Sie setzen sich mit dem Thema Blockchain und Bitcoins auseinander.
 
 [👉 Blender](https://www.blender.org/)
 
-[@youtube](https://www.youtube-nocookie.com/embed/LJ9dvcpsatg)
+::youtube[https://www.youtube-nocookie.com/embed/LJ9dvcpsatg]
 
 #### 3D Modelle & 3D-Druck
 

@@ -182,4 +182,4 @@ Laden Sie das Word-Dokument [ex01-what-is-programming.docx](files/ex01-what-is-p
 
 ### Übung Schritt für Schritt im Video
 
-[@video](images/text-exercise-1.mp4)
+::video[./images/text-exercise-1.mp4]

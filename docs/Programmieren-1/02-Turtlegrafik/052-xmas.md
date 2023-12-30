@@ -5,15 +5,15 @@ sidebar_custom_props:
 # Weihnachtskarten
 
 :::cards{columns=3}
-[@youtube](https://www.youtube-nocookie.com/embed/EnPrSYbA8z4)
+::youtube[https://www.youtube-nocookie.com/embed/EnPrSYbA8z4]
 ::br
-[@youtube](https://www.youtube-nocookie.com/embed/6zaA0HkzT-4)
+::youtube[https://www.youtube-nocookie.com/embed/6zaA0HkzT-4]
 ::br
-[@youtube](https://www.youtube-nocookie.com/embed/1rpuroDqiDU)
+::youtube[https://www.youtube-nocookie.com/embed/1rpuroDqiDU]
 ::br
-[@youtube](https://www.youtube-nocookie.com/embed/MMz58z3UsX0?start=3)
+::youtube[https://www.youtube-nocookie.com/embed/MMz58z3UsX0?start=3]
 ::br
-[@youtube](https://www.youtube-nocookie.com/embed/M_4yXiyoAM0)
+::youtube[https://www.youtube-nocookie.com/embed/M_4yXiyoAM0]
 :::
 
 

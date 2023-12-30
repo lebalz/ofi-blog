@@ -25,7 +25,7 @@ In Schaltplänen wird ein AND-Gatter mit folgendem Symbol dargestellt:
 
 ## Interaktive Schaltung
 
-[@circuitverse](https://circuitverse.org/simulator/embed/rothe-and-gate)
+::circuitverse[https://circuitverse.org/simulator/embed/rothe-and-gate]
 
 ## Beispiele
 

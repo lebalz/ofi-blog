@@ -13,14 +13,14 @@ sidebar_custom_props:
 ---
 <Answer type="state" webKey="6fc19caa-45b4-4d3f-a7d0-7bcb468f4a0e" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/bj-Yfakjllc)
+::youtube[https://www.youtube-nocookie.com/embed/bj-Yfakjllc]
 
 ---
 <Answer type="state" webKey="3366c27c-767b-4c37-b236-4b0dddc89109" label="Gesehen?" />
 
 Wichtige Geräte: Switches und Router. (Hubs und Bridges als Nice-To-Know betrachten...)
 
-[@youtube](https://www.youtube-nocookie.com/embed/H7-NR3Q3BeI)
+::youtube[https://www.youtube-nocookie.com/embed/H7-NR3Q3BeI]
 
 ---
 

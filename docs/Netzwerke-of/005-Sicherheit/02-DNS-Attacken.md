@@ -6,7 +6,7 @@ sidebar_custom_props:
 # ⭐️ DNS Attacken
 
 
-[@video](images/What-is-DNS-Hijacking.mp4)
+::video[./images/What-is-DNS-Hijacking.mp4]
 
 [^1]
 
@@ -22,7 +22,7 @@ sidebar_custom_props:
 
 ## ⭐️ ARP and DNS Spoofing
 
-[@youtube](https://www.youtube-nocookie.com/embed/SHkdWNo7SC8)
+::youtube[https://www.youtube-nocookie.com/embed/SHkdWNo7SC8]
 
 :::aufgabe[ARP und DNS Spoofing]
 

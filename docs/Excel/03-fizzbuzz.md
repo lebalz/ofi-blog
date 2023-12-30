@@ -27,7 +27,7 @@ Sie lernen die Excel-Funktionen
 kennen.
 :::
 
-[@video](images/03-fizzbuzz.mp4)
+::video[./images/03-fizzbuzz.mp4]
 
 :::aufgabe
 

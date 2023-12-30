@@ -8,8 +8,7 @@ sidebar_custom_props:
 :::success[Abgabe]
 Abgabe
 : **24.01.2023, 12:00 Uhr**
-
-Mündliche Prüfung:
+Mündliche Prüfung
 : :mdi[arrow-right] [👉 Liste](https://erzbe.sharepoint.com/:x:/r/sites/24EFInformatik/Freigegebene%20Dokumente/General/Numtrip-Pr%C3%BCfungsliste.xlsx?d=wd9ee8636912346d2b702249f2ad7f0bc&csf=1&web=1&e=Z48pUW)
 :::
 
@@ -32,9 +31,9 @@ Mündliche Prüfung:
 <th align="left">3 Punkte</th>
 </tr>
 </thead>
+<tbody>
 <tr>
 <td align="left">
-
 
 #### Git History
 1. Regelmässige Commits
@@ -150,8 +149,7 @@ Nachbarfelder)
 <td align="left">Alle drei Bedingungen erfüllt, kleinere Mängel</td>
 <td align="left">Alle drei Bedingungen sind vollständig erfüllt</td>
 </tr>
-<tbody>
 </tbody>
 </table>
 
-[@video --width=450px --autoplay --muted --loop](images/numtrip.mp4)
+::video[./images/numtrip.mp4]{maxWidth=450px autoplay muted loop}

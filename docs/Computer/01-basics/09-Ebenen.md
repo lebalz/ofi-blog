@@ -13,7 +13,7 @@ Wie die Netzwerke kann auch der Computer selber auf verschiedenen **Ebenen** bet
 
 Auf der Ebene der **Elektronik** werden die Zustände 0 und 1 durch unterschiedliche Spannungen dargestellt. Das grundlegende Bauelement für digitale Schaltungen ist der **Transistor**.
 
-[@youtube --height=315](https://www.youtube-nocookie.com/embed/5wIRJN3DN_8)
+::youtube[https://www.youtube-nocookie.com/embed/5wIRJN3DN_8]
 
 :::aufgabe[Transistoren (Wiederholung)]
 <Answer type="state" webKey="fefee10f-6ea1-4858-91a3-8406e4571714" />

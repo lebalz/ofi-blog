@@ -17,7 +17,7 @@ Mit Hilfe eines OR-Gatter kann dies realisiert werden. Dazu wird das Ausgangssig
 
 In dieser interaktiven Schaltung kannst du die Rückkopplung testen:
 
-[@circuitverse](https://circuitverse.org/simulator/embed/rothe-feedback)
+::circuitverse[https://circuitverse.org/simulator/embed/rothe-feedback]
 
 :::info
 #### Rückkopplung
@@ -30,7 +30,7 @@ Schaltungen mit Rückkopplung ermöglichen das **Speichern** von Daten sowie die
 
 Natürlich will man die Alarmanlage auch wieder Abschalten können. Dazu kann in der Rückkopplungsschleife ein Reset-Knopf eingebaut werden:
 
-[@circuitverse](https://circuitverse.org/simulator/embed/rothe-feedback-with-reset)
+::circuitverse[https://circuitverse.org/simulator/embed/rothe-feedback-with-reset]
 
 :::aufgabe
 <Answer type="state" webKey="f374d232-665c-438f-bd12-63cd745fa18f" />
@@ -57,4 +57,4 @@ Diese Schaltung bildet die Grundlage für den Bau von Speicher (RAM). Um ein Bit
 - Daten: gibt an, welcher Wert gespeichert werden soll.
 - Speichern: gibt durch ein 1 an, ob nun der Datenwert abgespeichert werden soll.
 
-[@circuitverse](https://circuitverse.org/simulator/embed/rothe-d-flip-flop)
+::circuitverse[https://circuitverse.org/simulator/embed/rothe-d-flip-flop]

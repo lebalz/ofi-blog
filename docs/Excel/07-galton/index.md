@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # Galton Brett ⭐
 
-[@video](./images/galton.mp4)
+::video[./images/galton.mp4]
 
 
 Mit Excel lassen sich auch komplexe Simulationen erzeugen - bspw. ein Nagelbrett (sog. [Galton Brett](https://de.wikipedia.org/wiki/Galtonbrett) welches die Binomialverteilung veranschaulicht).
@@ -21,11 +21,11 @@ Wenn die Grundzüge des Nagelbretts funktionieren, können Sie zudem mit folgend
 
 <GTabs getLabel={(idx) => ['1. Neue Kugel', '2. Zurücksetzen', '3. Simulieren'][idx]}>
 
-[@video](./images/1_makro_neue_kugel.mp4)
+::video[./images/1_makro_neue_kugel.mp4]
 
-[@video](./images/2_makro_reset.mp4)
+::video[./images/2_makro_reset.mp4]
 
-[@video](./images/3_makro_run.mp4)
+::video[./images/3_makro_run.mp4]
 
 </GTabs>
 

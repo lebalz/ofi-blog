@@ -29,7 +29,7 @@ Für den Prozessor gibt es folgende wichtige Kenngrössen:
 
 Jeder Kern einer CPU kann unabhängig von den anderen Kernen Berechnungen durchführen. Die Herausforderung dabei ist, dass die einzelnen Kerne nur mit grossen Hürden Zwischen- oder Endresultate austauschen können. Deshalb sind mehr Kerne nicht immer besser. Es kommt darauf an, wie die einzelnen Kerne genutzt werden.
 
-[@video](images/03-sequential-vs-parallel.mp4)
+::video[./images/03-sequential-vs-parallel.mp4]
 
 ## Aufgaben
 

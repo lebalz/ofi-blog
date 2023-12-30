@@ -36,4 +36,4 @@ Für Objekte wie etwa die obige Filmfigur *Groot* eignet es sich jedoch **nicht*
 
 An der Schule steht der 3D-Drucker [Prusa i3 MK3S+ MMU2S](https://www.prusa3d.com/de/kategorie/original-prusa-i3-mk3s/) von Prusa zur Verfügung. Spannender Fakt zu Prusa-Druckern: Sie haben sich "selbst" gedruckt - alle Teile wurden von i3 Druckern gefertigt :mdi[emoticon-cool-outline]. Die Teile des Druckers sind übrigens [Open-Source](https://github.com/prusa3d/Original-Prusa-i3) und können selber gedruckt werden.
 
-[@youtube](https://www.youtube.com/embed/gdnRkE1dRTI)
+::youtube[https://www.youtube.com/embed/gdnRkE1dRTI]

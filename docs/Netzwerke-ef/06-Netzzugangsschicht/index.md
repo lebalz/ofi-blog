@@ -15,24 +15,24 @@ sidebar_custom_props:
 
 <Answer type="state" webKey="103f3876-8c6e-4427-8331-d680c8ba2a5d" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/gYN2qN11-wE)
+::youtube[https://www.youtube-nocookie.com/embed/gYN2qN11-wE]
 
 ---
 <Answer type="state" webKey="817cfd63-1257-491a-9aa6-bd4f4424d8fe" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/JI9Zm2tbUoE)
+::youtube[https://www.youtube-nocookie.com/embed/JI9Zm2tbUoE]
 
 ---
 <Answer type="state" webKey="2a1fd649-537e-45ad-9bd3-95d595ef21a8" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/AhOU2eOpmX0)
+::youtube[https://www.youtube-nocookie.com/embed/AhOU2eOpmX0]
 
 ---
 <Answer type="state" webKey="9faf9dc5-f531-402f-834d-ad24906757d7" label="Gesehen?" />
 
 Ohne den Teil **VLAN**.
 
-[@youtube](https://www.youtube-nocookie.com/embed/G7GyWjJtjNs)
+::youtube[https://www.youtube-nocookie.com/embed/G7GyWjJtjNs]
 
 ---
 

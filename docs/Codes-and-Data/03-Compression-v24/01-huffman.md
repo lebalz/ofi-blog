@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 # 1. Huffman-Codierung
 
-[@youtube](https://www.youtube-nocookie.com/embed/JsTptu56GM8)
+::youtube[https://www.youtube-nocookie.com/embed/JsTptu56GM8]
 
 David Huffman hat 1952 ein Verfahren entwickelt, mit welchem Zeichen platzsparender codiert werden können. Seine Idee ist, dass Zeichen, welche häufig im Text vorkommen, einen kürzeren Code erhalten, als Zeichen, welche selten im Text vorkommen.
 
@@ -89,7 +89,7 @@ Nun kann eine Codierungstabelle erstellt werden, indem der Code für jedes Zeich
 
 ## Zusammenfassung
 
-[@youtube](https://www.youtube-nocookie.com/embed/eSlpTPXbhYw)
+::youtube[https://www.youtube-nocookie.com/embed/eSlpTPXbhYw]
 
 ## Übungen
 

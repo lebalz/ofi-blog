@@ -50,7 +50,7 @@ Klonen Sie das Repository auf Ihren Laptop.
    3. Kontrollieren Sie, ob die Änderungen online sichtbar sind.
 3. Markieren Sie die Aufgabe als erledigt.
 
-[@video](./images/gh-clone-hd.mp4)
+::video[./images/gh-clone-hd.mp4]
 :::
 
 ::::aufgabe[Repository Struktur]

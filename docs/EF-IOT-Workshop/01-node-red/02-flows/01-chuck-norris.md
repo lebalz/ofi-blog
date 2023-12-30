@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # Chuck Norris
 
-[@youtube](https://www.youtube-nocookie.com/embed/XRKiGBxwlgY)
+::youtube[https://www.youtube-nocookie.com/embed/XRKiGBxwlgY]
 
 :::aufgabe
 Ändern Sie das Beispiel so ab, dass nun ein Zitat von Chuck Norris angezeigt wird.

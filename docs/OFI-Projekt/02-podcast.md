@@ -39,7 +39,7 @@ Laden Sie Audacity nur mit dem nachfolgenden Link herunter.
 
 [Free Music Archive @button](https://freemusicarchive.org/home)
 
-[@youtube](https://www.youtube-nocookie.com/embed/Vn7HYyopGXk)
+::youtube[https://www.youtube-nocookie.com/embed/Vn7HYyopGXk]
 
 ---
 
@@ -53,12 +53,12 @@ Das Dateiformat `.M4A` enthält auch Audiodateien, die mit Audacity allerdings n
 
 Laden Sie ffmpeg [hier https://lame.buanzo.org/ffmpeg64audacity.php](https://lame.buanzo.org/ffmpeg64audacity.php) herunter und installieren Sie es (nicht den Link im Video verwenden!).
 
-[@youtube](https://www.youtube.com/embed/JAjb0aLj_yw)
+::youtube[https://www.youtube.com/embed/JAjb0aLj_yw]
 
 </TabItem>
 <TabItem value="mac">
 
-[@youtube](https://www.youtube.com/embed/E9EF6QYJTrI)
+::youtube[https://www.youtube.com/embed/E9EF6QYJTrI]
 
 </TabItem>
 </OsTabs>

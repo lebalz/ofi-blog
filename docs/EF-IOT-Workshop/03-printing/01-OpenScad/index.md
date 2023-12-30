@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 ## Einführung
 
-[@video](images/intro.mp4)
+::video[./images/intro.mp4]
 
 :::details[__intro.scad__]
 ```scad
@@ -58,7 +58,7 @@ https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/03-printing/01
 
 ## Parameter und Schrift
 
-[@video](images/params-and-text.mp4)
+::video[./images/params-and-text.mp4]
 
 :::details[__simple-box.scad__]
 ```scad

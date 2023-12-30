@@ -7,7 +7,7 @@ sidebar_custom_props:
 
 ## Binäre Addition
 
-[@youtube](https://www.youtube-nocookie.com/embed/x7ka0QwKciA)
+::youtube[https://www.youtube-nocookie.com/embed/x7ka0QwKciA]
 
 :::aufgabe[Binäre Addition]
 <Answer type="state" webKey="627b8aae-b77f-4e6e-8951-00c0b397f3b9" />
@@ -51,7 +51,7 @@ Die entsprechende Schaltung benötigt zwei Eingänge und zwei Ausgänge. Die bei
 
 Der Wert der Einerstelle kann durch ein XOR-Gatter berechnet werden, der Wert der Zweierstelle durch ein AND-Gatter. Die Schaltung sieht somit so aus:
 
-[@circuitverse](https://circuitverse.org/simulator/embed/rothe-half-adder-vertical)
+::circuitverse[https://circuitverse.org/simulator/embed/rothe-half-adder-vertical]
 
 :::aufgabe[Aufgabe Halbaddierer]
 <Answer type="state" webKey="c75944fb-cc94-4a78-8d91-dbeead45e9dd" />
@@ -76,7 +76,7 @@ Wenn zwei mehrstellige binäre Zahlen addiert werden sollen, muss der **Übertra
 
 Dies kann mit der folgenden Schaltung realisiert werden. Sie besteht aus zwei Halbaddierern sowie einem OR-Gatter. Mit dem OR-Gatter werden die beiden möglichen Überträge zusammengefasst.
 
-[@circuitverse](https://circuitverse.org/simulator/embed/rothe-full-adder-vertical)
+::circuitverse[https://circuitverse.org/simulator/embed/rothe-full-adder-vertical]
 
 :::aufgabe[Aufgabe Volladdierer]
 <Answer type="state" webKey="9a0423f2-4aea-4361-99c5-c4b1009dee9d" />
@@ -150,7 +150,7 @@ Zum Addieren der Einer-Stelle braucht es nur einen Halbaddierer, da dort noch ke
 
 Die Eingaben und das Resultat kann auch mit einem Hexadezimal-Display dargestellt werden.
 
-[@circuitverse](https://circuitverse.org/simulator/embed/hexdisplay-bb9aa46e-4626-442a-ba98-6589c6ab9df1)
+::circuitverse[https://circuitverse.org/simulator/embed/hexdisplay-bb9aa46e-4626-442a-ba98-6589c6ab9df1]
 
 Um Bits darzustellen, kann ein Hex-Display als Ausgabe verwendet werden. Damit vier Eingänge angeschlossen werden können, braucht es einen Splitter, welcher vier Eingänge zusammenfasst.
 

@@ -7,7 +7,7 @@ sidebar_custom_props:
 # 3. Prozessor
 ---
 
-[@youtube --height=515](https://www.youtube-nocookie.com/embed/aue3hIQvhzo)
+::youtube[https://www.youtube-nocookie.com/embed/aue3hIQvhzo]{height=515}
 
 
 :::success[Take-Home Message aus CPU-Rollenspiel]
