@@ -130,7 +130,7 @@ export const toJsxAttribute = (key: string, value: string | number | boolean | O
  * @returns camelCased string, e.g. helloBello
  */
 export const camelCased = (dashed: string): string => {
-    return dashed.replace(/-([a-zA-Z])/g, (g) => g[1].toUpperCase());
+    return dashed.replace(/-([a-zA-Z])/g, (g) => g[1].toUpperCase()).replace(/-/g, '');
 }
 
 /**

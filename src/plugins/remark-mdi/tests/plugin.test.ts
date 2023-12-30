@@ -72,4 +72,23 @@ Some content
         Hello <Icon path={mdiRobot} size={1.5} className=\\"mdi-icon\\" /> world!
         "`);
     });
+
+    it("handels numbers correct", async () => {
+        const input = `
+        # Details element example
+        Hello :mdi[numeric-1-box] world!
+        `;
+        const result = await process(input);
+        expect(result).toMatchInlineSnapshot(`
+          "import { mdiNumeric1Box } from '@mdi/js';
+
+          import Icon from '@mdi/react';
+
+          # Details element example
+
+          Hello <Icon path={mdiNumeric1Box} size={1.5} className=\\"mdi-icon\\" /> world!
+          "
+        `);
+    });
 });
+
