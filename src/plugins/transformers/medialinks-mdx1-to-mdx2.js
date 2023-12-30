@@ -39,7 +39,12 @@ async function transformMediaLinksIcons(file) {
         while (match = raw.match(REGEX)) {
             hasChanged = true;
             const {name, src} = match.groups;
-            const tag = `::${name}[${src}]`;
+            const isAbsolute = /https?:\/\//.test(src) || src.startsWith('pathname://') || src.startsWith('/');
+            if (!isAbsolute) {
+                console.log('relative', src);
+            }
+            const url = isAbsolute ? src : src.startsWith('.') ? src : `./${src}`;
+            const tag = `::${name}[${url}]`;
             raw = `${raw.slice(0, match.index)}${tag}${raw.slice(match.index + match[0].length)}`;
         }
         if (hasChanged) {

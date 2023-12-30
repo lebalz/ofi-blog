@@ -17,7 +17,7 @@ const process = async (content: string) => {
     return result.value;
 }
 
-describe('#links', () => {
+describe('#medialinks', () => {
     it("does nothing if there's no media", async () => {
         const input = `# Heading
 
@@ -33,6 +33,18 @@ describe('#links', () => {
         const result = await process(input);
         expect(result).toMatchInlineSnapshot(`
           "<video style={{\\"maxWidth\\":\\"100%\\"}} controls>
+            <source src={require('./bunny.mp4').default} />
+          </video>
+          "
+        `);
+    });
+    it("can convert video with autoplay directive", async () => {
+        const input = `
+            ::video[./bunny.mp4]{autoplay}
+        `;
+        const result = await process(input);
+        expect(result).toMatchInlineSnapshot(`
+          "<video autoPlay playsInline style={{\\"maxWidth\\":\\"100%\\"}} controls>
             <source src={require('./bunny.mp4').default} />
           </video>
           "

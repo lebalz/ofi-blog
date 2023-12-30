@@ -9,7 +9,7 @@ const alignLeft = (content: string) => {
 }
 
 const process = async (content: string) => {
-    const {default: plugin} = await import('../plugin');
+    const {default: plugin} = await import('../plugin') as any;
     const result = await remark()
         .use(remarkMdx)
         .use(remarkDirective)

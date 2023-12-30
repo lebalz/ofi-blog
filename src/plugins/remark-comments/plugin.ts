@@ -1,4 +1,4 @@
-import { visit } from 'unist-util-visit';
+import { visit, SKIP } from 'unist-util-visit';
 import type { Plugin, Processor, Transformer } from 'unified';
 import type { MdxJsxFlowElement } from 'mdast-util-mdx';
 import { BlockContent, Node, Parent, Strong } from 'mdast';
@@ -57,7 +57,7 @@ const plugin: Plugin = function plugin(
             // visitor
             (node, idx, parent: Parent) => {
                 const nType = ['paragraph', 'table', 'heading'].includes(node.type) ? node.type : JSX_TAG_MAP_REVERSE[(node as unknown as MdxJsxFlowElement).name];
-
+                const skipChildren = ['figure', 'deflist', 'detailsWrapper'].includes(nType);
                 parent.children.splice(idx, 1, {
                     type: 'mdxJsxFlowElement',
                     name: 'div',
@@ -128,6 +128,9 @@ const plugin: Plugin = function plugin(
 
                 if (nType in commentCounter) {
                     commentCounter[nType] += 1;
+                }
+                if (skipChildren) {
+                    return SKIP
                 }
             });
     }

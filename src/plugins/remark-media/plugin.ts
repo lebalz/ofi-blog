@@ -1,10 +1,9 @@
 import { visit } from 'unist-util-visit';
 import type { Plugin, Processor, Transformer } from 'unified';
-import type { MdxJsxFlowElement, MdxjsEsm } from 'mdast-util-mdx';
+import type { MdxJsxFlowElement } from 'mdast-util-mdx';
 import type { LeafDirective } from 'mdast-util-directive';
-import { camelCased, captialize, requireDefaultMdastNode, toJsxAttribute, toMdxJsxExpressionAttribute, transformAttributes } from '../helpers';
-import { Parent, Text } from 'mdast';
-import path from 'path';
+import { requireDefaultMdastNode, toJsxAttribute, transformAttributes } from '../helpers';
+import { Link, Parent, Text } from 'mdast';
 
 enum LeafDirectiveName {
     VIDEO = 'video',
@@ -35,17 +34,24 @@ const plugin: Plugin = function plugin(
                     _mdxExplicitJsx: true
                 }
             };
+            const rawChild = directive.children[0];
+            const src = rawChild.type === 'text' ? (rawChild as Text).value
+                            : rawChild.type === 'link' ? (rawChild as Link).url
+                            : undefined;
+            if (!src) {
+                throw new Error(`Invalid child for ${directive.name} directive in ${vfile.path}`);
+            }
             switch (directive.name) {
                 case LeafDirectiveName.VIDEO:
                     newNode.name = 'video';
-                    if (attributes.muted) {
+                    if (attributes.autoplay || attributes.autoplay === '') {
+                        newNode.attributes.push(toJsxAttribute('autoPlay', ''));
+                        newNode.attributes.push(toJsxAttribute('playsInline', ''));
+                    }
+                    if (attributes.muted || attributes.muted === '') {
                         newNode.attributes.push(toJsxAttribute('muted', attributes.muted))
                     }
-                    if (attributes.autoplay) {
-                        newNode.attributes.push(toJsxAttribute('autoPlay', attributes.autoplay));
-                        newNode.attributes.push(toJsxAttribute('playsInline', attributes.autoplay));
-                    }
-                    if (attributes.loop) {
+                    if (attributes.loop || attributes.loop === '') {
                         newNode.attributes.push(toJsxAttribute('loop', attributes.loop));
                     }
                     newNode.attributes.push(toJsxAttribute('style', {maxWidth: '100%', ...style}));
@@ -55,7 +61,7 @@ const plugin: Plugin = function plugin(
                           type: "mdxJsxFlowElement",
                           name: "source",
                           attributes: [
-                            requireDefaultMdastNode('src', (directive.children[0] as Text).value),
+                            requireDefaultMdastNode('src', src),
                           ],
                           children: [],
                           data: {
@@ -72,7 +78,7 @@ const plugin: Plugin = function plugin(
                           type: "mdxJsxFlowElement",
                           name: "source",
                           attributes: [
-                            requireDefaultMdastNode('src', (directive.children[0] as Text).value),
+                            requireDefaultMdastNode('src', src),
                             toJsxAttribute('type', 'audio/mpeg')
                           ],
                           children: [],
@@ -86,7 +92,7 @@ const plugin: Plugin = function plugin(
                     newNode.name = 'iframe';
                     newNode.attributes.push(toJsxAttribute('width', style.width || '100%'));
                     newNode.attributes.push(toJsxAttribute('height', style.height || '315px'));
-                    newNode.attributes.push(toJsxAttribute('src', (directive.children[0] as Text).value));
+                    newNode.attributes.push(toJsxAttribute('src', src));
                     newNode.attributes.push(toJsxAttribute('title', 'YouTube video player'));
                     newNode.attributes.push(toJsxAttribute('frameBorder', '0'));
                     newNode.attributes.push(toJsxAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'));
@@ -96,7 +102,7 @@ const plugin: Plugin = function plugin(
                     newNode.name = 'iframe';
                     newNode.attributes.push(toJsxAttribute('width', style.width || '100%'));
                     newNode.attributes.push(toJsxAttribute('height', style.height || '315px'));
-                    newNode.attributes.push(toJsxAttribute('src', (directive.children[0] as Text).value));
+                    newNode.attributes.push(toJsxAttribute('src', src));
                     newNode.attributes.push(toJsxAttribute('title', 'Circuit Verse'));
                     newNode.attributes.push(toJsxAttribute('frameBorder', '0'));
                     newNode.attributes.push(toJsxAttribute('scrolling', 'no'));

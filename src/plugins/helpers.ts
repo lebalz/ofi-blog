@@ -178,7 +178,8 @@ export const transformAttributes = (
             options.className = value;
         }
         options.attributes[k] = value === 'true' ? true 
-                                : value === 'false' ? false 
+                                : value === 'false' ? false
+                                : value === '' ? ''
                                 : !Number.isNaN(Number(value)) ? Number(value)
                                 : value;
     }
