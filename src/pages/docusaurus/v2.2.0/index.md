@@ -47,13 +47,13 @@ In Ihrem Github-Repository brauchen Sie die Ordner __blog__ und __docs__, jeweil
 Material
 : Vorkonfigurierte Dateien für Docusaurus v2.2.0 [👉 Herunterladen](assets/docusaurus.zip)
 
-1. Uncommitete Änderungen? :mdi-arrow-right: Commit & Push.
+1. Uncommitete Änderungen? :mdi[arrow-right] Commit & Push.
 2. [Material](assets/docusaurus.zip) herunterladen, entpacken und den ganzen Inhalt in Ihr Repository kopieren. Das sollte dann in etwa so aussehen:
 
   ![Struktur im Repository --width=300px](images/dir-structure.png)
 
   :::danger[Wichtig]
-  Die Datei __docs/about-me.md__ und den Ordner __blog__ braucht es zwingend, sonst versucht Docusaurus etwas zu suchen, was nicht existiert (:mdi-arrow-right: Docusaurus Traurig :mdi-arrow-right: Sie traurig :mdi-emoticon-cry:)
+  Die Datei __docs/about-me.md__ und den Ordner __blog__ braucht es zwingend, sonst versucht Docusaurus etwas zu suchen, was nicht existiert (:mdi[arrow-right] Docusaurus Traurig :mdi[arrow-right] Sie traurig :mdi[emoticon-cry])
   :::
 
 3. Github-Benutzername und Name des Repository in __docusaurus.config.js__ ändern.

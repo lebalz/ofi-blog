@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const fileDirectories = ['docs', 'news', 'versioned_docs'];
+const fileDirectories = ['docs', 'news', 'versioned_docs', 'src/pages', 'secure'];
 
 /**
  * @example
  * :mdi-account: --> :mdi[account]
  * :mdi-account--red: --> :mdi[account]{.red}
  */
-const REGEX = /:mdi-(?<content>\w+(-\w+)*)(--(?<clsx>\b\w+\b))?:/;
+const REGEX = /:mdi-(?<content>\w+(-\w+)*)(--(?<clsx>\w+(\s+\w+)*))?:/;
 
 const getFilesRecursively = (directory) => {
     const files = []
@@ -33,8 +33,12 @@ const files = fileDirectories.reduce((acc, dir) => {
  * @param {string} file 
  */
 async function transformMdiIcons(file) {
-    if (!(file.endsWith('.md') || !file.endsWith('.mdx'))) {
+    if (!(file.endsWith('.md') || file.endsWith('.mdx'))) {
         return;
+    }
+    if (file === 'docs/byod-basics/v25/003-Skills/005-navigation.mdx') {
+        console.log('jiiiüp');
+        console.log(file)
     }
     try {
         /** @type string */
@@ -44,7 +48,8 @@ async function transformMdiIcons(file) {
         while (match = raw.match(REGEX)) {
             hasChanged = true;
             const {content, clsx} = match.groups;
-            const mdi = clsx ? `:mdi[${content}]{.${clsx}}` : `:mdi[${content}]`;
+            const clsxStr = clsx ? clsx.split(/\s+/).filter(c => !!c.trim()).map(c => `.${c}`).join(' ') : clsx;
+            const mdi = clsxStr ? `:mdi[${content}]{${clsxStr}}` : `:mdi[${content}]`;
             raw = `${raw.slice(0, match.index)}${mdi}${raw.slice(match.index + match[0].length)}`;
         }
         if (hasChanged) {
@@ -57,4 +62,10 @@ async function transformMdiIcons(file) {
     }
 }
 
-files.forEach(transformMdiIcons);
+const main = async () => {
+    for (const file of files) {
+        await transformMdiIcons(file);
+    }
+};
+
+main().then(() => console.log('Done!'));
