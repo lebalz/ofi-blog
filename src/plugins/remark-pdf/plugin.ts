@@ -2,7 +2,7 @@ import { visit } from 'unist-util-visit';
 import type { Plugin, Processor, Transformer } from 'unified';
 import type { MdxJsxFlowElement, MdxjsEsm } from 'mdast-util-mdx';
 import type { LeafDirective } from 'mdast-util-directive';
-import { camelCased, captialize, toJsxAttribute, toMdxJsxExpressionAttribute, transformAttributes } from '../helpers';
+import { camelCased, captialize, requireDefaultMdastNode, toJsxAttribute, toMdxJsxExpressionAttribute, transformAttributes } from '../helpers';
 import { Parent, Text } from 'mdast';
 import path from 'path';
 
@@ -50,34 +50,7 @@ const PdfViewerNode = (src: string, attr: {[key: string]: string | number | bool
             attr.minWidth !== undefined && toJsxAttribute('minWidth', attr.minWidth),
             attr.noDownload !== undefined && toJsxAttribute('noDownload', attr.noDownload),
             attr.scale !== undefined && toJsxAttribute('scale', attr.scale),
-            toMdxJsxExpressionAttribute(
-                'file',
-                `require('${src}').default`,
-                {
-                    type: 'MemberExpression',
-                    object: {
-                        type: 'CallExpression',
-                        callee: {
-                            type: 'Identifier',
-                            name: 'require'
-                        },
-                        arguments: [
-                            {
-                            type: 'Literal',
-                            value: src,
-                            raw: `'${src}'`
-                            }
-                        ],
-                        optional: false
-                    },
-                    property: {
-                    type: 'Identifier',
-                    name: 'default'
-                    },
-                    computed: false,
-                    optional: false
-                }
-            )
+            requireDefaultMdastNode('file', src)
         ].filter((attr) => !!attr),
         children: [],
         data: {

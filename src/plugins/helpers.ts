@@ -177,9 +177,47 @@ export const transformAttributes = (
         } else if (k === 'className') {
             options.className = value;
         }
-        options.attributes[k] = value;
+        options.attributes[k] = value === 'true' ? true 
+                                : value === 'false' ? false 
+                                : !Number.isNaN(Number(value)) ? Number(value)
+                                : value;
     }
     return options;
+}
+
+/**
+ * transforms 'path/to/file' to `require('path/to/file').defaut` to mdast
+ * @param src path to require
+ */
+export const requireDefaultMdastNode = (key: string, src: string) => {
+    return toMdxJsxExpressionAttribute(
+        key,
+        `require('${src}').default`,
+        {
+            type: 'MemberExpression',
+            object: {
+                type: 'CallExpression',
+                callee: {
+                    type: 'Identifier',
+                    name: 'require'
+                },
+                arguments: [
+                    {
+                    type: 'Literal',
+                    value: src,
+                    raw: `'${src}'`
+                    }
+                ],
+                optional: false
+            },
+            property: {
+                type: 'Identifier',
+                name: 'default'
+            },
+            computed: false,
+            optional: false
+        }
+    )
 }
 
 export const cleanedText = (rawText: string) => {
