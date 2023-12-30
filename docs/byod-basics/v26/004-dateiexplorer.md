@@ -85,7 +85,7 @@ Standardmässig wird nach dem "Namen" sortiert.
 
 Einige Kriterien (wie das __Erstelldatum__) wird nicht automatisch verfügbar und müssen zuerst noch aktiviert werden: 
 
-__:mdi-cursor-default-click: rechtskick__ > __:mdi-swap-vertical: Sortieren nach__ > __Mehr...__ > __Erstelldatum__
+__:mdi[cursor-default-click] rechtskick__ > __:mdi[swap-vertical] Sortieren nach__ > __Mehr...__ > __Erstelldatum__
 
 <Video src={useBaseUrl('/img/byod-basics/win11/explorer-sort.mp4')} />
 </TabItem>
@@ -153,14 +153,14 @@ Sie können Dateien zwischen verschiedenen Ordnern, die allenfalls auf unterschi
 <TabItem value="win11">
 
 - Übers Menüband
-- Übers Kontextmenü: __:mdi-cursor-default-click: rechtskick__ > __:mdi-form-textbox: Umbenennen__
+- Übers Kontextmenü: __:mdi[cursor-default-click] rechtskick__ > __:mdi[form-textbox] Umbenennen__
 - Mit [[F2]] (je nach Tastatur auch [[Fn]]+[[F2]])
 
 </TabItem>
 <TabItem value="win10">
 
 - Übers Menüband
-- Übers Kontextmenü: __:mdi-cursor-default-click: rechtskick__ > __Umbenennen__
+- Übers Kontextmenü: __:mdi[cursor-default-click] rechtskick__ > __Umbenennen__
 - Mit [[F2]] (je nach Tastatur auch [[Fn]]+[[F2]])
 
 </TabItem>
@@ -195,7 +195,7 @@ Die gewünschten Dateien Auswählen und anschliessend komprimieren. Das Symbol f
 </TabItem>
 <TabItem value="win10">
 
-Übers Kontextmenü: __:mdi-cursor-default-click: rechtskick__ > __Senden an__ > __ZIP-komprimierter Ordner__
+Übers Kontextmenü: __:mdi[cursor-default-click] rechtskick__ > __Senden an__ > __ZIP-komprimierter Ordner__
 
 <Video src={useBaseUrl('/img/byod-basics/win/zip.mp4')} />
 </TabItem>

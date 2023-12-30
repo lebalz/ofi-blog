@@ -147,7 +147,7 @@ Sie haben nun die Struktur des DNS kennengelernt und gesehen, dass es zur Verwal
 :::aufgabe[]
 <Answer type="state" webKey="575005e2-40fb-47c6-9c51-52b6cdfb5024" />
 
-1. Gehen Sie auf die Seite 👉 https://tools.keycdn.com/dig Geben Sie den Domain-Name www.gbsl.ch ein, klicken Sie __:mdi-checkbox-marked: Trace__ an und lassen Sie den Namen auflösen.
+1. Gehen Sie auf die Seite 👉 https://tools.keycdn.com/dig Geben Sie den Domain-Name www.gbsl.ch ein, klicken Sie __:mdi[checkbox-marked] Trace__ an und lassen Sie den Namen auflösen.
 
 #### Erklärungen
 Was passiert hier genau?

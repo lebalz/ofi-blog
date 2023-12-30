@@ -101,11 +101,11 @@ Formatvorlagen verstanden?
 
 Tabstopps
 : [[┗]] [[┻]] [[┛]]
-: der Cursor :mdi-cursor-text: springt beim Drücken der Tabulator-Taste [[:mdi-keyboard-tab:]] bis zu diesem Tabstopp.
+: der Cursor :mdi[cursor-text] springt beim Drücken der Tabulator-Taste [[:mdi[keyboard-tab]]] bis zu diesem Tabstopp.
 : Die Ausrichtung bestimmt, wie der Tabulator-Text ausgerichtet wird:
-: [[┗]] :mdi-arrow-right-thin: :mdi-format-align-left:  
-: [[┻]] :mdi-arrow-right-thin: :mdi-format-align-center:  
-: [[┛]] :mdi-arrow-right-thin: :mdi-format-align-right:
+: [[┗]] :mdi[arrow-right-thin] :mdi[format-align-left]  
+: [[┻]] :mdi[arrow-right-thin] :mdi[format-align-center]  
+: [[┛]] :mdi[arrow-right-thin] :mdi[format-align-right]
 : Die Ausrichtung kann durch Doppelklicken auf den Tabstopp geändert werden.
 Linker Einzug
 : [[⧋]]

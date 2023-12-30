@@ -19,13 +19,13 @@ Das folgende Bild illustriert dies für eine Liste mit 4 Noten. Die **Länge** d
 Index
 : 　**Wert**
 `0`
-: :mdi-arrow-right-thin: `4.5`
+: :mdi[arrow-right-thin] `4.5`
 `1`
-: :mdi-arrow-right-thin: `5`
+: :mdi[arrow-right-thin] `5`
 `2`
-: :mdi-arrow-right-thin: `3.5`
+: :mdi[arrow-right-thin] `3.5`
 `3`
-: :mdi-arrow-right-thin: `5.5`
+: :mdi[arrow-right-thin] `5.5`
 
 In Python kann man diese Liste mit eckigen Klammern `[` `]` wie folgt erzeugen:
 

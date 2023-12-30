@@ -100,10 +100,10 @@ Beispiel-Anleitung:
 
 <div className="slim center">
 
-| Ort :mdi[pin] | Ziel :mdi[target] | :mdi-axis-y-arrow: Aktion             |
+| Ort :mdi[pin] | Ziel :mdi[target] | :mdi[axis-y-arrow] Aktion             |
 |:--------------|:------------------|:--------------------------------------|
-| Seehofweg     | Mettmoos          | :mdi-arrow-right-thin: Bus Nr. 9      |
-| Seehofweg     | Gymer             | :mdi-arrow-right-thin: Zu Fuss weiter |
+| Seehofweg     | Mettmoos          | :mdi[arrow-right-thin] Bus Nr. 9      |
+| Seehofweg     | Gymer             | :mdi[arrow-right-thin] Zu Fuss weiter |
 </div>
 
 Halten Sie Ihre Anleitung auf Papier fest und fügen Sie ein Foto unten ein.

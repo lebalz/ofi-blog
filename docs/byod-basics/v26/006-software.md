@@ -315,7 +315,7 @@ In der Mail-App einen neuen Exchange Mailaccount hinzufügen:
 </OsTabs>
 
 
-## :mdi-microsoft-office: Office 365
+## :mdi[microsoft-office] Office 365
 
 An der Schule wird die Office 365 Suite verwendet.
 

@@ -72,7 +72,7 @@ print('Zeile 3, Spalte 1:', matrix[2][0])
 :::def[]
 ### Schleife über Zeilen
 
-Schleife über einzelne Zeilen :mdi-arrow-right: Zeilen sind wieder Listen
+Schleife über einzelne Zeilen :mdi[arrow-right] Zeilen sind wieder Listen
 ```py live_py slim
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
@@ -326,7 +326,7 @@ matrix[1][1] = 0 # nur den Wert in Zeile 1 in der Mitte auf 0 Setzen
 print(matrix)
 ```
 
-:mdi-arrow-right: Fassen Sie obiges Verhalten nun in eigene Worte im Dokument __EF-Informatik/docs/python/referenzen.md__.
+:mdi[arrow-right] Fassen Sie obiges Verhalten nun in eigene Worte im Dokument __EF-Informatik/docs/python/referenzen.md__.
 
 :::
 

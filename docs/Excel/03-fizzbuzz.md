@@ -10,7 +10,7 @@ sidebar_custom_props:
 > 
 > ![](images/fizz-buzz.png)
 
-:mdi-arrow-right: Erkennen Sie das Schema dahinter?
+:mdi[arrow-right] Erkennen Sie das Schema dahinter?
 
 <Solution webKey="b65ca220-bd14-4c60-a20f-c61ae9a7b42f" show>
 
@@ -49,7 +49,7 @@ Halten Sie in Stichworten fest, was diese Funktionen machen und wie Sie angewand
 
 Das Programm braucht die "Hilfsspalten" B, C, D & E. Können Sie das Programm durch verschachteln von Funktionen so umschreiben, dass **nur drei Spalten** nötig sind?
 
-Bspw. in Spalte B berechnen Sie "Rest 3" und verwenden es in Spalte D :mdi-arrow-right: die Berechnung von Spalte B kann aber auch direkt in Spalte D vorgenommen werden, so dass die Spalte B überflüssig ist.
+Bspw. in Spalte B berechnen Sie "Rest 3" und verwenden es in Spalte D :mdi[arrow-right] die Berechnung von Spalte B kann aber auch direkt in Spalte D vorgenommen werden, so dass die Spalte B überflüssig ist.
 
 Welche Variante ist übersichtlicher, wieso?
 

@@ -22,7 +22,7 @@ Um einen Fehler zu korrigieren, können mit Rechtsklick die Verbesserungsvorschl
 
 Die Autokorrektur ist für die Rechtschreibefehler standardmässig aktiviert. Bei den Grammatikfehlern ist die Überprüfung aber nicht immer aktiv: Sie sollte unbedingt unter __Datei > Optionen > Dokumentprüfung__ aktiviert werden!
 
-![:mdi-checkbox-marked--blue: Grammatikfehler während der Eingabe markieren --width=550px](images/04-grammatik.png)
+![:mdi[checkbox-marked]{.blue} Grammatikfehler während der Eingabe markieren --width=550px](images/04-grammatik.png)
 :::
 
 ## Sprache

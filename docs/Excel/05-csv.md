@@ -16,7 +16,7 @@ __Daten > Text in Spalten__
 
 lässt sich dies ändern.
 
-👉 [:mdi-microsoft-excel: support.microsoft.com: Text zu Spalten](https://support.microsoft.com/de-de/office/aufteilen-von-text-in-verschiedene-spalten-mit-dem-textkonvertierungs-assistenten-30b14928-5550-41f5-97ca-7a3e9c363ed7)
+👉 [:mdi[microsoft-excel] support.microsoft.com: Text zu Spalten](https://support.microsoft.com/de-de/office/aufteilen-von-text-in-verschiedene-spalten-mit-dem-textkonvertierungs-assistenten-30b14928-5550-41f5-97ca-7a3e9c363ed7)
 :::
 
 ::::aufgabe

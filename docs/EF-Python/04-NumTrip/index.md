@@ -10,7 +10,7 @@ Abgabe
 : **24.01.2023, 12:00 Uhr**
 
 Mündliche Prüfung:
-: :mdi-arrow-right: [👉 Liste](https://erzbe.sharepoint.com/:x:/r/sites/24EFInformatik/Freigegebene%20Dokumente/General/Numtrip-Pr%C3%BCfungsliste.xlsx?d=wd9ee8636912346d2b702249f2ad7f0bc&csf=1&web=1&e=Z48pUW)
+: :mdi[arrow-right] [👉 Liste](https://erzbe.sharepoint.com/:x:/r/sites/24EFInformatik/Freigegebene%20Dokumente/General/Numtrip-Pr%C3%BCfungsliste.xlsx?d=wd9ee8636912346d2b702249f2ad7f0bc&csf=1&web=1&e=Z48pUW)
 :::
 
 :::info[Ziele]

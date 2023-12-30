@@ -6,7 +6,7 @@ sidebar_custom_props:
 ---
 # PC Manager 🚀
 
-Dein :mdi-microsoft-windows--blue:-Laptop ist plötzlich langsamer als gewohnt? Der PC-Manager verleiht deinem Gerät einen Boost 🚀.
+Dein :mdi[microsoft-windows]{.blue}-Laptop ist plötzlich langsamer als gewohnt? Der PC-Manager verleiht deinem Gerät einen Boost 🚀.
 
 {/* truncate */}
 

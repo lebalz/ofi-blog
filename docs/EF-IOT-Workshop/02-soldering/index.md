@@ -8,8 +8,8 @@ sidebar_custom_props:
 ![--width=120px](images/solder-tip01.jpg)
 - Beide Flächen erhitzen
 - möglichst etwas unterhalb der Spitze
-- :mdi-flash-triangle-outline--red: Lötzinn **nicht** direkt an die Spitze halten
-- :mdi-flash-triangle-outline--red: **nicht** mit unsauberer Spitze löten
+- :mdi[flash-triangle-outline]{.red} Lötzinn **nicht** direkt an die Spitze halten
+- :mdi[flash-triangle-outline]{.red} **nicht** mit unsauberer Spitze löten
 ::br
 ![](images/solder-tip02.jpg)
 A
@@ -19,7 +19,7 @@ B, C, D, E
 :::
 
 
-## Löten einfach gemacht... :mdi-thought-bubble-outline:
+## Löten einfach gemacht... :mdi[thought-bubble-outline]
 
 <div style={{maxWidth: '600px'}}>
 

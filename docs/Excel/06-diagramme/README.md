@@ -60,7 +60,7 @@ Zählt, wie viele Schüler:innen 14 oder 15 Jährig sind. (Daher wie viele Werte
 - Die aggregierte Tabelle auswählen und über __Einfügen > 2D-Kreis__ ein Kreisdiagramm einfügen.
 - Über __Diagrammentwurf > Diagrammelemente hinzufügen__ die Datenbeschriftung hinzufügen.
 - Mit einem Textfeld (__Einfügen > Formen > Textfeld__) ein Textfeld für die Anzahl Datensätze (hier: $n = 13$) hinzufügen.
-- Rechtsklick auf eine weisse Fläche des Diagramms __:mdi-cursor-default-click: > Als Bild speichern...__
+- Rechtsklick auf eine weisse Fläche des Diagramms __:mdi[cursor-default-click] > Als Bild speichern...__
 
 
 [@video](images/Excel-Kuchendiagramm.mp4)

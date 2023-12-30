@@ -55,12 +55,12 @@ Geben Sie einen kurzen Text ein. Dieser sollte nicht nur ASCII-Zeichen enthalten
 <OsTabs>
 <TabItem value="win">
 
-Emojis können unter Windows mit dem Tastenkürzel [[:mdi-microsoft-windows:]] + [[.]] eingefügt werden.
+Emojis können unter Windows mit dem Tastenkürzel [[:mdi[microsoft-windows]]] + [[.]] eingefügt werden.
 
 </TabItem>
 <TabItem value="mac">
 
-Emojis können unter Mac OS X mit dem Tastenkürzel [[Ctrl]] + [[Cmd :mdi-apple-keyboard-command:]] +[[Leertaste :mdi-keyboard-space:]] eingefügt werden.
+Emojis können unter Mac OS X mit dem Tastenkürzel [[Ctrl]] + [[Cmd :mdi[apple-keyboard-command]]] +[[Leertaste :mdi[keyboard-space]]] eingefügt werden.
 
 </TabItem>
 </OsTabs>

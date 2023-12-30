@@ -27,7 +27,7 @@ Als Netzwerk-Admin wollen Sie intern 11 Subnetze definieren, wobei Sie einen zug
 
 1. 11 Geräte, und somit ist die nächsthöhere Zweierpotenz $16=2^4$, es braucht also 4 bit. (3 wären zu wenig, da $2^3=8<11\leq 2^4=16$)
 
-2. 4 bit für Geräte :mdi-arrow-right: $2^4$ Geräte abzüglich der reservierten Adressen (Netzwerkadresse und Broadcastadresse)
+2. 4 bit für Geräte :mdi[arrow-right] $2^4$ Geräte abzüglich der reservierten Adressen (Netzwerkadresse und Broadcastadresse)
 
 </Solution>
 
@@ -62,7 +62,7 @@ definieren, wobei Sie einen zugewiesenen IP-Adressbereich von `192.168.0.0/ 24` 
 
 1. 15 Geräte + 2 fixe Adressen = 17 Adressen im Hostteil und somit ist die nächsthöhere Zweierpotenz $32=2^5$, es braucht also 5 bit. (4 wären zu wenig, da $2^4=16<17\leq 2^5=32$)
 
-2. 4 bit für Geräte :mdi-arrow-right: $2^4$ Geräte abzüglich der reservierten Adressen (Netzwerkadresse und Broadcastadresse)
+2. 4 bit für Geräte :mdi[arrow-right] $2^4$ Geräte abzüglich der reservierten Adressen (Netzwerkadresse und Broadcastadresse)
 
 </Solution>
 

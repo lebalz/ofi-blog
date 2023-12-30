@@ -15,7 +15,7 @@ import Video from '@site/src/components/Video'
 <OsTabs>
   <TabItem value="win11">
 
-- **Startmenü** mit [[:mdi-microsoft-windows:]] öffnen  und direkt mit Tippen beginnen.
+- **Startmenü** mit [[:mdi[microsoft-windows]]] öffnen  und direkt mit Tippen beginnen.
 
 Es kann nach Programmen, Ordnern, Dateien, aber auch z.B. nach dem Wetter gesucht werden.
 
@@ -24,7 +24,7 @@ Es kann nach Programmen, Ordnern, Dateien, aber auch z.B. nach dem Wetter gesuch
 </TabItem>
   <TabItem value="win10">
 
-- **Startmenü** mit [[:mdi-microsoft-windows:]] öffnen  und direkt mit Tippen beginnen.
+- **Startmenü** mit [[:mdi[microsoft-windows]]] öffnen  und direkt mit Tippen beginnen.
 - Auf die Lupe [[:mdi[magnify]]] klicken und Suchanfrage starten.
 
 Es kann nach Programmen, Ordnern, Dateien, aber auch z.B. nach dem Wetter gesucht werden.

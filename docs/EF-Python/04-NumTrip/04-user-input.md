@@ -12,13 +12,13 @@ Nun wird's interaktiv 🥳 Eine Gamer:in soll ein Feld auswählen können.
 :::danger[Nur Felder auswählen]
 Die Gefahr bei diesem Schritt lauert im inneren Bedürfnis, in diesem ersten Schritt bereits an alles zu Denken und das ganze Spiel zu programmieren!
 
-:mdi-flash-triangle--red: in diesem Schritt **nicht gefragt** :mdi-flash-triangle--red::
-- :mdi-close-circle--red: die Eingabe auf ungültige Eingaben überprüfen
-- :mdi-close-circle--red: ausgewählte Felder zusammenrechnen
-- :mdi-close-circle--red: den Spielstand angebe
-- :mdi-close-circle--red: überprüfen, ob das Spiel vorbei ist
-- :mdi-close-circle--red: Sound hinzufügen
-- :mdi-close-circle--red: ...
+:mdi[flash-triangle]{.red} in diesem Schritt **nicht gefragt** :mdi[flash-triangle]{.red}:
+- :mdi[close-circle]{.red} die Eingabe auf ungültige Eingaben überprüfen
+- :mdi[close-circle]{.red} ausgewählte Felder zusammenrechnen
+- :mdi[close-circle]{.red} den Spielstand angebe
+- :mdi[close-circle]{.red} überprüfen, ob das Spiel vorbei ist
+- :mdi[close-circle]{.red} Sound hinzufügen
+- :mdi[close-circle]{.red} ...
 :::
 
 

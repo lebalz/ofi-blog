@@ -10,4 +10,4 @@ Excel-Funktionen in einer anderen **Sprache**: 👉 https://de.excel-translator.
 
 Kostenlose Installation für Schüler:innen mit dem Schulaccount:
 
-👉 :mdi-microsoft-excel--green: https://office.com
+👉 :mdi[microsoft-excel]{.green} https://office.com

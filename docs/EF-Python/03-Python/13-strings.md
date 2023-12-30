@@ -56,7 +56,7 @@ def sqrt(zahl):
 print('Wurzel 2 = ', sqrt(2))
 ```
 ::br
-**Beispiel**: Ursprünglich wurde die Funktion `sqrt` selber implementiert. Nun brauchen Sie diese vermutlich nicht mehr, das diese aus der Bibliothek `math` importiert wird. Vorerst wollen Sie die eigene Funktion aber noch nicht löschten :mdi-arrow-right: vorerst **kommentieren** Sie diese.
+**Beispiel**: Ursprünglich wurde die Funktion `sqrt` selber implementiert. Nun brauchen Sie diese vermutlich nicht mehr, das diese aus der Bibliothek `math` importiert wird. Vorerst wollen Sie die eigene Funktion aber noch nicht löschten :mdi[arrow-right] vorerst **kommentieren** Sie diese.
 :::
 ::::
 :::::
@@ -180,7 +180,7 @@ namen = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 print(namen[0::2]) # Bemerke: der Endwert wird nicht angegeben = bis zum Schluss fortfahren...
 ```
 
-oder **rückwärts** :mdi-emoticon-cool-outline:
+oder **rückwärts** :mdi[emoticon-cool-outline]
 
 ```py live_py slim
 vorname = 'Reto'

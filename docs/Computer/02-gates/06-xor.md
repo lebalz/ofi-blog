@@ -137,7 +137,7 @@ A    B  |  X
 1    1  |  0
 ```
 
-:mdi-arrow-right: ein einzelnes `XOR`-Gatter reicht aus...
+:mdi[arrow-right] ein einzelnes `XOR`-Gatter reicht aus...
 
 </Solution>
 :::

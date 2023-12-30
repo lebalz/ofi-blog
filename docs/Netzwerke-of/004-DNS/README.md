@@ -57,9 +57,9 @@ Ein Port spezifiziert, welche Applikation auf einem Server die Anfrage behandeln
 Auf dem Server [188.34.157.212](http://188.34.157.212) sind mehrere Web-Sites, und mit dem richtigen Port kann ausgewählt werden, welche man möchte:
 
 Port 80 \*
-: [188.34.157.212:80](http://188.34.157.212:80) :mdi-arrow-right: [login.gbsl.website](http://login.gbsl.website)
+: [188.34.157.212:80](http://188.34.157.212:80) :mdi[arrow-right] [login.gbsl.website](http://login.gbsl.website)
 Port 8080
-: [188.34.157.212:8080](http://188.34.157.212:8080) :mdi-arrow-right: [hacksql.gbsl.website](https://hacksql.gbsl.website)
+: [188.34.157.212:8080](http://188.34.157.212:8080) :mdi[arrow-right] [hacksql.gbsl.website](https://hacksql.gbsl.website)
 
 Nun wird deutlich, dass es schwierig würde, sich auch noch alle Ports zu merken...
 
@@ -153,7 +153,7 @@ Wie findet man die IP-Adresse, welche zu einem Domain-Name gehört? (Googeln Sie
 
 <Answer  type="text"  webKey="67acbe64-ea7b-46ea-b07a-c09376f21381"/>
 
-:::details[:mdi-account-cowboy-hat: The Hacky Way :mdi-arrow-right: Übers Terminal :mdi[console]]
+:::details[:mdi[account-cowboy-hat] The Hacky Way :mdi[arrow-right] Übers Terminal :mdi[console]]
 
 Sie können auch in der Windows-Eingabeaufforderung oder auf dem Mac-Terminal einen Domain-Name zu einer IP-Adresse auflösen. Dazu brauchen Sie den Befehl `nslookup`.
 

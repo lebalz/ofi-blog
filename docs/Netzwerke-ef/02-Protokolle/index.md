@@ -115,7 +115,7 @@ stateDiagram-v2
 Startzustand
 : Der schwarze Punkt :mdi[circle]
 Endzustand
-: Der weisse Punkt :mdi-record-circle-outline:.
+: Der weisse Punkt :mdi[record-circle-outline].
 : In diesem ist keine weitere Kommunikation möglich. Die Zustandsmaschine müsste dazu neu gestartet werden.
 Zwischenzustände
 : Die Kästchen entsprechen

@@ -25,7 +25,7 @@ import TypedText from '@site/src/components/VisualizationTools/TypedText'
 
 Zeit :mdi[clock]{.blue}
 : 5 Minuten Vorbereitung, 5 Minuten Prüfung
-Szenarien :mdi-file-document-multiple--blue:
+Szenarien :mdi[file-document-multiple]{.blue}
 : 10 Szenarien aus den [Prüfungsfragen](./009-pruefungsfragen.md)
 Note :mdi[certificate]{.blue}
 : Halb zählende Note

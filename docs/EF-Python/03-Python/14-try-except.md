@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 ![??? --width=400px](images/io-joke-3.webp)
 
-Was soll ein Programm tun, wenn er mit unpassenden Daten oder Eingaben konfrontiert wird? Normalerweise: Abstürzen :mdi-emoticon-cry:.
+Was soll ein Programm tun, wenn er mit unpassenden Daten oder Eingaben konfrontiert wird? Normalerweise: Abstürzen :mdi[emoticon-cry].
 
 Damit das Programm nicht abstürzt, ist es unerlässlich, die Benutzerabfragen so gut es geht in die richtige Form umzuwandeln und dann auf Richtigkeit zu überprüfen!
 

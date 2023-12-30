@@ -97,7 +97,7 @@ Das Aufteilen von Videos ist besonders hilfreich, wenn
 <GTabs groupId="video-editor" getLabel={(idx) => ['Clipchamp', 'Fotos (Legacy)', 'iMovie'][idx]} >
 <div className="Clipchamp">
 
-![Video aufteilen :mdi-content-cut:](images/clipchamp/04-video-editor-split.png)
+![Video aufteilen :mdi[content-cut]](images/clipchamp/04-video-editor-split.png)
 </div>
 <div className="Fotos-Legacy">
 

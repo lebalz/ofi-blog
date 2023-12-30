@@ -92,7 +92,7 @@ Zwei Netzwerke über einen Router verbinden ist schon mal was. Das Internet best
 <Answer type="state" webKey="5e78b7fe-12f6-4052-9f26-6f95d23e8359" />
 
 
-:mdi-arrow-right: Nächste Aufgabe
+:mdi[arrow-right] Nächste Aufgabe
 
 <Solution webKey="6c3d7bbd-8fba-4853-9daf-b739a0314d8d">
 
@@ -116,7 +116,7 @@ Wie weit kommt Ihr ping jetzt?
 
 <Answer type="text" webKey="9412034e-df0e-45a7-8504-5433fb1a6601" />
 
-:mdi-arrow-right: Nächste Aufgabe
+:mdi[arrow-right] Nächste Aufgabe
 :::
 
 :::aufgabe[6.]
@@ -133,7 +133,7 @@ Erfassen Sie die nötigen Werte für Netzmaske, Gateway und Schnittstelle als Te
 Wie weit kommt Ihr ping jetzt?
 <Answer type="text" webKey="2e50853d-7c43-40e2-b684-bed7d04c30e3" />
 
-:mdi-arrow-right: Nächste Aufgabe
+:mdi[arrow-right] Nächste Aufgabe
 :::
 
 :::aufgabe[7.]

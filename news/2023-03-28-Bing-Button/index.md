@@ -8,7 +8,7 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 
 # Bing Button entfernen
 
-#### :mdi-microsoft-edge--cyan: :mdi[microsoft]{.blue} :mdi-microsoft-bing--blue:
+#### :mdi[microsoft-edge]{.cyan} :mdi[microsoft]{.blue} :mdi[microsoft-bing]{.blue}
 
 ![--width=220px](images/remove-bing-button.png)
 
@@ -17,7 +17,7 @@ Der prominente Bing-Knopf in Edge loswerden? So gehts...
 
 {/* truncate */}
 
-In den Einstellungen :mdi[cog] von Edge :mdi-microsoft-edge: unter __Randleiste > Entdecken__ die Einstellung __Entdecken anzeigen__ abschalten.
+In den Einstellungen :mdi[cog] von Edge :mdi[microsoft-edge] unter __Randleiste > Entdecken__ die Einstellung __Entdecken anzeigen__ abschalten.
 
 ![](images/edge-settings.png)
 
@@ -29,6 +29,6 @@ Die URL `edge://settings/sidebar` per Copy-Paste in die Adresszeile einfügen.
 
 <BrowserWindow url="edge://settings/sidebar" browser="edge" copy>
 
-__Entdecken > Entdecken anzeigen :mdi-toggle-switch-off-outline:__
+__Entdecken > Entdecken anzeigen :mdi[toggle-switch-off-outline]__
 
 </BrowserWindow>

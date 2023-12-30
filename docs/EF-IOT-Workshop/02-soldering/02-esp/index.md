@@ -46,12 +46,12 @@ Löten der angegebenen Lötstellen:
 
 ### Testen
 
-:mdi-power-plug--green: Stromversorgung anschliessen - auf dem Bildschirm sollte nun eine Meldung erscheinen...
+:mdi[power-plug]{.green} Stromversorgung anschliessen - auf dem Bildschirm sollte nun eine Meldung erscheinen...
 
 :::
 :::cards
 - 4 Kabel-Stücke von 7-8cm Länge zuschneiden
-- Abisolieren (mit gelbem Tool - :mdi-flash-triangle-outline--red: nicht mit den Zähnen!!! :mdi-tooth-outline--red:)
+- Abisolieren (mit gelbem Tool - :mdi[flash-triangle-outline]{.red} nicht mit den Zähnen!!! :mdi[tooth-outline]{.red})
   - Vorne: ~0.3 cm abisolieren
   - Hinten: ~1 cm abisolieren
 
@@ -98,4 +98,4 @@ __D2__
 :::
 
 
-It's Coffee Time! :mdi-coffee-outline: 
+It's Coffee Time! :mdi[coffee-outline] 

@@ -8,7 +8,7 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 
 # Browser Scrollbalken
 
-Unter Chrome :mdi-google-chrome--blue:, Edge :mdi-microsoft-edge--cyan: und Firefox :mdi[firefox]{.orange} gibt es eine versteckte Einstellungsseite, in welcher jegliche Einstellungen des Browsers konfiguriert werden kann.
+Unter Chrome :mdi[google-chrome]{.blue}, Edge :mdi[microsoft-edge]{.cyan} und Firefox :mdi[firefox]{.orange} gibt es eine versteckte Einstellungsseite, in welcher jegliche Einstellungen des Browsers konfiguriert werden kann.
 
 ![Moderne Scrollbars unter Windows](images/scrollbars.png)
 
@@ -24,7 +24,7 @@ Die Scrollbars sehen unter Windows teils etwas altbacken aus, damit Sie auf alle
 
 <BrowserWindow url="edge://flags" browser="edge" copy>
 
-Edge :mdi-microsoft-edge--cyan:
+Edge :mdi[microsoft-edge]{.cyan}
 : **Einstellungsseite** 👉 `edge://flags`
 Aussehen der Scrollbar
 : `edge://flags/#edge-overlay-scrollbars-win-style`
@@ -35,7 +35,7 @@ Flüssiges Scrollen
 
 <BrowserWindow url="chrome://flags" browser="chrome" copy>
 
-Chrome :mdi-google-chrome--blue:
+Chrome :mdi[google-chrome]{.blue}
 : **Einstellungsseite** 👉 `chrome://flags`
 Aussehen der Scrollbar
 : `chrome://flags/#overlay-scrollbars`

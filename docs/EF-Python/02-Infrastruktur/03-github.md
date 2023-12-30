@@ -21,7 +21,7 @@ Halten Sie Ihren Github-Namen hier fest, damit ich ([@bh0fer](https://github.com
 <Answer type="state" webKey="a4503b33-2b39-4cb5-a8ee-a07f2a8c4b1c" />
 
 Erstellen Sie auf Github ein neues Repository (z.B. mit dem Namen `EF-Informatik`).
-- :mdi-flash-triangle--orange: achten Sie darauf, dass der Namen keine Leerschläge enthält\*
+- :mdi[flash-triangle]{.orange} achten Sie darauf, dass der Namen keine Leerschläge enthält\*
 - Wählen Sie die Option **Add a README file** aus.
 
 ![](images/gh-repo.png)

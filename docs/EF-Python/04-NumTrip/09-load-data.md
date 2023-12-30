@@ -18,7 +18,7 @@ Typischerweise funktioniert dies durch Dateien auf dem Computer. Ihr kennt das s
 
 Nachdem dieser Dialog ausgeführt wird ist die Datei permanent auf der Festplatte gespeichert und kann auch wieder aufgerufen werden.
 
-## In Python :mdi-language-python:
+## In Python :mdi[language-python]
 
 Programmiersprachen verwenden oft sogenannte _standardisierte Dateiformate_ um Daten zu Speichern. Diese sind nichts anderes, als eine Abmachung darüber, in welchem Format die Datei gespeichert ist. Wenn Ihr an das Beispiel der Word Datei zurückdenkt fällt euch bestimmt auf, das diese Dateien z.B. die Endung _.docx_ haben. Dies dient dem Zweck, dass andere Programme wissen, in welchem Format die Informationen in dieser Datei gespeichert sind, und wie sie beim öffnen interpretiert werden sollten.
 
