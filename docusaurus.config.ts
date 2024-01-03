@@ -135,7 +135,9 @@ const config: Config = {
         DOCS_ONLY: process.env.DOCS_ONLY || false,
         AZURE_CLIENT_ID: process.env.AZURE_CLIENT_ID || 'no-id',
         DOMAIN: process.env.DOMAIN || 'http://localhost:3000',
-        OFFLINE_MODE: OFFLINE_MODE
+        OFFLINE_MODE: OFFLINE_MODE,
+        /** Use Testuser in local dev: set TEST_USERNAME to the test users email adress*/
+        TEST_USERNAME: process.env.TEST_USERNAME
     },
     i18n: {
         defaultLocale: 'de',

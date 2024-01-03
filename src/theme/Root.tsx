@@ -8,7 +8,7 @@ import { PublicClientApplication } from "@azure/msal-browser";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import Head from "@docusaurus/Head";
 import siteConfig from '@generated/docusaurus.config';
-const { OFFLINE_MODE } = siteConfig.customFields as { OFFLINE_MODE?: boolean };
+const { OFFLINE_MODE, TEST_USERNAME } = siteConfig.customFields as { OFFLINE_MODE?: boolean, TEST_USERNAME?: string };
 
 let msalInstance: PublicClientApplication;
 let Msal = ({ children }) => <>{children}</>;
@@ -19,6 +19,11 @@ if (!OFFLINE_MODE) {
     msalInstance = new PublicClientApplication(msalConfig);
 
     const selectAccount = () => {
+        
+        if (process?.env?.NODE_ENV !== 'production' && TEST_USERNAME) {
+            rootStore.msalStore.setAccount({username: TEST_USERNAME} as any);
+            return
+        }
         /**
          * See here for more information on account retrieval:
          * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md
@@ -59,6 +64,31 @@ if (!OFFLINE_MODE) {
         return <MsalProvider instance={msalInstance}>{children}</MsalProvider>;
     });
 }
+
+
+const useTestUserNoAuth = process.env.NODE_ENV !== 'production' && TEST_USERNAME?.length > 0;
+
+if (useTestUserNoAuth) {
+  const n = TEST_USERNAME.length >= 40 ? 0 : 40 - TEST_USERNAME.length;
+  console.log([   '',
+                  "┌──────────────────────────────────────────────────────────┐",
+                  '│                                                          │',
+                  "│   _   _                       _   _                      │",
+                  "│  | \\ | |           /\\        | | | |                     │",
+                  "│  |  \\| | ___      /  \\  _   _| |_| |__                   │",
+                  "│  | . ` |/ _ \\    / /\\ \\| | | | __| '_ \\                  │",
+                  "│  | |\\  | (_) |  / ____ \\ |_| | |_| | | |                 │",
+                  "│  |_| \\_|\\___/  /_/    \\_\\__,_|\\__|_| |_|                 │",
+                  '│                                                          │',
+                  '│                                                          │',
+                  `│   TEST_USERNAME: ${TEST_USERNAME + ' '.repeat(n)}│`,
+                  '│                                                          │',
+                  '│   --> enable authentication by removing "TEST_USERNAME"  │',
+                  '│       from the environment (or the .env file)            │',
+                  "└──────────────────────────────────────────────────────────┘",
+  ].join('\n'))
+}
+
 
 
 // Default implementation, that you can customize
