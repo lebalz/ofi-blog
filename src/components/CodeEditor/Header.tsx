@@ -26,7 +26,7 @@ const PlayButton = observer((props: PlayProps) => {
     const pyScript = store.find<Script>(props.webKey);
     return (
         <button
-            onClick={() => pyScript.execScript(document)}
+            onClick={() => pyScript.execScript((window as any).__BRYTHON__)}
             className={clsx(styles.playButton, styles.headerButton)}
             title={`Code Ausführen ${props.webKey} ${pyScript.codeId}`}
         >

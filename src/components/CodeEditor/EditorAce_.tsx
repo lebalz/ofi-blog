@@ -2,7 +2,6 @@ import * as React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 import { DOM_ELEMENT_IDS } from './constants';
-import PyScriptSrc from './PyScriptSrc';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/hooks';
 import Script from '../../models/Script';
@@ -38,7 +37,7 @@ const Editor = observer((props: Props) => {
                     // commands is array of key bindings.
                     name: 'execute',
                     bindKey: { win: 'Ctrl-Enter', mac: 'Command-Enter' },
-                    exec: () => pyScript.execScript(document),
+                    exec: () => pyScript.execScript((window as any).__BRYTHON__),
                 });
             }
             node.editor.commands.addCommand({
@@ -106,7 +105,6 @@ const Editor = observer((props: Props) => {
                 enableSnippets={false}
                 showGutter={props.showLineNumbers}
             />
-            {props.lang === 'python' && <PyScriptSrc webKey={props.webKey} />}
         </div>
     );
 });

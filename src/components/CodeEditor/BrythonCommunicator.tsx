@@ -16,10 +16,17 @@ const BrythonCommunicator = observer((props: Props) => {
   const onBryNotify = React.useCallback((event) => {
     if (event.detail) {
       const data = event.detail as LogMessage;
-      if (data.type === "done") {
-        return runInAction(() => (pyScript.executing = false));
+      switch (data.type) {
+        case "start":
+          pyScript.clearLogMessages();
+          pyScript.setExecuting(true);
+          break;
+        case "done":
+          pyScript.setExecuting(false);
+          break;
+        default:
+          pyScript.addLogMessage(data);
       }
-      pyScript.addLogMessage(data);
     }
   }, [pyScript]);
 

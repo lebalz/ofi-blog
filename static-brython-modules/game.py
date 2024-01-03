@@ -28,11 +28,6 @@ class Game():
         timer.clear_timeout(Game.timeout_id)
         timer.cancel_animation_frame(Game.timeout_id)
 
-
-    @staticmethod
-    def is_running():
-        return not Game.stop_request and document[Config.PYTHON_SOURCE].attrs.get('data--start-time') == Game.init_time # type: ignore
-
 def sleep(ms):
     Game.sleep(ms)
 
@@ -67,8 +62,8 @@ def gameloop(func):
 
     def sleep(ms):
         Game.sleep_requested = True
-        if Game.is_running():
-            Game.timeout_id = timer.set_timeout(animation_frame, ms)
+        # if Game.is_running():
+        #     Game.timeout_id = timer.set_timeout(animation_frame, ms)
 
     Game.sleep = sleep
     

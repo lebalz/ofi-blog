@@ -5,14 +5,16 @@ import { CodeModel } from './iModel';
 import { DocumentStore } from '../stores/DocumentStore';
 import { rootStore } from '../stores/stores';
 import SaveService, { ApiModel } from './SaveService';
+const run_template = require('./brython_runner.raw.py');
 import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER, GRAPHICS_OUTPUT_TESTER, CANVAS_OUTPUT_TESTER, GRID_IMPORTS_TESTER, TURTLE3D_IMPORTS_TESTER } from '../components/CodeEditor/constants';
+import { sanitizePyScript } from '../utils/sanitizers';
 
 export interface PyDoc {
     code: string;
 }
 
 export interface LogMessage {
-    type: 'done' | 'stdout' | 'stderr';
+    type: 'done' | 'stdout' | 'stderr' | 'start';
     output: string;
     timeStamp: number;
 }
@@ -66,9 +68,6 @@ export default class Script implements CodeModel, ApiModel {
     turtleModalOpen: boolean = false;
 
     @observable
-    execCounter: number = 0;
-
-    @observable
     executedScriptSource: string;
 
     @observable
@@ -118,6 +117,11 @@ export default class Script implements CodeModel, ApiModel {
     @computed
     get canUpdate(): boolean {
         return !this.isDummy && !this.readonly && this.loaded;
+    }
+
+    @action
+    setExecuting(executing: boolean) {
+        this.executing = executing;
     }
 
     @computed
@@ -195,22 +199,23 @@ export default class Script implements CodeModel, ApiModel {
 
     @action
     stopScript(document: globalThis.Document) {
-        document.querySelectorAll('.brython-script[type="text/python"]').forEach((src) => {
-            src.setAttribute('type', 'text/py_disabled');
-            src.removeAttribute('data--start-time');
-        });
+        // document.querySelectorAll('.brython-script[type="text/python"]').forEach((src) => {
+        //     src.setAttribute('type', 'text/py_disabled');
+        //     src.removeAttribute('data--start-time');
+        // });
     }
 
     @action
-    execScript(document: globalThis.Document) {
+    execScript(brython: {runPythonSource: (code: string, id: string) => void}) {
         if (this.hasGraphicsOutput) {
             this.store.setOpendTurtleModal(this.webKey);
         }
-        // make sure brython always processes only one script per page
-        document.querySelectorAll('.brython-script[type="text/python"]').forEach((src) => {
-            src.setAttribute('type', 'text/py_disabled');
-            src.removeAttribute('data--start-time');
-        });
+        const code = `${this.precode}\n${this.code}`;
+        const lineShift = this.precode.split(/\n/).length;
+        const src = `${run_template}\nrun("""${sanitizePyScript(code || '')}""", '${
+            this.codeId
+        }', ${lineShift})`
+
         document.querySelectorAll('.brython-graphics-result').forEach((resContainer) => {
             resContainer.replaceChildren();
             if (this.hasCanvasOutput) {
@@ -225,16 +230,10 @@ export default class Script implements CodeModel, ApiModel {
             }
         });
         const active = document.getElementById(DOM_ELEMENT_IDS.scriptSource(this.codeId));
-        active.setAttribute('type', 'text/python');
-        active.setAttribute('data--start-time', `${Date.now()}`);
-        this.executing = true;
         this.executedScriptSource = this.code;
-        setTimeout(
-            action(() => {
-                this.execCounter += 1;
-            }),
-            1
-        );
+        setTimeout(() => {
+            const res = brython.runPythonSource(src, this.codeId);
+        }, 0);
     }
 
     @action

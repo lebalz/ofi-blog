@@ -27,7 +27,7 @@ const plugin: Plugin = (context, options) => {
                         attributes: {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython.js",
                             // crossorigin: "anonymous",
-                            src: "https://cdn.jsdelivr.net/npm/brython@3.11.0/brython.min.js",
+                            src: "https://cdn.jsdelivr.net/npm/brython@3.12.1/brython.min.js",
                             referrerpolicy: "no-referrer"
                         },
                     },
@@ -36,7 +36,7 @@ const plugin: Plugin = (context, options) => {
                         attributes: {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js",
                             // crossorigin: "anonymous",
-                            src: "https://cdn.jsdelivr.net/npm/brython@3.11.0/brython_stdlib.js",
+                            src: "https://cdn.jsdelivr.net/npm/brython@3.12.1/brython_stdlib.js",
                             referrerpolicy: "no-referrer"
                         },
                     },
