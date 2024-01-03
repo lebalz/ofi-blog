@@ -4,10 +4,6 @@ import { sanitizePyScript } from '../../utils/sanitizers';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/hooks';
 import Script from '../../models/Script';
-import GridModule from './Modules/Grid';
-import ConfigModule from './Modules/Config';
-import GameModule from './Modules/Game';
-import Turtle3dModule from './Modules/Turtle3d';
 const run_template = require('./brython_runner.raw.py');
 
 interface Props {
@@ -20,18 +16,6 @@ const PyScriptSrc = observer((props: Props) => {
     const lineShift = pyScript.precode.split(/\n/).length;
     return (
         <React.Fragment>
-            <ConfigModule />
-            <GameModule />
-            {
-                TURTLE3D_IMPORTS_TESTER.test(code) && (
-                    <Turtle3dModule />
-                )
-            }
-            {
-                pyScript.hasCanvasOutput && (
-                    <GridModule />
-                )
-            }
             <script
                 id={DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)}
                 type="text/py_disabled"

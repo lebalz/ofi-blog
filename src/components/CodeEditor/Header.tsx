@@ -28,7 +28,7 @@ const PlayButton = observer((props: PlayProps) => {
         <button
             onClick={() => pyScript.execScript(document)}
             className={clsx(styles.playButton, styles.headerButton)}
-            title="Code Ausführen"
+            title={`Code Ausführen ${props.webKey} ${pyScript.codeId}`}
         >
             <FontAwesomeIcon icon={pyScript.executing ? faPython : faPlay} spin={pyScript.executing} />
         </button>

@@ -15,19 +15,51 @@ import Playground from '@theme/Playground';
 import ReactLiveScope from '@theme/ReactLiveScope';
 
 // type Props = WrapperProps<typeof CodeBlockType>;
-interface Props extends WrapperProps<typeof CodeBlockType> {
-    reference?: boolean;
-    live_jsx?: boolean;
-    live_py?: boolean;
-    id?: string;
-    slim?: boolean;
-    readonly?: boolean;
-    persist?: boolean;
-    noDownload?: boolean;
-    versioned?: boolean;
-    noHistory?: boolean;
-    noCompare?: boolean;
-    maxLines?: string;
+// interface Props extends WrapperProps<typeof CodeBlockType> {
+//     reference?: boolean;
+//     live_jsx?: boolean;
+//     live_py?: boolean;
+//     id?: string;
+//     slim?: boolean;
+//     readonly?: boolean;
+//     persist?: boolean;
+//     noDownload?: boolean;
+//     versioned?: boolean;
+//     noHistory?: boolean;
+//     noCompare?: boolean;
+//     maxLines?: string;
+// }
+
+type Props = WrapperProps<typeof CodeBlockType>;
+
+interface MetaProps {
+        reference?: boolean;
+        live_jsx?: boolean;
+        live_py?: boolean;
+        id?: string;
+        slim?: boolean;
+        readonly?: boolean;
+        persist?: boolean;
+        noDownload?: boolean;
+        versioned?: boolean;
+        noHistory?: boolean;
+        noCompare?: boolean;
+        maxLines?: string;
+        title?: string
+}
+
+const extractMetaProps = (props: {metastring?: string}): MetaProps => {
+    const metaString = (props.metastring || '').replace(/\s*=\s*/g, '='); // remove spaces around =
+    const metaRaw = metaString.split(/\s+/).map((s) => s.trim().split('='));
+    return metaRaw.reduce((acc, [key, value]) => {
+        /** casts to booleans and numbers. When no value was provided, true is used */
+        const val = value === 'true' ? true
+                    : value === 'false' ? false
+                    : !Number.isNaN(Number(value)) ? Number(value)
+                    : value || true;
+        acc[key] = val;
+        return acc;
+    }, {} as {[key: string]: number | string | boolean});
 }
 
 function pageId() {
@@ -57,7 +89,8 @@ const getCodeId = (title, children) => {
 };
 
 export default function CodeBlockWrapper(props: Props): JSX.Element {
-    if (props.reference) {
+    const metaProps = extractMetaProps(props);
+    if (metaProps.reference) {
         return <ReferenceCodeBlock {...(props as any)} />;
     }
     const langMatch = ((props.className || '') as string).match(/language-(?<lang>\w*)/);
@@ -65,13 +98,14 @@ export default function CodeBlockWrapper(props: Props): JSX.Element {
     if (lang === 'py') {
         lang = 'python';
     }
-    if (props.live_jsx) {
+    if (metaProps.live_jsx) {
         return <Playground scope={ReactLiveScope} {...props} />;
     }
-    if (props.live_py && ExecutionEnvironment.canUseDOM) {
-        if (!props.id && !props.slim) {
+    if (metaProps.live_py && ExecutionEnvironment.canUseDOM) {
+        if (!metaProps.id && !metaProps.slim) {
             return <CodeBlock {...props} />;
         }
+        const title = props.title || metaProps.title;
 
         const rawcode: string = (props.children as string).replace(/\s*\n$/, '');
         const match = rawcode.match(/\n###\s*PRE.*?\n/);
@@ -81,26 +115,27 @@ export default function CodeBlockWrapper(props: Props): JSX.Element {
             precode = rawcode.slice(0, match.index || 0);
             code = rawcode.slice((match.index || 0) + match[0].length);
         }
-        const codeId = getCodeId(props.title, code);
-        const [webKey] = React.useState(props.id || uuidv4());
+        const codeId = getCodeId(title, code);
+        const [webKey] = React.useState(metaProps.id || uuidv4());
         return (
             <PyAceEditor
                 {...props}
-                maxLines={props.maxLines && Number.parseInt(props.maxLines, 10)}
+                {...metaProps}
+                maxLines={metaProps.maxLines && Number.parseInt(metaProps.maxLines, 10)}
                 webKey={webKey}
                 code={code}
                 codeId={codeId}
-                readonly={!!props.readonly}
+                readonly={!!metaProps.readonly}
                 lang={lang}
-                resettable={!props.persist}
-                download={!props.versioned && !props.noDownload}
-                slim={!!props.slim}
+                resettable={!metaProps.persist}
+                download={!metaProps.versioned && !metaProps.noDownload}
+                slim={!!metaProps.slim}
                 precode={precode}
-                showLineNumbers={!(!!props.slim && !/\n/.test(code))}
-                versioned={!!props.versioned}
-                noHistory={!!props.noHistory}
-                noCompare={!!props.noCompare}
-                title={sanitizedTitle(props.title) || lang}
+                showLineNumbers={!(!!metaProps.slim && !/\n/.test(code))}
+                versioned={!!metaProps.versioned}
+                noHistory={!!metaProps.noHistory}
+                noCompare={!!metaProps.noCompare}
+                title={sanitizedTitle(title) || lang}
             />
         );
     }

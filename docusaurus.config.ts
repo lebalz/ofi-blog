@@ -265,6 +265,10 @@ const config: Config = {
             searchPagePath: 'search',
         }
     } satisfies Preset.ThemeConfig,
+    staticDirectories: [
+        'static',
+        'static-brython-modules'
+    ],
     presets: [
         [
             'classic',
@@ -301,7 +305,7 @@ const config: Config = {
                     },
                     beforeDefaultRemarkPlugins: REMARK_PLUGINS.beforeDefaultRemarkPlugins,
                     remarkPlugins: REMARK_PLUGINS.remarkPlugins,
-                    rehypePlugins: REMARK_PLUGINS.rehypePlugins,
+                    rehypePlugins: REMARK_PLUGINS.rehypePlugins,                    
                 },
                 blog: false,
                 theme: {
@@ -314,7 +318,7 @@ const config: Config = {
                     priority: 0.5,
                     ignorePatterns: ['/secure/**'],
                     filename: 'sitemap.xml',
-                },
+                }
             } satisfies Preset.Options,
         ],
     ],

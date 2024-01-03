@@ -10,6 +10,7 @@ interface Props {
     highlighted?: number[];
     hilightIcon?: string;
     groupId?: string;
+    lazy?: boolean;
 }
 
 const getValue = (idx: number) => {
@@ -23,6 +24,7 @@ const GTabs = (props: Props) => {
             defaultValue={getValue(0)}
             className={clsx(styles.tabs)}
             groupId={props.groupId}
+            lazy={props.lazy}
             values={props.children.map((_, idx) => {
                 const isHighlight = (props.highlighted || []).includes(idx);
                 const label = (
