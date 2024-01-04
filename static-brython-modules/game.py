@@ -28,6 +28,10 @@ class Game():
         timer.clear_timeout(Game.timeout_id)
         timer.cancel_animation_frame(Game.timeout_id)
 
+    @staticmethod
+    def is_running():
+        return not Game.stop_request and document[Config.BRYTHON_COMMUNICATOR].attrs.get('data--start-time') == Game.init_time # type: ignore
+
 def sleep(ms):
     Game.sleep(ms)
 
@@ -55,19 +59,20 @@ def gameloop(func):
     '''
     Game.reset()
     t0 = time.now() # type: ignore
-    Game.init_time = document[Config.PYTHON_SOURCE].attrs.get('data--start-time')
+    Game.init_time = document[Config.BRYTHON_COMMUNICATOR].attrs.get('data--start-time')
         
     def animation_frame():
-        Game.anim_id = timer.request_animation_frame(wrap)
+        Game.anim_id = timer.request_animation_frame(lambda t: wrap(t))
 
     def sleep(ms):
         Game.sleep_requested = True
-        # if Game.is_running():
-        #     Game.timeout_id = timer.set_timeout(animation_frame, ms)
+        if Game.is_running():
+            Game.timeout_id = timer.set_timeout(animation_frame, ms)
 
     Game.sleep = sleep
     
     def wrap(*args, **kwargs):
+        print('called wrap', args, kwargs)
         Game.sleep_requested = False
         if func.__code__.co_argcount > 0:
             result = func(time.now() - t0) # type: ignore

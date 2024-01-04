@@ -5,7 +5,6 @@ import { CodeModel } from './iModel';
 import { DocumentStore } from '../stores/DocumentStore';
 import { rootStore } from '../stores/stores';
 import SaveService, { ApiModel } from './SaveService';
-const run_template = require('./brython_runner.raw.py');
 import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER, GRAPHICS_OUTPUT_TESTER, CANVAS_OUTPUT_TESTER, GRID_IMPORTS_TESTER, TURTLE3D_IMPORTS_TESTER } from '../components/CodeEditor/constants';
 import { sanitizePyScript } from '../utils/sanitizers';
 
@@ -199,10 +198,10 @@ export default class Script implements CodeModel, ApiModel {
 
     @action
     stopScript(document: globalThis.Document) {
-        // document.querySelectorAll('.brython-script[type="text/python"]').forEach((src) => {
-        //     src.setAttribute('type', 'text/py_disabled');
-        //     src.removeAttribute('data--start-time');
-        // });
+        const code = document.getElementById(DOM_ELEMENT_IDS.communicator(this.codeId));
+        if (code) {
+            code.removeAttribute('data--start-time');
+        }
     }
 
     @action
@@ -212,9 +211,9 @@ export default class Script implements CodeModel, ApiModel {
         }
         const code = `${this.precode}\n${this.code}`;
         const lineShift = this.precode.split(/\n/).length;
-        const src = `${run_template}\nrun("""${sanitizePyScript(code || '')}""", '${
-            this.codeId
-        }', ${lineShift})`
+        const src = `from brython_runner import run
+run("""${sanitizePyScript(code || '')}""", '${this.codeId}', ${lineShift})
+`
 
         document.querySelectorAll('.brython-graphics-result').forEach((resContainer) => {
             resContainer.replaceChildren();
@@ -229,10 +228,11 @@ export default class Script implements CodeModel, ApiModel {
                 resContainer.appendChild(canv);
             }
         });
-        const active = document.getElementById(DOM_ELEMENT_IDS.scriptSource(this.codeId));
+        const active = document.getElementById(DOM_ELEMENT_IDS.communicator(this.codeId));
+        active.setAttribute('data--start-time', `${Date.now()}`);
         this.executedScriptSource = this.code;
         setTimeout(() => {
-            const res = brython.runPythonSource(src, this.codeId);
+            brython.runPythonSource(src, this.codeId);
         }, 0);
     }
 

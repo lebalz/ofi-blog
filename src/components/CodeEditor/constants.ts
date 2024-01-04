@@ -1,12 +1,11 @@
 
 const DOM_ELEMENT_IDS = {
-    component: (codeId) => `py_${codeId}`,
+    communicator: (codeId) => `py_${codeId}`,
     graphicsResult: (codeId) => `${codeId}_graphics`,
     outputDiv: (codeId) => `${codeId}_brython_result`,
     aceEditor: (codeId) => `${codeId}_editor`,
     turtleSvgContainer: (codeId) => `${codeId}_svg`,
-    canvasContainer: (codeId) => `${codeId}_canvas`,
-    scriptSource: (codeId) => `${codeId}_src`
+    canvasContainer: (codeId) => `${codeId}_canvas`
 }
 
 const BRYTHON_NOTIFICATION_EVENT = 'bry_notify'

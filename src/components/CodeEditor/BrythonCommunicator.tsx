@@ -42,7 +42,7 @@ const BrythonCommunicator = observer((props: Props) => {
   );
   return (
     <div
-      id={DOM_ELEMENT_IDS.component(pyScript.codeId)}
+      id={DOM_ELEMENT_IDS.communicator(pyScript.codeId)}
       ref={setupEventListeners}
     ></div>
   );

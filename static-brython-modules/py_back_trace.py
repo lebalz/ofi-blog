@@ -1,7 +1,9 @@
 from browser import document, window # type: ignore
 import sys
 
-# @see https://github.com/brython-dev/brython/blob/master/www/src/Lib/tb.py
+# @source https://github.com/brython-dev/brython/blob/master/www/src/Lib/tb.py
+# instead of "print()" to "console.log()" in the original code, we use "notify()" to send the output to the react world
+# additionally, the line number is shifted by "line_shift" if the user code is wrapped in custom code, e.g. for turtle (@see brython_runner)
 
 def notify(node_id, data):
     event = window.CustomEvent.new('bry_notify', {'detail': data})
