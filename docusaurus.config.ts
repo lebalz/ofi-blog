@@ -307,7 +307,23 @@ const config: Config = {
                     remarkPlugins: REMARK_PLUGINS.remarkPlugins,
                     rehypePlugins: REMARK_PLUGINS.rehypePlugins,                    
                 },
-                blog: false,
+                blog: {
+                    blogTitle: 'News',
+                    routeBasePath: 'news',
+                    path: 'news',
+                    showReadingTime: true,
+                    blogSidebarCount: 'ALL',
+                    postsPerPage: 15,
+                    blogSidebarTitle: 'News',
+                    editUrl: 'https://github.com/lebalz/ofi-blog/edit/main/',
+                    admonitions: {
+                        keywords: ['aufgabe', 'def', 'finding'],
+                        extendDefaults: true,
+                    },
+                    beforeDefaultRemarkPlugins: REMARK_PLUGINS.beforeDefaultRemarkPlugins,
+                    remarkPlugins: REMARK_PLUGINS.remarkPlugins.slice(1),
+                    rehypePlugins: REMARK_PLUGINS.rehypePlugins,
+                },
                 theme: {
                     customCss: [
                         require.resolve('./src/css/custom.scss'),
@@ -326,25 +342,6 @@ const config: Config = {
         'docusaurus-plugin-sass',
         '@saucelabs/theme-github-codeblock',
         './src/plugins/brython-source.ts',
-        // [
-        //     './src/plugins/blog-plugin.js',
-        //     {
-        //         blogTitle: 'News',
-        //         routeBasePath: 'news',
-        //         path: 'news',
-        //         showReadingTime: true,
-        //         blogSidebarCount: 'ALL',
-        //         postsPerPage: 15,
-        //         blogSidebarTitle: 'News',
-        //         // Please change this to your repo.
-        //         editUrl:
-        //             'https://github.com/lebalz/ofi-blog/edit/main/',
-        //         admonitions: {
-        //             keywords: ['aufgabe', 'def', 'finding'],
-        //             extendDefaults: true,
-        //         },
-        //     },
-        // ],
         function (context, options) {
             return {
                 name: 'raw-src-loader',
