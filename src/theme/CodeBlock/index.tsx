@@ -1,6 +1,7 @@
 import React from 'react';
-import CodeBlock from '@theme-original/CodeBlock';
-import CodeBlockType from '@theme/CodeBlock';
+import CodeBlock, {type Props as CodeBlockType} from '@theme-init/CodeBlock';
+// import CodeBlock from '@theme-original/CodeBlock';
+// import CodeBlockType from '@theme/CodeBlock';
 import type { WrapperProps } from '@docusaurus/types';
 import ReferenceCodeBlock from '@saucelabs/theme-github-codeblock/build/theme/ReferenceCodeBlock';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
@@ -14,21 +15,6 @@ import Playground from '@theme/Playground';
 // @ts-ignore
 import ReactLiveScope from '@theme/ReactLiveScope';
 
-// type Props = WrapperProps<typeof CodeBlockType>;
-// interface Props extends WrapperProps<typeof CodeBlockType> {
-//     reference?: boolean;
-//     live_jsx?: boolean;
-//     live_py?: boolean;
-//     id?: string;
-//     slim?: boolean;
-//     readonly?: boolean;
-//     persist?: boolean;
-//     noDownload?: boolean;
-//     versioned?: boolean;
-//     noHistory?: boolean;
-//     noCompare?: boolean;
-//     maxLines?: string;
-// }
 
 type Props = WrapperProps<typeof CodeBlockType>;
 
