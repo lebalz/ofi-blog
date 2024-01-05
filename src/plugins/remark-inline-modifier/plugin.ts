@@ -53,7 +53,7 @@ const plugin: Plugin = function plugin(
             switch (directive.name) {
                 case opts.button.name:
                     ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'link', 'active', 'outline', 'sm', 'lg', 'block'].forEach((ifmBtnClsx) => {
-                        if (clsx.includes(ifmBtnClsx)) {
+                        if (clsx.match(RegExp(`(^|\s+)${ifmBtnClsx}(\s+|$)`))) {
                             clsx = clsx.replace(ifmBtnClsx, `button--${ifmBtnClsx}`);
                         }
                     });

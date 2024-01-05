@@ -1,8 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
-// @ts-ignore
-import useFrontMatter from '@theme/useFrontMatter';
 import { useStore } from '@site/src/stores/hooks';
 import { LocatorType } from '@site/src/api/comment';
 import { default as CommentModel } from '@site/src/models/Comment';
@@ -16,6 +14,7 @@ import { mdiCommentTextOutline, mdiTrashCan } from '@mdi/js';
 interface Props {
     nr: number;
     type: LocatorType;
+    pageId: string;
 }
 
 const getReferenceContainer = (el: HTMLElement) => {
@@ -56,11 +55,10 @@ const setColor = (model: CommentModel | undefined, color: 'red' | 'orange' | 'gr
 
 const CommentContent = observer((props: Props) => {
     const store = useStore('commentStore');
-    const { sidebar_custom_props } = useFrontMatter();
 
     const ref = React.useRef<HTMLDivElement>(null);
     const [promptDelete, setPromptDelete] = React.useState(false);
-    const models = store.find(sidebar_custom_props?.id, props.type, props.nr);
+    const models = store.find(props.pageId, props.type, props.nr);
     const hasModels = models.length > 0;
 
     React.useEffect(() => {
@@ -73,7 +71,7 @@ const CommentContent = observer((props: Props) => {
     }, [ref]);
 
     React.useEffect(() => {
-        store.notifyPresence(sidebar_custom_props?.id, props.type, props.nr);
+        store.notifyPresence(props.pageId, props.type, props.nr);
     }, [store]);
 
     return (
@@ -93,7 +91,7 @@ const CommentContent = observer((props: Props) => {
                         models.forEach((m) => m.toggleOpen());
                     } else {
                         if (store.isLoggedIn && !store.offlineMode) {
-                            store.openComment(sidebar_custom_props.id, props.type, props.nr);
+                            store.openComment(props.pageId, props.type, props.nr);
                         } else {
                             if (store.offlineMode) {
                                 window.alert('Im Offline-Modus können keine Änderungen vorgenommen werden.');

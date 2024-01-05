@@ -16,7 +16,6 @@ const baseUrl = '/';
 
 export const StateSummary = observer((props: Props) => {
     const adminStore = useStore('adminStore');
-    const { sidebar_custom_props } = useFrontMatter();
     const [klasse, setKlasse] = React.useState<string>();
     React.useEffect(() => {
         setKlasse(window.location.pathname.replace(baseUrl, '').split('/')[0]);
@@ -27,7 +26,7 @@ export const StateSummary = observer((props: Props) => {
             {adminStore.isAdmin && adminStore.showTaskStates && klasse && (
                 <div className={clsx(styles.admin)}>
                     {adminStore
-                        .findByWebKey<StateDoc>(klasse, sidebar_custom_props?.id, props.webKey)
+                        .findByWebKey<StateDoc>(klasse, props.webKey)
                         .map((doc, idx) => {
                             const user = adminStore.getUser(doc.user_id);
                             if (!user || viewGroupFilter && !user.groups.includes(viewGroupFilter)) {
@@ -59,15 +58,18 @@ export const StateSummary = observer((props: Props) => {
     );
 });
 
-export const PageStateSummary = observer(() => {
+interface PageStateSummaryProps {
+    pageId: string;
+}
+
+export const PageStateSummary = observer((props: PageStateSummaryProps) => {
     const adminStore = useStore('adminStore');
-    const { sidebar_custom_props } = useFrontMatter();
     const [klasse, setKlasse] = React.useState<string>();
     const {viewGroupFilter} = adminStore;
     React.useEffect(() => {
         setKlasse(window.location.pathname.replace(baseUrl, '').split('/')[0]);
     }, []);
-    let rawDocs = adminStore.filteredBy<StateDoc>(klasse, sidebar_custom_props?.id, 'state');
+    let rawDocs = adminStore.filteredBy<StateDoc>(klasse, props.pageId, 'state');
     if (viewGroupFilter) {
         rawDocs = rawDocs.filter((doc) => {
             const user = adminStore.getUser(doc.user_id);

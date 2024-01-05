@@ -2,6 +2,7 @@ import { visit, SKIP } from 'unist-util-visit';
 import type { Plugin, Processor, Transformer } from 'unified';
 import type { MdxJsxFlowElement } from 'mdast-util-mdx';
 import { BlockContent, Node, Parent, Strong } from 'mdast';
+import matter from 'gray-matter';
 
 
 const plugin: Plugin = function plugin(
@@ -33,7 +34,10 @@ const plugin: Plugin = function plugin(
         }
 
         const relPath = (vfile.history[0] || '').replace(vfile.cwd || '', '');
-        const skip = relPath.startsWith('/src/pages/');
+        const frontMatter = matter(vfile.value);
+        const pageId = frontMatter.data?.sidebar_custom_props?.id;
+        const skip = relPath.startsWith('/src/pages/') || !pageId;
+
 
         visit(ast,
             // test 
@@ -103,6 +107,11 @@ const plugin: Plugin = function plugin(
                                     type: 'mdxJsxAttribute',
                                     name: 'type',
                                     value: nType
+                                },
+                                {
+                                    type: 'mdxJsxAttribute',
+                                    name: 'pageId',
+                                    value: pageId
                                 }
                             ],
                             children: [

@@ -34,7 +34,7 @@ describe('#inline modifier', () => {
         expect(result).toMatchInlineSnapshot(`
           "# Details element example
 
-          <a href=\\"https://example.com\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\" className=\\"button\\">
+          <a href=\\"https://example.com\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\" className=\\"button button--primary\\">
             Button Link
           </a>
           "
@@ -48,7 +48,7 @@ describe('#inline modifier', () => {
         expect(result).toMatchInlineSnapshot(`
           "# Details element example
 
-          <a href={require('./assets/word.docx').default} target=\\"_blank\\" rel=\\"noopener noreferrer\\" className=\\"button\\">
+          <a href={require('./assets/word.docx').default} target=\\"_blank\\" rel=\\"noopener noreferrer\\" className=\\"button button--primary\\">
             docx
           </a>
           "
@@ -62,7 +62,7 @@ describe('#inline modifier', () => {
         expect(result).toMatchInlineSnapshot(`
           "# Details element example
 
-          <span className=\\"button\\">hello world</span>
+          <span className=\\"button button--primary\\">hello world</span>
           "
         `);
     });

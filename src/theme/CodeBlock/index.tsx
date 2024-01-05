@@ -103,6 +103,7 @@ export default function CodeBlockWrapper(props: Props): JSX.Element {
         }
         const codeId = getCodeId(title, code);
         const [webKey] = React.useState(metaProps.id || uuidv4());
+        console.log(webKey, metaProps.id)
         return (
             <PyAceEditor
                 {...props}

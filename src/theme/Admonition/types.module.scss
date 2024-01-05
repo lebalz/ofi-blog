@@ -1,0 +1,35 @@
+.admonition.def {
+    --ifm-alert-border-color: rgb(30, 255, 0);
+    --ifm-alert-background-color: rgba(0, 0, 0, 0.226);
+    --ifm-spacing-vertical: 0.5rem;
+
+    &>admonitionContent>.admintionHeading,
+    &>.admonitionHeading {
+        display: none;
+    }
+
+    .admonitionContent h3 code {
+        color: rgb(19, 165, 0);
+        text-transform: none;
+        background-color: var(--ifm-color-secondary-dark);
+    }
+
+    .admonitionContent h3 code:first-of-type {
+        background-color: var(--ifm-color-primary-dark);
+        color: var(--ifm-alert-border-color);
+    }
+}
+
+html[data-theme='dark'] {
+    .admonition.def {
+        --ifm-alert-background-color: var(--ifm-color-primary-darkest);
+    }
+
+    .admonitionHeading code {
+        background-color: var(--ifm-color-primary-dark);
+    }
+
+    .admonitionHeading code:first-of-type {
+        background-color: var(--ifm-color-primary-lightest);
+    }
+}

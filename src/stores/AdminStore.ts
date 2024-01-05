@@ -102,11 +102,14 @@ export class AdminStore {
 
     find = computedFn(
         function (this: AdminStore, klasse: string, pageKey?: string): DocumentProps<any>[] {
-            if (!pageKey) {
+            if (!pageKey && !klasse) {
                 return [];
             }
             if (!this.documents.has(klasse)) {
                 return [];
+            }
+            if (!pageKey) {
+                return [...this.documents.get(klasse).values()].flat();
             }
             if (!this.documents.get(klasse).has(pageKey)) {
                 return [];
@@ -124,8 +127,8 @@ export class AdminStore {
         return this.find(klasse, pageKey).filter((doc) => doc.type === type);
     }
 
-    findByWebKey<T>(klasse: string, pageKey: string, webKey: string): DocumentProps<T>[] {
-        const docs = this.find(klasse, pageKey).filter((doc) => doc.web_key === webKey);
+    findByWebKey<T>(klasse: string, webKey: string): DocumentProps<T>[] {
+        const docs = this.find(klasse, undefined).filter((doc) => doc.web_key === webKey);
         docs.sort((a, b) => {
             const aName = this.userById(a.user_id)?.name;
             const bName = this.userById(b.user_id)?.name;
