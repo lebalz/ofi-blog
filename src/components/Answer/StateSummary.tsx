@@ -4,8 +4,6 @@ import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
 import * as React from 'react';
 import styles from './state.module.scss';
-// @ts-ignore
-import useFrontMatter from '@theme/useFrontMatter';
 import { mdiBgColor, mdiIcon, mdiColor } from './StateAnswer';
 import _ from 'lodash';
 
