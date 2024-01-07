@@ -35,7 +35,6 @@ interface MetaProps {
 }
 
 const extractMetaProps = (props: {metastring?: string}): MetaProps => {
-    console.log((props?.metastring || '').replace(/\s*=\s*/g, '='))
     const metaString = (props?.metastring || '').replace(/\s*=\s*/g, '='); // remove spaces around =
     const metaRaw = metaString.split(/\s+/).map((s) => s.trim().split('='));
     return metaRaw.reduce((acc, [key, value]) => {
@@ -104,7 +103,7 @@ export default function CodeBlockWrapper(props: Props): JSX.Element {
         }
         const codeId = getCodeId(title, code);
         const [webKey] = React.useState(metaProps.id || uuidv4());
-        console.log(webKey, metaProps.id)
+
         return (
             <PyAceEditor
                 {...props}

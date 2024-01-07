@@ -2,6 +2,7 @@
 sidebar_custom_props:
   id: 7d398c00-664c-4a08-852e-c66dd8d75501
 ---
+import OsTabs from '@site/src/components/OsTabs';
 
 # 3. Webseiten verfügbar machen
 

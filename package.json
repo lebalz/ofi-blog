@@ -28,10 +28,6 @@
     "edit-fm": "node bin/edit_front_matter.js",
     "test": "vitest --coverage"
   },
-  "resolutions": {
-    "@types/react": "17.0.2",
-    "@types/react-dom": "17.0.2"
-  },
   "dependencies": {
     "@azure/msal-browser": "^2.18.0",
     "@azure/msal-react": "^1.1.0",
@@ -51,6 +47,7 @@
     "@radial-color-picker/react-color-picker": "^3.0.0",
     "@saucelabs/theme-github-codeblock": "^0.2.3",
     "@svgr/webpack": "^5.5.0",
+    "@types/react-dom": "^18.2",
     "ace-builds": "^1.4.13",
     "animejs": "^3.2.1",
     "assert": "^2.0.0",
@@ -126,7 +123,7 @@
     "@types/lodash.debounce": "^4.0.6",
     "@types/node": "^18.0.1",
     "@types/quill": "^2.0.9",
-    "@types/react": "^17.0.11",
+    "@types/react": "^18.2",
     "@types/react-helmet": "^6.1.1",
     "@types/react-router-dom": "^5.1.7",
     "@types/rsync": "^0.4.32",

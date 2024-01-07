@@ -8,6 +8,7 @@ sidebar_custom_props:
 
 import Finding from "@site/src/components/Finding";
 import SearchBox from '@site/src/components/SearchBox';
+import OsTabs from '@site/src/components/OsTabs';
 
 # Routing im Internet
 
