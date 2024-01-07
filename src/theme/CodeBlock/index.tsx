@@ -35,7 +35,8 @@ interface MetaProps {
 }
 
 const extractMetaProps = (props: {metastring?: string}): MetaProps => {
-    const metaString = (props.metastring || '').replace(/\s*=\s*/g, '='); // remove spaces around =
+    console.log((props?.metastring || '').replace(/\s*=\s*/g, '='))
+    const metaString = (props?.metastring || '').replace(/\s*=\s*/g, '='); // remove spaces around =
     const metaRaw = metaString.split(/\s+/).map((s) => s.trim().split('='));
     return metaRaw.reduce((acc, [key, value]) => {
         /** casts to booleans and numbers. When no value was provided, true is used */
@@ -93,7 +94,7 @@ export default function CodeBlockWrapper(props: Props): JSX.Element {
         }
         const title = props.title || metaProps.title;
 
-        const rawcode: string = (props.children as string).replace(/\s*\n$/, '');
+        const rawcode: string = (props.children as string || '').replace(/\s*\n$/, '');
         const match = rawcode.match(/\n###\s*PRE.*?\n/);
         let precode = '';
         let code = rawcode;
