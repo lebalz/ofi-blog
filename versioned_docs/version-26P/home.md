@@ -11,10 +11,6 @@ import fs2023 from "./26P_FS2023.json"
 import hs2022 from "./26P_HS2022.json"
 import hk2022 from "./26P-HK_HS2022.json"
 import hs2023 from "./26P_HS2023.json"
-import Winter from "@site/src/components/Theme/Winter";
-
-<Winter />
-
 
 # 26P Informatik
 

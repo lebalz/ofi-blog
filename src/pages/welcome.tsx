@@ -85,7 +85,6 @@ export default function Home({ recentPosts }: Props) {
                     </div>
                 </div>
             </main>
-            <Winter />
         </Layout>
     );
 }
