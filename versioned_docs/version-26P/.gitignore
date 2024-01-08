@@ -31,7 +31,6 @@
 !03-Programmieren-1/00-Probe/ProbeE-Nachholer.md
 03-Programmieren-1/05-PyGameZero/*
 07-Big-Data/*
-!07-Big-Data/03-cookies.md
 08-Excel/*
 09-Datenbanken/*
 !09-Datenbanken/01-sql/04-create.md
@@ -40,4 +39,5 @@
 !10-Netzwerke/002-Codierung/
 !10-Netzwerke/005-Sicherheit/
 !10-Netzwerke/090-Pruefung.md
+10-Netzwerke/005-Datenschutz/*
 10-Netzwerke/_category_.json

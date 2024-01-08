@@ -168,6 +168,11 @@
         "090-Pruefung.md"
       ],
       "open": true
+    },
+    {
+      "from": "docs/Big-Data/03-cookies/",
+      "to": "versioned_docs/version-26e/10-Netzwerke/005-Datenschutz",
+      "ignore": []
     }
   ],
   "26P": [
@@ -337,6 +342,11 @@
         "090-Pruefung.md"
       ],
       "open": true
+    },
+    {
+      "from": "docs/Big-Data/03-cookies/",
+      "to": "versioned_docs/version-26P/10-Netzwerke/005-Datenschutz",
+      "ignore": []
     }
   ],
   "24ef": [
@@ -431,9 +441,13 @@
       "ignore": [
         "asyncio",
         "EV3/Pendelbus-Blink"
-
       ],
       "open": true
+    },
+    {
+      "from": "docs/Big-Data/03-cookies/",
+      "to": "versioned_docs/version-24ef/10-Netzwerke/005-Datenschutz",
+      "ignore": []
     }
   ]
 }
