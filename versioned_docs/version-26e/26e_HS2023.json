@@ -79,27 +79,34 @@
         "type": "holiday"
     },
     {
-        "cells": ["09.01.2024","Kryptologie","Antike Verschlüsselung"]
+        "cells": ["09.01.2024","Netzwerke","Datenschutz und Sicherheit"]
     },
     {
-        "cells": ["16.01.2024","Kryptologie","Symmetrische Verschlüsselung"]
+        "cells": ["16.01.2024","Kryptologie","Onion-Routing, Darkweb"]
     },
     {
-        "cells": ["23.01.2024","Kryptologie","Hashfunktion"]
+        "cells": ["16.01.2024","Kryptologie","Antike Verschlüsselung"]
+    },
+    {
+        "cells": ["23.01.2024","Kryptologie","Symmetrische Verschlüsselung"]
     },
     {
         "cells": ["25.01.2024","Notenchluss",""],
         "type": "event"
     },
     {
-        "cells": ["30.01.2024","Kryptologie","Asymmetrische Verschlüsselung"]
+        "cells": ["30.01.2024","Kryptologie","Hashfunktion"]
     },
     {
         "cells": ["04.02.2024","Semesterende",""],
         "type": "event"
     },
     {
-        "cells": ["06.02.2024","Kryptologie","Digitale Signaturen"]
+        "cells": ["06.02.2024","Kryptologie","Asymmetrische Verschlüsselung"]
+    },
+    {
+        "cells": ["07.02.2024","SchiLw Tag","Kein Regelunterricht"],
+        "type": "event"
     },
     {
         "cells": ["05.02.2024","Start Semester 2",""],
@@ -110,10 +117,13 @@
         "type": "holiday"
     },
     {
-        "cells": ["20.02.2024","Kryptologie","Kryptologie im Alltag"]
+        "cells": ["20.02.2024","Kryptologie","Digitale Signaturen"]
     },
     {
-        "cells": ["27.02.2024","Kryptologie","Test"],
+        "cells": ["27.02.2024","Netzwerke & Kryptologie","Onion Routing, Darkweb"]
+    },
+    {
+        "cells": ["05.03.2024","Netzwerke & Kryptologie","Test"],
         "type": "test"
     },
     {
