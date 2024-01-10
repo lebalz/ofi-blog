@@ -82,27 +82,27 @@
         "cells": ["09.01.2024","Netzwerke","Datenschutz und Sicherheit"]
     },
     {
-        "cells": ["16.01.2024","Kryptologie","Onion-Routing, Darkweb"]
-    },
-    {
         "cells": ["16.01.2024","Kryptologie","Antike Verschlüsselung"]
     },
     {
-        "cells": ["23.01.2024","Kryptologie","Symmetrische Verschlüsselung"]
+        "cells": ["16.01.2024","Kryptologie","Symmetrische Verschlüsselung"]
+    },
+    {
+        "cells": ["23.01.2024","Kryptologie","Hashfunktion"]
     },
     {
         "cells": ["25.01.2024","Notenchluss",""],
         "type": "event"
     },
     {
-        "cells": ["30.01.2024","Kryptologie","Hashfunktion"]
+        "cells": ["30.01.2024","Kryptologie","Asymmetrische Verschlüsselung"]
     },
     {
         "cells": ["04.02.2024","Semesterende",""],
         "type": "event"
     },
     {
-        "cells": ["06.02.2024","Kryptologie","Asymmetrische Verschlüsselung"]
+        "cells": ["06.02.2024","Kryptologie","Digitale Signaturen"]
     },
     {
         "cells": ["07.02.2024","SchiLw Tag","Kein Regelunterricht"],
@@ -117,7 +117,7 @@
         "type": "holiday"
     },
     {
-        "cells": ["20.02.2024","Kryptologie","Digitale Signaturen"]
+        "cells": ["20.02.2024","Kryptologie","Anwendungen"]
     },
     {
         "cells": ["27.02.2024","Netzwerke & Kryptologie","Onion Routing, Darkweb"]
@@ -142,7 +142,10 @@
         "cells": ["02.04.2024","Programmieren 2","Robotik"]
     },
     {
-        "cells": ["09.04.2024","Programmieren 2","Test Abgabe Robotik-Projekt"],
+        "cells": ["09.04.2024","Programmieren 2","Robotik"]
+    },
+    {
+        "cells": ["16.04.2024","Programmieren 2","Test Abgabe Robotik-Projekt"],
         "type": "test"
     },
     {
