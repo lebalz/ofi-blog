@@ -27,7 +27,7 @@ Das Feld ganz links wird markiert und nach oben in den temporären Speicher gele
 
 ### 2. Schritt: Selection
 
-Gehe jede Zahl durch. Falls die Zahl kleiner ist als die Zahl im Zwischenspeicher, wird die aktuelle Zahl im Zwischenspeicher nach unten auf ihren Platz und die kleinere Zahl nach oben in den Zwischenspeicher gelegt:
+Jede Zahl überprüfen: falls die Zahl kleiner ist als die Zahl im Zwischenspeicher, wird die aktuelle Zahl im Zwischenspeicher nach unten auf ihren Platz und die kleinere Zahl nach oben in den Zwischenspeicher gelegt:
 
 ![](images/selection-s02-full.png)
 
@@ -64,39 +64,39 @@ Die Schieblehre wird um eine Position nach rechts geschoben:
 
 Startaufstellung:
 
-![--width=700px](images/insertion-s01.png)
+![--width=700px](images/insertion-s00.png)
 
-### 1. Schritt: Schieben
 
-Die Schieblehre wird um eine Position nach rechts geschoben:
+### 1. Schritt: Feld markieren
 
-![--width=400px](images/insertion-s02.png)
+Die Zahl ganz rechts wird markiert, indem sie nach oben in den temporären Speicher gelegt wird:
 
-### 2. Schritt: Vergleichen
+![--width=400px](images/insertion-s01.png)
 
-Ist die Zahl links kleiner oder gleich der markierten Zahl: :mdi-arrow-right-bold: weiter mit **Schritt 1**
-
-Die markierte Zahl wird nach oben in den temporären Speicher gelegt:
-
-![--width=400px](images/insertion-s03.png)
-
-### 3. Schritt: Tauschen
+### 2. Schritt: Tauschen
 
 Solange die Zahl links neben dem leeren Feld grösser ist als die markierte Zahl, wird sie ins leere Feld verschoben:
 
-![--width=400px](images/insertion-s03b.png)
+![--width=400px](images/insertion-s02.png)
 
-## 4. Schritt: Insertion
+### 3. Schritt: Insertion
 
 Die markierte Zahl wird ins leere Feld verschoben:
 
-![--width=400px](images/insertion-s03c.png)
+![--width=400px](images/insertion-s03.png)
+
+
+### 4. Schritt: Schieben
+
+Die Schieblehre wird um eine Position nach rechts geschoben:
+
+![--width=400px](images/insertion-s04.png)
 
 ### ... weiter mit Schritt 1 bis keine Zahl mehr übrig ist
 
 :::details Nächste Runde
 
-![](images/insertion-s04.png)
+![](images/insertion-s05-full.png)
 
 :::
 

@@ -67,7 +67,7 @@
         "type": "test"
     },
     {
-        "cells": ["22.12.2023","Algorithmik","O(n) Notation, Sortieren"]
+        "cells": ["22.12.2023","Robotik", "Besprechen Test & Abschluss-Challenge Microbit+Maqueen"]
     },
     {
         "cells": ["29.12.2023","Winterferien",""],
@@ -78,21 +78,20 @@
         "type": "holiday"
     },
     {
-        "cells": ["12.01.2024","Algorithmik","Suchen, Sortieren"]
+        "cells": ["12.01.2024","Algorithmik","Einstieg Sortieren: Selection- und Insertion Sort"]
     },
     {
-        "cells": ["19.01.2024","Algorithmik","N+1 Problem"]
+        "cells": ["19.01.2024","Algorithmik","Sortieren: Teile und Herrsche - Merge Sort"]
     },
     {
-        "cells": ["26.01.2024","Algorithmik","Wiederholung"]
+        "cells": ["26.01.2024","Algorithmik","NP-Probleme: Travelling Salesman-Problem, Dijkstra"]
     },
     {
         "cells": ["25.01.2024","Notenchluss",""],
         "type": "event"
     },
     {
-        "cells": ["02.02.2024","Algorithmik","Test"],
-        "type": "test"
+        "cells": ["02.02.2024","Algorithmik","NP-Probleme"]
     },
     {
         "cells": ["04.02.2024","Semesterende",""],
@@ -101,6 +100,9 @@
     {
         "cells": ["05.02.2024","Start Semester 2",""],
         "type": "event"
+    },
+    {
+        "cells": ["09.02.2024","Algorithmik",""]
     },
     {
         "cells": ["16.02.2024","Sportwoche",""],
