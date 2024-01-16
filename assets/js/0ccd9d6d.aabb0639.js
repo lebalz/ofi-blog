@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[5545],{22953:e=>{e.exports=JSON.parse('{"permalink":"/news/tags/osx","page":1,"postsPerPage":15,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"News"}')}}]);

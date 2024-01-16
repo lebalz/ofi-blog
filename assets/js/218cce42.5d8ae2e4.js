@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[587],{5444:e=>{e.exports=JSON.parse('{"label":"wettbewerb","permalink":"/news/tags/wettbewerb","allTagsPath":"/news/tags","count":1}')}}]);
