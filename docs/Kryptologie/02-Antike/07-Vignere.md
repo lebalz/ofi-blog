@@ -14,6 +14,8 @@ Die Vigenère-Chiffre wurde vom Franzosen **Blaise de Vigenère** (1523-1596) er
 ![Vignère-Verschlüsselung](images/vignere.png)
 
 :::aufgabe
+<Answer type="state" webKey="79fb8297-2a9d-4fb8-8480-fe49cb7bb019" />
+
 Verschlüsseln Sie den Text `RUDERN AUF DEM SEE` mit der Vigenère-Chiffre. Verwenden Sie dazu den Schlüssel `GBSL`.
 
 <Answer type="string" webKey="f0ae0e40-3e5d-40b2-9e3d-fd0607990eb4" sanitizer={(val) => val.toUpperCase().trim()} solution="XVVPXO SFL EWX YFW"/>

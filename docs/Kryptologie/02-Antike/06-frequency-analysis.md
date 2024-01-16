@@ -41,6 +41,8 @@ Durch die Häufigkeitsanalyse werden Geheimtexte, die durch eine monoalphabetisc
 <FrequencyAnalysis />
 
 :::aufgabe
+<Answer type="state" webKey="7a90c23c-9388-4501-b7cc-4ff829ab7e7f" />
+
 Entschlüsseln Sie mithilfe der Häufigkeitsanalyse folgende geheime Nachricht:
 
 ```

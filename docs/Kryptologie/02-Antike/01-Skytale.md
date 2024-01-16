@@ -20,5 +20,3 @@ Die Skytale ist ein Beispiel einer Verschlüsselung durch Transposition. Das hei
 ## Skytale ausprobieren
 
 <Skytale />
-
-

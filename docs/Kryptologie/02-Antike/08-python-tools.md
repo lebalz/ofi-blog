@@ -76,10 +76,13 @@ for buchstabe in klartext:
 print(verschlüsselt.strip()) # strip entfernt Leerzeichen an den Rändern
 ```
 
-:::aufgabe
+::::aufgabe
+<Answer type="state" webKey="574b699f-8924-4874-9569-1c8a073b3b7b" />
+
 Lesen Sie das Programm durch und versuchen Sie, jede Zeile zu verstehen.
 
-Flicken Sie den Code, so dass der verschlüsselte Text lesbar wird. 
+Flicken Sie den Code, so dass der verschlüsselte Text lesbar wird.
+
 
 ```py live_py title=from__polybios.py id=2a72f129-612f-45f5-9972-ac82561bc97e
 QUADRAT = [
@@ -101,7 +104,19 @@ for zahl in zahlen:
 
 print(klartext)
 ```
+
+:::danger Zugriff auf eine Liste
+Wie Sie bemerkt haben, werden in Python Listen mit eckigen Klammern erzeugt - und der Zugriff erfolgt unter Angabe der Position in der Liste, auch wieder mit eckigen Klammern:
+
+Die Positionen in der Liste beginnen bei 0. Das heisst, das erste Element hat die Position 0, das zweite die Position 1, usw.
+
+```py live_py slim
+liste = ['A', 'B', 'C', 'D', 'E']
+print(liste[0]) # gibt 'A' aus
+print(liste[4]) # gibt 'E' aus
+```
 :::
+::::
 
 ## Caesar-Chiffre
 
@@ -109,11 +124,11 @@ print(klartext)
 ```py live_py title=to__caesar.py id=4f0f7d8d-a2d3-4c2f-b05f-ed9bd6b52b33
 ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 SCHLÜSSEL = 'D'
-ROT = ALPHABET.index(SCHLÜSSEL)
-
+ROT = ALPHABET.index(SCHLÜSSEL) # gibt die Position des Schlüsselbuchstabens im Alphabet zurück
+                                # A -> 0, B -> 1, C -> 2, D -> 3, ...
 klartext = 'CAESAR'
 
-klartext = klartext.upper()
+klartext = klartext.upper() # sicherstellen, dass nur Grossbuchstaben verwendet werden
 verschlüsselt = ''
 for buchstabe in klartext:
     index = ALPHABET.index(buchstabe) + ROT
@@ -124,6 +139,8 @@ print(verschlüsselt)
 ```
 
 :::aufgabe
+<Answer type="state" webKey="735176ce-b1c6-46c2-864a-151c63610dd7" />
+
 Ändern Sie den Code so ab, dass der verschlüsselte Text wieder entschlüsselt werden kann.
 
 ```py live_py title=from__caesar.py id=ebc928b8-7ff6-4566-9438-475718cedc03
@@ -134,7 +151,7 @@ ROT = ALPHABET.index(SCHLÜSSEL)
 verschlüsselt = 'JDLXV'
 
 klartext = ''
-verschlüsselt = klartext.upper()
+verschlüsselt = verschlüsselt.upper()
 for buchstabe in verschlüsselt:
     index = 0
     klartext = klartext + ALPHABET[index]
