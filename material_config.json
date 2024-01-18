@@ -39,7 +39,7 @@
       "from": "docs/dokumente/ms-word/",
       "to": "versioned_docs/version-26e/05-Texte",
       "ignore": [
-        "04-Uebung.md"
+        "05-Uebung.md"
       ]
     },
     {
@@ -138,7 +138,7 @@
       "from": "docs/Big-Data/",
       "to": "versioned_docs/version-26e/07-Big-Data",
       "ignore": [
-        "03-cookies.md"
+        "03-cookies"
       ],
       "open": false
     },
@@ -166,8 +166,7 @@
         "002-Codierung",
         "005-Sicherheit",
         "090-Pruefung.md"
-      ],
-      "open": true
+      ]
     },
     {
       "from": "docs/Big-Data/03-cookies/",
@@ -185,7 +184,8 @@
         "07-Alltag",
         "01-Lernziele-reduced.md",
         "01-Lernziele.md"
-      ]
+      ],
+      "open": true
     }
   ],
   "26P": [
@@ -228,7 +228,7 @@
       "from": "docs/dokumente/ms-word/",
       "to": "versioned_docs/version-26P/05-Texte",
       "ignore": [
-        "04-Uebung.md"
+        "05-Uebung.md"
       ]
     },
     {
@@ -329,7 +329,7 @@
       "from": "docs/Big-Data/",
       "to": "versioned_docs/version-26P/07-Big-Data",
       "ignore": [
-        "03-cookies.md"
+        "03-cookies"
       ]
     },
     {
@@ -343,8 +343,7 @@
       "ignore": [
         "01-sql/04-create.md",
         "_category_.json"
-      ],
-      "open": false
+      ]
     },
     {
       "from": "docs/Netzwerke-of/",
@@ -353,8 +352,7 @@
         "002-Codierung",
         "005-Sicherheit",
         "090-Pruefung.md"
-      ],
-      "open": true
+      ]
     },
     {
       "from": "docs/Big-Data/03-cookies/",
@@ -372,7 +370,8 @@
         "07-Alltag",
         "01-Lernziele-reduced.md",
         "01-Lernziele.md"
-      ]
+      ],
+      "open": true
     }
   ],
   "24ef": [
@@ -408,8 +407,7 @@
         "800-python-scripts.md",
         "051-art.md",
         "052-xmas.md",
-        "050-repetition",
-        "index.md"
+        "050-repetition"
       ]
     },
     {

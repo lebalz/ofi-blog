@@ -6,6 +6,7 @@
 03-Programmieren-1/02-Turtlegrafik/001-intro.md
 03-Programmieren-1/02-Turtlegrafik/002-screen.md
 05-Texte/*
+!05-Texte/05-Uebung.md
 03-Programmieren-1/02-Turtlegrafik/003-repeat.md
 03-Programmieren-1/02-Turtlegrafik/100-turtle-commands.md
 03-Programmieren-1/02-Turtlegrafik/004-errors.md
@@ -31,6 +32,7 @@
 !03-Programmieren-1/00-Probe/ProbeE-Nachholer.md
 03-Programmieren-1/05-PyGameZero/*
 07-Big-Data/*
+!07-Big-Data/03-cookies/
 08-Excel/*
 09-Datenbanken/*
 !09-Datenbanken/01-sql/04-create.md
@@ -48,4 +50,4 @@
 !11-Kryptologie/07-Alltag/
 !11-Kryptologie/01-Lernziele-reduced.md
 !11-Kryptologie/01-Lernziele.md
-10-Netzwerke/_category_.json
+11-Kryptologie/_category_.json
