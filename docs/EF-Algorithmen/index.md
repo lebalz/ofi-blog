@@ -116,7 +116,7 @@ A = [1, 2, 3]
 
 ### Selection Sort
 
-```
+```py
 Selection-Sort(A)
     for j = 1 to A.länge - 1
         schlüssel = A[j]
@@ -124,17 +124,17 @@ Selection-Sort(A)
         // tausche A[j] mit dem tiefsten Wert der
         // unsortierten Sequenz A[j..A.länge]
         i = j + 1
-        while i < A.länge
-            if A[i] < A[index]:
+        while i <= A.länge
+            if A[i] < A[index]
                 index = i
             i = i + 1
-        A[j] = A[i]
-        A[i] = schlüssel
+        A[j] = A[index]
+        A[index] = schlüssel 
 ```
 
 ### Insertion Sort
 
-```
+```py
 Insertion-Sort(A)
     for j = 2 to A.länge
         schlüssel = A[j]
