@@ -105,5 +105,45 @@ Die Schieblehre wird um eine Position nach rechts geschoben:
 </TabItem>
 </Tabs>
 
+## Pseudocode
+
+Listen (Felder) werden in eckigen Klammern geschrieben, im Unterschied zu Python beginnen die Indizes bei 1.
+
+```
+A = [1, 2, 3]
+// A[1] => 1
+```
+
+### Selection Sort
+
+```
+Selection-Sort(A)
+    for j = 1 to A.länge - 1
+        schlüssel = A[j]
+        index = j
+        // tausche A[j] mit dem tiefsten Wert der
+        // unsortierten Sequenz A[j..A.länge]
+        i = j + 1
+        while i < A.länge
+            if A[i] < A[index]:
+                index = i
+            i = i + 1
+        A[j] = A[i]
+        A[i] = schlüssel
+```
+
+### Insertion Sort
+
+```
+Insertion-Sort(A)
+    for j = 2 to A.länge
+        schlüssel = A[j]
+        // füge A[j] in die sortierte Sequenz A[1..j-1] ein
+        i = j - 1
+        while i > 0 and A[i] > schlüssel
+            A[i+1] = A[i]
+            i = i - 1
+        A[i+1] = schlüssel
+```
 
 [^1]: Druckvorlage: [apaik5](https://www.printables.com/@apaik5_264920)@[printables.com](https://www.printables.com/model/340344-computer-science-sorting-algorithms-learning-tool)
