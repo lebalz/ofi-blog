@@ -1,0 +1,14 @@
+.stack {
+    position: relative;
+    min-height: 100px;
+    .cardContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    height: 100%;
+}
+
+.splitLine {
+    border-left: 2px solid black;
+}
