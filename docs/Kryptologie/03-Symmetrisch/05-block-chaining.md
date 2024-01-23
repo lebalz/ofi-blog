@@ -35,9 +35,10 @@ Die Entschlüsselung funktioniert analog: Der Geheimtext wird wiederum in Blöck
 <XORBlockCipher />
 
 :::aufgabe Aufgabe ECB-Modus
-1. Verschlüsseln Sie den Text `EINE SEHR KLEINE SENSATION` mit dem Schlüssel `ZUSE`.  
+<Answer type="state" webKey="22dc5535-c021-4afa-88ab-679bfa753bf7" />
 
-  <Answer type="string" webKey="52638af8-d4af-4f19-ab55-8de24a8bac94" solution="@-. ZFVMHUXI@-. ZFVKITGLU," sanitizer={(val) => val.trim().toUpperCase()} width="400px"/>
+1. Verschlüsseln Sie den Text `EINE SEHR KLEINE SENSATION` mit dem Schlüssel `ZUSE`.  
+<Answer type="string" webKey="52638af8-d4af-4f19-ab55-8de24a8bac94" solution="@-. ZFVMHUXI@-. ZFVKITGLU," sanitizer={(val) => val.trim().toUpperCase()} width="400px"/>
 
 2. Schauen Sie sich den Klartext und den Geheimtext genau an. Gibt es Schwachstellen im ECB-Modus? Was ist verdächtig?
 
@@ -72,6 +73,8 @@ Auf den ersten Blick erstaunlich ist die Tatsache, dass die Entschlüsselung mit
 :::
 
 :::aufgabe Aufgabe CBC-Modus
+<Answer type="state" webKey="786a67c7-3cb6-44f0-a620-24267aa6185b" />
+
 1. Verschlüsseln Sie nochmals denselben Text, diesmal allerdings im CBC-Modus:  
 Klartext
 : `EINE SEHR KLEINE SENSATION`  
@@ -86,12 +89,16 @@ Schlüssel
 :::
 
 :::aufgabe Aufgabe Initialisierungsvektor
+<Answer type="state" webKey="c53914e3-b496-4643-8453-4451ba5e9f18" />
+
 Überlegen Sie sich zusammen mit Ihrer Pultnachbar:in, mit welcher einfachen Massnahme man darauf verzichten könnte, neben dem Schlüssel auch den Initialisierungsvektor mit der Kommunikationspartner:in abzusprechen.
 <Answer type="text" webKey="f33e61bc-140f-4f48-a027-abccae18ec05" />
 
 :::
 
 :::aufgabe Aufgabe Angriff auf die XOR-Blockchiffre
+<Answer type="state" webKey="fa533a99-efc9-4659-9c63-737a041075b2" />
+
 Setzen Sie sich in Dreiergruppen zusammen und diskutieren Sie folgende Fragen:
 
 1. Welche Faktoren beeinflussen die Sicherheit unserer XOR-Blockchiffre?

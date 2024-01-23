@@ -5,6 +5,6 @@ sidebar_custom_props:
 
 
 # Symmetrische Verschlüsselung
-Bei sämtlichen VErschlüsselungsverfahren in diesem Kapitel handelt es sich um symmetrische Verfahren, d.h. zum Verschlüsseln und Entschlüsseln wird derselbe Schlüssel verwendet:
+Bei sämtlichen Verschlüsselungsverfahren in diesem Kapitel handelt es sich um symmetrische Verfahren, d.h. zum Verschlüsseln und Entschlüsseln wird derselbe Schlüssel verwendet:
 
 ![](images/symm-encryption.svg)

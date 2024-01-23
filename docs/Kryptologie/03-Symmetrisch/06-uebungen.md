@@ -14,21 +14,25 @@ Lösen Sie die Übungen von Hand (daher nur mit dem Pentacode-Editor als Hilfsmi
 <TextEditor />
 
 :::aufgabe 1. XOR Verschlüsselung
+<Answer type="state" webKey="3dd663a7-45ad-45e6-ab03-995fe51bbe97" />
+
 Verschlüsseln Sie den Text `BUCHSTABENSPIELE` mit dem Schlüssel `AKRONYM`
 
-<Answer type="text" webKey="a30ab42b-0e2a-4452-a7a4-f34c96e8a4cd" monospace />
+<Answer type="text" webKey="a30ab42b-0e2a-4452-a7a4-f34c96e8a4cd" monospace/>
 
 
-<Answer label="Text (nicht binär)" type="string" webKey="b680e137-905a-4bc5-a05a-fe65bc1684ee" solution="C?QG.MLCN--?PHMN" sanitizer={UPPER_NOSPACE}/>
+<Answer label="Text (nicht binär)" type="string" webKey="b680e137-905a-4bc5-a05a-fe65bc1684ee" solution="C?QG.MLCN--?PHMN" sanitizer={UPPER_NOSPACE} width="80%"/>
 
 :::
 
 :::aufgabe 2. XOR Entschlüsseln
+<Answer type="state" webKey="400edf18-c72e-4d30-a3ca-711f10649d57" />
+
 Entschlüsseln Sie den Text `XWVJZWEKK,XWVJIK` mit dem Schlüssel `VVXKZ`
 
 <Answer type="text" webKey="f0c2bc43-cc15-4f58-8466-19f2f3374d2e" monospace />
 
-<Answer label="Text (nicht binär)" type="string" webKey="f877bdef-a2e9-4b82-a6cc-1b61109970c7" solution="NANA ASS ANANAS." sanitizer={UPPER_NOSPACE}/>
+<Answer label="Text (nicht binär)" type="string" webKey="f877bdef-a2e9-4b82-a6cc-1b61109970c7" solution="NANA ASS ANANAS." sanitizer={UPPER_NOSPACE} width="80%"/>
 :::
 
 ## CBC Modus
@@ -39,6 +43,7 @@ Entschlüsseln Sie den Text `XWVJZWEKK,XWVJIK` mit dem Schlüssel `VVXKZ`
 :::
 
 ::::aufgabe 3. CBC-Modus: Verschlüsseln
+<Answer type="state" webKey="6b6bd045-cd9b-4bd7-83d4-ccd3b485694c" />
 
 ![CBC: Verschlüsseln](images/CBC_encryption.svg)
 
@@ -87,6 +92,7 @@ Verschlüsseln Sie den Text `WINTER` mit dem Schlüssel `NY` und dem IV `AZ`.
 
 
 ::::aufgabe 4. CBC-Modus: Entschlüsseln
+<Answer type="state" webKey="5d950f19-7371-4fbf-ac91-75fbad207f36" />
 
 ![CBC Entschlüsseln](images/CBC_decryption.svg)
 

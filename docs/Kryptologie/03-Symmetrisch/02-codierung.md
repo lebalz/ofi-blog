@@ -11,7 +11,7 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 
 ## Albhabet
 
-Mit 5 Bits (*[Penta bedeutet 5]*) können $2^5 = 32$ Zeichen codiert werden. Neben dem Leerschlag hat es Platz für die Sonderzeichen __?__, __.__, __,__, __-__ und __@__.
+Mit 5 bits (*[Penta bedeutet 5]*) können $2^5 = 32$ Zeichen codiert werden. Neben allen Grossbuchstaben und dem Leerschlag hat es Platz für die Sonderzeichen __?__, __.__, __,__, __-__ und __@__.
 
 :::details Penta-Tabelle
 
