@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2803 1595" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1.36865,0,0,0.583821,0,0)">
+        <rect id="Artboard1" x="0" y="0" width="2048" height="2732" style="fill:none;"/>
+        <g id="Artboard11" serif:id="Artboard1">
+            <g transform="matrix(0.730646,0,0,1.71285,-154.166,-101.915)">
+                <circle cx="949" cy="959" r="610" style="fill:none;stroke:black;stroke-width:10px;"/>
+            </g>
+            <g transform="matrix(0.344961,0,0,0.808691,211.849,1316.71)">
+                <circle cx="949" cy="959" r="610" style="fill:none;stroke:black;stroke-width:21.18px;"/>
+            </g>
+            <g transform="matrix(0.730646,0,0,1.71285,814.67,-101.915)">
+                <circle cx="949" cy="959" r="610" style="fill:none;stroke:black;stroke-width:10px;"/>
+            </g>
+            <g transform="matrix(0.730646,0,0,1.71285,1060.99,235.852)">
+                <g transform="matrix(144,0,0,144,838.238,722.805)">
+                </g>
+                <text x="380.644px" y="722.805px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:144px;">P<tspan x="474.089px 514.097px " y="722.805px 722.805px "> =</tspan> NP</text>
+            </g>
+            <g transform="matrix(0.730646,0,0,1.71285,186.301,-130.632)">
+                <g transform="matrix(144,0,0,144,580.683,722.805)">
+                </g>
+                <text x="380.644px" y="722.805px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:144px;">NP</text>
+            </g>
+            <g transform="matrix(0.730646,0,0,1.71285,224.24,779.816)">
+                <g transform="matrix(144,0,0,144,476.691,722.805)">
+                </g>
+                <text x="380.644px" y="722.805px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:144px;">P</text>
+            </g>
+            <g transform="matrix(0.730646,0,0,1.71285,90.1808,945.689)">
+                <g transform="matrix(72,0,0,72,440.691,722.805)">
+                </g>
+                <g transform="matrix(72,0,0,72,460.695,722.805)">
+                </g>
+                <g transform="matrix(72,0,0,72,844.882,722.805)">
+                </g>
+                <text x="380.644px" y="722.805px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:72px;">efﬁzient lösbar</text>
+            </g>
+            <g transform="matrix(0.730646,0,0,1.71285,994.672,562.732)">
+                <g transform="matrix(72,0,0,72,440.691,722.805)">
+                </g>
+                <g transform="matrix(72,0,0,72,460.695,722.805)">
+                </g>
+                <text x="380.644px" y="722.805px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:72px;">efﬁzient überprüfbar</text>
+                <g transform="matrix(72,0,0,72,528.757,797.16)">
+                </g>
+                <g transform="matrix(72,0,0,72,548.761,797.16)">
+                </g>
+                <g transform="matrix(72,0,0,72,932.949,797.16)">
+                </g>
+                <text x="468.711px" y="797.16px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:72px;">efﬁzient lösbar</text>
+            </g>
+            <g transform="matrix(0.730646,0,0,1.71285,25.8355,82.5381)">
+                <g transform="matrix(72,0,0,72,440.691,722.805)">
+                </g>
+                <g transform="matrix(72,0,0,72,460.695,722.805)">
+                </g>
+                <text x="380.644px" y="722.805px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:72px;">efﬁzient überprüfbar</text>
+                <g transform="matrix(72,0,0,72,958.929,797.16)">
+                </g>
+                <text x="442.73px" y="797.16px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:72px;">schwierig lösbar</text>
+            </g>
+            <g transform="matrix(0.730646,0,0,1.71285,322.04,-202.772)">
+                <g transform="matrix(96,0,0,96,668.192,278.445)">
+                </g>
+                <text x="-68.214px" y="278.445px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:96px;">aktueller Zustand</text>
+            </g>
+            <g transform="matrix(0.730646,0,0,1.71285,1290.56,-202.772)">
+                <g transform="matrix(96,0,0,96,567.2,278.445)">
+                </g>
+                <text x="32.778px" y="278.445px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:96px;">Falls P<tspan x="324.434px 351.106px " y="278.445px 278.445px "> =</tspan> NP</text>
+            </g>
+        </g>
+    </g>
+</svg>
