@@ -38,7 +38,6 @@ Dateinamen
 : __EF-Informatik/docs/Algorithmen/selection_sort.py__
 : __EF-Informatik/docs/Algorithmen/insertion_sort.py__
 : __EF-Informatik/docs/Algorithmen/merge_sort.py__
-: __EF-Informatik/docs/Algorithmen/native_sort.py__
 : __EF-Informatik/docs/Algorithmen/zeitmessung.md__
 
 Führen Sie Zeitmessungen für die drei Algorithmen durch, indem Sie die Funktion `timeit` verwenden.
