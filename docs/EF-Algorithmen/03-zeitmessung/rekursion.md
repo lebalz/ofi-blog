@@ -24,6 +24,14 @@ Halten Sie Ihre Erkenntnisse fest!
 <Answer type="text" webKey="fbd9a76e-5027-4547-8e31-c4cd1f6ad92a" />
 :::
 
+:::aufgabe
+<Answer type="state" webKey="c869adfe-6b8f-402e-bf35-9a701302f752" />
+
+Betrachten Sie nochmals die Sortieralgorithmen, die Sie bei der Zeitmessung verwendet haben. Welche davon sind rekursiv?
+
+<Answer type="state" webKey="23547052-e9b1-4ef3-bb4f-aa8b612db201" />
+:::
+
 ## Ackermann-Funktion
 
 [@youtube](https://www.youtube-nocookie.com/embed/i7sm9dzFtEI?si=0vpwNNutzy5Bmyhm)
@@ -51,7 +59,7 @@ Dateinamen
 Dateinamen
 : __EF-Informatik/docs/Algorithmen/schizo.py__
 
-Schreiben Sie eine Funktion `schizo(n)`, die für eine gegebene Zahl `n` die schizophrene Zahl `s(n)` berechnet.
+Schreiben Sie eine Funktion `schizo(n)`, die für eine gegebene Zahl `n` die schizophrene Zahl so wie im Artikel beschrieben berechnet.
 
 :::danger Grosse Zahlen...
 Beachten Sie: Python rundet standardmässig die 16. Nachkommastelle. Sollen mehr Nachkommastellen dargestellt werden, können die Anzahl Nachkommastellen erhöht werden. 
