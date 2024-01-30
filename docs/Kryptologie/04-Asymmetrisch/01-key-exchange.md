@@ -39,7 +39,7 @@ Können Sie sich zusammenreimen, wie die geheimen Unterlagen versendet werden? W
 
 <Solution webKey="c4a8c0b0-60ce-4a3d-9b12-1145bdf8d9f7">
 
-Alice verschliesst die Truhe mit dem eigenen Schloss, um ungewollten Zugriff zu unterbinden. So verschlossen schickt sie die Truhe an Bob. Auch er kann sie nicht öffnen. Daher fügt er noch sein Schloss hinzu und sendet die Truhe zurück. Nun kann Alice ihr Schloss entfernen und die Truhe ein letztes Mal schicken und nachdem Bob sein eigenes Schloss entfernt hat, kann er den Inhalt sehen.
+Alice erstellt einen Schlüssel für die private Kommunikation (= __Sitzungsschlüssel__). Diesen Schlüssel muss sie an Bob weitergeben. Dazu legt sie ihn in die Truhe und verschliesst diese mit dem eigenen Schloss, um ungewollten Zugriff zu unterbinden. So verschlossen schickt sie die Truhe an Bob. Auch er kann sie nicht öffnen. Daher fügt er noch sein Schloss hinzu und sendet die Truhe zurück. Nun kann Alice ihr Schloss entfernen und die Truhe ein letztes Mal schicken und nachdem Bob sein eigenes Schloss entfernt hat, kann er den Inhalt (also den Sitzungsschlüssel)  sehen.
 
 Dass es sich um Alices Schloss handelt, kann Bob glauben, da die Absenderin die Informationen ja sicher nicht offen transportieren würde.
 
@@ -58,7 +58,7 @@ Wie können die Unterlagen sicher zugestellt werden? Wo liegen allenfalls Proble
 
 <Answer type="text" webKey="71166ff0-e7d6-4ff9-ab7c-a8695b004818" />
 
-<Solution webKey="c4a8c0b0-60ce-4a3d-9b12-1145bdf8d9f7">
+<Solution webKey="2a2f7b2c-8504-4949-9a4b-dbee089b50d9">
 
 Bob könnte Alice das eigene, offene Schloss senden, mit dem Alice anschliessend die Truhe verschliesst.
 
@@ -78,7 +78,7 @@ Wie können die Unterlagen sicher zugestellt werden? Wo liegen allenfalls Proble
 
 <Answer type="text" webKey="caf33c6d-2642-40cd-99d1-74fca9959cf1" />
 
-<Solution webKey="c4a8c0b0-60ce-4a3d-9b12-1145bdf8d9f7">
+<Solution webKey="f1d91c40-a4ad-4d22-8fb1-4e0662259acc">
 
 #### Variante 3:
 
