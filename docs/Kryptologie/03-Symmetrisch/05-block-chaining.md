@@ -62,6 +62,21 @@ Da bei der Verarbeitung des ersten Blocks noch kein Geheimtext-Block zur Verfüg
 
 Ändert man 1 Bit im IV, führt dies zu Änderungen im gesamten Geheimtext. Ändert man 1 Bit im Klartext, so ändern sich auch sämtliche darauffolgenden Blöcke im Geheimtext.
 
+### Beispiel CBC
+
+p
+: HEY
+iv
+: U
+k
+: Z
+
+![](images/cbc-example.png)
+
+Beachten Sie, dass der IV nur beim ersten Block verwendet wird und die Blocklänge hier genau ein Buchstabe ist. Die XOR-Operation ist hier mit `+` dargestellt und auch bei der "Block-Cipher-Encryption" wird XOR verwendet.
+
+
+
 Ein Nachteil des CBC-Modus ist allerdings, dass die **Verschlüsselung** der verschiedenen Blöcke nicht gleichzeitig (also parallel) berechnet werden können, da das Resultat des vorherigen Blocks für die Verschlüsselung des aktuellen Blocks benötigt wird. D.h. ein bestimmter Klartext-Block kann erst verschlüsselt werden, wenn sämtliche vorherigen Blöcke bereits verschlüsselt sind.
 
 Bei der **Entschlüsselung** sieht es anders aus. Da sofort sämtliche Geheimtextblöcke vorliegen, kann die Entschlüsselung problemlos parallelisiert werden, wie Sie in der folgenden Abbildung nachvollziehen können:
@@ -81,8 +96,8 @@ Klartext
 Schlüssel
 : `ZUSE`
 
-2. Achten Sie wiederum auf die Blöcke, die im Klartext übereinstimmen. Was passiert jetzt?
-3. Wählen Sie verschiedene Initialisierungsvektoren. Wie unterscheiden sich die Resultate?
+1. Achten Sie wiederum auf die Blöcke, die im Klartext übereinstimmen. Was passiert jetzt?
+2. Wählen Sie verschiedene Initialisierungsvektoren. Wie unterscheiden sich die Resultate?
 
 <Answer type="text" webKey="d98093d9-0718-4b04-9ac3-f2ea9617153b" monospace />
 
