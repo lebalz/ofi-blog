@@ -43,7 +43,9 @@
 !10-Netzwerke/090-Pruefung.md
 10-Netzwerke/005-Datenschutz/*
 11-Kryptologie/*
-!11-Kryptologie/04-Asymmetrisch/
+!11-Kryptologie/04-Asymmetrisch/04-asymm-encryption.md
+!11-Kryptologie/04-Asymmetrisch/05-kombiniert.md
+!11-Kryptologie/04-Asymmetrisch/08-rsa.md
 !11-Kryptologie/05-Hashfunktionen/
 !11-Kryptologie/06-Digitale-Signaturen/
 !11-Kryptologie/07-Alltag/
