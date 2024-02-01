@@ -12,7 +12,6 @@ from random import shuffle
 from copy import deepcopy
 
 def bogo_sort(a):
-    print(a)
     while True:
         shuffle(a)
         is_sorted = True
