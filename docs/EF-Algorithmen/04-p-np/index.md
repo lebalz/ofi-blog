@@ -28,8 +28,6 @@ Die Komplexitätsklasse $P$ enthält die Probleme, für die eine deterministisch
 :::def
 ### Definition
 
-Definition
-
 Die Komplexitätsklasse $NP$ enthält die Probleme, von denen sich in polynomialer Laufzeit mit einer deterministischen Turingmaschine entscheiden lässt, ob eine vorgeschlagene Lösung zutrifft.
 :::
 
