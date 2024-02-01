@@ -7,11 +7,11 @@ sidebar_custom_props:
 ---
 
 
-# Vignère-Chiffre
+# Vigenère-Chiffre
 
 Die Vigenère-Chiffre wurde vom Franzosen **Blaise de Vigenère** (1523-1596) erfunden und galt fast 300 Jahre lang als unknackbar. Es handelt sich um ein polyalphabetisches Verschlüsselungsverfahren, da mehrere Alphabete genutzt werden. Als Schlüssel dient ein Wort, das die Anzahl der verwendeten Substitutions-Alphabete bestimmt: Für jeden Buchstaben des Schlüsselwortes wird die Caesar-Chiffre mit dem jeweiligen Buchstaben als Schlüssel verwendet. Die Buchstaben des Klartextes werden abwechslungsweise durch diese Caesar-Chiffren verschlüsselt.
 
-![Vignère-Verschlüsselung](images/vignere.png)
+![Vigenère-Verschlüsselung](images/vigenere.png)
 
 :::aufgabe
 <Answer type="state" webKey="79fb8297-2a9d-4fb8-8480-fe49cb7bb019" />
