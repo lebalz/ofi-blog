@@ -36,7 +36,7 @@ Die Komplexitätsklasse $NP$ enthält die Probleme, von denen sich in polynomial
 ## P-NP-Problem
 Unbekannt ist, ob die beiden Klassen $P$ und $NP$ identisch sind, ob also auch die schwersten Probleme der Klasse $NP$ deterministischen Maschinen effizient lösbar sind.
 
-![P-NP-Problem](./images/pnp.svg)
+![--width=450px P-NP-Problem](./images/pnp.svg)
 
 ## Beispiele
 
