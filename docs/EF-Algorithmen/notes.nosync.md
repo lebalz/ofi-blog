@@ -9,3 +9,5 @@ Travelling Salesman Problem: https://youtu.be/1pmBjIZ20pE?si=y7jP5tOs74MWnTtL
 Selection Sort nicht stabil: https://www.happycoders.eu/algorithms/selection-sort/
 
 Abenteuer Informatik: https://www.abenteuer-informatik.de/dasbuch.html
+
+--> https://www.swisseduc.ch/informatik/theoretische_informatik/kuenstliche_intelligenz/

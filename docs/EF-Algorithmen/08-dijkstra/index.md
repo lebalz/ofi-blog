@@ -191,4 +191,14 @@ Führen Sie den Dijkstra-Algorithmus aus: erstellen Sie eine Entfernungstabelle 
 - Führen Sie daneben eine Open- und eine Closed-List
 
 <Answer type="text" webKey="64ab3765-f068-448b-aa1c-efaf8ea46728" />
+
+<Solution webKey="b58c2854-3227-43d7-a66a-9f0f5d3f5cd3">
+
+![](images/dijkstra-lzbi.png)
+
+</Solution>
 :::
+
+## Zusammenfassung
+
+[@youtube](https://www.youtube-nocookie.com/embed/EFg3u_E6eHU?si=FtRqtOsopcTPZ2F7)
