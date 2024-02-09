@@ -199,6 +199,10 @@ Führen Sie den Dijkstra-Algorithmus aus: erstellen Sie eine Entfernungstabelle 
 </Solution>
 :::
 
+## Besprechung der Aufgaben
+
+<iframe src="https://erzbe-my.sharepoint.com/personal/balthasar_hofer_gbsl_ch/_layouts/15/Doc.aspx?sourcedoc={94b15380-9d43-4d09-8e2c-00037eca2df5}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="100%" height="450px" frameborder="0">Dies ist ein eingebettetes <a target="_blank" href="https://office.com">Microsoft Office</a>-Dokument, unterstützt von <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+
 ## Zusammenfassung
 
 [@youtube](https://www.youtube-nocookie.com/embed/EFg3u_E6eHU?si=FtRqtOsopcTPZ2F7)
