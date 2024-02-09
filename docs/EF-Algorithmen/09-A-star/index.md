@@ -127,7 +127,7 @@ Heilbronn
 :::aufgabe Aufgabe 1: Vergleich Dijkstra und A\*-Algorithmus
 <Answer type="state" webKey="3d2faa9b-0ce4-4cfe-b573-bce807439c0f" />
 
-Berechnen	Sie	für	das	Folgende Strassennetz	den	kürzesten	Weg	von	Frankfurt	nach München mit dem A\*-Algorithmus. Die	Entfernungen	zwischen	den	Städten	sind	in	der	Abbildung	angegeben.
+Berechnen	Sie	für	das	Folgende Strassennetz	den	kürzesten	Weg	von	nach München nach Frankfurt mit dem A\*-Algorithmus. Die	Entfernungen	zwischen	den	Städten	sind	in	der	Abbildung	angegeben.
 
 ```mermaid
 flowchart LR
