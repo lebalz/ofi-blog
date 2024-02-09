@@ -22,7 +22,7 @@ wobei $g(N)$ die Kosten des Pfades vom Startknoten zu $N$ darstellt und $h(N)$ d
 Bei der Schätzung muss gelten:
 
 $$
-h(N) \beq h^*(N)
+h(N) \geq h^*(N)
 $$
 
 wobei $h^\star(N)$ die wirklichen Kosten des optimalen Pfades von $N$ zum Zielknoten sind.
