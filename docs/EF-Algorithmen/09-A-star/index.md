@@ -12,7 +12,7 @@ Der $A^\star$-Algorithmus[1] (im folgenden $A^\star$ genannt) wird verwendet, um
 Bei der Breitensuche wird keine «intelligente» Auswahl der Knoten in der Open-List getroffen, die Knoten werden in willkürlicher Reihenfolge verarbeitet. Der  $A^\star$ ist eine Verfeinerung dieser Verfahren, wobei folgendermassen immer der vielversprechendste Knoten weiterverarbeitet wird. Es wird abgeschätzt, wie «gut» ein Knoten ist, indem eine Bewertungsfunktion berechnet wird. Die Kosten eines Knotens $N$ beinhalten zwei Beiträge: einerseits die Kosten vom Startknoten bis zu $N$ (wie bei Dijkstra) und andererseits die geschätzten Kosten von $N$ bis zum Zielknoten. Diese Bewertungsfunktion $f(N)$ für einen Knoten $N$ wird also folgendermassen definiert:
 
 :::def Definition
-
+### A-Stern
 $$
 f(N) = g(N) + h(N)
 $$
@@ -28,7 +28,7 @@ $$
 wobei $h^\star(N)$ die wirklichen Kosten des optimalen Pfades von $N$ zum Zielknoten sind.
 :::
 
-Die geschätzte Kostenfunktion $h(N)$ ist normalerweise unbekannt und kann nur abgeschätzt werden. Damit obige Ungleichung gilt, darf die Funktion $h$ die Kosten eines Knotens nie überschätzen! (die Schätzung sollte also kleiner ausfallen als die effektiven Kosten) Oft wird z.B. die euklidische Distanz zum Ziel verwendet.
+Die geschätzte Kostenfunktion $h(N)$ ist normalerweise unbekannt und kann nur abgeschätzt werden. Damit obige Ungleichung gilt, darf die Funktion $h$ die Kosten eines Knotens nie überschätzen! Oft wird z.B. die euklidische Distanz zum Ziel verwendet.
 
 Die Funktion $h$ ist eine sog. Heuristik, also eine Abschätzung des wahren Werts. So kann die Suche nach dem optimalen Pfad oft wesentlich beschleunigt werden, was beim $A^\star$ ausgenutzt wird. Man kann zeigen, dass der  immer den kürzesten Weg findet, wenn es einen gibt.
 
