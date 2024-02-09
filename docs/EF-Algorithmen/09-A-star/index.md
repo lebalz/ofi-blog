@@ -139,10 +139,9 @@ flowchart LR
     i---|103 km| z((Nürnberg))
     i---|186 km| j((Erfurt))
     j---|137 km| k((Kassel))
-    n---|167 km| e
+    z---|167 km| e
     k---|502 km| e
     a---|173 km| k
-    i---|103 km| h
 ```
 
 Als	Heuristik	sollen	folgende	Luftlinien-Entfernungen	verwendet	werden:
@@ -177,7 +176,7 @@ Auf der verlinkten Seite können Breitensuche, Dijkstra und A-Stern miteinander 
 - Was ist «Depth First»?
 - Wofür stehen die Farben wenn man bei Terrain den Eintrag Simplex Terrain wählt. Welchen Einfluss haben diese auf den A-Stern-Algorithmus?
 
-👉 pathfindout.com
+👉 [pathfindout.com](https://pathfindout.com)
 
 <Answer type="text" webKey="d31de321-739e-47de-9102-076e3ce010f0" />
 :::
@@ -188,7 +187,7 @@ Auf der verlinkten Seite können Breitensuche, Dijkstra und A-Stern miteinander 
 Der A-Stern-Algorithmus kommt auch in Computer-Spielen zu Einsatz:
 Lesen Sie den folgenden Beitrag durch und testen Sie die tollen (und teilweise interaktiven) Visualisierungen:
 
-👉 www.redblobgames.com
+👉 [www.redblobgames.com](www.redblobgames.com)
 
 <Answer type="text" webKey="b83ec884-1a4d-4a02-91fe-444d5b981ffb" />
 
