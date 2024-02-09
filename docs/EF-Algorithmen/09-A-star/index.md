@@ -135,7 +135,7 @@ flowchart LR
     b ---|80 km| c((Karlsruhe))
     c---|250 km| d((Augsburg))
     d ---|84 km| e((München))
-    h---|167 km| e
+    h((Stuttgart))---|167 km| e
     a---|217 km| i((Würzburg))
     i---|186 km| j((Erfurt))
     j---|137 km| k((Kassel))
