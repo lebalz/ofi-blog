@@ -187,7 +187,7 @@ Auf der verlinkten Seite können Breitensuche, Dijkstra und A-Stern miteinander 
 Der A-Stern-Algorithmus kommt auch in Computer-Spielen zu Einsatz:
 Lesen Sie den folgenden Beitrag durch und testen Sie die tollen (und teilweise interaktiven) Visualisierungen:
 
-👉 [www.redblobgames.com](www.redblobgames.com)
+👉 [redblobgames.com](https://redblobgames.com)
 
 <Answer type="text" webKey="b83ec884-1a4d-4a02-91fe-444d5b981ffb" />
 
