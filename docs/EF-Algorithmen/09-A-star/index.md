@@ -134,11 +134,12 @@ flowchart LR
     a((Frankfurt))---|85 km| b((Mannheim))
     b ---|80 km| c((Karlsruhe))
     c---|250 km| d((Augsburg))
-    d ---|84 km| e((München))
-    h((Stuttgart))---|167 km| e
+    d---|84 km| e((München))
     a---|217 km| i((Würzburg))
+    i---|103 km| z((Nürnberg))
     i---|186 km| j((Erfurt))
     j---|137 km| k((Kassel))
+    n---|167 km| e
     k---|502 km| e
     a---|173 km| k
     i---|103 km| h
@@ -154,7 +155,6 @@ Kassel <--> München: 446 km
 Mannheim <--> München: 311 km
 München <--> München: 0 km
 Nürnberg <--> München: 151 km
-Stuttgart <--> München: 199 km
 Würzburg <--> München: 229 km
 ```
 
