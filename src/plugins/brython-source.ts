@@ -7,15 +7,23 @@ const plugin: Plugin = (context, options) => {
             const remoteHeadTags = content ? content.remoteHeadTags : [];
             const brython_pips = [];
             ([
-                'https://raw.githack.com/lebalz/ofi-blog/main/static/js/cowsay.brython.js'
-            ]).forEach(pip => {
+                '/libs/config.py',
+                '/libs/brython_runner.py',
+                '/libs/game.py',
+                '/libs/grid.py',
+                '/libs/py_back_trace.py',
+            ]).forEach(lib => {
+                const moduleName = lib.split('/').pop().split('.').shift();
                 brython_pips.push(
                     {
                         tagName: 'script',
                         attributes: {
-                            src: pip,
-                            crossorigin: "anonymous",
-                            referrerpolicy: "no-referrer"
+                            src: lib,
+                            type: 'text/python',
+                            id: moduleName,
+                            cache: 'true',
+                            async: true,
+                            defer: true,
                         },
                     }
                 );
@@ -28,9 +36,7 @@ const plugin: Plugin = (context, options) => {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython.js",
                             // crossorigin: "anonymous",
                             src: "https://cdn.jsdelivr.net/npm/brython@3.12.1/brython.min.js",
-                            referrerpolicy: "no-referrer",
-                            async: true,
-                            defer: true
+                            referrerpolicy: "no-referrer"
                         },
                     },
                     {
@@ -39,9 +45,16 @@ const plugin: Plugin = (context, options) => {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js",
                             // crossorigin: "anonymous",
                             src: "https://cdn.jsdelivr.net/npm/brython@3.12.1/brython_stdlib.js",
-                            referrerpolicy: "no-referrer",
-                            async: true,
-                            defer: true
+                            referrerpolicy: "no-referrer"
+                        },
+                    },
+                    {
+                        tagName: 'script',
+                        attributes: {
+                            // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython.js",
+                            // crossorigin: "anonymous",
+                            src: '/cowsay.brython.js',
+                            referrerpolicy: "no-referrer"
                         },
                     },
                     ...brython_pips,
