@@ -1,14 +1,14 @@
 import { visit, CONTINUE, SKIP, EXIT } from 'unist-util-visit';
 import type { Plugin, Processor, Transformer } from 'unified';
 import type { MdxJsxFlowElement } from 'mdast-util-mdx';
-import { Content, Parent, PhrasingContent, RootContent, Text } from 'mdast';
+import { Parent, PhrasingContent, RootContent, Text } from 'mdast';
 
 // match to determine if the line is an opening tag
 const DD_REGEX = /(\r?\n):[ \t]+(.*?)/;
 const DD_CONSECUTIVE_REGEX = /^(\r?\n)?:[ \t]+(.*?)/;
 type ActionStates = 'SEEK_DD_START' | 'SEEK_CONSECUTIVE_DD_START' | 'COLLECT_DT_BODY' | 'COLLECT_DD_BODY' | 'ADD_TO_DL';
 
-const createMdxJsxFlowElementNode = (name: string, children: Content[] = [], className?: string) => {
+const createMdxJsxFlowElementNode = (name: string, children: RootContent[] = [], className?: string) => {
     const attributes = className ? [{ type: 'mdxJsxAttribute', name: 'className', value: className }] : [];
     return {
         type: 'mdxJsxFlowElement',
@@ -40,16 +40,16 @@ const plugin: Plugin = function plugin(
     const DL = tagNames.dl || 'dl';
     const DT = tagNames.dt || 'dt';
     const DD = tagNames.dd || 'dd';
-    const getDLNode = (children: Content[] = []) => {
+    const getDLNode = (children: RootContent[] = []) => {
         return createMdxJsxFlowElementNode(DL, children, classNames.dl);
     }
 
-    const getDTNode = (children: Content[]) => {
-        return createMdxJsxFlowElementNode(DT, [{ type: 'paragraph', children: children} as Content], classNames.dt);
+    const getDTNode = (children: RootContent[]) => {
+        return createMdxJsxFlowElementNode(DT, [{ type: 'paragraph', children: children} as RootContent], classNames.dt);
     }
 
-    const getDDNode = (children: Content[]) => {
-        return createMdxJsxFlowElementNode(DD, [{ type: 'paragraph', children: children} as Content], classNames.dd);
+    const getDDNode = (children: RootContent[]) => {
+        return createMdxJsxFlowElementNode(DD, [{ type: 'paragraph', children: children} as RootContent], classNames.dd);
     }
     return async (ast, vfile) => {
         visit(ast, (node, idx, parent: Parent) => {
@@ -90,7 +90,7 @@ const plugin: Plugin = function plugin(
                             return SKIP;
                         case 'COLLECT_DT_BODY':
                             if (cIdx === 0) {
-                                /** the dd has no dt */
+                                /** the dl has no dt */
                                 action = 'COLLECT_DD_BODY';
                                 return [SKIP, cIdx];
                             }
