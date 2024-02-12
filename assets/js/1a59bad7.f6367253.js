@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[5982],{40833:e=>{e.exports=JSON.parse('{"label":"office","permalink":"/news/tags/office","allTagsPath":"/news/tags","count":1,"unlisted":false}')}}]);

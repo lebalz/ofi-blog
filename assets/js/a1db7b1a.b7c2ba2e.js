@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[50450],{73480:e=>{e.exports=JSON.parse('{"label":"programmieren","permalink":"/news/tags/programmieren","allTagsPath":"/news/tags","count":1}')}}]);
