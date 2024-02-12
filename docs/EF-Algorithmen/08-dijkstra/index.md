@@ -144,7 +144,7 @@ Der Algorithmus kann wie folgt schematisch dargestellt werden:
 ## Endzustand
 Wenn wir nur den besten Weg finden wollen, können wir den Algorithmus abbrechen, sobald der Zielknoten der «beste» Kandidat auf der Open-List ist. Dann wissen wir: Es gibt keinen kürzeren Weg!
 
-:::warning Warnung
+:::warning[Warnung]
 Wenn der Zielknoten nur auf der Open-List ist, könnte es immer noch einen besseren Weg geben!
 Wir haben ja erst einen Weg gefunden, ev. gibt es über einen anderen Knoten auf der Open-List einen schnelleren. Wenn aber der Zielknoten der «beste» Kandidat ist, dann kann es keinen schnelleren Weg mehr geben!
 :::
