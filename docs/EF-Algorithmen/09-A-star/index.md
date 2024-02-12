@@ -24,7 +24,7 @@ $$
 h(N) \geq h^*(N)
 $$
 
-wobei $h^\star(N)$ die wirklichen Kosten des optimalen Pfades von $N$ zum Zielknoten sind.
+wobei $h^\star(N)$ die tiefstmöglichen Kosten für die Verbindung von $N$ zum Zielknoten sind (dieser Pfad muss nicht zwingen über den vorhanden Graphen verlaufen. A\* könnte andernfalls falsche Resultate liefern, wenn plötzlich eine neue, direktere Verbindung von N zum Ziel gebaut wird. Deshalb ist die Luftlinie eine gute heuristik - schneller geht es mit herkömmlichen Gesetzen der Physik nicht).
 :::
 
 Die geschätzte Kostenfunktion $h(N)$ ist normalerweise unbekannt und kann nur abgeschätzt werden. Damit obige Ungleichung gilt, darf die Funktion $h$ die Kosten eines Knotens nie überschätzen! Oft wird z.B. die euklidische Distanz zum Ziel verwendet.
