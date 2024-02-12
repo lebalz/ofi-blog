@@ -38,8 +38,7 @@ Im Beispiel wird die vierte Note mit dem Index `3` ausgegeben.
 
 ## Python Listen: Befehle
 
-:::def
-### Liste erzeugen
+:::def[Liste erzeugen]
 ```py live_py slim
 # Liste erzeugen und Variablen zuweisen
 noten = [3.5, 6, 5, 4.5]
@@ -52,8 +51,7 @@ print(noten[2])
 :::
 
 
-:::def
-### Leere Liste `[]`
+:::def[Leere Liste `[]`]
 ```py live_py slim
 # Leere Liste erstellen
 noten = []
@@ -62,8 +60,7 @@ print(noten)
 :::
 
 
-:::def
-### Liste mit Text
+:::def[Liste mit Text]
 ```py live_py slim
 # Liste mit Strings
 noten =['gut', 'erfüllt', 'mangelhaft', 'erfüllt']
@@ -72,8 +69,7 @@ print(noten)
 :::
 
 
-:::def
-### Schleife über alle Elemente der Liste
+:::def[Schleife über alle Elemente der Liste]
 ```py live_py slim
 noten = [3.5, 6, 5, 4.5]
 
@@ -82,8 +78,7 @@ for note in noten:
 ```
 :::
 
-:::def
-### Schleife über Listen-Indices
+:::def[Schleife über Listen-Indices]
 ```py live_py slim
 noten = [3.5, 6, 5, 4.5]
 
@@ -94,8 +89,7 @@ for index in range(0, len(noten)):
 :::
 
 ## Listen Untersuchen
-:::def
-### Länge einer Liste: `len(<liste>)`
+:::def[Länge einer Liste: `len(<liste>)`]
 
 ```py live_py slim
 noten = [4.5, 5, 3.5, 5.5]
@@ -104,8 +98,7 @@ print(len(noten))
 ```
 :::
 
-:::def
-### Maximum: `max(<liste>)`
+:::def[Maximum: `max(<liste>)`]
 Gibt das maximale Element einer numerischen Liste zurück
 
 ```py live_py slim
@@ -114,8 +107,7 @@ print('Beste Noten', max(noten))
 ```
 :::
 
-:::def
-### Minimum: `min(<liste>)`
+:::def[Minimum: `min(<liste>)`]
 Gibt das minimale Element einer numerischen Liste zurück
 
 ```py live_py slim
@@ -124,8 +116,7 @@ print('Schlechteste Noten', min(noten))
 ```
 :::
 
-:::def
-### Wert in einer Liste? `<wert> in <liste>`
+:::def[Wert in einer Liste? `<wert> in <liste>`]
 Überprüft, ob sich ein Wert in einer Liste befindet
 
 ```py live_py slim
@@ -137,8 +128,7 @@ else:
 ```
 :::
 
-:::def
-### Anzahl Elemente mit einem Wert? `<liste>.count(<wert>)`
+:::def[Anzahl Elemente mit einem Wert? `<liste>.count(<wert>)`]
 Zählt, wie oft sich ein Wert in einer Liste befindet. 
 
 ```py live_py slim
@@ -152,8 +142,7 @@ for i in [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6]:
 ## Elemente abfragen
 
 
-:::def
-### Erstes Element: `<liste>[0]`
+:::def[Erstes Element: `<liste>[0]`]
 
 ```py live_py slim
 noten = [4.5, 5, 3.5, 5.5]
@@ -165,8 +154,7 @@ Bemerken Sie: es wird zuerst überprüft, ob die Liste überhaupt ein Element en
 :::
 
 
-:::def
-### Letztes Element `<liste>[-1]`
+:::def[Letztes Element `<liste>[-1]`]
 
 ```py live_py slim
 noten = [4.5, 5, 3.5, 5.5]
@@ -177,8 +165,7 @@ if len(noten) > 0:
 ```
 :::
 
-:::def
-### Fehler: IndexError
+:::def[Fehler: IndexError]
 Fragt man einen Index ab, den es nicht gibt (weil es zu wenige Elemente in der Liste hat), so entsteht ein `IndexError`.
 
 Beispiel: 
@@ -192,8 +179,7 @@ noten[4] = 6
 
 ## Elemente Verändern
 
-:::def
-### Zuordnung: `<liste>[index] = <wert>`
+:::def[Zuordnung: `<liste>[index] = <wert>`]
 
 Ein Element in der Liste kann durch eine Zuordnung verändert werden. Im untenstehenden Beispiel werden alle ungenügenden Noten auf eine `5` gesetzt.
 ```py live_py slim
@@ -207,8 +193,7 @@ print(noten)
 
 ## Elemente Hinzufügen/Entfernen
 
-::::def
-### hinzufügen: `<liste>.append(<wert>)`
+::::def[hinzufügen: `<liste>.append(<wert>)`]
 
 `append` fügt ein neues Element am **Ende** der Liste hinzu.
 
@@ -229,8 +214,7 @@ print('Neu', noten)
 :::
 ::::
 
-:::def
-### entfernen: `<liste>.pop(<index>)`
+:::def[entfernen: `<liste>.pop(<index>)`]
 Entfernt das Element an der Stelle `index` und gibt dieses zurück:
 
 ```py live_py slim
@@ -241,8 +225,7 @@ print('Noten', noten)
 ```
 :::
 
-:::def
-### Aufsteigend sortieren `<liste>.sort()`
+:::def[Aufsteigend sortieren `<liste>.sort()`]
 ```py live_py slim
 noten = [3.5, 6, 5, 4, 4.5, 5]
 

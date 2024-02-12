@@ -13,8 +13,7 @@ import RGB from "@site/src/components/VisualizationTools/ColorEncoding/RGB";
 
 ## Bewegungen
 
-:::def
-### `forward(n)` `fd(n)`
+:::def[`forward(n)` `fd(n)`]
 Bewegt die Turtle `n` Pixel nach vorne.
 
 ```py live_py slim
@@ -24,8 +23,7 @@ forward(100)
 ```
 :::
 
-:::def
-### `backward(n)` `back(n)` `bk(n)`
+:::def[`backward(n)` `back(n)` `bk(n)`]
 Bewegt die Turtle `n` Pixel rückwärts.
 
 ```py live_py slim
@@ -35,8 +33,7 @@ backward(100)
 ```
 :::
 
-:::def
-### `left(angle)` `lt(angle)`
+:::def[`left(angle)` `lt(angle)`]
 Dreht die Turtle `angle` Grad nach links.
 
 ```py live_py slim
@@ -46,8 +43,7 @@ left(90)
 ```
 :::
 
-:::def
-### `right(angle)` `rt(angle)`
+:::def[`right(angle)` `rt(angle)`]
 Dreht die Turtle `angle` Grad nach rechts.
 
 ```py live_py slim
@@ -57,8 +53,7 @@ right(90)
 ```
 :::
 
-:::def
-### `goto(x, y)`
+:::def[`goto(x, y)`]
 Bewegt die Turtle zur Position mit den Koordinaten (`x`, `y`).
 
 **Beispiel**: `goto(50, 100)`
@@ -70,8 +65,7 @@ goto(50, -50)
 ```
 :::
 
-:::def
-### `home()`
+:::def[`home()`]
 Setzt die Turtle auf die Ursprungsposition `(0, 0)` zurück und setzt die Orientierung der Turtle auf rechts ▶️.
 
 ```py live_py slim
@@ -88,8 +82,7 @@ home()
 ```
 :::
 
-:::def
-### `setheading(to_angle)` `seth(to_angle)`
+:::def[`setheading(to_angle)` `seth(to_angle)`]
 Dreht die Turtle, bis der angegebene Winkel erreicht ist.
 
 <div className="small-table">
@@ -112,8 +105,7 @@ setheading(120)
 
 ## Stift
 
-:::def
-### `penup()` `up()` `pu()`
+:::def[`penup()` `up()` `pu()`]
 Hebt den Stift an - beim Bewegen der Turtle wird keine Spur gezeichnet.
 
 ```py live_py slim
@@ -123,8 +115,7 @@ penup()
 forward(100)
 ```
 :::
-:::def
-### `pendown()` `down()` `pd()`
+:::def[`pendown()` `down()` `pd()`]
 Senkt den Stift - beim Bewegen der Turtle wird wieder eine Spur gezeichnet.
 
 ```py live_py slim
@@ -136,8 +127,7 @@ pendown()
 forward(100)
 ```
 :::
-:::def
-### `isdown()`
+:::def[`isdown()`]
 Überprüft, ob der Stift aktuell gesenkt ist und gibt das Resultat als `True` (=Stift gesenkt) oder `False` (=Stift oben) zurück.
 
 ```py live_py slim
@@ -148,8 +138,7 @@ if isdown():
 forward(100)
 ```
 :::
-:::::def
-### `pencolor(color)`
+:::::def[`pencolor(color)`]
 Legt die Stiftfarbe fest. Der Parameter `color` enthält Text, die Farbe muss also mit Anführungszeichen umgeben sein.
 
 Beispiel:
@@ -220,8 +209,7 @@ Mehr dazu hier 👉 https://docs.python.org/3/library/turtle.html#turtle.color
 :::
 :::::
 
-:::def
-### `pensize(size)`
+:::def[`pensize(size)`]
 Legt die Stiftdicke `size` fest. Standard: `pensize(1)`
 
 ```py live_py slim
@@ -232,8 +220,7 @@ forward(100)
 ```
 :::
 
-:::def
-### `dot()` `dot(diameter)`
+:::def[`dot()` `dot(diameter)`]
 Zeichnet einen Punkt an der aktuellen Position mit dem angegebenen Durchmesser `diameter`. Wenn kein Durchmesser angegeben wird, verwendet es standardmässig das doppelte der aktuellen Stiftdicke (`pensize`), aber mindestens einen Durchmesser von `5`.
 ```py live_py slim
 from turtle import *
@@ -244,8 +231,7 @@ dot(20)
 ```
 :::
 
-:::def
-### `circle(radius)`
+:::def[`circle(radius)`]
 Zeichnet einen Kreis mit dem angegebenen `radius`.
 
 
@@ -256,8 +242,7 @@ circle(100)
 ```
 :::
 
-:::def
-### `circle(radius, angle)`
+:::def[`circle(radius, angle)`]
 Zeichnet einen Kreisbogen mit dem angegebenen `radius` und `angle`.
 
 **Beispiel**
@@ -272,8 +257,7 @@ circle(50, 180)
 
 ## Füllen
 
-:::def
-### `fillcolor(color)`
+:::def[`fillcolor(color)`]
 Legt die `color` für das Füllen von geschlossenen Pfaden fest.
 
 [Farbpalette](#stift)
@@ -291,8 +275,7 @@ end_fill()
 ```
 :::
 
-:::def
-### `begin_fill()`
+:::def[`begin_fill()`]
 Startet einen geschlossenen Pfad.
 
 ```py live_py slim
@@ -307,8 +290,7 @@ end_fill()
 ```
 :::
 
-:::def
-### `end_fill()`
+:::def[`end_fill()`]
 Endet die Aufzeichnung des Pfades und schliesst diesen.
 
 **Beispiel**
@@ -328,8 +310,7 @@ end_fill()
 
 ## Aussehen und Geschwindigkeit
 
-:::def
-### `shape(form)`
+:::def[`shape(form)`]
 
 Ändert die Form der Turtle. Für den Parameter `form` können folgende Werte verwendet werden:
 
@@ -348,8 +329,7 @@ shape('turtle')
 
 :::
 
-:::def
-### `hideturtle()`
+:::def[`hideturtle()`]
 Macht die Turtle unsichtbar.
 
 ⚠️ Der Stift wird durch das Verstecken nicht automatisch angehoben.
@@ -362,8 +342,7 @@ forward(100)
 ```
 :::
 
-:::def
-### `showturtle()`
+:::def[`showturtle()`]
 Zeigt die Turtle wieder an.
 
 ⚠️ Der Stift wird durch das Anzeigen nicht automatisch wieder abgesetzt.
@@ -383,8 +362,7 @@ forward(50)
 ```
 :::
 
-:::def
-### `speed(v)`
+:::def[`speed(v)`]
 
 Legt die Geschwindigkeit `v` der Turtle fest.
 

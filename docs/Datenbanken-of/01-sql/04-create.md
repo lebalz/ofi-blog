@@ -6,8 +6,7 @@ sidebar_custom_props:
 
 ## Datenbank erstellen
 
-:::def
-### `CREATE DATABASE`
+:::def[`CREATE DATABASE`]
 Mit dem Befehl `CREATE DATABASE` kann eine neue Datenbank erstellt werden.
 
 ```sql
@@ -15,8 +14,7 @@ CREATE DATABASE ef_reto;
 ```
 :::
 
-::::def
-### `DROP DATABASE`
+::::def[`DROP DATABASE`]
 Die Datenbank kann mit dem Befehl `DROP DATABASE` auch wieder gelöscht werden:
 
 ```sql
@@ -43,8 +41,7 @@ Erstellen Sie eine eigene Datenbank mit nach folgendem Schema `ef_name`, wobei S
 
 ## Tabellen erstellen
 
-:::def
-### `CREATE TABLE`
+:::def[`CREATE TABLE`]
 Tabellen werden mit dem Befehl `CREATE TABLE` erstellt. Die Spalten werden mit dem Namen und dem Datentyp definiert.
 
 ```sql
@@ -61,8 +58,7 @@ CREATE TABLE persons (
 
 ### Datensätze einfügen
 
-:::def[]
-### `INSERT INTO`
+:::def[ `INSERT INTO`]
 Mit dem Befehl `INSERT INTO` können Datensätze in die Tabelle eingefügt werden.
 
 ```sql
@@ -94,8 +90,7 @@ Was passiert, wenn Sie nun nochmals die gleichen Datensätze einfügen?
 
 ### Tabellen löschen
 
-:::def
-### `DROP TABLE`
+:::def[`DROP TABLE`]
 Um eine Tabelle zu löschen, wird der Befehl `DROP TABLE` verwendet.
 
 ```sql

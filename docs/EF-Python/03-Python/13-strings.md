@@ -7,13 +7,11 @@ sidebar_custom_props:
 
 Texte in Python können auf unterschiedliche Art und weise erzeugt werden.
 
-:::def
-### `'text'`, `"text"`
+:::def[`'text'`, `"text"`]
 ob einfache- `'` oder doppelte `"` Anführungszeichen: Beides ist gleichbedeutend!
 :::
 
-:::def
-### `f''`, `f""` Formatierter Text
+:::def[`f''`, `f""` Formatierter Text]
 Formatierter Text kann mehrere Texte zusammenfügen und dabei auch Zahlen oder Listen einfügen. Inhalt in geschweiften Klammern wird zuerst ausgewertet und dann dort abgedruckt.
 
 ```py live_py slim
@@ -23,8 +21,7 @@ print(f'Hallo {name}, du bist heute {2022 - jahrgang} Jahre alt')
 ```
 :::
 
-:::::def
-### `'''`, `"""`, `f'''`, `f"""` Mehrzeiliger Text
+:::::def[`'''`, `"""`, `f'''`, `f"""` Mehrzeiliger Text]
 
 Möchte man Text über mehrere Zeilen schreiben, kann entweder das Zeichen für eine neue Zeile (`\n`) verwendet werden, oder ein mehrzeiligen String mit `'''`  oder `"""` starten. Ebenso können mehrzeilige formatierte Blöcke aussehen. 
 
@@ -154,8 +151,7 @@ print(vorname[0]) # erster Buchstabe
 print(vorname[-1]) # letzter Buchstabe
 ```
 
-:::def
-### `str[start:ende:schrittweite]` Zugriff
+:::def[`str[start:ende:schrittweite]` Zugriff]
 
 Es ist auch möglich, einen Bereich anzugeben. Wie beim `range()` Befehl, gibt man den Startwert und die obere Grenze an, die aber selber nicht erreicht wird.
 
@@ -261,8 +257,7 @@ Hier wird die **Methode** `.find()` *auf den String* `'hallo, welt'` aufgerufen,
 
 Diese Methoden bieten Hilfestellung, wenn wir eine spezifische Information über einen String haben wollen.
 
-:::def
-### `.startswith(wort)`
+:::def[`.startswith(wort)`]
 
 Beantwortet die Frage ob ein String mit einem `wort` (oder auch nur einem Buchstaben) **beginnt** mit einem Boolean.
 
@@ -275,8 +270,7 @@ print(a.startswith('h'))
 ```
 :::
 
-:::def
-### `.endswith(wort)`
+:::def[`.endswith(wort)`]
 
 Beantwortet die Frage ob ein String mit einem `wort` (oder auch nur einem Buchstaben) **endet** mit einem Boolean.
 
@@ -289,8 +283,7 @@ print(a.endswith(' ')) # auch Leerzeichen sind Zeichen!
 ```
 :::
 
-:::def
-### `.isalpha()`
+:::def[`.isalpha()`]
 
 Beantwortet die Frage, ob ein String **nur aus Buchstaben** besteht mit einem Boolean.
 
@@ -303,8 +296,7 @@ else:
 ```
 :::
 
-:::def
-### `.isnumeric()`
+:::def[`.isnumeric()`]
 
 Beantwortet die Frage, ob ein String **nur aus Zahlen** besteht mit einem Boolean.
 
@@ -317,8 +309,7 @@ else:
 ```
 :::
 
-:::def
-### `.find(wort)`
+:::def[`.find(wort)`]
 Findet ein `wort` im String und gibt den Startindex des erstmaligen Auftretens zurück. Bei `'Hallo'.find('l')` wäre dies also der Startindex `2`, da bei `'Hallo'[2]` erstmalig ein `l` vorkommt.
 
 Wird das `wort` nicht gefunden, so gibt die Method `-1` zurück.
@@ -337,8 +328,7 @@ else:
 
 Wie vorhin festgestellt, sind Strings **immutable**, können daher nicht verändert werden. Um dennoch möglichst einfach Operationen auf Texten auszuführen, wie etwa alles gross- oder kleinzuschreiben, gibt es Methoden, welche einen veränderten String zurückgeben, sich selber aber nicht verändern.
 
-:::def
-### `.upper()`
+:::def[`.upper()`]
 Schreibt den String in Grossbuchstaben, Sonderzeichen werden nicht verändert.
 
 ```py live_py slim
@@ -348,8 +338,7 @@ print(original, gross)
 ```
 :::
 
-:::def
-### `.lower()`
+:::def[`.lower()`]
 Schreibt den String in Kleinbuchstaben, Sonderzeichen werden nicht verändert.
 
 ```py live_py slim
@@ -359,8 +348,7 @@ print(original, klein)
 ```
 :::
 
-:::def
-### `.strip(<zeichen>)`
+:::def[`.strip(<zeichen>)`]
 Entfernt jeglichen *White-Space* ("weisse Zeichen", daher Leerschläge, Tabulatoren, Neue Zeilen)  entfernt Leerschläge am Start und Ende des Strings. 
 
 
@@ -388,8 +376,7 @@ print('Vorname:', vorname)
 ```
 :::
 
-:::def
-### `.replace(wort, ersetzen)`
+:::def[`.replace(wort, ersetzen)`]
 Ersetzt **alle** `wort`e im String mit dem Parameter `ersetzen`.
 
 **Achtung**: `ersetzen` muss auch ein String sein, `.replace('fünf', 5)` gibt einen Fehler.
@@ -428,8 +415,7 @@ Erweitern Sie anschliessend Ihr Programm so, dass eine Benutzer:in einen Satz ei
 
 Manchmal hilft es, Strings in Listen umzuwandeln und manchmal möchten wir eine Liste von Buchstaben oder Strings in einen String zu vereinen. 
 
-:::def
-### `.join(liste)`
+:::def[`.join(liste)`]
 
 benötigt als Parameter eine Liste von Strings. Diese werden dann zu einem ganzen String aneinandergehängt. Das Bindeglied bildet der String, auf dem die Methode aufgerufen wurde.
 ```py live_py slim
@@ -444,8 +430,7 @@ print('Heute ist der ', datum)
 ```
 :::
 
-:::def
-### `.split(zeichen)`
+:::def[`.split(zeichen)`]
 
 `.split()` ist die umgekehrte Aktion von `.join()`. Die Methode nimmt als Parameter ein `zeichen` [typ String] und trennt anschliessend den String überall, wo das `zeichen` vorkommt. Dabei werden die `zeichen` selbst entfernt.
 

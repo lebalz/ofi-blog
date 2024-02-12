@@ -7,8 +7,7 @@ sidebar_custom_props:
 
 Oft sollen ergebnisse in einer zusammengefassten Form ausgegeben werden. So interessiert einem bspw. oft, wie viele Datensätze in einer Tabelle vorhanden sind, oder wie hoch der Durchschnittswert einer Spalte ist. Hierfür gibt es die sogenannten __Aggregatfunktionen__.
 
-:::def
-### `COUNT(*)`
+:::def[`COUNT(*)`]
 
 Zählt die Anzahl der Datensätze in einer Tabelle.
 
@@ -21,8 +20,7 @@ SELECT COUNT(*) FROM legodudes;
 :::
 
 
-:::def
-### `SUM()`
+:::def[`SUM()`]
 
 Addiert die Werte einer Spalte.
 
@@ -34,8 +32,7 @@ SELECT SUM(lieblingszahl) FROM legodudes;
 ```
 :::
 
-:::def
-### `AVG()`
+:::def[`AVG()`]
 
 Berechnet den Mittelwert der Werte einer Spalte.
 
@@ -47,8 +44,7 @@ SELECT AVG(lieblingszahl) FROM legodudes;
 ```
 :::
 
-:::def
-### `MAX()`
+:::def[`MAX()`]
 
 Gibt den maximalen Wert einer Spalte zurück.
 
@@ -60,8 +56,7 @@ SELECT MAX(lieblingszahl) FROM legodudes;
 ```
 :::
 
-:::def
-### `MIN()`
+:::def[`MIN()`]
 
 Gibt den minimalen Wert einer Spalte zurück.
 
@@ -81,8 +76,7 @@ WHERE lieblingszahl = (SELECT MAX(lieblingszahl) FROM legodudes);
 ```
 
 
-:::def
-### `STRING_AGG(column, delimiter [ORDER BY column [ASC|DESC]])`
+:::def[`STRING_AGG(column, delimiter [ORDER BY column [ASC|DESC]])`]
 
 Mit `STRING_AGG` lassen sich Texte aus mehreren Zeilen zu einem Text zusammenfügen. Der `delimiter` ist das Trennzeichen, das zwischen den einzelnen Texten eingefügt wird.
 
@@ -125,8 +119,7 @@ WHERE alter = (SELECT MIN(alter) FROM legodudes);
 ## Group By
 Oft interessiert aber nicht nur die Anzahl der Datensätze, sondern die Anzahl der Datensätze pro Kategorie. Hierfür gibt es den `GROUP BY`-Befehl.
 
-::::def
-### `GROUP BY`
+::::def[`GROUP BY`]
 
 Mit `GROUP BY` lassen sich Datensätze nach einer oder mehrerer Spalten gruppieren. Die Aggregatfunktionen werden dann auf die einzelnen Gruppen angewendet.
 

@@ -47,8 +47,7 @@ In Python lassen sich Texte verändern, zusammenfügen und trennen.
 
 Texte können verknüpft werden - entweder mit `+` oder indem eine spezielle Syntax für die Verknüpfung von Textteilen verwendet wird.
 
-:::def
-### `'hallo ' + 'bello'`
+:::def[`'hallo ' + 'bello'`]
 
 Mit `+` lassen sich zwei gleichwertige Datentypen (daher, **entweder** zwei Zahlen, **oder** zwei Texte, **nicht jedoch** Texte und Zahlen, verknüpfen)
 
@@ -58,8 +57,7 @@ print('Hallo ' + 'Biber')
 :::
 
 
-:::def
-### `f''`, `f'Hallo, Nr. {7}'`
+:::def[`f''`, `f'Hallo, Nr. {7}'`]
 
 Ein formatierter Text wird in Python mit `f'` (statt nur `'`) gestartet. Anschliessend können geschweifte Klammern verwendet werden, welche durch deren Inhalt ersetzt werden. Hier Spielt es keine Rolle, ob Texte oder Zahlen verwendet werden.
 
@@ -71,8 +69,7 @@ print(f'Hallo {name}, ich bin {15} jährig.')
 
 ## Gross- und Kleinschreibung
 
-:::def
-### `.upper()`: Grossbuchstaben
+:::def[`.upper()`: Grossbuchstaben]
 
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
@@ -82,8 +79,7 @@ print(gross)
 ```
 :::
 
-:::def
-### `.lower()`: Kleinbuchstaben
+:::def[`.lower()`: Kleinbuchstaben]
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
 klein = text.lower()
@@ -94,8 +90,7 @@ print(klein)
 
 ## Text ersetzen
 
-:::def
-### `.replace(alt, neu)`
+:::def[`.replace(alt, neu)`]
 Mit `replace(alt, neu)` werden **alle** `alt`en Textstücke durch die `neu`en ersetzt. Der Text wird dabei nicht direkt verändert, sondern nur der Rückgabewert (=das Resultat) ist verändert.
 
 ```py live_py slim

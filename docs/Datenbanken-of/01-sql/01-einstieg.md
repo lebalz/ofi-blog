@@ -379,8 +379,7 @@ FROM haustiere;
 ### Texte verändern
 
 
-:::def[]
-### `CONCAT(text1, text2, ...)` oder `text1 || text 2`
+:::def[ `CONCAT(text1, text2, ...)` oder `text1 || text 2`]
 Mit dem Schlüsselwort `CONCAT` können Texte zusammengefügt werden:
 
 ```sql
@@ -392,8 +391,7 @@ SELECT 'Hallo ' || name FROM persons;
 
 :::details[⭐ `Substring` und `Replace`]
 
-:::def
-### `SUBSTRING(text, start, [length])`
+:::def[`SUBSTRING(text, start, [length])`]
 
 Mit dem Schlüsselwort `SUBSTRING` können Textausschnitte ausgegeben werden, wobei der `start` Index angibt, welches der erste Buchstaben ist. **Achtung** - hier hat der erste Buchstabe im Gegensatz zu Python den Index __1__! Optional kann mit dem Parameter `length` die Länge des Ausschnitts angegeben werden.
 
@@ -406,8 +404,7 @@ SELECT SUBSTRING(name, 1, 5) FROM persons;
 ```
 :::
 
-:::def
-### `REPLACE(text, old, new)`
+:::def[`REPLACE(text, old, new)`]
 
 Mit dem Schlüsselwort `REPLACE` können Textteile ersetzt werden
 

@@ -32,8 +32,7 @@ Man kann in Python auch zwei- oder gar *n*-dimensionale Listen haben. Für Pytho
 Für jede zusätzlich Dimension wird eine weitere Verschachtelungsstufe hinzugefügt.
 Bei zwei Dimensionen kann man auf diese Weise in Python Matrizen, bzw. Tabellen mit mehreren Zeilen und Spalten darstellen.
 
-:::def
-### 3 x 3 Matrix
+:::def[3 x 3 Matrix]
 Eine Matrix ist eine Liste von Listen
 ```py live_py slim
 matrix = [
@@ -45,8 +44,7 @@ print(matrix)
 ```
 :::
 
-:::def
-### Zugriff `[][]`
+:::def[Zugriff `[][]`]
 Auf einzelne Element in der Matrix zugreifen
 
 ```py live_py slim
@@ -69,8 +67,7 @@ print('Zeile 3, Spalte 1:', matrix[2][0])
 ```
 :::
 
-:::def[]
-### Schleife über Zeilen
+:::def[ Schleife über Zeilen]
 
 Schleife über einzelne Zeilen :mdi[arrow-right] Zeilen sind wieder Listen
 ```py live_py slim
@@ -135,8 +132,7 @@ pprint([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
 :::
 
-:::def
-### Durch alle Elemente Iterieren
+:::def[Durch alle Elemente Iterieren]
 
 Dazu wird eine **verschachtelte Schleife** über Zeilen und Spalten verwendet.
 ```py live_py slim

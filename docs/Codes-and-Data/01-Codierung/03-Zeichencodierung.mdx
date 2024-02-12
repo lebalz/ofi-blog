@@ -27,8 +27,7 @@ Die ASCII-Codierung enthält noch keine Umlaute, weshalb mit [Latin 1, 256 Zeich
 
 Auch in Python werden im Hintergrund Zahlen für Buchstaben und Binärcodes für Dezimalzahlen verwendet.  In Python lässt sich die sog. *Ordnungszahl* eines Buchstabens mit der Funktion `ord` einfach in Erfahrung bringen.
 
-:::def
-### `ord(<Buchstabe>)`
+:::def[`ord(<Buchstabe>)`]
 Die sogenannte **Ordnungszahl** für einen (einzelnen!) Buchstaben kann mit dem Befehl `ord` bestimmt werden.
 ```py live_py slim
 ord_A = ord('A')
@@ -38,8 +37,7 @@ print('Ordnungszahl a:', ord_a)
 ```
 :::
 
-::::def
-### `bin(<Zahl>)`
+::::def[`bin(<Zahl>)`]
 Eine Dezimalzahl kann in eine Binär-Zahl umgewandelt werden.
 ```py live_py slim
 binaer = bin(65)
@@ -51,8 +49,7 @@ Mit dem `0b` zu Beginn zeigt Python an, dass es sich um eine Binärzahl handelt.
 :::
 ::::
 
-::::def
-### `int(<Binärzahl>)`, `int(<BinärZahl>, 2)`
+::::def[`int(<Binärzahl>)`, `int(<BinärZahl>, 2)`]
 Der Befehl `int` (Abkürzung für *Integer*, also *Ganze Zahl*) kann eine Binärzahl in eine Dezimalzahl übersetzen. Dabei gibt es mehrere Möglichkeiten:
 
 ```py live_py slim
@@ -73,8 +70,7 @@ Der zweite Parameter gibt die Basis des Zahlensystems an, hier also für Binär 
 
 ::::
 
-:::def
-### `chr(<Zahl>)`
+:::def[`chr(<Zahl>)`]
 Gibt den zu einer Ordnungszahl gehörenden Buchstaben zurück.
 ```py live_py slim
 buchstabe = chr(77)

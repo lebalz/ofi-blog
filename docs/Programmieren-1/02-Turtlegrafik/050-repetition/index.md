@@ -207,8 +207,7 @@ for i in range(zahl):
 
 ## Programmieren (am PC)
 
-:::def
-### Text vervielfachen
+:::def[Text vervielfachen]
 In Python kann Text verfielfältigt werden, indem er mit der gewünschten Anzahl wiederholungen multipliziert wird:
 
 ```py live_py slim

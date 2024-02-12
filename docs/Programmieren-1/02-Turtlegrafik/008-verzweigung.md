@@ -79,8 +79,7 @@ Bei der Überprüfung auf Gleichheit werden zwei Gleichheitszeichen `==` geschri
 
 In Python lassen sich Ausgaben nicht nur mit `print` sondern auch mit dem Befehl `alert()` (aus der Bibliothek `browser`) in einer Ausgabebox anzeigen. *Die Ausgabe mit `alert` wird hier verwendet, weil die Online-Version von Python die Ausgaben mit `print` erst am Ende des Programms anzeigt wird*.
 
-:::def
-### `alert`
+:::def[`alert`]
 Mit dem Befehl `alert` aus der Bibliothek `browser` können **Ausgabeboxen** erzeugt werden.
 
 ```py live_py slim
@@ -117,8 +116,7 @@ Wenn die Zahl gefunden wurde, soll die Spieler:in nicht mehr nach einer Eingabe 
 <Hint title={<span><code>break</code></span>}>
 
 
-:::def
-### `break`
+:::def[`break`]
 Mit `break` kann eine Wiederholter Codeblock beendet werden. Die Ausführung geht mit der nächsten Zeile nach dem Codeblock weiter.
 
 **Beispiel**

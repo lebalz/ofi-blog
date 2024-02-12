@@ -50,8 +50,7 @@ print('Von Zehn rückwärts:', ten2zero)
 
 ### Listen mit *List Comprehension* erzeugen
 
-:::def
-### Liste mit `1` initialisieren
+:::def[Liste mit `1` initialisieren]
 Liste mit 10 Elementen. Alle enthalten den Wert 1.
 ```py live_py slim
 # Wert 1 in Liste setzen
@@ -62,8 +61,7 @@ print(ones)
 ```
 :::
 
-:::def
-### Zahlen von 0 bis 9
+:::def[Zahlen von 0 bis 9]
 Liste mit den Zahlen 0 bis 9 initialisieren:
 ```py live_py slim
 #  Aktuellen Wert des Schleifenzählers i setzen
@@ -74,8 +72,7 @@ print(zahlen)
 ```
 :::
 
-:::def
-### Gerade Zahlen
+:::def[Gerade Zahlen]
 Liste mit 10 geraden Zahlen, beginnend bei 0.
 ```py live_py slim
 gerade_zahlen = [2*i for i in range(10)]
@@ -120,8 +117,7 @@ print(twenty2ten)
 </Solution>
 
 :::
-:::def
-### `5x10`-Matrix
+:::def[`5x10`-Matrix]
 `5x10`-Matrix von lauter `0` (5 Zeilen, 10 Spalten)
 ```py live_py slim
 _print = print
@@ -139,8 +135,7 @@ print(zeros_5x10)
 ```
 :::
 
-:::def
-### `5x10`-Matrix, Durchnummeriert
+:::def[`5x10`-Matrix, Durchnummeriert]
 Elemente haben aufsteigende Werte, beginnend bei `0`.
 Der
 ```py live_py slim

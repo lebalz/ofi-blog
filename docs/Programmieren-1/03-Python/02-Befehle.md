@@ -5,10 +5,7 @@ sidebar_custom_props:
 
 # Python Befehle
 
-### Alert
-
-:::def
-### `alert`
+:::def[`alert`]
 Mit dem Befehl `alert` aus der Bibliothek `browser` können **Ausgabeboxen** erzeugt werden.
 
 ```py live_py slim
@@ -17,11 +14,7 @@ alert('Hello!')
 ```
 :::
 
-
-### Formatierter Text
-
-:::def
-### formatierter Text `f''`
+:::def[formatierter Text `f''`]
 Variablenwerte lassen sich mit geschweiften Klammern `{}` in einen Text einfügen. Dazu muss zu Beginn des Textes ein kleines `f` (für "fromatierten Text") hinzugefügt werden.
 
 ```py live_py slim
@@ -30,10 +23,7 @@ print(f'Hallo {name}')
 ```
 :::
 
-### Break
-
-:::def
-### `break`
+:::def[`break`]
 Mit `break` kann eine Wiederholter Codeblock beendet werden. Die Ausführung geht mit der nächsten Zeile nach dem Codeblock weiter.
 
 **Beispiel**

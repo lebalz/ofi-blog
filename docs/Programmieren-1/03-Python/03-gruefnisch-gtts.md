@@ -45,8 +45,7 @@ Das Ziel ist, einen vorgegebenen Text auf Grfünisch zu übersetzen und später 
 
 ### Gross- und Kleinschreibung
 
-:::def
-### `.upper()`: Grossbuchstaben
+:::def[`.upper()`: Grossbuchstaben]
 
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
@@ -56,8 +55,7 @@ print(gross)
 ```
 :::
 
-:::def
-### `.lower()`: Kleinbuchstaben
+:::def[`.lower()`: Kleinbuchstaben]
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
 klein = text.lower()

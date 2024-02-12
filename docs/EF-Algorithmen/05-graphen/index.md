@@ -10,8 +10,7 @@ sidebar_custom_props:
 
 Wenn man ein Problem – z.B. der schnellste Weg von A nach B – mit dem Computer lösen will, so muss man zuerst die Daten so aufbereiten, dass der Computer diese verstehen kann: wir müssen abstrahieren. Dabei muss das was für die Lösung des Problems wichtig ist in einer Datenstruktur festgehalten werden. Häufig werden dabei sogenannte Graphen verwendet:
 
-:::def
-### Definition: Graph
+:::def[Definition: Graph]
 
 Ein Graph ist eine abstrakte Struktur, die eine Menge von Objekten zusammen mit den zwischen diesen Objekten bestehenden Verbindungen repräsentiert.
 Die mathematischen Abstraktionen der Objekte werden dabei **Knoten** des Graphen genannt.
@@ -20,8 +19,7 @@ Die paarweisen Verbindungen zwischen Knoten heissen **Kanten**. Die Kanten könn
 
 Z.B. kann das U-Bahnnetz einer Stadt als Graph angesehen werden.
 
-:::def
-### Definition: Baum
+:::def[Definition: Baum]
 
 Ein Baum ist ein spezieller Typ von Graph, der zusammenhängend ist und keine geschlossenen Pfade, also Zyklen der Länge grösser oder gleich 3, enthält. Bei allen Bäumen ist die Anzahl der Knoten offensichtlich um 1 grösser als die Anzahl der Kanten.
 :::

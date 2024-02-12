@@ -247,8 +247,7 @@ for i in range(10):
 <details>
 <summary>⭐️ Zusatzparameter von <code>range()</code></summary>
 
-:::def
-### `range(start, ende, schritt)`
+:::def[`range(start, ende, schritt)`]
 Der Befehl `range` kann mit bis zu drei Parametern arbeiten, wobei `start` der erste verwendete Wert, `ende` das obere ganzzahlige Limit angibt, welches aber selber nie erreicht wird! und `schritt` den Abstand zwischen zwei Zahlen angibt.
 ```py live_py slim
 for i in range(2, 11, 3):

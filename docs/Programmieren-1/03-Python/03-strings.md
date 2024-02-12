@@ -9,8 +9,7 @@ In Python lassen sich Texte verändern.
 
 ## Gross- und Kleinschreibung
 
-:::def
-### `upper()`
+:::def[`upper()`]
 
 ```py live_py slim
 text = "Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch."
@@ -21,8 +20,7 @@ print(gross)
 :::
 
 
-:::def
-### `lower()`
+:::def[`lower()`]
 
 ```py live_py slim
 text = "Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch."
@@ -34,8 +32,7 @@ print(klein)
 
 ## Text ersetzen
 
-:::def
-### `replace()`
+:::def[`replace()`]
 Mit replace(alt, neu) können Text-Teile in einem Text ersetzt werden.
 
 ```py live_py slim
