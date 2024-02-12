@@ -16,7 +16,7 @@ Die Python Sprache setzt sich aus folgenden Elementen zusammen:
 - **Befehle** (Unterprogramme, *Funktionen*): vordefinierte Befehle, die mit einer runden Klammer aufgerufen werden. z.B. `print('hello')`
 - **Variablen**: Namen, die einen Wert enthalten
 
-:::caution[Häufigste Ursachen]
+:::warning[Häufigste Ursachen]
 - Fehler bei **Schlüsselwörtern**
 - vergessene oder falsch eingesetzte **Feldtrenner** (z.B. `:`)
 - Falsche Anordnung von Schlüsselwörtern/Feldtrennern
@@ -97,7 +97,7 @@ Die Fehlermeldung gibt den Hinweis, was falsch ist.
 
 Liegt ein Fehler vor, der nicht bei Schlüsselwörtern (oder deren Anordnung) vorliegt, so handelt es sich oft um einen Namens-Fehler (`NameError`). Es wird also versucht, ein Unterprogramm zu öffnen, das aber unter diesem Namen nicht gefunden werden kann.
 
-:::caution[Häufigste Ursachen]
+:::warning[Häufigste Ursachen]
 Die häufigste Ursachen von `NameError`s sind
 - Vertipper im Namen des Befehls
 - nicht `importierte` Befehle (z.B. `from turtle import *` fehlt)
@@ -159,7 +159,7 @@ Zwei Namensfehler, die Fehlermeldung sagt die Zeilennummer und schlägt den rich
 
 Python erwartet nach jedem Doppelpunkt `:`, dass ein **eingerückter** Codeblock kommt. Falls kein eingerückter Codeblock gefunden wird, entsteht ein `IndentationError`. Wird jedoch fälschlicherweise eine Zeile eingerückt, so wird ebenfalls dieser Fehler angezeigt.
 
-:::caution[Häufigste Ursachen]
+:::warning[Häufigste Ursachen]
 - Die nächste Zeile nach einem Doppelunkt `:` ist nicht eingerückt
 - Eine Zeile ist fälschlicherweise eingerückt
 - ein Leerschlag zu wenig eingerückt 
@@ -233,7 +233,7 @@ Sobald aber das Programm ausgeführt wird, macht es nicht das, was Sie sich gew�
 
 Diese Fehler sind im allgemeinen am schwierigsten zu finden. Ein häufiger Fehler ist aber, dass man bei einem Befehl die runden Klammern am Ende vergisst - für Python kein Problem, da es den Befehl kennt, jedoch nicht dazu aufgefordert wird, diesen auszuführen. 
 
-:::caution[Häufigste Ursachen]
+:::warning[Häufigste Ursachen]
 Checkliste für Logikfehler
 - sind bei Befehlen die runden Klammern `()` am Ende angegeben?
 :::

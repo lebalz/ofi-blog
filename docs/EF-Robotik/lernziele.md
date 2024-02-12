@@ -17,14 +17,14 @@ Vorbereitung
 : Eigene Programme schreiben, Aufgaben ausdenken/erfinden
 
 
-:::note Zustandsmaschinen (inkl. Zustandsdiagramme und State-Event-Tabellen)
+:::note[Zustandsmaschinen (inkl. Zustandsdiagramme und State-Event-Tabellen)]
 - Sie können erklären, was man unter einer Zustandsmaschine versteht
 - Sie können selber Zustandsmaschinen für Ihre Roboter entwerfen und in einem State-Event-Diagramm, oder einem Zustandsdiagramm dokumentieren
 - Sie können eine Zustandsmaschine mit Python programmieren
 - Sie haben Ihr Wissen bei der Realisierung eines Pendelbuses und verschiedener kleiner Übungsaufgaben mit Micro\:Bit angewendet
 :::
 
-:::note Aufgabentypen
+:::note[Aufgabentypen]
 - Zu einer textuellen Beschreibung ein Zustandsdiagramm oder eine State-Event-Tabelle zeichnen
 - Ein gegebenes Zustandsdiagramm in Python als Zustandsmaschine programmieren
 :::

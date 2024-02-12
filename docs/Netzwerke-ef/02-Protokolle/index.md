@@ -122,6 +122,6 @@ Zwischenzustände
 Transitionen
 : Die Pfeile sind die möglichen **Transitionen**, wobei jeweils steht, durch welche empfangene Nachricht die Transition ausgelöst wird und, nach dem /, welche Nachricht allenfalls als Antwort gesendet wird.
 
-:::caution[Vollständigkeit]
+:::warning[Vollständigkeit]
 Das Diagramm ist nicht vollständig. Die mit __...__ markierten Zwischenzustände sollen dies andeuten.
 :::

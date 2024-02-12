@@ -53,6 +53,6 @@ Nicht Prüfungsrelevante Kapitel:
 - ~~Sie wissen, was wie ein EAN-13 Code aufgebaut ist und wie die Prüfsumme berechnet wird.~~
 :::
 
-:::caution[Unterrichtsinhalte]
+:::warning[Unterrichtsinhalte]
 An der Prüfung können auch Inhalte/Diskussionen/Experimente zu den obigen Themen aufgegriffen werden, welche nur im Unterricht behandelt/diskutiert wurden.
 :::

@@ -43,7 +43,7 @@ Abwurfhöhe/Körpergrösse
 Weite
 : <span style={{background: 'var(--ifm-color-success)', color: 'white'}}> :mdi[arrow-right-thin] 52.169 m</span>
 
-:::caution[Hinweis]
+:::warning[Hinweis]
 Beachten Sie bei der Eingabe der Formeln, dass Sie Klammern in der richtigen Reihenfolge setzen: Zuerst die Multiplikationen und Divisionen, dann die Additionen und Subtraktionen.
 :::
 

@@ -88,7 +88,7 @@ text = text.replace('ich', 'XXX')
 
 print(text)
 ```
-:::caution[Merke]
+:::warning[Merke]
 Python nimmt es genau beim ersetzen - die Gross- & Kleinschreibung spielt eine Rolle! Im obigen Beispiel wird das `Ich` am Satzanfang also nicht ersetzt.
 :::
 

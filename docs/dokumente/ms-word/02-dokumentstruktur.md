@@ -7,7 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Textaufbau in Word
 
-:::caution[Vorgehen]
+:::warning[Vorgehen]
 
 1. Theorie durchlesen - überlegen Sie sich nach jedem Abschnitt, ob Ihnen die Inhalte bekannt vorkommen und ob Sie sich zutrauen, diese Schritte selber durchzuführen.
 2. Markieren Sie in bei jedem Abschnitt, wie git Sie die Inhalte verstanden haben. So können einzelne Themen im Plenum vorgeführt werden.

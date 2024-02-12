@@ -11,7 +11,7 @@ sidebar_custom_props:
     <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" />
   </a>
 
-  :::caution[Achtung]
+  :::warning[Achtung]
   Setzen Sie den Benutzernamen auf **admin** und wählen Sie ein sicheres Passwort (Sie brauchen es jedesmal, wenn Sie auf Node-RED zugreifen wollen.)
 
   ![](images/node-red-install-01.png)

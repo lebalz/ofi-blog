@@ -43,7 +43,7 @@ Laden Sie Audacity nur mit dem nachfolgenden Link herunter.
 
 ---
 
-:::caution[`.M4A`-Dateien]
+:::warning[`.M4A`-Dateien]
 
 Das Dateiformat `.M4A` enthält auch Audiodateien, die mit Audacity allerdings nur mit einer zusätzlichen Bibliothek, ffmpeg, eingelesen werden kann.
 

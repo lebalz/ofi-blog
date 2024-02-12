@@ -37,7 +37,7 @@ Ein auf OneDrive gespeichertes Word-Dokument kann zur gemeinsamen Bearbeitung (z
 :::
 
 
-:::caution[Link Kopieren 📋]
+:::warning[Link Kopieren 📋]
 Erfahrungsgemäss funktioniert das Freigeben von Dokumenten am zuverlässigsten und am schnellsten, wenn der **Link** kopiert und per Teams verschickt wird. Die E-Mails bleiben manchmal etwas länger in einer Warteschleife bei Edubern hängen.
 
 Beachten Sie, dass fürs Kopieren eines Links die Link-Einstellungen auf **Jeder mit dem Link** bzw. **Personen bei EDUBERN mit dem Link** gewählt werden muss.

@@ -65,7 +65,7 @@ Material
 
   ![](images/gh-pages.png)
 
-  :::caution[Private Repositories]
+  :::warning[Private Repositories]
   Bei kostenlosen Accounts können nur öffentliche Repositories als Website zugängig gemacht werden. Unter __Settings > General > Danger Zone (zuunterst auf der Seite)__ kann die Sichtbarkeit geändert werden (*Change repository visibility*).
   :::
 

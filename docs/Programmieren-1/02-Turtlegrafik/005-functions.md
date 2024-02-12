@@ -243,7 +243,7 @@ def zick_zack():  # <-- Doppelpunkt nicht vergessen!
     left(45)
 ```
 
-:::caution[Befehlsaufruf]
+:::warning[Befehlsaufruf]
 Die Definition alleine führt das Programm noch nicht aus. Dazu muss der Befehl erst noch **aufgerufen** werden:
 
 

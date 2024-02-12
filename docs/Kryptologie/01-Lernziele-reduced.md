@@ -31,6 +31,6 @@ sidebar_custom_props:
 - Sie verstehen, dass das Passwort des E-Mail-Accounts besonders wichtig ist (z.B. wegen der Passwortrücksetzung via E-Mail).
 :::
 
-:::caution[Unterrichtsinhalte]
+:::warning[Unterrichtsinhalte]
 An der Prüfung können auch Inhalte/Diskussionen/Experimente zu den obigen Themen aufgegriffen werden, welche nur im Unterricht behandelt/diskutiert wurden.
 :::
