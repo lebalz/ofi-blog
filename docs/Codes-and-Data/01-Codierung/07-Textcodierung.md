@@ -136,7 +136,7 @@ In der binären Darstellung sehen Sie sofort die Zeichen, welche mehrere Bytes b
 
 Nun können Sie mit folgenden Hilfsmitteln überprüfen, ob die Bytes tatsächlich der Unicode/UTF-8-Codierung Ihres Textes entsprechen:
 
-- [👉 ASCII-Tabelle](./03-Zeichencodierung.mdx#) für Bytes, die mit einer `0` starten
+- [👉 ASCII-Tabelle](./03-Zeichencodierung.mdx) für Bytes, die mit einer `0` starten
 - [👉 Unicode-Tabelle](https://unicode-table.com/de/) für zusammengesetzte Zeichen mit mehreren Bytes
 
 - Halten Sie die Hexadezimalzeichen Ihres Textes fest.
