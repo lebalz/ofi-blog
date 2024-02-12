@@ -30,6 +30,7 @@ const plugin: Plugin = (context, options) => {
                             src: "https://cdn.jsdelivr.net/npm/brython@3.12.1/brython.min.js",
                             referrerpolicy: "no-referrer",
                             async: true,
+                            defer: true
                         },
                     },
                     {
@@ -40,6 +41,7 @@ const plugin: Plugin = (context, options) => {
                             src: "https://cdn.jsdelivr.net/npm/brython@3.12.1/brython_stdlib.js",
                             referrerpolicy: "no-referrer",
                             async: true,
+                            defer: true
                         },
                     },
                     ...brython_pips,
