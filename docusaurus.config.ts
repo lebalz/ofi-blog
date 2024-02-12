@@ -17,7 +17,7 @@ import imagePlugin from './src/plugins/remark-images/plugin';
 import deflistPlugin from './src/plugins/remark-deflist/plugin';
 import strongPlugin from './src/plugins/remark-strong/plugin';
 import detailsPlugin from './src/plugins/remark-details/plugin';
-import commentsPlugin from './src/plugins/remark-comments/plugin';
+import commentsPlugin, { IGNORED_TAGS_DEFAULT } from './src/plugins/remark-comments/plugin';
 import pdfPlugin from './src/plugins/remark-pdf/plugin';
 import mediaPlugin from './src/plugins/remark-media/plugin';
 import remarkInlineModifier from './src/plugins/remark-inline-modifier/plugin';
@@ -55,11 +55,11 @@ const REMARK_PLUGINS = {
             imagePlugin,
             { tagNames: { sourceRef: 'SourceRef', figure: 'Figure' } }
         ],
+        detailsPlugin,
     ],
     remarkPlugins: [
         /** commentsPlugin must be the first plugin (will be applied last) */
         commentsPlugin,
-        [detailsPlugin, { tagNames: { details: 'Details' } }],
         [strongPlugin, { className: 'boxed'}],
         [
             deflistPlugin,

@@ -8,7 +8,7 @@ const process = async (content: string) => {
     const result = await remark()
         .use(remarkMdx)
         .use(remarkDirective)
-        .use(plugin)
+        .use(plugin, { dummyPageId: 'dummy-id'})
         .process(content);
 
     return result.value;
@@ -16,31 +16,16 @@ const process = async (content: string) => {
 
 describe('#comments', () => {
     it("wraps all nodes with children", async () => {
-        const input = `---
-sidebar_custom_props:
-  id: 99c92543-5e9e-4351-9021-e1f0f9809aa9
----
+        const input = `
 # Details element example
 Hello blaa
 `;
         const result = await process(input);
         expect(result).toMatchInlineSnapshot(`
-          "***
-
-          <div className=\\"commentable\\">
-            sidebar\\\\_custom\\\\_props:
-            id: 99c92543-5e9e-4351-9021-e1f0f9809aa9
-            ----------------------------------------
-
-            <Comment nr={0} type=\\"heading\\" pageId=\\"99c92543-5e9e-4351-9021-e1f0f9809aa9\\">
-              .
-            </Comment>
-          </div>
-
-          <div className=\\"commentable\\">
+          "<div className=\\"commentable\\">
             # Details element example
 
-            <Comment nr={1} type=\\"heading\\" pageId=\\"99c92543-5e9e-4351-9021-e1f0f9809aa9\\">
+            <Comment nr={0} type=\\"heading\\" pageId=\\"dummy-id\\">
               .
             </Comment>
           </div>
@@ -48,11 +33,38 @@ Hello blaa
           <div className=\\"commentable\\">
             Hello blaa
 
-            <Comment nr={0} type=\\"paragraph\\" pageId=\\"99c92543-5e9e-4351-9021-e1f0f9809aa9\\">
+            <Comment nr={0} type=\\"paragraph\\" pageId=\\"dummy-id\\">
               .
             </Comment>
           </div>
           "
         `);
     });
+
+    it("ignores details", async () => {
+      const input = `
+# Details element example
+
+<details>
+      <summary>Hello</summary>
+      Blaaa
+</details>
+`;
+      const result = await process(input);
+      expect(result).toMatchInlineSnapshot(`
+        "<div className=\\"commentable\\">
+          # Details element example
+
+          <Comment nr={0} type=\\"heading\\" pageId=\\"dummy-id\\">
+            .
+          </Comment>
+        </div>
+
+        <details>
+          <summary>Hello</summary>
+          Blaaa
+        </details>
+        "
+      `);
+  });
 });
