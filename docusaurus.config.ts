@@ -12,6 +12,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 import { ensurePageId } from './bin/ensure-page-id';
 import mdiPlugin from './src/plugins/remark-mdi/plugin';
 import kbdPlugin from './src/plugins/remark-kbd/plugin';
+import defPlugin from './src/plugins/remark-defbox/plugin';
 import flexCardsPlugin from './src/plugins/remark-flex-cards/plugin';
 import imagePlugin from './src/plugins/remark-images/plugin';
 import deflistPlugin from './src/plugins/remark-deflist/plugin';
@@ -56,6 +57,7 @@ const REMARK_PLUGINS = {
             { tagNames: { sourceRef: 'SourceRef', figure: 'Figure' } }
         ],
         detailsPlugin,
+        defPlugin
     ],
     remarkPlugins: [
         /** commentsPlugin must be the first plugin (will be applied last) */
@@ -290,7 +292,7 @@ const config: Config = {
                     showLastUpdateTime: true,
                     routeBasePath: '/',
                     admonitions: {
-                        keywords: ['aufgabe', 'def', 'finding'],
+                        keywords: ['aufgabe', 'finding'],
                         extendDefaults: true,
                     },
                     versions: VERSIONS,
@@ -300,7 +302,7 @@ const config: Config = {
                 },
                 pages: {
                     admonitions: {
-                        keywords: ['aufgabe', 'def', 'finding'],
+                        keywords: ['aufgabe', 'finding'],
                         extendDefaults: true,
                     },
                     beforeDefaultRemarkPlugins: REMARK_PLUGINS.beforeDefaultRemarkPlugins,
@@ -317,7 +319,7 @@ const config: Config = {
                     blogSidebarTitle: 'News',
                     editUrl: 'https://github.com/lebalz/ofi-blog/edit/main/',
                     admonitions: {
-                        keywords: ['aufgabe', 'def', 'finding'],
+                        keywords: ['aufgabe', 'finding'],
                         extendDefaults: true,
                     },
                     beforeDefaultRemarkPlugins: REMARK_PLUGINS.beforeDefaultRemarkPlugins,

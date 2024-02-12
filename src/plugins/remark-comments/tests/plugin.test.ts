@@ -54,7 +54,6 @@ Hello blaa
       expect(result).toMatchInlineSnapshot(`
         "<div className=\\"commentable\\">
           # Details element example
-
           <Comment nr={0} type=\\"heading\\" pageId=\\"dummy-id\\">
             .
           </Comment>
