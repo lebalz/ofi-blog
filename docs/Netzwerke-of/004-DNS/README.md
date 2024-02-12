@@ -41,7 +41,7 @@ Diese Namen werden als **Domain-Names** bezeichnet und das Verzeichnis, wo sie d
 
 ## Funktionsweise
 
-Es gibt auf der Welt bald **2 Milliarden**[^1] Webseiten, verteilt auf ca. 200 Millionen Server. Jeder Server beherbergt also durchschnittlich 10 Webseiten. Für jeden dieser Server braucht es eine öffentliche IP-Adresse, damit der Server im Internet erreichbar ist. Wenn man die IP-Adresse des Servers kennt, könnte man theoretisch versuchen im Browser statt des Domain-Namens einer Web-Site direkt die IP-Adresse des Servers einzugeben, also statt www.instgram.com die IP-Adresse 157.240.17.174.
+Es gibt auf der Welt bald **2 Milliarden**[^1] Webseiten, verteilt auf ca. 200 Millionen Server. Jeder Server beherbergt also durchschnittlich 10 Webseiten. Für jeden dieser Server braucht es eine öffentliche IP-Adresse, damit der Server im Internet erreichbar ist. Wenn man die IP-Adresse des Servers kennt, könnte man theoretisch versuchen im Browser statt des Domain-Namens einer Web-Site direkt die IP-Adresse des Servers einzugeben, also statt [www.instgram.com](https://www.instgram.com) die IP-Adresse 157.240.17.174.
 
 :::finding[IP-Adressen direkt eingeben]
 Obiges Beispiel, die IP-Adresse von Instagram direkt in den Browser einzutippen, funktioniert in der Praxis mit modernen Webseiten, die `https` als Protokoll verwenden, nicht. Bei `https` wird von Ihrem Browser mittels Zertifikat sichergestellt, dass die Adresse auf den korrekten Domain Namen lautet. Dadurch wird verhindert, dass Sie auf eine falsche Seite umgeleitet werden, und dann unwissentlich bspw. eine Geldtransaktion vornehmen. Das führt aber dazu, dass das Zertifikat bei IP-Adressen nicht gültig ist.
@@ -186,7 +186,7 @@ Der Button ist mit einem Link verbunden, welcher vom E-Mail-Programm am unteren 
 
 Im obigen E-Mail ist das `satellite-equipment.ru`, ein Domain-Namen aus Russland.
 
-Finden Sie heraus,
+Schauen Sie in Ihrem Postfach nach, ob Sie in letzter Zeit suspekte E-Mails erhalten haben. Finden Sie dort ebenfalls den die Domain-Namen heraus und überprüfen Sie folgende Punkte:
 - welche IP-Adresse hinter diesem Domain-Namen steht
 - wem diese Domain gehört und 
 - in welchem Land die Besitzer:in zuhause ist?
@@ -210,7 +210,7 @@ Diese Aufgabe hat nicht direkt mit dem Domain-Name-System zu tun. Da hinter der 
 
 Solche Überprüfungen bietet z.B. die Seite 	https://sitecheck.sucuri.net/ an.
 
-Überprüfen Sie damit den Domain-Namen aus Aufgabe 2. 
+(Obiger Link funktioniert bereits nicht mehr, weshalb Sie bei dieser Aufgabe einen einen Link aus Ihrer untersuchten Mail aus Aufgabe 2 verwenden können). 
 
 **Achtung: Geben Sie diese URL auschliesslich in das für die Überprüfung vorgesehene Feld ein!**
 

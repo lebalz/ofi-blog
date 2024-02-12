@@ -12,6 +12,10 @@ import ColorExchange from "@site/src/components/VisualizationTools/ColorExchange
 
 Alice und Bob arbeiten an einem neuen Kunstwerk, auf das die Öffentlichkeit gespannt wartet. Die beiden möchten dafür **eine** ganz besondere Farbe verwenden. Diese Farbe soll aber unbedingt bis zur Vernissage **geheim bleiben**. Alice und Bob wohnen weit auseinander und können sich nicht treffen, um die geheime Farbe gemeinsam herzustellen, sie können sich lediglich Farbkübel per Post zusenden.
 
+
+## Eve
+Die neugierige Journalistin Eve möchte unbedingt wissen, was Alice und Bob aushecken, um noch vor der Vernissage einen exklusiven Zeitungsbericht zu veröffentlichen. Daher versucht sie, an die gemeinsame private Farbe zu gelangen. Sie überwacht die Post und füllt sich von jeder transportierten Farbe ein wenig in eigene Behälter ab.
+
 ## Alice und Bob
 Sie haben eine Idee und gehen wie folgt vor:
 
@@ -40,16 +44,13 @@ sequenceDiagram
 ```
 :::
 
-## Eve
-Die neugierige Journalistin Eve möchte unbedingt wissen, was Alice und Bob aushecken, um noch vor der Vernissage einen exklusiven Zeitungsbericht zu veröffentlichen. Daher versucht sie, an die gemeinsame private Farbe zu gelangen. Sie überwacht die Post und füllt sich von jeder transportierten Farbe ein wenig in eigene Behälter ab.
-
 ## Ausprobieren
 :::aufgabe[Geheime Farbe herausfinden]
 <Answer type="state" webKey="732736d7-f3b8-4829-83be-b9b4e1164791" />
 
-Bestimmen Sie je eine Farbe für Alice und Bob und schauen Sie sich die Ergebnisse an.
+Spielen Sie das obige Szenario (Schritte 1-4) durch - die Farben können durch Klicken auf die Farbkreise verändert werden.
 
-Wieso erhalten Alice und Bob schlussendlich dieselbe Farbe?
+Machen Sie einen Screenshot, den Sie mit Pfeilen und Beschreibungen versehen, um die einzelnen Schritte zu erklären. Es soll klar werden, wie Alice und Bob vorgehen, um die geheime Farbe zu erhalten.
 
 <Answer type="text" webKey="11388720-93d0-403f-94f0-64b6f1ae4752" />
 :::

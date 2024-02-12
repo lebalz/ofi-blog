@@ -12,7 +12,7 @@ import {TextEditor, PixelEditor} from "@site/src/components/VisualizationTools/P
 
 Da wir nun mit Bits arbeiten und nicht mehr mit Buchstaben, müssen wir nach anderen Möglichkeiten zur Verschlüsselung suchen. Alphabetverschiebungen wie bei Caesar und Substitutionen sind nicht mehr geeignete Mittel, wenn nur die Zahlen `0` und `1` zur Verfügung stehen.
 
-Nebst den bekannten Operationen, *Addition, SUbtraktion, Multiplikation und Division*, kann ein Computer auch noch weitere Operationen auf zwei Binärzahlen anwenden. Eine solche Operation ist das **XOR** (*Exklusives Oder*, *Exclusive OR*):
+Nebst den bekannten Operationen, *Addition, Subtraktion, Multiplikation und Division*, kann ein Computer auch noch weitere Operationen auf zwei Binärzahlen anwenden. Eine solche Operation ist das **XOR** (*Exklusives Oder*, *Exclusive OR*):
 
 > Exclusive or exclusive disjunction is a logical operation that is 1 if, and only if its arguments differ (one is 1, the other is 0).[^1]
 
@@ -77,6 +77,8 @@ Verschlüsseln Sie die Bitfolge mit dem angegebenen Schlüssel
 :::aufgabe[Aufgabe Textverschlüsselung mit XOR]
 <Answer type="state" webKey="e5288ce5-f8f6-4de0-be2b-81eb90e8346d" />
 
+<TextEditor />
+
 Sie erhalten von einer Kollegin folgende verschlüsselte Nachricht:
 ```
 01010 00100 01010 11011 00000
@@ -85,13 +87,13 @@ Sie erhalten von einer Kollegin folgende verschlüsselte Nachricht:
 Als Schlüssel haben Sie das Wort `MACHT` abgemacht.
 
 1. Codieren Sie den Schlüssel mit Pentacode
-<Answer type="string" webKey="4159b846-71e5-4205-9907-975e3092c00c" solution="01101 00001 00011 01000 10100" sanitizer={(val) => val.replace(/\s/g, '')} />
+<Answer type="string" webKey="4159b846-71e5-4205-9907-975e3092c00c" solution="01101 00001 00011 01000 10100" sanitizer={(val) => val.replace(/\s/g, '')} width="100%"/>
 
-1. Entschlüsseln Sie die binäre Nachricht (XOR)
-<Answer type="string" webKey="c4e4f353-6f68-454a-b0ee-ac23695e61c5" solution="00111 00101 01001 10011 10100" sanitizer={(val) => val.replace(/\s/g, '')} />
+2. Entschlüsseln Sie die binäre Nachricht (XOR)
+<Answer type="string" webKey="c4e4f353-6f68-454a-b0ee-ac23695e61c5" solution="00111 00101 01001 10011 10100" sanitizer={(val) => val.replace(/\s/g, '')} width="100%"/>
 
-1. Klartext (entschlüsselte Bitfolge mit Pentacode zurückverwandeln)
-<Answer type="string" webKey="bd96e44e-96a7-404e-8d55-ed7007e1309a" solution="GEIST" sanitizer={(val) => val.trim().toUpperCase()} />
+3. Klartext (entschlüsselte Bitfolge mit Pentacode zurückverwandeln)
+<Answer type="string" webKey="bd96e44e-96a7-404e-8d55-ed7007e1309a" solution="GEIST" sanitizer={(val) => val.trim().toUpperCase()} width="100%"/>
 
 :::
 
@@ -100,7 +102,7 @@ Als Schlüssel haben Sie das Wort `MACHT` abgemacht.
 :::aufgabe[Aufgabe Bildverschlüsselung mit XOR]
 <Answer type="state" webKey="2eedbeb5-6506-4b11-ac66-c74b3945de75" />
 
-1. Zeichnen Sie ein `5x5`-Pixel-Bild
+1. Zeichnen Sie ein `5x5`-Pixel-Bild, kopieren Sie es unten in die Antwort (_Optionen _:mdi-dots-horizontal-circle-outline: > Kopieren :mdi-clipboard:__):
 
   <PixelEditor />
 

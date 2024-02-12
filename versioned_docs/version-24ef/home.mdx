@@ -16,12 +16,109 @@ import Grid from '@site/src/components/IFrame/Grid';
 
 ::::info[Aufträge]
 
-#### am 27.10.2023
+#### 09.02.2024
+- Einstieg: Tiefensuche
+- Besprechung Aufgaben zur Breitensuche und Dijkstra
+- A\*-Algorithmus: Einstieg mit Video
+- Übungen zum A\*-Algorithmus
+- Untersuchen und Vergleichen der verschiedenen Algorithmen an Beispielen
+
+
+:::details[Vergangene...]
+
+#### 02.02.2024
+- Besprechung Aufgaben
+- Rekursive Algorithmen: Stärken und Schwächen
+- P-NP Probleme: Kann jedes Problem, dessen Lösung effizient verifiziert werden kann, auch effizient gelöst werden?
+- Effizientes Lösen: in polynomialer Zeit
+- Kürzester Pfad
+  - Graphen und Bäume
+  - Breitensuche
+  - Algorithmus von Dijkstra
+
+#### 26.01.2024
+- Laufzeitanalysen: Messungen mit `timeit` von den besprochenen Sortieralgorithmen
+- Rekursive Algorithmen: Videos und Aufgaben 1-3 auf der Webseite
+- Aufgabe: Kapitel N-NP lesen
+
+#### 19.01.2024
+- Analyse Selection Sort
+- Theoretische Laufzeitberechnungen (Übung Cormen, 1-1)
+- Merge Sort, Teilen und Herrschen
+- Laufzeit von $n \times log(n)$
+
+#### 12.01.2024
+- Material: [👉 Cormen et Al.](https://erzbe.sharepoint.com/:b:/r/sites/24EFInformatik/Class%20Materials/Cormen_2013_Teil1-EF24er.pdf?csf=1&web=1&e=tUE8Hl)
+- Einstieg: Selection-Sort & Insertion-Sort durchspielen
+- Laufzeit von Algorithmen: Analyse von Insertion-Sort (Buch: Kapitel 2.1)
+- Aufgabe: Pseudocode für Selection-Sort schreiben und Laufzeit analysieren (Buch: Aufgabe 2.2-1, 2.2-2)
+- Aufgabe (auf nächste Woche): Lesen von **Kapitel 1**
+- Aufgabe (Vorbereitung Merge-Sort): Algorithmus versuchen mit Informationen aus **Kapitel 2.3.1** zu verstehen
+
+#### 22.12.2023
+- [👉 Maqueen](https://gbsl-informatik.github.io/maqueen-plus-v2-mpy/)
+- Einstiegsbeispiel: Herzchen weiterschicken:
+
+<details>
+<summary>Herzechn weiterschicken</summary>
+
+```py
+from microbit import *
+import radio
+
+ID = 0 # id bei jedem Gerät um eins erhöhen
+MEMBER_COUNT = 3 # Anzahl Geräte in der Gruppe
+
+TTL = 6 # Anzahl Weiterleitungen
+GROUP = 6
+
+# Code
+radio.config(group=GROUP)
+radio.on()
+
+def send(to, ttl):
+    radio.send(str(to) + ':' + str(ttl))
+
+while True:
+    if button_a.was_pressed():
+        send((ID + 1) % MEMBER_COUNT, TTL)
+    message = radio.receive()
+    if message:
+        numbers = message.split(':')
+        # in Zahl umwandeln
+        id = int(numbers[0])
+        ttl = int(numbers[1])
+        if id == ID and ttl > 0:
+            display.show(Image.HEART)
+            sleep(1000)
+            display.clear()
+            send((id + 1) % MEMBER_COUNT, ttl - 1)
+        
+```
+</details>
+
+#### am 15.11.2023
+- Robotik Test
+
+#### am 08.11.2023
+- Zustandsmaschinen
+- Micro:Bit Zustandsmaschinen prorgammieren
+
+#### am 01.11.2023
+- Zustandsmaschinen
+- Micro:Bit Zustandsmaschinen prorgammieren
+
+
+#### am 25.10.2023
+- RobOlympics: Lego Soriteren
+
+#### am 17.10.2023
+- Vorbereitungen RobOlympics
+
+#### am 27.09.2023
 - Repetition SQL
 - `UPDATE` und `CONSTRAINTS` in SQL
 - Selbständiges Wiederholen
-
-:::details[Vergangene...]
 
 #### am 15.09.2023
 - Bespechung Übungen

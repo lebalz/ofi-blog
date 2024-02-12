@@ -39,7 +39,7 @@
       "from": "docs/dokumente/ms-word/",
       "to": "versioned_docs/version-26e/05-Texte",
       "ignore": [
-        "04-Uebung.md"
+        "05-Uebung.md"
       ]
     },
     {
@@ -138,7 +138,7 @@
       "from": "docs/Big-Data/",
       "to": "versioned_docs/version-26e/07-Big-Data",
       "ignore": [
-        "03-cookies.md"
+        "03-cookies"
       ],
       "open": false
     },
@@ -164,9 +164,27 @@
       "to": "versioned_docs/version-26e/10-Netzwerke",
       "ignore": [
         "002-Codierung",
-        "004-DNS",
         "005-Sicherheit",
         "090-Pruefung.md"
+      ]
+    },
+    {
+      "from": "docs/Big-Data/03-cookies/",
+      "to": "versioned_docs/version-26e/10-Netzwerke/005-Datenschutz",
+      "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/",
+      "to": "versioned_docs/version-26e/11-Kryptologie",
+      "ignore": [
+        "04-Asymmetrisch/04-asymm-encryption.md",
+        "04-Asymmetrisch/05-kombiniert.md",
+        "04-Asymmetrisch/08-rsa.md",
+        "05-Hashfunktionen",
+        "06-Digitale-Signaturen",
+        "07-Alltag",
+        "01-Lernziele-reduced.md",
+        "01-Lernziele.md"
       ],
       "open": true
     }
@@ -211,7 +229,7 @@
       "from": "docs/dokumente/ms-word/",
       "to": "versioned_docs/version-26P/05-Texte",
       "ignore": [
-        "04-Uebung.md"
+        "05-Uebung.md"
       ]
     },
     {
@@ -312,7 +330,7 @@
       "from": "docs/Big-Data/",
       "to": "versioned_docs/version-26P/07-Big-Data",
       "ignore": [
-        "03-cookies.md"
+        "03-cookies"
       ]
     },
     {
@@ -326,17 +344,34 @@
       "ignore": [
         "01-sql/04-create.md",
         "_category_.json"
-      ],
-      "open": false
+      ]
     },
     {
       "from": "docs/Netzwerke-of/",
       "to": "versioned_docs/version-26P/10-Netzwerke",
       "ignore": [
         "002-Codierung",
-        "004-DNS",
         "005-Sicherheit",
         "090-Pruefung.md"
+      ]
+    },
+    {
+      "from": "docs/Big-Data/03-cookies/",
+      "to": "versioned_docs/version-26P/10-Netzwerke/005-Datenschutz",
+      "ignore": []
+    },
+    {
+      "from": "docs/Kryptologie/",
+      "to": "versioned_docs/version-26P/11-Kryptologie",
+      "ignore": [
+        "04-Asymmetrisch/04-asymm-encryption.md",
+        "04-Asymmetrisch/05-kombiniert.md",
+        "04-Asymmetrisch/08-rsa.md",
+        "05-Hashfunktionen",
+        "06-Digitale-Signaturen",
+        "07-Alltag",
+        "01-Lernziele-reduced.md",
+        "01-Lernziele.md"
       ],
       "open": true
     }
@@ -424,12 +459,24 @@
         "bin",
         "imdb-db",
         "_category_.json"
-      ],
-      "open": true
+      ]
     },
     {
       "from": "docs/EF-Robotik/",
       "to": "versioned_docs/version-24ef/04-Robotik",
+      "ignore": [
+        "asyncio",
+        "EV3/Pendelbus-Blink"
+      ]
+    },
+    {
+      "from": "docs/Big-Data/03-cookies/",
+      "to": "versioned_docs/version-24ef/10-Netzwerke/005-Datenschutz",
+      "ignore": []
+    },
+    {
+      "from": "docs/EF-Algorithmen/",
+      "to": "versioned_docs/version-24ef/05-Algorithmik",
       "ignore": [],
       "open": true
     }

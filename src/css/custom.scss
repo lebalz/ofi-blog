@@ -580,3 +580,8 @@ article[itemprop="blogPost"] {
     --ifm-alert-foreground-color: var(--ifm-color-blue-contrast-foreground);
     --ifm-alert-border-color: var(--ifm-color-blue-dark);
 }
+.white-svg {
+    svg {
+        background-color: var(--ifm-background-color);
+    }
+}

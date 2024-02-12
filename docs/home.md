@@ -13,6 +13,9 @@ sidebar_custom_props:
 ## Links:
 
 - [👉 SVG Pfad Tool](https://yqnn.github.io/svg-path-editor/)
+- [👉 Buch: Abenteuer Informatik](https://www.abenteuer-informatik.de/dasbuch.html)
+- [👉 TikZ Images; mathcha.io/editor](https://www.mathcha.io/editor)
+- [👉 Bilder zu LaTeX: Mathpix.com](https://snip.mathpix.com/)
 
 
 ### Codes und Daten

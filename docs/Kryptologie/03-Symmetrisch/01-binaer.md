@@ -7,12 +7,12 @@ sidebar_custom_props:
 ---
 
 # Umwandlung ins Binärsystem
-In diesem Kapitel dringen wir in unsere Zeit vor. Wir verwenden Computer, die mit binären Zahlen arbeiten. Somit muss der Klartext vor der Verschlüsselung in binäre Zahlen umgewandelt werden.
+In diesem Kapitel dringen wir in unsere Zeit vor. Wir verwenden Computer, die mit binären Codierungen arbeiten. Somit muss der Klartext vor der Verschlüsselung binär codiert werden.
 
 ## Prozess der Verschlüsselung
 Das Verfahren wird etwas umständlicher, da jeweils in die binäre Computersprache übersetzt werden muss:
-1. Der Geheimtext wird in eine Folge von binären Zahlen codiert (Klartext → binärer Klartext)
-2. Verschlüsselung dieser Zahlenfolge (binärer Klartext → binärer Geheimtext)
+1. Der Geheimtext wird in eine binäre Zeichenfolge codiert (Klartext → binärer Klartext)
+2. Verschlüsselung dieser Zeichenfolge (binärer Klartext → binärer Geheimtext)
 3. ... (Versand, Abspeichern, ...)
 4. Decodierung des binären Geheimtextes (binärer Geheimtext → Geheimtext)
 

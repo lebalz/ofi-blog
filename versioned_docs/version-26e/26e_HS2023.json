@@ -62,11 +62,13 @@
         "type": "holiday"
     },
     {
-        "cells": ["12.12.2023","Netzwerke","Wiederholung"]
+        "cells": ["06.12.2023","Netzwerke","Routing"]
     },
     {
-        "cells": ["19.12.2023","Netzwerke","Test"],
-        "type": "test"
+        "cells": ["12.12.2023","Netzwerke","DNS"]
+    },
+    {
+        "cells": ["19.12.2023","Netzwerke",""]
     },
     {
         "cells": ["26.12.2023","Winterferien",""],
@@ -77,7 +79,10 @@
         "type": "holiday"
     },
     {
-        "cells": ["09.01.2024","Kryptologie","Antike Verschlüsselung"]
+        "cells": ["09.01.2024","Netzwerke","Datenschutz und Sicherheit"]
+    },
+    {
+        "cells": ["16.01.2024","Kryptologie","Antike Verschlüsselung"]
     },
     {
         "cells": ["16.01.2024","Kryptologie","Symmetrische Verschlüsselung"]
@@ -100,6 +105,10 @@
         "cells": ["06.02.2024","Kryptologie","Digitale Signaturen"]
     },
     {
+        "cells": ["07.02.2024","SchiLw Tag","Kein Regelunterricht"],
+        "type": "event"
+    },
+    {
         "cells": ["05.02.2024","Start Semester 2",""],
         "type": "event"
     },
@@ -108,10 +117,13 @@
         "type": "holiday"
     },
     {
-        "cells": ["20.02.2024","Kryptologie","Kryptologie im Alltag"]
+        "cells": ["20.02.2024","Kryptologie","Anwendungen"]
     },
     {
-        "cells": ["27.02.2024","Kryptologie","Test"],
+        "cells": ["27.02.2024","Netzwerke & Kryptologie","Onion Routing, Darkweb"]
+    },
+    {
+        "cells": ["05.03.2024","Netzwerke & Kryptologie","Test"],
         "type": "test"
     },
     {
@@ -130,7 +142,10 @@
         "cells": ["02.04.2024","Programmieren 2","Robotik"]
     },
     {
-        "cells": ["09.04.2024","Programmieren 2","Test Abgabe Robotik-Projekt"],
+        "cells": ["09.04.2024","Programmieren 2","Robotik"]
+    },
+    {
+        "cells": ["16.04.2024","Programmieren 2","Test Abgabe Robotik-Projekt"],
         "type": "test"
     },
     {
