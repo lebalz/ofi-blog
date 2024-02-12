@@ -42,10 +42,10 @@ Jetzt erscheint ein Fenster, in welchem Sie die gespeicherten Browserdaten lösc
 
 ### Alternativen zum Shortcut:
 
-- [:mdi-microsoft-edge--teal: Edge: Cookies in Microsoft Edge löschen](https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-l%C3%B6schen-63947406-40ac-c3b8-57b9-2a946a29ae09)
-- [:mdi-google-chrome--red: Chrome: Cache leeren und Cookies löschen - Computer - Google-Konto-Hilfe](https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&hl=de)
-- [:mdi-firefox--orange: Firefox: Cookies und Website-Daten in Firefox löschen | Hilfe zu Firefox (mozilla.org)](https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen)
-- [:mdi-apple-safari--blue: Safari: Verwalten von Cookies und Website-Daten mit Safari auf dem Mac - Apple Support](https://support.apple.com/de-ch/guide/safari/sfri11471/mac)
+- [:mdi[microsoft-edge]{color=teal}: Edge: Cookies in Microsoft Edge löschen](https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-l%C3%B6schen-63947406-40ac-c3b8-57b9-2a946a29ae09)
+- [:mdi[google-chrome]{.red}: Chrome: Cache leeren und Cookies löschen - Computer - Google-Konto-Hilfe](https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&hl=de)
+- [:mdi[firefox]{.orange}: Firefox: Cookies und Website-Daten in Firefox löschen | Hilfe zu Firefox (mozilla.org)](https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen)
+- [:mdi[apple-safari]{.blue}: Safari: Verwalten von Cookies und Website-Daten mit Safari auf dem Mac - Apple Support](https://support.apple.com/de-ch/guide/safari/sfri11471/mac)
 
 
 :::info[Variante]
@@ -80,7 +80,7 @@ Werbe-Cookies und aufsässige Werbung lassen sich mit Erweiterungen blockieren. 
 
 [👉 uBlock Origin](https://ublockorigin.com/) ist eine OpenSource Erweiterung für Chrome, Firefox, Edge, Safari und Opera
 
-- :mdi-github: OpenSource [uBlockOrigin](https://github.com/gorhill/uBlock)
+- :mdi[github] OpenSource [uBlockOrigin](https://github.com/gorhill/uBlock)
 - Bis Dato keine negativen Schlagzeilen
 - verbraucht nicht unnötig Ressourcen
 
@@ -132,9 +132,9 @@ Mit "EFF Cover your tracks" können Sie ebenfalls Ihren digitalen Fingerabdruck 
 ## Alternative Browser mit Fokus auf Datenschutz
 
 - [Brave](https://brave.com/)
-- [:mdi-firefox--orange: Firefox](https://www.mozilla.org/de/firefox/new/)
+- [:mdi[firefox]{.orange}: Firefox](https://www.mozilla.org/de/firefox/new/)
 - [DuckDuckGo](https://duckduckgo.com/)
-- [:mdi-opera--red: Opera](https://www.opera.com/de)
+- [:mdi[opera]{.red}: Opera](https://www.opera.com/de)
 - [Epic](https://www.epicbrowser.com/)
 - [Vivaldi](https://vivaldi.com/de/)
 - [Tor](https://www.torproject.org/de/)

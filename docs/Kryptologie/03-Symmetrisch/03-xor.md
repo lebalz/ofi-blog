@@ -102,7 +102,7 @@ Als Schlüssel haben Sie das Wort `MACHT` abgemacht.
 :::aufgabe[Aufgabe Bildverschlüsselung mit XOR]
 <Answer type="state" webKey="2eedbeb5-6506-4b11-ac66-c74b3945de75" />
 
-1. Zeichnen Sie ein `5x5`-Pixel-Bild, kopieren Sie es unten in die Antwort (_Optionen _:mdi-dots-horizontal-circle-outline: > Kopieren :mdi-clipboard:__):
+1. Zeichnen Sie ein `5x5`-Pixel-Bild, kopieren Sie es unten in die Antwort (_Optionen _:mdi[dots-horizontal-circle-outline] > Kopieren :mdi[clipboard]__):
 
   <PixelEditor />
 

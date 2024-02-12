@@ -83,8 +83,8 @@ Die selbstkritische Reflexion sollte im Minimum **500** Wörter lang sein.
 
 :::info[Verfügbare Hardware an der Schule]
 Die Schule bietet begrenzte Hardware-Stückzahlen, um sich z.B. im Rahmen eines Hardware-Projekts mit den Möglichkeiten der folgenden Geräte\* auseinanderzusetzen.
-- Micro:Bit Platine
-- Maqueen Roboter (Gesteuert über Micro:Bit)
+- Micro\:Bit Platine
+- Maqueen Roboter (Gesteuert über Micro\:Bit)
 - 3D Drucker
 - EV3 Roboter (können nur an der Schule gebraucht werden)
 - Arduinos inkl. mehrerer Sensoren, WLAN-Kompatibel

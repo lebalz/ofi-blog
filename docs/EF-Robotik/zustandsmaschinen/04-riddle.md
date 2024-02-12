@@ -35,7 +35,7 @@ Es ist ein Ratespiel - man muss in der richtigen Reihenfolge die richtigen Einga
 </Solution>
 :::
 
-:::aufgabe Event-State Tabelle
+:::aufgabe[Event-State Tabelle]
 <Answer type="state" webKey="aaafd952-3053-40ca-a8bc-24098702716f" />
 
 Übersetzen Sie das Zustandsiagramm in eine Event-State Tabelle und halten Sie Ihre Lösung unten fest.
@@ -43,12 +43,12 @@ Es ist ein Ratespiel - man muss in der richtigen Reihenfolge die richtigen Einga
 <Answer type="text" webKey="07a94c07-3902-444c-9133-497e3ba0f97a" />
 <Solution webKey="6bf8ab78-782a-4b23-973a-7815c626e946">
 
-| <span style={{float: 'right'}}>Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __START__                               | __A#1__                              | __A#2__                                  | __SHAKE#3__                          | __B#4__                               | __A#5__                              | __WIN__                                             | __LOST__                                          | __END__ |
+| <span style={{float: 'right'}}>Zustand :mdi[arrow-right]</span><br />Ereignis :mdi[arrow-down] | __START__                               | __A#1__                              | __A#2__                                  | __SHAKE#3__                          | __B#4__                               | __A#5__                              | __WIN__                                             | __LOST__                                          | __END__ |
 |:-----------------------------------------------------------------------------------------------|:----------------------------------------|:-------------------------------------|:-----------------------------------------|:-------------------------------------|:--------------------------------------|:-------------------------------------|:----------------------------------------------------|:--------------------------------------------------|:--------|
-| **Button A**                                                                                   |                                         | 1 anzeigen :mdi-arrow-right: __A#2__ | 2 anzeigen :mdi-arrow-right: __SHAKE#3__ | :mdi-arrow-right: __LOST__           | :mdi-arrow-right: __LOST__            | 5 anzeigen :mdi-arrow-right: __WIN__ |                                                     |                                                   |         |
-| **Button B**                                                                                   |                                         | :mdi-arrow-right: __LOST__           | :mdi-arrow-right: __LOST__               | :mdi-arrow-right: __LOST__           | 4 anzeigen  :mdi-arrow-right: __A#5__ | :mdi-arrow-right: __LOST__           |                                                     |                                                   |         |
-| **Shake**                                                                                      |                                         | :mdi-arrow-right: __LOST__           | :mdi-arrow-right: __LOST__               | 3 anzeigen :mdi-arrow-right: __B#4__ | :mdi-arrow-right: __LOST__            | :mdi-arrow-right: __LOST__           |                                                     |                                                   |         |
-| **Timer**                                                                                      | reset display :mdi-arrow-right: __A#1__ |                                      |                                          |                                      |                                       |                                      | 3s warten, SMILE anzeigen :mdi-arrow-right: __END__ | 3s warten, SAD anzeigen :mdi-arrow-right: __END__ |         |
+| **Button A**                                                                                   |                                         | 1 anzeigen :mdi[arrow-right] __A#2__ | 2 anzeigen :mdi[arrow-right] __SHAKE#3__ | :mdi[arrow-right] __LOST__           | :mdi[arrow-right] __LOST__            | 5 anzeigen :mdi[arrow-right] __WIN__ |                                                     |                                                   |         |
+| **Button B**                                                                                   |                                         | :mdi[arrow-right] __LOST__           | :mdi[arrow-right] __LOST__               | :mdi[arrow-right] __LOST__           | 4 anzeigen  :mdi[arrow-right] __A#5__ | :mdi[arrow-right] __LOST__           |                                                     |                                                   |         |
+| **Shake**                                                                                      |                                         | :mdi[arrow-right] __LOST__           | :mdi[arrow-right] __LOST__               | 3 anzeigen :mdi[arrow-right] __B#4__ | :mdi[arrow-right] __LOST__            | :mdi[arrow-right] __LOST__           |                                                     |                                                   |         |
+| **Timer**                                                                                      | reset display :mdi[arrow-right] __A#1__ |                                      |                                          |                                      |                                       |                                      | 3s warten, SMILE anzeigen :mdi[arrow-right] __END__ | 3s warten, SAD anzeigen :mdi[arrow-right] __END__ |         |
 </Solution>
 :::
 
@@ -56,12 +56,12 @@ Es ist ein Ratespiel - man muss in der richtigen Reihenfolge die richtigen Einga
 <Answer type="state" webKey="c237f407-e5e3-4363-99fe-681138a07ba7" />
 
 Material
-: Micro:Bit
+: Micro\:Bit
 : mit USB-Kabel an den Computer angeschlossen
 Editor
 : Online-Editor [👉 python.microbit.org](https://python.microbit.org/)
 
-Programmieren Sie die Zustandsmaschine auf dem Micro:Bit. Verwenden Sie dazu ein neues Projekt im Online-Editor und halten Sie Ihre Lösung unten fest.
+Programmieren Sie die Zustandsmaschine auf dem Micro\:Bit. Verwenden Sie dazu ein neues Projekt im Online-Editor und halten Sie Ihre Lösung unten fest.
 
 ```mpy live_py id=b478b867-6ac9-46cc-a11a-a611db9b0b8f title=riddle.mpy
 
