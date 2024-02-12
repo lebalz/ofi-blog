@@ -14,13 +14,13 @@ Die Prüfung besteht aus zwei Teilen:
   - Turtlegrafik Abschnitte 1 bis und mit 7, inkl. Übungen
   - Grüfnisch
 
-:::info Lernziele Algorithmen
+:::info[Lernziele Algorithmen]
 - Sie können erklären, was ein Algorithmus ist.
 - Sie erkennen und beschreiben die Strukturen eines Algorithmus (Einzelschritte, Wiederholungen, bedingte Ausführung, Parameter)
 - Sie übersetzen einen Algorithmus zwischen zwei Darstellungsformen (**Alltagssprache**, **Struktogramm**, **Python-Programm**)
 :::
 
-:::info Lernziele Programme
+:::info[Lernziele Programme]
 - Sie können ein einfaches Python-Programm lesen und verstehen.
 - Sie können die Ausgabe eines einfachen Turle-Programms zeichnen.
 - Sie können ein einfaches Python-Programm ändern oder erweitern.
@@ -28,7 +28,7 @@ Die Prüfung besteht aus zwei Teilen:
 - Sie können in einem Programm *Befehlsnamen*, *Variablen*, *Parameter* und *Codeblöcke* identifizieren.
 :::
 
-:::info Lernziele Programmstuktur
+:::info[Lernziele Programmstuktur]
 - Wie wissen, dass ein Python-Programm grundsätzlich sequentiell (d.h. zeilenweise) ausgeführt wird.
 - Sie können Befehle aus anderen Bibliotheken importieren (`import`).
 - Sie verwenden `for`-Schleifen, um Befehlssequenzen zu wiederholen.
@@ -40,7 +40,7 @@ Die Prüfung besteht aus zwei Teilen:
 - Sie können **Struktogramme** in ein Programm übersetzen, bzw. ein Programm in ein Struktogramm überführen
 :::
 
-:::info Lernziele Turtlegrafik
+:::info[Lernziele Turtlegrafik]
 - Sie können die Turtle mit `forward`, `backward`, `left`, `right` und `goto` bewegen.
 - Sie können mit `pencolor` die Farbe ändern.
 - Sie können mit `fillcolor`, `begin_fill` und `end_fill` ausgefüllte Figuren zeichnen.
@@ -48,7 +48,7 @@ Die Prüfung besteht aus zwei Teilen:
 - Sie können mit `pensize`, `penup` und `pendown`, `dot`, `hideturtle` den Zeichenstift kontrollieren.
 :::
 
-:::info Lernziele Benutzerinteraktion
+:::info[Lernziele Benutzerinteraktion]
 - Sie können die Programmbenutzer:in mit `input` nach einer Eingabe fragen.
 - Sie wissen, dass Python zwischen Text (`str`), ganzen Zahlen (`int`) und Dezimalzahlen (`float`) unterscheidet und können Text in Zahlen/Dezimalzahlen umwandeln.
 - Sie können Platzhalter in formatierten Texten `f''` einfügen.

@@ -26,6 +26,13 @@ dl.dl {
     dd + dd {
         margin-top: -0.4em;
     }
+    
+    dt > p {
+        margin-bottom: 0;
+    }
+    dd > p {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 620px) {

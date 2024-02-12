@@ -13,10 +13,9 @@ Der Pentacode ist keine offizielle Codierung. Sie wurde von [Stefan Rothe und To
 
 Mit 5 bits (*[Penta bedeutet 5]*) können $2^5 = 32$ Zeichen codiert werden. Neben allen Grossbuchstaben und dem Leerschlag hat es Platz für die Sonderzeichen __?__, __.__, __,__, __-__ und __@__.
 
-:::details Penta-Tabelle
-
-:::flex --columns=2 --gap=2em
-*** --class=slim-table,no-comments
+::::details[Penta-Tabelle]
+:::flex{columns=2 gap=2em}
+::br{.slim-table,no-comments}
 | Buchstabe    | Zahl |   Binär |
 | :----------- | ---: | ------: |
 | *Leerschlag* |    0 | `00000` |
@@ -35,7 +34,7 @@ Mit 5 bits (*[Penta bedeutet 5]*) können $2^5 = 32$ Zeichen codiert werden. Neb
 | `M`          |   13 | `01101` |
 | `N`          |   14 | `01110` |
 | `O`          |   15 | `01111` |
-*** --class=slim-table,no-comments
+::br{.slim-table,no-comments}
 
 | Buchstabe | Zahl |   Binär |
 | :-------- | ---: | ------: |
@@ -55,8 +54,10 @@ Mit 5 bits (*[Penta bedeutet 5]*) können $2^5 = 32$ Zeichen codiert werden. Neb
 | `.`       |   29 | `11101` |
 | `?`       |   30 | `11110` |
 | `@`       |   31 | `11111` |
+
 :::
-:::
+::::
+
 ## Editor
 
 <TextEditor />

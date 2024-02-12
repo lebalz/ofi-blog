@@ -30,20 +30,20 @@ Sofern ein OneDrive Ordner ausgewählt wurde, wird das Dokument automatisch sync
 
 Ein auf OneDrive gespeichertes Word-Dokument kann zur gemeinsamen Bearbeitung (z.B. für eine Gruppenarbeit) freiegegeben werden. Bei der Freigabe müssen Sie entscheiden, ob das Dokument nur betrachtet, oder auch bearbeitet werden darf:
 
-:::flex --align-items=flex-end
+:::flex{align-items=flex-end}
 ![Bearbeitungsoptionen beim Teilen --width=300px](images/doc-sharing.png)
-***
+::br
 ![Linkeinstellungen für Ordner --width=300px](images/word-share-doc.png)
 :::
 
 
-:::caution Link Kopieren 📋
+:::warning[Link Kopieren 📋]
 Erfahrungsgemäss funktioniert das Freigeben von Dokumenten am zuverlässigsten und am schnellsten, wenn der **Link** kopiert und per Teams verschickt wird. Die E-Mails bleiben manchmal etwas länger in einer Warteschleife bei Edubern hängen.
 
 Beachten Sie, dass fürs Kopieren eines Links die Link-Einstellungen auf **Jeder mit dem Link** bzw. **Personen bei EDUBERN mit dem Link** gewählt werden muss.
 :::
 
-:::aufgabe Gemeinsames Arbeiten an einem Dokument
+:::aufgabe[Gemeinsames Arbeiten an einem Dokument]
 <Answer type="state" webKey="0f992d0a-e20e-4a32-901b-cf4da6500e2f" />
 
 Gemeinsame Bearbeitung der Menüs fürs Klassenlager.

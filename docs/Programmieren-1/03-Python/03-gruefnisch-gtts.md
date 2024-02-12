@@ -36,7 +36,7 @@ Gymnasium Biel Seeland
 
 </blockquote>
 
-:::info Ziel: Python spricht Grüfnisch
+:::info[Ziel: Python spricht Grüfnisch]
 Das Ziel ist, einen vorgegebenen Text auf Grfünisch zu übersetzen und später auch vorlesen zu lassen.
 :::
 
@@ -45,8 +45,7 @@ Das Ziel ist, einen vorgegebenen Text auf Grfünisch zu übersetzen und später 
 
 ### Gross- und Kleinschreibung
 
-:::def
-### `.upper()`: Grossbuchstaben
+:::def[`.upper()`: Grossbuchstaben]
 
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
@@ -56,8 +55,7 @@ print(gross)
 ```
 :::
 
-:::def
-### `.lower()`: Kleinbuchstaben
+:::def[`.lower()`: Kleinbuchstaben]
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
 klein = text.lower()
@@ -68,7 +66,7 @@ print(klein)
 
 ### Text ersetzen
 
-::::def `.replace(alt, neu)`
+::::def[`.replace(alt, neu)`]
 Mit `replace(alt, neu)` können Text-Teile in einem Text (`string`) ersetzt werden.
 
 
@@ -88,14 +86,14 @@ text = text.replace('ich', 'XXX')
 
 print(text)
 ```
-:::caution Merke
+:::warning[Merke]
 Python nimmt es genau beim ersetzen - die Gross- & Kleinschreibung spielt eine Rolle! Im obigen Beispiel wird das `Ich` am Satzanfang also nicht ersetzt.
 :::
 
 Lösungen: (1) Gross- und kleingeschriebenes ersetzen, oder (2) zuerst alles klein schreiben und dann ersetzen.
 
-:::cards 
-*** --code
+:::cards[]
+::br{code=true}
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
 
@@ -103,7 +101,7 @@ text = text.replace('ich', 'XXX') # Alle 'ich' durch XXX ersetzen
 text = text.replace('Ich', 'XXX') # Alle 'Ich' durch XXX ersetzen
 print(text)
 ```
-*** --code
+::br{code=true}
 ```py live_py slim
 text = 'Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch.'
 
@@ -133,7 +131,7 @@ for i in range(5):
 
 ## Aufgabe
 
-:::aufgabe Grüfnisch
+:::aufgabe[Grüfnisch]
 <Answer type="state" webKey="7893e2f7-b498-48c3-83f5-0c629f5dd6e4" />
 
 1. Wie lautet der Satz `hallo, es ist winter` auf Grünfisch? (Von Hand, ohne Programm übersetzen)

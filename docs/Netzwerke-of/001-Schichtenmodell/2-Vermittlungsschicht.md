@@ -34,6 +34,6 @@ Das wichtigste Protokoll der Vermittlungsschicht ist das Internet Protokoll (IP)
 
 <Answer type="state" webKey="8521d5be-6786-4867-89b7-a6bf18997d15">Gesehen?</Answer>
 
-[@youtube](https://www.youtube-nocookie.com/embed/5o8CwafCxnU)
+::youtube[https://www.youtube-nocookie.com/embed/5o8CwafCxnU]
 
 

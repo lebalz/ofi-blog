@@ -13,14 +13,14 @@ sidebar_custom_props:
 ---
 <Answer type="state" webKey="6fc19caa-45b4-4d3f-a7d0-7bcb468f4a0e" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/bj-Yfakjllc)
+::youtube[https://www.youtube-nocookie.com/embed/bj-Yfakjllc]
 
 ---
 <Answer type="state" webKey="3366c27c-767b-4c37-b236-4b0dddc89109" label="Gesehen?" />
 
 Wichtige Geräte: Switches und Router. (Hubs und Bridges als Nice-To-Know betrachten...)
 
-[@youtube](https://www.youtube-nocookie.com/embed/H7-NR3Q3BeI)
+::youtube[https://www.youtube-nocookie.com/embed/H7-NR3Q3BeI]
 
 ---
 
@@ -47,7 +47,7 @@ In **kabelgebundnen** Netzwerken sind heute meist **Sterntopologien** zu finden.
 :::cards
 ![Star](images/Star.png)
 
-***
+::br
 ![Switch](images/Switch.jpg)
 Ein Switch für den Anschluss von 24 Computern:
 :::
@@ -63,7 +63,7 @@ Typischer WLAN-Switch-Router für das Heimnetz:
 ![fritzbox-7490-big](images/fritzbox-7490-big.jpg)
 
 
-:::aufgabe Hausaufgabe
+:::aufgabe[Hausaufgabe]
 <Answer type="state" webKey="d731045f-df2b-452b-a2a0-7f81fab9fc2e" />
 
 Dateiname

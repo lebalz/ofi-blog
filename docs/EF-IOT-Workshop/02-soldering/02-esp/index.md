@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # 2. ESP 8266
 
-:::aufgabe ESP 8266 Löten
+:::aufgabe[ESP 8266 Löten]
 Wenn Sie Sie den Käfer gelötet (und getestet haben), können Sie sich an den ESP 8266 wagen.
 
 Gehen Sie Schritt für Schritt wie auf den Abbildungen gezeigt vor und löten Sie den ESP 8266 zusammen. Überprüfen Sie immer alle Lötstellen, insbesondere, ob sie sich nicht berühren.
@@ -21,13 +21,13 @@ __RST__
 __3V3__
 : Strom Output mit 3.3 V
 __5V__
-: :mdi-circle--red: 5V Strom Output
+: :mdi[circle]{.red} 5V Strom Output
 __G__
-: :mdi-circle--black: Ground (Erdung)
+: :mdi[circle]{.black} Ground (Erdung)
 __D1__
-: :mdi-circle--blue: SCL Pin für die $I^2C$ Schnittstelle
+: :mdi[circle]{.blue} SCL Pin für die $I^2C$ Schnittstelle
 __D2__
-: :mdi-circle--green: SDA Pin für die $I^2C$ Schnittstelle
+: :mdi[circle]{.green} SDA Pin für die $I^2C$ Schnittstelle
 __D5__
 : Analoger Pin, bspw. für LED's
 :::
@@ -46,56 +46,56 @@ Löten der angegebenen Lötstellen:
 
 ### Testen
 
-:mdi-power-plug--green: Stromversorgung anschliessen - auf dem Bildschirm sollte nun eine Meldung erscheinen...
+:mdi[power-plug]{.green} Stromversorgung anschliessen - auf dem Bildschirm sollte nun eine Meldung erscheinen...
 
 :::
 :::cards
 - 4 Kabel-Stücke von 7-8cm Länge zuschneiden
-- Abisolieren (mit gelbem Tool - :mdi-flash-triangle-outline--red: nicht mit den Zähnen!!! :mdi-tooth-outline--red:)
+- Abisolieren (mit gelbem Tool - :mdi[flash-triangle-outline]{.red} nicht mit den Zähnen!!! :mdi[tooth-outline]{.red})
   - Vorne: ~0.3 cm abisolieren
   - Hinten: ~1 cm abisolieren
 
-:::cards --min-width=300px
+:::cards{min-width=300px}
 ![Schritt 5](images/esp-step05.jpg)
-***
+::br
 ![Schritt 6](images/esp-step06.jpg)
 :::
 :::
 :::cards
 ![Schritt 7](images/esp-step07.jpg)
-Rot :mdi-circle--red:
+Rot :mdi[circle]{.red}
 : Auf __VIN__
-Schwarz :mdi-circle--black:
+Schwarz :mdi[circle]{.black}
 : Auf __GND__
-Blau :mdi-circle--blue:
+Blau :mdi[circle]{.blue}
 : Auf __SCL__
-Grün :mdi-circle--green:
+Grün :mdi[circle]{.green}
 : Auf __SDA__
 
 :::
 :::cards
 ![Schritt 8](images/esp-step08.jpg)
-Rot :mdi-circle--red:
+Rot :mdi[circle]{.red}
 : Auf __VIN__
-Schwarz :mdi-circle--black:
+Schwarz :mdi[circle]{.black}
 : Auf __GND__
-Blau :mdi-circle--blue:
+Blau :mdi[circle]{.blue}
 : Auf __SCL__
-Grün :mdi-circle--green:
+Grün :mdi[circle]{.green}
 : Auf __SDA__
 :::
 :::cards
 ![Schritt 9](images/esp-step09.jpg)
 Zusammenstecken:
 __5V__
-: :mdi-circle--red: 5V Strom Output
+: :mdi[circle]{.red} 5V Strom Output
 __G__
-: :mdi-circle--black: Ground (Erdung)
+: :mdi[circle]{.black} Ground (Erdung)
 __D1__
-: :mdi-circle--blue: SCL Pin für die $I^2C$ Schnittstelle
+: :mdi[circle]{.blue} SCL Pin für die $I^2C$ Schnittstelle
 __D2__
-: :mdi-circle--green: SDA Pin für die $I^2C$ Schnittstelle
+: :mdi[circle]{.green} SDA Pin für die $I^2C$ Schnittstelle
 :::
 
 
-It's Coffee Time! :mdi-coffee-outline: 
+It's Coffee Time! :mdi[coffee-outline] 

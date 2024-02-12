@@ -18,16 +18,12 @@ Für viele Probleme der Informatik hat man noch keine effiziente Algorithmen gef
 ## Komplexitätsklasse P
 
 :::def
-### Definition
-
 Die Komplexitätsklasse $P$ enthält die Probleme, für die eine deterministische Turingmaschine (etwa ein konventioneller Computer) existiert, die das Problem in polynomialer Laufzeit löst.
 :::
 
 ## Komplexitätsklasse NP
 
 :::def
-### Definition
-
 Die Komplexitätsklasse $NP$ enthält die Probleme, von denen sich in polynomialer Laufzeit mit einer deterministischen Turingmaschine entscheiden lässt, ob eine vorgeschlagene Lösung zutrifft.
 :::
 

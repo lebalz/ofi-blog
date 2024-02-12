@@ -30,7 +30,7 @@ Die obenstehende Schaltung kann beispielsweise mit folgender Tabelle beschrieben
 
 </div>
 
-:::aufgabe Aufgabe 1
+:::aufgabe[Aufgabe 1]
 <Answer type="state" webKey="b6de8ed2-91e1-4f6e-bcc2-877150829a12" />
 
 Wie könnte eine Schaltung mit dieser Wahrheitstabelle wohl aussehen?
@@ -44,41 +44,41 @@ Wie könnte eine Schaltung mit dieser Wahrheitstabelle wohl aussehen?
 
 Um einfache Schaltungen erstellen zu können, benötigen wir ein paar einfachen Ein- und Ausgabemöglichkeiten.  Wir haben folgende **Eingabemöglichkeiten** für unsere Schaltungen:
 
-:::cards --min-width=200px
+:::cards{min-width=200px}
 ![](images/01-sensor-button.svg)
 Druckknopf, liefert Eingabe 1️⃣, wenn er gedrückt wird.
-***
+::br
 ![](images/01-sensor-switch.svg)
 Schalter, kann ein- oder ausgeschaltet werden.
-***
+::br
 ![](images/01-sensor-temperature.svg)
 Temperatursensor, liefert als Eingabe 1️⃣, wenn es warm ist.
-***
+::br
 ![](images/01-sensor-light.svg)
 Lichtsensor, liefert als Eingabe 1️⃣, wenn es hell ist.
-***
+::br
 ![](images/01-sensor-humidity.svg)
 Feuchtigkeitssensor, liefert als Eingabe 1️⃣, wenn es feucht ist.
-***
+::br
 ![](images/01-sensor-movement.svg)
 Bewegungssensor, liefert als Eingabe 1️⃣, wenn Bewegung entdeckt wird.
-***
+::br
 ![](images/01-sensor-microphone.svg)
 Mikrofon, liefert als Eingabe 1️⃣, wenn ein Geräusch entdeckt wird.
 :::
 
 Für die **Ausgabe** stehen folgende Geräte zu Verfügung:
 
-:::cards --min-width=200px
+:::cards{min-width=200px}
 ![](images/01-actor-light.svg)
 Licht, brennt bei Ausgabe 1️⃣
-***
+::br
 ![](images/01-actor-sound.svg)
 Lautsprecher, tönt bei Ausgabe 1️⃣
-***
+::br
 ![](images/01-actor-heating.svg)
 Heizung, heizt bei Ausgabe 1️⃣
-***
+::br
 ![](images/01-actor-motor.svg)
 Motor, läuft bei Ausgabe 1️⃣
 :::

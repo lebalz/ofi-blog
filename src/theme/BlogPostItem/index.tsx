@@ -10,7 +10,7 @@ import BlogPostItemFooter from '@theme/BlogPostItem/Footer';
 import type { Props } from '@theme/BlogPostItem';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Link from '@docusaurus/Link';
-import { CommentProvider } from '../Root';
+import MDXContent from '@theme/MDXContent';
 
 // apply a bottom margin in list view
 function useContainerClassName() {
@@ -27,14 +27,16 @@ export default function BlogPostItem({
   if (isBlogPostPage) {
     return (
       <BlogPostItemContainer className={clsx(containerClassName, className)}>
-        <BlogPostItemHeader />
-        <BlogPostItemContent>{children}</BlogPostItemContent>
-        <BlogPostItemFooter />
+        <MDXContent>
+          <BlogPostItemHeader />
+          <BlogPostItemContent>{children}</BlogPostItemContent>
+          <BlogPostItemFooter />
+        </MDXContent>
       </BlogPostItemContainer>
     );
   }
   return (
-      <div className="card" style={{color: frontMatter.sidebar_custom_props?.color, background: frontMatter.sidebar_custom_props?.background }}>
+      <div className="card" style={{color: (frontMatter as {sidebar_custom_props?: any}).sidebar_custom_props?.color, background: (frontMatter as {sidebar_custom_props?: any}).sidebar_custom_props?.background }}>
         <div className="card__image">
           <img
             src={useBaseUrl(assets.image || '/img/og-preview.png')}
@@ -43,9 +45,9 @@ export default function BlogPostItem({
         <div className="card__body">
           <h4>{metadata.title}</h4>
           <small className={styles.noImages}>
-            <CommentProvider value={false}>
-              {children}
-            </CommentProvider>
+            <MDXContent>
+                {children}
+            </MDXContent>
           </small>
         </div>
         <div className="card__footer">

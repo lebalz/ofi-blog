@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Top-Down Entwurf Spiel
 
-:::aufgabe Spielentwurf
+:::aufgabe[Spielentwurf]
 <Answer type="state" webKey="90a9cdb5-6384-4818-b229-eb7d4ff889c3" />
 
 Dateiname

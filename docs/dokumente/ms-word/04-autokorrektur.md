@@ -18,26 +18,26 @@ Word unterschiedet zwei Fehlertypen:
 
 Um einen Fehler zu korrigieren, können mit Rechtsklick die Verbesserungsvorschläge angesehen werden.
 
-:::caution Autokorrektur aktivieren
+:::warning[Autokorrektur aktivieren]
 
 Die Autokorrektur ist für die Rechtschreibefehler standardmässig aktiviert. Bei den Grammatikfehlern ist die Überprüfung aber nicht immer aktiv: Sie sollte unbedingt unter __Datei > Optionen > Dokumentprüfung__ aktiviert werden!
 
-![:mdi-checkbox-marked--blue: Grammatikfehler während der Eingabe markieren --width=550px](images/04-grammatik.png)
+![:mdi[checkbox-marked]{.blue} Grammatikfehler während der Eingabe markieren --width=550px](images/04-grammatik.png)
 :::
 
 ## Sprache
 
 Natürlich muss Word wissen, in welcher Sprache ein Text verfasst wird. Word versucht für jeden Abschnitt zu erraten, um was für eine Sprache es sich handelt. Dies gelingt aber nicht immer automatisch und gerade "*Deutsch (Schweiz)*" oder "*Deutsch (Deutschland)*" ist für Word schwer zu unterscheiden. Die Sprache kann unten links umgestellt werden - Absatzweise oder auch nur für aktuell markierten Text. Dies ist dann nützlich, wenn Zitate oder Wörter einer anderen Sprache verwendet werden.
 
-:::caution Sprache ändern in Word
+:::warning[Sprache ändern in Word]
 ![Sprache ändern](images/04-therasus.png)
 :::
 
-:::aufgabe Fehler finden
+:::aufgabe[Fehler finden]
 <Answer type="state" webKey="619f5c1b-786f-451a-9b78-554403f298c6" />
 
 Datei
-: [:mdi-download: Texte mit Fehlern.docx](files/ex04-Texte-mit-Felern.docx)
+: [:mdi[download] Texte mit Fehlern.docx](files/ex04-Texte-mit-Felern.docx)
 
 Ändern Sie für die verschiedenen Abschnitte und Wörter die richtige Sprache und korrigieren Sie mithilfe der Rechtschreibkorrektur alle Fehler im Dokument.
 

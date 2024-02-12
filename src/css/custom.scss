@@ -1,5 +1,3 @@
-@import "@mdi/font/css/materialdesignicons.min.css";
-
 /* stylelint-disable docusaurus/copyright-header */
 /**
  * Any CSS included here will be global. The classic template
@@ -298,6 +296,9 @@ div.flex {
             flex-shrink: unset;
             flex-basis: unset;
         }
+        &.empty {
+            opacity: 0;
+        }
 
         .card__image {
             :first-child {
@@ -436,7 +437,7 @@ kbd {
     box-shadow: inset 1px -2px 0 var(--ifm-color-emphasis-400);
 }
 
-strong.underline {
+strong.boxed {
     color: #3348b5;
     font-weight: normal;
     border: 1px solid var(--ifm-color-gray-600);
@@ -448,19 +449,19 @@ strong.underline {
 }
 
 figcaption {
-    strong.underline {
+    strong.boxed {
         transform: none;
     }
 }
 
 html[data-theme='dark'] {    
-    strong.underline {
+    strong.boxed {
         color: #8395ef;
     }
 }
 
 
-.mdi {
+.mdi-icon {
     &.green {
         color: var(--ifm-color-success);
     }

@@ -22,7 +22,7 @@ Python kennt `35` **Schlüsselwörter**, sie sind im folgenden aufgelistet.
 
 </div>
 
-:::danger Achtung
+:::danger[Achtung]
 Diese Schlüsselwörter sollten **nicht** als Namen für eine Variable oder für ein Unterprogramm verwendet werden.
 :::
 ## Spezielle Zeichen in Python:

@@ -4,4 +4,4 @@ sidebar_custom_props:
 ---
 # GitHub Teams
 
-[@video](images/gh-organisations.mp4)
+::video[./images/gh-organisations.mp4]

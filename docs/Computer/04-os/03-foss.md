@@ -5,9 +5,9 @@ sidebar_custom_props:
 
 # 3. Freie Open Source Software
 
-:::cards --columns=2
+:::cards{columns=2}
 ![Europalette](images/03-palette.jpg)
-***
+::br
 ![Sitzbank](images/03-bench.jpg)
 :::
 
@@ -69,9 +69,9 @@ Als bekannteste und verbreitetste Lizenz für Quellcode muss sicherlich die *GNU
 
 Auch für Texte, Bilder und Videos gibt es freie Lizenzen. Die bekannteste Lizenz ist die *Creative Commons License (CC)*[^6] mit ihren verschiedenen Varianten:
 
-:::cards --columns=2
+:::cards{columns=2}
 ![Übersicht über die Creative Commons-Lizenzen](images/03-creative-commons-overview.svg)
-***
+::br
 ![Übersicht über die Creative Commons-Lizenzen](images/03-creative-commons-overview2.png)
 :::
 

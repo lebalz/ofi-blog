@@ -30,7 +30,7 @@ Beispiel Addition:
 Schliesslich wird der eigentliche Befehl ausgeführt, indem das Dekodierwerk die Steuersignale an die Komponenten auslöst. Im nächsten Abschnitt werden einige typische Befehle erläutert.
 
 
-:::success Take-Home Message aus CPU-Rollenspiel
+:::success[Take-Home Message aus CPU-Rollenspiel]
 
 - Wie schnell war ein schneller/langsamer/durchschnittlicher Zyklus in der Menschen-CPU?
 - Wie viele Zyklen waren für die Ausführung eines simplen Programms nötig?

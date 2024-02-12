@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Wurfweite
 
-:::info Lernziele
+:::info[Lernziele]
 Sie brauchen dazu die Funktionen:
 - `PI()`
 - `SIN`
@@ -28,7 +28,7 @@ Vorlage
 : 👉 [04-wurfweite.xlsx](assets/04-wurfweite.xlsx)
 
 
-[@pdf 04-wurfweite.pdf](assets/04-wurfweite.pdf)
+::pdf[./assets/04-wurfweite.pdf]
 
 
 
@@ -41,9 +41,9 @@ Abwurfgeschwindigkeit
 Abwurfhöhe/Körpergrösse
 : 1.85 m
 Weite
-: <span style={{background: 'var(--ifm-color-success)', color: 'white'}}> :mdi-arrow-right-thin: 52.169 m</span>
+: <span style={{background: 'var(--ifm-color-success)', color: 'white'}}> :mdi[arrow-right-thin] 52.169 m</span>
 
-:::caution Hinweis
+:::warning[Hinweis]
 Beachten Sie bei der Eingabe der Formeln, dass Sie Klammern in der richtigen Reihenfolge setzen: Zuerst die Multiplikationen und Divisionen, dann die Additionen und Subtraktionen.
 :::
 

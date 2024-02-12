@@ -12,7 +12,7 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 
 Zum Speichern von **mehreren Werten** unter einem **einzigen Namen** verwendet man in Python Listen. Man kann sich __Listen__ als Tabellen mit einer Spalte vorstellen. Die Zellen in der Tabelle werden als **Elemente** bezeichnet und sind durchnummeriert. So kann man einzelne in der Liste gespeichert Werte unterscheiden. Die Nummer eines Elements wird als dessen **Index** bezeichnet.
 
-:::important Wichtig
+:::important[Wichtig]
 - Das erste Element in der Liste trägt den Index 0.
 - Der Index des letzten Elementes ist die Länge der Liste minus 1.
 :::
@@ -22,13 +22,13 @@ Das folgende Bild illustriert dies für eine Liste mit 4 Noten. Die **Länge** d
 Index
 : 　**Wert**
 `0`
-: :mdi-arrow-right-thin: `4.5`
+: :mdi[arrow-right-thin] `4.5`
 `1`
-: :mdi-arrow-right-thin: `5`
+: :mdi[arrow-right-thin] `5`
 `2`
-: :mdi-arrow-right-thin: `3.5`
+: :mdi[arrow-right-thin] `3.5`
 `3`
-: :mdi-arrow-right-thin: `5.5`
+: :mdi[arrow-right-thin] `5.5`
 
 In Python kann man diese Liste wie folgt erzeugen:
 
@@ -41,7 +41,7 @@ Im Beispiel wird die vierte Note mit dem Index `3` ausgegeben.
 
 ## Aufgaben
 
-:::aufgabe 1. listen-1d.py
+:::aufgabe[1. listen-1d.py]
 <Answer type="state" webKey="ec010329-3a79-4bd3-8e8d-35be2c5d246e" />
 
 Dateiname
@@ -49,7 +49,7 @@ Dateiname
 
 
 1. Erstellen Sie das folgende Programm in Ihrem Repository  
-   :::details Programm
+   :::details[Programm]
     ```py reference title="listen-1d.py"
     https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/assets/listen-1d.py
     ```
@@ -62,7 +62,7 @@ Dateiname
 :::
 
 
-:::aufgabe 2. Was steht geschrieben?
+:::aufgabe[2. Was steht geschrieben?]
 <Answer type="state" webKey="84fa5115-9483-4c76-8aca-7112371d5b3e" />
 
 Dateiname
@@ -89,7 +89,7 @@ sequenceDiagram
 </Hint>
 :::
 
-::::aufgabe 3. Meine Nummer 1
+::::aufgabe[3. Meine Nummer 1]
 <Answer type="state" webKey="56fcba0a-c357-462b-b4e6-8f7d76fbe932" />
 
 Dateiname
@@ -125,19 +125,19 @@ sequenceDiagram
 
 Normalerweise fügt die `print`-Funktion am Ende einer Ausgabe immer das Zeichen `\n` an, was von der Konsole als Steuerzeichen für eine neue Zeile interpretiert wird. Das können Sie aber auch ändern, indem Sie explizit vorgeben, welche Zeichen am Ende hinzugefügt werden:
 
-:::flex --basis=380px
+:::flex{basis=380px}
 ```py live_py slim
 # Mit Lücke zwischen einzelnen prints
 for i in range(3):
     print(f'Lücke {i}', end=' ')
 ```
-***
+::br
 ```py live_py slim
 # Ohne Zeichen zwischen einzelnen prints
 for i in range(3):
     print(f'Ohne {i}', end='')
 ```
-***
+::br
 ```py live_py slim
 # Fancy: mit Rakete und neuer Zeile zwischen einzelnen prints
 for i in range(3):
@@ -147,7 +147,7 @@ for i in range(3):
 </Hint>
 ::::
 
-::::aufgabe 4. Primzahlen
+::::aufgabe[4. Primzahlen]
 <Answer type="state" webKey="00361219-0652-4870-9a42-c3cf8250b9a4" />
 
 Dateiname
@@ -161,8 +161,7 @@ Schreiben Sie ein Programm welches eine Liste mit allen Primzahlen zwischen 1 un
 
 Um den Rest bei einer Division zu berechnen, kann der Modulo-Operator verwendet werden.
 
-:::def
-### Modulo `%`
+:::def[Modulo `%`]
 Um den ganzzahligen Rest bei der Division von zwei ganzen Zahlen zu bestimmen, wird der Modulo-Operator verwendet.
 Biespiel: Was ist der ganzzahlige Rest von $7 / 5$?
 ```py live_py slim
@@ -237,8 +236,7 @@ https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/03-Python/assets/pri
 
 Hier nochmals in der Übersicht die Funktionsweise von Listen in Python.
 
-:::def
-### Liste erzeugen `[]`
+:::def[Liste erzeugen `[]`]
 ```py live_py slim
 # Liste erzeugen und Variablen zuweisen
 noten = [3.5, 6, 5, 4.5]
@@ -250,8 +248,7 @@ print(noten[2])
 ```
 :::
 
-:::def
-### Schleife über alle Elemente der Liste
+:::def[Schleife über alle Elemente der Liste]
 ```py live_py slim
 noten = [3.5, 6, 5, 4.5]
 
@@ -260,8 +257,7 @@ for note in noten:
 ```
 :::
 
-:::def
-### Schleife über Listen-Indices
+:::def[Schleife über Listen-Indices]
 ```py live_py slim
 noten = [3.5, 6, 5, 4.5]
 
@@ -271,8 +267,7 @@ for index in range(0, len(noten)):
 ```
 :::
 
-:::def
-### Listenelemente ändern
+:::def[Listenelemente ändern]
 ```py live_py slim
 noten = [3.5, 6, 5, 4.5]
 
@@ -282,8 +277,7 @@ print(noten)
 ```
 :::
 
-:::def
-### Fehler: IndexError
+:::def[Fehler: IndexError]
 ```py live_py slim
 noten = [3.5, 6, 5, 4.5]
 
@@ -292,8 +286,7 @@ noten[7] = 6
 ```
 :::
 
-:::def
-### Element hinzufügen `append()`
+:::def[Element hinzufügen `append()`]
 ```py live_py slim
 noten = [3.5, 6, 5, 4.5]
 
@@ -303,8 +296,7 @@ print(noten)
 ```
 :::
 
-:::def
-### Element an bestimmter Stelle hinzufügen `insert()`
+:::def[Element an bestimmter Stelle hinzufügen `insert()`]
 ```py live_py slim
 noten = [3.5, 6, 5, 4.5, 5]
 # vor dem Element mit Index 3 eine "4" einfügen
@@ -313,8 +305,7 @@ print(noten)
 ```
 :::
 
-:::def
-### Aufsteigend sortieren `sort()`
+:::def[Aufsteigend sortieren `sort()`]
 ```py live_py slim
 noten = [3.5, 6, 5, 4, 4.5, 5]
 
@@ -323,8 +314,7 @@ print(noten)
 ```
 :::
 
-:::def
-### Letztes Element entfernen `pop()`
+:::def[Letztes Element entfernen `pop()`]
 Letztes Element entfernen und zurückgeben.
 ```py live_py slim
 noten = [3.5, 4, 4.5, 5, 5, 6]
@@ -335,8 +325,7 @@ print(noten)
 ```
 :::
 
-:::def
-### Element bei Index entfernen `pop(0)`
+:::def[Element bei Index entfernen `pop(0)`]
 
 ```py live_py slim
 vorderstes = noten.pop(0)
@@ -344,8 +333,7 @@ print(vorderstes)
 print(noten)
 ```
 :::
-:::def
-### Element aus der Liste entfernen `remove()`
+:::def[Element aus der Liste entfernen `remove()`]
 
 ```py live_py slim
 noten = [3.5, 5, 4.5, 4, 5, 6]
@@ -356,8 +344,7 @@ print(noten)
 ```
 :::
 
-:::def
-### Mittelwert `statistics.mean()`
+:::def[Mittelwert `statistics.mean()`]
 
 ```py live_py slim
 import statistics
@@ -373,16 +360,14 @@ Weitere Funktionen
 👉 https://docs.python.org/3/library/statistics.html
 :::
 
-:::def
-### Leere Liste `[]`
+:::def[Leere Liste `[]`]
 ```py live_py slim
 # Leere Liste erstellen
 noten = []
 print(noten)
 ```
 :::
-:::def
-### Liste mit Text
+:::def[Liste mit Text]
 ```py live_py slim
 # Liste mit Strings
 noten =['gut', 'erfüllt', 'mangelhaft', 'erfüllt']

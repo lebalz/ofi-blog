@@ -30,7 +30,7 @@ Die **Verschlüsselung** erfolgt, indem man in der folgenden Tabelle einen Klart
 | Klartextalphabet   | `A` `B` `C` `D` `E` `F` `G` `H` `I` `J` `K` `L` `M` `N` `O` `P` `Q` `R` `S` `T` `U` `V` `W` `X` `Y` `Z` |
 | Geheimtextalphabet | `D` `E` `F` `G` `H` `I` `J` `K` `L` `M` `N` `O` `P` `Q` `R` `S` `T` `U` `V` `W` `X` `Y` `Z` `A` `B` `C` |
 
-:::tip Merke
+:::tip[Merke]
 Heute wird jede Verschlüsselung, die auf einer Verschiebung des Alphabets beruht, eine **Casear-Verschlüsselung** genannt.
 :::
 

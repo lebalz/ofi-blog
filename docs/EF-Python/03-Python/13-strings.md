@@ -7,13 +7,11 @@ sidebar_custom_props:
 
 Texte in Python können auf unterschiedliche Art und weise erzeugt werden.
 
-:::def
-### `'text'`, `"text"`
+:::def[`'text'`, `"text"`]
 ob einfache- `'` oder doppelte `"` Anführungszeichen: Beides ist gleichbedeutend!
 :::
 
-:::def
-### `f''`, `f""` Formatierter Text
+:::def[`f''`, `f""` Formatierter Text]
 Formatierter Text kann mehrere Texte zusammenfügen und dabei auch Zahlen oder Listen einfügen. Inhalt in geschweiften Klammern wird zuerst ausgewertet und dann dort abgedruckt.
 
 ```py live_py slim
@@ -23,8 +21,7 @@ print(f'Hallo {name}, du bist heute {2022 - jahrgang} Jahre alt')
 ```
 :::
 
-:::::def
-### `'''`, `"""`, `f'''`, `f"""` Mehrzeiliger Text
+:::::def[`'''`, `"""`, `f'''`, `f"""` Mehrzeiliger Text]
 
 Möchte man Text über mehrere Zeilen schreiben, kann entweder das Zeichen für eine neue Zeile (`\n`) verwendet werden, oder ein mehrzeiligen String mit `'''`  oder `"""` starten. Ebenso können mehrzeilige formatierte Blöcke aussehen. 
 
@@ -40,11 +37,11 @@ Reto'''
     print('----------')
 ```
 
-::::info Mehrzeilige Kommentare
+::::info[Mehrzeilige Kommentare]
 Manchmal wünscht man sich einen Kommentar über mehrere Zeilen zu schreiben, ohne immer ein `#` am Beginn der Zeile zu schreiben. In anderen Sprachen gibt es spezielle "Start-" und "End-Kommentar" Zeichen, so dass auch mehrere Zeilen auskommentiert werden können. (Bspw. um eine ganze Funktion auszukommentieren...). In Python gibt es dies nicht. Es kann aber aus dem kommentierten Code Text gemacht werden, so dass dieser nicht ausgeführt (aber auch nirgends in eine Variable gespeichert) wird.
 
 :::cards
-*** --code
+::br{code=true}
 ```py live_py slim
 from math import sqrt
 
@@ -55,8 +52,8 @@ def sqrt(zahl):
 '''
 print('Wurzel 2 = ', sqrt(2))
 ```
-***
-**Beispiel**: Ursprünglich wurde die Funktion `sqrt` selber implementiert. Nun brauchen Sie diese vermutlich nicht mehr, das diese aus der Bibliothek `math` importiert wird. Vorerst wollen Sie die eigene Funktion aber noch nicht löschten :mdi-arrow-right: vorerst **kommentieren** Sie diese.
+::br
+**Beispiel**: Ursprünglich wurde die Funktion `sqrt` selber implementiert. Nun brauchen Sie diese vermutlich nicht mehr, das diese aus der Bibliothek `math` importiert wird. Vorerst wollen Sie die eigene Funktion aber noch nicht löschten :mdi[arrow-right] vorerst **kommentieren** Sie diese.
 :::
 ::::
 :::::
@@ -66,12 +63,12 @@ print('Wurzel 2 = ', sqrt(2))
 
 Wie im Kapitel [Referenzen](./10-referenzen/index.md) besprochen, haben wir unsere Vorstellung des Speichermodells in Python soweit aktualisiert, dass der Computer für Variablen eine Etikette erstellt, die auf eine Speicherstelle zeigt, an welcher dann der effektive Wert gespeichert ist.
 
-:::flex --min-width=200px
+:::flex{min-width=200px}
 Der Python Code...
 ```py
 a = 'das ist mein string'
 ```
-***
+::br
 ... kann dargestellt werden als
 ```mermaid
 graph LR
@@ -83,10 +80,10 @@ In Python gibt es unterschiedliche Sammel-Datentypen, daher Daten, die unterschi
 
 Dabei macht Python einen grundlegenden Unterschied zwischen Veränderbaren- (*Mutable*) und Nicht-Veränderbaren (*Immutable*) Datentypen. Bei veränderbaren Datentypen können nach der Erzeugung und Zuweisung Änderungen an den zugrundeliegenden Speicherstellen vorgenommen werden.
 
-::::info Listen vs. Tupel
-:::flex --min-width=200px
+::::info[Listen vs. Tupel]
+:::flex{min-width=200px}
 Bei **Listen** können nach dem Erzeugen einzelne Listenwerte verändert, oder gar neue Werte hinzugefügt oder entfernt werden.
-***
+::br
 ```py live_py slim
 a = [1, 2, 3] # Liste initialisieren
 a.append(4)   # 4 hinzufügen
@@ -96,9 +93,9 @@ print(a)
 ```
 :::
 
-:::flex --min-width=200px
+:::flex{min-width=200px}
 Im Gegensatz dazu gibt es das **unveränderbare** Äquivalent dazu: **Tupel**. Einmal initialisiert, lassen sich dessen Werte nur noch lesen, jedoch nicht mehr verändern. Tupel werden im Gegensatz zu Listen mit runden Klammern erzeugt (initialisiert).
-***
+::br
 ```py live_py slim
 a = (1, 2, 3) # Tupel - eine unveränderbare Liste
 print(a)
@@ -154,8 +151,7 @@ print(vorname[0]) # erster Buchstabe
 print(vorname[-1]) # letzter Buchstabe
 ```
 
-:::def
-### `str[start:ende:schrittweite]` Zugriff
+:::def[`str[start:ende:schrittweite]` Zugriff]
 
 Es ist auch möglich, einen Bereich anzugeben. Wie beim `range()` Befehl, gibt man den Startwert und die obere Grenze an, die aber selber nicht erreicht wird.
 
@@ -180,7 +176,7 @@ namen = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 print(namen[0::2]) # Bemerke: der Endwert wird nicht angegeben = bis zum Schluss fortfahren...
 ```
 
-oder **rückwärts** :mdi-emoticon-cool-outline:
+oder **rückwärts** :mdi[emoticon-cool-outline]
 
 ```py live_py slim
 vorname = 'Reto'
@@ -214,7 +210,7 @@ else:
 ```
 
 ### Kurzaufgaben
-:::aufgabe 1.
+:::aufgabe[1.]
 <Answer type="state" webKey="c0ca7471-ffb2-4082-8d71-914cdc2fa942" />
 
 Erklären Sie, was die Programmierer:in hier erreichen wollten, und weshalb aber ein Fehler entsteht.
@@ -228,7 +224,7 @@ print(name)
 <Answer type="text" webKey="d0f2db5e-be9c-45ff-a056-c9f57975f7bb" />
 :::
 
-:::aufgabe 2.
+:::aufgabe[2.]
 <Answer type="state" webKey="218186b9-2c66-47af-98ad-08c54276934d" />
 
 > **Why are humans known to be extremely afraid of computers?**
@@ -261,8 +257,7 @@ Hier wird die **Methode** `.find()` *auf den String* `'hallo, welt'` aufgerufen,
 
 Diese Methoden bieten Hilfestellung, wenn wir eine spezifische Information über einen String haben wollen.
 
-:::def
-### `.startswith(wort)`
+:::def[`.startswith(wort)`]
 
 Beantwortet die Frage ob ein String mit einem `wort` (oder auch nur einem Buchstaben) **beginnt** mit einem Boolean.
 
@@ -275,8 +270,7 @@ print(a.startswith('h'))
 ```
 :::
 
-:::def
-### `.endswith(wort)`
+:::def[`.endswith(wort)`]
 
 Beantwortet die Frage ob ein String mit einem `wort` (oder auch nur einem Buchstaben) **endet** mit einem Boolean.
 
@@ -287,10 +281,9 @@ a = 'Hallo! '
 print(a.endswith('!'))
 print(a.endswith(' ')) # auch Leerzeichen sind Zeichen!
 ```
-::: 
+:::
 
-:::def
-### `.isalpha()`
+:::def[`.isalpha()`]
 
 Beantwortet die Frage, ob ein String **nur aus Buchstaben** besteht mit einem Boolean.
 
@@ -303,8 +296,7 @@ else:
 ```
 :::
 
-:::def
-### `.isnumeric()`
+:::def[`.isnumeric()`]
 
 Beantwortet die Frage, ob ein String **nur aus Zahlen** besteht mit einem Boolean.
 
@@ -317,8 +309,7 @@ else:
 ```
 :::
 
-:::def
-### `.find(wort)`
+:::def[`.find(wort)`]
 Findet ein `wort` im String und gibt den Startindex des erstmaligen Auftretens zurück. Bei `'Hallo'.find('l')` wäre dies also der Startindex `2`, da bei `'Hallo'[2]` erstmalig ein `l` vorkommt.
 
 Wird das `wort` nicht gefunden, so gibt die Method `-1` zurück.
@@ -337,8 +328,7 @@ else:
 
 Wie vorhin festgestellt, sind Strings **immutable**, können daher nicht verändert werden. Um dennoch möglichst einfach Operationen auf Texten auszuführen, wie etwa alles gross- oder kleinzuschreiben, gibt es Methoden, welche einen veränderten String zurückgeben, sich selber aber nicht verändern.
 
-:::def
-### `.upper()`
+:::def[`.upper()`]
 Schreibt den String in Grossbuchstaben, Sonderzeichen werden nicht verändert.
 
 ```py live_py slim
@@ -348,8 +338,7 @@ print(original, gross)
 ```
 :::
 
-:::def
-### `.lower()`
+:::def[`.lower()`]
 Schreibt den String in Kleinbuchstaben, Sonderzeichen werden nicht verändert.
 
 ```py live_py slim
@@ -359,8 +348,7 @@ print(original, klein)
 ```
 :::
 
-:::def
-### `.strip(<zeichen>)`
+:::def[`.strip(<zeichen>)`]
 Entfernt jeglichen *White-Space* ("weisse Zeichen", daher Leerschläge, Tabulatoren, Neue Zeilen)  entfernt Leerschläge am Start und Ende des Strings. 
 
 
@@ -388,8 +376,7 @@ print('Vorname:', vorname)
 ```
 :::
 
-:::def
-### `.replace(wort, ersetzen)`
+:::def[`.replace(wort, ersetzen)`]
 Ersetzt **alle** `wort`e im String mit dem Parameter `ersetzen`.
 
 **Achtung**: `ersetzen` muss auch ein String sein, `.replace('fünf', 5)` gibt einen Fehler.
@@ -404,7 +391,7 @@ print(text)
 ```
 :::
 
-:::aufgabe 3. Emoji-Sprache
+:::aufgabe[3. Emoji-Sprache]
 <Answer type="state" webKey="f0c0b431-73c9-42de-bb89-71a691af676d" />
 
 Erstellen Sie eine Emoji-Sprache und ersetzen Sie typische Wörter in das entsprechende Emoji. Beispiel:
@@ -428,8 +415,7 @@ Erweitern Sie anschliessend Ihr Programm so, dass eine Benutzer:in einen Satz ei
 
 Manchmal hilft es, Strings in Listen umzuwandeln und manchmal möchten wir eine Liste von Buchstaben oder Strings in einen String zu vereinen. 
 
-:::def
-### `.join(liste)`
+:::def[`.join(liste)`]
 
 benötigt als Parameter eine Liste von Strings. Diese werden dann zu einem ganzen String aneinandergehängt. Das Bindeglied bildet der String, auf dem die Methode aufgerufen wurde.
 ```py live_py slim
@@ -444,8 +430,7 @@ print('Heute ist der ', datum)
 ```
 :::
 
-:::def
-### `.split(zeichen)`
+:::def[`.split(zeichen)`]
 
 `.split()` ist die umgekehrte Aktion von `.join()`. Die Methode nimmt als Parameter ein `zeichen` [typ String] und trennt anschliessend den String überall, wo das `zeichen` vorkommt. Dabei werden die `zeichen` selbst entfernt.
 
@@ -461,7 +446,7 @@ print('Tag: ', datum.split(':')[0])
 ```
 :::
 
-:::aufgabe 4. Zeilenweise
+:::aufgabe[4. Zeilenweise]
 <Answer type="state" webKey="49b4ed69-263f-4a83-b38f-d4705162952c" />
 
 ```py live_py title=reverse.py id=674423d1-6338-4347-b7b2-7c92b8f0d794

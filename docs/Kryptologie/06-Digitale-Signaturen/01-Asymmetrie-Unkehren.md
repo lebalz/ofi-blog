@@ -9,15 +9,15 @@ sidebar_custom_props:
 
 # Asymmetrie umkehren
 
-:::flex --min-width=250px
+:::flex{min-width=250px}
 ![Asymmetrische Verschlüsselungs Box](images/asymm-box.png)
-***
+::br
 ![Privater Schlüssel (rechts drehend)](images/driver-private.png)
-***
+::br
 ![Öffentlicher Schlüssel (links drehend)](images/driver-public.png)
 :::
 
-:::aufgabe aus dem Unterricht...
+:::aufgabe[aus dem Unterricht...]
 <Answer type="state" webKey="41e7d6d6-2425-40f4-9976-f486ec9eb2cf" />
 
 Halten Sie kurz fest, wie die Boxen und ihre Schlüssel funktionieren.
@@ -26,7 +26,7 @@ Halten Sie kurz fest, wie die Boxen und ihre Schlüssel funktionieren.
 
 :::
 
-:::aufgabe Aufgabe Bedeutung des Gedankenexperimentes
+:::aufgabe[Aufgabe Bedeutung des Gedankenexperimentes]
 <Answer type="state" webKey="971ad389-7172-49a2-b8b8-1e47d83a40d4" />
 
 a. Was bedeutet es, wenn jemand einen Text mit seinem eigenen privaten Schlüssel «verschlüsselt», so dass der Geheimtext nur mit dem zugehörigen öffentlichen Schlüssel «entschlüsselt» werden kann?
@@ -56,11 +56,11 @@ Wir haben soeben das Prinzip der digitalen Signatur entdeckt.
 
 ![Digitale Signatur](images/asymm-signature.svg)
 
-:::finding Digitale Signatur
+:::finding[Digitale Signatur]
 Wenn Bob die Nachricht mit dem öffentlichen Schlüssel von Alice entschlüsseln kann, dann muss diese Nachricht vorher mit dem privaten Schlüssel von Alice verschlüsselt worden sein. Somit kann sie von niemandem anders stammen als von Alice. D.h. diese Nachricht ist quasi digital signiert.
 :::
 
-:::aufgabe Aufgabe mehrere Leute
+:::aufgabe[Aufgabe mehrere Leute]
 <Answer type="state" webKey="9a23f76b-2500-459d-8ffc-dc4da5d06a6a" />
 
 Überlegen Sie sich, wie ein signiertes Dokument von mehr als zwei Personen angeschaut und überprüft wird. Welche Schlüssel werden verwendet?

@@ -18,7 +18,7 @@ Bei der Speicherung von Grafiken und Bildern im Computer wird zwischen zwei grun
 
 :::flex
 ![Smiley als Rastergrafik](images/01-smiley-raster.svg)
-***
+::br
 ![Smiley als Vektorgrafik](images/01-smiley-vektor.svg)
 :::
 

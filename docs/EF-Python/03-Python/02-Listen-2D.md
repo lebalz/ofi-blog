@@ -32,8 +32,7 @@ Man kann in Python auch zwei- oder gar *n*-dimensionale Listen haben. Für Pytho
 Für jede zusätzlich Dimension wird eine weitere Verschachtelungsstufe hinzugefügt.
 Bei zwei Dimensionen kann man auf diese Weise in Python Matrizen, bzw. Tabellen mit mehreren Zeilen und Spalten darstellen.
 
-:::def
-### 3 x 3 Matrix
+:::def[3 x 3 Matrix]
 Eine Matrix ist eine Liste von Listen
 ```py live_py slim
 matrix = [
@@ -45,8 +44,7 @@ print(matrix)
 ```
 :::
 
-:::def
-### Zugriff `[][]`
+:::def[Zugriff `[][]`]
 Auf einzelne Element in der Matrix zugreifen
 
 ```py live_py slim
@@ -69,10 +67,9 @@ print('Zeile 3, Spalte 1:', matrix[2][0])
 ```
 :::
 
-:::def 
-### Schleife über Zeilen
+:::def[ Schleife über Zeilen]
 
-Schleife über einzelne Zeilen :mdi-arrow-right: Zeilen sind wieder Listen
+Schleife über einzelne Zeilen :mdi[arrow-right] Zeilen sind wieder Listen
 ```py live_py slim
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
@@ -81,7 +78,7 @@ for zeile in matrix:
 ```
 :::
 
-:::aufgabe `pprint()`
+:::aufgabe[`pprint()`]
 <Answer type="state" webKey="32b77e06-fa29-4ed2-950c-e28b0259eb3c" />
 
 Schreiben Sie eine Funktion `pprint` (Abkürzung für `Pretty Print`), welche eine 2D-Liste übersichtlich ausgibt:
@@ -135,8 +132,7 @@ pprint([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
 :::
 
-:::def
-### Durch alle Elemente Iterieren
+:::def[Durch alle Elemente Iterieren]
 
 Dazu wird eine **verschachtelte Schleife** über Zeilen und Spalten verwendet.
 ```py live_py slim
@@ -192,7 +188,7 @@ for i in range(len(matrix)):
 </Solution>
 :::
 
-:::aufgabe 2D-Liste erstellen
+:::aufgabe[2D-Liste erstellen]
 <Answer type="state" webKey="302c5fcd-76d3-4fa7-aef0-c52b9d03422d" />
 
 #### `create_from.py`
@@ -289,7 +285,7 @@ print(matrix)
 
 :::
 
-:::aufgabe Was ist denn hier los?
+:::aufgabe[Was ist denn hier los?]
 <Answer type="state" webKey="c134f37d-8e4b-49e0-964e-355d202560bf" />
 
 Dateiname
@@ -326,11 +322,11 @@ matrix[1][1] = 0 # nur den Wert in Zeile 1 in der Mitte auf 0 Setzen
 print(matrix)
 ```
 
-:mdi-arrow-right: Fassen Sie obiges Verhalten nun in eigene Worte im Dokument __EF-Informatik/docs/python/referenzen.md__.
+:mdi[arrow-right] Fassen Sie obiges Verhalten nun in eigene Worte im Dokument __EF-Informatik/docs/python/referenzen.md__.
 
 :::
 
-:::warning Häufige Fehlerquellen
+:::warning[Häufige Fehlerquellen]
 
 Exotisches (und oft Grund für Fehler):
 - Innere Listen sind unterschiedlich lang durch
@@ -379,7 +375,7 @@ png.from_array(simley, 'L').save('small_smiley.png')
 
 Probieren Sie es aus!
 
-:::aufgabe Graustufen-Bilder
+:::aufgabe[Graustufen-Bilder]
 <Answer type="state" webKey="8131c3da-101f-44dd-8a32-3c8ff541186c" />
 
 Dateiname

@@ -25,6 +25,7 @@ rekursiv
 
 
 :::aufgabe
+<Answer type="state" webKey="11d68d05-21d7-491e-8f60-d2da2bd508ee" />
 
 Selection Sort ist:
 

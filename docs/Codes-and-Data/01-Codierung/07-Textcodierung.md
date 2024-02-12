@@ -15,7 +15,7 @@ import HexSystem from '@site/docs/Codes-and-Data/01-Codierung/_def-hexa.md';
 
 In dieser praktischen Übung speichern Sie auf Ihrem Computer eine Textdatei und überprüfst anschliessend, ob die in der Datei gespeicherten Bits tatsächlich der Unicode/UTF-8-Codierung des Texts entsprechen.
 
-:::aufgabe 1. Texteditor öffnen
+:::aufgabe[1. Texteditor öffnen]
 <Answer type="state" webKey="528f373f-d9d7-4fe4-a211-c27726f18dd3" />
 
 Der Editor ist eine App, in welcher man Textdateien erstellen und bearbeiten kann. Das kann man auch mit Word, dies ist jedoch umständlicher. Word-Dateien sind keine reinen Textdateien, sie enthalten auch andere Daten wie Formatierungen und Bilder.
@@ -46,7 +46,7 @@ Um in macOS Textdateien erstellen und bearbeiten zu können, installieren Sie am
 
 :::
 
-:::aufgabe 2. Text eingeben
+:::aufgabe[2. Text eingeben]
 <Answer type="state" webKey="6682dc2c-b472-4fad-98f4-eb8bbe6f42ab" />
 
 Geben Sie einen kurzen Text ein. Dieser sollte nicht nur ASCII-Zeichen enthalten, sondern auch ein Umlaut wie «ä» und Emojis. 
@@ -55,12 +55,12 @@ Geben Sie einen kurzen Text ein. Dieser sollte nicht nur ASCII-Zeichen enthalten
 <OsTabs>
 <TabItem value="win">
 
-Emojis können unter Windows mit dem Tastenkürzel [[:mdi-microsoft-windows:]] + [[.]] eingefügt werden.
+Emojis können unter Windows mit dem Tastenkürzel [[:mdi[microsoft-windows]]] + [[.]] eingefügt werden.
 
 </TabItem>
 <TabItem value="mac">
 
-Emojis können unter Mac OS X mit dem Tastenkürzel [[Ctrl]] + [[Cmd :mdi-apple-keyboard-command:]] +[[Leertaste :mdi-keyboard-space:]] eingefügt werden.
+Emojis können unter Mac OS X mit dem Tastenkürzel [[Ctrl]] + [[Cmd :mdi[apple-keyboard-command]]] +[[Leertaste :mdi[keyboard-space]]] eingefügt werden.
 
 </TabItem>
 </OsTabs>
@@ -82,7 +82,7 @@ Alternativ findet man unter [👉 Emojipedia](https://emojipedia.org) viele weit
 </OsTabs>
 :::
 
-:::aufgabe 3. Textdatei speichern
+:::aufgabe[3. Textdatei speichern]
 <Answer type="state" webKey="b685dfdc-27eb-444a-a59f-019b315aa4af" />
 
 Speichern Sie die Textdatei unter dem Namen __Unicode-Test.txt__ indem Sie
@@ -109,7 +109,7 @@ Speichern Sie die Textdatei unter dem Namen __Unicode-Test.txt__ indem Sie
 
 :::
 
-::::aufgabe 4. Datei als Bytes betrachten
+::::aufgabe[4. Datei als Bytes betrachten]
 <Answer type="state" webKey="42f48306-1123-4161-a256-1eacc6ab8430" />
 
 Mit dem Online-Tool _HexEd.it_ können Sie eine beliebige Datei Byte für Byte betrachten:
@@ -125,7 +125,7 @@ Klicken Sie auf **Datei öffnen** und wählen Sie die vorhin gespeicherte Textda
 Die Bytes werden wie in der Informatik üblich als *Hexadezimalzahlen* angegeben. Wenn man über die einzelnen Bytes navigiert (mit den Pfeiltasten), sieht man auf der linken Seite die entsprechende Binärcodierung. Alternativ finden Sie hier auch einen Umrechner zwischen Binär-, Dezimal- und Hexadezimalzahlen.
 
 
-:::details ⭐️ Hexadezimal Zahlen
+:::details[⭐️ Hexadezimal Zahlen]
 <HexSystem />
 <DecBinHexTransformer />
 :::
@@ -167,7 +167,7 @@ Im vorliegenden Beispiel sieht das so aus:
 </Hint>
 ::::
 
-:::aufgabe ⭐️ Zusatzaufgabe - Andere Dateien
+:::aufgabe[⭐️ Zusatzaufgabe - Andere Dateien]
 <Answer type="state" webKey="132b7d4d-6605-45d6-a212-079d3487ec8a" />
 
 Betrachten Sie andere Dateien in _HexEd.it_ und achten Sie auf folgendes:

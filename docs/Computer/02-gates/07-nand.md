@@ -23,7 +23,7 @@ In Schaltplänen wird ein NAND-Gatter mit folgendem Symbol dargestellt:
 
 ## Interaktive Schaltung
 
-[@circuitverse](https://circuitverse.org/simulator/embed/rothe-nand-gate)
+::circuitverse[https://circuitverse.org/simulator/embed/rothe-nand-gate]
 
 Ein NAND-Gatter kann aus einem AND-Gatter, gefolgt von einem Inverter zusammengesetzt werden:
 

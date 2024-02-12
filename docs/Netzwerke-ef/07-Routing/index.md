@@ -12,20 +12,20 @@ sidebar_custom_props:
 
 <Answer type="state" webKey="8fcef783-5f7d-44aa-903f-ea4e74d5a385" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/AzXys5kxpAM)
+::youtube[https://www.youtube-nocookie.com/embed/AzXys5kxpAM]
 
 ---
 
 <Answer type="state" webKey="b6955d87-a06c-4db4-856b-961edf82d1d8" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/Ep-x_6kggKA)
+::youtube[https://www.youtube-nocookie.com/embed/Ep-x_6kggKA]
 
 ---
 
 
 <Answer type="state" webKey="4d499f34-45bb-4613-8f02-2260af713cf2" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/zmxLg4jV0ts)
+::youtube[https://www.youtube-nocookie.com/embed/zmxLg4jV0ts]
 
 ---
 
@@ -84,14 +84,14 @@ Für das Ziel einer Route hat man **mehrere** Möglichkeiten:
 Um beim Routenziel zu wissen, ob es sich um eine Netzwerk- oder Host-Adresse handelt, muss man auch die **Netzmaske** kennen. Im ersten Fall ist das eine herkömmliche Netzmaske mit einer Reihe 0 am Ende. Im zweiten Fall ist das die Netzmaske `255.255.255.255` (also lauter 1 und keine 0).
 
 ### Beispiele
-Routing-Tabelle eines Raspberry-Pi (Linux :mdi-penguin:):
+Routing-Tabelle eines Raspberry-Pi (Linux :mdi[penguin]):
 
 ```bash
 # sudo apt install net-tools
 route -n
 ```
 
-![Routingtabelle Raspberry PI :mdi-penguin:](images/RoutingtableRaspy.png)
+![Routingtabelle Raspberry PI :mdi[penguin]](images/RoutingtableRaspy.png)
 
 Routing-Tabelle eines Windows-Notebooks:
 
@@ -100,5 +100,5 @@ Routing-Tabelle eines Windows-Notebooks:
 route PRINT
 ```
 
-![Routingtabelle Windows :mdi-powershell: --width=500px](images/RoutingtableWindows.png)
+![Routingtabelle Windows :mdi[powershell] --width=500px](images/RoutingtableWindows.png)
 

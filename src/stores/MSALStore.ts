@@ -11,6 +11,8 @@ import { RootStore } from './stores';
 import api, { isLive } from '../api/base';
 import { umamiReport } from '../helpers/umami';
 import { User } from '../api/user';
+import siteConfig from '@generated/docusaurus.config';
+const { TEST_USERNAME } = siteConfig.customFields as { TEST_USERNAME?: string };
 
 export class MSALStore {
     private readonly root: RootStore;
@@ -168,6 +170,9 @@ export class MSALStore {
 
     withToken(): Promise<boolean | void> {
         if (this.offlineMode) {
+            return Promise.resolve(true);
+        }
+        if (process.env.NODE_ENV !== 'production' && TEST_USERNAME) {
             return Promise.resolve(true);
         }
         return this.getTokenRedirect().then((res) => {

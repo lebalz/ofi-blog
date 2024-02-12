@@ -8,11 +8,11 @@ sidebar_custom_props:
 
 # 1. Huffman-Codierung
 
-[@youtube](https://www.youtube-nocookie.com/embed/JsTptu56GM8)
+::youtube[https://www.youtube-nocookie.com/embed/JsTptu56GM8]
 
 David Huffman hat 1952 ein Verfahren entwickelt, mit welchem Zeichen platzsparender codiert werden können. Seine Idee ist, dass Zeichen, welche häufig im Text vorkommen, einen kürzeren Code erhalten, als Zeichen, welche selten im Text vorkommen.
 
-:::info Alltagsbezug
+:::info[Alltagsbezug]
 Die Huffman-Codierung und ähnliche Verfahren werden für das Komprimieren von Dateiformaten wie **DOCX**, **JPG** oder **MP3** eingesetzt. [^1]
 :::
 
@@ -88,12 +88,12 @@ Nun kann eine Codierungstabelle erstellt werden, indem der Code für jedes Zeich
 
 ## Zusammenfassung
 
-[@youtube](https://www.youtube-nocookie.com/embed/eSlpTPXbhYw)
+::youtube[https://www.youtube-nocookie.com/embed/eSlpTPXbhYw]
 
 ## Übungen
 
 
-:::aufgabe 1. Decodieren
+:::aufgabe[1. Decodieren]
 <Answer type="state" webKey="57465cba-7229-4cd6-aa7c-20a51e4e0d86" />
 
 ![](images/01-huffman/huffman-anna.svg)
@@ -107,7 +107,7 @@ Decodieren Sie diese Bitfolge mit dem obenstehenden Codebaum. Das Symbol `⎵` s
 
 :::
 
-::::aufgabe 2. Huffman-Codierung 1
+::::aufgabe[2. Huffman-Codierung 1]
 <Answer type="state" webKey="5b1accfd-f859-4927-9ec7-08ca0e2f37d7" />
 
 1. Erstellen Sie zum Wort «MISSISSIPPI» eine Häufigkeitstabelle.
@@ -150,7 +150,7 @@ Also braucht es: $11\cdot2=22$ Zeichen.
 **Einsparung**: Es braucht 1 Bit weniger.
 
 
-:::details Alternativ: MPSI
+:::details[Alternativ: MPSI]
 
 | Zeichen        | M    | P    | S    | I    |
 | :------------- | :--- | :--- | :--- | :--- |
@@ -166,7 +166,7 @@ Codierung: `100 0 11 11 0 11 11 0 101 101 0`, Total 21 Bit
 
 ::::
 
-:::aufgabe 3. Huffman-Codierung 2
+:::aufgabe[3. Huffman-Codierung 2]
 <Answer type="state" webKey="7a4569c8-5d35-4dfe-b727-570425d72496" />
 
 1. Erstellen Sie zum Wort «EXTERNER EFFEKT» eine Häufigkeitstabelle.
@@ -220,7 +220,7 @@ Die Huffman Codierung bewirkt erst bei längeren Texten eine noch grössere Spei
 </Solution>
 :::
 
-:::success Take-Home Message
+:::success[Take-Home Message]
 
 <Answer type="text" webKey="168db824-a49b-42b2-a586-112547749e02" />
 :::

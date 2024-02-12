@@ -35,7 +35,7 @@ Ein Von-Neumann-Computer besteht aus folgenden Komponenten:
 
 Heute sind das Rechenwerk und das Steuerwerk normalerweise im **Prozessor** (engl. _central processing unit, CPU_) zusammengefasst. Alle Komponenten sind über ein **Bussystem** miteinander verbunden.
 
-:::info Weit verbreitet
+:::info[Weit verbreitet]
 Die **Von-Neumann-Architektur** ist heute in den meisten Computern Standard – insbesondere bei Personalcomputern und Servern.
 :::
 

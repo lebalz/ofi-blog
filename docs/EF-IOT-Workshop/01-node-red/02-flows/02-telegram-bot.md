@@ -6,18 +6,18 @@ sidebar_custom_props:
 
 Telegram bietet die weitaus einfachste Anbindungsmöglichkeit für Entwickler:innen. Deshalb verwenden wir hier den Telegram-Messenger.
 
-:::aufgabe Telegram installieren
+:::aufgabe[Telegram installieren]
 Installieren Sie [👉 Telegram](https://telegram.org) auf Ihrem Smartphone.
 :::
 
 ## Telegram Bot erstellen
-:::aufgabe Tutorial
+:::aufgabe[Tutorial]
 Folgen Sie dem [👉 [Tutorial](https://www.iotwithus.com)](https://www.iotwithus.com/send-messages-using-telegram-and-node-red/) um einen neuen Bot zu erstellen.
 :::
 
 
-::::aufgabe Chuck-Norris Bot
-:::info Voraussetzung
+::::aufgabe[Chuck-Norris Bot]
+:::info[Voraussetzung]
 Das Kapitel zu Chuck Norris muss bereits abgeschlossen sein.
 :::
 Erstellen Sie einen eigenen Bot, welcher Ihnen Zitate von Chuck Norris sendet.

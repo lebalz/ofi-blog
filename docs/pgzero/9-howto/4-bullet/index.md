@@ -45,7 +45,7 @@ Damit sich der Schuss in die richtige Richtung bewegt, müssen die horizontale u
 
 Im rechtwinkligen Dreieck können nun $v_x$ und $v_y$ mit den trigonometrischen Formeln berechnet werden:
 
-$$\
+$$
 v_x = v \cdot \sin(a)\qquad v_y = v \cdot \cos(a)
 $$
 

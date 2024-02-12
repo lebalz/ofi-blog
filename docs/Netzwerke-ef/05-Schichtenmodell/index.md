@@ -24,7 +24,7 @@ Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netz
 
    ![](images/packtrav-nics-and-switches-layer-2.png)
 
-:::details Bitcodierungen
+:::details[Bitcodierungen]
 
 ![](images/bit-darstellung-1.png)
 
@@ -43,7 +43,7 @@ Um eine Nachricht über das Internet zu übertragen müssen die beteiligten Netz
 
 :::flex
 ![--width=450px](images/packtrav-layer-4.png)
-***
+::br
 Zu jedem gegebenen Zeitpunkt könnte auf dem Computer eines Benutzers ein Internetbrowser geöffnet sein, während Musik gestreamt wird und eine Messenger- oder Chat-App ausgeführt wird. Jede dieser Anwendungen sendet und empfängt Daten aus dem Internet, und all diese Daten kommen in Form von Einsen und Nullen auf derselben Netzwerkschnittstelle des Computers an.
 
 "Etwas" muss entscheiden, welche Datenpakete wohin gelangen - die Aufgabe des **Ports**.
@@ -59,14 +59,14 @@ Wie immer, wenn etwas kompliziert wird, kommt die altbewährte Strategie **Teile
 
 Hier wird das OSI-Modell vorgestellt - für uns wird schliesslich das TCP/IP-Modell mit "nur" 4 Schichten (Schichten 5-7 werden zusammengefasst) relevant sein. Mehr dazu weiter Unten...
 
-[@youtube](https://www.youtube-nocookie.com/embed/LkolbURrtTs)
+::youtube[https://www.youtube-nocookie.com/embed/LkolbURrtTs]
 
 ---
 
 
 <Answer type="state" webKey="3f5977b8-ef82-49e2-85fc-affd14467f5c" label="Gesehen?" />
 
-[@youtube](https://www.youtube-nocookie.com/embed/0aGqGKrRE0g)
+::youtube[https://www.youtube-nocookie.com/embed/0aGqGKrRE0g]
 
 ---
 
@@ -129,7 +129,7 @@ Der beschriebene Vorgang wird als **Kapselung** oder Verpackung bezeichnet. Anal
 ![Encapsulation](images/Encapsulation.png)
 
 
-:::aufgabe Selbsttest
+:::aufgabe[Selbsttest]
 <Answer type="state" webKey="980ec8c0-0119-4391-8be0-091b7b635f21" />
 
 <iframe src="https://learningapps.org/watch?v=p4semfyac22" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>

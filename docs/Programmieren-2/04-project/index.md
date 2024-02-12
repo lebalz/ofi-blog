@@ -7,7 +7,7 @@ import Grid from '@site/src/components/IFrame/Grid';
 
 # Game-Projekt
 
-:::info Ziel
+:::info[Ziel]
 - Ein Spiel selber nachbauen
 - Das Konzept der Spieleprogrammierung verstehen
   - Was ist ein Game-Loop?
@@ -17,20 +17,20 @@ import Grid from '@site/src/components/IFrame/Grid';
   - für das eigene Gerät optimieren (Bildschirmgrösse, Tastaturbelegung, ...)
 :::
 
-:::cards --cols=3
-***
+:::cards{cols=3}
+::br
 ![Snake](images/snake.png)
 👉 https://simplegametutorials.github.io/pygamezero/snake/
-***
+::br
 ![Arcanoid](images/arcanoid.gif)
 👉 [https://new.pythonforengineers.com](https://new.pythonforengineers.com/blog/your-first-game-in-python-in-less-than-30-minutes/)
-***
+::br
 ![Flappy Bird](images/flappy.png)
 👉 https://pygamezero-bird.readthedocs.io/en/latest/
 :::
 
 
-:::aufgabe Auftrag
+:::aufgabe[Auftrag]
 1. Wählen Sie ein Spiel aus der Liste aus und geben Sie an, welches Sie ausgewählt haben:
 
     <div style={{display: 'flex', gap: '1em'}}>

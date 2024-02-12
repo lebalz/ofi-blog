@@ -14,7 +14,7 @@ Hilfsmittel
 : Laptop, Openbook, ohne Kommunikation untereinander
 
 
-:::note Prüfungsstoff
+:::note[Prüfungsstoff]
 - Sie können ein Word-Dokument erstellen und unter einem vorgegebenen Namen abspeichern.
 - Sie können ein Word-Dokument als PDF exportieren.
 - Sie wissen was eine Formatvorlage ist und können diese verändern und anpassen (*Nummerierung, Linker Einzug, Absatz, Schrfitgrösse, Schriftart, Schriftfarbe...*)

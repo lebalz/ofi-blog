@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 # ⭐ Building Micro Python
 
-:::info IoT Workshop
+:::info[IoT Workshop]
 Dieser Schritt wurde bereits gemacht und muss nicht wiederholt werden. Sollte Ihr ESP8266 einmal aus unerklärlichen Gründen nicht mehr funktionieren, so könnte das neue Aufspielen (flashen) der Firmware allenfalls helfen.
 :::
 
@@ -110,18 +110,18 @@ make
 ## Add modules
 Now you can place all the modules you want to add to the firmware in the __Micropython\esp8266\micropython\ports\esp8266__ folder.
 
-:::details AHT21 Sensor Module
+:::details[AHT21 Sensor Module]
 ```python reference title="aht.py"
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/05-micropython/modules/aht.py
 ```
 :::
 
-:::details ENS160 Sensor Module
+:::details[ENS160 Sensor Module]
 ```python reference title="ENS.py"
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/05-micropython/modules/ens.py
 ```
 :::
-:::details PiicoDev_Unified Module
+:::details[PiicoDev_Unified Module]
 ```python reference title="PiicoDev_Unified.py"
 https://github.com/lebalz/ofi-blog/blob/main/docs/EF-IOT-Workshop/05-micropython/modules/PiicoDev_Unified.py
 ```
@@ -140,7 +140,7 @@ The firmware is generated under __ports/esp8266/build-GENERIC__ folder with the 
 
 Proceed to flash the firmware...
 
-:::details WSL / Windows
+:::details[WSL / Windows]
 
 Sadly, WSL 2 does not support yet USB devices by default. Becaus of that we use PowerShell to flash the firmware.
 
@@ -172,7 +172,7 @@ esptool --port COM3 --baud 460800 write_flash --flash_size=detect 0 .\build-GENE
 :::
 
 
-:::details UNIX
+:::details[UNIX]
 
 ```bash
 esptool.py --port /dev/ttyXXX erase_flash

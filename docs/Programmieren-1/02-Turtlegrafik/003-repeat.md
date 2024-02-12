@@ -10,8 +10,8 @@ import Finding from "@site/src/components/Finding";
 
 In der [Aufgabe 8](001-intro.md#aufgaben) haben Sie eine Treppe gezeichnet. Ihr Programm sieht vermutlich etwa wie folgt aus:
 
-:::flex --min=250px --justify=space-between --align=center
-***
+:::flex{min=250px justify=space-between align=center}
+::br
 ```py live_py slim
 from turtle import *
 
@@ -36,8 +36,8 @@ forward(17)
 right(90)
 forward(29)
 ```
-*** --empty --grow=0.5 --min=50px
-***
+::br{grow=0.5 min=50px empty=true}
+::br
 ![](images/stairs.svg)
 :::
 
@@ -63,7 +63,7 @@ forward(29)
 
 Ein Algorithmus kann Sequenzen wiederholt ausführen. In Python wird die zu wiederholende Sequenz **Codeblock** genannt.
 
-:::flex --min=300px
+:::flex{min=300px}
 ```py live_py slim
 from turtle import *
 
@@ -73,8 +73,8 @@ for i in range(5):
     right(90)
     forward(29)
 ```
-*** --empty --grow=0.5 --min=50px
-***
+::br{grow=0.5 min=50px empty=true}
+::br
 <Strukto program={[
     {
         type: 'repeat', 
@@ -89,8 +89,7 @@ for i in range(5):
 ]} />
 :::
 
-:::def
-### `for i in range(n):`
+:::def[`for i in range(n):`]
 Mit `for i in range(n):` wird eine wiederholte Ausführung vorbereitet. Der nachfolgende **Codeblock** wird `n` Mal wiederholt, bevor weitere Anweisungen ausgeführt werden.
 **Alles, was wiederholt werden soll, muss eingerückt sein.**
 
@@ -103,18 +102,18 @@ for i in range(4):
 ```
 :::
 
-::::aufgabe Struktogramm → Python
+::::aufgabe[Struktogramm → Python]
 <Answer type="state" webKey="868ad50b-1772-45f5-852b-9cd4b8650267" />
 
 Übersetzen Sie das Struktogramm in ein Python Programm. Was entsteht?
 
-:::flex --min-width=300px --gap=30px
+:::flex{min-width=300px gap=30px}
 ```py live_py title=wiederholung.py id=3d368326-dde6-414f-b494-ace1bfc2a687
 from turtle import *
 
 
 ```
-***
+::br
 <Strukto program={[
     {
         type: 'repeat', 
@@ -141,7 +140,7 @@ hideturtle()
 </Solution>
 ::::
 
-:::aufgabe 1. Python → Struktogramm
+:::aufgabe[1. Python → Struktogramm]
 <Answer type="state" webKey="dfbdeec2-0728-4431-9a21-0bb26b2b526b" />
 
 Zeichnen Sie für folgendes Programm ein Struktogramm auf ein Blatt Papier. Fotografieren Sie es im Anschluss und halten Sie es im untenstehenden Textfeld fest.
@@ -182,7 +181,7 @@ for i in range(5):
 </Solution>
 :::
 
-:::aufgabe 2. Python → Struktogramm
+:::aufgabe[2. Python → Struktogramm]
 <Answer type="state" webKey="2bdc6e12-b4c4-4cc3-a876-6f0638d15ea8" />
 
 Zeichnen Sie auch für folgendes Programm ein Struktogramm und halten Sie dieses fest.
@@ -227,7 +226,7 @@ for i in range(5):
 :::
 
 
-:::aufgabe 3. Treppe vol. 2
+:::aufgabe[3. Treppe vol. 2]
 <Answer type="state" webKey="1f478252-8656-47d2-9905-8dfa9f621af6" />
 
 Zeichnen Sie eine Treppe mit 20 Stufen. Die Treppe soll bei den Koordinaten `(-200, -200)` starten. Wählen Sie die Stufen-Breiten so, dass der verfügbare Platz möglichst gut ausgenutzt wird.
@@ -262,7 +261,7 @@ for i in range(20):
 </Solution>
 :::
 
-:::aufgabe 4. Schneestern
+:::aufgabe[4. Schneestern]
 <Answer type="state" webKey="739d205c-59af-4d11-ad53-7c32f0f39dee" />
 
 Zeichnen Sie einen Stern und gehen Sie wie folgt vor:
@@ -290,7 +289,7 @@ for i in range(6):
 :::
 
 
-:::aufgabe 5. Weihnachtsstern
+:::aufgabe[5. Weihnachtsstern]
 <Answer type="state" webKey="32d650c6-4422-41c8-bb3b-c40a6e42c8b4" />
 
 1. Zeichnen Sie einen Weihnachtsstern mit den Drehwinkeln `140°` und `80°`.
@@ -321,7 +320,7 @@ end_fill()
 </Solution>
 :::
 
-:::aufgabe 6. Quadrate
+:::aufgabe[6. Quadrate]
 <Answer type="state" webKey="13b8185f-9ffa-4553-8e10-8129ad8240f9" />
 
 1. Zeichnen Sie folgende Leiter.
@@ -351,7 +350,7 @@ for i in range(7):
 </Solution>
 :::
 
-:::aufgabe 7. Perlenkette
+:::aufgabe[7. Perlenkette]
 <Answer type="state" webKey="64055a7b-64ff-4bf9-aaf5-f82acc56cbad" />
 
 Zeichnen Sie eine Perlenkette in Ihrer Lieblingsfarbe, die aus `18` Perlen (dots) besteht.
@@ -383,7 +382,7 @@ hideturtle()
 </Solution>
 :::
 
-:::aufgabe 8. Vogel
+:::aufgabe[8. Vogel]
 <Answer type="state" webKey="15dbe59c-3d22-44d4-ae01-7dd63e2964ec" />
 
 Zeichnen Sie einen Vogel, indem Sie mehrmals nacheinander folgende Befehle wiederholen:

@@ -23,7 +23,7 @@ UPDATE legodudes
     WHERE id = 2;
 ```
 
-:::details Resultat
+:::details[Resultat]
 <div className="slim compact">
 
 | id | name            | alter | lieblingszahl |
@@ -43,7 +43,7 @@ UPDATE legodudes
     WHERE id = 2;
 ```
 
-:::details Resultat
+:::details[Resultat]
 <div className="slim compact">
 
 | id | name            |  alter | lieblingszahl |
@@ -62,7 +62,7 @@ UPDATE legodudes
     SET lieblingszahl = 42, alter = 18;
 ```
 
-:::details Resultat
+:::details[Resultat]
 <div className="slim compact">
 
 | id | name            |  alter | lieblingszahl |
@@ -81,7 +81,7 @@ UPDATE legodudes
     SET name = CONCAT('🤡', name);
 ```
 
-:::details Resultat
+:::details[Resultat]
 <div className="slim compact">
 
 | id | name                   | alter | lieblingszahl |
@@ -107,7 +107,7 @@ DELETE FROM legodudes;
 ```
 
 
-:::aufgabe Datensätze aktualisieren und löschen
+:::aufgabe[Datensätze aktualisieren und löschen]
 <Answer type="state" webKey="765ce9df-981d-48f5-b71e-81e1cdc08580" />
 
 Datenbank
@@ -140,7 +140,7 @@ DELETE FROM persons WHERE id=2;
 
 :::
 
-::::aufgabe Datensätze aus verbundenen Tabellen löschen
+::::aufgabe[Datensätze aus verbundenen Tabellen löschen]
 <Answer type="state" webKey="cb6cc9e7-7a68-4204-92b0-2837dbd230bc" />
 
 Datenbank
@@ -151,7 +151,7 @@ Datenbank
 
 Erstellen Sie die Legomania Datenbank durch Copy-Paste in Ihrer eignen Datenbank:
 
-:::details Legomania
+:::details[Legomania]
 ```sql
 DROP TABLE IF EXISTS haustiere;
 DROP TABLE IF EXISTS legodudes_freunde;
@@ -348,7 +348,7 @@ DELETE FROM legodudes WHERE id=3;
 DELETE FROM legodudes WHERE id=2;
 ```
 
-:::danger ERROR: update or delete on table "legodudes" violates foreign key constraint "haustiere_legodude_id_fkey" on table "haustiere" DETAIL: Key (id)=(2) is still referenced from table "haustiere".
+:::danger[ERROR: update or delete on table "legodudes" violates foreign key constraint "haustiere_legodude_id_fkey" on table "haustiere" DETAIL: Key (id)=(2) is still referenced from table "haustiere".]
 :::
 
 #### Aufgabe 2

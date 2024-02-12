@@ -11,7 +11,7 @@ sidebar_custom_props:
     <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" />
   </a>
 
-  :::caution Achtung
+  :::warning[Achtung]
   Setzen Sie den Benutzernamen auf **admin** und wählen Sie ein sicheres Passwort (Sie brauchen es jedesmal, wenn Sie auf Node-RED zugreifen wollen.)
 
   ![](images/node-red-install-01.png)
@@ -31,20 +31,20 @@ sidebar_custom_props:
    **Hinweis**: Nach dem ersten `Deploy succeeded` dauert es beim ersten Zugriff auf die Webseite bis zu 2 Minuten, bis die Webseite angezeigt wird. Den Grund dafür erfahren Sie weiter unten.
 
 ## Installation Überprüfen
-:::aufgabe Erster Flow erzeugen
+:::aufgabe[Erster Flow erzeugen]
 <Answer type="state" webKey="5e83c82b-90cc-4cdf-819d-ad9bdffd3b99" />
 
 Erstellen Sie Ihren ersten Flow und Überprüfen Sie, das alles genau so funktioniert wie im Video:
 
-[@video](images/flow-1.mp4)
+::video[./images/flow-1.mp4]
 :::
 
 ## Immer Online
 Um Rechenzeit und somit auch Kosten zu sparen, werden inaktive Server in einen Ruhezustand versetzt. Ein Server gilt als inaktiv, wenn er länger als 15 Minuten keine Webseite mehr anzeigen musste. Um einen inaktiven Server zu aktivieren, dauert es bis zu 2 Minuten (dies ist der Grund, weshalb Sie im letzten Installationsschritt so lange auf das erste Anzeigen warten mussten). Damit unsere Flows ständig aktiv bleiben, erzeugen wir einen Flow, welcher alle 5 Minuten die Startseite aufruft und somit verhindert, dass Node-RED in den Ruhezustand versetzt wird.
 
-[@video](images/node-red-keep-running.mp4)
+::video[./images/node-red-keep-running.mp4]
 
-:::aufgabe KeepAlive umsetzen
+:::aufgabe[KeepAlive umsetzen]
 <Answer type="state" webKey="7364675c-08f5-4653-9d9b-c256e7c8240b" />
 
 Erzeugen Sie den `KeepAlive` Flow und markieren Sie diese Aufgabe als erledigt.

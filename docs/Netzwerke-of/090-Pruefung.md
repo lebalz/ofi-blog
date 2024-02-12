@@ -11,7 +11,7 @@ Benotung
 Hilfsmittel
 : Keine
 
-:::note Prüfungsstoff
+:::note[Prüfungsstoff]
 - Sie kennen das Prinzip sowie die Vorteile eines Schichten-Modells und können dies in eigenen Worten erklären
 - Sie kennen die vier Schichten des *TCP/IP-Schichtenmodells* und deren Reihenfolge
 - Sie wissen was die Funktion von Protokollen ist und können zwei Netzwerkprotokolle aufzählen
@@ -32,6 +32,6 @@ Hilfsmittel
 :::
 
 
-:::caution Unterrichtsinhalte
+:::warning[Unterrichtsinhalte]
 An der Prüfung können auch Inhalte/Diskussionen/Experimente zu den obigen Themen aufgegriffen werden, welche nur im Unterricht behandelt/diskutiert wurden.
 :::

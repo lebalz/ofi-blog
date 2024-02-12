@@ -144,7 +144,7 @@ Der Algorithmus kann wie folgt schematisch dargestellt werden:
 ## Endzustand
 Wenn wir nur den besten Weg finden wollen, können wir den Algorithmus abbrechen, sobald der Zielknoten der «beste» Kandidat auf der Open-List ist. Dann wissen wir: Es gibt keinen kürzeren Weg!
 
-:::warning Warnung
+:::warning[Warnung]
 Wenn der Zielknoten nur auf der Open-List ist, könnte es immer noch einen besseren Weg geben!
 Wir haben ja erst einen Weg gefunden, ev. gibt es über einen anderen Knoten auf der Open-List einen schnelleren. Wenn aber der Zielknoten der «beste» Kandidat ist, dann kann es keinen schnelleren Weg mehr geben!
 :::
@@ -153,7 +153,7 @@ Wir können den Algorithmus auch weiterlaufen lassen. Am Schluss erhalten wir da
 
 ![--width=450](./images/12-dijkstra.jpg)
 
-:::aufgabe Aufgabe
+:::aufgabe
 <Answer type="state" webKey="abec0e1d-00d1-45fc-950e-b947ce90d197" />
 
 Führen Sie den Dijkstra-Algorithmus durch: Finden Sie den kürzesten Weg in umgekehrter Richtung, also vom Knoten `L` zum Knoten `I`.
@@ -182,7 +182,7 @@ Das Ganze funktioniert auch für sogenannt «gerichtete Graphen», also z.B. Kar
 </TabItem>
 </Tabs>
 
-:::aufgabe Aufgabe
+:::aufgabe
 <Answer type="state" webKey="2cb452d5-a87e-4fa9-9357-621d84f66d3d" />
 
 Führen Sie den Dijkstra-Algorithmus aus: erstellen Sie eine Entfernungstabelle für das Hotel Adler. Finden Sie die kürzesten Wege vom Knoten `A` zu allen anderen Knoten.

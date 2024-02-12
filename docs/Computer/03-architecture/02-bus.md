@@ -12,7 +12,7 @@ In der Informatik ist ein *Bus* ein System zur Datenübertragung zwischen mehrer
 
 :::cards
 ![Datenübertragung mit Bus](images/02-bus-1.svg)
-***
+::br
 ![Datenübertragung ohne Bus](images/02-bus-2.svg)
 :::
 
@@ -26,7 +26,7 @@ Wenn alle Komponenten direkt miteinander kommunizieren, muss zwischen allen Komp
 - Serial AT Attachment (SATA, für Computerfestplatten)
 - Universal Serial Bus (USB)
 
-:::success Take-Home Message aus CPU-Rollenspiel
+:::success[Take-Home Message aus CPU-Rollenspiel]
 
 <Answer type="text" webKey="2ac55d18-cd29-4ad2-b378-36a5210e19a2" />
 

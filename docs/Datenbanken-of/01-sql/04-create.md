@@ -6,8 +6,7 @@ sidebar_custom_props:
 
 ## Datenbank erstellen
 
-:::def
-### `CREATE DATABASE`
+:::def[`CREATE DATABASE`]
 Mit dem Befehl `CREATE DATABASE` kann eine neue Datenbank erstellt werden.
 
 ```sql
@@ -15,36 +14,34 @@ CREATE DATABASE ef_reto;
 ```
 :::
 
-::::def
-### `DROP DATABASE`
+::::def[`DROP DATABASE`]
 Die Datenbank kann mit dem Befehl `DROP DATABASE` auch wieder gelöscht werden:
 
 ```sql
 DROP DATABASE ef_reto;
 ```
 
-:::danger Wichtig
+:::danger[Wichtig]
 Bitte löschen Sie nur Datenbanken, die Sie selber erstellt haben!  
 Der Einfachheit halber haben Sie auf der Kursdatenbank __EDU-DBs EF__ alle Rechte...
 :::
 
 ::::
 
-:::aufgabe 1. Datenbank erstellen
+:::aufgabe[1. Datenbank erstellen]
 <Answer type="state" webKey="6b4f812b-2ccf-4beb-b551-71e774fa9c6c" />
 
 Datenbank
 : 👉 https://db-sql.ch/connections/d68ea3c2-eb9f-4454-aa19-9c00764757b5
 
-Erstellen Sie eine eigene Datenbank mit nach folgendem Schema `ef_name`, wobei Sie natürlich Ihren eigenen Namen verwenden. Wenn der Befehl erfolgreich ausgeführt wurde, sollte Ihre Datenbank nach dem Aktualisieren der Verbindungen :mdi-sync--l: angezeigt werden.
+Erstellen Sie eine eigene Datenbank mit nach folgendem Schema `ef_name`, wobei Sie natürlich Ihren eigenen Namen verwenden. Wenn der Befehl erfolgreich ausgeführt wurde, sollte Ihre Datenbank nach dem Aktualisieren der Verbindungen :mdi[sync]{.l} angezeigt werden.
 
 <Answer type="text" webKey="b1b0b2a9-5b0a-4b0a-9b0a-5b0a4b0a9b0a" monospace />
 :::
 
 ## Tabellen erstellen
 
-:::def
-### `CREATE TABLE`
+:::def[`CREATE TABLE`]
 Tabellen werden mit dem Befehl `CREATE TABLE` erstellt. Die Spalten werden mit dem Namen und dem Datentyp definiert.
 
 ```sql
@@ -61,8 +58,7 @@ CREATE TABLE persons (
 
 ### Datensätze einfügen
 
-:::def 
-### `INSERT INTO`
+:::def[ `INSERT INTO`]
 Mit dem Befehl `INSERT INTO` können Datensätze in die Tabelle eingefügt werden.
 
 ```sql
@@ -74,12 +70,12 @@ VALUES
 ```
 :::
 
-:::aufgabe 2. Datensätze einfügen
+:::aufgabe[2. Datensätze einfügen]
 <Answer type="state" webKey="e1fec5d5-ad04-4552-a4bc-476aa1d2147d" />
 
 
 Datenbank
-: :mdi-alert--orange: mit der eigenen Datenbank verbinden!
+: :mdi[alert]{.orange} mit der eigenen Datenbank verbinden!
 : 👉 https://db-sql.ch/connections/d68ea3c2-eb9f-4454-aa19-9c00764757b5
 
 Erstellen Sie eine Personen-Tabelle mit einigen selbst gewählten Attributen und fügen Sie einige Datensätze ein. Halten Sie das Query unten fest.
@@ -94,8 +90,7 @@ Was passiert, wenn Sie nun nochmals die gleichen Datensätze einfügen?
 
 ### Tabellen löschen
 
-:::def
-### `DROP TABLE`
+:::def[`DROP TABLE`]
 Um eine Tabelle zu löschen, wird der Befehl `DROP TABLE` verwendet.
 
 ```sql
@@ -146,11 +141,11 @@ VALUES
 ```
 
 
-:::aufgabe 3. Tabelle mit Constraints
+:::aufgabe[3. Tabelle mit Constraints]
 <Answer type="state" webKey="805b507b-93bc-40bd-a78d-9ce3fc531cad" />
 
 Datenbank
-: :mdi-alert--orange: mit der eigenen Datenbank verbinden!
+: :mdi[alert]{.orange} mit der eigenen Datenbank verbinden!
 : 👉 https://db-sql.ch/connections/d68ea3c2-eb9f-4454-aa19-9c00764757b5
 
 Erstellen Sie Ihre Personen-Tabelle erneut (zuerst Löschen...) 

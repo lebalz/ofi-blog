@@ -11,14 +11,14 @@ sidebar_custom_props:
 
 Gemäss WhatsApp sind sämtliche WhatsApp-Nachrichten Ende-zu-Ende verschlüsselt.[^1]
 
-:::aufgabe WhatsApp-Verschlüsselung
+:::aufgabe[WhatsApp-Verschlüsselung]
 1. Was meint WhatsApp mit «Ende-zu-Ende-Verschlüsselung»?
 2. Diskutieren Sie zu zweit, wie die WhatsApp-Verschlüsselung funktionieren könnte.
 
 <Answer type="text" webKey="be104161-251e-43e3-841d-23861b4c79de" />
 :::
 
-:::aufgabe Sicherheitsnummer
+:::aufgabe[Sicherheitsnummer]
 WhatsApp bietet die Möglichkeit, eine Sicherheitsnummer anzuzeigen und zu überprüfen.
 
 Ende-zu-Ende-Verschlüsselung eines Chats verifizieren:

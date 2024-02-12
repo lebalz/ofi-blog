@@ -49,7 +49,7 @@ and reimport this file:
 psql $(cat NEW_DB) -c "COPY humans_movies FROM '/home/imdb/humans_movies.sql';"
 ```
 
-:::details Unknown Entries 16.08.2023
+:::details[Unknown Entries 16.08.2023]
 The following keys are in `humans_movies.sql` but not found in `movies.sql`:
 
 - `tt8885954`

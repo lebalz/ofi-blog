@@ -8,7 +8,7 @@ sidebar_custom_props:
 ERD
 : Entity-Relationship-Diagramm
 
-:::info Slides: Lösungen
+:::info[Slides: Lösungen]
 <Solution webKey="3b69caa5-6e11-4def-8e07-3dcc64d730ea">
 
 Lösungen Präsentation
@@ -19,7 +19,7 @@ Lösungen Präsentation
 
 ## Lösungen
 
-:::aufgabe 1. Weiterbildungs-Organisation
+:::aufgabe[1. Weiterbildungs-Organisation]
 <Answer type="state" webKey="d65644f3-e369-4afe-b620-a14ea482f824" />
 
 Eine Weiterbildungs-Organisation besitzt Dozenten und Vorlesungen
@@ -39,7 +39,7 @@ Eine Weiterbildungs-Organisation besitzt Dozenten und Vorlesungen
 </Solution>
 :::
 
-:::aufgabe 2 Schüler:innen und Aufgaben
+:::aufgabe[2 Schüler:innen und Aufgaben]
 <Answer type="state" webKey="034f4caf-4e4e-42e9-a16f-b3d3d5e59980" />
 
 Ausgangslage: SchülerInnen lösen mehrere Aufgaben. Jede Aufgabe hat eine Nummer und eine maximal mögliche Punktezahl. Jede gelöste Aufgabe wird korrigiert und mit Punkten bewertet (von wem spielt hier keine Rolle).
@@ -55,7 +55,7 @@ Ausgangslage: SchülerInnen lösen mehrere Aufgaben. Jede Aufgabe hat eine Numme
 
 :::
 
-:::aufgabe 3. Klinik
+:::aufgabe[3. Klinik]
 <Answer type="state" webKey="c28936ce-60e2-49cf-93fa-6ec11852e669" />
 
 Gegeben sei das folgende ER-Diagramm, welches einen Ausschnitt eines Krankenhauses modellieren soll:
@@ -76,7 +76,7 @@ Eine Klinik besteht aus Stationen, eine Station hat mehrere Zimmer. Patienten we
 
 :::
 
-:::aufgabe 4. Person-AHV Nummer
+:::aufgabe[4. Person-AHV Nummer]
 <Answer type="state" webKey="e09f6820-e870-45f4-8913-b008b341d7bc" />
 
 1. Bestimmen Sie die Kardinalität und fügen Sie der Person zwei weitere Attribute hinzu.
@@ -108,7 +108,7 @@ __AHV Nummern__
 </Solution>
 :::
 
-:::aufgabe 6. Schülerprojekte
+:::aufgabe[6. Schülerprojekte]
 <Answer type="state" webKey="e09f6820-e870-45f4-8913-b008b341d7bc" />
 
 1. Bestimmen Sie die Kardinalität.

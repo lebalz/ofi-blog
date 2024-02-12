@@ -29,7 +29,7 @@ Lösungen Präsentation
 : [👉 Lösungs Slides](pathname:///p/Datenbanken/NF/01-normalformen.html)
 
 
-::::aufgabe Zweite Normalform 
+::::aufgabe[Zweite Normalform ]
 <Answer type="state" webKey="494746b2-aa20-4114-86bb-cff0419a9876" />
 
 Eine Carsharing-Firma speichert ihre Fahrzeuge und Kunden in einer Tabelle mit dem 
@@ -86,7 +86,7 @@ __Ausleihen__
 | 2         | 2023-09-15   | 32000    | CD-67890    | BMW        | 2019    | 002       |
 | 3         | 2023-09-16   | 32100    | CD-67890    | BMW        | 2019    | 001       |
 
-:::warning (Kennzeichen) → Hersteller, Baujahr
+:::warning[(Kennzeichen) → Hersteller, Baujahr]
 Das Kennzeichen ist nicht eindeutig einem Fahrzeug zugeordnet. Es kann mehrere Fahrzeuge mit dem gleichen Kennzeichen geben (Wechselnummero) oder eine Nummer kann neu vergeben werden (z. B. nach einem Umzug).
 :::
 
@@ -94,7 +94,7 @@ Das Kennzeichen ist nicht eindeutig einem Fahrzeug zugeordnet. Es kann mehrere F
 ::::
 
 
-:::aufgabe Dritte Normalform
+:::aufgabe[Dritte Normalform]
 <Answer type="state" webKey="87b00e59-6085-4d1e-b74d-ff96192bd55a" />
 
 1. Erläutern Sie anhand der Tabelle «Universität» unten, welche Daten redundant gespeichert werden. 
@@ -150,7 +150,7 @@ __Fachgebiete__
 :::
 
 
-::::aufgabe Onlineshop
+::::aufgabe[Onlineshop]
 <Answer type="state" webKey="2451a205-e8e4-41ca-b99c-f19a7ff3d66c" />
 
 Überführen Sie die Tabelle «Onlineshop» unten schrittweise in die dritte Normalform, d.h. 
@@ -190,7 +190,7 @@ zunächst in die 1 NF, 2NF und dann in die 3NF. Erläutern Sie bei jedem Schritt
 | blue28              | Lichtstr. | 44 | Bonn  | 776                 | 22.03.19 | 10098            | Armband     | 1     | 12.95 |
 | blue28              | Lichtstr. | 44 | Bonn  | 776                 | 22.03.19 | 10099            | Socken      | 5     | 4.45  |
 
-:::warning Beachte Primärschlüssel
+:::warning[Beachte Primärschlüssel]
 Der Primärschlüssel muss weiterhin eindeutig jeden Datensatz identifizieren können. Deshalb wird zusätzlich die ArtikelNr zum Primärschlüssel hinzugefügt.
 :::
 
@@ -201,7 +201,7 @@ Der Primärschlüssel muss weiterhin eindeutig jeden Datensatz identifizieren k�
   - (WarenkorbId) → Datum, Benuztername\*
   - (ArtikelNr) → Bezeichnung, Preis
 
-:::info \* (WarenkorbId) → Benutzername
+:::info[\* (WarenkorbId) → Benutzername]
 Der Benutzername ist abhängig von der WarenkorbId, da ein Warenkorb nur einer Benutzer:in zugeordnet werden kann. Umgekehrt ist die WarenkorbId aber nicht vom Benutzername abhängig (abzulesen), da eine Benutzer:in mehrere Warenkörbe haben kann. Dies sieht man leicht, wenn man einen weiteren Einkauf für `pink18` hinzufügt - die WarenkorbId ändert sich, der Benutzername nicht.
 :::
 

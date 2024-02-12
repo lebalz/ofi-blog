@@ -45,8 +45,8 @@ def update(zeitdifferenz):
 pgzrun.go()
 ```
 
-:::info Zur Erinnerung
-Bilder, die im Programm verwendet werden, müssen in einem Unterverzeichnis `images` gespeichert sein. Anstelle von `hintergrund` wird der Dateiname ohne Endung angegeben. Der Mu-Editor öffnet dieses Verzeichnis automatisch, wenn man auf `Images` :mdi-brush--blue: klickt.
+:::info[Zur Erinnerung]
+Bilder, die im Programm verwendet werden, müssen in einem Unterverzeichnis `images` gespeichert sein. Anstelle von `hintergrund` wird der Dateiname ohne Endung angegeben. Der Mu-Editor öffnet dieses Verzeichnis automatisch, wenn man auf `Images` :mdi[brush]{.blue} klickt.
 :::
 
 ## Zeichnen mit Pygame Zero
@@ -71,12 +71,12 @@ def draw():
 
 Dies zeichnet einen rot gefüllten Kreis mit Radius 10 bei den Koordinaten (100, 200).
 
-::::aufgabe Aufgabe 1 – Schneeflocke zeichnen
+::::aufgabe[Aufgabe 1 – Schneeflocke zeichnen]
 <Answer type="state" webKey="f393b9d4-488c-46ab-a583-bc030fca9a47" />
 
 :::cards
 ![[👉 Winterlandschaft 1](./images/winter_1.jpg)](./images/winter_1.jpg)
-***
+::br
 ![[👉 Winterlandschaft 2](./images/winter_2.jpg)](./images/winter_2.jpg)
 :::
 
@@ -111,7 +111,7 @@ pgzrun.go()
 </Solution>
 ::::
 
-:::aufgabe Aufgabe 2 – Schneeflocke bewegen
+:::aufgabe[Aufgabe 2 – Schneeflocke bewegen]
 <Answer type="state" webKey="44bff46e-f883-4520-8729-20f8fa7f3d2c" />
 
 Damit wir die Schneeflocke bewegen können, muss die Position in einer Variablen gespeichert werden, damit sie in der `update()`-Funktion verändert werden kann.
@@ -137,7 +137,7 @@ Vorerst begnügen wir uns allerdings mit der einen Schneeflocke, die wir bereits
 </Solution>
 :::
 
-:::aufgabe Aufgabe 3 – mehrere Schneeflocken
+:::aufgabe[Aufgabe 3 – mehrere Schneeflocken]
 Nun wollen wir mehrere Schneeflocken zeichnen. Dazu müssen wir brauchen wir Zufallszahlen als Startposition in der Liste mit den x-Koordinaten. Zudem müssen wir dafür sorgen, dass sämtliche Schneeflocken gezeichnet werden und nicht nicht eine.
 
 1. Legen Sie in einer Variablen fest, wie viele Schneeflocken Sie zeichnen möchten.
@@ -195,7 +195,7 @@ pgzrun.go()
 
 :::
 
-:::aufgabe ⭐ Zusatzaufgabe – Schneeflocken verschönern
+:::aufgabe[⭐ Zusatzaufgabe – Schneeflocken verschönern]
 <Answer type="state" webKey="d1f3abc0-ffa1-487f-816e-9dafcdf602f7" />
 
 Hier einige Ideen, wie Sie die Schneefall-Animation noch verbessern könnten:

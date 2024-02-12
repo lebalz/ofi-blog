@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # Wiedereinstieg
 
-:::aufgabe 1. Aufgabe
+:::aufgabe[1. Aufgabe]
 <Answer type="state" webKey="9c0ebdca-a13a-425c-89a9-11d93b495c88" />
 
 
@@ -36,7 +36,7 @@ for i in range(13):
 :::
 
 
-:::aufgabe 2. Aufgabe
+:::aufgabe[2. Aufgabe]
 <Answer type="state" webKey="a0bdfec4-b9c5-4174-9c86-4b11c89c95f4" />
 
 ```py live_py id=2a8a9b26-6632-4836-a10e-24738483d028

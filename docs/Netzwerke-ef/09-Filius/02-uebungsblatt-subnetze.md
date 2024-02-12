@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # Übungsblatt Subnetzmasken
 
-[@pdf](assets/Subnetzmasken.pdf)
+::pdf[./assets/Subnetzmasken.pdf]
 
 
 <Solution webKey="9d85bea0-a966-4de1-b906-9ae8c39f1995">

@@ -10,22 +10,22 @@ In der Kryptologie ist der wichtigste Punkt stets die Sicherheit. Dabei ist es w
 ## Das Prinzip von Kerckhoffs
 Eines der wichtigsten Prinzipien in der Kryptologie stammt von August Kerckhoffs:
 
-:::flex --justify=space-between --gap=3em
+:::flex{justify=space-between gap=3em}
 > «Die Sicherheit eines Kryptosystems darf nicht von der Geheimhaltung des Algorithmus abhängen.
 >
 > Die Sicherheit gründet sich nur auf die Geheimhaltung des Schlüssels.»
 > – Auguste Kerckhoffs (1835 - 1903)
-*** --no-flex
+::br{no-flex=true}
 ![Auguste Kerckhoffs --no-margins --width=10em](images/auguste_kerckhoffs.jpg)
 :::
 
 ## Formulierung von Claude Shannon
-:::flex --justify=space-between --gap=3em
+:::flex{justify=space-between gap=3em}
 Claude Shannon hat dasselbe kurz und prägnant ausgedrückt:
 > «The enemy knows the system!»
 > 
 > – Claude Shannon (1916 - 2001)
-*** --no-flex
+::br{no-flex=true}
 
 ![Claude Shannon --no-margins --width=10em](images/claude_shannon.jpg)
 
@@ -33,7 +33,7 @@ Claude Shannon hat dasselbe kurz und prägnant ausgedrückt:
 
 ## Erklärung von Bruce Schneier
 Der renommierte Kryptologe Bruce Schneier erklärt das Prinzip von Kerckhoffs' mit einer kurzen Geschichte [^2]:
-:::flex --justify=space-between --gap=3em
+:::flex{justify=space-between gap=3em}
 > «Man unterscheidet zwei Arten von Verschlüsselung: Verschlüsselung, die deine kleine Schwester daran hindert, deine Dateien zu lesen, und die Verschlüsselung, die bedeutende Regierungen daran hindert, sie zu lesen.»
 >
 > – Bruce Schneier
@@ -47,7 +47,7 @@ Der renommierte Kryptologe Bruce Schneier erklärt das Prinzip von Kerckhoffs' m
 > Wenn du den Brief trotzdem nicht lesen kannst, **dann spricht man von Sicherheit**.»
 >
 > – Bruce Schneier
-*** --no-flex
+::br{no-flex=true}
 
 ![Bruce Schneier --no-margins --width=10em](images/bruce_schneier.jpg)
 :::

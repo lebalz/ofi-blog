@@ -7,14 +7,16 @@ import { default as StateAnswerModel, StateType } from '../../models/Answer/Stat
 import Loader from '../shared/Loader';
 import clsx from 'clsx';
 import { StateSummary } from './StateSummary';
+import Icon from '@mdi/react';
+import { mdiAccountQuestionOutline, mdiCheckboxBlankOutline, mdiCheckboxMarkedOutline, mdiStar, mdiStarHalfFull, mdiStarOutline } from '@mdi/js';
 
 export const mdiIcon: { [key in StateType]: string } = {
-    checked: 'mdi-checkbox-marked-outline',
-    unset: 'mdi-checkbox-blank-outline',
-    question: 'mdi-account-question-outline',
-    star: 'mdi-star',
-    ['star-half']: 'mdi-star-half-full',
-    ['star-empty']: 'mdi-star-outline',
+    checked: mdiCheckboxMarkedOutline,
+    unset: mdiCheckboxBlankOutline,
+    question: mdiAccountQuestionOutline,
+    star: mdiStar,
+    ['star-half']: mdiStarHalfFull,
+    ['star-empty']: mdiStarOutline,
 };
 
 export const mdiBgColor: { [key in StateType]: string } = {
@@ -57,8 +59,9 @@ const StateAnswer = observer((props: StateProps) => {
                 ref={ref}
                 className={clsx(
                     styles.state,
+                    styles.stateComponent,
                     'state-component',
-                    (props.noHeader || props.children) && 'no-header',
+                    (props.noHeader || props.children) && styles.noHeader,
                     'no-comments'
                 )}
                 id={`state-${doc.webKey}`}
@@ -68,9 +71,10 @@ const StateAnswer = observer((props: StateProps) => {
                     style={{ backgroundColor: `var(${mdiBgColor[doc.data.value]})` }}
                     onClick={onChange}
                 >
-                    <i
-                        className={clsx('mdi', mdiIcon[doc.value])}
-                        style={{ color: `${mdiColor[doc.data.value]}` }}
+                    <Icon
+                        path={mdiIcon[doc.data.value]}
+                        size={1}
+                        color={mdiColor[doc.data.value]}
                     />
                 </div>
                 <div>{props.children || props.label}</div>

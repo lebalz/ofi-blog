@@ -9,8 +9,7 @@ Viele Computer Programme basieren auf zufälligen Zahlen. Programmiersprachen k�
 
 Die Python Standard-Bibliothek beinhaltet das `random` Modul mit vielen nützlichen Funktionen.
 
-:::def 
-### `random.random()`
+:::def[ `random.random()`]
 Gibt eine zufällige Zahl `n` zwischen `0.0` und `1.0`, ohne die `1.0` zurück ($0 <= n <1$).
 
 ```py slim live_py
@@ -19,8 +18,7 @@ print(random.random())
 ```
 :::
 
-:::def 
-### `random.seed()`
+:::def[ `random.seed()`]
 Diese Funktion initialisiert den Zufallszahlengenerator. Damit kann die "Zufälligkeit" kontrolliert werden - wird immer derselbe Initialisierungswert verwendet, so entsteht immer dieselbe "zufällige Sequenz". ENtsprechend wichtig ist es, dass jedesmal ein anderer Initialer Startwert gesetzt. Python verwendet automatisch die aktuelle Systemzeit. Mit `random.seed()` kann der Generator mit einem beliebigen `int`,  `str`, `byte` oder `bytearray` neu initialisiert werden.
 
 ```py slim live_py
@@ -30,8 +28,7 @@ print(random.random())
 ```
 :::
 
-:::def 
-### `random.randint(a, b)`
+:::def[ `random.randint(a, b)`]
 Gibt eine zufällige **ganze** Zahl `n` zwischen `a` und `b` ($a <= n <= b$) zurück.
 
 ```py slim live_py
@@ -41,8 +38,7 @@ print(random.random())
 :::
 
 
-:::def 
-### `random.choice(seq)`
+:::def[ `random.choice(seq)`]
 Gibt ein zufälliges Element der Sequenz `seq` (bspw. eine Liste) zurück.
 
 ```py slim live_py
@@ -52,8 +48,7 @@ print('Als nächstes gehe ich nach:', random.choice(destinations))
 ```
 :::
 
-:::def 
-### `random.shuffle(seq)`
+:::def[ `random.shuffle(seq)`]
 Mischt alle Elemente der eingefügten Sequenz (bspw. eine Liste) - die eingegebene Sequenz wird also verändert!
 
 ```py slim live_py
@@ -64,8 +59,7 @@ print(numbers)
 ```
 :::
 
-:::def
-### `random.sample(seq, n)`
+:::def[`random.sample(seq, n)`]
 
 Gibt `n` zufällige Elemente der Sequenz `seq` (bspw. eine Liste) zurück. Die eingegebene Sequenz bleibt unverändert!
 

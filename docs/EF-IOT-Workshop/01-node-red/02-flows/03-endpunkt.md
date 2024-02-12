@@ -9,14 +9,14 @@ sidebar_custom_props:
 
 ## Node RED Endpunkt erstellen
 
-[@youtube](https://www.youtube-nocookie.com/embed/HzO4wsL2Eio)
+::youtube[https://www.youtube-nocookie.com/embed/HzO4wsL2Eio]
 
-:::aufgabe Endpunkt erzeugen: GET
+:::aufgabe[Endpunkt erzeugen: GET]
 Erzeugen Sie einen GET Endpunkt auf ihrem Node-RED und versuchen Sie diesen über Postman abzufragen.
 :::
 
 
-:::aufgabe Endpunkt erzeugen: POST
+:::aufgabe[Endpunkt erzeugen: POST]
 Wozu braucht man POST? 👉 kurze Recherche auf Google.
 
 Erstellen Sie einen POST Endpunkt, wo Datenpakete hingeschickt werden können.

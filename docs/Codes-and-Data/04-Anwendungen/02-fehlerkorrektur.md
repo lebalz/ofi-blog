@@ -11,7 +11,7 @@ import Bin2Text from '@site/src/components/VisualizationTools/Bin2Text';
 
 Im Unterricht haben Sie gesehen, wie die umgedrehte Karte sofort entdeckt wurde - *Zauberei!?!?*
 
-:::aufgabe Aufgaben
+:::aufgabe[Aufgaben]
 <Answer type="state" webKey="db764a01-2401-47e7-85b2-734efcb4649a" />
 
 1. Beschreiben Sie, nach welchem Prinzip Herr Hofer das `5x5`-Muster zu einem `6x6`-Muster ergänzt hat.
@@ -52,7 +52,7 @@ Zu übertragender Code mit Paritätsbit (7+1 Bit lang): `10001101`
 
 Das Paritätsbit ist hier 1.
 
-:::aufgabe Paritätsbit
+:::aufgabe[Paritätsbit]
 <Answer type="state" webKey="1d70d112-58e2-4812-a3a8-e8e96a7d0ed7" />
 
 Schreiben Sie mit Paritätsbit:
@@ -109,17 +109,17 @@ Wieso wird ein `p` statt der Buchstabe `b` angezeigt? (`b` ist binär `1100010`)
 
 ## EAN-13
 
-:::flex --columns=2
+:::flex{columns=2}
 Letzthin beim Vorbereiten im Kaffee nebenan, wollte ich eine Packung Kaffee kaufen - doch das Einscannen des Codes ging nicht, so dass der Strichcode einer anderen Packung eingelesen werden musste...
 
 Doch wie funktioniert das? Weshalb wurde erkannt, dass der Code kaputt war?
 
 Nach einer kurzen Recherche: Die Strichcodes auf Verpackungen sind sog. **EAN-13-Codes** (EAN = European Article Number). Doch wie funktionieren diese?
-***
+::br
 ![EAN 13 --width=250px](images/fehlerkorrektur/ean13-blaser.jpg)
 :::
 
-:::aufgabe Aufgabe
+:::aufgabe[Aufgabe]
 <Answer type="state" webKey="587a129a-34cf-4a1a-8496-7f62bc6b2df7" />
 
 1. Was könnte passieren, wenn ein Strichcode verdreckt oder beschädigt ist?

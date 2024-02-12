@@ -30,7 +30,7 @@ Dieses Farbmodell kommt überall dort zum Einsatz, wo Licht verwendet wird, um e
 
 :::cards
 ![Additives Farbmodell --width=100%](images/02-colour-rgb.svg)
-***
+::br
 ![Pixel auf einem Bildschirm --width=100%](images/02-pixels.jpg)
 :::
 
@@ -51,7 +51,7 @@ Für das **RGBA-Farbmodell** wird das RBG-Farbmodell um einen Kanal erweitert. D
 
 <RGBA />
 
-:::aufgabe Farben ausprobieren
+:::aufgabe[Farben ausprobieren]
 <Answer type="state" webKey="6ae62761-be3e-4ec7-9060-8cab7495fd1e" />
 
 Füllen Sie die drei Kreise mit unterschiedlichen Farben - Sie können direkt den `hex` Wert einsetzen, z.b. `color('#3ed92161')`.
@@ -90,7 +90,7 @@ Dieses Farbmodell kommt beim Drucken zum Einsatz.
 
 <CMYK />
 
-:::details ⭐️ Umrechnung CMYK – RGB
+:::details[⭐️ Umrechnung CMYK – RGB]
 
 Für die Umrechnung einer `CMYK`-Farbangabe nach `RGB` wird folgender Formelsatz verwendet:
 

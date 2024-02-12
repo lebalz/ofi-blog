@@ -51,7 +51,7 @@ Zählt, wie oft der Wert "Schwarz" im Bereich `A1:A13` vorkommt
 Aggregieren nach dem Alter
 <ExcelBox>
 
-=ZÄHLENWENNS(D1:D13; ">=14"; D1:D13; "<16")
+=ZÄHLENWENNS(D1:D13; ">=14"; D1:D13; "\<16")
 </ExcelBox>
 
 Zählt, wie viele Schüler:innen 14 oder 15 Jährig sind. (Daher wie viele Werte im Bereich `D1:D13` zwischen 14 und 16 liegen). **Bemerke, dass der Bereich zweimal angegeben werden muss.**
@@ -60,18 +60,18 @@ Zählt, wie viele Schüler:innen 14 oder 15 Jährig sind. (Daher wie viele Werte
 - Die aggregierte Tabelle auswählen und über __Einfügen > 2D-Kreis__ ein Kreisdiagramm einfügen.
 - Über __Diagrammentwurf > Diagrammelemente hinzufügen__ die Datenbeschriftung hinzufügen.
 - Mit einem Textfeld (__Einfügen > Formen > Textfeld__) ein Textfeld für die Anzahl Datensätze (hier: $n = 13$) hinzufügen.
-- Rechtsklick auf eine weisse Fläche des Diagramms __:mdi-cursor-default-click: > Als Bild speichern...__
+- Rechtsklick auf eine weisse Fläche des Diagramms __:mdi[cursor-default-click] > Als Bild speichern...__
 
 
-[@video](images/Excel-Kuchendiagramm.mp4)
+::video[./images/Excel-Kuchendiagramm.mp4]
 
-:::finding Erkenntnis
+:::finding[Erkenntnis]
 - Die Stichprobengrösse **n** muss **immer** angegeben werden (=Anzahl der Datenpunkte)
 - Die Prozentwerte der einzelnen Kreissegmente müssen bei Diagrammen mit weniger als 10 Segmenten/Kategorien beschriftet werden.
 - Entweder in einer Legende oder direkt im Segment muss die Kategorie ersichtlich sein.
 :::
 
-:::aufgabe Kreisdiagramm
+:::aufgabe[Kreisdiagramm]
 <Answer type="state" webKey="44afcf07-cf61-480a-89c2-9b2a1a3f3c5d" />
 
 Datei
@@ -129,7 +129,7 @@ Das Säulendiagramm eignet sich besonders, um wenige Kategorien (bis ca. 15) zu 
 
 Das Balkendiagramm ist dem Säulendiagramm sehr ähnlich. Es entspricht einem Säulendiagramm mit vertauschten Achsen. So werden aus den vertikalen Säulen horizontale Balken und es wächst bei zunehmender Stichprobengrösse in die Länge und nicht in die Breite. Besonders gut sind Balkendiagramme für die Darstellung von Rangfolgen geeignet.
 
-:::aufgabe Geeignetes Diagramm
+:::aufgabe[Geeignetes Diagramm]
 <Answer type="state" webKey="16304ea3-5b50-433e-9acd-bf17e29fd52e" />
 
 Bestimmen Sie das geeignete Diagramm für die gegebene Ausgangslage.

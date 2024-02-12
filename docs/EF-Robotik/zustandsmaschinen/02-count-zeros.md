@@ -2,10 +2,10 @@
 sidebar_custom_props:
   id: 59815221-768e-4e0e-902b-641afb268e87
 ---
-# 2. Code für Micro:Bit
+# 2. Code für MicroBit
 
 Material
-: Micro:Bit
+: Micro\:Bit
 : mit USB-Kabel an den Computer angeschlossen
 Editor
 : Online-Editor [👉 python.microbit.org](https://python.microbit.org/)
@@ -40,7 +40,7 @@ while True:
 :::aufgabe
 <Answer type="state" webKey="6a5de7d0-90cf-406a-a269-c3413e24c95c" />
 
-Beschreiben Sie in eigenen Worten, was das Programm macht. Probieren Sie das Programm anschliessend auf dem Micro:Bit aus und überprüfen Sie Ihre Vermutung.
+Beschreiben Sie in eigenen Worten, was das Programm macht. Probieren Sie das Programm anschliessend auf dem Micro\:Bit aus und überprüfen Sie Ihre Vermutung.
 
 <Answer type="text" webKey="36b195ab-12da-4fb0-8b9d-50152f3995ae" />
 
@@ -53,7 +53,7 @@ Diese Zustandsmaschine kann bspw. beim Empfangen von Binärzahlen mit einem Pari
 </Solution>
 :::
 
-:::aufgabe Zustandsdiagramm
+:::aufgabe[Zustandsdiagramm]
 <Answer type="state" webKey="bdd1d61d-46f9-441b-97a5-0ed78f21231c" />
 
 Überführen Sie das Programm in ein Zustandsdiagramm und halten Sie Ihre Lösung unten fest. Achten Sie darauf, dass Sie die Transitionen mit ihren Ereignissen und Aktionen korrekt benennen.
@@ -77,7 +77,7 @@ stateDiagram-v2
 </Solution>
 :::
 
-:::aufgabe Event-State Tabelle
+:::aufgabe[Event-State Tabelle]
 <Answer type="state" webKey="49cefe33-f72e-41af-b838-2e890083573c" />
 
 Überführen Sie das Programm in eine Event-State Tabelle und halten Sie Ihre Lösung unten fest.
@@ -86,11 +86,11 @@ stateDiagram-v2
 <Solution webKey="6bf8ab78-782a-4b23-973a-7815c626e946">
 
 
-| <span style={{float: 'right'}}>Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | EVEN | ODD |
+| <span style={{float: 'right'}}>Zustand :mdi[arrow-right]</span><br />Ereignis :mdi[arrow-down] | EVEN | ODD |
 |:-----------------------------------------------------------------------------------------------|:-----|:----|
-| **Button A**                                                                                   | :mdi-music: *f,c* :mdi-arrow-right: __ODD__     | :mdi-music: *c,a*:mdi-arrow-right: __EVEN__    |
-| **Button B**                                                                                   | :mdi-music: *c,d,c* :mdi-arrow-right: __EVEN__     | :mdi-music: *c,d,c* :mdi-arrow-right: __ODD__    |
-| **Timer**                                                                                      | HAPPY :mdi-arrow-right: __EVEN__     | ANGRY :mdi-arrow-right: __ODD__    |
+| **Button A**                                                                                   | :mdi[music] *f,c* :mdi[arrow-right] __ODD__     | :mdi[music] *c,a*:mdi[arrow-right] __EVEN__    |
+| **Button B**                                                                                   | :mdi[music] *c,d,c* :mdi[arrow-right] __EVEN__     | :mdi[music] *c,d,c* :mdi[arrow-right] __ODD__    |
+| **Timer**                                                                                      | HAPPY :mdi[arrow-right] __EVEN__     | ANGRY :mdi[arrow-right] __ODD__    |
 
 </Solution>
 :::

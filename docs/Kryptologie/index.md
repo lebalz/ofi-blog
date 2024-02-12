@@ -37,7 +37,7 @@ Der Begriff *Schlüsselraum* bezeichnet die Anzahl möglicher Schlüssel für ei
 
 Die Grösse des Schlüsselraums wird in bit (d.h. als binärer Logarithmus) angegeben. Bei zwei möglichen Schlüsseln ($=2^1$) spricht man von 1 bit, bei 1024 möglichen Schlüsseln ($=2^{10}$) von 10 bit.
 
-:::aufgabe Schlüsselräume
+:::aufgabe[Schlüsselräume]
 <Answer type="state" webKey="b2c8e600-fe61-400e-bcd8-cb1dff1b2880" />
 
 Geben Sie die Grösse des Schlüsselraumes für die folgenden Verschlüsselungsverfahren an:

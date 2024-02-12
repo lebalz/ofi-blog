@@ -30,7 +30,7 @@ Dieses Farbmodell kommt überall dort zum Einsatz, wo Licht verwendet wird, um e
 
 :::cards
 ![Additives Farbmodell --width=100%](images/02-colour-rgb.svg)
-***
+::br
 ![Pixel auf einem Bildschirm --width=100%](images/02-pixels.jpg)
 :::
 
@@ -65,7 +65,8 @@ Dieses Farbmodell kommt beim Drucken zum Einsatz.
 
 <CMYK />
 
-<details><summary> ⭐️ Umrechnung CMYK – RGB </summary>
+<details>
+<summary> ⭐️ Umrechnung CMYK – RGB </summary>
 
 Für die Umrechnung einer `CMYK`-Farbangabe nach `RGB` wird folgender Formelsatz verwendet:
 
@@ -115,7 +116,7 @@ Die Farbtiefe gibt an, in wie vielen Abstufungen jeder Farbkanal vorliegt. Im in
 
 <ColorDepth />
 
-:::aufgabe 1. Aufgabe: Farbtiefe
+:::aufgabe[1. Aufgabe: Farbtiefe]
 Erkennen Sie das System, wie die Farbtiefe mit der Anzahl möglicher Farben zusammenhängt?
 - Wie viele Farben sind bei einer Farbabstufung von 4, 8, 16, 128 oder 256 Stufen möglich?
 - Wie viel bits sind für die Darstellung eines Farbkanals bei 4, 8, 16, 128 oder 256 Abstufungen nötig?

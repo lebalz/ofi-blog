@@ -105,7 +105,7 @@ for zahl in zahlen:
 print(klartext)
 ```
 
-:::danger Zugriff auf eine Liste
+:::danger[Zugriff auf eine Liste]
 Wie Sie bemerkt haben, werden in Python Listen mit eckigen Klammern erzeugt - und der Zugriff erfolgt unter Angabe der Position in der Liste, auch wieder mit eckigen Klammern:
 
 Die Positionen in der Liste beginnen bei 0. Das heisst, das erste Element hat die Position 0, das zweite die Position 1, usw.
@@ -159,7 +159,8 @@ for buchstabe in verschlüsselt:
 print(klartext)
 ```
 
-<details><summary>⭐️ Zusatz</summary>
+<details>
+<summary>⭐️ Zusatz</summary>
 
 Sie haben eine geheime Nachricht abgefangen, kennen aber den Schlüssel nicht. Sie wissen aber, dass `ALCZLJ` ein sinnvolles Wort ergeben muss. Schreiben Sie ein Programm, das alle möglichen Schlüssel durchprobiert und jeweils den entschlüsselten Text ausdruckt.
 

@@ -8,22 +8,22 @@ sidebar_custom_props:
 
 # 8. Sehsterne
 
-:::flex --gap=3em --align-items=center --min-width=150px
-*** --max-width=250px
+:::flex{gap=3em align-items=center min-width=150px}
+::br{max-width=250px}
 ![--width=250px](images/08-sehstern.png)
-*** --min-width=250px
+::br{min-width=250px}
 Sehsterne (das sind Seesterne mit Augen) kennen nur die fünf 
 Buchstaben `A` ,`C`, `I`, `N`, `T`, die sie auf einem gesunkenen Schiff entdeckt 
 haben. Alle Wörter setzen sie aus diesen Buchstaben zusammen.
 :::
 
 ## ACINT-Code
-:::flex 
-*** --min-width=250px
+::::flex
+::br{min-width=250px}
 Die Sehsterninformatiker haben eine binären Code für ihr
 Alphabet entwickelt, den sie **ACINT-Code** nennen:
 
-:::aufgabe 1. ACINT
+:::aufgabe[1. ACINT]
 <Answer type="state" webKey="d5e5b8d3-c31e-4487-a912-e43722f2ccd4" />
 
 1. Decodieren Sie die folgende Nachricht:
@@ -50,20 +50,20 @@ IN CINCINNATI
 </Solution>
 
 :::
-*** --max-width=250px
+::br{max-width=250px}
 ![--width=180px](images/08-sehstern-codierung.png)
 
-:::
+::::
 
 ## Gebärdensprache
-:::flex
-*** --min-width=430px
+::::flex
+::br{min-width=430px}
 Die Sehsterne haben keinen Mund. Sie kommunizieren, indem sie
 nacheinander für jeden Buchstaben den entsprechenden Arm heben.
 Eines Tages entdecken die Sehsterne ein weiteres gesunkenes Schiff
 mit fünf neuen Buchstaben: `E`, `H`, `J`, `M`, `R`.
 
-:::aufgabe 2. Gebärdensprache
+:::aufgabe[2. Gebärdensprache]
 <Answer type="state" webKey="5f3e52bf-092f-4ee7-807b-225d805aaec8" />
 
 1. Schlagen Sie den Sehsternen ein System vor, wie sie alle zehn
@@ -103,16 +103,16 @@ Wenn die Sehsterne einen binären Code wählen, können sie maximal $2^5 = 32$ v
 </Solution>
 :::
 
-*** --max-width=180px
+::br{max-width=180px}
 ![--width=180px](images/08-sehstern-arme.png)
-:::
+::::
 
 ## Erweiterter ACINT-Code
 Die Sehstern-Informatiker möchten einen neuen binären Code entwickeln, um die neuen 
 Buchstaben darstellen zu können. Der neue Code soll aber kompatibel mit
 dem bisherigen ACINT-Code sein. 
 
-:::aufgabe 3. Erweiterung ACINT-Code
+:::aufgabe[3. Erweiterung ACINT-Code]
 <Answer type="state" webKey="bd1aa5df-3fc4-431d-b32e-ad79bb3c45bf" />
 
 Machen Sie einen Vorschlag für einen
@@ -158,7 +158,7 @@ Eine andere Möglichkeit wäre, wie bei der Brailleschrift ein «Umschaltzeichen
 
 
 ## ⭐️ Gesunkenes Schiff (Bonus)
-:::aufgabe 4. Gesunkenes Schiff
+:::aufgabe[4. Gesunkenes Schiff]
 <Answer type="state" webKey="d01a2cc0-ae0c-4e8d-a968-ddc38f04d9ce" />
 
 Wie lautet der Name des ersten gesunkenen Schiffs?

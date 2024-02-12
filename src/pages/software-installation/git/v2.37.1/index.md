@@ -25,9 +25,9 @@ import OsTabs from '@site/src/components/OsTabs';
 
 ![](images/git-4.png)
 
-![:mdi-flash-triangle--orange: VS Code Auswählen!](images/git-5.png)
+![:mdi[flash-triangle]{.orange} VS Code Auswählen!](images/git-5.png)
 
-![:mdi-flash-triangle--orange: `main` als Standardname auswählen.](images/git-6.png)
+![:mdi[flash-triangle]{.orange} `main` als Standardname auswählen.](images/git-6.png)
 
 ![](images/git-7.png)
 

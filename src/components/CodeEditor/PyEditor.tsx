@@ -34,24 +34,6 @@ const PyEditor = observer((props: Props) => {
   const store = useStore('documentStore');
   const pyScript = store.find<Script>(props.webKey);
 
-  /**
-   * this effect triggers the brython execution
-   */
-  React.useEffect(() => {
-    return reaction(
-      () => pyScript.execCounter,
-      (counter) => {
-        if (props.lang === 'python' && counter > 0) {
-          pyScript.clearLogMessages();
-          umamiReport('script-exec', { type: pyScript.isDummy ? 'read-only' : 'editable', webKey: pyScript.webKey  });
-          (window as any).brython(1, {
-            ids: [DOM_ELEMENT_IDS.scriptSource(pyScript.codeId)],
-          });
-        }
-      }
-    )
-  }, [pyScript]);
-
   return (
     <React.Fragment>
       <Header

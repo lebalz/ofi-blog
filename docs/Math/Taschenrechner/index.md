@@ -12,7 +12,7 @@ Erlaubte Taschenrechner
 
 :::cards
 ![TI-30 eco RS](images/TI-30.jpg)
-***
+::br
 ![TI-30X IIS](images/TI-30XIIS.jpg)
 :::
 

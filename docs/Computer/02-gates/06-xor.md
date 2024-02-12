@@ -23,7 +23,7 @@ In Schaltplänen wird ein XOR-Gatter mit folgendem Symbol dargestellt:
 
 ## Interaktive Schaltung
 
-[@circuitverse](https://circuitverse.org/simulator/embed/rothe-xor-gate)
+::circuitverse[https://circuitverse.org/simulator/embed/rothe-xor-gate]
 
 ## Beispiele
 
@@ -137,7 +137,7 @@ A    B  |  X
 1    1  |  0
 ```
 
-:mdi-arrow-right: ein einzelnes `XOR`-Gatter reicht aus...
+:mdi[arrow-right] ein einzelnes `XOR`-Gatter reicht aus...
 
 </Solution>
 :::

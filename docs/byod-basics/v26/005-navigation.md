@@ -15,21 +15,21 @@ import Video from '@site/src/components/Video'
 <OsTabs>
 <TabItem value="win11">
 
-[[:mdi-microsoft-windows:]], [[Win]]
+[[:mdi[microsoft-windows]]], [[Win]]
 : Windows-Taste
-[[:mdi-apple-keyboard-shift:]], [[Shift]]
+[[:mdi[apple-keyboard-shift]]], [[Shift]]
 : Umschalttaste
 [[Alt]]
 : Wahltaste
 [[Ctrl]]
 : Control-Taste
-[[:mdi-apple-keyboard-caps:]], [[:mdi-keyboard-caps:]]
+[[:mdi[apple-keyboard-caps]]], [[:mdi[keyboard-caps]]]
 : Feststelltaste (oder [[Caps-Lock]]-Taste)
 : Bezweckt, dass alle Buchstaben gross geschrieben werden - auch Umlaute!
-[[:mdi-keyboard-tab:]]
+[[:mdi[keyboard-tab]]]
 : Tabulator-Taste
 : Zweck: Springt zur nächsten Spalte oder rückt den Cursor in Fliesstext ein.
-[[:mdi-keyboard-esc:]]
+[[:mdi[keyboard-esc]]]
 : Escape-Taste
 : Zweck: springt aus dem aktuellen Kontext heraus (bspw. die aktuelle Auswahl aufheben)
 [[Fn]]
@@ -38,21 +38,21 @@ import Video from '@site/src/components/Video'
 </TabItem>
 <TabItem value="win10">
 
-[[:mdi-microsoft-windows:]], [[Win]]
+[[:mdi[microsoft-windows]]], [[Win]]
 : Windows-Taste
-[[:mdi-apple-keyboard-shift:]], [[Shift]]
+[[:mdi[apple-keyboard-shift]]], [[Shift]]
 : Umschalttaste
 [[Alt]]
 : Wahltaste
 [[Ctrl]]
 : Control-Taste
-[[:mdi-apple-keyboard-caps:]], [[:mdi-keyboard-caps:]]
+[[:mdi[apple-keyboard-caps]]], [[:mdi[keyboard-caps]]]
 : Feststelltaste (oder [[Caps-Lock]]-Taste)
 : Bezweckt, dass alle Buchstaben gross geschrieben werden - auch Umlaute!
-[[:mdi-keyboard-tab:]]
+[[:mdi[keyboard-tab]]]
 : Tabulator-Taste
 : Zweck: Springt zur nächsten Spalte oder rückt den Cursor in Fliesstext ein.
-[[:mdi-keyboard-esc:]]
+[[:mdi[keyboard-esc]]]
 : Escape-Taste
 : Zweck: springt aus dem aktuellen Kontext heraus (bspw. die aktuelle Auswahl aufheben)
 [[Fn]]
@@ -61,21 +61,21 @@ import Video from '@site/src/components/Video'
 </TabItem>
 <TabItem value="mac">
 
-[[:mdi-apple-keyboard-command:]], [[Cmd]]
+[[:mdi[apple-keyboard-command]]], [[Cmd]]
 : Befehlstaste
-[[:mdi-apple-keyboard-shift:]], [[Shift]]
+[[:mdi[apple-keyboard-shift]]], [[Shift]]
 : Umschalttaste
-[[:mdi-apple-keyboard-option:]], [[Alt]], [[option]]
+[[:mdi[apple-keyboard-option]]], [[Alt]], [[option]]
 : Wahltaste-Taste
-[[:mdi-apple-keyboard-control:]], [[Ctrl]]
+[[:mdi[apple-keyboard-control]]], [[Ctrl]]
 : Control-Taste 
-[[:mdi-apple-keyboard-caps:]], [[:mdi-keyboard-caps:]]
+[[:mdi[apple-keyboard-caps]]], [[:mdi[keyboard-caps]]]
 : Feststelltaste
 : Bezweckt, dass alle Buchstaben gross geschrieben werden - auch Umlaute!
-[[:mdi-keyboard-tab:]]
+[[:mdi[keyboard-tab]]]
 : Tabulator-Taste
 : Zweck: Springt zur nächsten Spalte oder rückt den Cursor in Fliesstext ein.
-[[:mdi-keyboard-esc:]]
+[[:mdi[keyboard-esc]]]
 : Escape-Taste
 : Zweck: springt aus dem aktuellen Kontext heraus (bspw. die aktuelle Auswahl aufheben)
 [[fn]]
@@ -110,13 +110,13 @@ import Video from '@site/src/components/Video'
 : __Speichern__ Das aktuelle Dokument speichern.
 [[Ctrl]] + [[T]]
 : __Tabs__ Einen neuen Tab öffnen.
-[[:mdi-microsoft-windows:]] + [[Tabulatortaste :mdi-keyboard-tab:]]
+[[:mdi[microsoft-windows]]] + [[Tabulatortaste :mdi[keyboard-tab]]]
 : Alle geöffneten Apps anzeigen.
-[[Alt]] + [[Tabulatortaste :mdi-keyboard-tab:]]
+[[Alt]] + [[Tabulatortaste :mdi[keyboard-tab]]]
 : Unter den geöffneten Apps zur zuletzt verwendeten wechseln.
-[[Shift]] + [[Enter :mdi-keyboard-return:]]
+[[Shift]] + [[Enter :mdi[keyboard-return]]]
 : Neue Zeile im selben Absatz (oder eine neue Zeile in Teams/WhatsApp ohne zu senden)
-[[:mdi-microsoft-windows:]] + [[.]]
+[[:mdi[microsoft-windows]]] + [[.]]
 : __Emoji__ Öffnet die Emoji-Liste
 
 </TabItem>
@@ -142,13 +142,13 @@ import Video from '@site/src/components/Video'
 : __Speichern__ Das aktuelle Dokument speichern.
 [[Ctrl]] + [[T]]
 : __Tabs__ Einen neuen Tab öffnen.
-[[:mdi-microsoft-windows:]] + [[Tabulatortaste :mdi-keyboard-tab:]]
+[[:mdi[microsoft-windows]]] + [[Tabulatortaste :mdi[keyboard-tab]]]
 : Alle geöffneten Apps anzeigen.
-[[Alt]] + [[Tabulatortaste :mdi-keyboard-tab:]]
+[[Alt]] + [[Tabulatortaste :mdi[keyboard-tab]]]
 : Unter den geöffneten Apps zur zuletzt verwendeten wechseln.
-[[Shift]] + [[Enter :mdi-keyboard-return:]]
+[[Shift]] + [[Enter :mdi[keyboard-return]]]
 : Neue Zeile im selben Absatz (oder eine neue Zeile in Teams/WhatsApp ohne zu senden)
-[[:mdi-microsoft-windows:]] + [[.]]
+[[:mdi[microsoft-windows]]] + [[.]]
 : __Emoji__ Öffnet die Emoji-Liste
 
 </TabItem>
@@ -176,17 +176,17 @@ import Video from '@site/src/components/Video'
 : __Tabs__ Einen neuen Tab öffnen.
 [[Cmd]] + [[Leertaste]]
 : __Spotlight__ Das Spotlight-Suchfeld ein- oder ausblenden.
-[[Cmd]] + [[Tabulatortaste :mdi-keyboard-tab:]]
+[[Cmd]] + [[Tabulatortaste :mdi[keyboard-tab]]]
 : Unter den geöffneten Apps zur zuletzt verwendeten wechseln.
-[[Shift]] + [[Enter :mdi-keyboard-return:]]
+[[Shift]] + [[Enter :mdi[keyboard-return]]]
 : Neue Zeile im selben Absatz (oder eine neue Zeile in Teams/WhatsApp ohne zu senden)
-[[Ctrl :mdi-apple-keyboard-control:]] + [[Cmd :mdi-apple-keyboard-command:]] + [[Leertaste]]
+[[Ctrl :mdi[apple-keyboard-control]]] + [[Cmd :mdi[apple-keyboard-command]]] + [[Leertaste]]
 : __Emoji__ Öffnet die Emoji-Liste
 
 </TabItem>
 </OsTabs>
 
-:::aufgabe Quizz
+:::aufgabe[Quizz]
 <Answer type="state" webKey="215e7040-8992-4ded-ac14-85acd782a0f9" />
 
 Lösen Sie das Quizz und markieren Sie die Aufgabe anschliessend als erledigt.
@@ -206,7 +206,7 @@ Lösen Sie das Quizz und markieren Sie die Aufgabe anschliessend als erledigt.
 : ganze Wörter überspringen
 [[Ctrl]] + [[Shift]] + [[Pfeiltasten]]
 : ganze Wörter selektieren
-[[:mdi-microsoft-windows:]] + [[Pfeiltasten]]
+[[:mdi[microsoft-windows]]] + [[Pfeiltasten]]
 : Fenster auf dem Bildschirm anordnen
 
 <Video title="Weitere Möglichkeiten fürs Anordnen von Fenstern" src={useBaseUrl('/img/byod-basics/win11/andock-hilfe.mp4')} />
@@ -221,7 +221,7 @@ Lösen Sie das Quizz und markieren Sie die Aufgabe anschliessend als erledigt.
 : ganze Wörter überspringen
 [[Ctrl]] + [[Shift]] + [[Pfeiltasten]]
 : ganze Wörter selektieren
-[[:mdi-microsoft-windows:]] + [[Pfeiltasten]]
+[[:mdi[microsoft-windows]]] + [[Pfeiltasten]]
 : Fenster auf dem Bildschirm anordnen
 
 </TabItem>
@@ -229,15 +229,15 @@ Lösen Sie das Quizz und markieren Sie die Aufgabe anschliessend als erledigt.
 
 [[Shift]] + [[Pfeiltasten]]
 : Text auswählen
-[[Alt :mdi-apple-keyboard-option:]] + [[Pfeiltasten]]
+[[Alt :mdi[apple-keyboard-option]]] + [[Pfeiltasten]]
 : ganze Wörter überspringen
-[[Shift]] + [[Alt :mdi-apple-keyboard-option:]] + [[Pfeiltasten]]
+[[Shift]] + [[Alt :mdi[apple-keyboard-option]]] + [[Pfeiltasten]]
 : ganze Wörter selektieren
 
 </TabItem>
 </OsTabs>
 
-:::aufgabe Shortcuts Tastatur&Pfeiltasten ausprobieren
+:::aufgabe[Shortcuts Tastatur&Pfeiltasten ausprobieren]
 <Answer type="state" webKey="1d692ff8-21b1-416b-ab51-79573dfece5c" />
 
 Probieren Sie die verschiedenen Shortcuts im untenstehenden Textfeld aus!
@@ -266,9 +266,9 @@ __(__
 : [[Shift]] + [[8]]
 __)__
 : [[Shift]] + [[9]]
-__{__
+__\{__
 : Normalerweise [[Alt Gr]] + [[ä]]
-__}__
+__\}__
 : Normalerweise [[Alt Gr]] + [[$]]
 __[__
 : Normalerweise [[Alt Gr]] + [[ü]]
@@ -282,9 +282,9 @@ __(__
 : [[Shift]] + [[8]]
 __)__
 : [[Shift]] + [[9]]
-__{__
+__\{__
 : Normalerweise [[Alt Gr]] + [[ä]]
-__}__
+__\}__
 : Normalerweise [[Alt Gr]] + [[$]]
 __[__
 : Normalerweise [[Alt Gr]] + [[ü]]
@@ -299,19 +299,19 @@ __(__
 : [[Shift]] + [[8]]
 __)__
 : [[Shift]] + [[9]]
-__{__
-: [[Option :mdi-apple-keyboard-option:]] + [[(]]
-__}__
-: [[Option :mdi-apple-keyboard-option:]] + [[)]]
+__\{__
+: [[Option :mdi[apple-keyboard-option]]] + [[(]]
+__\}__
+: [[Option :mdi[apple-keyboard-option]]] + [[)]]
 __[__
-: [[Option :mdi-apple-keyboard-option:]] + [[5]]
+: [[Option :mdi[apple-keyboard-option]]] + [[5]]
 __]__
-: [[Option :mdi-apple-keyboard-option:]] + [[6]]
+: [[Option :mdi[apple-keyboard-option]]] + [[6]]
 
 </TabItem>
 </OsTabs>
 
-:::aufgabe Klammern schreiben
+:::aufgabe[Klammern schreiben]
 <Answer type="state" webKey="887346bb-a996-4799-98f3-e7ac25fd0a19" />
 
 Versuchen Sie, alle Klammern selber zu tippen!
@@ -343,11 +343,11 @@ __&__
 __/__
 : [[Shift]] + [[7]]
 __\__
-: [[ctrl]] + [[alt]] + [[<]] oder [[Alt Gr]] + [[<]]
-__<__
-: [[<]]
+: [[ctrl]] + [[alt]] + [[\<]] oder [[Alt Gr]] + [[\<]]
+__\<__
+: [[\<]]
 __>__
-: [[Shift]] + [[<]]
+: [[Shift]] + [[\<]]
 
 </TabItem>
 <TabItem value="win10">
@@ -369,11 +369,11 @@ __&__
 __/__
 : [[Shift]] + [[7]]
 __\__
-: [[ctrl]] + [[alt]] + [[<]] oder [[Alt Gr]] + [[<]]
-__<__
-: [[<]]
+: [[ctrl]] + [[alt]] + [[\<]] oder [[Alt Gr]] + [[\<]]
+__\<__
+: [[\<]]
 __>__
-: [[Shift]] + [[<]]
+: [[Shift]] + [[\<]]
 
 </TabItem>
 <TabItem value="mac">
@@ -396,16 +396,16 @@ __/__
 : [[shift]] + [[7]]
 __\__
 : [[shift]] + [[option]] + [[7]]
-__<__
-: [[<]]
+__\<__
+: [[\<]]
 __>__
-: [[shift]] + [[>]]
+: [[shift]] + [[\<]]
 
 </TabItem>
 </OsTabs>
 
 
-:::aufgabe Sonderzeichen
+:::aufgabe[Sonderzeichen]
 <Answer type="state" webKey="eb8771a6-681b-439c-b02e-d926d8c93fc5" />
 
 Können Sie die obigen Sonderzeichen selber erzeugen?
@@ -414,7 +414,7 @@ Können Sie die obigen Sonderzeichen selber erzeugen?
 
 :::
 
-:::aufgabe Quizz
+:::aufgabe[Quizz]
 <Answer type="state" webKey="41b18d27-2066-482b-926d-c4fa4253d96e" />
 
 Werden Sie Millionär? 🤑💰🤑💰🤑💰
@@ -422,7 +422,7 @@ Werden Sie Millionär? 🤑💰🤑💰🤑💰
 <iframe src="https://learningapps.org/watch?app=2815114" style={{border:'0px',width:'100%',height:'500px'}} allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 :::
 
-:::aufgabe 🌟 Arcade Game (englisch)
+:::aufgabe[🌟 Arcade Game (englisch)]
 <Answer type="state" webKey="dd6bddb6-fea8-4d37-902d-3ea1c9529c6e" />
 
 Freiwillig: Spielen Sie das Tastenkürzel-Game
@@ -436,7 +436,7 @@ Freiwillig: Spielen Sie das Tastenkürzel-Game
 - Link auf einer Webseite in einem neuen Tab öffnen
 - ...
 
-[[Cmd]] + :mdi-mouse: *Click*
+[[Cmd]] + :mdi[mouse] *Click*
 
 ## Touch-Gesten
 
@@ -543,7 +543,7 @@ Mit virtuellen Desktops lassen sich mehrere Arbeitsbereiche und Fensteranordnung
 <OsTabs>
 <TabItem value="win11">
 
-Virtuelle Desktops: Mit [[:mdi-microsoft-windows:]]+[[Tabulator :mdi-keyboard-tab:]] alle geöffneten Fenster anzeigen und oben im Fenster einen neuen Virtuellen Desktop erstellen:
+Virtuelle Desktops: Mit [[:mdi[microsoft-windows]]]+[[Tabulator :mdi[keyboard-tab]]] alle geöffneten Fenster anzeigen und oben im Fenster einen neuen Virtuellen Desktop erstellen:
 
 
 <Video src={useBaseUrl('/img/byod-basics/win11/create-virtual-desktop.mp4')} />
@@ -551,7 +551,7 @@ Virtuelle Desktops: Mit [[:mdi-microsoft-windows:]]+[[Tabulator :mdi-keyboard-ta
 </TabItem>
 <TabItem value="win10">
 
-Virtuelle Desktops: Mit [[:mdi-microsoft-windows:]]+[[Tabulator :mdi-keyboard-tab:]] alle geöffneten Fenster anzeigen und oben im Fenster einen neuen Virtuellen Desktop erstellen:
+Virtuelle Desktops: Mit [[:mdi[microsoft-windows]]]+[[Tabulator :mdi[keyboard-tab]]] alle geöffneten Fenster anzeigen und oben im Fenster einen neuen Virtuellen Desktop erstellen:
 
 
 <Video src={useBaseUrl('/img/byod-basics/win/create_virtual_desktops.mp4')} />
@@ -591,17 +591,17 @@ Mit folgenden Gesten kann zwischen diesen Desktops hin- und hergewechselt werden
 <OsTabs>
 <TabItem value="win11">
 
-Weitere Gesten [:mdi-link: hier](https://support.microsoft.com/de-de/windows/touchpad-gesten-f%C3%BCr-windows-10-a9d28305-4818-a5df-4e2b-e5590f850741)
+Weitere Gesten [:mdi[link] hier](https://support.microsoft.com/de-de/windows/touchpad-gesten-f%C3%BCr-windows-10-a9d28305-4818-a5df-4e2b-e5590f850741)
 
 </TabItem>
 <TabItem value="win10">
 
-Weitere Gesten [:mdi-link: hier](https://support.microsoft.com/de-de/windows/touchgesten-f%C3%BCr-windows-a9d28305-4818-a5df-4e2b-e5590f850741#WindowsVersion=Windows_10)
+Weitere Gesten [:mdi[link] hier](https://support.microsoft.com/de-de/windows/touchgesten-f%C3%BCr-windows-a9d28305-4818-a5df-4e2b-e5590f850741#WindowsVersion=Windows_10)
 
 </TabItem>
 <TabItem value="mac">
 
-Weitere Gesten [:mdi-link: hier](https://support.apple.com/de-ch/HT204895)
+Weitere Gesten [:mdi[link] hier](https://support.apple.com/de-ch/HT204895)
 
 </TabItem>
 </OsTabs>

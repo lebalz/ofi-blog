@@ -11,8 +11,7 @@ Der $A^\star$-Algorithmus[1] (im folgenden $A^\star$ genannt) wird verwendet, um
 
 Bei der Breitensuche wird keine «intelligente» Auswahl der Knoten in der Open-List getroffen, die Knoten werden in willkürlicher Reihenfolge verarbeitet. Der  $A^\star$ ist eine Verfeinerung dieser Verfahren, wobei folgendermassen immer der vielversprechendste Knoten weiterverarbeitet wird. Es wird abgeschätzt, wie «gut» ein Knoten ist, indem eine Bewertungsfunktion berechnet wird. Die Kosten eines Knotens $N$ beinhalten zwei Beiträge: einerseits die Kosten vom Startknoten bis zu $N$ (wie bei Dijkstra) und andererseits die geschätzten Kosten von $N$ bis zum Zielknoten. Diese Bewertungsfunktion $f(N)$ für einen Knoten $N$ wird also folgendermassen definiert:
 
-:::def Definition
-### A-Stern
+:::def[A-Stern]
 $$
 f(N) = g(N) + h(N)
 $$
@@ -124,7 +123,7 @@ Heilbronn
 
 </Tabs>
 
-:::aufgabe Aufgabe 1: Vergleich Dijkstra und A\*-Algorithmus
+:::aufgabe[Aufgabe 1: Vergleich Dijkstra und A\*-Algorithmus]
 <Answer type="state" webKey="3d2faa9b-0ce4-4cfe-b573-bce807439c0f" />
 
 Berechnen	Sie	für	das	Folgende Strassennetz	den	kürzesten	Weg	von	nach München nach Frankfurt mit dem A\*-Algorithmus. Die	Entfernungen	zwischen	den	Städten	sind	in	der	Abbildung	angegeben.
@@ -167,7 +166,7 @@ Die drei Algorithmen Breitensuche, Dijkstra und A-Stern-Algorithmus unterscheide
 
 ![](./images/vergleich.png)
 
-:::aufgabe Aufgabe
+:::aufgabe[Aufgabe 2]
 <Answer type="state" webKey="ad80e5de-48f8-41a9-a995-cd274f4b88fa" />
 
 Auf der verlinkten Seite können Breitensuche, Dijkstra und A-Stern miteinander vergleichen werden. Testen Sie die Seite aus und beantworten Sie folgende Fragen:
@@ -181,7 +180,7 @@ Auf der verlinkten Seite können Breitensuche, Dijkstra und A-Stern miteinander 
 <Answer type="text" webKey="d31de321-739e-47de-9102-076e3ce010f0" />
 :::
 
-:::aufgabe ⭐ Zusatzaufgabe
+:::aufgabe[⭐ Zusatzaufgabe 3]
 <Answer type="state" webKey="ae5a5f36-ca6b-4fd5-a521-6ffc2a47ad7a" />
 
 Der A-Stern-Algorithmus kommt auch in Computer-Spielen zu Einsatz:

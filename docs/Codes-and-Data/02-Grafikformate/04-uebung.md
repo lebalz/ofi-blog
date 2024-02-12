@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 # Rastergrafik praktisch
 
-:::aufgabe 1. JPEG-Format
+:::aufgabe[1. JPEG-Format]
 <Answer type="state" webKey="105c3ff0-820f-4870-b6b5-73d50e7ead4c" />
 
 Das folgende Foto hat im Original eine Auflösung von `6016×4016` Pixel mit einer Farbtiefe von 3 Byte.

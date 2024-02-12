@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 # Domain-Name-System
 
-:::finding Ziele
+:::finding[Ziele]
 - Was ist ein Domain-Name?
 - Sie können zu einem gegebenen Domain-Namen die zugehörige IP-Adresse ermitteln.
 -	Sie können herausfinden, wem ein Domain-Name gehört und ob ein bestimmter Domain-Name noch frei ist.
@@ -43,7 +43,7 @@ Diese Namen werden als **Domain-Names** bezeichnet und das Verzeichnis, wo sie d
 
 Es gibt auf der Welt bald **2 Milliarden**[^1] Webseiten, verteilt auf ca. 200 Millionen Server. Jeder Server beherbergt also durchschnittlich 10 Webseiten. Für jeden dieser Server braucht es eine öffentliche IP-Adresse, damit der Server im Internet erreichbar ist. Wenn man die IP-Adresse des Servers kennt, könnte man theoretisch versuchen im Browser statt des Domain-Namens einer Web-Site direkt die IP-Adresse des Servers einzugeben, also statt [www.instgram.com](https://www.instgram.com) die IP-Adresse 157.240.17.174.
 
-:::finding IP-Adressen direkt eingeben
+:::finding[IP-Adressen direkt eingeben]
 Obiges Beispiel, die IP-Adresse von Instagram direkt in den Browser einzutippen, funktioniert in der Praxis mit modernen Webseiten, die `https` als Protokoll verwenden, nicht. Bei `https` wird von Ihrem Browser mittels Zertifikat sichergestellt, dass die Adresse auf den korrekten Domain Namen lautet. Dadurch wird verhindert, dass Sie auf eine falsche Seite umgeleitet werden, und dann unwissentlich bspw. eine Geldtransaktion vornehmen. Das führt aber dazu, dass das Zertifikat bei IP-Adressen nicht gültig ist.
 
 Eine zu Demonstrationszwecken veröffentlichte Seite ohne https ist [login.gbsl.website](http://login.gbsl.website). Diese ist auch direkt über den entsprechenden Server [188.34.157.212](http://188.34.157.212) zu finden.
@@ -51,15 +51,15 @@ Eine zu Demonstrationszwecken veröffentlichte Seite ohne https ist [login.gbsl.
 
 Wie schon in der Einleitung erwähnt, wird das niemand tun, weil man sich diese IP-Adresse nicht merken kann und sie mit der Zeit auch ändern könnte (z.B. wenn die Web-Site auf einen anderen Server gezügelt wird). Ganz abgesehen davon, dass es auch nicht ausreichen würde, nur die IP-Adresse anzugeben, weil ja eben mehrere Web-Sites an einer bestimmten Adresse «zuhause» sein können - der Port müsste ebenfalls bekannt sein.
 
-:::finding Ports
+:::finding[Ports]
 Ein Port spezifiziert, welche Applikation auf einem Server die Anfrage behandeln soll.
 
 Auf dem Server [188.34.157.212](http://188.34.157.212) sind mehrere Web-Sites, und mit dem richtigen Port kann ausgewählt werden, welche man möchte:
 
 Port 80 \*
-: [188.34.157.212:80](http://188.34.157.212:80) :mdi-arrow-right: [login.gbsl.website](http://login.gbsl.website)
+: [188.34.157.212:80](http://188.34.157.212:80) :mdi[arrow-right] [login.gbsl.website](http://login.gbsl.website)
 Port 8080
-: [188.34.157.212:8080](http://188.34.157.212:8080) :mdi-arrow-right: [hacksql.gbsl.website](https://hacksql.gbsl.website)
+: [188.34.157.212:8080](http://188.34.157.212:8080) :mdi[arrow-right] [hacksql.gbsl.website](https://hacksql.gbsl.website)
 
 Nun wird deutlich, dass es schwierig würde, sich auch noch alle Ports zu merken...
 
@@ -87,13 +87,13 @@ Wird einer der übergeordneten DNS-Server nach dieser IP-Adresse gefragt, so ver
  
 Man kann diese Situation mit jemandem vergleichen, der sich in einer fremden Stadt über mehrere Stationen zu seinem Hotel durchfragt.
 
-:::aufgabe Selbsttest
+:::aufgabe[Selbsttest]
 <Answer type="state" webKey="2d0b2be9-72f8-415f-b032-d5113a50117b" />
 
 Füllen Sie das folgende [Forms-Quizz](https://forms.office.com/Pages/ResponsePage.aspx?id=Y4MGSWGDB0aVSWK2tVeUqmHAwu9d_oRHn4uu_hm4VSJUQUNaRktCVkZSOVFXVVgyM0RSOVhaWUJCTi4u) aus.
 :::
 
-:::aufgabe DNS-Hierarchie
+:::aufgabe[DNS-Hierarchie]
 <Answer type="state" webKey="7f4bdc53-0f3b-41b3-b83b-5643627cc82e" />
 
 Zeichnen Sie eine Hierarchie (Baum), in welcher folgende Domain-Namen vorkommen (so wie auf der Abbildung im Arbeitsblatt):
@@ -113,7 +113,7 @@ Halten Sie Ihre Lösung auf einem Blatt Papier fest und fügen Sie ein Foto davo
 ## Wer verwaltet Domain-Namen?
 Die hierarchische Gliederung des Domain-Name-Systems erlaubt es, die Verwaltung zu **dezentralisieren**. So gibt es für jede Top-Level-Domain eine Organisation, welche die Namen der darunter angesiedelten Subdomains verwaltet. Für die TLD der Schweiz (ch) und Liechtenstein (li) ist die Stiftung [SWITCH](https://www.switch.ch/) zuständig.
 
-:::finding info
+:::finding[info]
 Die SWITCH betreibt unter dem Link https://www.nic.ch/de/ einen Dienst zur Überprüfung, ob eine bestimmte Subdomain noch verfügbar ist. Das Registrieren einer Subdomain delegiert die SWITCH an sogenannte **Registrare**, also an Unternehmen die Domain-Namen anbieten und verkaufen. Bekannte (und günstige) Registrare sind:
 - [Swizzonic.ch](https://swizzonic.ch/)
 - [Gandi.net](https://www.gandi.net/)
@@ -127,7 +127,7 @@ Es gibt Web-Sites, über welche man herausfinden kann, von wem ein bestimmter Do
 - https://www.whois.com/whois/ (TLDs com, org, edu, website, …)
 - http://whois.nic.swiss/ (TLD swiss)
 
-:::aufgabe GBSL
+:::aufgabe[GBSL]
 <Answer type="state" webKey="95a98f14-95a0-4b84-b5fa-a874641a4a57" />
 
 Welcher Registrar hat die Domain
@@ -146,14 +146,14 @@ Den zuständigen DNS-Server kann Ihr Computer, aber nur über dessen eigene IP-A
 
 Man kann solche Anfragen aber auch von Hand machen. Dazu können Sie die Seite https://tools.keycdn.com/dig verwenden.
 
-::::aufgabe Aufgabe 1
+::::aufgabe[Aufgabe 1]
 <Answer type="state" webKey="0ad4bde0-94a3-4822-8c97-bd14774433a5" />
 
 Wie findet man die IP-Adresse, welche zu einem Domain-Name gehört? (Googeln Sie nach einer Website, welche einen Dienst anbietet, der dies tut.)
 
 <Answer  type="text"  webKey="67acbe64-ea7b-46ea-b07a-c09376f21381"/>
 
-:::details :mdi-account-cowboy-hat: The Hacky Way :mdi-arrow-right: Übers Terminal :mdi-console:
+:::details[:mdi[account-cowboy-hat] The Hacky Way :mdi[arrow-right] Übers Terminal :mdi[console]]
 
 Sie können auch in der Windows-Eingabeaufforderung oder auf dem Mac-Terminal einen Domain-Name zu einer IP-Adresse auflösen. Dazu brauchen Sie den Befehl `nslookup`.
 
@@ -174,7 +174,7 @@ Suchen Sie auch nach weiteren IP-Adressen, bspw. von www.instagram.com.
 ::::
 
 
-:::aufgabe Aufgabe 2
+:::aufgabe[Aufgabe 2]
 <Answer type="state" webKey="ebf745e1-a325-44cb-bb9e-49569f9316ea" />
 
 Untenstehende Abbildung zeigt eine verdächtige aussehende E-Mail. Sie enthält einen Button, unter welchem angeblich Details eines Fotos angeschaut werden können.
@@ -203,7 +203,7 @@ Verwenden Sie 👉 https://tools.keycdn.com/dig und 👉 https://www.whois.com/w
 Warnung: Auch hier gilt wieder: Nie auf solche Buttons klicken, denn in diesem Fall ist das Risiko hoch, dass Ihr Computer mit einem Virus infiziert wird. 
 :::
 
-:::aufgabe Aufgabe 3
+:::aufgabe[Aufgabe 3]
 <Answer type="state" webKey="dc4203ff-182c-44d1-8b1c-0b503e300f29" />
 
 Diese Aufgabe hat nicht direkt mit dem Domain-Name-System zu tun. Da hinter der E-Mail aus Aufgabe 2 aber mit Sicherheit jemand mit böswilliger Absicht steckt, können wir noch überprüfen, ob  der Link bereits **als gefährlich registriert** ist.
@@ -218,7 +218,7 @@ Solche Überprüfungen bietet z.B. die Seite 	https://sitecheck.sucuri.net/ an.
 :::
 
 
-:::aufgabe Aufgabe 4
+:::aufgabe[Aufgabe 4]
 <Answer type="state" webKey="5a3152ce-03e6-46d6-9dd4-c741027b2b9f" />
 
 Sie möchten Ihr eigenes Unternehmen gründen, oder Sie möchten eine Kampagne für ein Ihnen wichtiges Anliegen führen. In beiden Fällen hilft einen Auftritt im Web, um möglichst erfolgreich zu sein. Eine grosse Rolle spielt dabei, ob Sie einen einprägsamen und packenden Domain-Name finden. Dieser muss selbstverständlich noch verfügbar sein.
@@ -229,7 +229,7 @@ Sie möchten Ihr eigenes Unternehmen gründen, oder Sie möchten eine Kampagne f
 
 :::
 
-:::aufgabe Aufgabe 5
+:::aufgabe[Aufgabe 5]
 <Answer type="state" webKey="9da9e98c-ffcf-4ea5-bdcb-1b582dda8c4f" />
 
 Ein Gedankenspiel: Die Berner Kantonalbank (BEKB) bietet ihren Kunden Internet-Banking an. Diese ist erreichbar über die Web-Site der BEKB, www.bekb.ch.

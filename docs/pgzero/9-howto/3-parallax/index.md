@@ -15,20 +15,21 @@ import CodeBlock from '@theme/CodeBlock';
 
 ## Bilder
 
-::: columns 4
+:::cards{columns=4}
 ![](./images/hintergrund0.png)
-***
+::br
 ![](./images/hintergrund1.png)
-***
+::br
 ![](./images/hintergrund2.png)
-***
+::br
 ![](./images/hintergrund3.png)
-***
+::br
 ![](./images/hintergrund4.png)
-***
+::br
 ![](./images/hintergrund5.png)
-***
+::br
 ![](./images/hintergrund6.png)
+::br{.empty}
 :::
 
 Bildquelle: [Craftpix.net, OpenGameArt][1], Lizenz: OGA

@@ -17,7 +17,7 @@ wiederhole bis Spielende erreicht:
 :::aufgabe
 <Answer type="state" webKey="69c57cbf-4ea6-4b8e-8623-d379c4d38839" />
 
-- Ergänzen Sie die Hauptfunktion Ihres Spiels mit einer Game-Loop, wobei vorerst unendlich viele Runden gespielt werden können. :mdi-arrow-right: **commit**
+- Ergänzen Sie die Hauptfunktion Ihres Spiels mit einer Game-Loop, wobei vorerst unendlich viele Runden gespielt werden können. :mdi[arrow-right] **commit**
 - Fügen Sie eine Überprüfung hinzu, ob das Spiel gewonnen oder verloren wurde:
   - **Gewonnen**: Eine von Ihnen festgelegte Zahl (bspw. *1024*) wurde erreicht
   - **Verloren**: Es gibt keine weitere Möglichkeit, einen Zug zu machen. (Wenn es min. ein Feld mit einem gleichwertigen Nachbarsfeld gibt, so gibt es noch eine Möglichkeit...)
@@ -25,7 +25,7 @@ wiederhole bis Spielende erreicht:
 
 :::
 
-:::aufgabe ⭐ Zusatz: Score
+:::aufgabe[⭐ Zusatz: Score]
 <Answer type="state" webKey="1c1e526c-45bb-47c1-b9b6-2b5418785203" />
 
 Fügen Sie einen Score hinzu, der angibt, wie viele Züge man gebraucht hat, um das Endziel (*1024*) zu erreichen.

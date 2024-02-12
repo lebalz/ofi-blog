@@ -7,14 +7,14 @@ sidebar_custom_props:
 
 Mit einem 3D-Drucker lassen sich dreidimensionale Objekte erzeugen. Dabei arbeiten alle gängigen Druckverfahren schichtweise - das Objekt wird aus mehreren Schichten zusammengesetzt, wobei eine einzelne Schicht zweidimensional auf die darunterliegende Schicht aufgetragen wird.
 
-:::cards --columns=2 --text-align=center
-*** --text-align=center
+:::cards{columns=2 text-align=center}
+::br{text-align=center}
 ![--width=996px](images/prusa-timelapse-01.gif)
-*** --text-align=center
+::br{text-align=center}
 ![](images/prusa-timelapse-02.gif)
-***
+::br
 ![--width=996px](images/prusa-timelapse-03.gif)
-***
+::br
 ![--width=996px](images/prusa-timelapse-04.gif)
 :::
 
@@ -26,6 +26,6 @@ Modelle Slicen
 : [👉 Prusa Slicer](https://www.prusa3d.com/page/prusaslicer_424/)
 
 
-An der Schule steht der 3D-Drucker [Prusa i3 MK3S+ MMU2S](https://www.prusa3d.com/de/kategorie/original-prusa-i3-mk3s/) von Prusa zur Verfügung. Spannender Fakt zu Prusa-Druckern: Sie haben sich "selbst" gedruckt - alle Teile wurden von i3 Druckern gefertigt :mdi-emoticon-cool-outline:. Die Teile des Druckers sind übrigens [Open-Source](https://github.com/prusa3d/Original-Prusa-i3) und können selber gedruckt werden.
+An der Schule steht der 3D-Drucker [Prusa i3 MK3S+ MMU2S](https://www.prusa3d.com/de/kategorie/original-prusa-i3-mk3s/) von Prusa zur Verfügung. Spannender Fakt zu Prusa-Druckern: Sie haben sich "selbst" gedruckt - alle Teile wurden von i3 Druckern gefertigt :mdi[emoticon-cool-outline]. Die Teile des Druckers sind übrigens [Open-Source](https://github.com/prusa3d/Original-Prusa-i3) und können selber gedruckt werden.
 
-[@youtube](https://www.youtube.com/embed/gdnRkE1dRTI)
+::youtube[https://www.youtube.com/embed/gdnRkE1dRTI]

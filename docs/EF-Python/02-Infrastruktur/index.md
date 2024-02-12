@@ -20,7 +20,7 @@ graph TD
     F --> H("<i class='mdi mdi-language-markdown'/>" Dokumentation)
 ```
 
-:::info Ziele
+:::info[Ziele]
 - Sie haben die nötige Software für diesen Themenblock auf Ihrem Notebook installiert
 - Sie wissen, wozu die einzelnen Apps dienen
 - Sie haben einen ersten Einblick in diese Apps genommen

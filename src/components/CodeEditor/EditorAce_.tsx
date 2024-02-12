@@ -2,7 +2,6 @@ import * as React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 import { DOM_ELEMENT_IDS } from './constants';
-import PyScriptSrc from './PyScriptSrc';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../stores/hooks';
 import Script from '../../models/Script';
@@ -32,28 +31,27 @@ const Editor = observer((props: Props) => {
     const store = useStore('documentStore');
     const pyScript = store.find<Script>(props.webKey);
 
-    const editorRef = React.useCallback(
-        (node) => {
-            if (node !== null) {
-                if (node.editor) {
-                    if (props.lang === 'python') {
-                        node.editor.commands.addCommand({
-                            // commands is array of key bindings.
-                            name: 'execute',
-                            bindKey: { win: 'Ctrl-Enter', mac: 'Command-Enter' },
-                            exec: () => pyScript.execScript(document),
-                        });
-                    }
-                    node.editor.commands.addCommand({
-                        // commands is array of key bindings.
-                        name: 'save',
-                        bindKey: { win: 'Ctrl-s', mac: 'Command-s' },
-                        exec: () => {
-                            pyScript.saveService.saveNow();
-                        },
-                    });
-                }
+    const eRef = React.useRef<AceEditor>(null);
+
+    React.useEffect(() => {
+        if (eRef && eRef.current) {
+            const node = eRef.current;
+            if (props.lang === 'python') {
+                node.editor.commands.addCommand({
+                    // commands is array of key bindings.
+                    name: 'execute',
+                    bindKey: { win: 'Ctrl-Enter', mac: 'Command-Enter' },
+                    exec: () => pyScript.execScript((window as any).__BRYTHON__),
+                });
             }
+            node.editor.commands.addCommand({
+                // commands is array of key bindings.
+                name: 'save',
+                bindKey: { win: 'Ctrl-s', mac: 'Command-s' },
+                exec: () => {
+                    pyScript.saveService.saveNow();
+                },
+            });
             return () => {
                 if (node && node.editor) {
                     const cmd = node.editor.commands.commands['execute'];
@@ -66,9 +64,9 @@ const Editor = observer((props: Props) => {
                     }
                 }
             };
-        },
-        [pyScript]
-    );
+        }
+    }, [eRef, pyScript]);
+
     return (
         <div className={clsx(styles.brythonCodeBlock, styles.editor)}>
             <AceEditor
@@ -88,7 +86,7 @@ const Editor = observer((props: Props) => {
                 focus={false}
                 navigateToFileEnd={false}
                 maxLines={props.maxLines || 25}
-                ref={editorRef}
+                ref={eRef}
                 mode={ALIAS_LANG_MAP_ACE[props.lang] ?? props.lang}
                 theme="dracula"
                 onChange={(value: string) => {
@@ -111,7 +109,6 @@ const Editor = observer((props: Props) => {
                 enableSnippets={false}
                 showGutter={props.showLineNumbers}
             />
-            {props.lang === 'python' && <PyScriptSrc webKey={props.webKey} />}
         </div>
     );
 });

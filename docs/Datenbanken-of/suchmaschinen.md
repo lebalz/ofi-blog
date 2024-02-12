@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # Suchmaschinen
 
-:::aufgabe Wie funktioniert eine Suchmaschine?
+:::aufgabe[Wie funktioniert eine Suchmaschine?]
 <Answer type="state" webKey="1272c3e2-b728-4088-ab7b-16d07e195cfb" />
 
 Quelle

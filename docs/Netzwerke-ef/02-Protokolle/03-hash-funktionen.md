@@ -10,7 +10,7 @@ import HashSHA2 from '@site/src/components/VisualizationTools/Crypto/HashSHA2'
 
 # Hashfunktionen
 
-:::info Hashfunktion
+:::info[Hashfunktion]
 «Eine Hashfunktion ist eine Abbildung, die eine grosse Eingabemenge auf eine kleinere Zielmenge abbildet.»
 :::
 
@@ -21,7 +21,7 @@ Da eine **Eingabe beliebiger Länge** auf eine **Ausgabe mit fester Länge** abg
 ## Hashfunktion
 In der Abbildung oben sieht man, dass die Menge der Passwörter nur eine Teilmenge aller theoretisch möglichen Eingaben darstellt. Es ist im Beispiel Oben nicht zu verhindern, dass Kollisionen auftreten.
 
-:::info Kollisionsresistenz
+:::info[Kollisionsresistenz]
 Um genügend Sicherheit zu bieten, soll eine gute kryptographische Hashfunktion folglich kollisionsresistent sein. Das heisst, es soll praktisch unmöglich sein, Kollisionen zu finden.
 :::
 
@@ -32,7 +32,7 @@ Die Ausgabe der Hashfunktion wird **Hashwert** genannt.
 
 Man kann einen Hashwert mit einem Fingerabdruck vergleichen, weil er gewissermassen eindeutig zu einem Passwort passt wie ein Fingerabdruck zu einem Menschen. So wie mit einem Fingerabdruck nicht auf die Persönlichkeit/Charakter einer Person geschlossen werden kann, lässt sich auch nicht von einem Hashwert auf das Passwort schliessen. 
 
-*** --align-self=end
+::br{align-self=end}
 ![Ein Hashwert ist wie ein Fingerabdruck --width=100px](images/fingerprint.png)
 :::
 ## Aktuelle Beispiele

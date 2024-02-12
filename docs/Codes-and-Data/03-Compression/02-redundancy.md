@@ -26,13 +26,13 @@ Wir führen ein Experiment durch. Aus einem deutschen Text werden etwa 40% der B
 
 Offenbar tragen die häufigen Buchstaben weniger zum Inhalt des Textes bei. Sie haben einen kleineren **Informationsgehalt**.
 
-:::success Take-Home Message
+:::success[Take-Home Message]
 
 <Answer type="text" webKey="18b21da1-1e49-4d1a-a7ea-1c930205abf1" />
 :::
 
 
-<details><summary>⭐️ Huffman Codierung für die deutsche Sprache</summary>
+:::details[⭐️ Huffman Codierung für die deutsche Sprache]
 
 Die durchschnittliche Buchstabenhäufigkeit in deutschen Texten kann der folgenden Tabelle entnommen werden:
 
@@ -72,7 +72,7 @@ Daraus ergibt sich
 |       M | 01110     |       Ö | 111001110   |
 |       N | 1011      |       Ü | 10101100    |
 </div>
-</details>
+:::
 
 
 

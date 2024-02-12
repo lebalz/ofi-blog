@@ -25,69 +25,51 @@ Der Merge Sort ist ein stabiler Sortieralgorithmus, der auf dem Prinzip des Teil
 :::
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '30px'}}>
-
 :::cards
-
 <div style={{display: 'flex', justifyContent: 'center', gap: '10px'}}>
     <JassCard value={9} suit="HEARTS" />
     <JassCard value={5} suit="HEARTS" />
     <JassCard value={7} suit="HEARTS" />
     <JassCard value={2} suit="HEARTS" />
 </div>
-
 :::
 :::cards
-
 <div style={{display: 'flex', justifyContent: 'center', gap: '10px'}}>
         <JassCard value={4} suit="HEARTS" />
         <JassCard value={3} suit="HEARTS" />
         <JassCard value={8} suit="HEARTS" />
         <JassCard value={6} suit="HEARTS" />
 </div>
-
 :::
-
 </div>
 
-
-
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '30px'}}>
-
 :::cards
 <div style={{display: 'flex', justifyContent: 'center', gap: '10px'}}>
     <JassCard value={9} suit="HEARTS" />
     <JassCard value={5} suit="HEARTS" />
 </div>
-
 :::
 :::cards
-
 <div style={{display: 'flex', justifyContent: 'center', gap: '10px'}}>
     <JassCard value={7} suit="HEARTS" />
     <JassCard value={2} suit="HEARTS" />
 </div>
-
 :::
 :::cards
-
 <div style={{display: 'flex', justifyContent: 'center', gap: '10px'}}>
     <JassCard value={4} suit="HEARTS" />
     <JassCard value={3} suit="HEARTS" />
 </div>
-
 :::
 :::cards
-
 <div style={{display: 'flex', justifyContent: 'center', gap: '10px'}}>
     <JassCard value={8} suit="HEARTS" />
     <JassCard value={6} suit="HEARTS" />
 </div>
-
 :::
 
 </div>
-
-
 
 <div style={{display: 'flex', justifyContent: 'center', gap: '30px'}}>
     <JassCard value={9} suit="HEARTS" />

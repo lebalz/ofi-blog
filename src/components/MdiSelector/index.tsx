@@ -1,8 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
-import rawIcons from './mdi-icons.json';
 import CopyBadge from '../VisualizationTools/ColorEncoding/CopyBadge';
+import Icon from '@mdi/react';
+import * as Mdi from '@mdi/js';
+import _ from 'lodash';
 
 export default function MdiSelector(): JSX.Element {
   const [showNr, setShowNr] = React.useState(300);
@@ -13,16 +15,11 @@ export default function MdiSelector(): JSX.Element {
   React.useEffect(() => {
     setShowNr(300)
     if (filter.trim() === '') {
-      setIcons(rawIcons);
+      setIcons(Object.keys(Mdi));
       return;
     }
-    const trm = filter.trim().toLowerCase().replace(/-/g, '');
-    const icos = rawIcons.filter((ico) => {
-      return (
-        ico.name.replace(/-/g, '').includes(trm) ||
-        (!perfectMatch && ico.tags.join(' ').toLowerCase().includes(trm))
-      );
-    });
+    const trm = new RegExp(`${filter}`,'i');
+    const icos = Object.keys(Mdi).filter((ico) => trm.test(ico));
     // console.log(icos.length);
     setIcons(icos);
   }, [filter, perfectMatch]);
@@ -42,15 +39,16 @@ export default function MdiSelector(): JSX.Element {
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5em' }}>
         {icons.slice(0, showNr).map((ico, idx) => {
+          const dashed = _.startCase(ico).split(' ').slice(1).join('-')
           return (
             <div
               key={idx}
               className={clsx(styles.icon)}
             >
-              <div style={{ fontSize: '3rem' }} className={`mdi-${ico.name} mdi`}></div>
-              <CopyBadge value={ico.name} />
-              <CopyBadge label="mdi-" value={`mdi-${ico.name}`} />
-              <CopyBadge label=":mdi-:" value={`:mdi-${ico.name}:`} />
+              <Icon path={Mdi[ico]} size={2} />
+              <CopyBadge value={dashed.replace('-', ' ')} />
+              <CopyBadge label={`mdi${dashed.charAt(0)}...`} value={ico} />
+              <CopyBadge label={`:mdi[${dashed.charAt(0)}...]`} value={`:mdi[${dashed}]`.toLowerCase()} />
             </div>
           );
         })}

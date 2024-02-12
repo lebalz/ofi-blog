@@ -9,11 +9,11 @@ Jede Programmiersprache hat eigene Regeln und Richtlinien, wie ein Programm gesc
 
 Syntax
 : Wörter und Symbole, die in einer Programmiersprache verwendet werden dürfen
-: :mdi-flash-triangle--red: Fehler werden bereits vor dem Programmstart erkannt
+: :mdi[flash-triangle]{.red} Fehler werden bereits vor dem Programmstart erkannt
 Semantik
 : Inhaltliche Bedeutung des Codes
-: :mdi-information--blue: Die Bedeutung ergibt sich durch die Verwendung der gegebenen Syntax
-: :mdi-flash-triangle--red: Fehler werden erst zur Laufzeit erkannt
+: :mdi[information]{.blue} Die Bedeutung ergibt sich durch die Verwendung der gegebenen Syntax
+: :mdi[flash-triangle]{.red} Fehler werden erst zur Laufzeit erkannt
 
 Mittlerweilen gibt es eine schier unüberschaubar grosse Anzahl an Programmiersprachen ([Liste aller Programmiersprachen](https://en.wikipedia.org/wiki/List_of_programming_languages_by_type)). Im EF werden wir zu Beginn mit Python 3 programmieren, bevor wir dann auch Einblicke in andere Programmiersprachen und Domänenspezifische Sprachen (SQL) erhalten werden.
 
@@ -37,7 +37,7 @@ Zu den Pionierzeiten der Computerentwicklung war die einzige Möglichkeit, ein P
 
 Die Maschinensprache kann direkt von einer CPU ausgeführt werden. 
 
-:::danger Achtung 
+:::danger[Achtung ]
 Maschinencode läuft nicht einfach auf allen Prozessoren - je nach Aufbau/Architektur des Prozessors müssen andere Befehle verwendet werden.
 :::
 
@@ -111,7 +111,7 @@ sum:
 Aufgrund der mühseligen Programmierung und der fehlenden Portabilität von Programmen auf unterschiedliche Systeme ist Assembler nicht für komplexe Projekte zu empfehlen. Für bestimmte zeitkritische Aufgaben (Echtzeit), wo es auf Geschwindigkeit ankommt (bspw. Grafiktreiber) oder nur sehr wenig Platz zur Verfügung steht (embedded systems), wird auch heute noch auf Assembler zurückgegriffen.
 :::
 
-<!--
+{/*
 Weitere Übersetzungen
 👉 https://godbolt.org/
 
@@ -129,7 +129,7 @@ Notes:
 * schwerer, trotzdem noch machbar
 * läuft nur noch auf einer CPU -> vorher entscheiden, welches Ziel
 * spezifischer Compiler für jede CPU
--->
+*/}
 
 ## Hochsprachen
 In Hochsprachen wird eine Abstraktionsschicht für komplexen Funktionen wie
@@ -224,10 +224,10 @@ In Hochsprachen wird zusätzlich unterschieden zwischen __kompilierten__ und __i
 
 Wie bei der Assemblersprache muss ein geschriebenes Programm durch einen Compiler in Maschinensprache übersetzt werden. Dieser Prozess ist bei Hochsprachen um einiges komplexer als bei Assemblersprache, da keine direkte Übersetzung möglich ist. Da das Programm nach der Kompilierung von einem Prozessor ausgeführt wird, braucht es einen vorgegebenen Einstiegspunkt - eine Funktion namens `main`. 
 
-<!-- 
+{/*
 Notes:
 Keine direkte Übersetzung, da nun weitere Sprachkonzepte wie Wiederholungen, Verzweigungen, Listen, etc. möglich sind.
--->
+*/}
 
 ```mermaid
 graph LR
@@ -235,7 +235,7 @@ graph LR
     style B fill:#3578e5,color:white
 ```
 
-:::details Zwischenschritt Bytecode
+:::details[Zwischenschritt Bytecode]
 Einige kompilierte Sprachen verwenden zur Erhöhung der Portabilität eine Zwischensprache, sogenannter Bytecode verwendet. Dieser Bytecode ist quasi die Maschinensprache für eine virtuelle Maschine (**VM** für Virtual Machine). Um den Bytecode auszuführen, muss also lediglich die VM auf einem System installiert werden, und der Bytecode kann ausgeführt werden.
 
 ```mermaid
@@ -254,12 +254,12 @@ graph LR
 Für die Programmierung einer Skriptsprache braucht es keine Installation eines zusätzlichen Compilers. Die Programmiersprache, also bspw. Python, interpretiert den Quellcode direkt. Dazu wird der Code gelesen (__Parsen__) und gemäss der Syntax-Vorgaben in einen Syntax-Baum (__AST__, *Abstract Syntax Tree*) übersetzt. 
 
 :::cards
-*** --code --flex-basis=272px --justify-content=center
+::br{flex-basis=272px justify-content=center code=true}
 ```py title="Python Code"
 def sum(zahl1, zahl2):
     return zahl1 + zahl2
 ```
-*** --flex-basis=400px
+::br{flex-basis=400px}
 ![Übersetzer AST](images/ast-sum.svg)
 :::
 
@@ -281,4 +281,4 @@ Da kein eigentlicher Compile-Schritt notwendig ist, muss bei Skriptsprachen auch
 Insgesamt ist das Arbeiten mit Skriptsprachen mit weniger Konfigurationsaufwand, weniger Standardcode (Boilerplate Code) verbunden und daher effizienter. Der Nachteil ist, dass die Programme deutlich langsamer (ca. 10x langsamer) ausgeführt werden.
 
 
-[^1]: Jupyter Notebook: [⬇️ Visualize-AST.ipynb](./code/Visualize-AST.ipynb), [:mdi-github: Github](https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/01-Programmiersprachen/code/Visualize-AST.ipynb)
+[^1]: Jupyter Notebook: [⬇️ Visualize-AST.ipynb](./code/Visualize-AST.ipynb), [:mdi[github] Github](https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Python/01-Programmiersprachen/code/Visualize-AST.ipynb)

@@ -21,7 +21,7 @@ XOR kann auch zur Verschlüsselung verwendet werden. Dabei wird jeweils 1 Bit de
 Die Wahrheitstabelle sieht folgendermassen aus:
 
 :::cards
-*** --flex-basis=13em --class=slim-table;normal-header;no-comments
+::br{flex-basis=13em .slim-table .normal-header .no-comments}
 
 ### Verschlüsselung
 
@@ -39,7 +39,7 @@ k
 c
 : *cipher* (Verschlüsselt)
 
-*** --flex-basis=13em --class=slim-table;normal-header;no-comments
+::br{flex-basis=13em .slim-table .normal-header .no-comments}
 
 ### Entschlüsselung
 
@@ -54,12 +54,13 @@ c
 
 Analog zu ROT13 gilt auch hier: Die Verschlüsselung ist identisch mit der Entschlüsselung, da Folgendes gilt:
 
-$$\
-c \text{ XOR } k = (p \text{ XOR } k) \text{ XOR } k = p$$
+$$
+c \text{ XOR } k = (p \text{ XOR } k) \text{ XOR } k = p
+$$
 
 Dies können Sie mit den Tabellen oben leicht überprüfen.
 
-:::aufgabe Aufgabe XOR-Verschlüsselung
+:::aufgabe[Aufgabe XOR-Verschlüsselung]
 <Answer type="state" webKey="7fdee690-f7a7-4a62-9df7-da7df1001feb" />
 
 Verschlüsseln Sie die Bitfolge mit dem angegebenen Schlüssel
@@ -73,7 +74,7 @@ Verschlüsseln Sie die Bitfolge mit dem angegebenen Schlüssel
 :::
 
 
-:::aufgabe Aufgabe Textverschlüsselung mit XOR
+:::aufgabe[Aufgabe Textverschlüsselung mit XOR]
 <Answer type="state" webKey="e5288ce5-f8f6-4de0-be2b-81eb90e8346d" />
 
 <TextEditor />
@@ -98,10 +99,10 @@ Als Schlüssel haben Sie das Wort `MACHT` abgemacht.
 
 
 
-:::aufgabe Aufgabe Bildverschlüsselung mit XOR
+:::aufgabe[Aufgabe Bildverschlüsselung mit XOR]
 <Answer type="state" webKey="2eedbeb5-6506-4b11-ac66-c74b3945de75" />
 
-1. Zeichnen Sie ein `5x5`-Pixel-Bild, kopieren Sie es unten in die Antwort (_Optionen _:mdi-dots-horizontal-circle-outline: > Kopieren :mdi-clipboard:__):
+1. Zeichnen Sie ein `5x5`-Pixel-Bild, kopieren Sie es unten in die Antwort (_Optionen _:mdi[dots-horizontal-circle-outline] > Kopieren :mdi[clipboard]__):
 
   <PixelEditor />
 

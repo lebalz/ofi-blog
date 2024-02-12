@@ -19,7 +19,7 @@ Die neugierige Journalistin Eve möchte unbedingt wissen, was Alice und Bob aush
 ## Alice und Bob
 Sie haben eine Idee und gehen wie folgt vor:
 
-:::flex --minWidth=300px
+:::flex{minWidth=300px}
 
 Private Farbe
 : **Schritt 1**: Alice und Bob mischen sich je in einem Farbkübel eine persönliche, geheime Farbe, die sie niemandem mitteilen (private Farbe genannt).
@@ -29,7 +29,7 @@ Zwischenfarbe
 : **Schritt 3**: Im nächsten Schritt mischen sich Alice und Bob je in einem leeren Farbkübel eine neue Farbe: Sie nehmen dazu genau dieselbe Menge der eigenen privaten Farbe und der gemeinsamen Farbe. Diese neue Farbe schicken sie sich wieder gegenseitig zu.
 Zielfarbe
 : **Schritt 4**: Im letzten Schritt erzeugen Sie die Zielfarbe fürs Kunstwerk. Dazu nehmen sie zwei Einheiten der soeben erhaltenen Farbe und eine Einheit der privaten Farbe und erhalten die gemeinsame private Farbe, mit der sie die Teile des neuen Kunstwerks bemalen.
-***
+::br
 ```mermaid
 sequenceDiagram
     actor Alice
@@ -45,7 +45,7 @@ sequenceDiagram
 :::
 
 ## Ausprobieren
-:::aufgabe Geheime Farbe herausfinden
+:::aufgabe[Geheime Farbe herausfinden]
 <Answer type="state" webKey="732736d7-f3b8-4829-83be-b9b4e1164791" />
 
 Spielen Sie das obige Szenario (Schritte 1-4) durch - die Farben können durch Klicken auf die Farbkreise verändert werden.
@@ -55,7 +55,7 @@ Machen Sie einen Screenshot, den Sie mit Pfeilen und Beschreibungen versehen, um
 <Answer type="text" webKey="11388720-93d0-403f-94f0-64b6f1ae4752" />
 :::
 
-:::aufgabe Wieso kennt Eve die geheime Farbe nicht?
+:::aufgabe[Wieso kennt Eve die geheime Farbe nicht?]
 <Answer type="state" webKey="bdfda551-8129-41c2-bc89-8450d9ecade7" />
 
 Überlegen Sie sich: wieso kann Eve aus den verschickten Farben die geheime Farbe nicht herstellen?
@@ -67,7 +67,7 @@ Machen Sie einen Screenshot, den Sie mit Pfeilen und Beschreibungen versehen, um
 
 <br/>
 
-:::info ⭐️ Digitale Farben ≠ Echte Farben
+:::info[⭐️ Digitale Farben ≠ Echte Farben]
 Im obigen Modell musste getrickst werden: In der digitalen Welt werden Farben durch die Erzeugung von Lichtwellen unterschiedlicher Wellenlänge erzeugt. Dabei wird bei der Überlagerung aller Frequenzspektren weisses Licht erzeugt. Dies wird auch **additives Farbmodell** genannt. Im **Gegensatz** dazu werden Farben in der realen Welt je nach Oberfläche nur gewisse Wellenlänfen reflektiert und die anderen werden von der Oberfläche "verschluckt". Werden mehrere Farben gemischt, führt dies dazu, dass alle sichtbaren Wellenlängen "verschluckt" werden und daher ein Braun/Schwarz entsteht. Dieses ist das **subtraktive Farbmodell**.
 
 ![digitales (links) und reales (rechts) Farbmodell](images/color-models.png)

@@ -14,8 +14,8 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 In einer Bildkomposition kommen Figuren wie Dreiecke und Quadrate mehrmals vor. Die Turtle weiss aber nicht, was ein Dreieck oder ein Quadrat ist. Da in der Bildkomposition die Dreiecke und Quadrate nicht systematisch angeordnet sind, ist die Verwendung von Wiederholungen hier nicht naheliegend.
 
 
-:::cards --min-width=250px
-*** --code
+:::cards{min-width=250px}
+::br{code=true}
 ```py live_py slim
 from turtle import *
 
@@ -44,7 +44,7 @@ for i in range(3):
     left(120)
 end_fill()
 ```
-*** --alignSelf=center
+::br{alignSelf=center}
 ![](images/triangles.svg)
 :::
 
@@ -52,7 +52,7 @@ end_fill()
 
 **Es geht einfacher!** Es lassen sich nämlich neue Befehle festlegen, die z.B. ein Dreieck oder ein Quadrat zeichnen. 
 
-:::flex --min-width=200px gap=50px
+:::flex[gap=50px]{min-width=200px}
 ```py live_py slim
 from turtle import *
 
@@ -76,7 +76,7 @@ left(120)
 fillcolor('blue')
 dreieck()
 ```
-*** --align-self=end
+::br{align-self=end}
 <Strukto program={[
     {
         type: 'def', 
@@ -106,15 +106,15 @@ dreieck()
 :::
 
 
-::::aufgabe Aufgabe 1
+::::aufgabe[Aufgabe 1]
 <Answer type="state" webKey="4d9d75a8-8539-4541-aec8-5306c671b1d9" />
 
 Im folgenden ist zweimal derselbe Algorithmus programmiert - links ohne Unterprogramme, rechts mit Unterprogrammen.
 
 Ändern Sie beide Programme so ab, dass die Dreiecke doppelt so gross gezeichnet werden!
 
-:::cards --basis=200px
-*** --code
+:::cards{basis=200px}
+::br{code=true}
 ```py live_py title=sequentiell.py id=d60d5547-82d4-4a44-8413-c161b5627bc2 maxLines=55
 from turtle import *
 
@@ -172,7 +172,7 @@ for i in range(3):
     left(120)
 end_fill()
 ```
-*** --code
+::br{code=true}
 ```py live_py title=functions.py id=d42798ab-26d4-4eeb-bdcd-88c12952b5c4  maxLines=32
 from turtle import *
 
@@ -228,8 +228,7 @@ Codequalität
 
 Bei Python werden Befehle auch **Funktionen** genannt.
 
-::::def
-### `def name():`
+::::def[`def name():`]
 Mit `def name():` wird ein neues Unterprogramm (ein neuer Befehl) definiert. Als Name sollte immer etwas gewählt werden, das die **Tätigkeit** dieser Sequenz widerspiegelt. Alle Anweisungen, die zum neuen Befehl gehören, müssen eingerückt sein!
 
 **Beispiel:**
@@ -243,7 +242,7 @@ def zick_zack():  # <-- Doppelpunkt nicht vergessen!
     left(45)
 ```
 
-:::caution Befehlsaufruf
+:::warning[Befehlsaufruf]
 Die Definition alleine führt das Programm noch nicht aus. Dazu muss der Befehl erst noch **aufgerufen** werden:
 
 
@@ -264,12 +263,12 @@ zick_zack()
 
 ---
 
-::::aufgabe Aufgabe 2: Struktogramm → Python
+::::aufgabe[Aufgabe 2: Struktogramm → Python]
 <Answer type="state" webKey="202aff44-4ffd-4368-b74c-ab6682d0c805" />
 
 1. Erzeugen Sie ein Programm gemäss folgendem Struktogramm:
 
-:::cards --min-width=200px
+:::cards{min-width=200px}
 
 <Strukto program={[
     {
@@ -287,7 +286,7 @@ zick_zack()
     {type: 'call', code: 'stufe zeichnen'},
     {type: 'call', code: 'stufe zeichnen'}
 ]} />
-*** --code
+::br{code=true}
 ```py live_py title=befehl1.py id=e8dc1f0a-d2b6-4a2a-9461-e8cc96811530
 from turtle import *
 ```
@@ -321,16 +320,16 @@ stufe()
 
 ::::
 
-::::aufgabe Aufgabe 3 – Sechsecke
+::::aufgabe[Aufgabe 3 – Sechsecke]
 <Answer type="state" webKey="b1940f0b-2d69-4d40-84fc-676bddc1b45a" />
 
-:::cards --min-width=200px
-*** --code --flex-grow=2
+:::cards{min-width=200px}
+::br{flex-grow=2 code=true}
 ```py live_py title=sechseck.py id=6d4c82e3-ecaa-486e-a756-3a1a1a8a70fc
 from turtle import *
 
 ```
-*** --flex-grow=1 --max-height=500px --overflow-y=auto
+::br{flex-grow=1 max-height=500px overflow-y=auto}
 1. Zeichnen Sie ein Sechseck
 
 ![](images/sechseck.svg)
@@ -340,7 +339,8 @@ from turtle import *
 3. Verwenden Sie den neuen Befehl, um die folgende Figur zu zeichnen, welche aus 10 Sechsecken besteht: 
 ![](images/sechsecke.svg)
 
-<details><summary>Tipp</summary>
+<details>
+<summary>Tipp</summary>
 
 Nach jedem Sechseck muss `36°` gedreht werden.
 
@@ -365,18 +365,18 @@ for i in range(10):
 
 ::::
 
-::::aufgabe Aufgabe 4 – Häuser
+::::aufgabe[Aufgabe 4 – Häuser]
 <Answer type="state" webKey="1bc32c1a-0345-494d-85b3-883ea40151cd" />
 
 Für diese Aufgabe können Sie als Ausgangslage Ihr Programm aus Kapitel 1, Aufgabe 6 "Haus von Nikolaus" verwenden.
 
-:::cards --min-width=200px
-*** --code --flex-grow=2
+:::cards{min-width=200px}
+::br{flex-grow=2 code=true}
 ```py live_py title=stadt.py id=b5c82672-65db-4725-8ec9-7a80ac835b3d
 from turtle import *
 
 ```
-*** --flex-grow=1 --max-height=500px --overflow-y=auto
+::br{flex-grow=1 max-height=500px overflow-y=auto}
 1. Definieren Sie einen Befehl `haus()`, der ein Haus des Nikolaus zeichnet:  
     **Achten** Sie darauf, dass die Turtle am Ende eines Häuschens jeweils unten rechts ist und nach rechts schaut.
 
@@ -425,18 +425,18 @@ haus()
 
 ::::
 
-::::aufgabe Aufgabe 5 – Blume
+::::aufgabe[Aufgabe 5 – Blume]
 <Answer type="state" webKey="5f71b333-fd7d-446e-998b-d65c69bec060" />
 
 Sie werden in dieser Aufgabe unter der Verwendung mehrerer Unterprogramme eine komplexe Aufgabe schrittweise lösen.
 
-:::cards --min-width=200px
-*** --code --flex-grow=2
+:::cards{min-width=200px}
+::br{flex-grow=2 code=true}
 ```py live_py title=blume.py id=b47c6d09-11ca-4bff-b676-09cb0d7399bf
 from turtle import *
 
 ```
-*** --overflow-y=auto --max-height=550px --flex-grow=1
+::br{overflow-y=auto max-height=550px flex-grow=1}
 1. Definieren Sie Unterprogramm `bogen()`, mit dem die Turtle einen Bogen zeichnet und sich dabei insgesamt um `90°` nach rechts dreht.
 
     ![](images/blume_01.svg)

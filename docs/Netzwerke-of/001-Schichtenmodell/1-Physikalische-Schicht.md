@@ -31,6 +31,6 @@ Wieso braucht es zwei Adressen, logische Adressen (Vermittlungsschicht) und phys
 
 <Answer type="state" webKey="52593c0c-9652-4b36-9ed6-911c862a66aa">Gesehen?</Answer>
 
-[@youtube](https://www.youtube-nocookie.com/embed/ZhEf7e4kopM)
+::youtube[https://www.youtube-nocookie.com/embed/ZhEf7e4kopM]
 
 

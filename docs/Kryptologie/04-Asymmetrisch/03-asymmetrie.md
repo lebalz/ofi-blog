@@ -19,7 +19,7 @@ Wir haben in den beiden vorherigen Abschnitten gesehen, dass es Vorgänge gibt, 
 
 Diese Beispiele zeigen deutlich, worauf die asymmetrische Verschlüsselung basiert:
 
-:::finding Asymmetrische Verschlüsselung
+:::finding[Asymmetrische Verschlüsselung]
 Die asymmetrische Verschlüsselung basiert auf Aufgaben, die in eine Richtung einfach auszuführen sind, während man eine geheime Information braucht, um den Vorgang rückgängig zu machen.
 
 Verfügt jemand nicht über diese geheime Information, ist die Umkehrung des Vorgangs nicht in sinnvoller Zeit zu bewältigen.
@@ -30,7 +30,7 @@ Auch in der Mathematik gibt es Operationen, die einfach und schnell auszuführen
 
 Ein Beispiel dafür ist das Multiplizieren zweier (Prim-)Zahlen. Jeder Computer kann pro Sekunde mehrere Milliarden Multiplikationen ausführen. Ein Produkt zweier Primzahlen in die beiden Faktoren zu zerlegen, ist jedoch ungleich aufwändiger – insbesondere wenn die Zahlen mehrere hundert Stellen lang sind.
 
-:::aufgabe Multiplizieren vs. Faktorisieren
+:::aufgabe[Multiplizieren vs. Faktorisieren]
 <Answer type="state" webKey="e9065f77-e507-475e-bd4c-d6104da9180f" />
 
 1. Berechnen Sie $41 \cdot 83$ auf Papier. Überlegen Sie sich dabei, wie Sie vorgehen.
@@ -41,7 +41,7 @@ Ein Beispiel dafür ist das Multiplizieren zweier (Prim-)Zahlen. Jeder Computer 
 :::
 
 
-:::aufgabe Aufwand für den Computer
+:::aufgabe[Aufwand für den Computer]
 <Answer type="state" webKey="f77269d9-0b36-4221-b7e3-fbb11eccf2f7" />
 
 1. Wie schnell kann der Computer multiplizieren und faktorisieren? Überprüfen Sie mit dem folgenden Tool, wie schnell Ihr Computer beim Multiplizieren und Faktorisieren ist. Nehmen Sie für Primzahlen mit `6`, `7` und `8` Stellen einige (>3) Messungen vor.

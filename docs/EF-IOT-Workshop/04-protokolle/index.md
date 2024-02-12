@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Protokolle
 
-:::aufgabe Gestaltung und Vorstellung eines Protokolls
+:::aufgabe[Gestaltung und Vorstellung eines Protokolls]
 Bearbeiten Sie ein Protokoll und erzeugen Sie dafür ein Flipchart.
 
 Recherchieren Sie selbständig und schreiben Sie als Gruppe einen Markdown-Text, der das Protokoll beschreibt.

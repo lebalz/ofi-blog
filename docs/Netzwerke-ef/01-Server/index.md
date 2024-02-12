@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # 1. Webserver und HTTP
 
-:::info Ziele
+:::info[Ziele]
 - Sie können mit Python einen Webserver erstellen
 - Sie können die darüber erreichbaren Webseiten (minimal) gestalten
 - Sie haben ein Tool zur Analyse des Netzwerkverkehrs auf Ihrem Notebook installiert

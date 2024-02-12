@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
 import Figure from '../components/Figure';
@@ -13,6 +13,9 @@ import Hint from '../components/Solution/Hint'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ExcelBox from '../components/ExcelBox';
+import DefBox from '../components/DefBox';
+import DefHeading from '../components/DefBox/DefHeading';
+import DefContent from '../components/DefBox/DefContent';
 
 export default {
   // Re-use the default mapping
@@ -20,7 +23,7 @@ export default {
   Comment: Comment,
   Figure: Figure,
   SourceRef: SourceRef,
-  dl: DefinitionList,
+  Dl: DefinitionList,
   Answer: Answer,
   Solution: Solution,
   OnlyFor: OnlyFor,
@@ -29,4 +32,7 @@ export default {
   GTabs: GTabs,
   TabItem: TabItem,
   ExcelBox: ExcelBox,
+  DefBox: DefBox,
+  DefHeading: DefHeading,
+  DefContent: DefContent
 };

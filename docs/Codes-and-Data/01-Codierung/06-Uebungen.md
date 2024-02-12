@@ -8,7 +8,7 @@ import BinDecoder from '@site/src/components/VisualizationTools/BinDecoder'
 
 # Übungen UTF-8
 
-:::aufgabe 1. Wie viele Zeichen?
+:::aufgabe[1. Wie viele Zeichen?]
 <Answer type="state" webKey="9665d009-7956-49f0-a1ff-1a86a486e215" />
 
 Wie viele Zeichen sind in folgender bit-Squenz codiert?
@@ -21,7 +21,7 @@ Wie viele Zeichen sind in folgender bit-Squenz codiert?
 
 :::
 
-:::aufgabe 2. UTF-8 Decodieren
+:::aufgabe[2. UTF-8 Decodieren]
 <Answer type="state" webKey="c53ca7b3-9dca-48c7-8ec5-be327e8cbefe" />
 
 Folgende bit-Sequenzen sind UTF-8 Codiert. Welche Dezimalzahlen sind codiert?
@@ -42,7 +42,7 @@ Folgende bit-Sequenzen sind UTF-8 Codiert. Welche Dezimalzahlen sind codiert?
 :::
 
 
-:::aufgabe 3. UTF-8 Codieren
+:::aufgabe[3. UTF-8 Codieren]
 <Answer type="state" webKey="ae7ba638-f91a-4172-9cef-d136f55884cb" />
 
 Codieren Sie folgende bit-Sequenz zu UTF-8:
@@ -62,7 +62,7 @@ Codieren Sie die Zahl `260` zu UTF-8:
 :::
 
 
-:::aufgabe 4. UTF-8 Emojis
+:::aufgabe[4. UTF-8 Emojis]
 <Answer type="state" webKey="2185d615-a040-453f-98f9-2478e36c64eb" />
 
 Codieren Sie drei Weihnachts-Emojis zu UTF-8:

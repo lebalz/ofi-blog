@@ -69,7 +69,7 @@ Ein *Internet Media Type* besteht immer aus einem Haupt- und einem Untertype. Es
 
 </div>
 
-:::aufgabe Verlorene Dateiendungen
+:::aufgabe[Verlorene Dateiendungen]
 <Answer type="state" webKey="204e8e91-a578-43c2-a516-e655dd1423b0" />
 
 Bei den folgenden Dateien ging die Dateiendung verloren. Finden Sie mit https://hexed.it/ heraus, welche Dateiendung die jeweilige Datei hat, fügen Sie die Dateiendung hinzu und öffnen Sie diese.

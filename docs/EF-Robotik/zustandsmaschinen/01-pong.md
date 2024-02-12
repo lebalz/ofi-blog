@@ -28,19 +28,19 @@ stateDiagram-v2
 
 ## Event-State Tabelle
 
-| <span style={{float: 'right'}}>Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __IDLE__                         | __BL:MOVE_LEFT__                 | __MOVE_LEFT__                      | __BR:MOVE_RIGHT__               | __MOVE_RIGHT__                      | __A_WINS__                 | __B_WINS__                 |
+| <span style={{float: 'right'}}>Zustand :mdi[arrow-right]</span><br />Ereignis :mdi[arrow-down] | __IDLE__                         | __BL:MOVE_LEFT__                 | __MOVE_LEFT__                      | __BR:MOVE_RIGHT__               | __MOVE_RIGHT__                      | __A_WINS__                 | __B_WINS__                 |
 |:-----------------------------------------------------------------------------------------------|:---------------------------------|:---------------------------------|:-----------------------------------|:--------------------------------|:------------------------------------|:---------------------------|:---------------------------|
-| **Button A**                                                                                   | Ball in Mitte :mdi-arrow-right: __MOVE_LEFT__  | :mdi-arrow-right: __MOVE_RIGHT__ |                                    |                                 |                                     |                            |                            |
-| **Kein Button A**                                                                              |                                  | :mdi-arrow-right: __B_WINS__   |                                    |                                 |                                     |                            |                            |
-| **Button B**                                                                                   | Ball in Mitte :mdi-arrow-right: __MOVE_RIGHT__ |                                  |                                    | :mdi-arrow-right: __MOVE_LEFT__ |                                     |                            |                            |
-| **Kein Button B**                                                                              |                                  |                                  |                                    |  :mdi-arrow-right: __A_WINS__  |                                     |                            |                            |
-| **500ms timer**                                                                                | Happy :mdi-arrow-right: __IDLE__                            |                                  | Ball nach links, Position anzeigen :mdi-arrow-right: __MOVE_LEFT__|                                 | Ball nach rechts, Position anzeigen :mdi-arrow-right: __MOVE_RIGHT__ |A :mdi-arrow-right: __IDLE__ | B :mdi-arrow-right: __IDLE__ |
+| **Button A**                                                                                   | Ball in Mitte :mdi[arrow-right] __MOVE_LEFT__  | :mdi[arrow-right] __MOVE_RIGHT__ |                                    |                                 |                                     |                            |                            |
+| **Kein Button A**                                                                              |                                  | :mdi[arrow-right] __B_WINS__   |                                    |                                 |                                     |                            |                            |
+| **Button B**                                                                                   | Ball in Mitte :mdi[arrow-right] __MOVE_RIGHT__ |                                  |                                    | :mdi[arrow-right] __MOVE_LEFT__ |                                     |                            |                            |
+| **Kein Button B**                                                                              |                                  |                                  |                                    |  :mdi[arrow-right] __A_WINS__  |                                     |                            |                            |
+| **500ms timer**                                                                                | Happy :mdi[arrow-right] __IDLE__                            |                                  | Ball nach links, Position anzeigen :mdi[arrow-right] __MOVE_LEFT__|                                 | Ball nach rechts, Position anzeigen :mdi[arrow-right] __MOVE_RIGHT__ |A :mdi[arrow-right] __IDLE__ | B :mdi[arrow-right] __IDLE__ |
 
-:::aufgabe Ausprobieren auf Micro:Bit
+:::aufgabe[Ausprobieren auf Micro\:Bit]
 <Answer type="state" webKey="e732ec1e-72a5-4763-9fea-5ae614cee0a1" />
 
 Material
-: Micro:Bit
+: Micro\:Bit
 : mit USB-Kabel an den Computer angeschlossen
 Editor
 : Online-Editor [👉 python.microbit.org](https://python.microbit.org/)

@@ -7,7 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Textaufbau in Word
 
-:::caution Vorgehen
+:::warning[Vorgehen]
 
 1. Theorie durchlesen - überlegen Sie sich nach jedem Abschnitt, ob Ihnen die Inhalte bekannt vorkommen und ob Sie sich zutrauen, diese Schritte selber durchzuführen.
 2. Markieren Sie in bei jedem Abschnitt, wie git Sie die Inhalte verstanden haben. So können einzelne Themen im Plenum vorgeführt werden.
@@ -52,7 +52,7 @@ Spaltenlayout erzeugen verstanden?
 
 :::flex
 ![Durch Klicken auf den rot eingefärbten Pfeil können zudem weitere Einstellungsmöglichkeiten angezeigt werden.](images/word-seite-einrichten.png) 
-***
+::br
 ![](images/word-seite-einrichten-pro.png)
 :::
 
@@ -82,7 +82,7 @@ Die Formatvorlagen können auch nach den eigenen Wünschen **angepasst** werden:
 
 :::flex
 ![](images/word-formatvorlage-edit-pre.png)
-***
+::br
 ![](images/word-formatvorlage-edit.png)
 :::
 
@@ -101,11 +101,11 @@ Formatvorlagen verstanden?
 
 Tabstopps
 : [[┗]] [[┻]] [[┛]]
-: der Cursor :mdi-cursor-text: springt beim Drücken der Tabulator-Taste [[:mdi-keyboard-tab:]] bis zu diesem Tabstopp.
+: der Cursor :mdi[cursor-text] springt beim Drücken der Tabulator-Taste [[:mdi[keyboard-tab]]] bis zu diesem Tabstopp.
 : Die Ausrichtung bestimmt, wie der Tabulator-Text ausgerichtet wird:
-: [[┗]] :mdi-arrow-right-thin: :mdi-format-align-left:  
-: [[┻]] :mdi-arrow-right-thin: :mdi-format-align-center:  
-: [[┛]] :mdi-arrow-right-thin: :mdi-format-align-right:
+: [[┗]] :mdi[arrow-right-thin] :mdi[format-align-left]  
+: [[┻]] :mdi[arrow-right-thin] :mdi[format-align-center]  
+: [[┛]] :mdi[arrow-right-thin] :mdi[format-align-right]
 : Die Ausrichtung kann durch Doppelklicken auf den Tabstopp geändert werden.
 Linker Einzug
 : [[⧋]]
@@ -124,9 +124,9 @@ Unter __Ansicht > Anzeige__ kann das Lineal eingeblendet werden.
 - Zeilenabstand (der Zeilenabstand innerhalb eines Absatzes)
 - Absatzabstand (der Abstand zum vorherigen/nächsten Absatz)
 
-:::flex --align-items=flex-end
+:::flex{align-items=flex-end}
 ![Menüband __Start__](images/word-absatz.png)
-***
+::br
 ![Menüband __Layout__](images/word-absatz2.png)
 :::
 
@@ -147,7 +147,7 @@ Einzelne Wörter und Buchstaben/Zeichen lassen sich individuell formatieren. So 
 
 ![--width=400px](images/word-zeichenformatierung.png)
 
-:::danger Zeichenformat $\neq$ Überschrift
+:::danger[Zeichenformat $\neq$ Überschrift]
 Ertappen Sie sich dabei, Titel oder Untertitel mit der Zeichenformatierung zu machen, sollte bei Ihnen im Kopf eine Warnleuchte angehen 💡 - hier sollen Formatvorlagen verwendet werden, damit Strukturinformationen hinterlegt werden können. Umformatierungen oder auch Inhaltsverzeichnisse sind nur mit diesen Formatvorlagen automatisiert möglich. 
 :::
 
@@ -182,4 +182,4 @@ Laden Sie das Word-Dokument [ex01-what-is-programming.docx](files/ex01-what-is-p
 
 ### Übung Schritt für Schritt im Video
 
-[@video](images/text-exercise-1.mp4)
+::video[./images/text-exercise-1.mp4]

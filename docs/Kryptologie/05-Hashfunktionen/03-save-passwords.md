@@ -41,7 +41,7 @@ Die **Iterierte Quersumme** ist die Quersumme, die entsteht, wenn man solange im
 
 Die **Alternierende Quersumme** entsteht durch abwechslungweises Addieren und Subtrahieren der einzelnen Ziffern (für 1234 lautet diese 1 - 2 + 3 - 4 = -2).
 
-:::aufgabe Tabelle vervollständigen
+:::aufgabe[Tabelle vervollständigen]
 <Answer type="state" webKey="41644630-ee2c-4e5e-aa02-2855366cb7de" />
 
 Vervollständigen Sie die oben stehende Tabelle. Anstelle der in den Passwörtern enthaltenen Buchstaben können Sie die unten stehenden Zahlen einsetzen.
@@ -64,7 +64,7 @@ Vervollständigen Sie die oben stehende Tabelle. Anstelle der in den Passwörter
 <Answer type="text" webKey="e1cecdb8-b606-409e-ae94-64827efe06cf" />
 :::
 
-:::finding Wunsch: **Injektiviät**
+:::finding[Wunsch: **Injektiviät**]
 Zu jeder Prüfsumme gehört höchstens ein Passwort. Oder anders formuliert: Kollisionen sollen vermieden werden. Das bedeutet, dass jedes Passwort eine andere Prüfsumme erhalten soll.
 :::
 
@@ -89,7 +89,7 @@ Nachfolgend eine weitere Liste mit Vorschlägen für Prüfsummen.
 
 </div>
 
-:::aufgabe Aufgabe Funktionen erkennen
+:::aufgabe[Aufgabe Funktionen erkennen]
 <Answer type="state" webKey="eba38e83-d4d1-457f-ae2f-ea6b7d956633" />
 
 Erkennen Sie, wie die Prüfsummen in den hintersten drei Spalten berechnet werden?
@@ -97,6 +97,6 @@ Erkennen Sie, wie die Prüfsummen in den hintersten drei Spalten berechnet werde
 <Answer type="text" webKey="ead7f2f2-e792-48c8-a6cc-994757348e75" />
 :::
 
-:::finding Wunsch: **Unumkehrbarkeit**
+:::finding[Wunsch: **Unumkehrbarkeit**]
 Aus der Prüfsumme soll nicht auf das Passwort geschlossen werden können.
 :::

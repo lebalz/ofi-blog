@@ -8,22 +8,22 @@ sidebar_custom_props:
 
 # Krypto-Familie
 
-:::cards --cols=3  --minWidth=10em --gap=2em
+:::cards{cols=3 minWidth=10em gap=2em}
 ![Alice](images/info-family/alice.svg)
 Alice und Bob kommunizieren häufig miteinander – dies natürlich verschlüsselt.
-***
+::br
 ![Bob](images/info-family/bob.svg)
 Anstelle von «Person A» und «Person B» spricht man von Alice und Bob.
-***
+::br
 ![Charlie](images/info-family/charlie.svg)
 Wird eine dritte Person benötigt, kommt Charlie ins Spiel.
-***
+::br
 ![Eve](images/info-family/eve.svg)
 Eve wird meist dann eingesetzt, wenn Verbindungen abgehört (engl. eavesdropping) werden. Sie ist also eine passive Zuhörerin.
-***
+::br
 ![Mallory](images/info-family/mallory.svg)
 Mallory ist ein bösartiger, aktiver Angreifer (engl. **mal**icious).
-***
+::br
 ![Trent](images/info-family/trent.svg)
 Wird eine vertrauenswürdige dritte Stelle verwendet, wird Trent (engl. für **tr**usted **ent**ity) eingesetzt.
 :::

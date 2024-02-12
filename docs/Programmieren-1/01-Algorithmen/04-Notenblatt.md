@@ -40,7 +40,7 @@ So tönt der erste Durchgang:
 <audio controls>
     <source src={useBaseUrl('/sounds/music-conditional-1.mp3')} type="audio/mpeg"/>
 </audio>
-***
+::br
 So tönt der zweite Durchgang:
 <audio controls>
     <source src={useBaseUrl('/sounds/music-conditional-2.mp3')} type="audio/mpeg"/>

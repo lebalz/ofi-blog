@@ -12,69 +12,69 @@ sidebar_custom_props:
 
 ### Funktionen
 
-:::cards --basis=360px --align-items=flex-end
-*** --code
+:::cards{basis=360px align-items=flex-end}
+::br{code=true}
 ```py
 def show():
     pass
 ```
-*** --code
+::br{code=true}
 ```py
 def is_valid(inp):
     return True
 ```
-*** --code
+::br{code=true}
 ```py
 def eingabe():
     pass
 ```
-*** --code
+::br{code=true}
 ```py
 def auswerten(valid_inp):
     pass
 ```
-*** --code
+::br{code=true}
 ```py
 def gewonnen():
     return False
 ```
-*** --code
+::br{code=true}
 ```py
 def game_over():
     pass
 ```
-*** --code
+::br{code=true}
 ```py
 def play():
     pass
 ```
-***
+::br
 :::
 
 ### Funktionskörper
-:::cards --basis=360px --align-items=flex-end
-*** --code
+:::cards{basis=360px align-items=flex-end}
+::br{code=true}
 ```py
 for buchstabe in gesucht:
     if buchstabe not in gefunden:
         return False
 return True
 ```
-*** --code
+::br{code=true}
 ```py
 if valid_inp in gesucht:
     gefunden.append(valid_inp)
 else:
     falsch_geraten.append(valid_inp)
 ```
-*** --code
+::br{code=true}
 ```py
 buchstabe = input('Buchstabe? ')
 while not is_valid(buchstabe):
     buchstabe = input('Buchstabe? ')
 return buchstabe.lower()
 ```
-*** --code
+::br{code=true}
 ```py
 print('Falsche Buchstaben:', falsch_geraten)
 for buchstabe in gesucht:
@@ -96,7 +96,7 @@ gefunden = []
 falsch_geraten = []
 ```
 
-:::aufgabe Hangman
+:::aufgabe[Hangman]
 <Answer type="state" webKey="d4a9b21d-e021-4b0c-8a49-29f4b0343037" />
 
 Dateiname
@@ -151,7 +151,7 @@ def is_valid(inp):
 </Solution>
 :::
 
-:::aufgabe Erneut Spielen
+:::aufgabe[Erneut Spielen]
 <Answer type="state" webKey="d30992cb-4781-4f87-ba31-4030b4293095" />
 
 Sobald man verloren hat, soll man gefragt werden, ob man erneut spielen möchte.

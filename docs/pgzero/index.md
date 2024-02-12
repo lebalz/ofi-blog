@@ -7,7 +7,7 @@ sidebar_custom_props:
     ref: https://gitlab.gymkirchenfeld.ch/teach/ref/-/tree/main/pgzero
 ---
 
-# :mdi-controller-classic: Pygame Zero
+# :mdi[controller-classic] Pygame Zero
 
 ![](images/logo.svg)
 

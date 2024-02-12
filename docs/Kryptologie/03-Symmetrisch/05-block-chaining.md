@@ -14,7 +14,7 @@ import XORBlockCipher from "@site/src/components/VisualizationTools/Crypto/XORBl
 
 Im letzten Kapitel wurde der Geheimtext zur Ver- bzw. Entschlüsselung in Blöcke aufgeteilt, die exakt so lang sind wie der Schlüssel. Die Blöcke werden anschliessend einzeln durch die XOR-Funktion mit dem Schlüssel ver- bzw. entschlüsselt.
 
-:::info Allgemeine Blockchiffre
+:::info[Allgemeine Blockchiffre]
 Prinzipiell kann anstelle der XOR-Funktion jede beliebige mathematische Funktion (resp. Verkettung von Funktionen) zur Verschlüsselung verwendet werden (in den unten aufgeführten Grafiken daher mit dem allgemeinen Begriff *block cipher encryption* bezeichnet). Wir beschränken uns hier allerdings auf die einfache und gut verständliche XOR-Verschlüsselung.
 :::
 
@@ -34,7 +34,7 @@ Die Entschlüsselung funktioniert analog: Der Geheimtext wird wiederum in Blöck
 
 <XORBlockCipher />
 
-:::aufgabe Aufgabe ECB-Modus
+:::aufgabe[Aufgabe ECB-Modus]
 <Answer type="state" webKey="22dc5535-c021-4afa-88ab-679bfa753bf7" />
 
 1. Verschlüsseln Sie den Text `EINE SEHR KLEINE SENSATION` mit dem Schlüssel `ZUSE`.  
@@ -83,11 +83,11 @@ Bei der **Entschlüsselung** sieht es anders aus. Da sofort sämtliche Geheimtex
 
 ![](images/CBC_decryption.svg)
 
-:::info Bemerkenswert
+:::info[Bemerkenswert]
 Auf den ersten Blick erstaunlich ist die Tatsache, dass die Entschlüsselung mit falschem IV nur dazu führt, dass der erste Klartext-Block unleserlich ist, während die restlichen Blöcke korrekt entschlüsselt werden.
 :::
 
-:::aufgabe Aufgabe CBC-Modus
+:::aufgabe[Aufgabe CBC-Modus]
 <Answer type="state" webKey="786a67c7-3cb6-44f0-a620-24267aa6185b" />
 
 1. Verschlüsseln Sie nochmals denselben Text, diesmal allerdings im CBC-Modus:  
@@ -103,7 +103,7 @@ Schlüssel
 
 :::
 
-:::aufgabe Aufgabe Initialisierungsvektor
+:::aufgabe[Aufgabe Initialisierungsvektor]
 <Answer type="state" webKey="c53914e3-b496-4643-8453-4451ba5e9f18" />
 
 Überlegen Sie sich zusammen mit Ihrer Pultnachbar:in, mit welcher einfachen Massnahme man darauf verzichten könnte, neben dem Schlüssel auch den Initialisierungsvektor mit der Kommunikationspartner:in abzusprechen.
@@ -111,7 +111,7 @@ Schlüssel
 
 :::
 
-:::aufgabe Aufgabe Angriff auf die XOR-Blockchiffre
+:::aufgabe[Aufgabe Angriff auf die XOR-Blockchiffre]
 <Answer type="state" webKey="fa533a99-efc9-4659-9c63-737a041075b2" />
 
 Setzen Sie sich in Dreiergruppen zusammen und diskutieren Sie folgende Fragen:
@@ -124,7 +124,7 @@ Setzen Sie sich in Dreiergruppen zusammen und diskutieren Sie folgende Fragen:
 
 :::
 
-:::info XOR-Blockchiffre
+:::info[XOR-Blockchiffre]
 Selbstverständlich ist XOR als Verschlüsselungsfunktion aus kryptologischer Sicht nicht ideal – dafür aber für uns gut verständlich, überschaubar und einfach anzuwenden.
 
 In der Realität ist es besonders wichtig, dass die Verschlüsselungsfunktion sämtliche Bits des aktuellen Blocks stark «vermischt». Damit ist gemeint, dass eine winzige Änderung an einer bestimmten Stelle im Klartextblock nicht nur zu einer kleinen Änderung an derselben Stelle im Geheimtextblock führt (wie dies bei XOR wegen der bitweisen Verarbeitung der Fall), sondern dass durch die kleine Änderung viele Bits überall im Block verändert werden.

@@ -21,7 +21,7 @@ In Schaltungen wird das folgende Symbol für einen Inverter verwendet:
 
 ## Interaktive Schaltung
 
-[@circuitverse](https://circuitverse.org/simulator/embed/rothe-inverter)
+::circuitverse[https://circuitverse.org/simulator/embed/rothe-inverter]
 
 ## Beispiele
 
@@ -56,7 +56,7 @@ Die Heizung soll einschalten, wenn es **nicht** warm ist.
 
 :::
 
-:::aufgabe Aufgabe CircuitVerse
+:::aufgabe[Aufgabe CircuitVerse]
 <Answer type="state" webKey="fa24c02b-9390-488c-853b-73ca8882173d" />
 
 1. Erstellen Sie in CircuitVerse die Schaltung für die Kühlschrankbeleuchtung mit einem __Button__ als Eingabe und einem __DigitalLed__ als Ausgabe.

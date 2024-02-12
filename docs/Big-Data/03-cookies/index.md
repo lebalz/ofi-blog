@@ -9,7 +9,7 @@ sidebar_custom_props:
 
 Viele Webseiten nutzen z.B. den Dienst "Google Analytics". Öffnen wir solch eine Webseite wird auch Google Analytics gestartet und schon legt Google ein Cookie bei uns ab (ein sogenanntes Drittanbieter-Cookie). Cookies sind kleine Datenpakete, welche eine Webseite auf dem lokalen Computer (genau genommen im Browser) speichert. Öffnen wir danach eine andere Webseite die Google Analytics nutzt (das nutzen die meisten Webseiten) so kann Google die eigenen Cookies lesen und weiss welche Seiten wir in welcher Reihenfolge wie lange angesehen haben. Generell nutzen online-Werbeagenturen Information von ihren Drittanbieter-Cookies um nutzerspezifische Werbung schalten zu können. Die Browser-Ererweiterung "Thunderbeam-Lightbeam" für den Chrome-Browser macht die Spuren sichtbar, welche wir mit Cookies im Internet hinterlassen. 
 
-::::aufgabe Cookies
+::::aufgabe[Cookies]
 <Answer type="state" webKey="166823e8-7dc9-4949-b6e4-563d1584e22f" />
 
 Installieren 
@@ -23,7 +23,7 @@ Installieren
 <Answer type="text" webKey="49ec2cb9-10ee-490e-ab24-39c74c1dc2ea" />
 
 
-:::info OFI-Website
+:::info[OFI-Website]
 Welche Cookies finden Sie auf der ofi.gbsl-Website?
 
 <Answer type="text" webKey="ce1e8abf-4726-4c9c-98e8-9a295d87fe76" />
@@ -42,13 +42,13 @@ Jetzt erscheint ein Fenster, in welchem Sie die gespeicherten Browserdaten lösc
 
 ### Alternativen zum Shortcut:
 
-- [:mdi-microsoft-edge--teal: Edge: Cookies in Microsoft Edge löschen](https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-l%C3%B6schen-63947406-40ac-c3b8-57b9-2a946a29ae09)
-- [:mdi-google-chrome--red: Chrome: Cache leeren und Cookies löschen - Computer - Google-Konto-Hilfe](https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&hl=de)
-- [:mdi-firefox--orange: Firefox: Cookies und Website-Daten in Firefox löschen | Hilfe zu Firefox (mozilla.org)](https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen)
-- [:mdi-apple-safari--blue: Safari: Verwalten von Cookies und Website-Daten mit Safari auf dem Mac - Apple Support](https://support.apple.com/de-ch/guide/safari/sfri11471/mac)
+- [:mdi[microsoft-edge]{color=teal}: Edge: Cookies in Microsoft Edge löschen](https://support.microsoft.com/de-de/microsoft-edge/cookies-in-microsoft-edge-l%C3%B6schen-63947406-40ac-c3b8-57b9-2a946a29ae09)
+- [:mdi[google-chrome]{.red}: Chrome: Cache leeren und Cookies löschen - Computer - Google-Konto-Hilfe](https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&hl=de)
+- [:mdi[firefox]{.orange}: Firefox: Cookies und Website-Daten in Firefox löschen | Hilfe zu Firefox (mozilla.org)](https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen)
+- [:mdi[apple-safari]{.blue}: Safari: Verwalten von Cookies und Website-Daten mit Safari auf dem Mac - Apple Support](https://support.apple.com/de-ch/guide/safari/sfri11471/mac)
 
 
-:::info Variante
+:::info[Variante]
 In den meisten Browsern (alle ausser Safari) können Cookies auch direkt über das kleine Schloss 🔒 in der Adresszeile gelöscht werden:
 
 ![--width=450px](images/delete_cookies_1.png)
@@ -80,7 +80,7 @@ Werbe-Cookies und aufsässige Werbung lassen sich mit Erweiterungen blockieren. 
 
 [👉 uBlock Origin](https://ublockorigin.com/) ist eine OpenSource Erweiterung für Chrome, Firefox, Edge, Safari und Opera
 
-- :mdi-github: OpenSource [uBlockOrigin](https://github.com/gorhill/uBlock)
+- :mdi[github] OpenSource [uBlockOrigin](https://github.com/gorhill/uBlock)
 - Bis Dato keine negativen Schlagzeilen
 - verbraucht nicht unnötig Ressourcen
 
@@ -91,12 +91,12 @@ Werbe-Cookies und aufsässige Werbung lassen sich mit Erweiterungen blockieren. 
 
 ## Der Nachfolger von Cookies: Fingerprinting
 
-:::aufgabe Artikel Lesen
+:::aufgabe[Artikel Lesen]
 <Answer type="state" webKey="37f10195-58b0-4bb7-a98c-fd562ed60ea5" />
 
 Lesen Sie den verlinkten Artikel
 
-[Artikel @button](https://traffective.com/2020/09/01/browser-fingerprinting/)
+:btn[[Artikel](https://traffective.com/2020/09/01/browser-fingerprinting/)]
 
 - Halten Sie Fragen fest
 - Erklären Sie in eigenen Worten, was Fingerprinting ist
@@ -108,7 +108,7 @@ Lesen Sie den verlinkten Artikel
 
 ### Am i Unique?
 
-:::aufgabe Am I Unique
+:::aufgabe[Am I Unique]
 <Answer type="state" webKey="7b0b0752-5952-47e0-b878-d48b3f1530bf" />
 
 "Am I Unique" ist eine Website, welche Ihren digitalen Browser Fingerabdruck auswertet und bereitstellt. Damit ist es möglich zu sehen, welche Informationen durch das Aufrufen einer Website preisgegeben werden. Testen Sie Ihren Browser - wie gut sind Sie identifizierbar? Wie sieht das Resultat auf Ihrem Smartphone aus? Ändert sich etwas, wenn Sie den Test in einem privaten Fenster durchführen?
@@ -118,7 +118,7 @@ Lesen Sie den verlinkten Artikel
 <Answer type="text" webKey="c627366f-ebdd-4df0-a50a-468fbba30a5f" />
 :::
 
-:::aufgabe EFF Cover your tracks
+:::aufgabe[EFF Cover your tracks]
 <Answer type="state" webKey="4360d1d3-559f-4d42-a007-5a337665cba4" />
 
 Mit "EFF Cover your tracks" können Sie ebenfalls Ihren digitalen Fingerabdruck testen. Zusätzlich gibt Ihnen diese Website aber auch Hinweise dazu, wie gut Sie bspw. gegen Cookie-Tracking abgesichert sind. Wie steht es um Ihre Absicherung?
@@ -132,9 +132,9 @@ Mit "EFF Cover your tracks" können Sie ebenfalls Ihren digitalen Fingerabdruck 
 ## Alternative Browser mit Fokus auf Datenschutz
 
 - [Brave](https://brave.com/)
-- [:mdi-firefox--orange: Firefox](https://www.mozilla.org/de/firefox/new/)
+- [:mdi[firefox]{.orange}: Firefox](https://www.mozilla.org/de/firefox/new/)
 - [DuckDuckGo](https://duckduckgo.com/)
-- [:mdi-opera--red: Opera](https://www.opera.com/de)
+- [:mdi[opera]{.red}: Opera](https://www.opera.com/de)
 - [Epic](https://www.epicbrowser.com/)
 - [Vivaldi](https://vivaldi.com/de/)
 - [Tor](https://www.torproject.org/de/)

@@ -19,21 +19,21 @@ Ein **Ausgabegerät** wandelt Daten wieder in Informationen für die Umwelt um. 
 
 Typische Ein- und Ausgabegeräte für Computer sind:
 
-:::cards --columns=3
+:::cards{columns=3}
 ![Tastatur](images/02-keyboard.png)
-***
+::br
 ![Maus](images/02-mouse.png)
-***
+::br
 ![Webcam](images/02-webcam.png)
-***
+::br
 ![Drucker](images/02-printer.png)
-***
+::br
 ![Bildschirm](images/02-monitor.png)
-***
+::br
 ![Lautsprecher](images/02-speakers.png)
 :::
 
-:::aufgabe Aufgabe
+:::aufgabe[Aufgabe]
 <Answer type="state" webKey="46975da2-0cd3-4aa1-96f1-8e29628a2127" />
 
 Welche Möglichkeiten für die Ein- und Ausgabe von Daten hat Ihr Smartphone? Versuchen Sie, möglichst alle aufzuschreiben. Bilden Sie dabei folgende Kategorien:

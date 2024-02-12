@@ -7,7 +7,7 @@ sidebar_label: Git Grundlagen
 import DiffViewer from '@site/src/components/DiffViewer';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 
-# Git Grundlagen :mdi-git--orange:
+# Git Grundlagen :mdi[git]{.orange}
 
 👉 https://git-scm.com/
 
@@ -52,7 +52,7 @@ Um mit Git verwalteten Projekten zu arbeiten, muss das Repository heruntergelade
 - sich Git die Internet-Adresse des Remote Repos merkt und man somit zu einem späteren Zeitpunkt Änderungen (manuell) synchronisieren kann
 - auch alle Vorgängerversionen der Projektdateien enthalten sind
 
-:::info Repo Klonen in VS Code
+:::info[Repo Klonen in VS Code]
 Anleitung, wie in VS Code ein Repository von Github geklont wird.
 
 👉 https://code.visualstudio.com/docs/editor/github#_setting-up-a-repository

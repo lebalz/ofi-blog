@@ -56,14 +56,14 @@ Output
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-:::danger Hinweis Schul-WLAN
+:::danger[Hinweis Schul-WLAN]
 Im Schul-WLAN sind höhere Ports gesperrt, weshalb keine Verbindung zur Datenbank aufgebaut werden kann. Über einen Hotspot funktioniert es aber...
 :::
 
 
 ## WebApp
 
-:::details webapp.py
+:::details[webapp.py]
 
 ```py reference title="webapp.py"
 https://github.com/lebalz/ofi-blog/blob/main/docs/Datenbanken-ef/04-sql-injection/snippets/webapp.py
@@ -72,7 +72,7 @@ https://github.com/lebalz/ofi-blog/blob/main/docs/Datenbanken-ef/04-sql-injectio
 :::
 
 
-:::details static/style.css
+:::details[static/style.css]
 
 ```css reference title="static/style.css"
 https://github.com/lebalz/ofi-blog/blob/main/docs/Datenbanken-ef/04-sql-injection/snippets/static/style.css

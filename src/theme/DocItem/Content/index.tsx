@@ -3,9 +3,8 @@ import Content from '@theme-original/DocItem/Content';
 import type ContentType from '@theme/DocItem/Content';
 import type { WrapperProps } from '@docusaurus/types';
 import { useComments } from '@site/src/stores/hooks';
+import {useDoc} from '@docusaurus/theme-common/internal';
 
-// @ts-ignore
-import useFrontMatter from '@theme/useFrontMatter';
 import { observer } from 'mobx-react-lite';
 import styles from './styles.module.scss';
 import { PageStateSummary } from '@site/src/components/Answer/StateSummary';
@@ -13,12 +12,14 @@ import { PageStateSummary } from '@site/src/components/Answer/StateSummary';
 type Props = WrapperProps<typeof ContentType>;
 
 const ContentWrapper = observer((props: Props): JSX.Element => {
-    const { sidebar_custom_props } = useFrontMatter();
-    useComments(sidebar_custom_props.id);
+    const { frontMatter } = useDoc();
+    const { sidebar_custom_props } = frontMatter as { sidebar_custom_props: { id: string } };
+    const pageId = (sidebar_custom_props as {id: string}).id;
+    useComments(pageId);
 
     return (
         <div className={styles.content}>
-            <PageStateSummary />
+            <PageStateSummary  pageId={pageId}/>
             <Content {...props} />
         </div>
     );

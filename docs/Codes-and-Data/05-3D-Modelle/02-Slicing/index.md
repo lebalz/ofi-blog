@@ -16,7 +16,7 @@ Aus dem STL-Modell soll nun ein konkreter **Druck-Ablaufplan** erzeugt werden, w
 
 Mit dem Slicer kann nun das heruntergeladene STL-File für den Druck vorbereitet werden.
 
-:::aufgabe Grundlagen
+:::aufgabe[Grundlagen]
 <Answer type="state" webKey="ddf2355d-cc33-4623-a801-25a0791a9b19" />
 
 Lesen (überfliegen) Sie die kurze Einführung zum Prusa Slicer [👉 hier](https://help.prusa3d.com/article/first-print-with-prusaslicer_1753)
@@ -46,7 +46,7 @@ Je nach Farb-Wunsch wählen Sie oben die korrekten Einstellungen - der korrekte 
 
 Enthält das Modell überhängende Konstruktionen, so müssen für diese Stützen generiert werden (diese können später leicht abgelöst werden). Die Option __Stützen nur auf dem Druckbett__ sollte für die meisten Modelle ausreichen.
 
-:::warn Keine Modelle mit mehreren Farben
+:::warning[Keine Modelle mit mehreren Farben]
 Aus Zeitgünden und weil es oft komplikationen gibt, verzichten wir vorerst auf mehrfarbige Drucke. Entscheiden Sie sich also für eine Farbe und drucke Sie damit das ganze Modell.
 :::
 

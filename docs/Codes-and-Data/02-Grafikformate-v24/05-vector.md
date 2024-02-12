@@ -45,7 +45,7 @@ Das folgende Beispiel stellt die französische Flagge dar:
 - `height="200"` legt die Höhe des Bildes auf 200 Pixel fest.
 - `<rect ...>` zeichnet ein Rechteck an den angegebenen Koordinaten mit der angegebenen Breite, Höhe und Farbe.
 
-::::aufgabe Deutsche Flagge
+::::aufgabe[Deutsche Flagge]
 
 Erstellen Sie eine SVG-Datei, welche die Deutsche Flagge darstellt. Die Flagge ist 500 Pixel breit, jeder Streifen ist 100 Pixel hoch. Das Rot ist rein (d.h. 255 Rot, 0 Grün und 0 Blau). Das Gelb hat einen Rotanteil von 255 und einen Grünanteil von 204.
 
@@ -80,7 +80,7 @@ Auf der folgenden Seite sind die Grundformen von SVG zusammengefasst:
 
 - [SVG-Grundformen](https://wiki.selfhtml.org/wiki/SVG/Elemente/Grundformen)
 
-:::aufgabe Grundformen
+:::aufgabe[Grundformen]
 
 Erstellen Sie eine neue SVG-Datei und probieren Sie die Grundformen aus.
 
@@ -97,7 +97,7 @@ Erstellen Sie eine neue SVG-Datei und probieren Sie die Grundformen aus.
 ```
 :::
 
-:::aufgabe Eigene Zeichnung
+:::aufgabe[Eigene Zeichnung]
 
 Erstellen Sie mit SVG eine winterliche oder festliche Grafik.
 

@@ -17,7 +17,6 @@ sidebar_custom_props:
 - [👉 TikZ Images; mathcha.io/editor](https://www.mathcha.io/editor)
 - [👉 Bilder zu LaTeX: Mathpix.com](https://snip.mathpix.com/)
 
-
 ### Codes und Daten
 - [Codes und Daten: https://lehrerfortbildung-bw.de](https://lehrerfortbildung-bw.de/u_matnatech/imp/gym/bp2016/fb1/1_i1_duc/)
 ### Big Data
@@ -75,9 +74,6 @@ sidebar_custom_props:
   - [v2.2.0](/docusaurus/v2.2.0)
 
 
-
-
 ### API, REST API
 - 👉 https://blog.hubspot.com/website/what-is-rest-api
 - 👉 https://www.youtube.com/watch?v=xpeQz7Hsfz0
-

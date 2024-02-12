@@ -18,7 +18,7 @@ Ihre Stichworte sollen mindestens so detailliert sein, dass Sie während der Auf
 
 **Aber Achtung**: Denken Sie daran, dass abgelesene Text oft eintönig klingen und wenn Sie einen Text erstellen, welcher kopierte Bausteine aus einer anderen Quelle enthält, müssen Sie diese für den Hörer erkennbar und korrekt zitieren.
 ### Audiodateien Zusammenschneiden
-::::success Audacity
+::::success[Audacity]
 Um einen Podcast zu erstellen, können Sie im einfachsten Fall Ihre Stimme mit dem Handy aufnehmen und fertig.
 
 Sie können aber auch Ihren Text mit Musik oder Geräuschen untermalen. Dabei können Sie eigene Aufnahmen oder Material aus dem Internet verwenden. Bei letzterem müssen Sie allerdings darauf achten, dass Sie keine Urheberrechte verletzten.
@@ -27,23 +27,23 @@ Für das Zusammenmischen von verschiedenem Tonmaterial eignet sich die Software 
 
 Unter den folgenden Links finden Sie Information zu Audacity und möglichen Quellen von freier Musik.
 
-:::danger ACHTUNG: Virenverseuchte Versionen im Umlauf
+:::danger[ACHTUNG: Virenverseuchte Versionen im Umlauf]
 Wenn man in Google nach Audacity sucht, wird man auf die Seite **[audacity.de]** gelockt. Diese Seite bietet eine **VIRENVERSEUCHTE** Version von Audicity an.
 
-:mdi-alert--orange: **NICHT HERUNTERLADEN** :mdi-alert--orange:
+:mdi[alert]{.orange} **NICHT HERUNTERLADEN** :mdi[alert]{.orange}
 
 Laden Sie Audacity nur mit dem nachfolgenden Link herunter.
 :::
 
-[Download Audacity.org @download](https://www.audacityteam.org/download/)
+:btn[[:mdi[download-box] Download Audacity.org](https://www.audacityteam.org/download/)]{.success}
 
-[Free Music Archive @button](https://freemusicarchive.org/home)
+:btn[[Free Music Archive](https://freemusicarchive.org/home)]
 
-[@youtube](https://www.youtube-nocookie.com/embed/Vn7HYyopGXk)
+::youtube[https://www.youtube-nocookie.com/embed/Vn7HYyopGXk]
 
 ---
 
-:::caution `.M4A`-Dateien
+:::warning[`.M4A`-Dateien]
 
 Das Dateiformat `.M4A` enthält auch Audiodateien, die mit Audacity allerdings nur mit einer zusätzlichen Bibliothek, ffmpeg, eingelesen werden kann.
 
@@ -53,12 +53,12 @@ Das Dateiformat `.M4A` enthält auch Audiodateien, die mit Audacity allerdings n
 
 Laden Sie ffmpeg [hier https://lame.buanzo.org/ffmpeg64audacity.php](https://lame.buanzo.org/ffmpeg64audacity.php) herunter und installieren Sie es (nicht den Link im Video verwenden!).
 
-[@youtube](https://www.youtube.com/embed/JAjb0aLj_yw)
+::youtube[https://www.youtube.com/embed/JAjb0aLj_yw]
 
 </TabItem>
 <TabItem value="mac">
 
-[@youtube](https://www.youtube.com/embed/E9EF6QYJTrI)
+::youtube[https://www.youtube.com/embed/E9EF6QYJTrI]
 
 </TabItem>
 </OsTabs>

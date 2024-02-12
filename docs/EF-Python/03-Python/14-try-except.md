@@ -8,7 +8,7 @@ sidebar_custom_props:
 
 ![??? --width=400px](images/io-joke-3.webp)
 
-Was soll ein Programm tun, wenn er mit unpassenden Daten oder Eingaben konfrontiert wird? Normalerweise: Abstürzen :mdi-emoticon-cry:.
+Was soll ein Programm tun, wenn er mit unpassenden Daten oder Eingaben konfrontiert wird? Normalerweise: Abstürzen :mdi[emoticon-cry].
 
 Damit das Programm nicht abstürzt, ist es unerlässlich, die Benutzerabfragen so gut es geht in die richtige Form umzuwandeln und dann auf Richtigkeit zu überprüfen!
 
@@ -52,7 +52,7 @@ Beispiel: Ein Produktcode eingeben...
 Beispiel: `1234A0xBC`
 
 :::cards
-*** --code
+::br{code=true}
 
 ```py live_py slim
 def transform_input(raw):
@@ -76,7 +76,7 @@ else:
 
 ```
 
-*** --code
+::br{code=true}
 
 
 ```py live_py slim
@@ -117,7 +117,7 @@ else:
 
 :::
 
-:::aufgabe Obigen Code analysieren?
+:::aufgabe[Obigen Code analysieren?]
 <Answer type="state" webKey="938ae28c-2db0-4a32-945f-5189398216b7" />
 
 Welche Variante ist praktischer für die Programmierer:in?
@@ -164,7 +164,7 @@ Um die Lesbarkeit und Wartbarkeit des Programms zu verbessern, können Gewisse R
 
 ![](images/io-joke-1.webp)
 
-***
+::br
 
 ![](images/io-joke-2.jpg)
 

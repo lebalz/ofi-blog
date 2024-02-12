@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Powerpoint
 
-:::aufgabe Präsentieren
+:::aufgabe[Präsentieren]
 <Answer type="state" webKey="4b512119-1cf9-4132-9765-9291786b20f0" />
 
 Zeit 
@@ -63,6 +63,6 @@ Achten Sie zudem darauf, bei den Effektoptionen die Haken bei **Sanft Starten** 
 
 Laden Sie die fertige Präsentation hier hoch:
 
-[@upload Upload](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EtZY3FqEE_BGvkazF5ku1MUBgBGqe8pxum4wOhz1EA4KcA)
+:btn[[:mdi[upload] Upload](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EtZY3FqEE_BGvkazF5ku1MUBgBGqe8pxum4wOhz1EA4KcA)]{.success}
 
 :::

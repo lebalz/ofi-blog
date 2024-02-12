@@ -4,7 +4,7 @@ sidebar_custom_props:
 ---
 # IOT Workshop 2023
 
-## Shopping List :mdi-cart-outline:
+## Shopping List :mdi[cart-outline]
 
 | Stück                                      | Preis         | Link                                                                           |
 | :----------------------------------------- | :------------ | :----------------------------------------------------------------------------- |
@@ -12,8 +12,8 @@ sidebar_custom_props:
 | ![--width=120px](images/ens160-aht21.webp) | 6.40&nbsp;CHF | [ENS160 + AHT21 Sensor](https://de.aliexpress.com/item/1005004052950350.html)  |
 | ![--width=120px](images/oled.webp)         | 1.45&nbsp;CHF | [OLED 0.66 Zoll 64x48](https://de.aliexpress.com/item/1005004070162561.html)   |
 
-## Software :mdi-download-circle-outline: und Dienste :mdi-cloud-outline:
+## Software :mdi[download-circle-outline] und Dienste :mdi[cloud-outline]
 
 - [👉 OpenSCAD](https://openscad.org/)
 - [👉 Node-RED](https://nodered.org/)
-- [👉 Micro Python](https://micropython.org/) :mdi-bug-outline:
+- [👉 Micro Python](https://micropython.org/) :mdi[bug-outline]

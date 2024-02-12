@@ -21,7 +21,7 @@ Bei der **verlustbehafteten Kompression** können die Originaldaten aus den komp
 
 Ein Dateiformat (bspw. `.docx` oder `.jpeg`) enthalten komprimierte Daten, so dass ein spezielles Programm (bspw. Word oder ein Fotobetrachter) verwendet werden muss, damit der Inhalt dekomprimiert und angezeigt werden kann.
 
-:::info ZIP Ordner
+:::info[ZIP Ordner]
 Sollen Datei(en) möglichst platzsparend abgespeichert werden, kann eine Benutzer:in daraus eine `.zip`-Datei erstellen. Also eine Datei, die genauso wie ein Reissverschluss (engl. *Zipper*) die Daten platzsparend zusammenfügt und abspeichert.
 
 ![--width=100px](images/zip-osx.png)

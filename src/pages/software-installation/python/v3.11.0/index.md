@@ -4,7 +4,7 @@ sidebar_custom_props:
   id: 00b94b68-e1fd-4b1a-8afd-849ac7887a58
 ---
 
-# Python 3.11.0 :mdi-language-python--blue:
+# Python 3.11.0 :mdi[language-python]{.blue}
 
 👉 https://www.python.org/
 
@@ -13,7 +13,7 @@ sidebar_custom_props:
 
 <GTabs getLabel={(idx) => `${idx + 1}.`} highlighted={[0,1]}>
 
-![:mdi-flash-triangle--orange: Python zum Pfad hinzufügen!](images/py-1.png)
+![:mdi[flash-triangle]{.orange} Python zum Pfad hinzufügen!](images/py-1.png)
 
 ![Allenfalls bereits konfiguriert](images/py-2.png)
 

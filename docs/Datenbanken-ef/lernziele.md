@@ -13,9 +13,9 @@ Benotung
 Teile
 : __Theorie__ (ca. 40 Minuten), ohne Hilfsmittel, auf Papier
 : __SQL__ (ca. 20 Minuten), Openbook, Laptop, db-sql.ch, Webseite.
-: :mdi-alert--yellow: keine Chats/Kommunikation mit anderen Personen
+: :mdi[alert]{.yellow} keine Chats/Kommunikation mit anderen Personen
 
-:::info Theoretischer Teil
+:::info[Theoretischer Teil]
 
 Material
 : [👉 Buch](https://erzbe.sharepoint.com/:b:/s/24EFInformatik/EWseDuaUYBtOu0I9XIjEzCkBHvd1eNeknJg9kCY8FAe2xQ?e=4yEofE)
@@ -41,7 +41,7 @@ Material
 
 
 
-::::info Praktischer Teil: SQL (db-sql.ch)
+::::info[Praktischer Teil: SQL (db-sql.ch)]
 
 Kapitel:
 : [👉 Einstieg SQL](./01-sql/01-einstieg.md)
@@ -55,7 +55,7 @@ Kapitel:
 - Aufgaben selber erfinden und lösen
 - Es können auch Queries vorgegeben sein und Sie müssen es erklären oder anpassen.
 
-:::danger Nicht zugelassene Hilfsmittel
+:::danger[Nicht zugelassene Hilfsmittel]
 - Chat/Kommunikation mit anderen Personen
 :::
 ::::

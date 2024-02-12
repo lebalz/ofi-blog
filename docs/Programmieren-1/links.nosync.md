@@ -13,31 +13,31 @@ sidebar_custom_props:
 - 👉 https://www.youtube.com/watch?v=6zaA0HkzT-4
 - 👉 https://www.youtube.com/watch?v=EnPrSYbA8z4
 
-:::details 📚 Preview
+:::details[📚 Preview]
 
-:::cards --cols=2
-*** --code
-[@youtube](https://www.youtube-nocookie.com/embed/mjhoQonjVDk)
+:::cards{cols=2}
+::br{code=true}
+::youtube[https://www.youtube-nocookie.com/embed/mjhoQonjVDk]
 
 👉 https://www.youtube.com/watch?v=mjhoQonjVDk
-*** --code
-[@youtube](https://www.youtube-nocookie.com/embed/M_4yXiyoAM0)
+::br{code=true}
+::youtube[https://www.youtube-nocookie.com/embed/M_4yXiyoAM0]
 
 👉 https://www.youtube.com/watch?v=M_4yXiyoAM0
-*** --code
-[@youtube](https://www.youtube-nocookie.com/embed/MMz58z3UsX0)
+::br{code=true}
+::youtube[https://www.youtube-nocookie.com/embed/MMz58z3UsX0]
 
 👉 https://www.youtube.com/watch?v=MMz58z3UsX0
-*** --code
-[@youtube](https://www.youtube-nocookie.com/embed/1rpuroDqiDU)
+::br{code=true}
+::youtube[https://www.youtube-nocookie.com/embed/1rpuroDqiDU]
 
 👉 https://www.youtube.com/watch?v=1rpuroDqiDU
-*** --code
-[@youtube](https://www.youtube-nocookie.com/embed/6zaA0HkzT-4)
+::br{code=true}
+::youtube[https://www.youtube-nocookie.com/embed/6zaA0HkzT-4]
 
 👉 https://www.youtube.com/watch?v=6zaA0HkzT-4
-*** --code
-[@youtube](https://www.youtube-nocookie.com/embed/EnPrSYbA8z4)
+::br{code=true}
+::youtube[https://www.youtube-nocookie.com/embed/EnPrSYbA8z4]
 
 👉 https://www.youtube.com/watch?v=EnPrSYbA8z4
 

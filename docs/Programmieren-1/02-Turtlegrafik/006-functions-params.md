@@ -9,7 +9,7 @@ import Strukto from '@site/src/components/struktogramm/Strukto';
 
 Ein weiteres Strukturelement eines Algorithmus sind __Parameter__. Die Verwendung von Parametern haben wir bereits in Aktion gesehen -  im Struktogramm sind alle Parameter <u>unterstrichen</u>, in Python werden alle Parameter als Liste, abgetrennt mit Kommas, in den <u>runden Klammern</u> geschrieben.
 
-:::info Zur Erinnerung
+:::info[Zur Erinnerung]
 __Parameter ⊕ ⊖__: Das Ergebnis eines Algorithmus kann variiert werden durch Werte, welche bei jeder Ausführung neu festgelegt werden.
 
 **Beispiel**: Bei einem Online-Rezept kann der Parameter *Anzahl Personen*  mit den Knöpfen `⊕` und `⊖` variiert werden - die Mengenangaben werden dann aktualisiert. 
@@ -22,7 +22,7 @@ Markieren Sie im folgenden Programm (links) wie folgt:
 - Parameter <u>unterstreichen</u>
 - Befehlsnamen <span style={{background: 'yellow'}}>gelb</span> markieren
 
-:::flex --min=300px
+:::flex{min=300px}
 
 <Answer type="text" webKey="3995f76b-464e-40b8-8b48-7dbc53763d18" monospace toolbar={{background:1, underline:1}}>
 
@@ -37,8 +37,8 @@ for i in range(5):<br/>
 
 </Answer>
 
-*** --empty --grow=0.5 --min=50px
-***
+::br{grow=0.5 min=50px empty=true}
+::br
 ```py live_py slim
 from turtle import *
 
@@ -64,7 +64,7 @@ Wie können Unterprogramme geschrieben werden, die Parameter akzeptieren?
 Untersuchen Sie die folgenden Unterprogramme (führen Sie diese aus!) und notieren Sie sich, was Sie feststellen.
 
 
-:::aufgabe Unterprogramme mit Parametern
+:::aufgabe[Unterprogramme mit Parametern]
 <Answer type="state" webKey="42ab260d-417d-4cda-a173-6e11abea1f76" />
 
 `hello.py`
@@ -139,21 +139,21 @@ quadrat(100, 'blue') # ein blaues Quadrat mit der Grösse 100 zeichnen
 
 Es ist prinzipiell möglich, beliebig viele Parameter nacheinander zu übergeben.
 
-:::danger Häufige Fehler
+:::danger[Häufige Fehler]
 Ein häufiger Fehler sind vergessene Kommas zwischen zwei Parameternamen. Dann entsteht ein **SyntaxError**. 
 :::
 
 
-::::aufgabe Parameternamen
+::::aufgabe[Parameternamen]
 <Answer type="state" webKey="a3f42726-24e0-4a66-8a08-5bc74976c567" />
 
-:::cards --min-width=200px
-*** --code --flex-grow=2
+:::cards{min-width=200px}
+::br{flex-grow=2 code=true}
 ```py live_py title=sechseck.py id=fcd69fed-4ed9-4706-954e-c49cf1c8b764
 from turtle import *
 
 ```
-*** --overflow-y=auto --max-height=550px --flex-grow=1
+::br{overflow-y=auto max-height=550px flex-grow=1}
 1. Definieren Sie das Unterprogramm `sechseck(size)` welches ein Sechseck mit der Grösse `size` zeichnet. Rufen Sie das Programm mit `sechseck(20)` auf. 
 
     ![](images/06_sechseck_1.svg)
@@ -204,7 +204,7 @@ sechseck(10, 'red')
 
 ## Wiederholungen
 
-:::finding Wiederholung: 🔁 Wiederholte Ausführung
+:::finding[Wiederholung: 🔁 Wiederholte Ausführung]
 Mit `for i in range(n):` wird eine wiederholte Ausführung vorbereitet. Der nachfolgende **Codeblock** wird `n` Mal wiederholt.
 ```py live_py slim
 from turtle import *
@@ -216,16 +216,16 @@ for i in range(4):
 
 Wozu steht eigentlich das `i` im `for i in range(4)`? Das ist fast wie ein Parameter: `i` enthält die Anzahl bereits ausgeführter Wiederholungen.
 
-:::cards --min-width=220px
+:::cards{min-width=220px}
 Während Wiederholung 1: `i=0`, keine Wiederholung abgeschlossen ist.
 ![](images/06-repeat-0.svg)
-***
+::br
 Während Wiederholung 2: `i=1`, eine Wiederholung ist bereits abgeschlossen.
 ![](images/06-repeat-1.svg)
-***
+::br
 Während Wiederholung 3: `i=2`, zwei Wiederholungen sind bereits abgeschlossen.
 ![](images/06-repeat-2.svg)
-***
+::br
 Während Wiederholung 4: `i=3`, drei Wiederholungen sind bereits abgeschlossen.
 ![](images/06-repeat-3.svg)
 :::
@@ -247,8 +247,7 @@ for i in range(10):
 <details>
 <summary>⭐️ Zusatzparameter von <code>range()</code></summary>
 
-:::def
-### `range(start, ende, schritt)`
+:::def[`range(start, ende, schritt)`]
 Der Befehl `range` kann mit bis zu drei Parametern arbeiten, wobei `start` der erste verwendete Wert, `ende` das obere ganzzahlige Limit angibt, welches aber selber nie erreicht wird! und `schritt` den Abstand zwischen zwei Zahlen angibt.
 ```py live_py slim
 for i in range(2, 11, 3):
@@ -335,7 +334,7 @@ for i in range(30):
 :::
 
 
-:::aufgabe ⭐️ Zusatz
+:::aufgabe[⭐️ Zusatz]
 <Answer type="state" webKey="d89c87d2-8c51-415a-9101-f577aa1f1c65" />
 
 Zeichnen Sie folgende Quadrate. Auf wie viele Zeilen können Sie Ihr Programm kürzen?

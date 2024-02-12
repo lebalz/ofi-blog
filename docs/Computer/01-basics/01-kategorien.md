@@ -20,22 +20,22 @@ Computer gibt es in sehr unterschiedlichen Grössen. Supercomputer füllen gross
 | Grossrechner (Mainframe)       | Zahlungsverarbeitung in einer Bank |   5'000'000 |
 | Supercomputer                  | Forschung                          | 100'000'000 |
 
-:::cards --columns=3
+:::cards{columns=3}
 ![Smart Card](images/01-smart-card.jpg)
 
-***
+::br
 ![Arduino Lilypad](images/01-arduino-lilypad.jpg)
 
-***
+::br
 ![Smartphone](images/01-smartphone.jpg)
 
-***
+::br
 ![Notebook](images/01-notebook.jpg)
 
-***
+::br
 ![Server](images/01-server-racks.jpg)
 
-***
+::br
 ![Kei Supercomputer](images/01-kei-supercomputer.jpg)
 :::
 

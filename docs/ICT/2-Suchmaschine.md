@@ -10,7 +10,7 @@ sidebar_custom_props:
 
 Suchmaschinen werden verwendet, um im World Wide Web nach Informationen zu suchen. Die bekannteste Suchmaschine ist Google mit einem Marktanteil von über 90%.
 
-:::info Einschränkungen
+:::info[Einschränkungen]
 Suchmaschinen…
 
 - können nicht alles finden -> [Deep Web](https://www.google.ch/search?q=Deep+Web)
@@ -31,7 +31,7 @@ Wenn eine Benutzer:in eine Suchanfrage an die Maschine schickt, wird die Anfrage
 
 Schliesslich werden die Resultate bewertet und entsprechend geordnet.
 
-:::danger Achtung
+:::danger[Achtung]
 Suchergebnisse werden von einem automatischen Lernsystem (künstliche Intelligenz) beeinflusst.
 
 Zusätzlich erfassbare Informationen wie Person, Ort, Gerät oder der verwendete Browser geben der Suchmaschine Hinweise darauf, welche Informationen relevanter sind.

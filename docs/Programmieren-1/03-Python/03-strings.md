@@ -9,8 +9,7 @@ In Python lassen sich Texte verändern.
 
 ## Gross- und Kleinschreibung
 
-:::def
-### `upper()`
+:::def[`upper()`]
 
 ```py live_py slim
 text = "Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch."
@@ -21,8 +20,7 @@ print(gross)
 :::
 
 
-:::def
-### `lower()`
+:::def[`lower()`]
 
 ```py live_py slim
 text = "Hallo ich bin Alfred. Ich schreibe an einem wichtigen Buch."
@@ -34,8 +32,7 @@ print(klein)
 
 ## Text ersetzen
 
-:::def
-### `replace()`
+:::def[`replace()`]
 Mit replace(alt, neu) können Text-Teile in einem Text ersetzt werden.
 
 ```py live_py slim
@@ -49,7 +46,7 @@ print(text)
 
 :::
 
-:::warning Gross- & Kleinschreibung
+:::warning[Gross- & Kleinschreibung]
 Python nimmts genau beim ersetzen - die Gross- & Kleinschreibung spielt eine Rolle!
 
 Im folgenden Beispiel wird etwa nur das kleingeschriebene `ich` ersetzt, jedoch auch wenn es inmitten eines Textes auftritt.
@@ -71,7 +68,7 @@ print(text)
 
 `Gymnasium Biel Seeland` heisst auf Grüfnisch `Gymnanafasinifiunufum Binifienefel-Senefeenefelanafand`
 
-:::aufgabe Deutsch → Grüfnisch
+:::aufgabe[Deutsch → Grüfnisch]
 Erstellen Sie ein Programm, welches
 - die Benutzer:in nach einem deutschen Satz fragt
 - diesen Satz zu Grüfnisch umwandelt
@@ -186,7 +183,7 @@ beavis(grüfnisch)
 :::
 
 
-:::aufgabe Grüfnisch → Deutsch
+:::aufgabe[Grüfnisch → Deutsch]
 
 Können Sie auch ein Programm schreiben, welches vom Grüfnisch ins Berndeutsch übersetzt?
 

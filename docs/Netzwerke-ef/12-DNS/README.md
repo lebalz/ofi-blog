@@ -125,7 +125,7 @@ NS-Record
 : `gbsl.ch. 3600 IN NS ns.namespace4you.de.`
 
 
-:::aufgabe Selbsttest
+:::aufgabe[Selbsttest]
 <Answer type="state" webKey="89c880ef-e046-40d0-8007-7f9542306cf1" />
 
 
@@ -144,10 +144,10 @@ Aus diesen Gründen gibt es drei neue Konzepte, die diese Probleme lösen sollen
 
 Sie haben nun die Struktur des DNS kennengelernt und gesehen, dass es zur Verwaltung in Zonen aufgeteilt wird. Jede Zone steht unter der Aufsicht eines autoritativen Name-Servers. Doch wie funktioniert das nun, wenn Ihr Notebook einen Domain-Name zu einer IP-Adresse auflösen muss? Das werden Sie in dieser Aufgabe herausfinden.
 
-:::aufgabe 
+:::aufgabe[]
 <Answer type="state" webKey="575005e2-40fb-47c6-9c51-52b6cdfb5024" />
 
-1. Gehen Sie auf die Seite 👉 https://tools.keycdn.com/dig Geben Sie den Domain-Name www.gbsl.ch ein, klicken Sie __:mdi-checkbox-marked: Trace__ an und lassen Sie den Namen auflösen.
+1. Gehen Sie auf die Seite 👉 https://tools.keycdn.com/dig Geben Sie den Domain-Name www.gbsl.ch ein, klicken Sie __:mdi[checkbox-marked] Trace__ an und lassen Sie den Namen auflösen.
 
 #### Erklärungen
 Was passiert hier genau?

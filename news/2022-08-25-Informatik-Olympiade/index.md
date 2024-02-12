@@ -12,7 +12,7 @@ sidebar_custom_props:
 ![](images/soi-2022.png)
 
 Programmierwettbewerb für Jugendliche. Die Erste Runde findet vom **16.9-30.11.2022** online statt.
-<!--truncate-->
+{/* truncate */}
 
 Wann?
 : **15.9-30.11.2022**
@@ -20,4 +20,4 @@ Anmelden unter
 : https://soi.ch
 
 
-[@button 👉 Mehr Informationen auf soi.ch](https://soi.ch)
+:btn[[👉 Mehr Informationen auf soi.ch](https://soi.ch)]

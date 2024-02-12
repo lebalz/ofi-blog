@@ -6,11 +6,11 @@ sidebar_custom_props:
 
 Studieren Sie folgende Event-State Tabelle
 
-| <span style={{float: 'right'}}>Zustand :mdi-arrow-right:</span><br />Ereignis :mdi-arrow-down: | __ADD:00__                            | __ADD:01__                            | __ADD:10__                            | __ADD:11__                            | __SUB:00__                            | __SUB:01__                            | __SUB:10__                            | __SUB:11__                            | __RESET__                                       |
+| <span style={{float: 'right'}}>Zustand :mdi[arrow-right]</span><br />Ereignis :mdi[arrow-down] | __ADD:00__                            | __ADD:01__                            | __ADD:10__                            | __ADD:11__                            | __SUB:00__                            | __SUB:01__                            | __SUB:10__                            | __SUB:11__                            | __RESET__                                       |
 |:-----------------------------------------------------------------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:--------------------------------------|:------------------------------------------------|
-| **:mdi-gesture-tap-button: A**                                                                 | Zeige 01 :mdi-arrow-right: __ADD:01__ | Zeige 10 :mdi-arrow-right: __ADD:10__ | Zeige 11 :mdi-arrow-right: __ADD:11__ | Zeige 00 :mdi-arrow-right: __ADD:00__ | Zeige 11 :mdi-arrow-right: __SUB:11__ | Zeige 00 :mdi-arrow-right: __SUB:00__ | Zeige 01 :mdi-arrow-right: __SUB:01__ | Zeige 10 :mdi-arrow-right: __SUB:10__ |                                                 |
-| **:mdi-gesture-tap-button: B**                                                                 | __SUB:00__                            | __SUB:01__                            | __SUB:10__                            | __SUB:11__                            | Zeige 0 :mdi-arrow-right: __RESET__   | Zeige 1 :mdi-arrow-right: __RESET__   | Zeige 2 :mdi-arrow-right: __RESET__   | Zeige 3 :mdi-arrow-right: __RESET__   |                                                 |
-| **Timer**                                                                                      |                                       |                                       |                                       |                                       |                                       |                                       |                                       |                                       | warte 3s, zeige 00 :mdi-arrow-right: __ADD:00__ |
+| **:mdi[gesture-tap-button] A**                                                                 | Zeige 01 :mdi[arrow-right] __ADD:01__ | Zeige 10 :mdi[arrow-right] __ADD:10__ | Zeige 11 :mdi[arrow-right] __ADD:11__ | Zeige 00 :mdi[arrow-right] __ADD:00__ | Zeige 11 :mdi[arrow-right] __SUB:11__ | Zeige 00 :mdi[arrow-right] __SUB:00__ | Zeige 01 :mdi[arrow-right] __SUB:01__ | Zeige 10 :mdi[arrow-right] __SUB:10__ |                                                 |
+| **:mdi[gesture-tap-button] B**                                                                 | __SUB:00__                            | __SUB:01__                            | __SUB:10__                            | __SUB:11__                            | Zeige 0 :mdi[arrow-right] __RESET__   | Zeige 1 :mdi[arrow-right] __RESET__   | Zeige 2 :mdi[arrow-right] __RESET__   | Zeige 3 :mdi[arrow-right] __RESET__   |                                                 |
+| **Timer**                                                                                      |                                       |                                       |                                       |                                       |                                       |                                       |                                       |                                       | warte 3s, zeige 00 :mdi[arrow-right] __ADD:00__ |
 
 
 :::aufgabe 
@@ -27,7 +27,7 @@ Zuerst zählt wird gezählt, wie oft die Taste __A__ gedrückt wurde (max. 4). B
 </Solution>
 :::
 
-:::aufgabe Zustands-Diagramm
+:::aufgabe[Zustands-Diagramm]
 <Answer type="state" webKey="dfb35ba3-f2aa-485e-b878-3a5555134abd" />
 Überführen Sie die Tabelle in ein Zustands-Diagramm und halten Sie Ihre Lösung unten fest.
 
@@ -64,16 +64,16 @@ stateDiagram-v2
 </Solution>
 :::
 
-::::aufgabe Micro:Bit
+::::aufgabe[Micro\:Bit]
 <Answer type="state" webKey="c5f52e62-2fad-4186-a37c-8c074f4ef762" />
 
 Material
-: Micro:Bit
+: Micro\:Bit
 : mit USB-Kabel an den Computer angeschlossen
 Editor
 : Online-Editor [👉 python.microbit.org](https://python.microbit.org/)
 
-Programmieren Sie die Zustandsmaschine auf dem Micro:Bit. Verwenden Sie dazu die folgende Vorlage:
+Programmieren Sie die Zustandsmaschine auf dem Micro\:Bit. Verwenden Sie dazu die folgende Vorlage:
 
 ```py
 from microbit import *
@@ -284,7 +284,7 @@ while True:
 ::::
 
 
-:::aufgabe ⭐ Erweiterung bis 3 bit
+:::aufgabe[⭐ Erweiterung bis 3 bit]
 <Answer type="state" webKey="e3d1bf4d-b861-4495-a0f5-07cb72e3f904" />
 
 Erweitern Sie die Aufgabe auf eine 3 bit Addition.

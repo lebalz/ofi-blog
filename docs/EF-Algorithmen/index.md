@@ -50,7 +50,7 @@ Die Schieblehre wird um eine Position nach rechts geschoben:
 
 ### ... weiter mit Schritt 1 bis keine Zahl mehr übrig ist
 
-:::details Nächste Runde
+:::details[Nächste Runde]
 
 ![](images/selection-s04.png)
 :::
@@ -94,7 +94,7 @@ Die Schieblehre wird um eine Position nach rechts geschoben:
 
 ### ... weiter mit Schritt 1 bis keine Zahl mehr übrig ist
 
-:::details Nächste Runde
+:::details[Nächste Runde]
 
 ![](images/insertion-s05-full.png)
 
