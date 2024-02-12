@@ -105,7 +105,7 @@ for zahl in zahlen:
 print(klartext)
 ```
 
-:::danger Zugriff auf eine Liste
+:::danger[Zugriff auf eine Liste]
 Wie Sie bemerkt haben, werden in Python Listen mit eckigen Klammern erzeugt - und der Zugriff erfolgt unter Angabe der Position in der Liste, auch wieder mit eckigen Klammern:
 
 Die Positionen in der Liste beginnen bei 0. Das heisst, das erste Element hat die Position 0, das zweite die Position 1, usw.
