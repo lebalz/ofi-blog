@@ -52,6 +52,31 @@ describe('#defbox', () => {
           "
         `);
     });
+    it("can use custom header depth", async () => {
+      const input = alignLeft(`# Details element example
+          :::def[Hello World]{h=2}
+          Hello world!
+          :::
+          Byyye!
+      `);
+      const result = await process(input);
+      expect(result).toMatchInlineSnapshot(`
+        "# Details element example
+
+        <DefBox>
+          <DefHeading>
+            ## Hello World
+          </DefHeading>
+
+          <DefContent>
+            Hello world!
+          </DefContent>
+        </DefBox>
+
+        Byyye!
+        "
+      `);
+  });
     it("can convert defbox without title", async () => {
         const input = alignLeft(`# Details element example
             :::def

@@ -22,6 +22,7 @@ const plugin: Plugin = function plugin(
             const directive = node as unknown as ContainerDirective;
             const heading = (directive.children.find(c => c.type === 'paragraph' && c.data?.directiveLabel) as Paragraph)?.children;
             const content = directive.children.slice(heading ? 1 : 0);
+            const depth = Math.max(Math.min(Number(directive.attributes.h) || 3, 6), 1) as 1 | 2 | 3 | 4 | 5 | 6;
             const defbox: MdxJsxFlowElement = {
                 type: 'mdxJsxFlowElement',
                 name: 'DefBox',
@@ -34,7 +35,7 @@ const plugin: Plugin = function plugin(
                         children: [
                             {
                                 type: 'heading',
-                                depth: 3,
+                                depth: depth,
                                 children: heading || [{type: 'text', value: 'Definition'}]
                             }
                         ],

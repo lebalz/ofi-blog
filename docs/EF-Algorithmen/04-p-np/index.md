@@ -15,15 +15,11 @@ Algorithmen mit exponentieller Laufzeit, also $2^n$ oder $k^n$, werden nicht meh
 
 Für viele Probleme der Informatik hat man noch keine effiziente Algorithmen gefunden, also solche mit polynomialer Laufzeit oder besser.
 
-## Komplexitätsklasse P
-
-:::def
+:::def[Komplexitätsklasse P]{h=2}
 Die Komplexitätsklasse $P$ enthält die Probleme, für die eine deterministische Turingmaschine (etwa ein konventioneller Computer) existiert, die das Problem in polynomialer Laufzeit löst.
 :::
 
-## Komplexitätsklasse NP
-
-:::def
+:::def[Komplexitätsklasse NP]{h=2}
 Die Komplexitätsklasse $NP$ enthält die Probleme, von denen sich in polynomialer Laufzeit mit einer deterministischen Turingmaschine entscheiden lässt, ob eine vorgeschlagene Lösung zutrifft.
 :::
 
