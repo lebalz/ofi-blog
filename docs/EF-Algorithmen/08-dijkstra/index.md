@@ -205,4 +205,4 @@ Führen Sie den Dijkstra-Algorithmus aus: erstellen Sie eine Entfernungstabelle 
 
 ## Zusammenfassung
 
-[@youtube](https://www.youtube-nocookie.com/embed/EFg3u_E6eHU?si=FtRqtOsopcTPZ2F7)
+::youtube[https://www.youtube-nocookie.com/embed/EFg3u_E6eHU?si=FtRqtOsopcTPZ2F7]

@@ -7,7 +7,7 @@ sidebar_custom_props:
 
 Der $A^\star$-Algorithmus[1] (im folgenden $A^\star$ genannt) wird verwendet, um in einem Baum oder allgemein in einem Graphen den kürzesten Pfad zwischen zwei Knoten zu finden. Um  $A^\star$ anwenden zu können, müssen die Kanten mit **Kosten** versehen sein. Gesucht ist nun der kürzeste (bzw. billigste) Pfad zwischen zwei Knoten.
 
-[@youtube](https://www.youtube-nocookie.com/embed/A60q6dcoCjw?si=lhZQt6CCow0eK0Zr)
+::youtube[https://www.youtube-nocookie.com/embed/A60q6dcoCjw?si=lhZQt6CCow0eK0Zr]
 
 Bei der Breitensuche wird keine «intelligente» Auswahl der Knoten in der Open-List getroffen, die Knoten werden in willkürlicher Reihenfolge verarbeitet. Der  $A^\star$ ist eine Verfeinerung dieser Verfahren, wobei folgendermassen immer der vielversprechendste Knoten weiterverarbeitet wird. Es wird abgeschätzt, wie «gut» ein Knoten ist, indem eine Bewertungsfunktion berechnet wird. Die Kosten eines Knotens $N$ beinhalten zwei Beiträge: einerseits die Kosten vom Startknoten bis zu $N$ (wie bei Dijkstra) und andererseits die geschätzten Kosten von $N$ bis zum Zielknoten. Diese Bewertungsfunktion $f(N)$ für einen Knoten $N$ wird also folgendermassen definiert:
 
