@@ -8,7 +8,7 @@ Einige der kennengelernten Sortier-Algorithmen sind rekursiv. Wir wollen uns die
 
 ## Fakultät
 
-[@youtube](https://www.youtube-nocookie.com/embed/Mv9NEXX1VHc?si=_ca-r47UQ_zAXdmi)
+::youtube[https://www.youtube-nocookie.com/embed/Mv9NEXX1VHc?si=_ca-r47UQ_zAXdmi]
 
 :::aufgabe
 <Answer type="state" webKey="81546ad2-fed7-4e58-8d09-7047466ddb71" />
@@ -34,7 +34,7 @@ Betrachten Sie nochmals die Sortieralgorithmen, die Sie bei der Zeitmessung verw
 
 ## Ackermann-Funktion
 
-[@youtube](https://www.youtube-nocookie.com/embed/i7sm9dzFtEI?si=0vpwNNutzy5Bmyhm)
+::youtube[https://www.youtube-nocookie.com/embed/i7sm9dzFtEI?si=0vpwNNutzy5Bmyhm]
 
 :::aufgabe
 <Answer type="state" webKey="1439a69e-d803-4028-a5a5-ec8896a88dfc" />
@@ -51,7 +51,8 @@ Dateinamen
 
 ## ⭐ Schizophrene Zahlen
 
-[@pdf --no-download](./assets/sdw23-schizophrene-zahlen.pdf)
+
+::pdf[./assets/sdw23-schizophrene-zahlen.pdf]{noDownload}
 
 ::::aufgabe
 <Answer type="state" webKey="30c9e11d-b88f-49a0-808b-7e12e04b7774" />
@@ -61,7 +62,7 @@ Dateinamen
 
 Schreiben Sie eine Funktion `schizo(n)`, die für eine gegebene Zahl `n` die schizophrene Zahl so wie im Artikel beschrieben berechnet.
 
-:::danger Grosse Zahlen...
+:::danger[Grosse Zahlen...]
 Beachten Sie: Python rundet standardmässig die 16. Nachkommastelle. Sollen mehr Nachkommastellen dargestellt werden, können die Anzahl Nachkommastellen erhöht werden. 
 
 Dies geht mit dem Modul `decimal`:

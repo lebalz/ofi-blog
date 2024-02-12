@@ -75,7 +75,7 @@ Was wir nun erhalten ist ein **Gewichteter Graph**: Ein **Graph** besteht aus Ka
 
 Diesen Graphen können wir nun verwenden, um automatisiert einen Weg – oder sogar den kürzesten Weg zwischen zwei Ortschaften zu finden.
 
-:::note Hinweis: Prinzip der Informatik: «Abstraktion»
+:::note[Hinweis: Prinzip der Informatik: «Abstraktion»]
 Wir vereinfachen, lassen alles nicht wichtige Weg – damit wir das Problem mit dem Computer darstellen und lösen können.
 :::
 

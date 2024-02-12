@@ -109,7 +109,7 @@ Wir zeichnen nun noch mit Pfeilen die Reihenfolge ein in welcher wir diese Knote
 
 Diese Art der Baumsuche nennt man **Breitensuche**.
 
-:::aufgabe Aufgabe
+:::aufgabe
 <Answer type="state" webKey="ea2ba5bf-e9fa-451f-a157-fd7e45920744" />
 
 Führen Sie selbst eine Breitensuche durch: Finden Sie den Weg in umgekehrter Richtung, also vom Knoten `L` zum Knoten `I`.

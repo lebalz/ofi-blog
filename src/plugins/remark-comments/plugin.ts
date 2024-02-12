@@ -5,7 +5,7 @@ import { BlockContent, Node, Parent, Strong } from 'mdast';
 import matter from 'gray-matter';
 
 export const IGNORE_CHILDREN_FROM_TAGS_DEFAULT = ['figure', 'deflist'];
-export const IGNORED_TAGS_DEFAULT = ['details', 'Details'];
+export const IGNORED_TAGS_DEFAULT = ['details', 'Details', 'definition'];
 
 const plugin: Plugin = function plugin(
     this: Processor,
