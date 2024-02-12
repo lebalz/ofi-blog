@@ -28,7 +28,8 @@ const plugin: Plugin = (context, options) => {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython.js",
                             // crossorigin: "anonymous",
                             src: "https://cdn.jsdelivr.net/npm/brython@3.12.1/brython.min.js",
-                            referrerpolicy: "no-referrer"
+                            referrerpolicy: "no-referrer",
+                            async: true,
                         },
                     },
                     {
@@ -37,7 +38,8 @@ const plugin: Plugin = (context, options) => {
                             // src: "https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js",
                             // crossorigin: "anonymous",
                             src: "https://cdn.jsdelivr.net/npm/brython@3.12.1/brython_stdlib.js",
-                            referrerpolicy: "no-referrer"
+                            referrerpolicy: "no-referrer",
+                            async: true,
                         },
                     },
                     ...brython_pips,
