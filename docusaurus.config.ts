@@ -22,6 +22,7 @@ import commentsPlugin, { IGNORED_TAGS_DEFAULT } from './src/plugins/remark-comme
 import pdfPlugin from './src/plugins/remark-pdf/plugin';
 import mediaPlugin from './src/plugins/remark-media/plugin';
 import remarkInlineModifier from './src/plugins/remark-inline-modifier/plugin';
+import { mdiSourceCommit } from '@mdi/js';
 
 
 const BASE_URL = '/';
@@ -249,7 +250,7 @@ const config: Config = {
                       class="badge badge--primary"
                       href="https://github.com/lebalz/ofi-blog/commit/${GIT_COMMIT_SHA}"
                     >
-                      <i class="mdi mdi-source-commit mdi-rotate-90"></i> ${GIT_COMMIT_SHA.substring(0, 7)}
+                        <svg viewBox="0 0 24 24" role="presentation" style="width: 0.9rem; height: 0.9rem; transform: translateY(15%) rotate(90deg); transform-origin: center center;"><path d="${mdiSourceCommit}" style="fill: currentcolor;"></path></svg> ${GIT_COMMIT_SHA.substring(0, 7)}
                     </a>`
         },
         prism: {

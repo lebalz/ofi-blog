@@ -9,6 +9,8 @@ import React, { type ReactNode } from 'react';
 import clsx from 'clsx';
 
 import styles from './styles.module.scss';
+import { mdiAppleSafari, mdiClipboardCheck, mdiClipboardTextOff, mdiFirefox, mdiGoogleChrome, mdiLoading, mdiMicrosoftEdge } from '@mdi/js';
+import Icon from '@mdi/react';
 
 type Browser = 'edge' | 'chrome' | 'firefox' | 'safari'
 interface Props {
@@ -20,10 +22,10 @@ interface Props {
 }
 
 const ICONS: { [key in Browser]: string } = {
-  chrome: 'mdi-google-chrome',
-  edge: 'mdi-microsoft-edge',
-  firefox: 'mdi-firefox',
-  safari: 'mdi-apple-safari'
+  chrome: mdiGoogleChrome,
+  edge: mdiMicrosoftEdge,
+  firefox: mdiFirefox,
+  safari: mdiAppleSafari
 }
 
 const COLOR: { [key in Browser]: string } = {
@@ -35,14 +37,14 @@ const COLOR: { [key in Browser]: string } = {
 type CopyState = 'spin' | 'copied' | 'error';
 
 const CopyIcon: { [key in CopyState]: string } = {
-  copied: 'mdi-clipboard-check',
-  error: 'mdi-clipboard-text-off',
-  spin: 'mdi-loading'
+  copied: mdiClipboardCheck,
+  error: mdiClipboardTextOff,
+  spin: mdiLoading
 }
 
 const CopyColor: { [key in CopyState]: string } = {
-  copied: 'green',
-  error: 'red',
+  copied: 'var(--ifm-color-success)',
+  error: 'var(--ifm-color-danger)',
   spin: 'black'
 }
 
@@ -93,13 +95,13 @@ export default function BrowserWindow({
         </div>
         <div className={clsx(styles.browserWindowAddressBar, 'text--truncate')}>
           {browser && (
-            <i className={clsx('mdi', ICONS[browser], COLOR[browser], styles.browserType)} />
+            <Icon path={ICONS[browser]} size={0.8} color={COLOR[browser]} className={clsx(styles.browserType)} />
           )}
           <a href={url} target="_blank" onClick={onClick}>{url}</a>
           {copyState !== 'none' && (
             <>
               <div className={styles.spacer} />
-              <i className={clsx('mdi', CopyIcon[copyState], CopyColor[copyState], styles.copyState)} />
+              <Icon path={CopyIcon[copyState]} size={0.8} color={CopyColor[copyState]} className={clsx(styles.copyIcon)} />
             </>
           )}
         </div>

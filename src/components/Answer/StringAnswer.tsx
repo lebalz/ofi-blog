@@ -9,6 +9,8 @@ import { useStore } from "../../stores/hooks";
 import { default as StringModel } from "../../models/Answer/String";
 import Loader from "../shared/Loader";
 import DropdownSelect from "./DropdownSelect";
+import Icon from "@mdi/react";
+import { mdiCheckCircle, mdiCloseCircle, mdiHelpCircleOutline } from "@mdi/js";
 
 const OPTIONS_REGEX = /--(?<klass>\w+)$/;
 
@@ -25,12 +27,12 @@ const getClassName = (value: string) => {
 
 const CheckIcon = (state) => {
   if (state === "correct") {
-    return 'mdi-check-circle';
+    return mdiCheckCircle;
   }
   if (state === "wrong") {
-    return 'mdi-close-circle';
+    return mdiCloseCircle;
   }
-  return 'mdi-help-circle-outline';
+  return mdiHelpCircleOutline;
 };
 
 const StringAnswer = observer((props: StringProps) => {
@@ -124,7 +126,7 @@ const StringAnswer = observer((props: StringProps) => {
           }}
           className={clsx(styles[correctState], styles.checkButton)}
         >
-          <i className={clsx('mdi', CheckIcon(correctState))} />
+          <Icon path={CheckIcon(correctState)} size={'1em'} />
         </button>
       )}
     </div>

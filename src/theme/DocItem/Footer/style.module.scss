@@ -4,7 +4,9 @@
         display: flex;
         flex-wrap: wrap;
         .copyright {
-            margin-right: 0.5em;
+            display: flex;
+            margin-right: 0.3em;
+            align-items: center;
         }
     }
     :global .theme-doc-footer.docusaurus-mt-lg {

@@ -6,6 +6,8 @@ import styles from './styles.module.scss';
 import { runInAction } from 'mobx';
 import { faArrowDown, faArrowUp, faTimesCircle, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Icon from '@mdi/react';
+import { mdiArrowDown, mdiArrowUp, mdiArrowUpDown } from '@mdi/js';
 
 
 
@@ -31,9 +33,9 @@ const SortArrow = observer((props: SortProps) => {
             }}
         >
             {userStore.sortColumn === props.column ? (
-                <FontAwesomeIcon icon={(userStore.sortOrder === 'asc' ? faArrowDown : faArrowUp)} />
+                <Icon path={userStore.sortOrder === 'asc' ? mdiArrowDown : mdiArrowUp} size={0.8} />
             ) : (
-                <i className={clsx('mdi', 'mdi-arrow-up-down')}></i>
+                <Icon path={mdiArrowUpDown} size={0.6} rotate={90} />
             )}
         </span>
     );

@@ -26,6 +26,8 @@ import { VIEW_ELEMENTS } from '@site/src/stores/AdminStore';
 import siteConfig from '@generated/docusaurus.config';
 const { OFFLINE_MODE } = siteConfig.customFields as { OFFLINE_MODE?: boolean };
 import { FilePicker, LoadedOfflineFile } from '@site/src/pages/login';
+import Icon from '@mdi/react';
+import { mdiCheckboxBlankOutline, mdiCheckboxOutline } from '@mdi/js';
 
 const currentVersion = (versions: typeof NavbarItem[]): typeof NavbarItem | undefined => {
     return versions.find((v) => v.path.length > 1 && window.location.pathname.startsWith(v.path));
@@ -77,7 +79,7 @@ const withLoginNavbar = (Component) => {
                                             active && styles.active
                                         )}
                                     >
-                                        <i className={clsx(styles.icon, 'mdi', active ? 'mdi-checkbox-outline' : 'mdi-checkbox-blank-outline')}></i>
+                                        <Icon path={active ? mdiCheckboxOutline : mdiCheckboxBlankOutline} size={0.5} />
                                         {toggle}
                                     </span>
                                 );

@@ -7,6 +7,8 @@ import type { Props } from '@theme/DocVersionBadge';
 import styles from './styles.module.scss';
 import { useStore } from '@site/src/stores/hooks';
 import { observer } from 'mobx-react-lite';
+import Icon from '@mdi/react';
+import { mdiChevronRight, mdiClose } from '@mdi/js';
 
 const DocVersionBadge = observer(({ className }: Props): JSX.Element | null => {
     const versionMetadata = useDocsVersion();
@@ -32,15 +34,21 @@ const DocVersionBadge = observer(({ className }: Props): JSX.Element | null => {
                             {adminStore.viewGroupFilter ? (
                                 <>
                                     {adminStore.viewGroupFilter}
-                                    <i
-                                        className={clsx('mdi', 'mdi-close', styles.clearFilter)}
+                                    <span 
+                                        className={clsx(styles.clearFilter)}
                                         onClick={() => {
                                             adminStore.clearViewGroupFilter();
                                         }}
-                                    ></i>
+                                    >
+                                        <Icon 
+                                            path={mdiClose} 
+                                            size={0.6}
+                                            
+                                        />
+                                    </span>
                                 </>
                             ) : (
-                                <i className={clsx('mdi', 'mdi-chevron-right')}></i>
+                                <Icon path={mdiChevronRight} size={0.6} />
                             )}
                             <ul className={clsx('dropdown__menu', styles.menu)}>
                                 {groups.map((grp, idx) => {

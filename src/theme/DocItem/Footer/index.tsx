@@ -6,12 +6,14 @@ import styles from './style.module.scss';
 // @ts-ignore
 import { useDoc } from '@docusaurus/theme-common/internal';
 import clsx from 'clsx';
+import Icon from '@mdi/react';
+import { mdiOpenInNew } from '@mdi/js';
 
 type Props = WrapperProps<typeof FooterType>;
 
 export default function FooterWrapper(props: Props): JSX.Element {
     const { frontMatter } = useDoc();
-    const { sidebar_custom_props } = frontMatter;
+    const { sidebar_custom_props } = frontMatter as { sidebar_custom_props: { source?: { name: string; ref?: string } } };
     return (
         <div className={styles.footer}>
             <div className={styles.sources}>
@@ -25,7 +27,7 @@ export default function FooterWrapper(props: Props): JSX.Element {
                             >
                                 {sidebar_custom_props.source?.name}
                                 {sidebar_custom_props.source?.ref && (
-                                    <i className="mdi mdi-open-in-new" style={{ marginLeft: '0.3em' }}></i>
+                                    <Icon path={mdiOpenInNew} style={{ marginLeft: '0.3em' }} size={0.6}/>
                                 )}
                             </a>
                         )}
@@ -38,7 +40,7 @@ export default function FooterWrapper(props: Props): JSX.Element {
                     target="_blank"
                 >
                     CC 4.0
-                    <i className="mdi mdi-open-in-new" style={{ marginLeft: '0.3em' }}></i>
+                    <Icon path={mdiOpenInNew} style={{ marginLeft: '0.3em' }} size={0.6}/>
                 </a>
             </div>
             <Footer {...props} />

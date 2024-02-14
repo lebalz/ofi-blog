@@ -1,9 +1,15 @@
+import { mdiFormatAlignCenter, mdiFormatAlignLeft, mdiFormatAlignRight } from '@mdi/js';
 import { BaseModule } from './BaseModule';
 
 let Parchment: any = {};
 let FloatStyle: any = {};
 let MarginStyle: any = {};
 let DisplayStyle: any = {};
+
+const getSvgIcon = (icon: string, attrs?: { className?: string, size?: string | number}) => {
+    const size = Number(attrs?.size) ? `${attrs.size}rem` : attrs?.size || '1rem';
+    return `<svg viewBox="0 0 24 24" role="presentation" class="${attrs?.className || ''}" style="width: ${size}; height: ${size};"><path d="${icon}" style="fill: currentcolor;"></path></svg>`;
+}
 
 export default class Toolbar extends BaseModule {
     toolbar: HTMLDivElement;
@@ -40,7 +46,7 @@ export default class Toolbar extends BaseModule {
     _defineAlignments = () => {
         this.alignments = [
             {
-                icon: 'format-align-left',
+                icon: mdiFormatAlignLeft,
                 apply: () => {
                     DisplayStyle.add(this.img, 'inline');
                     FloatStyle.add(this.img, 'left');
@@ -49,7 +55,7 @@ export default class Toolbar extends BaseModule {
                 isApplied: () => FloatStyle.value(this.img) == 'left',
             },
             {
-                icon: 'format-align-center',
+                icon: mdiFormatAlignCenter,
                 apply: () => {
                     DisplayStyle.add(this.img, 'block');
                     FloatStyle.remove(this.img);
@@ -58,7 +64,7 @@ export default class Toolbar extends BaseModule {
                 isApplied: () => MarginStyle.value(this.img) == 'auto',
             },
             {
-                icon: 'format-align-right',
+                icon: mdiFormatAlignRight,
                 apply: () => {
                     DisplayStyle.add(this.img, 'inline');
                     FloatStyle.add(this.img, 'right');
@@ -74,7 +80,7 @@ export default class Toolbar extends BaseModule {
 		this.alignments.forEach((alignment, idx) => {
 			const button = document.createElement('span');
 			buttons.push(button);
-			button.innerHTML = `<i class="mdi mdi-${alignment.icon}" style="font-size: 20px"/>`;
+			button.innerHTML = getSvgIcon(alignment.icon, {size: '20px'});
 			button.addEventListener('click', () => {
 					// deselect all buttons
 				buttons.forEach(button => button.style.filter = '');

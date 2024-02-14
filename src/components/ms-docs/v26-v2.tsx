@@ -5,6 +5,8 @@ import { observer } from 'mobx-react-lite';
 import { Document, ImageRun, Packer, Paragraph } from 'docx';
 import { saveAs } from 'file-saver';
 import styles from "./styles.module.scss";
+import Icon from '@mdi/react';
+import { mdiDownload } from '@mdi/js';
 interface Props {
   personalize?: boolean
 }
@@ -154,7 +156,7 @@ const name = account.username;
         onClick={() => generateFromUrl(name)}
        >
         Vorlage Herunterladen: probe.docx
-        <i className='mdi mdi-download' style={{marginLeft: '1em', marginRight: '-1em'}}/>
+        <Icon path={mdiDownload} size={0.7} style={{transform: 'translateY(20%)', marginLeft: '1em', marginRight: '-1em'}} />
       </button>
   )
 });

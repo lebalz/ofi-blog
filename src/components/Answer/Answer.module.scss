@@ -53,6 +53,9 @@ html[data-theme='dark'] {
         &:hover {
             filter: brightness(0.85);
         }
+        > svg {
+            transform: translateY(10%);
+        }
     }
     &.string {
         gap: 0;

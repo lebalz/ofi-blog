@@ -6,14 +6,23 @@
       justify-content: space-between;
       align-items: center;
       margin: 0 auto;
-      height: 45px;
+      height: 2.2em;
       padding: 0 0 0 1rem;
       font-size: 1rem;
       border: 1px solid #d0cfce;
       border-radius: 22.5px;
       outline: none;
-      .searchIcon {
-        width: 2rem;
+      cursor: pointer;
+      .icons {
+        display: flex;
+        align-items: center;
+        .searchIcon {
+          width: 2em;
+          margin-right: 0.5em;
+        }
+        .copyIcon {
+          justify-self: flex-end;
+        }
       }
       p {
         margin: 0;
