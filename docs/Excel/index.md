@@ -4,7 +4,11 @@ sidebar_custom_props:
 ---
 # Excel
 
-![--width=200px --background=transparent](images/logo.svg)
+:::cards
+<div style={{display: 'flex', justifyContent: 'center'}}>
+:mdi[microsoft-excel]{.green size=8 spin=10}
+</div>
+:::
 
 Excel-Funktionen in einer anderen **Sprache**: 👉 https://de.excel-translator.de/translator/
 

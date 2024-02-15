@@ -462,6 +462,7 @@ html[data-theme='dark'] {
 
 
 .mdi-icon {
+    transform: translateY(20%);
     &.green {
         color: var(--ifm-color-success);
     }

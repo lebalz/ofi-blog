@@ -16,8 +16,10 @@
             user-select: none;
             cursor: pointer;
             padding: 3px;
+            display: flex;
+            align-items: center;
             .icon {
-                margin-right: 0.4em;
+                margin-right: 0.2em;
             }
             &.active {
                 .icon {

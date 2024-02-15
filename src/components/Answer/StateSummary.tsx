@@ -6,6 +6,7 @@ import * as React from 'react';
 import styles from './state.module.scss';
 import { mdiBgColor, mdiIcon, mdiColor } from './StateAnswer';
 import _ from 'lodash';
+import Icon from '@mdi/react';
 
 interface Props {
     webKey: string;
@@ -38,9 +39,10 @@ export const StateSummary = observer((props: Props) => {
                                         adminStore.setView(doc.user_id);
                                     }}
                                 >
-                                    <i
-                                        className={clsx('mdi', mdiIcon[doc.data.value])}
-                                        style={{ color: `${mdiColor[doc.data.value]}` }}
+                                    <Icon
+                                        path={mdiIcon[doc.data.value]}
+                                        size={0.8}
+                                        color={mdiColor[doc.data.value]}
                                     />
                                 </div>
                                 <div className={clsx(styles.nameWrapper)}>
@@ -94,8 +96,6 @@ export const PageStateSummary = observer((props: PageStateSummaryProps) => {
                                             style={{ backgroundColor: `var(${mdiBgColor[doc.data.value]})` }}
                                         >
                                             <a
-                                                className={clsx('mdi', mdiIcon[doc.data.value])}
-                                                style={{ color: `${mdiColor[doc.data.value]}` }}
                                                 href={`#state-${doc.web_key}`}
                                                 onClick={() => {
                                                     setTimeout(() => {
@@ -105,7 +105,16 @@ export const PageStateSummary = observer((props: PageStateSummaryProps) => {
                                                         }
                                                     }, 0);
                                                 }}
-                                            />
+                                                style={{
+                                                    lineHeight: 1
+                                                }}
+                                            >
+                                                <Icon
+                                                    path={mdiIcon[doc.data.value]}
+                                                    size={0.6}
+                                                    color={mdiColor[doc.data.value]}
+                                                />
+                                            </a>
                                         </div>
                                     );
                                 })}

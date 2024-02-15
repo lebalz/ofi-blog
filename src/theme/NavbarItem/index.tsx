@@ -79,7 +79,11 @@ const withLoginNavbar = (Component) => {
                                             active && styles.active
                                         )}
                                     >
-                                        <Icon path={active ? mdiCheckboxOutline : mdiCheckboxBlankOutline} size={0.5} />
+                                        <Icon 
+                                            path={active ? mdiCheckboxOutline : mdiCheckboxBlankOutline} 
+                                            size={0.8}
+                                            className={clsx(styles.icon)}
+                                        />
                                         {toggle}
                                     </span>
                                 );
