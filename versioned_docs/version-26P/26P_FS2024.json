@@ -1,0 +1,99 @@
+[
+    {
+        "cells": ["30.01.2024","Kryptologie","Symmetrische Verschlüsselung"]
+    },
+    {
+        "cells": ["07.02.2024","Concours: Math Sans Frontières",""],
+        "type": "event"
+    },
+    {
+        "cells": ["13.02.2024","Sportwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["20.02.2024","Kryptologie","Kerckhoff's Prinzip, Asymmetrische Verschlüsselung"]
+    },
+    {
+        "cells": ["27.02.2024","Kryptologie","Signaturverfahren"]
+    },
+    {
+        "cells": ["05.03.2024","Kryptologie und Netzwerke","Wiederholung"]
+    },
+    {
+        "cells": ["12.03.2024","Kryptologie und Netzwerke","Test"],
+        "type": "test"
+    },
+    {
+        "cells": ["19.03.2024","Programmieren 2","Datenstrukturen, Listen, MicroBit"]
+    },
+    {
+        "cells": ["26.03.2024","Sonderwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["02.04.2024","Frühlingsferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["09.04.2024","Frühlingsferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["16.04.2024","Programmieren 2","Robotik"]
+    },
+    {
+        "cells": ["23.04.2024","Programmieren 2","Robotik"]
+    },
+    {
+        "cells": ["30.04.2024","Programmieren 2","Robotik"]
+    },
+    {
+        "cells": ["07.05.2024","Programmieren 2","Wettbewerb: Robotik"],
+        "type": "test"
+    },
+    {
+        "cells": ["09.05.2024","Auffahrt",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["10.05.2024","Auffahrt",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["14.05.2024","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
+    },
+    {
+        "cells": ["21.05.2024","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
+    },
+    {
+        "cells": ["20.05.2024","Pfingstmontag",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["28.05.2024","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
+    },
+    {
+        "cells": ["04.06.2024","Projekt","🚀🚦🧨🪚⚙️🌡🤖"]
+    },
+    {
+        "cells": ["11.06.2024","Mündliche Maturwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["18.06.2024","Projekt: Abschluss und Abgabe","🚀🚦🧨🪚⚙️🌡🤖"]
+    },
+    {
+        "cells": ["19.06.2024","Abgabe Projekt","Bis 22:00 Uhr"],
+        "type": "test"
+    },
+    {
+        "cells": ["25.06.2024","Projekt Austauschen, Abschluss",""]
+    },
+    {
+        "cells": ["27.06.2024","Notenschluss",""],
+        "type": "event"
+    },
+    {
+        "cells": ["02.07.2024","Abschluss Informatik",""]
+    }
+]

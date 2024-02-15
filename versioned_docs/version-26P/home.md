@@ -11,6 +11,7 @@ import fs2023 from "./26P_FS2023.json"
 import hs2022 from "./26P_HS2022.json"
 import hk2022 from "./26P-HK_HS2022.json"
 import hs2023 from "./26P_HS2023.json"
+import fs2024 from "./26P_FS2024.json"
 
 # 26P Informatik
 
@@ -18,7 +19,7 @@ import hs2023 from "./26P_HS2023.json"
   header={["Datum", "Thema", "Inhalt"]}
   compact
   selectable
-  rows={hs2023}
+  rows={fs2024}
   order={SortTimeTableByDate()}
 />
 
@@ -58,6 +59,16 @@ import hs2023 from "./26P_HS2023.json"
   compact
   selectable
   rows={fs2023}
+  order={SortTimeTableByDate()}
+/>
+:::
+
+:::details[3. Semester]
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={hs2023}
   order={SortTimeTableByDate()}
 />
 :::

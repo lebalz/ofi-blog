@@ -15,29 +15,22 @@ const DAYS = {
 // 30.6.2022 Notenschluss
 const EVENTS = {
     // ['10.02.2022']: { desc: 'Filmanlass GYM2 / SchiLw', type: 'holiday' },
-    [40]: {desc: 'Sonderwoche', type: 'holiday'},
-    [41]: {desc: 'Herbstferien', type: 'holiday'},
-    [42]: {desc: 'Herbstferien', type: 'holiday'},
-    [52]: {desc: 'Winterferien', type: 'holiday'},
-    [1]: {desc: 'Winterferien', type: 'holiday'},
-    [7]: {desc: 'Sportwoche', type: 'holiday'},
-    [17]: {desc: 'Sonderwoche', type: 'holiday'},
-    [18]: {desc: 'Frühlingsferien', type: 'holiday'},
-    [19]: {desc: 'Frühlingsferien', type: 'holiday'},
+    [7]: { desc: 'Sportwoche', type: 'holiday' },
+    [13]: { desc: 'Sonderwoche', type: 'holiday' },
+    [14]: { desc: 'Frühlingsferien', type: 'holiday' },
+    [15]: { desc: 'Frühlingsferien', type: 'holiday' },
+    [24]: { desc: 'Mündliche Maturwoche', type: 'holiday'},
+    [28]: { desc: 'Sommerferien', type: 'holiday' },
 
 }
 const CLASS_EVENTS = {
     ['24ef']: {
-        [36]: {desc: 'Kompensation RobOlympics: Auftrag Normalisierung, SQL Abfragen', type: 'holiday', date: '08.09.2023'},
-        [44]: {desc: 'Rob-Olympics: Vorbereitungs-Weekend 3-4.11', type: 'event', date: '03.11.2023'},
-        [46]: {desc: 'Rob-Olympics: Rapperswil 18.11.2023', type: 'event', date: '18.11.2023'},
     },
     ['26P']: {
-        [45]: {desc: 'SET', type: 'holiday', date: '8.11.2023'},
-        [49]: {desc: 'Kantonaler Fachschaftstag', type: 'holiday', date: '05.12.2023'},
+        [6]: { desc: 'Concours: Math Sans Frontières', type: 'event', date: '07.02.2024' },
     },
     ['26e']: {
-        [49]: {desc: 'Kantonaler Fachschaftstag', type: 'holiday', date: '05.12.2023'},
+        [6]: { desc: 'SchiLw-Tag', type: 'holiday', details: 'Frei', date: '07.02.2024' }
     },
     // ['24L']: {
     //     [23]: { desc: 'Pfingsten', type: 'holiday'}
@@ -53,21 +46,22 @@ const CLASS_EVENTS = {
 }
 
 SCHOOL_EVENTS = {
-    // [9]: {desc: 'Videoabgabe', type: 'test', date: '06.03.2022'},
-    // [46]: { desc: 'Notenschluss Zwischenzeugnis', type: 'event', date: '17.11.2022' },
-    [44]: {desc: 'Rob-Olympics: Vorbereitungs-Weekend 3-4.11', type: 'event', date: '04.11.2023'},
-    [4]: { desc: 'Notenchluss', type: 'event', date: '25.01.2024' },
-    [5]: { desc: 'Semesterende', type: 'event', date: '04.02.2024' },
-    [6]: { desc: 'Start Semester 2', type: 'event', date: '05.02.2024' },
+    [19]: [
+        { desc: 'Auffahrt', type: 'holiday', date: '09.05.2024' },
+        { desc: 'Auffahrt', type: 'holiday', date: '10.05.2024' }
+    ],
+    [21]: { desc: 'Pfingstmontag', type: 'holiday', date: '20.05.2024' },
+    [26]: { desc: 'Notenschluss', type: 'event', date: '27.06.2024' },
+    [25]: { desc: 'Abgabe Projekt', details: 'Bis 22:00 Uhr', type: 'test', date: '19.06.2024' },
 }
 
 const CLASS_DAY = {
     ['24ef']: 'fr',
-    ['26P']: 'mi',
-    ['26e']: 'di',
+    ['26P']: 'di',
+    ['26e']: 'mi',
 }
-const YEAR = 2023
-const SEMESTER = 'HS'
+const YEAR = 2024
+const SEMESTER = 'FS'
 
 const SCHEDULE_GYM1_HS = [
     ["Einstieg","ICT Einstieg"],
@@ -98,6 +92,24 @@ const SCHEDULE_EF_HS1 = [
 ]
 
 const SCHEDULE_EF_HS2 = [
+    ["Datenbanken", "Relationale DB's, Einführund SQL"],
+    ["Datenbanken", "Relationale DB's, Datenmodellierung, ER-Diagramme, SQL Abfragen"],
+    ["Datenbanken", "Relationale DB's, Tabellen erstellen, SQL CREATE, INSERT, UPDATE, DELETE"],
+    ["Datenbanken", "Relationale DB's, Tabellen erstellen, SQL CRUD"],
+    ["Datenbanken", "Test"],
+    ["Robotik", "Einstieg, Zustandsmaschinen, EV3"],
+    ["Robotik", "Vorbereitungen RobOlympics"],
+    ["Robotik", "Zustandsmaschinen, Zustandsdiagramme"],
+    ["Robotik", "Zustandsmaschinen, Zustandsdiagramme"],
+    ["Robotik", "Test"],
+    ["Algorithmik", "Effizienz"],
+    ["Algorithmik", "O(n) Notation, Sortieren"],
+    ["Algorithmik", "Suchen, Sortieren"],
+    ["Algorithmik", "N+1 Problem"],
+    ["Algorithmik", "Wiederholung"],
+    ["Algorithmik", "Test"],
+]
+const SCHEDULE_EF_FS2 = [
     ["Datenbanken", "Relationale DB's, Einführund SQL"],
     ["Datenbanken", "Relationale DB's, Datenmodellierung, ER-Diagramme, SQL Abfragen"],
     ["Datenbanken", "Relationale DB's, Tabellen erstellen, SQL CREATE, INSERT, UPDATE, DELETE"],
@@ -217,31 +229,57 @@ const SCHEDULE_GYM2_FS = [
     ["Projekt Austauschen",""],
     ["🚧",""]
 ]
+const SCHEDULE_GYM2_26_FS = [
+    ["Kryptologie","Symmetrische Verschlüsselung"],
+    ["Kryptologie","Kerckhoff's Prinzip, Asymmetrische Verschlüsselung"],
+    ["Kryptologie","Signaturverfahren"],
+    ["Kryptologie und Netzwerke","Wiederholung"],
+    ["Kryptologie und Netzwerke","Test"],
+    ["Programmieren 2","Datenstrukturen, Listen, MicroBit"],
+    ["Programmieren 2","Robotik"],
+    ["Programmieren 2","Robotik"],
+    ["Programmieren 2","Robotik"],
+    ["Programmieren 2","Wettbewerb: Robotik", "test"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt: Abschluss und Abgabe","🚀🚦🧨🪚⚙️🌡🤖"],
+    ["Projekt Austauschen, Abschluss",""],
+    ["Abschluss Informatik",""]
+]
 
-const SCHEDULE = SCHEDULE_EF_HS2;
+const SCHEDULE = SCHEDULE_GYM2_26_FS;
 // const SCHEDULE = prepareHK(SCHEDULE_GYM1_PRAKTIKUM, ['B', 'A']);
 
-['24ef'].forEach((klasse) =>{
+['26e', '26P'].forEach((klasse) =>{
     const cells = [];
     let subjectNr = 0
     const klass = klasse.split('-')[0];
     const colSize = SCHEDULE[0].length + 1;
-    Array(34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 1, 2, 3, 4, 5, 6, 7).forEach((weekNr) => {
-        const date = moment().year(YEAR + (weekNr < 30 ? 1 : 0)).week(weekNr).day(DAYS[CLASS_DAY[klasse]]).format('DD.MM.YYYY');
+    Array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27).forEach((weekNr) => {
+        const date = moment().year(YEAR + (weekNr < 30 ? 0 : 0)).week(weekNr).day(DAYS[CLASS_DAY[klasse]]).format('DD.MM.YYYY');
         if (EVENTS[date]) {
-            cells.push({ cells: [date, EVENTS[date].desc, ''], type: EVENTS[date].type });
+            cells.push({ cells: [date, EVENTS[date].desc, EVENTS[date].details || ''], type: EVENTS[date].type });
         } else if (EVENTS[weekNr]) {
-            cells.push({ cells: [date, EVENTS[weekNr].desc, ''], type: EVENTS[weekNr].type });
+            cells.push({ cells: [date, EVENTS[weekNr].desc, EVENTS[weekNr].details || ''], type: EVENTS[weekNr].type });
         } else if (CLASS_EVENTS[klass][date]) {
-            cells.push({ cells: [date, CLASS_EVENTS[klass][date].desc, ''], type: CLASS_EVENTS[klass][date].type });
+            cells.push({ cells: [date, CLASS_EVENTS[klass][date].desc, CLASS_EVENTS[klass][date].details || ''], type: CLASS_EVENTS[klass][date].type });
         } else if (CLASS_EVENTS[klass][weekNr]) {
-            cells.push({ cells: [CLASS_EVENTS[klass][weekNr].date, CLASS_EVENTS[klass][weekNr].desc, ''], type: CLASS_EVENTS[klass][weekNr].type });
+            cells.push({ cells: [CLASS_EVENTS[klass][weekNr].date, CLASS_EVENTS[klass][weekNr].desc, CLASS_EVENTS[klass][weekNr].details || ''], type: CLASS_EVENTS[klass][weekNr].type });
         } else if (SCHEDULE[subjectNr]) {
-            cells.push({ cells: [date, ...SCHEDULE[subjectNr]], type: SCHEDULE[subjectNr][1].toLowerCase().includes('test') ? 'test' : undefined});
+            const isTest = SCHEDULE[subjectNr][1].toLowerCase().includes('test') || SCHEDULE[subjectNr][2] === 'test';
+            cells.push({ cells: [date, ...SCHEDULE[subjectNr].slice(0, 2)], type: isTest ? 'test' : undefined});
             subjectNr += 1;
         }
         if (SCHOOL_EVENTS[weekNr]) {
-            cells.push({ cells: [SCHOOL_EVENTS[weekNr].date, SCHOOL_EVENTS[weekNr].desc, ''], type: SCHOOL_EVENTS[weekNr].type});
+            if (Array.isArray(SCHOOL_EVENTS[weekNr])) {
+                SCHOOL_EVENTS[weekNr].forEach((event) => {
+                    cells.push({ cells: [event.date, event.desc, event.details || ''], type: event.type});
+                })
+            } else {
+                cells.push({ cells: [SCHOOL_EVENTS[weekNr].date, SCHOOL_EVENTS[weekNr].desc, SCHOOL_EVENTS[weekNr].details || ''], type: SCHOOL_EVENTS[weekNr].type});
+            }
         }
     })
     cells.forEach((row, idx) => {

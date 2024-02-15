@@ -89,57 +89,5 @@
     {
         "cells": ["04.02.2024","Semesterende",""],
         "type": "event"
-    },
-    {
-        "cells": ["07.02.2024","Kryptologie","Digitale Signaturen"]
-    },
-    {
-        "cells": ["05.02.2024","Start Semester 2",""],
-        "type": "event"
-    },
-    {
-        "cells": ["14.02.2024","Sportwoche",""],
-        "type": "holiday"
-    },
-    {
-        "cells": ["21.02.2024","Kryptologie","Anwendungen, Kryptologie im Alltag"]
-    },
-    {
-        "cells": ["28.02.2024","Netzwerke & Kryptologie","Onion Routing, Darkweb"]
-    },
-    {
-        "cells": ["06.03.2024","Netzwerke & Kryptologie","Onion Routing, Darkweb"],
-        "type": "test"
-    },
-    {
-        "cells": ["13.03.2024","Programmieren 2","Datenstrukturen und Listen"]
-    },
-    {
-        "cells": ["20.03.2024","Programmieren 2","Algorithmen und Sortieren"]
-    },
-    {
-        "cells": ["27.03.2024","Programmieren 2","Robotik"]
-    },
-    {
-        "cells": ["03.04.2024","Programmieren 2","Robotik"]
-    },
-    {
-        "cells": ["10.04.2024","Programmieren 2","Robotik"]
-    },
-    {
-        "cells": ["17.04.2024","Programmieren 2","Test Abgabe Robotik-Projekt"],
-        "type": "test"
-    },
-    {
-        "cells": ["24.04.2024","Sonderwoche",""],
-        "type": "holiday"
-    },
-    {
-        "cells": ["01.05.2024","Frühlingsferien",""],
-        "type": "holiday"
-    },
-    {
-        "cells": ["08.05.2024","Frühlingsferien",""],
-        "type": "holiday"
     }
 ]

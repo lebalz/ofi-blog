@@ -2,21 +2,22 @@
 
 html[data-theme="dark"] {
   table.ofi-table {
-    > tbody > tr {
-      &.holiday {
-        background: #3a537a;
-      }
-      &.event {
-        --table-background-color: var(--ifm-color-success-lightest);
-        color:black;
-      }
-  
-      &.test {
-        --table-background-color: var(--ifm-color-warning-lightest);
-        color:black;
+    > tbody {
+      > tr {
+        &.holiday {
+          background: #3a537a;
+        }
+        &.event {
+          --table-background-color: var(--ifm-color-success-lightest);
+          color:black;
+        }
+    
+        &.test {
+          --table-background-color: var(--ifm-color-warning-lightest);
+          color:black;
+        }
       }
     }
-
     &.selectable > tbody > tr:hover {
       &.holiday {
           background: #6881aa;
@@ -50,6 +51,11 @@ table.ofi-table {
     }
     &.currentWeek {
       border-left: 8px solid var(--ifm-color-warning-lighter);
+    }
+    .cell {
+      svg {
+        transform: translateY(20%);
+      }
     }
   }
 

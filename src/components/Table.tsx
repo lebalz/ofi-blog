@@ -1,4 +1,5 @@
-import React from 'react'; import styles from './Table.module.scss';
+import React from 'react'; 
+import styles from './Table.module.scss';
 import clsx from 'clsx';
 import { WEEK_DAYS } from '../helpers/time';
 import * as MDI from '@mdi/js';
@@ -44,7 +45,7 @@ export class Cell extends React.Component<CellProps> {
             value = toDateString(date);
         }
         return (
-            <td align={align}>{value}{icon ? ' ' : ''}{icon}</td>
+            <td align={align} className={clsx(styles.cell)}>{value}{icon ? ' ' : ''}{icon}</td>
         )
     }
 }
@@ -84,7 +85,7 @@ export class Row extends React.Component<RowProps> {
         if (this.props.icon) {
             return <Icon path={MDI[_.camelCase(this.props.icon)] || MDI.mdiProgressQuestion} size={0.5} />
         } else if (this.props.type) {
-            return <Icon path={MDI[ICON_MAPPING[this.props.type]]} size={0.8} />
+            return <Icon path={ICON_MAPPING[this.props.type]} size={0.5} />
         }
     }
     render() {
