@@ -50,7 +50,7 @@ const DEFAULT_RESULT = { calculations: [] };
 
 const tickFormatter = (tick: number) => {
     if (tick < 1000) {
-        return tick;
+        return `${tick}`;
     }
     const pot10 = `${tick}`.length - 1;
     const num = `${tick}`.replace(/0*$/, '');
@@ -174,18 +174,6 @@ const PrimfactorizationTiming = () => {
                         onClick={() => setDigits(7)}
                     >
                         7
-                    </button>
-                    <button
-                        className={clsx(
-                            'button',
-                            'button--sm',
-                            'button--outline',
-                            'button--primary',
-                            digits === 8 && 'button--active'
-                        )}
-                        onClick={() => setDigits(8)}
-                    >
-                        8
                     </button>
                 </div>
                 Stellen
