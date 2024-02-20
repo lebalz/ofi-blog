@@ -274,7 +274,7 @@ for buchstabe in 'hallo':
     print(alphabet.find(buchstabe), end=',')
 ```
 
-Mit der Python-Funktion `bin` machen wir daraus Binärzahlen in form eines `strings`, allerdings brauchen wir die zwei ersten Zeichen `0b`, die Python vor jede Binärzahl schreibt nicht und zwacken diese ab. Ausserdem füllen wir die Zahl mit `zfill` immer mit Nullen auf 5 Stellen auf. Warum 5 Stellen? Weil man für 26 Buchstaben mindestens 5 Bit (= 32 Möglichkeiten) braucht:
+Mit der Python-Funktion `bin` machen wir daraus Binärzahlen in Form eines `strings`, allerdings brauchen wir die zwei ersten Zeichen `0b`, die Python vor jede Binärzahl schreibt, nicht und zwacken diese ab. Ausserdem füllen wir die Binärzahl mit `zfill` (für englisch "Zero Fill") immer mit Nullen auf 5 Stellen auf. Warum 5 Stellen? Weil man für 26 Buchstaben mindestens 5 Bit (= 32 Möglichkeiten) braucht:
 
 ```py live_py slim
 print(bin(7)) # das 0b brauchen wir nicht
