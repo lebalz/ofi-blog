@@ -177,9 +177,6 @@
       "from": "docs/Kryptologie/",
       "to": "versioned_docs/version-26e/11-Kryptologie",
       "ignore": [
-        "04-Asymmetrisch/04-asymm-encryption.md",
-        "04-Asymmetrisch/05-kombiniert.md",
-        "04-Asymmetrisch/08-rsa.md",
         "05-Hashfunktionen",
         "06-Digitale-Signaturen",
         "07-Alltag",
@@ -364,9 +361,6 @@
       "from": "docs/Kryptologie/",
       "to": "versioned_docs/version-26P/11-Kryptologie",
       "ignore": [
-        "04-Asymmetrisch/04-asymm-encryption.md",
-        "04-Asymmetrisch/05-kombiniert.md",
-        "04-Asymmetrisch/08-rsa.md",
         "05-Hashfunktionen",
         "06-Digitale-Signaturen",
         "07-Alltag",
