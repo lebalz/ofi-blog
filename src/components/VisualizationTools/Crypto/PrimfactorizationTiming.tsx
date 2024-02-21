@@ -175,6 +175,18 @@ const PrimfactorizationTiming = () => {
                     >
                         7
                     </button>
+                    <button
+                        className={clsx(
+                            'button',
+                            'button--sm',
+                            'button--outline',
+                            'button--primary',
+                            digits === 8 && 'button--active'
+                        )}
+                        onClick={() => setDigits(8)}
+                    >
+                        8
+                    </button>
                 </div>
                 Stellen
                 <Stage
