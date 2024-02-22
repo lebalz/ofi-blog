@@ -155,7 +155,9 @@ Würzburg <--> München: 229 km
 ```
 
 <Answer type="text" webKey="3570f1df-aed9-4280-a4d9-44238d05e2c1" />
-
+<Solution webKey="722c5c63-43ec-4a42-b997-d216e38f395b">
+Der kürzeste Weg von München nach Frankfurt ist über Nürnberg und Würzburg.
+</Solution>
 :::
 
 ## Vergleich der Algorithmen

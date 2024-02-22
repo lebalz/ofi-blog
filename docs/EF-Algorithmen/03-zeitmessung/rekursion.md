@@ -49,6 +49,116 @@ Dateinamen
 :::
 
 
+:::aufgabe[Prüfsummenerzeugung]
+<Answer type="state" webKey="bde05e79-056f-4264-a2ab-5ffa8972f8f2" />
+
+```py
+def check_sum(ord_list):
+    if len(ord_list) <= 0:
+        return 0
+    elif len(ord_list) < 2:
+        return ord_list[0]
+    return (ord_list[0] + ord_list[1]) * len(ord_list) + check_sum(ord_list[2:])
+
+print(check_sum([4, 2, 3, 3, 12]))
+```
+
+Was macht der obige Code? Führen Sie den Code für die gegebene Liste **von Hand** aus - welches Ergebnis kommt raus?
+
+<Answer type="text" webKey="ce188e5c-3757-4849-bb4d-8db4dda0116e" />
+
+
+Analysieren Sie das Laufzeitverhalten des Codes. Wie viele Rekursionsaufrufe braucht es bei einer Liste mit `n` Elementen?
+
+<Answer type="text" webKey="4f2f30fb-45f8-43f7-9381-fba24bc99869" />
+
+In welcher Komplexitätsklasse liegt der Code?
+
+<Answer type="text" webKey="b1af631f-8fdf-4e89-af91-1a97b1b8703a" />
+
+<Solution webKey="b1af631f-8fdf-4e89-af91-1a97b1b8703a">
+
+a. 60
+
+```py live_py slim
+def check_sum(ord_list):
+    if len(ord_list) == 0:
+        return 0
+    elif len(ord_list) < 2:
+        return ord_list[0]
+    return (ord_list[0] + ord_list[1]) * len(ord_list) + check_sum(ord_list[2:])
+
+print(check_sum([4, 2, 3, 3, 12]))
+```
+
+b. Bei einer Liste mit $n$ Elementen braucht es maximal $\frac{n}{2} + 1$ Rekursionsaufrufe.
+
+c. Der Code liegt in $\mathcal{O}(n)$.
+
+</Solution>
+:::
+
+:::aufgabe[Prüfsummenerzeugung 2]
+<Answer type="state" webKey="94f25dc6-7dec-472f-8d52-f48a835e238d" />
+
+```py
+def check_sum2(liste):
+    cnt[0] += 1
+    if len(liste) == 0:
+        return 0
+    elif len(liste) == 1:
+        return liste[0] * liste[0]
+    idx = len(liste) // 2   # durch 2 teilen und das Ergebnis abrunden
+    if liste[0] < liste[idx]:
+        return check_sum2(liste[:idx]) * liste[idx]
+    else:
+        return check_sum2(liste[idx:]) * liste[0]
+
+print(check_sum2([1,4,3,6,2]))
+print(check_sum2([1,2,3,4,5,6,7,8,9]))
+print(check_sum2([9,8,7,6,5,4,3,2,1]))
+```
+
+Was macht der obige Code? Führen Sie den Code für die gegebenen Listen **von Hand** aus - welches Ergebnis kommt raus?
+
+<Answer type="text" webKey="f17c60a8-b3ce-4495-8dff-fa0c70f46a86" />
+
+Analysieren Sie das Laufzeitverhalten des Codes. Wie viele Rekursionsaufrufe braucht es bei einer Liste mit `n` Elementen? **Tipp**: Wie verändert sich die Listengrösse bei jedem Rekursionsaufruf?
+
+<Answer type="text" webKey="994d8fad-8db0-49e5-a0e8-7cc42bff760e" />
+
+In welcher Komplexitätsklasse liegt der Code?
+
+<Answer type="text" webKey="f3049075-23a5-4b5d-a774-bfaf0b4712ff" />
+
+<Solution webKey="b1af631f-8fdf-4e89-af91-1a97b1b8703a">
+
+a. 12, 30, 270
+
+```py live_py slim
+def check_sum2(liste):
+    cnt[0] += 1
+    if len(liste) == 0:
+        return 0
+    elif len(liste) == 1:
+        return liste[0] * liste[0]
+    idx = len(liste) // 2
+    if liste[0] < liste[idx]:
+        return check_sum2(liste[:idx]) * liste[idx]
+    else:
+        return check_sum2(liste[idx:]) * liste[0]
+
+print(check_sum2([1,4,3,6,2]))
+print(check_sum2([1,2,3,4,5,6,7,8,9]))
+print(check_sum2([9,8,7,6,5,4,3,2,1]))
+```
+
+b. Bei einer Liste mit $n$ Elementen braucht es maximal $\lceil log_{2}(n) \rceil + 1$ Rekursionsaufrufe ($\lceil ... \rceil$ ist mathematisch für "Aufrunden").
+
+c. Der Code liegt in $\mathcal{O}(log(n))$.
+</Solution>
+:::
+
 ## ⭐ Schizophrene Zahlen
 
 
