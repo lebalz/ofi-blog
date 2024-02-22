@@ -13,10 +13,13 @@
 01-Programmieren/03-Turtle-Repetition/index.md
 01-Programmieren/04-Python/*
 01-Programmieren/05-Software-Engineering/*
+!01-Programmieren/05-Software-Engineering/_category_.json
 01-Programmieren/02-Infrastruktur/20-Docusaurus/*
 02-Netzwerke/*
+!02-Netzwerke/_category_.json
 10-IoT-Workshop/*
 !10-IoT-Workshop/04-protokolle/
+!10-IoT-Workshop/_category_.json
 03-Datenbanken/*
 !03-Datenbanken/bin/
 !03-Datenbanken/imdb-db/
@@ -24,5 +27,8 @@
 04-Robotik/*
 !04-Robotik/asyncio/
 !04-Robotik/EV3/Pendelbus-Blink/
+!04-Robotik/_category_.json
 10-Netzwerke/005-Datenschutz/*
 05-Algorithmik/*
+!05-Algorithmik/_category_.json
+05-Algorithmik/_category_.json

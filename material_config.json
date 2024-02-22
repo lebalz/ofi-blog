@@ -427,7 +427,9 @@
     {
       "from": "docs/EF-Software-Engineering/",
       "to": "versioned_docs/version-24ef/01-Programmieren/05-Software-Engineering",
-      "ignore": []
+      "ignore": [
+        "_category_.json"
+      ]
     },
     {
       "from": "src/pages/docusaurus/v2.2.0/",
@@ -435,19 +437,22 @@
       "ignore": []
     },
     {
-      "from": "docs/Netzwerke-ef/",
+      "from": "docs/EF-Netzwerke/",
       "to": "versioned_docs/version-24ef/02-Netzwerke",
-      "ignore": []
+      "ignore": [
+        "_category_.json"
+      ]
     },
     {
       "from": "docs/EF-IOT-Workshop/",
       "to": "versioned_docs/version-24ef/10-IoT-Workshop",
       "ignore": [
-        "04-protokolle"
+        "04-protokolle",
+        "_category_.json"
       ]
     },
     {
-      "from": "docs/Datenbanken-ef/",
+      "from": "docs/EF-Datenbanken/",
       "to": "versioned_docs/version-24ef/03-Datenbanken",
       "ignore": [
         "bin",
@@ -460,7 +465,8 @@
       "to": "versioned_docs/version-24ef/04-Robotik",
       "ignore": [
         "asyncio",
-        "EV3/Pendelbus-Blink"
+        "EV3/Pendelbus-Blink",
+        "_category_.json"
       ]
     },
     {
@@ -471,7 +477,9 @@
     {
       "from": "docs/EF-Algorithmen/",
       "to": "versioned_docs/version-24ef/05-Algorithmik",
-      "ignore": [],
+      "ignore": [
+        "_category_.json"
+      ],
       "open": true
     }
   ]
