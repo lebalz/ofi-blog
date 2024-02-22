@@ -1,0 +1,82 @@
+[
+    {
+        "cells": ["09.02.2024","Algorithmik","A-Stern"]
+    },
+    {
+        "cells": ["16.02.2024","Sportwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["23.02.2024","Algorithmik","Abschluss, Repetition"]
+    },
+    {
+        "cells": ["01.03.2024","Algorithmik","Test"],
+        "type": "test"
+    },
+    {
+        "cells": ["08.03.2024","Rechnerarchitektur",""]
+    },
+    {
+        "cells": ["15.03.2024","Rechnerarchitektur",""]
+    },
+    {
+        "cells": ["22.03.2024","Rechnerarchitektur",""]
+    },
+    {
+        "cells": ["29.03.2024","Sonderwoche",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["05.04.2024","Frühlingsferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["12.04.2024","Frühlingsferien",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["19.04.2024","Rechnerarchitektur",""]
+    },
+    {
+        "cells": ["26.04.2024","Rechnerarchitektur","Prüfung"],
+        "type": "test"
+    },
+    {
+        "cells": ["03.05.2024","Repetition",""]
+    },
+    {
+        "cells": ["8.05.2024","Notenschluss GYM 4",""],
+        "type": "event"
+    },
+    {
+        "cells": ["10.05.2024","Repetition",""]
+    },
+    {
+        "cells": ["09.05.2024","Auffahrt",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["10.05.2024","Auffahrt",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["17.05.2024","Start Maturprüfungen","Schriftlich"],
+        "type": "event"
+    },
+    {
+        "cells": ["24.05.2024","Schriftliche Maturprüfung EF","5. Prüfungsfach/EF Informatik"],
+        "type": "test"
+    },
+    {
+        "cells": ["20.05.2024","Pfingstmontag",""],
+        "type": "holiday"
+    },
+    {
+        "cells": ["07.06.2024","Start Maturprüfungen","Mündlich"],
+        "type": "event"
+    },
+    {
+        "cells": ["13.06.2024","Mündliche Maturprüfung EF","5. Prüfungsfach/EF Informatik"],
+        "type": "test"
+    }
+]

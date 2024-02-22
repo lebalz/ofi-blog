@@ -91,21 +91,10 @@
         "type": "event"
     },
     {
-        "cells": ["02.02.2024","Algorithmik","NP-Probleme: Travelling Salesman-Problem, Dijkstra"]
+        "cells": ["02.02.2024","Algorithmik","NP-Probleme: Routenplanung, Dijkstra"]
     },
     {
-        "cells": ["04.02.2024","Semesterende","NP-Probleme"],
+        "cells": ["04.02.2024","Semesterende",""],
         "type": "event"
-    },
-    {
-        "cells": ["05.02.2024","Start Semester 2",""],
-        "type": "event"
-    },
-    {
-        "cells": ["09.02.2024","Algorithmik",""]
-    },
-    {
-        "cells": ["16.02.2024","Sportwoche",""],
-        "type": "holiday"
     }
 ]

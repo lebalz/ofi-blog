@@ -25,6 +25,10 @@ const EVENTS = {
 }
 const CLASS_EVENTS = {
     ['24ef']: {
+        [20]: { desc: 'Start Maturprüfungen', details: 'Schriftlich', type: 'test', date: '17.05.2024' },
+        [21]: { desc: 'Schriftliche Maturprüfung', details: '5. Prüfungsfach/EF Informatik', type: 'test', date: '24.05.2024' },
+        [23]: { desc: 'Mündliche Maturprüfung', details: '5. Prüfungsfach/EF Informatik', type: 'test', date: '13.06.2024' },
+
     },
     ['26P']: {
         [6]: { desc: 'Concours: Math Sans Frontières', type: 'event', date: '07.02.2024' },
@@ -47,10 +51,13 @@ const CLASS_EVENTS = {
 
 SCHOOL_EVENTS = {
     [19]: [
+        { desc: 'Notenschluss GYM 4', type: 'event', date: '8.05.2024' },
         { desc: 'Auffahrt', type: 'holiday', date: '09.05.2024' },
         { desc: 'Auffahrt', type: 'holiday', date: '10.05.2024' }
     ],
-    [21]: { desc: 'Pfingstmontag', type: 'holiday', date: '20.05.2024' },
+    [21]: [
+        { desc: 'Pfingstmontag', type: 'holiday', date: '20.05.2024' }
+    ],
     [26]: { desc: 'Notenschluss', type: 'event', date: '27.06.2024' },
     [25]: { desc: 'Abgabe Projekt', details: 'Bis 22:00 Uhr', type: 'test', date: '19.06.2024' },
 }
@@ -126,6 +133,19 @@ const SCHEDULE_EF_FS2 = [
     ["Algorithmik", "N+1 Problem"],
     ["Algorithmik", "Wiederholung"],
     ["Algorithmik", "Test"],
+]
+
+const SCHEDULE_EF_FS4 = [
+    ["Algorithmik", "A-Stern"],
+    ["Algorithmik", "Abschluss, Repetition"],
+    ["Algorithmik", "Test"],
+    ["Rechnen mit Strom", "Logische Bausteine"],
+    ["Rechnen mit Strom", ""],
+    ["Rechnen mit Strom", ""],
+    ["Rechnen mit Strom", ""],
+    ["Rechnen mit Strom", ""],
+    ["Rechnen mit Strom", "Test"],
+    ["Wiederholung & Fragestunde", ""]
 ]
 
 const SCHEDULE_GYM1_PRAKTIKUM = [
@@ -249,15 +269,15 @@ const SCHEDULE_GYM2_26_FS = [
     ["Abschluss Informatik",""]
 ]
 
-const SCHEDULE = SCHEDULE_GYM2_26_FS;
+const SCHEDULE = SCHEDULE_EF_FS4;
 // const SCHEDULE = prepareHK(SCHEDULE_GYM1_PRAKTIKUM, ['B', 'A']);
 
-['26e', '26P'].forEach((klasse) =>{
+['24ef'].forEach((klasse) =>{
     const cells = [];
     let subjectNr = 0
     const klass = klasse.split('-')[0];
     const colSize = SCHEDULE[0].length + 1;
-    Array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27).forEach((weekNr) => {
+    Array(6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27).forEach((weekNr) => {
         const date = moment().year(YEAR + (weekNr < 30 ? 0 : 0)).week(weekNr).day(DAYS[CLASS_DAY[klasse]]).format('DD.MM.YYYY');
         if (EVENTS[date]) {
             cells.push({ cells: [date, EVENTS[date].desc, EVENTS[date].details || ''], type: EVENTS[date].type });

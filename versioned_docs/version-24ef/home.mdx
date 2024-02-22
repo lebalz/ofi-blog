@@ -10,6 +10,7 @@ import {SortTimeTableByDate} from '@site/src/helpers/time';
 import hs2022 from "./24ef_HS2022.json"
 import fs2023 from "./24ef_FS2023.json"
 import hs2023 from "./24ef_HS2023.json"
+import fs2024 from "./24ef_FS2024.json"
 import Grid from '@site/src/components/IFrame/Grid';
 
 # EF Informatik
@@ -305,8 +306,15 @@ Beispiel-Repository von [@bh0fer](https://github.com/bh0fer): 👉 https://githu
 ::::
 
 
+<GTabs getLabel={(idx) => ['Aktuell', 'HS23', 'FS23', 'HS22'][idx]} >
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={fs2024}
+  order={SortTimeTableByDate()}
+/>
 
-<GTabs getLabel={(idx) => ['Aktuell', 'FS23', 'HS22'][idx]} >
 <Table
   header={["Datum", "Thema", "Inhalt"]}
   compact
