@@ -22,9 +22,9 @@ Verschiedene Konfigurationen der Ausgabe.
 
 :::cards
 __0 x 0__
-```
- ::::
- ::::
+```txt
+ ::::
+ ::::
 ```
 ::br
 __1 x 1__
@@ -143,8 +143,8 @@ Eine Benutzerinteraktion mit Validierung der Eingaben ist nicht gefragt.
 __0 x 0__
 
 ```
- ::::
- ::::
+ ::::
+ ::::
 ```
 ::br
 __1 x 1__
