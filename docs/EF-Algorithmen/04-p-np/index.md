@@ -67,3 +67,22 @@ Finden Sie eine Belegung der boolean Variablen `A` - `E`, womit `F` `True` ergib
 SAT gehört zur Komplexitätsklasse NP. Jedes Problem aus NP kann in polynomieller Zeit auf SAT zurückgeführt werden (Polynomialzeitreduktion).
 
 Eine deterministische Turingmaschine (im allgemeinen also ein sequenziell abgearbeitetes Programm, das endet) kann SAT in exponentieller Zeit entscheiden, zum Beispiel durch das Aufstellen einer Wahrheitstabelle. Es ist kein effizienter Algorithmus für SAT bekannt und es wird allgemein vermutet, dass ein solcher Polynomialzeitalgorithmus nicht existiert. Die Frage, ob SAT in polynomieller Zeit gelöst werden kann, ist äquivalent zum P-NP-Problem.
+
+### TSP - Travelling Salesman Problem
+Das **Travelling Salesman Problem** (TSP) ist ein klassisches Problem der Kombinatorik und der theoretischen Informatik. Es handelt sich um die Frage, wie der kürzeste **Rundweg** durch eine Menge von Städten gefunden werden kann, wenn die Entfernungen zwischen den Städten bekannt sind. Das Problem ist NP-vollständig und es ist bis Dato kein effizienter Algorithmus bekannt, der das Problem in polynomieller Zeit löst.
+
+::youtube[https://www.youtube-nocookie.com/embed/1pmBjIZ20pE?si=Y2WDt2nH19BbvVhy]
+
+:::aufgabe[TSP]
+Finden Sie den kürzesten Rundweg durch die folgenden Städte:
+
+![--width=350px](./images/tsp.png)
+
+<Answer type="text" webKey="800be9cf-29aa-4d68-9437-d0455453df3d" />
+<Solution webKey="199e47f7-0151-45e2-8b97-9b2e11991857">
+
+1-2-4-3-1
+
+mit den Gesamtkosten von 80.
+</Solution>
+:::
