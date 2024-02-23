@@ -20,7 +20,7 @@ Beim Thema Blockchiffren wollen wir aber ins technische eintauchen und uns anhan
 
 ## Blocklänge
 Klartext
-: `GEHEIMNACHRICHT` 
+: `GEHEIMESTREFFEN` 
 Key
 : `PENTA`
 
@@ -42,7 +42,7 @@ Im folgenden Beispiel wird der oben bereits erwähnte Klartext mit dem Schlüsse
 
 | ⠀    | Text    | Pentacode Block 2               | Geheimtext |
 | :--- | :------ | :------------------------------ | :--------- |
-| *p*    | `MNACH` | `01101 00101 10011 10100 10010` |            |
+| *p*    | `MESTR` | `01101 00101 10011 10100 10010` |            |
 | *k*    | `PENTA` | `10000 00101 01110 10100 00001` |            |
 | *c*    |         | `11101 00000 11101 00000 10011` | `. . S`    |
 
@@ -51,7 +51,7 @@ Im folgenden Beispiel wird der oben bereits erwähnte Klartext mit dem Schlüsse
 
 | ⠀    | Text    | Pentacode Block 3               | Geheimtext |
 | :--- | :------ | :------------------------------ | :--------- |
-| *p*    | `RICHT` | `00101 00110 00110 00101 01110` |            |
+| *p*    | `EFFEN` | `00101 00110 00110 00101 01110` |            |
 | *k*    | `PENTA` | `10000 00101 01110 10100 00001` |            |
 | *c*    |         | `10101 00011 01000 10001 01111` | `UCHQO`    |
 
