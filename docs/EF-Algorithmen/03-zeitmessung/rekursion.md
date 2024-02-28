@@ -137,7 +137,6 @@ a. 12, 30, 270
 
 ```py live_py slim
 def check_sum2(liste):
-    cnt[0] += 1
     if len(liste) == 0:
         return 0
     elif len(liste) == 1:
