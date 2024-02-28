@@ -13,13 +13,7 @@ Hannah Fry zeigt in ihrem Buch [«Hello World»](https://www.chbeck.de/buehnen/h
 
 ![--width=300px](images/book-cover_hannah-fry_hello-world.jpeg)
 
-:btn[[:mdi[download-box] Herunterladen (Deutsch) \*](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ef6zr_CP9kdNlGNj5ABP_DUBMkbxk7ptsspnIhkqVhNgtg?e=xIIKE2)]{.success}
-
-:btn[[:mdi[download-box] Herunterladen (Englisch) \*](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/ERn8JlEzHeZGrIey2zUv9xABWwCwsOH27OfxzdSpzldj3Q?e=d03G1L)]{.success}
-
 In der nächsten Zeit setzen Sie sich anhand des Buchs von Hannah Fry gruppenweise mit diesem Thema auseinander und halten einen Vortrag dazu.
-
-\* *Die Buchausschnitte sind urheberrechtlich geschützt und dürfen ausschliesslich für den schulischen Gebrauch verwendet werden. Die Weitergabe ist verboten.*
 
 ## Ablauf
 ### 1. Themenwahl und Gruppenbildung
