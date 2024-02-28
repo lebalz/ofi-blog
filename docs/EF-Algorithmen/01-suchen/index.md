@@ -181,3 +181,7 @@ Am Schluss sind in den Variablen `plot_x`, `plot_y_linear` und `plot_y_binaer` d
 Für eine Liste bis Länge 50 führt dies zu folgendem Output:
 
 ![«Messung Experiment»](./images/komplexitaet-experiment.png)
+
+## Präsentation
+
+<iframe src="https://erzbe-my.sharepoint.com/personal/balthasar_hofer_gbsl_ch/_layouts/15/Doc.aspx?sourcedoc={b3afbc01-7966-43bd-8054-e1f8bcf25b62}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="100%" height="450px" frameborder="0">Dies ist ein eingebettetes <a target="_blank" href="https://office.com">Microsoft Office</a>-Dokument, unterstützt von <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
