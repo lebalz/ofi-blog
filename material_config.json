@@ -477,6 +477,14 @@
         "_category_.json"
       ],
       "open": true
+    },
+    {
+      "from": "docs/EF-Rechnerarchitektur/",
+      "to": "versioned_docs/version-24ef/06-Rechnerarchitektur",
+      "ignore": [
+        "_category_.json"
+      ],
+      "open": true
     }
   ]
 }
