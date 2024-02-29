@@ -15,7 +15,7 @@ Gewichtung
 
 :::info
 - Sie kennen die behandelten Algorithmen zum Suchen (lineare Suche und binäre Suche) und Sortieren (Selection-Sort, Insertion-Sort und Merge-Sort) von Daten und können diese an exemplarischen Beispielen von Hand durchführen.
-- Sie was ein Suchalgorithmus ist weshalb diese so wichtig sind
+- Sie wissen was ein Suchalgorithmus ist weshalb diese so wichtig sind
 - Sie erstellen Pseudocode (Python-Ähnlicher Code) für die behandelten Algorithmen.
 - Sie bestimmen die Laufzeitverhalten von Algorithmen anhand deren Funktionsweise (Python-Code, Pseudocode oder Beschreibung der Funktionsweise) und beschreiben die Komplexistätsklasse mit der $O(n)$-Notation.
 - Sie kennen die Begriffe "Best-Case", "Worst-Case" und "Average-Case" und können mit diesen argumentieren.
