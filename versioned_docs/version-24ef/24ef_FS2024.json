@@ -64,19 +64,15 @@
         "type": "event"
     },
     {
-        "cells": ["24.05.2024","Schriftliche Maturprüfung EF","5. Prüfungsfach/EF Informatik"],
-        "type": "test"
-    },
-    {
         "cells": ["20.05.2024","Pfingstmontag",""],
         "type": "holiday"
     },
     {
-        "cells": ["07.06.2024","Start Maturprüfungen","Mündlich"],
-        "type": "event"
+        "cells": ["24.05.2024","Schriftliche Maturprüfung EF","5. Prüfungsfach/EF Informatik"],
+        "type": "test"
     },
     {
-        "cells": ["13.06.2024","Mündliche Maturprüfung EF","5. Prüfungsfach/EF Informatik"],
+        "cells": ["07.06.2024","Mündliche Maturprüfung EF","5. Prüfungsfach/EF Informatik"],
         "type": "test"
     }
 ]
