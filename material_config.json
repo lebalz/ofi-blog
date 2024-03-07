@@ -475,8 +475,7 @@
       "to": "versioned_docs/version-24ef/05-Algorithmik",
       "ignore": [
         "_category_.json"
-      ],
-      "open": true
+      ]
     },
     {
       "from": "docs/EF-Rechnerarchitektur/",

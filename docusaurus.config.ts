@@ -256,7 +256,7 @@ const config: Config = {
         prism: {
             theme: lightCodeTheme,
             darkTheme: darkCodeTheme,
-            additionalLanguages: ['bash', 'powershell', 'css', 'java', 'asm6502', 'ruby', 'csharp']
+            additionalLanguages: ['bash', 'powershell', 'css', 'java', 'armasm', 'ruby', 'csharp']
         },
         algolia: OFFLINE_MODE ? undefined : {
             appId: process.env.ALGOLIA_APP_ID || "no-id",
