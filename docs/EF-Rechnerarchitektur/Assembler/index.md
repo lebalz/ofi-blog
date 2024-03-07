@@ -108,9 +108,9 @@ Im Speicher stehen jetzt folgende Zahlen:
 
 ```armasm
 00    901    (INP; Eingabe holen und in Akk laden)
-01    104    (ADD 04; addiere den Inhalt von Speicherzelle 004 zum Akk)
+01    104    (ADD 04; addiere den Inhalt von Speicherzelle 04 zum Akk)
 02    902    (OUT; gib Akk aus)
-03     000    (HLT; Programm beenden)
+03    000    (HLT; Programm beenden)
 04    005    (Zahl 5; Datenzelle)
 ```
 
