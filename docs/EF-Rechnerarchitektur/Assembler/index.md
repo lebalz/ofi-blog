@@ -166,7 +166,7 @@ one     DAT 1       ; Zahl 1
 
 :::aufgabe[Aufgabe II]
 1.    Schreiben Sie ein Programm, das eine Zahl holt und dann bis 1 herunterzählt  
-    ```asm live_py id=ad7b14c8-ba30-46ec-8f02-ff81d0f7e8cc title=toOne.asm
+    ```armasm live_py id=ad7b14c8-ba30-46ec-8f02-ff81d0f7e8cc title=toOne.asm
     ```
 
 <Solution webKey="9c944c95-4576-4761-aeca-23eea71bb3f4">
@@ -204,7 +204,7 @@ i   DAT    1    ; i initialized to 1
 </Solution>
 
 2.    Schreiben Sie ein Programm, das eine Zahl holt und dann bis 10 hochzählt  
-    ```asm live_py id=723e3e85-97ed-49a5-9738-68d38fe3b1a0 title=toTen.asm
+    ```armasm live_py id=723e3e85-97ed-49a5-9738-68d38fe3b1a0 title=toTen.asm
     ```
 
 <Solution webKey="9c944c95-4576-4761-aeca-23eea71bb3f4">
@@ -245,14 +245,14 @@ end  LDA    n       ; load number back to akk
      HLT            ; then terminate the program
 
 i    DAT    1     ; i initialized to 1
-max  DAT     5    ; max initialized to 5
+max  DAT    10    ; max initialized to 5
 n    DAT    0     ; n initialized to 0
 ```
 
 </Solution>
 
 3.    Zahlenraten. Der Computer merkt sich eine Zahl und die Benutzer\:in muss sie erraten. Der Computer sagt "zu hoch" = 100, "zu tief" = -100; "richtig" = 200
-    ```asm live_py id=f71c6420-c9b6-4133-b77d-8a2aa42340fa title=guess.asm
+    ```armasm live_py id=f71c6420-c9b6-4133-b77d-8a2aa42340fa title=guess.asm
     ```
 4.    Ergänzen Sie (3) um einen Zähler für die Anzahl Versuche.
 
@@ -320,7 +320,7 @@ Weitere Ideen:
 - Fibonacci-Zahlen 0,1,1,2,3,5,8...
 - Pascalsches Dreieck
 
-```asm live_py id=566e25f7-65df-4715-9ca2-bc5bc2687055 title=zusatz.asm
+```armasm live_py id=566e25f7-65df-4715-9ca2-bc5bc2687055 title=zusatz.asm
 ```
 :::
 

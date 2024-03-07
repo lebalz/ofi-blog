@@ -27,16 +27,23 @@ const StripComments = (props: Props) => {
     const [txt, setTxt] = React.useState('');
     const [stripped, setStripped] = React.useState('');
     const [copyState, setCopyState] = React.useState<'idle' | 'processing' | 'success' | 'error'>('idle');
+    const ref = React.useRef<HTMLTextAreaElement>(null);
 
     React.useEffect(() => {
         setTxt(props.text);
     }, [props.text]);
 
     React.useEffect(() => {
-        if (typeof txt ==='string') {
-            setStripped(txt.replace(/[;#].*\n?/g, '\n').trim());
+        if (typeof txt ==='string' && txt !== stripped) {
+            const strippedText = `${txt.replace(/\s*[;#].*\n?/g, '\n').replace(/^\s*\n/g, '').trimEnd()}\n`;
+            setStripped(strippedText);
+            setTxt(strippedText);
+            if (ref.current) {
+                const pos = Math.max(ref.current.selectionStart, ref.current.selectionEnd, 0);
+                setTimeout(() => ref.current.setSelectionRange(pos, pos), 0);
+            }
         }
-    }, [txt]);
+    }, [txt, ref]);
 
     React.useEffect(() => {
         if (copyState === 'success' || copyState === 'error') {
@@ -52,9 +59,13 @@ const StripComments = (props: Props) => {
                 <h4>Assembler-Code</h4>
                 <div className={styles.inputContainer}>
                     <textarea
+                        ref={ref}
                         className={clsx(styles.input)}
                         value={txt}
                         onChange={(e) => {
+                            if (e.target.value === stripped) {
+                                return;
+                            }
                             setTxt(e.target.value);
                             const pos = Math.max(e.target.selectionStart, e.target.selectionEnd);
                             setTimeout(() => e.target.setSelectionRange(pos, pos), 0);
