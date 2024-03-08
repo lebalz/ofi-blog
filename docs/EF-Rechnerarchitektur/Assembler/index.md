@@ -85,6 +85,7 @@ Der LMC kennt **11** verschiedene Instruktionen und hat einen Speicher von 100 Z
 | Gehe wenn >=0 (Branch if Positive) | `BRP`    | `8xx`  | Wenn der Akkumulator positiv ist spring als nächstes nach xx       |
 | Eingabe                            | `INP`    | `901`  | Hol vom Operateur einen Eingabe und schreib sie in den Akkumulator |
 | Ausgabe                            | `OUT`    | `902`  | Gib den Inhalt des Akkumulators aus                                |
+| Freier Speicherort (Data Location) | `DAT`    |        | Weist dem nächstmöglichen, freien Speicherplatz im RAM einen Name zu. Optional kann auch der Zahlenwert des zugewiesenen Speicherplatzes angegeben werden. |
 
 </div>
 
