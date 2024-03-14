@@ -15,7 +15,7 @@ Skizzieren Sie dazu auf ein Papier den Nachrichtenaustausch in Form eines **Sequ
 
 Machen Sie anschliessend eine Foto und laden Sie diese mit einer kurzen Beschreibung hier hoch.
 
-:::details[Alternativ: Digitales Sequenz und Zustandsdiagramm mit Mermaid]
+::::details[Alternativ: Digitales Sequenz und Zustandsdiagramm mit Mermaid]
 Mermaid ist eine simple Syntax, um unterschiedliche Diagramme zu erzeugen. Auf 👉 https://mermaid.live/ können die verschiedenen Diagramm-Typen (unter anderem Sequenz- und Zustandsdiagramme) live erzeugt werden. Der Code kann im Markdown verwendet werden und wird anschliessend sowohl auf Github wie auch auf der Webseite direkt als Diagramm angezeigt. Dazu muss der Diagramm-Code in einen `mermaid`-Codeblock eingefügt werden:
 
 :::cards{code=true}
@@ -38,7 +38,7 @@ sequenceDiagram
 ```
 :::
 
-:::
+::::
 
 <Answer type="text" webKey="5b6c0def-74de-4052-9f6f-0eb8f61f664f" />
 
