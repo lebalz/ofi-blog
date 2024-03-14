@@ -82,7 +82,7 @@ Der LMC kennt **11** verschiedene Instruktionen und hat einen Speicher von 100 Z
 | Lade                               | `LDA`    | `5xx`  | Lade den Inhalt von Speicherzelle xx in den Akkumulator            |
 | Gehe zu (Branch Always)            | `BRA`    | `6xx`  | Setze den Programmzähler auf xx (also spring als nächstes dorthin) |
 | Gehe wenn 0 (Branch if Zero)       | `BRZ`    | `7xx`  | Wenn der Akkumulator 0 enthält spring als nächstes nach xx         |
-| Gehe wenn >=0 (Branch if Positive) | `BRP`    | `8xx`  | Wenn der Akkumulator positiv ist spring als nächstes nach xx       |
+| Gehe wenn \>=0 (Branch if Positive) | `BRP`    | `8xx`  | Wenn der Akkumulator positiv ist spring als nächstes nach xx       |
 | Eingabe                            | `INP`    | `901`  | Hol vom Operateur einen Eingabe und schreib sie in den Akkumulator |
 | Ausgabe                            | `OUT`    | `902`  | Gib den Inhalt des Akkumulators aus                                |
 | Freier Speicherort (Data Location) | `DAT`    |        | Weist dem nächstmöglichen, freien Speicherplatz im RAM einen Name zu. Optional kann auch der Zahlenwert des zugewiesenen Speicherplatzes angegeben werden. |
@@ -123,14 +123,14 @@ Leider können die Online-Simulatoren keine Kommentare verarbeiten. Sie müssen 
 <StripComments />
 :::
 
-::::aufgabe[Aufgabe IO]
+:::aufgabe[Aufgabe IO]
 <Answer type="state" webKey="22a87570-777f-4899-8567-438821bf09d1" />
 
 Simulator
 : 👉 https://www.peterhigginson.co.uk/lmc/
 
 Geben sie das obige Programm im Editor ein, speichern Sie es und lassen Sie es dann vom Assembler übersetzen. Mit "Load" können Sie es dann in den Simulator holen und dort ausführen.
-::::
+:::
 
 :::aufgabe[Aufgabe I]
 <Answer type="state" webKey="e0bfd52e-38dd-41d1-becf-098110d44393" />
@@ -166,15 +166,19 @@ one     DAT 1       ; Zahl 1
 ```
 
 :::aufgabe[Aufgabe II]
-1.    Schreiben Sie ein Programm, das eine Zahl holt und dann bis 1 herunterzählt  
-    ```armasm live_py id=ad7b14c8-ba30-46ec-8f02-ff81d0f7e8cc title=toOne.asm
-    ```
+<Answer type="state" webKey="d0ecf1d1-2444-48d2-8d8c-16d8dde1d767" />
+
+Schreiben Sie ein Programm, das eine Zahl holt und dann bis 1 herunterzählt  
+
+```armasm live_py id=ad7b14c8-ba30-46ec-8f02-ff81d0f7e8cc title=to_one.asm
+
+```
 
 <Solution webKey="9c944c95-4576-4761-aeca-23eea71bb3f4">
 
 ```armasm
 ;
-; Program toOne.asm
+; Program to_one.asm
 ;
 ; This is a program that
 ;    inputs a number n
@@ -203,16 +207,22 @@ i   DAT    1    ; i initialized to 1
 ```
 
 </Solution>
+:::
 
-2.    Schreiben Sie ein Programm, das eine Zahl holt und dann bis 10 hochzählt  
-    ```armasm live_py id=723e3e85-97ed-49a5-9738-68d38fe3b1a0 title=toTen.asm
-    ```
+:::aufgabe[Aufgabe III]
+<Answer type="state" webKey="09edff21-1554-4272-a973-a563269c344a" />
+
+Schreiben Sie ein Programm, das eine Zahl holt und dann bis 10 hochzählt  
+
+```armasm live_py id=723e3e85-97ed-49a5-9738-68d38fe3b1a0 title=to_ten.asm
+
+```
 
 <Solution webKey="9c944c95-4576-4761-aeca-23eea71bb3f4">
 
 ```armasm
 ;
-; Program toTen.asm
+; Program to_ten.asm
 ;
 ; This is a program that
 ;    inputs a number
@@ -251,11 +261,26 @@ n    DAT    0     ; n initialized to 0
 ```
 
 </Solution>
+:::
 
-3.    Zahlenraten. Der Computer merkt sich eine Zahl und die Benutzer\:in muss sie erraten. Der Computer sagt "zu hoch" = 100, "zu tief" = -100; "richtig" = 200
-    ```armasm live_py id=f71c6420-c9b6-4133-b77d-8a2aa42340fa title=guess.asm
-    ```
-4.    Ergänzen Sie (3) um einen Zähler für die Anzahl Versuche.
+:::aufgabe[Aufgabe IV: Zahlenraten]
+<Answer type="state" webKey="b141f13f-3ff6-423f-8320-c5d6328361aa" /> 
+
+a. Der Computer merkt sich eine Zahl und die Benutzer\:in muss sie erraten.
+Der Computer teilt der Spieler\:in dabei mit:
+
+zu hoch
+: Output `100`
+zu tief
+: Output `-100`
+richtig
+: Output `200`
+
+```armasm live_py id=f71c6420-c9b6-4133-b77d-8a2aa42340fa title=guess.asm
+
+```
+
+b. Ergänzen Sie ihr Programm um einen Zähler für die Anzahl Versuche.
 
 <Solution webKey="9c944c95-4576-4761-aeca-23eea71bb3f4">
 
@@ -317,11 +342,14 @@ one     DAT      1   ; Zahl 1
 
 :::
 :::aufgabe[Zusatz ⭐]
+<Answer type="state" webKey="42f8bc2a-c347-4d5d-b288-75c8ba366bef" />
+
 Weitere Ideen:
 - Fibonacci-Zahlen 0,1,1,2,3,5,8...
 - Pascalsches Dreieck
 
 ```armasm live_py id=566e25f7-65df-4715-9ca2-bc5bc2687055 title=zusatz.asm
+
 ```
 :::
 

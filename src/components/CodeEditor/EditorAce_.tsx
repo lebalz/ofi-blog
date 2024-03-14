@@ -92,10 +92,10 @@ const Editor = observer((props: Props) => {
                 onChange={(value: string) => {
                     pyScript.setData({ code: value });
                 }}
-                readOnly={pyScript.showRaw || !pyScript.loaded}
-                value={pyScript.showRaw ? pyScript.rawScript : pyScript.data.code}
-                defaultValue={pyScript.code}
-                name={DOM_ELEMENT_IDS.aceEditor(pyScript.codeId)}
+                readOnly={pyScript?.showRaw || !pyScript?.loaded}
+                value={pyScript?.showRaw ? pyScript.rawScript : pyScript?.data?.code}
+                defaultValue={pyScript?.code || '\n'}
+                name={DOM_ELEMENT_IDS.aceEditor(pyScript?.codeId)}
                 editorProps={{ $blockScrolling: true }}
                 setOptions={{
                     displayIndentGuides: true,
