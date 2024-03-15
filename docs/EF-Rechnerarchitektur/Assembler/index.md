@@ -196,12 +196,12 @@ Schreiben Sie ein Programm, das eine Zahl holt und dann bis 1 herunterzählt
 
 loop SUB    i
      BRZ    end   ; branch to end if n = 0
-     BR    body   ; branch to loop body if n > 0
+     BRA    body  ; branch to loop body if n > 0
 
 body OUT
-     BR    loop  ; go back to the top of the loop
+     BRA   loop  ; go back to the top of the loop
 
-end HLT         ; then terminate the program
+end HLT          ; then terminate the program
 
 i   DAT    1    ; i initialized to 1
 ```
@@ -245,7 +245,7 @@ loop ADD    i      ; increase akk
      STA    n      ; store akk to n
      SUB    max    ; subtract max from akk for BRZ test
      BRZ    end    ; branch to end if n = 0
-     BRA    body    ; branch to loop body if n > 0
+     BRA    body   ; branch to loop body if n > 0
 
 body LDA   n       ; load number back to akk
      OUT           ; print akk
