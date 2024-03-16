@@ -386,10 +386,10 @@ Wie Sie bemerken, ist das entstandene Bild nur `6x6` Pixel gross - es muss entsp
 Erweitern Sie das Programm so, dass Sie mit einem Zoom-Faktor angeben können, auf wie viele Pixel ein Wert verteilt werden soll.
 
 ```txt
-               ______ ______
-      Zoom    |      |      |
+                ______ ______
+      Zoom     |      |      |
 ▢▢  --------> |      |      |
-              |      |      |
-               ‾‾‾‾‾‾ ‾‾‾‾‾‾
+               |      |      |
+                ‾‾‾‾‾‾ ‾‾‾‾‾‾
 ```
 :::
