@@ -466,11 +466,6 @@
       ]
     },
     {
-      "from": "docs/Big-Data/03-cookies/",
-      "to": "versioned_docs/version-24ef/10-Netzwerke/005-Datenschutz",
-      "ignore": []
-    },
-    {
       "from": "docs/EF-Algorithmen/",
       "to": "versioned_docs/version-24ef/05-Algorithmik",
       "ignore": [
