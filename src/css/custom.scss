@@ -27,6 +27,7 @@
     --ifm-background-color: white;
     --ifm-card-background-color: #f7f7f7;
     --ifm-blockquote-shadow: var(--ifm-global-shadow-md);
+    --docusaurus-highlighted-code-line-bg: #f7f7be;
 
     .index-page-title {
         .hero__subtitle {
@@ -47,6 +48,7 @@ html[data-theme='dark'] {
     --ifm-card-background-color: #242526;
     --ifm-color-snow: white;
     --ifm-color-blue-contrast-background: #102445;
+    --docusaurus-highlighted-code-line-bg: #4c4515;
 
     .index-page {
         background: #232a40;
