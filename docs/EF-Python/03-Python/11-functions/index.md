@@ -147,12 +147,12 @@ Dateiname
 :  __EF-Informatik/exercises/fkt/sternchen.py__
 
 ```
-::br
+******
 *    *
 *    *
 *    *
 *    *
-::br
+******
 ```
 
 Gesucht ist ein Programm, welches obige Figur auf der Konsole ausgibt.
