@@ -94,11 +94,11 @@ Ordner
 
     :::details[Snippets]
     ```py reference title="SimpleWebServer.py"
-    https://github.com/lebalz/ofi-blog/blob/main/docs/Netzwerke-ef/01-Server/snippets/simple-server.py
+    https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Netzwerke/01-Server/snippets/simple-server.py
     ```
 
     ```html reference title="hello.html"
-    https://github.com/lebalz/ofi-blog/blob/main/docs/Netzwerke-ef/01-Server/snippets/hello.html
+    https://github.com/lebalz/ofi-blog/blob/main/docs/EF-Netzwerke/01-Server/snippets/hello.html
     ```
     :::
 2. Öffnen Sie auf Ihrem Notebook einen Browser und versuchen Sie die Seite hello.html anzuzeigen. Dazu müssen Sie in Ihrem Browser die richtige URL eingeben. Weil Ihr Browser auf dem selben Computer läuft, wie der Webserver, können Sie statt der IP-Adresse Ihres Computers auch `localhost` oder die lokale IP-Adresse `127.0.0.1` schreiben. Beim Pfad müssen Sie darauf achten, in welchen Ordner die Datei `hello.html` gespeichert ist.
