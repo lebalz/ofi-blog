@@ -20,7 +20,6 @@ Im Nand-Game wird all dies mit einem einzelnen Gatter, dem Nand-Gatter, gebaut.
 
 ![Level-Übersicht](./images/NandGame-Overview.png)
 
-:::
 :::aufgabe[1 Logic Gates]
 
 
