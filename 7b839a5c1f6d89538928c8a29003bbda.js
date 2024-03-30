@@ -1,1 +1,1626 @@
-!function(t){if(!(void 0!==t.window&&t.document||t.require&&t.define)){t.console||(t.console=function(){var t=Array.prototype.slice.call(arguments,0);postMessage({type:"log",data:t})},t.console.error=t.console.warn=t.console.log=t.console.trace=t.console),t.window=t,t.ace=t,t.onerror=function(t,e,n,r,i){postMessage({type:"error",data:{message:t,data:i&&i.data,file:e,line:n,col:r,stack:i&&i.stack}})},t.normalizeModule=function(e,n){if(-1!==n.indexOf("!")){var r=n.split("!");return t.normalizeModule(e,r[0])+"!"+t.normalizeModule(e,r[1])}if("."==n.charAt(0)){var i=e.split("/").slice(0,-1).join("/");for(n=(i?i+"/":"")+n;-1!==n.indexOf(".")&&o!=n;){var o=n;n=n.replace(/^\.\//,"").replace(/\/\.\//,"/").replace(/[^\/]+\/\.\.\//,"")}}return n},t.require=function(e,n){if(n||(n=e,e=null),!n.charAt)throw new Error("worker.js require() accepts only (parentId, id) as arguments");n=t.normalizeModule(e,n);var r=t.require.modules[n];if(r)return r.initialized||(r.initialized=!0,r.exports=r.factory().exports),r.exports;if(!t.require.tlns)return console.log("unable to load "+n);var i=function(t,e){var n=t,r="";for(;n;){var i=e[n];if("string"==typeof i)return i+r;if(i)return i.location.replace(/\/*$/,"/")+(r||i.main||i.name);if(!1===i)return"";var o=n.lastIndexOf("/");if(-1===o)break;r=n.substr(o)+r,n=n.slice(0,o)}return t}(n,t.require.tlns);return".js"!=i.slice(-3)&&(i+=".js"),t.require.id=n,t.require.modules[n]={},importScripts(i),t.require(e,n)},t.require.modules={},t.require.tlns={},t.define=function(e,n,r){if(2==arguments.length?(r=n,"string"!=typeof e&&(n=e,e=t.require.id)):1==arguments.length&&(r=e,n=[],e=t.require.id),"function"==typeof r){n.length||(n=["require","exports","module"]);var i=function(n){return t.require(e,n)};t.require.modules[e]={exports:{},factory:function(){var t=this,e=r.apply(this,n.slice(0,r.length).map((function(e){switch(e){case"require":return i;case"exports":return t.exports;case"module":return t;default:return i(e)}})));return e&&(t.exports=e),t}}}else t.require.modules[e]={exports:r,initialized:!0}},t.define.amd={},t.require.tlns={},t.initBaseUrls=function(t){for(var e in t)this.require.tlns[e]=t[e]},t.initSender=function(){var e=t.require("ace/lib/event_emitter").EventEmitter,n=t.require("ace/lib/oop"),r=function(){};return function(){n.implement(this,e),this.callback=function(t,e){postMessage({type:"call",id:e,data:t})},this.emit=function(t,e){postMessage({type:"event",name:t,data:e})}}.call(r.prototype),new r};var e=t.main=null,n=t.sender=null;t.onmessage=function(r){var i=r.data;if(i.event&&n)n._signal(i.event,i.data);else if(i.command)if(e[i.command])e[i.command].apply(e,i.args);else{if(!t[i.command])throw new Error("Unknown command:"+i.command);t[i.command].apply(t,i.args)}else if(i.init){t.initBaseUrls(i.tlns),n=t.sender=t.initSender();var o=this.require(i.module)[i.classname];e=t.main=new o(n)}}}}(this),ace.define("ace/lib/oop",[],(function(t,e,n){"use strict";e.inherits=function(t,e){t.super_=e,t.prototype=Object.create(e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}})},e.mixin=function(t,e){for(var n in e)t[n]=e[n];return t},e.implement=function(t,n){e.mixin(t,n)}})),ace.define("ace/apply_delta",[],(function(t,e,n){"use strict";e.applyDelta=function(t,e,n){var r=e.start.row,i=e.start.column,o=t[r]||"";switch(e.action){case"insert":if(1===e.lines.length)t[r]=o.substring(0,i)+e.lines[0]+o.substring(i);else{var s=[r,1].concat(e.lines);t.splice.apply(t,s),t[r]=o.substring(0,i)+t[r],t[r+e.lines.length-1]+=o.substring(i)}break;case"remove":var a=e.end.column,c=e.end.row;r===c?t[r]=o.substring(0,i)+o.substring(a):t.splice(r,c-r+1,o.substring(0,i)+t[c].substring(a))}}})),ace.define("ace/lib/event_emitter",[],(function(t,e,n){"use strict";var r={},i=function(){this.propagationStopped=!0},o=function(){this.defaultPrevented=!0};r._emit=r._dispatchEvent=function(t,e){this._eventRegistry||(this._eventRegistry={}),this._defaultHandlers||(this._defaultHandlers={});var n=this._eventRegistry[t]||[],r=this._defaultHandlers[t];if(n.length||r){"object"==typeof e&&e||(e={}),e.type||(e.type=t),e.stopPropagation||(e.stopPropagation=i),e.preventDefault||(e.preventDefault=o),n=n.slice();for(var s=0;s<n.length&&(n[s](e,this),!e.propagationStopped);s++);return r&&!e.defaultPrevented?r(e,this):void 0}},r._signal=function(t,e){var n=(this._eventRegistry||{})[t];if(n){n=n.slice();for(var r=0;r<n.length;r++)n[r](e,this)}},r.once=function(t,e){var n=this;if(this.on(t,(function r(){n.off(t,r),e.apply(null,arguments)})),!e)return new Promise((function(t){e=t}))},r.setDefaultHandler=function(t,e){var n=this._defaultHandlers;if(n||(n=this._defaultHandlers={_disabled_:{}}),n[t]){var r=n[t],i=n._disabled_[t];i||(n._disabled_[t]=i=[]),i.push(r);var o=i.indexOf(e);-1!=o&&i.splice(o,1)}n[t]=e},r.removeDefaultHandler=function(t,e){var n=this._defaultHandlers;if(n){var r=n._disabled_[t];if(n[t]==e)r&&this.setDefaultHandler(t,r.pop());else if(r){var i=r.indexOf(e);-1!=i&&r.splice(i,1)}}},r.on=r.addEventListener=function(t,e,n){this._eventRegistry=this._eventRegistry||{};var r=this._eventRegistry[t];return r||(r=this._eventRegistry[t]=[]),-1==r.indexOf(e)&&r[n?"unshift":"push"](e),e},r.off=r.removeListener=r.removeEventListener=function(t,e){this._eventRegistry=this._eventRegistry||{};var n=this._eventRegistry[t];if(n){var r=n.indexOf(e);-1!==r&&n.splice(r,1)}},r.removeAllListeners=function(t){t||(this._eventRegistry=this._defaultHandlers=void 0),this._eventRegistry&&(this._eventRegistry[t]=void 0),this._defaultHandlers&&(this._defaultHandlers[t]=void 0)},e.EventEmitter=r})),ace.define("ace/range",[],(function(t,e,n){"use strict";var r=function(){function t(t,e,n,r){this.start={row:t,column:e},this.end={row:n,column:r}}return t.prototype.isEqual=function(t){return this.start.row===t.start.row&&this.end.row===t.end.row&&this.start.column===t.start.column&&this.end.column===t.end.column},t.prototype.toString=function(){return"Range: ["+this.start.row+"/"+this.start.column+"] -> ["+this.end.row+"/"+this.end.column+"]"},t.prototype.contains=function(t,e){return 0==this.compare(t,e)},t.prototype.compareRange=function(t){var e,n=t.end,r=t.start;return 1==(e=this.compare(n.row,n.column))?1==(e=this.compare(r.row,r.column))?2:0==e?1:0:-1==e?-2:-1==(e=this.compare(r.row,r.column))?-1:1==e?42:0},t.prototype.comparePoint=function(t){return this.compare(t.row,t.column)},t.prototype.containsRange=function(t){return 0==this.comparePoint(t.start)&&0==this.comparePoint(t.end)},t.prototype.intersects=function(t){var e=this.compareRange(t);return-1==e||0==e||1==e},t.prototype.isEnd=function(t,e){return this.end.row==t&&this.end.column==e},t.prototype.isStart=function(t,e){return this.start.row==t&&this.start.column==e},t.prototype.setStart=function(t,e){"object"==typeof t?(this.start.column=t.column,this.start.row=t.row):(this.start.row=t,this.start.column=e)},t.prototype.setEnd=function(t,e){"object"==typeof t?(this.end.column=t.column,this.end.row=t.row):(this.end.row=t,this.end.column=e)},t.prototype.inside=function(t,e){return 0==this.compare(t,e)&&(!this.isEnd(t,e)&&!this.isStart(t,e))},t.prototype.insideStart=function(t,e){return 0==this.compare(t,e)&&!this.isEnd(t,e)},t.prototype.insideEnd=function(t,e){return 0==this.compare(t,e)&&!this.isStart(t,e)},t.prototype.compare=function(t,e){return this.isMultiLine()||t!==this.start.row?t<this.start.row?-1:t>this.end.row?1:this.start.row===t?e>=this.start.column?0:-1:this.end.row===t?e<=this.end.column?0:1:0:e<this.start.column?-1:e>this.end.column?1:0},t.prototype.compareStart=function(t,e){return this.start.row==t&&this.start.column==e?-1:this.compare(t,e)},t.prototype.compareEnd=function(t,e){return this.end.row==t&&this.end.column==e?1:this.compare(t,e)},t.prototype.compareInside=function(t,e){return this.end.row==t&&this.end.column==e?1:this.start.row==t&&this.start.column==e?-1:this.compare(t,e)},t.prototype.clipRows=function(e,n){if(this.end.row>n)var r={row:n+1,column:0};else if(this.end.row<e)r={row:e,column:0};if(this.start.row>n)var i={row:n+1,column:0};else if(this.start.row<e)i={row:e,column:0};return t.fromPoints(i||this.start,r||this.end)},t.prototype.extend=function(e,n){var r=this.compare(e,n);if(0==r)return this;if(-1==r)var i={row:e,column:n};else var o={row:e,column:n};return t.fromPoints(i||this.start,o||this.end)},t.prototype.isEmpty=function(){return this.start.row===this.end.row&&this.start.column===this.end.column},t.prototype.isMultiLine=function(){return this.start.row!==this.end.row},t.prototype.clone=function(){return t.fromPoints(this.start,this.end)},t.prototype.collapseRows=function(){return 0==this.end.column?new t(this.start.row,0,Math.max(this.start.row,this.end.row-1),0):new t(this.start.row,0,this.end.row,0)},t.prototype.toScreenRange=function(e){var n=e.documentToScreenPosition(this.start),r=e.documentToScreenPosition(this.end);return new t(n.row,n.column,r.row,r.column)},t.prototype.moveBy=function(t,e){this.start.row+=t,this.start.column+=e,this.end.row+=t,this.end.column+=e},t}();r.fromPoints=function(t,e){return new r(t.row,t.column,e.row,e.column)},r.comparePoints=function(t,e){return t.row-e.row||t.column-e.column},e.Range=r})),ace.define("ace/anchor",[],(function(t,e,n){"use strict";var r=t("./lib/oop"),i=t("./lib/event_emitter").EventEmitter,o=function(){function t(t,e,n){this.$onChange=this.onChange.bind(this),this.attach(t),"number"!=typeof e?this.setPosition(e.row,e.column):this.setPosition(e,n)}return t.prototype.getPosition=function(){return this.$clipPositionToDocument(this.row,this.column)},t.prototype.getDocument=function(){return this.document},t.prototype.onChange=function(t){if(!(t.start.row==t.end.row&&t.start.row!=this.row||t.start.row>this.row)){var e=function(t,e,n){var r="insert"==t.action,i=(r?1:-1)*(t.end.row-t.start.row),o=(r?1:-1)*(t.end.column-t.start.column),a=t.start,c=r?a:t.end;if(s(e,a,n))return{row:e.row,column:e.column};if(s(c,e,!n))return{row:e.row+i,column:e.column+(e.row==c.row?o:0)};return{row:a.row,column:a.column}}(t,{row:this.row,column:this.column},this.$insertRight);this.setPosition(e.row,e.column,!0)}},t.prototype.setPosition=function(t,e,n){var r;if(r=n?{row:t,column:e}:this.$clipPositionToDocument(t,e),this.row!=r.row||this.column!=r.column){var i={row:this.row,column:this.column};this.row=r.row,this.column=r.column,this._signal("change",{old:i,value:r})}},t.prototype.detach=function(){this.document.off("change",this.$onChange)},t.prototype.attach=function(t){this.document=t||this.document,this.document.on("change",this.$onChange)},t.prototype.$clipPositionToDocument=function(t,e){var n={};return t>=this.document.getLength()?(n.row=Math.max(0,this.document.getLength()-1),n.column=this.document.getLine(n.row).length):t<0?(n.row=0,n.column=0):(n.row=t,n.column=Math.min(this.document.getLine(n.row).length,Math.max(0,e))),e<0&&(n.column=0),n},t}();function s(t,e,n){var r=n?t.column<=e.column:t.column<e.column;return t.row<e.row||t.row==e.row&&r}o.prototype.$insertRight=!1,r.implement(o.prototype,i),e.Anchor=o})),ace.define("ace/document",[],(function(t,e,n){"use strict";var r=t("./lib/oop"),i=t("./apply_delta").applyDelta,o=t("./lib/event_emitter").EventEmitter,s=t("./range").Range,a=t("./anchor").Anchor,c=function(){function t(t){this.$lines=[""],0===t.length?this.$lines=[""]:Array.isArray(t)?this.insertMergedLines({row:0,column:0},t):this.insert({row:0,column:0},t)}return t.prototype.setValue=function(t){var e=this.getLength()-1;this.remove(new s(0,0,e,this.getLine(e).length)),this.insert({row:0,column:0},t||"")},t.prototype.getValue=function(){return this.getAllLines().join(this.getNewLineCharacter())},t.prototype.createAnchor=function(t,e){return new a(this,t,e)},t.prototype.$detectNewLine=function(t){var e=t.match(/^.*?(\r\n|\r|\n)/m);this.$autoNewLine=e?e[1]:"\n",this._signal("changeNewLineMode")},t.prototype.getNewLineCharacter=function(){switch(this.$newLineMode){case"windows":return"\r\n";case"unix":return"\n";default:return this.$autoNewLine||"\n"}},t.prototype.setNewLineMode=function(t){this.$newLineMode!==t&&(this.$newLineMode=t,this._signal("changeNewLineMode"))},t.prototype.getNewLineMode=function(){return this.$newLineMode},t.prototype.isNewLine=function(t){return"\r\n"==t||"\r"==t||"\n"==t},t.prototype.getLine=function(t){return this.$lines[t]||""},t.prototype.getLines=function(t,e){return this.$lines.slice(t,e+1)},t.prototype.getAllLines=function(){return this.getLines(0,this.getLength())},t.prototype.getLength=function(){return this.$lines.length},t.prototype.getTextRange=function(t){return this.getLinesForRange(t).join(this.getNewLineCharacter())},t.prototype.getLinesForRange=function(t){var e;if(t.start.row===t.end.row)e=[this.getLine(t.start.row).substring(t.start.column,t.end.column)];else{(e=this.getLines(t.start.row,t.end.row))[0]=(e[0]||"").substring(t.start.column);var n=e.length-1;t.end.row-t.start.row==n&&(e[n]=e[n].substring(0,t.end.column))}return e},t.prototype.insertLines=function(t,e){return console.warn("Use of document.insertLines is deprecated. Use the insertFullLines method instead."),this.insertFullLines(t,e)},t.prototype.removeLines=function(t,e){return console.warn("Use of document.removeLines is deprecated. Use the removeFullLines method instead."),this.removeFullLines(t,e)},t.prototype.insertNewLine=function(t){return console.warn("Use of document.insertNewLine is deprecated. Use insertMergedLines(position, ['', '']) instead."),this.insertMergedLines(t,["",""])},t.prototype.insert=function(t,e){return this.getLength()<=1&&this.$detectNewLine(e),this.insertMergedLines(t,this.$split(e))},t.prototype.insertInLine=function(t,e){var n=this.clippedPos(t.row,t.column),r=this.pos(t.row,t.column+e.length);return this.applyDelta({start:n,end:r,action:"insert",lines:[e]},!0),this.clonePos(r)},t.prototype.clippedPos=function(t,e){var n=this.getLength();void 0===t?t=n:t<0?t=0:t>=n&&(t=n-1,e=void 0);var r=this.getLine(t);return null==e&&(e=r.length),{row:t,column:e=Math.min(Math.max(e,0),r.length)}},t.prototype.clonePos=function(t){return{row:t.row,column:t.column}},t.prototype.pos=function(t,e){return{row:t,column:e}},t.prototype.$clipPosition=function(t){var e=this.getLength();return t.row>=e?(t.row=Math.max(0,e-1),t.column=this.getLine(e-1).length):(t.row=Math.max(0,t.row),t.column=Math.min(Math.max(t.column,0),this.getLine(t.row).length)),t},t.prototype.insertFullLines=function(t,e){var n=0;(t=Math.min(Math.max(t,0),this.getLength()))<this.getLength()?(e=e.concat([""]),n=0):(e=[""].concat(e),t--,n=this.$lines[t].length),this.insertMergedLines({row:t,column:n},e)},t.prototype.insertMergedLines=function(t,e){var n=this.clippedPos(t.row,t.column),r={row:n.row+e.length-1,column:(1==e.length?n.column:0)+e[e.length-1].length};return this.applyDelta({start:n,end:r,action:"insert",lines:e}),this.clonePos(r)},t.prototype.remove=function(t){var e=this.clippedPos(t.start.row,t.start.column),n=this.clippedPos(t.end.row,t.end.column);return this.applyDelta({start:e,end:n,action:"remove",lines:this.getLinesForRange({start:e,end:n})}),this.clonePos(e)},t.prototype.removeInLine=function(t,e,n){var r=this.clippedPos(t,e),i=this.clippedPos(t,n);return this.applyDelta({start:r,end:i,action:"remove",lines:this.getLinesForRange({start:r,end:i})},!0),this.clonePos(r)},t.prototype.removeFullLines=function(t,e){t=Math.min(Math.max(0,t),this.getLength()-1);var n=(e=Math.min(Math.max(0,e),this.getLength()-1))==this.getLength()-1&&t>0,r=e<this.getLength()-1,i=n?t-1:t,o=n?this.getLine(i).length:0,a=r?e+1:e,c=r?0:this.getLine(a).length,u=new s(i,o,a,c),l=this.$lines.slice(t,e+1);return this.applyDelta({start:u.start,end:u.end,action:"remove",lines:this.getLinesForRange(u)}),l},t.prototype.removeNewLine=function(t){t<this.getLength()-1&&t>=0&&this.applyDelta({start:this.pos(t,this.getLine(t).length),end:this.pos(t+1,0),action:"remove",lines:["",""]})},t.prototype.replace=function(t,e){return t instanceof s||(t=s.fromPoints(t.start,t.end)),0===e.length&&t.isEmpty()?t.start:e==this.getTextRange(t)?t.end:(this.remove(t),e?this.insert(t.start,e):t.start)},t.prototype.applyDeltas=function(t){for(var e=0;e<t.length;e++)this.applyDelta(t[e])},t.prototype.revertDeltas=function(t){for(var e=t.length-1;e>=0;e--)this.revertDelta(t[e])},t.prototype.applyDelta=function(t,e){var n="insert"==t.action;(n?t.lines.length<=1&&!t.lines[0]:!s.comparePoints(t.start,t.end))||(n&&t.lines.length>2e4?this.$splitAndapplyLargeDelta(t,2e4):(i(this.$lines,t,e),this._signal("change",t)))},t.prototype.$safeApplyDelta=function(t){var e=this.$lines.length;("remove"==t.action&&t.start.row<e&&t.end.row<e||"insert"==t.action&&t.start.row<=e)&&this.applyDelta(t)},t.prototype.$splitAndapplyLargeDelta=function(t,e){for(var n=t.lines,r=n.length-e+1,i=t.start.row,o=t.start.column,s=0,a=0;s<r;s=a){a+=e-1;var c=n.slice(s,a);c.push(""),this.applyDelta({start:this.pos(i+s,o),end:this.pos(i+a,o=0),action:t.action,lines:c},!0)}t.lines=n.slice(s),t.start.row=i+s,t.start.column=o,this.applyDelta(t,!0)},t.prototype.revertDelta=function(t){this.$safeApplyDelta({start:this.clonePos(t.start),end:this.clonePos(t.end),action:"insert"==t.action?"remove":"insert",lines:t.lines.slice()})},t.prototype.indexToPosition=function(t,e){for(var n=this.$lines||this.getAllLines(),r=this.getNewLineCharacter().length,i=e||0,o=n.length;i<o;i++)if((t-=n[i].length+r)<0)return{row:i,column:t+n[i].length+r};return{row:o-1,column:t+n[o-1].length+r}},t.prototype.positionToIndex=function(t,e){for(var n=this.$lines||this.getAllLines(),r=this.getNewLineCharacter().length,i=0,o=Math.min(t.row,n.length),s=e||0;s<o;++s)i+=n[s].length+r;return i+t.column},t.prototype.$split=function(t){return t.split(/\r\n|\r|\n/)},t}();c.prototype.$autoNewLine="",c.prototype.$newLineMode="auto",r.implement(c.prototype,o),e.Document=c})),ace.define("ace/lib/deep_copy",[],(function(t,e,n){e.deepCopy=function t(e){if("object"!=typeof e||!e)return e;var n;if(Array.isArray(e)){n=[];for(var r=0;r<e.length;r++)n[r]=t(e[r]);return n}if("[object Object]"!==Object.prototype.toString.call(e))return e;for(var r in n={},e)n[r]=t(e[r]);return n}})),ace.define("ace/lib/lang",[],(function(t,e,n){"use strict";e.last=function(t){return t[t.length-1]},e.stringReverse=function(t){return t.split("").reverse().join("")},e.stringRepeat=function(t,e){for(var n="";e>0;)1&e&&(n+=t),(e>>=1)&&(t+=t);return n};var r=/^\s\s*/,i=/\s\s*$/;e.stringTrimLeft=function(t){return t.replace(r,"")},e.stringTrimRight=function(t){return t.replace(i,"")},e.copyObject=function(t){var e={};for(var n in t)e[n]=t[n];return e},e.copyArray=function(t){for(var e=[],n=0,r=t.length;n<r;n++)t[n]&&"object"==typeof t[n]?e[n]=this.copyObject(t[n]):e[n]=t[n];return e},e.deepCopy=t("./deep_copy").deepCopy,e.arrayToMap=function(t){for(var e={},n=0;n<t.length;n++)e[t[n]]=1;return e},e.createMap=function(t){var e=Object.create(null);for(var n in t)e[n]=t[n];return e},e.arrayRemove=function(t,e){for(var n=0;n<=t.length;n++)e===t[n]&&t.splice(n,1)},e.escapeRegExp=function(t){return t.replace(/([.*+?^${}()|[\]\/\\])/g,"\\$1")},e.escapeHTML=function(t){return(""+t).replace(/&/g,"&#38;").replace(/"/g,"&#34;").replace(/'/g,"&#39;").replace(/</g,"&#60;")},e.getMatchOffsets=function(t,e){var n=[];return t.replace(e,(function(t){n.push({offset:arguments[arguments.length-2],length:t.length})})),n},e.deferredCall=function(t){var e=null,n=function(){e=null,t()},r=function(t){return r.cancel(),e=setTimeout(n,t||0),r};return r.schedule=r,r.call=function(){return this.cancel(),t(),r},r.cancel=function(){return clearTimeout(e),e=null,r},r.isPending=function(){return e},r},e.delayedCall=function(t,e){var n=null,r=function(){n=null,t()},i=function(t){null==n&&(n=setTimeout(r,t||e))};return i.delay=function(t){n&&clearTimeout(n),n=setTimeout(r,t||e)},i.schedule=i,i.call=function(){this.cancel(),t()},i.cancel=function(){n&&clearTimeout(n),n=null},i.isPending=function(){return n},i},e.supportsLookbehind=function(){try{new RegExp("(?<=.)")}catch(t){return!1}return!0},e.skipEmptyMatch=function(t,e,n){return n&&t.codePointAt(e)>65535?2:1}})),ace.define("ace/worker/mirror",[],(function(t,e,n){"use strict";var r=t("../document").Document,i=t("../lib/lang"),o=e.Mirror=function(t){this.sender=t;var e=this.doc=new r(""),n=this.deferredUpdate=i.delayedCall(this.onUpdate.bind(this)),o=this;t.on("change",(function(t){var r=t.data;if(r[0].start)e.applyDeltas(r);else for(var i=0;i<r.length;i+=2){var s,a;if(("insert"==(s=Array.isArray(r[i+1])?{action:"insert",start:r[i],lines:r[i+1]}:{action:"remove",start:r[i],end:r[i+1]}).action?s.start:s.end).row>=e.$lines.length)throw(a=new Error("Invalid delta")).data={path:o.$path,linesLength:e.$lines.length,start:s.start,end:s.end},a;e.applyDelta(s,!0)}if(o.$timeout)return n.schedule(o.$timeout);o.onUpdate()}))};(function(){this.$timeout=500,this.setTimeout=function(t){this.$timeout=t},this.setValue=function(t){this.doc.setValue(t),this.deferredUpdate.schedule(this.$timeout)},this.getValue=function(t){this.sender.callback(this.doc.getValue(),t)},this.onUpdate=function(){},this.isPending=function(){return this.deferredUpdate.isPending()}}).call(o.prototype)})),ace.define("ace/mode/json/json_parse",[],(function(t,e,n){"use strict";var r,i,o,s,a={'"':'"',"\\":"\\","/":"/",b:"\b",f:"\f",n:"\n",r:"\r",t:"\t"},c=function(t){throw{name:"SyntaxError",message:t,at:r,text:o}},u=function(t){return t&&t!==i&&c("Expected '"+t+"' instead of '"+i+"'"),i=o.charAt(r),r+=1,i},l=function(){var t,e="";for("-"===i&&(e="-",u("-"));i>="0"&&i<="9";)e+=i,u();if("."===i)for(e+=".";u()&&i>="0"&&i<="9";)e+=i;if("e"===i||"E"===i)for(e+=i,u(),"-"!==i&&"+"!==i||(e+=i,u());i>="0"&&i<="9";)e+=i,u();if(t=+e,!isNaN(t))return t;c("Bad number")},h=function(){var t,e,n,r="";if('"'===i)for(;u();){if('"'===i)return u(),r;if("\\"===i)if(u(),"u"===i){for(n=0,e=0;e<4&&(t=parseInt(u(),16),isFinite(t));e+=1)n=16*n+t;r+=String.fromCharCode(n)}else{if("string"!=typeof a[i])break;r+=a[i]}else{if("\n"==i||"\r"==i)break;r+=i}}c("Bad string")},p=function(){for(;i&&i<=" ";)u()};return s=function(){switch(p(),i){case"{":return function(){var t,e={};if("{"===i){if(u("{"),p(),"}"===i)return u("}"),e;for(;i;){if(t=h(),p(),u(":"),Object.hasOwnProperty.call(e,t)&&c('Duplicate key "'+t+'"'),e[t]=s(),p(),"}"===i)return u("}"),e;u(","),p()}}c("Bad object")}();case"[":return function(){var t=[];if("["===i){if(u("["),p(),"]"===i)return u("]"),t;for(;i;){if(t.push(s()),p(),"]"===i)return u("]"),t;u(","),p()}}c("Bad array")}();case'"':return h();case"-":return l();default:return i>="0"&&i<="9"?l():function(){switch(i){case"t":return u("t"),u("r"),u("u"),u("e"),!0;case"f":return u("f"),u("a"),u("l"),u("s"),u("e"),!1;case"n":return u("n"),u("u"),u("l"),u("l"),null}c("Unexpected '"+i+"'")}()}},function(t,e){var n;return o=t,r=0,i=" ",n=s(),p(),i&&c("Syntax error"),"function"==typeof e?function t(n,r){var i,o,s=n[r];if(s&&"object"==typeof s)for(i in s)Object.hasOwnProperty.call(s,i)&&(void 0!==(o=t(s,i))?s[i]=o:delete s[i]);return e.call(n,r,s)}({"":n},""):n}})),ace.define("ace/mode/json_worker",[],(function(t,e,n){"use strict";var r=t("../lib/oop"),i=t("../worker/mirror").Mirror,o=t("./json/json_parse"),s=e.JsonWorker=function(t){i.call(this,t),this.setTimeout(200)};r.inherits(s,i),function(){this.onUpdate=function(){var t=this.doc.getValue(),e=[];try{t&&o(t)}catch(r){var n=this.doc.indexToPosition(r.at-1);e.push({row:n.row,column:n.column,text:r.message,type:"error"})}this.sender.emit("annotate",e)}}.call(s.prototype)}));
+"no use strict";
+!(function(window) {
+if (typeof window.window != "undefined" && window.document)
+    return;
+if (window.require && window.define)
+    return;
+
+if (!window.console) {
+    window.console = function() {
+        var msgs = Array.prototype.slice.call(arguments, 0);
+        postMessage({type: "log", data: msgs});
+    };
+    window.console.error =
+    window.console.warn = 
+    window.console.log =
+    window.console.trace = window.console;
+}
+window.window = window;
+window.ace = window;
+
+window.onerror = function(message, file, line, col, err) {
+    postMessage({type: "error", data: {
+        message: message,
+        data: err && err.data,
+        file: file,
+        line: line, 
+        col: col,
+        stack: err && err.stack
+    }});
+};
+
+window.normalizeModule = function(parentId, moduleName) {
+    // normalize plugin requires
+    if (moduleName.indexOf("!") !== -1) {
+        var chunks = moduleName.split("!");
+        return window.normalizeModule(parentId, chunks[0]) + "!" + window.normalizeModule(parentId, chunks[1]);
+    }
+    // normalize relative requires
+    if (moduleName.charAt(0) == ".") {
+        var base = parentId.split("/").slice(0, -1).join("/");
+        moduleName = (base ? base + "/" : "") + moduleName;
+        
+        while (moduleName.indexOf(".") !== -1 && previous != moduleName) {
+            var previous = moduleName;
+            moduleName = moduleName.replace(/^\.\//, "").replace(/\/\.\//, "/").replace(/[^\/]+\/\.\.\//, "");
+        }
+    }
+    
+    return moduleName;
+};
+
+window.require = function require(parentId, id) {
+    if (!id) {
+        id = parentId;
+        parentId = null;
+    }
+    if (!id.charAt)
+        throw new Error("worker.js require() accepts only (parentId, id) as arguments");
+
+    id = window.normalizeModule(parentId, id);
+
+    var module = window.require.modules[id];
+    if (module) {
+        if (!module.initialized) {
+            module.initialized = true;
+            module.exports = module.factory().exports;
+        }
+        return module.exports;
+    }
+   
+    if (!window.require.tlns)
+        return console.log("unable to load " + id);
+    
+    var path = resolveModuleId(id, window.require.tlns);
+    if (path.slice(-3) != ".js") path += ".js";
+    
+    window.require.id = id;
+    window.require.modules[id] = {}; // prevent infinite loop on broken modules
+    importScripts(path);
+    return window.require(parentId, id);
+};
+function resolveModuleId(id, paths) {
+    var testPath = id, tail = "";
+    while (testPath) {
+        var alias = paths[testPath];
+        if (typeof alias == "string") {
+            return alias + tail;
+        } else if (alias) {
+            return  alias.location.replace(/\/*$/, "/") + (tail || alias.main || alias.name);
+        } else if (alias === false) {
+            return "";
+        }
+        var i = testPath.lastIndexOf("/");
+        if (i === -1) break;
+        tail = testPath.substr(i) + tail;
+        testPath = testPath.slice(0, i);
+    }
+    return id;
+}
+window.require.modules = {};
+window.require.tlns = {};
+
+window.define = function(id, deps, factory) {
+    if (arguments.length == 2) {
+        factory = deps;
+        if (typeof id != "string") {
+            deps = id;
+            id = window.require.id;
+        }
+    } else if (arguments.length == 1) {
+        factory = id;
+        deps = [];
+        id = window.require.id;
+    }
+    
+    if (typeof factory != "function") {
+        window.require.modules[id] = {
+            exports: factory,
+            initialized: true
+        };
+        return;
+    }
+
+    if (!deps.length)
+        // If there is no dependencies, we inject "require", "exports" and
+        // "module" as dependencies, to provide CommonJS compatibility.
+        deps = ["require", "exports", "module"];
+
+    var req = function(childId) {
+        return window.require(id, childId);
+    };
+
+    window.require.modules[id] = {
+        exports: {},
+        factory: function() {
+            var module = this;
+            var returnExports = factory.apply(this, deps.slice(0, factory.length).map(function(dep) {
+                switch (dep) {
+                    // Because "require", "exports" and "module" aren't actual
+                    // dependencies, we must handle them seperately.
+                    case "require": return req;
+                    case "exports": return module.exports;
+                    case "module":  return module;
+                    // But for all other dependencies, we can just go ahead and
+                    // require them.
+                    default:        return req(dep);
+                }
+            }));
+            if (returnExports)
+                module.exports = returnExports;
+            return module;
+        }
+    };
+};
+window.define.amd = {};
+window.require.tlns = {};
+window.initBaseUrls  = function initBaseUrls(topLevelNamespaces) {
+    for (var i in topLevelNamespaces)
+        this.require.tlns[i] = topLevelNamespaces[i];
+};
+
+window.initSender = function initSender() {
+
+    var EventEmitter = window.require("ace/lib/event_emitter").EventEmitter;
+    var oop = window.require("ace/lib/oop");
+    
+    var Sender = function() {};
+    
+    (function() {
+        
+        oop.implement(this, EventEmitter);
+                
+        this.callback = function(data, callbackId) {
+            postMessage({
+                type: "call",
+                id: callbackId,
+                data: data
+            });
+        };
+    
+        this.emit = function(name, data) {
+            postMessage({
+                type: "event",
+                name: name,
+                data: data
+            });
+        };
+        
+    }).call(Sender.prototype);
+    
+    return new Sender();
+};
+
+var main = window.main = null;
+var sender = window.sender = null;
+
+window.onmessage = function(e) {
+    var msg = e.data;
+    if (msg.event && sender) {
+        sender._signal(msg.event, msg.data);
+    }
+    else if (msg.command) {
+        if (main[msg.command])
+            main[msg.command].apply(main, msg.args);
+        else if (window[msg.command])
+            window[msg.command].apply(window, msg.args);
+        else
+            throw new Error("Unknown command:" + msg.command);
+    }
+    else if (msg.init) {
+        window.initBaseUrls(msg.tlns);
+        sender = window.sender = window.initSender();
+        var clazz = this.require(msg.module)[msg.classname];
+        main = window.main = new clazz(sender);
+    }
+};
+})(this);
+
+ace.define("ace/lib/oop",[], function(require, exports, module){"use strict";
+exports.inherits = function (ctor, superCtor) {
+    ctor.super_ = superCtor;
+    ctor.prototype = Object.create(superCtor.prototype, {
+        constructor: {
+            value: ctor,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+};
+exports.mixin = function (obj, mixin) {
+    for (var key in mixin) {
+        obj[key] = mixin[key];
+    }
+    return obj;
+};
+exports.implement = function (proto, mixin) {
+    exports.mixin(proto, mixin);
+};
+
+});
+
+ace.define("ace/apply_delta",[], function(require, exports, module){"use strict";
+function throwDeltaError(delta, errorText) {
+    console.log("Invalid Delta:", delta);
+    throw "Invalid Delta: " + errorText;
+}
+function positionInDocument(docLines, position) {
+    return position.row >= 0 && position.row < docLines.length &&
+        position.column >= 0 && position.column <= docLines[position.row].length;
+}
+function validateDelta(docLines, delta) {
+    if (delta.action != "insert" && delta.action != "remove")
+        throwDeltaError(delta, "delta.action must be 'insert' or 'remove'");
+    if (!(delta.lines instanceof Array))
+        throwDeltaError(delta, "delta.lines must be an Array");
+    if (!delta.start || !delta.end)
+        throwDeltaError(delta, "delta.start/end must be an present");
+    var start = delta.start;
+    if (!positionInDocument(docLines, delta.start))
+        throwDeltaError(delta, "delta.start must be contained in document");
+    var end = delta.end;
+    if (delta.action == "remove" && !positionInDocument(docLines, end))
+        throwDeltaError(delta, "delta.end must contained in document for 'remove' actions");
+    var numRangeRows = end.row - start.row;
+    var numRangeLastLineChars = (end.column - (numRangeRows == 0 ? start.column : 0));
+    if (numRangeRows != delta.lines.length - 1 || delta.lines[numRangeRows].length != numRangeLastLineChars)
+        throwDeltaError(delta, "delta.range must match delta lines");
+}
+exports.applyDelta = function (docLines, delta, doNotValidate) {
+    var row = delta.start.row;
+    var startColumn = delta.start.column;
+    var line = docLines[row] || "";
+    switch (delta.action) {
+        case "insert":
+            var lines = delta.lines;
+            if (lines.length === 1) {
+                docLines[row] = line.substring(0, startColumn) + delta.lines[0] + line.substring(startColumn);
+            }
+            else {
+                var args = [row, 1].concat(delta.lines);
+                docLines.splice.apply(docLines, args);
+                docLines[row] = line.substring(0, startColumn) + docLines[row];
+                docLines[row + delta.lines.length - 1] += line.substring(startColumn);
+            }
+            break;
+        case "remove":
+            var endColumn = delta.end.column;
+            var endRow = delta.end.row;
+            if (row === endRow) {
+                docLines[row] = line.substring(0, startColumn) + line.substring(endColumn);
+            }
+            else {
+                docLines.splice(row, endRow - row + 1, line.substring(0, startColumn) + docLines[endRow].substring(endColumn));
+            }
+            break;
+    }
+};
+
+});
+
+ace.define("ace/lib/event_emitter",[], function(require, exports, module){"use strict";
+var EventEmitter = {};
+var stopPropagation = function () { this.propagationStopped = true; };
+var preventDefault = function () { this.defaultPrevented = true; };
+EventEmitter._emit =
+    EventEmitter._dispatchEvent = function (eventName, e) {
+        this._eventRegistry || (this._eventRegistry = {});
+        this._defaultHandlers || (this._defaultHandlers = {});
+        var listeners = this._eventRegistry[eventName] || [];
+        var defaultHandler = this._defaultHandlers[eventName];
+        if (!listeners.length && !defaultHandler)
+            return;
+        if (typeof e != "object" || !e)
+            e = {};
+        if (!e.type)
+            e.type = eventName;
+        if (!e.stopPropagation)
+            e.stopPropagation = stopPropagation;
+        if (!e.preventDefault)
+            e.preventDefault = preventDefault;
+        listeners = listeners.slice();
+        for (var i = 0; i < listeners.length; i++) {
+            listeners[i](e, this);
+            if (e.propagationStopped)
+                break;
+        }
+        if (defaultHandler && !e.defaultPrevented)
+            return defaultHandler(e, this);
+    };
+EventEmitter._signal = function (eventName, e) {
+    var listeners = (this._eventRegistry || {})[eventName];
+    if (!listeners)
+        return;
+    listeners = listeners.slice();
+    for (var i = 0; i < listeners.length; i++)
+        listeners[i](e, this);
+};
+EventEmitter.once = function (eventName, callback) {
+    var _self = this;
+    this.on(eventName, function newCallback() {
+        _self.off(eventName, newCallback);
+        callback.apply(null, arguments);
+    });
+    if (!callback) {
+        return new Promise(function (resolve) {
+            callback = resolve;
+        });
+    }
+};
+EventEmitter.setDefaultHandler = function (eventName, callback) {
+    var handlers = this._defaultHandlers;
+    if (!handlers)
+        handlers = this._defaultHandlers = { _disabled_: {} };
+    if (handlers[eventName]) {
+        var old = handlers[eventName];
+        var disabled = handlers._disabled_[eventName];
+        if (!disabled)
+            handlers._disabled_[eventName] = disabled = [];
+        disabled.push(old);
+        var i = disabled.indexOf(callback);
+        if (i != -1)
+            disabled.splice(i, 1);
+    }
+    handlers[eventName] = callback;
+};
+EventEmitter.removeDefaultHandler = function (eventName, callback) {
+    var handlers = this._defaultHandlers;
+    if (!handlers)
+        return;
+    var disabled = handlers._disabled_[eventName];
+    if (handlers[eventName] == callback) {
+        if (disabled)
+            this.setDefaultHandler(eventName, disabled.pop());
+    }
+    else if (disabled) {
+        var i = disabled.indexOf(callback);
+        if (i != -1)
+            disabled.splice(i, 1);
+    }
+};
+EventEmitter.on =
+    EventEmitter.addEventListener = function (eventName, callback, capturing) {
+        this._eventRegistry = this._eventRegistry || {};
+        var listeners = this._eventRegistry[eventName];
+        if (!listeners)
+            listeners = this._eventRegistry[eventName] = [];
+        if (listeners.indexOf(callback) == -1)
+            listeners[capturing ? "unshift" : "push"](callback);
+        return callback;
+    };
+EventEmitter.off =
+    EventEmitter.removeListener =
+        EventEmitter.removeEventListener = function (eventName, callback) {
+            this._eventRegistry = this._eventRegistry || {};
+            var listeners = this._eventRegistry[eventName];
+            if (!listeners)
+                return;
+            var index = listeners.indexOf(callback);
+            if (index !== -1)
+                listeners.splice(index, 1);
+        };
+EventEmitter.removeAllListeners = function (eventName) {
+    if (!eventName)
+        this._eventRegistry = this._defaultHandlers = undefined;
+    if (this._eventRegistry)
+        this._eventRegistry[eventName] = undefined;
+    if (this._defaultHandlers)
+        this._defaultHandlers[eventName] = undefined;
+};
+exports.EventEmitter = EventEmitter;
+
+});
+
+ace.define("ace/range",[], function(require, exports, module){"use strict";
+var Range = /** @class */ (function () {
+    function Range(startRow, startColumn, endRow, endColumn) {
+        this.start = {
+            row: startRow,
+            column: startColumn
+        };
+        this.end = {
+            row: endRow,
+            column: endColumn
+        };
+    }
+    Range.prototype.isEqual = function (range) {
+        return this.start.row === range.start.row &&
+            this.end.row === range.end.row &&
+            this.start.column === range.start.column &&
+            this.end.column === range.end.column;
+    };
+    Range.prototype.toString = function () {
+        return ("Range: [" + this.start.row + "/" + this.start.column +
+            "] -> [" + this.end.row + "/" + this.end.column + "]");
+    };
+    Range.prototype.contains = function (row, column) {
+        return this.compare(row, column) == 0;
+    };
+    Range.prototype.compareRange = function (range) {
+        var cmp, end = range.end, start = range.start;
+        cmp = this.compare(end.row, end.column);
+        if (cmp == 1) {
+            cmp = this.compare(start.row, start.column);
+            if (cmp == 1) {
+                return 2;
+            }
+            else if (cmp == 0) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else if (cmp == -1) {
+            return -2;
+        }
+        else {
+            cmp = this.compare(start.row, start.column);
+            if (cmp == -1) {
+                return -1;
+            }
+            else if (cmp == 1) {
+                return 42;
+            }
+            else {
+                return 0;
+            }
+        }
+    };
+    Range.prototype.comparePoint = function (p) {
+        return this.compare(p.row, p.column);
+    };
+    Range.prototype.containsRange = function (range) {
+        return this.comparePoint(range.start) == 0 && this.comparePoint(range.end) == 0;
+    };
+    Range.prototype.intersects = function (range) {
+        var cmp = this.compareRange(range);
+        return (cmp == -1 || cmp == 0 || cmp == 1);
+    };
+    Range.prototype.isEnd = function (row, column) {
+        return this.end.row == row && this.end.column == column;
+    };
+    Range.prototype.isStart = function (row, column) {
+        return this.start.row == row && this.start.column == column;
+    };
+    Range.prototype.setStart = function (row, column) {
+        if (typeof row == "object") {
+            this.start.column = row.column;
+            this.start.row = row.row;
+        }
+        else {
+            this.start.row = row;
+            this.start.column = column;
+        }
+    };
+    Range.prototype.setEnd = function (row, column) {
+        if (typeof row == "object") {
+            this.end.column = row.column;
+            this.end.row = row.row;
+        }
+        else {
+            this.end.row = row;
+            this.end.column = column;
+        }
+    };
+    Range.prototype.inside = function (row, column) {
+        if (this.compare(row, column) == 0) {
+            if (this.isEnd(row, column) || this.isStart(row, column)) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        return false;
+    };
+    Range.prototype.insideStart = function (row, column) {
+        if (this.compare(row, column) == 0) {
+            if (this.isEnd(row, column)) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        return false;
+    };
+    Range.prototype.insideEnd = function (row, column) {
+        if (this.compare(row, column) == 0) {
+            if (this.isStart(row, column)) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        return false;
+    };
+    Range.prototype.compare = function (row, column) {
+        if (!this.isMultiLine()) {
+            if (row === this.start.row) {
+                return column < this.start.column ? -1 : (column > this.end.column ? 1 : 0);
+            }
+        }
+        if (row < this.start.row)
+            return -1;
+        if (row > this.end.row)
+            return 1;
+        if (this.start.row === row)
+            return column >= this.start.column ? 0 : -1;
+        if (this.end.row === row)
+            return column <= this.end.column ? 0 : 1;
+        return 0;
+    };
+    Range.prototype.compareStart = function (row, column) {
+        if (this.start.row == row && this.start.column == column) {
+            return -1;
+        }
+        else {
+            return this.compare(row, column);
+        }
+    };
+    Range.prototype.compareEnd = function (row, column) {
+        if (this.end.row == row && this.end.column == column) {
+            return 1;
+        }
+        else {
+            return this.compare(row, column);
+        }
+    };
+    Range.prototype.compareInside = function (row, column) {
+        if (this.end.row == row && this.end.column == column) {
+            return 1;
+        }
+        else if (this.start.row == row && this.start.column == column) {
+            return -1;
+        }
+        else {
+            return this.compare(row, column);
+        }
+    };
+    Range.prototype.clipRows = function (firstRow, lastRow) {
+        if (this.end.row > lastRow)
+            var end = { row: lastRow + 1, column: 0 };
+        else if (this.end.row < firstRow)
+            var end = { row: firstRow, column: 0 };
+        if (this.start.row > lastRow)
+            var start = { row: lastRow + 1, column: 0 };
+        else if (this.start.row < firstRow)
+            var start = { row: firstRow, column: 0 };
+        return Range.fromPoints(start || this.start, end || this.end);
+    };
+    Range.prototype.extend = function (row, column) {
+        var cmp = this.compare(row, column);
+        if (cmp == 0)
+            return this;
+        else if (cmp == -1)
+            var start = { row: row, column: column };
+        else
+            var end = { row: row, column: column };
+        return Range.fromPoints(start || this.start, end || this.end);
+    };
+    Range.prototype.isEmpty = function () {
+        return (this.start.row === this.end.row && this.start.column === this.end.column);
+    };
+    Range.prototype.isMultiLine = function () {
+        return (this.start.row !== this.end.row);
+    };
+    Range.prototype.clone = function () {
+        return Range.fromPoints(this.start, this.end);
+    };
+    Range.prototype.collapseRows = function () {
+        if (this.end.column == 0)
+            return new Range(this.start.row, 0, Math.max(this.start.row, this.end.row - 1), 0);
+        else
+            return new Range(this.start.row, 0, this.end.row, 0);
+    };
+    Range.prototype.toScreenRange = function (session) {
+        var screenPosStart = session.documentToScreenPosition(this.start);
+        var screenPosEnd = session.documentToScreenPosition(this.end);
+        return new Range(screenPosStart.row, screenPosStart.column, screenPosEnd.row, screenPosEnd.column);
+    };
+    Range.prototype.moveBy = function (row, column) {
+        this.start.row += row;
+        this.start.column += column;
+        this.end.row += row;
+        this.end.column += column;
+    };
+    return Range;
+}());
+Range.fromPoints = function (start, end) {
+    return new Range(start.row, start.column, end.row, end.column);
+};
+Range.comparePoints = function (p1, p2) {
+    return p1.row - p2.row || p1.column - p2.column;
+};
+exports.Range = Range;
+
+});
+
+ace.define("ace/anchor",[], function(require, exports, module){"use strict";
+var oop = require("./lib/oop");
+var EventEmitter = require("./lib/event_emitter").EventEmitter;
+var Anchor = /** @class */ (function () {
+    function Anchor(doc, row, column) {
+        this.$onChange = this.onChange.bind(this);
+        this.attach(doc);
+        if (typeof row != "number")
+            this.setPosition(row.row, row.column);
+        else
+            this.setPosition(row, column);
+    }
+    Anchor.prototype.getPosition = function () {
+        return this.$clipPositionToDocument(this.row, this.column);
+    };
+    Anchor.prototype.getDocument = function () {
+        return this.document;
+    };
+    Anchor.prototype.onChange = function (delta) {
+        if (delta.start.row == delta.end.row && delta.start.row != this.row)
+            return;
+        if (delta.start.row > this.row)
+            return;
+        var point = $getTransformedPoint(delta, { row: this.row, column: this.column }, this.$insertRight);
+        this.setPosition(point.row, point.column, true);
+    };
+    Anchor.prototype.setPosition = function (row, column, noClip) {
+        var pos;
+        if (noClip) {
+            pos = {
+                row: row,
+                column: column
+            };
+        }
+        else {
+            pos = this.$clipPositionToDocument(row, column);
+        }
+        if (this.row == pos.row && this.column == pos.column)
+            return;
+        var old = {
+            row: this.row,
+            column: this.column
+        };
+        this.row = pos.row;
+        this.column = pos.column;
+        this._signal("change", {
+            old: old,
+            value: pos
+        });
+    };
+    Anchor.prototype.detach = function () {
+        this.document.off("change", this.$onChange);
+    };
+    Anchor.prototype.attach = function (doc) {
+        this.document = doc || this.document;
+        this.document.on("change", this.$onChange);
+    };
+    Anchor.prototype.$clipPositionToDocument = function (row, column) {
+        var pos = {};
+        if (row >= this.document.getLength()) {
+            pos.row = Math.max(0, this.document.getLength() - 1);
+            pos.column = this.document.getLine(pos.row).length;
+        }
+        else if (row < 0) {
+            pos.row = 0;
+            pos.column = 0;
+        }
+        else {
+            pos.row = row;
+            pos.column = Math.min(this.document.getLine(pos.row).length, Math.max(0, column));
+        }
+        if (column < 0)
+            pos.column = 0;
+        return pos;
+    };
+    return Anchor;
+}());
+Anchor.prototype.$insertRight = false;
+oop.implement(Anchor.prototype, EventEmitter);
+function $pointsInOrder(point1, point2, equalPointsInOrder) {
+    var bColIsAfter = equalPointsInOrder ? point1.column <= point2.column : point1.column < point2.column;
+    return (point1.row < point2.row) || (point1.row == point2.row && bColIsAfter);
+}
+function $getTransformedPoint(delta, point, moveIfEqual) {
+    var deltaIsInsert = delta.action == "insert";
+    var deltaRowShift = (deltaIsInsert ? 1 : -1) * (delta.end.row - delta.start.row);
+    var deltaColShift = (deltaIsInsert ? 1 : -1) * (delta.end.column - delta.start.column);
+    var deltaStart = delta.start;
+    var deltaEnd = deltaIsInsert ? deltaStart : delta.end; // Collapse insert range.
+    if ($pointsInOrder(point, deltaStart, moveIfEqual)) {
+        return {
+            row: point.row,
+            column: point.column
+        };
+    }
+    if ($pointsInOrder(deltaEnd, point, !moveIfEqual)) {
+        return {
+            row: point.row + deltaRowShift,
+            column: point.column + (point.row == deltaEnd.row ? deltaColShift : 0)
+        };
+    }
+    return {
+        row: deltaStart.row,
+        column: deltaStart.column
+    };
+}
+exports.Anchor = Anchor;
+
+});
+
+ace.define("ace/document",[], function(require, exports, module){"use strict";
+var oop = require("./lib/oop");
+var applyDelta = require("./apply_delta").applyDelta;
+var EventEmitter = require("./lib/event_emitter").EventEmitter;
+var Range = require("./range").Range;
+var Anchor = require("./anchor").Anchor;
+var Document = /** @class */ (function () {
+    function Document(textOrLines) {
+        this.$lines = [""];
+        if (textOrLines.length === 0) {
+            this.$lines = [""];
+        }
+        else if (Array.isArray(textOrLines)) {
+            this.insertMergedLines({ row: 0, column: 0 }, textOrLines);
+        }
+        else {
+            this.insert({ row: 0, column: 0 }, textOrLines);
+        }
+    }
+    Document.prototype.setValue = function (text) {
+        var len = this.getLength() - 1;
+        this.remove(new Range(0, 0, len, this.getLine(len).length));
+        this.insert({ row: 0, column: 0 }, text || "");
+    };
+    Document.prototype.getValue = function () {
+        return this.getAllLines().join(this.getNewLineCharacter());
+    };
+    Document.prototype.createAnchor = function (row, column) {
+        return new Anchor(this, row, column);
+    };
+    Document.prototype.$detectNewLine = function (text) {
+        var match = text.match(/^.*?(\r\n|\r|\n)/m);
+        this.$autoNewLine = match ? match[1] : "\n";
+        this._signal("changeNewLineMode");
+    };
+    Document.prototype.getNewLineCharacter = function () {
+        switch (this.$newLineMode) {
+            case "windows":
+                return "\r\n";
+            case "unix":
+                return "\n";
+            default:
+                return this.$autoNewLine || "\n";
+        }
+    };
+    Document.prototype.setNewLineMode = function (newLineMode) {
+        if (this.$newLineMode === newLineMode)
+            return;
+        this.$newLineMode = newLineMode;
+        this._signal("changeNewLineMode");
+    };
+    Document.prototype.getNewLineMode = function () {
+        return this.$newLineMode;
+    };
+    Document.prototype.isNewLine = function (text) {
+        return (text == "\r\n" || text == "\r" || text == "\n");
+    };
+    Document.prototype.getLine = function (row) {
+        return this.$lines[row] || "";
+    };
+    Document.prototype.getLines = function (firstRow, lastRow) {
+        return this.$lines.slice(firstRow, lastRow + 1);
+    };
+    Document.prototype.getAllLines = function () {
+        return this.getLines(0, this.getLength());
+    };
+    Document.prototype.getLength = function () {
+        return this.$lines.length;
+    };
+    Document.prototype.getTextRange = function (range) {
+        return this.getLinesForRange(range).join(this.getNewLineCharacter());
+    };
+    Document.prototype.getLinesForRange = function (range) {
+        var lines;
+        if (range.start.row === range.end.row) {
+            lines = [this.getLine(range.start.row).substring(range.start.column, range.end.column)];
+        }
+        else {
+            lines = this.getLines(range.start.row, range.end.row);
+            lines[0] = (lines[0] || "").substring(range.start.column);
+            var l = lines.length - 1;
+            if (range.end.row - range.start.row == l)
+                lines[l] = lines[l].substring(0, range.end.column);
+        }
+        return lines;
+    };
+    Document.prototype.insertLines = function (row, lines) {
+        console.warn("Use of document.insertLines is deprecated. Use the insertFullLines method instead.");
+        return this.insertFullLines(row, lines);
+    };
+    Document.prototype.removeLines = function (firstRow, lastRow) {
+        console.warn("Use of document.removeLines is deprecated. Use the removeFullLines method instead.");
+        return this.removeFullLines(firstRow, lastRow);
+    };
+    Document.prototype.insertNewLine = function (position) {
+        console.warn("Use of document.insertNewLine is deprecated. Use insertMergedLines(position, ['', '']) instead.");
+        return this.insertMergedLines(position, ["", ""]);
+    };
+    Document.prototype.insert = function (position, text) {
+        if (this.getLength() <= 1)
+            this.$detectNewLine(text);
+        return this.insertMergedLines(position, this.$split(text));
+    };
+    Document.prototype.insertInLine = function (position, text) {
+        var start = this.clippedPos(position.row, position.column);
+        var end = this.pos(position.row, position.column + text.length);
+        this.applyDelta({
+            start: start,
+            end: end,
+            action: "insert",
+            lines: [text]
+        }, true);
+        return this.clonePos(end);
+    };
+    Document.prototype.clippedPos = function (row, column) {
+        var length = this.getLength();
+        if (row === undefined) {
+            row = length;
+        }
+        else if (row < 0) {
+            row = 0;
+        }
+        else if (row >= length) {
+            row = length - 1;
+            column = undefined;
+        }
+        var line = this.getLine(row);
+        if (column == undefined)
+            column = line.length;
+        column = Math.min(Math.max(column, 0), line.length);
+        return { row: row, column: column };
+    };
+    Document.prototype.clonePos = function (pos) {
+        return { row: pos.row, column: pos.column };
+    };
+    Document.prototype.pos = function (row, column) {
+        return { row: row, column: column };
+    };
+    Document.prototype.$clipPosition = function (position) {
+        var length = this.getLength();
+        if (position.row >= length) {
+            position.row = Math.max(0, length - 1);
+            position.column = this.getLine(length - 1).length;
+        }
+        else {
+            position.row = Math.max(0, position.row);
+            position.column = Math.min(Math.max(position.column, 0), this.getLine(position.row).length);
+        }
+        return position;
+    };
+    Document.prototype.insertFullLines = function (row, lines) {
+        row = Math.min(Math.max(row, 0), this.getLength());
+        var column = 0;
+        if (row < this.getLength()) {
+            lines = lines.concat([""]);
+            column = 0;
+        }
+        else {
+            lines = [""].concat(lines);
+            row--;
+            column = this.$lines[row].length;
+        }
+        this.insertMergedLines({ row: row, column: column }, lines);
+    };
+    Document.prototype.insertMergedLines = function (position, lines) {
+        var start = this.clippedPos(position.row, position.column);
+        var end = {
+            row: start.row + lines.length - 1,
+            column: (lines.length == 1 ? start.column : 0) + lines[lines.length - 1].length
+        };
+        this.applyDelta({
+            start: start,
+            end: end,
+            action: "insert",
+            lines: lines
+        });
+        return this.clonePos(end);
+    };
+    Document.prototype.remove = function (range) {
+        var start = this.clippedPos(range.start.row, range.start.column);
+        var end = this.clippedPos(range.end.row, range.end.column);
+        this.applyDelta({
+            start: start,
+            end: end,
+            action: "remove",
+            lines: this.getLinesForRange({ start: start, end: end })
+        });
+        return this.clonePos(start);
+    };
+    Document.prototype.removeInLine = function (row, startColumn, endColumn) {
+        var start = this.clippedPos(row, startColumn);
+        var end = this.clippedPos(row, endColumn);
+        this.applyDelta({
+            start: start,
+            end: end,
+            action: "remove",
+            lines: this.getLinesForRange({ start: start, end: end })
+        }, true);
+        return this.clonePos(start);
+    };
+    Document.prototype.removeFullLines = function (firstRow, lastRow) {
+        firstRow = Math.min(Math.max(0, firstRow), this.getLength() - 1);
+        lastRow = Math.min(Math.max(0, lastRow), this.getLength() - 1);
+        var deleteFirstNewLine = lastRow == this.getLength() - 1 && firstRow > 0;
+        var deleteLastNewLine = lastRow < this.getLength() - 1;
+        var startRow = (deleteFirstNewLine ? firstRow - 1 : firstRow);
+        var startCol = (deleteFirstNewLine ? this.getLine(startRow).length : 0);
+        var endRow = (deleteLastNewLine ? lastRow + 1 : lastRow);
+        var endCol = (deleteLastNewLine ? 0 : this.getLine(endRow).length);
+        var range = new Range(startRow, startCol, endRow, endCol);
+        var deletedLines = this.$lines.slice(firstRow, lastRow + 1);
+        this.applyDelta({
+            start: range.start,
+            end: range.end,
+            action: "remove",
+            lines: this.getLinesForRange(range)
+        });
+        return deletedLines;
+    };
+    Document.prototype.removeNewLine = function (row) {
+        if (row < this.getLength() - 1 && row >= 0) {
+            this.applyDelta({
+                start: this.pos(row, this.getLine(row).length),
+                end: this.pos(row + 1, 0),
+                action: "remove",
+                lines: ["", ""]
+            });
+        }
+    };
+    Document.prototype.replace = function (range, text) {
+        if (!(range instanceof Range))
+            range = Range.fromPoints(range.start, range.end);
+        if (text.length === 0 && range.isEmpty())
+            return range.start;
+        if (text == this.getTextRange(range))
+            return range.end;
+        this.remove(range);
+        var end;
+        if (text) {
+            end = this.insert(range.start, text);
+        }
+        else {
+            end = range.start;
+        }
+        return end;
+    };
+    Document.prototype.applyDeltas = function (deltas) {
+        for (var i = 0; i < deltas.length; i++) {
+            this.applyDelta(deltas[i]);
+        }
+    };
+    Document.prototype.revertDeltas = function (deltas) {
+        for (var i = deltas.length - 1; i >= 0; i--) {
+            this.revertDelta(deltas[i]);
+        }
+    };
+    Document.prototype.applyDelta = function (delta, doNotValidate) {
+        var isInsert = delta.action == "insert";
+        if (isInsert ? delta.lines.length <= 1 && !delta.lines[0]
+            : !Range.comparePoints(delta.start, delta.end)) {
+            return;
+        }
+        if (isInsert && delta.lines.length > 20000) {
+            this.$splitAndapplyLargeDelta(delta, 20000);
+        }
+        else {
+            applyDelta(this.$lines, delta, doNotValidate);
+            this._signal("change", delta);
+        }
+    };
+    Document.prototype.$safeApplyDelta = function (delta) {
+        var docLength = this.$lines.length;
+        if (delta.action == "remove" && delta.start.row < docLength && delta.end.row < docLength
+            || delta.action == "insert" && delta.start.row <= docLength) {
+            this.applyDelta(delta);
+        }
+    };
+    Document.prototype.$splitAndapplyLargeDelta = function (delta, MAX) {
+        var lines = delta.lines;
+        var l = lines.length - MAX + 1;
+        var row = delta.start.row;
+        var column = delta.start.column;
+        for (var from = 0, to = 0; from < l; from = to) {
+            to += MAX - 1;
+            var chunk = lines.slice(from, to);
+            chunk.push("");
+            this.applyDelta({
+                start: this.pos(row + from, column),
+                end: this.pos(row + to, column = 0),
+                action: delta.action,
+                lines: chunk
+            }, true);
+        }
+        delta.lines = lines.slice(from);
+        delta.start.row = row + from;
+        delta.start.column = column;
+        this.applyDelta(delta, true);
+    };
+    Document.prototype.revertDelta = function (delta) {
+        this.$safeApplyDelta({
+            start: this.clonePos(delta.start),
+            end: this.clonePos(delta.end),
+            action: (delta.action == "insert" ? "remove" : "insert"),
+            lines: delta.lines.slice()
+        });
+    };
+    Document.prototype.indexToPosition = function (index, startRow) {
+        var lines = this.$lines || this.getAllLines();
+        var newlineLength = this.getNewLineCharacter().length;
+        for (var i = startRow || 0, l = lines.length; i < l; i++) {
+            index -= lines[i].length + newlineLength;
+            if (index < 0)
+                return { row: i, column: index + lines[i].length + newlineLength };
+        }
+        return { row: l - 1, column: index + lines[l - 1].length + newlineLength };
+    };
+    Document.prototype.positionToIndex = function (pos, startRow) {
+        var lines = this.$lines || this.getAllLines();
+        var newlineLength = this.getNewLineCharacter().length;
+        var index = 0;
+        var row = Math.min(pos.row, lines.length);
+        for (var i = startRow || 0; i < row; ++i)
+            index += lines[i].length + newlineLength;
+        return index + pos.column;
+    };
+    Document.prototype.$split = function (text) {
+        return text.split(/\r\n|\r|\n/);
+    };
+    return Document;
+}());
+Document.prototype.$autoNewLine = "";
+Document.prototype.$newLineMode = "auto";
+oop.implement(Document.prototype, EventEmitter);
+exports.Document = Document;
+
+});
+
+ace.define("ace/lib/deep_copy",[], function(require, exports, module){exports.deepCopy = function deepCopy(obj) {
+    if (typeof obj !== "object" || !obj)
+        return obj;
+    var copy;
+    if (Array.isArray(obj)) {
+        copy = [];
+        for (var key = 0; key < obj.length; key++) {
+            copy[key] = deepCopy(obj[key]);
+        }
+        return copy;
+    }
+    if (Object.prototype.toString.call(obj) !== "[object Object]")
+        return obj;
+    copy = {};
+    for (var key in obj)
+        copy[key] = deepCopy(obj[key]);
+    return copy;
+};
+
+});
+
+ace.define("ace/lib/lang",[], function(require, exports, module){"use strict";
+exports.last = function (a) {
+    return a[a.length - 1];
+};
+exports.stringReverse = function (string) {
+    return string.split("").reverse().join("");
+};
+exports.stringRepeat = function (string, count) {
+    var result = '';
+    while (count > 0) {
+        if (count & 1)
+            result += string;
+        if (count >>= 1)
+            string += string;
+    }
+    return result;
+};
+var trimBeginRegexp = /^\s\s*/;
+var trimEndRegexp = /\s\s*$/;
+exports.stringTrimLeft = function (string) {
+    return string.replace(trimBeginRegexp, '');
+};
+exports.stringTrimRight = function (string) {
+    return string.replace(trimEndRegexp, '');
+};
+exports.copyObject = function (obj) {
+    var copy = {};
+    for (var key in obj) {
+        copy[key] = obj[key];
+    }
+    return copy;
+};
+exports.copyArray = function (array) {
+    var copy = [];
+    for (var i = 0, l = array.length; i < l; i++) {
+        if (array[i] && typeof array[i] == "object")
+            copy[i] = this.copyObject(array[i]);
+        else
+            copy[i] = array[i];
+    }
+    return copy;
+};
+exports.deepCopy = require("./deep_copy").deepCopy;
+exports.arrayToMap = function (arr) {
+    var map = {};
+    for (var i = 0; i < arr.length; i++) {
+        map[arr[i]] = 1;
+    }
+    return map;
+};
+exports.createMap = function (props) {
+    var map = Object.create(null);
+    for (var i in props) {
+        map[i] = props[i];
+    }
+    return map;
+};
+exports.arrayRemove = function (array, value) {
+    for (var i = 0; i <= array.length; i++) {
+        if (value === array[i]) {
+            array.splice(i, 1);
+        }
+    }
+};
+exports.escapeRegExp = function (str) {
+    return str.replace(/([.*+?^${}()|[\]\/\\])/g, '\\$1');
+};
+exports.escapeHTML = function (str) {
+    return ("" + str).replace(/&/g, "&#38;").replace(/"/g, "&#34;").replace(/'/g, "&#39;").replace(/</g, "&#60;");
+};
+exports.getMatchOffsets = function (string, regExp) {
+    var matches = [];
+    string.replace(regExp, function (str) {
+        matches.push({
+            offset: arguments[arguments.length - 2],
+            length: str.length
+        });
+    });
+    return matches;
+};
+exports.deferredCall = function (fcn) {
+    var timer = null;
+    var callback = function () {
+        timer = null;
+        fcn();
+    };
+    var deferred = function (timeout) {
+        deferred.cancel();
+        timer = setTimeout(callback, timeout || 0);
+        return deferred;
+    };
+    deferred.schedule = deferred;
+    deferred.call = function () {
+        this.cancel();
+        fcn();
+        return deferred;
+    };
+    deferred.cancel = function () {
+        clearTimeout(timer);
+        timer = null;
+        return deferred;
+    };
+    deferred.isPending = function () {
+        return timer;
+    };
+    return deferred;
+};
+exports.delayedCall = function (fcn, defaultTimeout) {
+    var timer = null;
+    var callback = function () {
+        timer = null;
+        fcn();
+    };
+    var _self = function (timeout) {
+        if (timer == null)
+            timer = setTimeout(callback, timeout || defaultTimeout);
+    };
+    _self.delay = function (timeout) {
+        timer && clearTimeout(timer);
+        timer = setTimeout(callback, timeout || defaultTimeout);
+    };
+    _self.schedule = _self;
+    _self.call = function () {
+        this.cancel();
+        fcn();
+    };
+    _self.cancel = function () {
+        timer && clearTimeout(timer);
+        timer = null;
+    };
+    _self.isPending = function () {
+        return timer;
+    };
+    return _self;
+};
+exports.supportsLookbehind = function () {
+    try {
+        new RegExp('(?<=.)');
+    }
+    catch (e) {
+        return false;
+    }
+    return true;
+};
+exports.skipEmptyMatch = function (line, last, supportsUnicodeFlag) {
+    return supportsUnicodeFlag && line.codePointAt(last) > 0xffff ? 2 : 1;
+};
+
+});
+
+ace.define("ace/worker/mirror",[], function(require, exports, module) {
+"use strict";
+
+var Document = require("../document").Document;
+var lang = require("../lib/lang");
+    
+var Mirror = exports.Mirror = function(sender) {
+    this.sender = sender;
+    var doc = this.doc = new Document("");
+    
+    var deferredUpdate = this.deferredUpdate = lang.delayedCall(this.onUpdate.bind(this));
+    
+    var _self = this;
+    sender.on("change", function(e) {
+        var data = e.data;
+        if (data[0].start) {
+            doc.applyDeltas(data);
+        } else {
+            for (var i = 0; i < data.length; i += 2) {
+                var d, err; 
+                if (Array.isArray(data[i+1])) {
+                    d = {action: "insert", start: data[i], lines: data[i+1]};
+                } else {
+                    d = {action: "remove", start: data[i], end: data[i+1]};
+                }
+                
+                if ((d.action == "insert" ? d.start : d.end).row >= doc.$lines.length) {
+                    err = new Error("Invalid delta");
+                    err.data = {
+                        path: _self.$path,
+                        linesLength: doc.$lines.length,
+                        start: d.start,
+                        end: d.end
+                    };
+                    throw err;
+                }
+
+                doc.applyDelta(d, true);
+            }
+        }
+        if (_self.$timeout)
+            return deferredUpdate.schedule(_self.$timeout);
+        _self.onUpdate();
+    });
+};
+
+(function() {
+    
+    this.$timeout = 500;
+    
+    this.setTimeout = function(timeout) {
+        this.$timeout = timeout;
+    };
+    
+    this.setValue = function(value) {
+        this.doc.setValue(value);
+        this.deferredUpdate.schedule(this.$timeout);
+    };
+    
+    this.getValue = function(callbackId) {
+        this.sender.callback(this.doc.getValue(), callbackId);
+    };
+    
+    this.onUpdate = function() {
+    };
+    
+    this.isPending = function() {
+        return this.deferredUpdate.isPending();
+    };
+    
+}).call(Mirror.prototype);
+
+});
+
+ace.define("ace/mode/json/json_parse",[], function(require, exports, module) {
+"use strict";
+
+    var at,     // The index of the current character
+        ch,     // The current character
+        escapee = {
+            '"':  '"',
+            '\\': '\\',
+            '/':  '/',
+            b:    '\b',
+            f:    '\f',
+            n:    '\n',
+            r:    '\r',
+            t:    '\t'
+        },
+        text,
+
+        error = function (m) {
+
+            throw {
+                name:    'SyntaxError',
+                message: m,
+                at:      at,
+                text:    text
+            };
+        },
+
+        next = function (c) {
+
+            if (c && c !== ch) {
+                error("Expected '" + c + "' instead of '" + ch + "'");
+            }
+
+            ch = text.charAt(at);
+            at += 1;
+            return ch;
+        },
+
+        number = function () {
+
+            var number,
+                string = '';
+
+            if (ch === '-') {
+                string = '-';
+                next('-');
+            }
+            while (ch >= '0' && ch <= '9') {
+                string += ch;
+                next();
+            }
+            if (ch === '.') {
+                string += '.';
+                while (next() && ch >= '0' && ch <= '9') {
+                    string += ch;
+                }
+            }
+            if (ch === 'e' || ch === 'E') {
+                string += ch;
+                next();
+                if (ch === '-' || ch === '+') {
+                    string += ch;
+                    next();
+                }
+                while (ch >= '0' && ch <= '9') {
+                    string += ch;
+                    next();
+                }
+            }
+            number = +string;
+            if (isNaN(number)) {
+                error("Bad number");
+            } else {
+                return number;
+            }
+        },
+
+        string = function () {
+
+            var hex,
+                i,
+                string = '',
+                uffff;
+
+            if (ch === '"') {
+                while (next()) {
+                    if (ch === '"') {
+                        next();
+                        return string;
+                    } else if (ch === '\\') {
+                        next();
+                        if (ch === 'u') {
+                            uffff = 0;
+                            for (i = 0; i < 4; i += 1) {
+                                hex = parseInt(next(), 16);
+                                if (!isFinite(hex)) {
+                                    break;
+                                }
+                                uffff = uffff * 16 + hex;
+                            }
+                            string += String.fromCharCode(uffff);
+                        } else if (typeof escapee[ch] === 'string') {
+                            string += escapee[ch];
+                        } else {
+                            break;
+                        }
+                    } else if (ch == "\n" || ch == "\r") {
+                        break;
+                    } else {
+                        string += ch;
+                    }
+                }
+            }
+            error("Bad string");
+        },
+
+        white = function () {
+
+            while (ch && ch <= ' ') {
+                next();
+            }
+        },
+
+        word = function () {
+
+            switch (ch) {
+            case 't':
+                next('t');
+                next('r');
+                next('u');
+                next('e');
+                return true;
+            case 'f':
+                next('f');
+                next('a');
+                next('l');
+                next('s');
+                next('e');
+                return false;
+            case 'n':
+                next('n');
+                next('u');
+                next('l');
+                next('l');
+                return null;
+            }
+            error("Unexpected '" + ch + "'");
+        },
+
+        value,  // Place holder for the value function.
+
+        array = function () {
+
+            var array = [];
+
+            if (ch === '[') {
+                next('[');
+                white();
+                if (ch === ']') {
+                    next(']');
+                    return array;   // empty array
+                }
+                while (ch) {
+                    array.push(value());
+                    white();
+                    if (ch === ']') {
+                        next(']');
+                        return array;
+                    }
+                    next(',');
+                    white();
+                }
+            }
+            error("Bad array");
+        },
+
+        object = function () {
+
+            var key,
+                object = {};
+
+            if (ch === '{') {
+                next('{');
+                white();
+                if (ch === '}') {
+                    next('}');
+                    return object;   // empty object
+                }
+                while (ch) {
+                    key = string();
+                    white();
+                    next(':');
+                    if (Object.hasOwnProperty.call(object, key)) {
+                        error('Duplicate key "' + key + '"');
+                    }
+                    object[key] = value();
+                    white();
+                    if (ch === '}') {
+                        next('}');
+                        return object;
+                    }
+                    next(',');
+                    white();
+                }
+            }
+            error("Bad object");
+        };
+
+    value = function () {
+
+        white();
+        switch (ch) {
+        case '{':
+            return object();
+        case '[':
+            return array();
+        case '"':
+            return string();
+        case '-':
+            return number();
+        default:
+            return ch >= '0' && ch <= '9' ? number() : word();
+        }
+    };
+
+    return function (source, reviver) {
+        var result;
+
+        text = source;
+        at = 0;
+        ch = ' ';
+        result = value();
+        white();
+        if (ch) {
+            error("Syntax error");
+        }
+
+        return typeof reviver === 'function' ? function walk(holder, key) {
+            var k, v, value = holder[key];
+            if (value && typeof value === 'object') {
+                for (k in value) {
+                    if (Object.hasOwnProperty.call(value, k)) {
+                        v = walk(value, k);
+                        if (v !== undefined) {
+                            value[k] = v;
+                        } else {
+                            delete value[k];
+                        }
+                    }
+                }
+            }
+            return reviver.call(holder, key, value);
+        }({'': result}, '') : result;
+    };
+});
+
+ace.define("ace/mode/json_worker",[], function(require, exports, module) {
+"use strict";
+
+var oop = require("../lib/oop");
+var Mirror = require("../worker/mirror").Mirror;
+var parse = require("./json/json_parse");
+
+var JsonWorker = exports.JsonWorker = function(sender) {
+    Mirror.call(this, sender);
+    this.setTimeout(200);
+};
+
+oop.inherits(JsonWorker, Mirror);
+
+(function() {
+
+    this.onUpdate = function() {
+        var value = this.doc.getValue();
+        var errors = [];
+        try {
+            if (value)
+                parse(value);
+        } catch (e) {
+            var pos = this.doc.indexToPosition(e.at-1);
+            errors.push({
+                row: pos.row,
+                column: pos.column,
+                text: e.message,
+                type: "error"
+            });
+        }
+        this.sender.emit("annotate", errors);
+    };
+
+}).call(JsonWorker.prototype);
+
+});

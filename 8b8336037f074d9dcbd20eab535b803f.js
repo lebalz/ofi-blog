@@ -1,1 +1,227 @@
-ace.define("ace/ext/elastic_tabstops_lite",["require","exports","module","ace/editor","ace/config"],(function(t,e,o){"use strict";var s=function(){function t(t){this.$editor=t;var e=this,o=[],s=!1;this.onAfterExec=function(){s=!1,e.processRows(o),o=[]},this.onExec=function(){s=!0},this.onChange=function(t){s&&(-1==o.indexOf(t.start.row)&&o.push(t.start.row),t.end.row!=t.start.row&&o.push(t.end.row))}}return t.prototype.processRows=function(t){this.$inChange=!0;for(var e=[],o=0,s=t.length;o<s;o++){var i=t[o];if(!(e.indexOf(i)>-1))for(var n=this.$findCellWidthsForBlock(i),r=this.$setBlockCellWidthsToMax(n.cellWidths),a=n.firstRow,h=0,c=r.length;h<c;h++){var l=r[h];e.push(a),this.$adjustRow(a,l),a++}}this.$inChange=!1},t.prototype.$findCellWidthsForBlock=function(t){for(var e,o=[],s=t;s>=0&&0!=(e=this.$cellWidthsForRow(s)).length;)o.unshift(e),s--;var i=s+1;s=t;for(var n=this.$editor.session.getLength();s<n-1&&(s++,0!=(e=this.$cellWidthsForRow(s)).length);)o.push(e);return{cellWidths:o,firstRow:i}},t.prototype.$cellWidthsForRow=function(t){for(var e=this.$selectionColumnsForRow(t),o=[-1].concat(this.$tabsForRow(t)),s=o.map((function(t){return 0})).slice(1),i=this.$editor.session.getLine(t),n=0,r=o.length-1;n<r;n++){var a=o[n]+1,h=o[n+1],c=this.$rightmostSelectionInCell(e,h),l=i.substring(a,h);s[n]=Math.max(l.replace(/\s+$/g,"").length,c-a)}return s},t.prototype.$selectionColumnsForRow=function(t){var e=[],o=this.$editor.getCursorPosition();return this.$editor.session.getSelection().isEmpty()&&t==o.row&&e.push(o.column),e},t.prototype.$setBlockCellWidthsToMax=function(t){for(var e,o,s,i=!0,n=this.$izip_longest(t),r=0,a=n.length;r<a;r++){var h=n[r];if(h.push){h.push(NaN);for(var c=0,l=h.length;c<l;c++){var p=h[c];if(i&&(e=c,s=0,i=!1),isNaN(p)){o=c;for(var u=e;u<o;u++)t[u][r]=s;i=!0}s=Math.max(s,p)}}else console.error(h)}return t},t.prototype.$rightmostSelectionInCell=function(t,e){var o=0;if(t.length){for(var s=[],i=0,n=t.length;i<n;i++)t[i]<=e?s.push(i):s.push(0);o=Math.max.apply(Math,s)}return o},t.prototype.$tabsForRow=function(t){for(var e,o=[],s=this.$editor.session.getLine(t),i=/\t/g;null!=(e=i.exec(s));)o.push(e.index);return o},t.prototype.$adjustRow=function(t,e){var o=this.$tabsForRow(t);if(0!=o.length)for(var s=0,i=-1,n=this.$izip(e,o),r=0,a=n.length;r<a;r++){var h=n[r][0],c=n[r][1],l=(i+=1+h)-(c+=s);if(0!=l){var p=this.$editor.session.getLine(t).substr(0,c),u=p.replace(/\s*$/g,""),f=p.length-u.length;l>0&&(this.$editor.session.getDocument().insertInLine({row:t,column:c+1},Array(l+1).join(" ")+"\t"),this.$editor.session.getDocument().removeInLine(t,c,c+1),s+=l),l<0&&f>=-l&&(this.$editor.session.getDocument().removeInLine(t,c+l,c),s+=l)}}},t.prototype.$izip_longest=function(t){if(!t[0])return[];for(var e=t[0].length,o=t.length,s=1;s<o;s++){var i=t[s].length;i>e&&(e=i)}for(var n=[],r=0;r<e;r++){var a=[];for(s=0;s<o;s++)""===t[s][r]?a.push(NaN):a.push(t[s][r]);n.push(a)}return n},t.prototype.$izip=function(t,e){for(var o=t.length>=e.length?e.length:t.length,s=[],i=0;i<o;i++){var n=[t[i],e[i]];s.push(n)}return s},t}();e.ElasticTabstopsLite=s;var i=t("../editor").Editor;t("../config").defineOptions(i.prototype,"editor",{useElasticTabstops:{set:function(t){t?(this.elasticTabstops||(this.elasticTabstops=new s(this)),this.commands.on("afterExec",this.elasticTabstops.onAfterExec),this.commands.on("exec",this.elasticTabstops.onExec),this.on("change",this.elasticTabstops.onChange)):this.elasticTabstops&&(this.commands.removeListener("afterExec",this.elasticTabstops.onAfterExec),this.commands.removeListener("exec",this.elasticTabstops.onExec),this.removeListener("change",this.elasticTabstops.onChange))}}})})),ace.require(["ace/ext/elastic_tabstops_lite"],(function(t){"object"==typeof module&&"object"==typeof exports&&module&&(module.exports=t)}));
+ace.define("ace/ext/elastic_tabstops_lite",["require","exports","module","ace/editor","ace/config"], function(require, exports, module){"use strict";
+var ElasticTabstopsLite = /** @class */ (function () {
+    function ElasticTabstopsLite(editor) {
+        this.$editor = editor;
+        var self = this;
+        var changedRows = [];
+        var recordChanges = false;
+        this.onAfterExec = function () {
+            recordChanges = false;
+            self.processRows(changedRows);
+            changedRows = [];
+        };
+        this.onExec = function () {
+            recordChanges = true;
+        };
+        this.onChange = function (delta) {
+            if (recordChanges) {
+                if (changedRows.indexOf(delta.start.row) == -1)
+                    changedRows.push(delta.start.row);
+                if (delta.end.row != delta.start.row)
+                    changedRows.push(delta.end.row);
+            }
+        };
+    }
+    ElasticTabstopsLite.prototype.processRows = function (rows) {
+        this.$inChange = true;
+        var checkedRows = [];
+        for (var r = 0, rowCount = rows.length; r < rowCount; r++) {
+            var row = rows[r];
+            if (checkedRows.indexOf(row) > -1)
+                continue;
+            var cellWidthObj = this.$findCellWidthsForBlock(row);
+            var cellWidths = this.$setBlockCellWidthsToMax(cellWidthObj.cellWidths);
+            var rowIndex = cellWidthObj.firstRow;
+            for (var w = 0, l = cellWidths.length; w < l; w++) {
+                var widths = cellWidths[w];
+                checkedRows.push(rowIndex);
+                this.$adjustRow(rowIndex, widths);
+                rowIndex++;
+            }
+        }
+        this.$inChange = false;
+    };
+    ElasticTabstopsLite.prototype.$findCellWidthsForBlock = function (row) {
+        var cellWidths = [], widths;
+        var rowIter = row;
+        while (rowIter >= 0) {
+            widths = this.$cellWidthsForRow(rowIter);
+            if (widths.length == 0)
+                break;
+            cellWidths.unshift(widths);
+            rowIter--;
+        }
+        var firstRow = rowIter + 1;
+        rowIter = row;
+        var numRows = this.$editor.session.getLength();
+        while (rowIter < numRows - 1) {
+            rowIter++;
+            widths = this.$cellWidthsForRow(rowIter);
+            if (widths.length == 0)
+                break;
+            cellWidths.push(widths);
+        }
+        return { cellWidths: cellWidths, firstRow: firstRow };
+    };
+    ElasticTabstopsLite.prototype.$cellWidthsForRow = function (row) {
+        var selectionColumns = this.$selectionColumnsForRow(row);
+        var tabs = [-1].concat(this.$tabsForRow(row));
+        var widths = tabs.map(function (el) { return 0; }).slice(1);
+        var line = this.$editor.session.getLine(row);
+        for (var i = 0, len = tabs.length - 1; i < len; i++) {
+            var leftEdge = tabs[i] + 1;
+            var rightEdge = tabs[i + 1];
+            var rightmostSelection = this.$rightmostSelectionInCell(selectionColumns, rightEdge);
+            var cell = line.substring(leftEdge, rightEdge);
+            widths[i] = Math.max(cell.replace(/\s+$/g, '').length, rightmostSelection - leftEdge);
+        }
+        return widths;
+    };
+    ElasticTabstopsLite.prototype.$selectionColumnsForRow = function (row) {
+        var selections = [], cursor = this.$editor.getCursorPosition();
+        if (this.$editor.session.getSelection().isEmpty()) {
+            if (row == cursor.row)
+                selections.push(cursor.column);
+        }
+        return selections;
+    };
+    ElasticTabstopsLite.prototype.$setBlockCellWidthsToMax = function (cellWidths) {
+        var startingNewBlock = true, blockStartRow, blockEndRow, maxWidth;
+        var columnInfo = this.$izip_longest(cellWidths);
+        for (var c = 0, l = columnInfo.length; c < l; c++) {
+            var column = columnInfo[c];
+            if (!column.push) {
+                console.error(column);
+                continue;
+            }
+            column.push(NaN);
+            for (var r = 0, s = column.length; r < s; r++) {
+                var width = column[r];
+                if (startingNewBlock) {
+                    blockStartRow = r;
+                    maxWidth = 0;
+                    startingNewBlock = false;
+                }
+                if (isNaN(width)) {
+                    blockEndRow = r;
+                    for (var j = blockStartRow; j < blockEndRow; j++) {
+                        cellWidths[j][c] = maxWidth;
+                    }
+                    startingNewBlock = true;
+                }
+                maxWidth = Math.max(maxWidth, width);
+            }
+        }
+        return cellWidths;
+    };
+    ElasticTabstopsLite.prototype.$rightmostSelectionInCell = function (selectionColumns, cellRightEdge) {
+        var rightmost = 0;
+        if (selectionColumns.length) {
+            var lengths = [];
+            for (var s = 0, length = selectionColumns.length; s < length; s++) {
+                if (selectionColumns[s] <= cellRightEdge)
+                    lengths.push(s);
+                else
+                    lengths.push(0);
+            }
+            rightmost = Math.max.apply(Math, lengths);
+        }
+        return rightmost;
+    };
+    ElasticTabstopsLite.prototype.$tabsForRow = function (row) {
+        var rowTabs = [], line = this.$editor.session.getLine(row), re = /\t/g, match;
+        while ((match = re.exec(line)) != null) {
+            rowTabs.push(match.index);
+        }
+        return rowTabs;
+    };
+    ElasticTabstopsLite.prototype.$adjustRow = function (row, widths) {
+        var rowTabs = this.$tabsForRow(row);
+        if (rowTabs.length == 0)
+            return;
+        var bias = 0, location = -1;
+        var expandedSet = this.$izip(widths, rowTabs);
+        for (var i = 0, l = expandedSet.length; i < l; i++) {
+            var w = expandedSet[i][0], it = expandedSet[i][1];
+            location += 1 + w;
+            it += bias;
+            var difference = location - it;
+            if (difference == 0)
+                continue;
+            var partialLine = this.$editor.session.getLine(row).substr(0, it);
+            var strippedPartialLine = partialLine.replace(/\s*$/g, "");
+            var ispaces = partialLine.length - strippedPartialLine.length;
+            if (difference > 0) {
+                this.$editor.session.getDocument().insertInLine({ row: row, column: it + 1 }, Array(difference + 1).join(" ") + "\t");
+                this.$editor.session.getDocument().removeInLine(row, it, it + 1);
+                bias += difference;
+            }
+            if (difference < 0 && ispaces >= -difference) {
+                this.$editor.session.getDocument().removeInLine(row, it + difference, it);
+                bias += difference;
+            }
+        }
+    };
+    ElasticTabstopsLite.prototype.$izip_longest = function (iterables) {
+        if (!iterables[0])
+            return [];
+        var longest = iterables[0].length;
+        var iterablesLength = iterables.length;
+        for (var i = 1; i < iterablesLength; i++) {
+            var iLength = iterables[i].length;
+            if (iLength > longest)
+                longest = iLength;
+        }
+        var expandedSet = [];
+        for (var l = 0; l < longest; l++) {
+            var set = [];
+            for (var i = 0; i < iterablesLength; i++) {
+                if (iterables[i][l] === "")
+                    set.push(NaN);
+                else
+                    set.push(iterables[i][l]);
+            }
+            expandedSet.push(set);
+        }
+        return expandedSet;
+    };
+    ElasticTabstopsLite.prototype.$izip = function (widths, tabs) {
+        var size = widths.length >= tabs.length ? tabs.length : widths.length;
+        var expandedSet = [];
+        for (var i = 0; i < size; i++) {
+            var set = [widths[i], tabs[i]];
+            expandedSet.push(set);
+        }
+        return expandedSet;
+    };
+    return ElasticTabstopsLite;
+}());
+exports.ElasticTabstopsLite = ElasticTabstopsLite;
+var Editor = require("../editor").Editor;
+require("../config").defineOptions(Editor.prototype, "editor", {
+    useElasticTabstops: {
+        set: function (val) {
+            if (val) {
+                if (!this.elasticTabstops)
+                    this.elasticTabstops = new ElasticTabstopsLite(this);
+                this.commands.on("afterExec", this.elasticTabstops.onAfterExec);
+                this.commands.on("exec", this.elasticTabstops.onExec);
+                this.on("change", this.elasticTabstops.onChange);
+            }
+            else if (this.elasticTabstops) {
+                this.commands.removeListener("afterExec", this.elasticTabstops.onAfterExec);
+                this.commands.removeListener("exec", this.elasticTabstops.onExec);
+                this.removeListener("change", this.elasticTabstops.onChange);
+            }
+        }
+    }
+});
+
+});                (function() {
+                    ace.require(["ace/ext/elastic_tabstops_lite"], function(m) {
+                        if (typeof module == "object" && typeof exports == "object" && module) {
+                            module.exports = m;
+                        }
+                    });
+                })();
+            

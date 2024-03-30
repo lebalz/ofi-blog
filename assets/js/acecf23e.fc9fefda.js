@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[97393],{81838:e=>{e.exports=JSON.parse('{"blogBasePath":"/news","blogTitle":"News"}')}}]);

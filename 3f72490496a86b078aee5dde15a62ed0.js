@@ -1,1 +1,321 @@
-ace.define("ace/mode/prql_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"],(function(e,t,n){"use strict";var r=e("../lib/oop"),i=e("./text_highlight_rules").TextHighlightRules,o=function(){var e=["bool","int","int8","int16","int32","int64","int128","float","text","set"].join("|"),t=this.createKeywordMapper({"constant.language":"null","constant.language.boolean":"true|false",keyword:"let|into|case|prql|type|module|internal","storage.type":"let|func","support.function":"min|max|sum|average|stddev|every|any|concat_array|count|lag|lead|first|last|rank|rank_dense|row_number|round|as|in|tuple_every|tuple_map|tuple_zip|_eq|_is_null|from_text|lower|upper|read_parquet|read_csv","support.type":e},"identifier"),n=/\\(\d+|['"\\&bfnrt]|u\{[0-9a-fA-F]{1,6}\}|x[0-9a-fA-F]{2})/,r=/[A-Za-z_][a-z_A-Z0-9]/.source,i=/(?:\d\d*(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+\b)?/.source,o="[\\u202A\\u202B\\u202D\\u202E\\u2066\\u2067\\u2068\\u202C\\u2069]";this.$rules={start:[{token:"string.start",regex:'s?"',next:"string"},{token:"string.start",regex:'f"',next:"fstring"},{token:"string.start",regex:'r"',next:"rstring"},{token:"string.single",start:"'",end:"'"},{token:"string.character",regex:"'(?:"+n.source+"|.)'?"},{token:"constant.language",regex:"^"+r+"*"},{token:["constant.numeric","keyword"],regex:"("+i+")(years|months|weeks|days|hours|minutes|seconds|milliseconds|microseconds)"},{token:"constant.numeric",regex:/0(?:[xX][0-9a-fA-F]+|[oO][0-7]+|[bB][01]+)\b/},{token:"constant.numeric",regex:i},{token:"comment.block.documentation",regex:"#!.*"},{token:"comment.line.number-sign",regex:"#.*"},{token:"keyword.operator",regex:/\|\s*/,next:"pipe"},{token:"keyword.operator",regex:/->|=>|==|!=|>=|<=|~=|&&|\|\||\?\?|\/\/|@/},{token:"invalid.illegal",regex:o},{token:"punctuation.operator",regex:/[,`]/},{token:t,regex:"[\\w\\xff-\\u218e\\u2455-\\uffff]+\\b"},{token:"paren.lparen",regex:/[\[({]/},{token:"paren.rparen",regex:/[\])}]/}],pipe:[{token:"constant.language",regex:r+"*",next:"pop"},{token:"error",regex:"",next:"pop"}],string:[{token:"constant.character.escape",regex:n},{token:"text",regex:/\\(\s|$)/,next:"stringGap"},{token:"string.end",regex:'"',next:"start"},{token:"invalid.illegal",regex:o},{defaultToken:"string.double"}],stringGap:[{token:"text",regex:/\\/,next:"string"},{token:"error",regex:"",next:"start"}],fstring:[{token:"constant.character.escape",regex:n},{token:"string.end",regex:'"',next:"start"},{token:"invalid.illegal",regex:o},{token:"paren.lparen",regex:"{",push:"fstringParenRules"},{token:"invalid.illegal",regex:o},{defaultToken:"string"}],fstringParenRules:[{token:"constant.language",regex:"^"+r+"*"},{token:"paren.rparen",regex:"}",next:"pop"}],rstring:[{token:"string.end",regex:'"',next:"start"},{token:"invalid.illegal",regex:o},{defaultToken:"string"}]},this.normalizeRules()};r.inherits(o,i),t.PrqlHighlightRules=o})),ace.define("ace/mode/folding/cstyle",["require","exports","module","ace/lib/oop","ace/range","ace/mode/folding/fold_mode"],(function(e,t,n){"use strict";var r=e("../../lib/oop"),i=e("../../range").Range,o=e("./fold_mode").FoldMode,a=t.FoldMode=function(e){e&&(this.foldingStartMarker=new RegExp(this.foldingStartMarker.source.replace(/\|[^|]*?$/,"|"+e.start)),this.foldingStopMarker=new RegExp(this.foldingStopMarker.source.replace(/\|[^|]*?$/,"|"+e.end)))};r.inherits(a,o),function(){this.foldingStartMarker=/([\{\[\(])[^\}\]\)]*$|^\s*(\/\*)/,this.foldingStopMarker=/^[^\[\{\(]*([\}\]\)])|^[\s\*]*(\*\/)/,this.singleLineBlockCommentRe=/^\s*(\/\*).*\*\/\s*$/,this.tripleStarBlockCommentRe=/^\s*(\/\*\*\*).*\*\/\s*$/,this.startRegionRe=/^\s*(\/\*|\/\/)#?region\b/,this._getFoldWidgetBase=this.getFoldWidget,this.getFoldWidget=function(e,t,n){var r=e.getLine(n);if(this.singleLineBlockCommentRe.test(r)&&!this.startRegionRe.test(r)&&!this.tripleStarBlockCommentRe.test(r))return"";var i=this._getFoldWidgetBase(e,t,n);return!i&&this.startRegionRe.test(r)?"start":i},this.getFoldWidgetRange=function(e,t,n,r){var i,o=e.getLine(n);if(this.startRegionRe.test(o))return this.getCommentRegionBlock(e,o,n);if(i=o.match(this.foldingStartMarker)){var a=i.index;if(i[1])return this.openingBracketBlock(e,i[1],n,a);var s=e.getCommentFoldRange(n,a+i[0].length,1);return s&&!s.isMultiLine()&&(r?s=this.getSectionRange(e,n):"all"!=t&&(s=null)),s}if("markbegin"!==t&&(i=o.match(this.foldingStopMarker))){a=i.index+i[0].length;return i[1]?this.closingBracketBlock(e,i[1],n,a):e.getCommentFoldRange(n,a,-1)}},this.getSectionRange=function(e,t){for(var n=e.getLine(t),r=n.search(/\S/),o=t,a=n.length,s=t+=1,g=e.getLength();++t<g;){var l=(n=e.getLine(t)).search(/\S/);if(-1!==l){if(r>l)break;var u=this.getFoldWidgetRange(e,"all",t);if(u){if(u.start.row<=o)break;if(u.isMultiLine())t=u.end.row;else if(r==l)break}s=t}}return new i(o,a,s,e.getLine(s).length)},this.getCommentRegionBlock=function(e,t,n){for(var r=t.search(/\s*$/),o=e.getLength(),a=n,s=/^\s*(?:\/\*|\/\/|--)#?(end)?region\b/,g=1;++n<o;){t=e.getLine(n);var l=s.exec(t);if(l&&(l[1]?g--:g++,!g))break}if(n>a)return new i(a,r,n,t.length)}}.call(a.prototype)})),ace.define("ace/mode/prql",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/prql_highlight_rules","ace/mode/folding/cstyle"],(function(e,t,n){"use strict";var r=e("../lib/oop"),i=e("./text").Mode,o=e("./prql_highlight_rules").PrqlHighlightRules,a=e("./folding/cstyle").FoldMode,s=function(){this.HighlightRules=o,this.foldingRules=new a,this.$behaviour=this.$defaultBehaviour};r.inherits(s,i),function(){this.lineCommentStart="#",this.$id="ace/mode/prql"}.call(s.prototype),t.Mode=s})),ace.require(["ace/mode/prql"],(function(e){"object"==typeof module&&"object"==typeof exports&&module&&(module.exports=e)}));
+ace.define("ace/mode/prql_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module){// https://prql-lang.org/
+"use strict";
+var oop = require("../lib/oop");
+var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
+var PrqlHighlightRules = function () {
+    var builtinFunctions = "min|max|sum|average|stddev|every|any|concat_array|count|" +
+        "lag|lead|first|last|rank|rank_dense|row_number|" +
+        "round|as|in|" +
+        "tuple_every|tuple_map|tuple_zip|_eq|_is_null|" +
+        "from_text|" +
+        "lower|upper|" +
+        "read_parquet|read_csv";
+    var builtinTypes = [
+        "bool",
+        "int",
+        "int8",
+        "int16",
+        "int32",
+        "int64",
+        "int128",
+        "float",
+        "text",
+        "set"
+    ].join("|");
+    var keywordMapper = this.createKeywordMapper({
+        "constant.language": "null",
+        "constant.language.boolean": "true|false",
+        "keyword": "let|into|case|prql|type|module|internal",
+        "storage.type": "let|func",
+        "support.function": builtinFunctions,
+        "support.type": builtinTypes
+    }, "identifier");
+    var escapeRe = /\\(\d+|['"\\&bfnrt]|u\{[0-9a-fA-F]{1,6}\}|x[0-9a-fA-F]{2})/;
+    var identifierRe = /[A-Za-z_][a-z_A-Z0-9]/.source;
+    var numRe = /(?:\d\d*(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+\b)?/.source;
+    var bidi = "[\\u202A\\u202B\\u202D\\u202E\\u2066\\u2067\\u2068\\u202C\\u2069]";
+    this.$rules = {
+        start: [
+            {
+                token: "string.start",
+                regex: 's?"',
+                next: "string"
+            }, {
+                token: "string.start",
+                regex: 'f"',
+                next: "fstring"
+            }, {
+                token: "string.start",
+                regex: 'r"',
+                next: "rstring"
+            }, {
+                token: "string.single",
+                start: "'",
+                end: "'"
+            }, {
+                token: "string.character",
+                regex: "'(?:" + escapeRe.source + "|.)'?"
+            }, {
+                token: "constant.language",
+                regex: "^" + identifierRe + "*"
+            }, {
+                token: ["constant.numeric", "keyword"],
+                regex: "(" + numRe + ")(years|months|weeks|days|hours|minutes|seconds|milliseconds|microseconds)"
+            }, {
+                token: "constant.numeric", // hexadecimal, octal and binary
+                regex: /0(?:[xX][0-9a-fA-F]+|[oO][0-7]+|[bB][01]+)\b/
+            }, {
+                token: "constant.numeric", // decimal integers and floats
+                regex: numRe
+            }, {
+                token: "comment.block.documentation",
+                regex: "#!.*"
+            }, {
+                token: "comment.line.number-sign",
+                regex: "#.*"
+            }, {
+                token: "keyword.operator",
+                regex: /\|\s*/,
+                next: "pipe"
+            }, {
+                token: "keyword.operator",
+                regex: /->|=>|==|!=|>=|<=|~=|&&|\|\||\?\?|\/\/|@/
+            }, {
+                token: "invalid.illegal",
+                regex: bidi
+            }, {
+                token: "punctuation.operator",
+                regex: /[,`]/
+            }, {
+                token: keywordMapper,
+                regex: "[\\w\\xff-\\u218e\\u2455-\\uffff]+\\b"
+            }, {
+                token: "paren.lparen",
+                regex: /[\[({]/
+            }, {
+                token: "paren.rparen",
+                regex: /[\])}]/
+            }
+        ],
+        pipe: [{
+                token: "constant.language",
+                regex: identifierRe + "*",
+                next: "pop"
+            }, {
+                token: "error",
+                regex: "",
+                next: "pop"
+            }],
+        string: [{
+                token: "constant.character.escape",
+                regex: escapeRe
+            }, {
+                token: "text",
+                regex: /\\(\s|$)/,
+                next: "stringGap"
+            }, {
+                token: "string.end",
+                regex: '"',
+                next: "start"
+            }, {
+                token: "invalid.illegal",
+                regex: bidi
+            }, {
+                defaultToken: "string.double"
+            }],
+        stringGap: [{
+                token: "text",
+                regex: /\\/,
+                next: "string"
+            }, {
+                token: "error",
+                regex: "",
+                next: "start"
+            }],
+        fstring: [{
+                token: "constant.character.escape",
+                regex: escapeRe
+            }, {
+                token: "string.end",
+                regex: '"',
+                next: "start"
+            }, {
+                token: "invalid.illegal",
+                regex: bidi
+            }, {
+                token: "paren.lparen",
+                regex: "{",
+                push: "fstringParenRules"
+            }, {
+                token: "invalid.illegal",
+                regex: bidi
+            }, {
+                defaultToken: "string"
+            }],
+        fstringParenRules: [{
+                token: "constant.language",
+                regex: "^" + identifierRe + "*"
+            }, {
+                token: "paren.rparen",
+                regex: "}",
+                next: "pop"
+            }],
+        rstring: [{
+                token: "string.end",
+                regex: '"',
+                next: "start"
+            }, {
+                token: "invalid.illegal",
+                regex: bidi
+            }, {
+                defaultToken: "string"
+            }]
+    };
+    this.normalizeRules();
+};
+oop.inherits(PrqlHighlightRules, TextHighlightRules);
+exports.PrqlHighlightRules = PrqlHighlightRules;
+
+});
+
+ace.define("ace/mode/folding/cstyle",["require","exports","module","ace/lib/oop","ace/range","ace/mode/folding/fold_mode"], function(require, exports, module){"use strict";
+var oop = require("../../lib/oop");
+var Range = require("../../range").Range;
+var BaseFoldMode = require("./fold_mode").FoldMode;
+var FoldMode = exports.FoldMode = function (commentRegex) {
+    if (commentRegex) {
+        this.foldingStartMarker = new RegExp(this.foldingStartMarker.source.replace(/\|[^|]*?$/, "|" + commentRegex.start));
+        this.foldingStopMarker = new RegExp(this.foldingStopMarker.source.replace(/\|[^|]*?$/, "|" + commentRegex.end));
+    }
+};
+oop.inherits(FoldMode, BaseFoldMode);
+(function () {
+    this.foldingStartMarker = /([\{\[\(])[^\}\]\)]*$|^\s*(\/\*)/;
+    this.foldingStopMarker = /^[^\[\{\(]*([\}\]\)])|^[\s\*]*(\*\/)/;
+    this.singleLineBlockCommentRe = /^\s*(\/\*).*\*\/\s*$/;
+    this.tripleStarBlockCommentRe = /^\s*(\/\*\*\*).*\*\/\s*$/;
+    this.startRegionRe = /^\s*(\/\*|\/\/)#?region\b/;
+    this._getFoldWidgetBase = this.getFoldWidget;
+    this.getFoldWidget = function (session, foldStyle, row) {
+        var line = session.getLine(row);
+        if (this.singleLineBlockCommentRe.test(line)) {
+            if (!this.startRegionRe.test(line) && !this.tripleStarBlockCommentRe.test(line))
+                return "";
+        }
+        var fw = this._getFoldWidgetBase(session, foldStyle, row);
+        if (!fw && this.startRegionRe.test(line))
+            return "start"; // lineCommentRegionStart
+        return fw;
+    };
+    this.getFoldWidgetRange = function (session, foldStyle, row, forceMultiline) {
+        var line = session.getLine(row);
+        if (this.startRegionRe.test(line))
+            return this.getCommentRegionBlock(session, line, row);
+        var match = line.match(this.foldingStartMarker);
+        if (match) {
+            var i = match.index;
+            if (match[1])
+                return this.openingBracketBlock(session, match[1], row, i);
+            var range = session.getCommentFoldRange(row, i + match[0].length, 1);
+            if (range && !range.isMultiLine()) {
+                if (forceMultiline) {
+                    range = this.getSectionRange(session, row);
+                }
+                else if (foldStyle != "all")
+                    range = null;
+            }
+            return range;
+        }
+        if (foldStyle === "markbegin")
+            return;
+        var match = line.match(this.foldingStopMarker);
+        if (match) {
+            var i = match.index + match[0].length;
+            if (match[1])
+                return this.closingBracketBlock(session, match[1], row, i);
+            return session.getCommentFoldRange(row, i, -1);
+        }
+    };
+    this.getSectionRange = function (session, row) {
+        var line = session.getLine(row);
+        var startIndent = line.search(/\S/);
+        var startRow = row;
+        var startColumn = line.length;
+        row = row + 1;
+        var endRow = row;
+        var maxRow = session.getLength();
+        while (++row < maxRow) {
+            line = session.getLine(row);
+            var indent = line.search(/\S/);
+            if (indent === -1)
+                continue;
+            if (startIndent > indent)
+                break;
+            var subRange = this.getFoldWidgetRange(session, "all", row);
+            if (subRange) {
+                if (subRange.start.row <= startRow) {
+                    break;
+                }
+                else if (subRange.isMultiLine()) {
+                    row = subRange.end.row;
+                }
+                else if (startIndent == indent) {
+                    break;
+                }
+            }
+            endRow = row;
+        }
+        return new Range(startRow, startColumn, endRow, session.getLine(endRow).length);
+    };
+    this.getCommentRegionBlock = function (session, line, row) {
+        var startColumn = line.search(/\s*$/);
+        var maxRow = session.getLength();
+        var startRow = row;
+        var re = /^\s*(?:\/\*|\/\/|--)#?(end)?region\b/;
+        var depth = 1;
+        while (++row < maxRow) {
+            line = session.getLine(row);
+            var m = re.exec(line);
+            if (!m)
+                continue;
+            if (m[1])
+                depth--;
+            else
+                depth++;
+            if (!depth)
+                break;
+        }
+        var endRow = row;
+        if (endRow > startRow) {
+            return new Range(startRow, startColumn, endRow, line.length);
+        }
+    };
+}).call(FoldMode.prototype);
+
+});
+
+ace.define("ace/mode/prql",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/prql_highlight_rules","ace/mode/folding/cstyle"], function(require, exports, module){"use strict";
+var oop = require("../lib/oop");
+var TextMode = require("./text").Mode;
+var HighlightRules = require("./prql_highlight_rules").PrqlHighlightRules;
+var FoldMode = require("./folding/cstyle").FoldMode;
+var Mode = function () {
+    this.HighlightRules = HighlightRules;
+    this.foldingRules = new FoldMode();
+    this.$behaviour = this.$defaultBehaviour;
+};
+oop.inherits(Mode, TextMode);
+(function () {
+    this.lineCommentStart = "#";
+    this.$id = "ace/mode/prql";
+}).call(Mode.prototype);
+exports.Mode = Mode;
+
+});                (function() {
+                    ace.require(["ace/mode/prql"], function(m) {
+                        if (typeof module == "object" && typeof exports == "object" && module) {
+                            module.exports = m;
+                        }
+                    });
+                })();
+            

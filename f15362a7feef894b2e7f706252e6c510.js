@@ -1,1 +1,45 @@
-ace.define("ace/ext/simple_tokenizer",["require","exports","module","ace/tokenizer","ace/layer/text_util"],(function(e,t,n){"use strict";var i=e("../tokenizer").Tokenizer,o=e("../layer/text_util").isTextToken,r=function(){function e(e,t){this._lines=e.split(/\r\n|\r|\n/),this._states=[],this._tokenizer=t}return e.prototype.getTokens=function(e){var t=this._lines[e],n=this._states[e-1],i=this._tokenizer.getLineTokens(t,n);return this._states[e]=i.state,i.tokens},e.prototype.getLength=function(){return this._lines.length},e}();n.exports={tokenize:function(e,t){for(var n=new r(e,new i(t.getRules())),s=[],u=0;u<n.getLength();u++){var a=n.getTokens(u);s.push(a.map((function(e){return{className:o(e.type)?void 0:"ace_"+e.type.replace(/\./g," ace_"),value:e.value}})))}return s}}})),ace.require(["ace/ext/simple_tokenizer"],(function(e){"object"==typeof module&&"object"==typeof exports&&module&&(module.exports=e)}));
+ace.define("ace/ext/simple_tokenizer",["require","exports","module","ace/tokenizer","ace/layer/text_util"], function(require, exports, module){"use strict";
+var Tokenizer = require("../tokenizer").Tokenizer;
+var isTextToken = require("../layer/text_util").isTextToken;
+var SimpleTokenizer = /** @class */ (function () {
+    function SimpleTokenizer(content, tokenizer) {
+        this._lines = content.split(/\r\n|\r|\n/);
+        this._states = [];
+        this._tokenizer = tokenizer;
+    }
+    SimpleTokenizer.prototype.getTokens = function (row) {
+        var line = this._lines[row];
+        var previousState = this._states[row - 1];
+        var data = this._tokenizer.getLineTokens(line, previousState);
+        this._states[row] = data.state;
+        return data.tokens;
+    };
+    SimpleTokenizer.prototype.getLength = function () {
+        return this._lines.length;
+    };
+    return SimpleTokenizer;
+}());
+function tokenize(content, highlightRules) {
+    var tokenizer = new SimpleTokenizer(content, new Tokenizer(highlightRules.getRules()));
+    var result = [];
+    for (var lineIndex = 0; lineIndex < tokenizer.getLength(); lineIndex++) {
+        var lineTokens = tokenizer.getTokens(lineIndex);
+        result.push(lineTokens.map(function (token) { return ({
+            className: isTextToken(token.type) ? undefined : "ace_" + token.type.replace(/\./g, " ace_"),
+            value: token.value
+        }); }));
+    }
+    return result;
+}
+module.exports = {
+    tokenize: tokenize
+};
+
+});                (function() {
+                    ace.require(["ace/ext/simple_tokenizer"], function(m) {
+                        if (typeof module == "object" && typeof exports == "object" && module) {
+                            module.exports = m;
+                        }
+                    });
+                })();
+            

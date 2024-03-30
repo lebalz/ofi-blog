@@ -1,1 +1,183 @@
-ace.define("ace/mode/folding/coffee",["require","exports","module","ace/lib/oop","ace/mode/folding/fold_mode","ace/range"],(function(e,t,n){"use strict";var r=e("../../lib/oop"),o=e("./fold_mode").FoldMode,i=e("../../range").Range,s=t.FoldMode=function(){};r.inherits(s,o),function(){this.commentBlock=function(e,t){var n=/\S/,r=e.getLine(t),o=r.search(n);if(-1!=o&&"#"==r[o]){for(var s=r.length,g=e.getLength(),a=t,c=t;++t<g;){var l=(r=e.getLine(t)).search(n);if(-1!=l){if("#"!=r[l])break;c=t}}if(c>a){var x=e.getLine(c).length;return new i(a,s,c,x)}}},this.getFoldWidgetRange=function(e,t,n){var r=this.indentationBlock(e,n);return r||((r=this.commentBlock(e,n))||void 0)},this.getFoldWidget=function(e,t,n){var r=e.getLine(n),o=r.search(/\S/),i=e.getLine(n+1),s=e.getLine(n-1),g=s.search(/\S/),a=i.search(/\S/);if(-1==o)return e.foldWidgets[n-1]=-1!=g&&g<a?"start":"","";if(-1==g){if(o==a&&"#"==r[o]&&"#"==i[o])return e.foldWidgets[n-1]="",e.foldWidgets[n+1]="","start"}else if(g==o&&"#"==r[o]&&"#"==s[o]&&-1==e.getLine(n-2).search(/\S/))return e.foldWidgets[n-1]="start",e.foldWidgets[n+1]="","";return e.foldWidgets[n-1]=-1!=g&&g<o?"start":"",o<a?"start":""}}.call(s.prototype)})),ace.define("ace/mode/snippets",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/text_highlight_rules","ace/mode/folding/coffee"],(function(e,t,n){"use strict";var r=e("../lib/oop"),o=e("./text").Mode,i=e("./text_highlight_rules").TextHighlightRules,s=function(){var e="SELECTION|CURRENT_WORD|SELECTED_TEXT|CURRENT_LINE|LINE_INDEX|LINE_NUMBER|SOFT_TABS|TAB_SIZE|FILENAME|FILEPATH|FULLNAME";this.$rules={start:[{token:"constant.language.escape",regex:/\\[\$}`\\]/},{token:"keyword",regex:"\\$(?:TM_)?(?:"+e+")\\b"},{token:"variable",regex:"\\$\\w+"},{onMatch:function(e,t,n){return n[1]?n[1]++:n.unshift(t,1),this.tokenName},tokenName:"markup.list",regex:"\\${",next:"varDecl"},{onMatch:function(e,t,n){return n[1]?(n[1]--,n[1]||n.splice(0,2),this.tokenName):"text"},tokenName:"markup.list",regex:"}"},{token:"doc.comment",regex:/^\${2}-{5,}$/}],varDecl:[{regex:/\d+\b/,token:"constant.numeric"},{token:"keyword",regex:"(?:TM_)?(?:"+e+")\\b"},{token:"variable",regex:"\\w+"},{regex:/:/,token:"punctuation.operator",next:"start"},{regex:/\//,token:"string.regex",next:"regexp"},{regex:"",next:"start"}],regexp:[{regex:/\\./,token:"escape"},{regex:/\[/,token:"regex.start",next:"charClass"},{regex:"/",token:"string.regex",next:"format"},{token:"string.regex",regex:"."}],charClass:[{regex:"\\.",token:"escape"},{regex:"\\]",token:"regex.end",next:"regexp"},{token:"string.regex",regex:"."}],format:[{regex:/\\[ulULE]/,token:"keyword"},{regex:/\$\d+/,token:"variable"},{regex:"/[gim]*:?",token:"string.regex",next:"start"},{token:"string",regex:"."}]}};r.inherits(s,i),t.SnippetHighlightRules=s;var g=function(){this.$rules={start:[{token:"text",regex:"^\\t",next:"sn-start"},{token:"invalid",regex:/^ \s*/},{token:"comment",regex:/^#.*/},{token:"constant.language.escape",regex:"^regex ",next:"regex"},{token:"constant.language.escape",regex:"^(trigger|endTrigger|name|snippet|guard|endGuard|tabTrigger|key)\\b"}],regex:[{token:"text",regex:"\\."},{token:"keyword",regex:"/"},{token:"empty",regex:"$",next:"start"}]},this.embedRules(s,"sn-",[{token:"text",regex:"^\\t",next:"sn-start"},{onMatch:function(e,t,n){return n.splice(n.length),this.tokenName},tokenName:"text",regex:"^(?!\t)",next:"start"}])};r.inherits(g,i),t.SnippetGroupHighlightRules=g;var a=e("./folding/coffee").FoldMode,c=function(){this.HighlightRules=g,this.foldingRules=new a,this.$behaviour=this.$defaultBehaviour};r.inherits(c,o),function(){this.$indentWithTabs=!0,this.lineCommentStart="#",this.$id="ace/mode/snippets",this.snippetFileId="ace/snippets/snippets"}.call(c.prototype),t.Mode=c})),ace.require(["ace/mode/snippets"],(function(e){"object"==typeof module&&"object"==typeof exports&&module&&(module.exports=e)}));
+ace.define("ace/mode/folding/coffee",["require","exports","module","ace/lib/oop","ace/mode/folding/fold_mode","ace/range"], function(require, exports, module){"use strict";
+var oop = require("../../lib/oop");
+var BaseFoldMode = require("./fold_mode").FoldMode;
+var Range = require("../../range").Range;
+var FoldMode = exports.FoldMode = function () { };
+oop.inherits(FoldMode, BaseFoldMode);
+(function () {
+    this.commentBlock = function (session, row) {
+        var re = /\S/;
+        var line = session.getLine(row);
+        var startLevel = line.search(re);
+        if (startLevel == -1 || line[startLevel] != "#")
+            return;
+        var startColumn = line.length;
+        var maxRow = session.getLength();
+        var startRow = row;
+        var endRow = row;
+        while (++row < maxRow) {
+            line = session.getLine(row);
+            var level = line.search(re);
+            if (level == -1)
+                continue;
+            if (line[level] != "#")
+                break;
+            endRow = row;
+        }
+        if (endRow > startRow) {
+            var endColumn = session.getLine(endRow).length;
+            return new Range(startRow, startColumn, endRow, endColumn);
+        }
+    };
+    this.getFoldWidgetRange = function (session, foldStyle, row) {
+        var range = this.indentationBlock(session, row);
+        if (range)
+            return range;
+        range = this.commentBlock(session, row);
+        if (range)
+            return range;
+    };
+    this.getFoldWidget = function (session, foldStyle, row) {
+        var line = session.getLine(row);
+        var indent = line.search(/\S/);
+        var next = session.getLine(row + 1);
+        var prev = session.getLine(row - 1);
+        var prevIndent = prev.search(/\S/);
+        var nextIndent = next.search(/\S/);
+        if (indent == -1) {
+            session.foldWidgets[row - 1] = prevIndent != -1 && prevIndent < nextIndent ? "start" : "";
+            return "";
+        }
+        if (prevIndent == -1) {
+            if (indent == nextIndent && line[indent] == "#" && next[indent] == "#") {
+                session.foldWidgets[row - 1] = "";
+                session.foldWidgets[row + 1] = "";
+                return "start";
+            }
+        }
+        else if (prevIndent == indent && line[indent] == "#" && prev[indent] == "#") {
+            if (session.getLine(row - 2).search(/\S/) == -1) {
+                session.foldWidgets[row - 1] = "start";
+                session.foldWidgets[row + 1] = "";
+                return "";
+            }
+        }
+        if (prevIndent != -1 && prevIndent < indent)
+            session.foldWidgets[row - 1] = "start";
+        else
+            session.foldWidgets[row - 1] = "";
+        if (indent < nextIndent)
+            return "start";
+        else
+            return "";
+    };
+}).call(FoldMode.prototype);
+
+});
+
+ace.define("ace/mode/snippets",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/text_highlight_rules","ace/mode/folding/coffee"], function(require, exports, module){"use strict";
+var oop = require("../lib/oop");
+var TextMode = require("./text").Mode;
+var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
+var SnippetHighlightRules = function () {
+    var builtins = "SELECTION|CURRENT_WORD|SELECTED_TEXT|CURRENT_LINE|LINE_INDEX|" +
+        "LINE_NUMBER|SOFT_TABS|TAB_SIZE|FILENAME|FILEPATH|FULLNAME";
+    this.$rules = {
+        "start": [
+            { token: "constant.language.escape", regex: /\\[\$}`\\]/ },
+            { token: "keyword", regex: "\\$(?:TM_)?(?:" + builtins + ")\\b" },
+            { token: "variable", regex: "\\$\\w+" },
+            { onMatch: function (value, state, stack) {
+                    if (stack[1])
+                        stack[1]++;
+                    else
+                        stack.unshift(state, 1);
+                    return this.tokenName;
+                }, tokenName: "markup.list", regex: "\\${", next: "varDecl" },
+            { onMatch: function (value, state, stack) {
+                    if (!stack[1])
+                        return "text";
+                    stack[1]--;
+                    if (!stack[1])
+                        stack.splice(0, 2);
+                    return this.tokenName;
+                }, tokenName: "markup.list", regex: "}" },
+            { token: "doc.comment", regex: /^\${2}-{5,}$/ }
+        ],
+        "varDecl": [
+            { regex: /\d+\b/, token: "constant.numeric" },
+            { token: "keyword", regex: "(?:TM_)?(?:" + builtins + ")\\b" },
+            { token: "variable", regex: "\\w+" },
+            { regex: /:/, token: "punctuation.operator", next: "start" },
+            { regex: /\//, token: "string.regex", next: "regexp" },
+            { regex: "", next: "start" }
+        ],
+        "regexp": [
+            { regex: /\\./, token: "escape" },
+            { regex: /\[/, token: "regex.start", next: "charClass" },
+            { regex: "/", token: "string.regex", next: "format" },
+            { "token": "string.regex", regex: "." }
+        ],
+        charClass: [
+            { regex: "\\.", token: "escape" },
+            { regex: "\\]", token: "regex.end", next: "regexp" },
+            { "token": "string.regex", regex: "." }
+        ],
+        "format": [
+            { regex: /\\[ulULE]/, token: "keyword" },
+            { regex: /\$\d+/, token: "variable" },
+            { regex: "/[gim]*:?", token: "string.regex", next: "start" },
+            { "token": "string", regex: "." }
+        ]
+    };
+};
+oop.inherits(SnippetHighlightRules, TextHighlightRules);
+exports.SnippetHighlightRules = SnippetHighlightRules;
+var SnippetGroupHighlightRules = function () {
+    this.$rules = {
+        "start": [
+            { token: "text", regex: "^\\t", next: "sn-start" },
+            { token: "invalid", regex: /^ \s*/ },
+            { token: "comment", regex: /^#.*/ },
+            { token: "constant.language.escape", regex: "^regex ", next: "regex" },
+            { token: "constant.language.escape", regex: "^(trigger|endTrigger|name|snippet|guard|endGuard|tabTrigger|key)\\b" }
+        ],
+        "regex": [
+            { token: "text", regex: "\\." },
+            { token: "keyword", regex: "/" },
+            { token: "empty", regex: "$", next: "start" }
+        ]
+    };
+    this.embedRules(SnippetHighlightRules, "sn-", [
+        { token: "text", regex: "^\\t", next: "sn-start" },
+        { onMatch: function (value, state, stack) {
+                stack.splice(stack.length);
+                return this.tokenName;
+            }, tokenName: "text", regex: "^(?!\t)", next: "start" }
+    ]);
+};
+oop.inherits(SnippetGroupHighlightRules, TextHighlightRules);
+exports.SnippetGroupHighlightRules = SnippetGroupHighlightRules;
+var FoldMode = require("./folding/coffee").FoldMode;
+var Mode = function () {
+    this.HighlightRules = SnippetGroupHighlightRules;
+    this.foldingRules = new FoldMode();
+    this.$behaviour = this.$defaultBehaviour;
+};
+oop.inherits(Mode, TextMode);
+(function () {
+    this.$indentWithTabs = true;
+    this.lineCommentStart = "#";
+    this.$id = "ace/mode/snippets";
+    this.snippetFileId = "ace/snippets/snippets";
+}).call(Mode.prototype);
+exports.Mode = Mode;
+
+});                (function() {
+                    ace.require(["ace/mode/snippets"], function(m) {
+                        if (typeof module == "object" && typeof exports == "object" && module) {
+                            module.exports = m;
+                        }
+                    });
+                })();
+            

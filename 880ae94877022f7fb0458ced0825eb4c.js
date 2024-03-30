@@ -1,1 +1,56 @@
-ace.define("ace/mode/cuttlefish_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"],(function(e,t,i){"use strict";var o=e("../lib/oop"),l=e("./text_highlight_rules").TextHighlightRules,s=function(){this.$rules={start:[{token:["text","comment"],regex:/^([ \t]*)(#.*)$/},{token:["text","keyword","text","string","text","comment"],regex:/^([ \t]*)(include)([ \t]*)([A-Za-z0-9-\_\.\*\/]+)([ \t]*)(#.*)?$/},{token:["text","keyword","text","operator","text","string","text","comment"],regex:/^([ \t]*)([A-Za-z0-9-_]+(?:\.[A-Za-z0-9-_]+)*)([ \t]*)(=)([ \t]*)([^ \t#][^#]*?)([ \t]*)(#.*)?$/},{defaultToken:"invalid"}]},this.normalizeRules()};s.metaData={fileTypes:["conf"],keyEquivalent:"^~C",name:"Cuttlefish",scopeName:"source.conf"},o.inherits(s,l),t.CuttlefishHighlightRules=s})),ace.define("ace/mode/cuttlefish",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/cuttlefish_highlight_rules"],(function(e,t,i){"use strict";var o=e("../lib/oop"),l=e("./text").Mode,s=e("./cuttlefish_highlight_rules").CuttlefishHighlightRules,u=function(){this.HighlightRules=s,this.foldingRules=null,this.$behaviour=this.$defaultBehaviour};o.inherits(u,l),function(){this.lineCommentStart="#",this.blockComment=null,this.$id="ace/mode/cuttlefish"}.call(u.prototype),t.Mode=u})),ace.require(["ace/mode/cuttlefish"],(function(e){"object"==typeof module&&"object"==typeof exports&&module&&(module.exports=e)}));
+ace.define("ace/mode/cuttlefish_highlight_rules",["require","exports","module","ace/lib/oop","ace/mode/text_highlight_rules"], function(require, exports, module){"use strict";
+var oop = require("../lib/oop");
+var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
+var CuttlefishHighlightRules = function () {
+    this.$rules = {
+        start: [{
+                token: ['text', 'comment'],
+                regex: /^([ \t]*)(#.*)$/
+            }, {
+                token: ['text', 'keyword', 'text', 'string', 'text', 'comment'],
+                regex: /^([ \t]*)(include)([ \t]*)([A-Za-z0-9-\_\.\*\/]+)([ \t]*)(#.*)?$/
+            }, {
+                token: ['text', 'keyword', 'text', 'operator', 'text', 'string', 'text', 'comment'],
+                regex: /^([ \t]*)([A-Za-z0-9-_]+(?:\.[A-Za-z0-9-_]+)*)([ \t]*)(=)([ \t]*)([^ \t#][^#]*?)([ \t]*)(#.*)?$/
+            }, {
+                defaultToken: 'invalid'
+            }]
+    };
+    this.normalizeRules();
+};
+CuttlefishHighlightRules.metaData = {
+    fileTypes: ['conf'],
+    keyEquivalent: '^~C',
+    name: 'Cuttlefish',
+    scopeName: 'source.conf'
+};
+oop.inherits(CuttlefishHighlightRules, TextHighlightRules);
+exports.CuttlefishHighlightRules = CuttlefishHighlightRules;
+
+});
+
+ace.define("ace/mode/cuttlefish",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/cuttlefish_highlight_rules"], function(require, exports, module){"use strict";
+var oop = require("../lib/oop");
+var TextMode = require("./text").Mode;
+var CuttlefishHighlightRules = require("./cuttlefish_highlight_rules").CuttlefishHighlightRules;
+var Mode = function () {
+    this.HighlightRules = CuttlefishHighlightRules;
+    this.foldingRules = null;
+    this.$behaviour = this.$defaultBehaviour;
+};
+oop.inherits(Mode, TextMode);
+(function () {
+    this.lineCommentStart = "#";
+    this.blockComment = null;
+    this.$id = "ace/mode/cuttlefish";
+}).call(Mode.prototype);
+exports.Mode = Mode;
+
+});                (function() {
+                    ace.require(["ace/mode/cuttlefish"], function(m) {
+                        if (typeof module == "object" && typeof exports == "object" && module) {
+                            module.exports = m;
+                        }
+                    });
+                })();
+            
