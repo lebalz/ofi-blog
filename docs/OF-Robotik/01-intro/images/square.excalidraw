@@ -1,0 +1,131 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "B9hCyelP3_wuivO4vVWy6",
+      "type": "rectangle",
+      "x": 383.66668701171875,
+      "y": 184.33334350585938,
+      "width": 202.33331298828125,
+      "height": 198.33334350585938,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1963651002,
+      "version": 30,
+      "versionNonce": 1173923706,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "6iDOoZ1QJ3AxnNLTwLS8j",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1713178766460,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "6iDOoZ1QJ3AxnNLTwLS8j",
+      "type": "arrow",
+      "x": 398.66668701171875,
+      "y": 382.0000305175781,
+      "width": 90.66665649414062,
+      "height": 0.666656494140625,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 2004055078,
+      "version": 40,
+      "versionNonce": 326129190,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1713178773967,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          90.66665649414062,
+          0.666656494140625
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": {
+        "elementId": "B9hCyelP3_wuivO4vVWy6",
+        "focus": -0.9922235532311853,
+        "gap": 1
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "j2USwStuE7N8MRw4QHw-g",
+      "type": "image",
+      "x": 342.0000305175781,
+      "y": 333.6666564941406,
+      "width": 90.33334350585939,
+      "height": 90.33334350585939,
+      "angle": 0,
+      "strokeColor": "transparent",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1540702054,
+      "version": 83,
+      "versionNonce": 303341670,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1713179071395,
+      "link": null,
+      "locked": false,
+      "status": "pending",
+      "fileId": "6cc66eae92f2351479669884f95f8f29beb30c7a",
+      "scale": [
+        1,
+        1
+      ]
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {
+    "6cc66eae92f2351479669884f95f8f29beb30c7a": {
+      "mimeType": "image/svg+xml",
+      "id": "6cc66eae92f2351479669884f95f8f29beb30c7a",
+      "dataURL": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHJvbGU9InByZXNlbnRhdGlvbiIgc3R5bGU9IndpZHRoOiAzcmVtOyBoZWlnaHQ6IDNyZW07IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CiAgICA8cGF0aCBkPSJNMTYsNkgxMC41VjEwSDFWMTVIM0EzLDMgMCAwLDAgNiwxOEEzLDMgMCAwLDAgOSwxNUgxNUEzLDMgMCAwLDAgMTgsMThBMywzIDAgMCwwIDIxLDE1SDIzVjEyQzIzLDEwLjg5IDIyLjExLDEwIDIxLDEwSDE5TDE2LDZNMTIsNy41SDE1LjVMMTcuNDYsMTBIMTJWNy41TTYsMTMuNUExLjUsMS41IDAgMCwxIDcuNSwxNUExLjUsMS41IDAgMCwxIDYsMTYuNUExLjUsMS41IDAgMCwxIDQuNSwxNUExLjUsMS41IDAgMCwxIDYsMTMuNU0xOCwxMy41QTEuNSwxLjUgMCAwLDEgMTkuNSwxNUExLjUsMS41IDAgMCwxIDE4LDE2LjVBMS41LDEuNSAwIDAsMSAxNi41LDE1QTEuNSwxLjUgMCAwLDEgMTgsMTMuNVoiIHN0eWxlPSJmaWxsOiAjMzU3OGU1OyIvPgo8L3N2Zz4=",
+      "created": 1713179064139,
+      "lastRetrieved": 1713179064139
+    }
+  }
+}
