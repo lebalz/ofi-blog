@@ -181,6 +181,14 @@
         "01-Lernziele-reduced.md",
         "01-Lernziele.md"
       ],
+      "open": false
+    },
+    {
+      "from": "docs/OF-Robotik/",
+      "to": "versioned_docs/version-26e/12-Robotik",
+      "ignore": [
+        "_category_.json"
+      ],
       "open": true
     }
   ],
@@ -362,6 +370,13 @@
         "07-Alltag",
         "01-Lernziele-reduced.md",
         "01-Lernziele.md"
+      ]
+    },
+    {
+      "from": "docs/OF-Robotik/",
+      "to": "versioned_docs/version-26P/12-Robotik",
+      "ignore": [
+        "_category_.json"
       ],
       "open": true
     }
