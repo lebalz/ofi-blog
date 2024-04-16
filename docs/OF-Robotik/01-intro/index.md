@@ -18,6 +18,64 @@ Nehmen Sie den Maqueen gemäss folgender Anleitung in Betrieb. Für jedes Maquee
 2. Markieren Sie die Aufgabe als erledigt.
 :::
 
+:::def[Motoren `motor_run(motor, speed)`]
+Lässt den gewählten Motor mit der angegebenen Geschwindigkeit laufen.
+
+Die Geschwindigkeit kann zwischen `-255` und `255` liegen. Negative Werte bedeuten, dass der Motor rückwärts läuft.
+
+Welcher Motor angesteuert wird, muss mit einer Zahl (oder der Konstantent aus `Motor`) angegeben werden:
+
+Links
+: `0` oder `Motor.LEFT`
+Rechts
+: `1` oder `Motor.RIGHT`
+Beide
+: `2` oder `Motor.ALL`
+
+```py
+# den linke Motor mit 100% Geschwindigkeit vorwärts drehen lassen
+motor_run(0, 255)
+# oder äquivalent
+motor_run(Motor.LEFT, 255)
+
+# den rechten Motor rückwärts mit 50% drehen lassen
+motor_run(Motor.RIGHT, -128)
+
+# beide Motoren vorwärts drehen mit 100%
+motor_run(Motor.ALL, 255)
+```
+
+Referenz
+: [👉 Dokumentation/motor#motor_runmotor-speed](https://gbsl-informatik.github.io/maqueen-plus-v2-mpy/docs/api/motor#motor_runmotor-speed)
+
+:::
+
+:::def[Motor stoppen `motor_stop()`]
+
+Mit `motor_stop()` können alle Motoren gestoppt werden. Optional kann auch nur ein Motor gestoppt werden.
+
+```py
+# stoppt beide Motoren
+motor_stop()
+# stoppt den linken Motor
+motor_stop(0)
+# oder äquivalent
+motor_stop(Motor.LEFT)
+```
+
+Referenz
+: [👉 Dokumentation/motor#motor_stop](https://gbsl-informatik.github.io/maqueen-plus-v2-mpy/docs/api/motor#motor_stop)
+:::
+
+:::warning[Geradeausfahern]
+Die Drehgeschwindigkeit der Motoren wird über die Spannung gesteuert und ist leider nicht sehr präzise. Daher kann es sein, dass der Maqueen nicht geradeaus fährt, sondern eine Kurve macht - auch wenn bei beiden Motoren derselbe Zahlenwert eingestellt ist. Dies muss durch Ausprobieren und Anpassen der Geschwindigkeit der Motoren korrigiert werden.
+:::
+
+:::success[Hinweis Kurvenfahren]
+Kurvenfahren kann durch unterschiedliche Geschwindigkeiten der linken- und rechten Motoren erreicht werden. Soll der Maqueen an Ort und Stelle drehen, so müssen die Motoren in entgegengesetzte Richtungen laufen.
+:::
+
+
 :::aufgabe[Quadrat fahren]
 <Answer type="state" webKey="cac5a052-f977-4649-a918-214ecfe85c92" />
 
@@ -64,7 +122,7 @@ led_rgb(Color.BLUE, brightness=50) # Ändert die globale Helligkeit nicht.
 ```
 
 Referenz
-: [👉 Dokumentation](https://gbsl-informatik.github.io/maqueen-plus-v2-mpy/docs/api/led-rgb#api)
+: [👉 Dokumentation/led-rgb](https://gbsl-informatik.github.io/maqueen-plus-v2-mpy/docs/api/led-rgb#api)
 :::
 
 ::::def[HSL-Farben]
@@ -78,14 +136,14 @@ led_rgb(hsl(  0, 100, 50)) # => LED's in rot
 led_rgb(hsl(180, 100, 50)) # => LED's in cyan
 ```
 
-Referenz
-: [👉 Dokumentation](https://gbsl-informatik.github.io/maqueen-plus-v2-mpy/docs/api/led-rgb#hsl)
-
 :::warning[Lightness]
 Die Lightness (letzter Parameter) gibt an, wie hell die Farbe ist. `0` ist schwarz, `100` ist weiss. Sollen satte Farben angezeigt werden, sollte die Lightness auf ca. `50` gesetzt werden.
 :::
 
 Dies ermöglicht es etwa, die Farbe abhängig vom Winkel zu setzen.
+
+Referenz
+: [👉 Dokumentation/led-rgb#hsl](https://gbsl-informatik.github.io/maqueen-plus-v2-mpy/docs/api/led-rgb#hsl)
 ::::
 
 :::def[Modulo Operator `%`]
