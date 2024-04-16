@@ -12,7 +12,7 @@ Dokumentation
 
 Nehmen Sie den Maqueen gemäss folgender Anleitung in Betrieb. Für jedes Maqueen-Programm müssen diese Schritte zu Beginn durchgeführt werden. 
 
-::video[./images/maqueen-intro.mp4]
+::video[./images/maqueen-intro.mp4]{autoplay loop}
 
 1. Überprüfen Sie, dass der Maqueen kurz etwas nach links dreht und dann gerade aus fährt. 
 2. Markieren Sie die Aufgabe als erledigt.
