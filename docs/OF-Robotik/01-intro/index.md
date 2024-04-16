@@ -14,7 +14,7 @@ Nehmen Sie den Maqueen gemäss folgender Anleitung in Betrieb. Für jedes Maquee
 
 ::video[./images/maqueen-intro.mp4]{autoplay loop}
 
-1. Überprüfen Sie, dass der Maqueen kurz etwas nach links dreht und dann gerade aus fährt. 
+1. Überprüfen Sie, dass der Maqueen nach rechts dreht, dann gerade aus fährt und anhält. 
 2. Markieren Sie die Aufgabe als erledigt.
 :::
 
