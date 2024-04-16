@@ -15,7 +15,16 @@ import fs2024 from "./26P_FS2024.json"
 
 # 26P Informatik
 
+<Table
+  header={["Datum", "Thema", "Inhalt"]}
+  compact
+  selectable
+  rows={fs2024}
+  order={SortTimeTableByDate()}
+/>
 
+
+::::::details[Lernziele Netzwerke und Krypto]
 :::::note[Prüfung]
 Dauer
 : 90 Minuten
@@ -79,15 +88,7 @@ Hilfsmittel
 An der Prüfung können auch Inhalte/Diskussionen/Experimente zu den obigen Themen aufgegriffen werden, welche nur im Unterricht behandelt/diskutiert wurden.
 :::
 :::::
-
-
-<Table
-  header={["Datum", "Thema", "Inhalt"]}
-  compact
-  selectable
-  rows={fs2024}
-  order={SortTimeTableByDate()}
-/>
+::::::
 
 :::details[1. Semester]
 <Tabs
