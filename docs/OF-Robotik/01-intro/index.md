@@ -173,7 +173,12 @@ Zum Glück müssen Sie sich nicht um die genaue Berechnung kümmern, sondern kö
 :::
 
 :::aufgabe[Ultraschall Lead-and-Follow]
-Schreiben Sie ein Programm, bei welchem der Maqueen immer `20 cm` Abstand zu Ihrer Hand hält. Ist die Distanz kleiner, fährt der Maqueen rückwärts, ist die Distanz grösser, fährt er vorwärts. Eine Richtungsänderung erfolgt dabei nie.
+<Answer type="state" webKey="25293200-bca2-4590-82a2-39f66d12f85f" />
+
+Schreiben Sie ein Programm, bei welchem der Maqueen immer `10 cm` Abstand zu Ihrer Hand hält. Ist die Distanz kleiner, fährt der Maqueen rückwärts, ist die Distanz grösser, fährt er vorwärts. Eine Richtungsänderung erfolgt dabei nie.
+
+::video[./images/lead-and-follow.mp4]{autoplay loop}
+
 
 ```mpy live_py id=a68792f6-f832-4d74-9d9e-80ee1d2762e6
 
