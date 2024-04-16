@@ -26,3 +26,12 @@ Abgabe
 : Code und Kurzbeschreibung
 : Mi. 8.5.24 bis 22:00 Uhr
 :::
+
+:::note[:mdi[apple] iPad und Micro\:Bit]
+Mit dem iPad kann der Micro\:Bit nicht direkt programmiert werden. Es ist jedoch möglich, den Code auf dem iPad zu schreiben und dann wie folgt auf den Micro\:Bit zu übertragen:
+
+Anleitung
+: [👉 support.microbit.org](https://support.microbit.org/support/solutions/articles/19000139629-python-editor-using-the-micro-bit-ios-app-to-flash-the-micro-bit-with-an-ipad)
+iOS App
+: [👉 App Store](https://apps.apple.com/gb/app/micro-bit/id1092687276)
+:::
