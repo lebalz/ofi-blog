@@ -50,6 +50,24 @@ Referenz
 
 :::
 
+
+:::def[`sleep(ms)`]
+Mit der Funktion `sleep(ms)` kann das Programm für eine bestimmte Anzahl Millisekunden angehalten werden.
+
+Diese Funktion funktioniert im Browser leider nicht, auf dem Micro\:Bit jedoch schon (oder auch wenn Python lokal installiert ist). Während dem der Micro\:bit wartet/schläft, kann er keine anderen Befehle ausführen - sich drehende Motoren drehen sich aber in dieser Zeit weiter.
+
+```py
+from microbit import *
+from maqueen import *
+
+while True:
+    motor_run(Motor.ALL, 255)
+    sleep(1000) # wartet 1 Sekunde
+    motor_run(Motor.ALL, -255)
+    sleep(1000) # wartet 1 Sekunde
+```
+:::
+
 :::def[Motor stoppen `motor_stop()`]
 
 Mit `motor_stop()` können alle Motoren gestoppt werden. Optional kann auch nur ein Motor gestoppt werden.
@@ -156,21 +174,6 @@ print(f'5 modulo 2 = {5 % 2}')
 # gibt nacheinander 0, 1, 2, 0, 1, 2, 0, 1, 2, 0 aus
 for i in range(10):
     print(f'{i} modulo 3 = {i % 3}')
-```
-:::
-
-:::def[`sleep(ms)`]
-Mit der Funktion `sleep(ms)` kann das Programm für eine bestimmte Anzahl Millisekunden angehalten werden.
-
-Diese Funktion funktioniert im Browser leider nicht, auf dem Micro\:Bit jedoch schon (oder auch wenn Python lokal installiert ist).
-
-```py
-from microbit import *
-while True:
-    display.show(Image.HEART)
-    sleep(1000) # wartet 1 Sekunde
-    display.show(Image.HEART_SMALL)
-    sleep(1000) # wartet 1 Sekunde
 ```
 :::
 
