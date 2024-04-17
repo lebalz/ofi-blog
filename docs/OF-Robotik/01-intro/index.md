@@ -105,6 +105,52 @@ Schreiben Sie ein Programm, das den Maqueen ein Quadrat fahren lässt.
 
 ```
 
+<Solution webKey="48efdf30-68b3-4dee-8286-6c1aafe1309d">
+
+#### Ansatz 1: Wiederholungen brauchen
+
+```py
+# Imports go at the top
+from microbit import *
+from maqueen import *
+
+for i in range(4):
+    motor_run(Motor.ALL, 255)
+    sleep(1000)
+
+    motor_run(Motor.RIGHT, 100)
+    motor_run(Motor.LEFT, -100)
+    sleep(1900)
+motor_stop()
+```
+#### Ansatz 2: Funktionen schreiben, die man einfach anpassen kann
+
+```py
+from microbit import *
+from maqueen import *
+
+TIME_FOR_360 = 1900 # Zeit in ms um sich um 360° zu drehen (bei 100 Geschwindigkeit)
+TIME_FOR_1M = 4000  # Zeit in ms um 1m zu fahren (bei 255 Geschwindigkeit)
+
+def forward(distanz):
+    motor_run(Motor.ALL, 255)
+    sleep(distanz * TIME_FOR_1M)
+    motor_stop()
+
+def left(winkel):
+    motor_run(Motor.RIGHT, 100)
+    motor_run(Motor.LEFT, -100)
+    sleep(winkel * TIME_FOR_360 / 360)
+    motor_stop()
+
+## Programm fürs Quadrat
+for i in range(4):
+    forward(0.25)
+    left(90)
+```
+
+</Solution>
+
 ### ⭐ Zusatz
 Ändern Sie das Programm so ab, dass der Maqueen an den Ecken jeweils eine zusätzliche 360 ° Drehung vollzieht.
 ![--width=300px](./images/square360.png)
@@ -180,9 +226,9 @@ for i in range(10):
 :::aufgabe[Farb-Disco]
 <Answer type="state" webKey="5ad417e2-37f2-454b-9a3d-8727aa30983a" />
 
-Studieren Sie den folgenden Code und passen Sie ihn so an, dass die Farben nach einer Umdrehung wieder auf rot gesetzt werden.
+Studieren Sie den folgenden Code und passen Sie ihn so an, dass die Farben nach einer Umdrehung wieder auf rot gesetzt werden. Der Roboter soll sich unendlich lang drehen und dabei die Farben wechseln.
 
-```py live_py id=48d2c03f-b4f2-4b98-ac20-20d1afeef380
+```mpy live_py id=48d2c03f-b4f2-4b98-ac20-20d1afeef380
 from microbit import *
 from maqueen import *
 
