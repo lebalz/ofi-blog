@@ -121,6 +121,7 @@ Mit "Run" kann das Programm nun ausgeführt werden.
 Leider können die Online-Simulatoren keine Kommentare verarbeiten. Sie müssen die Kommentare vor dem Ausführen entfernen 😓
 
 <StripComments />
+
 :::
 
 :::aufgabe[Aufgabe IO]
@@ -341,6 +342,7 @@ one     DAT      1   ; Zahl 1
 </Solution>
 
 :::
+
 :::aufgabe[Zusatz ⭐]
 <Answer type="state" webKey="42f8bc2a-c347-4d5d-b288-75c8ba366bef" />
 
@@ -380,7 +382,8 @@ Es gibt direkt einen Befehl, welcher die Multiplikation zweier Zahlen aus dem RA
 ```armasm
 MULT 5, 14 
 ```
-Nach der Ausführung dieser Instruktion steht das Resultat in Speicherzelle 5.
+Nach der Ausführung dieser Instruktion steht das Resultat in Speicherzelle 5. Es führt also im wesentlichen `a = a * b` aus.
+
 
 ::br
 ### CISC
@@ -404,5 +407,4 @@ Halten Sie fest, was die Vor- und Nachteile von RISC und CISC Prozessoren sind. 
 :::
 
 [^1]: Inspiriert von [diesem Artikel](https://cs.stanford.edu/people/eroberts/courses/soco/projects/risc/risccisc/) 
-
 

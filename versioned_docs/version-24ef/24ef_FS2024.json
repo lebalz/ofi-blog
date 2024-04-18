@@ -49,9 +49,6 @@
         "type": "event"
     },
     {
-        "cells": ["10.05.2024","Repetition",""]
-    },
-    {
         "cells": ["09.05.2024","Auffahrt",""],
         "type": "holiday"
     },
@@ -65,11 +62,17 @@
     },
     {
         "cells": ["20.05.2024","Pfingstmontag",""],
-        "type": "holiday"
+        "type": "holiday",
+        "icon": "mdiBookEducationOutline"
     },
     {
         "cells": ["24.05.2024","Schriftliche Maturprüfung EF","5. Prüfungsfach/EF Informatik"],
         "type": "test"
+    },
+    {
+        "cells": ["31.05.2024","Individuelle Vorbereitung auf mündliche Matur",""],
+        "type": "holiday",
+        "icon": "mdiBookEducationOutline"
     },
     {
         "cells": ["07.06.2024","Mündliche Maturprüfung EF","5. Prüfungsfach/EF Informatik"],
