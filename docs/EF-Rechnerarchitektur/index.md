@@ -2,7 +2,8 @@
 sidebar_custom_props:
   id: 02e9497e-3bf9-44eb-bd94-f6fa98280932
 ---
-## Rechnerarchitektur
+
+# Rechnerarchitektur
 
 :::info[Prüfung]
 Datum
