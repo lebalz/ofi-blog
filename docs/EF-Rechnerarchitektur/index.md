@@ -21,6 +21,9 @@ Hilfsmittel
 - Sie können den Aufbau und die Funktionsweise eines Von-Neumann-Rechners erklären.
   - Von-Neumann-Zyklus
   - Bussystem
+- Logische Bausteine (UND, ODER, NICHT, XOR, NAND, NOR, XNOR), deren Funktionsweise und Wahrheitstabellen kennen.
+- Einfache logische Schaltungen interpretieren und deren Wahrheitstabelle erstellen.
+- Für eine gegebene Wahrheitstabelle eine logische Schaltung entwerfen.
 - Sie können die Unterschiede zwischen Von-Neumann- und Harvard-Architektur erklären.
 - Sie beschreiben den Prozess, wie ein in menschenlesbarer Form geschriebenes Programm in Maschinencode umgewandelt wird in eigenen Worten (Compiler, Assembler, Linker, Loader).
 - Sie können min. 2 Compiler-Optimierungen nennen und deren Funktionsweise erklären.
