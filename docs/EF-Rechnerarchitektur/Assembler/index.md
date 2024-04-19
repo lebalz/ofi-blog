@@ -375,7 +375,7 @@ Für diese Betrachtung nehmen wir folgende (vereinfachte) Architektur an:
 Die Register stellen Speicherzellen im Prozessor dar, auf welche die Instruktionen direkt zugreifen können. Im LMC gibt es nur ein einziges Register, den Akkumulator. In modernen Prozessoren gibt es mehrere Register, die für verschiedene Zwecke verwendet werden können.
 
 :::cards
-### RISC
+### CISC
 
 Es gibt direkt einen Befehl, welcher die Multiplikation zweier Zahlen aus dem RAM durchführt und das Resultat zurück in den RAM schreibt:
 
@@ -386,7 +386,7 @@ Nach der Ausführung dieser Instruktion steht das Resultat in Speicherzelle 5. E
 
 
 ::br
-### CISC
+### RISC
 Hier gibt es nur primitive Instruktionen - Zahlen aus dem RAM in ein Register laden, Zahlen von einem Register in den RAM schreiben, Zahlen in einem Register multiplizieren, etc. Dies führt zu 4 Zeilen Code:
 
 ```armasm
@@ -404,6 +404,12 @@ STORE A, 5
 Halten Sie fest, was die Vor- und Nachteile von RISC und CISC Prozessoren sind. Welche technologie wird heute in modernen Prozessoren verwendet?
 
 <Answer type="text" webKey="26b64a4f-9ee4-4b60-9b75-a94815a915c0" />
+<Solution>
+
+- Powerpoint aus dem Unterricht
+- 👉 [https://cs.stanford.edu](https://cs.stanford.edu/people/eroberts/courses/soco/projects/risc/risccisc/)
+
+</Solution>
 :::
 
 [^1]: Inspiriert von [diesem Artikel](https://cs.stanford.edu/people/eroberts/courses/soco/projects/risc/risccisc/) 
