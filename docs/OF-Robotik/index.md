@@ -61,10 +61,12 @@ print('Note:', note)
 ```
 
 Mögliche Punkte
-- Parcour bewältigt, ohne manuellen Eingriff (6 Punkte)
-- Parcour bewältigt, mit manuellem Eingriff (4 Punkte)
+- Parcours bewältigt, ohne manuellen Eingriff (6 Punkte)
+- Parcours bewältigt, mit manuellem Eingriff (4 Punkte)
 - Der Roboter blinkt während der Fahrt in verschiedenen Farben (1 Punkt)
-- Der Roboter kann einem Hindernis ausweichen und findet die Fahrtstrecke wieder (2 Punkte)
+- Der Roboter bleibt stehen, wenn er auf ein Hindernis trifft und fährt dann weiter, wenn es wieder weg ist (1 Punkt)
 - Der Roboter dreht sich um 360 ° wenn geklatscht wird (1 Punkt)
-- Der Roboter findet den Weg zum Ziel, auch wenn Einbahnstrassen vorhanden sind (1 Punkte)
 - Der Roboter zeigt auf dem Display mit einem Pfeil an, ob er aktuell links, rechts oder gerade steuert. (1 Punkt)
+- Der Roboter macht spielt 
+- ⭐ Der Roboter findet den Weg zum Ziel, auch wenn Einbahnstrassen vorhanden sind (1 Punkte)
+- ⭐ Der Roboter kann einem Hindernis ausweichen und findet die Fahrtstrecke wieder (2 Punkte)
