@@ -71,32 +71,32 @@ zustand = 'vorwärts'
 
 # Zustandsmaschine umsetzen
 while True:
-    '''
-    VORWÄRTSFAHREN
-    '''
     if zustand == 'vorwärts':
+        '''
+        VORWÄRTSFAHREN
+        '''
         # zuerst immer Motoren ansteuern
         # hier: beide Motoren fahren vorwärts
         motor_run(Motor.ALL, 40)
         # dann die Sensoren einlesen
-        if line_sensor(LINE_SENSOR.M) == 1:
+        if line_sensor(LineSensor.M) == 1:
             # alles beim Alten, weiterfahren
             zustand = 'vorwärts'
-        elif line_sensor(LINE_SENSOR.L1) == 0:
+        elif line_sensor(LineSensor.L1) == 0:
             zustand = 'rechtskurve'
-        elif line_sensor(LINE_SENSOR.R1) == 0:
+        elif line_sensor(LineSensor.R1) == 0:
             zustand = 'linkskurve'
-    '''
-    RECHTSKURVE FAHREN
-    '''
     elif zustand == 'rechtskurve':
+        '''
+        RECHTSKURVE FAHREN
+        '''
         motor_run(Motor.LEFT, 40)
         motor_run(Motor.RIGHT, 0)
         ...
-    '''
-    LINKSKURVE FAHREN
-    '''
     elif zustand == 'linkskurve':
+        '''
+        LINKSKURVE FAHREN
+        '''
         motor_run(Motor.LEFT, 0)
         motor_run(Motor.RIGHT, 40)
         ...
