@@ -67,6 +67,6 @@ Mögliche Punkte
 - Der Roboter bleibt stehen, wenn er auf ein Hindernis trifft und fährt dann weiter, wenn es wieder weg ist (1 Punkt)
 - Der Roboter dreht sich um 360 ° wenn geklatscht wird (1 Punkt)
 - Der Roboter zeigt auf dem Display mit einem Pfeil an, ob er aktuell links, rechts oder gerade steuert. (1 Punkt)
-- Der Roboter macht spielt 
-- ⭐ Der Roboter findet den Weg zum Ziel, auch wenn Einbahnstrassen vorhanden sind (1 Punkte)
+- Der Roboter spielt beim Richtungswechsel einen Ton oder eine kurze Melodie (1 Punkt)
+- ⭐ Der Roboter findet den Weg zum Ziel, auch wenn Einbahnstrassen vorhanden sind (1 Punkt)
 - ⭐ Der Roboter kann einem Hindernis ausweichen und findet die Fahrtstrecke wieder (2 Punkte)
