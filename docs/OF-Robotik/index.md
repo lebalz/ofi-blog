@@ -24,7 +24,7 @@ Note
 : Zählt 0.5
 Abgabe
 : Code und Kurzbeschreibung
-: Fr. 10.5.24 bis 22:00 Uhr
+: Fr. 15.5.24 bis 22:00 Uhr
 :::
 
 :::note[:mdi[apple] iPad und Micro\:Bit]
@@ -70,3 +70,62 @@ Mögliche Punkte
 - Der Roboter macht spielt 
 - ⭐ Der Roboter findet den Weg zum Ziel, auch wenn Einbahnstrassen vorhanden sind (1 Punkte)
 - ⭐ Der Roboter kann einem Hindernis ausweichen und findet die Fahrtstrecke wieder (2 Punkte)
+
+
+### Trouble Shooting
+
+::::warning[Roboter dreht sich in die falsche Richtung]
+
+#### Ausgangslage
+
+```py
+zustand = 'vorwärts'
+while True:
+    if zustand == 'vorwärts':
+        # motoren vorwärts
+        if line_sensor(LineSensor.M) == 1:
+            zustand = 'vorwärts'
+        elif line_sensor(LineSensor.L1) == 0:
+            zustand = 'rechts'
+        elif line_sensor(LineSensor.R1) == 0:
+            zustand = 'links'
+    elif zustand == 'rechts':
+      ...
+```
+
+Ist `M=0` und **sowohl `L1` wie auch `R1`** sehen weiss (kann passieren, wenn die Linie in einer Kurve zu schmal ist), dann wird der Roboter **immer nach rechts** fahren, auch wenn er eigentlich nach links müsste.
+
+Die Lösung besteht darin zu überprüfen, ob `L1` oder `R1` eine hellere Farbe misst und dann entsprechend eine andere Entscheidung zu treffen. Dies kann mit den über die Funktion `line_sensor_data` abfragbaren Rohdaten der Sensoren gemacht werden. Dabei gilt (!entgegen der `0=Weiss, 1=Schwarz`):
+
+Wert `0`
+: Sensor sieht komplett Schwarz
+Wert `255`
+: Sensor sieht komplett Weiss
+
+👉 [Referenz: Maqueen Dokumentation](https://gbsl-informatik.github.io/maqueen-plus-v2-mpy/docs/api/line-tracking#line_sensor_datasensor)
+
+:::details[Lösung]
+
+```py {7-13}
+zustand = 'vorwärts'
+while True:
+    if zustand == 'vorwärts':
+        # motoren vorwärts
+        if line_sensor(LineSensor.M) == 1:
+            zustand = 'vorwärts'
+        elif line_sensor(LineSensor.L1) == 0 and line_sensor(LineSensor.R1) == 0:
+            # wenn L1 heller ist als R1 (also L1 > R1): dann fahre nach rechts
+            if line_sensor_data(LineSensor.L1) > line_sensor_data(LineSensor.R1):
+                zustand = 'rechts'
+            # sonst nach links
+            else:
+                zustand = 'links'
+        elif line_sensor(LineSensor.L1) == 0:
+            zustand = 'rechts'
+        elif line_sensor(LineSensor.R1) == 0:
+            zustand = 'links'
+    elif zustand == 'rechts':
+        ...
+```
+:::
+::::
