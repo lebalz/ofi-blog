@@ -24,7 +24,7 @@ Note
 : Zählt 0.5
 Abgabe
 : Code und Kurzbeschreibung
-: Fr. 15.5.24 bis 22:00 Uhr
+: Mi. 15.5.24 bis 22:00 Uhr
 :::
 
 :::note[:mdi[apple] iPad und Micro\:Bit]
@@ -44,8 +44,11 @@ Praktischer Teil
 : Gewichtung: 70 %
 
 Bericht
-: Tagebucheinträge (mind. 3) - was haben Sie gemacht, was hat funktioniert, was nicht? Welche Überlegungen stecken hinter den umgesetzten Funktionalitäten? (Welche Idee steht bspw. hinter dem "Blinken-Feature"?) Pro Eintrag ca. 1/4-1/2 Seite.
-: Code: Der Code ist kommentiert und nachvollziehbar
+: ~~Tagebucheinträge (mind. 3) - was haben Sie gemacht, was hat funktioniert, was nicht?~~
+: Zu jeder Funktionalität, die Sie am Wettbewerb gezeigt haben: Welche Überlegungen und Konzepte stecken dahinter? (Welche Idee steht bspw. hinter dem "Blinken-Feature" und wie konnte das Blinken umgesetzt werden, ohne dass ein sanftes "Farbwechseln" ist?) Pro Funktion ca. 1/4-1/2 Seite.
+: Min. ein Foto des Roboters
+: Code: Der Code ist **kommentiert** und nachvollziehbar
+: Die Rechtschreibung und Formatierung wird ebenfalls miteinbezogen - es wird ein ordentlich verfasster Bericht erwartet.
 : Gewichtung: 30 %
 
 Wettbewerb
