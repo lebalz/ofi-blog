@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[43969],{11633:e=>{e.exports=JSON.parse('{"label":"firefox","permalink":"/news/tags/firefox","allTagsPath":"/news/tags","count":1,"unlisted":false}')}}]);
