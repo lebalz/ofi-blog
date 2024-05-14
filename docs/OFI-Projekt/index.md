@@ -10,18 +10,18 @@ sidebar_custom_props:
 Gruppengrösse
 : 2, Partnerarbeit
 Termin 1: Projektantrag
-: 12.05.2023, 23:59 Uhr
-: [👉 Vorlage](https://erzbe-my.sharepoint.com/:w:/g/personal/balthasar_hofer_gbsl_ch/EcKlfnWD2TtLspneUsiwOsMBQR7xaockSJxd3gWfmRBeXQ?e=rs2BeS)
-: __name1-vornam1 name2-vorname2.docx__
-: [👉 OneDrive Projektantrag](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EiVhBiZWw9FDrD4_ZjLSvRABcZ_BUTVLt5jBaFSiYdwWvg)
+: Freitag 17.05.2024, 23:59 Uhr
+: [👉 Vorlage](https://erzbe-my.sharepoint.com/:w:/g/personal/balthasar_hofer_gbsl_ch/EcKlfnWD2TtLspneUsiwOsMBQR7xaockSJxd3gWfmRBeXQ?e=KtxPNg)
+: __klasse-vorname1-vorname2.docx__
+: [👉 Abgabe Projektantrag auf OneDrive](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EtaOnSU-gFdGqEgpYn9lGp4Bvyo5ylGxCJAxdUFXgXJfUA)
 Termin 2: Finale Abgabe
-: 21.06.2023, 20:00 Uhr
-: __name1-vorname1 name2-vorname2.zip__
-: [👉 OneDrive Finale Abgabe](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EjXGrYtw7KBMu_QCLkSHThQBi5F3qRojjfo2tjPXIvUVVg)
+: 19.06.2024, 20:00 Uhr
+: __klasse-vorname1-vorname2.zip__
+: [👉 Finale Abgabe auf OneDrive](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EsYF-OU38VJLpTUvEay-LsAB6vX6fedk1YSM1eIG4YJkyA)
 :::
 
 
-Im Partnerpraktikum suchen Sie sich in **Zweiergruppen** selbständig ein Thema aus, welches Sie interessiert.
+Im Partnerpraktikum suchen Sie sich in **Zweiergruppen** selbständig ein Thema aus, welches Sie **interessiert**.
 
 ## Ablauf
 
@@ -29,7 +29,7 @@ Im Partnerpraktikum suchen Sie sich in **Zweiergruppen** selbständig ein Thema 
 
 Suchen Sie sich ein Thema, in welches Sie sich innerhalb von 5 Doppellektionen einarbeiten können. Ihr Projekt darf auch einen praktischen Teil beinhalten (muss aber nicht).
 
-Das Endprodukt ihres Projekts ist ein **Podcast** oder wenn Visualisierungen zwingend sind ein **Videobeitrag** von 4-7 Minuten. Zudem wird eine schriftliche Reflexion zum Arbeitsprozess und dem Projekt verfasst, die in die Beurteilung einfliesst.
+Das Endprodukt ihres Projekts ist ein **4-7 Minuten** langer **Podcast** oder, wenn Visualisierungen zwingen sind, ein **Videobeitrag**. Zudem wird eine schriftliche Reflexion zum Arbeitsprozess und dem Projekt verfasst, die in die Beurteilung einfliesst.
 
 ## Beurteilung
 
@@ -65,7 +65,7 @@ In der schriftlichen Selbstreflexion blicken Sie auf Ihr Praktikumsprojekt zurü
   - Bin ich zufrieden damit? 
   - Wo hätten Sie sich mehr erwünscht? 
   - Inwiefern wurden Ihre Erwartungen an die Lernerfahrung erfüllt?
-- Podcast
+- Podcast/Videobeitrag
   - Wie zufrieden sind Sie mit dem Podcast/Videobeitrag?
   - Wo bestünde noch Verbesserungspotential?
 - Selbstbeurteilung
@@ -97,9 +97,9 @@ Die Schule bietet begrenzte Hardware-Stückzahlen, um sich z.B. im Rahmen eines 
 
 ### 1. Themenwahl und Ideensuche 
 
-Informieren Sie sich über Themen, die Sie spannend finden. Tauschen Sie sich anschliessend mit den Klassenkamerad:innen aus und finden Sie eine Projektpartner:in, welche Ihre Interessen teilt. Entscheiden Sie sich für ein Thema und schreiben Sie einen Projektantrag in folgender [👉 Vorlage](https://erzbe-my.sharepoint.com/:w:/g/personal/balthasar_hofer_gbsl_ch/EcKlfnWD2TtLspneUsiwOsMBQR7xaockSJxd3gWfmRBeXQ?e=rs2BeS).
+Informieren Sie sich über Themen, die Sie spannend finden. Tauschen Sie sich anschliessend mit den Klassenkamerad:innen aus und finden Sie eine Projektpartner:in, welche Ihre Interessen teilt. Entscheiden Sie sich für ein Thema und schreiben Sie einen Projektantrag in folgender [👉 Vorlage](https://erzbe-my.sharepoint.com/:w:/g/personal/balthasar_hofer_gbsl_ch/EcKlfnWD2TtLspneUsiwOsMBQR7xaockSJxd3gWfmRBeXQ?e=KtxPNg).
 
-Füllen Sie den Projektantrag aus und laden Sie den Antrag bis am 12.05.2023, 23:59 Uhr: [👉 OneDrive Finale Abgabe](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EjXGrYtw7KBMu_QCLkSHThQBi5F3qRojjfo2tjPXIvUVVg)
+Füllen Sie den Projektantrag aus und laden Sie den Antrag bis am Freitag Abend, 17.05.2024, 23:59 Uhr hoch auf: [👉 OneDrive Projektantrag](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EtaOnSU-gFdGqEgpYn9lGp4Bvyo5ylGxCJAxdUFXgXJfUA)
 
 :::success[Arbeitstagebuch Woche 1]
 <Answer type="text" webKey="333ae706-c77e-465f-9273-bef1881c0f7a" />
@@ -128,21 +128,12 @@ Selbständiges Arbeiten an den Projekten. Holen Sie sich bei Fragen oder Unklarh
 <Answer type="text" webKey="0881427c-f098-4059-8727-813cebef5315" />
 :::
 
-### 5. Woche
-Selbständiges Arbeiten an den Projekten. Holen Sie sich bei Fragen oder Unklarheiten frühzeitig Hilfe bei Herrn Hofer.
+### 5. Letzte Woche
+Vorbereitung und Aufnehmen der Podcasts
 
 :::success[Arbeitstagebuch Woche 5]
 <Answer type="text" webKey="f86c4f09-cd01-465d-95bf-96d9f04f66a7" />
 :::
-
-
-### 6. Letzte Woche
-Vorbereitung und Aufnehmen der Podcasts
-
-:::success[Arbeitstagebuch Woche 6]
-<Answer type="text" webKey="52a1172b-ae18-464d-8772-0a4d419b9bf8" />
-:::
-
 
 ## Ideensammlung
 
@@ -153,7 +144,7 @@ Mögliche Ideen - Sie dürfen aber auch einen eigenen Projektvorschlag ausarbeit
 
 ::youtube[https://www.youtube-nocookie.com/embed/zRuVhq0Kgnw]
 
-#### Wie funktionieren Bitcoins?
+#### Wie funktioniert Kryptowährung / Bitcoin?
 Sie setzen sich mit dem Thema Blockchain und Bitcoins auseinander. 
 
 ![](https://www.leparisien.fr/resizer/pgNoLN8LeaWEP6mjBtM5JTPYJhE=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/J5WMRGQC4NEZXAPJERTHG7MXBA.jpg)
@@ -170,7 +161,28 @@ Sie setzen sich mit dem Thema Blockchain und Bitcoins auseinander.
 
 Einarbeitung in ein 3D-Druck Programm: [👉 10 CAD Programme](https://all3dp.com/de/2/3d-drucker-cad-program-kostenlos/)
 
-An der Schule kann mit einem Prusa MK3+ mit MMU2 (Mehrfarbendruck) gedruckt werden.
+Für Fusion 360 kann ein Kurs zur Verfügung gestellt werden, in welchem man die Grundlagen der technischen Modellierung lernt und ein eigenes Modell erstellt.
+
+An der Schule kann mit einem Prusa i3 MK3S+ mit MMU2 (Mehrfarbendruck) gedruckt werden.
+
+### Hardware
+
+#### Logische Gatter: Addieren nur mit Strom
+
+Was sind logische Bausteine, wie kann damit gerechnet werden? Sie erarbeiten sich mit einem Kurs ein Verständnis über die Funktionsweise von logischen Bausteinen und bauen einen Rechner, der nur mit Strom addieren kann. Optional: nicht nur im Simulator, sondern mit echten Bauteilen.
+
+![](./images/06-cv-XOR-AND.png)
+
+Kurs
+: [👉 Logische Gatter](https://docs.ofi.gbsl.website/Computer/gates)
+
+#### Rechnen mit Strom
+Wie funktioniert ein Computer? Wie funktioniert ein Prozessor? Wie funktioniert ein Speicher? Wie funktioniert ein Netzteil? Wie funktioniert ein Motherboard? Wie funktioniert ein Monitor? Wie funktioniert ein Betriebssystem?
+
+Nand-Game
+: [👉 nandgame.com](https://www.nandgame.com/)
+
+
 ### Netzwerk
 
 Netzwerksimulation mit Filius - wie funktioniert das Internet im Detail? Was ist eine MAC-Adresse, was sind ARP-Tabellen und wie ist ein hierarchisches Netzwerk aufgebaut?
@@ -192,18 +204,15 @@ Einarbeitung in Node-RED - automatisch Telegram-Nachrichten verschicken - z.B. m
 
 ### Machine Learning
 
-#### ChatGPT
+#### Intelligenter Chatbot / ChatGPT
 - Kritische Sicht auf den Chat-Bot
 - Hintergründe
 - Was ermöglicht mir ChatGPT? Kann ich damit etwas programmieren? Eine Webseite machen? Kunst erstellen? ...
+- Zwingend: Ein Experiment, welches Stärken und Schwächen vom Chatbot aufzeigt.
+- 
 
 [👉 Aktueller TED Talk](https://www.ted.com/talks/imran_chaudhri_the_disappearing_computer_and_a_world_where_you_can_take_ai_everywhere): Wenn Mensch und AI verschmelzen.
 
-#### Artificial Intelligence, Machine Learning, Deep Learning - was bedeuten diese Begriffe?
-
-Sie recherchieren über die Bedeutung der Modewörter AI, ML und DL und setzen diese in einen Kontext.
-
-https://www.mygreatlearning.com/blog/what-is-artificial-intelligence/
 
 #### Wie funktionieren Suchvorschläge auf Google?
 
@@ -213,9 +222,6 @@ Sie lesen sich ins Buch von Tommaso Teofili, [Deep Learning for Search_2019](htt
 > A practical approach that shows you the state of the art in using neural networks, AI, and deep learning in the development of search engines.
 
 ![--width=300px](https://human-centered.ai/wordpress/wp-content/uploads/2017/11/Deep-Learning-subset-of-Machine-Learning-subset-of-Artificial-Intelligence.jpg)
-
-:btn[[Herunterladen](https://erzbe-my.sharepoint.com/:b:/g/personal/balthasar_hofer_gbsl_ch/Ec6EDPPeV8ZFuZ137SimNOwBtbqfQDqe6nWwlzjNVWKkcQ?e=qjlZVW)]{.success}
-
 
 ## Abgabe
 :::success[Abgabe]
