@@ -189,6 +189,15 @@
       "ignore": [
         "_category_.json"
       ],
+      "open": false
+    },
+    {
+      "from": "docs/OFI-Projekt/",
+      "to": "versioned_docs/version-26e/13-Abschlussprojekt",
+      "ignore": [
+        "_category_.json",
+        "02-podcast.md"
+      ],
       "open": true
     }
   ],
@@ -377,6 +386,15 @@
       "to": "versioned_docs/version-26P/12-Robotik",
       "ignore": [
         "_category_.json"
+      ],
+      "open": false
+    },
+    {
+      "from": "docs/OFI-Projekt/",
+      "to": "versioned_docs/version-26P/13-Abschlussprojekt",
+      "ignore": [
+        "_category_.json",
+        "02-podcast.md"
       ],
       "open": true
     }
