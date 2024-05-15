@@ -4,6 +4,8 @@ sidebar_custom_props:
   id: 4ef991fc-8ad4-46e8-99ff-330ec7ffddad
 ---
 
+import BrowserWindow from '@site/src/components/BrowserWindow';
+
 # Projekt: Partnerpraktikum
 
 :::info[TL;DR]
@@ -142,7 +144,12 @@ Mögliche Ideen - Sie dürfen aber auch einen eigenen Projektvorschlag ausarbeit
 ### Algorithmen
 #### Programmieren von zufälligen Labyrinthen
 
+Programmieren eines simplen Labyrinths, welches zufällig generiert wird. Sie setzen sich mit Algorithmen auseinander und programmieren ein Labyrinth, welches zufällig generiert und allenfalls auch gelöst wird.
+
+![--width=450px](./images/maze.png)
+:::details
 ::youtube[https://www.youtube-nocookie.com/embed/zRuVhq0Kgnw]
+:::
 
 #### Wie funktioniert Kryptowährung / Bitcoin?
 Sie setzen sich mit dem Thema Blockchain und Bitcoins auseinander. 
@@ -151,19 +158,22 @@ Sie setzen sich mit dem Thema Blockchain und Bitcoins auseinander.
 
 ### Modellieren
 
+#### 3D Modelle & 3D-Druck
+
+Einarbeitung in ein 3D-Druck Programm: [👉 10 CAD Programme](https://all3dp.com/de/2/3d-drucker-cad-program-kostenlos/)
+
+Für **Fusion 360** kann ein Kurs zur Verfügung gestellt werden, in welchem man die Grundlagen der technischen Modellierung lernt und ein eigenes Modell erstellt.
+
+::video[./images/AsyncEncryptionBox.mp4]{autoplay loop maxWidth=350px marginLeft=auto marginRight=auto display=block}
+
+An der Schule kann mit einem Prusa i3 MK3S+ mit MMU2 (Mehrfarbendruck) gedruckt werden.
+
+
 #### Einarbeitung in Blender
 
 [👉 Blender](https://www.blender.org/)
 
 ::youtube[https://www.youtube-nocookie.com/embed/LJ9dvcpsatg]
-
-#### 3D Modelle & 3D-Druck
-
-Einarbeitung in ein 3D-Druck Programm: [👉 10 CAD Programme](https://all3dp.com/de/2/3d-drucker-cad-program-kostenlos/)
-
-Für Fusion 360 kann ein Kurs zur Verfügung gestellt werden, in welchem man die Grundlagen der technischen Modellierung lernt und ein eigenes Modell erstellt.
-
-An der Schule kann mit einem Prusa i3 MK3S+ mit MMU2 (Mehrfarbendruck) gedruckt werden.
 
 ### Hardware
 
@@ -179,8 +189,29 @@ Kurs
 #### Rechnen mit Strom
 Wie funktioniert ein Computer? Wie funktioniert ein Prozessor? Wie funktioniert ein Speicher? Wie funktioniert ein Netzteil? Wie funktioniert ein Motherboard? Wie funktioniert ein Monitor? Wie funktioniert ein Betriebssystem?
 
+![--width=400px](./images/nandgame.png)
+
 Nand-Game
 : [👉 nandgame.com](https://www.nandgame.com/)
+
+### Website Erstellen
+
+#### Einfache Webseite erstellen
+Sie erstellen eine simple Webseite und lernen, wie eine Webseite aufgebaut ist. Sie lernen dabei die Grundzüge von HTML, CSS und JavaScript und wie diese interagieren.
+
+<BrowserWindow>
+
+![](https://www.w3schools.com/w3images/lights.jpg)
+</BrowserWindow>
+
+#### Blog-Webseite erstellen
+
+Sie erstellen eine Blog-Webseite mit bspw. [👉 Docusaurus](https://docusaurus.io/) und veröffentlichen diese, bspw. unter GitHub.
+
+<BrowserWindow url="https://docusaurus.io">
+
+![](./images/docusaurus.png)
+</BrowserWindow>
 
 
 ### Netzwerk

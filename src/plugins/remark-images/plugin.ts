@@ -1,7 +1,7 @@
 import { visit, SKIP } from 'unist-util-visit';
 import type { Plugin, Processor, Transformer } from 'unified';
 import type { MdxJsxFlowElement, MdxJsxTextElement } from 'mdast-util-mdx';
-import { Content, Image, Paragraph, Parent } from 'mdast';
+import { BlockContent, Content, Image, Paragraph, Parent } from 'mdast';
 import path from 'path';
 import fs from 'fs';
 import { cleanedText, parseOptions, toJsxAttribute } from '../helpers';
@@ -158,7 +158,7 @@ const plugin: Plugin = function plugin(
                     bibPromises.push(bibPromise);
                 }
                 if (caption.children.length > 0 || hasBibFile) {
-                    figure.children.splice(figure.children.length, 0, caption);
+                    figure.children.splice(figure.children.length, 0, caption as BlockContent);
                 }
                 parent.children.splice(idx, 1, figure);
             }
