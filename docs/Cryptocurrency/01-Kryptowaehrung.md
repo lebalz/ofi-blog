@@ -9,4 +9,4 @@ sidebar_custom_props:
 
 ::pdf[./assets/Kryptowährungen_Skript_Peter_Giger.pdf]
 
-## Foli von P. Giger
+## Folien von P. Giger
