@@ -52,7 +52,7 @@ Merksatz: **Links von dieser Stelle hat es in der Netzmaske ausschliesslich 1, r
 
 **Wichtig:** Die Stelle, wo der Wechsel von 1 zu 0 stattfindet kann mitten in einem Byte liegen. Er muss also nicht bei einem der Punkte in der dezimalen Schreibweise liegen.
 
-Schreibt man nun eine Netzmaske in ihrer binären Form auf und direkt darunter eine beliebige IP-Adresse, ebenfalls in binären Form, so markieren die **1** in der Netzmaske diejenigen Bits der IP-Adresse, welche den **Netzwerteil** bilden. Die **0** in der Netzmaske markieren dann den **Hostteil**. 
+Schreibt man nun eine Netzmaske in ihrer binären Form auf und direkt darunter eine beliebige IP-Adresse, ebenfalls in binären Form, so markieren die **1** in der Netzmaske diejenigen Bits der IP-Adresse, welche den **Netzwerkteil** bilden. Die **0** in der Netzmaske markieren dann den **Hostteil**. 
 
 Beispiel:
 
