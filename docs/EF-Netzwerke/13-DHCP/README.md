@@ -16,7 +16,7 @@ Dienstprogramme zur Kontrolle der Netzwerkeinstellungen sind `ipconfig /all` (Wi
 
 ## Anwendung im Heimnetzwerk
 
-Ab und zu scheint das Internet unendlich langsam zu sein - so auch geschehen letzthin bei mir zu Hause (nach der Umstellung des ISP zu einer Budget-Variante). Der Download Speed-Test hat schnell gezeigt, dass der Download-Speed eigentlich hoch war, jedoch der Verbindungs-Aufbau gefühlt ewig dauerte. Es viel auf, dass keiner der bekannten Namensserver (Cloudflare `1.1.1.1` oder Google `8.8.8.8`) verwendet wurde. Wieso? Damit spezielle, lokale Domains für die Verwaltung vom ISP konfiguriert werden konnten. So konnte bspw. über `http://box.local` auf den WIFI-Router zugegriffen werden (anstatt dass man `192.168.0.1` oder `192.168.0.254` von Hand eingeben musste).
+Ab und zu scheint das Internet unendlich langsam zu sein - so auch geschehen letzthin bei mir zu Hause (nach der Umstellung des ISP zu einer Budget-Variante). Der Download Speed-Test hat schnell gezeigt, dass der Download-Speed eigentlich hoch war, jedoch der Verbindungs-Aufbau gefühlt ewig dauerte. Es fiel auf, dass keiner der bekannten Namensserver (Cloudflare `1.1.1.1` oder Google `8.8.8.8`) verwendet wurde. Wieso? Damit spezielle, lokale Domains für die Verwaltung vom ISP konfiguriert werden konnten. So konnte bspw. über `http://box.local` auf den WIFI-Router zugegriffen werden (anstatt dass man `192.168.0.1` oder `192.168.0.254` von Hand eingeben musste).
 
 Der WIFI-Router kann standardmässig DNS-Records zwischenspeichern, was eigentlich eine tolle Sache ist. Allerdings war als Nameserver ein langsamer, vom ISP zur Verfügung gestellter Server konfiguriert. Dies konnte man ändern:
 
