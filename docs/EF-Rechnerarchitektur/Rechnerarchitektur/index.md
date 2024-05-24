@@ -41,7 +41,7 @@ Steuerbus
 #### Beispiel: Lesevorgang
 Die CPU soll Daten aus dem Speicher lesen: Die CPU ...
 
-- gibt die Adresse der der "Speichereinheit" und der Speicherzelle auf den Adressbus.
+- gibt die Adresse der "Speichereinheit" und der Speicherzelle auf den Adressbus.
 - aktiviert die Steuerleitung `READ`, wobei die adressierte Speicherzelle ihren Inhalt auf den Datenbus gibt.
 - übernimmt die Daten vom Datenbus und deaktiviert die Steuerleitung `READ`. Der Lesevorgang ist damit beendet.
 
