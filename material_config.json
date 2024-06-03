@@ -511,7 +511,7 @@
       "ignore": [
         "_category_.json"
       ],
-      "open": true
+      "open": false
     }
   ]
 }
