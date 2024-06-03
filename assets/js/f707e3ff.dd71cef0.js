@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[36170],{81641:e=>{e.exports=JSON.parse('{"tags":[{"label":"Assembler","permalink":"/24ef/tags/assembler","count":1},{"label":"LMC","permalink":"/24ef/tags/lmc","count":1}]}')}}]);
