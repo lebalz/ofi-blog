@@ -195,8 +195,7 @@
       "from": "docs/OFI-Projekt/",
       "to": "versioned_docs/version-26e/13-Abschlussprojekt",
       "ignore": [
-        "_category_.json",
-        "02-podcast.md"
+        "_category_.json"
       ],
       "open": true
     }
@@ -393,8 +392,7 @@
       "from": "docs/OFI-Projekt/",
       "to": "versioned_docs/version-26P/13-Abschlussprojekt",
       "ignore": [
-        "_category_.json",
-        "02-podcast.md"
+        "_category_.json"
       ],
       "open": true
     }
