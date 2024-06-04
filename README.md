@@ -8,29 +8,6 @@
 
 The `theme/classic` is used. It is build with [infima](https://infima.dev/).
 
-## New Documentation
-
-Add or edit new docs in [docs/](). This will have effect to all different "Versions" since their versions are only simlinked.
-
-### Enable docs to a course
-
-To enable specific docs to a course, either add manually a symlink, or call the bash script [bin/enable](bin/enable).
-
-E.g. to enable the contents of [docs/byod_basics] for the course 24i:
-
-```sh
-bin/enable byod_basics 24i
-```
-
-### Disable docs from a course
-
-To disable docs from a course, either remove the simlink manually, or call the bash script [bin/disable](bin/disable):
-
-E.g. to disable the contents of [docs/byod_basics] for the course 24i:
-
-```sh
-bin/disable byod_basics 24i
-```
 
 ## Installation
 
