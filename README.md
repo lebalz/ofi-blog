@@ -3,8 +3,11 @@
 # Abschlussjahrgang EF 2024
 
 This branch is deployed in [EF Blog v24](https://github.com/lebalz/ef-blog-v24).
+- remove unwanted versions from `versions.ts`
+- update the `docusaurus.config.ts` to reflect the new version
+- remove the versions from course list in `src/pages/index.tsx`
 - update the doc-config
-- build it with `yarn run build`
+- build it with offline mode, domai `yarn run build`
 - navigate to the build directory `cd build`
 - initialize and push a git repo. make sure to add revealjs too (by deleting the .git folder of the submodule in the build directory...)
 
