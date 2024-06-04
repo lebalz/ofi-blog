@@ -20,6 +20,7 @@ const CourseList: Course[] = [
 ];
 
 if (!DOCS_ONLY) {
+  /*
   CourseList.push({
     title: 'Gym 2',
     classes: [
@@ -27,17 +28,18 @@ if (!DOCS_ONLY) {
       '26P'
     ]
   });
+  */
   CourseList.push({
-    title: 'Gym 4',
+    title: 'Abschlussjahrgang 2024',
     classes: [
       {
         uri: '24ef/home',
-        label: 'EF'
+        label: 'EF Informatik'
       },
     ]
   });  
 }
-
+/*
 CourseList.push({
     title: 'Ehemalige',
     classes: [
@@ -55,6 +57,7 @@ CourseList.push({
       },
     ]
   });
+*/
 
 // const CourseComponent = (course: Course) => {
 const CourseComponent = ({ course }: {course: Course}) => {

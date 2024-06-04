@@ -9,7 +9,7 @@ This branch is deployed in [EF Blog v24](https://github.com/lebalz/ef-blog-v24).
 - initialize and push a git repo. make sure to add revealjs too (by deleting the .git folder of the submodule in the build directory...)
 
 ```bash
-yarn run build
+WITHOUT_DOCS="true" OFFLINE_MODE="true" DOMAIN="https://ef.24.gbsl.website" UMAMI_ID="26afa3d9-bc2f-4fe6-91ec-0ee486eb6aef" UMAMI_SRC="https://umami.gbsl.website/tell-me.js" NODE_OPTIONS="--max_old_space_size=12288" yarn run build
 cd build
 rm -rf p/reveal.js/.git
 
