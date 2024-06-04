@@ -38,7 +38,7 @@ const VERSIONS: { [version: string]: VersionOptions } = {
 };
 
 if (!process.env.DOCS_ONLY) {
-    ['26e', '26P', '24ef'].forEach(version => {
+    ['24ef'].forEach(version => {
         VERSIONS[version] = {
             label: version,
             banner: 'none'

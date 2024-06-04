@@ -1,8 +1,25 @@
-# OFI Blog
+# EF Blog v24
 
-[![Build Status](https://drone.gbsl.website/api/badges/lebalz/ofi-blog/status.svg)](https://drone.gbsl.website/lebalz/ofi-blog)
+# Abschlussjahrgang EF 2024
 
-[OFI Blog](https://lebalz.github.io/ofi-blog)
+This branch is deployed in [EF Blog v24](https://github.com/lebalz/ef-blog-v24).
+- update the doc-config
+- build it with `yarn run build`
+- navigate to the build directory `cd build`
+- initialize and push a git repo. make sure to add revealjs too (by deleting the .git folder of the submodule in the build directory...)
+
+```bash
+yarn run build
+cd build
+rm -rf p/reveal.js/.git
+
+git init .
+git add .
+git commit -am "version EF Abschlussjahrgang 2024"
+git remote add origin git@github.com:lebalz/ef-blog-v24.git
+git branch -M main
+git push -u -f origin main
+```
 
 ## Styling
 
