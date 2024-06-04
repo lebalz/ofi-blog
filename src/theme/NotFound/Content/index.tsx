@@ -10,13 +10,14 @@ import { mdiArrowRightBoldBox } from '@mdi/js';
 import Link from '@docusaurus/Link';
 
 const ARCHIVED_CLASSES = [
-    { name: '24i', version: '24' },
-    { name: '24f', version: '24' },
-    { name: '24o', version: '24' },
-    { name: '24L', version: '24' },
-    { name: '24K', version: '24' },
-    { name: '24w', version: '25' },
-    { name: '25h', version: '25' },
+    { name: '24i', subDomain: '24', subSubDomain: 'ofi' },
+    { name: '24f', subDomain: '24', subSubDomain: 'ofi' },
+    { name: '24o', subDomain: '24', subSubDomain: 'ofi' },
+    { name: '24L', subDomain: '24', subSubDomain: 'ofi' },
+    { name: '24K', subDomain: '24', subSubDomain: 'ofi' },
+    { name: '24w', subDomain: '25', subSubDomain: 'ofi' },
+    { name: '25h', subDomain: '25', subSubDomain: 'ofi' },
+    { name: '24ef', subDomain: '24', subSubDomain: 'ef' },
 ];
 
 const REGEX = new RegExp(`^\\/(${ARCHIVED_CLASSES.map((c) => c.name).join('|')})\\/`, 'i');
@@ -26,9 +27,9 @@ export default function NotFoundContent({ className }: Props): JSX.Element {
 
     if (REGEX.test(location.pathname)) {
         const klasse = location.pathname.split('/')[1];
-        const version = ARCHIVED_CLASSES.find((c) => c.name === klasse.toLowerCase() || c.name === klasse.toUpperCase())?.version;
-        if (version) {
-            const baseUri = `https://ofi.${version}.gbsl.website`;
+        const klass = ARCHIVED_CLASSES.find((c) => c.name === klasse.toLowerCase() || c.name === klasse.toUpperCase());
+        if (klass) {
+            const baseUri = `https://${klass.subSubDomain}.${klass.subDomain}.gbsl.website`;
             const newUri = `${baseUri}${location.pathname}${location.hash}${location.search}`;
             return (    
                 <>
@@ -37,7 +38,7 @@ export default function NotFoundContent({ className }: Props): JSX.Element {
                         <div className="row">
                             <div className="col col--6 col--offset-3">
                                 <Heading as="h1" className="hero__title">
-                                    Seite des Jahrgangs 20{version} archiviert
+                                    Seite des Jahrgangs 20{klass.subDomain} archiviert
                                 </Heading>
                                 <a 
                                     href={newUri}
