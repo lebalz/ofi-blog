@@ -201,7 +201,8 @@
     },
     {
       "from": "docs/Video-Editor/",
-      "to": "versioned_docs/version-26e/13-Abschlussprojekt/02-podcast/02-Video-Editor"
+      "to": "versioned_docs/version-26e/13-Abschlussprojekt/02-podcast/02-Video-Editor",
+      "ignore": []
     }
   ],
   "26P": [
@@ -402,7 +403,8 @@
     },
     {
       "from": "docs/Video-Editor/",
-      "to": "versioned_docs/version-26P/13-Abschlussprojekt/02-podcast/02-Video-Editor"
+      "to": "versioned_docs/version-26P/13-Abschlussprojekt/02-podcast/02-Video-Editor",
+      "ignore": []
     }
   ],
   "24ef": [
