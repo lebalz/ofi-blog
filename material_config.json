@@ -198,6 +198,10 @@
         "_category_.json"
       ],
       "open": true
+    },
+    {
+      "from": "docs/Video-Editor/",
+      "to": "versioned_docs/version-26e/13-Abschlussprojekt/02-podcast/02-Video-Editor"
     }
   ],
   "26P": [
@@ -395,6 +399,10 @@
         "_category_.json"
       ],
       "open": true
+    },
+    {
+      "from": "docs/Video-Editor/",
+      "to": "versioned_docs/version-26P/13-Abschlussprojekt/02-podcast/02-Video-Editor"
     }
   ],
   "24ef": [
