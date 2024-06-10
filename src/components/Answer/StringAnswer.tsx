@@ -43,7 +43,7 @@ const StringAnswer = observer((props: StringProps) => {
   const doc = store.find<StringModel>(props.webKey);
 
   const onChange = (newVal: string) => {
-    if (!doc.loaded) {
+    if (!doc.isLoaded) {
       return;
     }
     setCorrectState("unchecked");
@@ -61,7 +61,7 @@ const StringAnswer = observer((props: StringProps) => {
   /** check the answer */
   React.useEffect(() => {
     return reaction(
-      () => doc.loaded,
+      () => doc.isLoaded,
       (loaded) => {
         if (loaded) {
           checkAnswer(doc.value)
@@ -71,13 +71,13 @@ const StringAnswer = observer((props: StringProps) => {
   }, [doc]);
   
   React.useEffect(() => {
-    if (doc.loaded) {
+    if (doc.isLoaded) {
       doc.setState(correctState);
     }
   }, [doc, correctState]);
 
   React.useEffect(() => {
-    if (doc.loaded) {
+    if (doc.isLoaded) {
       checkAnswer(doc.value);
     }
   }, [doc, inBrowser])
@@ -86,7 +86,7 @@ const StringAnswer = observer((props: StringProps) => {
     return <div>SSR</div>;
   }
 
-  if (!doc.loaded) {
+  if (!doc.isLoaded) {
     return <Loader />;
   }
   const hasSolution = props.solution || props.checker;
@@ -104,7 +104,7 @@ const StringAnswer = observer((props: StringProps) => {
           }))}
           value={doc.value}
           className={clsx(getClassName(doc.value), hasSolution && styles.solution)}
-          disabled={!doc.loaded}
+          disabled={!doc.isLoaded}
         />
       ) : (
         <input
@@ -116,7 +116,7 @@ const StringAnswer = observer((props: StringProps) => {
           }}
           value={doc.value}
           placeholder={props.placeholder}
-          disabled={!doc.loaded || doc.readonly || props.disabled}
+          disabled={!doc.isLoaded || doc.readonly || props.disabled}
         />
       )}
       {(hasSolution) && (

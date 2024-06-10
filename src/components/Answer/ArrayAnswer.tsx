@@ -30,7 +30,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
         doc.setData({ ...doc.data, value: newArr });
     };
 
-    if (!doc.loaded) {
+    if (!doc.isLoaded) {
         return <Loader />;
     }
     return (
@@ -60,7 +60,7 @@ const ArrayAnswer = observer((props: ArrayProps) => {
                             type="text"
                             onChange={(e) => onChange(e.target.value, i)}
                             value={c}
-                            disabled={!doc.loaded || doc.readonly}
+                            disabled={!doc.isLoaded || doc.readonly}
                         />
                     );
                 })}

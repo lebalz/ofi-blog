@@ -1,12 +1,21 @@
 import axios, { CancelTokenSource } from 'axios';
 import { Document, putDocument, Version } from './../api/document';
-import { action, computed, makeObservable, observable } from 'mobx';
+import { action, computed, makeObservable, observable, reaction } from 'mobx';
 import { CodeModel } from './iModel';
 import { DocumentStore } from '../stores/DocumentStore';
 import { rootStore } from '../stores/stores';
 import SaveService, { ApiModel } from './SaveService';
-import { DOM_ELEMENT_IDS, TURTLE_IMPORTS_TESTER, GRAPHICS_OUTPUT_TESTER, CANVAS_OUTPUT_TESTER, GRID_IMPORTS_TESTER, TURTLE3D_IMPORTS_TESTER } from '../components/CodeEditor/constants';
 import { sanitizePyScript } from '../utils/sanitizers';
+import { throttle } from 'lodash';
+import { 
+    CANVAS_OUTPUT_TESTER, 
+    DOM_ELEMENT_IDS, 
+    GRAPHICS_OUTPUT_TESTER, 
+    GRID_IMPORTS_TESTER, 
+    TURTLE_IMPORTS_TESTER 
+} from 'docusaurus-live-brython/theme/CodeEditor/constants';
+import { splitPreCode } from 'docusaurus-live-brython/theme/CodeEditor/WithScript/helpers';
+import { Status } from 'docusaurus-live-brython/theme/CodeEditor/WithScript/Types';
 
 export interface PyDoc {
     code: string;
@@ -23,11 +32,11 @@ export const DEFAULT_DATA: PyDoc = {
 };
 
 const save = (model: Script, cancelToken: CancelTokenSource) => {
-    const pasted = model.pastedEdit;
+    const pasted = model.isPasted;
     if (pasted) {
         model.setPastedEdit(false);
     }
-    return putDocument<PyDoc>(model.webKey, model.data, model.versioned, pasted, cancelToken);
+    return putDocument<PyDoc>(model.webKey, model.data, model.isVersioned, pasted, cancelToken);
 };
 
 export default class Script implements CodeModel, ApiModel {
@@ -51,14 +60,14 @@ export default class Script implements CodeModel, ApiModel {
     saveService: SaveService;
 
     @observable
-    loaded: boolean = false;
+    isLoaded: boolean = false;
 
     /** model specific props */
 
     _logMessages = observable<LogMessage>([]);
 
     @observable
-    executing: boolean = false;
+    isExecuting: boolean = false;
 
     @observable
     showRaw: boolean = false;
@@ -69,22 +78,34 @@ export default class Script implements CodeModel, ApiModel {
     @observable
     executedScriptSource: string;
 
+    
     @observable
-    precode: string = '';
+    isGraphicsmodalOpen: boolean = false;
+
+    @observable
+    preCode: string = '';
 
     rawScript: string;
 
     @observable
     code: string;
+
+    // @observable
+    // status: Status = Status.IDLE;
+
     readonly: boolean;
 
-    versioned: boolean;
+    readonly isVersioned: boolean;
+    readonly _pristineCode: string;
+    readonly codeId: string;
+    readonly lang = 'python';
+
     @observable
-    versionsLoaded: false | 'loading' | 'loaded' = false;
+    versionsLoaded: boolean = false;
     versions = observable.array<Version<PyDoc>>([]);
 
     @observable
-    pastedEdit: boolean;
+    isPasted: boolean;
 
     versionsCT: CancelTokenSource;
 
@@ -106,8 +127,13 @@ export default class Script implements CodeModel, ApiModel {
         this.rawScript = rawScript;
         this.executedScriptSource = doc.data.code;
         this.code = doc.data.code;
+        this.codeId = `code.${this.id}`.replace(/(-|\.)/g, '_');
+        
+        const {pre, code} = splitPreCode(doc.data.code) as {pre: string, code: string};
+        this._pristineCode = code;
+
         this.isDummy = isDummy;
-        this.versioned = versioned;
+        this.isVersioned = versioned;
         makeObservable(this);
         /** order depends, initialize AFTER making this observable! */
         this.saveService = new SaveService(this, save);
@@ -115,13 +141,56 @@ export default class Script implements CodeModel, ApiModel {
 
     @computed
     get canUpdate(): boolean {
-        return !this.isDummy && !this.readonly && this.loaded;
+        return !this.isDummy && !this.readonly && this.isLoaded;
+    }
+
+    @action
+    setIsPasted(isPasted: boolean) {
+        this.isPasted = isPasted;
+    };
+    @action
+    setShowRaw(showRaw: boolean) {
+        this.showRaw = showRaw;
+    };
+
+    @computed
+    get pristineCode() {
+        return this._pristineCode;
+    }
+
+    @action
+    setStatus(status: Status) {
+        // this.status = status;
+        if (status === Status.IDLE) {
+            this.saveService.state = 'init';
+        }
+    };
+
+    @computed
+    get status() {
+        switch (this.saveService.state) {
+            case 'pending':
+                return Status.SYNCING;
+            case 'done':
+                return Status.SUCCESS;
+            case 'error':
+                return Status.ERROR;
+            default:
+                return Status.IDLE;
+        };
     }
 
     @action
     setExecuting(executing: boolean) {
-        this.executing = executing;
+        this.isExecuting = executing;
     }
+
+
+    @action
+    closeGraphicsModal() {
+        this.isGraphicsmodalOpen = false;
+    }
+
 
     @computed
     get umami() {
@@ -143,22 +212,68 @@ export default class Script implements CodeModel, ApiModel {
         this.code = data.code;
     }
 
+    
+    
+    @action
+    _addVersion(version: Version<PyDoc>) {
+        if (!this.isVersioned) {
+            return;
+        }
+        this.versions.push(version);
+    }
+
+    addVersion = throttle(
+        this._addVersion,
+        DocumentStore.syncMaxOnceEvery,
+        {leading: false, trailing: true}
+    );
+
+    @action
+    saveNow() {
+        console.log('save now')
+        this.saveService.saveNow();
+    }
+
+    @action
+    setCode(code: string, action?: 'insert' | 'remove' | string) {
+        if (this.isPasted && action === 'remove') {
+            return;
+        }
+        this.code = code;
+        const updatedAt = new Date();
+        this.updatedAt = updatedAt;
+        if (this.isVersioned) {
+            this.addVersion({
+                data: this.data,
+                pasted: this.isPasted,
+                version: (new Date()).toISOString()
+            });
+        }
+        if (this.isPasted) {
+            this.isPasted = false;
+        }
+
+        /**
+         * call the api to save the code...
+         */
+    }
+
     @action
     loadVersions() {
-        if (!this.versioned) {
+        if (!this.isVersioned) {
             return;
         }
         if (this.versionsCT) {
             this.versionsCT.cancel();
         }
-        this.versionsLoaded = 'loading';
+        this.versionsLoaded = false;
         this.versionsCT = axios.CancelToken.source();
         this.store
             .apiGetDocument<PyDoc>(this.webKey, true, this.versionsCT)
             .then(action((res) => {
                 if (res) {
                     this.versions.replace(res.versions);
-                    this.versionsLoaded = 'loaded';
+                    this.versionsLoaded = true;
                 } else {
                     this.versionsLoaded = false;
                 }
@@ -181,7 +296,7 @@ export default class Script implements CodeModel, ApiModel {
 
     @action
     addLogMessage(msg: LogMessage) {
-        this._logMessages.push(msg);
+        this._logMessages.push({output: msg.output, timeStamp: msg.timeStamp, type: msg.type});
     }
 
     @action
@@ -190,82 +305,96 @@ export default class Script implements CodeModel, ApiModel {
     }
 
     @computed
-    get logMessages() {
+    get logs() {
         return this._logMessages
             .slice()
             .sort((a, b) => (a.timeStamp > b.timeStamp ? 1 : a.timeStamp < b.timeStamp ? -1 : 0));
     }
 
     @action
-    stopScript(document: globalThis.Document) {
+    stopScript() {
         const code = document.getElementById(DOM_ELEMENT_IDS.communicator(this.codeId));
         if (code) {
             code.removeAttribute('data--start-time');
         }
     }
 
-    @action
-    execScript(brython: {runPythonSource: (code: string, id: string) => void}) {
-        if (this.hasGraphicsOutput) {
-            this.store.setOpendTurtleModal(this.webKey);
+    
+    @computed
+    get codeToExecute() {
+        if (this.preCode.length > 0) {
+            return `${this.preCode}\n${this.code}`;
         }
-        const code = `${this.precode}\n${this.code}`;
-        const lineShift = this.precode.split(/\n/).length;
-        const src = `from brython_runner import run
-run("""${sanitizePyScript(code || '')}""", '${this.codeId}', ${lineShift})
-`
+        return `${this.code}`;
+    }
+    
 
-        document.querySelectorAll('.brython-graphics-result').forEach((resContainer) => {
-            resContainer.replaceChildren();
-            if (this.hasCanvasOutput) {
-                const canv = document.createElement('canvas');
-                canv.setAttribute('width', '500');
-                canv.setAttribute('height', '500');
-                canv.style.width = '500px';
-                canv.style.height = '500px';
-                canv.style.display = 'block';
-                canv.id = DOM_ELEMENT_IDS.canvasContainer(this.codeId);
-                resContainer.appendChild(canv);
-            }
-        });
+    @action
+    execScript() {
+        const lineShift = this.preCode.split(/\n/).length;
+        const src = `from brython_runner import run\nrun("""${sanitizePyScript(this.codeToExecute || '')}""", '${this.codeId}', ${lineShift})\n`;
+        console.log('exec script', src)
+        if (!(window as any).__BRYTHON__) {
+            alert('Brython not loaded');
+            return;
+        }
+        if (this.hasGraphicsOutput) {
+            this.isGraphicsmodalOpen = true;
+        }
+        this.isExecuting = true;
         const active = document.getElementById(DOM_ELEMENT_IDS.communicator(this.codeId));
-        active.setAttribute('data--start-time', `${Date.now()}`);
-        this.executedScriptSource = this.code;
+        active?.setAttribute('data--start-time', `${Date.now()}`);
+        /**
+         * ensure that the script is executed after the current event loop.
+         * Otherwise, the brython script will not be able to access the graphics output.
+         */
         setTimeout(() => {
-            brython.runPythonSource(src, this.codeId);
+            (window as any).__BRYTHON__.runPythonSource(
+                src,
+                {
+                    pythonpath: DocumentStore.router === 'hash' ? [] : [DocumentStore.libDir]
+                }
+            );
         }, 0);
     }
 
     @action
     setPastedEdit(pasted: boolean) {
-        this.pastedEdit = pasted;
+        this.isPasted = pasted;
     }
 
     @computed
-    get codeId(): string {
-        return `ofi_${this.webKey}`.replace(/-/g, '_');
+    get hasGraphicsOutput() {
+        return this.hasTurtleOutput || this.hasCanvasOutput || GRAPHICS_OUTPUT_TESTER.test(this.codeToExecute);
     }
 
     @computed
-    get hasGraphicsOutput(): boolean {
-        const code = `${this.precode}\n${this.data.code}`;
-        return CANVAS_OUTPUT_TESTER.test(code) || GRAPHICS_OUTPUT_TESTER.test(code) || TURTLE_IMPORTS_TESTER.test(code) || GRID_IMPORTS_TESTER.test(code) || TURTLE3D_IMPORTS_TESTER.test(code);
+    get hasTurtleOutput() {
+        return TURTLE_IMPORTS_TESTER.test(this.codeToExecute);
     }
 
-    @computed
-    get hasTurtleOutput(): boolean {
-        const code = `${this.precode}\n${this.data.code}`;
-        return this.hasGraphicsOutput && (TURTLE_IMPORTS_TESTER.test(code) || TURTLE3D_IMPORTS_TESTER.test(code));
-    }
 
     @computed
-    get hasCanvasOutput(): boolean {
-        const code = `${this.precode}\n${this.data.code}`;
-        return CANVAS_OUTPUT_TESTER.test(code) || GRID_IMPORTS_TESTER.test(code);
+    get hasCanvasOutput() {
+        return CANVAS_OUTPUT_TESTER.test(this.codeToExecute) || GRID_IMPORTS_TESTER.test(this.codeToExecute);
     }
 
     @computed
     get hasEdits(): boolean {
         return this.rawScript !== this.data.code;
+    }
+
+    
+    subscribe(listener: () => void, selector: keyof Script) {
+        if (Array.isArray(this[selector])) {
+            return reaction(
+                () => (this[selector] as Array<any>).length,
+                listener
+            );
+        }
+        return reaction(
+            () => this[selector],
+            listener
+        );
     }
 }

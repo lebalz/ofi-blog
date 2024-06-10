@@ -44,7 +44,7 @@ export default class StringAnswer implements StringModel, ApiModel {
 
 
     @observable
-    loaded: boolean = false;
+    isLoaded: boolean = false;
 
     @observable
     state: 'unchecked' | 'correct' | 'wrong' = 'unchecked';
@@ -74,7 +74,7 @@ export default class StringAnswer implements StringModel, ApiModel {
 
     @computed
     get canUpdate(): boolean {
-        return !this.readonly && this.loaded;
+        return !this.readonly && this.isLoaded;
     }
 
 

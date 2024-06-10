@@ -46,7 +46,7 @@ export default class ArrayAnswer implements ArrayModel, ApiModel {
     saveService: SaveService;
 
     @observable
-    loaded: boolean = false;
+    isLoaded: boolean = false;
 
     value = observable<string>([]);
 
@@ -68,7 +68,7 @@ export default class ArrayAnswer implements ArrayModel, ApiModel {
 
     @computed
     get canUpdate(): boolean {
-        return !this.readonly && this.loaded;
+        return !this.readonly && this.isLoaded;
     }
 
     @computed

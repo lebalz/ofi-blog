@@ -10,6 +10,7 @@ import { DocType, ModelTypes, IModel, TypedDoc, Model } from '../models/iModel';
 import Script from '../models/Script';
 import { RootStore } from './stores';
 import StateAnswer from '../models/Answer/State';
+import { RouterType } from '@docusaurus/types';
 
 const CreateModel = (
     data: DocumentProps<any>,
@@ -72,6 +73,11 @@ const CreateDummyModel = <T extends IModel = IModel>(
 };
 export class DocumentStore {
     private readonly root: RootStore;
+
+    static libDir: string = '/bry-libs/';
+    static syncMaxOnceEvery: number = 1000;
+    static router: RouterType = 'hash';
+
     documents = observable<Model>([]);
 
     @observable
@@ -144,7 +150,7 @@ export class DocumentStore {
     ): Promise<T> {
         const loadedModel = this.find<T>(webKey);
         if (loadedModel) {
-            if (loadedModel.loaded && !forceReload) {
+            if (loadedModel.isLoaded && !forceReload) {
                 return Promise.resolve(loadedModel);
             }
             this.documents.remove(loadedModel);
@@ -159,7 +165,7 @@ export class DocumentStore {
         );
         this.documents.push(model);
         if (!persist || !this.root.msalStore.loggedIn || this.root.msalStore.offlineMode) {
-            model.loaded = true;
+            model.isLoaded = true;
             return Promise.resolve(model);
         }
         this.root.adminStore.batchDocument(pageKey, webKey);
@@ -183,7 +189,7 @@ export class DocumentStore {
             .then((data) => {
                 if (data.returnDummy) {
                     runInAction(() => {
-                        model.loaded = true;
+                        model.isLoaded = true;
                     });
                     return model;
                 }
@@ -193,9 +199,9 @@ export class DocumentStore {
                         raw: type === 'code' ? TypedDoc('code', defaultData).code : undefined,
                         versioned: versioned,
                     }) as T;
-                    fromApi.loaded = true;
+                    fromApi.isLoaded = true;
                     runInAction(() => {
-                        fromApi.loaded = true;
+                        fromApi.isLoaded = true;
                         this.documents.remove(model);
                         this.documents.push(fromApi);
                     });
@@ -288,7 +294,7 @@ export class DocumentStore {
                 raw: d.type === 'code' ? TypedDoc('code', {code: ''}).code : undefined
             });
             if (model) {
-                model.loaded = true;
+                model.isLoaded = true;
             }
             return model;
         }).filter(d => !!d));

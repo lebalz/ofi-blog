@@ -10,7 +10,7 @@ const TextAnswer = observer((props: TextProps) => {
     const store = useStore('documentStore');
     const doc = store.find<Text>(props.webKey);
 
-    if (!doc.loaded) {    
+    if (!doc.isLoaded) {    
         return <Loader />;
     }
     return (
