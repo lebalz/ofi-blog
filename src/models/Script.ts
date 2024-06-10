@@ -127,7 +127,7 @@ export default class Script implements CodeModel, ApiModel {
         this.rawScript = rawScript;
         this.executedScriptSource = doc.data.code;
         this.code = doc.data.code;
-        this.codeId = `code.${this.id}`.replace(/(-|\.)/g, '_');
+        this.codeId = `code.${this.webKey}`.replace(/(-|\.)/g, '_');
         
         const {pre, code} = splitPreCode(doc.data.code) as {pre: string, code: string};
         this._pristineCode = code;
