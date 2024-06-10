@@ -230,7 +230,6 @@ export default class Script implements CodeModel, ApiModel {
 
     @action
     saveNow() {
-        console.log('save now')
         this.saveService.saveNow();
     }
 
@@ -333,7 +332,6 @@ export default class Script implements CodeModel, ApiModel {
     execScript() {
         const lineShift = this.preCode.split(/\n/).length;
         const src = `from brython_runner import run\nrun("""${sanitizePyScript(this.codeToExecute || '')}""", '${this.codeId}', ${lineShift})\n`;
-        console.log('exec script', src)
         if (!(window as any).__BRYTHON__) {
             alert('Brython not loaded');
             return;
