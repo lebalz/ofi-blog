@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[27169],{86822:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/news","page":1,"postsPerPage":15,"totalPages":1,"totalCount":6,"blogDescription":"Blog","blogTitle":"News"}}')}}]);
