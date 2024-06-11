@@ -5,7 +5,6 @@ import { CodeModel } from './iModel';
 import { DocumentStore } from '../stores/DocumentStore';
 import { rootStore } from '../stores/stores';
 import SaveService, { ApiModel } from './SaveService';
-import { sanitizePyScript } from '../utils/sanitizers';
 import { throttle } from 'lodash';
 import { 
     CANVAS_OUTPUT_TESTER, 
@@ -14,11 +13,13 @@ import {
     GRID_IMPORTS_TESTER, 
     TURTLE_IMPORTS_TESTER 
 } from 'docusaurus-live-brython/theme/CodeEditor/constants';
-import { splitPreCode } from 'docusaurus-live-brython/theme/CodeEditor/WithScript/helpers';
 import { Status } from 'docusaurus-live-brython/theme/CodeEditor/WithScript/Types';
+import { runCode } from 'docusaurus-live-brython/theme/CodeEditor/WithScript/bryRunner';
 
 export interface PyDoc {
     code: string;
+    pre?: string;
+    post?: string;
 }
 
 export interface LogMessage {
@@ -28,7 +29,7 @@ export interface LogMessage {
 }
 
 export const DEFAULT_DATA: PyDoc = {
-    code: '',
+    code: ''
 };
 
 const save = (model: Script, cancelToken: CancelTokenSource) => {
@@ -82,19 +83,19 @@ export default class Script implements CodeModel, ApiModel {
     @observable
     isGraphicsmodalOpen: boolean = false;
 
-    @observable
-    preCode: string = '';
-
+    
     rawScript: string;
-
+    
     @observable
     code: string;
-
+    
     // @observable
     // status: Status = Status.IDLE;
-
+    
     readonly: boolean;
-
+    
+    readonly preCode: string;
+    readonly postCode: string;
     readonly isVersioned: boolean;
     readonly _pristineCode: string;
     readonly codeId: string;
@@ -129,8 +130,9 @@ export default class Script implements CodeModel, ApiModel {
         this.code = doc.data.code;
         this.codeId = `code.${this.webKey}`.replace(/(-|\.)/g, '_');
         
-        const {pre, code} = splitPreCode(doc.data.code) as {pre: string, code: string};
-        this._pristineCode = code;
+        this._pristineCode = doc.data.code;
+        this.preCode = doc.data.pre || '';
+        this.postCode = doc.data.post || '';
 
         this.isDummy = isDummy;
         this.isVersioned = versioned;
@@ -320,40 +322,18 @@ export default class Script implements CodeModel, ApiModel {
 
     
     @computed
-    get codeToExecute() {
-        if (this.preCode.length > 0) {
-            return `${this.preCode}\n${this.code}`;
-        }
-        return `${this.code}`;
+    get _codeToExecute() {
+        return `${this.preCode}\n${this.code}\n${this.postCode}`;
     }
     
 
     @action
     execScript() {
-        const lineShift = this.preCode.split(/\n/).length;
-        const src = `from brython_runner import run\nrun("""${sanitizePyScript(this.codeToExecute || '')}""", '${this.codeId}', ${lineShift})\n`;
-        if (!(window as any).__BRYTHON__) {
-            alert('Brython not loaded');
-            return;
-        }
         if (this.hasGraphicsOutput) {
             this.isGraphicsmodalOpen = true;
         }
         this.isExecuting = true;
-        const active = document.getElementById(DOM_ELEMENT_IDS.communicator(this.codeId));
-        active?.setAttribute('data--start-time', `${Date.now()}`);
-        /**
-         * ensure that the script is executed after the current event loop.
-         * Otherwise, the brython script will not be able to access the graphics output.
-         */
-        setTimeout(() => {
-            (window as any).__BRYTHON__.runPythonSource(
-                src,
-                {
-                    pythonpath: DocumentStore.router === 'hash' ? [] : [DocumentStore.libDir]
-                }
-            );
-        }, 0);
+        runCode(this.code, this.preCode, this.postCode, this.codeId, DocumentStore.libDir, DocumentStore.router);
     }
 
     @action
@@ -363,18 +343,18 @@ export default class Script implements CodeModel, ApiModel {
 
     @computed
     get hasGraphicsOutput() {
-        return this.hasTurtleOutput || this.hasCanvasOutput || GRAPHICS_OUTPUT_TESTER.test(this.codeToExecute);
+        return this.hasTurtleOutput || this.hasCanvasOutput || GRAPHICS_OUTPUT_TESTER.test(this._codeToExecute);
     }
 
     @computed
     get hasTurtleOutput() {
-        return TURTLE_IMPORTS_TESTER.test(this.codeToExecute);
+        return TURTLE_IMPORTS_TESTER.test(this._codeToExecute);
     }
 
 
     @computed
     get hasCanvasOutput() {
-        return CANVAS_OUTPUT_TESTER.test(this.codeToExecute) || GRID_IMPORTS_TESTER.test(this.codeToExecute);
+        return CANVAS_OUTPUT_TESTER.test(this._codeToExecute) || GRID_IMPORTS_TESTER.test(this._codeToExecute);
     }
 
     @computed

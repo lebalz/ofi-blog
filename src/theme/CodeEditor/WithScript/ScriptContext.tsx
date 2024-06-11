@@ -20,7 +20,7 @@ const ScriptContext = observer((props: InitState & { children: React.ReactNode; 
             return;
         }
         documentStore.provideDocument(
-            { code: props.raw || '' },
+            { code: props.code || '', pre: props.preCode, post: props.postCode },
             'code',
             pageKey,
             id,

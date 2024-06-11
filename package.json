@@ -55,7 +55,7 @@
     "buffer": "^6.0.3",
     "canvas": "2.9.1",
     "clsx": "^1.1.1",
-    "docusaurus-live-brython": "^3.0.0-beta.19",
+    "docusaurus-live-brython": "^3.0.0-beta.21",
     "docusaurus-plugin-sass": "^0.2.5",
     "docusaurus-theme-frontmatter": "^1.3.0",
     "docx": "^7.6.0",
