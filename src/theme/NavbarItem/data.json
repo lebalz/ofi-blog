@@ -1,7 +1,7 @@
 {
   "user": {
-    "id": 1,
-    "email": "OFFLINE_MODE_USER",
+    "id": -1,
+    "email": "",
     "class": "",
     "updated_at": "2022-11-04T13:25:06.147Z",
     "created_at": "2021-10-29T11:35:39.382Z",

@@ -63,7 +63,8 @@ export const FilePicker = observer(() => {
 
 export const LoadedOfflineFile = observer(() => {
     const rootStore = useRootStore();
-    if (!rootStore.loadedFileName) {
+    const userStore = useStore('userStore');
+    if (!rootStore.loadedFileName || userStore.current?.id < 0) {
         return null;
     }
     return (

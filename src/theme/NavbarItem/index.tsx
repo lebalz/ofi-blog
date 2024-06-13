@@ -44,9 +44,11 @@ const withLoginNavbar = (Component) => {
             return <Component {...props} />;
         }
         React.useEffect(() => {
-            if (OFFLINE_MODE) {
+            if (OFFLINE_MODE && (!userStore.current)) {
                 import('./data.json').then((data) => {
-                    rootStore.loadOfflineData(data.default.user.email, data.default);
+                    if (data.default.user.id > 0) {
+                        rootStore.loadOfflineData(data.default.user.email, data.default);
+                    }
                 }).catch((e) => {
                     console.error('error', e);
                 });
