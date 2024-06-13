@@ -19,7 +19,7 @@ export class RootStore {
   @observable
   initialized = false;
   @observable.ref
-  timer?: NodeJS.Timer;
+  timer?: NodeJS.Timeout;
 
   @observable
   time_ms = 0;

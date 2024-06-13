@@ -7,7 +7,7 @@
 
 import React from 'react';
 import NavbarItem from '@theme-original/NavbarItem';
-import { useStore } from '../../stores/hooks';
+import { useRootStore, useStore } from '../../stores/hooks';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
@@ -35,6 +35,7 @@ const currentVersion = (versions: typeof NavbarItem[]): typeof NavbarItem | unde
 
 const withLoginNavbar = (Component) => {
     const WrappedComponent = observer((props: typeof NavbarItem) => {
+        const rootStore = useRootStore();
         const msalStore = useStore('msalStore');
         const userStore = useStore('userStore');
         const adminStore = useStore('adminStore');
@@ -42,6 +43,15 @@ const withLoginNavbar = (Component) => {
         if (props.to !== 'login') {
             return <Component {...props} />;
         }
+        React.useEffect(() => {
+            if (OFFLINE_MODE) {
+                import('./data.json').then((data) => {
+                    rootStore.loadOfflineData(data.default.user.email, data.default);
+                }).catch((e) => {
+                    console.error('error', e);
+                });
+            }
+        }, [])
         if (OFFLINE_MODE) {
             return (<div style={{display: 'flex', flexWrap: 'wrap', maxWidth: '70vw'}}>
                 <FilePicker /> <LoadedOfflineFile />
