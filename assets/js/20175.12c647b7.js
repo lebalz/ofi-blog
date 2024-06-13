@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkofi_blog_versioned=self.webpackChunkofi_blog_versioned||[]).push([[20175],{20175:e=>{e.exports=JSON.parse('{"user":{"id":-1,"email":"","class":"","updated_at":"2022-11-04T13:25:06.147Z","created_at":"2021-10-29T11:35:39.382Z","admin":false,"groups":[],"oid":"","oid_changed":false},"documents":[],"timed_topics":[],"comments":[]}')}}]);
