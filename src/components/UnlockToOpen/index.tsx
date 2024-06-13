@@ -40,7 +40,7 @@ const UnlockToOpen = observer((props: Props) => {
             }
             open={true}
         >
-            {doc?.loaded && doc?.state === 'correct' && props.children}
+            {doc?.isLoaded && doc?.state === 'correct' && props.children}
         </Details>
     );
 });

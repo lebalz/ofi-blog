@@ -17,7 +17,6 @@ Eine SVG-Datei hat folgende Grundstruktur:
 ```html
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
 ></svg>
 ```
 
@@ -31,8 +30,7 @@ Das folgende Beispiel stellt die französische Flagge dar:
 
 ```jsx live_jsx
 <svg width="300" 
-  height="200" xmlns="http://www.w3.org/2000/svg" 
-  xmlns:xlink="http://www.w3.org/1999/xlink"
+  height="200" xmlns="http://www.w3.org/2000/svg"
 >
   <desc>Flagge Frankreichs</desc>
   <rect x="0" y="0" width="100" height="200" fill="rgb(0, 85, 164)" />
@@ -63,8 +61,7 @@ Halten Sie den verwendeten Code separat im untenstehenden Textfeld fest.
 
 ```jsx live_jsx
 <svg width="300" height="200" 
-  xmlns="http://www.w3.org/2000/svg" 
-  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg"
 >
     <desc>Flagge Frankreichs</desc>
     <rect x="0" y="0" width="100" height="200" fill="rgb(0, 85, 164)" />
@@ -89,8 +86,7 @@ Erstellen Sie eine neue SVG-Datei und probieren Sie die Grundformen aus.
 
 ```jsx live_jsx
 <svg width="300" height="200" 
-  xmlns="http://www.w3.org/2000/svg" 
-  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg"
 >
   <desc>Grundformen</desc>
 </svg>
@@ -106,8 +102,7 @@ Erstellen Sie mit SVG eine winterliche oder festliche Grafik.
 
 ```jsx live_jsx
 <svg width="300" height="200" 
-  xmlns="http://www.w3.org/2000/svg" 
-  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg"
 >
   <desc>Eigene Zeichnung</desc>
 </svg>

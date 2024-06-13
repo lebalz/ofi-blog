@@ -18,7 +18,6 @@ Eine SVG-Datei hat folgende Grundstruktur:
 ```html
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
 ></svg>
 ```
 
@@ -27,7 +26,7 @@ Eine SVG-Datei hat folgende Grundstruktur:
 Das folgende Beispiel stellt die französische Flagge dar:
 
 ```jsx live_jsx
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
   <desc>Flagge Frankreichs</desc>
   <rect x="0" y="0" width="100" height="200" fill="rgb(0, 85, 164)" />
   <rect x="100" y="0" width="100" height="200" fill="rgb(255, 255, 255)" />
@@ -48,7 +47,7 @@ Erstellen Sie eine SVG-Datei, welche die Deutsche Flagge darstellt. Die Flagge i
 
 
 ```jsx live_jsx
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
   <desc>Deutsche Flagge</desc>
 </svg>
 ```
@@ -71,7 +70,7 @@ Auf der folgenden Seite sind die Grundformen von SVG zusammengefasst:
 <Answer type="state" webKey="1b2ccfd8-8912-4171-b25a-e7fa47911c57" />
 
 ```jsx live_jsx
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
   <desc>Grundformen</desc>
 </svg>
 ```
@@ -89,7 +88,7 @@ Erstellen Sie eine neue SVG-Datei und probieren Sie die Grundformen aus.
 
 
 ```jsx live_jsx
-<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
   <desc>Meine Zeichnung</desc>
 </svg>
 ```

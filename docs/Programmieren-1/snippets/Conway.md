@@ -67,7 +67,7 @@ evolution()
 from grid import Grid
 from game import gameloop, sleep
 
-grid = Grid.from_bin_text('''
+grid = Grid.from_text('''
   
    
   xx      x              xx
@@ -158,7 +158,7 @@ evolution()
 from grid import Grid
 from game import gameloop, sleep
 
-grid = Grid.from_bin_text('''
+grid = Grid.from_text('''
        x
         x
       xxx 
@@ -216,7 +216,7 @@ evolution()
 from grid import Grid
 from game import gameloop, sleep
 
-grid = Grid.from_bin_text('''
+grid = Grid.from_text('''
   
 
         xxxx

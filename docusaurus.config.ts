@@ -269,8 +269,7 @@ const config: Config = {
         }
     } satisfies Preset.ThemeConfig,
     staticDirectories: [
-        'static',
-        'static-brython-modules'
+        'static'
     ],
     presets: [
         [
@@ -344,7 +343,6 @@ const config: Config = {
     plugins: [
         'docusaurus-plugin-sass',
         '@saucelabs/theme-github-codeblock',
-        './src/plugins/brython-source.ts',
         function (context, options) {
             return {
                 name: 'raw-src-loader',
@@ -457,7 +455,8 @@ const config: Config = {
     themes: [
         '@docusaurus/theme-live-codeblock',
         'docusaurus-theme-frontmatter',
-        '@docusaurus/theme-mermaid'
+        '@docusaurus/theme-mermaid',
+        'docusaurus-live-brython'
     ],
 }
 

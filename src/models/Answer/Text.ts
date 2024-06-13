@@ -38,7 +38,7 @@ export default class Text implements TextModel, ApiModel, iTextData {
     isDummy: boolean;
 
     @observable
-    loaded: boolean = false;
+    isLoaded: boolean = false;
 
     @observable.ref
     saveService: SaveService;
@@ -62,7 +62,7 @@ export default class Text implements TextModel, ApiModel, iTextData {
 
     @computed
     get canUpdate(): boolean {
-        return !this.readonly && this.loaded;
+        return !this.readonly && this.isLoaded;
     }
 
     @computed

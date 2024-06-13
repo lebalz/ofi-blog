@@ -50,7 +50,7 @@ const StateAnswer = observer((props: StateProps) => {
         doc.setValue(props.states[(idx + 1) % props.states.length]);
     };
 
-    if (!doc.loaded) {
+    if (!doc.isLoaded) {
         return <Loader />;
     }
     return (

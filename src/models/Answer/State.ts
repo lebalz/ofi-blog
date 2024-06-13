@@ -44,7 +44,7 @@ export default class StateAnswer implements StateModel, ApiModel {
     readonly: boolean;
 
     @observable
-    loaded: boolean = false;
+    isLoaded: boolean = false;
 
     @observable
     value: StateType;
@@ -74,7 +74,7 @@ export default class StateAnswer implements StateModel, ApiModel {
 
     @computed
     get canUpdate(): boolean {
-        return !this.readonly && this.loaded;
+        return !this.readonly && this.isLoaded;
     }
 
     @computed

@@ -8,6 +8,9 @@ import { PublicClientApplication } from "@azure/msal-browser";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import Head from "@docusaurus/Head";
 import siteConfig from '@generated/docusaurus.config';
+import { usePluginData } from "@docusaurus/useGlobalData";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { DocumentStore } from "../stores/DocumentStore";
 const { OFFLINE_MODE, TEST_USERNAME } = siteConfig.customFields as { OFFLINE_MODE?: boolean, TEST_USERNAME?: string };
 
 let msalInstance: PublicClientApplication;
@@ -93,10 +96,21 @@ if (useTestUserNoAuth) {
 
 // Default implementation, that you can customize
 function Root({ children }) {
+    const {libDir, syncMaxOnceEvery} = usePluginData('docusaurus-live-brython') as { libDir: string; syncMaxOnceEvery: number; };
+    const {siteConfig} = useDocusaurusContext();
     const isBrowser = useIsBrowser();
-    if (isBrowser && !(window as any).store) {
+    React.useEffect(() => {
+        /**
+         * Expose the store to the window object
+         */
         (window as any).store = rootStore;
-    }
+        /**
+         * Set some configuration options
+         */
+        DocumentStore.syncMaxOnceEvery = syncMaxOnceEvery;
+        DocumentStore.libDir = libDir;
+        DocumentStore.router = siteConfig.future.experimental_router;
+    }, [rootStore]);
     return (
         <div>
             <Head>

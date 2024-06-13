@@ -71,7 +71,7 @@ const getDefault = (props: Props): ModelTypes => {
             };
         case 'text':
             return {
-                value: props.default || ReactDomServer.renderToString(props.children),
+                value: props.default || ReactDomServer.renderToString(props.children as any),
                 type: 'text',
             };
         case 'array':
