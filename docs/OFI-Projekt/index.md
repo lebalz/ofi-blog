@@ -17,7 +17,7 @@ Termin 1: Projektantrag
 : __klasse-vorname1-vorname2.docx__
 : [👉 Abgabe Projektantrag auf OneDrive](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EtaOnSU-gFdGqEgpYn9lGp4Bvyo5ylGxCJAxdUFXgXJfUA)
 Termin 2: Finale Abgabe
-: 19.06.2024, 20:00 Uhr
+: 19.06.2024, 22:00 Uhr
 : __klasse-vorname1-vorname2.zip__
 : [👉 Finale Abgabe auf OneDrive](https://erzbe-my.sharepoint.com/:f:/g/personal/balthasar_hofer_gbsl_ch/EsYF-OU38VJLpTUvEay-LsAB6vX6fedk1YSM1eIG4YJkyA)
 :::
