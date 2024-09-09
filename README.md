@@ -18,8 +18,8 @@ rm -rf p/reveal.js/.git
 
 git init .
 git add .
-git commit -am "version EF Abschlussjahrgang 2024"
-git remote add origin git@github.com:lebalz/ef-blog-v24.git
+git commit -am "version OFI Abschlussjahrgang 2026"
+git remote add origin git@github.com:lebalz/ofi-blog-v26.git
 git branch -M main
 git push -u -f origin main
 ```
