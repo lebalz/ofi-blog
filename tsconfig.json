@@ -9,5 +9,5 @@
     "esModuleInterop":true,
     "resolveJsonModule": true,
   },
-  "exclude": ["src/plugins/**/*.test.ts"],
+  "exclude": ["src/plugins/**/*.test.ts", "node_modules", "build", "dist"],
 }
