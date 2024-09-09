@@ -23,44 +23,20 @@ interface Props {
 }
 
 export default function Home({ recentPosts }: Props) {
-    const images = [
-        {
-            original: './img/index/artificial-intelligence.jpg',
-        },
-        {
-            original: './img/index/robot-hand.jpg',
-        },
-        {
-            original: './img/index/security.jpg',
-        },
-        {
-            original: './img/index/network.jpg',
-        },
-        {
-            original: './img/index/computer.jpg',
-        },
-    ];
 
     return (
         <Layout>
             <HomepageHeader />
             <main>
-                <div className="gallery-wrapper">
-                    <ImageGallery
-                        items={images}
-                        infinite
-                        lazyLoad
-                        showNav={false}
-                        showThumbnails={false}
-                        showFullscreenButton={false}
-                        showPlayButton={false}
-                        showBullets
-                        slideDuration={2000}
-                        slideInterval={8000}
-                        autoPlay
-                    />
+                <div className="hero hero--primary" style={{height: '25rem'}}>
+                    <div className="container">
+                        <h1 className="hero__title">OFI ist Umgezogen</h1>
+                        <p className="hero__subtitle" style={{color: 'var(--ifm-heading-color)'}}>Danke für dein langfristiges Interesse an ofi.gbsl.website. Die aktuelle Seite findest du neu unter</p>
+                        <div>
+                            <a className="button button--secondary button--lg" href="https://inf.gbsl.website">👉 inf.gbsl.website</a>
+                        </div>
+                    </div>
                 </div>
-                <HomepageCourses />
             </main>
         </Layout>
     );
