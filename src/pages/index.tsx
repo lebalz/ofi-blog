@@ -30,7 +30,7 @@ export default function Home({ recentPosts }: Props) {
             <main>
                 <div className="hero hero--primary" style={{height: '25rem'}}>
                     <div className="container">
-                        <h1 className="hero__title">OFI ist Umgezogen</h1>
+                        <h1 className="hero__title">OFI ist umgezogen</h1>
                         <p className="hero__subtitle" style={{color: 'var(--ifm-heading-color)'}}>Danke für dein langfristiges Interesse an ofi.gbsl.website. Die aktuelle Seite findest du neu unter</p>
                         <div>
                             <a className="button button--secondary button--lg" href="https://inf.gbsl.website">👉 inf.gbsl.website</a>
