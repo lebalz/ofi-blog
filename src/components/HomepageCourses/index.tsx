@@ -26,39 +26,8 @@ if (!DOCS_ONLY) {
       '26e',
       '26P'
     ]
-  });
-  CourseList.push({
-    title: 'Gym 4',
-    classes: [
-      {
-        uri: '24ef/home',
-        label: 'EF'
-      },
-    ]
-  });  
+  }); 
 }
-
-CourseList.push({
-    title: 'Ehemalige',
-    classes: [
-      {
-        uri: 'https://ofi.24.gbsl.website',
-        label: '24'
-      },
-      {
-        uri: 'https://ef.24.gbsl.website/24ef/home',
-        label: '24 EF'
-      },
-      {
-        uri: 'https://ofi.25.gbsl.website/25h/home',
-        label: '25h'
-      },
-      {
-        uri: 'https://ofi.25.gbsl.website/24w/home',
-        label: '24w'
-      },
-    ]
-  });
 
 // const CourseComponent = (course: Course) => {
 const CourseComponent = ({ course }: {course: Course}) => {

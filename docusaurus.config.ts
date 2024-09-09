@@ -38,7 +38,7 @@ const VERSIONS: { [version: string]: VersionOptions } = {
 };
 
 if (!process.env.DOCS_ONLY) {
-    ['26e', '26P', '24ef'].forEach(version => {
+    ['26e', '26P'].forEach(version => {
         VERSIONS[version] = {
             label: version,
             banner: 'none'
@@ -242,7 +242,7 @@ const config: Config = {
                       class="footer__link-item"
                       href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de"
                     >
-                      <img src="${BASE_URL}img/by-nc-sa.eu.svg" alt="CC-BY-NC-SA"> 
+                      <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" alt="CC-BY-NC-SA"> 
                       Text und Bilder von Balthasar Hofer, Ausnahmen sind gekennzeichnet. 
                     </a>
                     <br />

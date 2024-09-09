@@ -1,4 +1,28 @@
-# OFI Blog
+# OFI Blog v26
+
+# Abschlussjahrgang OFI 2026
+
+This branch is deployed in [OFI Blog v26](https://github.com/lebalz/ofi-blog-v26).
+- remove unwanted versions from `versions.jsons`
+- update the `docusaurus.config.ts` to reflect the new version
+- remove the versions from course list in `src/pages/index.tsx`
+- update the doc-config
+- build it with offline mode, domain `yarn run build`
+- navigate to the build directory `cd build`
+- initialize and push a git repo. make sure to add revealjs too (by deleting the .git folder of the submodule in the build directory...)
+
+```bash
+WITHOUT_DOCS="true" OFFLINE_MODE="true" DOMAIN="https://ofi.26.gbsl.website" UMAMI_ID="c2f6f014-5671-42d7-8cab-1ddd90d64497" UMAMI_SRC="https://umami.gbsl.website/tell-me.js" NODE_OPTIONS="--max_old_space_size=12288" yarn run build
+cd build
+rm -rf p/reveal.js/.git
+
+git init .
+git add .
+git commit -am "version EF Abschlussjahrgang 2024"
+git remote add origin git@github.com:lebalz/ef-blog-v24.git
+git branch -M main
+git push -u -f origin main
+```
 
 [![Build Status](https://drone.gbsl.website/api/badges/lebalz/ofi-blog/status.svg)](https://drone.gbsl.website/lebalz/ofi-blog)
 
