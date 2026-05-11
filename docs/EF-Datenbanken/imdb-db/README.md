@@ -7,7 +7,7 @@ sidebar_custom_props:
 
 1. Download the [IMDB Dataset](https://datasets.imdbws.com/).
 2. Execute `node create-db-copy-files.js` to create the copy files.
-3. Copy the files to the server. `scp *.sql ip-address:/home/imdb`
+3. Copy the files to the server. `scp *.sql ip-address:/var/lib/dokku/services/postgres/hfr-imdb/data/imdb-files`
 4. On the server, execute the following commands:
 
 ```bash
@@ -18,11 +18,9 @@ DB_URL=$(dokku postgres:info hfr-imdb --dsn | sed 's/@.*:/@localhost:/')
 NEW_DB=$(echo $DB_URL | sed 's/5432\/.*/5432\/imdb/')
 echo $DB_URL > imdb/DB_URL
 echo $NEW_DB > imdb/NEW_DB
-docker cp imdb/ $(dokku postgres:info hfr-imdb --id):/home/imdb
-
 dokku postgres:enter hfr-imdb
 
-cd /home/imdb
+cd /var/lib/postgresql/imdb-files
 psql $(cat DB_URL) -f ./_1-create-db.sql
 psql $(cat NEW_DB) -f ./_2-setup-db.sql
 psql $(cat NEW_DB) -f ./_3-restore-db.sql
@@ -47,6 +45,54 @@ and reimport this file:
 
 ```bash	
 psql $(cat NEW_DB) -c "COPY humans_movies FROM '/home/imdb/humans_movies.sql';"
+```
+
+or maybe even better: validate during import with a `WHERE` clause:
+
+```sql
+COPY humans (id, name, birth_year, death_year)
+FROM '/var/lib/postgresql/imdb-files/humans.sql'
+WITH (
+    FORMAT    text,
+    DELIMITER E'\t',
+    NULL      '\N'
+)
+WHERE (
+    id          IS NOT NULL
+    AND char_length(id) <= 10
+    AND name        IS NOT NULL
+    AND name        <> ''
+    AND (birth_year IS NULL OR birth_year BETWEEN 1 AND 2100)
+    AND (death_year IS NULL OR death_year BETWEEN 1 AND 2100)
+    AND (death_year IS NULL OR birth_year IS NULL OR death_year >= birth_year)
+);
+```
+
+and when foreign keys are violated:
+
+```sql
+ALTER TABLE humans_movies DISABLE TRIGGER ALL;
+
+COPY humans_movies (human_id, movie_id)
+FROM '/var/lib/postgresql/imdb-files/humans_movies.sql'
+WITH (FORMAT text, DELIMITER E'\t', NULL '\N')
+WHERE (
+    human_id IS NOT NULL AND char_length(human_id) <= 10
+    AND movie_id IS NOT NULL AND char_length(movie_id) <= 10
+);
+
+DELETE FROM humans_movies hm
+WHERE NOT EXISTS (
+    SELECT 1 FROM humans h WHERE h.id = hm.human_id
+)
+OR NOT EXISTS (
+    SELECT 1 FROM movies m WHERE m.id = hm.movie_id
+);
+
+ALTER TABLE humans_movies ENABLE TRIGGER ALL;
+
+-- confirm no violations remain
+SET session_replication_role = 'origin';
 ```
 
 :::details[Unknown Entries 16.08.2023]
